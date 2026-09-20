@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Check integration boundary and authored assets
@@ -30,12 +30,12 @@ jobs:
       - name: Build container
         run: docker build -t opentt3d-dev -f docker/Dockerfile .
       - name: Build game and run tests
-        run: docker run --rm -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/build.py --build-dir build-linux --jobs 4
+        run: docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/build.py --build-dir build-linux --jobs 4
       - name: Render with Mesa in a virtual display
-        run: docker run --init --rm -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --rotation 1
+        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --rotation 1
       - name: Store verification artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: linux-verification
           path: |
@@ -47,7 +47,7 @@ jobs:
     runs-on: macos-15
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Install runner-only build dependencies
@@ -56,7 +56,7 @@ jobs:
         run: python3 tools/opentt3d/build.py --build-dir build-macos --jobs 3
       - name: Store test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: macos-verification
           path: build-macos/Testing/Temporary/
@@ -76,10 +76,10 @@ jobs:
           - arch: arm64
             host: x64_arm64
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - uses: OpenTTD/actions/setup-vcpkg@v6
@@ -108,12 +108,12 @@ jobs:
         if: matrix.arch != 'arm64'
         shell: bash
         run: |
-          cmake --build build-windows --target openttd_test --parallel 4
+          cmake --build build-windows --target openttd_test regression_files --parallel 4
           python tools/opentt3d/fetch_baseset.py build-windows/baseset
           ctest --test-dir build-windows --output-on-failure
       - name: Store build and test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: windows-${{ matrix.arch }}-verification
           path: |

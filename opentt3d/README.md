@@ -30,7 +30,8 @@ Linux builds and tests run in Docker:
 
 ```sh
 docker build -t opentt3d-dev -f docker/Dockerfile .
-docker run --rm -v "$PWD:/workspace" -w /workspace opentt3d-dev \
+docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp \
+  -v "$PWD:/workspace" -w /workspace opentt3d-dev \
   python3 tools/opentt3d/build.py --build-dir build-linux
 ```
 
@@ -76,6 +77,18 @@ The upstream git remote is `https://github.com/OpenTTD/OpenTTD.git`. Rendering
 implementation lives in `src/renderer3d/`; integration changes are reviewed
 separately from upstream's engine. Development builds keep their own revision
 identity until interoperability has been tested.
+
+```sh
+python3 tools/opentt3d/upstream.py check
+# When a newer stable tag is available:
+python3 tools/opentt3d/upstream.py prepare 16.0
+```
+
+`prepare` fetches the tag, creates `update/openttd-<version>`, starts a normal
+upstream merge and updates the pin after a clean merge. It leaves the result
+for review and testing. If the merge needs resolution, resolve it and run
+`upstream.py record <version>` before the compatibility checks. The weekly
+GitHub workflow reports newly available stable versions.
 
 ## Licensing
 

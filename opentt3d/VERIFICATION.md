@@ -50,7 +50,8 @@ python3 tools/opentt3d/smoke.py --build-dir build-macos \
 For Linux rendering in Docker, use `--init` so Xvfb's startup signal is handled:
 
 ```sh
-docker run --init --rm -v "$PWD:/workspace" -w /workspace opentt3d-dev \
+docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp \
+  -v "$PWD:/workspace" -w /workspace opentt3d-dev \
   xvfb-run -a python3 tools/opentt3d/smoke.py \
   --build-dir build-linux --output build-linux/smoke-example --rotation 1
 ```
