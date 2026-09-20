@@ -1,0 +1,16 @@
+{
+  "openttd": {
+    "repository": "https://github.com/OpenTTD/OpenTTD.git",
+    "tag": "15.3",
+    "commit": "14ec60f248547d4d062a1160f0fc26d742319888"
+  },
+  "opengfx": {
+    "repository": "https://github.com/OpenTTD/OpenGFX.git",
+    "tag": "8.0",
+    "commit": "e68bd9b7cb60305aa98c687b6836e0e0b08e2847",
+    "url": "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+    "sha256": "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be"
+  },
+  "renderer_version": "0.1.0-dev",
+  "asset_format_version": 1
+}

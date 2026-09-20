@@ -1,5 +1,9 @@
 # OpenTTD
 
+> **OpenTT3D development fork:** renderer replacement and hand-authored 3D assets
+> are being developed here. See [OpenTT3D documentation](opentt3d/README.md) and
+> [implementation status](opentt3d/STATUS.md). The upstream README follows.
+
 ## Table of contents
 
 - 1.0) [About](#10-about)
