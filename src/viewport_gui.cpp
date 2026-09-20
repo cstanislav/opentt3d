@@ -8,6 +8,7 @@
 /** @file viewport_gui.cpp Extra viewport window. */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
 #include "landscape.h"
 #include "window_gui.h"
 #include "viewport_func.h"
@@ -113,8 +114,9 @@ public:
 
 	void OnScroll(Point delta) override
 	{
-		this->viewport->scrollpos_x += ScaleByZoom(delta.x, this->viewport->zoom);
-		this->viewport->scrollpos_y += ScaleByZoom(delta.y, this->viewport->zoom);
+		delta = Renderer3D::UnrotateScroll({ScaleByZoom(delta.x, this->viewport->zoom), ScaleByZoom(delta.y, this->viewport->zoom)});
+		this->viewport->scrollpos_x += delta.x;
+		this->viewport->scrollpos_y += delta.y;
 		this->viewport->dest_scrollpos_x = this->viewport->scrollpos_x;
 		this->viewport->dest_scrollpos_y = this->viewport->scrollpos_y;
 	}

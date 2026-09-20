@@ -35,6 +35,7 @@
 #include "../blitter/factory.hpp"
 #include "../zoom_func.h"
 #include "../core/string_consumer.hpp"
+#include "../renderer3d/gl_backend.hpp"
 
 #include "../table/opengl_shader.h"
 #include "../table/sprites.h"
@@ -492,6 +493,7 @@ OpenGLBackend::OpenGLBackend() : cursor_cache(MAX_CACHED_CURSORS)
  */
 OpenGLBackend::~OpenGLBackend()
 {
+	Renderer3D::DestroyOpenGLResources();
 	if (_glDeleteProgram != nullptr) {
 		_glDeleteProgram(this->remap_program);
 		_glDeleteProgram(this->vid_program);
@@ -543,7 +545,9 @@ std::optional<std::string_view> OpenGLBackend::Init(const Dimension &screen_res)
 #ifndef GL_ALLOW_SOFTWARE_RENDERER
 	/* Don't use MESA software rendering backends as they are slower than
 	 * just using a non-OpenGL video driver. */
-	if (renderer->starts_with("llvmpipe") || renderer->starts_with("softpipe")) return "Software renderer detected, not using OpenGL";
+	const char *allow_software = std::getenv("OPENTT3D_ALLOW_SOFTWARE_GL");
+	if ((renderer->starts_with("llvmpipe") || renderer->starts_with("softpipe")) &&
+			(allow_software == nullptr || std::string_view(allow_software) != "1")) return "Software renderer detected, not using OpenGL";
 #endif
 
 	std::tie(_gl_major_ver, _gl_minor_ver) = DecodeVersion(*ver);

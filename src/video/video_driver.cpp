@@ -21,6 +21,7 @@
 #include "../thread.h"
 #include "../window_func.h"
 #include "video_driver.hpp"
+#include "../renderer3d/viewport_3d.h"
 
 #include "../safeguards.h"
 
@@ -150,6 +151,7 @@ void VideoDriver::Tick()
 
 			/* Prevent drawing when switching mode, as windows can be removed when they should still appear. */
 			if (_game_mode == GM_BOOTSTRAP || _switch_mode == SM_NONE || HasModalProgress()) {
+				Renderer3D::BeginFrame();
 				::UpdateWindows();
 			}
 

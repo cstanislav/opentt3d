@@ -8,6 +8,7 @@
 /** @file vehicle.cpp Base implementations of all vehicles. */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
 #include "error.h"
 #include "roadveh.h"
 #include "ship.h"
@@ -1214,6 +1215,7 @@ void ViewportAddVehicles(DrawPixelInfo *dpi)
  */
 Vehicle *CheckClickOnVehicle(const Viewport &vp, int x, int y)
 {
+	if (Renderer3D::IsEnabled()) return Renderer3D::PickVehicle(vp, x, y);
 	Vehicle *found = nullptr;
 	uint dist, best_dist = UINT_MAX;
 

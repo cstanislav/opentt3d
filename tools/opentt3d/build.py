@@ -2,6 +2,7 @@
 """Build and test without installing dependencies on the host."""
 
 import argparse
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -30,6 +31,10 @@ def main():
     if args.configure_only:
         return
     subprocess.run(["cmake", "--build", str(build), "--parallel", str(args.jobs)], check=True)
+    pin = json.loads((Path(__file__).resolve().parents[2] / "opentt3d/upstream.json").read_text())
+    baseset = build / "baseset" / f"opengfx-{pin['opengfx']['tag']}.tar"
+    if not baseset.is_file():
+        subprocess.run([sys.executable, str(Path(__file__).with_name("fetch_baseset.py")), str(build / "baseset")], check=True)
     subprocess.run(["ctest", "--test-dir", str(build), "--output-on-failure"], check=True)
 
 

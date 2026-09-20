@@ -45,6 +45,7 @@
 #include "3rdparty/fmt/chrono.h"
 #include "company_cmd.h"
 #include "misc_cmd.h"
+#include "renderer3d/viewport_3d.h"
 
 #if defined(WITH_ZLIB)
 #include "network/network_content.h"
@@ -2869,8 +2870,31 @@ static bool ConDumpInfo(std::span<std::string_view> argv)
  * console command registration
  *******************************/
 
+static bool ConRenderer3D(std::span<std::string_view> argv)
+{
+	if (argv.size() != 2) {
+		IConsolePrint(CC_HELP, "renderer3d on|off|left|right|reset|locate: development 3D viewport (artwork incomplete)");
+		return true;
+	}
+	if (argv[1] == "on" || argv[1] == "off") {
+		if (!Renderer3D::SetEnabled(argv[1] == "on")) IConsolePrint(CC_ERROR, "The 3D viewport requires an OpenGL video driver and a 32bpp blitter.");
+	} else if (argv[1] == "left") {
+		Renderer3D::RotateCamera(-1);
+	} else if (argv[1] == "right") {
+		Renderer3D::RotateCamera(1);
+	} else if (argv[1] == "reset") {
+		Renderer3D::RotateCamera(-static_cast<int>(Renderer3D::GetRotation()));
+	} else if (argv[1] == "locate") {
+		if (!Renderer3D::FocusReferenceModel()) IConsolePrint(CC_INFO, "No completed reference-model house on this map.");
+	} else {
+		return false;
+	}
+	return true;
+}
+
 void IConsoleStdLibRegister()
 {
+	IConsole::CmdRegister("renderer3d",              ConRenderer3D);
 	IConsole::CmdRegister("debug_level",             ConDebugLevel);
 	IConsole::CmdRegister("echo",                    ConEcho);
 	IConsole::CmdRegister("echoc",                   ConEchoC);

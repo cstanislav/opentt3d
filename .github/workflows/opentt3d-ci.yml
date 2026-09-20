@@ -1,0 +1,121 @@
+name: OpenTT3D - Build and verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opentt3d-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  linux:
+    name: Linux x86-64 / Mesa
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check integration boundary and authored assets
+        run: |
+          python3 tools/opentt3d/check_boundary.py
+          python3 -m unittest discover -s tools/assets -p 'test_*.py'
+      - name: Build container
+        run: docker build -t opentt3d-dev -f docker/Dockerfile .
+      - name: Build game and run tests
+        run: docker run --rm -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/build.py --build-dir build-linux --jobs 4
+      - name: Render with Mesa in a virtual display
+        run: docker run --init --rm -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --rotation 1
+      - name: Store verification artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-verification
+          path: |
+            build-linux/Testing/Temporary/
+            build-linux/smoke-ci/
+
+  macos:
+    name: macOS arm64
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install runner-only build dependencies
+        run: brew install libpng lzo opusfile
+      - name: Build game and run tests
+        run: python3 tools/opentt3d/build.py --build-dir build-macos --jobs 3
+      - name: Store test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-verification
+          path: build-macos/Testing/Temporary/
+
+  windows:
+    name: Windows ${{ matrix.arch }}
+    runs-on: windows-2022
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            host: x64
+          - arch: x86
+            host: x86
+          - arch: arm64
+            host: x64_arm64
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: OpenTTD/actions/setup-vcpkg@v6
+        id: vcpkg
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      - name: Build native code-generation tools
+        shell: bash
+        run: |
+          cmake -S . -B build-host -GNinja -DOPTION_TOOLS_ONLY=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+          cmake --build build-host --target tools --parallel 4
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: ${{ matrix.host }}
+      - name: Build game
+        shell: bash
+        run: |
+          cmake -S . -B build-windows -GNinja \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo -DOPTION_USE_ASSERTS=ON \
+            -DCMAKE_TOOLCHAIN_FILE="${{ steps.vcpkg.outputs.vcpkg-cmake }}" \
+            -DVCPKG_TARGET_TRIPLET=${{ matrix.arch }}-windows-static \
+            -DHOST_BINARY_DIR="$GITHUB_WORKSPACE/build-host"
+          cmake --build build-windows --target openttd --parallel 4
+      - name: Run native tests
+        if: matrix.arch != 'arm64'
+        shell: bash
+        run: |
+          cmake --build build-windows --target openttd_test --parallel 4
+          python tools/opentt3d/fetch_baseset.py build-windows/baseset
+          ctest --test-dir build-windows --output-on-failure
+      - name: Store build and test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-${{ matrix.arch }}-verification
+          path: |
+            build-windows/Testing/Temporary/
+            build-windows/CMakeFiles/CMakeConfigureLog.yaml

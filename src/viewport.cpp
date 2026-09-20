@@ -90,6 +90,7 @@
 #include "network/network_func.h"
 #include "framerate_type.h"
 #include "viewport_cmd.h"
+#include "renderer3d/viewport_3d.h"
 
 #include <forward_list>
 #include <stack>
@@ -429,6 +430,7 @@ Viewport *IsPtInWindowViewport(const Window *w, int x, int y)
  */
 Point TranslateXYToTileCoord(const Viewport &vp, int x, int y, bool clamp_to_map)
 {
+	if (Renderer3D::IsEnabled() && Renderer3D::GetRotation() != 0) return Renderer3D::PickTerrain(vp, x, y, clamp_to_map);
 	if (!IsInsideBS(x, vp.left, vp.width) || !IsInsideBS(y, vp.top, vp.height)) {
 		Point pt = { -1, -1 };
 		return pt;
@@ -1207,7 +1209,7 @@ static int GetViewportY(Point tile)
 /**
  * Add the landscape to the viewport, i.e. all ground tiles and buildings.
  */
-static void ViewportAddLandscape()
+static void ViewportAddLandscape(bool selections_only = false)
 {
 	assert(_vd.dpi.top <= _vd.dpi.top + _vd.dpi.height);
 	assert(_vd.dpi.left <= _vd.dpi.left + _vd.dpi.width);
@@ -1312,7 +1314,11 @@ static void ViewportAddLandscape()
 				_vd.last_foundation_child[0] = LAST_CHILD_NONE;
 				_vd.last_foundation_child[1] = LAST_CHILD_NONE;
 
-				_tile_type_procs[tile_type]->draw_tile_proc(&_cur_ti);
+				if (!selections_only) {
+					_tile_type_procs[tile_type]->draw_tile_proc(&_cur_ti);
+				} else if (_cur_ti.tile != INVALID_TILE && tile_type != MP_VOID) {
+					std::tie(_cur_ti.tileh, _cur_ti.z) = GetFoundationPixelSlope(_cur_ti.tile);
+				}
 				if (_cur_ti.tile != INVALID_TILE) DrawTileSelection(&_cur_ti);
 			}
 		}
@@ -1369,7 +1375,7 @@ static Rect ExpandRectWithViewportSignMargins(Rect r, ZoomLevel zoom)
  * @param towns List of towns to add.
  * @param small Add small versions of strings.
  */
-static void ViewportAddTownStrings(DrawPixelInfo *dpi, const std::vector<const Town *> &towns, bool small)
+static void ViewportAddTownStrings(const Viewport &vp, DrawPixelInfo *dpi, const std::vector<const Town *> &towns, bool small)
 {
 	ViewportStringFlags flags{};
 	if (small) flags.Set({ViewportStringFlag::Small, ViewportStringFlag::Shadow});
@@ -1381,7 +1387,8 @@ static void ViewportAddTownStrings(DrawPixelInfo *dpi, const std::vector<const T
 	}
 
 	for (const Town *t : towns) {
-		std::string *str = ViewportAddString(dpi, &t->cache.sign, flags, INVALID_COLOUR);
+		ViewportSign sign = Renderer3D::ProjectSign(vp, t->cache.sign, t->xy);
+		std::string *str = ViewportAddString(dpi, &sign, flags, INVALID_COLOUR);
 		if (str == nullptr) continue;
 
 		if (t->larger_town) {
@@ -1398,7 +1405,7 @@ static void ViewportAddTownStrings(DrawPixelInfo *dpi, const std::vector<const T
  * @param signs List of signs to add.
  * @param small Add small versions of strings.
  */
-static void ViewportAddSignStrings(DrawPixelInfo *dpi, const std::vector<const Sign *> &signs, bool small)
+static void ViewportAddSignStrings(const Viewport &vp, DrawPixelInfo *dpi, const std::vector<const Sign *> &signs, bool small)
 {
 	ViewportStringFlags flags{};
 	if (small) flags.Set(ViewportStringFlag::Small);
@@ -1408,7 +1415,8 @@ static void ViewportAddSignStrings(DrawPixelInfo *dpi, const std::vector<const S
 	flags.Set(IsTransparencySet(TO_SIGNS) ? ViewportStringFlag::TransparentRect : ViewportStringFlag::ColourRect);
 
 	for (const Sign *si : signs) {
-		std::string *str = ViewportAddString(dpi, &si->sign, (si->owner == OWNER_DEITY) ? deity_flags : flags,
+		ViewportSign sign = Renderer3D::ProjectSign(vp, si->sign, si->x, si->y, si->z);
+		std::string *str = ViewportAddString(dpi, &sign, (si->owner == OWNER_DEITY) ? deity_flags : flags,
 			(si->owner == OWNER_NONE) ? COLOUR_GREY : (si->owner == OWNER_DEITY ? INVALID_COLOUR : _company_colours[si->owner]));
 		if (str == nullptr) continue;
 
@@ -1422,14 +1430,15 @@ static void ViewportAddSignStrings(DrawPixelInfo *dpi, const std::vector<const S
  * @param stations List of stations to add.
  * @param small Add small versions of strings.
  */
-static void ViewportAddStationStrings(DrawPixelInfo *dpi, const std::vector<const BaseStation *> &stations, bool small)
+static void ViewportAddStationStrings(const Viewport &vp, DrawPixelInfo *dpi, const std::vector<const BaseStation *> &stations, bool small)
 {
 	/* Transparent station signs have colour text instead of a colour panel. */
 	ViewportStringFlags flags{IsTransparencySet(TO_SIGNS) ? ViewportStringFlag::TextColour : ViewportStringFlag::ColourRect};
 	if (small) flags.Set(ViewportStringFlag::Small);
 
 	for (const BaseStation *st : stations) {
-		std::string *str = ViewportAddString(dpi, &st->sign, flags, (st->owner == OWNER_NONE || !st->IsInUse()) ? COLOUR_GREY : _company_colours[st->owner]);
+		ViewportSign sign = Renderer3D::ProjectSign(vp, st->sign, st->xy);
+		std::string *str = ViewportAddString(dpi, &sign, flags, (st->owner == OWNER_NONE || !st->IsInUse()) ? COLOUR_GREY : _company_colours[st->owner]);
 		if (str == nullptr) continue;
 
 		if (Station::IsExpected(st)) { /* Station */
@@ -1440,10 +1449,11 @@ static void ViewportAddStationStrings(DrawPixelInfo *dpi, const std::vector<cons
 	}
 }
 
-static void ViewportAddKdtreeSigns(DrawPixelInfo *dpi)
+static void ViewportAddKdtreeSigns(const Viewport &vp, DrawPixelInfo *dpi)
 {
 	Rect search_rect{ dpi->left, dpi->top, dpi->left + dpi->width, dpi->top + dpi->height };
 	search_rect = ExpandRectWithViewportSignMargins(search_rect, dpi->zoom);
+	if (Renderer3D::IsEnabled() && Renderer3D::GetRotation() != 0) search_rect = {-INT_MAX / 2, -INT_MAX / 2, INT_MAX / 2, INT_MAX / 2};
 
 	bool show_stations = HasBit(_display_opt, DO_SHOW_STATION_NAMES) && _game_mode != GM_MENU;
 	bool show_waypoints = HasBit(_display_opt, DO_SHOW_WAYPOINT_NAMES) && _game_mode != GM_MENU;
@@ -1513,13 +1523,13 @@ static void ViewportAddKdtreeSigns(DrawPixelInfo *dpi)
 	bool small = dpi->zoom >= ZoomLevel::Out4x;
 
 	/* Layering order (bottom to top): Town names, signs, stations */
-	ViewportAddTownStrings(dpi, towns, small);
+	ViewportAddTownStrings(vp, dpi, towns, small);
 
 	/* Do not draw signs nor station names if they are set invisible */
 	if (IsInvisibilitySet(TO_SIGNS)) return;
 
-	ViewportAddSignStrings(dpi, signs, small);
-	ViewportAddStationStrings(dpi, stations, small);
+	ViewportAddSignStrings(vp, dpi, signs, small);
+	ViewportAddStationStrings(vp, dpi, stations, small);
 }
 
 
@@ -1828,10 +1838,15 @@ void ViewportDoDraw(const Viewport &vp, int left, int top, int right, int bottom
 	_vd.dpi.dst_ptr = BlitterFactory::GetCurrentBlitter()->MoveTo(_cur_dpi->dst_ptr, x - _cur_dpi->left, y - _cur_dpi->top);
 	AutoRestoreBackup dpi_backup(_cur_dpi, &_vd.dpi);
 
-	ViewportAddLandscape();
-	ViewportAddVehicles(&_vd.dpi);
+	bool rendered_3d = Renderer3D::DrawViewport(vp, _vd.dpi);
+	if (!rendered_3d) {
+		ViewportAddLandscape();
+		ViewportAddVehicles(&_vd.dpi);
+	} else if (Renderer3D::GetRotation() == 0) {
+		ViewportAddLandscape(true);
+	}
 
-	ViewportAddKdtreeSigns(&_vd.dpi);
+	ViewportAddKdtreeSigns(vp, &_vd.dpi);
 
 	DrawTextEffects(&_vd.dpi);
 
@@ -2294,6 +2309,7 @@ static bool CheckClickOnViewportSign(const Viewport &vp, int x, int y)
 
 	Rect search_rect{ x - 1, y - 1, x + 1, y + 1 };
 	search_rect = ExpandRectWithViewportSignMargins(search_rect, vp.zoom);
+	if (Renderer3D::IsEnabled() && Renderer3D::GetRotation() != 0) search_rect = {-INT_MAX / 2, -INT_MAX / 2, INT_MAX / 2, INT_MAX / 2};
 
 	bool show_stations = HasBit(_display_opt, DO_SHOW_STATION_NAMES) && !IsInvisibilitySet(TO_SIGNS);
 	bool show_waypoints = HasBit(_display_opt, DO_SHOW_WAYPOINT_NAMES) && !IsInvisibilitySet(TO_SIGNS);
@@ -2318,29 +2334,36 @@ static bool CheckClickOnViewportSign(const Viewport &vp, int x, int y)
 				if (facilities.None()) facilities = STATION_FACILITY_GHOST;
 				if (!facilities.Any(_facility_display_opt)) break;
 
-				if (CheckClickOnViewportSign(vp, x, y, &st->sign)) last_st = st;
+				ViewportSign sign = Renderer3D::ProjectSign(vp, st->sign, st->xy);
+				if (CheckClickOnViewportSign(vp, x, y, &sign)) last_st = st;
 				break;
 			}
 
-			case ViewportSignKdtreeItem::VKI_WAYPOINT:
+			case ViewportSignKdtreeItem::VKI_WAYPOINT: {
 				if (!show_waypoints) break;
 				st = BaseStation::Get(std::get<StationID>(item.id));
 				if (!show_competitors && _local_company != st->owner && st->owner != OWNER_NONE) break;
-				if (CheckClickOnViewportSign(vp, x, y, &st->sign)) last_st = st;
+				ViewportSign sign = Renderer3D::ProjectSign(vp, st->sign, st->xy);
+				if (CheckClickOnViewportSign(vp, x, y, &sign)) last_st = st;
 				break;
+			}
 
-			case ViewportSignKdtreeItem::VKI_TOWN:
+			case ViewportSignKdtreeItem::VKI_TOWN: {
 				if (!show_towns) break;
 				t = Town::Get(std::get<TownID>(item.id));
-				if (CheckClickOnViewportSign(vp, x, y, &t->cache.sign)) last_t = t;
+				ViewportSign sign = Renderer3D::ProjectSign(vp, t->cache.sign, t->xy);
+				if (CheckClickOnViewportSign(vp, x, y, &sign)) last_t = t;
 				break;
+			}
 
-			case ViewportSignKdtreeItem::VKI_SIGN:
+			case ViewportSignKdtreeItem::VKI_SIGN: {
 				if (!show_signs) break;
 				si = Sign::Get(std::get<SignID>(item.id));
 				if (!show_competitors && _local_company != si->owner && si->owner != OWNER_DEITY) break;
-				if (CheckClickOnViewportSign(vp, x, y, &si->sign)) last_si = si;
+				ViewportSign sign = Renderer3D::ProjectSign(vp, si->sign, si->x, si->y, si->z);
+				if (CheckClickOnViewportSign(vp, x, y, &sign)) last_si = si;
 				break;
+			}
 
 			default:
 				NOT_REACHED();

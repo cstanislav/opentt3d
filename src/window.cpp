@@ -8,6 +8,7 @@
 /** @file window.cpp Windowing system, widgets and events */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
 #include "company_func.h"
 #include "gfx_func.h"
 #include "console_func.h"
@@ -2768,6 +2769,7 @@ static void HandleAutoscroll()
 	/* here allows scrolling in both x and y axis */
 	/* If we succeed at scrolling in any direction, stop following a vehicle. */
 	static const int SCROLLSPEED = 3;
+	Point old_position{w->viewport->dest_scrollpos_x, w->viewport->dest_scrollpos_y};
 	if (x - 15 < 0) {
 		w->viewport->CancelFollow(*w);
 		w->viewport->dest_scrollpos_x += ScaleByZoom((x - 15) * SCROLLSPEED, vp->zoom);
@@ -2782,6 +2784,9 @@ static void HandleAutoscroll()
 		w->viewport->CancelFollow(*w);
 		w->viewport->dest_scrollpos_y += ScaleByZoom((15 - (vp->height - y)) * SCROLLSPEED, vp->zoom);
 	}
+	Point delta = Renderer3D::UnrotateScroll({w->viewport->dest_scrollpos_x - old_position.x, w->viewport->dest_scrollpos_y - old_position.y});
+	w->viewport->dest_scrollpos_x = old_position.x + delta.x;
+	w->viewport->dest_scrollpos_y = old_position.y + delta.y;
 }
 
 enum MouseClick : uint8_t {
@@ -2803,8 +2808,9 @@ static void ScrollMainViewport(int x, int y)
 {
 	if (_game_mode != GM_MENU && _game_mode != GM_BOOTSTRAP) {
 		Window *w = GetMainWindow();
-		w->viewport->dest_scrollpos_x += ScaleByZoom(x, w->viewport->zoom);
-		w->viewport->dest_scrollpos_y += ScaleByZoom(y, w->viewport->zoom);
+		Point delta = Renderer3D::UnrotateScroll({ScaleByZoom(x, w->viewport->zoom), ScaleByZoom(y, w->viewport->zoom)});
+		w->viewport->dest_scrollpos_x += delta.x;
+		w->viewport->dest_scrollpos_y += delta.y;
 	}
 }
 

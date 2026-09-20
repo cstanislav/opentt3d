@@ -16,7 +16,10 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[2]
     pin = json.loads((root / "opentt3d/upstream.json").read_text())["opengfx"]
-    with urllib.request.urlopen(pin["url"], timeout=120) as response:
+    request = urllib.request.Request(pin["url"], headers={
+        "User-Agent": "OpenTT3D/0.1.0 (https://github.com/cstanislav/opentt3d)",
+    })
+    with urllib.request.urlopen(request, timeout=120) as response:
         data = response.read()
     actual = hashlib.sha256(data).hexdigest()
     if actual != pin["sha256"]:

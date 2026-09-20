@@ -44,6 +44,31 @@ python3 tools/opentt3d/fetch_baseset.py build-macos/baseset
 The build helper does not install host packages. Native release packaging uses
 GitHub-hosted macOS and Windows runners; Linux packaging uses a container.
 
+### Try the development renderer
+
+On macOS, from the repository root:
+
+```sh
+OPENTT3D_RENDERER=1 build-macos/openttd \
+  -X -x -c build-macos/opentt3d.cfg \
+  -v cocoa-opengl -b 40bpp-anim -I OpenGFX
+```
+
+On Linux, the video driver is named `sdl-opengl`. Use the existing console
+(backquote) and `renderer3d on` / `renderer3d off` to switch rendering modes.
+`Ctrl+[` and `Ctrl+]` rotate; `Ctrl+\` resets the camera. These shortcuts can be
+rebound in the original hotkey configuration. `renderer3d locate` finds one of
+the authored building types when present (introduced in 1957 and 1968).
+
+The current artwork is a development subset; magenta objects identify unfinished
+coverage. See [status](STATUS.md) and [verified results](VERIFICATION.md).
+
+To export the authored source models for inspection in a glTF viewer:
+
+```sh
+python3 tools/assets/compile_models.py assets/3d/models.json --gltf build-models
+```
+
 ## Upstream tracking
 
 `opentt3d/upstream.json` pins both upstream projects by tag and full commit.

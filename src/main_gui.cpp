@@ -8,6 +8,7 @@
 /** @file main_gui.cpp Handling of the main viewport. */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
 #include "currency.h"
 #include "spritecache.h"
 #include "window_gui.h"
@@ -208,6 +209,9 @@ enum GlobalHotKeys : int32_t {
 	GHK_CHAT_SERVER,
 	GHK_CLOSE_NEWS,
 	GHK_CLOSE_ERROR,
+	GHK_ROTATE_LEFT,
+	GHK_ROTATE_RIGHT,
+	GHK_ROTATE_RESET,
 };
 
 struct MainWindow : Window
@@ -333,6 +337,12 @@ struct MainWindow : Window
 			}
 
 			case GHK_RESET_OBJECT_TO_PLACE: ResetObjectToPlace(); break;
+			case GHK_ROTATE_LEFT:
+			case GHK_ROTATE_RIGHT:
+			case GHK_ROTATE_RESET:
+				if (!Renderer3D::IsEnabled()) return ES_NOT_HANDLED;
+				Renderer3D::RotateCamera(hotkey == GHK_ROTATE_RESET ? -static_cast<int>(Renderer3D::GetRotation()) : (hotkey == GHK_ROTATE_LEFT ? -1 : 1));
+				break;
 			case GHK_DELETE_WINDOWS: CloseNonVitalWindows(); break;
 			case GHK_DELETE_NONVITAL_WINDOWS: CloseAllNonVitalWindows(); break;
 			case GHK_DELETE_ALL_MESSAGES: DeleteAllMessages(); break;
@@ -429,8 +439,9 @@ struct MainWindow : Window
 
 	void OnScroll(Point delta) override
 	{
-		this->viewport->scrollpos_x += ScaleByZoom(delta.x, this->viewport->zoom);
-		this->viewport->scrollpos_y += ScaleByZoom(delta.y, this->viewport->zoom);
+		delta = Renderer3D::UnrotateScroll({ScaleByZoom(delta.x, this->viewport->zoom), ScaleByZoom(delta.y, this->viewport->zoom)});
+		this->viewport->scrollpos_x += delta.x;
+		this->viewport->scrollpos_y += delta.y;
 		this->viewport->dest_scrollpos_x = this->viewport->scrollpos_x;
 		this->viewport->dest_scrollpos_y = this->viewport->scrollpos_y;
 		this->refresh_timeout.Reset();
@@ -522,6 +533,9 @@ struct MainWindow : Window
 		Hotkey({WKC_CTRL | WKC_SHIFT | WKC_RETURN, WKC_CTRL | WKC_SHIFT | 'T'}, "chat_server", GHK_CHAT_SERVER),
 		Hotkey(WKC_SPACE, "close_news", GHK_CLOSE_NEWS),
 		Hotkey(WKC_SPACE, "close_error", GHK_CLOSE_ERROR),
+		Hotkey(WKC_L_BRACKET | WKC_CTRL, "3d_rotate_left", GHK_ROTATE_LEFT),
+		Hotkey(WKC_R_BRACKET | WKC_CTRL, "3d_rotate_right", GHK_ROTATE_RIGHT),
+		Hotkey(WKC_BACKSLASH | WKC_CTRL, "3d_rotate_reset", GHK_ROTATE_RESET),
 	}};
 };
 
