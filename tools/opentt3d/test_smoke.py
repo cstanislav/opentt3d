@@ -1,12 +1,17 @@
 """Regression tests for accepting only completely written game screenshots."""
 
 from pathlib import Path
+import errno
 import random
 import struct
+import subprocess
+import sys
 import tempfile
 import unittest
+from unittest import mock
 import zlib
 
+import smoke
 from smoke import completed_png_size
 
 
@@ -24,6 +29,29 @@ def png_fixture():
 
 
 class ScreenshotCompletionTests(unittest.TestCase):
+    def test_failed_memory_report_still_reaps_the_live_child(self):
+        child = subprocess.Popen([sys.executable,"-c","import time; time.sleep(30)"])
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                build = root / "build"
+                build.mkdir()
+                (build / ("opentt3d.exe" if sys.platform == "win32" else "opentt3d")).touch()
+                monitor = mock.Mock()
+                monitor.sample.side_effect = RuntimeError("sampled memory exceeded the limit")
+                monitor.close.side_effect = OSError(errno.ENOSPC,"memory report disk is full")
+                argv = ["smoke.py","--build-dir",str(build),"--output",str(root / "review"),"--memory-limit-mib","64","--timeout","2"]
+                with mock.patch.object(sys,"argv",argv), mock.patch("smoke.subprocess.Popen",return_value=child), mock.patch("process_memory.MemoryMonitor",return_value=monitor):
+                    with self.assertRaises(OSError) as raised:
+                        smoke.main()
+                self.assertEqual(raised.exception.errno,errno.ENOSPC)
+                monitor.sample.assert_called_once_with(child.pid)
+                self.assertIsNotNone(child.poll(),"A failed memory report must not orphan the native process")
+        finally:
+            if child.poll() is None:
+                child.kill()
+            child.wait(timeout=10)
+
     def test_partial_write_is_not_a_completed_screenshot(self):
         image = png_fixture()
         with tempfile.TemporaryDirectory() as directory:

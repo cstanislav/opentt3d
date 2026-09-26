@@ -10,6 +10,7 @@ class TrainCatalogueInfo extends AIInfo {
 	function CreateInstance() { return "TrainCatalogue"; }
 	function UseAsRandomAI()  { return false; }
 	function GetSettings() {
+		AddSetting({name = "review_curves", description = "Add a four-corner review detour", min_value = 0, max_value = 1, default_value = 0, flags = CONFIG_NONE});
 		AddSetting({name = "review_rail_type", description = "Original railtype", min_value = 0, max_value = 3, default_value = 1, flags = CONFIG_NONE});
 		AddSetting({name = "review_engine", description = "Requested original locomotive, or automatic selection", min_value = -1, max_value = 115, default_value = -1, flags = CONFIG_NONE});
 		AddSetting({name = "review_first", description = "First original wagon engine ID", min_value = 0, max_value = 115, default_value = 27, flags = CONFIG_NONE});

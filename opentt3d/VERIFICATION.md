@@ -21,6 +21,27 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Disk-failure cleanup regression:** a failed final memory-report write could
+  escape the smoke harness's `finally` block before terminating the game. The
+  observed orphaned Toyland wagon52 run was stopped; its interrupted evidence stays
+  in `pass1-pitch-loaded-toyland-0-52-opengl`. Shutdown now runs even if memory-report
+  writing fails. A real sleeping child plus injected `ENOSPC` verifies reaping, and
+  all9 harness tests pass. Complete GPU runs are serialized to limit host swap pressure.
+  Two incomplete model PAMs are preserved by the lossless cleanup tool; corrupted
+  captures are not accepted as rendered evidence. Verified duplicate pinned archives
+  are shared by symlink, retaining their SHA256 manifests and original source art.
+- **Quiet application launch:** `pass1-1169-launchservices-hidden` launches the frozen
+  development bundle through LaunchServices, proves `active=false, key=false,
+  visible=false, policy=2`, captures2560×1600, and passes tile picking plus exact
+  4,096,000-pixel world-atlas comparisons. Sampled peak4,559,819,144bytes. This proves
+  background bundle presentation; foreground input remains an independent open item.
+- **Real curved freight route:** `pass1-pitch-curves-electric-fixture` services coal
+  with locomotive23/wagon29, traversing four connecting curve tiles, a bridge and a
+  tunnel both full30/30 and empty0/30. All three cargo traversal masks are3, with
+  acceptance8, delivery, return and holding observed through public NoAI. Renderer
+  curve/support follow-up remains pending. `--curve-route` leaves a recorded detour
+  between the existing bridge and tunnel and checks the actual journey.
+
 - **Public-NoAI oil-rig fixtures:** `pass1-oilrig-construction-fixture` funds original
   industry5 at10,10 and saves ordinary day0/16/30/44 construction. The aircraft
   harness now supports `--oilrig`, builds a helidepot, funds a water-site rig and

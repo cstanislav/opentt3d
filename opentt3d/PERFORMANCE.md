@@ -17,8 +17,11 @@ checks. Complete-workload and interactive review remain in progress.
 without crossing6GiB:6,290,298,928 sampled bytes across9,328 samples. It passes all
 28,056 voxel model views and reaches engine67's added pitch matrix before the harness
 timeout. This is a retained **incomplete timed-out run**, not a full pass. The matching
-pre-residency pitch workload failed at6,463,543,728bytes. Both backend repetitions use
-the existing7,200s full-matrix allowance with the unchanged6GiB guard. Sustained frame
+pre-residency pitch workload failed at6,463,543,728bytes. The matched disabled-
+retirement control, `pass1-residency-disabled-vulkan-ci`, again crosses the guard at
+6,450,419,760bytes after104 samples. The first7,200s retry was interrupted during the
+host disk-space incident and has no completed validation manifest. GPU repetitions
+are being serialized with the unchanged6GiB guard and7,200s allowance. Sustained frame
 pacing, multiple viewports and complete-world CPU cache growth remain open.
 
 The catalogue contains11,422,202 triangles. Both9,000-frame forest production/regrowth

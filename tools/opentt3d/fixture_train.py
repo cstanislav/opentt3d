@@ -22,6 +22,7 @@ def main():
     parser.add_argument("--last-engine", type=int, choices=range(116), default=53)
     parser.add_argument("--hold", action="store_true", help="Stop the verified returning consist through a normal public command")
     parser.add_argument("--clearance-route", action="store_true", help="Operate the consist across a real bridge with ramps and a tunnel built through a raised hill")
+    parser.add_argument("--curve-route", action="store_true", help="Add a four-corner detour between the bridge and tunnel for real heading/rail-join observations")
     parser.add_argument("--cargo-source", type=int, choices=range(37), help="Fund this original producer and verify real cargo service with a single selected wagon")
     parser.add_argument("--cargo-destination", type=int, choices=range(37), help="Original accepting industry for --cargo-source")
     parser.add_argument("--cargo-town", action="store_true", help="Fund an ordinary town by the delivery station for town-accepted cargo")
@@ -38,6 +39,8 @@ def main():
         parser.error("Cargo review requires a producer and an accepting industry or town")
     if args.cargo_feeder is not None and (args.cargo_source is None or args.cargo_feeder in (args.cargo_source,args.cargo_destination)):
         parser.error("A cargo feeder needs a distinct input producer and processing source")
+    if args.curve_route and args.cargo_feeder is not None:
+        parser.error("The curve detour occupies the optional feeder industry's review site")
     if args.cargo_source is not None and (args.first_engine != args.last_engine or args.cargo_source == args.cargo_destination):
         parser.error("Cargo review needs one wagon engine and distinct industry types")
     root = Path(__file__).resolve().parents[2]
@@ -86,7 +89,7 @@ pause_on_join = false
     source = args.cargo_source if args.cargo_source is not None else -1
     destination = -1 if args.cargo_town else args.cargo_destination if args.cargo_destination is not None else 1
     feeder = args.cargo_feeder if args.cargo_feeder is not None else -1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_clearance={int(args.clearance_route)},review_source={source},review_destination={destination},review_feeder={feeder}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_clearance={int(args.clearance_route)},review_curves={int(args.curve_route)},review_source={source},review_destination={destination},review_feeder={feeder}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave train-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     for state in ("empty", "full"):
@@ -142,6 +145,9 @@ pause_on_join = false
                         any(not args.first_engine <= wagon["engine"] <= args.last_engine for wagon in manifest["wagons"]) or
                         (args.locomotive is not None and manifest["locomotive"] != args.locomotive)):
                         raise RuntimeError("Train fixture did not verify its selected operating consist")
+                    if args.curve_route and (not manifest.get("curve_route") or not manifest.get("curve_seen") or
+                        (args.cargo_source is not None and manifest.get("curve_cargo_states") != 3)):
+                        raise RuntimeError("Train fixture did not traverse the actual curve detour in its required cargo states")
                     if args.clearance_route and (not manifest.get("clearance_route") or not manifest.get("bridge_seen") or not manifest.get("tunnel_seen") or
                                                  manifest.get("tunnel_first", -1) < 0 or manifest.get("tunnel_last", -1) <= manifest["tunnel_first"]):
                         raise RuntimeError("Train fixture did not verify its original bridge and tunnel route")

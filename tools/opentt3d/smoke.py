@@ -863,24 +863,28 @@ server_advertise = false
             if args.keep_open:
                 return
         finally:
-            if memory is not None:
-                memory.close()
-            if not args.keep_open or not screenshot.exists():
-                if args.macos_bundle:
-                    match = re.search(r"OpenTT3D: Cocoa process (\d+)", (output / "run.log").read_text())
-                    if match:
+            try:
+                if memory is not None:
+                    memory.close()
+            finally:
+                # A full evidence disk must not leave the native game running
+                # after the memory sampler or its final report fails to write.
+                if not args.keep_open or not screenshot.exists():
+                    if args.macos_bundle:
+                        match = re.search(r"OpenTT3D: Cocoa process (\d+)", (output / "run.log").read_text())
+                        if match:
+                            try:
+                                os.kill(int(match[1]), signal.SIGTERM)
+                            except ProcessLookupError:
+                                pass
+                    if process.poll() is None:
+                        if not args.macos_bundle:
+                            process.terminate()
                         try:
-                            os.kill(int(match[1]), signal.SIGTERM)
-                        except ProcessLookupError:
-                            pass
-                if process.poll() is None:
-                    if not args.macos_bundle:
-                        process.terminate()
-                    try:
-                        process.wait(timeout=10)
-                    except subprocess.TimeoutExpired:
-                        process.kill()
-                        process.wait()
+                            process.wait(timeout=10)
+                        except subprocess.TimeoutExpired:
+                            process.kill()
+                            process.wait()
 
 
 if __name__ == "__main__":

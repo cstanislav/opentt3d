@@ -23,6 +23,7 @@ function TrainCatalogue::Start()
 		local rail_type = AIController.GetSetting("review_rail_type"), requested = AIController.GetSetting("review_engine");
 		local service = AIController.GetSetting("review_source") >= 0;
 		local clearance = AIController.GetSetting("review_clearance") != 0;
+		local curves = AIController.GetSetting("review_curves") != 0;
 		this.Require(AIRail.IsRailTypeAvailable(rail_type),"selected railtype is available");
 		AIRail.SetCurrentRailType(rail_type);
 		local engines = AIEngineList(AIVehicle.VT_RAIL), locomotive = -1, power = -1, wagons = [];
@@ -72,8 +73,15 @@ function TrainCatalogue::Start()
 		this.Require(AIRail.BuildRailStation(east,AIRail.RAILTRACK_NE_SW,delivery_platforms,8,AIStation.STATION_NEW),"build east terminus");
 		for (local x = 2; x <= 69; ++x) {
 			if ((x >= 5 && x < 13) || (x >= 57 && x < 65)) continue;
+			if (curves && x >= 29 && x <= 35) continue;
 			if (clearance && ((x >= 20 && x <= 27) || (x >= tunnel_first && x <= tunnel_last))) continue;
 			this.Require(AIRail.BuildRailTrack(this.Tile(x,4),AIRail.RAILTRACK_NE_SW),"connect review line");
+		}
+		if (curves) {
+			local path = [[28,4],[29,4],[29,5],[29,6],[29,7],[29,8],[30,8],[31,8],[32,8],[33,8],[34,8],[35,8],[35,7],[35,6],[35,5],[35,4],[36,4]];
+			for (local i = 1; i < path.len()-1; ++i) {
+				this.Require(AIRail.BuildRail(this.Tile(path[i-1][0],path[i-1][1]),this.Tile(path[i][0],path[i][1]),this.Tile(path[i+1][0],path[i+1][1])),"build real connecting curve detour");
+			}
 		}
 		local train = AIVehicle.BuildVehicle(depot,locomotive);
 		this.Require(AIVehicle.IsValidVehicle(train),"build selected locomotive");
@@ -99,10 +107,11 @@ function TrainCatalogue::Start()
 		this.Require(AIOrder.AppendOrder(train,west,AIOrder.OF_NONE),"order west station");
 		this.Require(AIVehicle.StartStopVehicle(train),"start original consist");
 		this.built = true;
-		local east_seen = false, returned = false, peak_speed = 0, bridge_seen = false, tunnel_seen = false;
+		local east_seen = false, returned = false, peak_speed = 0, bridge_seen = false, tunnel_seen = false, curve_seen = false;
 		for (local tick = 0; tick < 3200 && !returned; tick += 4) {
 			if (!AIVehicle.IsValidVehicle(train) || AIVehicle.GetState(train) == AIVehicle.VS_CRASHED) throw "review train was lost";
 			local dx = AIMap.GetTileX(AIVehicle.GetLocation(train))-this.x;
+			curve_seen = curve_seen || (curves && dx >= 29 && dx <= 35 && AIMap.GetTileY(AIVehicle.GetLocation(train)) > this.y+4);
 			local speed = AIVehicle.GetCurrentSpeed(train);
 			if (speed > peak_speed) peak_speed = speed;
 			bridge_seen = bridge_seen || (dx >= 20 && dx <= 27);
@@ -113,6 +122,7 @@ function TrainCatalogue::Start()
 		}
 		if (!returned || peak_speed <= 0) throw "the attached consist did not complete both terminus journeys";
 		if (clearance && !(bridge_seen && tunnel_seen)) throw "the consist did not traverse the actual bridge and tunnel";
+		if (curves && !curve_seen) throw "the consist did not traverse the actual curve detour";
 		local held = AIController.GetSetting("review_hold") != 0;
 		if (held) {
 			this.Require(AIVehicle.StartStopVehicle(train),"hold the verified returning consist");
@@ -122,6 +132,7 @@ function TrainCatalogue::Start()
 		AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+rail_type+
 			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
 			",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"clearance_route\":"+(clearance ? "true" : "false")+
+			",\"curve_route\":"+(curves ? "true" : "false")+",\"curve_seen\":"+(curve_seen ? "true" : "false")+
 			",\"bridge_seen\":"+(clearance && bridge_seen ? "true" : "false")+",\"tunnel_seen\":"+(tunnel_seen ? "true" : "false")+
 			",\"tunnel_first\":"+tunnel_first+",\"tunnel_last\":"+tunnel_last+"}");
 	} catch (error) {
@@ -157,12 +168,17 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 	this.Require(AIVehicle.StartStopVehicle(train),"start the original cargo train");
 	local full = false, delivered = false, returned = false, peak_speed = 0;
 	local clearance = AIController.GetSetting("review_clearance") != 0, bridge_states = 0, tunnel_states = 0;
+	local curves = AIController.GetSetting("review_curves") != 0, curve_states = 0;
 	local pickup_station = AIStation.GetStationID(west), delivery_station = AIStation.GetStationID(east);
 	local capacity = AIVehicle.GetCapacity(train,cargo);
 	if (capacity <= 0) throw "attached train has no cargo capacity";
 	for (local tick = 0; tick < 6000 && !returned; tick += 2) {
 		if (!AIVehicle.IsValidVehicle(train) || AIVehicle.GetState(train) == AIVehicle.VS_CRASHED) throw "cargo train was lost";
 		local amount = AIVehicle.GetCargoLoad(train,cargo), speed = AIVehicle.GetCurrentSpeed(train);
+		if (curves) {
+			local location = AIVehicle.GetLocation(train), dx = AIMap.GetTileX(location)-this.x;
+			if (dx >= 29 && dx <= 35 && AIMap.GetTileY(location) > this.y+4) curve_states = curve_states | (amount == capacity ? 1 : delivered && amount == 0 ? 2 : 0);
+		}
 		if (clearance) {
 			local dx = AIMap.GetTileX(AIVehicle.GetLocation(train))-this.x;
 			local cargo_state = amount == capacity ? 1 : delivered && amount == 0 ? 2 : 0;
@@ -196,6 +212,7 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 	}
 	if (!full || !delivered || !returned || peak_speed <= 0) throw "cargo train did not fully load, deliver and return";
 	if (clearance && (bridge_states != 3 || tunnel_states != 3)) throw "cargo train did not cross the actual bridge and tunnel both full and empty";
+	if (curves && curve_states != 3) throw "cargo train did not traverse the actual curves both full and empty";
 	if (feeder != null && !feeder.delivered) throw "processing input was not observed loading and unloading at its accepting industry";
 	local held = AIController.GetSetting("review_hold") != 0;
 	if (held) {
@@ -209,6 +226,7 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 		",\"source_type\":"+source+",\"destination_type\":"+destination+",\"feeder_type\":"+feeder_type+
 		",\"feeder_delivered\":"+(feeder != null && feeder.delivered ? "true" : "false")+",\"full\":true,\"delivered\":true"+
 		",\"clearance_route\":"+(clearance ? "true" : "false")+",\"bridge_seen\":"+(bridge_states == 3 ? "true" : "false")+
+		",\"curve_route\":"+(curves ? "true" : "false")+",\"curve_seen\":"+(curve_states == 3 ? "true" : "false")+",\"curve_cargo_states\":"+curve_states+
 		",\"tunnel_seen\":"+(tunnel_states == 3 ? "true" : "false")+",\"bridge_cargo_states\":"+bridge_states+",\"tunnel_cargo_states\":"+tunnel_states+
 		",\"tunnel_first\":"+tunnel_first+",\"tunnel_last\":"+tunnel_last+"}");
 }
