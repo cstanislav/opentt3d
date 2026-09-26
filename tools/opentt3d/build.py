@@ -32,7 +32,7 @@ def main():
         return
     subprocess.run(["cmake", "--build", str(build), "--parallel", str(args.jobs)], check=True)
     pin = json.loads((Path(__file__).resolve().parents[2] / "opentt3d/upstream.json").read_text())
-    baseset = build / "baseset" / f"opengfx-{pin['opengfx']['tag']}.tar"
+    baseset = build / "baseset" / pin["graphics"]["filename"]
     if not baseset.is_file():
         subprocess.run([sys.executable, str(Path(__file__).with_name("fetch_baseset.py")), str(build / "baseset")], check=True)
     subprocess.run(["ctest", "--test-dir", str(build), "--output-on-failure"], check=True)

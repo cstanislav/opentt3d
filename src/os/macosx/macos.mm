@@ -11,6 +11,7 @@
 #include "../../core/bitmath_func.hpp"
 #include "../../rev.h"
 #include "macos.h"
+#include "autorelease_pool.hpp"
 #include "../../string_func.h"
 #include "../../fileio_func.h"
 #include <pthread.h>
@@ -44,6 +45,9 @@ typedef struct {
 #ifdef WITH_COCOA
 static NSAutoreleasePool *_ottd_autorelease_pool;
 #endif
+
+CocoaAutoreleasePool::CocoaAutoreleasePool() : pool([[NSAutoreleasePool alloc] init]) {}
+CocoaAutoreleasePool::~CocoaAutoreleasePool() { [static_cast<NSAutoreleasePool *>(this->pool) drain]; }
 
 /**
  * Get the version of the MacOS we are running under. Code adopted

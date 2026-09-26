@@ -1,4 +1,5 @@
 add_files(
+    autorelease_pool.hpp
     crashlog_osx.cpp
     font_osx.cpp
     font_osx.h

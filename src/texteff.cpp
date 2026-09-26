@@ -12,10 +12,14 @@
 #include "transparency.h"
 #include "strings_func.h"
 #include "viewport_func.h"
+#include "landscape.h"
 #include "settings_type.h"
 #include "command_type.h"
 #include "timer/timer.h"
 #include "timer/timer_window.h"
+#include "renderer3d/viewport_3d.h"
+#include <array>
+#include <optional>
 
 #include "safeguards.h"
 
@@ -24,6 +28,7 @@ struct TextEffect : public ViewportSign {
 	TextEffectMode mode; ///< Type of text effect.
 	uint8_t duration; ///< How long the text effect should stay, in ticks (applies only when mode == TE_RISING)
 	EncodedString msg; ///< Encoded message for text effect.
+	std::optional<std::array<int,3>> world_position; ///< Presentation-only anchor; never camera/screen coordinates.
 
 	/** Reset the text effect */
 	void Reset()
@@ -31,6 +36,7 @@ struct TextEffect : public ViewportSign {
 		this->MarkDirty();
 		this->width_normal = 0;
 		this->mode = TE_INVALID;
+		this->world_position.reset();
 	}
 
 	inline bool IsValid() const { return this->mode != TE_INVALID; }
@@ -56,12 +62,33 @@ TextEffectID AddTextEffect(EncodedString &&msg, int center, int y, uint8_t durat
 	te.msg = std::move(msg);
 	te.duration = duration;
 	te.mode = mode;
+	te.world_position.reset();
 
 	/* Make sure we only dirty the new area */
 	te.width_normal = 0;
 	te.UpdatePosition(center, y, te.msg.GetDecodedString());
 
 	return static_cast<TextEffectID>(it - std::begin(_text_effects));
+}
+
+TextEffectID AddTextEffectAtWorld(EncodedString &&msg, int x, int y, int z, uint8_t duration, TextEffectMode mode)
+{
+	Point point = RemapCoords(x,y,z);
+	TextEffectID id = AddTextEffect(std::move(msg),point.x,point.y,duration,mode);
+	if (id != INVALID_TE_ID) _text_effects[id].world_position = std::array<int,3>{x,y,z};
+	return id;
+}
+
+/** Resolve against each viewport's current pose at draw time. The legacy sign
+ * still carries the original font offsets and upward text-effect animation. */
+ViewportSign GetTextEffectSign(TextEffectID id, const Viewport *viewport)
+{
+	const TextEffect &te = _text_effects[id];
+	if (viewport != nullptr && te.world_position) {
+		const auto &[x,y,z] = *te.world_position;
+		return Renderer3D::ProjectSign(*viewport,te,x,y,z);
+	}
+	return te;
 }
 
 void UpdateTextEffect(TextEffectID te_id, EncodedString &&msg)
@@ -114,7 +141,7 @@ void InitTextEffects()
 	_text_effects.shrink_to_fit();
 }
 
-void DrawTextEffects(DrawPixelInfo *dpi)
+void DrawTextEffects(DrawPixelInfo *dpi, const Viewport *viewport)
 {
 	/* Don't draw the text effects when zoomed out a lot */
 	if (dpi->zoom > ZoomLevel::TextEffect) return;
@@ -123,11 +150,13 @@ void DrawTextEffects(DrawPixelInfo *dpi)
 	ViewportStringFlags flags{};
 	if (dpi->zoom >= ZoomLevel::TextEffect) flags.Set(ViewportStringFlag::Small);
 
-	for (const TextEffect &te : _text_effects) {
+	for (size_t index = 0; index < _text_effects.size(); ++index) {
+		const TextEffect &te = _text_effects[index];
 		if (!te.IsValid()) continue;
 
 		if (te.mode == TE_RISING || _settings_client.gui.loading_indicators) {
-			std::string *str = ViewportAddString(dpi, &te, flags, INVALID_COLOUR);
+			ViewportSign sign = GetTextEffectSign(static_cast<TextEffectID>(index),viewport);
+			std::string *str = ViewportAddString(dpi, &sign, flags, INVALID_COLOUR);
 			if (str == nullptr) continue;
 
 			*str = te.msg.GetDecodedString();

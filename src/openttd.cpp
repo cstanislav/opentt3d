@@ -706,6 +706,13 @@ int openttd_main(std::span<std::string_view> arguments)
 
 	BaseGraphics::FindSets();
 	bool valid_graphics_set;
+	/* The fork uses the same Classic artwork for the UI and model materials.
+	 * Migrate our former High Def recommendation, while respecting an explicit
+	 * command-line set and other saved base-set choices. */
+	if (graphics_set.empty() && ((BaseGraphics::ini_data.name.empty() && BaseGraphics::ini_data.shortname == 0) ||
+			BaseGraphics::ini_data.name == "OpenGFX2 High Def") && BaseGraphics::SetSetByName("OpenGFX2 Classic")) {
+		graphics_set = "OpenGFX2 Classic";
+	}
 	if (!graphics_set.empty()) {
 		valid_graphics_set = BaseGraphics::SetSetByName(graphics_set);
 	} else if (BaseGraphics::ini_data.shortname != 0) {

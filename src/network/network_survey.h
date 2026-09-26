@@ -36,7 +36,9 @@ public:
 
 	constexpr static bool IsSurveyPossible()
 	{
-		return true;
+		/* OpenTT3D has no survey service; use the existing disabled-service path
+		 * rather than prompting for or sending this fork's data to upstream. */
+		return false;
 	}
 
 private:

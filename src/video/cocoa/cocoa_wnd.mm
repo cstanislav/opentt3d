@@ -14,6 +14,7 @@
 #ifdef WITH_COCOA
 
 #include "../../stdafx.h"
+#include "../../fileio_func.h"
 #include "../../os/macosx/macos.h"
 
 #define Rect  OTTDRect
@@ -35,6 +36,7 @@
 #include "../../textbuf_type.h"
 #include "../../toolbar_gui.h"
 #include "../../core/utf8.hpp"
+#include "../../renderer3d/viewport_3d.h"
 
 #include "../../table/sprites.h"
 
@@ -212,6 +214,15 @@ static NSImage *NSImageFromSprite(SpriteID sprite_id, ZoomLevel zoom)
 - (void)launchGameEngine: (NSNotification*) note
 {
 	auto *drv = static_cast<VideoDriver_Cocoa *>(VideoDriver::GetInstance());
+	if (!CocoaBackgroundMode()) {
+		[ NSApp activateIgnoringOtherApps:YES ];
+		[ drv->window makeKeyAndOrderFront:nil ];
+	} else {
+		Debug(driver,1,"OpenTT3D: background Cocoa window active={}, key={}, visible={}, policy={}",
+			static_cast<bool>(NSApp.isActive),static_cast<bool>(drv->window.isKeyWindow),static_cast<bool>(drv->window.isVisible),static_cast<long>(NSApp.activationPolicy));
+	}
+	[ drv->window makeFirstResponder:drv->cocoaview ];
+	[ drv->cocoaview refreshMouseState ];
 
 	/* Setup cursor for the current _game_mode. */
 	NSEvent *e = [ [ NSEvent alloc ] init ];
@@ -233,8 +244,10 @@ static NSImage *NSImageFromSprite(SpriteID sprite_id, ZoomLevel zoom)
 	/* Add a notification observer so we can restart the game loop later on if necessary. */
 	[ [ NSNotificationCenter defaultCenter ] addObserver:self selector:@selector(launchGameEngine:) name:OTTDMainLaunchGameEngine object:nil ];
 
-	/* Start game loop. */
-	[ [ NSNotificationCenter defaultCenter ] postNotificationName:OTTDMainLaunchGameEngine object:nil ];
+	/* Let AppKit finish launching/activating before entering our long-running
+	 * event loop. Entering it synchronously here can leave the visible window
+	 * without key focus on recent macOS versions. */
+	[ self performSelector:@selector(launchGameEngine:) withObject:nil afterDelay:0 ];
 }
 
 /**
@@ -273,7 +286,7 @@ static NSImage *NSImageFromSprite(SpriteID sprite_id, ZoomLevel zoom)
  */
 static void setApplicationMenu()
 {
-	NSString *appName = @"OpenTTD";
+	NSString *appName = @"OpenTT3D";
 	NSMenu *appleMenu = [ [ NSMenu alloc ] initWithTitle:appName ];
 
 	/* Add menu items */
@@ -340,6 +353,16 @@ static void setupWindowMenu()
 	[ menuItem release ];
 }
 
+/** Keep automated framebuffer reviews hidden without taking the user's focus. */
+bool CocoaBackgroundMode()
+{
+	static const bool background = [] {
+		const char *value = std::getenv("OPENTT3D_BACKGROUND");
+		return value != nullptr && std::string_view(value) == "1";
+	}();
+	return background;
+}
+
 /**
  * Startup the application.
  */
@@ -349,10 +372,18 @@ bool CocoaSetupApplication()
 
 	/* Ensure the application object is initialised */
 	[ NSApplication sharedApplication ];
+	std::string icon_path = FioFindFullPath(BASESET_DIR, "opentt3d.icns");
+	if (!icon_path.empty()) {
+		NSImage *icon = [ [ NSImage alloc ] initWithContentsOfFile:[ NSString stringWithUTF8String:icon_path.c_str() ] ];
+		if (icon != nil) [ NSApp setApplicationIconImage:icon ];
+		[ icon release ];
+	}
 
 	/* Tell the dock about us */
-	OSStatus returnCode = TransformProcessType(&psn, kProcessTransformToForegroundApplication);
-	if (returnCode != 0) Debug(driver, 0, "Could not change to foreground application. Error {}", (int)returnCode);
+	if (!CocoaBackgroundMode() && [ NSRunningApplication currentApplication ].activationPolicy != NSApplicationActivationPolicyRegular) {
+		OSStatus returnCode = TransformProcessType(&psn, kProcessTransformToForegroundApplication);
+		if (returnCode != 0) Debug(driver, 0, "Could not change to foreground application. Error {}", (int)returnCode);
+	}
 
 	/* Disable the system-wide tab feature as we only have one window. */
 	if ([ NSWindow respondsToSelector:@selector(setAllowsAutomaticWindowTabbing:) ]) {
@@ -361,8 +392,12 @@ bool CocoaSetupApplication()
 	}
 
 	/* Become the front process, important when start from the command line. */
-	[ [ NSApplication sharedApplication ] setActivationPolicy:NSApplicationActivationPolicyRegular ];
-	[ [ NSApplication sharedApplication ] activateIgnoringOtherApps:YES ];
+	if (CocoaBackgroundMode()) {
+		[ NSApp setActivationPolicy:NSApplicationActivationPolicyProhibited ];
+	} else {
+		[ NSApp setActivationPolicy:NSApplicationActivationPolicyRegular ];
+		[ NSApp activateIgnoringOtherApps:YES ];
+	}
 
 	/* Set up the menubar */
 	[ NSApp setMainMenu:[ [ NSMenu alloc ] init ] ];
@@ -432,6 +467,8 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 @implementation NSCursor (OTTD_CocoaCursor)
 + (NSCursor *) clearCocoaCursor
 {
+	static NSCursor *cursor = nil;
+	if (cursor != nil) return cursor;
 	/* RAW 16x16 transparent GIF */
 	unsigned char clearGIFBytes[] = {
 		0x47, 0x49, 0x46, 0x38, 0x37, 0x61, 0x10, 0x00, 0x10, 0x00, 0x80, 0x00,
@@ -439,9 +476,11 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 		0x00, 0x01, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x10, 0x00,
 		0x00, 0x02, 0x0E, 0x8C, 0x8F, 0xA9, 0xCB, 0xED, 0x0F, 0xA3, 0x9C, 0xB4,
 		0xDA, 0x8B, 0xB3, 0x3E, 0x05, 0x00, 0x3B};
-	NSData *clearGIFData = [ NSData dataWithBytesNoCopy:&clearGIFBytes[0] length:55 freeWhenDone:NO ];
+	NSData *clearGIFData = [ NSData dataWithBytes:&clearGIFBytes[0] length:55 ];
 	NSImage *clearImg = [ [ NSImage alloc ] initWithData:clearGIFData ];
-	return [ [ NSCursor alloc ] initWithImage:clearImg hotSpot:NSMakePoint(0.0,0.0) ];
+	cursor = [ [ NSCursor alloc ] initWithImage:clearImg hotSpot:NSMakePoint(0.0,0.0) ];
+	[ clearImg release ];
+	return cursor;
 }
 @end
 
@@ -449,6 +488,9 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 	VideoDriver_Cocoa *driver;
 	bool touchbar_created;
 }
+
+- (BOOL)canBecomeKeyWindow { return YES; }
+- (BOOL)canBecomeMainWindow { return YES; }
 
 /**
  * Initialize event system for the application rectangle
@@ -565,6 +607,7 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 	NSUInteger _current_mods;
 	bool _emulated_down;
 	bool _use_hidpi; ///< Render content in native resolution?
+	bool _mouse_disassociated; ///< Only release relative capture acquired by this view.
 }
 
 - (instancetype)initWithFrame:(NSRect)frameRect
@@ -598,6 +641,17 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 	return YES;
 }
 
+- (BOOL)acceptsFirstMouse:(NSEvent *)event
+{
+	return YES; // The activation click must reach the game's input wrapper.
+}
+
+/** All game controls belong to this wrapper, not the Metal/GL drawing subview. */
+- (NSView *)hitTest:(NSPoint)point
+{
+	return [ super hitTest:point ] != nil ? self : nil;
+}
+
 - (void)setNeedsDisplayInRect:(NSRect)invalidRect
 {
 	/* Drawing is handled by our sub-views. Just pass it along. */
@@ -609,11 +663,12 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 /** Update mouse cursor to use for this view. */
 - (void)cursorUpdate:(NSEvent *)event
 {
-	[ (_game_mode == GM_BOOTSTRAP ? [ NSCursor arrowCursor ] : [ NSCursor clearCocoaCursor ]) set ];
+	[ ([ self hasMouseFocus ] && _cursor.in_window && _game_mode != GM_BOOTSTRAP ? [ NSCursor clearCocoaCursor ] : [ NSCursor arrowCursor ]) set ];
 }
 
 - (void)viewWillMoveToWindow:(NSWindow *)win
 {
+	[ self releaseMouseState ];
 	for (NSTrackingArea *a in [ self trackingAreas ]) {
 		[ self removeTrackingArea:a ];
 	}
@@ -621,8 +676,19 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 
 - (void)viewDidMoveToWindow
 {
+	[ self updateTrackingAreas ];
+	[ self refreshMouseState ];
+}
+
+- (void)updateTrackingAreas
+{
+	[ super updateTrackingAreas ];
+	for (NSTrackingArea *area in [ [ [ self trackingAreas ] copy ] autorelease ]) {
+		if (area.owner == self) [ self removeTrackingArea:area ];
+	}
+	if (self.window == nil) return;
 	/* Install mouse tracking area. */
-	NSTrackingAreaOptions track_opt = NSTrackingInVisibleRect | NSTrackingActiveInActiveApp | NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingCursorUpdate;
+	NSTrackingAreaOptions track_opt = NSTrackingInVisibleRect | NSTrackingActiveInKeyWindow | NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingCursorUpdate | NSTrackingEnabledDuringMouseDrag;
 	NSTrackingArea *track = [ [ NSTrackingArea alloc ] initWithRect:[ self bounds ] options:track_opt owner:self userInfo:nil ];
 	[ self addTrackingArea:track ];
 	[ track release ];
@@ -632,15 +698,171 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
  */
 - (void)mouseEntered:(NSEvent *)theEvent
 {
-	_cursor.in_window = true;
+	[ self refreshMouseState ];
 }
 /**
  * Make OpenTTD aware that it has NOT control over the mouse
  */
 - (void)mouseExited:(NSEvent *)theEvent
 {
-	if ([ self window ] != nil) UndrawMouseCursor();
+	[ self refreshMouseState ];
+}
+
+- (BOOL)hasMouseFocus
+{
+	return self.window != nil && self.window.isKeyWindow && NSApp.isActive && !self.window.isMiniaturized;
+}
+
+- (void)synchronizeMouseAssociation
+{
+	bool want_relative = [ self hasMouseFocus ] && _cursor.in_window && _cursor.fix_at;
+	if (want_relative == self->_mouse_disassociated) return;
+	CGError error = CGAssociateMouseAndMouseCursorPosition(!want_relative);
+	if (error == kCGErrorSuccess) self->_mouse_disassociated = want_relative;
+	else if (want_relative) {
+		/* A failed OS grab must leave a usable absolute-position drag. */
+		_cursor.fix_at = false;
+		Debug(driver, 1, "OpenTT3D: Cocoa relative mouse capture unavailable ({})", static_cast<int>(error));
+	}
+}
+
+- (void)releaseMouseState
+{
+	bool had_mouse_control = _cursor.in_window || self->_mouse_disassociated;
+	ResetViewportScrolling();
+	_left_button_down = _left_button_clicked = _right_button_down = _right_button_clicked = _middle_button_down = false;
+	_dirkeys = 0;
+	bool had_control = _ctrl_pressed;
+	_tab_is_down = _ctrl_pressed = _shift_pressed = false;
+	if (had_control) HandleCtrlChanged();
+	self->_emulated_down = false;
+	self->_current_mods = 0;
+	self->_current_magnification = 0;
+	_cursor.delta = {};
+	_cursor.wheel = 0;
+	_cursor.h_wheel = _cursor.v_wheel = 0;
+	_cursor.wheel_moved = false;
+	Renderer3D::HandleMiddleOrbit(false, {}, {});
+	if (_screen.dst_ptr != nullptr && _cursor.visible) UndrawMouseCursor();
 	_cursor.in_window = false;
+	[ self synchronizeMouseAssociation ];
+	/* refreshMouseState also polls while inactive. Reinstalling the same system
+	 * cursor every frame makes AppKit regenerate its accessibility images. */
+	if (had_mouse_control) [ [ NSCursor arrowCursor ] set ];
+}
+
+- (void)updateMousePresence:(NSPoint)point
+{
+	if (![ self hasMouseFocus ]) { [ self releaseMouseState ]; return; }
+	NSRect bounds = [ self getRealRect:self.bounds ];
+	bool inside = _cursor.fix_at || (point.x >= 0 && point.y >= 0 && point.x < bounds.size.width && point.y < bounds.size.height);
+	if (inside != _cursor.in_window) {
+		if (!inside && _screen.dst_ptr != nullptr && _cursor.visible) UndrawMouseCursor();
+		_cursor.in_window = inside;
+		if (inside) {
+			_cursor.UpdateCursorPosition(point.x,point.y);
+			_cursor.delta = {}; // Reactivation is not an orbit/drag movement.
+			_cursor.dirty = true;
+			[ (_game_mode == GM_BOOTSTRAP ? [ NSCursor arrowCursor ] : [ NSCursor clearCocoaCursor ]) set ];
+		} else [ [ NSCursor arrowCursor ] set ];
+	}
+}
+
+- (void)refreshMouseState
+{
+	/* No event-stream/WindowServer position query is needed while inactive:
+	 * updateMousePresence would discard that point and release capture anyway. */
+	if (![ self hasMouseFocus ]) { [ self releaseMouseState ]; return; }
+	[ self updateMousePresence:[ self mousePositionFromEvent:nil ] ];
+	if (![ self hasMouseFocus ]) return;
+	/* Delivered button events are authoritative. The global hardware snapshot
+	 * may already reflect a queued release, or omit remote/injected input, and
+	 * must not cancel a press that the game just received. Window/focus loss
+	 * explicitly releases all buttons; AppKit dispatches the matching mouse-up. */
+	if (!_right_button_down && !_left_button_down && !_middle_button_down && !_cursor.wheel_moved) ResetViewportScrolling();
+	[ self synchronizeMouseAssociation ];
+}
+
+/** Exercise actual AppKit view/window dispatch without accessibility permission
+ * or changing the map. A missing mouseEntered notification is intentional. */
+- (void)verifyMouseRecovery
+{
+	NSWindow *other = [ [ NSWindow alloc ] initWithContentRect:NSMakeRect(0,0,64,64) styleMask:NSWindowStyleMaskTitled backing:NSBackingStoreBuffered defer:NO ];
+	[ other setReleasedWhenClosed:NO ];
+	struct Restore {
+		OTTD_CocoaView *view;
+		CursorVars cursor;
+		NSWindow *other;
+		~Restore()
+		{
+			[ other close ];
+			[ other release ];
+			[ view.window makeKeyAndOrderFront:nil ];
+			[ view releaseMouseState ];
+			_cursor = std::move(cursor);
+			_cursor.visible = false;
+			_cursor.dirty = true;
+			[ view refreshMouseState ];
+			MarkWholeScreenDirty();
+		}
+	} restore{self,_cursor,other};
+	auto require = [](bool condition, const char *message) { if (!condition) throw std::runtime_error(message); };
+	if (![ self hasMouseFocus ]) {
+		NSRunningApplication *application = [ NSRunningApplication currentApplication ];
+		NSRunningApplication *front = [ NSWorkspace sharedWorkspace ].frontmostApplication;
+		throw std::runtime_error(fmt::format("Cocoa input verification: active={}, key={}, visible={}, miniaturized={}, policy={}, finished={}, front={}",
+			static_cast<bool>(NSApp.isActive),static_cast<bool>(self.window.isKeyWindow),static_cast<bool>(self.window.isVisible),static_cast<bool>(self.window.isMiniaturized),
+			static_cast<int>(application.activationPolicy),static_cast<bool>(application.finishedLaunching),front.localizedName != nil ? front.localizedName.UTF8String : "none"));
+	}
+	for (unsigned cycle = 0; cycle < 8; ++cycle) {
+		NSPoint local = NSMakePoint(37+cycle*3,47+cycle*2);
+		require([ self hitTest:[ self convertPoint:local toView:self.superview ] ] == self,"Drawing subview intercepted game input");
+		NSEvent *move = [ NSEvent mouseEventWithType:NSEventTypeMouseMoved location:[ self convertPoint:local toView:nil ] modifierFlags:0 timestamp:0
+			windowNumber:self.window.windowNumber context:nil eventNumber:0 clickCount:0 pressure:0 ];
+		[ self releaseMouseState ];
+		[ self mouseMoved:move ];
+		NSPoint expected = [ self mousePositionFromEvent:move ];
+		require(_cursor.in_window && _cursor.pos.x == static_cast<int>(expected.x) && _cursor.pos.y == static_cast<int>(expected.y),"Mouse movement did not recover missing entry notification");
+		_cursor.fix_at = true;
+		_scrolling_viewport = true;
+		_right_button_down = _middle_button_down = true;
+		[ self synchronizeMouseAssociation ];
+		require(self->_mouse_disassociated,"Native relative mouse capture failed");
+		[ other makeKeyAndOrderFront:nil ];
+		require(!_cursor.fix_at && !self->_mouse_disassociated && !_right_button_down && !_middle_button_down && !_scrolling_viewport,"Focus loss left mouse capture or buttons stuck");
+		[ self.window makeKeyAndOrderFront:nil ];
+		[ self mouseMoved:move ];
+		require(_cursor.in_window && _cursor.delta.x == 0 && _cursor.delta.y == 0,"Focus recovery moved the drag/orbit anchor");
+	}
+	/* Exercise actual NSApplication -> NSWindow -> view dispatch. Calling the
+	 * view's move method directly never tested a press surviving the next poll.
+	 * AppKit events may lead the hardware snapshot (including remote input). */
+	NSPoint local = NSMakePoint(self.bounds.size.width*0.5,self.bounds.size.height*0.5);
+	for (bool middle : {false,true}) {
+		NSEventType down_type = middle ? NSEventTypeOtherMouseDown : NSEventTypeRightMouseDown;
+		NSEventType up_type = middle ? NSEventTypeOtherMouseUp : NSEventTypeRightMouseUp;
+		auto event = [&](NSEventType type) {
+			NSEvent *created = [ NSEvent mouseEventWithType:type location:[ self convertPoint:local toView:nil ] modifierFlags:0 timestamp:0
+				windowNumber:self.window.windowNumber context:nil eventNumber:0 clickCount:1 pressure:type == down_type ? 1 : 0 ];
+			if (!middle) return created;
+			/* The convenience constructor leaves OtherMouse's button number at
+			 * zero. Supply an actual centre-button event instead of a left event
+			 * merely labelled OtherMouseDown. This is local dispatch, not posting. */
+			CGEventRef cg = CGEventCreateCopy(created.CGEvent);
+			CGEventSetIntegerValueField(cg,kCGMouseEventButtonNumber,2);
+			NSEvent *result = [ NSEvent eventWithCGEvent:cg ];
+			CFRelease(cg);
+			require(result.buttonNumber == 2,"Native probe did not construct a middle-button event");
+			return result;
+		};
+		[ self releaseMouseState ];
+		[ NSApp sendEvent:event(down_type) ];
+		require(middle ? _middle_button_down : _right_button_down,"Window dispatch lost a mouse down");
+		[ self refreshMouseState ];
+		require(middle ? _middle_button_down : _right_button_down,"Cocoa polling discarded an authoritative mouse down");
+		[ NSApp sendEvent:event(up_type) ];
+		require(middle ? !_middle_button_down : !_right_button_down,"Window dispatch lost a mouse up");
+	}
 }
 
 /**
@@ -650,8 +872,8 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
  */
 - (NSPoint)mousePositionFromEvent:(NSEvent *)e
 {
-	NSPoint pt = e.locationInWindow;
-	if ([ e window ] == nil) pt = [ self.window convertRectFromScreen:NSMakeRect(pt.x, pt.y, 0, 0) ].origin;
+	NSPoint pt = e == nil ? [ self.window mouseLocationOutsideOfEventStream ] : e.locationInWindow;
+	if (e != nil && [ e window ] == nil) pt = [ self.window convertRectFromScreen:NSMakeRect(pt.x, pt.y, 0, 0) ].origin;
 	pt = [ self convertPoint:pt fromView:nil ];
 
 	return [ self getRealRect:NSMakeRect(pt.x, self.bounds.size.height - pt.y, 0, 0) ].origin;
@@ -659,6 +881,8 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 
 - (void)internalMouseMoveEvent:(NSEvent *)event
 {
+	[ self updateMousePresence:[ self mousePositionFromEvent:event ] ];
+	if (![ self hasMouseFocus ]) return;
 	if (_cursor.fix_at) {
 		_cursor.UpdateCursorPositionRelative(event.deltaX * self.getContentsScale, event.deltaY * self.getContentsScale);
 	} else {
@@ -667,15 +891,19 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 	}
 
 	HandleMouseEvents();
+	[ self synchronizeMouseAssociation ];
 }
 
-- (void)internalMouseButtonEvent
+- (void)internalMouseButtonEvent:(NSEvent *)event
 {
-	bool cur_fix = _cursor.fix_at;
+	NSPoint point = [ self mousePositionFromEvent:event ];
+	[ self updateMousePresence:point ];
+	if (![ self hasMouseFocus ]) return;
+	if (!_cursor.fix_at) _cursor.UpdateCursorPosition(point.x,point.y);
 	HandleMouseEvents();
 
 	/* Cursor fix mode was changed, synchronize with OS. */
-	if (cur_fix != _cursor.fix_at) CGAssociateMouseAndMouseCursorPosition(!_cursor.fix_at);
+	[ self synchronizeMouseAssociation ];
 }
 
 - (BOOL)emulateRightButton:(NSEvent *)event
@@ -703,7 +931,7 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 		[ self rightMouseDown:event ];
 	} else {
 		_left_button_down = true;
-		[ self internalMouseButtonEvent ];
+		[ self internalMouseButtonEvent:event ];
 	}
 }
 - (void)mouseUp:(NSEvent *)event
@@ -714,7 +942,7 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 	} else {
 		_left_button_down = false;
 		_left_button_clicked = false;
-		[ self internalMouseButtonEvent ];
+		[ self internalMouseButtonEvent:event ];
 	}
 }
 
@@ -726,16 +954,38 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 {
 	_right_button_down = true;
 	_right_button_clicked = true;
-	[ self internalMouseButtonEvent ];
+	[ self internalMouseButtonEvent:event ];
 }
 - (void)rightMouseUp:(NSEvent *)event
 {
 	_right_button_down = false;
-	[ self internalMouseButtonEvent ];
+	_right_button_clicked = false;
+	[ self internalMouseButtonEvent:event ];
+}
+
+- (void)otherMouseDown:(NSEvent *)event
+{
+	if (event.buttonNumber != 2) return;
+	_middle_button_down = true;
+	[ self internalMouseButtonEvent:event ];
+}
+
+- (void)otherMouseDragged:(NSEvent *)event
+{
+	if (event.buttonNumber == 2) [ self internalMouseMoveEvent:event ];
+}
+
+- (void)otherMouseUp:(NSEvent *)event
+{
+	if (event.buttonNumber != 2) return;
+	_middle_button_down = false;
+	[ self internalMouseButtonEvent:event ];
 }
 
 - (void)scrollWheel:(NSEvent *)event
 {
+	[ self updateMousePresence:[ self mousePositionFromEvent:event ] ];
+	if (![ self hasMouseFocus ]) return;
 	if ([ event deltaY ] > 0.0) { /* Scroll up */
 		_cursor.wheel--;
 	} else if ([ event deltaY ] < 0.0) { /* Scroll down */
@@ -1273,16 +1523,18 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 /** Window entered fullscreen mode (10.7). */
 - (void)windowDidEnterFullScreen:(NSNotification *)aNotification
 {
-	NSPoint loc = [ driver->cocoaview convertPoint:[ [ aNotification object ] mouseLocationOutsideOfEventStream ] fromView:nil ];
-	BOOL inside = ([ driver->cocoaview hitTest:loc ] == driver->cocoaview);
-
-	if (inside) {
-		/* We don't care about the event, but the compiler does. */
-		NSEvent *e = [ [ NSEvent alloc ] init ];
-		[ driver->cocoaview mouseEntered:e ];
-		[ e release ];
-	}
+	[ driver->cocoaview refreshMouseState ];
 }
+
+- (void)windowDidExitFullScreen:(NSNotification *)notification { [ driver->cocoaview refreshMouseState ]; }
+- (void)windowDidBecomeKey:(NSNotification *)notification
+{
+	[ driver->window makeFirstResponder:driver->cocoaview ];
+	[ driver->cocoaview refreshMouseState ];
+}
+- (void)windowDidResignKey:(NSNotification *)notification { [ driver->cocoaview releaseMouseState ]; }
+- (void)windowDidMiniaturize:(NSNotification *)notification { [ driver->cocoaview releaseMouseState ]; }
+- (void)windowDidDeminiaturize:(NSNotification *)notification { [ driver->cocoaview refreshMouseState ]; }
 /** Screen the window is on changed. */
 - (void)windowDidChangeBackingProperties:(NSNotification *)notification
 {
@@ -1301,5 +1553,31 @@ void CocoaDialog(std::string_view title, std::string_view message, std::string_v
 }
 
 @end
+
+bool VideoDriver_Cocoa::VerifyInput()
+{
+	if (CocoaBackgroundMode()) throw std::runtime_error("Native input verification requires a foreground Cocoa window");
+	/* Activation is asynchronous; the automated launcher may still be handing
+	 * over focus when the loaded-game console script reaches this probe. */
+	[ [ NSRunningApplication currentApplication ] activateWithOptions:NSApplicationActivateAllWindows | NSApplicationActivateIgnoringOtherApps ];
+	[ this->window makeKeyAndOrderFront:nil ];
+	for (unsigned attempt = 0; attempt < 50 && (![ NSApp isActive ] || ![ this->window isKeyWindow ]); ++attempt) {
+		CFRunLoopRunInMode(kCFRunLoopDefaultMode,0.01,true);
+		while (this->PollEvent()) {}
+	}
+	bool fullscreen = this->IsFullscreen();
+	struct RestoreMode {
+		VideoDriver_Cocoa &driver;
+		bool fullscreen;
+		~RestoreMode() { driver.ToggleFullscreen(fullscreen); }
+	} restore{*this,fullscreen};
+	for (unsigned pass = 0; pass < 4; ++pass) {
+		[ this->cocoaview verifyMouseRecovery ];
+		if (!this->ToggleFullscreen(!this->IsFullscreen())) throw std::runtime_error("Cocoa input verification could not change fullscreen mode");
+	}
+	Debug(driver,1,"OpenTT3D: Cocoa input recovery passed 32 focus/capture cycles and four fullscreen transitions");
+	Debug(driver,1,"OpenTT3D: Cocoa window-dispatched right/middle presses survive polling and release correctly");
+	return true;
+}
 
 #endif /* WITH_COCOA */

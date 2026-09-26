@@ -215,7 +215,9 @@ std::optional<std::string_view> VideoDriver_CocoaOpenGL::Start(const StringList 
 
 	this->AllocateBackingStore(true);
 
-	if (fullscreen) this->ToggleFullscreen(fullscreen);
+	/* Native fullscreen is asynchronous; request it after AppKit starts its
+	 * event loop instead of during video-driver construction. */
+	if (fullscreen) this->QueueOnMainThread([this] { this->ToggleFullscreen(true); });
 
 	this->GameSizeChanged();
 	this->UpdateVideoModes();
@@ -265,7 +267,7 @@ std::optional<std::string_view> VideoDriver_CocoaOpenGL::AllocateContext(bool al
 
 	CGLSetCurrentContext(this->gl_context);
 
-	return OpenGLBackend::Create(&GetOGLProcAddressCallback, this->GetScreenSize());
+	return OpenGLBackend::Create(&GetOGLProcAddressCallback,this->GetScreenSize(),[this] { CGLSetCurrentContext(this->gl_context); });
 }
 
 NSView *VideoDriver_CocoaOpenGL::AllocateDrawView()
@@ -325,6 +327,8 @@ void VideoDriver_CocoaOpenGL::Paint()
 		}
 	}
 
+	/* Upload and compose this frame before the shared layer context consumes it. */
+	this->UnlockVideoBuffer();
 	[ CATransaction begin ];
 	[ this->cocoaview.subviews[0].layer setNeedsDisplay ];
 	[ CATransaction commit ];

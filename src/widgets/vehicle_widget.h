@@ -29,6 +29,7 @@ enum VehicleViewWidgets : WidgetID {
 	WID_VV_FORCE_PROCEED,      ///< Force this vehicle to pass a signal at danger.
 	WID_VV_FORCE_PROCEED_SEL,  ///< Container for 'force proceed' button, which can be hidden.
 	WID_VV_HONK_HORN,          ///< Honk the vehicles horn (not drawn on UI, only used for hotkey).
+	WID_VV_FIRST_PERSON,       ///< Follow this vehicle from a smoothly turning cab camera.
 };
 
 /** Widgets of the #RefitWindow class. */

@@ -8,6 +8,7 @@
 /** @file vehicle_gui.cpp The base GUI for all vehicles. */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
 #include "debug.h"
 #include "company_func.h"
 #include "gui.h"
@@ -2826,6 +2827,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_vehicle_view_widgets
 		NWidget(WWT_PUSHIMGBTN, COLOUR_GREY, WID_VV_RENAME), SetAspect(WidgetDimensions::ASPECT_RENAME), SetSpriteTip(SPR_RENAME),
 		NWidget(WWT_CAPTION, COLOUR_GREY, WID_VV_CAPTION),
 		NWidget(WWT_PUSHIMGBTN, COLOUR_GREY, WID_VV_LOCATION), SetAspect(WidgetDimensions::ASPECT_LOCATION), SetSpriteTip(SPR_GOTO_LOCATION),
+		NWidget(WWT_TEXTBTN, COLOUR_GREY, WID_VV_FIRST_PERSON), SetMinimalSize(24, 14), SetStringTip(STR_OPENTT3D_CAB_BUTTON, STR_OPENTT3D_CAB_TOOLTIP),
 		NWidget(WWT_DEBUGBOX, COLOUR_GREY),
 		NWidget(WWT_SHADEBOX, COLOUR_GREY),
 		NWidget(WWT_DEFSIZEBOX, COLOUR_GREY),
@@ -3102,6 +3104,8 @@ public:
 		}
 
 		this->SetWidgetDisabledState(WID_VV_ORDER_LOCATION, v->current_order.GetLocation(v) == INVALID_TILE);
+		this->SetWidgetDisabledState(WID_VV_FIRST_PERSON, !Renderer3D::IsEnabled() || (v->vehstatus.Test(VehState::Hidden) && !Renderer3D::IsFirstPerson(v->index)));
+		this->SetWidgetLoweredState(WID_VV_FIRST_PERSON, Renderer3D::IsFirstPerson(v->index));
 
 		const Window *mainwindow = GetMainWindow();
 		if (mainwindow->viewport->follow_vehicle == v->index) {
@@ -3222,7 +3226,7 @@ public:
 	{
 		const Vehicle *v = Vehicle::Get(this->window_number);
 
-		switch (widget) {
+			switch (widget) {
 			case WID_VV_RENAME: { // rename
 				ShowQueryString(GetString(STR_VEHICLE_NAME, v->index), STR_QUERY_RENAME_TRAIN_CAPTION + v->type,
 						MAX_LENGTH_VEHICLE_NAME_CHARS, this, CS_ALPHANUMERAL, {QueryStringFlag::EnableDefault, QueryStringFlag::LengthIsInChars});
@@ -3246,7 +3250,13 @@ public:
 				break;
 			}
 
+			case WID_VV_FIRST_PERSON:
+				Renderer3D::ToggleFirstPerson(v->index);
+				this->SetDirty();
+				break;
+
 			case WID_VV_LOCATION: // center main view
+				if (const Window *main_window = GetMainWindow(); main_window != nullptr && main_window->viewport != nullptr) Renderer3D::CancelFirstPerson(*main_window->viewport);
 				if (_ctrl_pressed) {
 					ShowExtraViewportWindow(TileVirtXY(v->x_pos, v->y_pos));
 				} else {

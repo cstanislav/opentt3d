@@ -32,10 +32,12 @@
 #include "../core/math_func.hpp"
 #include "../gfx_func.h"
 #include "../debug.h"
+#include "../error_func.h"
 #include "../blitter/factory.hpp"
 #include "../zoom_func.h"
 #include "../core/string_consumer.hpp"
 #include "../renderer3d/gl_backend.hpp"
+#include "../renderer3d/profiling.h"
 
 #include "../table/opengl_shader.h"
 #include "../table/sprites.h"
@@ -462,13 +464,14 @@ void SetupDebugOutput()
  * @param screen_res Current display resolution.
  * @return std::nullopt on success, error message otherwise.
  */
-/* static */ std::optional<std::string_view> OpenGLBackend::Create(GetOGLProcAddressProc get_proc, const Dimension &screen_res)
+/* static */ std::optional<std::string_view> OpenGLBackend::Create(GetOGLProcAddressProc get_proc, const Dimension &screen_res, std::function<void()> activate_render_context)
 {
 	if (OpenGLBackend::instance != nullptr) OpenGLBackend::Destroy();
 
 	GetOGLProcAddress = get_proc;
 
 	OpenGLBackend::instance = new OpenGLBackend();
+	OpenGLBackend::instance->activate_render_context = std::move(activate_render_context);
 	return OpenGLBackend::instance->Init(screen_res);
 }
 
@@ -512,7 +515,7 @@ OpenGLBackend::~OpenGLBackend()
 
 		_glDeleteTextures(1, &this->vid_texture);
 		_glDeleteTextures(1, &this->anim_texture);
-		_glDeleteTextures(1, &this->pal_texture);
+		_glDeleteTextures(static_cast<GLsizei>(this->pal_textures.size()),this->pal_textures.data());
 	}
 }
 
@@ -630,14 +633,17 @@ std::optional<std::string_view> OpenGLBackend::Init(const Dimension &screen_res)
 	if (_glGetError() != GL_NO_ERROR) return "Can't generate animation buffer texture";
 
 	/* Setup palette texture. */
-	_glGenTextures(1, &this->pal_texture);
-	_glBindTexture(GL_TEXTURE_1D, this->pal_texture);
-	_glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	_glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-	_glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAX_LEVEL, 0);
-	_glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	_glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	_glTexImage1D(GL_TEXTURE_1D, 0, GL_RGBA8, 256, 0, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, nullptr);
+	_glGenTextures(static_cast<GLsizei>(this->pal_textures.size()),this->pal_textures.data());
+	for (GLuint texture : this->pal_textures) {
+		_glBindTexture(GL_TEXTURE_1D,texture);
+		_glTexParameteri(GL_TEXTURE_1D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
+		_glTexParameteri(GL_TEXTURE_1D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
+		_glTexParameteri(GL_TEXTURE_1D,GL_TEXTURE_MAX_LEVEL,0);
+		_glTexParameteri(GL_TEXTURE_1D,GL_TEXTURE_WRAP_S,GL_CLAMP_TO_EDGE);
+		_glTexParameteri(GL_TEXTURE_1D,GL_TEXTURE_WRAP_T,GL_CLAMP_TO_EDGE);
+		_glTexImage1D(GL_TEXTURE_1D,0,GL_RGBA8,256,0,GL_BGRA,GL_UNSIGNED_INT_8_8_8_8_REV,nullptr);
+	}
+	this->pal_texture = this->pal_textures[0];
 	_glBindTexture(GL_TEXTURE_1D, 0);
 	if (_glGetError() != GL_NO_ERROR) return "Can't generate palette lookup texture";
 
@@ -1029,12 +1035,24 @@ bool OpenGLBackend::Resize(int w, int h, bool force)
 void OpenGLBackend::UpdatePalette(const Colour *pal, uint first, uint length)
 {
 	assert(first + length <= 256);
+	std::copy_n(pal+first,length,this->palette_colours.begin()+first);
+	++this->palette_revision;
+}
 
+void OpenGLBackend::SelectPaletteTexture()
+{
+	unsigned slot = Renderer3D::OpenGL::Active() ? Renderer3D::OpenGL::FrameSlot() : 0;
+	this->pal_texture = this->pal_textures[slot];
+	if (this->pal_uploaded[slot] == this->palette_revision) return;
+	Renderer3D::Profile::Scope timing(Renderer3D::Profile::Section::UIPaletteUpload);
 	_glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
 	_glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
 	_glActiveTexture(GL_TEXTURE1);
 	_glBindTexture(GL_TEXTURE_1D, this->pal_texture);
-	_glTexSubImage1D(GL_TEXTURE_1D, 0, first, length, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, pal + first);
+	/* Each slot can have missed several partial updates. Upload the retained full
+	 * palette only after its producer and layer/cursor completion fences retired. */
+	_glTexSubImage1D(GL_TEXTURE_1D,0,0,256,GL_BGRA,GL_UNSIGNED_INT_8_8_8_8_REV,this->palette_colours.data());
+	this->pal_uploaded[slot] = this->palette_revision;
 }
 
 /**
@@ -1045,28 +1063,35 @@ void OpenGLBackend::Paint()
 	_glClear(GL_COLOR_BUFFER_BIT);
 
 	_glDisable(GL_BLEND);
+	GLuint presentation = Renderer3D::OpenGL::PresentationTexture();
+	this->DrawVideoBuffer(presentation != 0 ? presentation : this->vid_texture,
+		presentation == 0 && BlitterFactory::GetCurrentBlitter()->NeedsAnimationBuffer());
+	_glEnable(GL_BLEND);
+}
 
+void OpenGLBackend::DrawVideoBuffer(GLuint texture, bool animation, bool flipped)
+{
 	/* Blit video buffer to screen. */
 	_glActiveTexture(GL_TEXTURE0);
-	_glBindTexture(GL_TEXTURE_2D, this->vid_texture);
+	_glBindTexture(GL_TEXTURE_2D, texture);
 	_glActiveTexture(GL_TEXTURE1);
 	_glBindTexture(GL_TEXTURE_1D, this->pal_texture);
 	/* Is the blitter relying on a separate animation buffer? */
-	if (BlitterFactory::GetCurrentBlitter()->NeedsAnimationBuffer()) {
+	if (animation) {
 		_glActiveTexture(GL_TEXTURE2);
 		_glBindTexture(GL_TEXTURE_2D, this->anim_texture);
 		_glUseProgram(this->remap_program);
-		_glUniform4f(this->remap_sprite_loc, 0.0f, 0.0f, 1.0f, 1.0f);
+		_glUniform4f(this->remap_sprite_loc,0.0f,flipped ? 1.0f : 0.0f,1.0f,flipped ? -1.0f : 1.0f);
 		_glUniform2f(this->remap_screen_loc, 1.0f, 1.0f);
 		_glUniform1f(this->remap_zoom_loc, 0);
 		_glUniform1i(this->remap_rgb_loc, 1);
 	} else {
-		_glUseProgram(BlitterFactory::GetCurrentBlitter()->GetScreenDepth() == 8 ? this->pal_program : this->vid_program);
+		GLuint program = BlitterFactory::GetCurrentBlitter()->GetScreenDepth() == 8 ? this->pal_program : this->vid_program;
+		_glUseProgram(program);
+		_glUniform4f(_glGetUniformLocation(program,"sprite"),0.0f,flipped ? 1.0f : 0.0f,1.0f,flipped ? -1.0f : 1.0f);
 	}
 	_glBindVertexArray(this->vao_quad);
 	_glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-
-	_glEnable(GL_BLEND);
 }
 
 /**
@@ -1074,7 +1099,7 @@ void OpenGLBackend::Paint()
  */
 void OpenGLBackend::DrawMouseCursor()
 {
-	if (!this->cursor_in_window) return;
+	if (!this->cursor_in_window) { Renderer3D::OpenGL::FinishPresentation(); return; }
 
 	/* Draw cursor on screen */
 	_cur_dpi = &_screen;
@@ -1089,6 +1114,7 @@ void OpenGLBackend::DrawMouseCursor()
 					_gui_zoom);
 		}
 	}
+	Renderer3D::OpenGL::FinishPresentation();
 }
 
 class OpenGLSpriteAllocator : public SpriteAllocator {
@@ -1151,6 +1177,9 @@ void OpenGLBackend::ClearCursorCache()
  */
 void *OpenGLBackend::GetVideoBuffer()
 {
+	/* Do not let the asynchronous 3D path report smooth CPU ticks while building
+	 * an unbounded GPU backlog. This runs outside the simulation-state lock. */
+	if (!Renderer3D::OpenGL::WaitForFrame()) FatalError("OpenTT3D: OpenGL frame fence wait failed");
 #ifndef NO_GL_BUFFER_SYNC
 	if (this->sync_vid_mapping != nullptr) _glClientWaitSync(this->sync_vid_mapping, GL_SYNC_FLUSH_COMMANDS_BIT, 100000000); // 100ms timeout.
 #endif
@@ -1226,6 +1255,12 @@ void OpenGLBackend::ReleaseVideoBuffer(const Rect &update_rect)
 		if (this->persistent_mapping_supported) this->sync_vid_mapping = _glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
 #endif
 	}
+	/* Publish the new palette with its completed UI texture, not while Cocoa may
+	 * still redraw the preceding presentation during event processing. */
+	this->SelectPaletteTexture();
+	if (!Renderer3D::OpenGL::PreparePresentation(_screen.width,_screen.height,[this] {
+		this->DrawVideoBuffer(this->vid_texture,BlitterFactory::GetCurrentBlitter()->NeedsAnimationBuffer(),true);
+	})) FatalError("OpenTT3D: OpenGL viewport/UI composition failed");
 }
 
 /**

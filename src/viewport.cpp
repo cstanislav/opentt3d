@@ -91,6 +91,7 @@
 #include "framerate_type.h"
 #include "viewport_cmd.h"
 #include "renderer3d/viewport_3d.h"
+#include "renderer3d/world_capture.h"
 
 #include <forward_list>
 #include <stack>
@@ -430,7 +431,7 @@ Viewport *IsPtInWindowViewport(const Window *w, int x, int y)
  */
 Point TranslateXYToTileCoord(const Viewport &vp, int x, int y, bool clamp_to_map)
 {
-	if (Renderer3D::IsEnabled() && Renderer3D::GetRotation() != 0) return Renderer3D::PickTerrain(vp, x, y, clamp_to_map);
+	if (Renderer3D::IsEnabled()) return Renderer3D::PickMap(vp, x, y, clamp_to_map);
 	if (!IsInsideBS(x, vp.left, vp.width) || !IsInsideBS(y, vp.top, vp.height)) {
 		Point pt = { -1, -1 };
 		return pt;
@@ -487,10 +488,10 @@ Point GetTileZoomCenterWindow(bool in, Window * w)
  */
 void HandleZoomMessage(Window *w, const Viewport &vp, WidgetID widget_zoom_in, WidgetID widget_zoom_out)
 {
-	w->SetWidgetDisabledState(widget_zoom_in, vp.zoom <= _settings_client.gui.zoom_min);
+	w->SetWidgetDisabledState(widget_zoom_in, Renderer3D::IsEnabled() ? !Renderer3D::CanZoom(vp, true) : vp.zoom <= _settings_client.gui.zoom_min);
 	w->SetWidgetDirty(widget_zoom_in);
 
-	w->SetWidgetDisabledState(widget_zoom_out, vp.zoom >= _settings_client.gui.zoom_max);
+	w->SetWidgetDisabledState(widget_zoom_out, Renderer3D::IsEnabled() ? !Renderer3D::CanZoom(vp, false) : vp.zoom >= _settings_client.gui.zoom_max);
 	w->SetWidgetDirty(widget_zoom_out);
 }
 
@@ -508,6 +509,10 @@ void HandleZoomMessage(Window *w, const Viewport &vp, WidgetID widget_zoom_in, W
  */
 static void AddTileSpriteToDraw(SpriteID image, PaletteID pal, int32_t x, int32_t y, int z, const SubSprite *sub = nullptr, int extra_offs_x = 0, int extra_offs_y = 0)
 {
+	if (Renderer3D::IsCapturing()) {
+		Renderer3D::CaptureGround(image, pal, x, y, z, _cur_ti, sub, extra_offs_x, extra_offs_y);
+		return;
+	}
 	assert((image & SPRITE_MASK) < MAX_SPRITES);
 
 	TileSpriteToDraw &ts = _vd.tile_sprites_to_draw.emplace_back();
@@ -557,6 +562,10 @@ static void AddChildSpriteToFoundation(SpriteID image, PaletteID pal, const SubS
  */
 void DrawGroundSpriteAt(SpriteID image, PaletteID pal, int32_t x, int32_t y, int z, const SubSprite *sub, int extra_offs_x, int extra_offs_y)
 {
+	if (Renderer3D::IsCapturing()) {
+		Renderer3D::CaptureGround(image, pal, _cur_ti.x + x, _cur_ti.y + y, _cur_ti.z + z, _cur_ti, sub, extra_offs_x * ZOOM_BASE, extra_offs_y * ZOOM_BASE);
+		return;
+	}
 	/* Switch to first foundation part, if no foundation was drawn */
 	if (_vd.foundation_part == FOUNDATION_PART_NONE) _vd.foundation_part = FOUNDATION_PART_NORMAL;
 
@@ -592,6 +601,7 @@ void DrawGroundSprite(SpriteID image, PaletteID pal, const SubSprite *sub, int e
  */
 void OffsetGroundSprite(int x, int y)
 {
+	if (Renderer3D::IsCapturing()) return;
 	/* Switch to next foundation part */
 	switch (_vd.foundation_part) {
 		case FOUNDATION_PART_NONE:
@@ -664,6 +674,10 @@ static void AddCombinedSprite(SpriteID image, PaletteID pal, int x, int y, int z
  */
 void AddSortableSpriteToDraw(SpriteID image, PaletteID pal, int x, int y, int z, const SpriteBounds &bounds, bool transparent, const SubSprite *sub)
 {
+	if (Renderer3D::IsCapturing()) {
+		Renderer3D::CaptureParent(image, pal, x, y, z, bounds, transparent, sub);
+		return;
+	}
 	int32_t left, right, top, bottom;
 
 	assert((image & SPRITE_MASK) < MAX_SPRITES);
@@ -825,6 +839,10 @@ bool IsInsideRotatedRectangle(int x, int y)
  */
 void AddChildSpriteScreen(SpriteID image, PaletteID pal, int x, int y, bool transparent, const SubSprite *sub, bool scale, bool relative)
 {
+	if (Renderer3D::IsCapturing()) {
+		Renderer3D::CaptureChild(image, pal, x, y, transparent, sub, scale, relative);
+		return;
+	}
 	assert((image & SPRITE_MASK) < MAX_SPRITES);
 
 	/* If the ParentSprite was clipped by the viewport bounds, do not draw the ChildSprites either */
@@ -1209,6 +1227,36 @@ static int GetViewportY(Point tile)
 /**
  * Add the landscape to the viewport, i.e. all ground tiles and buildings.
  */
+void CollectViewport3D(const Viewport &viewport)
+{
+	/* Atlas repacking can interrupt draw_tile_proc inside StartSpriteCombine.
+	 * Restore presentation bookkeeping before retrying the capture. */
+	AutoRestoreBackup combine_backup(_vd.combine_sprites, SPRITE_COMBINE_NONE);
+	AutoRestoreBackup tile_backup(_cur_ti, _cur_ti);
+	/* Read-only scene reviews run outside a window paint. Some upstream tile
+	 * callbacks still consult the legacy detail zoom, even during 3D capture. */
+	DrawPixelInfo fallback_dpi{};
+	fallback_dpi.zoom = viewport.zoom;
+	AutoRestoreBackup dpi_backup(_cur_dpi, _cur_dpi != nullptr ? _cur_dpi : &fallback_dpi);
+	auto bounds = Renderer3D::CaptureTileBounds();
+	for (int y = bounds[1]; y <= bounds[3]; ++y) {
+		for (int x = bounds[0]; x <= bounds[2]; ++x) {
+			_cur_ti.tile = TileXY(x, y);
+			if (!IsValidTile(_cur_ti.tile)) continue;
+			_cur_ti.x = x * TILE_SIZE; _cur_ti.y = y * TILE_SIZE;
+			std::tie(_cur_ti.tileh, _cur_ti.z) = GetTilePixelSlope(_cur_ti.tile);
+			_vd.foundation_part = FOUNDATION_PART_NONE;
+			_vd.foundation[0] = _vd.foundation[1] = -1;
+			_vd.last_foundation_child[0] = _vd.last_foundation_child[1] = LAST_CHILD_NONE;
+			Renderer3D::CaptureTile(&_cur_ti);
+			_tile_type_procs[GetTileType(_cur_ti.tile)]->draw_tile_proc(&_cur_ti);
+			DrawTileSelection(&_cur_ti);
+		}
+	}
+	Renderer3D::CaptureTile(nullptr);
+	ViewportAddVehicles(&_vd.dpi);
+}
+
 static void ViewportAddLandscape(bool selections_only = false)
 {
 	assert(_vd.dpi.top <= _vd.dpi.top + _vd.dpi.height);
@@ -1453,7 +1501,7 @@ static void ViewportAddKdtreeSigns(const Viewport &vp, DrawPixelInfo *dpi)
 {
 	Rect search_rect{ dpi->left, dpi->top, dpi->left + dpi->width, dpi->top + dpi->height };
 	search_rect = ExpandRectWithViewportSignMargins(search_rect, dpi->zoom);
-	if (Renderer3D::IsEnabled() && Renderer3D::GetRotation() != 0) search_rect = {-INT_MAX / 2, -INT_MAX / 2, INT_MAX / 2, INT_MAX / 2};
+	if (Renderer3D::IsEnabled()) search_rect = {-INT_MAX / 2, -INT_MAX / 2, INT_MAX / 2, INT_MAX / 2};
 
 	bool show_stations = HasBit(_display_opt, DO_SHOW_STATION_NAMES) && _game_mode != GM_MENU;
 	bool show_waypoints = HasBit(_display_opt, DO_SHOW_WAYPOINT_NAMES) && _game_mode != GM_MENU;
@@ -1842,13 +1890,11 @@ void ViewportDoDraw(const Viewport &vp, int left, int top, int right, int bottom
 	if (!rendered_3d) {
 		ViewportAddLandscape();
 		ViewportAddVehicles(&_vd.dpi);
-	} else if (Renderer3D::GetRotation() == 0) {
-		ViewportAddLandscape(true);
 	}
 
 	ViewportAddKdtreeSigns(vp, &_vd.dpi);
 
-	DrawTextEffects(&_vd.dpi);
+	DrawTextEffects(&_vd.dpi, rendered_3d ? &vp : nullptr);
 
 	if (!_vd.tile_sprites_to_draw.empty()) ViewportDrawTileSprites(&_vd.tile_sprites_to_draw);
 
@@ -2309,7 +2355,7 @@ static bool CheckClickOnViewportSign(const Viewport &vp, int x, int y)
 
 	Rect search_rect{ x - 1, y - 1, x + 1, y + 1 };
 	search_rect = ExpandRectWithViewportSignMargins(search_rect, vp.zoom);
-	if (Renderer3D::IsEnabled() && Renderer3D::GetRotation() != 0) search_rect = {-INT_MAX / 2, -INT_MAX / 2, INT_MAX / 2, INT_MAX / 2};
+	if (Renderer3D::IsEnabled()) search_rect = {-INT_MAX / 2, -INT_MAX / 2, INT_MAX / 2, INT_MAX / 2};
 
 	bool show_stations = HasBit(_display_opt, DO_SHOW_STATION_NAMES) && !IsInvisibilitySet(TO_SIGNS);
 	bool show_waypoints = HasBit(_display_opt, DO_SHOW_WAYPOINT_NAMES) && !IsInvisibilitySet(TO_SIGNS);
@@ -3848,13 +3894,17 @@ void SetViewportCatchmentTown(const Town *t, bool sel)
  */
 void ViewportData::CancelFollow(const Window &viewport_window)
 {
+	Renderer3D::CancelFirstPerson(*this);
 	if (this->follow_vehicle == VehicleID::Invalid()) return;
 
 	if (viewport_window.window_class == WC_MAIN_WINDOW) {
 		/* We're cancelling follow in the main viewport, so we need to check for a vehicle view window
 		 * to raise the location follow widget. */
 		Window *vehicle_window = FindWindowById(WC_VEHICLE_VIEW, this->follow_vehicle);
-		if (vehicle_window != nullptr) vehicle_window->RaiseWidgetWhenLowered(WID_VV_LOCATION);
+		if (vehicle_window != nullptr) {
+			vehicle_window->RaiseWidgetWhenLowered(WID_VV_LOCATION);
+			vehicle_window->RaiseWidgetWhenLowered(WID_VV_FIRST_PERSON);
+		}
 	}
 
 	this->follow_vehicle = VehicleID::Invalid();

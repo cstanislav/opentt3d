@@ -43,6 +43,15 @@ public:
 	 */
 	static inline Colour ComposeColourRGBANoCheck(uint r, uint g, uint b, uint a, Colour current)
 	{
+		/* GPU-composited world viewports leave a transparent UI canvas. Retain
+		 * premultiplied colour and coverage there; opaque UI keeps its exact
+		 * original integer arithmetic below. */
+		if (current.a != 255) {
+			return Colour((r * a + current.r * (255 - a) + 127) / 255,
+				(g * a + current.g * (255 - a) + 127) / 255,
+				(b * a + current.b * (255 - a) + 127) / 255,
+				a + (current.a * (255 - a) + 127) / 255);
+		}
 		uint cr = current.r;
 		uint cg = current.g;
 		uint cb = current.b;
@@ -106,7 +115,8 @@ public:
 		uint g = colour.g;
 		uint b = colour.b;
 
-		return Colour(r * nom / denom, g * nom / denom, b * nom / denom);
+		return Colour(r * nom / denom, g * nom / denom, b * nom / denom,
+			255 - (255 - colour.a) * nom / denom);
 	}
 
 	/**

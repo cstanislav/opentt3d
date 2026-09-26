@@ -11,6 +11,25 @@
     "url": "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
     "sha256": "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be"
   },
-  "renderer_version": "0.1.0-dev",
-  "asset_format_version": 1
+  "graphics": {
+    "repository": "https://github.com/OpenTTD/OpenGFX2.git",
+    "tag": "0.8.1",
+    "commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+    "name": "OpenGFX2 Classic",
+    "filename": "OpenGFX2_Classic-0.8.1.tar",
+    "url": "https://github.com/OpenTTD/OpenGFX2/releases/download/0.8.1/OpenGFX2_Classic-0.8.1.tar",
+    "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf",
+    "pixel_filter": "nearest",
+    "world_texture_zoom_min": 2,
+    "material_texels_per_world_unit": 2
+  },
+  "moltenvk": {
+    "repository": "https://github.com/KhronosGroup/MoltenVK",
+    "tag": "v1.4.2",
+    "filename": "MoltenVK-macos.tar",
+    "url": "https://github.com/KhronosGroup/MoltenVK/releases/download/v1.4.2/MoltenVK-macos.tar",
+    "sha256": "f95765a6229cb7b915990a2890ce12ebe36a730b021545d3d52ae69ce4c4024e"
+  },
+  "renderer_version": "0.2.0-dev",
+  "asset_format_version": 2
 }

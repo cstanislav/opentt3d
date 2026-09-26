@@ -27,12 +27,19 @@ jobs:
         run: |
           python3 tools/opentt3d/check_boundary.py
           python3 -m unittest discover -s tools/assets -p 'test_*.py'
+          python3 -m unittest discover -s tools/opentt3d -p 'test_*.py'
       - name: Build container
         run: docker build -t opentt3d-dev -f docker/Dockerfile .
       - name: Build game and run tests
         run: docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/build.py --build-dir build-linux --jobs 4
       - name: Render with Mesa in a virtual display
-        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --rotation 1
+        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --savegame media/baseset/opntitle.dat --graphics-from-config "OpenGFX2 High Def" --rotation 1 --verify-renderer --verify-tile-picking --verify-bridges --reference-bridge
+      - name: Validate Vulkan presentation and synchronization
+        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/vulkan-ci --backend vulkan --vulkan-validation --savegame media/baseset/opntitle.dat --blitter 40bpp-anim --verify-renderer --verify-tile-picking --verify-vehicles --verify-industries --verify-bridges --verify-fences --verify-foundations --verify-tunnels --verify-live-tunnel --verify-rails --verify-stations --verify-ground-details --verify-rail-details --first-person tunnel --benchmark-frames 30 --timeout 240
+      - name: Build and render a real electric-rail journey
+        run: |
+          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/fixture_rail.py --build-dir build-linux --output build-linux/electric-fixture-ci
+          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/electric-ci --backend vulkan --vulkan-validation --savegame build-linux/electric-fixture-ci/save/rail-fixture.sav --ai-dir build-linux/electric-fixture-ci/ai --reference-catenary --verify-live-tunnel --verify-rail-details --verify-stations --verify-depots --verify-crossings --verify-road-stops --verify-trees --first-person auto --running --benchmark-frames 120 --timeout 240
       - name: Store verification artifacts
         if: always()
         uses: actions/upload-artifact@v5
@@ -41,6 +48,9 @@ jobs:
           path: |
             build-linux/Testing/Temporary/
             build-linux/smoke-ci/
+            build-linux/vulkan-ci/
+            build-linux/electric-fixture-ci/
+            build-linux/electric-ci/
 
   macos:
     name: macOS arm64
@@ -52,6 +62,8 @@ jobs:
           fetch-depth: 0
       - name: Install runner-only build dependencies
         run: brew install libpng lzo opusfile
+      - name: Fetch pinned build-local MoltenVK
+        run: python3 tools/opentt3d/fetch_vulkan.py build-macos/vulkan
       - name: Build game and run tests
         run: python3 tools/opentt3d/build.py --build-dir build-macos --jobs 3
       - name: Store test results

@@ -24,6 +24,10 @@ class VideoDriver_Cocoa : public VideoDriver {
 private:
 	Dimension orig_res;       ///< Saved window size for non-fullscreen mode.
 	bool refresh_sys_sprites; ///< System sprites need refreshing.
+	bool borderless_fullscreen = false;
+	NSRect windowed_frame{};
+	NSUInteger windowed_style = 0;
+	NSApplicationPresentationOptions windowed_presentation = NSApplicationPresentationDefault;
 
 public:
 	bool setup; ///< Window is currently being created.
@@ -45,6 +49,7 @@ public:
 
 	bool ChangeResolution(int w, int h) override;
 	bool ToggleFullscreen(bool fullscreen) override;
+	bool VerifyInput() override;
 
 	void ClearSystemSprites() override;
 	void PopulateSystemSprites() override;

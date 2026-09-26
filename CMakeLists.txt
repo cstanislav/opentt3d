@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 
 if(NOT BINARY_NAME)
-    set(BINARY_NAME openttd)
+    set(BINARY_NAME opentt3d)
 endif()
 
 project(${BINARY_NAME}
@@ -166,6 +166,17 @@ endif()
 
 if(NOT EMSCRIPTEN AND NOT OPTION_DEDICATED)
     find_package(OpenGL COMPONENTS OpenGL)
+    option(OPTION_VULKAN "Build the Vulkan renderer and video drivers" ON)
+    if(OPTION_VULKAN)
+        if(APPLE AND EXISTS "${CMAKE_BINARY_DIR}/vulkan/MoltenVK/MoltenVK/include/vulkan/vulkan.h")
+            set(Vulkan_INCLUDE_DIR "${CMAKE_BINARY_DIR}/vulkan/MoltenVK/MoltenVK/include" CACHE PATH "Vulkan headers")
+            set(Vulkan_LIBRARY "${CMAKE_BINARY_DIR}/vulkan/MoltenVK/MoltenVK/dylib/macOS/libMoltenVK.dylib" CACHE FILEPATH "Vulkan runtime")
+        endif()
+        find_package(Vulkan QUIET)
+        if(WIN32 AND Vulkan_FOUND)
+            find_package(SDL2 QUIET)
+        endif()
+    endif()
 endif()
 
 if(MSVC)

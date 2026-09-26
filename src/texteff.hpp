@@ -27,9 +27,14 @@ using TextEffectID = uint16_t;
 
 static const TextEffectID INVALID_TE_ID = UINT16_MAX;
 
+struct Viewport;
+struct ViewportSign;
+
 TextEffectID AddTextEffect(EncodedString &&msg, int x, int y, uint8_t duration, TextEffectMode mode);
+TextEffectID AddTextEffectAtWorld(EncodedString &&msg, int x, int y, int z, uint8_t duration, TextEffectMode mode);
+ViewportSign GetTextEffectSign(TextEffectID effect_id, const Viewport *viewport = nullptr);
 void InitTextEffects();
-void DrawTextEffects(DrawPixelInfo *dpi);
+void DrawTextEffects(DrawPixelInfo *dpi, const Viewport *viewport = nullptr);
 void UpdateTextEffect(TextEffectID effect_id, EncodedString &&msg);
 void RemoveTextEffect(TextEffectID effect_id);
 void UpdateAllTextEffectVirtCoords();

@@ -42,6 +42,7 @@
 #include "road_cmd.h"
 #include "landscape_cmd.h"
 #include "rail_cmd.h"
+#include "renderer3d/world_capture.h"
 
 #include "table/strings.h"
 #include "table/roadtypes.h"
@@ -1278,6 +1279,13 @@ struct DrawRoadTileStruct {
 
 #include "table/road_land.h"
 
+/** Read-only source layout for alternate viewport rendering and artwork review. */
+const DrawTileSprites &GetRoadDepotDrawData(DiagDirection dir)
+{
+	assert(dir < DIAGDIR_END);
+	return _road_depot[dir];
+}
+
 /**
  * Get the foundationtype of a RoadBits Slope combination
  *
@@ -1778,6 +1786,12 @@ static void DrawTile_Road(TileInfo *ti)
 					}
 				}
 
+				if (Renderer3D::CaptureCrossing(*ti,image,pal)) {
+					DrawRoadCatenary(ti);
+					if (HasRailCatenaryDrawn(GetRailType(ti->tile))) DrawRailCatenary(ti);
+					blocked_pillars = {BridgePillarFlag::EdgeSW, BridgePillarFlag::EdgeNE, BridgePillarFlag::EdgeNW, BridgePillarFlag::EdgeSE};
+					break;
+				}
 				DrawGroundSprite(image, pal);
 			}
 
@@ -1853,6 +1867,7 @@ static void DrawTile_Road(TileInfo *ti)
 			const RoadTypeInfo *rti = GetRoadTypeInfo(road_rt == INVALID_ROADTYPE ? tram_rt : road_rt);
 
 			int relocation = GetCustomRoadSprite(rti, ti->tile, ROTSG_DEPOT);
+			bool custom_depot = relocation != 0;
 			bool default_gfx = relocation == 0;
 			if (default_gfx) {
 				if (rti->flags.Test(RoadTypeFlag::Catenary)) {
@@ -1871,6 +1886,8 @@ static void DrawTile_Road(TileInfo *ti)
 
 			DiagDirection dir = GetRoadDepotDirection(ti->tile);
 			const DrawTileSprites *dts = &_road_depot[dir];
+			if (!custom_depot && !rti->UsesOverlay() &&
+				Renderer3D::CaptureDepot(*ti,road_rt == INVALID_ROADTYPE ? 5 : 4,dir,*dts,relocation,dts->ground.sprite,palette)) break;
 			DrawGroundSprite(dts->ground.sprite, PAL_NONE);
 
 			if (default_gfx) {

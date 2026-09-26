@@ -27,6 +27,8 @@ if(NOT OPTION_DEDICATED)
         CONDITION SDL2_FOUND AND OPENGL_FOUND
     )
 
+    add_files(sdl2_vulkan_v.cpp sdl2_vulkan_v.h CONDITION SDL2_FOUND AND Vulkan_FOUND)
+
     add_files(
         win32_v.cpp
         win32_v.h

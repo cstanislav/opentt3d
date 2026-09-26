@@ -5976,3 +5976,12 @@ STR_BADGE_CONFIG_PREVIEW                                        :Preview Image
 STR_BADGE_CONFIG_NAME                                           :Name
 STR_BADGE_FILTER_ANY_LABEL                                      :Any {STRING}
 STR_BADGE_FILTER_IS_LABEL                                       :{STRING} is {STRING}
+
+# OpenTT3D presentation strings use a free range; upstream and saved IDs remain stable.
+##id 0x9000
+STR_OPENTT3D_CAB_BUTTON                                         :{BLACK}Cab
+STR_OPENTT3D_CAB_TOOLTIP                                        :Follow this vehicle in first person with smooth turning. Click again for the orbit view. Hold the middle mouse button to look around
+STR_OPENTT3D_INTRO_CAPTION                                      :{WHITE}OpenTT3D
+STR_OPENTT3D_INTRO_VERSION                                      :OpenTT3D {REV}
+STR_OPENTT3D_QUIT_QUERY                                         :{YELLOW}Are you sure you want to exit OpenTT3D?
+STR_OPENTT3D_ABOUT                                              :{WHITE}About OpenTT3D

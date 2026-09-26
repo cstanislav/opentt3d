@@ -22,6 +22,7 @@
 #include "../window_func.h"
 #include "video_driver.hpp"
 #include "../renderer3d/viewport_3d.h"
+#include "../renderer3d/profiling.h"
 
 #include "../safeguards.h"
 
@@ -122,17 +123,24 @@ void VideoDriver::Tick()
 		if (this->next_draw_tick < now - ALLOWED_DRIFT * this->GetDrawInterval()) this->next_draw_tick = now;
 
 		/* Locking video buffer can block (especially with vsync enabled), do it before taking game state lock. */
-		this->LockVideoBuffer();
+		Renderer3D::Profile::BeginFrame();
+		{
+			Renderer3D::Profile::Scope timing(Renderer3D::Profile::Section::BufferWait);
+			this->LockVideoBuffer();
+		}
 
 		{
 			/* Tell the game-thread to stop so we can have a go. */
+			auto waiting = Renderer3D::Profile::Clock::now();
 			std::lock_guard<std::mutex> lock_wait(this->game_thread_wait_mutex);
 			std::lock_guard<std::mutex> lock_state(this->game_state_mutex);
+			Renderer3D::Profile::AddTime(Renderer3D::Profile::Section::GameWait, std::chrono::duration<double, std::milli>(Renderer3D::Profile::Clock::now() - waiting).count());
 
 			/* Keep the interactive randomizer a bit more random by requesting
 			 * new values when-ever we can. */
 			InteractiveRandom();
 
+			Renderer3D::BeginFrame();
 			this->DrainCommandQueue();
 
 			while (this->PollEvent()) {}
@@ -151,17 +159,21 @@ void VideoDriver::Tick()
 
 			/* Prevent drawing when switching mode, as windows can be removed when they should still appear. */
 			if (_game_mode == GM_BOOTSTRAP || _switch_mode == SM_NONE || HasModalProgress()) {
-				Renderer3D::BeginFrame();
+				Renderer3D::Profile::Scope timing(Renderer3D::Profile::Section::WindowDraw);
 				::UpdateWindows();
 			}
 
 			this->PopulateSystemSprites();
 		}
 
-		this->CheckPaletteAnim();
-		this->Paint();
+		{
+			Renderer3D::Profile::Scope timing(Renderer3D::Profile::Section::Present);
+			this->CheckPaletteAnim();
+			this->Paint();
+		}
 
 		this->UnlockVideoBuffer();
+		Renderer3D::Profile::EndFrame();
 
 		/* Wait till the first successful drawing tick before marking the driver as operational. */
 		static bool first_draw_tick = true;
@@ -192,5 +204,5 @@ void VideoDriver::SleepTillNextTick()
  */
 /* static */ std::string VideoDriver::GetCaption()
 {
-	return fmt::format("OpenTTD {}", _openttd_revision);
+	return fmt::format("OpenTT3D {}", _openttd_revision);
 }

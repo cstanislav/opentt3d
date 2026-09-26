@@ -62,6 +62,7 @@
 #include "elrail_func.h"
 #include "company_base.h"
 #include "newgrf_railtype.h"
+#include "renderer3d/world_capture.h"
 
 #include "table/elrail_data.h"
 
@@ -284,6 +285,7 @@ static void DrawRailCatenaryRailway(const TileInfo *ti)
 	DiagDirections override_pcp{};
 	std::array<Directions, DIAGDIR_END> ppp_preferred{};
 	std::array<Directions, DIAGDIR_END> ppp_allowed{};
+	std::array<int,DIAGDIR_END> pcp_elevations{};
 
 	/* Find which rail bits are present, and select the override points.
 	 * We don't draw a pylon:
@@ -311,6 +313,7 @@ static void DrawRailCatenaryRailway(const TileInfo *ti)
 		SpriteID pylon_base = (halftile_corner != CORNER_INVALID && HasBit(edge_corners[i], halftile_corner)) ? pylon_halftile : pylon_normal;
 		TileIndex neighbour = ti->tile + TileOffsByDiagDir(i);
 		int elevation = GetPCPElevation(ti->tile, i);
+		pcp_elevations[i] = elevation;
 
 		/* Here's one of the main headaches. GetTileSlope does not correct for possibly
 		 * existing foundataions, so we do have to do that manually later on.*/
@@ -425,8 +428,10 @@ static void DrawRailCatenaryRailway(const TileInfo *ti)
 						continue; // No neighbour, go looking for a better position
 					}
 
-					AddSortableSpriteToDraw(pylon_base + _pylon_sprites[temp], PAL_NONE, x, y, elevation,
-						{{-1, -1, 0}, {1, 1, BB_HEIGHT_UNDER_BRIDGE}, {1, 1, 0}}, IsTransparencySet(TO_CATENARY));
+					if (!Renderer3D::CaptureRailPylon(*ti,pylon_base+_pylon_sprites[temp],x,y,elevation,ti->x+_x_pcp_offsets[i],ti->y+_y_pcp_offsets[i])) {
+						AddSortableSpriteToDraw(pylon_base + _pylon_sprites[temp], PAL_NONE, x, y, elevation,
+							{{-1, -1, 0}, {1, 1, BB_HEIGHT_UNDER_BRIDGE}, {1, 1, 0}}, IsTransparencySet(TO_CATENARY));
+					}
 
 					break; // We already have drawn a pylon, bail out
 				}
@@ -476,7 +481,9 @@ static void DrawRailCatenaryRailway(const TileInfo *ti)
 		 * down to the nearest full height change.
 		 */
 		int z = (GetSlopePixelZ(ti->x + sss.origin.x, ti->y + sss.origin.y, true) + 4) / 8 * 8;
-		AddSortableSpriteToDraw(wire_base + sss.image_offset, PAL_NONE, ti->x, ti->y, z, sss, IsTransparencySet(TO_CATENARY));
+		if (!Renderer3D::CaptureRailWire(*ti,wire_base+sss.image_offset,t,pcp_elevations,pcp_status.base())) {
+			AddSortableSpriteToDraw(wire_base + sss.image_offset, PAL_NONE, ti->x, ti->y, z, sss, IsTransparencySet(TO_CATENARY));
+		}
 	}
 }
 
@@ -514,7 +521,13 @@ void DrawRailCatenaryOnBridge(const TileInfo *ti)
 
 	SpriteID wire_base = GetWireBase(end, TCX_ON_BRIDGE);
 
-	AddSortableSpriteToDraw(wire_base + sss->image_offset, PAL_NONE, ti->x, ti->y, height, *sss, IsTransparencySet(TO_CATENARY));
+	unsigned start_dir = axis == AXIS_X ? DIAGDIR_NE : DIAGDIR_NW;
+	unsigned end_dir = axis == AXIS_X ? DIAGDIR_SW : DIAGDIR_SE;
+	unsigned supports = (length%2 && num == length) ? (1U<<start_dir)|(1U<<end_dir) : 1U<<(num%2 ? start_dir : end_dir);
+	int elevation = static_cast<int>(height);
+	if (!Renderer3D::CaptureRailWire(*ti,wire_base+sss->image_offset,AxisToTrack(axis),{elevation,elevation,elevation,elevation},supports)) {
+		AddSortableSpriteToDraw(wire_base + sss->image_offset, PAL_NONE, ti->x, ti->y, height, *sss, IsTransparencySet(TO_CATENARY));
+	}
 
 	SpriteID pylon_base = GetPylonBase(end, TCX_ON_BRIDGE);
 
@@ -528,7 +541,9 @@ void DrawRailCatenaryOnBridge(const TileInfo *ti)
 		if (HasBit(tlg, (axis == AXIS_X ? 0 : 1))) ppp_pos = ReverseDir(ppp_pos);
 		uint x = ti->x + _x_pcp_offsets[pcp_pos] + _x_ppp_offsets[ppp_pos];
 		uint y = ti->y + _y_pcp_offsets[pcp_pos] + _y_ppp_offsets[ppp_pos];
-		AddSortableSpriteToDraw(pylon_base + _pylon_sprites[ppp_pos], PAL_NONE, x, y, height, pylon_bounds, IsTransparencySet(TO_CATENARY));
+		if (!Renderer3D::CaptureRailPylon(*ti,pylon_base+_pylon_sprites[ppp_pos],x,y,height,ti->x+_x_pcp_offsets[pcp_pos],ti->y+_y_pcp_offsets[pcp_pos],true)) {
+			AddSortableSpriteToDraw(pylon_base + _pylon_sprites[ppp_pos], PAL_NONE, x, y, height, pylon_bounds, IsTransparencySet(TO_CATENARY));
+		}
 	}
 
 	/* need a pylon on the southern end of the bridge */
@@ -538,7 +553,9 @@ void DrawRailCatenaryOnBridge(const TileInfo *ti)
 		if (HasBit(tlg, (axis == AXIS_X ? 0 : 1))) ppp_pos = ReverseDir(ppp_pos);
 		uint x = ti->x + _x_pcp_offsets[pcp_pos] + _x_ppp_offsets[ppp_pos];
 		uint y = ti->y + _y_pcp_offsets[pcp_pos] + _y_ppp_offsets[ppp_pos];
-		AddSortableSpriteToDraw(pylon_base + _pylon_sprites[ppp_pos], PAL_NONE, x, y, height, pylon_bounds, IsTransparencySet(TO_CATENARY));
+		if (!Renderer3D::CaptureRailPylon(*ti,pylon_base+_pylon_sprites[ppp_pos],x,y,height,ti->x+_x_pcp_offsets[pcp_pos],ti->y+_y_pcp_offsets[pcp_pos],true)) {
+			AddSortableSpriteToDraw(pylon_base + _pylon_sprites[ppp_pos], PAL_NONE, x, y, height, pylon_bounds, IsTransparencySet(TO_CATENARY));
+		}
 	}
 }
 
@@ -557,7 +574,12 @@ void DrawRailCatenary(const TileInfo *ti)
 				SpriteID wire_base = GetWireBase(ti->tile);
 
 				/* This wire is not visible with the default depot sprites */
-				AddSortableSpriteToDraw(wire_base + sss.image_offset, PAL_NONE, ti->x, ti->y, GetTileMaxPixelZ(ti->tile), sss, IsTransparencySet(TO_CATENARY));
+				int height = GetTileMaxPixelZ(ti->tile);
+				DiagDirection direction = GetRailDepotDirection(ti->tile);
+				unsigned half = direction == DIAGDIR_NE || direction == DIAGDIR_NW ? 1 : 2;
+				if (!Renderer3D::CaptureRailWire(*ti,wire_base+sss.image_offset,DiagDirToDiagTrack(direction),{height,height,height,height},15,half)) {
+					AddSortableSpriteToDraw(wire_base + sss.image_offset, PAL_NONE, ti->x, ti->y, height, sss, IsTransparencySet(TO_CATENARY));
+				}
 				return;
 			}
 			break;

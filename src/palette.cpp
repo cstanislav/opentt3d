@@ -239,6 +239,13 @@ bool CopyPalette(Palette &local_palette, bool force_copy)
 	return true;
 }
 
+/** Read-only snapshot for world/material rendering; leave UI animation dirtiness intact. */
+Palette SnapshotPalette()
+{
+	std::lock_guard<std::recursive_mutex> lock(_palette_mutex);
+	return _cur_palette;
+}
+
 #define EXTR(p, q) (((uint16_t)(palette_animation_counter * (p)) * (q)) >> 16)
 #define EXTR2(p, q) (((uint16_t)(~palette_animation_counter * (p)) * (q)) >> 16)
 

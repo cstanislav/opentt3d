@@ -33,6 +33,7 @@ void UnInitWindowSystem();
 void ResetWindowSystem();
 void SetupColoursAndInitialWindow();
 void InputLoop();
+void ResetViewportScrolling();
 
 void InvalidateWindowData(WindowClass cls, WindowNumber number, int data = 0, bool gui_scope = false);
 void InvalidateWindowData(WindowClass cls, WindowNumber number, ConvertibleThroughBase auto data, bool gui_scope = false) { InvalidateWindowData(cls, number, data.base(), gui_scope); }

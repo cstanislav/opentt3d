@@ -1141,6 +1141,7 @@ void Window::Close([[maybe_unused]] int data)
  */
 Window::~Window()
 {
+	if (this->viewport!=nullptr) Renderer3D::ForgetViewport(this->viewport.get());
 	/* Make sure the window is closed, deletion is allowed only in Window::DeleteClosedWindows(). */
 	assert(*this->z_position == nullptr);
 }
@@ -2438,6 +2439,13 @@ static EventState HandleActiveWidget()
  * Handle viewport scrolling with the mouse.
  * @return State of handling the event.
  */
+void ResetViewportScrolling()
+{
+	_cursor.fix_at = false;
+	_scrolling_viewport = false;
+	_last_scroll_window = nullptr;
+}
+
 static EventState HandleViewportScroll()
 {
 	bool scrollwheel_scrolling = _settings_client.gui.scrollwheel_scrolling == SWS_SCROLL_MAP && _cursor.wheel_moved;
@@ -2450,9 +2458,7 @@ static EventState HandleViewportScroll()
 	if (_last_scroll_window == nullptr) _last_scroll_window = FindWindowFromPt(_cursor.pos.x, _cursor.pos.y);
 
 	if (_last_scroll_window == nullptr || !((_settings_client.gui.scroll_mode != VSM_MAP_LMB && _right_button_down) || scrollwheel_scrolling || (_settings_client.gui.scroll_mode == VSM_MAP_LMB && _left_button_down))) {
-		_cursor.fix_at = false;
-		_scrolling_viewport = false;
-		_last_scroll_window = nullptr;
+		ResetViewportScrolling();
 		return ES_NOT_HANDLED;
 	}
 
@@ -2867,6 +2873,10 @@ static void MouseLoop(MouseClick click, int mousewheel)
 	 * But there is no company related window open anyway, so _current_company is not used. */
 	assert(HasModalProgress() || IsLocalCompany());
 
+	if (!HasModalProgress() && Renderer3D::HandleMiddleOrbit(_middle_button_down, _cursor.pos, _cursor.delta)) {
+		_cursor.delta = {};
+		return;
+	}
 	HandlePlacePresize();
 	UpdateTileSelection();
 
@@ -3518,6 +3528,7 @@ int PositionNetworkChatWindow(Window *w)
  */
 void ChangeVehicleViewports(VehicleID from_index, VehicleID to_index)
 {
+	Renderer3D::ReplaceCameraVehicle(from_index, to_index);
 	for (const Window *w : Window::Iterate()) {
 		if (w->viewport != nullptr && w->viewport->follow_vehicle == from_index) {
 			w->viewport->follow_vehicle = to_index;

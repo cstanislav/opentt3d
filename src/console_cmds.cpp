@@ -46,6 +46,24 @@
 #include "company_cmd.h"
 #include "misc_cmd.h"
 #include "renderer3d/viewport_3d.h"
+#include "renderer3d/profiling.h"
+#include "widgets/vehicle_widget.h"
+#include "vehicle_base.h"
+#include "vehicle_gui.h"
+#include "renderer3d/sprite_textures.hpp"
+#include "renderer3d/authored_geometry.h"
+#include "renderer3d/voxel_models.h"
+#include "renderer3d/world_capture.h"
+#include "renderer3d/bridge_capture.h"
+#include "renderer3d/tunnel_capture.h"
+#include "renderer3d/rail_capture.h"
+#include "renderer3d/station_capture.h"
+#include "renderer3d/ground_detail_capture.h"
+#include "renderer3d/rail_detail_capture.h"
+#include "renderer3d/depot_capture.h"
+#include "renderer3d/crossing_capture.h"
+#include "renderer3d/road_stop_capture.h"
+#include "video/video_driver.hpp"
 
 #if defined(WITH_ZLIB)
 #include "network/network_content.h"
@@ -342,6 +360,7 @@ static bool ConZoomToLevel(std::span<std::string_view> argv)
 				} else {
 					Window *w = GetMainWindow();
 					Viewport &vp = *w->viewport;
+					if (Renderer3D::IsEnabled()) return Renderer3D::SetZoom(*w, static_cast<float>(to_underlying(zoom_lvl)), true);
 					while (vp.zoom > zoom_lvl) DoZoomInOutWindow(ZOOM_IN, w);
 					while (vp.zoom < zoom_lvl) DoZoomInOutWindow(ZOOM_OUT, w);
 				}
@@ -1709,8 +1728,9 @@ static bool ConAlias(std::span<std::string_view> argv)
 static bool ConScreenShot(std::span<std::string_view> argv)
 {
 	if (argv.empty()) {
-		IConsolePrint(CC_HELP, "Create a screenshot of the game. Usage: 'screenshot [viewport | normal | big | giant | heightmap | minimap] [no_con] [size <width> <height>] [<filename>]'.");
+		IConsolePrint(CC_HELP, "Create a screenshot of the game. Usage: 'screenshot [viewport | presented | normal | big | giant | heightmap | minimap] [no_con] [size <width> <height>] [<filename>]'.");
 		IConsolePrint(CC_HELP, "  'viewport' (default) makes a screenshot of the current viewport (including menus, windows).");
+		IConsolePrint(CC_HELP, "  'presented' captures Vulkan's swapchain or OpenGL's composed viewport/UI texture (before the GL hardware cursor).");
 		IConsolePrint(CC_HELP, "  'normal' makes a screenshot of the visible area.");
 		IConsolePrint(CC_HELP, "  'big' makes a zoomed-in screenshot of the visible area.");
 		IConsolePrint(CC_HELP, "  'giant' makes a screenshot of the whole map.");
@@ -1734,6 +1754,9 @@ static bool ConScreenShot(std::span<std::string_view> argv)
 		if (argv[arg_index] == "viewport") {
 			type = SC_VIEWPORT;
 			arg_index += 1;
+		} else if (argv[arg_index] == "presented") {
+			type = SC_PRESENTED;
+			arg_index += 1;
 		} else if (argv[arg_index] == "normal") {
 			type = SC_DEFAULTZOOM;
 			arg_index += 1;
@@ -1753,8 +1776,8 @@ static bool ConScreenShot(std::span<std::string_view> argv)
 	}
 
 	if (argv.size() > arg_index && argv[arg_index] == "no_con") {
-		if (type != SC_VIEWPORT) {
-			IConsolePrint(CC_ERROR, "'no_con' can only be used in combination with 'viewport'.");
+		if (type != SC_VIEWPORT && type != SC_PRESENTED) {
+			IConsolePrint(CC_ERROR, "'no_con' can only be used with 'viewport' or 'presented'.");
 			return true;
 		}
 		IConsoleClose();
@@ -1897,7 +1920,7 @@ static bool ConHelp(std::span<std::string_view> argv)
 		return true;
 	}
 
-	IConsolePrint(TC_LIGHT_BLUE, " ---- OpenTTD Console Help ---- ");
+	IConsolePrint(TC_LIGHT_BLUE, " ---- OpenTT3D Console Help ---- ");
 	IConsolePrint(CC_DEFAULT, " - commands: the command to list all commands is 'list_cmds'.");
 	IConsolePrint(CC_DEFAULT, " call commands with '<command> <arg2> <arg3>...'");
 	IConsolePrint(CC_DEFAULT, " - to assign strings, or use them as arguments, enclose it within quotes.");
@@ -2872,20 +2895,565 @@ static bool ConDumpInfo(std::span<std::string_view> argv)
 
 static bool ConRenderer3D(std::span<std::string_view> argv)
 {
+	if (argv.size() == 3 && argv[1] == "cab") {
+		VehicleID id = VehicleID::Invalid();
+		if (argv[2] == "auto") {
+			for (const Vehicle *vehicle : Vehicle::Iterate()) {
+				if (vehicle->IsPrimaryVehicle() && !vehicle->vehstatus.Test(VehState::Hidden)) { id = vehicle->index; break; }
+			}
+		} else if (argv[2] == "tunnel") {
+			for (const Vehicle *vehicle : Vehicle::Iterate()) {
+				if (vehicle->IsPrimaryVehicle() && Renderer3D::IsVehicleInTunnel(*vehicle)) { id = vehicle->index; break; }
+			}
+		} else if (auto value = ParseType<uint32_t>(argv[2]); value.has_value()) {
+			id = VehicleID{*value};
+		}
+		if (!Vehicle::IsValidID(id)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([id] {
+			const Vehicle *vehicle = Vehicle::GetIfValid(id);
+			if (vehicle == nullptr || !vehicle->IsPrimaryVehicle()) return;
+			ShowVehicleViewWindow(vehicle);
+			if (Window *window = FindWindowById(WC_VEHICLE_VIEW, id); window != nullptr) window->OnClick({}, WID_VV_FIRST_PERSON, 1);
+			if (Renderer3D::IsFirstPerson(id)) Debug(driver, 1, "OpenTT3D: first-person camera following vehicle {}", id);
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "zoom") {
+		auto zoom = ParseInteger<int>(argv[2]);
+		if (!zoom || *zoom < -6 || *zoom > 5 || GetMainWindow() == nullptr) return false;
+		/* Keep scripted camera changes ordered with queued focus, verification
+		 * and benchmark actions, rather than applying them ahead of that work. */
+		VideoDriver::GetInstance()->QueueOnMainThread([level=*zoom] {
+			if (Window *window = GetMainWindow(); window != nullptr) Renderer3D::SetZoom(*window,static_cast<float>(level),true);
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "orbit") {
+		auto dx = ParseInteger<int>(argv[2]), dy = ParseInteger<int>(argv[3]);
+		if (!dx || !dy || std::abs(static_cast<int64_t>(*dx)) > 10000 || std::abs(static_cast<int64_t>(*dy)) > 10000) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([delta = Point{*dx, *dy}] {
+			Window *window = GetMainWindow();
+			if (window == nullptr || window->viewport == nullptr) return;
+			auto &vp = *window->viewport;
+			Point cursor{vp.left + vp.width * 2 / 3, vp.top + vp.height * 2 / 3};
+			Renderer3D::HandleMiddleOrbit(false, cursor, {});
+			Renderer3D::HandleMiddleOrbit(true, cursor, {});
+			Renderer3D::HandleMiddleOrbit(true, cursor, delta);
+			Renderer3D::HandleMiddleOrbit(false, cursor, {});
+			Debug(driver, 1, "OpenTT3D: middle-drag orbit released at yaw {}, pitch {}", Renderer3D::GetRotation(), Renderer3D::GetPitch(vp));
+		});
+		return true;
+	}
+	if (argv.size() >= 3 && argv.size() <= 5 && argv[1] == "benchmark") {
+		auto frames = ParseType<unsigned>(argv[2]);
+		if (!frames || *frames == 0 || *frames > 6000) return false;
+		bool fullscreen = false, capture = false;
+		for (size_t i = 3; i < argv.size(); ++i) {
+			if (argv[i] == "fullscreen") fullscreen = true;
+			else if (argv[i] == "capture") capture = true;
+			else return false;
+		}
+		VideoDriver::GetInstance()->QueueOnMainThread([count = *frames, fullscreen, capture] { Renderer3D::Profile::StartBenchmark(count, fullscreen, capture); });
+		return true;
+	}
+	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "voxel-gallery") {
+		std::string prefix = argv.size() == 3 ? std::string(argv[2]) : std::string{};
+		VideoDriver::GetInstance()->QueueOnMainThread([prefix=std::move(prefix)] {
+			try { Renderer3D::ExportVoxelReviews(prefix); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "airport-locate") {
+		auto graphics = argv.size() == 3 ? ParseType<unsigned>(argv[2]) : std::optional<unsigned>{UINT_MAX};
+		if (!graphics || (argv.size() == 3 && *graphics >= 74)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=*graphics] {
+			if (!Renderer3D::FocusVoxelAirport(graphics)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching authored voxel airport tile {} in this map",graphics);
+		});
+		return true;
+	}
+	if (argv.size() >= 3 && argv[1] == "verify-airport-animation") {
+		std::vector<unsigned> graphics;
+		for (size_t i = 2; i < argv.size(); ++i) {
+			auto graphic = ParseType<unsigned>(argv[i]);
+			if (!graphic || *graphic >= 74) return false;
+			graphics.push_back(*graphic);
+		}
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=std::move(graphics)] {
+			try { Renderer3D::BeginVoxelAirportAnimationChecks(graphics); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if ((argv.size() == 3 || argv.size() == 4) && argv[1] == "voxel-depot-locate") {
+		auto kind = ParseType<unsigned>(argv[2]);
+		auto direction = argv.size() == 4 ? ParseType<unsigned>(argv[3]) : std::optional<unsigned>{UINT_MAX};
+		if (!kind || *kind >= 6 || !direction || (argv.size() == 4 && *direction >= 4)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind=*kind,direction=*direction] {
+			if (!Renderer3D::FocusDepot(kind,direction)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching voxel depot {} on this map",kind);
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-depot-traversal") {
+		auto vehicle = ParseType<unsigned>(argv[2]);
+		if (!vehicle || *vehicle == UINT32_MAX) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([vehicle=*vehicle] {
+			try { Renderer3D::BeginVoxelDepotTraversalCheck(vehicle); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "ship-depot-locate") {
+		auto axis = ParseType<unsigned>(argv[2]);
+		if (!axis || *axis >= 2) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([axis=*axis] {
+			if (!Renderer3D::FocusShipDepot(axis)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching voxel ship depot axis {} on this map",axis);
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "dock-locate") {
+		auto graphics = ParseType<unsigned>(argv[2]);
+		if (!graphics || *graphics >= 6) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=*graphics] {
+			if (!Renderer3D::FocusVoxelDock(graphics)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching voxel dock {} on this map",graphics);
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-dock-palette") {
+		auto graphics = ParseType<unsigned>(argv[2]);
+		if (!graphics || *graphics < 4 || *graphics >= 6) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=*graphics] {
+			try { Renderer3D::BeginVoxelDockPaletteCheck(graphics); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "verify-voxel-meshes") {
+		std::string prefix = argv.size() == 3 ? std::string(argv[2]) : std::string{};
+		VideoDriver::GetInstance()->QueueOnMainThread([prefix=std::move(prefix)] {
+			try { Renderer3D::VerifyVoxelMeshes(prefix); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-voxel-poses") {
+		auto engine = ParseType<unsigned>(argv[2]);
+		if (!engine || *engine >= 256) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([engine=*engine] {
+			try { Renderer3D::VerifyVoxelVehicleModels(engine); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-vehicle-cargo") {
+		auto engine = ParseType<unsigned>(argv[2]);
+		if (!engine || *engine >= 256) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([engine=*engine] {
+			try { Renderer3D::BeginVoxelVehicleCargoCheck(engine); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() >= 3 && argv[1] == "verify-industry-animation") {
+		std::vector<unsigned> graphics;
+		for (size_t i = 2; i < argv.size(); ++i) {
+			auto graphic = ParseType<unsigned>(argv[i]);
+			if (!graphic || *graphic >= 175) return false;
+			graphics.push_back(*graphic);
+		}
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=std::move(graphics)] {
+			try { Renderer3D::BeginVoxelIndustryAnimationChecks(graphics); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "verify-power-sparks") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::BeginVoxelPowerSparkCheck(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() >= 3 && argv.size() <= 5 && argv[1] == "house-stage-locate") {
+		auto stage = ParseType<unsigned>(argv[2]);
+		if (!stage || *stage > 3) return false;
+		auto house = argv.size() >= 4 ? ParseType<unsigned>(argv[3]) : std::optional<unsigned>{UINT_MAX};
+		auto variant = argv.size() == 5 ? ParseType<unsigned>(argv[4]) : std::optional<unsigned>{UINT_MAX};
+		if (!house || !variant || (argv.size() >= 4 && *house >= 110) || (argv.size() == 5 && *variant > 3)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([stage=*stage,house=*house,variant=*variant] {
+			if (!Renderer3D::FocusVoxelHouseStage(stage,house,variant)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching voxel house construction stage {} in this map",stage);
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "tree-locate") {
+		auto base = ParseType<unsigned>(argv[2]), stage = ParseType<unsigned>(argv[3]);
+		if (!base || *base < 1576 || *base > 2003 || (*base-1576)%7 != 0 || !stage || *stage >= 7) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([base=*base,stage=*stage] {
+			if (!Renderer3D::FocusVoxelTree(base,stage)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching voxel tree {} stage {} in this map",base,stage);
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "vehicle-locate") {
+		auto engine = ParseType<unsigned>(argv[2]);
+		if (!engine || *engine >= 256) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([engine=*engine] {
+			if (!Renderer3D::FocusVoxelVehicle(engine)) Debug(driver,0,"OpenTT3D: renderer verification failed: no visible voxel vehicle engine {} in this map",engine);
+		});
+		return true;
+	}
+	if (argv.size() == 4 && (argv[1] == "industry-locate" || argv[1] == "industry-ground-locate")) {
+		auto graphics = ParseType<unsigned>(argv[2]), stage = ParseType<unsigned>(argv[3]);
+		if (!graphics || *graphics >= 175 || !stage || *stage >= 4) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=*graphics,stage=*stage,ground=argv[1] == "industry-ground-locate"] {
+			if (!Renderer3D::FocusVoxelIndustry(graphics,stage,ground)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching voxel industry {} construction stage {} in this map",graphics,stage);
+		});
+		return true;
+	}
+	if (argv.size()==3 && argv[1]=="gallery") {
+		auto house=ParseType<unsigned>(argv[2]);
+		if (!house || (*house>=110 && (*house<1576 || *house>2009))) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([id=*house] { Renderer3D::ExportHouseModelGallery(id); });
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "industry-gallery") {
+		auto graphics = ParseInteger<unsigned>(argv[2]);
+		if (!graphics || *graphics >= 175) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([id = *graphics] {
+			try { Renderer3D::ExportHouseModelGallery(id, true); }
+			catch (const std::exception &error) { Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "bridge-gallery") {
+		auto type = ParseInteger<unsigned>(argv[2]);
+		if (!type || *type >= 13) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([id = *type] {
+			try { Renderer3D::ExportBridgeModelGallery(id); }
+			catch (const std::exception &error) { Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what()); }
+		});
+		return true;
+	}
+	if ((argv.size() == 4 || argv.size() == 5) && argv[1] == "fence-gallery") {
+		auto style = ParseInteger<unsigned>(argv[2]), slope = ParseInteger<unsigned>(argv[3]);
+		auto layout = argv.size() == 5 ? ParseInteger<unsigned>(argv[4]) : std::optional<unsigned>{};
+		if (!style || *style >= 7 || !slope || *slope > 255 || (argv.size() == 5 && (!layout || *layout > 15 || *style != 6))) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([style=*style,slope=*slope,layout] {
+			try { Renderer3D::ExportFenceGallery(style,slope,layout); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "verify-house-lift") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] { Renderer3D::BeginVoxelHouseLiftCheck(); });
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "verify-radio-beacons") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] { Renderer3D::BeginVoxelRadioBeaconCheck(); });
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "buoy-locate") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			if (!Renderer3D::FocusVoxelBuoy()) Debug(driver,0,"OpenTT3D: renderer verification failed: no original voxel buoy in this map");
+		});
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "verify-buoy-beacon") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] { Renderer3D::BeginVoxelBuoyBeaconCheck(); });
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-stadium-palette") {
+		auto house = ParseType<unsigned>(argv[2]);
+		if (!house || (*house != 20 && *house != 32)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([house=*house] { Renderer3D::BeginVoxelStadiumPaletteCheck(house); });
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-house-palette") {
+		auto house = ParseType<unsigned>(argv[2]);
+		if (!house || (*house != 20 && *house != 31 && *house != 32 && *house != 39 && *house != 104 && *house != 105)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([house=*house] { Renderer3D::BeginVoxelHousePaletteCheck(house); });
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-voxel-water") {
+		auto house = ParseType<unsigned>(argv[2]);
+		if (!house || (*house != 8 && *house != 10 && *house != 11)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([house=*house] { Renderer3D::BeginVoxelWaterAnimationCheck(house); });
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "fence-locate") {
+		auto style = ParseType<unsigned>(argv[2]);
+		if (!style || *style > 6) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([style=*style] {
+			if (!Renderer3D::FocusReferenceFence(style)) Debug(driver,0,"OpenTT3D: renderer verification failed: no live fence style {} in this map",style);
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "foundation-gallery") {
+		auto slope = ParseInteger<unsigned>(argv[2]), foundation = ParseInteger<unsigned>(argv[3]);
+		if (!slope || *slope >= 32 || !foundation || *foundation >= 14) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([slope=*slope,foundation=*foundation] {
+			try { Renderer3D::ExportFoundationGallery(slope,foundation); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "foundation-locate") {
+		std::string kind(argv[2]);
+		if (kind != "any" && kind != "house" && kind != "voxel-house" && kind != "rail" && kind != "road" && kind != "station" && kind != "industry") return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind] {
+			if (!Renderer3D::FocusReferenceFoundation(kind)) Debug(driver,0,"OpenTT3D: renderer verification failed: no live {} foundation in this map",kind);
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "tunnel-gallery") {
+		auto kind = ParseInteger<unsigned>(argv[2]), direction = ParseInteger<unsigned>(argv[3]);
+		if (!kind || *kind >= 6 || !direction || *direction >= 4) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind=*kind,direction=*direction] {
+			try { Renderer3D::ExportTunnelGallery(kind,direction); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 5 && argv[1] == "signal-gallery") {
+		auto type = ParseInteger<unsigned>(argv[2]), variant = ParseInteger<unsigned>(argv[3]), state = ParseInteger<unsigned>(argv[4]);
+		if (!type || *type >= 6 || !variant || *variant >= 2 || !state || *state >= 2) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([type=*type,variant=*variant,state=*state] {
+			try { Renderer3D::ExportSignalGallery(type,variant,state); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "catenary-gallery") {
+		auto track = ParseInteger<unsigned>(argv[2]);
+		auto grade = ParseInteger<int>(argv[3]);
+		if (!track || *track >= 6 || !grade || *grade < -8 || *grade > 8) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([track=*track,grade=*grade] {
+			try { Renderer3D::ExportCatenaryGallery(track,grade); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 5 && argv[1] == "crossing-gallery") {
+		auto kind = ParseInteger<unsigned>(argv[2]), axis = ParseInteger<unsigned>(argv[3]), barred = ParseInteger<unsigned>(argv[4]);
+		if (!kind || *kind >= 4 || !axis || *axis >= 2 || !barred || *barred >= 2) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind=*kind,axis=*axis,barred=*barred] {
+			try { Renderer3D::ExportCrossingGallery(kind,axis,barred != 0); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "road-stop-gallery") {
+		auto kind = ParseInteger<unsigned>(argv[2]), layout = ParseInteger<unsigned>(argv[3]);
+		if (!kind || *kind >= 2 || !layout || *layout >= 6) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind=*kind,layout=*layout] {
+			try { Renderer3D::ExportRoadStopGallery(kind != 0,layout); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "depot-gallery") {
+		auto kind = ParseInteger<unsigned>(argv[2]), direction = ParseInteger<unsigned>(argv[3]);
+		if (!kind || *kind >= 6 || !direction || *direction >= 4) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind=*kind,direction=*direction] {
+			try { Renderer3D::ExportDepotGallery(kind,direction); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "ground-detail-locate") {
+		auto kind = ParseInteger<unsigned>(argv[2]), variant = ParseInteger<unsigned>(argv[3]);
+		if (!kind || *kind >= 5 || !variant || *variant >= (*kind == 0 ? 9U : *kind == 1 ? 2U : *kind == 4 ? 5U : 4U)) return false;
+		if (!Renderer3D::FocusGroundDetail(*kind,*variant)) IConsolePrint(CC_INFO,"No matching ground detail on this map.");
+		return true;
+	}
+	if (argv.size() == 5 && argv[1] == "ground-detail-gallery") {
+		auto kind = ParseInteger<unsigned>(argv[2]), variant = ParseInteger<unsigned>(argv[3]), slope = ParseInteger<unsigned>(argv[4]);
+		if (!kind || *kind >= 5 || !variant || *variant >= (*kind == 0 ? 9U : *kind == 1 ? 2U : *kind == 4 ? 5U : 4U) || !slope || (*slope >= 15 && *slope != 23 && *slope != 27 && *slope != 29 && *slope != 30)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([kind=*kind,variant=*variant,slope=*slope] {
+			try { Renderer3D::ExportGroundDetailGallery(kind,variant,slope); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 4 && argv[1] == "station-gallery") {
+		auto type = ParseInteger<unsigned>(argv[2]), layout = ParseInteger<unsigned>(argv[3]);
+		if (!type || *type >= 4 || !layout || *layout >= 8) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([type=*type,layout=*layout] {
+			try { Renderer3D::ExportStationGallery(type,layout); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 5 && argv[1] == "rail-gallery") {
+		auto type = ParseInteger<unsigned>(argv[2]), tracks = ParseInteger<unsigned>(argv[3]), slope = ParseInteger<unsigned>(argv[4]);
+		if (!type || *type >= 4 || !tracks || *tracks == 0 || *tracks > TRACK_BIT_ALL || !slope || (*slope >= 15 && *slope != 23 && *slope != 27 && *slope != 29 && *slope != 30)) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([type=*type,tracks=*tracks,slope=*slope] {
+			try { Renderer3D::ExportRailGallery(type,tracks,slope); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() >= 3 && argv.size() <= 4 && argv[1] == "vehicle-gallery") {
+		auto engine = ParseInteger<unsigned>(argv[2]);
+		if (!engine || *engine >= 256 || (argv.size() == 4 && argv[3] != "loaded")) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([id = *engine, loaded = argv.size() == 4] { Renderer3D::ExportVehicleModelGallery(id, loaded); });
+		return true;
+	}
 	if (argv.size() != 2) {
-		IConsolePrint(CC_HELP, "renderer3d on|off|left|right|reset|locate: development 3D viewport (artwork incomplete)");
+		IConsolePrint(CC_HELP, "renderer3d on|off|left|right|reset|locate|references|verify, or renderer3d gallery <id>: development 3D viewport (artwork incomplete)");
 		return true;
 	}
 	if (argv[1] == "on" || argv[1] == "off") {
-		if (!Renderer3D::SetEnabled(argv[1] == "on")) IConsolePrint(CC_ERROR, "The 3D viewport requires an OpenGL video driver and a 32bpp blitter.");
+		if (!Renderer3D::SetEnabled(argv[1] == "on")) IConsolePrint(CC_ERROR, "The 3D viewport requires an OpenGL or Vulkan video driver and a 32bpp blitter.");
 	} else if (argv[1] == "left") {
 		Renderer3D::RotateCamera(-1);
 	} else if (argv[1] == "right") {
 		Renderer3D::RotateCamera(1);
 	} else if (argv[1] == "reset") {
-		Renderer3D::RotateCamera(-static_cast<int>(Renderer3D::GetRotation()));
+		Renderer3D::ResetCameraRotation();
 	} else if (argv[1] == "locate") {
 		if (!Renderer3D::FocusReferenceModel()) IConsolePrint(CC_INFO, "No completed reference-model house on this map.");
+	} else if (argv[1] == "references") {
+		Renderer3D::ExportHouseReferences();
+	} else if (argv[1] == "vehicle-references") {
+		Renderer3D::ExportVehicleReferences();
+	} else if (argv[1] == "industry-references") {
+		Renderer3D::ExportIndustryReferences();
+	} else if (argv[1] == "bridge-references") {
+		Renderer3D::ExportBridgeReferences();
+	} else if (argv[1] == "terrain-references") {
+		Renderer3D::ExportTerrainReferences();
+	} else if (argv[1] == "station-references") {
+		Renderer3D::ExportStationReferences();
+	} else if (argv[1] == "rail-detail-references") {
+		Renderer3D::ExportRailDetailReferences();
+	} else if (argv[1] == "infrastructure-references") {
+		Renderer3D::ExportInfrastructureReferences();
+	} else if (argv[1] == "verify-fences") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyFenceModels(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-foundations") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyFoundationModels(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "bridge-locate") {
+		if (!Renderer3D::FocusReferenceBridge()) IConsolePrint(CC_INFO,"No bridge on this map.");
+	} else if (argv[1] == "tunnel-locate") {
+		if (!Renderer3D::FocusReferenceTunnel()) IConsolePrint(CC_INFO,"No supported tunnel on this map.");
+	} else if (argv[1] == "verify-tunnels") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyTunnelModels(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-live-tunnel") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyLiveTunnelCapture(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "signal-locate" || argv[1] == "catenary-locate") {
+		if (!Renderer3D::FocusRailDetail(argv[1] == "catenary-locate")) IConsolePrint(CC_INFO,"No matching railway detail on this map.");
+	} else if (argv[1] == "verify-rail-details") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyRailDetails(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "crossing-locate") {
+		if (!Renderer3D::FocusCrossing()) IConsolePrint(CC_INFO,"No crossing on this map.");
+	} else if (argv[1] == "verify-crossings") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyCrossings(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "road-stop-locate") {
+		if (!Renderer3D::FocusRoadStop()) IConsolePrint(CC_INFO,"No road stop on this map.");
+	} else if (argv[1] == "verify-road-stops") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyRoadStops(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "depot-locate") {
+		if (!Renderer3D::FocusDepot()) IConsolePrint(CC_INFO,"No depot on this map.");
+	} else if (argv[1] == "verify-depots") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyDepots(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "station-locate") {
+		if (!Renderer3D::FocusReferenceStation()) IConsolePrint(CC_INFO,"No supported station on this map.");
+	} else if (argv[1] == "verify-ground-continuity") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyGroundContinuity(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-ground-details") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyGroundDetails(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-stations") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyStationModels(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-rails") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyRailModels(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-bridges") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyBridgeModels(); }
+			catch (const std::exception &error) { Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what()); }
+		});
+	} else if (argv[1] == "verify-trees") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyTreeModels(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-industries") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyIndustryModels(); }
+			catch (const std::exception &error) { Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what()); }
+		});
+	} else if (argv[1] == "verify-vehicles") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyVehicleModels(); }
+			catch (const std::exception &error) { Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what()); }
+		});
+	} else if (argv[1] == "verify-world-atlas") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyWorldAtlas(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-tile-picking") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyTilePicking(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-instance-order") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyInstanceOrdering(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+	} else if (argv[1] == "verify-input") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try {
+				if (!VideoDriver::GetInstance()->VerifyInput()) throw std::runtime_error("Native input verification is unavailable for this driver");
+			} catch (const std::exception &error) {
+				Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what());
+			}
+		});
+	} else if (argv[1] == "verify") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try {
+				Renderer3D::VerifyGPUScene();
+				Renderer3D::VerifyViewportNavigation();
+			} catch (const std::exception &error) {
+				Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what());
+			}
+		});
 	} else {
 		return false;
 	}

@@ -51,6 +51,9 @@ extern NSString *OTTDMainLaunchGameEngine;
 - (NSRect)getVirtualRect:(NSRect)rect;
 - (CGFloat)getContentsScale;
 - (NSPoint)mousePositionFromEvent:(NSEvent *)e;
+- (void)refreshMouseState;
+- (void)releaseMouseState;
+- (void)verifyMouseRecovery;
 @end
 
 /** Delegate for our NSWindow to send ask for quit on close */
@@ -68,5 +71,6 @@ extern bool _allow_hidpi_window;
 
 bool CocoaSetupApplication();
 void CocoaExitApplication();
+bool CocoaBackgroundMode();
 
 #endif /* COCOA_WND_H */

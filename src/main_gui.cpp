@@ -9,6 +9,7 @@
 
 #include "stdafx.h"
 #include "renderer3d/viewport_3d.h"
+#include "renderer3d/branding.h"
 #include "currency.h"
 #include "spritecache.h"
 #include "window_gui.h"
@@ -94,6 +95,7 @@ void CcPlaySound_EXPLOSION(Commands, const CommandCost &result, TileIndex tile)
 bool DoZoomInOutWindow(ZoomStateChange how, Window *w)
 {
 	assert(w != nullptr);
+	if (how != ZOOM_NONE && Renderer3D::IsEnabled()) return Renderer3D::Zoom(*w, how == ZOOM_IN);
 
 	switch (how) {
 		case ZOOM_NONE:
@@ -145,6 +147,7 @@ void ZoomInOrOutToCursorWindow(bool in, Window *w)
 	assert(w != nullptr);
 
 	if (_game_mode != GM_MENU) {
+		if (Renderer3D::ZoomAtCursor(*w, in, _cursor.pos)) return;
 		if ((in && w->viewport->zoom <= _settings_client.gui.zoom_min) || (!in && w->viewport->zoom >= _settings_client.gui.zoom_max)) return;
 
 		Point pt = GetTileZoomCenterWindow(in, w);
@@ -261,22 +264,10 @@ struct MainWindow : Window
 	{
 		this->DrawWidgets();
 		if (_game_mode == GM_MENU) {
-			static const std::initializer_list<SpriteID> title_sprites = {SPR_OTTD_O, SPR_OTTD_P, SPR_OTTD_E, SPR_OTTD_N, SPR_OTTD_T, SPR_OTTD_T, SPR_OTTD_D};
-			uint letter_spacing = ScaleGUITrad(10);
-			int name_width = static_cast<int>(std::size(title_sprites) - 1) * letter_spacing;
-
-			for (const SpriteID &sprite : title_sprites) {
-				name_width += GetSpriteSize(sprite).width;
-			}
-			int off_x = (this->width - name_width) / 2;
-
-			for (const SpriteID &sprite : title_sprites) {
-				DrawSprite(sprite, PAL_NONE, off_x, ScaleGUITrad(50));
-				off_x += GetSpriteSize(sprite).width + letter_spacing;
-			}
+			Renderer3D::DrawTitleLogo(this->width);
 
 			int text_y = this->height - GetCharacterHeight(FS_NORMAL) * 2;
-			DrawString(0, this->width - 1, text_y, STR_INTRO_VERSION, TC_WHITE, SA_CENTER);
+			DrawString(0, this->width - 1, text_y, STR_OPENTT3D_INTRO_VERSION, TC_WHITE, SA_CENTER);
 		}
 	}
 
@@ -341,7 +332,8 @@ struct MainWindow : Window
 			case GHK_ROTATE_RIGHT:
 			case GHK_ROTATE_RESET:
 				if (!Renderer3D::IsEnabled()) return ES_NOT_HANDLED;
-				Renderer3D::RotateCamera(hotkey == GHK_ROTATE_RESET ? -static_cast<int>(Renderer3D::GetRotation()) : (hotkey == GHK_ROTATE_LEFT ? -1 : 1));
+				if (hotkey == GHK_ROTATE_RESET) Renderer3D::ResetCameraRotation();
+				else Renderer3D::RotateCamera(hotkey == GHK_ROTATE_LEFT ? -1.0f : 1.0f);
 				break;
 			case GHK_DELETE_WINDOWS: CloseNonVitalWindows(); break;
 			case GHK_DELETE_NONVITAL_WINDOWS: CloseAllNonVitalWindows(); break;
@@ -439,6 +431,10 @@ struct MainWindow : Window
 
 	void OnScroll(Point delta) override
 	{
+		if (Renderer3D::ScrollAtCursor(*this, delta, _cursor.pos)) {
+			this->refresh_timeout.Reset();
+			return;
+		}
 		delta = Renderer3D::UnrotateScroll({ScaleByZoom(delta.x, this->viewport->zoom), ScaleByZoom(delta.y, this->viewport->zoom)});
 		this->viewport->scrollpos_x += delta.x;
 		this->viewport->scrollpos_y += delta.y;

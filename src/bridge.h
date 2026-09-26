@@ -69,5 +69,7 @@ CommandCost CheckBridgeAvailability(BridgeType bridge_type, uint bridge_len, DoC
 int CalcBridgeLenCostFactor(int x);
 
 void ResetBridges();
+/** Resolved presentation sprites, shared with the 3D reference/export adapter. */
+std::span<const PalSpriteID> GetBridgeSpriteTable(BridgeType bridge_type, BridgePieces piece);
 
 #endif /* BRIDGE_H */

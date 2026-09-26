@@ -21,6 +21,7 @@ enum ScreenshotType : uint8_t {
 	SC_WORLD,       ///< World screenshot.
 	SC_HEIGHTMAP,   ///< Heightmap of the world.
 	SC_MINIMAP,     ///< Minimap screenshot.
+	SC_PRESENTED,   ///< Vulkan swapchain or GL's composed viewport/UI texture (before hardware cursor).
 };
 
 bool MakeHeightmapScreenshot(std::string_view filename);

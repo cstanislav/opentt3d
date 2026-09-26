@@ -9,6 +9,8 @@
 
 #include "stdafx.h"
 #include "renderer3d/viewport_3d.h"
+#include "renderer3d/world_capture.h"
+#include "renderer3d/tunnel_capture.h"
 #include "error.h"
 #include "roadveh.h"
 #include "ship.h"
@@ -1092,6 +1094,7 @@ void CallVehicleTicks()
  */
 static void DoDrawVehicle(const Vehicle *v)
 {
+	if (Renderer3D::IsCapturing()) Renderer3D::CaptureVehicle(v);
 	PaletteID pal = PAL_NONE;
 
 	if (v->vehstatus.Test(VehState::DefaultPalette)) pal = v->vehstatus.Test(VehState::Crashed) ? PALETTE_CRASH : GetVehiclePalette(v);
@@ -1106,11 +1109,19 @@ static void DoDrawVehicle(const Vehicle *v)
 		if (to != TO_INVALID && (IsTransparencySet(to) || IsInvisibilitySet(to))) return;
 	}
 
+	/* Hidden tunnel vehicles retain their gameplay state. Resolve a value-only
+	 * drawing sequence because their legacy viewport cache can be empty/stale. */
+	VehicleSpriteSeq tunnel_sequence;
+	const VehicleSpriteSeq *sequence = &v->sprite_cache.sprite_seq;
+	if (Renderer3D::IsCapturing() && Renderer3D::IsVehicleInTunnel(*v)) {
+		v->GetImage(v->direction, EIT_ON_MAP, &tunnel_sequence);
+		sequence = &tunnel_sequence;
+	}
 	StartSpriteCombine();
-	for (uint i = 0; i < v->sprite_cache.sprite_seq.count; ++i) {
-		PaletteID pal2 = v->sprite_cache.sprite_seq.seq[i].pal;
+	for (uint i = 0; i < sequence->count; ++i) {
+		PaletteID pal2 = sequence->seq[i].pal;
 		if (!pal2 || v->vehstatus.Test(VehState::Crashed)) pal2 = pal;
-		AddSortableSpriteToDraw(v->sprite_cache.sprite_seq.seq[i].sprite, pal2, v->x_pos, v->y_pos, v->z_pos, v->bounds, shadowed);
+		AddSortableSpriteToDraw(sequence->seq[i].sprite, pal2, v->x_pos, v->y_pos, v->z_pos, v->bounds, shadowed);
 	}
 	EndSpriteCombine();
 }
@@ -1121,6 +1132,23 @@ static void DoDrawVehicle(const Vehicle *v)
  */
 void ViewportAddVehicles(DrawPixelInfo *dpi)
 {
+	if (Renderer3D::IsCapturing()) {
+		for (const Vehicle *v : Vehicle::Iterate()) {
+			if (!Renderer3D::CaptureVehicleVisible(v)) continue;
+			if (v->sprite_cache.revalidate_before_draw) {
+				VehicleSpriteSeq sequence;
+				v->GetImage(v->direction, EIT_ON_MAP, &sequence);
+				if (sequence.IsValid() && v->sprite_cache.sprite_seq != sequence) {
+					v->sprite_cache.sprite_seq = sequence;
+					v->UpdateBoundingBoxCoordinates(false);
+				}
+				v->sprite_cache.revalidate_before_draw = false;
+			}
+			DoDrawVehicle(v);
+		}
+		Renderer3D::CaptureVehicle(nullptr);
+		return;
+	}
 	/* The bounding rectangle */
 	const int l = dpi->left;
 	const int r = dpi->left + dpi->width;

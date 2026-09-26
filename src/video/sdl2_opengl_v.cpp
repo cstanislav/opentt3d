@@ -183,6 +183,8 @@ void VideoDriver_SDL_OpenGL::Paint()
 		this->local_palette.count_dirty = 0;
 	}
 
+	/* Upload this frame's UI before presenting GPU-resident viewport regions. */
+	this->UnlockVideoBuffer();
 	OpenGLBackend::Get()->Paint();
 	OpenGLBackend::Get()->DrawMouseCursor();
 

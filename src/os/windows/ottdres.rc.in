@@ -37,7 +37,7 @@ LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-100                     ICON    DISCARDABLE     "${CMAKE_SOURCE_DIR}/os/windows/openttd.ico"
+100                     ICON    DISCARDABLE     "${CMAKE_SOURCE_DIR}/assets/branding/opentt3d.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -61,7 +61,7 @@ END
 101 DIALOG DISCARDABLE  0, 0, 600, 400
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "OpenTTD command line help"
+CAPTION "OpenTT3D command line help"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "&OK",12,274,378,50,14,BS_CENTER
@@ -93,15 +93,15 @@ BEGIN
         BLOCK "000004b0"
         BEGIN
             VALUE "Comments", "This program is licensed under the GNU General Public License version 2.\0"
-            VALUE "CompanyName", "OpenTTD Development Team\0"
-            VALUE "FileDescription", "OpenTTD\0"
+            VALUE "CompanyName", "OpenTT3D contributors; based on OpenTTD\0"
+            VALUE "FileDescription", "OpenTT3D\0"
             VALUE "FileVersion", "${REV_VERSION}\0"
-            VALUE "InternalName", "openttd\0"
+            VALUE "InternalName", "opentt3d\0"
             VALUE "LegalCopyright", "Copyright \xA9 OpenTTD Developers 2002-${REV_YEAR}. All Rights Reserved.\0"
             VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "openttd.exe\0"
+            VALUE "OriginalFilename", "opentt3d.exe\0"
             VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "OpenTTD\0"
+            VALUE "ProductName", "OpenTT3D\0"
             VALUE "ProductVersion", "${REV_VERSION}\0"
             VALUE "SpecialBuild", "-\0"
         END

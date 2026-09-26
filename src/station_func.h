@@ -35,6 +35,7 @@ CargoTypes GetEmptyMask(const Station *st);
 
 void SetRailStationTileFlags(TileIndex tile, const StationSpec *statspec);
 const DrawTileSprites *GetStationTileLayout(StationType st, uint8_t gfx);
+std::span<const DrawTileSprites *const> GetAirportTileLayouts(uint8_t gfx);
 void StationPickerDrawSprite(int x, int y, StationType st, RailType railtype, RoadType roadtype, int image);
 
 bool HasStationInUse(StationID station, bool include_company, CompanyID company);

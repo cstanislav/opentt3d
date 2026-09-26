@@ -40,6 +40,7 @@
 #include "water_cmd.h"
 #include "landscape_cmd.h"
 #include "pathfinder/water_regions.h"
+#include "renderer3d/world_capture.h"
 
 #include "table/strings.h"
 
@@ -879,6 +880,7 @@ static void DrawWaterLock(const TileInfo *ti)
 static void DrawWaterDepot(const TileInfo *ti)
 {
 	DrawWaterClassGround(ti);
+	if (Renderer3D::CaptureShipDepot(*ti, GetShipDepotAxis(ti->tile), to_underlying(GetShipDepotPart(ti->tile)), GetCompanyPalette(GetTileOwner(ti->tile)))) return;
 	DrawWaterTileStruct(ti, _shipdepot_display_data[GetShipDepotAxis(ti->tile)][to_underlying(GetShipDepotPart(ti->tile))].seq, 0, 0, GetCompanyPalette(GetTileOwner(ti->tile)), CF_END);
 }
 

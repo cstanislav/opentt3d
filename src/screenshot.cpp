@@ -8,6 +8,10 @@
 /** @file screenshot.cpp The creation of screenshots! */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
+#include "renderer3d/gl_backend.hpp"
+#include "renderer3d/vulkan_backend.h"
+#include "palette_func.h"
 #include "core/backup_type.hpp"
 #include "fileio_func.h"
 #include "viewport_func.h"
@@ -192,6 +196,7 @@ static Viewport SetupScreenshotViewport(ScreenshotType t, uint32_t width = 0, ui
 
 	switch(t) {
 		case SC_VIEWPORT:
+		case SC_PRESENTED:
 		case SC_CRASHLOG: {
 			assert(width == 0 && height == 0);
 
@@ -277,6 +282,11 @@ static bool MakeLargeWorldScreenshot(ScreenshotType t, uint32_t width = 0, uint3
 	if (provider == nullptr) return false;
 
 	Viewport vp = SetupScreenshotViewport(t, width, height);
+	if (t != SC_WORLD) Renderer3D::CopyViewportCamera(*GetMainWindow()->viewport, vp);
+	struct CameraCleanup {
+		const Viewport &vp;
+		~CameraCleanup() { Renderer3D::ForgetViewport(&vp); }
+	} camera_cleanup{vp};
 
 	return provider->MakeImage(MakeScreenshotName(SCREENSHOT_NAME, provider->GetName()),
 			[&](void *buf, uint y, uint pitch, uint n) {
@@ -380,6 +390,39 @@ void MakeScreenshotWithConfirm(ScreenshotType t)
  */
 static bool RealMakeScreenshot(ScreenshotType t, const std::string &name, uint32_t width, uint32_t height)
 {
+	if (t == SC_PRESENTED) {
+		/* A startup console script can run before the first regular window draw. */
+		SetScreenshotWindowVisibility(true);
+		UndrawMouseCursor();
+		MarkWholeScreenDirty();
+		DrawDirtyBlocks();
+		SetScreenshotWindowVisibility(false);
+		auto callback = [name](int width, int height, std::vector<Colour> pixels) {
+			/* Paint runs outside the game-state lock. Write metadata and notify UI
+			 * under the normal command-queue lock on the following draw tick. */
+			VideoDriver::GetInstance()->QueueOnMainThread([name, width, height, pixels = std::move(pixels)] {
+				_screenshot_name = name;
+				auto provider = GetScreenshotProvider();
+				auto palette = SnapshotPalette();
+				bool saved = provider != nullptr && provider->MakeImage(MakeScreenshotName(SCREENSHOT_NAME, provider->GetName()),
+					[&](void *buf, uint y, uint pitch, uint n) {
+						for (uint row = 0; row < n; ++row) std::copy_n(pixels.data() + static_cast<size_t>(y + row) * width,
+							width, static_cast<Colour *>(buf) + row * pitch);
+					}, width, height, 32, palette.palette);
+				if (saved) ShowErrorMessage(GetEncodedString(STR_MESSAGE_SCREENSHOT_SUCCESSFULLY, _screenshot_name), {}, WL_WARNING);
+				else ShowErrorMessage(GetEncodedString(STR_ERROR_SCREENSHOT_FAILED), {}, WL_ERROR);
+			});
+		};
+		bool queued = Renderer3D::Vulkan::Active() ? Renderer3D::Vulkan::CapturePresentation(std::move(callback)) : Renderer3D::OpenGL::CapturePresentation(std::move(callback));
+		if (queued) MarkWholeScreenDirty();
+		else ShowErrorMessage(GetEncodedString(STR_ERROR_SCREENSHOT_FAILED), {}, WL_ERROR);
+		return queued;
+	}
+	struct ReadbackScope {
+		bool enabled;
+		ReadbackScope(bool enabled) : enabled(enabled) { if (enabled) Renderer3D::BeginReadback(); }
+		~ReadbackScope() { if (enabled) Renderer3D::EndReadback(); }
+	} readback(t == SC_VIEWPORT && Renderer3D::IsEnabled());
 	if (t == SC_VIEWPORT) {
 		/* First draw the dirty parts of the screen and only then change the name
 		 * of the screenshot. This way the screenshot will always show the name

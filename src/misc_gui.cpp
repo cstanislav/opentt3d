@@ -327,7 +327,7 @@ void ShowLandInfo(TileIndex tile)
 static constexpr std::initializer_list<NWidgetPart> _nested_about_widgets = {
 	NWidget(NWID_HORIZONTAL),
 		NWidget(WWT_CLOSEBOX, COLOUR_GREY),
-		NWidget(WWT_CAPTION, COLOUR_GREY), SetStringTip(STR_ABOUT_OPENTTD, STR_TOOLTIP_WINDOW_TITLE_DRAG_THIS),
+		NWidget(WWT_CAPTION, COLOUR_GREY), SetStringTip(STR_OPENTT3D_ABOUT, STR_TOOLTIP_WINDOW_TITLE_DRAG_THIS),
 	EndContainer(),
 	NWidget(WWT_PANEL, COLOUR_GREY), SetPIP(4, 2, 4),
 		NWidget(WWT_LABEL, INVALID_COLOUR), SetStringTip(STR_ABOUT_ORIGINAL_COPYRIGHT),
@@ -515,14 +515,13 @@ void ShowCostOrIncomeAnimation(int x, int y, int z, Money cost)
 	if (cost == 0) {
 		return;
 	}
-	Point pt = RemapCoords(x, y, z);
 	StringID msg = STR_INCOME_FLOAT_COST;
 
 	if (cost < 0) {
 		cost = -cost;
 		msg = STR_INCOME_FLOAT_INCOME;
 	}
-	AddTextEffect(GetEncodedString(msg, cost), pt.x, pt.y, Ticks::DAY_TICKS, TE_RISING);
+	AddTextEffectAtWorld(GetEncodedString(msg, cost), x, y, z, Ticks::DAY_TICKS, TE_RISING);
 }
 
 /**
@@ -535,17 +534,15 @@ void ShowCostOrIncomeAnimation(int x, int y, int z, Money cost)
  */
 void ShowFeederIncomeAnimation(int x, int y, int z, Money transfer, Money income)
 {
-	Point pt = RemapCoords(x, y, z);
-
 	if (income == 0) {
-		AddTextEffect(GetEncodedString(STR_FEEDER, transfer), pt.x, pt.y, Ticks::DAY_TICKS, TE_RISING);
+		AddTextEffectAtWorld(GetEncodedString(STR_FEEDER, transfer), x, y, z, Ticks::DAY_TICKS, TE_RISING);
 	} else {
 		StringID msg = STR_FEEDER_COST;
 		if (income < 0) {
 			income = -income;
 			msg = STR_FEEDER_INCOME;
 		}
-		AddTextEffect(GetEncodedString(msg, transfer, income), pt.x, pt.y, Ticks::DAY_TICKS, TE_RISING);
+		AddTextEffectAtWorld(GetEncodedString(msg, transfer, income), x, y, z, Ticks::DAY_TICKS, TE_RISING);
 	}
 }
 
@@ -560,11 +557,9 @@ void ShowFeederIncomeAnimation(int x, int y, int z, Money transfer, Money income
  */
 TextEffectID ShowFillingPercent(int x, int y, int z, uint8_t percent, StringID string)
 {
-	Point pt = RemapCoords(x, y, z);
-
 	assert(string != STR_NULL);
 
-	return AddTextEffect(GetEncodedString(string, percent), pt.x, pt.y, 0, TE_STATIC);
+	return AddTextEffectAtWorld(GetEncodedString(string, percent), x, y, z, 0, TE_STATIC);
 }
 
 /**

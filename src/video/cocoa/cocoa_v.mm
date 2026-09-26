@@ -108,6 +108,11 @@ VideoDriver_Cocoa::VideoDriver_Cocoa(bool uses_hardware_acceleration)
 void VideoDriver_Cocoa::Stop()
 {
 	if (!_cocoa_video_started) return;
+	[ this->cocoaview releaseMouseState ];
+	if (this->borderless_fullscreen) {
+		[ NSApp setPresentationOptions:this->windowed_presentation ];
+		this->borderless_fullscreen = false;
+	}
 
 	CocoaExitApplication();
 
@@ -128,6 +133,7 @@ std::optional<std::string_view> VideoDriver_Cocoa::Initialize()
 
 	if (_cocoa_video_started) return "Already started";
 	_cocoa_video_started = true;
+	Debug(driver,1,"OpenTT3D: Cocoa process {}",static_cast<int>([ NSProcessInfo processInfo ].processIdentifier));
 
 	/* Don't create a window or enter fullscreen if we're just going to show a dialog. */
 	if (!CocoaSetupApplication()) return std::nullopt;
@@ -201,20 +207,40 @@ bool VideoDriver_Cocoa::ChangeResolution(int w, int h)
  */
 bool VideoDriver_Cocoa::ToggleFullscreen(bool full_screen)
 {
+	if (CocoaBackgroundMode()) return !full_screen;
 	if (this->IsFullscreen() == full_screen) return true;
-
-	if ([ this->window respondsToSelector:@selector(toggleFullScreen:) ]) {
-		[ this->window performSelector:@selector(toggleFullScreen:) withObject:this->window ];
-
-		/* Hide the menu bar and the dock */
-		[ NSMenu setMenuBarVisible:!full_screen ];
-
-		this->UpdateVideoModes();
-		InvalidateWindowClassesData(WC_GAME_OPTIONS, 3);
+	if (this->window == nil) return false;
+	/* Keep an OS-entered native fullscreen window compatible with its exit path. */
+	if (!full_screen && !this->borderless_fullscreen) {
+		[ this->window toggleFullScreen:nil ];
 		return true;
 	}
-
-	return false;
+	/* Borderless fullscreen avoids AppKit's asynchronous Space transition and
+	 * its transient backing sizes during startup or a heavily loaded frame. */
+	if (full_screen) {
+		this->windowed_frame = [ this->window frame ];
+		this->windowed_style = [ this->window styleMask ];
+		this->windowed_presentation = [ NSApp presentationOptions ];
+		this->borderless_fullscreen = true;
+		[ NSApp setPresentationOptions:NSApplicationPresentationHideDock | NSApplicationPresentationHideMenuBar ];
+		[ this->window setStyleMask:NSWindowStyleMaskBorderless ];
+		NSScreen *screen = [ this->window screen ];
+		if (screen == nil) screen = [ NSScreen mainScreen ];
+		[ this->window setFrame:[ screen frame ] display:YES animate:NO ];
+	} else {
+		this->borderless_fullscreen = false;
+		[ NSApp setPresentationOptions:this->windowed_presentation ];
+		[ this->window setStyleMask:this->windowed_style ];
+		[ this->window setFrame:this->windowed_frame display:YES animate:NO ];
+	}
+	[ this->window makeKeyAndOrderFront:nil ];
+	[ this->window makeFirstResponder:this->cocoaview ];
+	[ this->cocoaview refreshMouseState ];
+	this->AllocateBackingStore(true);
+	this->UpdateVideoModes();
+	InvalidateWindowClassesData(WC_GAME_OPTIONS, 3);
+	MarkWholeScreenDirty();
+	return true;
 }
 
 void VideoDriver_Cocoa::ClearSystemSprites()
@@ -313,7 +339,7 @@ void VideoDriver_Cocoa::UnlockVideoBuffer()
  */
 bool VideoDriver_Cocoa::IsFullscreen()
 {
-	return this->window != nil && ([ this->window styleMask ] & NSWindowStyleMaskFullScreen) != 0;
+	return this->window != nil && (this->borderless_fullscreen || ([ this->window styleMask ] & NSWindowStyleMaskFullScreen) != 0);
 }
 
 /**
@@ -404,7 +430,7 @@ bool VideoDriver_Cocoa::MakeWindow(int width, int height)
 	[ this->window setDelegate:this->delegate ];
 
 	[ this->window center ];
-	[ this->window makeKeyAndOrderFront:nil ];
+	[ this->window setAcceptsMouseMovedEvents:YES ];
 
 	/* Create wrapper view for input and event handling. */
 	NSRect view_frame = [ this->window contentRectForFrameRect:[ this->window frame ] ];
@@ -438,6 +464,8 @@ bool VideoDriver_Cocoa::MakeWindow(int width, int height)
 	if (this->colour_space == nullptr) FatalError("Could not get a valid colour space for drawing.");
 
 	this->setup = false;
+	if (!CocoaBackgroundMode()) [ this->window makeKeyAndOrderFront:nil ];
+	[ this->cocoaview refreshMouseState ];
 
 	return true;
 }
@@ -449,6 +477,12 @@ bool VideoDriver_Cocoa::MakeWindow(int width, int height)
  */
 bool VideoDriver_Cocoa::PollEvent()
 {
+	if (CocoaBackgroundMode() && ([ NSApp isActive ] || [ this->window isKeyWindow ] || [ this->window isVisible ])) {
+		FatalError("OpenTT3D: background Cocoa window became visible or active");
+	}
+	/* The game owns its loop. AppKit also schedules activation, tracking-area
+	 * and window updates as run-loop sources, not just queued NSEvents. */
+	CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, true);
 #ifdef HAVE_OSX_1012_SDK
 	NSEventMask mask = NSEventMaskAny;
 #else
@@ -465,12 +499,14 @@ bool VideoDriver_Cocoa::PollEvent()
 
 void VideoDriver_Cocoa::InputLoop()
 {
+	[ this->cocoaview refreshMouseState ];
 	NSUInteger cur_mods = [ NSEvent modifierFlags ];
+	bool active = [ NSApp isActive ] && [ this->window isKeyWindow ];
 
 	bool old_ctrl_pressed = _ctrl_pressed;
 
-	_ctrl_pressed = (cur_mods & ( _settings_client.gui.right_mouse_btn_emulation != RMBE_CONTROL ? NSEventModifierFlagControl : NSEventModifierFlagCommand)) != 0;
-	_shift_pressed = (cur_mods & NSEventModifierFlagShift) != 0;
+	_ctrl_pressed = active && (cur_mods & ( _settings_client.gui.right_mouse_btn_emulation != RMBE_CONTROL ? NSEventModifierFlagControl : NSEventModifierFlagCommand)) != 0;
+	_shift_pressed = active && (cur_mods & NSEventModifierFlagShift) != 0;
 
 	this->fast_forward_key_pressed = _tab_is_down;
 
@@ -602,7 +638,7 @@ std::optional<std::string_view> VideoDriver_CocoaQuartz::Start(const StringList 
 
 	this->AllocateBackingStore(true);
 
-	if (fullscreen) this->ToggleFullscreen(fullscreen);
+	if (fullscreen) this->QueueOnMainThread([this] { this->ToggleFullscreen(true); });
 
 	this->GameSizeChanged();
 	this->UpdateVideoModes();

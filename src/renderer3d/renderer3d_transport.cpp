@@ -1,0 +1,643 @@
+/* SPDX-License-Identifier: GPL-2.0-only */
+/** @file renderer3d_transport.cpp Tunnel clearances and portal orientation invariants. */
+#include "../stdafx.h"
+#include "../3rdparty/catch2/catch.hpp"
+#include "tunnel_geometry.hpp"
+#include "rail_capture.h"
+#include "station_geometry.hpp"
+#include "ground_detail_geometry.hpp"
+#include "rail_detail_geometry.hpp"
+#include "depot_geometry.hpp"
+#include "crossing_geometry.hpp"
+#include "road_stop_geometry.hpp"
+#include "bridge_geometry.hpp"
+#include "world_capture.h"
+#include "../landscape.h"
+#include "../rail.h"
+#include "../slope_func.h"
+#include "../track_func.h"
+#include <set>
+
+using namespace Renderer3D;
+using Catch::Detail::Approx;
+
+static std::optional<float> TriangleHit(const Ray &ray, Vec3 a, Vec3 b, Vec3 c)
+{
+	auto cross = [](Vec3 u, Vec3 v) { return Vec3{u.y*v.z-u.z*v.y,u.z*v.x-u.x*v.z,u.x*v.y-u.y*v.x}; };
+	Vec3 edge = b-a, second = c-a, h = cross(ray.direction,second);
+	float determinant = Dot(edge,h);
+	if (std::abs(determinant) < 1e-7f) return std::nullopt;
+	Vec3 s = ray.origin-a;
+	float u = Dot(s,h)/determinant;
+	if (u < 0 || u > 1) return std::nullopt;
+	Vec3 q = cross(s,edge);
+	float v = Dot(ray.direction,q)/determinant;
+	if (v < 0 || u+v > 1) return std::nullopt;
+	float distance = Dot(second,q)/determinant;
+	return distance > 0.0001f ? std::optional<float>{distance} : std::nullopt;
+}
+
+static float FirstHit(const TunnelAssembly &assembly, const Ray &ray)
+{
+	float distance = std::numeric_limits<float>::infinity();
+	for (const auto &part : assembly.parts) for (size_t i = 0; i < part.size(); i += 3) {
+		if (auto hit = TriangleHit(ray,part[i].position,part[i+1].position,part[i+2].position)) distance = std::min(distance,*hit);
+	}
+	return distance;
+}
+
+TEST_CASE("Voxel fence families retain openings, heights and raised diagonal contact", "[renderer3d][voxel]")
+{
+	auto hit = [](const std::vector<Vertex> &mesh, Ray ray) {
+		float nearest = INFINITY;
+		for (size_t i = 0; i < mesh.size(); i += 3) if (auto distance = TriangleHit(ray,mesh[i].position,mesh[i+1].position,mesh[i+2].position)) nearest = std::min(nearest,*distance);
+		return nearest;
+	};
+	auto white = MakeFenceMesh(2,{0,1,0},{16,1,0},{});
+	CHECK(hit(white,{{0,1,8},{0,0,-1}}) == Approx(5));
+	CHECK_FALSE(std::isfinite(hit(white,{{1,0,1.75f},{0,1,0}})));
+	CHECK(std::isfinite(hit(white,{{1,0,1.125f},{0,1,0}})));
+	auto gate = MakeFenceMesh(1,{0,1,0},{16,1,0},{},false,2);
+	CHECK_FALSE(std::isfinite(hit(gate,{{8,0,2.1f},{0,1,0}})));
+	CHECK(std::isfinite(hit(gate,{{8,0,1.125f},{0,1,0}})));
+	auto chain = MakeFenceMesh(6,{0,1,0},{16,1,0},{});
+	CHECK(hit(chain,{{0,1,8},{0,0,-1}}) == Approx(3));
+	CHECK_FALSE(std::isfinite(hit(chain,{{2.25f,0,2},{0,1,0}})));
+	CHECK(std::isfinite(hit(chain,{{2,0,2},{0,1,0}})));
+	for (unsigned lod = 0; lod < 3; ++lod) for (Corner corner : {CORNER_W,CORNER_S,CORNER_E,CORNER_N}) {
+		for (Slope terrain : {SLOPE_FLAT,HalftileSlope(SlopeWithOneCornerRaised(corner),corner),HalftileSlope(SteepSlope(corner),corner)}) {
+			float base = GetSlopePixelZInCorner(RemoveHalftileSlope(terrain),corner);
+			bool along = corner == CORNER_W || corner == CORNER_E;
+			Vec3 start{along ? 0.0f : 16.0f,0,base}, end{along ? 16.0f : 0.0f,16,base};
+			auto diagonal = MakeFenceMesh(6,start,end,MakeTileSurface(terrain),true,0,lod);
+			INFO("corner=" << to_underlying(corner) << " slope=" << to_underlying(terrain) << " lod=" << lod);
+			CHECK(std::ranges::all_of(diagonal,[base](const Vertex &v) { return v.position.z >= base && v.position.z <= base+5; }));
+			CHECK(std::ranges::any_of(diagonal,[base](const Vertex &v) { return v.normal.z < -0.99f && v.position.z == base; }));
+			CHECK(hit(diagonal,{start+Vec3{0,0,8},{0,0,-1}}) == Approx(3));
+			CHECK(hit(diagonal,{end+Vec3{0,0,8},{0,0,-1}}) == Approx(3));
+		}
+	}
+}
+
+TEST_CASE("Voxel foundations stay below playable surfaces and support every legal foundation", "[renderer3d][voxel]")
+{
+	std::set<std::pair<Slope,Foundation>> cases;
+	for (unsigned value = 1; value < 32; ++value) {
+		if (value >= 15 && value != 23 && value != 27 && value != 29 && value != 30) continue;
+		Slope slope = static_cast<Slope>(value);
+		cases.emplace(slope,FOUNDATION_LEVELED);
+		for (unsigned tracks = 1; tracks <= TRACK_BIT_ALL; ++tracks) {
+			Foundation foundation = GetRailFoundation(slope,static_cast<TrackBits>(tracks));
+			if (foundation != FOUNDATION_NONE && foundation != FOUNDATION_INVALID && foundation != FOUNDATION_STEEP_BOTH) cases.emplace(slope,foundation);
+		}
+	}
+	for (auto [slope,foundation] : cases) {
+		Slope upper = slope;
+		float rise = ApplyPixelFoundationToSlope(foundation,upper);
+		auto low = MakeTileSurface(slope), high = MakeTileSurface(upper);
+		auto solid = MakeFoundationMesh(low,high,rise,0,true);
+		INFO("slope=" << static_cast<unsigned>(slope) << " foundation=" << static_cast<unsigned>(foundation));
+		REQUIRE_FALSE(solid.empty());
+		bool finite = true, aligned = true;
+		for (const auto &vertex : solid) {
+			finite &= std::isfinite(vertex.position.x+vertex.position.y+vertex.position.z);
+			float length = std::abs(vertex.normal.x)+std::abs(vertex.normal.y)+std::abs(vertex.normal.z);
+			aligned &= std::abs(length-1) < 0.000001f;
+			aligned &= (std::abs(vertex.normal.x) > 0.5f)+(std::abs(vertex.normal.y) > 0.5f)+(std::abs(vertex.normal.z) > 0.5f) == 1;
+		}
+		CHECK(finite); CHECK(aligned);
+		unsigned supported = 0;
+		for (float x : {0.125f,3.125f,7.125f,11.125f,15.125f}) for (float y : {0.125f,3.125f,7.125f,11.125f,15.125f}) {
+			float terrain = low.Height(x,y), ceiling = rise+high.Height(x,y);
+			float nearest = INFINITY;
+			for (size_t i = 0; i < solid.size(); i += 3) if (solid[i].normal.z > 0.99f) {
+				if (auto distance = TriangleHit({{x,y,40},{0,0,-1}},solid[i].position,solid[i+1].position,solid[i+2].position)) nearest = std::min(nearest,*distance);
+			}
+			if (std::isfinite(nearest)) CHECK(40-nearest <= ceiling+0.0001f);
+			/* Skip the half-cell stair band immediately at an internal diagonal.
+			 * Interior support must approach the original surface within a cell. */
+			if (ceiling-terrain > 1 && std::abs(x-y) > 0.5f && std::abs(x+y-16) > 0.5f) {
+				REQUIRE(std::isfinite(nearest));
+				CHECK(ceiling-(40-nearest) <= 0.75f);
+				++supported;
+			}
+		}
+		CHECK(supported != 0);
+		for (unsigned lod : {1U,2U}) {
+			auto distant = MakeFoundationMesh(low,high,rise,lod,true);
+			float max_z = -INFINITY;
+			for (const auto &v : distant) max_z = std::max(max_z,v.position.z);
+			CHECK(max_z <= rise+GetSlopeMaxPixelZ(upper));
+		}
+	}
+	/* The two microstep faces of one diagonal wall stone must not alternate
+	 * between unrelated light ramps, which produced vertical zebra striping. */
+	const Corner corners[] = {CORNER_N,CORNER_W,CORNER_S,CORNER_E};
+	for (unsigned turn = 0; turn < 4; ++turn) {
+		Slope slope = SlopeWithOneCornerRaised(corners[turn]);
+		auto mesh = MakeFoundationMesh(MakeTileSurface(slope),MakeTileSurface(HalftileSlope(slope,corners[turn])),0);
+		auto colour = [&](Vec3 origin, Vec3 direction) {
+			for (unsigned i = 0; i < turn; ++i) { origin = {16-origin.y,origin.x,origin.z}; direction = {-direction.y,direction.x,direction.z}; }
+			float distance = INFINITY, palette = -1;
+			for (size_t i = 0; i < mesh.size(); i += 3) if (auto hit = TriangleHit({origin,direction},mesh[i].position,mesh[i+1].position,mesh[i+2].position); hit && *hit < distance) {
+				distance = *hit; palette = mesh[i].texture.x;
+			}
+			return palette;
+		};
+		for (float z : {1.125f,3.125f,5.125f,7.125f}) {
+			float x = colour({8.25f,8.125f,z},{-1,0,0}), y = colour({7.125f,9.25f,z},{0,-1,0});
+			REQUIRE(x >= 0);
+			CHECK(x == y);
+		}
+	}
+}
+
+TEST_CASE("Voxel hedge corner caps agree where perpendicular volumes overlap", "[renderer3d][voxel]")
+{
+	const Vec3 corners[] = {{0,0,0},{16,0,0},{16,16,0},{0,16,0}};
+	const unsigned edges[][2] = {{0,3},{3,2},{1,2},{0,1}};
+	for (Slope slope : {SLOPE_FLAT,SLOPE_SW,SLOPE_NE}) {
+		std::array<std::vector<Vertex>,4> fences;
+		for (unsigned edge = 0; edge < 4; ++edge) fences[edge] = MakeFenceMesh(1,corners[edges[edge][0]],corners[edges[edge][1]],MakeTileSurface(slope));
+		for (float x : {0.3125f,15.6875f}) for (float y : {0.3125f,15.6875f}) {
+			std::vector<std::pair<float,float>> hits;
+			float nearest = INFINITY;
+			for (const auto &mesh : fences) for (size_t i = 0; i < mesh.size(); i += 3) {
+				if (mesh[i].normal.z < 0.99f) continue;
+				if (auto distance = TriangleHit({{x,y,32},{0,0,-1}},mesh[i].position,mesh[i+1].position,mesh[i+2].position)) {
+					hits.emplace_back(*distance,mesh[i].texture.x);
+					nearest = std::min(nearest,*distance);
+				}
+			}
+			std::set<float> colours;
+			unsigned surfaces = 0;
+			for (auto [distance,colour] : hits) if (std::abs(distance-nearest) < 0.0001f) { colours.insert(colour); ++surfaces; }
+			INFO("slope=" << static_cast<unsigned>(slope) << " corner=" << x << "," << y);
+			REQUIRE(surfaces >= 2);
+			CHECK(colours.size() == 1);
+		}
+	}
+}
+
+TEST_CASE("Tunnel entrances and lining leave actual Cab and vehicle clearances", "[renderer3d]")
+{
+	for (unsigned kind = 0; kind < 6; ++kind) for (bool portal : {false,true}) {
+		INFO("kind=" << kind << " portal=" << portal);
+		auto assembly = MakeTunnelAssembly(static_cast<TunnelKind>(kind),portal);
+		for (float lane : (kind >= 4 ? std::vector<float>{5,11} : std::vector<float>{8})) {
+			CHECK_FALSE(std::isfinite(FirstHit(assembly,{{-1,lane,6},{1,0,0}})));
+		}
+		float ceiling = FirstHit(assembly,{{12,8,6},{0,0,1}});
+		CHECK(ceiling > (kind == 1 ? 0.9f : 1.5f)); // Electric contact wire is below the vault.
+		CHECK(ceiling < 2.0f);
+		CHECK(FirstHit(assembly,{{12,8,6},{0,0,-1}}) < 6.5f);
+		bool finite = true;
+		for (const auto &part : assembly.parts) for (const auto &vertex : part) {
+			finite &= std::isfinite(vertex.position.x+vertex.position.y+vertex.position.z+vertex.normal.x+vertex.normal.y+vertex.normal.z);
+		}
+		REQUIRE(finite);
+	}
+}
+
+TEST_CASE("Tunnel directions connect paired portals without moving the track centre", "[renderer3d]")
+{
+	for (unsigned direction = 0; direction < 4; ++direction) {
+		Vec3 a = TunnelPoint(direction,{0,8,0}), b = TunnelPoint(direction,{16,8,0});
+		CHECK(Dot(b-a,b-a) == Approx(256));
+		Vec3 exit = TunnelPoint((direction+2)%4,{8,8,0})+(b-a)*3;
+		Vec3 expected = TunnelPoint(direction,{56,8,0});
+		CHECK(exit == expected);
+		CHECK(TunnelPoint(direction,{8,8,6}) == Vec3{8,8,6});
+	}
+}
+
+TEST_CASE("Underground labels are visible through mouths rather than through walls", "[renderer3d]")
+{
+	for (unsigned kind = 0; kind < 6; ++kind) {
+		auto type = static_cast<TunnelKind>(kind);
+		CHECK(VisibleThroughTunnelMouth(type,48,{20,8,6},{100,8,6}));
+		CHECK(VisibleThroughTunnelMouth(type,48,{20,8,6},{-20,8,6}));
+		CHECK_FALSE(VisibleThroughTunnelMouth(type,48,{20,8,6},{24,8,20}));
+		CHECK_FALSE(VisibleThroughTunnelMouth(type,48,{20,8,6},{100,40,6}));
+		CHECK_FALSE(VisibleThroughTunnelMouth(type,48,{20,8,6},{100,8,50}));
+	}
+}
+
+TEST_CASE("Tunnel excavation removes intersecting terrain while retaining the shoulders and charts", "[renderer3d]")
+{
+	Scene terrain;
+	terrain.Quad({0,0,6},{16,0,6},{16,16,6},{0,16,6},{});
+	for (auto &vertex : terrain.vertices) vertex.texture = {vertex.position.x,vertex.position.y,0};
+	for (unsigned direction = 0; direction < 4; ++direction) {
+		TunnelAssembly clipped;
+		clipped.parts[0] = CutTunnelTerrain(terrain.vertices,TunnelKind::Rail,direction,0);
+		CHECK_FALSE(std::isfinite(FirstHit(clipped,{{8,8,5},{0,0,1}})));
+		Vec3 shoulder = TunnelPoint(direction,{8,1,5});
+		CHECK(FirstHit(clipped,{shoulder,{0,0,1}}) == Approx(1));
+		for (const auto &vertex : clipped.parts[0]) {
+			CHECK(vertex.texture.x == Approx(vertex.position.x));
+			CHECK(vertex.texture.y == Approx(vertex.position.y));
+		}
+	}
+}
+
+TEST_CASE("Voxel ground excavation keeps palette indices and clears the complete soil slab", "[renderer3d][voxel]")
+{
+	VoxelGrid grid({32,32,2},{{{112,112,112,112,112,112}},{{2,2,2,2,2,2}}},{0,0,5.5f},{0.5f,0.5f,0.25f});
+	grid.Fill({0,0,0},{32,32,2},1);
+	grid.Fill({4,0,0},{8,32,2},2);
+	auto terrain = grid.Mesh();
+	for (TunnelKind kind : {TunnelKind::Rail,TunnelKind::Road}) for (unsigned direction = 0; direction < 4; ++direction) {
+		TunnelAssembly clipped;
+		clipped.parts[0] = CutTunnelTerrain(terrain.vertices,kind,direction,0);
+		CHECK_FALSE(std::isfinite(FirstHit(clipped,{{8,8,5},{0,0,1}})));
+		Vec3 shoulder = TunnelPoint(direction,{8,1,5});
+		CHECK(FirstHit(clipped,{shoulder,{0,0,1}}) == Approx(0.5f));
+		for (const auto &vertex : clipped.parts[0]) {
+			CHECK(static_cast<uint32_t>(vertex.surface) == (static_cast<uint32_t>(SurfaceMode::Palette)|SURFACE_UNLIT));
+			CHECK((vertex.texture.x == (112.5f/256) || vertex.texture.x == (2.5f/256)));
+			CHECK(vertex.opacity == 1);
+		}
+	}
+}
+
+TEST_CASE("Rail routes join the upstream edge ports with continuous gauge", "[renderer3d]")
+{
+	static_assert(TRACK_X == 0 && TRACK_Y == 1 && TRACK_UPPER == 2 && TRACK_LOWER == 3 && TRACK_LEFT == 4 && TRACK_RIGHT == 5);
+	const Vec3 ports[][2] = {{{0,8,0},{16,8,0}},{{8,0,0},{8,16,0}},{{0,8,0},{8,0,0}},
+		{{16,8,0},{8,16,0}},{{16,8,0},{8,0,0}},{{0,8,0},{8,16,0}}};
+	for (unsigned track = 0; track < 6; ++track) {
+		for (unsigned end = 0; end < 2; ++end) {
+			auto frame = RailPath(track,static_cast<float>(end));
+			CHECK(frame.point == ports[track][end]);
+			CHECK(Dot(ports[track][1]-ports[track][0],frame.across) == Approx(0).margin(0.00001f));
+		}
+		for (unsigned step = 0; step <= 16; ++step) {
+			auto frame = RailPath(track,step/16.0f);
+			CHECK(Dot(frame.across,frame.across) == Approx(1));
+			Vec3 a = frame.point-frame.across*1.3f, b = frame.point+frame.across*1.3f;
+			CHECK(Dot(b-a,b-a) == Approx(2.6f*2.6f));
+			if (track >= 2) {
+				float x = track == 3 || track == 4 ? 16-frame.point.x : frame.point.x;
+				float y = track == 3 || track == 5 ? 16-frame.point.y : frame.point.y;
+				CHECK(x+y == Approx(8));
+			}
+		}
+	}
+}
+
+TEST_CASE("Voxel rail heads follow straight bands and match adjoining diagonal tiles", "[renderer3d]")
+{
+	for (unsigned type = 0; type < 4; ++type) for (unsigned track = 2; track < 6; ++track) for (unsigned lod = 0; lod < 3; ++lod) {
+		auto assembly = MakeRailAssembly(type,track,{},lod);
+		auto frame = RailPath(track,0);
+		const auto &rails = assembly.parts[static_cast<unsigned>(RailMaterial::Rails)];
+		bool straight = true;
+		for (const auto &vertex : rails) {
+			float distance = std::abs(Dot(vertex.position-frame.point,frame.across));
+			/* Bounds include the projected half-cell width of the transport
+			 * lattice, not the formerly smooth swept rail profile. */
+			straight &= type <= 1 ? distance >= 0.9999f && distance <= 1.6001f :
+				type == 2 ? distance <= 0.7501f : distance >= 3.2499f && distance <= 4.0001f;
+			CHECK(vertex.position.x*8 == Approx(std::round(vertex.position.x*8))); // Boundary-fan centres may use half a cell.
+			CHECK(vertex.position.y*8 == Approx(std::round(vertex.position.y*8)));
+			CHECK((static_cast<unsigned>(vertex.surface)&15U) == static_cast<unsigned>(SurfaceMode::Palette));
+		}
+		INFO("type=" << type << " track=" << track << " lod=" << lod);
+		CHECK(straight);
+	}
+	/* A voxel diagonal stair changes row at the tile edge just as inside a tile.
+	 * Neighbouring steps must share positive-area faces, not just a corner. */
+	for (unsigned type = 0; type < 4; ++type) {
+		auto upper = MakeRailAssembly(type,2,{}), lower = MakeRailAssembly(type,3,{});
+		auto on_cap = [&](const auto &vertices, Ray ray) {
+			for (size_t i = 0; i < vertices.size(); i += 3) {
+				auto hit = TriangleHit(ray,vertices[i].position,vertices[i+1].position,vertices[i+2].position);
+				if (hit && std::abs(*hit-0.25f) < 0.0001f) return true;
+			}
+			return false;
+		};
+		unsigned shared = 0;
+		for (unsigned x = 0; x < 64; ++x) {
+			float height = type <= 1 ? 0.375f : 0.625f;
+			bool a = on_cap(upper.parts[static_cast<unsigned>(RailMaterial::Rails)],{{(x+0.5f)*0.25f,-0.25f,height},{0,1,0}});
+			bool b = on_cap(lower.parts[static_cast<unsigned>(RailMaterial::Rails)],{{(x+0.5f)*0.25f,16.25f,height},{0,-1,0}});
+			shared += a && b;
+		}
+		CHECK(shared >= 2);
+	}
+	/* Distant flat straight runs may use fewer longitudinal cells, but their
+	 * running-head height, gauge and complete cross-section stay identical. */
+	for (unsigned type = 0; type < 4; ++type) for (unsigned track = 0; track < 2; ++track) {
+		auto medium = MakeRailAssembly(type,track,{},1), distant = MakeRailAssembly(type,track,{},2);
+		const auto &a = medium.parts[static_cast<unsigned>(RailMaterial::Rails)], &b = distant.parts[static_cast<unsigned>(RailMaterial::Rails)];
+		CHECK(b.size()*2 < a.size());
+		auto hit = [](const std::vector<Vertex> &mesh, Ray ray) {
+			float nearest = INFINITY;
+			for (size_t i = 0; i < mesh.size(); i += 3) if (auto distance = TriangleHit(ray,mesh[i].position,mesh[i+1].position,mesh[i+2].position)) nearest = std::min(nearest,*distance);
+			return nearest;
+		};
+		for (float t : {0.03125f,0.28125f,0.53125f,0.78125f,0.96875f}) for (int step = -40; step <= 40; ++step) {
+			auto frame = RailPath(track,t);
+			Ray ray{frame.point+frame.across*(step/8.0f)+Vec3{0,0,4},{0,0,-1}};
+			float near_hit = hit(a,ray), far_hit = hit(b,ray);
+			CHECK(std::isfinite(near_hit) == std::isfinite(far_hit));
+			if (std::isfinite(near_hit)) CHECK(near_hit == Approx(far_hit).margin(0.000001f));
+		}
+	}
+}
+
+TEST_CASE("Low bridge decks clear Cab paths and contain their pillar caps", "[renderer3d]")
+{
+	for (unsigned type = 0; type <= 13; ++type) for (bool along_y : {false,true}) {
+		TunnelAssembly bridge;
+		for (BridgeRole role : {BridgeRole::Deck,BridgeRole::Front}) {
+			auto mesh = MakeBridgeMesh({type,0,role,along_y});
+			for (auto &v : mesh) v.position.z += 8;
+			bridge.parts[0].insert(bridge.parts[0].end(),mesh.begin(),mesh.end());
+		}
+		for (float height : {6.0f,7.0f}) {
+			Ray path = along_y ? Ray{{-1,8,height},{1,0,0}} : Ray{{8,-1,height},{0,1,0}};
+			CHECK_FALSE(std::isfinite(FirstHit(bridge,path)));
+		}
+		CHECK(FirstHit(bridge,{{8,8,6},{0,0,1}}) == Approx(2-BRIDGE_DECK_THICKNESS));
+		for (float segment_z : {5.0f,-3.0f,-11.0f}) {
+			BridgeShape shape{type,4,BridgeRole::Pillar,along_y};
+			shape.pillar_top = BridgePillarCap(8,segment_z);
+			for (const auto &v : MakeBridgeMesh(shape)) CHECK(v.position.z+segment_z <= 8-BRIDGE_DECK_THICKNESS*0.5f+0.0001f);
+		}
+	}
+}
+
+TEST_CASE("Rail assemblies sit on legal gameplay foundations at every detail level", "[renderer3d]")
+{
+	std::set<std::pair<Slope,Track>> surfaces;
+	for (unsigned value = 0; value < 32; ++value) {
+		if (value >= 15 && value != 23 && value != 27 && value != 29 && value != 30) continue;
+		for (unsigned bits = 1; bits <= TRACK_BIT_ALL; ++bits) {
+			Slope slope = static_cast<Slope>(value);
+			TrackBits tracks = static_cast<TrackBits>(bits);
+			Foundation foundation = GetRailFoundation(slope,tracks);
+			if (foundation == FOUNDATION_INVALID) continue;
+			Corner upper = CORNER_INVALID;
+			if (IsNonContinuousFoundation(foundation)) {
+				upper = foundation == FOUNDATION_STEEP_BOTH ? GetHighestSlopeCorner(slope) : GetHalftileFoundationCorner(foundation);
+				tracks &= ~CornerToTrackBits(upper);
+				foundation = foundation == FOUNDATION_STEEP_BOTH ? FOUNDATION_STEEP_LOWER : FOUNDATION_NONE;
+			}
+			ApplyPixelFoundationToSlope(foundation,slope);
+			for (Track track = TRACK_BEGIN; track < TRACK_END; ++track) if ((tracks & TrackToTrackBits(track)) != TRACK_BIT_NONE) surfaces.emplace(slope,track);
+			if (IsValidCorner(upper)) {
+				ApplyPixelFoundationToSlope(HalftileFoundation(upper),slope);
+				surfaces.emplace(slope,FindFirstTrack(CornerToTrackBits(upper)));
+			}
+		}
+	}
+	for (auto [slope,track] : surfaces) for (unsigned type = 0; type < 4; ++type) for (unsigned lod = 0; lod < 3; ++lod) {
+		INFO("slope=" << to_underlying(slope) << " track=" << to_underlying(track) << " type=" << type << " lod=" << lod);
+		auto surface = MakeTileSurface(slope);
+		auto assembly = MakeRailAssembly(type,to_underlying(track),surface,lod);
+		bool finite = true, supported = true, contained = true;
+		for (const auto &part : assembly.parts) for (const auto &v : part) {
+			finite &= std::isfinite(v.position.x+v.position.y+v.position.z+v.normal.x+v.normal.y+v.normal.z);
+			/* The base layer embeds by at most one vertical cell plus the
+			 * terrain change across a ground cell; there are no floating feet. */
+			supported &= v.position.z >= surface.Height(v.position.x,v.position.y)-0.3751f;
+			supported &= v.position.z <= surface.Height(v.position.x,v.position.y)+(type < 2 ? 0.5f : 1.0f)+0.3751f;
+			contained &= v.position.x >= 0 && v.position.x <= 16 && v.position.y >= 0 && v.position.y <= 16;
+		}
+		CHECK(finite); CHECK(supported); CHECK(contained);
+		const auto &rails = assembly.parts[static_cast<unsigned>(RailMaterial::Rails)];
+		REQUIRE_FALSE(rails.empty());
+		if (type < 2 && track < TRACK_UPPER) for (float distance : {4.0f,8.0f,12.0f}) for (float side : {-1.3f,1.3f}) {
+			auto frame = RailPath(to_underlying(track),distance/16);
+			Vec3 p = frame.point+frame.across*side;
+			float ground = surface.Height(p.x,p.y), hit = 100;
+			for (size_t i = 0; i < rails.size(); i += 3) if (auto ray = TriangleHit({{p.x,p.y,ground+2},{0,0,-1}},rails[i].position,rails[i+1].position,rails[i+2].position)) hit = std::min(hit,*ray);
+			CHECK(hit <= 1.5001f);
+			CHECK(hit >= 1.1249f);
+		}
+	}
+}
+
+TEST_CASE("Maglev junction guide walls leave every running route open", "[renderer3d]")
+{
+	for (unsigned layout : {3U,5U,9U,17U,33U,12U,48U,63U}) for (unsigned lod : {0U,2U}) {
+		TunnelAssembly walls;
+		for (unsigned track = 0; track < 6; ++track) if (layout & (1U<<track)) {
+			auto geometry = MakeRailAssembly(3,track,{},lod,layout);
+			const auto &rails = geometry.parts[static_cast<unsigned>(RailMaterial::Rails)];
+			walls.parts[0].insert(walls.parts[0].end(),rails.begin(),rails.end());
+		}
+		for (unsigned track = 0; track < 6; ++track) if (layout & (1U<<track)) {
+			for (unsigned sample = 1; sample < 16; ++sample) for (float side : {-2.0f,0.0f,2.0f}) {
+				auto frame = RailPath(track,sample/16.0f);
+				Vec3 p = frame.point+frame.across*side+Vec3{0,0,2};
+				INFO("layout=" << layout << " track=" << track << " sample=" << sample << " side=" << side << " lod=" << lod);
+				CHECK_FALSE(std::isfinite(FirstHit(walls,{p,{0,0,-1}})));
+			}
+		}
+	}
+}
+
+TEST_CASE("Maglev junction slabs agree on colours at shared tile-port surfaces", "[renderer3d][voxel]")
+{
+	const std::pair<unsigned,Vec3> cases[] = {
+		{5,{2.125f,11.125f,2}},{9,{13.875f,4.875f,2}},
+		{6,{11.125f,2.125f,2}},{10,{4.875f,13.875f,2}}
+	};
+	for (auto [layout,point] : cases) for (unsigned lod : {0U,1U,2U}) {
+		std::set<unsigned> colours;
+		unsigned routes = 0;
+		for (unsigned track = 0; track < 6; ++track) if (layout & (1U<<track)) {
+			auto assembly = MakeRailAssembly(3,track,{},lod,layout);
+			const auto &slab = assembly.parts[static_cast<unsigned>(RailMaterial::Supports)];
+			bool visible = false;
+			for (size_t i = 0; i < slab.size(); i += 3) {
+				if (slab[i].normal.z != 1) continue;
+				if (auto hit = TriangleHit({point,{0,0,-1}},slab[i].position,slab[i+1].position,slab[i+2].position); hit && std::abs(*hit-1.75f) < 0.0001f) {
+					colours.insert(static_cast<unsigned>(slab[i].texture.x*256));
+					visible = true;
+				}
+			}
+			routes += visible;
+		}
+		INFO("layout=" << layout << " lod=" << lod);
+		CHECK(routes == 2);
+		CHECK(colours.size() == 1);
+	}
+}
+
+TEST_CASE("Station platforms and mirrored halls retain train and Cab clearance", "[renderer3d]")
+{
+	for (unsigned type = 0; type < 4; ++type) for (unsigned layout = 0; layout < 8; ++layout) {
+		INFO("type=" << type << " layout=" << layout);
+		auto assembly = MakeStationAssembly(type,layout);
+		TunnelAssembly test;
+		for (const auto &part : assembly.parts) test.parts[0].insert(test.parts[0].end(),part.begin(),part.end());
+		for (float side : {6.0f,8.0f,10.0f}) {
+			Ray forward = layout%2 == 0 ? Ray{{-1,side,6},{1,0,0}} : Ray{{side,-1,6},{0,1,0}};
+			CHECK_FALSE(std::isfinite(FirstHit(test,forward)));
+		}
+		if (layout < 2) {
+			Ray down = layout%2 == 0 ? Ray{{12,2,4},{0,0,-1}} : Ray{{2,12,4},{0,0,-1}};
+			CHECK(FirstHit(test,down) == Approx(2).margin(0.03f));
+		}
+		bool finite = true, normals = true;
+		for (const auto &part : assembly.parts) for (size_t i = 0; i < part.size(); i += 3) {
+			Vec3 n = Normal(part[i].position,part[i+1].position,part[i+2].position);
+			for (size_t j = i; j < i+3; ++j) {
+				const auto &v = part[j];
+				finite &= std::isfinite(v.position.x+v.position.y+v.position.z+v.texture.x+v.texture.y);
+				normals &= Dot(v.normal,n) > 0.999f;
+			}
+		}
+		CHECK(finite); CHECK(normals);
+	}
+}
+
+TEST_CASE("Raised crop and rock details remain supported by all terrain slopes", "[renderer3d]")
+{
+	for (unsigned value = 0; value < 32; ++value) {
+		if (value >= 15 && value != 23 && value != 27 && value != 29 && value != 30) continue;
+		auto surface = MakeTileSurface(static_cast<Slope>(value));
+		for (unsigned variant = 0; variant < 15; ++variant) for (unsigned lod = 0; lod < (variant < 9 ? 3U : 1U); ++lod) {
+			INFO("slope=" << value << " variant=" << variant << " lod=" << lod);
+			auto mesh = variant < 9 ? MakeFieldAssembly(variant,surface,lod) : MakeRockAssembly(variant == 10 ? 1 : 0,variant >= 11 ? variant-10 : 0,surface);
+			bool finite = true, supported = true, contained = true;
+			for (const auto &part : mesh.parts) for (const auto &vertex : part) {
+				Vec3 p = vertex.position;
+				finite &= std::isfinite(p.x+p.y+p.z+vertex.normal.x+vertex.normal.y+vertex.normal.z);
+				supported &= p.z >= surface.Height(p.x,p.y)-0.001f;
+				contained &= p.x >= 0 && p.x <= 16 && p.y >= 0 && p.y <= 16;
+			}
+			CHECK(finite); CHECK(supported); CHECK(contained);
+		}
+	}
+	/* The reference's two hay stacks must have real three-unit tops, rather
+	 * than merely adding rows of straw over the old flat painted image. */
+	auto field = MakeFieldAssembly(8,{});
+	TunnelAssembly hay;
+	hay.parts[0] = field.parts[static_cast<unsigned>(GroundDetailMaterial::Hay)];
+	CHECK(FirstHit(hay,{{3.1f,3.4f,10},{0,0,-1}}) == Approx(6.85f));
+	CHECK(FirstHit(hay,{{10.6f,9.9f,10},{0,0,-1}}) == Approx(6.85f));
+	CHECK_FALSE(std::isfinite(FirstHit(hay,{{8,8,10},{0,0,-1}})));
+}
+
+TEST_CASE("Catenary joins retain contact height and long-span messenger continuity", "[renderer3d]")
+{
+	CHECK(CatenaryRise(1,1) == Approx(CatenaryRise(0,2)));
+	CHECK(CatenaryRise(0,1) == Approx(CatenaryRise(1,2)));
+	for (unsigned track = 0; track < 6; ++track) for (int grade : {-8,0,8}) for (unsigned supports = 1; supports <= 3; ++supports) {
+		TunnelAssembly wire;
+		wire.parts[0] = MakeCatenaryWire(track,grade,supports);
+		for (float t : {0.25f,0.5f,0.75f}) {
+			Vec3 p = RailPath(track,t).point+Vec3{0,0,grade*t+8};
+			float hit = FirstHit(wire,{p,{0,0,1}});
+			INFO("track=" << track << " grade=" << grade << " supports=" << supports << " t=" << t);
+			CHECK(hit > 1.9f); CHECK(hit < 2.1f);
+		}
+		bool finite = true;
+		for (const auto &v : wire.parts[0]) finite &= std::isfinite(v.position.x+v.position.y+v.position.z+v.normal.x+v.normal.y+v.normal.z);
+		CHECK(finite);
+	}
+}
+
+TEST_CASE("Signal faces and semaphore swing follow the upstream direction convention", "[renderer3d]")
+{
+	const Vec3 faces[] = {{1,0,0},{-1,0,0},{0,-1,0},{0,1,0},{0.7071068f,-0.7071068f,0},
+		{-0.7071068f,0.7071068f,0},{0.7071068f,0.7071068f,0},{-0.7071068f,-0.7071068f,0}};
+	for (unsigned direction = 0; direction < 8; ++direction) {
+		float heading = SignalHeading(direction);
+		CHECK(Dot({std::cos(heading),std::sin(heading),0},faces[direction]) == Approx(1));
+	}
+	float red_top = 0, green_top = 0;
+	for (bool green : {false,true}) {
+		auto mesh = MakeSignalMesh(0,true,green);
+		bool finite = true;
+		for (const auto &v : mesh) {
+			finite &= std::isfinite(v.position.x+v.position.y+v.position.z+v.normal.x+v.normal.y+v.normal.z);
+			(green ? green_top : red_top) = std::max(green ? green_top : red_top,v.position.z);
+		}
+		CHECK(finite);
+	}
+	CHECK(green_top > red_top+2);
+	CHECK(green_top < 16);
+}
+
+TEST_CASE("Depot doors retain vehicle clearance and tracks stop inside the back wall", "[renderer3d]")
+{
+	for (unsigned kind = 0; kind < 6; ++kind) for (unsigned direction = 0; direction < 4; ++direction) for (unsigned lod = 0; lod < 2; ++lod) {
+		auto depot = MakeDepotAssembly(kind,direction,lod);
+		TunnelAssembly whole;
+		bool finite = true, bounded = true;
+		for (size_t part = 0; part < depot.parts.size(); ++part) {
+			if (part == static_cast<unsigned>(DepotMaterial::ReservedTrack)) continue;
+			for (const auto &v : depot.parts[part]) {
+				Vec3 p = v.position;
+				finite &= std::isfinite(p.x+p.y+p.z+v.normal.x+v.normal.y+v.normal.z);
+				bounded &= p.x >= -0.01f && p.x <= 16.01f && p.y >= -0.01f && p.y <= 16.01f && p.z >= -0.01f && p.z <= 24;
+			}
+			whole.parts[0].insert(whole.parts[0].end(),depot.parts[part].begin(),depot.parts[part].end());
+		}
+		INFO("kind=" << kind << " direction=" << direction << " lod=" << lod);
+		CHECK(finite); CHECK(bounded);
+		auto ray = [&](Vec3 a, Vec3 b) { return Ray{DepotPoint(direction,a),DepotPoint(direction,b)-DepotPoint(direction,a)}; };
+		float bay = FirstHit(whole,ray({18,8,5},{17,8,5}));
+		CHECK(bay > 13); CHECK(bay < 18);
+		CHECK(FirstHit(whole,ray({18,2.6f,5},{17,2.6f,5})) < 5);
+		if (kind < 4) {
+			CHECK_FALSE(std::isfinite(FirstHit(whole,ray({0.5f,8,4},{0.5f,8,3}))));
+			float y = kind < 2 ? 6.7f : kind == 2 ? 8.0f : 4.4f;
+			float head = kind < 2 ? 0.5f : 1.0f;
+			CHECK(FirstHit(whole,ray({15,y,4},{15,y,3})) == Approx(4-head).margin(0.001f));
+		}
+	}
+}
+
+TEST_CASE("Crossing equipment clears both road lanes and maglev gates obey the barred state", "[renderer3d]")
+{
+	for (unsigned kind = 0; kind < 4; ++kind) for (bool transpose : {false,true}) for (bool barred : {false,true}) for (bool tram : {false,true}) {
+		auto crossing = MakeCrossingAssembly(kind,transpose,barred,tram);
+		TunnelAssembly whole;
+		bool finite = true;
+		for (const auto &part : crossing.parts) for (const auto &vertex : part) {
+			finite &= std::isfinite(vertex.position.x+vertex.position.y+vertex.position.z+vertex.normal.x+vertex.normal.y+vertex.normal.z);
+			whole.parts[0].push_back(vertex);
+		}
+		CHECK(finite);
+		for (float lane : {5.0f,11.0f}) {
+			Ray ray = transpose ? Ray{{1,lane,0.5f},{1,0,0}} : Ray{{lane,1,0.5f},{0,1,0}};
+			float hit = FirstHit(whole,ray);
+			INFO("kind=" << kind << " transpose=" << transpose << " barred=" << barred << " tram=" << tram << " lane=" << lane);
+			if (kind == 3 && barred) CHECK(hit < 4);
+			else CHECK_FALSE(std::isfinite(hit));
+		}
+	}
+}
+
+TEST_CASE("Road-stop shelters have real roofs and leave both vehicle lanes open", "[renderer3d]")
+{
+	for (bool truck : {false,true}) for (unsigned layout = 0; layout < 6; ++layout) for (bool detail : {false,true}) for (bool tram : {false,true}) {
+		if (tram && layout < 4) continue;
+		auto stop = MakeRoadStopAssembly(truck,layout,tram,detail);
+		TunnelAssembly whole;
+		bool finite = true, contained = true;
+		for (const auto &part : stop.parts) for (const auto &v : part) {
+			Vec3 p = v.position;
+			finite &= std::isfinite(p.x+p.y+p.z+v.normal.x+v.normal.y+v.normal.z);
+			contained &= p.x >= -0.01f && p.y >= -0.01f && p.x <= 16.01f && p.y <= 16.01f && p.z >= -0.01f && p.z < 12;
+			whole.parts[0].push_back(v);
+		}
+		INFO("truck=" << truck << " layout=" << layout << " detail=" << detail << " tram=" << tram);
+		CHECK(finite); CHECK(contained);
+		auto ray = [&](Vec3 a, Vec3 b) { return Ray{RoadStopPoint(layout,a),RoadStopPoint(layout,b)-RoadStopPoint(layout,a)}; };
+		for (float lane : {5.0f,11.0f}) {
+			float hit = FirstHit(whole,ray({18,lane,2},{17,lane,2}));
+			if (layout >= 4) CHECK_FALSE(std::isfinite(hit));
+			else CHECK(hit > 14.8f);
+		}
+		Vec3 roof = truck && layout < 4 ? Vec3{1.5f,9,14} : Vec3{8,1.5f,14};
+		CHECK(FirstHit(whole,ray(roof,roof-Vec3{0,0,1})) < 6);
+	}
+}

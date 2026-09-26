@@ -8,13 +8,13 @@
         <key>CFBundleDisplayName</key>
         <string>${CPACK_BUNDLE_NAME}</string>
         <key>CFBundleExecutable</key>
-        <string>openttd</string>
+        <string>${BINARY_NAME}</string>
         <key>CFBundleGetInfoString</key>
         <string>#CPACK_PACKAGE_VERSION#, Copyright 2004-${CURRENT_YEAR} The OpenTTD team</string>
         <key>CFBundleIconFile</key>
         <string>${CPACK_BUNDLE_NAME}.icns</string>
         <key>CFBundleIdentifier</key>
-        <string>org.openttd.openttd</string>
+        <string>org.opentt3d.opentt3d</string>
         <key>CFBundleInfoDictionaryVersion</key>
         <string>6.0</string>
         <key>CFBundleName</key>

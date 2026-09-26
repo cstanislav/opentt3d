@@ -14,6 +14,7 @@
 #include "../gfx_type.h"
 #include "../spriteloader/spriteloader.hpp"
 #include "../misc/lrucache.hpp"
+#include <functional>
 
 typedef void (*OGLProc)();
 typedef OGLProc (*GetOGLProcAddressProc)(const char *proc);
@@ -42,6 +43,10 @@ private:
 	GLuint vao_quad = 0; ///< Vertex array object storing the rendering state for the fullscreen quad.
 	GLuint vbo_quad = 0; ///< Vertex buffer with a fullscreen quad.
 	GLuint pal_texture = 0; ///< Palette lookup texture.
+	std::array<GLuint,2> pal_textures{}; ///< Frame-local UI/cursor palette textures.
+	std::array<uint64_t,2> pal_uploaded{}; ///< Palette revision uploaded to each frame slot.
+	std::array<Colour,256> palette_colours{}; ///< Latest original palette, including unchanged entries.
+	uint64_t palette_revision = 1;
 
 	void *anim_buffer = nullptr; ///< Pointer to the mapped animation buffer.
 	GLuint anim_pbo = 0; ///< Pixel buffer object storing the memory used for the animation buffer.
@@ -63,6 +68,7 @@ private:
 	OpenGLSpriteLRUCache cursor_cache; ///< Cache of encoded cursor sprites.
 	PaletteID last_sprite_pal = (PaletteID)-1; ///< Last uploaded remap palette.
 	bool clear_cursor_cache = false; ///< A clear of the cursor cache is pending.
+	std::function<void()> activate_render_context; ///< Cocoa's layer uses a different shared GL context.
 
 	Point cursor_pos{}; ///< Cursor position
 	bool cursor_in_window = false; ///< Cursor inside this window
@@ -77,6 +83,8 @@ private:
 	void InternalClearCursorCache();
 
 	void RenderOglSprite(const OpenGLSprite *gl_sprite, PaletteID pal, int x, int y, ZoomLevel zoom);
+	void DrawVideoBuffer(GLuint texture, bool animation, bool flipped = false);
+	void SelectPaletteTexture();
 
 public:
 	/** Get singleton instance of this class. */
@@ -84,8 +92,9 @@ public:
 	{
 		return OpenGLBackend::instance;
 	}
-	static std::optional<std::string_view> Create(GetOGLProcAddressProc get_proc, const Dimension &screen_res);
+	static std::optional<std::string_view> Create(GetOGLProcAddressProc get_proc, const Dimension &screen_res, std::function<void()> activate_render_context = {});
 	static void Destroy();
+	void ActivateRenderContext() { if (this->activate_render_context) this->activate_render_context(); }
 
 	void PrepareContext();
 

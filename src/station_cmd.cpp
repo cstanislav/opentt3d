@@ -8,6 +8,7 @@
 /** @file station_cmd.cpp Handling of station tiles. */
 
 #include "stdafx.h"
+#include "renderer3d/world_capture.h"
 #include "core/flatset_type.hpp"
 #include "aircraft.h"
 #include "bridge_map.h"
@@ -3119,6 +3120,27 @@ const DrawTileSprites *GetStationTileLayout(StationType st, uint8_t gfx)
 	return layouts.data() + gfx;
 }
 
+/** Read-only access to the exact vanilla airport drawing frames. */
+std::span<const DrawTileSprites *const> GetAirportTileLayouts(uint8_t gfx)
+{
+	static const auto layouts = [] {
+		std::array<std::vector<const DrawTileSprites *>,APT_GRASS_FENCE_NE_FLAG_2+1> result;
+		for (unsigned tile = 0; tile < result.size(); ++tile) {
+			auto append = [&](const auto &frames) { for (const auto &frame : frames) result[tile].push_back(&frame); };
+			switch (tile) {
+				case APT_RADAR_GRASS_FENCE_SW: append(_station_display_datas_airport_radar_grass_fence_sw); break;
+				case APT_GRASS_FENCE_NE_FLAG: append(_station_display_datas_airport_flag_grass_fence_ne); break;
+				case APT_RADAR_FENCE_SW: append(_station_display_datas_airport_radar_fence_sw); break;
+				case APT_RADAR_FENCE_NE: append(_station_display_datas_airport_radar_fence_ne); break;
+				case APT_GRASS_FENCE_NE_FLAG_2: append(_station_display_datas_airport_flag_grass_fence_ne_2); break;
+				default: result[tile].push_back(GetStationTileLayout(StationType::Airport,tile)); break;
+			}
+		}
+		return result;
+	}();
+	return layouts[gfx < layouts.size() ? gfx : gfx&1];
+}
+
 /**
  * Check whether a sprite is a track sprite, which can be replaced by a non-track ground sprite and a rail overlay.
  * If the ground sprite is suitable, \a ground is replaced with the new non-track ground sprite, and \a overlay_offset
@@ -3324,23 +3346,8 @@ static void DrawTile_Station(TileInfo *ti)
 			assert(ats->grf_prop.subst_id != INVALID_AIRPORTTILE);
 			gfx = ats->grf_prop.subst_id;
 		}
-		switch (gfx) {
-			case APT_RADAR_GRASS_FENCE_SW:
-				t = &_station_display_datas_airport_radar_grass_fence_sw[GetAnimationFrame(ti->tile)];
-				break;
-			case APT_GRASS_FENCE_NE_FLAG:
-				t = &_station_display_datas_airport_flag_grass_fence_ne[GetAnimationFrame(ti->tile)];
-				break;
-			case APT_RADAR_FENCE_SW:
-				t = &_station_display_datas_airport_radar_fence_sw[GetAnimationFrame(ti->tile)];
-				break;
-			case APT_RADAR_FENCE_NE:
-				t = &_station_display_datas_airport_radar_fence_ne[GetAnimationFrame(ti->tile)];
-				break;
-			case APT_GRASS_FENCE_NE_FLAG_2:
-				t = &_station_display_datas_airport_flag_grass_fence_ne_2[GetAnimationFrame(ti->tile)];
-				break;
-		}
+		auto frames = GetAirportTileLayouts(gfx);
+		t = frames[frames.size() == 1 ? 0 : GetAnimationFrame(ti->tile)];
 	}
 
 	Owner owner = GetTileOwner(ti->tile);
@@ -3360,6 +3367,16 @@ static void DrawTile_Station(TileInfo *ti)
 		if (!DrawCustomStationFoundations(statspec, st, ti, tile_layout)) {
 			DrawFoundation(ti, FOUNDATION_LEVELED);
 		}
+	}
+
+	if (layout == nullptr && statspec == nullptr && t != nullptr && Renderer3D::CaptureVoxelAirport(*ti,gfx,*t,palette)) {
+		DrawBridgeMiddle(ti,GetStationBlockedPillars(bridgeable_info,GetStationGfx(ti->tile)));
+		return;
+	}
+	if (layout == nullptr && statspec == nullptr && t != nullptr && Renderer3D::CaptureRailStation(*ti,gfx,*t,palette)) {
+		if (HasRailCatenaryDrawn(GetRailType(ti->tile))) DrawRailCatenary(ti);
+		DrawBridgeMiddle(ti,GetStationBlockedPillars(bridgeable_info,GetStationGfx(ti->tile)));
+		return;
 	}
 
 	bool draw_ground = false;
@@ -3454,6 +3471,11 @@ static void DrawTile_Station(TileInfo *ti)
 
 		const RoadStopSpec *stopspec = GetRoadStopSpec(ti->tile);
 		RoadStopDrawModes stop_draw_mode{};
+		if (stopspec == nullptr && Renderer3D::CaptureRoadStop(*ti,view,*t,palette)) {
+			DrawRoadCatenary(ti);
+			DrawBridgeMiddle(ti,GetStationBlockedPillars(bridgeable_info,GetStationGfx(ti->tile)));
+			return;
+		}
 		if (stopspec != nullptr) {
 			stop_draw_mode = stopspec->draw_mode;
 			st = BaseStation::GetByTile(ti->tile);
@@ -3510,6 +3532,10 @@ static void DrawTile_Station(TileInfo *ti)
 		total_offset = 0;
 	}
 
+	if (layout == nullptr && statspec == nullptr && t != nullptr && Renderer3D::CaptureVoxelDock(*ti,gfx,*t,palette)) {
+		DrawBridgeMiddle(ti,GetStationBlockedPillars(bridgeable_info,GetStationGfx(ti->tile)));
+		return;
+	}
 	DrawRailTileSeq(ti, t, TO_BUILDINGS, total_offset, relocation, palette);
 	DrawBridgeMiddle(ti, GetStationBlockedPillars(bridgeable_info, GetStationGfx(ti->tile)));
 }

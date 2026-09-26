@@ -552,9 +552,9 @@ LRESULT CALLBACK WndProcGdi(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			return 0;
 
 		case WM_LBUTTONUP:
-			ReleaseCapture();
 			_left_button_down = false;
 			_left_button_clicked = false;
+			if (!_right_button_down && !_middle_button_down) ReleaseCapture();
 			HandleMouseEvents();
 			return 0;
 
@@ -566,8 +566,20 @@ LRESULT CALLBACK WndProcGdi(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			return 0;
 
 		case WM_RBUTTONUP:
-			ReleaseCapture();
 			_right_button_down = false;
+			if (!_left_button_down && !_middle_button_down) ReleaseCapture();
+			HandleMouseEvents();
+			return 0;
+
+		case WM_MBUTTONDOWN:
+			SetCapture(hwnd);
+			_middle_button_down = true;
+			HandleMouseEvents();
+			return 0;
+
+		case WM_MBUTTONUP:
+			_middle_button_down = false;
+			if (!_left_button_down && !_right_button_down) ReleaseCapture();
 			HandleMouseEvents();
 			return 0;
 
@@ -849,6 +861,7 @@ LRESULT CALLBACK WndProcGdi(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			break;
 
 		case WM_KILLFOCUS:
+			_middle_button_down = false;
 			video_driver->has_focus = false;
 			break;
 
@@ -1099,7 +1112,7 @@ bool VideoDriver_Win32Base::LockVideoBuffer()
 
 void VideoDriver_Win32Base::UnlockVideoBuffer()
 {
-	assert(_screen.dst_ptr != nullptr);
+	/* GL uploads before Paint; the outer tick can subsequently release again. */
 	if (_screen.dst_ptr != nullptr) {
 		/* Hand video buffer back to the drawing backend. */
 		this->ReleaseVideoPointer();
@@ -1589,6 +1602,8 @@ void VideoDriver_Win32OpenGL::Paint()
 		_local_palette.count_dirty = 0;
 	}
 
+	/* Upload this frame's UI before presenting GPU-resident viewport regions. */
+	this->UnlockVideoBuffer();
 	OpenGLBackend::Get()->Paint();
 	OpenGLBackend::Get()->DrawMouseCursor();
 

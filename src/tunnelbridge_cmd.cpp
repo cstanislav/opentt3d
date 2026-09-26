@@ -40,6 +40,8 @@
 #include "tunnelbridge_cmd.h"
 #include "landscape_cmd.h"
 #include "terraform_cmd.h"
+#include "renderer3d/bridge_capture.h"
+#include "renderer3d/world_capture.h"
 
 #include "table/strings.h"
 #include "table/bridge_land.h"
@@ -154,7 +156,7 @@ static bool BridgeHasCustomSpriteTable(BridgeType bridge_type, BridgePieces piec
  * @param piece Bridge piece.
  * @return Sprite table for the bridge piece.
  */
-static std::span<const PalSpriteID> GetBridgeSpriteTable(BridgeType bridge_type, BridgePieces piece)
+std::span<const PalSpriteID> GetBridgeSpriteTable(BridgeType bridge_type, BridgePieces piece)
 {
 	assert(piece < NUM_BRIDGE_PIECES);
 
@@ -1060,6 +1062,7 @@ static CommandCost ClearTile_TunnelBridge(TileIndex tile, DoCommandFlags flags)
  */
 static inline void DrawPillar(const PalSpriteID &psid, int x, int y, int z, uint8_t w, uint8_t h, const SubSprite *subsprite)
 {
+	Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::Pillar);
 	static const int PILLAR_Z_OFFSET = TILE_HEIGHT - BRIDGE_Z_START; ///< Start offset of pillar wrt. bridge (downwards)
 	AddSortableSpriteToDraw(psid.sprite, psid.pal, x, y, z, {{0, 0, -PILLAR_Z_OFFSET}, {w, h, BB_HEIGHT_UNDER_BRIDGE}, {0, 0, PILLAR_Z_OFFSET}}, IsTransparencySet(TO_BRIDGES), subsprite);
 }
@@ -1133,8 +1136,9 @@ static void DrawBridgePillars(const PalSpriteID &psid, const TileInfo *ti, Axis 
 	if (z_front_north < z_front) DrawPillar(psid, x, y, bottom_z, w, h, &half_pillar_sub_sprite[axis][0]);
 	if (z_front_south < z_front) DrawPillar(psid, x, y, bottom_z, w, h, &half_pillar_sub_sprite[axis][1]);
 
-	/* Draw back pillars, skip top two parts, which are hidden by the bridge */
-	int z_bridge_back = z_bridge - 2 * (int)TILE_HEIGHT;
+	/* The fixed isometric view hides the top two back sections. Other 3D
+	 * camera angles can see them; keep the upstream ground/obstruction rules. */
+	int z_bridge_back = Renderer3D::CurrentBridgeCapture() != nullptr ? z_bridge : z_bridge - 2 * (int)TILE_HEIGHT;
 	if (drawfarpillar && (z_back_north <= z_bridge_back || z_back_south <= z_bridge_back)) {
 		bottom_z = DrawPillarColumn(z_back, z_bridge_back, psid, x_back, y_back, w, h);
 		if (z_back_north < z_back) DrawPillar(psid, x_back, y_back, bottom_z, w, h, &half_pillar_sub_sprite[axis][0]);
@@ -1252,6 +1256,7 @@ static void DrawBridgeRoadBits(TileIndex head_tile, int x, int y, int z, int off
 	 * The bounding boxes here are the same as for bridge front/roof */
 	for (uint i = 0; i < lengthof(seq_back); ++i) {
 		if (seq_back[i] != 0) {
+			Renderer3D::BridgeCaptureScope capture_role(i < 3 ? Renderer3D::BridgeRole::Surface : Renderer3D::BridgeRole::None);
 			AddSortableSpriteToDraw(seq_back[i], PAL_NONE, x, y, z, back_bounds[offset], trans_back[i]);
 		}
 	}
@@ -1271,6 +1276,7 @@ static void DrawBridgeRoadBits(TileIndex head_tile, int x, int y, int z, int off
 
 	for (uint i = 0; i < lengthof(seq_front); ++i) {
 		if (seq_front[i] != 0) {
+			Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::None);
 			AddSortableSpriteToDraw(seq_front[i], PAL_NONE, x, y, z, front_bounds[offset], trans_front[i]);
 		}
 	}
@@ -1295,6 +1301,11 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 	DiagDirection tunnelbridge_direction = GetTunnelBridgeDirection(ti->tile);
 
 	if (IsTunnel(ti->tile)) {
+		if (Renderer3D::CaptureTunnel(*ti)) {
+			if (transport_type == TRANSPORT_RAIL && HasRailCatenaryDrawn(GetRailType(ti->tile))) DrawRailCatenary(ti);
+			DrawBridgeMiddle(ti, BridgePillarFlag::EdgeNE + tunnelbridge_direction);
+			return;
+		}
 		/* Front view of tunnel bounding boxes:
 		 *
 		 *   122223  <- BB_Z_SEPARATOR
@@ -1451,11 +1462,11 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 	} else { // IsBridge(ti->tile)
 		DrawFoundation(ti, GetBridgeFoundation(ti->tileh, DiagDirToAxis(tunnelbridge_direction)));
 		bool is_custom_layout = false; // Set if rail/road bridge uses a custom layout.
+		BridgeType bridge_type = transport_type == TRANSPORT_WATER ? MAX_BRIDGES : GetBridgeType(ti->tile);
 
 		uint base_offset = GetBridgeRampDirectionBaseOffset(tunnelbridge_direction);
 		std::span<const PalSpriteID> psid;
 		if (transport_type != TRANSPORT_WATER) {
-			BridgeType bridge_type = GetBridgeType(ti->tile);
 			if (ti->tileh == SLOPE_FLAT) base_offset += 4; // sloped bridge head
 			base_offset += GetBridgeSpriteTableBaseOffset(transport_type, ti->tile);
 			psid = GetBridgeSpriteTable(bridge_type, BRIDGE_PIECE_HEAD);
@@ -1477,6 +1488,10 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 		}
 
 		/* draw ramp */
+		Renderer3D::BridgeCaptureScope bridge_capture({
+			{bridge_type, BRIDGE_PIECE_HEAD, Renderer3D::BridgeRole::None, DiagDirToAxis(tunnelbridge_direction) == AXIS_Y,
+				to_underlying(tunnelbridge_direction), ti->tileh == SLOPE_FLAT},
+			{static_cast<float>(ti->x),static_cast<float>(ti->y),static_cast<float>(ti->z + TILE_HEIGHT)},is_custom_layout});
 
 		/* Draw Trambits and PBS Reservation as SpriteCombine */
 		if (transport_type == TRANSPORT_ROAD || transport_type == TRANSPORT_RAIL) StartSpriteCombine();
@@ -1485,7 +1500,10 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 		 * it doesn't disappear behind it
 		 */
 		/* Bridge heads are drawn solid no matter how invisibility/transparency is set */
-		AddSortableSpriteToDraw(psid[0].sprite, psid[0].pal, *ti, {{}, {TILE_SIZE, TILE_SIZE, static_cast<uint8_t>(ti->tileh == SLOPE_FLAT ? 0 : TILE_HEIGHT)}, {}});
+		{
+			Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::Ramp);
+			AddSortableSpriteToDraw(psid[0].sprite, psid[0].pal, *ti, {{}, {TILE_SIZE, TILE_SIZE, static_cast<uint8_t>(ti->tileh == SLOPE_FLAT ? 0 : TILE_HEIGHT)}, {}});
+		}
 
 		if (transport_type == TRANSPORT_ROAD) {
 			uint offset = tunnelbridge_direction;
@@ -1502,6 +1520,7 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 
 			EndSpriteCombine();
 		} else if (transport_type == TRANSPORT_RAIL) {
+			Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::Surface);
 			const RailTypeInfo *rti = GetRailTypeInfo(GetRailType(ti->tile));
 			if (is_custom_layout || rti->UsesOverlay()) {
 				SpriteID surface = rti->UsesOverlay() ? GetCustomRailSprite(rti, ti->tile, RTSG_BRIDGE) : rti->base_sprites.bridge_deck;
@@ -1534,6 +1553,7 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 
 			EndSpriteCombine();
 			if (HasRailCatenaryDrawn(GetRailType(ti->tile))) {
+				Renderer3D::BridgeCaptureScope wire_role(Renderer3D::BridgeRole::None);
 				DrawRailCatenary(ti);
 			}
 		}
@@ -1636,14 +1656,15 @@ void DrawBridgeMiddle(const TileInfo *ti, BridgePillarFlags blocked_pillars)
 	TransportType transport_type = GetTunnelBridgeTransportType(rampsouth);
 	Axis axis = GetBridgeAxis(ti->tile);
 	BridgePillarFlags pillars;
-	bool is_custom_layout; // Set if rail/road bridge uses a custom layout.
+	bool is_custom_layout = false; // Set if rail/road bridge uses a custom layout.
+	BridgeType bridge_type = transport_type == TRANSPORT_WATER ? MAX_BRIDGES : GetBridgeType(rampsouth);
+	BridgePieces bridge_piece = BRIDGE_PIECE_NORTH;
 
 	uint base_offset = GetBridgeMiddleAxisBaseOffset(axis);
 	std::span<const PalSpriteID> psid;
 	bool drawfarpillar;
 	if (transport_type != TRANSPORT_WATER) {
-		BridgeType bridge_type = GetBridgeType(rampsouth);
-		BridgePieces bridge_piece = CalcBridgePiece(GetTunnelBridgeLength(ti->tile, rampnorth) + 1, GetTunnelBridgeLength(ti->tile, rampsouth) + 1);
+		bridge_piece = CalcBridgePiece(GetTunnelBridgeLength(ti->tile, rampnorth) + 1, GetTunnelBridgeLength(ti->tile, rampsouth) + 1);
 		drawfarpillar = !HasBit(GetBridgeSpec(bridge_type)->flags, 0);
 		base_offset += GetBridgeSpriteTableBaseOffset(transport_type, rampsouth);
 		psid = GetBridgeSpriteTable(bridge_type, bridge_piece);
@@ -1660,6 +1681,9 @@ void DrawBridgeMiddle(const TileInfo *ti, BridgePillarFlags blocked_pillars)
 	int y = ti->y;
 	uint bridge_z = GetBridgePixelHeight(rampsouth);
 	int z = bridge_z - BRIDGE_Z_START;
+	Renderer3D::BridgeCaptureScope bridge_capture({
+		{bridge_type,to_underlying(bridge_piece),Renderer3D::BridgeRole::None,axis == AXIS_Y,0,false},
+		{static_cast<float>(x),static_cast<float>(y),static_cast<float>(bridge_z)},is_custom_layout});
 
 	/* Add a bounding box that separates the bridge from things below it. */
 	AddSortableSpriteToDraw(SPR_EMPTY_BOUNDING_BOX, PAL_NONE, x, y, bridge_z - TILE_HEIGHT + BB_Z_SEPARATOR, {{}, {TILE_SIZE, TILE_SIZE, 1}, {}});
@@ -1669,6 +1693,7 @@ void DrawBridgeMiddle(const TileInfo *ti, BridgePillarFlags blocked_pillars)
 
 	/* Draw floor and far part of bridge*/
 	if (!IsInvisibilitySet(TO_BRIDGES)) {
+		Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::Deck);
 		if (axis == AXIS_X) {
 			AddSortableSpriteToDraw(psid[0].sprite, psid[0].pal, x, y, z, {{0, 0, BRIDGE_Z_START}, {TILE_SIZE, 1, 40}, {0, 0, -BRIDGE_Z_START}}, IsTransparencySet(TO_BRIDGES));
 		} else {
@@ -1680,6 +1705,7 @@ void DrawBridgeMiddle(const TileInfo *ti, BridgePillarFlags blocked_pillars)
 		/* DrawBridgeRoadBits() calls EndSpriteCombine() and StartSpriteCombine() */
 		DrawBridgeRoadBits(rampsouth, x, y, bridge_z, axis ^ 1, false, is_custom_layout);
 	} else if (transport_type == TRANSPORT_RAIL) {
+		Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::Surface);
 		const RailTypeInfo *rti = GetRailTypeInfo(GetRailType(rampsouth));
 		if ((is_custom_layout || rti->UsesOverlay()) && !IsInvisibilitySet(TO_BRIDGES)) {
 			SpriteID surface = rti->UsesOverlay() ? GetCustomRailSprite(rti, rampsouth, RTSG_BRIDGE, TCX_ON_BRIDGE) : rti->base_sprites.bridge_deck;
@@ -1700,12 +1726,14 @@ void DrawBridgeMiddle(const TileInfo *ti, BridgePillarFlags blocked_pillars)
 		EndSpriteCombine();
 
 		if (HasRailCatenaryDrawn(GetRailType(rampsouth))) {
+			Renderer3D::BridgeCaptureScope wire_role(Renderer3D::BridgeRole::None);
 			DrawRailCatenaryOnBridge(ti);
 		}
 	}
 
 	/* draw roof, the component of the bridge which is logically between the vehicle and the camera */
 	if (!IsInvisibilitySet(TO_BRIDGES)) {
+		Renderer3D::BridgeCaptureScope capture_role(Renderer3D::BridgeRole::Front);
 		if (axis == AXIS_X) {
 			y += 12;
 			if (psid[1].sprite & SPRITE_MASK) AddSortableSpriteToDraw(psid[1].sprite, psid[1].pal, x, y, z, {{0, 3, BRIDGE_Z_START}, {TILE_SIZE, 1, 40}, {0, -3, -BRIDGE_Z_START}}, IsTransparencySet(TO_BRIDGES));

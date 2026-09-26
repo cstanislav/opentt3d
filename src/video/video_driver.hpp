@@ -88,6 +88,9 @@ public:
 		return true;
 	}
 
+	/** Development probe of native input/focus recovery. Unsupported drivers return false. */
+	virtual bool VerifyInput() { return false; }
+
 	/**
 	 * Get whether the mouse cursor is drawn by the video driver.
 	 * @return True if cursor drawing is done by the video driver.

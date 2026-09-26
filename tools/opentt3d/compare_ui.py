@@ -6,6 +6,7 @@ by OpenTTD, using only Python's standard library.
 """
 
 import argparse
+import json
 from pathlib import Path
 import struct
 import zlib
@@ -74,12 +75,14 @@ def main():
     parser.add_argument("reference", type=Path)
     parser.add_argument("actual", type=Path)
     parser.add_argument("--rect", action="append", required=True, help="x,y,width,height; repeat for each UI region")
+    parser.add_argument("--output", type=Path, help="Retain an exact-comparison JSON report, including failures")
     args = parser.parse_args()
     width, height, reference = read_png(args.reference)
     w, h, actual = read_png(args.actual)
     if (w, h) != (width, height):
         raise SystemExit(f"Screenshot sizes differ: {(width, height)} vs {(w, h)}")
     print(f"Screenshot dimensions: {width}x{height}")
+    report = {"reference": str(args.reference), "actual": str(args.actual), "size": [width, height], "channels": "RGB", "regions": []}
     total = 0
     for rect in args.rect:
         x, y, w, h = map(int, rect.split(","))
@@ -88,6 +91,7 @@ def main():
         changed = sum(reference[row][col * 3:col * 3 + 3] != actual[row][col * 3:col * 3 + 3]
                       for row in range(y, y + h) for col in range(x, x + w))
         print(f"{rect}: {changed} differing pixels out of {w * h}")
+        report["regions"].append({"rect": [x, y, w, h], "pixels": w * h, "different_pixels": changed})
         if changed:
             for row in range(y, y + h):
                 mismatch = next((col for col in range(x, x + w) if reference[row][col * 3:col * 3 + 3] != actual[row][col * 3:col * 3 + 3]), None)
@@ -96,6 +100,10 @@ def main():
                     print(f"  First difference at {mismatch},{row}: {tuple(reference[row][i:i + 3])} vs {tuple(actual[row][i:i + 3])}")
                     break
         total += changed
+    report["exact"] = total == 0
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(report, indent=2) + "\n")
     if total:
         raise SystemExit(f"UI comparison failed: {total} differing pixels")
     print("All selected UI regions match exactly")

@@ -12,3 +12,5 @@ add_files(
     cocoa_ogl.mm
     CONDITION APPLE AND OPENGL_FOUND
 )
+
+add_files(cocoa_vulkan.h cocoa_vulkan.mm CONDITION APPLE AND Vulkan_FOUND)

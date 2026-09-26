@@ -33,6 +33,8 @@
 #include "object_map.h"
 #include "rail_cmd.h"
 #include "landscape_cmd.h"
+#include "renderer3d/world_capture.h"
+#include "renderer3d/rail_capture.h"
 
 #include "table/strings.h"
 #include "table/railtypes.h"
@@ -1897,7 +1899,10 @@ static void DrawSingleSignal(TileIndex tile, const RailTypeInfo *rti, Track trac
 		sprite += type * 16 + variant * 64 + image * 2 + condition + (type > SIGTYPE_LAST_NOPBS ? 64 : 0);
 	}
 
-	AddSortableSpriteToDraw(sprite, PAL_NONE, x, y, GetSaveSlopeZ(x, y, track), {{}, {1, 1, BB_HEIGHT_UNDER_BRIDGE}, {}});
+	int z = GetSaveSlopeZ(x,y,track);
+	if (!Renderer3D::CaptureRailSignal(tile,sprite,x,y,z,type,variant,condition,image)) {
+		AddSortableSpriteToDraw(sprite, PAL_NONE, x, y, z, {{}, {1, 1, BB_HEIGHT_UNDER_BRIDGE}, {}});
+	}
 }
 
 /** Offsets for drawing fences */
@@ -1937,6 +1942,7 @@ static const FenceOffset _fence_offsets[] = {
  */
 static void DrawTrackFence(const TileInfo *ti, const PalSpriteID &psid, uint num_sprites, RailFenceOffset rfo)
 {
+	if (Renderer3D::CaptureFence(*ti, 6, to_underlying(rfo), psid.sprite + (rfo % num_sprites), psid.sprite, psid.pal)) return;
 	int z = ti->z;
 	if (_fence_offsets[rfo].height_ref != CORNER_INVALID) {
 		z += GetSlopePixelZInCorner(RemoveHalftileSlope(ti->tileh), _fence_offsets[rfo].height_ref);
@@ -2240,6 +2246,7 @@ static int GetJunctionGroundSpriteOffset(TrackBits track)
  */
 static void DrawTrackBits(TileInfo *ti, TrackBits track)
 {
+	if (Renderer3D::CaptureRailTile(*ti,track)) return;
 	const RailTypeInfo *rti = GetRailTypeInfo(GetRailType(ti->tile));
 
 	if (rti->UsesOverlay()) {
@@ -2473,6 +2480,12 @@ static void DrawTile_Track(TileInfo *ti)
 			}
 		}
 
+		if (!rti->UsesOverlay() && rti->group[RTSG_DEPOT] == nullptr && Renderer3D::CaptureDepot(*ti,to_underlying(GetRailType(ti->tile)),dir,*dts,rti->GetRailtypeSpriteOffset(),image,pal,
+			_game_mode != GM_MENU && _settings_client.gui.show_track_reservation && HasDepotReservation(ti->tile))) {
+			if (HasRailCatenaryDrawn(GetRailType(ti->tile))) DrawRailCatenary(ti);
+			DrawBridgeMiddle(ti,blocked_pillars);
+			return;
+		}
 		DrawGroundSprite(image, GroundSpritePaletteTransform(image, PAL_NONE, pal));
 
 		if (rti->UsesOverlay()) {

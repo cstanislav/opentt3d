@@ -30,9 +30,9 @@ static const std::string KNOWN_BUGS_FILENAME = "known-bugs.md";
 static const std::string LICENSE_FILENAME = "COPYING.md";
 static const std::string FONTS_FILENAME = "fonts.md";
 
-static const std::string WEBSITE_LINK = "https://www.openttd.org/";
+static const std::string WEBSITE_LINK = "https://github.com/cstanislav/opentt3d";
 static const std::string WIKI_LINK = "https://wiki.openttd.org/";
-static const std::string BUGTRACKER_LINK = "https://bugs.openttd.org/";
+static const std::string BUGTRACKER_LINK = "https://github.com/cstanislav/opentt3d/issues";
 static const std::string COMMUNITY_LINK = "https://community.openttd.org/";
 
 /** Only show the first 20 changelog versions in the textfile viewer. */

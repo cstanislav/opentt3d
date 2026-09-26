@@ -131,13 +131,13 @@ endif()
 
 set(CPACK_SYSTEM_NAME "${ARCHITECTURE}")
 
-set(CPACK_PACKAGE_NAME "openttd")
-set(CPACK_PACKAGE_VENDOR "OpenTTD")
-set(CPACK_PACKAGE_DESCRIPTION "OpenTTD")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenTTD")
-set(CPACK_PACKAGE_HOMEPAGE_URL "https://www.openttd.org/")
-set(CPACK_PACKAGE_CONTACT "OpenTTD <info@openttd.org>")
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "OpenTTD")
+set(CPACK_PACKAGE_NAME "opentt3d")
+set(CPACK_PACKAGE_VENDOR "OpenTT3D")
+set(CPACK_PACKAGE_DESCRIPTION "OpenTT3D — OpenTTD transport simulation in a 3D world")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenTT3D")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/cstanislav/opentt3d")
+set(CPACK_PACKAGE_CONTACT "https://github.com/cstanislav/opentt3d/issues")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "OpenTT3D")
 set(CPACK_PACKAGE_CHECKSUM "SHA256")
 
 if((APPLE OR WIN32) AND EXISTS ${PANDOC_EXECUTABLE})
@@ -149,7 +149,7 @@ endif()
 
 set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/README.md")
 set(CPACK_MONOLITHIC_INSTALL YES)
-set(CPACK_PACKAGE_EXECUTABLES "openttd;OpenTTD")
+set(CPACK_PACKAGE_EXECUTABLES "${BINARY_NAME};OpenTT3D")
 set(CPACK_STRIP_FILES YES)
 set(CPACK_OUTPUT_FILE_PREFIX "bundles")
 
@@ -160,9 +160,9 @@ if(APPLE)
     include(PackageBundle)
 
     if (APPLE_UNIVERSAL_PACKAGE)
-        set(CPACK_PACKAGE_FILE_NAME "openttd-#CPACK_PACKAGE_VERSION#-macos-universal")
+        set(CPACK_PACKAGE_FILE_NAME "opentt3d-#CPACK_PACKAGE_VERSION#-macos-universal")
     else()
-        set(CPACK_PACKAGE_FILE_NAME "openttd-#CPACK_PACKAGE_VERSION#-macos-${CPACK_SYSTEM_NAME}")
+        set(CPACK_PACKAGE_FILE_NAME "opentt3d-#CPACK_PACKAGE_VERSION#-macos-${CPACK_SYSTEM_NAME}")
     endif()
 elseif(WIN32)
     set(CPACK_GENERATOR "ZIP")
@@ -171,7 +171,7 @@ elseif(WIN32)
         include(PackageNSIS)
     endif()
 
-    set(CPACK_PACKAGE_FILE_NAME "openttd-#CPACK_PACKAGE_VERSION#-windows-${CPACK_SYSTEM_NAME}")
+    set(CPACK_PACKAGE_FILE_NAME "opentt3d-#CPACK_PACKAGE_VERSION#-windows-${CPACK_SYSTEM_NAME}")
 
     if(DEFINED ENV{AZURE_CODESIGN_PROFILE_NAME})
       add_custom_command(TARGET openttd
@@ -237,7 +237,7 @@ elseif(UNIX)
         endif()
     endif()
 
-    set(CPACK_PACKAGE_FILE_NAME "openttd-#CPACK_PACKAGE_VERSION#-linux-${PLATFORM}-${CPACK_SYSTEM_NAME}")
+    set(CPACK_PACKAGE_FILE_NAME "opentt3d-#CPACK_PACKAGE_VERSION#-linux-${PLATFORM}-${CPACK_SYSTEM_NAME}")
 
 else()
     message(FATAL_ERROR "Unknown OS found for packaging; please consider creating a Pull Request to add support for this OS.")
@@ -256,7 +256,7 @@ if(OPTION_PACKAGE_DEPENDENCIES)
         file(GET_RUNTIME_DEPENDENCIES
                 RESOLVED_DEPENDENCIES_VAR DEPENDENCIES
                 UNRESOLVED_DEPENDENCIES_VAR UNRESOLVED_DEPENDENCIES
-                EXECUTABLES openttd
+                EXECUTABLES "$<TARGET_FILE:openttd>"
                 POST_EXCLUDE_REGEXES "ld-linux|libc.so|libdl.so|libm.so|libgcc_s.so|libpthread.so|librt.so|libstdc...so")
         file(INSTALL
                 DESTINATION "${CMAKE_INSTALL_PREFIX}/lib"

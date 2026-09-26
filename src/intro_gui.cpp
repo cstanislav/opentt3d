@@ -343,7 +343,7 @@ struct SelectGameWindow : public Window {
 };
 
 static constexpr std::initializer_list<NWidgetPart> _nested_select_game_widgets = {
-	NWidget(WWT_CAPTION, COLOUR_BROWN), SetStringTip(STR_INTRO_CAPTION),
+	NWidget(WWT_CAPTION, COLOUR_BROWN), SetStringTip(STR_OPENTT3D_INTRO_CAPTION),
 	NWidget(WWT_PANEL, COLOUR_BROWN),
 		NWidget(NWID_VERTICAL), SetPIP(0, WidgetDimensions::unscaled.vsep_wide, 0), SetPadding(WidgetDimensions::unscaled.sparse),
 
@@ -412,7 +412,7 @@ void AskExitGame()
 {
 	ShowQuery(
 		GetEncodedString(STR_QUIT_CAPTION),
-		GetEncodedString(STR_QUIT_ARE_YOU_SURE_YOU_WANT_TO_EXIT_OPENTTD),
+		GetEncodedString(STR_OPENTT3D_QUIT_QUERY),
 		nullptr,
 		AskExitGameCallback,
 		true

@@ -1,22 +1,26 @@
 # OpenTT3D
 
 A renderer-only source port of OpenTTD, based on OpenTTD **15.3**, with
-hand-authored 3D artwork referencing **OpenGFX 8.0**.
+hand-authored 3D artwork referencing **OpenGFX2 Classic 0.8.1**.
 
 Repository: https://github.com/cstanislav/opentt3d
 
 ## Development status
 
-Implementation is in progress. This is not a completed 3D edition or a released
-product. See [the implementation status](STATUS.md) for verified capabilities
-and outstanding work. Upstream documentation is retained at the repository root.
+Implementation is in progress. [Development source previews](https://github.com/cstanislav/opentt3d/releases)
+record tested checkpoints; complete artwork and portable desktop packages remain in development.
+See [the implementation status](STATUS.md) for verified capabilities
+and outstanding work. The upstream README is retained in `docs/UPSTREAM_README.md`.
 
 ## Project contract
 
 - Preserve the upstream simulation, commands, save format, and scripting behavior.
 - Preserve the original widgets, fonts, sprites in UI controls, menus and dialogs.
-- Match OpenGFX with individually authored 3D models for **all four climates**.
-- Provide the familiar orthographic projection plus optional quarter-turn rotation.
+- Use OpenGFX2 Classic for the UI and individually authored 3D models in **all four climates**.
+- Use calibrated perspective, clicked-point middle-button yaw/tilt, smooth extended zoom
+  and first-person vehicle following; retain quarter-turn hotkeys.
+- Keep the native low-resolution pixel grid crisp with nearest sampling. Model
+  materials use native or coarser source levels and approximately uniform texel density.
 - Render unsupported NewGRF world objects as placeholders while running their
   original gameplay code. The original NewGRFs are still required to load a save.
 - Keep renderer state out of savegames and simulation random number generators.
@@ -38,6 +42,7 @@ docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp \
 For local macOS development, use existing CMake and Apple's command-line tools:
 
 ```sh
+python3 tools/opentt3d/fetch_vulkan.py build-macos/vulkan
 python3 tools/opentt3d/build.py --build-dir build-macos
 python3 tools/opentt3d/fetch_baseset.py build-macos/baseset
 ```
@@ -50,25 +55,80 @@ GitHub-hosted macOS and Windows runners; Linux packaging uses a container.
 On macOS, from the repository root:
 
 ```sh
-OPENTT3D_RENDERER=1 build-macos/openttd \
+OPENTT3D_RENDERER=1 build-macos/opentt3d \
   -X -x -c build-macos/opentt3d.cfg \
-  -v cocoa-opengl -b 40bpp-anim -I OpenGFX
+  -v cocoa-vulkan -b 40bpp-anim -I "OpenGFX2 Classic"
 ```
 
-On Linux, the video driver is named `sdl-opengl`. Use the existing console
+On Linux, the Vulkan driver is `sdl-vulkan`. OpenGL fallback drivers are
+`cocoa-opengl`, `sdl-opengl` and `win32-opengl`; `-DOPTION_VULKAN=OFF` builds without
+Vulkan dependencies. The SDL Vulkan Windows integration still needs native runtime
+verification. Use the existing console
 (backquote) and `renderer3d on` / `renderer3d off` to switch rendering modes.
 `Ctrl+[` and `Ctrl+]` rotate; `Ctrl+\` resets the camera. These shortcuts can be
 rebound in the original hotkey configuration. `renderer3d locate` finds one of
 the authored building types when present (introduced in 1957 and 1968).
 
-The current artwork is a development subset; magenta objects identify unfinished
-coverage. See [status](STATUS.md) and [verified results](VERIFICATION.md).
+Middle-drag rotates around the terrain point under the initial press, with vertical
+motion tilting the view (3°–89°). In Cab mode it looks around the moving eye,
+including up/down, without ending follow. The first-person geometry, terrain,
+picking and labels have no fixed draw-distance limit. Scene collection is bounded
+by the real map and view frustum; the infinite-water exterior reaches the horizon.
 
-To export the authored source models for inspection in a glTF viewer:
+The current artwork is a development subset. There are initial geometry profiles
+for 110 house IDs, 62 tree sprite families and all 256 vanilla vehicle definitions;
+their individual visual/state review is still incomplete. Remaining industry and
+infrastructure objects use reference sprite planes counted as missing geometry.
+See [status](STATUS.md) and [verified results](VERIFICATION.md).
+
+Run the GPU and loaded-world navigation checks with an isolated fixture:
 
 ```sh
-python3 tools/assets/compile_models.py assets/3d/models.json --gltf build-models
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
+  --output build-macos/verified-view --savegame media/baseset/opntitle.dat \
+  --background --backend vulkan --rotation 1 --verify-renderer \
+  --memory-limit-mib 6144 --timeout 600
+python3 tools/assets/inventory.py --require-complete
 ```
+
+The inventory command intentionally fails until complete geometry, states and
+visual review are available. `renderer3d references` exports resolved house/tree
+artwork; `renderer3d gallery <house-id-or-tree-sprite>` exports four model views.
+The JSON packs in `assets/3d/houses.json` and `assets/3d/trees.json` are the current
+authored sources. The older `models.json`/glTF compiler is retained as a prototype
+reference, and is not the current world-scene path.
+
+On macOS, use `--background` for automated reviews while using the computer. It keeps
+the Cocoa window hidden and prohibits app activation while retaining normal GPU
+rendering and framebuffer captures. The harness checks the native hidden-window
+diagnostic; event polling also rejects accidental visibility or activation. It supports
+OpenGL, Vulkan and `--macos-bundle`, and is incompatible with fullscreen/native-input
+checks. Direct launches can set `OPENTT3D_BACKGROUND=1`. These captures validate rendered
+output; foreground interaction still requires a separate input review.
+
+Vehicle review commands are `renderer3d vehicle-references`,
+`renderer3d vehicle-gallery <engine> [loaded]` and `renderer3d verify-vehicles`.
+Use a world in the engine's climate: unavailable sprite slots may contain another
+climate's artwork. `renderer3d industry-references` exports the 175 default
+industry tile definitions and four stages, including special-procedure metadata.
+`renderer3d industry-gallery <graphics-id>` renders a modelled industry tile.
+There are initial profiles for 40 mine/power-station/refinery/offshore/farm/factory/steelworks/sawmill tile definitions;
+remaining industry geometry and individual state/material review are unfinished.
+`renderer3d verify-industries` checks all current profiles in four GPU-rendered views.
+
+Both backends retain interactive world colour/picking targets on the GPU. OpenGL
+composes clipped viewports with the original driver's UI/animation shaders, uses
+on-demand one-pixel picking, and limits queued work to two frames. Cocoa shares only
+the completed presentation texture with its layer context, synchronized by GPU fences.
+`OPENTT3D_GL_PRESENTATION=0` selects the original readback path for controlled review;
+the smoke harness exposes it as `--readback-presentation`.
+
+`screenshot presented <name>` captures the Vulkan swapchain, including UI/cursor,
+or OpenGL's completed viewport/UI texture before its hardware cursor. Both 3D smoke
+paths use GPU composition captures; regular viewport and giant screenshots retain
+their existing readback/streaming paths. The container includes
+Khronos validation layers: add `--vulkan-validation` to a Vulkan smoke run to
+require core and synchronization validation and reject reported errors.
 
 ## Upstream tracking
 
@@ -92,6 +152,6 @@ GitHub workflow reports newly available stable versions.
 
 ## Licensing
 
-OpenTTD and OpenGFX are GPL-2.0. OpenTT3D code and derivative artwork use GPL-2.0.
+OpenTTD, OpenGFX and OpenGFX2 are GPL-2.0. OpenTT3D code and derivative artwork use GPL-2.0.
 See the original [license](../COPYING.md), [credits](../CREDITS.md), and asset
 attribution files. Model sources are distributed with exported assets.

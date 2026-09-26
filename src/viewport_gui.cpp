@@ -59,7 +59,7 @@ public:
 
 		NWidgetViewport *nvp = this->GetWidget<NWidgetViewport>(WID_EV_VIEWPORT);
 		nvp->InitializeViewport(this, tile, ScaleZoomGUI(ZoomLevel::Viewport));
-		if (_settings_client.gui.zoom_min == viewport->zoom) this->DisableWidget(WID_EV_ZOOM_IN);
+		if (Renderer3D::IsEnabled() ? !Renderer3D::CanZoom(*viewport, true) : _settings_client.gui.zoom_min == viewport->zoom) this->DisableWidget(WID_EV_ZOOM_IN);
 	}
 
 	std::string GetWidgetString(WidgetID widget, StringID stringid) const override
@@ -114,6 +114,7 @@ public:
 
 	void OnScroll(Point delta) override
 	{
+		if (Renderer3D::ScrollAtCursor(*this, delta, _cursor.pos)) return;
 		delta = Renderer3D::UnrotateScroll({ScaleByZoom(delta.x, this->viewport->zoom), ScaleByZoom(delta.y, this->viewport->zoom)});
 		this->viewport->scrollpos_x += delta.x;
 		this->viewport->scrollpos_y += delta.y;

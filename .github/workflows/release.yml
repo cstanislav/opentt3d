@@ -18,6 +18,10 @@ jobs:
   source:
     name: Source
 
+    # Fork development previews publish to GitHub Releases. The inherited
+    # OpenTTD pipeline targets upstream distribution services and store packages.
+    if: github.repository == 'OpenTTD/OpenTTD' || github.event_name != 'release'
+
     uses: ./.github/workflows/release-source.yml
     secrets: inherit
 

@@ -47,7 +47,11 @@
     },
     {
       "name": "sdl2",
-      "platform": "linux"
+      "platform": "linux | windows"
+    },
+    {
+      "name": "vulkan-loader",
+      "platform": "linux | windows"
     },
     {
       "name": "zlib"

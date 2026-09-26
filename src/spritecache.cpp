@@ -8,6 +8,7 @@
 /** @file spritecache.cpp Caching of sprites. */
 
 #include "stdafx.h"
+#include "renderer3d/sprite_textures.hpp"
 #include "spriteloader/grf.hpp"
 #include "spriteloader/makeindexed.h"
 #include "error_func.h"
@@ -896,6 +897,7 @@ void *GetRawSprite(SpriteID sprite, SpriteType type, SpriteAllocator *allocator,
 
 void GfxInitSpriteMem()
 {
+	Renderer3D::InvalidateTextures();
 	/* Reset the spritecache 'pool' */
 	_spritecache.clear();
 	_spritecache.shrink_to_fit();
@@ -910,6 +912,7 @@ void GfxInitSpriteMem()
  */
 void GfxClearSpriteCache()
 {
+	Renderer3D::InvalidateTextures();
 	/* Clear sprite ptr for all cached items */
 	for (SpriteCache &sc : _spritecache) {
 		if (sc.ptr != nullptr) sc.ClearSpriteData();

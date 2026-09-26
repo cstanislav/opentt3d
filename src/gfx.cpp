@@ -8,6 +8,7 @@
 /** @file gfx.cpp Handling of drawing text and other gfx related stuff. */
 
 #include "stdafx.h"
+#include "renderer3d/viewport_3d.h"
 #include "gfx_func.h"
 #include "gfx_layout.h"
 #include "progress.h"
@@ -42,6 +43,7 @@ bool _left_button_down;     ///< Is left mouse button pressed?
 bool _left_button_clicked;  ///< Is left mouse button clicked?
 bool _right_button_down;    ///< Is right mouse button pressed?
 bool _right_button_clicked; ///< Is right mouse button clicked?
+bool _middle_button_down;   ///< Middle mouse drag orbits the 3D camera.
 DrawPixelInfo _screen;
 bool _screen_disable_anim = false;   ///< Disable palette animation (important for 32bpp-anim blitter during giant screenshot)
 std::atomic<bool> _exit_game;
@@ -1847,7 +1849,9 @@ bool AdjustGUIZoom(bool automatic)
 			w->left   = (w->left   * _gui_scale) / old_scale;
 			w->top    = (w->top    * _gui_scale) / old_scale;
 		}
-		if (w->viewport != nullptr) {
+		/* The 3D camera owns a continuous zoom value. A GUI/DPI change must not
+		 * silently replace it with the legacy integer viewport zoom. */
+		if (w->viewport != nullptr && !Renderer3D::IsEnabled()) {
 			w->viewport->zoom = Clamp(w->viewport->zoom - zoom_shift, _settings_client.gui.zoom_min, _settings_client.gui.zoom_max);
 		}
 	}

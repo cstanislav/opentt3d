@@ -17,8 +17,10 @@
 #include "town_type.h"
 
 enum RoadStopClassID : uint16_t;
+struct DrawTileSprites;
 
 void DrawRoadDepotSprite(int x, int y, DiagDirection dir, RoadType rt);
+const DrawTileSprites &GetRoadDepotDrawData(DiagDirection dir);
 void UpdateNearestTownForRoadTiles(bool invalidate);
 
 CommandCost CmdBuildLongRoad(DoCommandFlags flags, TileIndex end_tile, TileIndex start_tile, RoadType rt, Axis axis, DisallowedRoadDirections drd, bool start_half, bool end_half, bool is_ai);

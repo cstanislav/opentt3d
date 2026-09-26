@@ -16,6 +16,7 @@
 #include "core/random_func.hpp"
 #include "newgrf_generic.h"
 #include "landscape_cmd.h"
+#include "renderer3d/world_capture.h"
 
 #include "table/strings.h"
 #include "table/sprites.h"
@@ -52,15 +53,19 @@ static CommandCost ClearTile_Clear(TileIndex tile, DoCommandFlags flags)
 
 void DrawClearLandTile(const TileInfo *ti, uint8_t set)
 {
-	DrawGroundSprite(SPR_FLAT_BARE_LAND + SlopeToSpriteOffset(ti->tileh) + set * 19, PAL_NONE);
+	SpriteID image = SPR_FLAT_BARE_LAND + SlopeToSpriteOffset(ti->tileh) + set * 19;
+	if (!Renderer3D::CaptureNaturalGround(*ti,false,set,image)) DrawGroundSprite(image, PAL_NONE);
 }
 
 void DrawHillyLandTile(const TileInfo *ti)
 {
 	if (ti->tileh != SLOPE_FLAT) {
-		DrawGroundSprite(SPR_FLAT_ROUGH_LAND + SlopeToSpriteOffset(ti->tileh), PAL_NONE);
+		SpriteID image = SPR_FLAT_ROUGH_LAND + SlopeToSpriteOffset(ti->tileh);
+		if (!Renderer3D::CaptureNaturalGround(*ti,true,0,image)) DrawGroundSprite(image, PAL_NONE);
 	} else {
-		DrawGroundSprite(_landscape_clear_sprites_rough[GB(TileHash(ti->x, ti->y), 0, 3)], PAL_NONE);
+		unsigned layout = GB(TileHash(ti->x, ti->y), 0, 3);
+		SpriteID image = _landscape_clear_sprites_rough[layout];
+		if (!Renderer3D::CaptureNaturalGround(*ti,true,layout >= 5 ? layout-5 : layout,image)) DrawGroundSprite(image, PAL_NONE);
 	}
 }
 
@@ -79,7 +84,9 @@ static void DrawClearLandFence(const TileInfo *ti)
 		bounds.offset.y = -static_cast<int>(TILE_SIZE);
 		bounds.offset.z = GetSlopePixelZInCorner(ti->tileh, CORNER_W);
 		SpriteID sprite = _clear_land_fence_sprites[fence_nw - 1] + _fence_mod_by_tileh_nw[ti->tileh];
-		AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+		if (!Renderer3D::CaptureFence(*ti, fence_nw - 1, DIAGDIR_NW, sprite, _clear_land_fence_sprites[fence_nw - 1], PAL_NONE)) {
+			AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+		}
 	}
 
 	uint fence_ne = GetFence(ti->tile, DIAGDIR_NE);
@@ -88,7 +95,9 @@ static void DrawClearLandFence(const TileInfo *ti)
 		bounds.offset.y = 0;
 		bounds.offset.z = GetSlopePixelZInCorner(ti->tileh, CORNER_E);
 		SpriteID sprite = _clear_land_fence_sprites[fence_ne - 1] + _fence_mod_by_tileh_ne[ti->tileh];
-		AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+		if (!Renderer3D::CaptureFence(*ti, fence_ne - 1, DIAGDIR_NE, sprite, _clear_land_fence_sprites[fence_ne - 1], PAL_NONE)) {
+			AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+		}
 	}
 
 	uint fence_sw = GetFence(ti->tile, DIAGDIR_SW);
@@ -101,12 +110,16 @@ static void DrawClearLandFence(const TileInfo *ti)
 
 		if (fence_sw != 0) {
 			SpriteID sprite = _clear_land_fence_sprites[fence_sw - 1] + _fence_mod_by_tileh_sw[ti->tileh];
-			AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+			if (!Renderer3D::CaptureFence(*ti, fence_sw - 1, DIAGDIR_SW, sprite, _clear_land_fence_sprites[fence_sw - 1], PAL_NONE)) {
+				AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+			}
 		}
 
 		if (fence_se != 0) {
 			SpriteID sprite = _clear_land_fence_sprites[fence_se - 1] + _fence_mod_by_tileh_se[ti->tileh];
-			AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+			if (!Renderer3D::CaptureFence(*ti, fence_se - 1, DIAGDIR_SE, sprite, _clear_land_fence_sprites[fence_se - 1], PAL_NONE)) {
+				AddSortableSpriteToDraw(sprite, PAL_NONE, *ti, bounds, false);
+			}
 
 		}
 	}
@@ -127,14 +140,20 @@ static void DrawTile_Clear(TileInfo *ti)
 			DrawHillyLandTile(ti);
 			break;
 
-		case CLEAR_ROCKS:
-			DrawGroundSprite((HasGrfMiscBit(GrfMiscBit::SecondRockyTileSet) && (TileHash(ti->x, ti->y) & 1) ? SPR_FLAT_ROCKY_LAND_2 : SPR_FLAT_ROCKY_LAND_1) + SlopeToSpriteOffset(ti->tileh), PAL_NONE);
+		case CLEAR_ROCKS: {
+			unsigned variant = HasGrfMiscBit(GrfMiscBit::SecondRockyTileSet) && (TileHash(ti->x, ti->y) & 1) ? 1 : 0;
+			SpriteID image = (variant != 0 ? SPR_FLAT_ROCKY_LAND_2 : SPR_FLAT_ROCKY_LAND_1)+SlopeToSpriteOffset(ti->tileh);
+			if (!Renderer3D::CaptureRocks(*ti,variant,image)) DrawGroundSprite(image,PAL_NONE);
 			break;
+		}
 
-		case CLEAR_FIELDS:
-			DrawGroundSprite(_clear_land_sprites_farmland[GetFieldType(ti->tile)] + SlopeToSpriteOffset(ti->tileh), PAL_NONE);
+		case CLEAR_FIELDS: {
+			unsigned stage = GetFieldType(ti->tile);
+			SpriteID image = _clear_land_sprites_farmland[stage]+SlopeToSpriteOffset(ti->tileh);
+			if (!Renderer3D::CaptureFarmland(*ti,stage,image)) DrawGroundSprite(image,PAL_NONE);
 			DrawClearLandFence(ti);
 			break;
+		}
 
 		case CLEAR_SNOW: {
 			uint8_t density = GetClearDensity(ti->tile);
@@ -142,7 +161,8 @@ static void DrawTile_Clear(TileInfo *ti)
 			if (real_ground == CLEAR_ROCKS) {
 				/* There 4 levels of snowy overlay rocks, each with 19 sprites. */
 				++density;
-				DrawGroundSprite(SPR_OVERLAY_ROCKS_BASE + (density * 19) + SlopeToSpriteOffset(ti->tileh), PAL_NONE);
+				SpriteID image = SPR_OVERLAY_ROCKS_BASE+(density*19)+SlopeToSpriteOffset(ti->tileh);
+				if (!Renderer3D::CaptureRocks(*ti,0,image,density)) DrawGroundSprite(image,PAL_NONE);
 			}
 			break;
 		}

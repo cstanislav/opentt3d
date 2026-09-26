@@ -10,6 +10,7 @@
 /** @defgroup SnowLineGroup Snowline functions and data structures */
 
 #include "stdafx.h"
+#include "renderer3d/world_capture.h"
 #include "heightmap.h"
 #include "clear_map.h"
 #include "spritecache.h"
@@ -432,6 +433,10 @@ void DrawFoundation(TileInfo *ti, Foundation f)
 
 	/* Two part foundations must be drawn separately */
 	assert(f != FOUNDATION_STEEP_BOTH);
+	if (Renderer3D::CaptureFoundation(*ti, f)) {
+		ti->z += ApplyPixelFoundationToSlope(f, ti->tileh);
+		return;
+	}
 
 	uint sprite_block = 0;
 	auto [slope, z] = GetFoundationPixelSlope(ti->tile);

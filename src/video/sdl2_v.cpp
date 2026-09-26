@@ -8,6 +8,7 @@
 /** @file sdl2_v.cpp Implementation of the SDL2 video driver. */
 
 #include "../stdafx.h"
+#include "../../assets/branding/opentt3d_icon.hpp"
 #include "../openttd.h"
 #include "../gfx_func.h"
 #include "../blitter/factory.hpp"
@@ -161,18 +162,10 @@ bool VideoDriver_SDL_Base::CreateMainWindow(uint w, uint h, uint flags)
 		return false;
 	}
 
-	std::string icon_path = FioFindFullPath(BASESET_DIR, "openttd.32.bmp");
-	if (!icon_path.empty()) {
-		/* Give the application an icon */
-		SDL_Surface *icon = SDL_LoadBMP(icon_path.c_str());
-		if (icon != nullptr) {
-			/* Get the colourkey, which will be magenta */
-			uint32_t rgbmap = SDL_MapRGB(icon->format, 255, 0, 255);
-
-			SDL_SetColorKey(icon, SDL_TRUE, rgbmap);
-			SDL_SetWindowIcon(this->sdl_window, icon);
-			SDL_FreeSurface(icon);
-		}
+	SDL_Surface *icon = SDL_CreateRGBSurfaceWithFormatFrom(const_cast<unsigned char *>(_opentt3d_icon_rgba.data()), 32, 32, 32, 32 * 4, SDL_PIXELFORMAT_RGBA32);
+	if (icon != nullptr) {
+		SDL_SetWindowIcon(this->sdl_window, icon);
+		SDL_FreeSurface(icon);
 	}
 
 	return true;
@@ -424,7 +417,7 @@ bool VideoDriver_SDL_Base::PollEvent()
 		}
 
 		case SDL_MOUSEBUTTONDOWN:
-			if (_rightclick_emulate && SDL_GetModState() & KMOD_CTRL) {
+			if (_rightclick_emulate && ev.button.button == SDL_BUTTON_LEFT && SDL_GetModState() & KMOD_CTRL) {
 				ev.button.button = SDL_BUTTON_RIGHT;
 			}
 
@@ -438,13 +431,19 @@ bool VideoDriver_SDL_Base::PollEvent()
 					_right_button_clicked = true;
 					break;
 
+				case SDL_BUTTON_MIDDLE:
+					_middle_button_down = true;
+					break;
+
 				default: break;
 			}
 			HandleMouseEvents();
 			break;
 
 		case SDL_MOUSEBUTTONUP:
-			if (_rightclick_emulate) {
+			if (ev.button.button == SDL_BUTTON_MIDDLE) {
+				_middle_button_down = false;
+			} else if (_rightclick_emulate) {
 				_right_button_down = false;
 				_left_button_down = false;
 				_left_button_clicked = false;
@@ -504,7 +503,9 @@ bool VideoDriver_SDL_Base::PollEvent()
 			break;
 		}
 		case SDL_WINDOWEVENT: {
-			if (ev.window.event == SDL_WINDOWEVENT_EXPOSED) {
+			if (ev.window.event == SDL_WINDOWEVENT_FOCUS_LOST) {
+				_middle_button_down = false;
+			} else if (ev.window.event == SDL_WINDOWEVENT_EXPOSED) {
 				/* Force a redraw of the entire screen. */
 				this->MakeDirty(0, 0, _screen.width, _screen.height);
 			} else if (ev.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
@@ -530,11 +531,13 @@ bool VideoDriver_SDL_Base::PollEvent()
 
 static std::optional<std::string_view> InitializeSDL()
 {
+	/* The Windows executable uses the upstream WinMain, not SDL's wrapper. */
+	SDL_SetMainReady();
 	/* Check if the video-driver is already initialized. */
 	if (SDL_WasInit(SDL_INIT_VIDEO) != 0) return std::nullopt;
 
 #ifdef SDL_HINT_APP_NAME
-	SDL_SetHint(SDL_HINT_APP_NAME, "OpenTTD");
+	SDL_SetHint(SDL_HINT_APP_NAME, "OpenTT3D");
 #endif
 
 	if (SDL_InitSubSystem(SDL_INIT_VIDEO) < 0) return SDL_GetError();
