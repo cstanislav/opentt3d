@@ -182,13 +182,35 @@ creates a public-NoAI service route; add `--aircraft-hold` for its verified retu
 loading stop. Stage each fixture's own `ai/` when loading the save. Full vehicle/state
 coverage, source precision and final approval remain open.
 
-The next aircraft batch adds distinct propeller, delta, high-wing, twin/four-engine
+The aircraft catalogue adds distinct propeller, delta, high-wing, twin/four-engine
 and futuristic multi-body volumes. `fixture_aircraft.py --first-engine 215
 --last-engine 238` builds a normal operating fleet, observes each aircraft at an
 actual destination service stop and saves it outside its hangar. Use that fixture's
 `ai/` directory during reload. Native source comparisons remain required for each
 independent family; equal source-direction arrays justify aliases only within the
-same graphics climate. Toyland aircraft and helicopters are still separate work.
+same graphics climate. All41 aircraft definitions now have body bindings: Toyland's
+five planes and helicopter use explicit6/7 states, independent of the normal artwork
+behind overlapping sprite numbers. Normal aircraft sources match across temperate,
+Arctic and tropical exports in1,120 directional/cargo views.
+
+Helicopters have separate body and four original-state rotor volumes. Sprite3901
+binds infrastructure states0..3, selected from the actual3901..3904 rotor sprite;
+partially replaced rotor/body art keeps its supplied rendering. Rotors use the body's
+smoothed position and retain fixed-world source poses, original palette and unclickable
+ownership. Both parts remove the original aircraft anchor's one-height-unit offset so
+zero-height authored wheels/skids meet the airport surface. Cab hides its own rotor.
+`--verify-aircraft-contact <engine>` checks actual stationary support against the
+airport ground. `fixture_aircraft.py --service-hold-ticks 256` holds ordinary full-load
+service through saving, then releases it after reload. Use `--verify-helicopter-rotor`
+with a running benchmark to observe all four states and the stopped-to-running transition.
+Per-engine pose checks include128 independent joined-rotor CPU/GPU comparisons.
+
+Vehicle source exports include `aircraft-rotors.json` with original palette indices,
+size and offsets. `contact_sheet.py <gallery> --vehicle-comparison 253
+--helicopter-rotor-state 0 --registration --source-directory <references>` composites
+the original body/rotor at their own offsets and compares vehicle-anchor-aligned views.
+All-angle native and street captures include all four rotor states. These technical
+checks do not establish source-shape, paint or complete airport/Cab clearance approval.
 
 Slender wings/fins can use `['prism', material, axis, lower, upper, outline]`, written
 as JSON with double quotes. The outline is an explicitly authored simple integer

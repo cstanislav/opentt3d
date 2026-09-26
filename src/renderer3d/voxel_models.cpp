@@ -20,6 +20,7 @@
 #include "../house.h"
 #include "../viewport_func.h"
 #include "../vehicle_base.h"
+#include "../aircraft.h"
 #include "../settings_type.h"
 #include "../industry.h"
 #include "../industry_map.h"
@@ -336,6 +337,18 @@ bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID
 	if (!DrawVoxelAsset(scene,"infrastructure",image,0,origin,palette,opacity)) return false;
 	for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
 	return true;
+}
+
+bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette)
+{
+	image &= SPRITE_MASK;
+	if (image < SPR_ROTOR_STOPPED || image > SPR_ROTOR_MOVING_3) return false;
+	/* The original rotor uses four fixed world-space poses, independently of
+	 * aircraft heading. A partially replaced animation keeps its supplied art. */
+	for (unsigned state = 0; state < 4; ++state) {
+		if (!IsBaseGraphicsSprite(SPR_ROTOR_STOPPED+state) || !HasVoxelAsset("infrastructure",SPR_ROTOR_STOPPED,state)) return false;
+	}
+	return DrawVoxelAsset(scene,"infrastructure",SPR_ROTOR_STOPPED,image-SPR_ROTOR_STOPPED,origin,palette);
 }
 
 bool FocusVoxelIndustry(unsigned graphics, unsigned stage, bool ground)
@@ -804,6 +817,21 @@ void ExportVoxelReviews(std::string_view prefix)
 				vehicle.instances.push_back({&Models().models.at(name).surface.vertices,material});
 				Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 				capture(vehicle,camera.Cropped(8192-48,8192-72,96,96),fmt::format("model-voxel-vehicle-{}-{}-native-{}",base,stage&1U,direction),true);
+				if (base >= 253 && base <= 255 && (stage&1U) == 0) for (unsigned rotor = 0; rotor < 4; ++rotor) {
+					Scene joined = vehicle;
+					if (!DrawVoxelHelicopterRotor(joined,SPR_ROTOR_STOPPED+rotor,{0,0,ROTOR_Z_OFFSET})) continue;
+					/* Diagnostic silhouette owns both parts; live rotors keep their
+					 * original unclickable ID, checked separately during capture. */
+					joined.instances.back().data.SetObjectId(1);
+					capture(joined,camera.Cropped(8192-48,8192-72,96,96),fmt::format("model-voxel-helicopter-{}-rotor-{}-native-{}",base,rotor,direction),true);
+					if (direction < 4) {
+						const auto &rotor_mesh = Models().models.at(Models().bindings.at({"infrastructure",SPR_ROTOR_STOPPED,rotor})).surface;
+						Vec3 low{std::min(mesh.low.x,rotor_mesh.low.x),std::min(mesh.low.y,rotor_mesh.low.y),mesh.low.z};
+						Vec3 high{std::max(mesh.high.x,rotor_mesh.high.x),std::max(mesh.high.y,rotor_mesh.high.y),std::max(mesh.high.z,rotor_mesh.high.z+ROTOR_Z_OFFSET)};
+						joined.instances.front().data.mirror_layer_heading[3] = 0;
+						capture(joined,StreetReviewCamera(low,high,640,480,direction),fmt::format("model-voxel-helicopter-{}-rotor-{}-street-{}",base,rotor,direction));
+					}
+				}
 			}
 		}
 		if (category != "trees" || !name.starts_with(prefix)) continue;
@@ -1362,6 +1390,30 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 			actual.instances[0].data.origin_opacity[3] = 0.38f;
 			if (!RenderScene(actual,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),engine+1) != 0) throw std::runtime_error("Transparent voxel vehicle intercepted picking");
 			++vehicle_views;
+		}
+		if (engine >= 253 && engine <= 255 && !loaded) {
+			unsigned rotor_views = 0;
+			Scene invalid;
+			if (DrawVoxelHelicopterRotor(invalid,SPR_ROTOR_STOPPED-1,{}) || DrawVoxelHelicopterRotor(invalid,SPR_ROTOR_MOVING_3+1,{}) || !invalid.instances.empty()) throw std::runtime_error("Unrelated sprite selected helicopter rotor geometry");
+			for (unsigned rotor = 0; rotor < 4; ++rotor) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) for (PaletteID palette : {PALETTE_RECOLOUR_START,PALETTE_CRASH}) {
+				Scene actual, reference, isolated;
+				float heading = pose*std::numbers::pi_v<float>/4+0.07f;
+				DrawVoxelVehicle(actual,engine,false,{},heading,palette,1,climate);
+				actual.instances.front().data.SetObjectId(engine+1);
+				const auto &rotor_mesh = Models().models.at(Models().bindings.at({"infrastructure",SPR_ROTOR_STOPPED,rotor})).surface;
+				if (!DrawVoxelHelicopterRotor(actual,SPR_ROTOR_STOPPED+rotor,{0,0,ROTOR_Z_OFFSET},palette) || actual.instances.size() != 2 || actual.instances.back().mesh != &rotor_mesh.vertices || actual.instances.back().data.mirror_layer_heading[3] != 0) throw std::runtime_error("Helicopter rotor lost independent source-state selection or fixed world-space orientation");
+				reference.vertices = actual.ExpandedVertices(true);
+				isolated.instances = {actual.instances.back()};
+				isolated.instances.front().data.SetObjectId(engine+1);
+				Camera camera{{0,0,3},3,256,256,pose*0.5f+0.17f};
+				camera.vertical_fov = 40;
+				if (street) camera = StreetReviewCamera({-9,-9,0},{9,9,6},256,256,pose*0.5f+0.17f);
+				if (!RenderScene(isolated,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),engine+1) < 4) throw std::runtime_error("Voxel helicopter rotor disappeared from an all-angle review");
+				if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error(fmt::format("Voxel helicopter {} rotor {} pose {} street {} differs from independent CPU placement",engine,rotor,pose,street));
+				if (std::count(ids.begin(),ids.end(),engine+1) < 8 || std::ranges::any_of(ids,[&](uint32_t id) { return id != 0 && id != engine+1; })) throw std::runtime_error("Voxel helicopter rotor changed unclickable ownership");
+				++rotor_views;
+			}
+			Debug(driver,1,"OpenTT3D: voxel helicopter engine {} passed {} joined rotor poses with original attachment, fixed-world animation, company/crash palettes and unclickable ownership",engine,rotor_views);
 		}
 	}
 	if ((only_engine != UINT_MAX && bindings_checked == 0) || bindings_checked%2 != 0 || vehicle_views != bindings_checked*544) throw std::runtime_error("Requested voxel vehicles do not have complete climate/cargo pose matrices");

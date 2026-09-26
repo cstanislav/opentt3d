@@ -21,6 +21,55 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,031-volume all-aircraft bindings:** five Toyland fixed-wing bodies, three
+  helicopter bodies and four separate rotor states bring vehicles to169/256 and
+  aircraft to41/41. Toyland uses only6/7 climate states; normal source art matches
+  Arctic/tropical exports in1,120 views /1,477,364 exact RGBA pixels. All four normal/
+  Toyland rotor source images also match exactly. Native comparison sheets cover
+  eight directions per body plus96 body/rotor registration views and48 joined street
+  views. Source geometry/painting/anchor discrepancies remain in`VOXEL_REVIEW.md`.
+- The single-connected-component regression exposed two older detached nose struts
+  and new Ploddy500/Powernaut support gaps; all are repaired. Separate rotor/body
+  cells meet at the mast without intersecting the cabin or tail. Kelling6/Juggerplane
+  now have explicitly swept crescent wings and connected interplane pillars. The
+  original aircraft anchor's one-unit ground offset is removed from authored body
+  and rotor together; the Cab camera hides its own rotor.
+- `pass1-1031-helicopter-final-{253,254,255}` each passes1,088 body poses,128 joined
+  rotor poses, actual support-plane equality at airportZ16, all four source rotor
+  states and a subsequent stopped-to-running transition. Held-service NoAI fixtures
+  use only normal full-load orders, saved AI data, sleep and order-flag release.
+  The1,800-frame GL runs peak3,755,118,336 /3,765,047,136 /3,575,238,400bytes
+  (159/158/154 samples), under6GiB with inactive hidden windows. Mean60fps and
+  p95 work5.163/5.309/4.818ms apply only to these close airport views; full smoothness
+  remains unproven. The earlier combined-gallery run reaches32.447fps at zoom3,
+  and the first held run retains a966ms work spike.
+- `pass1-1031-aircraft-vulkan-{normal,toyland}` passes all41 engines /44,608 exact
+  body poses and384 joined rotor poses. Each run also passes720 model views and
+  4,096,000 atlas colour/picking pixels, plus actual ground/stop-restart observations
+  for253/255. Sampled peaks are3,648,606,048bytes over664 samples and3,498,528,512bytes
+  over232 samples. `pass1-1031-aircraft-final-gl` also completes the entire41-engine
+  /44,608-pose /384-joined-rotor matrix,720 model views, exact world-atlas pixels and
+  actual ground/stop-restart observations. It peaks3,871,723,480bytes over713 samples;
+  the following1,800 zoom1 frames average60.001fps, with177 intervals over20ms despite
+  p95 work5.468ms. These results do not close presentation smoothness.
+- Failed`pass1-1031-aircraft-normal` and`pass1-1031-rotor-diagnostic` retain the
+  incomplete animation observation: normal short empty-airport visits did not expose
+  the stopped rotor. State logging identifies1/2/3; held-service fixture runs then
+  verify0 and the later restart. Generic720-view mesh/pose/atlas portions of the
+  first run passed; its4,159,803,376-byte peak is preserved with the failed result.
+- Final native186/186, asset/compiler101/101 and harness8/8 checks pass. The updated
+  development app and preserved`opentt3d-pass1-1031-aircraft` share SHA256
+  `b918fdab212ec7ad75f8b706044409defb1e7c06acd01ddf030756ae3d494462`;
+  preserved runtime catalogue`pass1-1031-catalogue.json` is
+  `6df06537c1023b118eca02e34334bf1b978ccba40234102c3be215323fd2fde7`.
+  `pass1-1031-hashes.json` records both and the editable source. Final approvals0.
+- Publication continues with`f22cf02e1361fd9914a1c02edc453f9464d32ef3` onmain and
+  source prerelease`opentt3d-dev-20260926.2`. Remote run36215979507 passes macOS and
+  Windows x64/x86/arm64; its Linux job was cancelled by the subsequent push. The
+  workflow now preserves in-progress jobs across pushes. Run36217303691 is pending;
+  local Docker still times out after5seconds during this follow-up. None of these
+  observations closes Linux runtime/core/sync or Windows runtime gates.
+
 - **1,019-volume aircraft breadth:**17 new bodies plus the prior Dinger100 bind
   engines215…247 using only original directional/cargo aliases. The compiler now
   supports explicit integer polygon prisms for narrow swept wings and fins; exact
@@ -32,8 +81,8 @@ Work continued on the user's reported memory incident; full-objective approval r
   world-atlas RGBA/ID pixels. Sampled peaks are3,646,967,624bytes (GL,555 samples)
   and3,574,304,488bytes (Vulkan,542 samples), under6GiB with hidden Cocoa windows.
   `pass1-aircraft-{early,late}-fixture` observes actual destination service and positive
-  speed for all24/nine aircraft, saving ordinary NoAI games. All-engine live captures
-  are underway. One native engine215 and oneVulkan engine247 capture already pass.
+  speed for all24/nine aircraft, saving ordinary NoAI games. All33 live-engine captures
+  now pass (`pass1-1019-aircraft-live.json`), peaking at3,729,510,072bytes with no6GiB breach.
 - Source/voxel comparisons cover all eighteen distinct fixed-wing families in eight
   directions. Oversized propeller-wing chords and Haugan aft-delta spread were
   corrected before the latest matrices. Later wing/fin/body proportions, painted

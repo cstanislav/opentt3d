@@ -3,6 +3,22 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Aircraft expansion:1,031 volumes (September26)
+
+The catalogue now has8,397,312 occupied cells /8,906,806 triangles. Focused Vulkan
+aircraft matrices peak3,648,606,048bytes (normal,664 samples) and3,498,528,512bytes
+(Toyland,232 samples), under6GiB. Separate1,800-frame GL helicopter runs each include
+actual four-state stop/restart and ground-contact checks, peaking at3.33…3.51GiB.
+Their mean60fps /p95 work4.82…5.31ms applies to zoom1 close airport views. They still
+record2…6 presentation intervals above20ms, and an earlier held-service run retains
+a966ms work spike. The broader zoom3 helicopter world averages32.447fps over3,600
+frames (p95 work33.552ms,4,159,803,376-byte peak). Smooth catalogue-wide60fps remains
+unproven. All checks use hidden inactive Cocoa windows and approximately250ms memory
+sampling; verifier views are correctness evidence, not continuous gameplay bounds.
+The completeGL41-engine matrix also passes at3,871,723,480bytes over713 samples.
+Its subsequent1,800 close-view frames average60.001fps and5.468ms p95 work, but177
+presentation intervals exceed20ms. Low CPU work alone does not establish pacing.
+
 ## Full-catalogue diagnostic retention repair (September26 03:37UTC)
 
 `pass1-1002-transient-full-native` completes the entire1,002-volume nativeVulkan

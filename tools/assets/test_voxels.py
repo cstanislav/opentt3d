@@ -52,31 +52,56 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_aircraft_source_aliases_and_thin_parts_remain_supported(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("aircraft_")}
-        source["bindings"] = {"vehicles":{str(engine):source["bindings"]["vehicles"][str(engine)] for engine in range(215,248)}}
+        source["bindings"] = {"vehicles":{str(engine):source["bindings"]["vehicles"][str(engine)] for engine in range(215,256)}}
         result, definitions = compile_catalogue(source), vehicle_definitions()
         source_families, model_families = {}, {}
-        for engine in range(215,248):
+        for engine in range(215,256):
             definition = definitions[str(engine)]
             self.assertEqual(definition["sprites"],definition["loaded_sprites"],"The aircraft cargo-state alias lacks original sprite evidence")
             states = result["bindings"]["vehicles"][str(engine)]
-            self.assertEqual(states["0"],states["1"])
-            signature = tuple(definition["sprites"])
-            source_families.setdefault(signature,set()).add(states["0"])
-            model_families.setdefault(states["0"],set()).add(signature)
+            toyland = engine in (248,249,250,251,252,255)
+            first = "6" if toyland else "0"
+            self.assertEqual(states[first],states[str(int(first)+1)])
+            # Toyland reuses sprite numbers with replacement artwork. Those are
+            # separate source families even when the direction arrays coincide.
+            signature = (toyland,tuple(definition["sprites"]))
+            source_families.setdefault(signature,set()).add(states[first])
+            model_families.setdefault(states[first],set()).add(signature)
+            if toyland:
+                self.assertEqual(set(states),{"6","7"})
         self.assertTrue(all(len(names) == 1 for names in source_families.values()),"One source aircraft family acquired inconsistent aliases")
         self.assertTrue(all(len(signatures) == 1 for signatures in model_families.values()),"Different original aircraft were collapsed into one volume")
         for name,model in result["models"].items():
             cells = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
             origin, step = model["origin"], model["cell_size"]
             self.assertEqual(min(origin[2]+z*step[2] for x,y,z in cells),0,name)
-            supported = {p for p in cells if origin[2]+p[2]*step[2] == 0}
+            supported = {next(p for p in cells if origin[2]+p[2]*step[2] == 0)}
             pending = list(supported)
             for x,y,z in pending:
                 for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
                     if point in cells and point not in supported:
                         supported.add(point)
                         pending.append(point)
-            self.assertEqual(supported,cells,f"Detached propeller, engine, wing, tailplane or landing gear in {name}")
+            self.assertEqual(len(supported),len(cells),f"Detached propeller, engine, wing, tailplane or landing gear in {name}: {len(cells-supported)} cells outside the first component")
+
+    def test_helicopter_rotors_remain_separate_clear_and_attached_at_original_height(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith(("aircraft_helicopter_","aircraft_rotor_"))}
+        source["bindings"] = {"infrastructure":{"3901":source["bindings"]["infrastructure"]["3901"]}}
+        result = compile_catalogue(source)
+        states = result["bindings"]["infrastructure"]["3901"]
+        self.assertEqual(set(states),{"0","1","2","3"})
+        self.assertEqual(len(set(states.values())),4)
+        volumes = {}
+        for name,model in result["models"].items():
+            origin = [round(v*4) for v in model["origin"]]
+            self.assertEqual(model["cell_size"],[0.25,0.25,0.25])
+            lift = 20 if name.startswith("aircraft_rotor_") else 0
+            volumes[name] = {(origin[0]+x+i,origin[1]+y,origin[2]+z+lift) for x,y,z,length,_ in model["runs"] for i in range(length)}
+        for body in (name for name in volumes if name.startswith("aircraft_helicopter_")):
+            for rotor in states.values():
+                self.assertFalse(volumes[body]&volumes[rotor],f"Rotor intersects cabin or tail: {body}/{rotor}")
+                self.assertTrue(any((x,y,z-1) in volumes[body] for x,y,z in volumes[rotor]),f"Floating rotor spindle: {body}/{rotor}")
 
     def test_toyland_layers_meet_at_ground_without_coplanar_wrapping_or_floating_parts(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())

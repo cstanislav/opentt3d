@@ -36,6 +36,8 @@ void BeginVoxelAirportAnimationChecks(std::span<const unsigned> graphics);
 void BeginVoxelIndustryAnimationChecks(std::span<const unsigned> graphics);
 void BeginVoxelPowerSparkCheck();
 void BeginVoxelVehicleCargoCheck(unsigned engine);
+void BeginVoxelHelicopterRotorCheck(unsigned engine);
+void BeginVoxelAircraftContactCheck(unsigned engine);
 void BeginVoxelDepotTraversalCheck(unsigned vehicle);
 void BeginVoxelRadioBeaconCheck();
 bool FocusVoxelBuoy();

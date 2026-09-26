@@ -52,6 +52,7 @@ def main():
     parser.add_argument("--tree-source", type=int, nargs="+", choices=range(1576, 2010, 7), help="Review every original palette and all seven lifecycle stages of selected tree sprite families at one scale")
     parser.add_argument("--tree-comparison", type=int, choices=range(1576, 2010, 7), help="Compare one family's seven native-scale voxel views with original sources")
     parser.add_argument("--vehicle-comparison", type=int, choices=range(256), help="Compare all eight native-scale voxel directions with original vehicle sources")
+    parser.add_argument("--helicopter-rotor-state", type=int, choices=range(4), help="Include the independently placed original rotor in a helicopter vehicle comparison")
     parser.add_argument("--industry-comparison", type=int, choices=range(175), help="Compare all four native-scale voxel construction stages with original industry sources")
     parser.add_argument("--registration", action="store_true", help="Keep the original tile-relative placement in an industry comparison, rather than centring cropped silhouettes")
     parser.add_argument("--source-directory", type=Path, help="Original source export for tree/vehicle/industry comparisons")
@@ -94,8 +95,10 @@ def main():
         parser.error("Foundation context requires --gallery and --foundation")
     if args.fence_layout is not None and (not args.gallery or args.fence_style != 6):
         parser.error("A railway fence layout requires --gallery --fence-style 6")
-    if args.registration and args.industry_comparison is None and args.depot_comparison is None and args.house_comparison is None:
-        parser.error("--registration requires an industry, depot or house comparison")
+    if args.registration and args.industry_comparison is None and args.depot_comparison is None and args.house_comparison is None and args.vehicle_comparison is None:
+        parser.error("--registration requires an industry, depot, house or vehicle comparison")
+    if args.helicopter_rotor_state is not None and args.vehicle_comparison is None:
+        parser.error("--helicopter-rotor-state requires --vehicle-comparison")
     if args.industry_ground and not (args.industry_source or args.industry_comparison is not None):
         parser.error("--industry-ground requires an industry source/comparison selection")
     if args.palette_counts and not args.preview:
@@ -653,6 +656,11 @@ def main():
     if args.vehicle_comparison is not None:
         if args.source_directory is None:
             parser.error("--vehicle-comparison requires --source-directory")
+        rotor = None
+        if args.helicopter_rotor_state is not None:
+            if args.vehicle_comparison not in (253,254,255) or args.loaded:
+                parser.error("Joined rotor comparison needs an unloaded original helicopter253..255")
+            rotor = next(entry for entry in json.loads((args.source_directory / "aircraft-rotors.json").read_text()) if entry["state"] == args.helicopter_rotor_state)
         entries = sorted((entry for entry in json.loads((args.source_directory / "vehicles.json").read_text())
                           if entry["engine"] == args.vehicle_comparison and entry["loaded"] == args.loaded), key=lambda entry: entry["direction"])
         if [entry["direction"] for entry in entries] != list(range(8)):
@@ -660,13 +668,35 @@ def main():
         sizes, panels = [], []
         for direction, entry in enumerate(entries):
             name = args.directory / f"model-voxel-vehicle-{args.vehicle_comparison}-{int(args.loaded)}-native-{direction}"
+            if rotor is not None:
+                name = args.directory / f"model-voxel-helicopter-{args.vehicle_comparison}-rotor-{args.helicopter_rotor_state}-native-{direction}"
             model = read_pam(name.with_suffix(".pam")) if name.with_suffix(".pam").exists() else Image.open(name.with_suffix(".png")).convert("RGBA")
             bounds = model.getchannel("A").getbbox()
             if not bounds:
                 parser.error(f"Native-scale vehicle direction {direction} is empty")
-            model = model.crop(bounds)
             original = read_pam(args.source_directory / entry["image"])
-            sizes.append({"direction": direction, "original_size": list(original.size), "model_size": list(model.size)})
+            source_bounds = None
+            if rotor is not None or args.registration:
+                registered = Image.new("RGBA",model.size)
+                for part,lift in ((entry,0),(rotor,5)) if rotor is not None else ((entry,0),):
+                    if "sprite_offset" not in part or "sprite_size" not in part:
+                        parser.error("Registered vehicle comparison needs current source offset/size metadata")
+                    image = read_pam(args.source_directory / part["image"])
+                    sx,sy = (part["sprite_size"][axis]/image.size[axis] for axis in range(2))
+                    if sx != sy or sx <= 0:
+                        parser.error("Inconsistent original vehicle sprite scale")
+                    offset = [round(value/sx) for value in part["sprite_offset"]]
+                    registered.alpha_composite(image,(48+offset[0],72+offset[1]-lift))
+                source_bounds = registered.getchannel("A").getbbox()
+                original = registered.crop(source_bounds)
+            sizes.append({"direction": direction, "original_size": list(original.size), "model_size": [bounds[2]-bounds[0],bounds[3]-bounds[1]]})
+            if args.registration:
+                sizes[-1].update(original_anchor_bounds=[source_bounds[0]-48,source_bounds[1]-72,source_bounds[2]-48,source_bounds[3]-72],
+                                 model_anchor_bounds=[bounds[0]-48,bounds[1]-72,bounds[2]-48,bounds[3]-72])
+                common = (min(source_bounds[0],bounds[0]),min(source_bounds[1],bounds[1]),max(source_bounds[2],bounds[2]),max(source_bounds[3],bounds[3]))
+                original,model = registered.crop(common),model.crop(common)
+            else:
+                model = model.crop(bounds)
             panels.append((original,model))
         # Ships and broad aircraft exceed the old road-vehicle panel width.
         # Preserve 5x native scale without overlapping adjacent directions.
@@ -676,12 +706,13 @@ def main():
         draw = ImageDraw.Draw(sheet)
         for direction,pair in enumerate(panels):
             for row, (label, image) in enumerate(zip(("source","voxel"),pair)):
-                draw.text((direction*panel_width+6,row*panel_height+6), f"{label} dir {direction}, {image.width}x{image.height}\n5x native pixels", fill="white")
+                draw.text((direction*panel_width+6,row*panel_height+6), f"{label} dir {direction}, {image.width}x{image.height}\n5x native pixels"+("; vehicle-anchor aligned" if args.registration else ""), fill="white")
                 panel = Image.new("RGBA", image.size, (40, 40, 48, 255))
                 panel.alpha_composite(image)
                 panel = panel.resize((image.width * 5, image.height * 5), Image.Resampling.NEAREST)
                 sheet.paste(panel,(direction*panel_width+(panel_width-panel.width)//2,row*panel_height+40+(panel_height-40-panel.height)//2))
-        output = args.directory / f"vehicle-{args.vehicle_comparison}-{int(args.loaded)}-source-comparison.png"
+        rotor_label = f"-rotor-{args.helicopter_rotor_state}" if rotor is not None else ""
+        output = args.directory / f"vehicle-{args.vehicle_comparison}-{int(args.loaded)}{rotor_label}-source-{'registration' if args.registration else 'comparison'}.png"
         sheet.save(output)
         output.with_suffix(".json").write_text(json.dumps(sizes, indent=2) + "\n")
         print(output)

@@ -513,6 +513,11 @@
     "plane_wing_shadow": [7,5,6,7,4,7],
     "plane_intake": [2,2,2,2,1,3],
     "plane_gear": [5,2,3,6,1,7],
+    "plane_glass_grey": [5,3,4,6,2,8],
+    "plane_nose_red": [180,180,180,180,165,182],
+    "rotor_blade": [8,7,8,9,4,12],
+    "rotor_blade_tip": [10,8,9,11,5,13],
+    "rotor_motion": [4,3,4,5,3,5],
     "lime_bark": [107,105,106,108,105,109],
     "lime_bark_light": [109,106,107,109,105,109],
     "lime_bark_shadow": 105,
@@ -8808,7 +8813,8 @@
         ["paint","plane_intake",41,20,7,46,29,10],["paint","plane_intake",41,59,7,46,68,10],
         ["box","plane_company",13,0,5,22,2,9],["box","plane_company",13,86,5,22,88,9],
         ["box","plane_company_light",14,1,5,23,4,6],["box","plane_company_light",14,84,5,23,87,6],
-        ["use","plane_early_wheel",[25,25,0]],["use","plane_early_wheel",[25,62,0]],["use","plane_early_wheel",[57,43,0]]
+        ["use","plane_early_wheel",[25,25,0]],["use","plane_early_wheel",[25,62,0]],["use","plane_early_wheel",[57,43,0]],
+        ["box","plane_gear",57,43,5,58,44,10]
       ]
     },
     "aircraft_late_zshuttle": {
@@ -8841,10 +8847,13 @@
       "size":[82,68,25],"cell_size":[0.25,0.25,0.5],"origin":[-10.25,-8.5,0],"review_status":"work-in-progress",
       "reference":"Kelling K6 sprites3861..3868: long slender blue fuselage, separately raised white swept upper/lower wings with blue connecting struts and a white T-tail",
       "ops":[
-        ["hull","plane_white",34,[[16,32,32,11,12],[23,33,33,11,12],[37,21,21,11,12],[51,6,6,11,12]]],
-        ["hull","plane_wing_edge",34,[[15,32,32,5,6],[22,34,34,5,6],[35,23,23,5,6],[46,6,6,5,6]]],
-        ["repeat",[0,11,0],3,[["box","plane_company",24,7,5,26,8,12]]],
-        ["repeat",[0,-11,0],3,[["box","plane_company",24,60,5,26,61,12]]],
+        ["prism","plane_white_shade",2,11,12,[[34,34],[51,34],[33,52],[23,68],[16,68],[20,51]]],
+        ["prism","plane_white_shade",2,11,12,[[34,34],[51,34],[33,16],[23,0],[16,0],[20,17]]],
+        ["prism","plane_wing_edge",2,5,6,[[32,34],[48,34],[32,53],[22,68],[15,68],[19,51]]],
+        ["prism","plane_wing_edge",2,5,6,[[32,34],[48,34],[32,15],[22,0],[15,0],[19,17]]],
+        ["box","plane_company",24,7,5,26,8,12],["box","plane_company",24,60,5,26,61,12],
+        ["box","plane_company",29,18,5,31,19,12],["box","plane_company",29,49,5,31,50,12],
+        ["box","plane_company",36,29,5,38,30,12],["box","plane_company",36,38,5,38,39,12],
         ["box","plane_company",14,31,5,71,37,12],["box","plane_company_light",16,32,12,69,36,13],
         ["ellipsoid","plane_company",0,32,5,25,36,11],["ellipsoid","plane_company",64,31,5,82,37,13],
         ["paint","plane_company_shadow",0,31,5,82,37,7],
@@ -8864,7 +8873,8 @@
         ["box","plane_company",1,18,7,64,22,12],["ellipsoid","plane_company",57,17,7,74,23,13],
         ["paint","plane_company_light",12,19,10,68,21,14],
         ["box","plane_company_shadow",2,19,11,17,21,16],["box","plane_company_shadow",2,19,16,12,21,21],["box","plane_company_shadow",2,19,21,6,21,26],
-        ["use","plane_early_wheel",[29,13,0]],["use","plane_early_wheel",[29,26,0]],["use","plane_early_wheel",[65,19,0]]
+        ["use","plane_early_wheel",[29,13,0]],["use","plane_early_wheel",[29,26,0]],["use","plane_early_wheel",[65,19,0]],
+        ["box","plane_gear",65,19,5,66,20,10]
       ]
     },
     "aircraft_late_darwin700": {
@@ -8923,6 +8933,182 @@
         ["box","plane_company_shadow",4,20,11,23,22,16],["box","plane_company_shadow",4,20,16,17,22,22],["box","plane_company_shadow",4,20,22,9,22,27],
         ["box","plane_company_shadow",4,50,11,23,52,16],["box","plane_company_shadow",4,50,16,17,52,22],["box","plane_company_shadow",4,50,22,9,52,27],
         ["use","plane_early_wheel",[32,20,0]],["use","plane_early_wheel",[32,50,0]],["use","plane_early_wheel",[76,35,0]]
+      ]
+    },
+    "aircraft_toy_ploddy100": {
+      "size":[44,46,18],"cell_size":[0.25,0.25,0.5],"origin":[-5.5,-5.75,0],"review_status":"work-in-progress",
+      "reference":"Toyland248 sprites3741..3748: small blue monoplane, short pale low wings, simple blue fin, pale tailplane and silver nose; distinct replacement art, not ordinary Luckett8",
+      "ops":[
+        ["prism","plane_white_shade",2,5,6,[[19,23],[31,23],[25,46],[20,46],[16,31]]],
+        ["prism","plane_white_shade",2,5,6,[[19,23],[31,23],[25,0],[20,0],[16,15]]],
+        ["box","plane_company",8,20,4,36,26,10],["box","plane_company_light",10,21,10,35,25,11],
+        ["ellipsoid","plane_company",0,21,4,17,25,10],["ellipsoid","plane_company",31,20,4,44,26,11],
+        ["paint","plane_company_shadow",0,20,4,44,26,6],
+        ["paint","plane_glass_grey",39,20,7,44,26,10],["paint","plane_white_shade",41,22,9,44,24,11],
+        ["prism","plane_company_shadow",1,22,24,[[1,8],[13,8],[4,17],[1,17]]],
+        ["box","plane_white_shade",2,16,9,10,30,10],["box","plane_white_shade",1,14,9,6,32,10],
+        ["use","plane_early_wheel",[25,18,0]],["use","plane_early_wheel",[25,26,0]],["use","plane_early_wheel",[5,22,0]]
+      ]
+    },
+    "aircraft_toy_ploddy500": {
+      "size":[52,56,21],"cell_size":[0.25,0.25,0.5],"origin":[-6.5,-7,0],"review_status":"work-in-progress",
+      "reference":"Toyland249 sprites3749..3756: blue medium four-engine low-wing aircraft, pale tapered wings and low tailplane, separate four metallic nacelles; no ordinary Darwin300 upper deck",
+      "ops":[
+        ["prism","plane_white_shade",2,7,8,[[24,28],[39,28],[29,42],[24,56],[19,56],[22,40]]],
+        ["prism","plane_white_shade",2,7,8,[[24,28],[39,28],[29,14],[24,0],[19,0],[22,16]]],
+        ["box","plane_company",9,25,5,43,31,12],["box","plane_company_light",11,26,12,42,30,13],
+        ["ellipsoid","plane_company",0,26,5,19,30,12],["ellipsoid","plane_company",37,25,5,52,31,13],
+        ["paint","plane_company_shadow",0,25,5,52,31,7],
+        ["paint","plane_glass_grey",45,25,9,50,31,12],
+        ["box","plane_white_shade",2,20,11,11,36,12],["box","plane_white_shade",1,17,11,7,39,12],
+        ["prism","plane_company_shadow",1,27,29,[[1,10],[15,10],[4,20],[1,20]]],
+        ["ellipsoid","plane_white_shade",24,7,4,34,11,7],["ellipsoid","plane_white_shade",29,17,4,39,21,7],
+        ["ellipsoid","plane_white_shade",29,35,4,39,39,7],["ellipsoid","plane_white_shade",24,45,4,34,49,7],
+        ["box","plane_gear",25,9,6,29,10,8],["box","plane_gear",31,19,6,35,20,8],
+        ["box","plane_gear",31,37,6,35,38,8],["box","plane_gear",25,47,6,29,48,8],
+        ["paint","plane_intake",32,7,4,34,11,7],["paint","plane_intake",37,17,4,39,21,7],
+        ["paint","plane_intake",37,35,4,39,39,7],["paint","plane_intake",32,45,4,34,49,7],
+        ["use","plane_early_wheel",[28,23,0]],["use","plane_early_wheel",[28,31,0]],["use","plane_early_wheel",[44,27,0]],
+        ["box","plane_gear",28,23,5,29,24,8]
+      ]
+    },
+    "aircraft_toy_flashbang1": {
+      "size":[62,54,23],"cell_size":[0.25,0.25,0.5],"origin":[-7.75,-6.75,0],"review_status":"work-in-progress",
+      "reference":"Toyland250 sprites3757..3764: blue narrow rear twinjet, two high white nacelles, silver belly/window strip and high white T-tail; distinct from ordinary Haugan delta",
+      "ops":[
+        ["prism","plane_white_shade",2,6,7,[[29,27],[44,27],[31,44],[22,54],[18,54],[25,38]]],
+        ["prism","plane_white_shade",2,6,7,[[29,27],[44,27],[31,10],[22,0],[18,0],[25,16]]],
+        ["box","plane_company",10,24,5,52,30,12],["box","plane_company_light",13,25,12,50,29,13],
+        ["ellipsoid","plane_company",0,25,5,20,29,12],["ellipsoid","plane_company",47,24,5,62,30,13],
+        ["paint","plane_white_shade",0,24,5,62,30,7],
+        ["repeat",[3,0,0],12,[["paint","plane_window",13,24,8,14,25,9],["paint","plane_window",13,29,8,14,30,9]]],
+        ["paint","plane_glass_grey",55,24,9,60,30,12],
+        ["prism","plane_company_shadow",1,26,28,[[2,10],[15,10],[5,21],[2,21]]],
+        ["box","plane_white_shade",2,18,20,11,36,21],["box","plane_white_shade",1,15,21,6,39,22],
+        ["box","plane_company",13,19,10,21,35,11],
+        ["ellipsoid","plane_white_shade",9,17,10,23,22,14],["ellipsoid","plane_white_shade",9,32,10,23,37,14],
+        ["paint","plane_intake",21,17,11,23,22,13],["paint","plane_intake",21,32,11,23,37,13],
+        ["use","plane_early_wheel",[33,22,0]],["use","plane_early_wheel",[33,30,0]],["use","plane_early_wheel",[53,26,0]]
+      ]
+    },
+    "aircraft_toy_juggerplane": {
+      "extends":"aircraft_late_kelling6","review_status":"work-in-progress",
+      "reference":"Toyland251 sprites3765..3772: K6-like open double swept wings, but independent deep blue forward cabin, glazing and long lower window strip",
+      "ops":[
+        ["ellipsoid","plane_company",53,29,4,82,39,14],["box","plane_company_light",62,31,12,75,37,15],
+        ["paint","plane_company_shadow",53,29,4,82,39,7],
+        ["paint","plane_glass_grey",75,30,10,81,38,13],
+        ["repeat",[3,0,0],16,[["paint","plane_window",21,31,8,22,32,9],["paint","plane_window",21,36,8,22,37,9]]],
+        ["repeat",[3,0,0],5,[["paint","plane_window",59,29,8,60,30,9],["paint","plane_window",59,38,8,60,39,9]]]
+      ]
+    },
+    "aircraft_toy_wizzer": {
+      "size":[88,60,20],"cell_size":[0.25,0.25,0.5],"origin":[-11,-7.5,0],"review_status":"work-in-progress",
+      "reference":"Toyland252 sprites3773..3780: blue slender supersonic fuselage, broad silver delta, dark grey swept fin, lower window row and silver nose; not ordinary Sampson trimotor",
+      "ops":[
+        ["prism","plane_white_shade",2,5,6,[[17,26],[20,0],[28,3],[43,17],[64,26],[70,28],[70,32],[64,34],[43,43],[28,57],[20,60],[17,34]]],
+        ["box","plane_company",9,27,5,72,33,10],["box","plane_company_light",12,28,10,71,32,11],
+        ["ellipsoid","plane_company",0,28,5,18,32,10],["hull","plane_company",30,[[72,3,3,5,10],[83,1,1,5,8],[88,0.5,0.5,5,7]]],
+        ["paint","plane_company_shadow",0,27,5,88,33,7],
+        ["repeat",[3,0,0],20,[["paint","plane_window",12,27,7,13,28,8],["paint","plane_window",12,32,7,13,33,8]]],
+        ["paint","plane_white_shade",80,27,7,87,33,9],
+        ["prism","plane_gear",1,29,31,[[2,9],[20,9],[7,19],[2,19]]],
+        ["use","plane_early_wheel",[32,24,0]],["use","plane_early_wheel",[32,34,0]],["use","plane_early_wheel",[72,29,0]]
+      ]
+    },
+    "aircraft_helicopter_tricario": {
+      "size":[48,18,21],"cell_size":[0.25,0.25,0.25],"origin":[-6,-2.25,0],"review_status":"work-in-progress",
+      "reference":"Tricario253 sprites3813..3820: white upper cabin/tailboom, blue lower cabin and roof engine fairing, side windows, dark frontal glass, two blue undercarriage outriggers and separate source-state main rotor",
+      "ops":[
+        ["ellipsoid","plane_white_shade",20,4,5,48,14,17],
+        ["paint","plane_company",20,4,5,48,14,10],
+        ["box","plane_company",24,6,15,36,12,18],["box","plane_company_light",27,7,18,33,11,19],
+        ["box","plane_gear",23,8,17,27,10,20],
+        ["paint","plane_glass_grey",40,4,11,48,14,17],
+        ["repeat",[4,0,0],4,[["paint","plane_window",25,4,11,27,6,14],["paint","plane_window",25,12,11,27,14,14]]],
+        ["box","plane_white_shade",4,8,10,24,10,13],["box","plane_company_shadow",5,8,9,23,10,10],
+        ["prism","plane_white_shade",1,8,10,[[0,12],[7,12],[3,19],[0,19]]],
+        ["box","plane_white_shade",1,5,16,5,15,17],["paint","plane_company",1,13,16,5,15,17],
+        ["box","plane_white_shade",27,2,4,30,16,7],
+        ["box","plane_company",25,0,1,36,3,5],["box","plane_company",25,15,1,36,18,5],
+        ["box","plane_intake",28,0,0,32,3,2],["box","plane_intake",28,15,0,32,18,2]
+      ]
+    },
+    "aircraft_helicopter_guru": {
+      "size":[50,16,21],"cell_size":[0.25,0.25,0.25],"origin":[-6.25,-2,0],"review_status":"work-in-progress",
+      "reference":"GuruX2 engine254 sprites3893..3900: blue rounded cabin and upswept blue tail, white dorsal fairing and broad pale skids, dark cabin glazing and separate original main rotor",
+      "ops":[
+        ["ellipsoid","plane_company",19,3,5,50,13,18],
+        ["paint","plane_company_shadow",19,3,5,50,13,8],
+        ["paint","plane_company_light",24,5,15,45,11,19],
+        ["ellipsoid","plane_white_shade",24,5,15,36,11,19],["box","plane_gear",23,7,16,27,9,20],
+        ["paint","plane_glass_grey",41,3,10,50,13,17],
+        ["repeat",[4,0,0],4,[["paint","plane_window",26,3,11,28,5,14],["paint","plane_window",26,11,11,28,13,14]]],
+        ["box","plane_company",4,7,11,25,9,14],
+        ["prism","plane_company",1,7,9,[[0,13],[8,12],[3,19],[0,19]]],
+        ["box","plane_company_shadow",2,4,15,6,12,16],
+        ["box","plane_white_shade",23,0,0,42,2,2],["box","plane_white_shade",23,14,0,42,16,2],
+        ["box","plane_gear",26,1,2,29,5,7],["box","plane_gear",37,1,2,40,5,7],
+        ["box","plane_gear",26,11,2,29,15,7],["box","plane_gear",37,11,2,40,15,7]
+      ]
+    },
+    "aircraft_helicopter_powernaut": {
+      "size":[46,14,21],"cell_size":[0.25,0.25,0.25],"origin":[-5.75,-1.75,0],"review_status":"work-in-progress",
+      "reference":"Toyland255 sprites3781..3788: blue toy helicopter, exposed grey tailboom and skids, bright red round nose, grey front glass and separate four original rotor poses",
+      "ops":[
+        ["ellipsoid","plane_company",19,3,5,43,11,18],
+        ["paint","plane_company_shadow",19,3,5,43,11,8],
+        ["box","plane_company",24,4,15,33,10,18],["box","plane_company_light",26,5,18,32,9,19],
+        ["box","plane_gear",22,6,16,26,8,20],
+        ["paint","plane_glass_grey",35,3,10,43,11,17],
+        ["paint","plane_white_shade",36,4,13,41,10,15],
+        ["ellipsoid","plane_nose_red",40,4,6,46,10,12],
+        ["box","plane_gear",3,6,10,22,8,13],
+        ["prism","plane_gear",1,6,8,[[0,11],[7,11],[3,19],[0,19]]],
+        ["box","plane_white_shade",0,6,18,3,8,19],
+        ["box","plane_gear",20,1,0,40,2,2],["box","plane_gear",20,12,0,40,13,2],
+        ["box","plane_gear",24,1,2,26,5,10],["box","plane_gear",35,1,2,37,5,10],
+        ["box","plane_gear",24,9,2,26,13,10],["box","plane_gear",35,9,2,37,13,10]
+      ]
+    },
+    "aircraft_rotor_stopped": {
+      "size":[48,48,3],"cell_size":[0.25,0.25,0.25],"origin":[-6,-6,0],"review_status":"work-in-progress",
+      "reference":"Original3901 stopped rotor: fixed world-X silver two-blade bar and raised hub; rotor is an independent source-state vehicle at bodyZ+5, not a camera-facing sprite",
+      "ops":[
+        ["box","rotor_blade",2,23,0,24,24,1],["box","rotor_blade",24,24,0,46,25,1],
+        ["box","rotor_blade_tip",2,23,0,6,24,1],["box","rotor_blade_tip",42,24,0,46,25,1],
+        ["box","rotor_blade",22,22,0,26,26,1],["box","rotor_blade_tip",23,23,1,25,25,3]
+      ]
+    },
+    "aircraft_rotor_moving1": {
+      "size":[48,48,3],"cell_size":[0.25,0.25,0.25],"origin":[-6,-6,0],"review_status":"work-in-progress",
+      "reference":"Original3902: world-Y bright blade, hub and sparse dark motion spokes; original state selects this independent thin cell volume",
+      "ops":[
+        ["prism","rotor_motion",2,0,1,[[5,7],[7,5],[43,41],[41,43]]],
+        ["box","rotor_motion",3,23,0,45,24,1],
+        ["box","rotor_blade",23,2,0,24,24,1],["box","rotor_blade",24,24,0,25,46,1],
+        ["box","rotor_blade_tip",23,2,0,24,6,1],["box","rotor_blade_tip",24,42,0,25,46,1],
+        ["box","rotor_blade",22,22,0,26,26,1],["box","rotor_blade_tip",23,23,1,25,25,3]
+      ]
+    },
+    "aircraft_rotor_moving2": {
+      "size":[48,48,3],"cell_size":[0.25,0.25,0.25],"origin":[-6,-6,0],"review_status":"work-in-progress",
+      "reference":"Original3903: bright diagonal blade projects vertically, small hub and dark crosswise motion traces",
+      "ops":[
+        ["prism","rotor_motion",2,0,1,[[6,39],[8,41],[42,9],[40,7]]],
+        ["box","rotor_motion",8,23,0,40,24,1],["box","rotor_motion",23,8,0,24,40,1],
+        ["prism","rotor_blade",2,0,1,[[4,6],[6,4],[44,42],[42,44]]],
+        ["box","rotor_blade",22,22,0,26,26,1],["box","rotor_blade_tip",23,23,1,25,25,3]
+      ]
+    },
+    "aircraft_rotor_moving3": {
+      "size":[48,48,3],"cell_size":[0.25,0.25,0.25],"origin":[-6,-6,0],"review_status":"work-in-progress",
+      "reference":"Original3904: silver world-X blade with diagonal dark trailing spokes; four distinct state volumes preserve animation selection",
+      "ops":[
+        ["prism","rotor_motion",2,0,1,[[6,8],[8,6],[42,40],[40,42]]],
+        ["prism","rotor_motion",2,0,1,[[6,40],[8,42],[42,8],[40,6]]],
+        ["box","rotor_blade",2,23,0,24,24,1],["box","rotor_blade",24,24,0,46,25,1],
+        ["box","rotor_blade",22,22,0,26,26,1],["box","rotor_blade_tip",23,23,1,25,25,3]
       ]
     },
     "aircraft_dinger_100": {
@@ -10177,6 +10363,7 @@
       "1919": {"0":"tree_column_cactus_00","1":"tree_column_cactus_01","2":"tree_column_cactus_02","3":"tree_column_cactus_03","4":"tree_column_cactus_04","5":"tree_column_cactus_05","6":"tree_column_cactus_06"}
     },
     "infrastructure": {
+      "3901":{"0":"aircraft_rotor_stopped","1":"aircraft_rotor_moving1","2":"aircraft_rotor_moving2","3":"aircraft_rotor_moving3"},
       "693":{"0":"water_buoy","1":"water_buoy_toyland"},
       "1443": {"0":"office_lift"},
       "2055": {"0":"power_spark_1"}, "2056": {"0":"power_spark_2"},
@@ -10364,7 +10551,15 @@
       "244":{"0":"aircraft_late_darwin700","1":"aircraft_late_darwin700"},
       "245":{"0":"aircraft_late_hyperdart","1":"aircraft_late_hyperdart"},
       "246":{"0":"aircraft_late_dinger200","1":"aircraft_late_dinger200"},
-      "247":{"0":"aircraft_late_dinger1000","1":"aircraft_late_dinger1000"}
+      "247":{"0":"aircraft_late_dinger1000","1":"aircraft_late_dinger1000"},
+      "248":{"6":"aircraft_toy_ploddy100","7":"aircraft_toy_ploddy100"},
+      "249":{"6":"aircraft_toy_ploddy500","7":"aircraft_toy_ploddy500"},
+      "250":{"6":"aircraft_toy_flashbang1","7":"aircraft_toy_flashbang1"},
+      "251":{"6":"aircraft_toy_juggerplane","7":"aircraft_toy_juggerplane"},
+      "252":{"6":"aircraft_toy_wizzer","7":"aircraft_toy_wizzer"},
+      "253":{"0":"aircraft_helicopter_tricario","1":"aircraft_helicopter_tricario"},
+      "254":{"0":"aircraft_helicopter_guru","1":"aircraft_helicopter_guru"},
+      "255":{"6":"aircraft_helicopter_powernaut","7":"aircraft_helicopter_powernaut"}
     },
     "houses": {
       "91":{"0":"house_toy_gift_yellow_tall","1":"house_toy_church_unwrap","2":"house_toy_church_unwrap","3":"house_toy_church"},

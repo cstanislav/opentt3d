@@ -51,12 +51,12 @@ full terrain/source-raster fidelity and final approval remain separate.
   deliberate palette selection. The first window palette was wrong and was corrected
   against the actual source colours (indices 128…133).
 
-## Current checkpoint: September26, 1,019 volumes
+## Current checkpoint: September26, 1,031 volumes
 
 All110 house definitions have body or ground bindings (109 body/88 ground definitions),
-and all62 original tree families have434 lifecycle volumes. Vehicles now cover161/256,
+and all62 original tree families have434 lifecycle volumes. Vehicles now cover169/256,
 industry bodies8/175, industry grounds11, airports18/74 and depot families5/6. Exact
-counts and material/footprint metadata are in `build-macos/pass1-1019-inventory.json`.
+counts and material/footprint metadata are in `build-macos/pass1-1031-inventory.json`.
 All volumes remain work-in-progress and final approvals remain zero.
 
 Seventeen new aircraft volumes cover the33 ordinary fixed-wing definitions215…247
@@ -65,7 +65,8 @@ justify aliases within this climate. Each body is face-connected to its landing
 gear. Public NoAI fixtures observe all24 early and nine late aircraft moving and
 servicing the destination airport; their ordinary save files reload for renderer
 review. NativeGL andVulkan each pass432 all-model views and35,904 vehicle poses plus
-exact world-atlas checks, below6GiB. Full live-engine capture is underway.
+exact world-atlas checks, below6GiB. All33 live-engine captures pass, peaking at
+3,729,510,072bytes under the6GiB guard.
 
 Native comparisons show remaining broad/triangular late wings, excessive nose/rear
 perspective heights, overly bright white tops, uniform side shading, absent small
@@ -74,7 +75,26 @@ the propeller wings, replace stair-step early fins with authored voxel prisms an
 shorten the Haugan delta's aft spread. Street sheets preserve the K6's real wing
 gap and Dinger200's dorsal arch opening. These are breadth-stage models, not source-
 pixel or all-airport-clearance acceptance. Toyland replaces the graphics behind
-overlapping sprite IDs; its five planes and the three helicopters remain separate.
+overlapping sprite IDs; five additional plane bodies and three helicopter bodies
+now preserve those independent source families. Four separate rotor volumes follow
+the original3901..3904 state selection, with identical source RGBA across normal and
+Toyland exports. Normal aircraft also match1,477,364 original RGBA pixels across
+the Arctic/tropical versus temperate directional/cargo exports.
+
+The stricter single-component aircraft test caught detached nose-wheel struts on
+AirTaxi34/Kelling7, plus two new-family support gaps; all are repaired. Kelling6 and
+the separately detailed Juggerplane have explicit swept crescent wings and connected
+interplane struts. The airport simulation's anchor sits one height unit above its
+landing surface; world capture now subtracts that offset from body and rotor together.
+All three helicopters pass actual ground-contact and four-state stopped-to-running
+observations in held-service NoAI saves, plus128 joined rotor poses per engine.
+
+Eight-direction body and joined-rotor registration sheets retain oversized front/rear
+silhouettes, triangular wing chords, tall T-tails, flat helicopter cabins, short skid
+clearance, broad glass/nose patches, source-anchor discrepancies and sparse small-window
+painting. Forty-eight joined street views show distinct rotor poses and open skids,
+but require later proportion/paint refinement. Stopped blades still alias in distant
+native captures. Final visual approvals remain zero.
 
 The315 new tree states include105 temperate,112 Arctic/snow and98 tropical states.
 Connected-root and snow-occupancy/face regressions pass. Native source review identifies
@@ -96,8 +116,8 @@ teddy face/body proportions and pixel painting still differ visibly from source.
 The joined boot must be judged with both original tile parts, not the isolated half.
 Corrected96-case live coverage is technical evidence, not visual approval.
 
-Current runtime catalogue statistics:8,371,966 occupied cells,6,273,730 exposed faces,
-1,418,364 conforming rectangles and8,859,842 triangles. Full1,002 nativeVulkan/GL
+Current runtime catalogue statistics:8,397,312 occupied cells,6,302,456 exposed faces,
+1,424,375 conforming rectangles and8,906,806 triangles. Full1,002 nativeVulkan/GL
 verification completes at4.38/4.52GiB after retiring diagnostic CPU/GPU references;
 the earlier6GiB failure remains preserved. A600-frame generated-world wideGL run remains30.764fps. Full-quality
 wide-view performance and arbitrary-map/all-day memory remain unresolved.

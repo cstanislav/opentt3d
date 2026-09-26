@@ -1324,6 +1324,26 @@ void BeginVoxelBuoyBeaconCheck()
 	Debug(driver,1,"OpenTT3D: observing original239/240 beacons and250..254 foam on an actually captured voxel buoy");
 }
 
+static unsigned checked_rotor_engine = UINT_MAX;
+static uint32_t checked_rotor_vehicle = UINT32_MAX;
+static unsigned checked_rotor_states = 0;
+static bool checked_rotor_restarted = false;
+static unsigned checked_aircraft_contact = UINT_MAX;
+
+void BeginVoxelAircraftContactCheck(unsigned engine)
+{
+	if (engine < 215 || engine > 255 || !VoxelVehicleState(engine,false)) throw std::invalid_argument("Aircraft contact observation needs a bound aircraft in its proper climate");
+	checked_aircraft_contact = engine;
+}
+
+void BeginVoxelHelicopterRotorCheck(unsigned engine)
+{
+	if (engine < 253 || engine > 255 || !VoxelVehicleState(engine,false)) throw std::invalid_argument("Rotor observation needs an original voxel helicopter in its proper climate");
+	checked_rotor_engine = engine; checked_rotor_vehicle = UINT32_MAX; checked_rotor_states = 0;
+	checked_rotor_restarted = false;
+	Debug(driver,1,"OpenTT3D: observing original stopped/moving rotor states on voxel helicopter {}",engine);
+}
+
 void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const SpriteBounds &bounds, bool transparent, const SubSprite *sub)
 {
 	if (!capture) return;
@@ -1380,6 +1400,39 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 		const Vehicle &vehicle = *capture->vehicle;
 		bool shadow = vehicle.vehstatus.Test(VehState::Shadow);
 		bool rotor = vehicle.type == VEH_AIRCRAFT && vehicle.subtype == AIR_ROTOR;
+		if (rotor && sub == nullptr && !transparent && VoxelVehicleState(vehicle.engine_type.base(),false)) {
+			const Vehicle &body = *vehicle.First();
+			bool original = body.type == VEH_AIRCRAFT && body.subtype == AIR_HELICOPTER;
+			for (unsigned direction = 0; direction < 8 && original; ++direction) {
+				VehicleSpriteSeq sequence;
+				body.GetImage(static_cast<Direction>(direction),EIT_ON_MAP,&sequence);
+				original = sequence.count == 1 && IsBaseGraphicsSprite(sequence.seq[0].sprite);
+			}
+			/* Share the body's current smoothed transform so the independent rotor
+			 * cannot trail its cabin on turns, landings or capture-order changes. */
+			Vec3 rotor_origin = SmoothVehiclePose(body).position+Vec3{0,0,ROTOR_Z_OFFSET-1};
+			if (original && DrawVoxelHelicopterRotor(capture->scene,image,rotor_origin,palette)) {
+				capture->parent_instance_end = capture->scene.instances.size();
+				capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
+				if (!capture->diagnostic && !capture->parent_culled && checked_rotor_engine == body.engine_type.base()) {
+					if (checked_rotor_vehicle == UINT32_MAX) checked_rotor_vehicle = body.index.base();
+					if (checked_rotor_vehicle == body.index.base()) {
+						if (vehicle.x_pos != body.x_pos || vehicle.y_pos != body.y_pos || vehicle.z_pos-body.z_pos != ROTOR_Z_OFFSET || tag.id != 0) {
+							throw std::runtime_error("Voxel rotor observation: original attachment or unclickable ownership changed");
+						}
+						unsigned state = (image&SPRITE_MASK)-SPR_ROTOR_STOPPED;
+						if ((checked_rotor_states & (1U<<state)) == 0) Debug(driver,1,"OpenTT3D: voxel helicopter rotor engine {} vehicle {} captured original state {} at {},{},{}",checked_rotor_engine,checked_rotor_vehicle,state,body.x_pos,body.y_pos,body.z_pos);
+						if (state != 0 && (checked_rotor_states & 1U) != 0) checked_rotor_restarted = true;
+						checked_rotor_states |= 1U<<state;
+						if (checked_rotor_states == 15 && checked_rotor_restarted) {
+							Debug(driver,1,"OpenTT3D: voxel helicopter rotor observation passed: engine {} vehicle {}, all four original states and stopped-to-running transition, body-relative motion and unclickable ownership",checked_rotor_engine,checked_rotor_vehicle);
+							checked_rotor_engine = UINT_MAX;
+						}
+					}
+				}
+				return;
+			}
+		}
 		if (shadow || rotor || vehicle.type == VEH_EFFECT) {
 			SpriteTexture texture = Textures().Get(image, palette, TextureZoom(origin));
 			PlanarVehicleMaterial(texture, origin, shadow, vehicle.type == VEH_EFFECT);
@@ -1398,6 +1451,10 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 			}
 			Vec3 position = pose.position;
 			bool loaded = vehicle.cargo_cap != 0 && vehicle.cargo.StoredCount() >= vehicle.cargo_cap / 2U;
+			/* Original airport motion places the aircraft anchor one height unit
+			 * above its landing surface. Authored wheels/skids have a zero-height
+			 * contact plane, so remove that sprite-anchor offset from both parts. */
+			if (vehicle.type == VEH_AIRCRAFT && VoxelVehicleState(vehicle.engine_type.base(),loaded)) position.z -= 1;
 			std::array<SpriteID, 8> references{};
 			bool supported = true;
 			for (unsigned direction = 0; direction < 8; ++direction) {
@@ -1418,6 +1475,19 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 					}
 				}
 				if (auto state = VoxelVehicleState(vehicle.engine_type.base(),loaded); !capture->parent_culled && !capture->diagnostic && state) {
+					if (checked_aircraft_contact == vehicle.engine_type.base() && vehicle.cur_speed == 0 && IsValidTile(vehicle.tile) && IsTileType(vehicle.tile,MP_STATION) && IsAirport(vehicle.tile)) {
+						int ground = GetSlopePixelZ(vehicle.x_pos,vehicle.y_pos);
+						if (vehicle.z_pos == ground+1 && std::abs(position.z-ground) < 0.001f) {
+							float lowest = INFINITY;
+							for (size_t i = capture->parent_instance_begin; i < capture->parent_instance_end; ++i) {
+								const auto &instance = capture->scene.instances[i];
+								for (const auto &vertex : *instance.mesh) lowest = std::min(lowest,vertex.position.z+instance.data.origin_opacity[2]);
+							}
+							if (std::abs(lowest-ground) >= 0.001f) throw std::runtime_error("Authored aircraft wheels/skids do not meet the actual airport surface");
+							Debug(driver,1,"OpenTT3D: voxel aircraft ground contact passed: engine {} vehicle {}, authored support plane {} matches actual airport surface",checked_aircraft_contact,vehicle.index.base(),lowest);
+							checked_aircraft_contact = UINT_MAX;
+						}
+					}
 					static std::set<std::pair<unsigned,bool>> reported;
 					if (reported.emplace(vehicle.engine_type.base(),loaded).second) {
 						Debug(driver,1,"OpenTT3D: live voxel vehicle engine {} cargo {} captured as vehicle {}",vehicle.engine_type.base(),loaded ? 1 : 0,vehicle.index.base());
@@ -1679,6 +1749,7 @@ bool CaptureVehicleVisible(const Vehicle *vehicle)
 {
 	if (vehicle->vehstatus.Test(VehState::Hidden) && !IsVehicleInTunnel(*vehicle)) return false;
 	if (capture->camera.hidden_object == vehicle->index.base() + 1) return false;
+	if (vehicle->type == VEH_AIRCRAFT && vehicle->subtype == AIR_ROTOR && capture->camera.hidden_object == vehicle->First()->index.base() + 1) return false;
 	Vec3 position{static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), static_cast<float>(vehicle->z_pos)};
 	return capture->scene.visibility->Intersects(position - Vec3{128, 128, 16}, position + Vec3{128, 128, 128});
 }

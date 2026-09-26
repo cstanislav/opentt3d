@@ -1,16 +1,30 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 class AircraftCatalogue extends AIController {
 	built = false;
-	function Save() { return {built = this.built}; }
-	function Load(version, data) { if (data != null && "built" in data) this.built = data.built; }
+	release = null;
+	function Save() { return {built = this.built, release = this.release}; }
+	function Load(version, data) {
+		if (data != null && "built" in data) this.built = data.built;
+		if (data != null && "release" in data) this.release = data.release;
+	}
 	function Require(ok, operation) { if (!ok) throw operation + ": " + AIError.GetLastErrorString(); }
 	function Start();
 }
 
 function AircraftCatalogue::Start()
 {
-	if (this.built) while (true) this.Sleep(1000);
 	try {
+		if (this.built) {
+			if (this.release != null) {
+				/* Ordinary full-load service lets the original rotor reach its stopped
+				 * pose; release after reload lets the renderer observe its restart. */
+				this.Sleep(AIController.GetSetting("review_hold_ticks"));
+				foreach (vehicle in this.release) this.Require(AIOrder.SetOrderFlags(vehicle,0,AIOrder.OF_NONE), "release held destination service");
+				this.release = null;
+				AILog.Info("AIRCRAFT_CATALOGUE_HELD_SERVICE_RELEASED");
+			}
+			while (true) this.Sleep(1000);
+		}
 		AIController.SetCommandDelay(1);
 		this.Require(AICompany.SetLoanAmount(AICompany.GetMaxLoanAmount()), "fund aircraft catalogue company");
 		AICompany.SetName("OpenTT3D Aircraft Review");
@@ -52,12 +66,16 @@ function AircraftCatalogue::Start()
 				if (!plane.serviced && AIVehicle.GetState(vehicle) == AIVehicle.VS_AT_STATION &&
 						AIStation.GetStationID(AIVehicle.GetLocation(vehicle)) == AIStation.GetStationID(airports[1])) {
 					plane.serviced = true;
-					this.Require(AIOrder.SetOrderFlags(vehicle,0,AIOrder.OF_NONE), "release observed airport service");
+					if (AIController.GetSetting("review_hold_ticks") == 0) this.Require(AIOrder.SetOrderFlags(vehicle,0,AIOrder.OF_NONE), "release observed airport service");
 					AILog.Info("AIRCRAFT_CATALOGUE_SERVICE engine=" + plane.engine + " vehicle=" + vehicle);
 				}
 				if (plane.serviced && plane.peak_speed > 0 && !AIVehicle.IsInDepot(vehicle)) ++ready;
 			}
 			if (ready == aircraft.len()) {
+				if (AIController.GetSetting("review_hold_ticks") > 0) {
+					this.release = [];
+					foreach (plane in aircraft) this.release.append(plane.vehicle);
+				}
 				local manifest = "";
 				foreach (plane in aircraft) {
 					manifest += (manifest.len() == 0 ? "" : ",") + "{\"engine\":" + plane.engine + ",\"vehicle\":" + plane.vehicle + ",\"serviced\":true,\"peak_speed\":" + plane.peak_speed + "}";

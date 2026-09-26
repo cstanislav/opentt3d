@@ -14,6 +14,7 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground = false);
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);
 bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0, float opacity = 1);
+bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0);
 uint32_t VoxelPaletteMask(std::span<const Vertex> vertices, unsigned first, unsigned count);
 bool DrawVoxelAsset(Scene &scene, std::string_view category, unsigned identifier, unsigned state,
 	Vec3 origin, PaletteID palette = 0, float opacity = 1);

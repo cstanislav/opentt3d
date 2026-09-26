@@ -976,6 +976,18 @@ void ExportVehicleReferences()
 		}
 	}
 	std::ofstream(directory / "vehicles.json") << manifest.dump(2) << '\n';
+	Json rotors = Json::array();
+	for (SpriteID sprite = SPR_ROTOR_STOPPED; sprite <= SPR_ROTOR_MOVING_3; ++sprite) {
+		auto name = fmt::format("aircraft-rotor-{}.pam",sprite);
+		std::vector<uint8_t> indices;
+		ExportSpriteReference(sprite,PAL_NONE,(directory/name).string(),&indices);
+		const Sprite *source = GetSprite(sprite,SpriteType::Normal);
+		rotors.push_back({{"sprite",sprite},{"state",sprite-SPR_ROTOR_STOPPED},
+			{"climate",to_underlying(_settings_game.game_creation.landscape)},
+			{"image",name},{"palette_indices",indices},{"sprite_offset",{source->x_offs,source->y_offs}},
+			{"sprite_size",{source->width,source->height}}});
+	}
+	std::ofstream(directory / "aircraft-rotors.json") << rotors.dump(2) << '\n';
 	Debug(driver, 1, "OpenTT3D: exported {} vehicle directional/state references", manifest.size());
 }
 

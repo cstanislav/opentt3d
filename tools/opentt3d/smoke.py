@@ -145,6 +145,8 @@ def main():
     parser.add_argument("--verify-voxel-poses", type=int, nargs="+", choices=range(256), help="Run the exact company/crash/cargo/heading matrix for selected voxel vehicle engines")
     parser.add_argument("--verify-voxel-vehicle", type=int, choices=range(256), help="Require an actual captured voxel vehicle of the selected vanilla engine type")
     parser.add_argument("--verify-voxel-cargo", type=int, choices=range(256), help="Observe one actual voxel vehicle at both zero cargo and full capacity with the corresponding original bindings")
+    parser.add_argument("--verify-helicopter-rotor", type=int, choices=(253,254,255), help="Observe all four original rotor states on an actual moving voxel helicopter")
+    parser.add_argument("--verify-aircraft-contact", type=int, choices=range(215,256), help="Observe authored wheels/skids on an actual stopped aircraft meeting the airport ground surface")
     parser.add_argument("--verify-tile-picking", action="store_true")
     parser.add_argument("--verify-native-input", action="store_true", help="Exercise Cocoa focus, pointer capture and fullscreen recovery")
     parser.add_argument("--macos-bundle", action="store_true", help="Launch through macOS LaunchServices using a linked development app bundle")
@@ -196,6 +198,8 @@ def main():
         parser.error("Depot traversal needs a valid vehicle ID, --running and --benchmark-frames")
     if args.verify_house_lift and (not args.running or not args.benchmark_frames):
         parser.error("House lift checks require --running and --benchmark-frames")
+    if args.verify_helicopter_rotor is not None and (not args.running or not args.benchmark_frames):
+        parser.error("Helicopter rotor checks require --running and --benchmark-frames")
     if args.verify_radio_beacons and (not args.running or not args.benchmark_frames):
         parser.error("Radio beacon checks require --running and --benchmark-frames")
     if args.verify_buoy_beacon and (not args.running or not args.benchmark_frames):
@@ -457,6 +461,10 @@ server_advertise = false
     if args.verify_voxel_poses is not None:
         for engine in dict.fromkeys(args.verify_voxel_poses):
             commands.append(f"renderer3d verify-voxel-poses {engine}")
+    if args.verify_helicopter_rotor is not None:
+        commands.append(f"renderer3d verify-helicopter-rotor {args.verify_helicopter_rotor}")
+    if args.verify_aircraft_contact is not None:
+        commands.append(f"renderer3d verify-aircraft-contact {args.verify_aircraft_contact}")
     if args.verify_tile_picking:
         commands.append("renderer3d verify-tile-picking")
     if args.verify_world_atlas:
@@ -634,6 +642,10 @@ server_advertise = false
                 raise RuntimeError("The vehicle-window Cab button did not activate first-person following")
             if args.verify_voxel_vehicle is not None and f"live voxel vehicle engine {args.verify_voxel_vehicle} cargo " not in text:
                 raise RuntimeError("The requested actual vehicle was not captured through its voxel binding")
+            if args.verify_helicopter_rotor is not None and f"voxel helicopter rotor observation passed: engine {args.verify_helicopter_rotor} " not in text:
+                raise RuntimeError("Original helicopter rotor animation observation incomplete; inspect run.log")
+            if args.verify_aircraft_contact is not None and f"voxel aircraft ground contact passed: engine {args.verify_aircraft_contact} " not in text:
+                raise RuntimeError("Actual stopped aircraft ground-contact observation incomplete; inspect run.log")
             if args.verify_voxel_poses is not None and any(f"voxel vehicle engine {engine} pose matrix passed" not in text for engine in args.verify_voxel_poses):
                 raise RuntimeError("The requested voxel vehicle's complete pose matrix did not pass")
             if args.verify_voxel_meshes is not None and f"voxel mesh selection '{args.verify_voxel_meshes}' passed exact geometry, palettes and picking" not in text:

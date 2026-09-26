@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: opentt3d-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   linux:
