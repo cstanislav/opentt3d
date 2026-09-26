@@ -237,9 +237,9 @@ inline TunnelAssembly MakeTunnelAssembly(TunnelKind kind, bool portal)
 	if (portal) {
 		for (bool right : {false,true}) {
 			float a = right ? 13.8f : 0, b = right ? 16 : 2.2f;
-			earth.Quad({0,a,0},{16,a,8},{16,b,8},{0,b,0},{});
+			earth.Quad({0,a,0},{16,a,TerrainZ(8)},{16,b,TerrainZ(8)},{0,b,0},{});
 			float y = right ? 13.8f : 2.2f;
-			structure.Triangle({0,y,0},{8,y,0},{8,y,4},stone);
+			structure.Triangle({0,y,0},{8,y,0},{8,y,TerrainZ(4)},stone);
 		}
 		if (road) {
 			for (float y : {1.8f,13.5f}) GeometryBox(structure,{7.5f,y,0},{9,y+0.7f,7.6f},stone);
@@ -263,7 +263,12 @@ inline TunnelAssembly MakeTunnelAssembly(TunnelKind kind, bool portal)
 				}
 			}
 		}
-		if (!hood) earth.Quad({8.7f,2.2f,8.6f},{16,2.2f,8},{16,13.8f,8},{8.7f,13.8f,8.6f},{});
+		/* The taller hillside covers the rear of even an exposed monorail hood.
+		 * Retaining walls and earth meet its slope; the bore itself keeps its gauge. */
+		if (!hood || TerrainZ(8) > 8.6f) {
+			float front = std::max(8.6f,TerrainZ(8)*8.7f/16);
+			earth.Quad({8.7f,2.2f,front},{16,2.2f,TerrainZ(8)},{16,13.8f,TerrainZ(8)},{8.7f,13.8f,front},{});
+		}
 	}
 	for (auto index : {TunnelMaterial::Earth,TunnelMaterial::Floor}) for (auto &vertex : meshes[static_cast<unsigned>(index)].vertices) {
 		if (vertex.texture.z != -3) vertex.texture = {2*(vertex.position.y-vertex.position.x),vertex.position.x+vertex.position.y,0};

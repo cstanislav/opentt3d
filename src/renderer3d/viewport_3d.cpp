@@ -167,7 +167,7 @@ void ResetCameraRotation()
 static Vec3 CabEye(const Vehicle &vehicle)
 {
 	float height = vehicle.type == VEH_SHIP ? 12 : vehicle.type == VEH_AIRCRAFT ? 8 : 6;
-	return {static_cast<float>(vehicle.x_pos), static_cast<float>(vehicle.y_pos), vehicle.z_pos + height};
+	return {static_cast<float>(vehicle.x_pos), static_cast<float>(vehicle.y_pos), RenderVehicleZ(vehicle) + height};
 }
 
 bool IsFirstPerson(VehicleID vehicle)
@@ -240,8 +240,8 @@ static float CameraGroundHeight(float x, float y)
 	int ix = static_cast<int>(std::floor(x)), iy = static_cast<int>(std::floor(y));
 	int nx = std::min(ix + 1, static_cast<int>(Map::MaxX() * TILE_SIZE - 1));
 	int ny = std::min(iy + 1, static_cast<int>(Map::MaxY() * TILE_SIZE - 1));
-	return std::lerp(std::lerp(static_cast<float>(GetSlopePixelZ(ix, iy)), static_cast<float>(GetSlopePixelZ(nx, iy)), x - ix),
-		std::lerp(static_cast<float>(GetSlopePixelZ(ix, ny)), static_cast<float>(GetSlopePixelZ(nx, ny)), x - ix), y - iy);
+	return TerrainZ(std::lerp(std::lerp(static_cast<float>(GetSlopePixelZ(ix, iy)), static_cast<float>(GetSlopePixelZ(nx, iy)), x - ix),
+		std::lerp(static_cast<float>(GetSlopePixelZ(ix, ny)), static_cast<float>(GetSlopePixelZ(nx, ny)), x - ix), y - iy));
 }
 
 float GetEffectiveZoom(const Viewport &vp)
@@ -265,11 +265,11 @@ static Camera MakeCamera(const Viewport &vp)
 	if (ground.x >= 0 && ground.y >= 0 && ground.x < static_cast<int>(Map::MaxX() * TILE_SIZE) && ground.y < static_cast<int>(Map::MaxY() * TILE_SIZE)) {
 		float z = GetSlopePixelZ(ground.x, ground.y);
 		for (unsigned iteration = 0; iteration < 16; ++iteration) {
-			float height = CameraGroundHeight(camera.focus.x + z * 0.5f, camera.focus.y + z * 0.5f);
+			float height = CameraGroundHeight(camera.focus.x + z * 0.5f, camera.focus.y + z * 0.5f)/TERRAIN_HEIGHT_SCALE;
 			if (std::abs(height - z) < 0.0001f) break;
 			z = std::lerp(z, height, 0.5f);
 		}
-		camera.focus = camera.focus + Vec3{z * 0.5f, z * 0.5f, z};
+		camera.focus = camera.focus + Vec3{z * 0.5f, z * 0.5f, TerrainZ(z)};
 	}
 	/* An aircraft or bridge vehicle must remain centred at its actual elevation,
 	 * including in vehicle/news viewports and after rotating the camera. */
@@ -277,7 +277,7 @@ static Camera MakeCamera(const Viewport &vp)
 	for (const Window *window : Window::Iterate()) {
 		if (window->viewport.get() != &vp) continue;
 		if (const Vehicle *vehicle = Vehicle::GetIfValid(window->viewport->follow_vehicle); vehicle != nullptr) {
-			camera.focus = {static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), static_cast<float>(vehicle->z_pos)};
+			camera.focus = {static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), RenderVehicleZ(*vehicle)};
 			/* Ordinary following stays above the landscape while the vehicle is
 			 * underground; only an explicit Cab view enters the modeled bore. */
 			if (vehicle->vehstatus.Test(VehState::Hidden) && IsVehicleInTunnel(*vehicle) && (!offset.cab || offset.cab->vehicle != vehicle->index)) camera.focus.z = CameraGroundHeight(camera.focus.x,camera.focus.y);
@@ -355,7 +355,7 @@ static void RebaseOrbitZoom(const Viewport &vp)
 		return;
 	}
 	Point hit = PickTerrain(vp,vp.left+vp.width/2,vp.top+vp.height/2,false);
-	float height = hit.x < 0 ? 0 : GetSlopePixelZ(hit.x,hit.y);
+	float height = hit.x < 0 ? 0 : TerrainZ(GetSlopePixelZ(hit.x,hit.y));
 	auto ground = before.ScreenRay(vp.width*0.5f,vp.height*0.5f).AtZ(height);
 	if (!ground) { position.grounded_camera = before; return; }
 	float distance = Dot(Camera::Physical(before.Rotate(before.Eye()-*ground)),before.Back());
@@ -441,7 +441,7 @@ bool HandleMiddleOrbit(bool pressed, Point cursor, Point delta)
 		float x = cursor.x - orbit_viewport->left + 0.5f, y = cursor.y - orbit_viewport->top + 0.5f;
 		Point terrain = PickTerrain(*orbit_viewport, cursor.x, cursor.y, false);
 		std::optional<Vec3> pivot;
-		if (terrain.x != -1) pivot = camera.ScreenRay(x, y).AtZ(GetSlopePixelZ(terrain.x, terrain.y));
+		if (terrain.x != -1) pivot = camera.ScreenRay(x, y).AtZ(TerrainZ(GetSlopePixelZ(terrain.x, terrain.y)));
 		else if (!_settings_game.construction.freeform_edges) pivot = camera.ScreenRay(x, y).AtZ(0);
 		if (!pivot) return true; // Sky has no clicked surface to orbit around.
 		window->viewport->CancelFollow(*window);
@@ -558,7 +558,7 @@ static void AnchorViewport(ViewportData &vp, Vec3 anchor, float x, float y)
 		Vec3 residual;
 		if (auto focus = camera.FocusForAnchor(anchor, x, y, &residual); focus.has_value()) {
 			SetPreciseScrollPosition(vp, 2.0 * (focus->y - focus->x) * ZOOM_BASE - vp.virtual_width * 0.5,
-				(focus->x + focus->y - focus->z) * ZOOM_BASE - vp.virtual_height * 0.5);
+				(focus->x + focus->y - focus->z/TERRAIN_HEIGHT_SCALE) * ZOOM_BASE - vp.virtual_height * 0.5);
 			PinFocus(vp, *focus, true, residual);
 		}
 	}
@@ -596,7 +596,7 @@ bool SetZoom(Window &window, float level, bool instant, std::optional<Point> cur
 	Point hit = PickTerrain(vp,cursor_point.x,cursor_point.y,false);
 	float x = cursor ? cursor->x-vp.left+0.5f : vp.width*0.5f;
 	float y = cursor ? cursor->y-vp.top+0.5f : vp.height*0.5f;
-	float ground_z = hit.x >= 0 ? GetSlopePixelZ(hit.x,hit.y) : 0;
+	float ground_z = hit.x >= 0 ? TerrainZ(GetSlopePixelZ(hit.x,hit.y)) : 0;
 	if (auto point = before.ScreenRay(x,y).AtZ(ground_z)) {
 		position.zoom_anchor = CameraPosition::Anchor{*point,before.focus,current,before.focus_offset};
 		if (cursor) vp.CancelFollow(window);
@@ -692,7 +692,7 @@ bool ScrollAtCursor(Window &window, Point delta, Point cursor)
 	Point hit = PickTerrain(vp, cursor.x, cursor.y, false);
 	const float x = cursor.x - vp.left + 0.5f, y = cursor.y - vp.top + 0.5f;
 	const Camera camera = MakeCamera(vp);
-	float z = hit.x == -1 ? camera.focus.z : GetSlopePixelZ(hit.x, hit.y);
+	float z = hit.x == -1 ? camera.focus.z : TerrainZ(GetSlopePixelZ(hit.x, hit.y));
 	auto anchor = camera.ScreenRay(x + delta.x, y + delta.y).AtZ(z);
 	if (anchor.has_value()) {
 		AnchorViewport(vp, *anchor, x, y);
@@ -711,9 +711,9 @@ ViewportSign ProjectSign(const Viewport &vp, const ViewportSign &sign, int x, in
 	ViewportSign result = sign;
 	Point original = RemapCoords(x, y, z);
 	Camera camera = MakeCamera(vp);
-	auto p = camera.Project({static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)});
+	auto p = camera.Project({static_cast<float>(x), static_cast<float>(y), TerrainZ(z)});
 	float margin = std::max(sign.width_normal, sign.width_small) + 256.0f;
-	if (!p.visible || p.x < -margin || p.y < -margin || p.x > vp.width + margin || p.y > vp.height + margin || !TunnelLabelVisible(camera,{static_cast<float>(x),static_cast<float>(y),static_cast<float>(z)})) {
+	if (!p.visible || p.x < -margin || p.y < -margin || p.x > vp.width + margin || p.y > vp.height + margin || !TunnelLabelVisible(camera,{static_cast<float>(x),static_cast<float>(y),TerrainZ(z)})) {
 		result.center = result.top = -INT_MAX / 4;
 		return result;
 	}
@@ -883,7 +883,7 @@ Point PickTerrain(const Viewport &vp, int screen_x, int screen_y, bool clamp_to_
 	Camera camera = MakeCamera(vp);
 	Ray ray = camera.ScreenRay(screen_x - vp.left + 0.5f, screen_y - vp.top + 0.5f);
 	double enter = 0, leave = std::numeric_limits<double>::infinity();
-	float maximum_z = _settings_game.construction.map_height_limit * TILE_HEIGHT + 2 * TILE_HEIGHT;
+	float maximum_z = TerrainZ(_settings_game.construction.map_height_limit * TILE_HEIGHT + 2 * TILE_HEIGHT);
 	if (ray.ClipBox({0, 0, 0}, {Map::MaxX() * 16.0f - 0.001f, Map::MaxY() * 16.0f - 0.001f, maximum_z}, enter, leave)) {
 		/* Two-level DDA skips tiles above/below the ray, then intersects the exact
 		 * upstream integer-pixel height field. No geometry or command approximation. */
@@ -904,13 +904,13 @@ Point PickTerrain(const Viewport &vp, int screen_x, int screen_y, bool clamp_to_
 			if (tx < 0 || ty < 0 || tx >= static_cast<int>(Map::MaxX()) || ty >= static_cast<int>(Map::MaxY())) break;
 			double end = std::min({static_cast<double>(leave), exit_cell(ray.origin.x, ray.direction.x, tx, 16), exit_cell(ray.origin.y, ray.direction.y, ty, 16)});
 			TileIndex tile = TileXY(tx, ty);
-			if (IsValidTile(tile) && std::min(ray.origin.z + ray.direction.z * t, ray.origin.z + ray.direction.z * end) <= GetTileMaxPixelZ(tile) + 2 * TILE_HEIGHT) {
+			if (IsValidTile(tile) && std::min(ray.origin.z + ray.direction.z * t, ray.origin.z + ray.direction.z * end) <= TerrainZ(GetTileMaxPixelZ(tile) + 2 * TILE_HEIGHT)) {
 				for (double u = t; u <= end;) {
 					int x = cell_at(ray.origin.x, ray.direction.x, u + 0.0001, 1);
 					int y = cell_at(ray.origin.y, ray.direction.y, u + 0.0001, 1);
 					if (x < 0 || y < 0 || x >= static_cast<int>(Map::MaxX() * TILE_SIZE) || y >= static_cast<int>(Map::MaxY() * TILE_SIZE)) break;
 					double next = std::min({end, exit_cell(ray.origin.x, ray.direction.x, x, 1), exit_cell(ray.origin.y, ray.direction.y, y, 1)});
-					int height = GetSlopePixelZ(x, y);
+					float height = TerrainZ(GetSlopePixelZ(x, y));
 					/* A shallow ray can enter a higher integer-height cell through its
 					 * vertical face without ever crossing that cell's top plane. */
 					if (ray.origin.z + ray.direction.z * u <= height) return {x, y};
@@ -967,7 +967,7 @@ Point PickMap(const Viewport &vp, int screen_x, int screen_y, bool clamp_to_map)
 		Point point{x+8,y+8};
 		Ray ray = frame->camera.ScreenRay(screen_x-vp.left+0.5f,screen_y-vp.top+0.5f);
 		for (unsigned i = 0; i < 3; ++i) {
-			auto ground = ray.AtZ(GetSlopePixelZ(point.x,point.y));
+			auto ground = ray.AtZ(TerrainZ(GetSlopePixelZ(point.x,point.y)));
 			if (!ground) break;
 			point = {std::clamp(static_cast<int>(std::floor(ground->x)),x,x+15),std::clamp(static_cast<int>(std::floor(ground->y)),y,y+15)};
 		}
@@ -1069,7 +1069,7 @@ void VerifyTilePicking()
 		++attempts;
 		unsigned views = 0;
 		for (unsigned turn = 0; turn < 4; ++turn) {
-			Camera camera{{TileX(tile)*16.0f+8,TileY(tile)*16.0f+8,GetTileMaxPixelZ(tile)+8.0f},6,viewport.width,viewport.height,turn+0.25f};
+			Camera camera{{TileX(tile)*16.0f+8,TileY(tile)*16.0f+8,TerrainZ(GetTileMaxPixelZ(tile))+8.0f},6,viewport.width,viewport.height,turn+0.25f};
 			camera.vertical_fov = VIEWPORT_VERTICAL_FOV;
 			camera_positions[&viewport].snapshot = camera;
 			Scene scene;
@@ -1123,7 +1123,7 @@ static void VerifyTextEffectAnchors()
 {
 	int x = (Map::MaxX()/2)*TILE_SIZE+8, y = (Map::MaxY()/2)*TILE_SIZE+8;
 	int z = GetSlopePixelZ(x,y)+6;
-	Vec3 world{static_cast<float>(x),static_cast<float>(y),static_cast<float>(z)};
+	Vec3 world{static_cast<float>(x),static_cast<float>(y),TerrainZ(z)};
 	Viewport viewport{};
 	struct Cleanup {
 		Viewport &viewport;
@@ -1212,7 +1212,7 @@ void VerifyViewportNavigation()
 					Point hit = PickTerrain(vp, cursor.x, cursor.y, false);
 					if (hit.x == -1) continue;
 					float x = cursor.x - vp.left + 0.5f, y = cursor.y - vp.top + 0.5f;
-					auto anchor = MakeCamera(vp).ScreenRay(x, y).AtZ(GetSlopePixelZ(hit.x, hit.y));
+					auto anchor = MakeCamera(vp).ScreenRay(x, y).AtZ(TerrainZ(GetSlopePixelZ(hit.x, hit.y)));
 					if (!anchor.has_value()) throw std::runtime_error("Navigation verification: missing terrain anchor");
 					ZoomAtCursor(*window, in, cursor);
 					for (unsigned frame = 0; frame < 90; ++frame) UpdateCameraMotion(1.0f / 60);
@@ -1224,7 +1224,7 @@ void VerifyViewportNavigation()
 					hit = PickTerrain(vp, cursor.x, cursor.y, false);
 					if (hit.x == -1) continue;
 					Point delta{-17, 11};
-					anchor = MakeCamera(vp).ScreenRay(x + delta.x, y + delta.y).AtZ(GetSlopePixelZ(hit.x, hit.y));
+					anchor = MakeCamera(vp).ScreenRay(x + delta.x, y + delta.y).AtZ(TerrainZ(GetSlopePixelZ(hit.x, hit.y)));
 					if (!anchor.has_value()) continue;
 					ScrollAtCursor(*window, delta, cursor);
 					projected = MakeCamera(vp).Project(*anchor);
@@ -1266,7 +1266,7 @@ void VerifyViewportNavigation()
 		if (terrain.x >= 0) {
 			Camera tilted = MakeCamera(vp);
 			float x = orbit_point.x - vp.left + 0.5f, y = orbit_point.y - vp.top + 0.5f;
-			auto anchor = tilted.ScreenRay(x, y).AtZ(GetSlopePixelZ(terrain.x, terrain.y));
+			auto anchor = tilted.ScreenRay(x, y).AtZ(TerrainZ(GetSlopePixelZ(terrain.x, terrain.y)));
 			if (!anchor) throw std::runtime_error("Navigation verification: missing tilted zoom anchor");
 			/* At street-level magnification the float world-point grid is a
 			 * visible fraction of a pixel. Measure preservation of the actual
@@ -1278,7 +1278,7 @@ void VerifyViewportNavigation()
 			auto projected = MakeCamera(vp).Project(*anchor);
 			if (std::hypot(projected.x - picked_pixel.x, projected.y - picked_pixel.y) > 0.1f || MakeCamera(vp).pitch != held_pitch) throw std::runtime_error(fmt::format("Navigation verification: tilted zoom changed its anchor or pitch: pixel {:.4f},{:.4f} expected {:.4f},{:.4f}, anchor {},{},{}",projected.x,projected.y,picked_pixel.x,picked_pixel.y,anchor->x,anchor->y,anchor->z));
 			Point delta{-13, 7};
-			anchor = MakeCamera(vp).ScreenRay(x + delta.x, y + delta.y).AtZ(GetSlopePixelZ(terrain.x, terrain.y));
+			anchor = MakeCamera(vp).ScreenRay(x + delta.x, y + delta.y).AtZ(TerrainZ(GetSlopePixelZ(terrain.x, terrain.y)));
 			if (anchor) {
 				ScrollAtCursor(*window, delta, orbit_point);
 				projected = MakeCamera(vp).Project(*anchor);
@@ -1317,13 +1317,13 @@ void VerifyViewportNavigation()
 		vp.follow_vehicle = vehicle->index;
 		for (unsigned turn = 0; turn < 4; ++turn) {
 			rotation = turn;
-			auto projected = MakeCamera(vp).Project({static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), static_cast<float>(vehicle->z_pos)});
+			auto projected = MakeCamera(vp).Project({static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), RenderVehicleZ(*vehicle)});
 			if (!projected.visible || std::abs(projected.x - vp.width * 0.5f) > 0.01f || std::abs(projected.y - vp.height * 0.5f) > 0.01f) {
 				throw std::runtime_error("Navigation verification: followed vehicle is not centred");
 			}
 			Viewport copy = vp;
 			CopyViewportCamera(vp, copy);
-			auto copied = MakeCamera(copy).Project({static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), static_cast<float>(vehicle->z_pos)});
+			auto copied = MakeCamera(copy).Project({static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), RenderVehicleZ(*vehicle)});
 			ForgetViewport(&copy);
 			if (std::abs(projected.x - copied.x) > 0.01f || std::abs(projected.y - copied.y) > 0.01f) throw std::runtime_error("Navigation verification: screenshot lost the follow camera");
 			++following_checks;
@@ -1365,7 +1365,7 @@ void VerifyViewportNavigation()
 	/* Test the real loaded-world capture/picker from beyond the former 4096-unit
 	 * cutoff, aimed at the map centre. No simulation state or RNG is touched. */
 	Vec3 target{Map::MaxX() * 8.0f, Map::MaxY() * 8.0f, 0};
-	target.z = GetSlopePixelZ(static_cast<int>(target.x), static_cast<int>(target.y));
+	target.z = TerrainZ(GetSlopePixelZ(static_cast<int>(target.x), static_cast<int>(target.y)));
 	Camera distant{target + Vec3{-8192, -8192, 512}, 1, vp.width, vp.height, 2};
 	distant.first_person = true; distant.vertical_fov = 60;
 	distant.pitch = std::atan2(512 * Camera::WORLD_Z_SCALE, std::hypot(8192.0f, 8192.0f)) * 180 / std::numbers::pi_v<float>;
@@ -1379,11 +1379,11 @@ void VerifyViewportNavigation()
 	if (hit.x < 0) {
 		Ray ray = distant.ScreenRay(vp.width / 2 + 0.5f, vp.height / 2 + 0.5f);
 		double enter = 0, leave = std::numeric_limits<double>::infinity();
-		bool intersects = ray.ClipBox({0, 0, 0}, {Map::MaxX() * 16.0f - 0.001f, Map::MaxY() * 16.0f - 0.001f, _settings_game.construction.map_height_limit * TILE_HEIGHT + 2.0f * TILE_HEIGHT}, enter, leave);
+		bool intersects = ray.ClipBox({0, 0, 0}, {Map::MaxX() * 16.0f - 0.001f, Map::MaxY() * 16.0f - 0.001f, TerrainZ(_settings_game.construction.map_height_limit * TILE_HEIGHT + 2.0f * TILE_HEIGHT)}, enter, leave);
 		throw std::runtime_error(fmt::format("Navigation verification: distant terrain picking failed: eye {},{},{} ray {},{},{} map {},{} target {},{},{} interval {} {} {}", ray.origin.x, ray.origin.y, ray.origin.z, ray.direction.x, ray.direction.y, ray.direction.z, Map::MaxX(), Map::MaxY(), target.x, target.y, target.z, intersects, enter, leave));
 	}
 	ViewportSign sign{};
-	auto label = ProjectSign(vp, sign, static_cast<int>(target.x), static_cast<int>(target.y), static_cast<int>(target.z));
+	auto label = ProjectSign(vp, sign, static_cast<int>(target.x), static_cast<int>(target.y), static_cast<int>(target.z/TERRAIN_HEIGHT_SCALE));
 	if (label.center == -INT_MAX / 4) throw std::runtime_error("Navigation verification: distant first-person label was clipped");
 	Debug(driver, 1, "OpenTT3D: first-person terrain capture, picking and labels beyond 4096 world units passed");
 }

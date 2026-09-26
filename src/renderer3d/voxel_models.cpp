@@ -57,7 +57,7 @@ struct Catalogue {
 	std::map<std::string,VoxelModel,std::less<>> models;
 	std::map<std::tuple<std::string,unsigned,unsigned>,std::string> bindings;
 	std::array<const VoxelModel *,2009-1576+1> tree_models{};
-	VoxelMeshCache surfaces{VoxelCPUCacheBudget()};
+	mutable VoxelMeshCache surfaces{VoxelCPUCacheBudget()};
 };
 
 const Catalogue &Models()
@@ -138,8 +138,29 @@ std::shared_ptr<const void> PinVoxelModel(const VoxelModel &model)
 
 void AddVoxelInstance(Scene &scene, const VoxelModel &model, const InstanceData &data)
 {
-	auto lease = PinVoxelModel(model);
-	scene.instances.push_back({&model.surface.vertices,data,std::move(lease)});
+	static const bool enabled = [] { const char *value = std::getenv("OPENTT3D_AUTO_LOD"); return value == nullptr || std::string_view(value) != "0"; }();
+	const VoxelModel *selected = &model;
+	if (enabled && scene.detail) {
+		Vec3 origin{data.origin_opacity[0],data.origin_opacity[1],data.origin_opacity[2]};
+		const auto &mesh = model.surface;
+		float radius = std::max({std::abs(mesh.low.x),std::abs(mesh.low.y),std::abs(mesh.high.x),std::abs(mesh.high.y)})*1.42f;
+		float pixels = scene.detail->PixelsPerUnit(origin+Vec3{-radius,-radius,mesh.low.z-radius},origin+Vec3{radius,radius,mesh.high.z+radius});
+		/* No authored low-detail variants. A coarse cell is at most two screen
+		 * pixels across, and nearby geometry always keeps the original surface. */
+		unsigned level = pixels < 0.125f ? 4 : pixels < 0.25f ? 3 : pixels < 0.5f ? 2 : pixels < 1 ? 1 : 0;
+		if (level != 0) {
+			auto &lod = model.lods[level-1];
+			if (!lod) {
+				lod = std::make_unique<VoxelModel>();
+				lod->lod_source = model.source.get(); lod->reduction = 1U<<level;
+				lod->surface = model.source->Expand(Models().materials).ReducedMesh(lod->reduction);
+				Models().surfaces.Register(*lod);
+			}
+			selected = lod.get();
+		}
+	}
+	auto lease = PinVoxelModel(*selected);
+	scene.instances.push_back({&selected->surface.vertices,data,std::move(lease)});
 }
 
 InstanceData Material(Vec3 origin, PaletteID palette, float opacity)
@@ -219,6 +240,12 @@ bool HasVoxelTree(SpriteID image)
 	return true;
 }
 
+bool UseVoxelTrees()
+{
+	static const bool voxel = [] { const char *value = std::getenv("OPENTT3D_TREE_STYLE"); return value != nullptr && std::string_view(value) == "voxel"; }();
+	return voxel;
+}
+
 bool FocusVoxelTree(unsigned base, unsigned stage)
 {
 	if (base < 1576 || base > 2003 || (base-1576)%7 != 0 || stage >= 7 || !HasVoxelTree(base+stage)) return false;
@@ -250,7 +277,7 @@ bool FocusVoxelTree(unsigned base, unsigned stage)
 	}
 	if (selected != INVALID_TILE) {
 		ScrollMainWindowToTile(selected,true);
-		Debug(driver,1,"OpenTT3D: focused voxel tree {} stage {} at {},{} (slot {})",base,stage,TileX(selected),TileY(selected),selected_slot);
+		Debug(driver,1,"OpenTT3D: focused {} tree {} stage {} at {},{} (slot {})",UseVoxelTrees() ? "voxel" : "projected",base,stage,TileX(selected),TileY(selected),selected_slot);
 		return true;
 	}
 	Debug(driver,1,"OpenTT3D: tree lookup {} stage {} found no match; actual stage counts {}/{}/{}/{}/{}/{}/{}",base,stage,counts[0],counts[1],counts[2],counts[3],counts[4],counts[5],counts[6]);
@@ -1148,7 +1175,7 @@ void VerifyVoxelTreeModels()
 			Textures().BeginScene();
 			const auto &texture = Textures().Get(base+stage,palette,0,false);
 			Scene scene, reference;
-			if (!DrawAuthoredTree(scene,base+stage,texture,{},1,scale) || scene.instances.size() != 1 || scene.instances.front().mesh != &mesh.vertices) throw std::runtime_error("Tree did not select its exact voxel lifecycle binding");
+			if (!DrawVoxelAsset(scene,"trees",base,stage,{},texture.palette) || scene.instances.size() != 1 || scene.instances.front().mesh != &mesh.vertices) throw std::runtime_error("Tree did not select its exact voxel lifecycle binding");
 			scene.instances.front().data.SetObjectId(TILE_PICK_ID|73);
 			reference.vertices = scene.ExpandedVertices(true);
 			Camera camera{(mesh.low+mesh.high)*0.5f,2,256,256,turn+0.15f};
@@ -1716,7 +1743,7 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 		if (engine < 116) {
 			unsigned pitched_views = 0;
 			auto unit_mesh = Models().models.at(name).source->Expand(Models().materials).Mesh(false);
-			for (float grade : {-0.5f,-0.25f,0.25f,0.5f}) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) for (PaletteID palette : {PAL_NONE,PALETTE_RECOLOUR_START,PALETTE_CRASH}) {
+			for (float grade : {-TerrainZ(0.5f),-TerrainZ(0.25f),TerrainZ(0.25f),TerrainZ(0.5f)}) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) for (PaletteID palette : {PAL_NONE,PALETTE_RECOLOUR_START,PALETTE_CRASH}) {
 				Scene actual, reference, cells;
 				float heading = pose*std::numbers::pi_v<float>/4+0.07f;
 				DrawVoxelVehicle(actual,engine,loaded,{},heading,palette,1,climate,grade);
@@ -1766,7 +1793,7 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 			}
 			Debug(driver,1,"OpenTT3D: voxel train engine {} passed {} joined collector poses with fixed roof mounts, independent wire heights, company/crash palettes and original picking ownership",engine,collector_views);
 			unsigned pitched_collectors = 0;
-			for (float grade : {-0.5f,0.5f}) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) {
+			for (float grade : {-TerrainZ(0.5f),TerrainZ(0.5f)}) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) {
 				Scene actual, reference;
 				float heading = pose*std::numbers::pi_v<float>/4+0.07f;
 				DrawVoxelVehicle(actual,engine,false,{},heading,PALETTE_RECOLOUR_START,1,climate,grade);

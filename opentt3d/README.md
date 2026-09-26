@@ -75,8 +75,20 @@ including up/down, without ending follow. The first-person geometry, terrain,
 picking and labels have no fixed draw-distance limit. Scene collection is bounded
 by the real map and view frustum; the infinite-water exterior reaches the horizon.
 
+Terrain steps render at twice their original height. Object sizes retain their
+authored scale, with foundations, bridge ramps and dock supports meeting the taller
+landscape. The elevation change is presentation-only. Sloped roof surfaces are
+permitted in the artwork pipeline.
+
+Voxel models now use four **automatically generated** distance LODs. Nearby models
+keep their full authored mesh; coarse versions use deterministic occupied-cell and
+palette aggregation, preserve outer bounds, and share the scene-pinned mesh caches.
+Set `OPENTT3D_AUTO_LOD=0` for a full-detail comparison. Trees use the previous
+projected-material3D geometry by default after matched voxel-tree LOD tests remained
+too slow. `OPENTT3D_TREE_STYLE=voxel` selects the retained voxel trees for diagnostics.
+
 The current artwork is a development subset: **1,247 voxel volumes**, covering
-110 house IDs,62 tree sprite families and all256 vanilla vehicle definitions,
+110 house IDs,62 diagnostic tree sprite families and all256 vanilla vehicle definitions,
 plus54/175 industry body definitions and21/74 airport definitions. Climate/state
 coverage remains incomplete: Arctic farms/forests and several non-temperate industry
 grounds retain supplied source artwork pending independent volumes. No model has
@@ -97,9 +109,10 @@ python3 tools/assets/inventory.py --require-complete
 The inventory command intentionally fails until complete geometry, states and
 visual review are available. `renderer3d references` exports resolved house/tree
 artwork; `renderer3d gallery <house-id-or-tree-sprite>` exports four model views.
-The authoritative voxel artwork is `assets/3d/voxels.json`. The older house/tree/
-industry profile packs and `models.json`/glTF prototype remain reference/fallback
-paths; their presence does not establish voxel coverage.
+The authoritative voxel artwork is `assets/3d/voxels.json`. The tree profile pack
+provides the active projected-material3D trees; the older house/industry profiles
+and `models.json`/glTF prototype remain reference/fallback paths. Profile-pack
+presence does not establish voxel coverage.
 
 The full renderer check includes every voxel vehicle climate/cargo/livery/heading
 comparison and can exceed two hours on software Vulkan. CI runs the scene checks

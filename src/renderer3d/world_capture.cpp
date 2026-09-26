@@ -168,9 +168,22 @@ void BeginCaptureFrame(float seconds)
 	}
 }
 
+float RenderVehicleZ(const Vehicle &vehicle)
+{
+	/* Aircraft preserve their altitude above the local landscape, including
+	 * elevated heliports/oil-rig decks. Only the terrain datum is exaggerated. */
+	if (vehicle.type == VEH_AIRCRAFT || vehicle.type == VEH_EFFECT) {
+		int x = std::clamp(vehicle.x_pos,0,static_cast<int>(Map::MaxX()*TILE_SIZE-1));
+		int y = std::clamp(vehicle.y_pos,0,static_cast<int>(Map::MaxY()*TILE_SIZE-1));
+		float ground = GetSlopePixelZ(x,y);
+		return vehicle.z_pos+TerrainZ(ground)-ground;
+	}
+	return TerrainZ(vehicle.z_pos);
+}
+
 static VehiclePose SmoothVehiclePose(const Vehicle &vehicle)
 {
-	Vec3 target{static_cast<float>(vehicle.x_pos), static_cast<float>(vehicle.y_pos), static_cast<float>(vehicle.z_pos)};
+	Vec3 target{static_cast<float>(vehicle.x_pos), static_cast<float>(vehicle.y_pos), RenderVehicleZ(vehicle)};
 	float heading = to_underlying(vehicle.direction) * 0.5f;
 	auto [found, inserted] = vehicle_poses.try_emplace(vehicle.index.base(), VehiclePose{target, heading, capture_frame, vehicle.engine_type});
 	auto &pose = found->second;
@@ -214,6 +227,7 @@ void BeginCapture(const Camera &camera, bool diagnostic, std::optional<bool> tun
 	capture->scene.vertices.swap(recycled_vertices);
 	capture->scene.instances.swap(recycled_instances);
 	capture->scene.visibility = camera.Frustum(16);
+	capture->scene.detail = Scene::DetailView{camera.focus,capture->depth_direction,capture->distance,camera.FocalPixels(),camera.Near()};
 	static const bool experimental_tunnel_scenery_cull = [] { const char *value = std::getenv("OPENTT3D_TUNNEL_SCENERY_CULL"); return value != nullptr && std::string_view(value) == "1"; }();
 	if (tunnel_scenery_cull.value_or(experimental_tunnel_scenery_cull)) capture->scene.scenery_regions = CaptureTunnelSceneryRegions(camera);
 	Textures().BeginScene();
@@ -399,8 +413,8 @@ static bool CaptureTunnelPair(TileIndex entrance)
 	if (other < entrance) std::swap(entrance,other);
 	unsigned direction = GetTunnelBridgeDirection(entrance);
 	/* North-corner heights differ at opposite mouths; tunnel floors do not. */
-	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,static_cast<float>(GetTilePixelZ(entrance))};
-	Vec3 finish{TileX(other)*16.0f,TileY(other)*16.0f,static_cast<float>(GetTilePixelZ(other))};
+	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,TerrainZ(GetTilePixelZ(entrance))};
+	Vec3 finish{TileX(other)*16.0f,TileY(other)*16.0f,TerrainZ(GetTilePixelZ(other))};
 	assert(origin.z == finish.z);
 	unsigned length = static_cast<unsigned>((std::abs(finish.x-origin.x)+std::abs(finish.y-origin.y))/16);
 	Vec3 step = (finish-origin)*(1.0f/length);
@@ -431,11 +445,11 @@ TileSurface MakeTileSurface(Slope slope)
 {
 	TileSurface surface;
 	const Corner names[] = {CORNER_N,CORNER_W,CORNER_S,CORNER_E};
-	for (unsigned i = 0; i < 4; ++i) surface.corners[i] = GetSlopePixelZInCorner(RemoveHalftileSlope(slope),names[i]);
-	surface.centre = GetPartialPixelZ(8,8,RemoveHalftileSlope(slope));
+	for (unsigned i = 0; i < 4; ++i) surface.corners[i] = TerrainZ(GetSlopePixelZInCorner(RemoveHalftileSlope(slope),names[i]));
+	surface.centre = TerrainZ(GetPartialPixelZ(8,8,RemoveHalftileSlope(slope)));
 	if (IsHalftileSlope(slope)) {
 		surface.raised_half = std::find(std::begin(names),std::end(names),GetHalftileSlopeCorner(slope))-std::begin(names);
-		surface.upper_height = GetSlopeMaxPixelZ(slope);
+		surface.upper_height = TerrainZ(GetSlopeMaxPixelZ(slope));
 	}
 	return surface;
 }
@@ -445,7 +459,7 @@ void CaptureRailTracks(const TileInfo &tile, RailType type, TrackBits tracks, Tr
 	if (!capture || tracks == TRACK_BIT_NONE) return;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawRailTracks(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},tile.tileh,type,tracks,reserved);
+	DrawRailTracks(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},tile.tileh,type,tracks,reserved);
 	if (Profile::IsBenchmarking()) for (size_t i = first; i < capture->scene.instances.size(); ++i) capture->rail_vertices += capture->scene.instances[i].mesh->size();
 	if (capture->scene.instances.size() != first) ++capture->rail_sections;
 }
@@ -472,7 +486,7 @@ bool CaptureRailStation(const TileInfo &tile, unsigned layout, const DrawTileSpr
 	if (IsInvisibilitySet(TO_BUILDINGS)) return true;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawRailStation(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},type,layout,palette,IsTransparencySet(TO_BUILDINGS));
+	DrawRailStation(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},type,layout,palette,IsTransparencySet(TO_BUILDINGS));
 	if (capture->scene.instances.size() != first) ++capture->station_sections;
 	return true;
 }
@@ -558,7 +572,7 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 	SpriteID ground = source.ground.sprite;
 	{
 		ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
-		if (DrawVoxelAirportGround(capture->scene,graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},GroundSpritePaletteTransform(ground,source.ground.pal,palette))) {
+		if (DrawVoxelAirportGround(capture->scene,graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},GroundSpritePaletteTransform(ground,source.ground.pal,palette))) {
 			static std::set<unsigned> reported;
 			if (!capture->diagnostic && reported.insert(graphics).second) Debug(driver,1,"OpenTT3D: live independent voxel airport ground {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
 		} else {
@@ -568,7 +582,7 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 	if (IsInvisibilitySet(TO_BUILDINGS)) return true;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawVoxelAsset(capture->scene,"airport_tiles",graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},palette,IsTransparencySet(TO_BUILDINGS) ? 0.38f : 1);
+	DrawVoxelAsset(capture->scene,"airport_tiles",graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},palette,IsTransparencySet(TO_BUILDINGS) ? 0.38f : 1);
 	if (capture->scene.instances.size() != first) {
 		++capture->voxel_airport_sections;
 		static std::set<unsigned> reported;
@@ -618,7 +632,7 @@ static const std::vector<Vertex> *ClippedGroundMesh(const std::vector<Vertex> *m
 		using Key = std::tuple<const std::vector<Vertex> *,TunnelKind,unsigned,int,float,float,float>;
 		static std::map<Key,std::vector<Vertex>> clipped;
 		const auto &bore = cut->second;
-		int floor = bore.floor-tile.z;
+		int floor = bore.floor-static_cast<int>(TerrainZ(tile.z));
 		if (std::any_of(mesh->begin(),mesh->end(),[&](const Vertex &v) { return v.position.z+tile_offset.z < floor+7.75f; })) {
 			auto [found,inserted] = clipped.try_emplace(Key{mesh,bore.kind,bore.direction,floor,tile_offset.x,tile_offset.y,tile_offset.z});
 			if (inserted) found->second = CutTunnelTerrain(*mesh,bore.kind,bore.direction,static_cast<float>(floor),tile_offset);
@@ -659,7 +673,7 @@ bool CaptureNaturalGround(const TileInfo &tile, bool rough, unsigned variant, Sp
 		!IsBaseGraphicsSprite(SPR_FLAT_GRASS_TILE) || !IsBaseGraphicsSprite(SPR_FLAT_ROCKY_LAND_2)) return false;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawClearSurface(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},tile.tileh,rough,variant,GroundFineEdges(tile.tile));
+	DrawClearSurface(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},tile.tileh,rough,variant,GroundFineEdges(tile.tile));
 	for (size_t index = first; index < capture->scene.instances.size(); ++index) {
 		auto &instance = capture->scene.instances[index];
 		instance.mesh = ClippedGroundMesh(instance.mesh,tile);
@@ -675,7 +689,7 @@ bool CaptureFarmland(const TileInfo &tile, unsigned stage, SpriteID image)
 	CaptureGround(SPR_FLAT_BARE_LAND+SlopeToSpriteOffset(tile.tileh),PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0);
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawGroundDetails(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},tile.tileh,false,stage);
+	DrawGroundDetails(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},tile.tileh,false,stage);
 	if (capture->scene.instances.size() != first) ++capture->ground_detail_sections;
 	return true;
 }
@@ -688,7 +702,7 @@ bool CaptureRocks(const TileInfo &tile, unsigned variant, SpriteID image, unsign
 	if (snow == 0) CaptureGround(SPR_FLAT_GRASS_TILE+SlopeToSpriteOffset(tile.tileh),PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0);
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawGroundDetails(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},tile.tileh,true,variant,snow);
+	DrawGroundDetails(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},tile.tileh,true,variant,snow);
 	if (capture->scene.instances.size() != first) ++capture->ground_detail_sections;
 	return true;
 }
@@ -698,9 +712,9 @@ bool CaptureRailSignal(TileIndex tile, SpriteID image, int x, int y, int z, unsi
 	if (!capture || type >= 6 || variant >= 2 || state >= 2 || direction >= 8 || !IsBaseGraphicsSprite(image)) return false;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.base()};
 	float height = 16;
-	if (IsBridgeAbove(tile)) height = std::max(2,static_cast<int>(GetBridgePixelHeight(GetNorthernBridgeEnd(tile)))-z-3);
+	if (IsBridgeAbove(tile)) height = std::max(2.0f,TerrainZ(GetBridgePixelHeight(GetNorthernBridgeEnd(tile))-z)-3);
 	size_t first = capture->scene.instances.size();
-	DrawRailSignal(capture->scene,capture->camera,{static_cast<float>(x),static_cast<float>(y),static_cast<float>(z)},type,variant,state,direction,height);
+	DrawRailSignal(capture->scene,capture->camera,{static_cast<float>(x),static_cast<float>(y),TerrainZ(z)},type,variant,state,direction,height);
 	if (capture->scene.instances.size() != first) ++capture->signal_parts;
 	return true;
 }
@@ -723,7 +737,7 @@ bool CaptureDepot(const TileInfo &tile, unsigned kind, unsigned direction, const
 	else CaptureGround(ground,PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0);
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawDepot(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},kind,direction,palette,
+	DrawDepot(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},kind,direction,palette,
 		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS),reserved,original_family,floor_state);
 	if (capture->scene.instances.size() != first) {
 		++capture->depot_sections;
@@ -747,7 +761,7 @@ bool CaptureShipDepot(const TileInfo &tile, unsigned axis, unsigned part, Palett
 	if (!capture || !HasVoxelShipDepot(axis,part)) return false;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	if (!DrawVoxelShipDepot(capture->scene,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},axis,part,palette,
+	if (!DrawVoxelShipDepot(capture->scene,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},axis,part,palette,
 		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS))) return false;
 	if (capture->scene.instances.size() != first) {
 		++capture->depot_sections;
@@ -808,7 +822,7 @@ bool CaptureVoxelDock(const TileInfo &tile, unsigned graphics, const DrawTileSpr
 	for (const auto &piece : source.GetSequence()) if (!IsBaseGraphicsSprite(piece.image.sprite&SPRITE_MASK)) return false;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	if (!DrawVoxelDock(capture->scene,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},graphics,palette,
+	if (!DrawVoxelDock(capture->scene,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},graphics,palette,
 		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS))) return false;
 	if (capture->scene.instances.size() != first) {
 		++capture->voxel_dock_sections;
@@ -837,7 +851,7 @@ bool CaptureCrossing(const TileInfo &tile, SpriteID ground, PaletteID palette)
 	CaptureGround(clean,PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0);
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawCrossing(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},to_underlying(type),
+	DrawCrossing(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},to_underlying(type),
 		GetCrossingRailAxis(tile.tile),IsCrossingBarred(tile.tile),tram != INVALID_ROADTYPE,
 		_game_mode != GM_MENU && _settings_client.gui.show_track_reservation && HasCrossingReservation(tile.tile));
 	if (capture->scene.instances.size() != first) {
@@ -859,10 +873,10 @@ bool CaptureRailWire(const TileInfo &tile, SpriteID image, Track track, const st
 	unsigned a = first_end[track], b = last_end[track];
 	unsigned supports = ((support_mask>>a)&1U) | (((support_mask>>b)&1U)<<1);
 	size_t first = capture->scene.instances.size();
-	DrawCatenaryWire(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(heights[a])},track,heights[b]-heights[a],supports,half,IsTransparencySet(TO_CATENARY));
+	DrawCatenaryWire(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(heights[a])},track,TerrainZ(heights[b]-heights[a]),supports,half,IsTransparencySet(TO_CATENARY));
 	Vec3 begin = RailPath(track,half == 2 ? 0.5f : 0).point, end = RailPath(track,half == 1 ? 0.5f : 1).point;
-	begin.z = std::lerp(static_cast<float>(heights[a]),static_cast<float>(heights[b]),half == 2 ? 0.5f : 0)+10;
-	end.z = std::lerp(static_cast<float>(heights[a]),static_cast<float>(heights[b]),half == 1 ? 0.5f : 1)+10;
+	begin.z = TerrainZ(std::lerp(static_cast<float>(heights[a]),static_cast<float>(heights[b]),half == 2 ? 0.5f : 0))+10;
+	end.z = TerrainZ(std::lerp(static_cast<float>(heights[a]),static_cast<float>(heights[b]),half == 1 ? 0.5f : 1))+10;
 	Vec3 origin{static_cast<float>(tile.x),static_cast<float>(tile.y),0};
 	capture->contact_wires[tile.tile].push_back({origin+begin,origin+end});
 	if (capture->scene.instances.size() != first) ++capture->catenary_parts;
@@ -876,8 +890,8 @@ bool CaptureRailPylon(const TileInfo &tile, SpriteID image, int x, int y, int el
 	int tx = static_cast<int>(tile.x), ty = static_cast<int>(tile.y);
 	int floor = on_bridge ? elevation : GetSlopePixelZ(std::clamp(x,tx,tx+15),std::clamp(y,ty,ty+15),true);
 	size_t first = capture->scene.instances.size();
-	DrawCatenaryPylon(capture->scene,{static_cast<float>(x),static_cast<float>(y),static_cast<float>(floor)},
-		{static_cast<float>(contact_x),static_cast<float>(contact_y),elevation+10.0f},IsTransparencySet(TO_CATENARY));
+	DrawCatenaryPylon(capture->scene,{static_cast<float>(x),static_cast<float>(y),TerrainZ(floor)},
+		{static_cast<float>(contact_x),static_cast<float>(contact_y),TerrainZ(elevation)+10.0f},IsTransparencySet(TO_CATENARY));
 	if (capture->scene.instances.size() != first) ++capture->catenary_parts;
 	return true;
 }
@@ -897,8 +911,8 @@ bool CaptureRoadStop(const TileInfo &tile, unsigned layout, const DrawTileSprite
 	CaptureGround(paving,PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0);
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	float height = IsBridgeAbove(tile.tile) ? std::max(1,static_cast<int>(GetBridgePixelHeight(GetNorthernBridgeEnd(tile.tile)))-tile.z-1) : 12;
-	DrawRoadStop(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},truck,layout,tram != INVALID_ROADTYPE,palette,
+	float height = IsBridgeAbove(tile.tile) ? std::max(1.0f,TerrainZ(GetBridgePixelHeight(GetNorthernBridgeEnd(tile.tile))-tile.z)-1) : 12;
+	DrawRoadStop(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},truck,layout,tram != INVALID_ROADTYPE,palette,
 		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS),height);
 	if (capture->scene.instances.size() != first) ++capture->road_stop_sections;
 	return true;
@@ -919,8 +933,8 @@ bool CaptureFoundation(const TileInfo &tile, Foundation foundation)
 	}
 	if (!supported) return false;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
-	Vec3 origin{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)};
-	if (capture->scene.visibility && !capture->scene.visibility->Intersects(origin,origin+Vec3{16,16,24})) return true;
+	Vec3 origin{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)};
+	if (capture->scene.visibility && !capture->scene.visibility->Intersects(origin,origin+Vec3{16,16,TerrainZ(24)})) return true;
 	float scale = PixelScaleAt(origin+Vec3{8,8,4});
 	unsigned lod = scale >= 1.25f ? 0 : scale >= 0.35f ? 1 : 2;
 	using Key = std::tuple<Slope,Foundation,unsigned>;
@@ -928,7 +942,7 @@ bool CaptureFoundation(const TileInfo &tile, Foundation foundation)
 	auto [mesh,inserted] = meshes.try_emplace(Key{tile.tileh,foundation,lod});
 	if (inserted) {
 		Slope upper = tile.tileh;
-		float rise = ApplyPixelFoundationToSlope(foundation,upper);
+		float rise = TerrainZ(ApplyPixelFoundationToSlope(foundation,upper));
 		mesh->second = MakeFoundationMesh(MakeTileSurface(tile.tileh),MakeTileSurface(upper),rise,lod);
 	}
 	if (mesh->second.empty()) return true;
@@ -972,8 +986,8 @@ bool FocusReferenceFoundation(std::string_view kind)
 static void CaptureFenceMesh(const TileInfo &tile, unsigned style, unsigned layout, PaletteID palette)
 {
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
-	Vec3 origin{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)};
-	if (capture->scene.visibility && !capture->scene.visibility->Intersects(origin-Vec3{1,1,1},origin+Vec3{17,17,24})) return;
+	Vec3 origin{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)};
+	if (capture->scene.visibility && !capture->scene.visibility->Intersects(origin-Vec3{1,1,1},origin+Vec3{17,17,TerrainZ(24)})) return;
 	float scale = PixelScaleAt(origin+Vec3{8,8,3});
 	unsigned lod = scale >= 1.25f ? 0 : scale >= 0.35f ? 1 : 2;
 	/* Sloped RFO slots select different source sprites, but their 3D placement
@@ -1088,7 +1102,7 @@ static const std::vector<Vertex> &GroundGeometry(Slope tileh, bool flat_material
 	Slope slope = RemoveHalftileSlope(tileh);
 	Vec3 corner[] = {{0, 0, 0}, {16, 0, 0}, {16, 16, 0}, {0, 16, 0}};
 	const Corner names[] = {CORNER_N, CORNER_W, CORNER_S, CORNER_E};
-	for (unsigned i = 0; i < 4; ++i) corner[i].z += GetSlopePixelZInCorner(slope, names[i]);
+	for (unsigned i = 0; i < 4; ++i) corner[i].z += TerrainZ(GetSlopePixelZInCorner(slope, names[i]));
 	if (tileh == SLOPE_FLAT) {
 		if (fine_edges == 0) mesh.Quad(corner[0],corner[1],corner[2],corner[3],{});
 		else GroundEdgeFan(mesh,corner,{8,8,0},{},fine_edges);
@@ -1098,7 +1112,7 @@ static const std::vector<Vertex> &GroundGeometry(Slope tileh, bool flat_material
 		unsigned left = (top + 1) % 4, right = (top + 3) % 4;
 		float cx = (corner[top].x + corner[left].x + corner[right].x) / 3;
 		float cy = (corner[top].y + corner[left].y + corner[right].y) / 3;
-		float height = GetPartialPixelZ(static_cast<int>(cx), static_cast<int>(cy), tileh);
+		float height = TerrainZ(GetPartialPixelZ(static_cast<int>(cx), static_cast<int>(cy), tileh));
 		Vec3 a = corner[top], b = corner[left], c = corner[right];
 		a.z = b.z = c.z = height;
 		const Vec3 boundary[] = {a,b,c};
@@ -1106,11 +1120,11 @@ static const std::vector<Vertex> &GroundGeometry(Slope tileh, bool flat_material
 		/* The lower half was already submitted before DrawFoundation. Drawing
 		 * it again here would paint the upper material over water/track below. */
 	} else {
-		Vec3 center{8, 8, static_cast<float>(GetPartialPixelZ(8, 8, tileh))};
+		Vec3 center{8, 8, TerrainZ(GetPartialPixelZ(8, 8, tileh))};
 		GroundEdgeFan(mesh,corner,center,{},fine_edges);
 	}
 	vertices = std::move(mesh.vertices);
-	if (flat_material) for (auto &vertex : vertices) vertex.texture = {vertex.position.x,vertex.position.y,0};
+	for (auto &vertex : vertices) vertex.texture = {vertex.position.x,vertex.position.y,flat_material ? 0 : vertex.position.z/TERRAIN_HEIGHT_SCALE};
 	return vertices;
 }
 
@@ -1138,7 +1152,7 @@ static std::optional<SpriteID> FlatTerrainMaterial(SpriteID image, Slope slope)
 void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const TileInfo &tile, const SubSprite *, int offset_x, int offset_y, unsigned fine_edges)
 {
 	if (!capture || tile.tile == INVALID_TILE || !IsValidTile(tile.tile)) return;
-	Vec3 origin{static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)};
+	Vec3 origin{static_cast<float>(x), static_cast<float>(y), TerrainZ(z)};
 	if (tile.tileh == SLOPE_FLAT && offset_x == 0 && offset_y == 0) {
 		size_t first = capture->scene.instances.size();
 		bool industry = IsTileType(tile.tile,MP_INDUSTRY);
@@ -1174,11 +1188,12 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 	/* The first layer must meet adjacent terrain/voxel floors at the original
 	 * map height. Only subsequent overlays need a small depth-order offset. */
 	float layer = (capture->tile_layers++) * 0.015f;
-	if (!capture->scene.visibility->Intersects({tile.x - 1.0f, tile.y - 1.0f, tile.z - 1.0f}, {tile.x + 17.0f, tile.y + 17.0f, tile.z + 33.0f})) return;
+	if (!capture->scene.visibility->Intersects({tile.x - 1.0f, tile.y - 1.0f, TerrainZ(tile.z) - 1.0f}, {tile.x + 17.0f, tile.y + 17.0f, TerrainZ(tile.z + 32) + 1})) return;
 	SpriteTexture texture = Textures().Get(flat_material.value_or(image), palette, TextureZoom(origin), opaque);
-	Vec3 root{static_cast<float>(tile.x), static_cast<float>(tile.y), static_cast<float>(tile.z)};
+	Vec3 root{static_cast<float>(tile.x), static_cast<float>(tile.y), TerrainZ(tile.z)};
 	Vec3 material_root = root;
 	if (flat_material) material_root.z = origin.z;
+	else material_root.z = origin.z+(root.z-origin.z)/TERRAIN_HEIGHT_SCALE;
 	Vec3 uv = SpriteUV(texture, material_root, origin, offset_x, offset_y);
 	InstanceData instance;
 	instance.origin_opacity = {root.x, root.y, root.z + layer, 1};
@@ -1186,7 +1201,7 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 	instance.region = texture.Region();
 	instance.identity[1] = static_cast<float>(static_cast<uint32_t>(texture.opaque_surface ? SurfaceMode::Opaque : SurfaceMode::Cutout) | (flat_material ? SURFACE_SHADED : 0));
 	instance.identity[2] = 1; // Terrain UVs are never mirrored onto rear faces.
-	instance.identity[3] = flat_material ? 2 : 0;
+	instance.identity[3] = 2; // Preserve source UV heights while doubling terrain geometry.
 	instance.SetObjectId(TILE_PICK_ID | tile.tile.base());
 	if (fine_edges == UINT_MAX) fine_edges = GroundFineEdges(tile.tile);
 	if (fine_edges >= 16) throw std::runtime_error("Invalid ground boundary mask");
@@ -1387,7 +1402,7 @@ static float FitTrainToCapturedRail(unsigned engine, bool loaded, Vec3 &position
 		auto a = CapturedRailSupport(rear), b = CapturedRailSupport(front);
 		if (!a || !b) return 0;
 		grade = (b->smooth-a->smooth)/((support->front-support->rear)*cosine);
-		if (std::abs(grade) > 0.501f) return 0;
+		if (std::abs(grade) > TerrainZ(0.5f)+0.001f) return 0;
 		height = std::max(a->stepped-support->rear*cosine*grade,b->stepped-support->front*cosine*grade);
 		/* At a grade transition a rigid underframe can span a crest. Keep its
 		 * intermediate wheelsets above the same stepped running surface. */
@@ -1425,10 +1440,10 @@ static void CheckTrainSupport(const Vehicle &vehicle, const MeshInstance &instan
 		}
 	}
 	if (samples == 0) return;
-	if (minimum < -0.126f || ((std::abs(grade) < 0.0001f || std::abs(grade) >= 0.499f) && maximum > 0.251f)) {
+	if (minimum < -0.126f || ((std::abs(grade) < 0.0001f || std::abs(grade) >= TerrainZ(0.5f)-0.001f) && maximum > 0.251f)) {
 		throw std::runtime_error(fmt::format("Train support engine {} vehicle {} at {},{},{} grade {} has wheel gaps {}..{}",checked_support_engine,checked_support_vehicle,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,grade,minimum,maximum));
 	}
-	unsigned state = grade > 0.49f ? 4U : grade < -0.49f ? 8U : 0U;
+	unsigned state = grade > TerrainZ(0.5f)-0.01f ? 4U : grade < -TerrainZ(0.5f)+0.01f ? 8U : 0U;
 	if (std::abs(grade) < 0.0001f && IsValidTile(vehicle.tile)) {
 		state |= IsRailStationTile(vehicle.tile) ? 1U : IsTileType(vehicle.tile,MP_RAILWAY) ? 2U :
 			IsBridgeTile(vehicle.tile) ? 16U : IsTunnelTile(vehicle.tile) ? 32U : 0U;
@@ -1532,8 +1547,21 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	if (capture->vehicle != nullptr && !capture->vehicle->vehstatus.Any({VehState::Unclickable,VehState::Shadow})) id = capture->vehicle->index.base()+1;
 	ObjectTag tag{capture->scene.vertices.size(),id};
 	capture->parent_id = tag.id;
-	Vec3 origin{static_cast<float>(x + bounds.origin.x + bounds.offset.x),
+	Vec3 source_origin{static_cast<float>(x + bounds.origin.x + bounds.offset.x),
 		static_cast<float>(y + bounds.origin.y + bounds.offset.y), static_cast<float>(z + bounds.origin.z + bounds.offset.z)};
+	/* Upstream sprite callbacks can place a child above the tile/vehicle datum.
+	 * Raise the supporting datum, preserving smoke, roofs and rotor offsets. */
+	Vec3 origin = source_origin;
+	if (capture->vehicle != nullptr) origin.z += RenderVehicleZ(*capture->vehicle)-capture->vehicle->z_pos;
+	else if (capture->tile != nullptr) origin.z += TerrainZ(capture->tile->z)-capture->tile->z;
+	else origin.z += TerrainZ(z)-z;
+	if (capture->tile != nullptr && IsTileType(capture->tile->tile,MP_TREES) &&
+		(image&SPRITE_MASK) >= 1576 && (image&SPRITE_MASK) <= 2009 && IsBaseGraphicsSprite(image)) {
+		/* The original combined sprite uses the tile's middle height for every
+		 * tree. A real 3D trunk must instead meet the slope at its own XY root. */
+		const auto &tile = *capture->tile;
+		origin.z = TerrainZ(tile.z)+MakeTileSurface(tile.tileh).Height(origin.x-tile.x,origin.y-tile.y);
+	}
 	capture->parent_origin = origin; capture->parent_bounds = bounds; capture->have_parent = true;
 	capture->parent_sprite = image&SPRITE_MASK;
 	capture->parent_mesh_begin = capture->parent_mesh_end = capture->scene.vertices.size();
@@ -1545,7 +1573,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	if (capture->tile != nullptr && IsBuoyTile(capture->tile->tile) && (image&SPRITE_MASK) == GetCanalSprite(CF_BUOY,capture->tile->tile) && sub == nullptr && IsBaseGraphicsSprite(image) && HasVoxelAsset("infrastructure",SPR_IMG_BUOY,_settings_game.game_creation.landscape == LandscapeType::Toyland ? 1 : 0)) {
 		const TileInfo &tile = *capture->tile;
 		unsigned state = _settings_game.game_creation.landscape == LandscapeType::Toyland ? 1 : 0;
-		DrawVoxelAsset(capture->scene,"infrastructure",SPR_IMG_BUOY,state,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},palette,transparent ? 0.38f : 1);
+		DrawVoxelAsset(capture->scene,"infrastructure",SPR_IMG_BUOY,state,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},palette,transparent ? 0.38f : 1);
 		capture->parent_instance_end = capture->scene.instances.size();
 		capture->parent_culled = capture->parent_instance_begin == capture->parent_instance_end;
 		if (capture->parent_culled) return;
@@ -1568,11 +1596,12 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 		}
 		return;
 	}
-	if (const auto *bridge = CurrentBridgeCapture(); bridge != nullptr && DrawCapturedBridge(capture->scene,*bridge,image,palette,origin,TextureZoom(origin),transparent,sub)) {
+	if (const auto *bridge = CurrentBridgeCapture(); bridge != nullptr && DrawCapturedBridge(capture->scene,*bridge,image,palette,source_origin,TextureZoom(origin),transparent,sub)) {
 		if ((bridge->shape.role == BridgeRole::Ramp || bridge->shape.role == BridgeRole::Deck) && !bridge->custom && bridge->rail != INVALID_RAILTYPE && SupportedRailType(bridge->rail)) {
 			Vec3 floor = bridge->origin;
+			floor.z = TerrainZ(floor.z);
 			Slope slope = SLOPE_FLAT;
-			if (bridge->shape.sloped) { floor.z -= TILE_HEIGHT; slope = InclinedSlope(static_cast<DiagDirection>(bridge->shape.ramp_direction)); }
+			if (bridge->shape.sloped) { floor.z -= TerrainZ(TILE_HEIGHT); slope = InclinedSlope(static_cast<DiagDirection>(bridge->shape.ramp_direction)); }
 			TrackBits tracks = bridge->shape.along_y ? TRACK_BIT_Y : TRACK_BIT_X;
 			size_t first = capture->scene.instances.size();
 			DrawRailTracks(capture->scene,capture->camera,floor,slope,bridge->rail,tracks,bridge->reserved ? tracks : TRACK_BIT_NONE);
@@ -1713,8 +1742,9 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 						const auto *airport = Station::GetIfValid(Aircraft::From(&vehicle)->targetairport);
 						bool oilrig = airport != nullptr && airport->airport.type == AT_OILRIG;
 						bool on_airport = oilrig || (IsTileType(vehicle.tile,MP_STATION) && IsAirport(vehicle.tile));
-						int ground = GetSlopePixelZ(vehicle.x_pos,vehicle.y_pos)+(airport == nullptr ? 0 : airport->airport.GetFTA()->delta_z);
-						if (on_airport && vehicle.z_pos == ground+1 && std::abs(position.z-ground) < 0.001f) {
+						int source_ground = GetSlopePixelZ(vehicle.x_pos,vehicle.y_pos), deck = airport == nullptr ? 0 : airport->airport.GetFTA()->delta_z;
+						float ground = TerrainZ(source_ground)+deck;
+						if (on_airport && vehicle.z_pos == source_ground+deck+1 && std::abs(position.z-ground) < 0.001f) {
 							float lowest = INFINITY;
 							for (size_t i = capture->parent_instance_begin; i < capture->parent_instance_end; ++i) {
 								const auto &instance = capture->scene.instances[i];
@@ -1762,11 +1792,11 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	}
 	bool tree=(image&SPRITE_MASK)>=1576 && (image&SPRITE_MASK)<=2009 && IsBaseGraphicsSprite(image);
 	unsigned tree_stage = tree ? ((image & SPRITE_MASK) - 1576) % 7 : 0;
-	if (tree && capture->tile != nullptr && IsTileType(capture->tile->tile,MP_TREES) && HasVoxelTree(image)) {
+	if (tree && UseVoxelTrees() && capture->tile != nullptr && IsTileType(capture->tile->tile,MP_TREES) && HasVoxelTree(image)) {
 		unsigned base = (image&SPRITE_MASK)-tree_stage;
 		DrawVoxelAsset(capture->scene,"trees",base,tree_stage,origin,palette&PALETTE_MASK,transparent ? 0.38f : 1);
 		const auto &tile = *capture->tile;
-		Vec3 tile_offset = origin-Vec3{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)};
+		Vec3 tile_offset = origin-Vec3{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)};
 		for (size_t i = capture->parent_instance_begin; i < capture->scene.instances.size(); ++i) {
 			/* Preserve the rooted surface silhouette while keeping underground
 			 * bark out of the original tunnel's clear interior. */
@@ -1798,7 +1828,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	SpriteTexture texture = Textures().Get(image, palette, TextureZoom(pixel_scale), opaque_house || industry || (tree && !fading_tree && !TreeHasComponentMaterials(image)));
 	capture->parent_left = texture.x_offset; capture->parent_top = texture.y_offset;
 	if (industry) {
-		Vec3 root{static_cast<float>(capture->tile->x), static_cast<float>(capture->tile->y), static_cast<float>(capture->tile->z)};
+		Vec3 root{static_cast<float>(capture->tile->x), static_cast<float>(capture->tile->y), TerrainZ(capture->tile->z)};
 		if (DrawAuthoredIndustry(capture->scene, GetIndustryGfx(capture->tile->tile), image, texture, root, origin, transparent ? 0.38f : 1, pixel_scale)) {
 			capture->parent_culled = capture->scene.instances.size() == capture->parent_instance_begin;
 			if (auto state = VoxelIndustryState(GetIndustryGfx(capture->tile->tile),image); !capture->parent_culled && !capture->diagnostic && state) {
@@ -1851,7 +1881,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 		}
 	}
 	if (house_body) {
-		Vec3 root{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),static_cast<float>(capture->tile->z)};
+		Vec3 root{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
 		unsigned variant = TileHash2Bit(capture->tile->x,capture->tile->y);
 		if (DrawAuthoredHouse(capture->scene,GetHouseType(capture->tile->tile),GetHouseBuildingStage(capture->tile->tile),texture,root,origin,transparent ? 0.38f : 1.0f,pixel_scale,variant)) {
 			capture->parent_mesh_end = capture->scene.vertices.size();
@@ -1872,7 +1902,12 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	if (tree && DrawAuthoredTree(capture->scene,image,texture,origin,transparent ? 0.38f : 1.0f,pixel_scale)) {
 		capture->parent_mesh_end=capture->scene.vertices.size();
 		capture->parent_instance_end = capture->scene.instances.size();
-		capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
+		capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin && capture->parent_mesh_end == capture->parent_mesh_begin;
+		if (!capture->parent_culled && !capture->diagnostic && capture->tile != nullptr && !UseVoxelTrees()) {
+			static std::set<std::pair<unsigned,unsigned>> reported;
+			unsigned base = (image&SPRITE_MASK)-tree_stage;
+			if (reported.emplace(base,tree_stage).second) Debug(driver,1,"OpenTT3D: live projected tree {} stage {} captured at {},{}",base,tree_stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
+		}
 		return;
 	}
 	ReferenceSprite(texture, origin, transparent ? 0.38f : 1.0f);
@@ -1912,7 +1947,7 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		TileIndex tile = capture->tile->tile;
 		unsigned animation = GetAnimationFrame(tile);
 		if (!scale || !relative || x != offset.x || y != offset.y || frame != animation) throw std::runtime_error("Power-station spark lost its original child frame/offset");
-		Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),static_cast<float>(capture->tile->z)};
+		Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
 		size_t before = capture->scene.instances.size();
 		if (!DrawVoxelIndustrySpark(capture->scene,image,origin,palette,transparent ? 0.38f : 1)) throw std::runtime_error("Missing bound power-station spark");
 		if (animation != GetAnimationFrame(tile)) throw std::runtime_error("Spark rendering changed the original animation state");
@@ -1939,7 +1974,7 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		if ((house == 4 || house == 5) && VoxelHouseState(house,GetHouseBuildingStage(tile),variant)) {
 			unsigned position = GetLiftPosition(tile);
 			bool destination = LiftHasDestination(tile);
-			Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),static_cast<float>(capture->tile->z)};
+			Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
 			size_t before = capture->scene.instances.size();
 			if (DrawVoxelHouseLift(capture->scene,origin,position,palette,transparent ? 0.38f : 1)) {
 				if (position != GetLiftPosition(tile) || destination != LiftHasDestination(tile)) throw std::runtime_error("Lift rendering changed gameplay state");
@@ -2005,7 +2040,7 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 std::array<int, 4> CaptureTileBounds()
 {
 	assert(capture.has_value());
-	float maximum_z = _settings_game.construction.map_height_limit * TILE_HEIGHT + 160.0f;
+	float maximum_z = TerrainZ(_settings_game.construction.map_height_limit * TILE_HEIGHT) + 160.0f;
 	constexpr float overhang = 128;
 	auto bounds = capture->camera.Frustum(64).IntersectionBounds({-overhang, -overhang, -16},
 		{Map::MaxX() * 16.0f + overhang, Map::MaxY() * 16.0f + overhang, maximum_z});
@@ -2022,7 +2057,7 @@ bool CaptureVehicleVisible(const Vehicle *vehicle)
 	if (vehicle->vehstatus.Test(VehState::Hidden) && !IsVehicleInTunnel(*vehicle)) return false;
 	if (capture->camera.hidden_object == vehicle->index.base() + 1) return false;
 	if (vehicle->type == VEH_AIRCRAFT && vehicle->subtype == AIR_ROTOR && capture->camera.hidden_object == vehicle->First()->index.base() + 1) return false;
-	Vec3 position{static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), static_cast<float>(vehicle->z_pos)};
+	Vec3 position{static_cast<float>(vehicle->x_pos), static_cast<float>(vehicle->y_pos), RenderVehicleZ(*vehicle)};
 	return capture->scene.visibility->Intersects(position - Vec3{128, 128, 16}, position + Vec3{128, 128, 128});
 }
 

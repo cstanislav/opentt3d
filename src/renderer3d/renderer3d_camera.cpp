@@ -13,6 +13,7 @@
 #include "sprite_textures.hpp"
 #include "bridge_geometry.hpp"
 #include "terrain_geometry.hpp"
+#include "world_capture.h"
 #include "../blitter/32bpp_base.hpp"
 #include "../landscape.h"
 #include <map>
@@ -163,14 +164,11 @@ TEST_CASE("Foundation walls close every exposed side and the raised half-tile", 
 
 TEST_CASE("Terrain surfaces and fence feet follow all vanilla slopes", "[renderer3d]")
 {
-	const Corner names[] = {CORNER_N,CORNER_W,CORNER_S,CORNER_E};
 	for (unsigned value = 0; value < 32; ++value) {
 		if (value >= 15 && value != 23 && value != 27 && value != 29 && value != 30) continue;
 		Slope slope = static_cast<Slope>(value);
-		TileSurface surface;
-		for (unsigned i = 0; i < 4; ++i) surface.corners[i] = GetSlopePixelZInCorner(slope,names[i]);
-		surface.centre = GetPartialPixelZ(8,8,slope);
-		for (int x = 0; x < 16; x += 2) for (int y = 0; y < 16; y += 2) CHECK(surface.Height(x,y) == Approx(GetPartialPixelZ(x,y,slope)));
+		TileSurface surface = MakeTileSurface(slope);
+		for (int x = 0; x < 16; x += 2) for (int y = 0; y < 16; y += 2) CHECK(surface.Height(x,y) == Approx(2*GetPartialPixelZ(x,y,slope)));
 		for (unsigned style = 0; style < 7; ++style) for (unsigned lod = 0; lod < 3; ++lod) {
 			auto mesh = MakeFenceMesh(style,{0,1,0},{16,1,0},surface,false,0,lod);
 			REQUIRE_FALSE(mesh.empty());

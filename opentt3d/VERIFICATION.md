@@ -1,5 +1,92 @@
 # Implementation verification
 
+## September26 follow-up: doubled terrain, automatic LODs and projected trees
+
+Work resumed after the completed19:00UTC minimum under the user's revised terrain,
+roof and performance requirements. The earlier stopping audits below are historical.
+Sloped roof surfaces are permitted, and projected-material3D trees replace voxel trees
+as the default after the matched LOD-only controls remain too slow.
+
+- Native199/199 tests pass with the rendered terrain level doubled8→16 and original
+  simulation/map coordinates retained. Ground charts retain their original source UV
+  heights. Foundations, fences, rail support, catenary, bridge ramps/pillars, tunnel
+  earth, object datums, camera focus/Cab placement, labels and picking use rendered
+  elevations; object offsets above their supports retain authored dimensions.
+- The12 dock volumes now have sixteen-unit decks and longer piles, preserving slab,
+  railing, bollard and lamp dimensions, open central walkways and original water-level
+  foam. Both independent shore and water tiles join at the raised deck. The structural
+  asset check uses actual sloping-ground contact rather than requiring every bank
+  component to reach sea level. The103-test voxel suite initially exposed that old
+  assertion in four cases; its focused retry and14 remaining schema/compiler tests
+  pass. Aggregate current asset/compiler/schema result:117/117.
+- Both hidden native backend infrastructure matrices pass832 bridge,828 fence,
+  1,056 foundation,144 tunnel,8,240 rail,128 station,512 joined-dock,192 signal and216
+  catenary views. All24 low-angle terrain-continuity controls pass; each backend also
+  preserves20 exact live-tunnel images/picking and1,024,000 world-atlas RGBA/picking
+  pixels. The dock changes pass288 exact merged/cell/CPU/palette/transparent views.
+  Peaks:4,800,500,560bytesGL and4,826,616,440Vulkan, below the6GiB guard.
+- The initial terrain GPU run failed a diagonal-fence oracle still using source
+  heights. Its evidence remains in `pass2-terrain-*-matrix/`; corrected assertions
+  now check doubled heights without relaxing precision or visibility thresholds.
+  The earlier native foundation/bridge-source-height failures also remain retained.
+- Inspected `pass2-terrain-structure-sheet-v2.png`: bridge/ramp spans, underpass,
+  foundation/building proportions, tunnel earth and joined dock orbit/street views.
+  This is structural review, with zero final source-fidelity approvals. The first
+  sheet's two incorrect gallery filenames remain recorded as absent rather than views.
+- Frozen build and evidence: `pass2-terrain-docks-build/`,
+  `pass2-terrain-docks-{hashes,validation,reconciliation}.json`. Explicit-success
+  compaction verifies456 generated images byte-for-byte and recovers755,779,752bytes;
+  failed/original evidence remains. Manifest:`review-compaction-20260926T193500972467Z.json`.
+- Both complete scene/navigation checks now pass:192 terrain zoom/drag anchors,
+  fixed40° interactive FOV,64 vehicle-follow/screenshot checks, Cab/no-zoom behavior,
+  tilted/orbit recovery and unlimited terrain/picking/labels. Each backend also passes
+  62 projected-tree families/5,544 lifecycle/LOD views, exact picking and the existing
+  one-RGBA8-level material comparison bound. Scene peaks:3,507,670,832bytesGL and
+  3,430,862,448Vulkan. Evidence:`pass2-final-{validation,reconciliation}.json`.
+- All six matched doubled-terrain performance/picking controls pass below6GiB;
+  projected trees average48.872/60.004fpsGL/Vulkan with42/0 intervals over20ms.
+  Both moving electric-route controls fail at the first ramp: the pitch fitter still
+  rejects grades above the old0.5 maximum. Their failed logs remain. The correction
+  accepts the actual doubled1.0 grade and extends native/GPU pose checks accordingly;
+  contact tolerances remain unchanged. Follow-up:`pass2-contact-validation.json`.
+- Both corrected9,000-frame electric23 routes now pass all six support situations,
+  all four actual corner tracks and surface/portal/tunnel collectors. Measured ramp
+  grades reach±1.0, with wheel gaps retained within the original−0.126/+0.251 bounds.
+  Both updated216-view catenary checks use±16-unit tile rises. Peaks:
+  2,702,855,336bytesGL and2,623,507,456Vulkan. Their59.558/59.961fps averages include
+  147/1,100 intervals over20ms; these are contact/motion evidence, not sustained60fps
+  approval. Evidence:`pass2-contact-{hashes,validation,reconciliation}.json`.
+- Tree roots now meet each tree's actual sloping ground point; crop/clear-land
+  culling bounds use the doubled slope maximum. Both focused checks pass1,824 raised
+  ground-detail views,24 continuity views,62 projected-tree families/5,544 views and
+  24,528 retained voxel-tree lifecycle/palette/scale views. Electric23…26 pass4,352
+  ordinary vehicle poses,1,536 doubled-grade body poses,10,880 joined collector poses
+  and128 doubled-grade collector poses per backend, with original contact precision,
+  palettes, ownership and exact CPU/unit-cell comparisons. Geometry peaks:
+  3,177,827,760bytesGL and3,052,981,512Vulkan.
+- Both1,800-frame helicopter254 controls preserve the local54-unit oil-rig deck,
+  all120 observed support corners, four original rotor states and restart; maximum
+  sampled memory2,437,398,528bytes. Inspected live Cab, rooted Toyland canopy and
+  oil-rig images. Evidence:`pass2-release-{validation,reconciliation,performance}.json`
+  and `pass2-terrain-final-hashes.json`. All ten runs pass; no final visual approvals.
+- The final portal audit extends retaining cheeks to the taller bank and covers the
+  rear monorail hood with continuous earth while preserving bore dimensions. New ray
+  assertions test the two retaining walls and bank/roof agreement. Live tree-location
+  diagnostics now identify both active projected and optional voxel states accurately.
+  All twelve final runs pass:144 portal/interior views and20 exact live-tunnel views
+  per backend, four actual tree-style selections,6,144,000 exact world-atlas/picking
+  pixels across the portal/tree controls, and six matched300-frame performance runs.
+  Final native199/199 and harness9/9 checks pass; original contact tolerances and the
+  presentation boundary remain intact. Final-run maximum:3,408,743,760bytes.
+- Publication audit **2026-09-26 20:12:13 UTC** records no live native processes and
+  identical local-app/frozen executable SHA256
+  `454a469e9235678620b591540a70fc7069d7a813957b14bc59cc7e544a3d3cfc`.
+  All frozen source/artwork hashes match. Final evidence:
+  `pass2-publish-{hashes,validation,reconciliation,performance}.json`;
+  portal/tree images were inspected structurally, with zero final visual approvals.
+  Successful-only compaction for the final32 generated images recovers87,532,225bytes
+  (`review-compaction-20260926T201139905812Z.json`), retaining original/failed evidence.
+
 **Renewed-window stopping audit:2026-09-26 19:00:01 UTC**, after the requested
 19:00UTC/1PM fixedCST minimum. The clock endpoint is the stopping reason. Full
 objective completion remains unproven; final catalogue, climate, clearance,

@@ -35,7 +35,7 @@ bool TunnelLabelVisible(const Camera &camera, Vec3 point)
 		TunnelKind kind;
 		if (!GetVanillaTunnelKind(entrance,kind)) return true;
 		TileIndex other = GetOtherTunnelEnd(entrance);
-		Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,static_cast<float>(GetTilePixelZ(entrance))};
+		Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,TerrainZ(GetTilePixelZ(entrance))};
 		float length = (std::abs(static_cast<int>(TileX(other))-static_cast<int>(TileX(entrance)))+std::abs(static_cast<int>(TileY(other))-static_cast<int>(TileY(entrance))))*16.0f;
 		found = sight_cache.emplace(entrance,TunnelSight{origin,length,to_underlying(GetTunnelBridgeDirection(entrance)),kind}).first;
 	}
@@ -52,7 +52,7 @@ std::vector<ClipVolume> CaptureTunnelSceneryRegions(const Camera &camera)
 	if (!GetVanillaTunnelKind(entrance,kind)) return {};
 	TileIndex other = GetOtherTunnelEnd(entrance);
 	if (!GetVanillaTunnelKind(other,other_kind) || kind != other_kind) return {};
-	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,static_cast<float>(GetTilePixelZ(entrance))};
+	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,TerrainZ(GetTilePixelZ(entrance))};
 	float length = (std::abs(static_cast<int>(TileX(other))-static_cast<int>(TileX(entrance)))+std::abs(static_cast<int>(TileY(other))-static_cast<int>(TileY(entrance))))*16.0f;
 	unsigned direction = to_underlying(GetTunnelBridgeDirection(entrance));
 	return TunnelSceneryRegions(kind,length,TunnelPoint((4-direction)%4,camera.Eye()-origin),origin,direction);
@@ -97,6 +97,7 @@ std::optional<float> TrainTunnelContactHeight(const Vehicle &vehicle, Vec3 point
 		TileIndex other = GetOtherTunnelEnd(entrance);
 		float floor = GetTilePixelZ(entrance);
 		if (std::abs(vehicle.z_pos-floor) > 1) continue;
+		floor = TerrainZ(floor);
 		Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,floor};
 		Vec3 local = TunnelPoint((4-to_underlying(GetTunnelBridgeDirection(entrance)))%4,point-origin);
 		if (local.y < 3 || local.y > 13) continue;
@@ -116,7 +117,7 @@ const TunnelAssembly &TunnelGeometry(TunnelKind kind, bool portal)
 
 void DrawTunnelSection(Scene &scene, const Camera &camera, Vec3 origin, unsigned direction, TunnelKind kind, bool portal, bool snow_desert, bool reserved)
 {
-	if (scene.visibility && !scene.visibility->Intersects(origin-Vec3{0,0,1},origin+Vec3{16,16,11})) return;
+	if (scene.visibility && !scene.visibility->Intersects(origin-Vec3{0,0,1},origin+Vec3{16,16,std::max(11.0f,TerrainZ(8))})) return;
 	const auto &assembly = TunnelGeometry(kind,portal);
 	bool road = kind == TunnelKind::Road || kind == TunnelKind::Tram;
 	for (size_t part = 0; part < assembly.parts.size(); ++part) {

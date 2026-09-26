@@ -49,16 +49,34 @@ bool DrawCapturedBridge(Scene &scene, const BridgeCaptureInfo &info, SpriteID im
 	using Key = std::tuple<unsigned, unsigned, BridgeRole, bool, unsigned, bool, unsigned, float>;
 	static std::map<Key, std::vector<Vertex>> meshes;
 	auto [found, inserted] = meshes.try_emplace(Key{shape.type,shape.piece,shape.role,shape.along_y,shape.ramp_direction,shape.sloped,shape.pillar_mask,shape.pillar_top});
-	if (inserted) found->second = MakeBridgeMesh(shape);
+	if (inserted) {
+		found->second = MakeBridgeMesh(shape);
+		/* Exaggerate support spans and ramp rise, retaining the original deck,
+		 * railing thickness and source UV chart. */
+		for (auto &vertex : found->second) {
+			if (shape.role == BridgeRole::Pillar) {
+				float top = shape.pillar_top < 3 ? TerrainZ(shape.pillar_top+BRIDGE_DECK_THICKNESS*0.5f)-BRIDGE_DECK_THICKNESS*0.5f : TerrainZ(3);
+				vertex.position.z = std::lerp(TerrainZ(-5),top,(vertex.position.z+5)/(shape.pillar_top+5));
+			} else if (shape.sloped) {
+				float rise = BridgeRampHeight(shape.ramp_direction,vertex.position.x,vertex.position.y)-8;
+				vertex.position.z += TerrainZ(rise)-rise;
+			}
+		}
+		for (size_t i = 0; i < found->second.size(); i += 3) {
+			Vec3 normal = Normal(found->second[i].position,found->second[i+1].position,found->second[i+2].position);
+			for (unsigned j = 0; j < 3; ++j) found->second[i+j].normal = normal;
+		}
+	}
 	if (found->second.empty()) return true;
 	Vec3 origin = shape.role == BridgeRole::Pillar ? sprite_origin : info.origin;
-	if (scene.visibility && !scene.visibility->Intersects(origin + Vec3{-1,-1,-9},origin + Vec3{17,17,32})) return true;
+	Vec3 rendered_origin{origin.x,origin.y,TerrainZ(origin.z)};
+	if (scene.visibility && !scene.visibility->Intersects(rendered_origin + Vec3{-1,-1,TerrainZ(-9)},rendered_origin + Vec3{17,17,32})) return true;
 	bool opaque = shape.role != BridgeRole::Surface;
 	SpriteTexture texture = Textures().Get(image,palette,zoom,opaque);
 	Vec3 relative = origin - sprite_origin;
 	Vec3 uv = texture.UV(2 * (relative.y-relative.x) * ZOOM_BASE - texture.x_offset,(relative.x+relative.y-relative.z) * ZOOM_BASE - texture.y_offset);
 	InstanceData data;
-	data.origin_opacity = {origin.x,origin.y,origin.z,transparent ? 0.38f : 1};
+	data.origin_opacity = {rendered_origin.x,rendered_origin.y,rendered_origin.z,transparent ? 0.38f : 1};
 	data.uv_transform = {uv.x,uv.y,ZOOM_BASE / (static_cast<float>(1U << texture.zoom) * ATLAS_SIZE),uv.z};
 	data.region = texture.Region();
 	data.identity = {0,static_cast<float>(opaque ? SurfaceMode::Opaque : SurfaceMode::Cutout),1,1};

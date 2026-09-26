@@ -3,6 +3,75 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Automatic model LODs and restored projected trees (September26 follow-up)
+
+The user's new priority permits generated distance LODs and requires restoring the
+previous projected-material3D trees if voxel-tree performance remains poor. Four
+coarse levels are now generated lazily from the authored cell volumes at factors
+2/4/8/16. Occupied blocks survive, majority materials retain palette indices, ties
+are deterministic, and outer bounds/ground-contact extrema remain registered.
+Nearest-bound projected size keeps close geometry at full detail. Generated meshes
+share the1GiB scene-pinned CPU cache and the immutable GPU cache; no separate LOD
+artwork is authored. `OPENTT3D_AUTO_LOD=0` selects the original full-detail control.
+
+Matched300-frame title-world tunnel-Cab controls, before the terrain-height change,
+use identical frozen executable/artwork/save/camera and disable tunnel scenery culling:
+
+| Geometry | GL fps | Vulkan fps | Vertices/frame | GL/Vulkan p95 work ms |
+| --- | ---: | ---: | ---: | ---: |
+| Full voxel models/trees | 12.081 | 13.242 | 664,706,778 | 85.970 /79.308 |
+| Automatic voxel LODs | 22.714 | 29.499 | 280,773,969 | 47.164 /35.852 |
+| Automatic LODs + projected3D trees | 54.891 | 60.017 | 51,668,286 | 20.928 /13.768 |
+
+All six checks pass below6GiB; the maximum sampled footprint is3,338,046,824bytes.
+Voxel LODs alone still miss every20ms interval. The projected-tree samples have25/2
+intervals over20ms onGL/Vulkan, so their improved averages are not arbitrary-world
+smooth60fps proof. Projected3D trees are the default; `OPENTT3D_TREE_STYLE=voxel`
+retains the old tree path for controlled diagnostics. The new terrain configuration
+has its own subsequent controls rather than being substituted into this comparison.
+
+Evidence: `build-macos/pass2-auto-lod-{validation,performance,hashes}.json` and
+`pass2-auto-lod-build/`. Native tests cover thin features, anisotropic/odd-sized grids,
+palette preservation, deterministic reduction and exact reconstruction after eviction.
+
+### Doubled-terrain control
+
+The separately frozen `pass2-terrain-docks-build/` repeats the same six300-frame
+comparisons with the raised terrain:
+
+| Geometry | GL fps | Vulkan fps | Vertices/frame | GL/Vulkan p95 work ms |
+| --- | ---: | ---: | ---: | ---: |
+| Full voxel models/trees | 10.133 | 10.771 | 817,034,766 | 104.187 /96.522 |
+| Automatic voxel LODs | 22.035 | 28.627 | 286,592,502 | 48.407 /38.297 |
+| Automatic LODs + projected3D trees | 48.872 | 60.004 | 56,218,083 | 22.462 /15.368 |
+
+All six pass their6GiB/picking guards; maximum3,411,152,184bytes. Projected-tree
+intervals over20ms are42/0. Evidence:`pass2-final-{validation,performance,reconciliation}.json`.
+The two separate9,000-frame moving-route attempts fail early on the old maximum
+train-grade constraint; they are retained as failures and supply no route performance
+claim. The corrected-contact candidate has its own subsequent route verification.
+
+### Published geometry candidate
+
+After the tree-root, terrain-culling and tunnel-bank corrections, the final frozen
+`pass2-publish-build/` repeats all six matched300-frame controls:
+
+| Geometry | GL fps | Vulkan fps | Vertices/frame | GL/Vulkan p95 work ms |
+| --- | ---: | ---: | ---: | ---: |
+| Full voxel models/trees | 10.211 | 10.842 | 812,811,498 | 101.733 /96.440 |
+| Automatic voxel LODs | 21.738 | 28.698 | 286,443,852 | 49.194 /37.648 |
+| Automatic LODs + projected3D trees | 49.477 | 60.000 | 56,185,929 | 21.686 /13.689 |
+
+All pass the6GiB/picking guards; the maximum sampled footprint is3,408,743,760bytes.
+Projected-tree intervals over20ms are154/0. The changed interval distributions across
+the retained short samples reinforce that average fps alone is insufficient.
+Evidence:`pass2-publish-{hashes,validation,reconciliation,performance}.json`.
+
+The corrected electric23 routes complete9,000 frames/backend with all support/corner/
+collector observations and2,702,855,336/2,623,507,456-byte peaks. Their59.558/59.961fps
+averages include147/1,100 intervals over20ms. These moving runs are correctness and
+bounded-duration memory evidence; no matched moving off-control establishes a speedup.
+
 ## Opt-in tunnel-tree occlusion: exact native comparisons (September26)
 
 `OPENTT3D_TUNNEL_SCENERY_CULL=1` retains trees intersecting the whole bore or either

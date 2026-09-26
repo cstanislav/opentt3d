@@ -59,7 +59,7 @@ def main():
     parser.add_argument("--reference-cargo", choices=("empty", "full"), help="Require the located vehicle's real cargo count to be zero/full in a paused review")
     parser.add_argument("--reference-industry", nargs=2, type=int, metavar=("GRAPHICS", "STAGE"), help="Locate an actual voxel industry tile in its original construction state")
     parser.add_argument("--reference-industry-ground", nargs=2, type=int, metavar=("GRAPHICS", "STAGE"), help="Locate an actual voxel industry ground/stockpile layer in its original construction state")
-    parser.add_argument("--reference-tree", nargs=2, type=int, metavar=("BASE_SPRITE", "STAGE"), help="Locate an actual voxel tree in one of its seven original lifecycle stages")
+    parser.add_argument("--reference-tree", nargs=2, type=int, metavar=("BASE_SPRITE", "STAGE"), help="Locate an actual projected or voxel tree in one of its seven original lifecycle stages")
     parser.add_argument("--reference-house-stage", type=int, choices=range(4), help="Find an actual voxel-bound house at this upstream construction stage")
     parser.add_argument("--reference-house-id", type=int, choices=range(110), help="Restrict --reference-house-stage to one house type")
     parser.add_argument("--reference-house-variant", type=int, choices=range(4), help="Select an actual source-art variant of the requested house/stage")
@@ -744,8 +744,8 @@ server_advertise = false
                 raise RuntimeError("The requested airport graphics type was not captured as voxels")
             if args.reference_tree:
                 base, stage = args.reference_tree
-                if f"focused voxel tree {base} stage {stage} at" not in text or f"live voxel tree {base} stage {stage} captured at" not in text:
-                    raise RuntimeError("The requested actual voxel tree lifecycle stage was not located and captured")
+                if not any(f"focused {style} tree {base} stage {stage} at" in text and f"live {style} tree {base} stage {stage} captured at" in text for style in ("voxel", "projected")):
+                    raise RuntimeError("The requested actual tree lifecycle stage was not located and captured")
             if args.reference_vehicle is not None and (f"focused voxel vehicle engine {args.reference_vehicle} vehicle " not in text or f"live voxel vehicle engine {args.reference_vehicle} cargo " not in text):
                 raise RuntimeError("The requested actual voxel vehicle was not located and captured")
             if args.reference_buoy and ("focused voxel buoy at" not in text or "live voxel buoy captured at" not in text):

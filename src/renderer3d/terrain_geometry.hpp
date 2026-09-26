@@ -181,7 +181,7 @@ inline std::vector<Vertex> MakeFenceMesh(unsigned style, Vec3 start, Vec3 end, c
  * contacts are omitted from the draw mesh, not left coplanar with grass/road. */
 inline std::vector<Vertex> MakeFoundationMesh(const TileSurface &bottom, const TileSurface &top, float top_base, unsigned lod = 0, bool contacts = false, bool greedy = true)
 {
-	if (lod > 2 || !std::isfinite(top_base) || top_base < 0 || top_base > 16) throw std::invalid_argument("Invalid voxel foundation");
+	if (lod > 2 || !std::isfinite(top_base) || top_base < 0 || top_base > TerrainZ(16)) throw std::invalid_argument("Invalid voxel foundation");
 	float xy = lod == 0 ? 0.5f : lod == 1 ? 1 : 2;
 	float dz = lod == 0 ? 0.25f : lod == 1 ? 0.5f : 1;
 	int extent = static_cast<int>(16/xy);

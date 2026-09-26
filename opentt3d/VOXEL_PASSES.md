@@ -1,5 +1,17 @@
 # Breadth-first voxel development passes
 
+## September 26 rendering-priority update
+
+The follow-up instruction supersedes the earlier strict voxel requirement for
+**trees and roofs**. Terrain steps render at2× their original height; object
+dimensions and simulation coordinates retain their existing scale. Sloped roof
+surfaces are permitted wherever they better reproduce the original structure and
+paint. LOD meshes must be generated automatically, not authored as separate models.
+Matched performance remains poor with voxel-tree LODs, so the previous projected
+material3D trees are restored as the normal path. Their existing lifecycle/climate
+and source-fidelity checks still apply; voxel tree data remains diagnostic history.
+All other catalogue, footprint, contact, state and fidelity gates below remain active.
+
 ## Active work window and complete goal
 
 - Strategy recorded **2026-09-24 05:31:32 UTC**.

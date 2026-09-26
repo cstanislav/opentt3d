@@ -1,8 +1,10 @@
 # Voxel recreation ledger
 
-The full objective and minimum work window are in `ACTIVE_GOAL.md`. Every world
-asset must ultimately be voxel-based, including existing models, every rail system,
-airports, effects and all relevant states. **No voxel model is visually approved.**
+The full objective and work-window history are in `ACTIVE_GOAL.md`. The September26
+follow-up permits sloped roof surfaces and restores projected-material3D trees after
+voxel-tree LOD performance remains poor. Other world assets retain the voxel coverage
+goal, including existing models, every rail system, airports, effects and all relevant
+states. **No voxel model is visually approved.**
 Technical visibility and meshing checks are necessary but do not establish faithful,
 production-quality recreation.
 
@@ -13,6 +15,25 @@ and24 flat/ramp/large-origin coverage views were reviewed. Original failures rem
 full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
+
+- **Terrain-height follow-up:** rendered map levels double8→16. Authored object
+  dimensions retain their scale; support datums, slopes, foundations, bridge spans
+  and dock piles/decks follow the terrain. The twelve dock volumes keep their
+  original slab, railing, bollard and lamp dimensions, water-level foam and independent
+  shore/water ownership. Both backends pass512 joined views and288 exact dock mesh/
+  palette/ownership views. Inspected structure/context sheet:
+  `build-macos/pass2-terrain-structure-sheet-v2.png`; source-fidelity approval remains open.
+- **Automatic LODs:** four reduced meshes are generated lazily from occupied cells;
+  majority original materials, deterministic ties, original outer bounds and scene
+  leases are retained. There are no separately authored LOD assets. Diagnostic
+  full-detail geometry remains available with `OPENTT3D_AUTO_LOD=0`.
+- **Active projected trees:** both backend checks pass62 component families and
+  5,544 lifecycle/LOD views, with exact picking and the existing one-RGBA8-level material
+  rounding bound. The retained434 voxel lifecycle volumes are diagnostic alternatives,
+  enabled with `OPENTT3D_TREE_STYLE=voxel`. These technical checks do not resolve the
+  previously recorded palm/street or source-fidelity findings.
+- **Roofs:** planar slopes may be used where they better reproduce the source roof.
+  This changes the authoring rule; existing voxel roofs have not all been converted.
 
 - **Expanded industry climate audit:**323 layer pairs across623,286 original RGBA
   pixels find153 differences:15 coal-ground,16 power-ground,16 forest body/ground,

@@ -13,6 +13,9 @@ struct VoxelCachedSurface {
 	std::unique_ptr<VoxelSource> source;
 	mutable VoxelMesh surface;
 	bool merged = true;
+	const VoxelSource *lod_source = nullptr;
+	unsigned reduction = 1;
+	mutable std::array<std::unique_ptr<VoxelCachedSurface>,4> lods;
 private:
 	friend class VoxelMeshCache;
 	std::shared_ptr<const void> lease = std::make_shared<uint8_t>(0);
@@ -39,7 +42,8 @@ public:
 		auto lease = entry.lease;
 		entry.last_use = ++generation;
 		if (entry.surface.vertices.empty() && entry.surface.occupied != 0) {
-			auto restored = entry.source->Expand(materials).Mesh(entry.merged);
+			auto grid = (entry.lod_source != nullptr ? entry.lod_source : entry.source.get())->Expand(materials);
+			auto restored = entry.reduction == 1 ? grid.Mesh(entry.merged) : grid.ReducedMesh(entry.reduction);
 			if (restored.occupied != entry.surface.occupied || restored.exposed_faces != entry.surface.exposed_faces ||
 				restored.quads != entry.surface.quads || restored.low != entry.surface.low || restored.high != entry.surface.high) {
 				throw std::runtime_error("Retired voxel surface changed its immutable geometry");

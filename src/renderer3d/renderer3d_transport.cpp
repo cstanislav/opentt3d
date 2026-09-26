@@ -67,7 +67,7 @@ TEST_CASE("Voxel fence families retain openings, heights and raised diagonal con
 	CHECK(std::isfinite(hit(chain,{{2,0,2},{0,1,0}})));
 	for (unsigned lod = 0; lod < 3; ++lod) for (Corner corner : {CORNER_W,CORNER_S,CORNER_E,CORNER_N}) {
 		for (Slope terrain : {SLOPE_FLAT,HalftileSlope(SlopeWithOneCornerRaised(corner),corner),HalftileSlope(SteepSlope(corner),corner)}) {
-			float base = GetSlopePixelZInCorner(RemoveHalftileSlope(terrain),corner);
+			float base = TerrainZ(GetSlopePixelZInCorner(RemoveHalftileSlope(terrain),corner));
 			bool along = corner == CORNER_W || corner == CORNER_E;
 			Vec3 start{along ? 0.0f : 16.0f,0,base}, end{along ? 16.0f : 0.0f,16,base};
 			auto diagonal = MakeFenceMesh(6,start,end,MakeTileSurface(terrain),true,0,lod);
@@ -94,7 +94,7 @@ TEST_CASE("Voxel foundations stay below playable surfaces and support every lega
 	}
 	for (auto [slope,foundation] : cases) {
 		Slope upper = slope;
-		float rise = ApplyPixelFoundationToSlope(foundation,upper);
+		float rise = TerrainZ(ApplyPixelFoundationToSlope(foundation,upper));
 		auto low = MakeTileSurface(slope), high = MakeTileSurface(upper);
 		auto solid = MakeFoundationMesh(low,high,rise,0,true);
 		INFO("slope=" << static_cast<unsigned>(slope) << " foundation=" << static_cast<unsigned>(foundation));
@@ -128,7 +128,7 @@ TEST_CASE("Voxel foundations stay below playable surfaces and support every lega
 			auto distant = MakeFoundationMesh(low,high,rise,lod,true);
 			float max_z = -INFINITY;
 			for (const auto &v : distant) max_z = std::max(max_z,v.position.z);
-			CHECK(max_z <= rise+GetSlopeMaxPixelZ(upper));
+			CHECK(max_z <= rise+TerrainZ(GetSlopeMaxPixelZ(upper)));
 		}
 	}
 	/* The two microstep faces of one diagonal wall stone must not alternate
@@ -192,6 +192,12 @@ TEST_CASE("Tunnel entrances and lining leave actual Cab and vehicle clearances",
 		CHECK(ceiling > (kind == 1 ? 0.9f : 1.5f)); // Electric contact wire is below the vault.
 		CHECK(ceiling < 2.0f);
 		CHECK(FirstHit(assembly,{{12,8,6},{0,0,-1}}) < 6.5f);
+		if (portal) {
+			/* The doubled bank is continuous above every bore, including the
+			 * monorail hood, and both exposed retaining cheeks close its sides. */
+			for (float y : {1.0f,8.0f,15.0f}) CHECK(FirstHit(assembly,{{12,y,24},{0,0,-1}}) == Approx(12));
+			for (float direction : {-1.0f,1.0f}) CHECK(FirstHit(assembly,{{6,8,5},{0,direction,0}}) == Approx(5.8f));
+		}
 		bool finite = true;
 		for (const auto &part : assembly.parts) for (const auto &vertex : part) {
 			finite &= std::isfinite(vertex.position.x+vertex.position.y+vertex.position.z+vertex.normal.x+vertex.normal.y+vertex.normal.z);
@@ -550,7 +556,7 @@ TEST_CASE("Bridge rail supports match the ramp deck in all four world orientatio
 			Vec3 p = direction%2 == 0 ? Vec3{distance,8,0} : Vec3{8,distance,0};
 			auto contact = support.Contact(p+support.origin);
 			REQUIRE(contact.has_value());
-			CHECK(contact->smooth == Approx(16.5f+BridgeRampHeight(direction,p.x,p.y)));
+			CHECK(contact->smooth == Approx(16.5f+TerrainZ(BridgeRampHeight(direction,p.x,p.y))));
 			CHECK(contact->stepped >= contact->smooth);
 			CHECK(contact->stepped-contact->smooth <= 0.1251f);
 		}

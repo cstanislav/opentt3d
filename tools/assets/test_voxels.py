@@ -1743,8 +1743,8 @@ class VoxelCompilerTests(unittest.TestCase):
                     self.assertEqual(model["cell_size"],[0.5,0.5,0.5])
                     self.assertEqual(model["origin"],[0,0,-0.5])
                     self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in cells),"Dock left the original playable tile")
-                    self.assertTrue(all((x,y,16) in canonical for x in range(32) for y in range(6,26)),"A joined deck lost its constant eight-unit elevation")
-                    self.assertFalse(any(8 <= y < 24 and z >= 17 for x,y,z in canonical),"A bollard or lamp blocks the central walkway")
+                    self.assertTrue(all((x,y,32) in canonical for x in range(32) for y in range(6,26)),"A joined deck lost its doubled sixteen-unit terrain elevation")
+                    self.assertFalse(any(8 <= y < 24 and z >= 33 for x,y,z in canonical),"A bollard or lamp blocks the central walkway")
                     remaining = set(cells)
                     while remaining:
                         visited, pending = set(), [next(iter(remaining))]
@@ -1755,7 +1755,13 @@ class VoxelCompilerTests(unittest.TestCase):
                             visited.add(point)
                             x,y,z = point
                             pending.extend(p for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)) if p in remaining and p not in visited)
-                        self.assertTrue(any(z <= 1 for x,y,z in visited),"A pile, rail or lamp floats above land/water")
+                        def ground_layer(point):
+                            x,y,z = point
+                            if int(graphics) >= 4:
+                                return 0
+                            along = x if int(graphics)%2 == 0 else y
+                            return along if int(graphics) in (0,3) else 31-along
+                        self.assertTrue(any(z <= ground_layer((x,y,z))+1 for x,y,z in visited),"A pile, rail or lamp floats above its actual land/water support")
                         remaining -= visited
                     colours = {colour for material in cells.values() for colour in result["materials"][material-1]}
                     if int(graphics) >= 4:
@@ -1764,7 +1770,7 @@ class VoxelCompilerTests(unittest.TestCase):
                     else:
                         self.assertTrue(colours & set(range(198,206)),"Original company-coloured bank railing was lost")
                         for x,y,z in canonical:
-                            terrain_step = x//2 if int(graphics) in (0,3) else (31-x)//2
+                            terrain_step = x if int(graphics) in (0,3) else 31-x
                             self.assertGreaterEqual(z,terrain_step,"A bank pile protrudes below the supporting slope's tile boundary")
 
     def test_ship_depots_preserve_two_tile_joins_open_water_and_all_original_ship_clearances(self):

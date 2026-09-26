@@ -35,7 +35,7 @@ bool FocusGroundDetail(unsigned kind, unsigned variant)
 
 void DrawGroundDetails(Scene &scene, const Camera &camera, Vec3 origin, Slope slope, bool rocks, unsigned variant, unsigned snow)
 {
-	if (scene.visibility && !scene.visibility->Intersects(origin-Vec3{0.1f,0.1f,0.1f},origin+Vec3{16.1f,16.1f,24})) return;
+	if (scene.visibility && !scene.visibility->Intersects(origin-Vec3{0.1f,0.1f,0.1f},origin+Vec3{16.1f,16.1f,TerrainZ(GetSlopeMaxPixelZ(slope))+8})) return;
 	float scale = camera.PixelScaleAt(origin+Vec3{8,8,2});
 	unsigned lod = rocks || scale >= 5 ? 0 : scale >= 0.6f ? 1 : 2;
 	using Key = std::tuple<bool,unsigned,Slope,unsigned,unsigned>;
@@ -64,7 +64,7 @@ void DrawGroundDetails(Scene &scene, const Camera &camera, Vec3 origin, Slope sl
 
 void DrawClearSurface(Scene &scene, const Camera &camera, Vec3 origin, Slope slope, bool rough, unsigned variant, unsigned fine_edges)
 {
-	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,18})) return;
+	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,TerrainZ(GetSlopeMaxPixelZ(slope))+2})) return;
 	unsigned climate = to_underlying(_settings_game.game_creation.landscape);
 	float scale = camera.PixelScaleAt(origin+Vec3{8,8,1});
 	unsigned lod = scale >= 5 ? 0 : scale >= 1.8f ? 1 : 2;

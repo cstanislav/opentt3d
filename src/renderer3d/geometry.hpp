@@ -28,6 +28,11 @@ struct Vec3 {
 inline float Dot(Vec3 a, Vec3 b) { return a.x * b.x + a.y * b.y + a.z * b.z; }
 inline Vec3 Normalize(Vec3 p) { return p * (1.0f / std::sqrt(Dot(p, p))); }
 
+/** Presentation elevation only. Upstream map levels, saves and vehicle physics
+ * retain their original eight-unit steps; authored object dimensions do not grow. */
+inline constexpr float TERRAIN_HEIGHT_SCALE = 2;
+inline constexpr float TerrainZ(float height) { return height*TERRAIN_HEIGHT_SCALE; }
+
 struct Ray {
 	Vec3 origin, direction;
 	Vec3 At(float distance) const { return origin + direction * distance; }
@@ -294,6 +299,18 @@ struct Scene {
 	/** Optional conservative regions for scenery behind an opaque tunnel lining.
 	 * An empty list retains ordinary frustum-only capture. */
 	std::vector<ClipVolume> scenery_regions;
+	/** Automatic mesh detail uses the nearest bound, not its centre: large nearby
+	 * models must not lose detail because their origin is far from the eye. */
+	struct DetailView {
+		Vec3 focus, depth_direction;
+		float distance, focal_pixels, near_plane;
+		float PixelsPerUnit(Vec3 low, Vec3 high) const
+		{
+			Vec3 nearest{depth_direction.x >= 0 ? high.x : low.x, depth_direction.y >= 0 ? high.y : low.y, depth_direction.z >= 0 ? high.z : low.z};
+			return focal_pixels/std::max(near_plane,distance-Dot(nearest-focus,depth_direction));
+		}
+	};
+	std::optional<DetailView> detail;
 	struct WaterMaterial { Vec3 uv_origin{}; float uv_scale = 0; } water;
 	/** Authored instances have stable lifetime/address. Diagnostic references can
 	 * instead use call-scoped GPU uploads, retaining the same instanced shader path. */

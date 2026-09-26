@@ -1,5 +1,44 @@
 # Active extended development goal
 
+## September 26 follow-up: terrain, automatic LODs and projected trees
+
+The user resumed development after the19:00UTC minimum with these updated requirements:
+
+- Double rendered terrain step heights. Apply the elevation change to terrain,
+  foundations, transport connections, object placement, cameras and picking while
+  retaining authored object dimensions and the upstream simulation/save coordinates.
+- **Sloping roof surfaces are allowed.** Faithful proportions, painted detail and
+  complete footprints govern roof construction; roofs need not be stair-stepped.
+- Generate model LODs automatically from the authored geometry; do not hand-author
+  separate reduced models. Keep nearby models detailed and choose distance detail
+  from projected size, with bounded CPU/GPU residency.
+- If performance remains poor, restore the previous projected-material3D trees.
+  The matched300-frame control gives12.081/13.242fpsGL/Vulkan with full voxel trees,
+  22.714/29.499fps with automatic voxel LODs and54.891/60.017fps with projected3D
+  trees plus automatic model LODs. **Projected3D trees are therefore the default.**
+  Existing voxel tree data is retained for diagnostic comparisons, not required as
+  the active rendering path. This supersedes the earlier all-assets-voxel tree rule.
+- Continue the catalogue and fidelity work under these revised priorities, publishing
+  verified progress frequently. The previous minimum was satisfied; no new minimum
+  stopping time was specified. Native app checks remain background-only.
+
+Verification checkpoint **2026-09-26 20:12:13 UTC**: all local review processes have
+exited. The final source/artwork/binary hashes match the tested freeze, and the local
+`build-macos/OpenTT3D.app` contains that same executable. Native199/199, asset/compiler/
+schema117/117 and harness9/9 checks pass. Both backends pass the raised infrastructure,
+navigation, projected trees, electric23…26 poses,9,000-frame electric route and
+1,800-frame helicopter254 contact/rotor checks. Final portal-bank ray/GPU checks and
+actual projected/voxel tree-location controls also pass.
+
+The final matched300-frame controls improve full-voxel10.211/10.842fpsGL/Vulkan to
+21.738/28.698fps with automatic LODs and49.477/60.000fps with projected3D trees.
+Projected-tree p95 work is21.686/13.689ms;154/0 intervals exceed20ms. This remains
+insufficient for arbitrary-world smooth60fps. Latest evidence:
+`build-macos/pass2-publish-{hashes,validation,reconciliation,performance}.json`.
+Earlier controls and failures remain preserved. Roof slopes are authorized, not a
+claim that every existing roof has been rebuilt. Catalogue/state/fidelity and current
+Linux verification remain unfinished, with **zero final visual approvals**.
+
 ## Extended September 22–26 objective: complete voxel recreation
 
 - User's approximate start: **9:30 PM CST, September 22, 2026**.

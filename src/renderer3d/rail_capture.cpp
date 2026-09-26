@@ -36,7 +36,7 @@ const RailAssembly &RailGeometry(RailType type, Track track, Slope slope, unsign
 void DrawRailTracks(Scene &scene, const Camera &camera, Vec3 origin, Slope slope, RailType type, TrackBits tracks, TrackBits reserved)
 {
 	CaptureRailSupport(origin,slope,type,tracks);
-	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,GetSlopeMaxPixelZ(slope)+1.0f})) return;
+	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,TerrainZ(GetSlopeMaxPixelZ(slope))+1.0f})) return;
 	float scale = camera.PixelScaleAt(origin+Vec3{8,8,0});
 	unsigned lod = scale >= 1.25f ? 0 : scale >= 0.35f ? 1 : 2;
 	for (Track track = TRACK_BEGIN; track < TRACK_END; ++track) {

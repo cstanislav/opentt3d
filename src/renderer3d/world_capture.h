@@ -24,6 +24,7 @@ Scene FinishCapture();
 void RecycleCapture(Scene &scene);
 void CaptureTile(const TileInfo *tile);
 void CaptureVehicle(const Vehicle *vehicle);
+float RenderVehicleZ(const Vehicle &vehicle);
 bool CaptureFence(const TileInfo &tile, unsigned style, unsigned layout, SpriteID image, SpriteID material, PaletteID palette);
 bool FocusReferenceFence(unsigned style);
 bool CaptureFoundation(const TileInfo &tile, Foundation foundation);

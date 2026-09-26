@@ -15,6 +15,40 @@
 using namespace Renderer3D;
 using Catch::Detail::Approx;
 
+TEST_CASE("Automatic voxel LODs retain bounds thin parts palette and deterministic residency", "[renderer3d][voxel]")
+{
+	const std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{3,4,5,6,7,8}}};
+	VoxelGrid grid({33,31,29},materials,{-7,13,0.5f},{0.5f,0.5f,1});
+	grid.Fill({1,2,0},{32,30,5},1);
+	grid.Fill({5,5,4},{6,6,28},2); // A narrow chimney must survive aggregation.
+	auto original = grid.Mesh();
+	VoxelSource source(grid);
+	for (unsigned factor : {2U,4U,8U,16U}) {
+		CAPTURE(factor);
+		auto reduced = grid.ReducedMesh(factor);
+		CHECK(reduced.low == original.low);
+		CHECK(reduced.high == original.high);
+		CHECK(reduced.vertices.size() < original.vertices.size());
+		for (const auto &vertex : reduced.vertices) {
+			CHECK(std::isfinite(vertex.position.x+vertex.position.y+vertex.position.z));
+			CHECK(vertex.position.z >= original.low.z);
+			CHECK(vertex.position.z <= original.high.z);
+			unsigned colour = static_cast<unsigned>(vertex.texture.x*256);
+			CHECK(((colour >= 72 && colour <= 77) || (colour >= 3 && colour <= 8)));
+		}
+		VoxelCachedSurface cached;
+		cached.lod_source = &source; cached.reduction = factor; cached.surface = std::move(reduced);
+		auto expected = cached.surface.vertices;
+		VoxelMeshCache cache(0);
+		cache.Register(cached);
+		CHECK(cached.surface.vertices.empty());
+		auto lease = cache.Pin(cached,materials);
+		REQUIRE(cached.surface.vertices.size() == expected.size());
+		CHECK(std::memcmp(cached.surface.vertices.data(),expected.data(),expected.size()*sizeof(Vertex)) == 0);
+	}
+	CHECK_THROWS_AS(grid.ReducedMesh(3),std::invalid_argument);
+}
+
 TEST_CASE("CPU voxel retirement pins scene copies and restores exact meshes at stable addresses", "[renderer3d][voxel]")
 {
 	std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{3,4,5,6,7,8}}};
@@ -626,7 +660,7 @@ TEST_CASE("Original train voxel bodies retain source proportions without overlap
 
 TEST_CASE("Pitched train instances preserve physical lengths, rail support and outward normals", "[renderer3d][voxel]")
 {
-	for (float grade : {-0.5f,-0.25f,0.0f,0.25f,0.5f}) for (float heading : {0.0f,0.71f,1.57f,3.14f}) {
+	for (float grade : {-1.0f,-0.5f,-0.25f,0.0f,0.25f,0.5f,1.0f}) for (float heading : {0.0f,0.71f,1.57f,3.14f}) {
 		InstanceData data;
 		data.origin_opacity = {128,256,16,1};
 		data.identity[2] = 1;
@@ -656,7 +690,7 @@ TEST_CASE("Pitched train instances preserve physical lengths, rail support and o
 
 TEST_CASE("Pitched collectors retain every roof mount while independently meeting their wire", "[renderer3d][voxel]")
 {
-	for (float grade : {-0.5f,0.0f,0.5f}) for (float heading : {0.0f,0.71f,3.14f}) for (float contact : {7.55f,8.8f,10.0f,11.0f}) {
+	for (float grade : {-1.0f,-0.5f,0.0f,0.5f,1.0f}) for (float heading : {0.0f,0.71f,3.14f}) for (float contact : {7.55f,8.8f,10.0f,11.0f}) {
 		InstanceData body;
 		body.origin_opacity = {128,256,16,1}; body.identity[2] = 1;
 		body.mirror_layer_heading[3] = heading;

@@ -644,6 +644,7 @@ static void AddDockReviewTile(Scene &scene, unsigned graphics, Vec3 origin, uint
 			Scene tile;
 			const Vec3 corners[] = {{0,0,surface.corners[0]},{16,0,surface.corners[1]},{16,16,surface.corners[2]},{0,16,surface.corners[3]}};
 			GroundEdgeFan(tile,corners,{8,8,surface.centre});
+			for (auto &vertex : tile.vertices) vertex.texture = {vertex.position.x,vertex.position.y,vertex.position.z/TERRAIN_HEIGHT_SCALE};
 			meshes[layout] = std::move(tile.vertices);
 		}
 		return meshes;
@@ -655,7 +656,7 @@ static void AddDockReviewTile(Scene &scene, unsigned graphics, Vec3 origin, uint
 	floor.origin_opacity = {origin.x,origin.y,origin.z,1};
 	floor.uv_transform = {uv.x,uv.y,ZOOM_BASE/(static_cast<float>(1U<<texture.zoom)*ATLAS_SIZE),uv.z};
 	floor.region = texture.Region();
-	floor.identity = {0,static_cast<float>(SurfaceMode::Opaque),1,0};
+	floor.identity = {0,static_cast<float>(SurfaceMode::Opaque),1,2};
 	floor.SetObjectId(id);
 	scene.instances.push_back({&ground[graphics],floor});
 	size_t first = scene.instances.size();
@@ -689,7 +690,7 @@ void VerifyDocks()
 	const Vec3 offsets[] = {{-16,0,0},{0,16,0},{16,0,0},{0,-16,0}};
 	for (unsigned direction = 0; direction < 4; ++direction) for (unsigned turn = 0; turn < 4; ++turn) for (bool street : {false,true}) {
 		Vec3 low{std::min(0.0f,offsets[direction].x),std::min(0.0f,offsets[direction].y),0};
-		Vec3 high{16+std::max(0.0f,offsets[direction].x),16+std::max(0.0f,offsets[direction].y),14};
+		Vec3 high{16+std::max(0.0f,offsets[direction].x),16+std::max(0.0f,offsets[direction].y),TerrainZ(8)+6};
 		Camera camera{(low+high)*0.5f,2,256,256,turn+0.15f};
 		if (street) camera = StreetReviewCamera(low,high,256,256,turn+0.15f);
 		for (unsigned company = 0; company < 16; ++company) {
@@ -846,6 +847,7 @@ void ExportSignalGallery(unsigned type, unsigned variant, unsigned state)
 
 void ExportCatenaryGallery(unsigned track, int grade)
 {
+	grade = static_cast<int>(TerrainZ(grade));
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR)) / "renderer3d-reference";
 	std::filesystem::create_directories(directory);
 	for (unsigned turn = 0; turn < 4; ++turn) {
@@ -901,7 +903,7 @@ void VerifyRailDetails()
 		bool green = pixels[pixel+1] > 160 && pixels[pixel] < 70;
 		if (state == 0 ? !red : type < 4 ? !green : red || green) throw std::runtime_error("Auxiliary signal lamp disagrees with its base-set aspect");
 	}
-	for (unsigned track = 0; track < 6; ++track) for (int grade : {-8,0,8}) for (unsigned supports = 1; supports <= 3; ++supports) {
+	for (unsigned track = 0; track < 6; ++track) for (int grade : {-16,0,16}) for (unsigned supports = 1; supports <= 3; ++supports) {
 		for (unsigned turn = 0; turn < 4; ++turn) {
 			Camera camera{RailPath(track,0.5f).point+Vec3{0,0,grade*0.5f+6},3,256,256,turn+0.25f};
 			Scene scene = CatenaryReviewScene(track,grade,supports,camera);
@@ -940,14 +942,14 @@ void ExportGroundDetailGallery(unsigned kind, unsigned variant, unsigned slope)
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR)) / "renderer3d-reference";
 	std::filesystem::create_directories(directory);
 	for (unsigned turn = 0; turn < 4; ++turn) {
-		Camera camera{{8,8,GetSlopeMaxPixelZ(static_cast<Slope>(slope))*0.5f+1},7,640,640,turn+0.25f};
+		Camera camera{{8,8,TerrainZ(GetSlopeMaxPixelZ(static_cast<Slope>(slope)))*0.5f+1},7,640,640,turn+0.25f};
 		Scene scene = GroundDetailReviewScene(kind,variant,static_cast<Slope>(slope),camera,true);
 		std::vector<uint8_t> pixels;
 		if (!RenderScene(scene,camera,pixels)) throw std::runtime_error("Ground-detail gallery rendering failed");
 		WriteReviewImage(directory/fmt::format("model-ground-detail-{}-{}-{}.pam",kind,variant,turn),camera,pixels);
 	}
 	if (kind >= 3) {
-		Camera camera{{24,24,GetSlopeMaxPixelZ(static_cast<Slope>(slope))*0.5f+4},1,960,640,0};
+		Camera camera{{24,24,TerrainZ(GetSlopeMaxPixelZ(static_cast<Slope>(slope)))*0.5f+4},1,960,640,0};
 		camera.first_person = true; camera.pitch = 4; camera.vertical_fov = 40;
 		Scene scene = GroundDetailReviewScene(kind,variant,static_cast<Slope>(slope),camera,true);
 		std::vector<uint8_t> pixels;
@@ -968,10 +970,11 @@ void VerifyGroundContinuity()
 	}
 	if (sample == INVALID_TILE) throw std::runtime_error("Ground continuity probe needs a valid reference tile");
 	unsigned views = 0;
-	for (unsigned layout = 0; layout < 3; ++layout) for (Vec3 origin : {Vec3{},Vec3{4096,8192,96}}) for (unsigned turn = 0; turn < 4; ++turn) {
+	for (unsigned layout = 0; layout < 3; ++layout) for (Vec3 source_origin : {Vec3{},Vec3{4096,8192,96}}) for (unsigned turn = 0; turn < 4; ++turn) {
+		Vec3 origin{source_origin.x,source_origin.y,TerrainZ(source_origin.z)};
 		/* Two independent ramp directions meet the level voxel floors at their
 		 * original edge. No voxel floor is flattened onto a sloping map tile. */
-		auto height = [layout](float x, float y) { return layout == 0 ? 0.0f : std::max(0.0f,(layout == 1 ? x : y)-64)*0.5f; };
+		auto height = [layout](float x, float y) { return layout == 0 ? 0.0f : TerrainZ(std::max(0.0f,(layout == 1 ? x : y)-64)*0.5f); };
 		auto kind_at = [layout](int x, int y) {
 			unsigned kind = (x+y)%3;
 			return kind == 2 && layout != 0 && (layout == 1 ? x : y) >= 4 ? 0U : kind;
@@ -996,7 +999,7 @@ void VerifyGroundContinuity()
 			if (_settings_game.game_creation.landscape == LandscapeType::Toyland && kind == 1) fine_edges = 15;
 			if (kind == 0) {
 				TileInfo tile{}; tile.tile = sample; tile.tileh = slope;
-				tile.x = static_cast<int>(position.x); tile.y = static_cast<int>(position.y); tile.z = static_cast<int>(position.z);
+				tile.x = static_cast<int>(position.x); tile.y = static_cast<int>(position.y); tile.z = static_cast<int>(position.z/TERRAIN_HEIGHT_SCALE);
 				BeginCapture(camera,true);
 				try { CaptureGround(SPR_FLAT_BARE_LAND+SlopeToSpriteOffset(slope),PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0,fine_edges); }
 				catch (...) { FinishCapture(); throw; }
@@ -1017,7 +1020,7 @@ void VerifyGroundContinuity()
 		} else {
 			auto point = [&](float along, float across, float z) { return origin+(layout == 1 ? Vec3{along,across,z} : Vec3{across,along,z}); };
 			reference.Quad(point(0,0,0),point(64,0,0),point(64,128,0),point(0,128,0),{0.2f,0.25f,0.3f});
-			reference.Quad(point(64,0,0),point(128,0,32),point(128,128,32),point(64,128,0),{0.2f,0.25f,0.3f});
+			reference.Quad(point(64,0,0),point(128,0,TerrainZ(32)),point(128,128,TerrainZ(32)),point(64,128,0),{0.2f,0.25f,0.3f});
 		}
 		for (auto &vertex : reference.vertices) vertex.object_id = TILE_PICK_ID|83;
 		std::vector<uint8_t> pixels, expected;
@@ -1045,7 +1048,7 @@ void VerifyGroundDetails()
 		for (unsigned slope = 0; slope < 32; ++slope) {
 			if (slope >= 15 && slope != 23 && slope != 27 && slope != 29 && slope != 30) continue;
 			for (unsigned turn = 0; turn < 4; ++turn) {
-				Camera camera{{8,8,GetSlopeMaxPixelZ(static_cast<Slope>(slope))*0.5f+1},2,256,256,turn+0.25f};
+				Camera camera{{8,8,TerrainZ(GetSlopeMaxPixelZ(static_cast<Slope>(slope)))*0.5f+1},2,256,256,turn+0.25f};
 				Scene scene = GroundDetailReviewScene(kind,variant,static_cast<Slope>(slope),camera,false);
 				std::vector<uint8_t> pixels, comparison;
 				std::vector<uint32_t> ids, comparison_ids;
@@ -1143,11 +1146,11 @@ static Scene RailReviewScene(RailType type, TrackBits tracks, Slope slope, const
 		};
 		DrawFoundation(&tile,foundation);
 		ground();
-		DrawRailTracks(rails,camera,{0,0,static_cast<float>(tile.z)},tile.tileh,type,tracks,reserved);
+		DrawRailTracks(rails,camera,{0,0,TerrainZ(tile.z)},tile.tileh,type,tracks,reserved);
 		if (IsValidCorner(upper)) {
 			DrawFoundation(&tile,HalftileFoundation(upper));
 			ground();
-			DrawRailTracks(rails,camera,{0,0,static_cast<float>(tile.z)},tile.tileh,type,CornerToTrackBits(upper),reserved);
+			DrawRailTracks(rails,camera,{0,0,TerrainZ(tile.z)},tile.tileh,type,CornerToTrackBits(upper),reserved);
 		}
 	} catch (...) { FinishCapture(); throw; }
 	Scene ground = FinishCapture();
@@ -1161,7 +1164,7 @@ void ExportRailGallery(unsigned type, unsigned tracks, unsigned slope)
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR)) / "renderer3d-reference";
 	std::filesystem::create_directories(directory);
 	for (unsigned turn = 0; turn < 4; ++turn) {
-		Camera camera{{8,8,GetSlopeMaxPixelZ(static_cast<Slope>(slope))*0.5f},6,640,640,turn+0.25f};
+		Camera camera{{8,8,TerrainZ(GetSlopeMaxPixelZ(static_cast<Slope>(slope)))*0.5f},6,640,640,turn+0.25f};
 		Scene scene = RailReviewScene(static_cast<RailType>(type),static_cast<TrackBits>(tracks),static_cast<Slope>(slope),camera,true);
 		std::vector<uint8_t> pixels;
 		if (!RenderScene(scene,camera,pixels)) throw std::runtime_error("Rail gallery rendering failed");
@@ -1179,7 +1182,7 @@ void VerifyRailModels()
 			if (GetRailFoundation(static_cast<Slope>(slope),static_cast<TrackBits>(tracks)) == FOUNDATION_INVALID) continue;
 			for (float scale : {2.0f,0.2f}) for (unsigned turn = 0; turn < 4; ++turn) {
 				if (scale != 2 && (slope != 0 || (tracks != TRACK_BIT_X && tracks != TRACK_BIT_Y))) continue;
-				Camera camera{{8,8,GetSlopeMaxPixelZ(static_cast<Slope>(slope))*0.5f},scale,192,192,turn+0.25f};
+				Camera camera{{8,8,TerrainZ(GetSlopeMaxPixelZ(static_cast<Slope>(slope)))*0.5f},scale,192,192,turn+0.25f};
 				Scene scene = RailReviewScene(static_cast<RailType>(type),static_cast<TrackBits>(tracks),static_cast<Slope>(slope),camera,false);
 				std::vector<uint8_t> pixels;
 				std::vector<uint32_t> ids;
@@ -1262,7 +1265,7 @@ void VerifyLiveTunnelCapture()
 	if (entrance == INVALID_TILE) throw std::runtime_error("Live tunnel check requires a map with a supported tunnel");
 	TileIndex other = GetOtherTunnelEnd(entrance);
 	unsigned direction = GetTunnelBridgeDirection(entrance);
-	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,static_cast<float>(GetTilePixelZ(entrance))};
+	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,TerrainZ(GetTilePixelZ(entrance))};
 	float length = (std::abs(static_cast<int>(TileX(other))-static_cast<int>(TileX(entrance)))+std::abs(static_cast<int>(TileY(other))-static_cast<int>(TileY(entrance))))*16.0f;
 	Debug(driver,1,"OpenTT3D: live tunnel review {},{} to {},{}, floor {}, direction {}",TileX(entrance),TileY(entrance),TileX(other),TileY(other),origin.z,direction);
 	struct VehicleState { const Vehicle *vehicle; int x,y,z; Direction direction; VehStates flags; };
@@ -1490,7 +1493,7 @@ void VerifyFenceModels()
 		}
 		if (layout && (*layout == 2 || *layout == 3 || *layout == 10 || *layout == 11)) {
 			Corner corner = *layout == 2 ? CORNER_W : *layout == 3 ? CORNER_N : *layout == 10 ? CORNER_E : CORNER_S;
-			float base = GetSlopePixelZInCorner(RemoveHalftileSlope(slope),corner);
+			float base = TerrainZ(GetSlopePixelZInCorner(RemoveHalftileSlope(slope),corner));
 			for (const auto &instance : scene.instances) {
 				float low = INFINITY, high = -INFINITY;
 				for (const auto &vertex : *instance.mesh) { low = std::min(low,vertex.position.z); high = std::max(high,vertex.position.z); }
@@ -1588,7 +1591,7 @@ static Scene FoundationReviewScene(Slope slope, Foundation foundation, const Cam
 	if (show_ground && scene.instances.size() < 3) throw std::runtime_error("Foundation review did not capture its ground and retaining walls");
 	size_t end = scene.instances.size()-(show_ground ? 1 : 0);
 	for (size_t i = show_ground ? 1 : 0; i < end; ++i) scene.instances[i].data.SetObjectId(137);
-	if (house) DrawVoxelAsset(scene,"houses",2,3,{0,0,static_cast<float>(tile.z)});
+	if (house) DrawVoxelAsset(scene,"houses",2,3,{0,0,TerrainZ(tile.z)});
 	return scene;
 }
 
@@ -1661,7 +1664,7 @@ void VerifyFoundationModels()
 				size_t part = 0;
 				auto append = [&](Foundation f) {
 					Slope upper = current;
-					float rise = ApplyPixelFoundationToSlope(f,upper);
+					float rise = TerrainZ(ApplyPixelFoundationToSlope(f,upper));
 					float detail = camera.PixelScaleAt({8,8,base+4});
 					unsigned lod = detail >= 1.25f ? 0 : detail >= 0.35f ? 1 : 2;
 					auto unit = MakeFoundationMesh(MakeTileSurface(current),MakeTileSurface(upper),rise,lod,false,false);
@@ -1734,7 +1737,7 @@ void ExportBridgeModelGallery(unsigned type)
 	for (unsigned rotation = 0; rotation < 4; ++rotation) {
 		Textures().BeginScene();
 		Scene scene = BridgeReviewScene(type,0,false,true);
-		Camera camera{{40,8,24},2,640,640,rotation + 0.2f};
+		Camera camera{{40,8,TerrainZ(24)},2,640,640,rotation + 0.2f};
 		std::vector<uint8_t> pixels;
 		if (!RenderScene(scene,camera,pixels)) throw std::runtime_error("Bridge gallery GPU rendering failed");
 		std::ofstream file(directory / fmt::format("model-bridge-{:02}-{}.pam",type,rotation),std::ios::binary);
@@ -1744,11 +1747,11 @@ void ExportBridgeModelGallery(unsigned type)
 	for (bool overhead : {false,true}) {
 		Textures().BeginScene();
 		Scene scene = BridgeReviewScene(type,3,false,false);
-		Camera camera{{40,8,24},2,640,480,0.2f};
+		Camera camera{{40,8,TerrainZ(24)},2,640,480,0.2f};
 		camera.pitch = 90;
 		if (!overhead) {
-			camera.first_person = true; camera.focus = {40,-4,22}; camera.rotation = 1.5f; camera.pitch = 0; camera.vertical_fov = 40;
-			scene.Quad({32,-32,16},{48,-32,16},{48,48,16},{32,48,16},{0.18f,0.19f,0.18f});
+			camera.first_person = true; camera.focus = {40,-4,TerrainZ(16)+6}; camera.rotation = 1.5f; camera.pitch = 0; camera.vertical_fov = 40;
+			scene.Quad({32,-32,TerrainZ(16)},{48,-32,TerrainZ(16)},{48,48,TerrainZ(16)},{32,48,TerrainZ(16)},{0.18f,0.19f,0.18f});
 		}
 		std::vector<uint8_t> pixels;
 		if (!RenderScene(scene,camera,pixels)) throw std::runtime_error("Bridge overhead/underpass gallery failed");
@@ -1768,7 +1771,7 @@ void VerifyBridgeModels()
 		if (scene.instances.empty()) throw std::runtime_error("Bridge has no authored assembly");
 		for (auto &instance : scene.instances) instance.data.SetObjectId(103);
 		for (unsigned turn = 0; turn < 4; ++turn) {
-			Camera camera{along_y ? Vec3{8,40,24} : Vec3{40,8,24},0.8f,256,256,turn + 0.2f};
+			Camera camera{along_y ? Vec3{8,40,TerrainZ(24)} : Vec3{40,8,TerrainZ(24)},0.8f,256,256,turn + 0.2f};
 			if (!RenderScene(scene,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),103) < 32) throw std::runtime_error(fmt::format("Bridge {} transport {} axis {} view {} failed visibility/picking",type,transport,along_y,turn));
 			if (type == 0 && transport == 0 && sloped) {
 				/* Opaque batching may choose either colour at coincident component
@@ -1793,13 +1796,13 @@ void VerifyBridgeModels()
 			++views;
 		}
 		Scene overhead = scene;
-		for (auto &instance : overhead.instances) if (instance.data.origin_opacity[2] < 24) {
+		for (auto &instance : overhead.instances) if (instance.data.origin_opacity[2] < TerrainZ(24)) {
 			instance.data.SetObjectId(104);
-			for (const auto &v : *instance.mesh) if (v.position.z+instance.data.origin_opacity[2] > 24-BRIDGE_DECK_THICKNESS*0.5f+0.0001f) {
+			for (const auto &v : *instance.mesh) if (v.position.z+instance.data.origin_opacity[2] > TerrainZ(24)-BRIDGE_DECK_THICKNESS*0.5f+0.0001f) {
 				throw std::runtime_error("Bridge pillar cap reaches the running surface");
 			}
 		}
-		Camera top{along_y ? Vec3{8,40,24} : Vec3{40,8,24},0.8f,256,256,0.2f};
+		Camera top{along_y ? Vec3{8,40,TerrainZ(24)} : Vec3{40,8,TerrainZ(24)},0.8f,256,256,0.2f};
 		top.pitch = 90;
 		if (!RenderScene(overhead,top,pixels,&ids) || std::count(ids.begin(),ids.end(),104) != 0) throw std::runtime_error("Bridge pillars are visible through the deck from above");
 	}

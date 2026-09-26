@@ -49,6 +49,45 @@ public:
 	{
 		return x < 0 || y < 0 || z < 0 || x >= size[0] || y >= size[1] || z >= size[2] ? 0 : cells[Index(x,y,z)];
 	}
+
+	/** Automatically aggregate authored cells. Any occupied cell retains its
+	 * coarse block (thin posts cannot disappear); deterministic majority material
+	 * retains original palette/remap indices. Clamp the mesh to the original
+	 * occupied bounds, preserving ground contact and complete physical footprints. */
+	VoxelMesh ReducedMesh(unsigned factor) const
+	{
+		if (factor == 1) return Mesh();
+		if (factor < 2 || factor > 16 || (factor & (factor-1)) != 0) throw std::invalid_argument("Invalid automatic voxel LOD factor");
+		std::array<int,3> extent;
+		for (unsigned axis = 0; axis < 3; ++axis) extent[axis] = (size[axis]+factor-1)/factor;
+		VoxelGrid reduced(extent,materials,origin,step*factor);
+		Vec3 low{INFINITY,INFINITY,INFINITY}, high{-INFINITY,-INFINITY,-INFINITY};
+		std::vector<unsigned> counts(materials.size()+1);
+		std::vector<uint16_t> used;
+		for (int z = 0; z < extent[2]; ++z) for (int y = 0; y < extent[1]; ++y) for (int x = 0; x < extent[0]; ++x) {
+			for (int dz = z*factor; dz < std::min<int>((z+1)*factor,size[2]); ++dz)
+			for (int dy = y*factor; dy < std::min<int>((y+1)*factor,size[1]); ++dy)
+			for (int dx = x*factor; dx < std::min<int>((x+1)*factor,size[0]); ++dx) {
+				uint16_t cell = Get(dx,dy,dz);
+				if (cell == 0) continue;
+				if (counts[cell]++ == 0) used.push_back(cell);
+				low = {std::min(low.x,origin.x+dx*step.x),std::min(low.y,origin.y+dy*step.y),std::min(low.z,origin.z+dz*step.z)};
+				high = {std::max(high.x,origin.x+(dx+1)*step.x),std::max(high.y,origin.y+(dy+1)*step.y),std::max(high.z,origin.z+(dz+1)*step.z)};
+			}
+			uint16_t selected = 0;
+			for (uint16_t cell : used) if (selected == 0 || counts[cell] > counts[selected] || (counts[cell] == counts[selected] && cell < selected)) selected = cell;
+			if (selected != 0) reduced.Fill({x,y,z},{x+1,y+1,z+1},selected);
+			for (uint16_t cell : used) counts[cell] = 0;
+			used.clear();
+		}
+		auto mesh = reduced.Mesh();
+		if (mesh.occupied == 0) return mesh;
+		for (auto &vertex : mesh.vertices) {
+			vertex.position = {std::clamp(vertex.position.x,low.x,high.x),std::clamp(vertex.position.y,low.y,high.y),std::clamp(vertex.position.z,low.z,high.z)};
+		}
+		mesh.low = low; mesh.high = high;
+		return mesh;
+	}
 	void Fill(std::array<int,3> low, std::array<int,3> high, uint16_t material)
 	{
 		if (material > materials.size()) throw std::invalid_argument("Unknown voxel material");

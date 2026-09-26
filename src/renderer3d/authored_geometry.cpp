@@ -759,7 +759,7 @@ bool DrawAuthoredTree(Scene &scene, SpriteID image, const SpriteTexture &texture
 	image &= SPRITE_MASK;
 	if (image<1576 || image>2009) return false;
 	unsigned stage=(image-1576)%7, base=image-stage;
-	if (HasVoxelTree(image)) return DrawVoxelAsset(scene,"trees",base,stage,origin,texture.palette,opacity);
+	if (UseVoxelTrees() && HasVoxelTree(image)) return DrawVoxelAsset(scene,"trees",base,stage,origin,texture.palette,opacity);
 	const auto &models=TreeModels();
 	auto found=models.find(base);
 	if (found != models.end() && found->second.tree) {
@@ -810,7 +810,7 @@ void VerifyTreeModels()
 	for (const auto &row : _tree_layout_sprite) for (const auto &sprite : row) palettes[sprite.sprite].insert(sprite.pal);
 	for (const auto &[base,model] : TreeModels()) {
 		if (!model.tree) continue;
-		bool all_voxel = true;
+		bool all_voxel = UseVoxelTrees();
 		for (unsigned stage = 0; stage < 7; ++stage) all_voxel &= HasVoxelTree(base+stage);
 		if (all_voxel) { ++voxel_families; continue; }
 		++families;

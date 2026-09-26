@@ -9,11 +9,33 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite198/198, including train physical pitch/contact, exact retained-source reconstruction, copied-scene CPU residency, active asynchronous-worker leases, conservative tunnel regions and farm climate restrictions. Release`.9`LinuxGL, macOS and Windows x86/x64/arm64 pass; LinuxVulkan stays below4.15GB but its renderer matrix reaches the7200-second bound before completion.
+- [x] Current native suite199/199, including automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, exact retained-source reconstruction, copied-scene CPU residency, active asynchronous-worker leases, conservative tunnel regions and farm climate restrictions. Release`.9`LinuxGL, macOS and Windows x86/x64/arm64 pass; LinuxVulkan stays below4.15GB but its renderer matrix reaches the7200-second bound before completion.
 - [x] Current1,247-volume asset/compiler/schema suite117/117 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Terrain steps render8→16 while retaining authored object dimensions. Raised
+  foundations, bridge ramps/pillars, rails/catenary, tunnel earth and dock decks/piles
+  pass the updatedGL/Vulkan infrastructure, ground-continuity, atlas and picking checks.
+- [x] Four model LOD levels are generated automatically from authored cells, with
+  nearest-bound screen sizing, palette-aware deterministic reduction and scene-pinned
+  cache retirement. Native reduction/thin-part/bounds/reconstruction regressions pass.
+- [x] Projected-material3D trees restored as the default per the user's performance
+  instruction. Matched pre-terrain300-frame controls improve12.08/13.24→22.71/29.50fps
+  with voxel LODs, then54.89/60.02fps with projected trees. Sloped roofs are permitted.
+- [x] Both scene/navigation and62-family projected-tree matrices pass. Corrected
+  electric23 routes complete9,000 frames/backend with doubled-grade wheel support,
+  all four corner tracks and independent surface/portal/tunnel collector contact.
+- [x] Rooted-tree/culling and steeper electric23…26 pose matrices pass on both backends.
+  Both1,800-frame helicopter254 controls retain the local54-unit oil-rig deck,120
+  support corners, all rotor states and restart.
+- [x] Final portal-bank continuity, both live tree-style selections, exact atlas/picking
+  and six matched performance controls pass. The updated local macOS app matches the
+  frozen reviewed executable; all local native review processes have exited.
+- [ ] Arbitrary-world smooth60fps remains unmet: final dense-Cab projected-tree controls
+  average49.477/60.000fpsGL/Vulkan, with154/0 intervals over20ms. Catalogue/source-fidelity
+  completion and complete current Linux verification remain unproven.
 
 - [x] Matched expanded1,169GL/Vulkan matrices complete below6GiB with scene-pinned
   CPU surfaces and cold immutable GPU-page retirement:5,779,248,360/5,359,801,360bytes.

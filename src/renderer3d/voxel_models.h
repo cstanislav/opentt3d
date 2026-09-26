@@ -9,6 +9,7 @@ bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned stat
 bool HasVoxelAirport(unsigned graphics, unsigned frame);
 bool DrawVoxelAirportGround(Scene &scene, unsigned graphics, unsigned frame, Vec3 origin, PaletteID palette);
 bool HasVoxelTree(SpriteID image);
+bool UseVoxelTrees();
 std::optional<unsigned> VoxelHouseState(unsigned house, unsigned stage, unsigned variant);
 bool HasVoxelHouseGround(unsigned house);
 std::optional<unsigned> VoxelHouseGroundState(unsigned house, unsigned stage, unsigned variant);
