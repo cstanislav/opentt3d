@@ -3,7 +3,11 @@ name: OpenTT3D - Build and verify
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**/*.md'
   pull_request:
+    paths-ignore:
+      - '**/*.md'
     branches: [main]
   workflow_dispatch:
 
@@ -75,9 +79,11 @@ jobs:
         run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/vehicle-poses-ci --backend vulkan --vulkan-validation --savegame media/baseset/opntitle.dat --blitter 40bpp-anim --verify-voxel-poses $(seq "$FIRST_ENGINE" "$LAST_ENGINE") --timeout 7200 --memory-limit-mib 6144 --brief
       - name: Build and render a real electric-rail journey
         if: matrix.suite == 'scene'
+        # The complete scene pass already covers all diagnostic voxel-tree views.
+        # Retain the active projected/voxel tree matrix in this 900-second journey.
         run: |
           docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/fixture_rail.py --build-dir build-linux --output build-linux/electric-fixture-ci
-          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/electric-ci --backend vulkan --vulkan-validation --savegame build-linux/electric-fixture-ci/save/rail-fixture.sav --ai-dir build-linux/electric-fixture-ci/ai --reference-catenary --verify-live-tunnel --verify-rail-details --verify-stations --verify-depots --verify-crossings --verify-road-stops --verify-trees --first-person auto --running --benchmark-frames 120 --timeout 900 --memory-limit-mib 6144
+          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/electric-ci --backend vulkan --vulkan-validation --savegame build-linux/electric-fixture-ci/save/rail-fixture.sav --ai-dir build-linux/electric-fixture-ci/ai --reference-catenary --verify-live-tunnel --verify-rail-details --verify-stations --verify-depots --verify-crossings --verify-road-stops --verify-trees --tree-verification-scope active --first-person auto --running --benchmark-frames 120 --timeout 900 --memory-limit-mib 6144
       - name: Store verification artifacts
         if: always()
         uses: actions/upload-artifact@v5

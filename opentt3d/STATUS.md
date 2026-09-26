@@ -9,12 +9,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite200/200, including airport/industry climate restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.11`LinuxGL and all five Vulkan scene/vehicle shards now pass below6GiB, with all256 engines/322,048 poses; macOS and Windows jobs pass. Newer doubled-terrain CI remains pending.
-- [x] Current1,286-volume asset/compiler/schema suite121/121 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.13`LinuxGL, all four Vulkan vehicle shards, macOS and Windows pass; its Vulkan scene job passes the main matrix but times out repeating trees in the electric journey. The active-tree scope repair awaits CI.
+- [x] Current1,301-volume asset/compiler/schema suite122/122 and three retirement checks pass (123 unique checks); downloader/screenshot/memory harness9/9 passes. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Factory39…42 adds fifteen provisional volumes, including both original
+  multi-block layouts and independently owned completed lower walls/paving. The
+  completed42 body remains empty. Coverage reaches62 industry bodies/66 grounds.
+- [x] A478-layer Toyland audit identifies215 source replacements. Climate guards
+  now preserve distinct soil/rig layers and only paper67's changed completed body;
+  unchanged construction and other independent owners retain their voxel bindings.
 - [x] Tropical lumbermill125…128 adds twelve volumes with independent bare soil,
   all four construction selections, joined open canopy and supported timber stacks.
   Both backend geometry/state matrices, eight actual construction runs and four

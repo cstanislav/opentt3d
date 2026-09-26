@@ -25,6 +25,8 @@ def assemble(build):
     link_or_copy(executable, contents / "MacOS/opentt3d")
     for name in ("baseset", "lang", "ai", "game"):
         destination = resources / name
+        if destination.is_symlink() and destination.readlink() != build / name:
+            destination.unlink()
         if not destination.exists():
             destination.symlink_to(build / name, target_is_directory=True)
     link_or_copy(build / "baseset/opentt3d.icns", resources / "OpenTT3D.icns")

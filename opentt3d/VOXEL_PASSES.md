@@ -68,7 +68,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,286-volume lumbermill candidate)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,301-volume factory candidate)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -78,7 +78,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states and three independently mounted train collector volumes | Flat-body tunnel gauge repaired; slope/curve wheel contact, contextual station/depot/bridge/Cab clearance and all-family source/dimensional work remain; bindings do not establish Pass1 acceptance |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
-| Industries | 58/175 body definitions,62 grounds | Lumbermill125…128 now joins oil-well, farm, bank, food, paper, plantations, waterworks, oil-rig, forest and refinery; remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
+| Industries | 62/175 body definitions,66 grounds | Factory39…42 and lumbermill125…128 now join oil-well, farm, bank, food, paper, plantations, waterworks, oil-rig, forest and refinery; printing works43…46 and other production/storage/machinery families, climate grounds, construction, animation, cargo and multi-tile layouts remain |
 | Airports | 53/74 tile definitions:47 body owners and6 ground-only definitions;35 independent grounds | Added apron/runway/threshold/fence/helipad families and small terminals33/34/35; remaining taxiway/grass/small-runway grounds, heliport44, radar grounds and independent Toyland terminal/hangar artwork |
 | Depots | 5/6 families,20 directional bindings | Tram body/floor/wire and all-family source/ground/clearance review |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |

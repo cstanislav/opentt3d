@@ -802,9 +802,11 @@ bool DrawAuthoredTree(Scene &scene, SpriteID image, const SpriteTexture &texture
 	return found!=models.end() && DrawRegisteredModel(scene,found->second,stage==6 ? 6 : 3,texture,origin,origin,opacity,pixel_scale);
 }
 
-void VerifyTreeModels()
+void VerifyTreeModels(bool include_inactive_voxels)
 {
-	VerifyVoxelTreeModels();
+	/* The complete scene matrix already covers the diagnostic voxel catalogue.
+	 * A moving-world control can verify only the active tree representation. */
+	if (include_inactive_voxels || UseVoxelTrees()) VerifyVoxelTreeModels();
 	unsigned views = 0, families = 0, voxel_families = 0;
 	std::map<unsigned,std::set<PaletteID>> palettes;
 	for (const auto &row : _tree_layout_sprite) for (const auto &sprite : row) palettes[sprite.sprite].insert(sprite.pal);
@@ -870,11 +872,12 @@ void VerifyTreeModels()
 	if (families == 0 && voxel_families == 0) throw std::runtime_error("No tree profiles loaded");
 	Debug(driver,1,"OpenTT3D: {} component tree families and {} lifecycle/LOD views passed materials (one RGBA8 rounding level), culling bounds and exact picking",families,views);
 	Debug(driver,1,"OpenTT3D: {} complete voxel tree families verified separately with exact palette/cell geometry",voxel_families);
+	if (!include_inactive_voxels) Debug(driver,1,"OpenTT3D: active tree representation verified ({} projected families, {} voxel families)",families,voxel_families);
 }
 
 bool HasAuthoredIndustry(unsigned graphics, SpriteID sprite)
 {
-	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) return false;
+	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape),false,sprite&SPRITE_MASK)) return false;
 	if (VoxelIndustryState(graphics,sprite)) return true;
 	auto found = IndustryModels().find(graphics);
 	if (found == IndustryModels().end()) return false;
@@ -1051,8 +1054,8 @@ void VerifyIndustryModels()
 	VerifyVoxelIndustryModels();
 	unsigned views = 0;
 	for (const auto &[graphics, model] : IndustryModels()) {
-		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) continue;
 		SpriteID image = IndustryBodySprite(graphics);
+		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape),false,image&SPRITE_MASK)) continue;
 		if (!HasAuthoredIndustry(graphics, image)) throw std::runtime_error(fmt::format("Industry {} is not bound to its completed reference", graphics));
 		Textures().BeginScene();
 		SpriteTexture texture = Textures().Get(image, PAL_NONE, 0, true);

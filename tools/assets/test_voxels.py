@@ -8,6 +8,58 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_factory_layers_preserve_empty_body_support_and_roof_ownership(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("factory_") or name in ("mine_ground_bare","mine_ground_site")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(39,43)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        self.assertNotIn("3",result["bindings"]["industries"]["42"],"The entire completed service shed is ground-owned")
+        def world_cells(name):
+            model = result["models"][name]
+            return {(round((model["origin"][0]+x*model["cell_size"][0])*4),
+                     round((model["origin"][1]+y*model["cell_size"][1])*4),
+                     round((model["origin"][2]+z*model["cell_size"][2])*4))
+                    for x,y,z in volumes[name]}
+        for graphics in range(39,43):
+            states = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(states["1"],states["2"])
+            self.assertEqual({z for x,y,z in volumes[states["0"]]},{0},"Excavations have no future building mass")
+            ground_name = result["bindings"]["industry_ground"][str(graphics)]["3"]
+            ground = volumes[ground_name]
+            self.assertEqual({(x,y) for x,y,z in ground if z == 0},{(x,y) for x in range(32) for y in range(32)})
+            joined = {(x,y,z-1) for x,y,z in ground}
+            if "3" in states:
+                body_name = states["3"]
+                self.assertFalse(world_cells(body_name) & world_cells(ground_name),"Independent source owners must not overlap")
+                joined |= set(volumes[body_name])
+            reached = {p for p in joined if p[2] == -1}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in joined and p not in reached:
+                        reached.add(p); pending.append(p)
+            self.assertEqual(reached,joined,(graphics,"Upper factory bodies must meet their independently owned ground support"))
+        north = volumes["factory_north_finished"]
+        self.assertEqual({(y,z) for x,y,z in north if x == 31 and z >= 28},
+                         {(y,z) for x,y,z in volumes["factory_west_finished"] if x == 0 and z >= 28})
+        self.assertTrue(all(y >= 21 for x,y,z in volumes["factory_east_finished"]),
+                        "Original2151 contains the tower only; the low dark roof belongs to2147")
+        for p in ((7,13,83),(7,20,77),(7,27,103)):
+            self.assertNotIn(p,north,"Keep each original flue open through its rim")
+        self.assertNotIn((7,14,6),volumes["factory_south_partial"],"Construction entrance remains a real aperture")
+        self.assertNotIn((23,8,6),volumes["factory_south_partial"],"The unfinished opposite wall must not appear early")
+        self.assertNotIn((8,23,6),volumes["factory_south_ground"],"Completed glass retains its outer recess")
+        self.assertIn((8,22,6),volumes["factory_south_ground"])
+        self.assertIn((24,15,22),volumes["factory_south_ground"],"The source service shed has its ridge alongX")
+        partial = volumes["factory_north_partial"]
+        self.assertNotIn((2,2,20),partial,"Construction must not introduce unsupported rear posts")
+        self.assertNotIn((16,11,16),partial,"Original upper construction openings remain apertures")
+
     def test_lumbermill_preserves_construction_voids_log_stacks_and_roof_join(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

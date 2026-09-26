@@ -87,9 +87,9 @@ Set `OPENTT3D_AUTO_LOD=0` for a full-detail comparison. Trees use the previous
 projected-material3D geometry by default after matched voxel-tree LOD tests remained
 too slow. `OPENTT3D_TREE_STYLE=voxel` selects the retained voxel trees for diagnostics.
 
-The current artwork is a development subset: **1,247 voxel volumes**, covering
+The current artwork is a development subset: **1,301 voxel volumes**, covering
 110 house IDs,62 diagnostic tree sprite families and all256 vanilla vehicle definitions,
-plus54/175 industry body definitions and21/74 airport definitions. Climate/state
+plus62/175 industry body definitions and53/74 airport definitions. Climate/state
 coverage remains incomplete: Arctic farms/forests and several non-temperate industry
 grounds retain supplied source artwork pending independent volumes. No model has
 final visual approval. Remaining industry and
@@ -121,6 +121,27 @@ separate `--verify-voxel-poses` runs covering engines0…63,64…127,128…191 a
 Each shard retains all original comparisons and its own7200-second/6GiB bounds.
 `renderer3d verify-scene` is the corresponding console command; ordinary
 `renderer3d verify` and `--verify-renderer` still run the complete matrix.
+
+`--verify-trees` normally checks the diagnostic voxel catalogue and the active tree
+representation. Use `--verify-trees --tree-verification-scope active` for an active-
+representation check after the complete scene matrix. Its console equivalent is
+`renderer3d verify-active-trees`. Projected trees still receive their full lifecycle,
+palette, material, LOD, bounds and picking comparisons; opting into voxel trees keeps
+their full matrix. CI uses this scope for the separately bounded electric journey,
+after the scene step has already verified the complete voxel-tree catalogue.
+Documentation-only commits skip the expensive build/renderer workflow.
+
+Keep only the current build and selected review evidence. After inspecting a
+successful run and retaining comparison sheets, retire its generated model images:
+
+```sh
+python3 tools/assets/compact_reviews.py build-macos --discard-generated --apply \
+  --validation-manifest build-macos/your-completed-validation.json
+```
+
+This writes a per-image hash ledger before deletion; failed/unlisted runs, original
+sprite exports and selected source-comparison sheets are retained. The default mode
+still losslessly compacts generated PAM images to PNG instead.
 
 `OPENTT3D_TUNNEL_SCENERY_CULL=1` enables an experimental conservative tree-visibility
 filter while the Cab is inside an original tunnel. Both mouth cones remain infinite,

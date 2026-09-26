@@ -4,6 +4,32 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "factory_brick": [71,74,72,76,71,75],
+    "factory_brick_grain": [72,75,73,76,71,74],
+    "factory_west_brick": [71,74,72,75,71,75],
+    "factory_west_grain": [72,75,73,75,71,74],
+    "factory_chimney_cap": [72,76,73,78,71,77],
+    "factory_concrete": [6,9,7,10,6,9],
+    "factory_frame": [6,8,6,8,6,8],
+    "factory_glass": [128,131,129,132,128,130],
+    "factory_ground_glass": [129,132,130,133,129,131],
+    "factory_ground_east_glass": [130,132,131,133,130,134],
+    "factory_ground_west_glass": [131,132,131,132,131,132],
+    "factory_garage_glass": [131,133,131,133,131,133],
+    "factory_tower_roof_blue": [199,200,199,200,199,200],
+    "factory_blue_roof": [198,201,199,203,198,201],
+    "factory_blue_rib": [199,202,200,204,198,203],
+    "factory_dark_roof": [2,4,3,5,2,4],
+    "factory_dark_rib": [3,6,4,7,3,5],
+    "factory_paving": [3,5,4,6,3,5],
+    "factory_paving_grain": [4,6,5,7,4,6],
+    "factory_pit": [1,2,1,3,1,2],
+    "factory_pit_grain": [2,3,2,3,1,3],
+    "factory_partial_recess": [1,2,2,3,1,2],
+    "factory_partial_soil": 113,
+    "factory_fence": [6,9,7,10,6,9],
+    "factory_grass": [82,84,83,88,82,84],
+    "factory_cargo": [104,114,105,124,104,111],
     "lumber_soil": [105,108,106,112,105,113],
     "lumber_soil_light": [106,112,107,113,106,114],
     "lumber_soil_shadow": [71,73,72,73,71,73],
@@ -1254,6 +1280,79 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "factory_site": [
+      ["box","lumber_initial_soil",0,0,0,32,32,1],
+      ["scatter_paint","lumber_partial_soil_light",5,2153,0,0,0,32,32,1],
+      ["scatter_paint","lumber_soil_shadow",7,2156,0,0,0,32,32,1]
+    ],
+    "factory_yard": [
+      ["box","factory_paving",0,0,0,32,32,1],
+      ["scatter_paint","factory_paving_grain",4,2146,0,0,0,32,32,1]
+    ],
+    "factory_partial_x": [
+      ["box","factory_brick",0,10,1,32,12,21],
+      ["paint","factory_concrete",0,10,5,32,12,7],
+      ["paint","factory_concrete",0,10,11,32,12,13],
+      ["repeat",[6,0,0],5,[["erase",2,10,15,5,12,20]]]
+    ],
+    "factory_partial_y": [
+      ["box","factory_brick",10,0,1,12,32,21],
+      ["paint","factory_concrete",10,0,5,12,32,7],
+      ["paint","factory_concrete",10,0,11,12,32,13],
+      ["repeat",[0,6,0],5,[["erase",10,2,15,12,5,20]]]
+    ],
+    "factory_lower_x": [
+      ["box","factory_concrete",0,2,1,32,20,5],
+      ["box","factory_brick",0,2,5,32,20,21],
+      ["erase",0,4,2,32,18,21],
+      ["paint","factory_concrete",0,2,5,32,20,7],
+      ["paint","factory_concrete",0,2,15,32,20,17],
+      ["repeat",[6,0,0],5,[["erase",2,18,8,6,20,14],
+        ["box","factory_glass",2,18,8,6,19,14]]],
+      ["scatter_paint","factory_brick_grain",6,2146,0,2,5,32,20,21,"factory_brick"]
+    ],
+    "factory_lower_y": [
+      ["box","factory_concrete",2,0,1,20,32,5],
+      ["box","factory_brick",2,0,5,20,32,21],
+      ["erase",4,0,2,18,32,21],
+      ["paint","factory_concrete",2,0,5,20,32,7],
+      ["paint","factory_concrete",2,0,15,20,32,17],
+      ["repeat",[0,6,0],5,[["erase",18,2,8,20,6,14],
+        ["box","factory_glass",18,2,8,19,6,14]]],
+      ["scatter_paint","factory_brick_grain",6,2147,2,0,5,20,32,21,"factory_brick"]
+    ],
+    "factory_upper_x": [
+      ["box","factory_brick",0,2,20,32,20,28],
+      ["erase",0,4,20,32,18,28],
+      ["repeat",[6,0,0],5,[["erase",2,18,21,6,20,26],
+        ["box","factory_glass",2,18,21,6,19,26]]]
+    ],
+    "factory_upper_y": [
+      ["box","factory_brick",2,0,20,20,32,28],
+      ["erase",4,0,20,18,32,28],
+      ["repeat",[0,6,0],5,[["erase",18,2,21,20,6,26],
+        ["box","factory_glass",18,2,21,19,6,26]]]
+    ],
+    "factory_roof_x": [
+      ["box","factory_blue_roof",0,1,28,32,21,29],
+      ["gable","factory_blue_roof",0,1,29,32,21,42,"y"],
+      ["repeat",[3,0,0],11,[["paint","factory_blue_rib",0,1,29,1,21,42]]]
+    ],
+    "factory_roof_y": [
+      ["box","factory_blue_roof",1,0,28,21,32,29],
+      ["gable","factory_blue_roof",1,0,29,21,32,42,"x"],
+      ["repeat",[0,3,0],11,[["paint","factory_blue_rib",1,0,29,21,1,42]]]
+    ],
+    "factory_fence_x": [
+      ["paint","factory_grass",30,0,0,32,32,1],
+      ["box","factory_fence",31,0,5,32,32,6],
+      ["repeat",[0,4,0],8,[["box","factory_fence",31,0,1,32,1,7]]]
+    ],
+    "factory_fence_y": [
+      ["paint","factory_grass",0,30,0,32,32,1],
+      ["box","factory_fence",0,31,5,32,32,6],
+      ["repeat",[4,0,0],8,[["box","factory_fence",0,31,1,1,32,7]]]
+    ],
     "lumber_site": [
       ["box","lumber_initial_soil",0,0,0,32,32,1],
       ["scatter_paint","lumber_soil_light",5,2353,0,0,0,32,32,1],
@@ -5605,6 +5704,152 @@
     ]
   },
   "models": {
+    "factory_north_initial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory39 original2153 L-shaped dark excavation in body-owned soil over independent2022 ground",
+      "ops":[["use","factory_site"],
+        ["box","factory_pit",2,12,0,20,32,1],["box","factory_pit",12,2,0,32,20,1],
+        ["scatter_paint","factory_pit_grain",3,2153,0,0,0,32,32,1,"factory_pit"]]
+    },
+    "factory_east_initial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory40 original2154 long north-south excavated strip; no premature tower or blue roof",
+      "ops":[["use","factory_site"],["box","factory_pit",2,0,0,20,30,1],
+        ["scatter_paint","factory_pit_grain",3,2154,2,0,0,20,30,1,"factory_pit"]]
+    },
+    "factory_west_initial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory41 original2155 long east-west excavated strip",
+      "ops":[["use","factory_site"],["box","factory_pit",0,2,0,30,20,1],
+        ["scatter_paint","factory_pit_grain",3,2155,0,2,0,30,20,1,"factory_pit"]]
+    },
+    "factory_south_initial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory42 original2156 two exposed black foundation trenches for the low courtyard service building",
+      "ops":[["use","factory_site"],["box","factory_pit",6,4,0,12,26,1],
+        ["box","factory_pit",18,4,0,24,26,1],
+        ["scatter_paint","factory_pit_grain",3,2156,0,0,0,32,32,1,"factory_pit"]]
+    },
+    "factory_north_partial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory39 original2157 roofless red L-shell and grey bands; only source-identical construction1/2 share this volume",
+      "ops":[["use","factory_yard"],["use","factory_partial_x"],["use","factory_partial_y"],
+        ["erase",0,0,1,10,32,21],["erase",0,0,1,32,10,21],
+        ["paint","factory_partial_soil",0,0,0,10,10,1],
+        ["box","factory_pit",20,20,1,32,32,2]]
+    },
+    "factory_east_partial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory40 original2158 red lower wing and tall-tower foundation, with no finished tower or roofing at1/2",
+      "ops":[["use","factory_yard"],["use","factory_partial_y"],
+        ["box","factory_brick",2,22,1,12,32,21],["erase",4,24,2,10,30,21],
+        ["paint","factory_concrete",2,22,5,12,32,7],
+        ["paint","factory_concrete",2,22,15,12,32,17],
+        ["replace_material","factory_glass","factory_partial_recess"]]
+    },
+    "factory_west_partial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory41 original2159 lower brick end wing and open dark window apertures",
+      "ops":[["use","factory_yard"],["use","factory_partial_x"],
+        ["box","factory_brick",30,10,1,32,20,21],
+        ["paint","factory_concrete",30,10,5,32,20,7],
+        ["paint","factory_concrete",30,10,11,32,20,13],
+        ["replace_material","factory_glass","factory_partial_recess"]]
+    },
+    "factory_south_partial": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Factory42 original2160 partial red service-building walls with an open entrance and exposed adjacent trench; completed building/paving later belong entirely to ground2149",
+      "ops":[["use","factory_yard"],["box","factory_brick",6,4,1,24,24,15],
+        ["erase",8,6,2,22,22,15],
+        ["erase",8,22,1,24,24,15],["erase",22,6,1,24,24,15],
+        ["erase",6,12,1,8,17,11],
+        ["paint","factory_pit",2,4,0,6,30,1],
+        ["scatter_paint","factory_brick_grain",6,2160,6,4,1,24,24,15,"factory_brick"]]
+    },
+    "factory_north_ground": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Original2146 owns the lower red L-building, white horizontal bands, glazing and complete paved ground; upper39 remains independent",
+      "ops":[["use","factory_yard"],["use","factory_lower_x"],["use","factory_lower_y"],
+        ["replace_material","factory_glass","factory_ground_glass"]]
+    },
+    "factory_east_ground": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Original2147 owns the lower east hall/tower plinth, glazing, paving and perimeter fence; tower upper40 is separately transparent",
+      "ops":[["use","factory_yard"],
+        ["box","factory_brick",2,0,1,20,22,12],["erase",4,0,2,18,20,12],
+        ["repeat",[0,8,0],2,[["erase",18,3,3,20,9,10],["box","factory_glass",18,3,3,19,9,10]]],
+        ["gable","factory_dark_roof",1,0,12,21,22,20,"x"],
+        ["repeat",[0,3,0],8,[["paint","factory_dark_rib",1,0,12,21,1,20]]],
+        ["box","factory_brick",2,22,1,12,32,21],["erase",4,24,2,10,30,21],
+        ["paint","factory_concrete",2,22,5,12,32,7],
+        ["paint","factory_concrete",2,22,15,12,32,17],
+        ["replace_material","factory_glass","factory_ground_east_glass"],
+        ["paint","factory_grass",20,30,0,32,32,1],
+        ["box","factory_fence",20,31,5,32,32,6],
+        ["repeat",[4,0,0],3,[["box","factory_fence",20,31,1,21,32,7]]]]
+    },
+    "factory_west_ground": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Original2148 owns the lower west end wing and stone stripes plus paved apron/fence; upper41 keeps separate source ownership",
+      "ops":[["use","factory_yard"],["use","factory_lower_x"],
+        ["box","factory_brick",30,2,1,32,20,21],
+        ["paint","factory_concrete",30,2,5,32,20,7],
+        ["paint","factory_concrete",30,2,15,32,20,17],
+        ["replace_material","factory_glass","factory_ground_west_glass"],
+        ["paint","factory_grass",30,20,0,32,32,1],
+        ["box","factory_fence",31,20,5,32,32,6],
+        ["repeat",[0,4,0],3,[["box","factory_fence",31,20,1,32,21,7]]]]
+    },
+    "factory_south_ground": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Original2149 owns the whole low red courtyard service building, black gable, inset windows, stacked crates and boundary fence; original42 has no completed body",
+      "ops":[["use","factory_yard"],["box","factory_brick",4,6,1,24,24,15],
+        ["erase",6,8,2,22,22,15],
+        ["repeat",[8,0,0],2,[["erase",7,22,4,12,24,12],
+          ["box","factory_garage_glass",7,22,4,12,23,12]]],
+        ["erase",22,12,1,24,18,12],
+        ["box","factory_dark_roof",4,6,15,24,24,16],
+        ["gable","factory_dark_roof",3,5,16,25,25,23,"y"],
+        ["repeat",[3,0,0],7,[["paint","factory_dark_rib",3,5,16,4,25,23]]],
+        ["face_paint","factory_brick",3,3,6,16,25,24,23],
+        ["repeat",[0,5,0],5,[["box","factory_cargo",26,2,1,30,6,6]]],
+        ["use","factory_fence_x"],["use","factory_fence_y"],
+        ["scatter_paint","factory_brick_grain",6,2149,6,4,1,24,24,15,"factory_brick"]]
+    },
+    "factory_north_finished": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2150 owns the blue L-roof and upper brick/glazing with three hollow red flues; lower completed wall/paving remain in2146",
+      "ops":[["use","factory_upper_x"],["use","factory_upper_y"],
+        ["use","factory_roof_x"],["use","factory_roof_y"],
+        ["box","factory_brick",6,12,28,10,16,84],
+        ["box","factory_chimney_cap",5,11,82,11,17,84],["erase",7,13,30,9,15,84],
+        ["box","factory_brick",6,19,28,10,23,78],
+        ["box","factory_chimney_cap",5,18,76,11,24,78],["erase",7,20,30,9,22,78],
+        ["box","factory_brick",6,26,28,10,30,104],
+        ["box","factory_chimney_cap",5,25,102,11,31,104],["erase",7,27,30,9,29,104],
+        ["scatter_paint","factory_brick_grain",5,2150,0,0,20,32,32,110,"factory_brick"]]
+    },
+    "factory_east_finished": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2151 tall square red tower, stacked inset windows and raised grey rooflight, above the independent2147 tower plinth",
+      "ops":[
+        ["box","factory_brick",2,22,20,12,32,100],
+        ["erase",4,24,22,10,30,100],
+        ["repeat",[0,0,16],2,[["erase",10,24,72,12,30,80],
+          ["box","factory_glass",10,24,72,11,30,80],
+          ["erase",4,30,72,10,32,80],["box","factory_glass",4,30,72,10,31,80]]],
+        ["box","factory_frame",1,21,100,13,32,102],
+        ["hip","factory_frame",1,21,102,13,32,107,4],
+        ["paint","factory_glass",3,23,102,11,30,107],
+        ["scatter_paint","factory_brick_grain",5,2151,2,22,20,12,32,100,"factory_brick"]]
+    },
+    "factory_west_finished": {
+      "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2152 upper red west wing and blue gable, meeting the neighbouring north39 roof at the exact tile edge",
+      "ops":[["use","factory_upper_x"],["box","factory_brick",30,2,20,32,20,28],
+        ["use","factory_roof_x"],
+        ["replace_material","factory_brick","factory_west_brick"]]
+    },
     "lumber_yard_initial": {
       "size":[32,32,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
       "reference":"Tropical lumbermill125 original2353 bare body-owned soil above independent2022 ground; no completed timber or canopy",
@@ -13518,6 +13763,10 @@
     },
     "depot_wires":{"1":{"0":"rail_depot_wire","1":"rail_depot_wire","2":"rail_depot_wire","3":"rail_depot_wire"}},
     "industry_ground": {
+      "39":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_north_ground"},
+      "40":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_east_ground"},
+      "41":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_west_ground"},
+      "42":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_south_ground"},
       "125":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "126":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "127":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -13582,6 +13831,10 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "39":{"0":"factory_north_initial","1":"factory_north_partial","2":"factory_north_partial","3":"factory_north_finished"},
+      "40":{"0":"factory_east_initial","1":"factory_east_partial","2":"factory_east_partial","3":"factory_east_finished"},
+      "41":{"0":"factory_west_initial","1":"factory_west_partial","2":"factory_west_partial","3":"factory_west_finished"},
+      "42":{"0":"factory_south_initial","1":"factory_south_partial","2":"factory_south_partial"},
       "125":{"0":"lumber_yard_initial","1":"lumber_yard_partial","2":"lumber_yard_partial","3":"lumber_yard_finished"},
       "126":{"0":"lumber_boiler_initial","1":"lumber_boiler_partial","2":"lumber_boiler_partial","3":"lumber_boiler_finished"},
       "127":{"0":"lumber_shed_initial","1":"lumber_shed_partial","2":"lumber_shed_partial","3":"lumber_shed_finished"},

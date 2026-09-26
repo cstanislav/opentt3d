@@ -22,13 +22,17 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
 /** Known source-climate restrictions apply to both voxel and legacy profiles.
  * Forest16/17 and farm33..38 currently model temperate artwork only. Industry
  * ground3924 and oil-well ground2173 also have independently painted climate
- * replacements despite retaining the same source numbers. Body ownership is
+ * replacements despite retaining the same source numbers. Toyland additionally
+ * replaces bare soil2022, forest2077, rig4061, rig bodies26..28 and paper2206.
+ * Body ownership is
  * independent, so an unsupported ground need not hide an unchanged body. */
 inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, bool ground = false, SpriteID sprite = 0)
 {
 	if (climate >= 4) return false;
 	if (climate == 0) return true;
-	return graphics != 16 && graphics != 17 && (graphics < 33 || graphics > 38) && (!ground || (sprite != 3924 && sprite != 2173));
+	if (graphics == 16 || graphics == 17 || (graphics >= 33 && graphics <= 38)) return false;
+	if (ground) return sprite != 3924 && sprite != 2173 && (climate != 3 || (sprite != 2022 && sprite != 2077 && sprite != 4061));
+	return climate != 3 || !((graphics >= 26 && graphics <= 28) || (graphics == 67 && sprite == 2206));
 }
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground = false);
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);

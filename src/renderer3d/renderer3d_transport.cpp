@@ -323,8 +323,16 @@ TEST_CASE("Industry source-climate replacements retain independent ground and bo
 		CHECK_FALSE(IndustryModelClimateSupported(7,climate,true,3924));
 		CHECK(IndustryModelClimateSupported(29,climate,false,2174));
 		CHECK_FALSE(IndustryModelClimateSupported(29,climate,true,2173));
-		CHECK(IndustryModelClimateSupported(29,climate,true,2022));
+		CHECK(IndustryModelClimateSupported(29,climate,true,2022) == (climate != 3));
 		CHECK(IndustryModelClimateSupported(18,climate,true,1420));
+	}
+	for (unsigned climate = 0; climate < 4; ++climate) {
+		for (unsigned graphic : {26U,27U,28U}) CHECK(IndustryModelClimateSupported(graphic,climate) == (climate != 3));
+		CHECK(IndustryModelClimateSupported(67,climate,false,2206) == (climate != 3));
+		CHECK(IndustryModelClimateSupported(67,climate,false,2221)); // Unchanged construction remains independently bound.
+		CHECK(IndustryModelClimateSupported(24,climate,false,2094));
+		CHECK(IndustryModelClimateSupported(24,climate,true,4061) == (climate != 3));
+		CHECK(IndustryModelClimateSupported(39,climate,true,2146));
 	}
 }
 

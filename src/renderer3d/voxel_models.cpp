@@ -864,8 +864,9 @@ void ExportVoxelReviews(std::string_view prefix)
 			bool selected = false;
 			for (const auto &part : layouts[layout]) for (unsigned stage = 0; stage < 4; ++stage) for (const char *category : {"industry_ground","industries"}) {
 				if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
-				if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape))) continue;
-				if (std::string_view(category) == "industry_ground" && !IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),true,_industry_draw_tile_data[part.gfx*4+stage].ground.sprite&SPRITE_MASK)) continue;
+				bool ground = std::string_view(category) == "industry_ground";
+				const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
+				if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),ground,(ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
 				auto binding = Models().bindings.find({category,part.gfx,stage});
 				selected |= binding != Models().bindings.end() && binding->second.starts_with(prefix);
 			}
@@ -875,8 +876,9 @@ void ExportVoxelReviews(std::string_view prefix)
 				std::vector<Vec3> placements;
 				for (const auto &part : layouts[layout]) for (const char *category : {"industry_ground","industries"}) {
 					if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
-					if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape))) continue;
-					if (std::string_view(category) == "industry_ground" && !IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),true,_industry_draw_tile_data[part.gfx*4+stage].ground.sprite&SPRITE_MASK)) continue;
+					bool ground = std::string_view(category) == "industry_ground";
+					const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
+					if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),ground,(ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
 					auto binding = Models().bindings.find({category,part.gfx,stage});
 					if (binding == Models().bindings.end()) continue;
 					group.push_back(&Models().models.at(binding->second));
@@ -961,6 +963,14 @@ void ExportVoxelReviews(std::string_view prefix)
 		std::ofstream registration(directory/(name+".json"));
 		registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}}}.dump(2) << '\n';
 		if (!registration) throw std::runtime_error("Could not write native house registration");
+	}
+	/* A family's construction floor can share a differently named soil model.
+	 * Export all native ground/body states of each selected industry definition
+	 * so the registered source sheet retains its complete ownership history. */
+	std::set<unsigned> industry_native_families;
+	for (const auto &[binding,name] : Models().bindings) {
+		const auto &[category,base,stage] = binding;
+		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix)) industry_native_families.insert(base);
 	}
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,base,stage] = binding;
@@ -1048,10 +1058,10 @@ void ExportVoxelReviews(std::string_view prefix)
 			}
 			context(fmt::format("context-depot-{}-direction-{}",base,direction),group,placements,headings);
 		}
-		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix) && IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape))) {
+		if ((category == "industries" || category == "industry_ground") && industry_native_families.contains(base)) {
 			bool ground_layer = category == "industry_ground";
 			const auto &source = _industry_draw_tile_data[base*4+stage];
-			if (!IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape),ground_layer,source.ground.sprite&SPRITE_MASK)) continue;
+			if (!IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape),ground_layer,(ground_layer ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
 			Textures().BeginScene();
 			Scene industry;
 			float z = ground_layer ? -0.25f : 0;

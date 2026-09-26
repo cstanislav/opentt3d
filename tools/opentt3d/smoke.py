@@ -112,6 +112,7 @@ def main():
     parser.add_argument("--verify-vehicles", action="store_true")
     parser.add_argument("--verify-industries", action="store_true")
     parser.add_argument("--verify-trees", action="store_true")
+    parser.add_argument("--tree-verification-scope", choices=("full", "active"), default="full", help="Active scope verifies the selected tree representation; the complete renderer matrix separately retains all diagnostic voxel-tree coverage")
     parser.add_argument("--verify-bridges", action="store_true")
     parser.add_argument("--verify-fences", action="store_true")
     parser.add_argument("--verify-foundations", action="store_true")
@@ -411,7 +412,7 @@ server_advertise = false
     if args.verify_industries:
         commands.append("renderer3d verify-industries")
     if args.verify_trees:
-        commands.append("renderer3d verify-trees")
+        commands.append("renderer3d verify-active-trees" if args.tree_verification_scope == "active" else "renderer3d verify-trees")
     if args.verify_bridges:
         commands.append("renderer3d verify-bridges")
     if args.gallery_bridge is not None:
@@ -680,8 +681,10 @@ server_advertise = false
                 raise RuntimeError("Industry geometry verification did not complete")
             if args.verify_trees and "lifecycle/LOD views passed materials (one RGBA8 rounding level), culling bounds and exact picking" not in text:
                 raise RuntimeError("Tree lifecycle verification did not complete")
-            if args.verify_trees and "voxel tree lifecycle/palette/scale views preserve exact bindings" not in text:
+            if args.verify_trees and args.tree_verification_scope == "full" and "voxel tree lifecycle/palette/scale views preserve exact bindings" not in text:
                 raise RuntimeError("Authored voxel tree state/palette verification did not complete")
+            if args.verify_trees and args.tree_verification_scope == "active" and "active tree representation verified" not in text:
+                raise RuntimeError("Active tree representation verification did not complete")
             if args.verify_bridges and "bridge assembly views, half-pillar clipping and transparent picking passed" not in text:
                 raise RuntimeError("Bridge geometry verification did not complete")
             if args.verify_bridges and "bridge pillar caps remain below the deck with zero overhead picking pixels" not in text:

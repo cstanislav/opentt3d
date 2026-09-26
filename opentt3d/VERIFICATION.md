@@ -1,5 +1,74 @@
 # Implementation verification
 
+## Factory39…42 coverage and Linux tree-sweep timeout repair
+
+Fifteen volumes bring the catalogue to1,301 and industry coverage to62
+body/66 ground definitions. Both original factory layouts retain their three2×2
+blocks, separate lower-wall/paving ownership, source-identical middle construction
+states and completed42's empty body. Its service building, dark roof, glazing,
+crates and fence belong entirely to original ground2149. Structural checks verify
+the shared blue-roof seam, supported upper/ground unions, exact non-overlap, open flues and
+construction openings. All31 new bound source layers pass the original palette
+audit. Source comparison repairs an oversized tower, merged-looking chimney silhouette,
+premature rear/opposite construction walls and a reversed service-shed roof. The
+tower's original body2151 contains no adjoining blue roof; its lower dark roof is now
+correctly part of ground2147. Registered joined, four-sided street and real-world
+views were inspected, with zero final visual approvals. Fine paint, trim and exact
+roof profiles remain later catalogue-wide pass work.
+
+All18 final native runs pass: two focused factory controls, eight actual construction
+runs, six climate matrices and two moving electric-journey controls. Each temperate
+backend checks360 focused mesh/palette views and3,824 industry states (2,112 grounds),
+plus1,024,000 exact world-atlas pixels across relocation. Actual saves capture62
+ground/body selections and preserve completed42's empty body on both backends.
+Arctic/tropical matrices each cover2,672 views (1,184 grounds); Toyland covers1,664
+views (280 grounds) while retaining the distinct unsupported layers. Each electric
+journey passes5,544 active projected-tree lifecycle/LOD views and completes its120
+moving frames. Peak sampled memory is3,148,696,792bytes. Source/artwork/executable
+hashes match at the22:59:05UTC audit. Evidence:`pass4-factory-{hashes,validation,
+reconciliation}.json`. Inventory's initial60-second invocation timed out; its
+background retry completes. The image-retirement manifest removes271 successful
+generated images (432,096,611bytes), retaining selected comparison/street/world
+images and original source references.
+
+The478-pair Toyland source audit finds215 changed bound layers. The corrected
+selection guards cover every difference, including2022/2077/4061 grounds, oil-rig
+bodies26…28 and only the changed completed paper67 body2206. Unchanged paper
+construction and other unaffected body/ground owners stay independent. Native unit
+checks cover those distinctions, and diagnostics/gallery/inventory use source-specific
+guards. Evidence:`build-macos/pass4-toyland-source-selection-audit.json`.
+
+Release`.13`run`36268907301`has passed its main Vulkan scene matrix, with peak
+4,729,335,808bytes, including24,528 voxel-tree lifecycle views,20,832 distant-tree
+views and five edited-instance-stream controls. Its subsequent electric-journey
+step repeats that complete tree catalogue and reaches its900-second screenshot
+timeout before finishing the remaining active projected-tree checks. This is a
+time-limit failure, not a memory-limit failure; electric-step peak is1,979,244,544bytes.
+The original artifacts and job log are retained in
+`build-macos/pass3-release13-vulkan-scene-ci/`and
+`pass3-release13-vulkan-scene-job.log`. Release`.13`has now completed its full Linux
+OpenGL matrix and all four Vulkan vehicle shards, as well as macOS and Windows. The
+electric-journey timeout is its sole failed job. Compressed job logs and selected
+artifact text are in`pass4-release13-ci-text/`; current candidate Linux acceptance
+remains pending.
+
+`--tree-verification-scope active` now lets the electric journey exercise the selected
+tree representation after the scene matrix has covered all diagnostic voxel trees.
+Its console command is`renderer3d verify-active-trees`. The default full tree check
+retains both existing paths. Active projected trees still receive every lifecycle,
+palette, LOD, CPU/GPU, transparency and picking comparison; active voxel trees still
+run the complete voxel matrix. Matched native controls accompany this candidate.
+The workflow also skips documentation-only changes to reduce redundant queue load.
+
+The user-requested storage reset removes obsolete build snapshots, compiler caches,
+successful generated images and duplicate input saves. Original source pixels and
+failure evidence remain preserved, with exact-byte compression/deduplication where
+applicable. The checkout drops from approximately18GiB to2.57GiB before recompiling.
+`compact_reviews.py --discard-generated --apply --validation-manifest ...` now
+records image hashes before retiring only explicitly successful generated reviews;
+its regression preserves failed/unknown runs, source sprites, selected sheets and
+symlink targets. Development-app resource links are refreshed to the current build.
+
 ## Tropical lumbermill125…128 and shared bare-soil palette
 
 Twelve volumes bring the catalogue to1,286 and industry coverage to58 body/62 ground

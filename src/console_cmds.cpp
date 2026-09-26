@@ -3450,9 +3450,9 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 			try { Renderer3D::VerifyBridgeModels(); }
 			catch (const std::exception &error) { Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what()); }
 		});
-	} else if (argv[1] == "verify-trees") {
-		VideoDriver::GetInstance()->QueueOnMainThread([] {
-			try { Renderer3D::VerifyTreeModels(); }
+	} else if (argv[1] == "verify-trees" || argv[1] == "verify-active-trees") {
+		VideoDriver::GetInstance()->QueueOnMainThread([all = argv[1] == "verify-trees"] {
+			try { Renderer3D::VerifyTreeModels(all); }
 			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
 		});
 	} else if (argv[1] == "verify-industries") {

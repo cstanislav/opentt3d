@@ -109,11 +109,21 @@ def inventory():
             industry["climate_source_note"] = "Arctic source replaces both ground and trees with snowy artwork; independent voxel volumes remain missing."
         restricted_grounds = []
         for stage in industry["voxel_ground_states"]:
-            sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[0].strip(),0)
+            # Colour modifiers belong to sprite rendering, not the source ID.
+            sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[0].split("|",1)[0].strip(),0)
             if sprite in (3924,2173):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
+            elif sprite in (2022,2077,4061):
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":["toyland"],"other_climates":"retain supplied Toyland source ground"})
         if restricted_grounds:
             industry["ground_climate_restrictions"] = restricted_grounds
+        restricted_bodies = []
+        for stage in industry["voxel_states"]:
+            sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[2].split("|",1)[0].strip(),0)
+            if industry["graphics"] in (26,27,28) or (industry["graphics"] == 67 and sprite == 2206):
+                restricted_bodies.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":["toyland"]})
+        if restricted_bodies:
+            industry["body_climate_restrictions"] = restricted_bodies
     airport_source = (ROOT / "src/table/airporttile_ids.h").read_text().split("enum AirportTiles", 1)[1].split("};", 1)[0]
     airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i), "voxel_ground_states": voxel_states("airport_ground", i), "reviewed": False}
                 for i, name in enumerate(re.findall(r"\b(APT_\w+)\s*,", airport_source))]

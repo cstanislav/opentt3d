@@ -16,6 +16,18 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Factory breadth candidate:** fifteen volumes add39…42, including complete
+  original1/2 construction aliases and independent completed2146…2149 grounds.
+  Completed42 has no body: its entire low shed, black roof, crates and boundary
+  fence remain ground-owned. The joined upper roof and three open chimneys pass
+  structural checks, and all31 bound layers retain their original palette colours.
+  Both multi-block layout sheets and individual source cuts were reviewed. First
+  comparison repairs the tower height, three-chimney separation, reversed workshop
+  gable and premature construction walls. The tower has no blue roof in its source;
+  its lower dark roof belongs to2147. Source-cut proportions, fine blue roof/brick paint, paving,
+  fencing and all-angle artwork fidelity remain under review, with no approvals.
+  Evidence:`build-macos/pass3-factory-*`.
+
 - **Lumbermill breadth candidate:** twelve volumes cover125…128 across all four
   construction stages; only the original identical1/2 sprites share volumes. The
   excavated workshop has real window/door openings, the completed courtyard retains

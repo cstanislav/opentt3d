@@ -1,5 +1,54 @@
 # Active extended development goal
 
+## Renewed continuation — September 26, 22:39:24 UTC
+
+Actual clock **2026-09-26 22:39:24 UTC** independently establishes that this renewed
+continuation begins after the requested19:00UTC/1PM fixed-CST minimum. Resume the
+complete four-pass catalogue objective with background-only native reviews and
+frequent verified publication. Correct the pending factory source geometry and
+Toyland layer selection, then continue missing industry families. Keep workspace
+retention bounded: one current build, compact evidence and selected review sheets.
+Complete coverage, final source fidelity and smooth production performance remain
+unproven; no prior stopping audit is used as evidence for this new clock check.
+
+Progress audit **2026-09-26 22:59:05 UTC**: the1,301-volume factory/source-climate
+freeze passes200 native,122 asset-suite, three retirement and nine harness checks.
+All18 final native runs pass, including62 actual construction layers, six climate
+matrices and the active-tree electric journey on both backends. Peak sampled memory
+is3,148,696,792bytes. Original source/registered/street/live views were inspected;
+all frozen source/artwork/executable hashes match. Retiring271 successful generated
+images recovers432,096,611bytes. Publishing this increment before integrating the
+prepared printing-works draft. No catalogue-wide pass or final approval is claimed.
+
+## User-requested workspace cleanup — September 26, 22:37:49 UTC
+
+The user redirected work to deleting temporary files because the checkout had
+approached20GB. Cleanup reduces measured allocated workspace size from about18GiB
+to **2.57GiB**, retaining the current native executable, compiled artwork and runtime.
+Removed50 obsolete frozen builds, old Linux/native compiler caches, redundant
+runtime copies,79,465 successful generated review images and529 duplicate review
+input saves. Older verbose diagnostics are byte-verified gzip archives; identical
+retained reference images share storage. Source imagery, failure evidence, fixture
+saves, compact results and selected comparison sheets remain available. All2,042
+tracked files were byte-checked against their pre-cleanup state before this ledger
+update. Current executable/artwork hashes still match the factory review freeze.
+The development app's resources now link directly to the current build rather than
+through retired snapshots. Compiler caches will be regenerated on the next build.
+
+Detailed cleanup records are in
+`.opentt3d-local/cleanup-20260926T222822Z/`; large per-file ledgers use`.json.gz`.
+Future work must retire superseded build copies and successful bulky review images
+after retaining compact evidence. Existing source-reference directories are archival;
+new exports use new directories to preserve their shared immutable pixel payloads.
+
+**Stopping audit:2026-09-26 22:37:49 UTC.** Reason: the user's requested storage
+cleanup is complete. Catalogue development is paused at the uncommitted factory
+candidate. Source review still needs construction-wall/roof corrections, and the
+478-pair Toyland audit found215 differing bound layers, including soil2022, oil-rig
+ground4061/bodies26…28 and completed paper67. Their selection guards remain pending.
+Factory publication and the wider catalogue/fidelity/performance objective are not
+complete. The previously published lumbermill release`.15`remains the latest checkpoint.
+
 ## Breadth-first continuation — September 26, 20:24:14 UTC
 
 The user renewed the complete four-pass objective. The actual clock for this new
@@ -53,6 +102,18 @@ and live rainforest-world images were inspected. A reference-comment correction
 after validation leaves the entire compiled catalogue and executable byte-identical;
 `pass3-lumbermill-publication-hashes.json`records that reconciliation. The local app
 is refreshed. Publishing this increment before proceeding to factory coverage.
+
+Lumbermill source preview`opentt3d-dev-20260926.15`is published from
+`9bb7705a540cc02a135a8ccbc9102265e07fc651`on`main`. The next fifteen-volume factory
+candidate reaches1,301 volumes and62 industry body/66 ground definitions. Source
+comparisons repair tower/chimney proportions and construction-only openings; all31
+bound layer palettes pass. Factory6 and printing-works7 public-command construction
+fixtures are prepared. Current`.13`CI passes its main Vulkan scene matrix but the
+separate electric journey times out while repeating the diagnostic tree catalogue.
+An active-representation tree-check scope retains complete overall coverage while
+removing that repeated work; the revised journey and factory freeze are in background
+verification. Full coverage, source fidelity, current Linux acceptance and smooth60fps
+remain open.
 
 ## September 26 follow-up: terrain, automatic LODs and projected trees
 

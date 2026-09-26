@@ -9,7 +9,7 @@ namespace Renderer3D {
 bool DrawAuthoredHouse(Scene &scene, unsigned house, unsigned stage, const SpriteTexture &texture, Vec3 origin, Vec3 sprite_origin, float opacity, float pixel_scale = 4, unsigned variant = 0);
 bool DrawAuthoredTree(Scene &scene, SpriteID image, const SpriteTexture &texture, Vec3 origin, float opacity, float pixel_scale = 4);
 bool TreeHasComponentMaterials(SpriteID image);
-void VerifyTreeModels();
+void VerifyTreeModels(bool include_inactive_voxels = true);
 bool HasAuthoredIndustry(unsigned graphics, SpriteID sprite);
 bool DrawAuthoredIndustry(Scene &scene, unsigned graphics, SpriteID sprite, const SpriteTexture &texture, Vec3 origin, Vec3 sprite_origin, float opacity, float pixel_scale = 4);
 bool DrawAuthoredVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, unsigned texture_zoom, float opacity = 1, const std::array<SpriteID, 8> *resolved = nullptr, float grade = 0);
