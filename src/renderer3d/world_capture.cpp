@@ -58,6 +58,7 @@ static_assert(2*MAX_MAP_SIZE_BITS <= 24, "Tile picking payload must exactly repr
 
 struct CaptureState {
 	Camera camera;
+	std::map<TileIndex,std::vector<ContactWireSegment>> contact_wires;
 	Vec3 depth_direction;
 	float distance = 0, focal_scale = 0, near_plane = 0;
 	Scene scene;
@@ -597,16 +598,16 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 	return true;
 }
 
-static const std::vector<Vertex> *ClippedGroundMesh(const std::vector<Vertex> *mesh, const TileInfo &tile)
+static const std::vector<Vertex> *ClippedGroundMesh(const std::vector<Vertex> *mesh, const TileInfo &tile, Vec3 tile_offset = {})
 {
 	if (auto cut = capture->tunnel_cuts.find(tile.tile); cut != capture->tunnel_cuts.end()) {
-		using Key = std::tuple<const std::vector<Vertex> *,TunnelKind,unsigned,int>;
+		using Key = std::tuple<const std::vector<Vertex> *,TunnelKind,unsigned,int,float,float,float>;
 		static std::map<Key,std::vector<Vertex>> clipped;
 		const auto &bore = cut->second;
 		int floor = bore.floor-tile.z;
-		if (std::any_of(mesh->begin(),mesh->end(),[&](const Vertex &v) { return v.position.z < floor+7.75f; })) {
-			auto [found,inserted] = clipped.try_emplace(Key{mesh,bore.kind,bore.direction,floor});
-			if (inserted) found->second = CutTunnelTerrain(*mesh,bore.kind,bore.direction,static_cast<float>(floor));
+		if (std::any_of(mesh->begin(),mesh->end(),[&](const Vertex &v) { return v.position.z+tile_offset.z < floor+7.75f; })) {
+			auto [found,inserted] = clipped.try_emplace(Key{mesh,bore.kind,bore.direction,floor,tile_offset.x,tile_offset.y,tile_offset.z});
+			if (inserted) found->second = CutTunnelTerrain(*mesh,bore.kind,bore.direction,static_cast<float>(floor),tile_offset);
 			return &found->second;
 		}
 	}
@@ -845,6 +846,11 @@ bool CaptureRailWire(const TileInfo &tile, SpriteID image, Track track, const st
 	unsigned supports = ((support_mask>>a)&1U) | (((support_mask>>b)&1U)<<1);
 	size_t first = capture->scene.instances.size();
 	DrawCatenaryWire(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(heights[a])},track,heights[b]-heights[a],supports,half,IsTransparencySet(TO_CATENARY));
+	Vec3 begin = RailPath(track,half == 2 ? 0.5f : 0).point, end = RailPath(track,half == 1 ? 0.5f : 1).point;
+	begin.z = std::lerp(static_cast<float>(heights[a]),static_cast<float>(heights[b]),half == 2 ? 0.5f : 0)+10;
+	end.z = std::lerp(static_cast<float>(heights[a]),static_cast<float>(heights[b]),half == 1 ? 0.5f : 1)+10;
+	Vec3 origin{static_cast<float>(tile.x),static_cast<float>(tile.y),0};
+	capture->contact_wires[tile.tile].push_back({origin+begin,origin+end});
 	if (capture->scene.instances.size() != first) ++capture->catenary_parts;
 	return true;
 }
@@ -1329,6 +1335,37 @@ static uint32_t checked_rotor_vehicle = UINT32_MAX;
 static unsigned checked_rotor_states = 0;
 static bool checked_rotor_restarted = false;
 static unsigned checked_aircraft_contact = UINT_MAX;
+static unsigned checked_collector_engine = UINT_MAX;
+static uint32_t checked_collector_vehicle = UINT32_MAX;
+static unsigned checked_collector_states = 0;
+
+static std::optional<float> CapturedContactWireHeight(Vec3 point)
+{
+	int x = static_cast<int>(std::floor(point.x/16)), y = static_cast<int>(std::floor(point.y/16));
+	float nearest = INFINITY;
+	std::optional<float> height;
+	for (int ty = y-1; ty <= y+1; ++ty) for (int tx = x-1; tx <= x+1; ++tx) {
+		if (tx < 0 || ty < 0 || tx >= static_cast<int>(Map::MaxX()) || ty >= static_cast<int>(Map::MaxY())) continue;
+		auto found = capture->contact_wires.find(TileXY(tx,ty));
+		if (found == capture->contact_wires.end()) continue;
+		for (const auto &wire : found->second) {
+			auto [contact,distance] = wire.Nearest(point);
+			/* A collector shoe spans the running route; a nearby crossing route
+			 * or the wire on an overpass must not pull it onto a different deck. */
+			if (distance > 1.5f*1.5f || std::abs(contact.z-point.z) >= 4) continue;
+			float score = distance+(contact.z-point.z)*(contact.z-point.z)*0.01f;
+			if (score >= nearest) continue;
+			nearest = score; height = contact.z;
+		}
+	}
+	return height;
+}
+
+void BeginVoxelTrainCollectorCheck(unsigned engine)
+{
+	if (!VoxelTrainCollectorMount(engine,0,0)) throw std::invalid_argument("Collector observation needs an original bound electric locomotive");
+	checked_collector_engine = engine; checked_collector_vehicle = UINT32_MAX; checked_collector_states = 0;
+}
 
 void BeginVoxelAircraftContactCheck(unsigned engine)
 {
@@ -1464,6 +1501,41 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				references[direction] = sequence.seq[0].sprite;
 			}
 			if (supported && DrawAuthoredVehicle(capture->scene, vehicle.engine_type.base(), loaded, position, heading, palette, TextureZoom(position), 1, &references)) {
+				if (vehicle.type == VEH_TRAIN && VoxelTrainCollectorMount(vehicle.engine_type.base(),0,heading)) {
+					std::array<float,2> contacts{10,10};
+					unsigned observed_states = 0;
+					for (unsigned part = 0; part < contacts.size(); ++part) {
+						auto mount = VoxelTrainCollectorMount(vehicle.engine_type.base(),part,heading);
+						if (!mount) continue;
+						if (auto height = TrainTunnelContactHeight(vehicle,position+*mount)) {
+							contacts[part] = *height-position.z;
+							observed_states |= contacts[part] > 9.99f ? 1U : contacts[part] < 7.56f ? 4U : 2U;
+						} else if (auto height = CapturedContactWireHeight({position.x+mount->x,position.y+mount->y,position.z+10})) {
+							contacts[part] = *height-position.z;
+							observed_states |= 1U;
+						}
+					}
+					size_t first = capture->scene.instances.size();
+					unsigned drawn = DrawVoxelTrainCollectors(capture->scene,vehicle.engine_type.base(),position,heading,palette,contacts);
+					if (drawn != 0 && !capture->diagnostic && checked_collector_engine == vehicle.engine_type.base()) {
+						if (checked_collector_vehicle == UINT32_MAX) checked_collector_vehicle = vehicle.index.base();
+						if (checked_collector_vehicle == vehicle.index.base()) {
+							for (size_t i = first; i < capture->scene.instances.size(); ++i) {
+								const auto &instance = capture->scene.instances[i];
+								float highest = -INFINITY;
+								for (const auto &vertex : *instance.mesh) highest = std::max(highest,ResolveInstanceVertex(vertex,instance.data).position.z);
+								bool matched = std::ranges::any_of(contacts,[&](float height) { return std::abs(highest-position.z-height) < 0.0001f; });
+								if (!matched || tag.id != vehicle.index.base()+1) throw std::runtime_error("Voxel collector lost wire contact or vehicle ownership");
+							}
+							if ((checked_collector_states | observed_states) != checked_collector_states) Debug(driver,1,"OpenTT3D: voxel train collector engine {} vehicle {} observed contact heights {},{} states {}",checked_collector_engine,checked_collector_vehicle,contacts[0],contacts[1],observed_states);
+							checked_collector_states |= observed_states;
+							if (checked_collector_states == 7) {
+								Debug(driver,1,"OpenTT3D: voxel train collector observation passed: engine {} vehicle {}, surface/portal/tunnel wire contact and original ownership",checked_collector_engine,checked_collector_vehicle);
+								checked_collector_engine = UINT_MAX;
+							}
+						}
+					}
+				}
 				capture->parent_instance_end = capture->scene.instances.size();
 				capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
 				if (!capture->parent_culled) ++capture->modelled_vehicles;
@@ -1527,6 +1599,15 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	if (tree && capture->tile != nullptr && IsTileType(capture->tile->tile,MP_TREES) && HasVoxelTree(image)) {
 		unsigned base = (image&SPRITE_MASK)-tree_stage;
 		DrawVoxelAsset(capture->scene,"trees",base,tree_stage,origin,palette&PALETTE_MASK,transparent ? 0.38f : 1);
+		const auto &tile = *capture->tile;
+		Vec3 tile_offset = origin-Vec3{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)};
+		for (size_t i = capture->parent_instance_begin; i < capture->scene.instances.size(); ++i) {
+			/* Preserve the rooted surface silhouette while keeping underground
+			 * bark out of the original tunnel's clear interior. */
+			capture->scene.instances[i].mesh = ClippedGroundMesh(capture->scene.instances[i].mesh,tile,tile_offset);
+		}
+		capture->scene.instances.erase(std::remove_if(capture->scene.instances.begin()+capture->parent_instance_begin,capture->scene.instances.end(),
+			[](const auto &instance) { return instance.mesh->empty(); }),capture->scene.instances.end());
 		capture->parent_instance_end = capture->scene.instances.size();
 		capture->parent_culled = capture->parent_instance_begin == capture->parent_instance_end;
 		/* The voxel's original palette is independent of the source RGBA chart.

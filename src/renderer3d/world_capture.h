@@ -38,6 +38,7 @@ void BeginVoxelPowerSparkCheck();
 void BeginVoxelVehicleCargoCheck(unsigned engine);
 void BeginVoxelHelicopterRotorCheck(unsigned engine);
 void BeginVoxelAircraftContactCheck(unsigned engine);
+void BeginVoxelTrainCollectorCheck(unsigned engine);
 void BeginVoxelDepotTraversalCheck(unsigned vehicle);
 void BeginVoxelRadioBeaconCheck();
 bool FocusVoxelBuoy();

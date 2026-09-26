@@ -3,6 +3,35 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Train loading-gauge and silhouette repair:1,133 volumes (September26)
+
+The complete nativeGL/Vulkan matrices pass with sampled peaks6,080,894,760 and
+6,103,144,088bytes (5.66/5.68GiB), respectively, below the6GiB guard. Keeping reference
+unit diagonals beside occupied/empty silhouette edges fixes the observed one-pixel
+AsiaStar mismatch. The catalogue's triangle stream rises from9,527,302 to11,019,410
+(15.66%); exactness has a measurable memory cost.
+
+`pass1-train-clearance-perf.json` compares the frozen1,130 control and1,133 repair
+sequentially on the same paused128×128 save, engine23 focus at1155,264,16,40° lens,
+2560×1600 framebuffer and30 warm-up/1,800 measured frames. No other GPU checks run
+concurrently. These are fixture-scoped measurements of the complete repair:
+
+| Backend / zoom | Control → repair fps | Control → repair p95 work | Control → repair sampled bytes |
+| --- | --- | --- | --- |
+| OpenGL /2 | 60.006 →60.001 | 5.656 →5.538ms | 3,971,338,176 →4,340,256,992 |
+| OpenGL /4 | 36.950 →36.732 | 27.340 →27.475ms | 4,074,770,368 →4,450,341,160 |
+| Vulkan /2 | 60.002 →60.001 | 6.000 →5.863ms | 3,794,030,432 →4,176,335,024 |
+| Vulkan /4 | 39.240 →38.948 | 25.969 →26.186ms | 3,867,676,512 →4,249,489,608 |
+
+The repair adds approximately352…365MiB sampled memory in these matched cases.
+Wide-view throughput is0.59%/0.74% lower onGL/Vulkan and remains well below60fps;
+nearly every wide-view frame overruns. Close cases retain120…208 presentation
+intervals over20ms despite60fps averages and zero work overruns. The correctness
+repair is verified; smooth pacing and catalogue-wide throughput remain required.
+
+The incremental1,144 sawmill matrices peak4,355,789,192 /4,124,463,328bytes; this
+smaller diagnostic workload does not supersede the complete-catalogue memory peak.
+
 ## Aircraft expansion:1,031 volumes (September26)
 
 The catalogue now has8,397,312 occupied cells /8,906,806 triangles. Focused Vulkan

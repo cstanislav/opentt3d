@@ -32,7 +32,7 @@ full terrain/source-raster fidelity and final approval remain separate.
 - Hidden occupied-to-occupied faces are removed, including between different
   materials. Coplanar equal-colour regions merge. Shared edge cuts prevent raster
   T-junctions; actual colour/crease edges retain every unit vertex for stable subpixel
-  coverage. Thin rectangles and unit strips on both sides of coplanar colour borders
+   coverage. Thin rectangles and unit strips beside colour borders and silhouette edges
   keep cell-reference diagonals; larger interiors still merge. Convex ear clipping
   retains the remaining boundary points without centre fans.
   Independently requested material partitions keep their unit boundary topology.
@@ -51,12 +51,12 @@ full terrain/source-raster fidelity and final approval remain separate.
   deliberate palette selection. The first window palette was wrong and was corrected
   against the actual source colours (indices 128…133).
 
-## Current checkpoint: September26, 1,130 volumes
+## Current checkpoint: September26, 1,144-volume verified candidate
 
 All110 house definitions have body or ground bindings (109 body/88 ground definitions),
 and all62 original tree families have434 lifecycle volumes. Vehicles now cover256/256,
-industry bodies8/175, industry grounds11, airports18/74 and depot families5/6. Exact
-counts and material/footprint metadata are in `build-macos/pass1-1130-inventory.json`.
+industry bodies13/175, industry grounds16, airports18/74 and depot families5/6. Exact
+counts are in `build-macos/pass1-1144-inventory.json`.
 All volumes remain work-in-progress and final approvals remain zero.
 
 Thirty-eight new locomotive volumes bind the remaining33 definitions. Native source
@@ -67,13 +67,34 @@ have independent geometry; Toyland eyes/red lamps remain separate. Shape/paint
 differences include flat uniform surfaces, weak boiler shadows, short passenger
 window bands, simplified nose/roof contours and inconsistent side/end heights.
 
-**Immediate structural finding:** the existing tunnel vault is below one8-unit
+**Repaired structural finding:** the existing tunnel vault is below one8-unit
 terrain level, while several old/new train bodies reach9…10.75units. The saved
 analytic audit finds91 empty engine/climate cases /64 unique models exceeding the
-arch. Vehicle body dimensions and electric collector movement need correction
-against the original terrain, tunnel, wire, platform and depot clearances. Broad
-vehicle binding coverage and exact renderer matrices are not acceptance of this
-defect. A preserved1,130 control retains the pre-correction source and runtime.
+arch. Selected train Z grids now preserve running support and XY footprints while
+clearing the actual faceted arch plus inward ribs. The three independent collector
+volumes keep their roof mounts fixed and follow individual wire samples, lowering to
+7.55units before the tunnel arch. All train empty/loaded bindings and joined collector
+poses pass both native backends. Eight live collector runs observe real surface,
+portal and tunnel transitions. Slope/curve wheel contact and complete contextual
+clearance remain active. A preserved1,130 control retains pre-correction source/runtime.
+
+The Linux title-world tunnel check additionally found a tree's below-ground root
+covering640 lining pixels. That exact failure reproduces natively. Tree instances
+now use finite bore subtraction with their own tile-relative offset, preserving the
+above-ground crown and roots outside the current segment. Both native backends pass
+the original saved-world Cab review with243,635 unobstructed lining pixels; Linux
+revalidation remains pending.
+
+Eleven sawmill volumes add original11…15: separate low foundations, open timber
+frames, three northlight/cutting-shed roofs, a monitor-roof store, cutting table and
+worker, round log piles and individually supported board stacks. Original14/15
+stages0…2 remain empty, and original3924 soil is independently bound in all states.
+The source/street review corrected the northlight/store axes, entry sides, foundation
+width, log direction, board-stack height and dark interior substrate. Tests require
+every disconnected physical part to reach ground and every state to use its source
+palette. Both native backends pass264 mesh views/840 industry views; all20 actual
+state selections pass. Corrugation shading, timber grain, pile profile/end-grain and
+small saw/worker details remain queued for the later catalogue-wide fidelity pass.
 
 The61 new wagon volumes bind the remaining54 wagon definitions, completing81/81
 bindings. Manual source inspection distinguishes Arctic brown coal tubs, tropical

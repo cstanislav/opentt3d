@@ -543,7 +543,7 @@ def compile_catalogue(data):
         compile_model(name)
     bindings = data.get("bindings", {})
     for category, identifiers in bindings.items():
-        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "trees", "airport_tiles", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks") or not isinstance(identifiers, dict):
+        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks") or not isinstance(identifiers, dict):
             raise ValueError(f"Unknown voxel binding category {category}")
         for identifier, states in identifiers.items():
             if not identifier.isascii() or not identifier.isdecimal() or int(identifier) > 65535 or not isinstance(states, dict) or not states:
@@ -551,6 +551,8 @@ def compile_catalogue(data):
             for state, model in states.items():
                 if not state.isascii() or not state.isdecimal() or int(state) > 65535 or model not in compiled:
                     raise ValueError(f"Invalid voxel binding {category}/{identifier}/{state}")
+            if category == "vehicle_collectors" and (int(identifier) not in (23,24,25,26) or set(states) != ({"0","1"} if int(identifier) in (23,24) else {"0"})):
+                raise ValueError("Original electric locomotives need their complete independently mounted collectors")
             if category == "vehicles":
                 if int(identifier) >= 256 or any(int(state) >= 8 for state in states):
                     raise ValueError("Vehicle bindings use original engine IDs and climate*2+cargo states0..7")

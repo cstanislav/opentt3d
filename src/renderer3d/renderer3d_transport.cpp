@@ -12,6 +12,7 @@
 #include "road_stop_geometry.hpp"
 #include "bridge_geometry.hpp"
 #include "world_capture.h"
+#include "voxel_models.h"
 #include "../landscape.h"
 #include "../rail.h"
 #include "../slope_func.h"
@@ -211,6 +212,49 @@ TEST_CASE("Tunnel directions connect paired portals without moving the track cen
 	}
 }
 
+TEST_CASE("Captured contact wires retain grade, diagonal and bridge elevations", "[renderer3d]")
+{
+	ContactWireSegment slope{{32,56,18},{48,56,26}};
+	auto [contact,distance] = slope.Nearest({36,57,0});
+	CHECK(contact == Vec3{36,56,20});
+	CHECK(distance == Approx(1));
+	CHECK(slope.Nearest({30,56,100}).first == slope.first);
+	CHECK(slope.Nearest({50,56,100}).first == slope.last);
+	ContactWireSegment chord{{64,72,42},{72,64,42}};
+	CHECK(chord.Nearest({68,68,0}).first == Vec3{68,68,42});
+	CHECK(chord.Nearest({68,68,0}).second == Approx(0));
+	ContactWireSegment empty{{1,1,1},{1,1,2}};
+	CHECK_THROWS(empty.Nearest({1,1,1}));
+}
+
+TEST_CASE("Electric collectors retain roof mounts while following both tunnel mouths", "[renderer3d][voxel]")
+{
+	for (float length : {16.0f,64.0f,256.0f}) {
+		for (float x = -16; x <= length+32; x += 0.5f) {
+			float height = TunnelPairContactWireHeight(x,length);
+			CHECK(height == Approx(TunnelPairContactWireHeight(length+16-x,length)));
+			if (x <= 0 || x >= length+16) CHECK(height == Approx(10));
+			if (x >= 6.5f && x <= length+9.5f) CHECK(height == Approx(7.55));
+			for (auto [mount,top] : {std::pair{6.5f,10.25f},std::pair{6.625f,9.375f}}) {
+				InstanceData data;
+				data.origin_opacity = {17,29,32,1};
+				data.SetObjectId(513);
+				FitVoxelCollectorToWire(data,mount,top,height);
+				Vertex base{},contact{};
+				base.position = {1,2,mount}; contact.position = {1,2,top};
+				base.normal = contact.normal = {0,0,1};
+				CHECK(ResolveInstanceVertex(base,data).position.z == Approx(32+mount));
+				CHECK(ResolveInstanceVertex(contact,data).position.z == Approx(32+height));
+				CHECK(data.ObjectId() == 513);
+			}
+		}
+	}
+	InstanceData invalid;
+	CHECK_THROWS(FitVoxelCollectorToWire(invalid,6.5f,6.5f,10));
+	CHECK_THROWS(FitVoxelCollectorToWire(invalid,6.5f,10.25f,6));
+	CHECK_THROWS(FitVoxelCollectorToWire(invalid,6.5f,10.25f,INFINITY));
+}
+
 TEST_CASE("Underground labels are visible through mouths rather than through walls", "[renderer3d]")
 {
 	for (unsigned kind = 0; kind < 6; ++kind) {
@@ -258,6 +302,32 @@ TEST_CASE("Voxel ground excavation keeps palette indices and clears the complete
 			CHECK((vertex.texture.x == (112.5f/256) || vertex.texture.x == (2.5f/256)));
 			CHECK(vertex.opacity == 1);
 		}
+	}
+}
+
+TEST_CASE("Tunnel excavation respects translated roots and the ends of its segment", "[renderer3d][voxel]")
+{
+	VoxelGrid grid({4,4,10},{{{105,105,105,105,105,105}}},{-1,-1,-0.75f},{0.5f,0.5f,0.5f});
+	grid.Fill({0,0,0},{4,4,10},1);
+	auto root = grid.Mesh();
+	for (unsigned direction = 0; direction < 4; ++direction) {
+		Vec3 anchor = TunnelPoint(direction,{8,8,8});
+		TunnelAssembly clipped;
+		clipped.parts[0] = CutTunnelTerrain(root.vertices,TunnelKind::Rail,direction,0,anchor);
+		float removed_low = 7.25f-anchor.z, kept_high = 12.25f-anchor.z;
+		/* The underground side is removed; the above-ground top remains. */
+		CHECK_FALSE(std::isfinite(FirstHit(clipped,{{-2,0,removed_low+0.1f},{1,0,0}})));
+		CHECK(FirstHit(clipped,{{0,0,kept_high+1},{0,0,-1}}) == Approx(1));
+		for (const auto &vertex : clipped.parts[0]) {
+			CHECK(vertex.position.z+anchor.z >= 7.6f);
+			CHECK(vertex.texture.x == 105.5f/256);
+		}
+		/* A root beyond this underground section must be kept in its original
+		 * local coordinates, even if its cross-section enters the infinite bore. */
+		Vec3 outside = TunnelPoint(direction,{-3,8,8});
+		auto retained = CutTunnelTerrain(root.vertices,TunnelKind::Rail,direction,0,outside);
+		REQUIRE(retained.size() == root.vertices.size());
+		for (size_t i = 0; i < retained.size(); ++i) CHECK(retained[i].position == root.vertices[i].position);
 	}
 }
 

@@ -116,6 +116,22 @@ inline float CatenaryRise(float t, unsigned supports)
 	return 2.0f-0.9f*4*phase*(1-phase);
 }
 
+/** Original catenary runs are straight between track ports, including half-tile
+ * diagonal chords. Retain their captured endpoint elevations for roof contact. */
+struct ContactWireSegment {
+	Vec3 first, last;
+	std::pair<Vec3,float> Nearest(Vec3 point) const
+	{
+		Vec3 direction = last-first;
+		float squared_length = direction.x*direction.x+direction.y*direction.y;
+		if (squared_length <= 0) throw std::invalid_argument("Empty contact wire run");
+		float t = std::clamp(((point.x-first.x)*direction.x+(point.y-first.y)*direction.y)/squared_length,0.0f,1.0f);
+		Vec3 contact = first+direction*t;
+		float x = point.x-contact.x, y = point.y-contact.y;
+		return {contact,x*x+y*y};
+	}
+};
+
 inline std::vector<Vertex> MakeCatenaryWire(unsigned track, float grade, unsigned supports, unsigned half = 0, bool detail = true)
 {
 	Scene scene;

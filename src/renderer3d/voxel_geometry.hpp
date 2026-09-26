@@ -216,11 +216,12 @@ public:
 					if (compact_polygons && exposed) for (unsigned tangent : {u,v}) for (int side : {-1,1}) {
 						auto neighbour = p; neighbour[tangent] += side;
 						uint16_t adjacent = face_colour(neighbour);
-						if (adjacent != 0 && adjacent != colour) edges |= 1U<<((tangent == u ? 0 : 2)+(side > 0));
+						if (adjacent != colour) edges |= 1U<<((tangent == u ? 0 : 2)+(side > 0));
 					}
-					/* A one-cell strip on BOTH sides of a coplanar colour boundary
-					 * keeps its reference diagonals. Projected collinear points may
-					 * round non-convexly, so boundary vertices alone are insufficient. */
+					/* Keep reference diagonals at colour AND occupied/empty edges.
+					 * A projected collinear silhouette can round non-convexly too:
+					 * an interior ear then covers a pixel outside its unit faces.
+					 * Unit boundary vertices alone do not preserve that silhouette. */
 					mask[static_cast<size_t>(y)*width+x] = exposed ? colour : 0;
 					colour_edges[static_cast<size_t>(y)*width+x] = edges;
 					result.exposed_faces += exposed;

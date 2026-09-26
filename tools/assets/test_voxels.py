@@ -2097,9 +2097,10 @@ class VoxelCompilerTests(unittest.TestCase):
 
     def test_sh_electric_has_connected_running_gear_and_open_pantograph_frames(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
-        source["models"] = {"rail_sh_electric": source["models"]["rail_sh_electric"]}
+        source["models"] = {name:model for name,model in source["models"].items() if name == "rail_sh_electric" or name.startswith("rail_collector_sh_")}
         source["bindings"] = {"vehicles": {engine: source["bindings"]["vehicles"][engine] for engine in ("23", "24")}}
-        model = compile_catalogue(source)["models"]["rail_sh_electric"]
+        models = compile_catalogue(source)["models"]
+        model = models["rail_sh_electric"]
         cells = {(x+i,y,z) for x,y,z,length,material in model["runs"] for i in range(length)}
         visited, todo = set(), [next(iter(cells))]
         while todo:
@@ -2110,11 +2111,84 @@ class VoxelCompilerTests(unittest.TestCase):
             x,y,z = point
             todo.extend(p for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)) if p in cells and p not in visited)
         self.assertEqual(visited, cells, "A wheel or roof member is detached")
-        for x in (12, 28):
+        for name,x in (("rail_collector_sh_front",12),("rail_collector_sh_rear",28)):
+            collector = models[name]
+            frame = {(x+i,y,z) for x,y,z,length,_ in collector["runs"] for i in range(length)}
+            self.assertEqual(collector["origin"][2],model["origin"][2]+24*model["cell_size"][2],"The separate collector mount detached from the roof insulator")
             for y in (4, 9):
-                self.assertNotIn((x,y,31), cells, "The pantograph diamond was filled in")
-                self.assertIn((x,y,38), cells)
+                self.assertNotIn((x,y,7),frame,"The pantograph diamond was filled in")
+                self.assertIn((x,y,14),frame)
+                self.assertIn((x,y,23),cells,"The separate frame lost its fixed roof insulator")
         self.assertEqual({model["origin"][1]+(y+0.5)*model["cell_size"][1] for x,y,z in cells if z == 0},{-1.375,-1.125,1.125,1.375},"SH electric wheel treads must straddle the running rails")
+
+    def test_electric_collectors_are_connected_and_touch_fixed_roof_insulators(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name in ("rail_sh_electric","rail_loco_tim","rail_loco_asiastar") or name.startswith("rail_collector_")}
+        source["bindings"] = {category:{engine:states for engine,states in source["bindings"][category].items() if engine in ("23","24","25","26")} for category in ("vehicles","vehicle_collectors")}
+        result = compile_catalogue(source)
+        def cells(model):
+            return {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+        for engine,parts in result["bindings"]["vehicle_collectors"].items():
+            body = result["models"][result["bindings"]["vehicles"][engine]["0"]]
+            surface = {(body["origin"][0]+(x+0.5)*body["cell_size"][0],body["origin"][1]+(y+0.5)*body["cell_size"][1],body["origin"][2]+(z+1)*body["cell_size"][2]) for x,y,z in cells(body)}
+            for name in parts.values():
+                frame = result["models"][name]
+                occupied = cells(frame)
+                visited = {next(iter(occupied))}; pending = list(visited)
+                for x,y,z in pending:
+                    for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if point in occupied and point not in visited:
+                            visited.add(point); pending.append(point)
+                self.assertEqual(visited,occupied,name)
+                feet = {(frame["origin"][0]+(x+0.5)*frame["cell_size"][0],frame["origin"][1]+(y+0.5)*frame["cell_size"][1],frame["origin"][2]) for x,y,z in occupied if z == 0}
+                joined = feet & surface
+                self.assertTrue(joined,(engine,name,"collector floats above the roof"))
+                self.assertGreater(max(y for x,y,z in joined)-min(y for x,y,z in joined),1,"The collector needs both transverse roof supports")
+        for engine in ("23","25"):
+            broken = json.loads(json.dumps(source))
+            broken["bindings"]["vehicle_collectors"][engine]["2"] = "rail_collector_single"
+            with self.assertRaisesRegex(ValueError,"complete independently mounted collectors"):
+                compile_catalogue(broken)
+
+    def test_sawmill_construction_roofs_and_timbers_have_grounded_parts_and_source_palettes(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("sawmill_") or name == "mine_ground_site"}
+        source["bindings"] = {category:{graphics:states for graphics,states in source["bindings"][category].items() if 11 <= int(graphics) <= 15} for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        palettes = {
+            (11,0): {1,2,3}, (11,1): set(range(1,7)) | set(range(104,111)), (11,2): set(range(1,13)) | set(range(104,110)),
+            (12,0): {1,2,3}, (12,1): {1,2,3,4,6} | set(range(104,110)), (12,2): set(range(1,9)) | {20,38,39,57,58,59,119,121} | set(range(104,111)) | set(range(227,232)),
+            (13,0): {1,2,3}, (13,1): {1,2,3} | set(range(104,111)), (13,2): set(range(1,10)) | set(range(104,110)),
+            (14,3): {56,57,58,60,61,62,63,64}, (15,3): set(range(55,60)) | set(range(105,111)),
+        }
+        for graphics,states in result["bindings"]["industries"].items():
+            self.assertEqual(set(states),{"3"} if int(graphics) >= 14 else {"0","1","2","3"})
+            if int(graphics) < 14:
+                self.assertEqual(states["2"],states["3"])
+                self.assertNotEqual(states["0"],states["1"])
+            for stage,name in states.items():
+                model = result["models"][name]
+                occupied = {(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                colours = {colour for material in occupied.values() for colour in result["materials"][material-1]}
+                original = palettes[(int(graphics),min(int(stage),2) if int(graphics) < 14 else 3)]
+                self.assertTrue(colours <= original,(name,sorted(colours-original)))
+                pending = set(occupied)
+                while pending:
+                    points = [pending.pop()]
+                    for x,y,z in points:
+                        for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                            if point in pending:
+                                pending.remove(point); points.append(point)
+                    self.assertTrue(any(z == 0 for x,y,z in points),(name,"Detached roof truss, board or machinery",points[:4]))
+                self.assertTrue(all(0 <= model["origin"][axis]+point[axis]*model["cell_size"][axis] < 16 for point in occupied for axis in (0,1)),name)
+        for family,point in (("northlight",(12,12,5)),("cutting",(8,8,5)),("store",(16,16,8))):
+            for stage in ("frame","house"):
+                model = result["models"][f"sawmill_{family}_{stage}"]
+                cells = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+                self.assertNotIn(point,cells,"The sawmill's open interior was filled")
+        for states in result["bindings"]["industry_ground"].values():
+            self.assertEqual(set(states),{"0","1","2","3"})
+            self.assertEqual(set(states.values()),{"mine_ground_site"},"The original3924 substrate must retain independent full-tile ownership")
 
     def test_shops_offices_keep_one_footprint_with_open_construction_rooms(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())

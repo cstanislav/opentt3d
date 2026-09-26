@@ -10,6 +10,11 @@
 - Extension recorded at **2026-09-26 03:09:04 UTC**. Every prior stopping audit is
   historical and does not satisfy this new window. Continue breadth-first coverage,
   immediate correctness repairs and production review through19:00UTC.
+- Progress clock audit **2026-09-26 07:30:32 UTC**: the window is still active.
+  Full1,133 GL/Vulkan geometry/vehicle matrices and eight live collector runs pass;
+  the1,144 sawmill candidate passes both incremental backends and20 actual states.
+  Publication and matched-performance review continue, followed by remaining industry
+  breadth and contextual rail-contact/clearance work. Final visual approvals remain zero.
 - Publish progress frequently: commit and push coherent verified increments to main,
   merge feature work as appropriate, and make a release at least daily or at noteworthy
   milestones. Label incomplete development checkpoints accurately; retain all evidence.

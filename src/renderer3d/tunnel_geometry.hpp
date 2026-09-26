@@ -16,6 +16,18 @@ struct TunnelAssembly {
 	std::array<std::vector<Vertex>,static_cast<unsigned>(TunnelMaterial::Count)> parts;
 };
 
+/** Clear the inward lining ribs and reach the low wire before the 7.5-unit arch
+ * mouth, including the finite length of the collector's contact shoe. */
+inline float TunnelContactWireHeight(float local_x)
+{
+	return std::lerp(10.0f,7.55f,std::clamp(local_x/6.5f,0.0f,1.0f));
+}
+
+inline float TunnelPairContactWireHeight(float local_x, float length)
+{
+	return TunnelContactWireHeight(std::min(local_x,length+16-local_x));
+}
+
 inline Vec3 TunnelPoint(unsigned direction, Vec3 point)
 {
 	switch (direction) {
@@ -41,6 +53,17 @@ inline std::vector<Vec3> TunnelProfile(TunnelKind kind, float x)
 	return result;
 }
 
+inline float TunnelRoofHeight(TunnelKind kind, float y)
+{
+	static const auto rail = TunnelProfile(TunnelKind::Rail,0), road = TunnelProfile(TunnelKind::Road,0);
+	const auto &profile = kind == TunnelKind::Road || kind == TunnelKind::Tram ? road : rail;
+	for (size_t i = 1; i+1 < profile.size(); ++i) {
+		Vec3 a = profile[i], b = profile[i+1];
+		if (b.y > a.y && y >= a.y && y <= b.y) return std::lerp(a.z,b.z,(y-a.y)/(b.y-a.y));
+	}
+	return -INFINITY;
+}
+
 inline bool VisibleThroughTunnelMouth(TunnelKind kind, float length, Vec3 eye, Vec3 target)
 {
 	if (eye.x < 8 || eye.x > length+8) return true;
@@ -57,21 +80,24 @@ inline bool VisibleThroughTunnelMouth(TunnelKind kind, float length, Vec3 eye, V
 	return false;
 }
 
-/** Subtract the convex bore from terrain triangles. Some legal slopes dip
+/** Subtract one convex bore segment from terrain or rooted scenery triangles. Some legal slopes dip
  * below the vault beside the centreline; merely drawing a tube under them
  * leaves strips of grass crossing the interior. Material charts interpolate
  * with the clipped geometry, and the actual map heights are never modified. */
-inline std::vector<Vertex> CutTunnelTerrain(std::span<const Vertex> input, TunnelKind kind, unsigned direction, float floor)
+inline std::vector<Vertex> CutTunnelTerrain(std::span<const Vertex> input, TunnelKind kind, unsigned direction, float floor, Vec3 tile_offset = {})
 {
 	std::vector<Vertex> result;
 	auto profile = TunnelProfile(kind,0);
-	auto local = [&](Vec3 point) { point = TunnelPoint((4-direction)%4,point); point.z -= floor; return point; };
-	std::vector<std::array<float,3>> planes{{1,0,-profile.front().y},{-1,0,profile.back().y},{0,1,0.4f}};
+	auto local = [&](Vec3 point) { point = TunnelPoint((4-direction)%4,point+tile_offset); point.z -= floor; return point; };
+	/* Tree roots and body-owned foundations can extend below the terrain and
+	 * across tile edges. Their local origin need not be the tile origin. Bound
+	 * excavation along X so an overhanging component outside this segment stays. */
+	std::vector<std::array<float,4>> planes{{1,0,0,0},{-1,0,0,16},{0,1,0,-profile.front().y},{0,-1,0,profile.back().y},{0,0,1,0.4f}};
 	for (size_t i = 1; i+1 < profile.size(); ++i) {
 		Vec3 a = profile[i], b = profile[i+1];
 		float dy = b.y-a.y, dz = b.z-a.z;
 		if (dy <= 0) continue;
-		planes.push_back({dz,-dy,dy*(a.z+0.03f)-dz*a.y});
+		planes.push_back({0,dz,-dy,dy*(a.z+0.03f)-dz*a.y});
 	}
 	auto interpolate = [](Vertex a, const Vertex &b, float t) {
 		a.position = a.position+(b.position-a.position)*t;
@@ -83,7 +109,7 @@ inline std::vector<Vertex> CutTunnelTerrain(std::span<const Vertex> input, Tunne
 		std::vector<Vertex> inside{input[triangle],input[triangle+1],input[triangle+2]};
 		for (const auto &plane : planes) {
 			if (inside.empty()) break;
-			auto distance = [&](const Vertex &v) { Vec3 p = local(v.position); return plane[0]*p.y+plane[1]*p.z+plane[2]; };
+			auto distance = [&](const Vertex &v) { Vec3 p = local(v.position); return plane[0]*p.x+plane[1]*p.y+plane[2]*p.z+plane[3]; };
 			std::vector<Vertex> retained, clipped;
 			Vertex previous = inside.back();
 			for (const Vertex &current : inside) {
@@ -165,10 +191,11 @@ inline TunnelAssembly MakeTunnelAssembly(TunnelKind kind, bool portal)
 	}
 	if (electric) {
 		for (float y : (road ? std::vector<float>{5,11} : std::vector<float>{8})) {
+			float end = road ? 8 : 6.5f, height = road ? 7.0f : TunnelContactWireHeight(end);
 			if (portal) {
-				GeometryBeam(wire,{0,y,10},{8,y,7},0.035f,{0.31f,0.29f,0.24f});
-				GeometryBeam(wire,{8,y,7},{16,y,7},0.035f,{0.31f,0.29f,0.24f});
-			} else GeometryBeam(wire,{0,y,7},{16,y,7},0.035f,{0.31f,0.29f,0.24f});
+				GeometryBeam(wire,{0,y,10},{end,y,height},0.035f,{0.31f,0.29f,0.24f});
+				GeometryBeam(wire,{end,y,height},{16,y,height},0.035f,{0.31f,0.29f,0.24f});
+			} else GeometryBeam(wire,{0,y,height},{16,y,height},0.035f,{0.31f,0.29f,0.24f});
 		}
 	}
 	if (portal) {

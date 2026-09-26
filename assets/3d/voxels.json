@@ -4,6 +4,27 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "sawmill_wood": [104,106,107,109,104,108],
+    "sawmill_wood_grain": [105,107,108,110,104,109],
+    "sawmill_wood_finished_grain": [105,108,109,109,104,109],
+    "sawmill_wood_dark": [104,104,105,106,104,107],
+    "sawmill_roof": [4,3,6,8,2,10],
+    "sawmill_roof_rib": [5,4,7,9,2,12],
+    "sawmill_store_roof": [4,3,6,8,2,9],
+    "sawmill_frame": [3,2,4,5,1,6],
+    "sawmill_cutting_metal": [3,2,4,6,1,6],
+    "sawmill_foundation": [1,1,2,3,1,2],
+    "sawmill_foundation_grain": [2,1,2,3,1,3],
+    "sawmill_plank": [56,55,57,58,55,59],
+    "sawmill_plank_shade": [55,55,56,57,55,58],
+    "sawmill_cutting_plank": [57,57,58,59,57,59],
+    "sawmill_cutting_plank_shade": [57,57,58,58,57,59],
+    "sawmill_board_support": [106,105,107,109,105,110],
+    "sawmill_log": [61,60,62,63,60,64],
+    "sawmill_log_end": [56,57,58,58,56,58],
+    "sawmill_saw": [6,3,7,8,2,8],
+    "sawmill_worker_skin": [38,38,39,39,38,39],
+    "sawmill_worker_shirt": 227,
     "arctic_tree_bark_shade": [107,104,105,108,104,109],
     "arctic_snow_green_shadow": 80,
     "arctic_snow_olive_shadow": 24,
@@ -6513,40 +6534,40 @@
         ["use","tree_olive_column_branches"]
       ]
     },
-    "wagon_closed_passenger_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Passenger27 temperate2733..2736: seven glazed side bays, black barrel roof, end gangways and two grounded bogies; original cargo states identical","ops":[["use","wagon_passenger_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_passenger_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Passenger27 temperate2733..2736: seven glazed side bays, black barrel roof, end gangways and two grounded bogies; original cargo states identical","ops":[["use","wagon_passenger_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_passenger_a":{"extends":"wagon_closed_passenger_t","reference":"Passenger27 Arctic: distinct vented grey/black roof","ops":[["use","wagon_arctic_coach"]]},
     "wagon_closed_passenger_s":{"extends":"wagon_closed_passenger_t","reference":"Passenger27 tropical: tan bands around the original blue-framed glazing","ops":[["replace_material","wagon_trim","wagon_tan"]]},
     "wagon_closed_passenger_y":{"extends":"wagon_closed_passenger_t","reference":"Passenger27 Toyland: separate pale-roof artwork","ops":[["replace_material","wagon_roof_black","wagon_roof_pale"]]},
     "wagon_closed_passenger_fast":{"extends":"wagon_closed_passenger_y","reference":"Passenger57/89,2829..2832: pale roof and yellow sill; all four climate exports match exactly","ops":[["use","wagon_fast_sill"]]},
-    "wagon_closed_mail_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Mail28 temperate2741..2744: paired central doors, end windows/gangways and black curved roof; cargo states identical","ops":[["use","wagon_mail_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_mail_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Mail28 temperate2741..2744: paired central doors, end windows/gangways and black curved roof; cargo states identical","ops":[["use","wagon_mail_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_mail_a":{"extends":"wagon_closed_mail_t","reference":"Mail28 Arctic: vented roof and grey bands rather than the temperate all-blue side","ops":[["use","wagon_arctic_coach"],["replace_material","wagon_trim","wagon_silver"]]},
     "wagon_closed_mail_s":{"extends":"wagon_closed_mail_t","reference":"Mail28 tropical: original tan side bands and black roof","ops":[["replace_material","wagon_trim","wagon_tan"]]},
     "wagon_closed_mail_y":{"extends":"wagon_closed_mail_t","reference":"Mail28 Toyland: original pale roof","ops":[["replace_material","wagon_roof_black","wagon_roof_pale"]]},
     "wagon_closed_mail_fast":{"extends":"wagon_closed_mail_y","reference":"Mail58/90,2837..2840: pale roof/yellow sill; all climate exports match exactly","ops":[["use","wagon_fast_sill"]]},
-    "wagon_closed_oil":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Oil30 temperate/Arctic2745..2748: rounded company tank, broad metal band and raised filler; exact climate source equality","ops":[["use","wagon_oil_body",[0,-1,0]],["use","wagon_running_gear"]]},
-    "wagon_closed_oil_tropic":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Oil30 tropical: continuous blue tank and small hazard plate, without the ordinary raised filler/metal band","ops":[["use","wagon_oil_tropical_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_oil":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Oil30 temperate/Arctic2745..2748: rounded company tank, broad metal band and raised filler; exact climate source equality","ops":[["use","wagon_oil_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_oil_tropic":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Oil30 tropical: continuous blue tank and small hazard plate, without the ordinary raised filler/metal band","ops":[["use","wagon_oil_tropical_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_oil_fast":{"extends":"wagon_closed_oil","reference":"Oil60/92 ordinary banded tank with yellow running sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_closed_oil_fast_tropic":{"extends":"wagon_closed_oil_tropic","reference":"Oil60/92 tropical blue hazard-marked tank with yellow running sill","ops":[["use","wagon_fast_sill"]]},
-    "wagon_closed_livestock":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Livestock31 temperate/Arctic2749..2752: actual ventilation slots, horizontal slats, central bracing and black roof; climate pixels identical","ops":[["use","wagon_livestock_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_livestock":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Livestock31 temperate/Arctic2749..2752: actual ventilation slots, horizontal slats, central bracing and black roof; climate pixels identical","ops":[["use","wagon_livestock_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_livestock_fast":{"extends":"wagon_closed_livestock","reference":"Livestock61/93: the ventilated body with original yellow sill","ops":[["use","wagon_fast_sill"]]},
-    "wagon_closed_goods_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Goods32 temperate2753..2756: blue ribbed closed van and black roof","ops":[["use","wagon_goods_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_goods_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Goods32 temperate2753..2756: blue ribbed closed van and black roof","ops":[["use","wagon_goods_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_goods_a":{"extends":"wagon_closed_goods_t","reference":"Goods32 Arctic: distinct broad horizontally barred centre door","ops":[["use","wagon_goods_arctic_door"]]},
     "wagon_closed_goods_s":{"extends":"wagon_closed_goods_t","reference":"Goods32 tropical: brown roof/panels and retained company uprights","ops":[["replace_material","wagon_roof_black","wagon_brown_roof"],["paint","wagon_brown",2,1,11,39,11,28],["use","wagon_goods_ribs",[0,-1,0]]]},
     "wagon_closed_goods_fast_t":{"extends":"wagon_closed_goods_t","reference":"Goods62/94 temperate: blue ribs/black roof and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_closed_goods_fast_a":{"extends":"wagon_closed_goods_a","reference":"Goods62/94 Arctic: broad original centre door and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_closed_goods_fast_s":{"extends":"wagon_closed_goods_s","reference":"Goods62/94 tropical: brown body and yellow sill","ops":[["use","wagon_fast_sill"]]},
-    "wagon_closed_armoured_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Armoured37 temperate2777..2780: company-blue roof, small side windows and barred reinforced central doors","ops":[["use","wagon_armoured_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_armoured_t":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Armoured37 temperate2777..2780: company-blue roof, small side windows and barred reinforced central doors","ops":[["use","wagon_armoured_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_armoured_a":{"extends":"wagon_closed_armoured_t","reference":"Armoured37 Arctic: grey side bands and vented dark roof","ops":[["replace_material","wagon_roof_company","wagon_roof_black"],["use","wagon_arctic_coach"],["replace_material","wagon_trim","wagon_silver"]]},
     "wagon_closed_armoured_s":{"extends":"wagon_closed_armoured_t","reference":"Armoured37 tropical: tan side bands and black roof","ops":[["replace_material","wagon_roof_company","wagon_roof_black"],["replace_material","wagon_trim","wagon_tan"]]},
     "wagon_closed_armoured_fast":{"extends":"wagon_closed_armoured_t","reference":"Armoured67/99,2873..2876: pale roof/yellow sill; temperate/Arctic/tropical exports match exactly","ops":[["replace_material","wagon_roof_company","wagon_roof_pale"],["use","wagon_fast_sill"]]},
-    "wagon_closed_food_a":{"size":[42,12,38],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Food38 Arctic2757..2760: silver refrigerated ribs/doors/ends with blue stripe and black roof","ops":[["use","wagon_food_body",[0,-1,0]],["use","wagon_running_gear"]]},
+    "wagon_closed_food_a":{"size":[42,12,38],"cell_size":[0.25,0.25,0.1875],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Food38 Arctic2757..2760: silver refrigerated ribs/doors/ends with blue stripe and black roof","ops":[["use","wagon_food_body",[0,-1,0]],["use","wagon_running_gear"]]},
     "wagon_closed_food_s":{"extends":"wagon_closed_food_a","reference":"Food38 tropical: same refrigerated structure with both original company-blue ends","ops":[["use","wagon_food_tropical_ends"]]},
     "wagon_closed_food_fast_a":{"extends":"wagon_closed_food_a","reference":"Food68/100 Arctic: silver refrigerated van with yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_closed_food_fast_s":{"extends":"wagon_closed_food_s","reference":"Food68/100 tropical: company end panels and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_closed_sweets_y":{"extends":"wagon_closed_goods_t","reference":"Toyland sweets49/79/111,2785..2788: pale roof with thin blue band and blue ribbed closed body; same original art on all three rail systems","ops":[["replace_material","wagon_roof_black","wagon_roof_pale"],["paint","wagon_rib",1,1,31,40,11,32]]},
     "wagon_closed_toys_y":{"extends":"wagon_closed_livestock","reference":"Toyland toys50/80/112,2789..2792: separate pale roof and original ventilated/braced company body","ops":[["replace_material","wagon_roof_black","wagon_roof_pale"]]},
     "wagon_open_coal_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Coal29 temperate2737..2740: open grey metal tub, dark empty interior, broad paired company panels, metal rim and two grounded bogies",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_bin"]]
     },
@@ -6558,7 +6579,7 @@
     "wagon_open_coal_fast_arctic_empty": {"extends":"wagon_open_coal_arctic_empty","reference":"Coal59/91 Arctic: distinct brown empty tub with yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_coal_fast_arctic_loaded": {"extends":"wagon_open_coal_arctic_loaded","reference":"Coal59/91 Arctic: brown tub, black heap and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_grain_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Grain33 temperate/Arctic2761..2764: tapered grey hopper, deep genuinely open interior, narrow company band and two bogies; climate source pixels identical",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_hopper"]]
     },
@@ -6570,7 +6591,7 @@
     "wagon_open_grain_fast_tropic_empty": {"extends":"wagon_open_grain_tropic_empty","reference":"Grain63/95 tropical: broad company lower body with yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_grain_fast_tropic_loaded": {"extends":"wagon_open_grain_tropic_loaded","reference":"Grain63/95 tropical: gold cargo over broad company body/yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_wood_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Wood34 temperate/Arctic2765..2768: empty ochre timber deck, four open stakes on each side and company underframe; climate source pixels identical",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_flat_deck"]]
     },
@@ -6582,7 +6603,7 @@
     "wagon_open_wood_fast_tropic_empty": {"extends":"wagon_open_wood_tropic_empty","reference":"Wood64/96 tropical: two-pair end stakes and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_wood_fast_tropic_loaded": {"extends":"wagon_open_wood_tropic_loaded","reference":"Wood64/96 tropical: pale logs, two bindings and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_ore_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Iron ore35 temperate2773..2776: tall open company hopper, eight near/far ribs and grey interior with continuous blue rim",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_ore_body"]]
     },
@@ -6590,14 +6611,14 @@
     "wagon_open_ore_fast_empty": {"extends":"wagon_open_ore_empty","reference":"Iron ore65/97: source-identical rail bodies with yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_ore_fast_loaded": {"extends":"wagon_open_ore_loaded","reference":"Iron ore65/97: red heaps and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_steel_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Steel36 temperate2769..2772: low rust-red flat deck, short side pegs and company running frame",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_steel_deck"]]
     },
     "wagon_open_steel_loaded": {"extends":"wagon_open_steel_empty","reference":"Steel36 temperate2793..2796: three upright grey coils with genuine top-to-bottom central holes and painted dark inner walls","ops":[["use","wagon_open_steel_load"]]},
     "wagon_open_steel_fast_empty": {"extends":"wagon_open_steel_empty","reference":"Steel66/98: original red deck and short pegs over a yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_steel_fast_loaded": {"extends":"wagon_open_steel_loaded","reference":"Steel66/98: three open upright coils and yellow sill","ops":[["use","wagon_fast_sill"]]},
-    "wagon_open_paper_empty": {"extends":"wagon_open_steel_empty","reference":"Paper39 Arctic2769..2772: taller original end supports, intermediate stakes and independent raised black canopy over a genuinely open red deck","ops":[["use","wagon_open_paper_canopy"]]},
+    "wagon_open_paper_empty": {"size":[42,12,42],"cell_size":[0.25,0.25,0.15625],"origin":[-5.125,-1.5,0.5],"review_status":"work-in-progress","reference":"Paper39 Arctic2769..2772: tall end supports, intermediate stakes and raised black canopy over an open red deck; vertically calibrated to the original one-level tunnel loading gauge","ops":[["use","wagon_running_gear"],["use","wagon_open_steel_deck"],["use","wagon_open_paper_canopy"]]},
     "wagon_open_paper_loaded": {"extends":"wagon_open_paper_empty","reference":"Paper39 Arctic2801..2804: three white upright rolls beneath the source canopy with dark spindle marks","ops":[["use","wagon_open_paper_load"]]},
     "wagon_open_paper_fast_empty": {"extends":"wagon_open_paper_empty","reference":"Paper69/101 Arctic: original canopy and empty deck with yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_paper_fast_loaded": {"extends":"wagon_open_paper_loaded","reference":"Paper69/101 Arctic: white rolls beneath canopy and yellow sill","ops":[["use","wagon_fast_sill"]]},
@@ -6606,12 +6627,12 @@
     "wagon_open_copper_fast_empty": {"extends":"wagon_open_copper_empty","reference":"Copper70/102 tropical: brown ribbed company-banded hopper with yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_copper_fast_loaded": {"extends":"wagon_open_copper_loaded","reference":"Copper70/102 tropical: olive cargo and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_open_water": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Water41/71/103 tropical2809..2812: white elliptical tank, continuous narrow company band and two independently raised dark-neck fillers; all rail/cargo source images identical",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_water_body"]]
     },
     "wagon_open_fruit_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Fruit42/72/104 tropical2813..2816: low open company body, blue interior and horizontal/vertical side lattice; no invented roof",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_fruit_body"]]
     },
@@ -6619,37 +6640,37 @@
     "wagon_open_rubber_empty": {"extends":"wagon_open_coal_arctic_empty","reference":"Rubber43/73/105 tropical2821..2824: open copper-coloured vat, brown interior and slanted company end supports rather than the coal wagon's vertical panels","ops":[["paint","truck_rubber_vat",2,1,7,39,2,23],["paint","truck_rubber_vat",2,10,7,39,11,23],["prism","wagon_panel",1,1,2,[[2,22],[3,22],[10,9],[8,8]]],["prism","wagon_panel",1,10,11,[[2,22],[3,22],[10,9],[8,8]]],["prism","wagon_panel",1,1,2,[[38,22],[37,22],[30,9],[32,8]]],["prism","wagon_panel",1,10,11,[[38,22],[37,22],[30,9],[32,8]]]]},
     "wagon_open_rubber_loaded": {"extends":"wagon_open_rubber_empty","reference":"Rubber43/73/105 tropical2825..2828: level pale latex below the copper rim, preserving liquid rather than a peaked mineral pile","ops":[["box","truck_latex",3,2,10,38,10,22],["scatter_paint","truck_latex_shade",7,2825,3,2,21,38,10,22,"truck_latex",[2,2,1]]]},
     "wagon_toy_sugar_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Sugar44/74/106 Toyland2745..2748: open grey tub and paired company panels; separate Toyland binding despite numbers overlapping ordinary oil wagons",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_bin"]]
     },
     "wagon_toy_sugar_loaded": {"extends":"wagon_toy_sugar_empty","reference":"Sugar44/74/106 Toyland2749..2752: original white granular heaps, not the normal-climate artwork at those sprite IDs","ops":[["use","wagon_open_coal_load"],["replace_material","truck_coal","toy_sugar"],["replace_material","truck_coal_glint","toy_sugar_grain"]]},
     "wagon_toy_candyfloss_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Candyfloss45/75/107 Toyland2753..2756: open ribbed company hopper with distinctive pink lower band",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_ore_body"],["paint","toy_candyfloss_band",2,0,10,39,12,13]]
     },
     "wagon_toy_candyfloss_loaded": {"extends":"wagon_toy_candyfloss_empty","reference":"Candyfloss45/75/107 Toyland2757..2760: pale pink irregular puffs above the hopper, independent loaded volume","ops":[["box","toy_candyfloss",3,2,10,38,10,25],["ellipsoid","toy_candyfloss",3,2,22,17,10,33],["ellipsoid","toy_candyfloss",13,2,22,29,10,35],["ellipsoid","toy_candyfloss",25,2,22,38,10,32],["scatter_paint","toy_candyfloss_light",4,2757,3,2,10,38,10,35,"toy_candyfloss",[2,2,2]]]},
     "wagon_toy_toffee_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Toffee46/76/108 Toyland2761..2764: tapered silver hopper with narrow company band and source yellow end sill sections, open black centre below",
       "ops":[["use","wagon_running_gear"],["use","wagon_open_hopper"],["repeat",[25,0,0],2,[["box","wagon_yellow_sill",2,1,6,14,2,8],["box","wagon_yellow_sill",2,10,6,14,11,8]]]]
     },
     "wagon_toy_toffee_loaded": {"extends":"wagon_toy_toffee_empty","reference":"Toffee46/76/108 Toyland2765..2768: ochre-gold heaps over the original tapered tub","ops":[["use","wagon_open_grain_load"],["replace_material","truck_grain","toy_toffee"],["replace_material","truck_grain_light","toy_toffee_glint"]]},
     "wagon_toy_bubble_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.15625], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Bubbles47/77/109 Toyland2769..2772: raised blue canopy, four slender dark posts each side and genuinely empty copper deck",
       "ops":[["use","wagon_running_gear"],["use","wagon_toy_bubble_body"]]
     },
     "wagon_toy_bubble_loaded": {"extends":"wagon_toy_bubble_empty","reference":"Bubbles47/77/109 Toyland2773..2776: three blue/white bubble outlines with open centres; three-dimensional wire volumes, not painted flat circles","ops":[["repeat",[12,0,0],3,[["use","wagon_toy_bubble_outline",[2,0,12]]]]]},
     "wagon_toy_cola_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Cola48/78/110 Toyland2777..2780: rounded lavender transparent-tank frame, original checker highlights, blue sill and genuinely open inspection gaps",
       "ops":[["use","wagon_running_gear"],["use","wagon_toy_cola_body"]]
     },
     "wagon_toy_cola_loaded": {"extends":"wagon_toy_cola_empty","reference":"Cola48/78/110 Toyland2781..2784: visible level brown cola beneath the retained open curved frame","ops":[["use","wagon_toy_cola_load"]]},
     "wagon_toy_battery_empty": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Battery51/81/113 Toyland2793..2796: maroon flat platform, raised parallel grey side restraints and company underframe",
       "ops":[["use","wagon_running_gear"],["use","wagon_toy_flat_platform"]]
     },
@@ -7405,6 +7426,165 @@
       "extends": "power_spark_5", "origin": [0.75,1.25,21],
       "reference": "Original2060, final child frame: upper arc at the original(-3,-1) native offset relative to frame5; fine source silhouette remains under review", "review_status": "work-in-progress",
       "ops": []
+    },
+    "sawmill_northlight_site": {
+      "size":[32,32,32], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress",
+      "reference":"Sawmill11 sprite2061: dark low foundation, separate from original3924 full-tile rubble; the later timber hall is absent",
+      "ops":[
+        ["box","sawmill_foundation",2,0,0,27,22,1],
+        ["scatter_paint","sawmill_foundation_grain",4,2061,2,0,0,27,22,1]
+      ]
+    },
+    "sawmill_northlight_frame": {
+      "extends":"sawmill_northlight_site", "review_status":"work-in-progress",
+      "reference":"Sawmill11 sprite2062: three open northlight bays above the original left-facing entrances, brown plank walls and exposed grey roof members; manually reviewed47-pixel foundation width within the full ground tile",
+      "ops":[
+        ["box","sawmill_wood",2,0,0,27,22,18], ["erase",3,1,1,26,21,18],
+        ["repeat",[0,7,0],3,[["erase",26,2,1,27,6,13]]],
+        ["repeat",[0,7,0],3,[
+          ["prism","sawmill_wood",0,2,3,[[0,18],[7,18],[0,28]]],
+          ["prism","sawmill_wood",0,26,27,[[0,18],[7,18],[0,28]]],
+          ["box","sawmill_wood",2,0,17,27,1,20],
+          ["prism","sawmill_frame",0,2,3,[[0,27],[7,19],[7,22],[0,30]]],
+          ["prism","sawmill_frame",0,15,16,[[0,27],[7,19],[7,22],[0,30]]],
+          ["prism","sawmill_frame",0,26,27,[[0,27],[7,19],[7,22],[0,30]]],
+          ["box","sawmill_frame",2,0,27,27,1,29]
+        ]],
+        ["box","sawmill_wood",2,21,17,27,22,20],
+        ["repeat",[0,3,0],7,[["paint","sawmill_wood_dark",2,1,1,3,2,18],["paint","sawmill_wood_dark",26,1,1,27,2,18]]],
+        ["repeat",[3,0,0],8,[["paint","sawmill_wood_dark",3,0,1,4,1,19],["paint","sawmill_wood_dark",3,21,1,4,22,19]]],
+        ["scatter_paint","sawmill_wood_grain",7,2062,2,0,1,27,22,29,"sawmill_wood"],
+        ["paint","sawmill_foundation",3,1,0,26,21,1],
+        ["scatter_paint","sawmill_foundation_grain",4,2061,3,1,0,26,21,1]
+      ]
+    },
+    "sawmill_northlight_house": {
+      "extends":"sawmill_northlight_frame", "review_status":"work-in-progress",
+      "reference":"Sawmill11 identical2063 stage2/3: three corrugated grey sawtooth roof planes on the original wooden hall, with dark entrances and open internal volume",
+      "ops":[
+        ["repeat",[0,7,0],3,[
+          ["prism","sawmill_roof",0,1,28,[[0,27],[7,19],[7,22],[0,30]]],
+          ["box","sawmill_wood",2,0,20,27,1,28],
+          ["paint","sawmill_wood_dark",3,0,21,26,1,27],
+          ["repeat",[3,0,0],9,[["prism","sawmill_roof_rib",0,1,2,[[0,27],[7,19],[7,22],[0,30]]]]]
+        ]],
+        ["replace_material","sawmill_wood_grain","sawmill_wood_finished_grain"]
+      ]
+    },
+    "sawmill_cutting_site": {
+      "size":[32,32,32], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress",
+      "reference":"Sawmill12 sprite2064: original dark foundation beneath the rear timber cutting shed; pale timber and machinery appear only in completed2066",
+      "ops":[["box","sawmill_foundation",0,2,0,18,30,1],["scatter_paint","sawmill_foundation_grain",4,2064,0,2,0,18,30,1]]
+    },
+    "sawmill_cutting_frame": {
+      "extends":"sawmill_cutting_site", "review_status":"work-in-progress",
+      "reference":"Sawmill12 sprite2065: three timber bays with exposed sloping grey rafters, open front loading bays and dark interior; no finished lumber piles or worker",
+      "ops":[
+        ["box","sawmill_wood",0,2,0,18,30,18], ["erase",1,3,1,17,29,18],
+        ["repeat",[0,9,0],3,[
+          ["erase",16,4,1,18,10,16],
+          ["prism","sawmill_wood",0,0,1,[[2,18],[11,18],[2,28]]],
+          ["prism","sawmill_wood",0,17,18,[[2,18],[11,18],[2,28]]],
+          ["prism","sawmill_frame",0,0,1,[[2,27],[11,19],[11,21],[2,29]]],
+          ["prism","sawmill_frame",0,17,18,[[2,27],[11,19],[11,21],[2,29]]],
+          ["box","sawmill_frame",0,2,27,18,3,28],
+          ["box","sawmill_wood",0,2,17,18,3,20]
+        ]],
+        ["box","sawmill_wood",0,29,17,18,30,20],
+        ["repeat",[0,3,0],9,[["paint","sawmill_wood_dark",0,3,1,1,4,19],["paint","sawmill_wood_dark",17,3,1,18,4,19]]],
+        ["scatter_paint","sawmill_wood_grain",7,2065,0,2,1,18,30,29,"sawmill_wood"],
+        ["replace_material","sawmill_wood_grain","sawmill_wood_finished_grain"],
+        ["replace_material","sawmill_frame","sawmill_cutting_metal"],
+        ["paint","sawmill_foundation",1,3,0,17,29,1],
+        ["scatter_paint","sawmill_foundation_grain",4,2064,1,3,0,17,29,1]
+      ]
+    },
+    "sawmill_cutting_house": {
+      "extends":"sawmill_cutting_frame", "review_status":"work-in-progress",
+      "reference":"Sawmill12 identical2066 stage2/3: three corrugated cutting-shed roofs, three supported pale board stacks, cutting table, metal blade and the original227-cycle worker shirt",
+      "ops":[
+        ["repeat",[0,9,0],3,[
+          ["prism","sawmill_saw",0,0,18,[[2,27],[11,19],[11,21],[2,29]]],
+          ["box","sawmill_wood",0,2,20,18,3,28],
+          ["repeat",[3,0,0],6,[["prism","sawmill_frame",0,0,1,[[2,27],[11,19],[11,21],[2,29]]]]],
+          ["box","sawmill_wood_dark",20,2,0,22,9,2], ["box","sawmill_wood_dark",28,2,0,30,9,2],
+          ["repeat",[0,0,2],3,[
+            ["repeat",[0,2,0],4,[["box","sawmill_plank",18,2,2,32,3,3]]],
+            ["box","sawmill_plank_shade",20,2,3,21,9,4], ["box","sawmill_plank_shade",29,2,3,30,9,4]
+          ]],
+          ["paint","sawmill_plank_shade",18,2,2,19,9,8]
+        ]],
+        ["box","sawmill_wood_dark",16,27,0,17,30,7], ["box","sawmill_wood_dark",20,27,0,21,30,7],
+        ["box","sawmill_plank",15,26,6,22,30,7], ["ellipsoid","sawmill_saw",18,27,5,19,30,10],
+        ["box","sawmill_worker_skin",20,30,0,21,31,2], ["box","sawmill_worker_skin",22,30,0,23,31,2],
+        ["box","sawmill_wood_dark",20,30,2,21,31,4], ["box","sawmill_wood_dark",22,30,2,23,31,4],
+        ["box","sawmill_worker_shirt",20,30,4,23,31,7], ["box","sawmill_worker_skin",19,29,5,21,31,6],
+        ["box","sawmill_worker_skin",21,30,7,23,31,9], ["paint","sawmill_wood_dark",21,30,8,23,31,9],
+        ["replace_material","sawmill_plank","sawmill_cutting_plank"], ["replace_material","sawmill_plank_shade","sawmill_cutting_plank_shade"]
+      ]
+    },
+    "sawmill_store_site": {
+      "size":[32,32,40], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress",
+      "reference":"Sawmill13 sprite2067: dark14x14 foundation on separately owned3924 rubble; no timber warehouse shell in this first construction state",
+      "ops":[["box","sawmill_foundation",2,2,0,30,30,1],["scatter_paint","sawmill_foundation_grain",4,2067,2,2,0,30,30,1]]
+    },
+    "sawmill_store_frame": {
+      "extends":"sawmill_store_site", "review_status":"work-in-progress",
+      "reference":"Sawmill13 sprite2068: low unroofed timber perimeter with open centre and framed dark front doorway; the central raised roof monitor is absent",
+      "ops":[
+        ["box","sawmill_wood",2,2,0,30,30,14], ["erase",3,3,1,29,29,14],
+        ["erase",8,29,1,14,30,11], ["erase",8,2,1,14,3,11],
+        ["repeat",[0,3,0],9,[["paint","sawmill_wood_dark",2,3,1,3,4,14],["paint","sawmill_wood_dark",29,3,1,30,4,14]]],
+        ["repeat",[3,0,0],9,[["paint","sawmill_wood_dark",3,2,1,4,3,14],["paint","sawmill_wood_dark",3,29,1,4,30,14]]],
+        ["scatter_paint","sawmill_wood_grain",7,2068,2,2,1,30,30,14,"sawmill_wood"],
+        ["paint","sawmill_foundation",3,3,0,29,29,1],
+        ["scatter_paint","sawmill_foundation_grain",4,2067,3,3,0,29,29,1]
+      ]
+    },
+    "sawmill_store_house": {
+      "extends":"sawmill_store_frame", "review_status":"work-in-progress",
+      "reference":"Sawmill13 identical2069 stage2/3: low plank warehouse and broad corrugated gable with a raised timber roof monitor, real interior and dark loading door",
+      "ops":[
+        ["prism","sawmill_wood",1,2,3,[[2,14],[16,24],[30,14]]],
+        ["prism","sawmill_wood",1,29,30,[[2,14],[16,24],[30,14]]],
+        ["prism","sawmill_roof",1,2,30,[[2,14],[16,24],[30,14],[30,16],[16,26],[2,16]]],
+        ["repeat",[0,3,0],10,[["prism","sawmill_frame",1,2,3,[[2,15],[16,25],[30,15],[30,16],[16,26],[2,16]]]]],
+        ["box","sawmill_wood",12,4,23,20,28,30], ["erase",13,5,23,19,27,30],
+        ["prism","sawmill_roof",1,3,29,[[11,29],[16,33],[21,29],[21,31],[16,35],[11,31]]],
+        ["prism","sawmill_wood",1,4,5,[[12,30],[16,33],[20,30]]],
+        ["prism","sawmill_wood",1,27,28,[[12,30],[16,33],[20,30]]],
+        ["repeat",[0,3,0],8,[["prism","sawmill_frame",1,4,5,[[11,30],[16,34],[21,30],[21,31],[16,35],[11,31]]]]],
+        ["paint","sawmill_wood_dark",12,5,27,13,27,29], ["paint","sawmill_wood_dark",19,5,27,20,27,29],
+        ["scatter_paint","sawmill_wood_grain",7,2069,2,2,14,30,30,34,"sawmill_wood"],
+        ["replace_material","sawmill_roof","sawmill_store_roof"],
+        ["replace_material","sawmill_wood_grain","sawmill_wood_finished_grain"]
+      ]
+    },
+    "sawmill_logs": {
+      "size":[32,32,20], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress",
+      "transpose_xy":true,
+      "reference":"Sawmill14 sprite2070 only at completed stage3: staggered round brown logs with pale original56..58 cut ends and dark lower bark; original stages0..2 have no body",
+      "ops":[
+        ["repeat",[0,5,0],5,[["barrel_fill","sawmill_log",0,0,0,27,5,5,"y"],["paint","sawmill_log_end",26,0,1,27,5,4]]],
+        ["repeat",[0,5,0],4,[["barrel_fill","sawmill_log",1,3,4,28,8,9,"y"],["paint","sawmill_log_end",27,3,5,28,8,8]]],
+        ["repeat",[0,5,0],3,[["barrel_fill","sawmill_log",0,5,8,26,10,13,"y"],["paint","sawmill_log_end",25,5,9,26,10,12]]],
+        ["repeat",[0,5,0],2,[["barrel_fill","sawmill_log",2,8,12,28,13,17,"y"],["paint","sawmill_log_end",27,8,13,28,13,16]]]
+      ]
+    },
+    "sawmill_boards": {
+      "size":[32,32,32], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress", "transpose_xy":true,
+      "reference":"Sawmill15 sprite2071 only at completed stage3: individually separated pale timber planks on alternating cross-battens, staggered stepped stacks and darker exposed end grain; original first three bodies are empty",
+      "ops":[
+        ["box","sawmill_board_support",3,2,0,5,22,1], ["box","sawmill_board_support",21,2,0,23,22,1],
+        ["repeat",[0,0,3],7,[
+          ["repeat",[0,3,0],7,[["box","sawmill_plank",0,2,1,26,4,3]]],
+          ["box","sawmill_plank_shade",4,2,3,6,22,4], ["box","sawmill_plank_shade",21,2,3,23,22,4]
+        ]],
+        ["repeat",[0,3,0],5,[["box","sawmill_plank",1,5,22,25,7,24]]],
+        ["box","sawmill_plank_shade",4,5,24,6,19,25], ["box","sawmill_plank_shade",21,5,24,23,19,25],
+        ["repeat",[0,3,0],3,[["box","sawmill_plank",0,8,25,26,10,27]]],
+        ["scatter_paint","sawmill_plank_shade",4,2071,0,2,1,2,22,27,"sawmill_plank"]
+      ]
     },
     "power_generator_frame": {
       "size": [32,30,22], "origin": [0,0,0],
@@ -8380,7 +8560,7 @@
       "ops": [["use","mine_machine_piers"]]
     },
     "rail_loco_kirby": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Kirby Paul Tank0 temperate2921..2928: short side tanks around the boiler, open-backed cab, three coupled driving axles, grey dome, brass whistle and front chimney",
       "ops":[
         ["use","loco_steam_gear"], ["use","loco_steam_cab"], ["use","loco_steam_boiler"],
@@ -8392,12 +8572,12 @@
       ]
     },
     "rail_loco_jubilee": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Chaney Jubilee8/SH8 engine10, temperate2905..2912: identical original long exposed banded boiler, open blue cab, black smokebox, dome, front lamps and three spoked coupled drivers",
       "ops":[["use","loco_steam_gear"],["use","loco_steam_cab"],["use","loco_steam_boiler"]]
     },
     "rail_loco_a4": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Ginzu A4 engine9, temperate2913..2920: original blue streamlined boiler/nose with dark top slot, cab and long side skirts over the three visible coupled drivers",
       "ops":[["use","loco_steam_gear"],["use","loco_steam_cab"],["use","loco_steam_streamline"]]
     },
@@ -8405,8 +8585,8 @@
       "extends":"rail_loco_jubilee", "reference":"Ploddyphut Choo-Choo2 Toyland2921..2928: independent narrow blue boiler, silver/brown bands, tall grey chimney, blue cab and red cowcatcher; same numbers are unrelated to Kirby's normal artwork",
       "ops":[
         ["replace_material","loco_steam_band","loco_toy_brass"],
-        ["box","loco_hub",33,4,25,37,8,39], ["box","loco_steel",32,3,36,38,9,39],
-        ["paint","loco_recess",33,4,38,37,8,39],
+        ["box","loco_hub",33,4,25,37,8,37], ["box","loco_steel",32,3,34,38,9,37],
+        ["paint","loco_recess",33,4,36,37,8,37],
         ["box","loco_steam_band",2,0,26,14,12,28], ["barrel_fill","loco_steam_band",2,0,28,14,12,31,"y"],
         ["box","loco_steel",11,1,11,36,2,13], ["box","loco_steel",11,10,11,36,11,13],
         ["prism","loco_toy_red",1,1,11,[[36,4],[42,4],[42,6],[37,10],[36,10]]],
@@ -8433,7 +8613,7 @@
       ]
     },
     "rail_loco_wills": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.1875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Wills2-8-0 engine7 Arctic/tropical3041..3048, inspected matching sources: black boiler and three grey domes, open blue rear cab, four coupled drivers and front lamp",
       "ops":[
         ["use","loco_steam_boiler"], ["replace_material","loco_steam_company","loco_roof"], ["replace_material","loco_steam_band","loco_steel"],
@@ -8451,7 +8631,7 @@
       ]
     },
     "rail_loco_mjs250_arctic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"MJS250 engine1 Arctic3065..3072: yellow rear-offset cab and sill, tall narrow blue long hood, black radiator grille and exposed walkways",
       "ops":[
         ["use","loco_diesel_gear"], ["box","loco_yellow",2,0,8,39,12,10],
@@ -8469,7 +8649,7 @@
       ]
     },
     "rail_loco_mjs250_tropic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"MJS250 engine1 tropical3065..3072: independent silver-grey low hood, forward cab with grey cap, blue walls, black wheels and red end buffer beams",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_long_hood"],
@@ -8504,7 +8684,7 @@
       ]
     },
     "rail_loco_uu37": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"UU37 engine14 temperate2933..2936: symmetrical projecting yellow noses with raised blue cab ends, recessed black roof and low grey bogie sill",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_diesel_shell"],
@@ -8521,7 +8701,7 @@
       ]
     },
     "rail_loco_cs4000_arctic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"CS4000 engine16 Arctic3033..3040: angular forward blue cab, twin dark long-hood radiator banks, silver-grey narrow walkways and handrail, grey bogies and two yellow headlights",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_long_hood"],
@@ -8548,7 +8728,7 @@
       ]
     },
     "rail_loco_cs2400_arctic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"CS2400 engine17 Arctic3017..3024: tall yellow front cab and sill, blue rear long hood, single black rear radiator bank and grey front short hood",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_long_hood"],
@@ -8575,7 +8755,7 @@
       ]
     },
     "rail_loco_centennial_arctic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Centennial engine18 Arctic3025..3032: twin roof and side radiator banks on a wide blue hood, forward black-capped blue cab, yellow sill/handrail and yellow front headlight",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_long_hood"],
@@ -8642,7 +8822,7 @@
       ]
     },
     "rail_loco_turner_arctic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"TurnerTurbo engine20 Arctic3053..3060: pointed blue nose and raised forward driver, dark stepped turbine roof, long side glazing and two horizontal front-side grilles",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
@@ -8670,7 +8850,7 @@
       ]
     },
     "rail_loco_mjs1000_arctic": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"MJS1000 engine21 Arctic3061..3064: symmetrical narrow blue hoods, tall yellow centre cab and running boards, paired black radiator banks and low silver wheels",
       "ops":[
         ["use","loco_diesel_gear"], ["paint","loco_yellow",2,1,7,39,11,10],
@@ -8716,7 +8896,7 @@
       ]
     },
     "rail_loco_tim": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"TIM engine25 temperate2973..2980: long silver sloping roof, blue cab nose, broad silver engine grille band, black rear insulator bay and open single-arm roof collector",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
@@ -8728,11 +8908,11 @@
         ["paint","loco_blue_light",30,1,12,39,11,19],
         ["paint","loco_window",31,2,20,37,10,25],
         ["paint","loco_lamp",37,1,13,40,3,15], ["paint","loco_lamp",37,9,13,40,11,15],
-        ["use","loco_single_pantograph"]
+        ["box","loco_insulator",8,3,26,11,5,28], ["box","loco_insulator",8,7,26,11,9,28]
       ]
     },
     "rail_loco_asiastar": {
-      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"AsiaStar engine26 temperate2965..2972: blue high-speed power body, long recessed blue engine panel, yellow swept windscreen rim and low waist stripe, charcoal roof and open rear single-arm collector",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
@@ -8741,7 +8921,7 @@
         ["paint","loco_blue_light",4,1,13,5,2,21], ["paint","loco_blue_light",4,10,13,5,11,21],
         ["paint","loco_yellow",2,1,9,23,2,11], ["paint","loco_yellow",2,10,9,23,11,11],
         ["paint","loco_lamp",37,1,13,40,3,15], ["paint","loco_lamp",37,9,13,40,11,15],
-        ["use","loco_single_pantograph"]
+        ["box","loco_insulator",8,3,26,11,5,28], ["box","loco_insulator",8,7,26,11,9,28]
       ]
     },
     "rail_loco_toy_ploddy_diesel": {
@@ -8756,7 +8936,7 @@
       ]
     },
     "rail_loco_toy_powernaut_diesel": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"PowernautDiesel engine6 Toyland3033..3040: independent blue long hood, low grey side shutters, yellow waist, black forward roof cap, pale cab eyes and red forward lamp",
       "ops":[
         ["use","loco_diesel_gear"], ["use","loco_long_hood"],
@@ -8816,7 +8996,7 @@
       ]
     },
     "rail_loco_leviathan": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Leviathan maglev84, identical normal/Arctic/tropical3009..3012: two large yellow driver ends, raised blue central casing, three rows of split black machinery grilles, grey roof plate and separate running shoes",
       "ops":[
         ["use","loco_maglev_gear"], ["use","loco_maglev_cabs"],
@@ -8828,7 +9008,7 @@
       ]
     },
     "rail_loco_cyclops": {
-      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.21875], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
       "reference":"Cyclops maglev85, identical normal/Arctic/tropical3013..3016: larger slanted yellow cab noses, single broad windscreens, paired central dark intake rows and raised grey machinery roof",
       "ops":[
         ["use","loco_maglev_gear"], ["use","loco_maglev_cabs"],
@@ -8882,6 +9062,41 @@
         ["paint","loco_toy_lamp",2,5,14,3,7,17], ["paint","loco_toy_lamp",38,5,14,39,7,17]
       ]
     },
+    "rail_collector_sh_front": {
+      "size":[40,14,16],"cell_size":[0.25,0.25,0.25],"origin":[-5,-1.75,6.5],"review_status":"work-in-progress",
+      "reference":"SH30/40 original front open diamond collector, independently mounted on the fixed roof insulators; contact height follows the actual surface/tunnel wire",
+      "ops":[
+        ["box","loco_steel",11,4,0,13,10,1],
+        ["repeat",[0,5,0],2,[
+          ["line","loco_steel",12,4,1,9,4,7], ["line","loco_steel",9,4,7,12,4,14],
+          ["line","loco_steel",12,4,14,15,4,7], ["line","loco_steel",15,4,7,12,4,1]
+        ]],
+        ["box","loco_steel",11,4,14,14,10,15]
+      ]
+    },
+    "rail_collector_sh_rear": {
+      "size":[40,14,16],"cell_size":[0.25,0.25,0.25],"origin":[-5,-1.75,6.5],"review_status":"work-in-progress",
+      "reference":"SH30/40 original rear open diamond collector, independently lowered at a portal rather than clipping both collectors to the front one's wire height",
+      "ops":[
+        ["box","loco_steel",27,4,0,29,10,1],
+        ["repeat",[0,5,0],2,[
+          ["line","loco_steel",28,4,1,25,4,7], ["line","loco_steel",25,4,7,28,4,14],
+          ["line","loco_steel",28,4,14,31,4,7], ["line","loco_steel",31,4,7,28,4,1]
+        ]],
+        ["box","loco_steel",27,4,14,30,10,15]
+      ]
+    },
+    "rail_collector_single": {
+      "size":[42,12,12],"cell_size":[0.25,0.25,0.25],"origin":[-5.125,-1.5,6.625],"review_status":"work-in-progress",
+      "reference":"TIM/AsiaStar single-arm roof collector above the fixed insulators; articulated wire-contact height is presentation-only and retains the original vehicle owner/palette",
+      "ops":[
+        ["box","loco_steel",8,3,0,11,9,1],
+        ["repeat",[0,5,0],2,[
+          ["line","loco_steel",10,3,1,6,3,6], ["line","loco_steel",6,3,6,12,3,10]
+        ]],
+        ["box","loco_steel",11,2,10,14,10,11]
+      ]
+    },
     "rail_sh_electric": {
       "size": [40,14,42], "cell_size": [0.25,0.25,0.25], "origin": [-5,-1.75,0.5],
       "reference": "SH30/SH40 engines23/24, identical original2937..2940 in all directions/cargo states: yellow cab ends, company sides, grey sill, black roof, twin open diamond pantographs", "review_status": "work-in-progress",
@@ -8928,8 +9143,10 @@
         ["box","loco_roof",37,4,5,40,6,7], ["box","loco_roof",37,8,5,40,10,7],
         ["paint","loco_lamp",3,3,12,4,4,13], ["paint","loco_lamp",3,10,12,4,11,13],
         ["paint","loco_lamp",36,3,12,37,4,13], ["paint","loco_lamp",36,10,12,37,11,13],
-        ["use","sh_pantograph",[8,0,0]],
-        ["use","sh_pantograph",[24,0,0]]
+        ["repeat",[16,0,0],2,[
+          ["box","loco_insulator",11,4,22,13,6,24],
+          ["box","loco_insulator",11,8,22,13,10,24]
+        ]]
       ]
     },
     "tree_palm_bent_00": {
@@ -11271,7 +11488,12 @@
       "7": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
       "8": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
       "9": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
-      "10": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"}
+      "10": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
+      "11": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
+      "12": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
+      "13": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
+      "14": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
+      "15": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"}
     },
     "industries": {
       "0": {"0":"mine_head_skeleton","1":"mine_head_shell","2":"mine_head_00","3":"mine_head_00"},
@@ -11281,7 +11503,12 @@
       "7": {"0":"power_cooling_base","1":"power_cooling_shell","2":"power_cooling_tower","3":"power_cooling_tower"},
       "8": {"1":"power_boiler_frame","2":"power_boiler_house","3":"power_boiler_house"},
       "9": {"1":"power_generator_frame","2":"power_generator_house","3":"power_generator_house"},
-      "10": {"3":"power_transformer"}
+      "10": {"3":"power_transformer"},
+      "11": {"0":"sawmill_northlight_site","1":"sawmill_northlight_frame","2":"sawmill_northlight_house","3":"sawmill_northlight_house"},
+      "12": {"0":"sawmill_cutting_site","1":"sawmill_cutting_frame","2":"sawmill_cutting_house","3":"sawmill_cutting_house"},
+      "13": {"0":"sawmill_store_site","1":"sawmill_store_frame","2":"sawmill_store_house","3":"sawmill_store_house"},
+      "14": {"3":"sawmill_logs"},
+      "15": {"3":"sawmill_boards"}
     },
     "trees": {
       "1884":{"0":"tree_tropical_bottle_00","1":"tree_tropical_bottle_01","2":"tree_tropical_bottle_02","3":"tree_tropical_bottle_03","4":"tree_tropical_bottle_04","5":"tree_tropical_bottle_05","6":"tree_tropical_bottle_06"},
@@ -11374,6 +11601,12 @@
       "51": {"0":"airport_radar_sw_00","1":"airport_radar_sw_01","2":"airport_radar_sw_02","3":"airport_radar_sw_03","4":"airport_radar_sw_04","5":"airport_radar_sw_05","6":"airport_radar_sw_06","7":"airport_radar_sw_07","8":"airport_radar_sw_08","9":"airport_radar_sw_09","10":"airport_radar_sw_10","11":"airport_radar_sw_11"},
       "52": {"0":"airport_radar_ne_00","1":"airport_radar_ne_01","2":"airport_radar_ne_02","3":"airport_radar_ne_03","4":"airport_radar_ne_04","5":"airport_radar_ne_05","6":"airport_radar_ne_06","7":"airport_radar_ne_07","8":"airport_radar_ne_08","9":"airport_radar_ne_09","10":"airport_radar_ne_10","11":"airport_radar_ne_11"},
       "73": {"0":"airport_flag_0","1":"airport_flag_1","2":"airport_flag_2","3":"airport_flag_3"}
+    },
+    "vehicle_collectors": {
+      "23":{"0":"rail_collector_sh_front","1":"rail_collector_sh_rear"},
+      "24":{"0":"rail_collector_sh_front","1":"rail_collector_sh_rear"},
+      "25":{"0":"rail_collector_single"},
+      "26":{"0":"rail_collector_single"}
     },
     "vehicles": {
       "0":{"0":"rail_loco_kirby","1":"rail_loco_kirby"},

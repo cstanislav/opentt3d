@@ -21,6 +21,50 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,144-volume train-clearance/sawmill candidate:**190 native,106 asset/compiler
+  and8 harness tests pass. The134-source-file presentation boundary and whitespace
+  checks pass. No final visual approvals. Runtime totals:9,139,438 occupied
+  cells,6,779,924 exposed faces,1,485,446 conforming rectangles and11,135,426 triangles.
+- Full1,133 GL/Vulkan matrices each pass27,192 model views,320 joined house views,
+  322,048 vehicle poses/592 climate-cargo bindings,10,880 joined collector poses,
+  384 joined rotor poses,144 tunnel views,8,240 rail layouts/slopes,128 station layouts,
+  192 signal states and216 catenary views. Exact world-atlas RGBA/picking checks cover
+  4,096,000 pixels/backend. Sampled peaks6,080,894,760 /6,103,144,088bytes remain below
+  6GiB; results:`pass1-1133-full-matrices.json`. The original one-pixel AsiaStar failure
+  remains under`pass1-1133-locomotives-opengl-verified`; the directory name is historical.
+  Occupied/empty silhouette strips now retain reference diagonals, and the complete
+  rerun passes. The wider triangulation's performance cost is under matched review.
+- Train body verification checks every empty/loaded binding against the actual
+  faceted tunnel lining with0.08unit rib allowance. Roof mounts/insulators remain
+  fixed; separate collectors follow each shoe's sampled surface wire and7.55unit
+  tunnel wire. Live engines23…26 pass surface/portal/tunnel observation onGL/Vulkan,
+  maximum sampled peak4,380,807,464bytes;`pass1-1133-collector-live.json`. Their close
+  3,600-frame runs average60fps but retain388…565 intervals over20ms and up to two
+  work overruns, so smooth pacing remains unproven. Bridge/slope contact and complete
+  station/depot/Cab context remain active.
+- Sawmill11…15 adds11 volumes, raising industry body/ground bindings to13/16. Both
+  backends pass264 new mesh views,840 industry construction/animation views including
+  512 independent grounds, and exact atlas comparisons. The final floor-material
+  review peaks4,355,789,192 /4,124,463,328bytes. All20 public-NoAI construction-state
+  captures pass, including the six original empty log/board bodies. Reports:
+  `pass1-1144-sawmill-{matrices,floor-matrices}.json`. Source comparisons remain WIP.
+- Locomotive CI36223339754 passes macOS, Windowsx86/x64 build/tests, WindowsARM64
+  build and187Linux tests. LinuxVulkan then detects640 scenery pixels obstructing
+  the title-world tunnel lining; the artifact is retained in`pass1-1130-linux-vulkan-ci`.
+  The same640-pixel obstruction reproduces natively in`pass1-1144-tunnel-ci-repro`.
+  A below-ground tree root was missing the terrain's bore subtraction. The repair
+  uses each tree's actual tile-relative origin and finite segment bounds, preserving
+  above-ground geometry/palette. `pass1-1144-root-tunnel-{opengl,vulkan}` each pass
+  243,635 unobstructed lining pixels, unchanged vehicle state and exact atlas checks,
+  with sampled peaks5,494,019,280 /5,399,139,392bytes. Current Linux verification
+  remains pending; the failure and its native reproduction remain preserved.
+- Final1,144 source/catalogue and executable are frozen in`pass1-1144-root-control-build`
+  and`pass1-1144-{source,catalogue,final-hashes,inventory}.json`. Executable SHA256:
+  `8e9dbe037f093cd48167a8cd683e3cdf44882c07213f9b4f63496ed4ea6d828e`;
+  runtime catalogue:`f8df83f5ea17773914ada18d24b78eb6a613eb664c258b1581946775ab165043`.
+  The development app is refreshed to this checkpoint;`pass1-1144-bundle-hidden`
+  passes actual sawmill capture/atlas verification through hidden LaunchServices.
+
 - **Original train clearance routes:**`fixture_train.py --clearance-route` builds
   a real eight-tile bridge with its original ramps and a tunnel through a raised
   hill using public NoAI commands. All12 climate/railtype consists finish outbound

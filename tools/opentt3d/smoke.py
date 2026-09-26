@@ -147,6 +147,7 @@ def main():
     parser.add_argument("--verify-voxel-cargo", type=int, choices=range(256), help="Observe one actual voxel vehicle at both zero cargo and full capacity with the corresponding original bindings")
     parser.add_argument("--verify-helicopter-rotor", type=int, choices=(253,254,255), help="Observe all four original rotor states on an actual moving voxel helicopter")
     parser.add_argument("--verify-aircraft-contact", type=int, choices=range(215,256), help="Observe authored wheels/skids on an actual stopped aircraft meeting the airport ground surface")
+    parser.add_argument("--verify-train-collectors", type=int, choices=range(23,27), help="Observe original electric roof collectors following surface, portal and tunnel wires")
     parser.add_argument("--verify-tile-picking", action="store_true")
     parser.add_argument("--verify-native-input", action="store_true", help="Exercise Cocoa focus, pointer capture and fullscreen recovery")
     parser.add_argument("--macos-bundle", action="store_true", help="Launch through macOS LaunchServices using a linked development app bundle")
@@ -465,6 +466,8 @@ server_advertise = false
         commands.append(f"renderer3d verify-helicopter-rotor {args.verify_helicopter_rotor}")
     if args.verify_aircraft_contact is not None:
         commands.append(f"renderer3d verify-aircraft-contact {args.verify_aircraft_contact}")
+    if args.verify_train_collectors is not None:
+        commands.append(f"renderer3d verify-train-collectors {args.verify_train_collectors}")
     if args.verify_tile_picking:
         commands.append("renderer3d verify-tile-picking")
     if args.verify_world_atlas:
@@ -763,6 +766,8 @@ server_advertise = false
                 raise RuntimeError("A single actual power-station tile did not render all six original spark children; inspect run.log")
             if args.verify_voxel_cargo is not None and f"voxel vehicle cargo verification passed: engine {args.verify_voxel_cargo}," not in text:
                 raise RuntimeError("A single voxel vehicle did not render both actual empty and full-capacity states; inspect run.log")
+            if args.verify_train_collectors is not None and f"voxel train collector observation passed: engine {args.verify_train_collectors} " not in text:
+                raise RuntimeError("The electric locomotive did not retain captured surface/portal/tunnel collector contact; inspect run.log")
             if args.verify_ground_continuity and "ground continuity verification passed:" not in text:
                 raise RuntimeError("Mixed ground surfaces did not preserve their complete terrain footprint; inspect run.log")
             if args.verify_depot_traversal is not None and f"voxel depot traversal verification passed: vehicle {args.verify_depot_traversal}," not in text:

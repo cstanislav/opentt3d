@@ -511,7 +511,9 @@ TEST_CASE("Voxel meshes merge colour-compatible faces and eliminate internal bou
 	CHECK(merged.occupied == 24);
 	CHECK(merged.exposed_faces == 52);
 	CHECK(merged.quads == 6);
-	CHECK(merged.vertices.size() < cells.vertices.size());
+	/* This small box is entirely boundary cells; a safe mesh may retain all
+	 * of them. Larger same-colour interiors are checked independently below. */
+	CHECK(merged.vertices.size() <= cells.vertices.size());
 	CHECK(cells.quads == 52);
 	CHECK(merged.low == Vec3{2,4,8});
 	CHECK(merged.high == Vec3{4,5.5f,10});
@@ -552,6 +554,40 @@ TEST_CASE("Coplanar voxel colour borders retain cell diagonals while interiors s
 	}
 	CHECK(protected_triangles == 128);
 	CHECK(merged_interior);
+	CHECK(VoxelAreaVolume(merged).first == Approx(VoxelAreaVolume(reference).first));
+	CHECK(VoxelAreaVolume(merged).second == Approx(VoxelAreaVolume(reference).second));
+}
+
+TEST_CASE("Voxel silhouettes retain reference unit diagonals on anisotropic grids", "[renderer3d][voxel]")
+{
+	VoxelGrid grid({32,12,28},{{{4,4,4,4,4,4}}},{-5.125f,-1.5f,0.5f},{0.25f,0.25f,0.21875f});
+	grid.Fill({0,0,0},{32,12,28},1);
+	auto merged = grid.Mesh(), reference = grid.Mesh(false);
+	using Triangle = std::array<std::array<float,3>,3>;
+	auto triangle = [](const auto &vertices,size_t first) {
+		Triangle result;
+		for (size_t i = 0; i < 3; ++i) {
+			Vec3 p = vertices[first+i].position; result[i] = {p.x,p.y,p.z};
+		}
+		std::sort(result.begin(),result.end());
+		return result;
+	};
+	std::set<Triangle> unit_faces;
+	for (size_t i = 0; i < reference.vertices.size(); i += 3) unit_faces.insert(triangle(reference.vertices,i));
+	unsigned silhouette_triangles = 0;
+	for (size_t i = 0; i < merged.vertices.size(); i += 3) {
+		Vec3 n = merged.vertices[i].normal;
+		unsigned axis = n.x != 0 ? 0 : n.y != 0 ? 1 : 2;
+		std::array<float,3> low{merged.low.x,merged.low.y,merged.low.z},high{merged.high.x,merged.high.y,merged.high.z};
+		bool boundary = false;
+		auto face = triangle(merged.vertices,i);
+		for (const auto &point : face) for (unsigned tangent = 0; tangent < 3; ++tangent) if (tangent != axis) boundary |= point[tangent] == low[tangent] || point[tangent] == high[tangent];
+		if (!boundary) continue;
+		CHECK(unit_faces.contains(face));
+		++silhouette_triangles;
+	}
+	CHECK(silhouette_triangles > 100);
+	CHECK(merged.vertices.size() < reference.vertices.size());
 	CHECK(VoxelAreaVolume(merged).first == Approx(VoxelAreaVolume(reference).first));
 	CHECK(VoxelAreaVolume(merged).second == Approx(VoxelAreaVolume(reference).second));
 }

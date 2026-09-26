@@ -15,6 +15,17 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);
 bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0, float opacity = 1);
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0);
+std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading);
+unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette,
+	std::array<float,2> contact_heights = {10,10});
+/** Keep a collector's fixed roof mounting while moving only its upper frame. */
+inline void FitVoxelCollectorToWire(InstanceData &data, float mount, float top, float contact)
+{
+	if (!std::isfinite(mount) || !std::isfinite(top) || !std::isfinite(contact) || top <= mount || contact <= mount) throw std::invalid_argument("Invalid voxel collector contact");
+	float scale = (contact-mount)/(top-mount);
+	data.scale_center[1] = scale;
+	data.origin_opacity[2] += mount*(1-scale);
+}
 uint32_t VoxelPaletteMask(std::span<const Vertex> vertices, unsigned first, unsigned count);
 bool DrawVoxelAsset(Scene &scene, std::string_view category, unsigned identifier, unsigned state,
 	Vec3 origin, PaletteID palette = 0, float opacity = 1);

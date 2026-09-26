@@ -8,6 +8,7 @@
 #include "gl_backend.hpp"
 #include "depot_capture.h"
 #include "station_capture.h"
+#include "tunnel_geometry.hpp"
 #include "../fileio_func.h"
 #include "../debug.h"
 #include "../core/bitmath_func.hpp"
@@ -460,6 +461,54 @@ bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, f
 	return true;
 }
 
+std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading)
+{
+	const auto &models = Models();
+	auto binding = models.bindings.find({"vehicle_collectors",engine,part});
+	auto state = VoxelVehicleState(engine,false);
+	if (binding == models.bindings.end() || !state) return {};
+	const auto &body = models.models.at(models.bindings.at({"vehicles",engine,*state})).surface;
+	const auto &mesh = models.models.at(binding->second).surface;
+	/* A single-arm frame is asymmetric: its overall bounds are not the wire
+	 * contact shoe. Cache the top surface's XY centre in immutable model space. */
+	static std::map<const VoxelMesh *,Vec3> contacts;
+	auto [contact,inserted] = contacts.try_emplace(&mesh);
+	if (inserted) {
+		Vec3 low{INFINITY,INFINITY,mesh.low.z},high{-INFINITY,-INFINITY,mesh.low.z};
+		for (const auto &vertex : mesh.vertices) if (vertex.position.z == mesh.high.z) {
+			low.x = std::min(low.x,vertex.position.x); low.y = std::min(low.y,vertex.position.y);
+			high.x = std::max(high.x,vertex.position.x); high.y = std::max(high.y,vertex.position.y);
+		}
+		contact->second = (low+high)*0.5f;
+	}
+	Vec3 centre = contact->second;
+	centre.x *= OriginalTrainVoxelScale(heading,body.high.x-body.low.x);
+	return Vec3{centre.x*std::cos(heading)-centre.y*std::sin(heading),centre.x*std::sin(heading)+centre.y*std::cos(heading),mesh.low.z};
+}
+
+unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette, std::array<float,2> contact_heights)
+{
+	const auto &models = Models();
+	auto state = VoxelVehicleState(engine,false);
+	if (!state || engine >= 116) return 0;
+	const auto &body = models.models.at(models.bindings.at({"vehicles",engine,*state})).surface;
+	unsigned drawn = 0;
+	for (unsigned part = 0; part < 2; ++part) {
+		auto binding = models.bindings.find({"vehicle_collectors",engine,part});
+		if (binding == models.bindings.end()) continue;
+		const auto &mesh = models.models.at(binding->second).surface;
+		float radius = std::max({std::abs(body.low.x),std::abs(body.high.x),std::abs(mesh.low.y),std::abs(mesh.high.y)})*1.42f;
+		if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,mesh.low.z},origin+Vec3{radius,radius,contact_heights[part]})) continue;
+		auto data = Material(origin,palette,1);
+		data.mirror_layer_heading[3] = heading;
+		data.SetLongitudinalScale(OriginalTrainVoxelScale(heading,body.high.x-body.low.x));
+		FitVoxelCollectorToWire(data,mesh.low.z,mesh.high.z,contact_heights[part]);
+		scene.instances.push_back({&mesh.vertices,data});
+		++drawn;
+	}
+	return drawn;
+}
+
 bool FocusVoxelVehicle(unsigned engine)
 {
 	for (const Vehicle *vehicle : Vehicle::Iterate()) {
@@ -806,6 +855,15 @@ void ExportVoxelReviews(std::string_view prefix)
 			capture(industry,camera.Cropped(8192-64,8192-80,128,128),fmt::format("model-voxel-industry{}-{}-native-{}",ground_layer ? "-ground" : "",base,stage),true);
 		}
 		if (category == "vehicles" && name.starts_with(prefix) && VoxelVehicleState(base,(stage&1U) != 0) == stage) {
+			if (base >= 23 && base <= 26 && stage == 0) for (unsigned lowered = 0; lowered < 3; ++lowered) for (unsigned view = 0; view < 8; ++view) {
+				Scene train;
+				DrawVoxelVehicle(train,base,false,{},0,PALETTE_RECOLOUR_START,1);
+				std::array<float,2> heights = lowered == 0 ? std::array{10.0f,10.0f} : lowered == 1 ? std::array{7.55f,7.55f} : std::array{8.8f,7.55f};
+				DrawVoxelTrainCollectors(train,base,{},0,PALETTE_RECOLOUR_START,heights);
+				Camera camera{{0,0,5},3,640,640,static_cast<float>(view)};
+				if (view >= 4) camera = StreetReviewCamera({-8,-2,0},{8,2,11},640,640,view-4+1.5f);
+				capture(train,camera,fmt::format("model-voxel-train-{}-collector-{}-{}",base,lowered,view));
+			}
 			for (unsigned direction = 0; direction < 8; ++direction) {
 				Textures().BeginScene();
 				Scene vehicle;
@@ -815,6 +873,8 @@ void ExportVoxelReviews(std::string_view prefix)
 				if (base < 116) material.SetLongitudinalScale(OriginalTrainVoxelScale(material.mirror_layer_heading[3],mesh.high.x-mesh.low.x));
 				material.SetObjectId(1);
 				vehicle.instances.push_back({&Models().models.at(name).surface.vertices,material});
+				DrawVoxelTrainCollectors(vehicle,base,{},material.mirror_layer_heading[3],PALETTE_RECOLOUR_START);
+				for (auto &instance : vehicle.instances) instance.data.SetObjectId(1);
 				Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 				capture(vehicle,camera.Cropped(8192-48,8192-72,96,96),fmt::format("model-voxel-vehicle-{}-{}-native-{}",base,stage&1U,direction),true);
 				if (base >= 253 && base <= 255 && (stage&1U) == 0) for (unsigned rotor = 0; rotor < 4; ++rotor) {
@@ -1336,6 +1396,12 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 		unsigned climate = state/2;
 		if (state >= 8 || VoxelVehicleState(engine,loaded,climate) != state) throw std::runtime_error("Vehicle climate/cargo binding cannot be selected");
 		const auto &mesh = Models().models.at(name).surface;
+		if (engine < 116) for (const auto &vertex : mesh.vertices) {
+			/* Use the actual faceted lining and inward ribs, not its bounding box
+			 * or a smooth ellipse that admits clipping at facet boundaries. */
+			float roof = TunnelRoofHeight(TunnelKind::Rail,8+vertex.position.y)-0.08f;
+			if (vertex.position.z > roof) throw std::runtime_error(fmt::format("Train {} binding {} body {} exceeds the original tunnel loading gauge",engine,state,name));
+		}
 		++bindings_checked;
 		for (PaletteID palette : vehicle_palettes) for (unsigned pose = 0; pose < 16; ++pose) for (bool street : {false,true}) {
 			float heading = pose*std::numbers::pi_v<float>/8+0.07f;
@@ -1390,6 +1456,38 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 			actual.instances[0].data.origin_opacity[3] = 0.38f;
 			if (!RenderScene(actual,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),engine+1) != 0) throw std::runtime_error("Transparent voxel vehicle intercepted picking");
 			++vehicle_views;
+		}
+		if (engine >= 23 && engine <= 26 && !loaded) {
+			unsigned collector_views = 0, parts = engine <= 24 ? 2 : 1;
+			for (auto heights : {std::array{10.0f,10.0f},std::array{8.8f,8.8f},std::array{7.55f,7.55f},std::array{10.0f,7.55f},std::array{7.55f,10.0f}}) {
+				for (unsigned pose = 0; pose < 16; ++pose) for (bool street : {false,true}) for (PaletteID palette : vehicle_palettes) {
+					Scene actual, reference;
+					float heading = pose*std::numbers::pi_v<float>/8+0.07f;
+					DrawVoxelVehicle(actual,engine,false,{},heading,palette,1,climate);
+					if (DrawVoxelTrainCollectors(actual,engine,{},heading,palette,heights) != parts || actual.instances.size() != parts+1) throw std::runtime_error("Electric train lost an independent roof collector");
+					for (unsigned part = 0; part < parts; ++part) {
+						const auto &instance = actual.instances[part+1];
+						const auto &frame = Models().models.at(Models().bindings.at({"vehicle_collectors",engine,part})).surface;
+						float low = INFINITY,high = -INFINITY;
+						for (const auto &vertex : *instance.mesh) {
+							float z = ResolveInstanceVertex(vertex,instance.data).position.z;
+							low = std::min(low,z); high = std::max(high,z);
+							if (heights[part] == 7.55f && z > TunnelRoofHeight(TunnelKind::ElectricRail,8+vertex.position.y)-0.08f) throw std::runtime_error("Lowered collector intersects the actual tunnel lining ribs");
+						}
+						if (std::abs(low-frame.low.z) > 0.00001f || std::abs(high-heights[part]) > 0.00001f) throw std::runtime_error("Collector moved its roof mounting or missed its own wire height");
+					}
+					for (auto &instance : actual.instances) instance.data.SetObjectId(engine+1);
+					reference.vertices = actual.ExpandedVertices(true);
+					Camera camera{{0,0,5},2,256,256,0.17f}; camera.vertical_fov = 40;
+					if (street) camera = StreetReviewCamera({-8,-2,0},{8,2,11},256,256,0.17f);
+					if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error(fmt::format("Electric train {} collector pose {} heights {},{} street {} differs from CPU instances",engine,pose,heights[0],heights[1],street));
+					if (std::count(ids.begin(),ids.end(),engine+1) < 16 || std::ranges::any_of(ids,[&](uint32_t id) { return id != 0 && id != engine+1; })) throw std::runtime_error("Electric collector lost its original vehicle's picking ownership");
+					for (auto &instance : actual.instances) instance.data.origin_opacity[3] = 0.38f;
+					if (!RenderScene(actual,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),engine+1) != 0) throw std::runtime_error("Transparent electric collector intercepted picking");
+					++collector_views;
+				}
+			}
+			Debug(driver,1,"OpenTT3D: voxel train engine {} passed {} joined collector poses with fixed roof mounts, independent wire heights, company/crash palettes and original picking ownership",engine,collector_views);
 		}
 		if (engine >= 253 && engine <= 255 && !loaded) {
 			unsigned rotor_views = 0;

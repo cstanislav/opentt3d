@@ -56,17 +56,17 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,130 volumes, focused checks ongoing)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,144-volume verified candidate)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
 
 | Category | Existing voxel bindings | Pass 1 coverage work |
 | --- | --- | --- |
-| Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states | Immediate tall-train/tunnel loading-gauge correction, actual locomotive/climate review, and all-family source/clearance/dimensional work; bindings do not establish Pass1 acceptance |
+| Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states and three independently mounted train collector volumes | Flat-body tunnel gauge repaired; slope/curve wheel contact, contextual station/depot/bridge/Cab clearance and all-family source/dimensional work remain; bindings do not establish Pass1 acceptance |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
-| Industries | 8/175 body definitions,11 grounds | Remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
+| Industries | 13/175 body definitions,16 grounds | Sawmill11…15 joins the mine/power groups; remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
 | Airports | 18/74 tile definitions | Missing buildings/grounds/runways/aprons, helipads and state-driven equipment |
 | Depots | 5/6 families,20 directional bindings | Tram body/floor/wire and all-family source/ground/clearance review |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
@@ -105,8 +105,13 @@ clearance remain open. All81 wagon definitions now have bindings;69 newly bound
 engine/climate cases are captured in twelve normal consists. NativeGL/Vulkan each
 pass68,544 new wagon poses. Source sheets retain side/diagonal proportions, bright
 uniform paint, simplified ribs/cargo grain and canopy/coil detail for later review.
-Real coal production, loading, delivery and both saved states pass; remaining cargo
-services and complete clearances stay open. The33 unconverted locomotives are next.
+Sixteen freight routes pass actual full loading, accepted delivery and return with
+32 saved full/empty captures. Toyland fizzy drinks and complete contextual clearances
+remain open. All35 locomotives now have bindings and all55 climate/railtype service
+fixtures/captures pass. The1,133 repair clears the faceted tunnel gauge and independently
+fits the electric collectors; fullGL/Vulkan matrices pass. The1,144 sawmill addition
+preserves original construction differences, completed-only log/board piles and all
+five independent grounds. Forest/refinery and remaining infrastructure breadth are next.
 
 **Pass 1 remains incomplete.** New bindings do not automatically establish correct
 source dimensions/ground registration or every clearance. Bus/van diagonal/profile

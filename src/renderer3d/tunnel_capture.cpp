@@ -11,6 +11,7 @@
 #include "../roadveh.h"
 #include "../viewport_func.h"
 #include "../debug.h"
+#include "../landscape.h"
 #include <map>
 
 namespace Renderer3D {
@@ -67,6 +68,28 @@ bool IsVehicleInTunnel(const Vehicle &vehicle)
 	if (vehicle.tile == INVALID_TILE || !IsValidTile(vehicle.tile) || !IsTunnelTile(vehicle.tile)) return false;
 	return (vehicle.type == VEH_TRAIN && Train::From(&vehicle)->track == TRACK_BIT_WORMHOLE) ||
 		(vehicle.type == VEH_ROAD && RoadVehicle::From(&vehicle)->state == RVSB_WORMHOLE);
+}
+
+std::optional<float> TrainTunnelContactHeight(const Vehicle &vehicle, Vec3 point)
+{
+	if (vehicle.type != VEH_TRAIN) return {};
+	TileIndex under = INVALID_TILE;
+	if (point.x >= 0 && point.y >= 0 && point.x < Map::MaxX()*16 && point.y < Map::MaxY()*16) under = TileVirtXY(static_cast<int>(point.x),static_cast<int>(point.y));
+	/* A wormhole vehicle keeps the entrance tile. At a mouth the two roof
+	 * collectors can occupy different tiles, so also examine the sampled tile. */
+	for (TileIndex entrance : {vehicle.tile,under}) {
+		TunnelKind kind;
+		if (!GetVanillaTunnelKind(entrance,kind) || kind != TunnelKind::ElectricRail) continue;
+		TileIndex other = GetOtherTunnelEnd(entrance);
+		float floor = GetTilePixelZ(entrance);
+		if (std::abs(vehicle.z_pos-floor) > 1) continue;
+		Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,floor};
+		Vec3 local = TunnelPoint((4-to_underlying(GetTunnelBridgeDirection(entrance)))%4,point-origin);
+		if (local.y < 3 || local.y > 13) continue;
+		float length = (std::abs(static_cast<int>(TileX(other))-static_cast<int>(TileX(entrance)))+std::abs(static_cast<int>(TileY(other))-static_cast<int>(TileY(entrance))))*16.0f;
+		return floor+TunnelPairContactWireHeight(local.x,length);
+	}
+	return {};
 }
 
 const TunnelAssembly &TunnelGeometry(TunnelKind kind, bool portal)

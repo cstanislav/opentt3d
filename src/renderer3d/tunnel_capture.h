@@ -13,6 +13,7 @@ const TunnelAssembly &TunnelGeometry(TunnelKind kind, bool portal);
 void DrawTunnelSection(Scene &scene, const Camera &camera, Vec3 tile_origin, unsigned direction, TunnelKind kind, bool portal, bool snow_desert, bool reserved = false);
 bool GetVanillaTunnelKind(TileIndex entrance, TunnelKind &kind);
 bool IsVehicleInTunnel(const Vehicle &vehicle);
+std::optional<float> TrainTunnelContactHeight(const Vehicle &vehicle, Vec3 point);
 void BeginTunnelFrame();
 bool TunnelLabelVisible(const Camera &camera, Vec3 point);
 void ExportTunnelGallery(unsigned kind, unsigned direction);

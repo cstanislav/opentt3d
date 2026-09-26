@@ -7,7 +7,7 @@ cell volumes and six-face Classic palette materials are in `voxels.json`.
 `compile_voxels.py` validates/compiles boxes, paint, cuts, repeats, stepped roofs and hollow barrels
 to cell runs; the renderer builds shared, hidden-face-free conforming surfaces.
 Compact triangulation keeps actual colour/crease edge samples and shared rectangle
-cuts. Thin rectangles and unit strips beside coplanar colour changes retain reference
+cuts. Thin rectangles and unit strips beside colour changes or occupied/empty silhouette edges retain reference
 cell diagonals; larger interiors use ears without skipping boundary vertices. Reference/contact
 surfaces can retain the original triangulation when depth interpolation must match.
 All four construction states for houses 0…8 and13…19, and static airport bindings 19…28,32,43 and47 use this
@@ -345,6 +345,38 @@ native-scale vehicle directions alongside orbit/street views. Use `fixture_rail.
 verified normal stop at the terminus. `smoke.py --reference-vehicle 23` requires both
 read-only focus and actual voxel emission. Stage the matching fixture's `ai/`.
 
+All35 original locomotive definitions now have voxel bodies. Engines1 and16…21
+keep independently inspected Arctic/tropical forms; sprite-number reuse does not
+permit sharing those climates. The remaining normal monorail/maglev artwork matches
+across the three ordinary climates. Toyland locomotives retain separate bodies and
+their original eye/lamp details. Engine8/10 and13/15 share matching source artwork.
+
+Train volumes use explicit vertical grids calibrated to the original one-level
+tunnel loading gauge. Their XY footprints, wheel gauge, cargo voids, authored cells
+and0.5-unit running-rail contact plane remain explicit. The pose verifier checks all
+body vertices against the actual faceted tunnel profile including inward ribs;
+longitudinal spacing and slope/curve contact require their own contextual review.
+
+`vehicle_collectors` binds each fixed roof attachment separately: parts0/1 for
+SH23/24 and part0 for TIM25/AsiaStar26. The independent open frames retain the body's
+smoothed position, heading, original company/crash palette and picking owner. Their
+lower mount stays on the roof insulators while the upper frame follows the wire;
+each contact shoe samples its own position at a tunnel mouth. Surface samples use
+the actual captured wire endpoints/elevations, including half-runs and bridge grades.
+The interior electric
+wire is at7.55units, with its descending approach ending before the stone arch.
+`--verify-voxel-poses 23 24 25 26` includes joined all-angle, palette, transparent-pick,
+CPU/GPU and independent-height checks. Native source views include the collectors;
+`model-voxel-train-ENGINE-collector-STATE-VIEW` adds joined street/orbit views for
+surface0, tunnel1 and mixed-height2 states.
+
+Use `fixture_rail.py --train-engine 23` and then a bounded background run with
+`--reference-tunnel --verify-train-collectors 23 --running --benchmark-frames 3600`
+to require actual surface/portal/tunnel observations on one operating locomotive.
+Repeat for24…26 with their own fixtures and AI directories. A held catalogue save
+cannot establish this movement check. These observations do not change the original
+train state, map, orders or simulation RNG.
+
 The Balogh coal truck123 has distinct empty/loaded volumes. Use
 `fixture_industry.py --coal-service --cargo-snapshots` for ordinary0/20 and20/20 saves,
 `--reference-vehicle 123 --reference-cargo empty|full` for paused actual-state review,
@@ -358,6 +390,16 @@ The `mound` operation takes the same material/bounds as a box and fills an expli
 bounded elliptical cone from its base; every column is supported. It never reads
 source image geometry. `--palette-counts --preview` reports reference colour frequency
 for manual material work. Ground keeps the complete playable tile footprint.
+
+The eleven `sawmill_` volumes cover industry11…15, including distinct foundation,
+open-framing and roofed states for11…13. Original14/15 bodies are absent through
+stage2; their completed round logs and separated timber boards sit on the independently
+owned full3924 soil. Connected rafters/roof planes, cut-through rooms/doors, the cutting
+table/worker and every board's supporting battens remain explicit cell geometry.
+Use `fixture_industry.py --industry 2` for real construction checkpoints and
+`--gallery-voxel-prefix sawmill_` for source/street review. Tests enforce original
+per-state palettes and grounding of every disconnected physical part; source-painted
+roof/wood detail and final approval remain open.
 
 Power-station bodies7/8 add cooling-tower and boiler/chimney construction volumes;
 ground7/8 reuses the identical original3924 soil. Body8's transparent source2048 gets

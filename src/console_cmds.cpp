@@ -3045,6 +3045,15 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		});
 		return true;
 	}
+	if (argv.size() == 3 && argv[1] == "verify-train-collectors") {
+		auto engine = ParseType<unsigned>(argv[2]);
+		if (!engine || *engine < 23 || *engine > 26) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([engine=*engine] {
+			try { Renderer3D::BeginVoxelTrainCollectorCheck(engine); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
 	if (argv.size() == 3 && argv[1] == "verify-aircraft-contact") {
 		auto engine = ParseType<unsigned>(argv[2]);
 		if (!engine || *engine < 215 || *engine > 255) return false;
