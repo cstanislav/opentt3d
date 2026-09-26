@@ -25,3 +25,14 @@ journey/held observations. Reload `save/train-catalogue.sav` with this fixture's
 `ai/`. A loaded script stays idle while the ordinary train orders continue. Failed
 worlds/logs are preserved. This is movement/coupling evidence, not cargo delivery,
 all-curve/slope/bridge clearance or source-fidelity approval.
+
+For actual open-wagon cargo review, select a single wagon and add a producing/
+accepting industry pair, for example `--first-engine 29 --last-engine 29
+--cargo-source 0 --cargo-destination 1` for coal to a power station. The AI funds
+the original industries beside the stations, checks real station coverage and
+acceptance, orders full loading, observes accepted delivery and requires a return.
+The harness saves both `save/train-cargo-full.sav` and `save/train-cargo-empty.sav`
+before saving the operating fixture. Production, cargo packets and vehicle state
+come entirely from ordinary settings, public NoAI construction and normal orders.
+Use the saved fixture's own `ai/` and `smoke.py --reference-vehicle <wagon>
+--reference-cargo full` or `empty` to check the actual renderer selection separately.

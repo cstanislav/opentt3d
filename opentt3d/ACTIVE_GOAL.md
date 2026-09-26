@@ -31,13 +31,13 @@
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: 1,031 JSON volumes, houses0…109 and eighty-eight
+- Current coverage remains partial: 1,092 JSON volumes, houses0…109 and eighty-eight
   independent house grounds, eighteen airport
   definitions, industry bodies0…3/7…10 and grounds0…10, six power-station spark frames,
   depot families0…4 in four directions with source/weather-aware floors,
   both two-tile ship-depot orientations and all six ordinary/Toyland dock sections,
   separate ordinary/Toyland source-resolved Classic navigation buoys,
-  169 vehicle engine definitions (including all88 road definitions,27 closed-wagon definitions,all11 original ships and41 aircraft with four independent rotor states) and all62 standalone tree families /434 lifecycle volumes
+  223 vehicle engine definitions (including all88 road definitions,all81 wagon definitions,all11 original ships and41 aircraft with four independent rotor states) and all62 standalone tree families /434 lifecycle volumes
   (all original families1576…2003, including snow and all nine Toyland families)
   (fine fidelity remains WIP), four running-track systems, seven fence families and13 foundation
   forms. No asset has final visual approval. Every remaining category/state in the
@@ -63,6 +63,17 @@ immediately; record cosmetic findings for their appropriate later pass.
 > - If by a chance you think you're done with everything on this list, DON'T STOP WORKING. Keep playtesting the game, do visual checks, make lists of things that don't work or don't look perfect, keep improving things. THE ONLY ALLOWED WAY OF STOPPING WORK IS THE TIME CHECK.
 
 ### Current-window progress
+
+- **All-wagon bindings:**61 new volumes cover the remaining54 wagon definitions,
+  bringing the catalogue to1,092 and vehicles to223/256. NativeGL/Vulkan each pass
+  68,544 new wagon poses; twelve actual consists capture all69 new engine/climate
+  combinations. A public NoAI coal route fully loads, delivers and returns, and both
+  saved cargo states select their own voxel geometry. The remaining33 locomotives
+  lead the vehicle breadth queue. Current05:29:30UTC audit remains before19:00UTC.
+- CI36217303691 passes macOS/Windows builds/tests and187 Linux tests, but the full
+  Linux software renderer reaches its one-hour timeout after24,456 mesh and200,192
+  vehicle-pose checks. Evidence is retained; independent GL/Vulkan jobs now allow
+  two hours per full matrix while retaining the6GiB guard and every comparison.
 
 - **All-aircraft bindings:** the1,031-volume catalogue binds169/256 vehicles and all41
   aircraft, including independent Toyland bodies and four original rotor states.

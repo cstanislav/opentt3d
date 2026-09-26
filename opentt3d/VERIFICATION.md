@@ -21,6 +21,45 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,092-volume all-wagon binding checkpoint:**45 ordinary/Arctic/tropical and16
+  Toyland volumes bind the remaining54 wagon definitions. Vehicles now cover223/256,
+  including81/81 wagons. The runtime reports8,796,136 occupied cells,6,569,334 exposed
+  faces,1,457,051 conforming rectangles and9,306,402 triangles. Native186/186,
+  asset/compiler103/103 and harness8/8 tests pass; the134-source-file presentation
+  boundary and whitespace checks pass. No final visual approvals.
+- `pass1-1076-wagons-temperate` passes1,080 new ordinary model views and42,432 poses;
+  `pass1-1092-wagons-toyland-gl` passes384 new Toyland model views and26,112 poses.
+  `pass1-1092-wagons-all-vulkan` passes2,232 views across all93 wagon volumes and
+  **68,544 poses across the54 new engines**, plus4,096,000 exact world-atlas RGBA/ID
+  pixels. The three sampled peaks are3,704,147,904 /3,839,152,040 /3,670,609,736bytes
+  across1,019 /381 /941 samples, all under6GiB. Additional Arctic/tropical atlas runs
+  pass with peaks3,739,602,808 /3,842,559,840bytes. Every app window remains hidden.
+- `pass1-1092-consist-*` reloads twelve public NoAI conventional/electric/monorail/
+  maglev consists across all four climates. All69 new engine/climate combinations
+  are actually captured with their correct empty-state bindings; no missing cases.
+  `pass1-1092-wagon-consists.json` records the complete matrix and3,764,162,328-byte
+  maximum sampled peak. Actual loaded-state and complete clearance evidence remains
+  distinct from the empty operating-consist check.
+- The extended train fixture funds original producers/acceptors, checks real station
+  coverage, fully loads a selected wagon, delivers to an accepting station and returns.
+  `pass1-wagon-coal-service-fixture` observes30/30 coal and0/30 after delivery, acceptance8
+  and264km/h peak. `pass1-1092-coal-{full,empty}` validates both saved states against the
+  actual voxel selection. Source/state geometry stays explicitly authored; normal
+  settings, NoAI APIs, orders and save/load provide all simulation cargo state.
+- Forty ordinary and sixteen Toyland eight-direction source sheets plus61 street
+  sheets retain shape/shading differences for later passes. The Toyland rail aliases
+  match256 original views /67,780 RGBA pixels. Connectivity, grounded wheel planes,
+  genuinely empty beds, coil holes, raised canopies and climate-specific state pairs
+  have regressions. Full source fidelity, remaining cargo services and contextual
+  clearance remain open. See`VOXEL_REVIEW.md`.
+- Preserved`opentt3d-pass1-1092-wagons` and refreshed development-app executable SHA256:
+  `4edf4829603bf6ca4c71c1525aa95e8699fc962cfae569b4b6f9dbdb3bd51f03`.
+  Runtime`pass1-1092-catalogue.json` SHA256:
+  `6250bad35594aa3e1ecd37fcfcf1c0d012b5a36080d1ca6379d47c46250fdaad`.
+  Source/executable/catalogue hashes remain in`pass1-1092-hashes.json`. Lossless
+  review compaction preserves2,924 generated images and saves3,001,995,093bytes
+  without errors; all source images, saves, screenshots, logs and failed evidence remain.
+
 - **1,031-volume all-aircraft bindings:** five Toyland fixed-wing bodies, three
   helicopter bodies and four separate rotor states bring vehicles to169/256 and
   aircraft to41/41. Toyland uses only6/7 climate states; normal source art matches
@@ -63,12 +102,20 @@ Work continued on the user's reported memory incident; full-objective approval r
   preserved runtime catalogue`pass1-1031-catalogue.json` is
   `6df06537c1023b118eca02e34334bf1b978ccba40234102c3be215323fd2fde7`.
   `pass1-1031-hashes.json` records both and the editable source. Final approvals0.
-- Publication continues with`f22cf02e1361fd9914a1c02edc453f9464d32ef3` onmain and
-  source prerelease`opentt3d-dev-20260926.2`. Remote run36215979507 passes macOS and
+- Thirteen further fixed-wing stopped-contact captures pass for215…217,239…243
+  and248…252 (`pass1-1031-fixed-wing-contact.json`). Actual support planes meet the
+  airport surface; complete departure/flight/landing/airport/Cab/crash clearance remains.
+- The aircraft checkpoint is published as`f7970a6a074c7c662a2383fdda1852e68caa5855`
+  onmain and source prerelease`opentt3d-dev-20260926.3`. Remote run36215979507 passes macOS and
   Windows x64/x86/arm64; its Linux job was cancelled by the subsequent push. The
-  workflow now preserves in-progress jobs across pushes. Run36217303691 is pending;
-  local Docker still times out after5seconds during this follow-up. None of these
-  observations closes Linux runtime/core/sync or Windows runtime gates.
+  workflow preserves in-progress jobs across pushes. Run36217303691 subsequently
+  passes macOS/Windows builds/tests and187 Linux tests. Its Linux GL matrix passes
+  24,456 mesh views,320 joined houses,200,192 vehicle poses and24,528 tree views before
+  the one-hour timeout, at4,062,892,032bytes over14,366 samples. Retained artifacts are
+  in`pass1-aircraft-ci-linux`; timeout remains a failed overall run. Full GL/Vulkan CI
+  now runs in independent180-minute jobs with two-hour matrix timeouts and the same
+  6GiB guard/checks. Run36219454794 and current full Linux/core/sync remain pending;
+  local Docker still times out after5seconds. Windows runtime remains unverified.
 
 - **1,019-volume aircraft breadth:**17 new bodies plus the prior Dinger100 bind
   engines215…247 using only original directional/cargo aliases. The compiler now

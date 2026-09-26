@@ -56,14 +56,14 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,031 volumes, focused checks ongoing)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,092 volumes, focused checks ongoing)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
 
 | Category | Existing voxel bindings | Pass 1 coverage work |
 | --- | --- | --- |
-| Vehicles | 169/256 engine definitions, including88/88 road,27 closed-wagon definitions,11/11 ships and41/41 aircraft with four rotor states | Remaining open wagons/engines and applicable states; all-family source/clearance/dimensional review remains |
+| Vehicles | 223/256 engine definitions, including88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states | Remaining33 locomotives and applicable states; all-family source/clearance/dimensional review remains |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
 | Industries | 8/175 body definitions,11 grounds | Remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
@@ -74,7 +74,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Terrain | Seven fences,13 foundations | All remaining ground/detail/water/climate/seasonal surfaces and transitions |
 | Objects/effects | Six power-station spark poses and four original helicopter rotor states | Headquarters, landmarks, smoke/wakes/explosions and remaining effects |
 
-The1,031-volume catalogue adds four bus bodies, eighteen closed road-cargo bodies,
+The1,092-volume catalogue adds four bus bodies, eighteen closed road-cargo bodies,
 twelve rail-depot bodies/four floors/one wire, and28 cactus/palm lifecycle volumes
 plus15 commercial-house volumes,16 stadium stand/pitch volumes, six ship families
 and four ship-depot sections/twelve dock volumes, plus five old-house/cottage and
@@ -88,7 +88,8 @@ glass-office/ribbed/setback tower volumes, twelve cabin, ten shop/church and six
 small-house/corner-shop/joined-hotel volumes,21 late Arctic office/tower volumes and
 17 tropical house/hut/flats/church volumes,21 final tropical house/tower volumes,
 52 Toyland house/ground volumes,315 temperate/Arctic/tropical tree lifecycle volumes
-and17 ordinary fixed-wing/eight remaining aircraft bodies plus four rotor volumes to the145-volume
+and17 ordinary fixed-wing/eight remaining aircraft bodies plus four rotor volumes,
+45 ordinary-climate open-wagon volumes and16 independent Toyland wagon volumes to the145-volume
 strategy baseline. The previous detailed models retain their
 quality. All17 company/crash palettes, continuous vehicle poses, tree-state binding,
 invisibility/picking and root/door connectivity have technical checks. Normal public
@@ -100,7 +101,12 @@ retain wing/fin/fuselage/shading/diagonal differences for the later catalogue pa
 All41 aircraft service actual destinations in public NoAI fixtures. Toyland aircraft
 have separate climate bindings, and each helicopter passes actual four-state rotor
 stop/restart and ground-contact observations. Source fidelity and full airport/Cab
-clearance remain open; unconverted trains take the next vehicle breadth pass.
+clearance remain open. All81 wagon definitions now have bindings;69 newly bound
+engine/climate cases are captured in twelve normal consists. NativeGL/Vulkan each
+pass68,544 new wagon poses. Source sheets retain side/diagonal proportions, bright
+uniform paint, simplified ribs/cargo grain and canopy/coil detail for later review.
+Real coal production, loading, delivery and both saved states pass; remaining cargo
+services and complete clearances stay open. The33 unconverted locomotives are next.
 
 **Pass 1 remains incomplete.** New bindings do not automatically establish correct
 source dimensions/ground registration or every clearance. Bus/van diagonal/profile

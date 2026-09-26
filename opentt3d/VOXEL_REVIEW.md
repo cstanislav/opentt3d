@@ -51,13 +51,32 @@ full terrain/source-raster fidelity and final approval remain separate.
   deliberate palette selection. The first window palette was wrong and was corrected
   against the actual source colours (indices 128…133).
 
-## Current checkpoint: September26, 1,031 volumes
+## Current checkpoint: September26, 1,092 volumes
 
 All110 house definitions have body or ground bindings (109 body/88 ground definitions),
-and all62 original tree families have434 lifecycle volumes. Vehicles now cover169/256,
+and all62 original tree families have434 lifecycle volumes. Vehicles now cover223/256,
 industry bodies8/175, industry grounds11, airports18/74 and depot families5/6. Exact
-counts and material/footprint metadata are in `build-macos/pass1-1031-inventory.json`.
+counts and material/footprint metadata are in `build-macos/pass1-1092-inventory.json`.
 All volumes remain work-in-progress and final approvals remain zero.
+
+The61 new wagon volumes bind the remaining54 wagon definitions, completing81/81
+bindings. Manual source inspection distinguishes Arctic brown coal tubs, tropical
+grain lower bands, timber stake counts/log colours, paper canopies, copper hoppers,
+water fillers, fruit and liquid latex. Separate Toyland states6/7 preserve eight
+families, including open bubble outlines and cola tank frames, three upright solid
+batteries/drink cans/plastic masses, and independent sugar/candyfloss/toffee cargo.
+Toyland rail aliases match256 original directional/cargo views /67,780 RGBA pixels.
+Regressions require one face-connected body/load, support at the running-rail plane,
+genuinely empty beds, steel through-bores and source-permitted cargo/rail aliases.
+
+Forty ordinary and sixteen Toyland eight-direction comparison sheets show recognizable
+families but still differ in diagonal lengths, front/rear heights, overly uniform/
+bright wall and cargo paint, rib width, log end-grain, filler/canopy shapes and coil
+shading. Street sheets retain raised-canopy gaps, actual coil holes and open tank/
+bubble structures, while their finer source proportions remain WIP. Twelve saved
+consists capture all69 new engine/climate combinations; real coal loading/delivery
+and full/empty saved renderer checks pass. Complete slope/curve/depot/platform/Cab
+clearance, other cargo services and final source-pixel fidelity remain unproven.
 
 Seventeen new aircraft volumes cover the33 ordinary fixed-wing definitions215…247
 together with the existing Dinger100. Original eight-direction/cargo signatures

@@ -597,6 +597,14 @@
     "wagon_brown_roof": [55,52,53,56,52,55],
     "wagon_tank_band": [20,16,18,21,16,22],
     "wagon_yellow_sill": [66,64,65,67,62,68],
+    "wagon_bin_wall": [7,5,6,9,3,9],
+    "wagon_bin_rim": [10,7,8,12,4,11],
+    "wagon_bin_inner": [5,2,3,6,2,5],
+    "wagon_bin_floor": [4,2,3,5,2,4],
+    "wagon_bin_floor_grain": [3,2,2,4,2,3],
+    "wagon_tropic_log": [37,33,34,38,32,37],
+    "wagon_tropic_log_grain": [38,34,35,39,32,38],
+    "wagon_tropic_log_cut": [39,36,37,40,34,39],
     "mine_brick": [56,108,107,57,104,58],
     "mine_brick_grain": [58,109,110,58,105,59],
     "mine_brick_shadow": [54,105,106,55,104,56],
@@ -2354,6 +2362,208 @@
       ["paint","wagon_rib",4,2,24,37,12,29],
       ["paint","wagon_yellow_sill",30,2,15,33,12,19],
       ["paint","loco_recess",32,2,15,33,3,17], ["paint","loco_recess",32,11,15,33,12,17]
+    ],
+    "wagon_open_bin": [
+      ["box","wagon_bin_wall",2,1,7,39,11,24],
+      ["erase",3,2,10,38,10,25],
+      ["paint","wagon_bin_floor",3,2,9,38,10,10],
+      ["scatter_paint","wagon_bin_floor_grain",5,2737,3,2,9,38,10,10,"wagon_bin_floor",[2,2,1]],
+      ["paint","wagon_bin_inner",3,1,10,38,2,23], ["paint","wagon_bin_inner",3,10,10,38,11,23],
+      ["paint","wagon_bin_rim",2,1,23,39,11,24],
+      ["paint","wagon_bin_rim",2,1,7,3,11,24], ["paint","wagon_bin_rim",38,1,7,39,11,24],
+      ["paint","wagon_panel",7,1,7,14,2,22], ["paint","wagon_panel",7,10,7,14,11,22],
+      ["paint","wagon_panel",27,1,7,34,2,22], ["paint","wagon_panel",27,10,7,34,11,22],
+      ["paint","wagon_rib",7,1,20,14,2,22], ["paint","wagon_rib",7,10,20,14,11,22],
+      ["paint","wagon_rib",27,1,20,34,2,22], ["paint","wagon_rib",27,10,20,34,11,22]
+    ],
+    "wagon_open_coal_load": [
+      ["box","truck_coal",3,2,10,38,10,23],
+      ["mound","truck_coal",3,2,23,24,10,30], ["mound","truck_coal",18,2,23,38,10,28],
+      ["scatter_paint","truck_coal_glint",4,2781,3,2,10,38,10,30,"truck_coal",[2,2,2]]
+    ],
+    "wagon_open_hopper": [
+      ["prism","wagon_bin_wall",0,2,39,[[1,26],[1,16],[3,9],[4,7],[8,7],[9,9],[11,16],[11,26]]],
+      ["prism","wagon_bin_inner",0,3,38,[[2,25],[2,18],[4,11],[8,11],[10,18],[10,25]]],
+      ["erase",3,2,18,38,10,27], ["erase",3,3,15,38,9,18], ["erase",3,4,12,38,8,15],
+      ["paint","wagon_bin_floor",3,4,11,38,8,12],
+      ["paint","wagon_bin_rim",2,1,25,39,11,26],
+      ["paint","wagon_panel",2,1,11,39,11,14],
+      ["paint","wagon_rib",2,1,13,39,11,14]
+    ],
+    "wagon_open_grain_load": [
+      ["box","truck_grain",3,4,12,38,8,18], ["box","truck_grain",3,2,18,38,10,25],
+      ["mound","truck_grain",3,2,25,24,10,34], ["mound","truck_grain",19,2,25,38,10,32],
+      ["scatter_paint","truck_grain_light",3,2785,3,2,12,38,10,34,"truck_grain",[2,2,3]]
+    ],
+    "wagon_open_ore_body": [
+      ["box","wagon_panel",2,1,7,39,11,26], ["erase",3,2,10,38,10,27],
+      ["paint","wagon_bin_inner",3,1,10,38,2,25], ["paint","wagon_bin_inner",3,10,10,38,11,25],
+      ["paint","wagon_bin_floor",3,2,9,38,10,10],
+      ["scatter_paint","wagon_bin_floor_grain",5,2773,3,2,9,38,10,10,"wagon_bin_floor",[2,2,1]],
+      ["paint","wagon_rib",2,1,24,39,11,26],
+      ["repeat",[5,0,0],8,[
+        ["box","wagon_rib",2,0,7,3,2,25], ["box","wagon_rib",2,10,7,3,12,25]
+      ]]
+    ],
+    "wagon_open_ore_load": [
+      ["box","truck_ore",3,2,10,38,10,25],
+      ["mound","truck_ore",3,2,25,23,10,34], ["mound","truck_ore",17,2,25,38,10,33],
+      ["scatter_paint","truck_ore_light",4,2797,3,2,10,38,10,34,"truck_ore",[2,2,3]]
+    ],
+    "wagon_open_flat_deck": [
+      ["box","wagon_panel",2,1,6,39,11,9],
+      ["box","truck_timber_deck",2,1,9,39,11,12],
+      ["paint","truck_timber_deck_shadow",2,1,11,39,3,12],
+      ["repeat",[5,0,0],7,[["paint","truck_timber_deck_shadow",4,3,11,5,10,12]]],
+      ["repeat",[11,0,0],4,[
+        ["box","truck_cargo_stake",3,1,9,4,2,30], ["box","truck_cargo_stake",3,10,9,4,11,30]
+      ]]
+    ],
+    "wagon_open_wood_logs": [
+      ["prism","truck_timber_bark",0,2,39,[[1,14],[2,12],[5,12],[6,14],[6,20],[5,22],[2,22],[1,20]]],
+      ["prism","truck_timber_bark",0,3,39,[[6,14],[7,12],[10,12],[11,14],[11,20],[10,22],[7,22],[6,20]]],
+      ["prism","truck_timber_bark",0,4,38,[[3,23],[4,20],[8,20],[9,23],[9,29],[8,32],[4,32],[3,29]]],
+      ["scatter_paint","truck_timber_grain",4,2789,2,1,12,39,11,32,"truck_timber_bark",[3,1,2]]
+    ],
+    "wagon_open_wood_straps": [
+      ["repeat",[21,0,0],2,[
+        ["box","wagon_panel",8,1,10,11,2,23], ["box","wagon_panel",8,10,10,11,11,23],
+        ["box","wagon_panel",8,2,21,11,4,24], ["box","wagon_panel",8,8,21,11,10,24],
+        ["box","wagon_panel",8,3,23,11,4,30], ["box","wagon_panel",8,8,23,11,9,30],
+        ["box","wagon_rib",8,4,30,11,8,33]
+      ]]
+    ],
+    "wagon_open_steel_deck": [
+      ["box","wagon_panel",2,1,6,39,11,9],
+      ["box","truck_steel_deck",2,1,9,39,11,12],
+      ["paint","truck_steel_deck_edge",2,1,11,39,11,12],
+      ["repeat",[11,0,0],4,[
+        ["box","wagon_bin_wall",3,1,10,4,2,18], ["box","wagon_bin_wall",3,10,10,4,11,18]
+      ]]
+    ],
+    "wagon_open_steel_load": [
+      ["repeat",[12,0,0],3,[
+        ["lathe","truck_steel_coil",[8.5,6],[[12,4.5,2],[13,5,2],[31,5,2],[32,4.5,2]]],
+        ["scatter_paint","truck_steel_glint",7,2793,3,1,12,14,11,32,"truck_steel_coil",[1,1,3]],
+        ["lathe_paint_inner","truck_steel_inner",[8.5,6],[[12,4.5,2],[13,5,2],[31,5,2],[32,4.5,2]]]
+      ]]
+    ],
+    "wagon_open_paper_canopy": [
+      ["repeat",[33,0,0],2,[
+        ["box","truck_cargo_stake",3,1,9,4,2,37], ["box","truck_cargo_stake",3,10,9,4,11,37]
+      ]],
+      ["repeat",[11,0,0],2,[
+        ["box","truck_cargo_stake",14,1,9,15,2,26], ["box","truck_cargo_stake",14,10,9,15,11,26]
+      ]],
+      ["box","loco_roof",3,1,35,37,11,37],
+      ["barrel","loco_roof",3,1,36,37,11,41,"y"],
+      ["paint","loco_roof_light",3,9,35,37,11,38]
+    ],
+    "wagon_open_paper_load": [
+      ["repeat",[11,0,0],3,[
+        ["lathe","truck_paper",[9,6],[[12,4.5,0],[13,5,0],[32,5,0],[33,4.5,0]]],
+        ["paint","truck_paper_shade",4,1,12,9,11,33],
+        ["paint","wagon_bin_inner",8,5,32,10,7,33]
+      ]]
+    ],
+    "wagon_open_water_body": [
+      ["box","loco_roof",5,3,7,36,9,13],
+      ["ellipsoid","truck_water_tank",3,1,9,38,11,32],
+      ["paint","wagon_panel",3,1,17,38,11,20],
+      ["paint","wagon_silver_light",3,1,23,38,11,29],
+      ["repeat",[20,0,0],2,[
+        ["box","wagon_bin_wall",8,4,27,12,8,34],
+        ["paint","wagon_bin_rim",8,4,33,12,8,34], ["paint","loco_recess",9,5,33,11,7,34]
+      ]]
+    ],
+    "wagon_open_fruit_body": [
+      ["use","wagon_open_ore_body"],
+      ["erase",2,0,22,39,12,27],
+      ["paint","wagon_panel",3,1,9,38,11,22],
+      ["paint","wagon_rib",2,1,21,39,11,22],
+      ["repeat",[5,0,0],8,[
+        ["paint","wagon_rib",2,0,7,3,2,22], ["paint","wagon_rib",2,10,7,3,12,22]
+      ]],
+      ["paint","wagon_rib",2,0,13,39,1,15], ["paint","wagon_rib",2,11,13,39,12,15]
+    ],
+    "wagon_open_fruit_load": [
+      ["box","truck_fruit",3,2,10,38,10,21],
+      ["mound","truck_fruit",3,2,21,23,10,30], ["mound","truck_fruit",17,2,21,38,10,29],
+      ["scatter_paint","truck_fruit_light",3,2817,3,2,10,38,10,30,"truck_fruit",[2,2,2]],
+      ["scatter_paint","truck_fruit_leaf",6,2820,3,2,10,38,10,30,"truck_fruit",[2,2,2]]
+    ],
+    "wagon_toy_flat_platform": [
+      ["box","wagon_panel",2,1,6,39,11,9],
+      ["box","toy_battery_deck",2,1,9,39,11,12],
+      ["box","toy_battery_rail",4,1,12,37,2,17], ["box","toy_battery_rail",4,10,12,37,11,17]
+    ],
+    "wagon_toy_battery_load": [
+      ["repeat",[12,0,0],3,[
+        ["lathe","toy_battery_metal",[8.5,6],[[12,4,0],[13,4.75,0],[31,4.75,0],[32,4,0]]],
+        ["paint","toy_battery_gold",3,1,22,14,11,32],
+        ["paint","toy_battery_glint",4,7,25,13,10,28],
+        ["box","toy_battery_terminal",7,5,31,10,8,34]
+      ]]
+    ],
+    "wagon_toy_drinks_load": [
+      ["repeat",[12,0,0],3,[
+        ["lathe","toy_drinks_can",[8.5,6],[[12,4,0],[13,4.5,0],[31,4.5,0],[32,4,0]]],
+        ["paint","toy_battery_metal",3,1,12,14,11,14], ["paint","toy_battery_metal",3,1,30,14,11,32],
+        ["paint","toy_drinks_label",7,1,17,10,11,28],
+        ["paint","loco_recess",8,5,31,11,7,32]
+      ]]
+    ],
+    "wagon_toy_plastic_load": [
+      ["repeat",[12,0,0],3,[
+        ["lathe","toy_plastic",[8.5,6],[[12,2.5,0],[14,4,0],[19,5,0],[25,5,0],[30,3.5,0],[33,1.5,0]]],
+        ["scatter_paint","toy_plastic_shade",7,2813,3,1,12,14,11,33,"toy_plastic",[2,2,3]],
+        ["ellipsoid_paint","toy_plastic_glint",8,7,24,12,11,30]
+      ]]
+    ],
+    "wagon_toy_cola_body": [
+      ["box","wagon_panel",2,1,6,39,11,10],
+      ["box","toy_cola_glass",3,2,10,38,10,12],
+      ["box","toy_cola_glass",3,1,12,38,2,15], ["box","toy_cola_glass",3,10,12,38,11,15],
+      ["ellipsoid","toy_cola_glass",2,1,10,5,11,34], ["ellipsoid","toy_cola_glass",36,1,10,39,11,34],
+      ["repeat",[11,0,0],4,[
+        ["box","toy_cola_glass",3,1,12,4,2,28], ["box","toy_cola_glass",3,10,12,4,11,28],
+        ["barrel","toy_cola_highlight",3,1,27,4,11,34,"y"]
+      ]],
+      ["box","toy_cola_highlight",3,1,26,38,2,28], ["box","toy_cola_highlight",3,10,26,38,11,28],
+      ["box","toy_cola_glass",3,5,33,38,7,34],
+      ["repeat",[3,0,0],12,[
+        ["box","toy_cola_highlight",3,1,28,4,2,30], ["box","toy_cola_highlight",3,10,28,4,11,30]
+      ]]
+    ],
+    "wagon_toy_cola_load": [
+      ["box","toy_cola",3,2,12,38,10,25],
+      ["paint","toy_cola",2,1,14,5,11,25], ["paint","toy_cola",36,1,14,39,11,25],
+      ["paint","toy_cola_light",3,2,21,38,10,23],
+      ["scatter_paint","toy_cola_light",7,2781,3,2,24,38,10,25,"toy_cola",[3,2,1]]
+    ],
+    "wagon_toy_bubble_body": [
+      ["box","wagon_panel",2,1,6,39,11,9],
+      ["box","toy_drinks_rail",2,1,9,39,11,12],
+      ["repeat",[11,0,0],4,[
+        ["box","loco_sill",3,1,10,4,2,37], ["box","loco_sill",3,10,10,4,11,37]
+      ]],
+      ["box","wagon_roof_company",3,1,35,37,11,37],
+      ["barrel","wagon_roof_company",3,1,36,37,11,41,"y"],
+      ["paint","wagon_rib",3,10,35,37,11,38]
+    ],
+    "wagon_toy_bubble_outline": [
+      ["line","toy_bubble",3,6,0,1,6,4], ["line","toy_bubble",1,6,4,0,6,10],
+      ["line","toy_bubble",0,6,10,1,6,17], ["line","toy_bubble",1,6,17,4,6,21],
+      ["line","toy_bubble",4,6,21,7,6,21], ["line","toy_bubble",7,6,21,10,6,17],
+      ["line","toy_bubble",10,6,17,11,6,10], ["line","toy_bubble",11,6,10,10,6,4],
+      ["line","toy_bubble",10,6,4,8,6,0], ["line","toy_bubble",8,6,0,3,6,0],
+      ["line","toy_bubble",5,4,0,5,2,4], ["line","toy_bubble",5,2,4,5,1,10],
+      ["line","toy_bubble",5,1,10,5,2,17], ["line","toy_bubble",5,2,17,5,4,21],
+      ["line","toy_bubble",5,4,21,5,7,21], ["line","toy_bubble",5,7,21,5,10,17],
+      ["line","toy_bubble",5,10,17,5,11,10], ["line","toy_bubble",5,11,10,5,10,4],
+      ["line","toy_bubble",5,10,4,5,7,0], ["line","toy_bubble",5,7,0,5,4,0],
+      ["lathe","toy_bubble",[5.5,6],[[10,5.5,4.3],[11,5.5,4.3]]],
+      ["paint","toy_bubble_glint",0,1,15,12,12,22]
     ],
     "city_portico": [
       ["box","city_steel_shadow",2,2,0,29,30,1],
@@ -6176,6 +6386,119 @@
     "wagon_closed_food_fast_s":{"extends":"wagon_closed_food_s","reference":"Food68/100 tropical: company end panels and yellow sill","ops":[["use","wagon_fast_sill"]]},
     "wagon_closed_sweets_y":{"extends":"wagon_closed_goods_t","reference":"Toyland sweets49/79/111,2785..2788: pale roof with thin blue band and blue ribbed closed body; same original art on all three rail systems","ops":[["replace_material","wagon_roof_black","wagon_roof_pale"],["paint","wagon_rib",1,1,31,40,11,32]]},
     "wagon_closed_toys_y":{"extends":"wagon_closed_livestock","reference":"Toyland toys50/80/112,2789..2792: separate pale roof and original ventilated/braced company body","ops":[["replace_material","wagon_roof_black","wagon_roof_pale"]]},
+    "wagon_open_coal_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Coal29 temperate2737..2740: open grey metal tub, dark empty interior, broad paired company panels, metal rim and two grounded bogies",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_bin"]]
+    },
+    "wagon_open_coal_loaded": {"extends":"wagon_open_coal_empty","reference":"Coal29 temperate2781..2784: low broken black coal heaps inside the same open tub","ops":[["use","wagon_open_coal_load"]]},
+    "wagon_open_coal_arctic_empty": {"extends":"wagon_open_coal_empty","reference":"Coal29 Arctic: original copper-brown tub replaces temperate grey despite matching sprite numbers","ops":[["replace_material","wagon_bin_wall","truck_rubber_vat"],["replace_material","wagon_bin_rim","truck_rubber_rim"],["replace_material","wagon_bin_inner","truck_rubber_inner"],["replace_material","wagon_bin_floor","truck_rubber_inner"],["replace_material","wagon_bin_floor_grain","truck_copper_shadow"]]},
+    "wagon_open_coal_arctic_loaded": {"extends":"wagon_open_coal_arctic_empty","reference":"Coal29 Arctic2781..2784: same coal load in the independently brown climate tub","ops":[["use","wagon_open_coal_load"]]},
+    "wagon_open_coal_fast_empty": {"extends":"wagon_open_coal_empty","reference":"Coal59/91 temperate2833..2836: source yellow sill on the monorail/maglev wagon","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_coal_fast_loaded": {"extends":"wagon_open_coal_loaded","reference":"Coal59/91 temperate2877..2880: yellow sill and original loaded coal","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_coal_fast_arctic_empty": {"extends":"wagon_open_coal_arctic_empty","reference":"Coal59/91 Arctic: distinct brown empty tub with yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_coal_fast_arctic_loaded": {"extends":"wagon_open_coal_arctic_loaded","reference":"Coal59/91 Arctic: brown tub, black heap and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_grain_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Grain33 temperate/Arctic2761..2764: tapered grey hopper, deep genuinely open interior, narrow company band and two bogies; climate source pixels identical",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_hopper"]]
+    },
+    "wagon_open_grain_loaded": {"extends":"wagon_open_grain_empty","reference":"Grain33 temperate/Arctic2785..2788: original bright golden raised heaps","ops":[["use","wagon_open_grain_load"]]},
+    "wagon_open_grain_tropic_empty": {"extends":"wagon_open_grain_empty","reference":"Grain33 tropical: original broad company-colour lower body rather than the narrow normal stripe","ops":[["paint","wagon_panel",2,1,7,39,11,17],["paint","wagon_rib",2,1,16,39,11,17]]},
+    "wagon_open_grain_tropic_loaded": {"extends":"wagon_open_grain_tropic_empty","reference":"Grain33 tropical: raised gold cargo over the climate-specific broad blue hopper","ops":[["use","wagon_open_grain_load"]]},
+    "wagon_open_grain_fast_empty": {"extends":"wagon_open_grain_empty","reference":"Grain63/95 temperate/Arctic: exact source alias with yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_grain_fast_loaded": {"extends":"wagon_open_grain_loaded","reference":"Grain63/95 temperate/Arctic: gold load and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_grain_fast_tropic_empty": {"extends":"wagon_open_grain_tropic_empty","reference":"Grain63/95 tropical: broad company lower body with yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_grain_fast_tropic_loaded": {"extends":"wagon_open_grain_tropic_loaded","reference":"Grain63/95 tropical: gold cargo over broad company body/yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_wood_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Wood34 temperate/Arctic2765..2768: empty ochre timber deck, four open stakes on each side and company underframe; climate source pixels identical",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_flat_deck"]]
+    },
+    "wagon_open_wood_loaded": {"extends":"wagon_open_wood_empty","reference":"Wood34 temperate/Arctic2789..2792: three faceted lengthwise logs, light cut ends and two raised company straps; no solid rectangular load","ops":[["use","wagon_open_wood_logs"],["face_paint","truck_timber_cut",3,2,1,12,39,11,32],["use","wagon_open_wood_straps"]]},
+    "wagon_open_wood_tropic_empty": {"extends":"wagon_open_wood_empty","reference":"Wood34 tropical: original removes the middle two pairs of stakes, retaining only the end restraints","ops":[["erase",14,1,12,15,2,30],["erase",14,10,12,15,11,30],["erase",25,1,12,26,2,30],["erase",25,10,12,26,11,30]]},
+    "wagon_open_wood_tropic_loaded": {"extends":"wagon_open_wood_tropic_empty","reference":"Wood34 tropical2789..2792: paler tropical timber, light ends and original two blue bindings","ops":[["use","wagon_open_wood_logs"],["replace_material","truck_timber_bark","wagon_tropic_log"],["replace_material","truck_timber_grain","wagon_tropic_log_grain"],["face_paint","wagon_tropic_log_cut",3,2,1,12,39,11,32],["use","wagon_open_wood_straps"]]},
+    "wagon_open_wood_fast_empty": {"extends":"wagon_open_wood_empty","reference":"Wood64/96 temperate/Arctic: source yellow sill under the four-pair stake deck","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_wood_fast_loaded": {"extends":"wagon_open_wood_loaded","reference":"Wood64/96 temperate/Arctic: strapped log load and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_wood_fast_tropic_empty": {"extends":"wagon_open_wood_tropic_empty","reference":"Wood64/96 tropical: two-pair end stakes and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_wood_fast_tropic_loaded": {"extends":"wagon_open_wood_tropic_loaded","reference":"Wood64/96 tropical: pale logs, two bindings and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_ore_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Iron ore35 temperate2773..2776: tall open company hopper, eight near/far ribs and grey interior with continuous blue rim",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_ore_body"]]
+    },
+    "wagon_open_ore_loaded": {"extends":"wagon_open_ore_empty","reference":"Iron ore35 temperate2797..2800: raised rusty-red cargo over the original open company hopper","ops":[["use","wagon_open_ore_load"]]},
+    "wagon_open_ore_fast_empty": {"extends":"wagon_open_ore_empty","reference":"Iron ore65/97: source-identical rail bodies with yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_ore_fast_loaded": {"extends":"wagon_open_ore_loaded","reference":"Iron ore65/97: red heaps and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_steel_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Steel36 temperate2769..2772: low rust-red flat deck, short side pegs and company running frame",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_steel_deck"]]
+    },
+    "wagon_open_steel_loaded": {"extends":"wagon_open_steel_empty","reference":"Steel36 temperate2793..2796: three upright grey coils with genuine top-to-bottom central holes and painted dark inner walls","ops":[["use","wagon_open_steel_load"]]},
+    "wagon_open_steel_fast_empty": {"extends":"wagon_open_steel_empty","reference":"Steel66/98: original red deck and short pegs over a yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_steel_fast_loaded": {"extends":"wagon_open_steel_loaded","reference":"Steel66/98: three open upright coils and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_paper_empty": {"extends":"wagon_open_steel_empty","reference":"Paper39 Arctic2769..2772: taller original end supports, intermediate stakes and independent raised black canopy over a genuinely open red deck","ops":[["use","wagon_open_paper_canopy"]]},
+    "wagon_open_paper_loaded": {"extends":"wagon_open_paper_empty","reference":"Paper39 Arctic2801..2804: three white upright rolls beneath the source canopy with dark spindle marks","ops":[["use","wagon_open_paper_load"]]},
+    "wagon_open_paper_fast_empty": {"extends":"wagon_open_paper_empty","reference":"Paper69/101 Arctic: original canopy and empty deck with yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_paper_fast_loaded": {"extends":"wagon_open_paper_loaded","reference":"Paper69/101 Arctic: white rolls beneath canopy and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_copper_empty": {"extends":"wagon_open_ore_empty","reference":"Copper40 tropical2773..2776: distinct brown ribbed hopper, grey interior and narrow company band","ops":[["replace_material","wagon_panel","truck_copper_body"],["replace_material","wagon_rib","truck_copper_rib"],["paint","wagon_panel",3,1,12,38,2,15],["paint","wagon_panel",3,10,12,38,11,15]]},
+    "wagon_open_copper_loaded": {"extends":"wagon_open_copper_empty","reference":"Copper40 tropical2805..2808: green-olive mineral heaps, unlike the temperate red iron ore","ops":[["use","wagon_open_ore_load"],["replace_material","truck_ore","truck_copper_ore"],["replace_material","truck_ore_light","truck_copper_glint"]]},
+    "wagon_open_copper_fast_empty": {"extends":"wagon_open_copper_empty","reference":"Copper70/102 tropical: brown ribbed company-banded hopper with yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_copper_fast_loaded": {"extends":"wagon_open_copper_loaded","reference":"Copper70/102 tropical: olive cargo and yellow sill","ops":[["use","wagon_fast_sill"]]},
+    "wagon_open_water": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Water41/71/103 tropical2809..2812: white elliptical tank, continuous narrow company band and two independently raised dark-neck fillers; all rail/cargo source images identical",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_water_body"]]
+    },
+    "wagon_open_fruit_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Fruit42/72/104 tropical2813..2816: low open company body, blue interior and horizontal/vertical side lattice; no invented roof",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_fruit_body"]]
+    },
+    "wagon_open_fruit_loaded": {"extends":"wagon_open_fruit_empty","reference":"Fruit42/72/104 tropical2817..2820: yellow-orange fruit heaps with sparse green leaves; exact source aliases across all three rail systems","ops":[["use","wagon_open_fruit_load"]]},
+    "wagon_open_rubber_empty": {"extends":"wagon_open_coal_arctic_empty","reference":"Rubber43/73/105 tropical2821..2824: open copper-coloured vat, brown interior and slanted company end supports rather than the coal wagon's vertical panels","ops":[["paint","truck_rubber_vat",2,1,7,39,2,23],["paint","truck_rubber_vat",2,10,7,39,11,23],["prism","wagon_panel",1,1,2,[[2,22],[3,22],[10,9],[8,8]]],["prism","wagon_panel",1,10,11,[[2,22],[3,22],[10,9],[8,8]]],["prism","wagon_panel",1,1,2,[[38,22],[37,22],[30,9],[32,8]]],["prism","wagon_panel",1,10,11,[[38,22],[37,22],[30,9],[32,8]]]]},
+    "wagon_open_rubber_loaded": {"extends":"wagon_open_rubber_empty","reference":"Rubber43/73/105 tropical2825..2828: level pale latex below the copper rim, preserving liquid rather than a peaked mineral pile","ops":[["box","truck_latex",3,2,10,38,10,22],["scatter_paint","truck_latex_shade",7,2825,3,2,21,38,10,22,"truck_latex",[2,2,1]]]},
+    "wagon_toy_sugar_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Sugar44/74/106 Toyland2745..2748: open grey tub and paired company panels; separate Toyland binding despite numbers overlapping ordinary oil wagons",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_bin"]]
+    },
+    "wagon_toy_sugar_loaded": {"extends":"wagon_toy_sugar_empty","reference":"Sugar44/74/106 Toyland2749..2752: original white granular heaps, not the normal-climate artwork at those sprite IDs","ops":[["use","wagon_open_coal_load"],["replace_material","truck_coal","toy_sugar"],["replace_material","truck_coal_glint","toy_sugar_grain"]]},
+    "wagon_toy_candyfloss_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Candyfloss45/75/107 Toyland2753..2756: open ribbed company hopper with distinctive pink lower band",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_ore_body"],["paint","toy_candyfloss_band",2,0,10,39,12,13]]
+    },
+    "wagon_toy_candyfloss_loaded": {"extends":"wagon_toy_candyfloss_empty","reference":"Candyfloss45/75/107 Toyland2757..2760: pale pink irregular puffs above the hopper, independent loaded volume","ops":[["box","toy_candyfloss",3,2,10,38,10,25],["ellipsoid","toy_candyfloss",3,2,22,17,10,33],["ellipsoid","toy_candyfloss",13,2,22,29,10,35],["ellipsoid","toy_candyfloss",25,2,22,38,10,32],["scatter_paint","toy_candyfloss_light",4,2757,3,2,10,38,10,35,"toy_candyfloss",[2,2,2]]]},
+    "wagon_toy_toffee_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Toffee46/76/108 Toyland2761..2764: tapered silver hopper with narrow company band and source yellow end sill sections, open black centre below",
+      "ops":[["use","wagon_running_gear"],["use","wagon_open_hopper"],["repeat",[25,0,0],2,[["box","wagon_yellow_sill",2,1,6,14,2,8],["box","wagon_yellow_sill",2,10,6,14,11,8]]]]
+    },
+    "wagon_toy_toffee_loaded": {"extends":"wagon_toy_toffee_empty","reference":"Toffee46/76/108 Toyland2765..2768: ochre-gold heaps over the original tapered tub","ops":[["use","wagon_open_grain_load"],["replace_material","truck_grain","toy_toffee"],["replace_material","truck_grain_light","toy_toffee_glint"]]},
+    "wagon_toy_bubble_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Bubbles47/77/109 Toyland2769..2772: raised blue canopy, four slender dark posts each side and genuinely empty copper deck",
+      "ops":[["use","wagon_running_gear"],["use","wagon_toy_bubble_body"]]
+    },
+    "wagon_toy_bubble_loaded": {"extends":"wagon_toy_bubble_empty","reference":"Bubbles47/77/109 Toyland2773..2776: three blue/white bubble outlines with open centres; three-dimensional wire volumes, not painted flat circles","ops":[["repeat",[12,0,0],3,[["use","wagon_toy_bubble_outline",[2,0,12]]]]]},
+    "wagon_toy_cola_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Cola48/78/110 Toyland2777..2780: rounded lavender transparent-tank frame, original checker highlights, blue sill and genuinely open inspection gaps",
+      "ops":[["use","wagon_running_gear"],["use","wagon_toy_cola_body"]]
+    },
+    "wagon_toy_cola_loaded": {"extends":"wagon_toy_cola_empty","reference":"Cola48/78/110 Toyland2781..2784: visible level brown cola beneath the retained open curved frame","ops":[["use","wagon_toy_cola_load"]]},
+    "wagon_toy_battery_empty": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Battery51/81/113 Toyland2793..2796: maroon flat platform, raised parallel grey side restraints and company underframe",
+      "ops":[["use","wagon_running_gear"],["use","wagon_toy_flat_platform"]]
+    },
+    "wagon_toy_battery_loaded": {"extends":"wagon_toy_battery_empty","reference":"Battery51/81/113 Toyland2797..2800: three upright silver/gold batteries with small original raised terminals","ops":[["use","wagon_toy_battery_load"]]},
+    "wagon_toy_drinks_empty": {"extends":"wagon_toy_battery_empty","reference":"Fizzy drinks52/82/114 Toyland2801..2804: separate blue deck and copper side restraints","ops":[["replace_material","toy_battery_deck","wagon_panel"],["replace_material","toy_battery_rail","toy_drinks_rail"]]},
+    "wagon_toy_drinks_loaded": {"extends":"wagon_toy_drinks_empty","reference":"Fizzy drinks52/82/114 Toyland2805..2808: three upright red cans, grey lids, dark opening marks and pale labels","ops":[["use","wagon_toy_drinks_load"]]},
+    "wagon_toy_plastic_empty": {"extends":"wagon_toy_battery_empty","reference":"Plastic53/83/115 Toyland2809..2812: green deck with distinct cyan side restraints","ops":[["replace_material","toy_battery_deck","toy_plastic_deck"],["replace_material","toy_battery_rail","toy_plastic_rail"]]},
+    "wagon_toy_plastic_loaded": {"extends":"wagon_toy_plastic_empty","reference":"Plastic53/83/115 Toyland2813..2816: three rounded solid tan plastic masses, light glints and no steel-coil bores","ops":[["use","wagon_toy_plastic_load"]]},
     "house_city_heritage_site": {
       "size":[32,32,104], "origin":[0,0,0], "review_status":"work-in-progress",
       "reference":"House28 variants0/1,1531: already-raised low white concrete frame with brick infill; original ground1530 stays independent",
@@ -10391,6 +10714,60 @@
       "73": {"0":"airport_flag_0","1":"airport_flag_1","2":"airport_flag_2","3":"airport_flag_3"}
     },
     "vehicles": {
+      "44":{"6":"wagon_toy_sugar_empty","7":"wagon_toy_sugar_loaded"},
+      "45":{"6":"wagon_toy_candyfloss_empty","7":"wagon_toy_candyfloss_loaded"},
+      "46":{"6":"wagon_toy_toffee_empty","7":"wagon_toy_toffee_loaded"},
+      "47":{"6":"wagon_toy_bubble_empty","7":"wagon_toy_bubble_loaded"},
+      "48":{"6":"wagon_toy_cola_empty","7":"wagon_toy_cola_loaded"},
+      "51":{"6":"wagon_toy_battery_empty","7":"wagon_toy_battery_loaded"},
+      "52":{"6":"wagon_toy_drinks_empty","7":"wagon_toy_drinks_loaded"},
+      "53":{"6":"wagon_toy_plastic_empty","7":"wagon_toy_plastic_loaded"},
+      "74":{"6":"wagon_toy_sugar_empty","7":"wagon_toy_sugar_loaded"},
+      "75":{"6":"wagon_toy_candyfloss_empty","7":"wagon_toy_candyfloss_loaded"},
+      "76":{"6":"wagon_toy_toffee_empty","7":"wagon_toy_toffee_loaded"},
+      "77":{"6":"wagon_toy_bubble_empty","7":"wagon_toy_bubble_loaded"},
+      "78":{"6":"wagon_toy_cola_empty","7":"wagon_toy_cola_loaded"},
+      "81":{"6":"wagon_toy_battery_empty","7":"wagon_toy_battery_loaded"},
+      "82":{"6":"wagon_toy_drinks_empty","7":"wagon_toy_drinks_loaded"},
+      "83":{"6":"wagon_toy_plastic_empty","7":"wagon_toy_plastic_loaded"},
+      "106":{"6":"wagon_toy_sugar_empty","7":"wagon_toy_sugar_loaded"},
+      "107":{"6":"wagon_toy_candyfloss_empty","7":"wagon_toy_candyfloss_loaded"},
+      "108":{"6":"wagon_toy_toffee_empty","7":"wagon_toy_toffee_loaded"},
+      "109":{"6":"wagon_toy_bubble_empty","7":"wagon_toy_bubble_loaded"},
+      "110":{"6":"wagon_toy_cola_empty","7":"wagon_toy_cola_loaded"},
+      "113":{"6":"wagon_toy_battery_empty","7":"wagon_toy_battery_loaded"},
+      "114":{"6":"wagon_toy_drinks_empty","7":"wagon_toy_drinks_loaded"},
+      "115":{"6":"wagon_toy_plastic_empty","7":"wagon_toy_plastic_loaded"},
+      "29":{"0":"wagon_open_coal_empty","1":"wagon_open_coal_loaded","2":"wagon_open_coal_arctic_empty","3":"wagon_open_coal_arctic_loaded"},
+      "33":{"0":"wagon_open_grain_empty","1":"wagon_open_grain_loaded","4":"wagon_open_grain_tropic_empty","5":"wagon_open_grain_tropic_loaded"},
+      "34":{"0":"wagon_open_wood_empty","1":"wagon_open_wood_loaded","4":"wagon_open_wood_tropic_empty","5":"wagon_open_wood_tropic_loaded"},
+      "35":{"0":"wagon_open_ore_empty","1":"wagon_open_ore_loaded"},
+      "36":{"0":"wagon_open_steel_empty","1":"wagon_open_steel_loaded"},
+      "39":{"2":"wagon_open_paper_empty","3":"wagon_open_paper_loaded"},
+      "40":{"4":"wagon_open_copper_empty","5":"wagon_open_copper_loaded"},
+      "41":{"4":"wagon_open_water","5":"wagon_open_water"},
+      "42":{"4":"wagon_open_fruit_empty","5":"wagon_open_fruit_loaded"},
+      "43":{"4":"wagon_open_rubber_empty","5":"wagon_open_rubber_loaded"},
+      "59":{"0":"wagon_open_coal_fast_empty","1":"wagon_open_coal_fast_loaded","2":"wagon_open_coal_fast_arctic_empty","3":"wagon_open_coal_fast_arctic_loaded"},
+      "63":{"0":"wagon_open_grain_fast_empty","1":"wagon_open_grain_fast_loaded","4":"wagon_open_grain_fast_tropic_empty","5":"wagon_open_grain_fast_tropic_loaded"},
+      "64":{"0":"wagon_open_wood_fast_empty","1":"wagon_open_wood_fast_loaded","4":"wagon_open_wood_fast_tropic_empty","5":"wagon_open_wood_fast_tropic_loaded"},
+      "65":{"0":"wagon_open_ore_fast_empty","1":"wagon_open_ore_fast_loaded"},
+      "66":{"0":"wagon_open_steel_fast_empty","1":"wagon_open_steel_fast_loaded"},
+      "69":{"2":"wagon_open_paper_fast_empty","3":"wagon_open_paper_fast_loaded"},
+      "70":{"4":"wagon_open_copper_fast_empty","5":"wagon_open_copper_fast_loaded"},
+      "71":{"4":"wagon_open_water","5":"wagon_open_water"},
+      "72":{"4":"wagon_open_fruit_empty","5":"wagon_open_fruit_loaded"},
+      "73":{"4":"wagon_open_rubber_empty","5":"wagon_open_rubber_loaded"},
+      "91":{"0":"wagon_open_coal_fast_empty","1":"wagon_open_coal_fast_loaded","2":"wagon_open_coal_fast_arctic_empty","3":"wagon_open_coal_fast_arctic_loaded"},
+      "95":{"0":"wagon_open_grain_fast_empty","1":"wagon_open_grain_fast_loaded","4":"wagon_open_grain_fast_tropic_empty","5":"wagon_open_grain_fast_tropic_loaded"},
+      "96":{"0":"wagon_open_wood_fast_empty","1":"wagon_open_wood_fast_loaded","4":"wagon_open_wood_fast_tropic_empty","5":"wagon_open_wood_fast_tropic_loaded"},
+      "97":{"0":"wagon_open_ore_fast_empty","1":"wagon_open_ore_fast_loaded"},
+      "98":{"0":"wagon_open_steel_fast_empty","1":"wagon_open_steel_fast_loaded"},
+      "101":{"2":"wagon_open_paper_fast_empty","3":"wagon_open_paper_fast_loaded"},
+      "102":{"4":"wagon_open_copper_fast_empty","5":"wagon_open_copper_fast_loaded"},
+      "103":{"4":"wagon_open_water","5":"wagon_open_water"},
+      "104":{"4":"wagon_open_fruit_empty","5":"wagon_open_fruit_loaded"},
+      "105":{"4":"wagon_open_rubber_empty","5":"wagon_open_rubber_loaded"},
       "27":{"0":"wagon_closed_passenger_t","1":"wagon_closed_passenger_t","2":"wagon_closed_passenger_a","3":"wagon_closed_passenger_a","4":"wagon_closed_passenger_s","5":"wagon_closed_passenger_s","6":"wagon_closed_passenger_y","7":"wagon_closed_passenger_y"},
       "28":{"0":"wagon_closed_mail_t","1":"wagon_closed_mail_t","2":"wagon_closed_mail_a","3":"wagon_closed_mail_a","4":"wagon_closed_mail_s","5":"wagon_closed_mail_s","6":"wagon_closed_mail_y","7":"wagon_closed_mail_y"},
       "30":{"0":"wagon_closed_oil","1":"wagon_closed_oil","4":"wagon_closed_oil_tropic","5":"wagon_closed_oil_tropic"},

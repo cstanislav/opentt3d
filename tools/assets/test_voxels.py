@@ -834,6 +834,93 @@ class VoxelCompilerTests(unittest.TestCase):
                 self.assertTrue(any(z == 0 for x,y,z in visited),f"Detached roof/cable/porch/hedge in {name}: {len(visited)} cells, sample {sorted(visited)[:12]}")
                 remaining -= visited
 
+    def test_open_wagons_preserve_cargo_voids_climate_variants_and_rail_contact(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("wagon_open_")}
+        source["bindings"] = {"vehicles":{engine:states for engine,states in source["bindings"]["vehicles"].items() if any(name.startswith("wagon_open_") for name in states.values())}}
+        result,definitions = compile_catalogue(source),vehicle_definitions()
+        self.assertEqual(len(result["bindings"]["vehicles"]),30)
+        for engine,states in result["bindings"]["vehicles"].items():
+            definition = definitions[engine]
+            for state,name in states.items():
+                other = states[str(int(state)^1)]
+                self.assertEqual(name == other,definition["sprites"] == definition["loaded_sprites"],f"Original cargo-state selection was lost for wagon {engine}")
+        for engine in (39,69,101):
+            self.assertEqual(set(result["bindings"]["vehicles"][str(engine)]),{"2","3"},"Arctic paper artwork leaked into other climates")
+        for engine in (40,41,42,43,70,71,72,73,102,103,104,105):
+            self.assertEqual(set(result["bindings"]["vehicles"][str(engine)]),{"4","5"})
+        for first,second in ((59,91),(63,95),(64,96),(65,97),(66,98),(69,101),(70,102),(41,71),(41,103),(42,72),(42,104),(43,73),(43,105)):
+            self.assertEqual(result["bindings"]["vehicles"][str(first)],result["bindings"]["vehicles"][str(second)])
+            self.assertEqual(definitions[str(first)]["sprites"],definitions[str(second)]["sprites"])
+            self.assertEqual(definitions[str(first)]["loaded_sprites"],definitions[str(second)]["loaded_sprites"])
+        volumes = {}
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+            volumes[name] = cells
+            self.assertEqual(model["origin"][2],0.5,"Wagon support no longer meets the original running-rail height")
+            contact_y = {model["origin"][1]+(y+0.5)*model["cell_size"][1] for x,y,z in cells if z == 0}
+            self.assertEqual(contact_y,{-1.375,-1.125,1.125,1.375},name)
+            visited = {next(iter(cells))}
+            pending = list(visited)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in cells and point not in visited:
+                        visited.add(point); pending.append(point)
+            self.assertEqual(len(visited),len(cells),f"Detached bogie, restraint, canopy or cargo in {name}: {sorted(cells.keys()-visited)[:8]}")
+            if name.endswith("_empty"):
+                self.assertNotIn((20,6,20),cells,"A genuinely empty deck/bin became a filled placeholder")
+            if "steel" in name and name.endswith("_loaded"):
+                for x in (8,20,32):
+                    self.assertTrue(all((x,6,z) not in cells for z in range(12,32)),"A steel coil lost its actual through-hole")
+            if "paper" in name:
+                self.assertIn((20,6,35),cells,"The source canopy disappeared")
+                self.assertNotIn((20,6,34),cells,"The raised paper canopy merged into its cargo")
+        self.assertIn((14,1,25),volumes["wagon_open_wood_empty"])
+        self.assertNotIn((14,1,25),volumes["wagon_open_wood_tropic_empty"],"Tropical wood acquired the normal middle stakes")
+        self.assertNotEqual(volumes["wagon_open_coal_empty"][(20,1,18)],volumes["wagon_open_coal_arctic_empty"][(20,1,18)],"Arctic copper-colour tub aliased the grey temperate artwork")
+        latex = volumes["wagon_open_rubber_loaded"]
+        self.assertTrue(all((x,y,21) in latex and (x,y,22) not in latex for x in range(4,37) for y in range(3,9)),"Liquid latex must retain its level surface below the rim")
+
+    def test_toy_wagons_keep_independent_source_states_and_real_cargo_openings(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("wagon_toy_")}
+        source["bindings"] = {"vehicles":{engine:states for engine,states in source["bindings"]["vehicles"].items() if any(name.startswith("wagon_toy_") for name in states.values())}}
+        result,definitions = compile_catalogue(source),vehicle_definitions()
+        self.assertEqual(len(result["models"]),16)
+        self.assertEqual(len(result["bindings"]["vehicles"]),24)
+        for engine,states in result["bindings"]["vehicles"].items():
+            self.assertEqual(set(states),{"6","7"},"Toyland art cannot be selected from overlapping ordinary sprite numbers")
+            self.assertNotEqual(states["6"],states["7"],"A loaded Toyland wagon lost its independent cargo volume")
+            self.assertNotEqual(definitions[engine]["sprites"],definitions[engine]["loaded_sprites"])
+        for first in (44,45,46,47,48,51,52,53):
+            for second in (first+30,first+62):
+                self.assertEqual(result["bindings"]["vehicles"][str(first)],result["bindings"]["vehicles"][str(second)])
+                self.assertEqual(definitions[str(first)]["sprites"],definitions[str(second)]["sprites"])
+                self.assertEqual(definitions[str(first)]["loaded_sprites"],definitions[str(second)]["loaded_sprites"])
+        volumes = {}
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+            volumes[name] = cells
+            self.assertEqual(model["origin"][2]+min(z for x,y,z in cells)*model["cell_size"][2],0.5)
+            self.assertEqual({model["origin"][1]+(y+0.5)*model["cell_size"][1] for x,y,z in cells if z == 0},{-1.375,-1.125,1.125,1.375})
+            visited = {next(iter(cells))}; pending = list(visited)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in cells and point not in visited:
+                        visited.add(point); pending.append(point)
+            self.assertEqual(visited,cells,f"Unsupported Toyland tank frame, canopy, bubble or cargo: {name}")
+            if name.endswith("_empty"):
+                self.assertNotIn((20,6,20),cells)
+        for family in ("battery","drinks","plastic"):
+            for x in (8,20,32):
+                self.assertIn((x,6,23),volumes[f"wagon_toy_{family}_loaded"],"The original three solid upright cargo pieces became hollow/absent")
+        for x in (8,20,32):
+            self.assertNotIn((x,5,22),volumes["wagon_toy_bubble_loaded"],"Bubble interiors must stay see-through")
+        cola = volumes["wagon_toy_cola_empty"]
+        self.assertFalse(any((x,y,20) in cola for x in (8,19,30) for y in (1,6,10)),"Opaque cola shell hides its originally visible empty/load state")
+        self.assertIn((20,6,24),volumes["wagon_toy_cola_loaded"])
+        self.assertNotIn((20,6,25),volumes["wagon_toy_cola_loaded"],"The cola liquid rose beyond its level fill surface")
+
     def test_closed_wagons_preserve_climate_art_cargo_aliases_and_open_ventilation(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         engines = (27,28,30,31,32,37,38,49,50,57,58,60,61,62,67,68,79,80,89,90,92,93,94,99,100,111,112)

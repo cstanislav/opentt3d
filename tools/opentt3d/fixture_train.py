@@ -21,12 +21,18 @@ def main():
     parser.add_argument("--first-engine", type=int, choices=range(116), default=27)
     parser.add_argument("--last-engine", type=int, choices=range(116), default=53)
     parser.add_argument("--hold", action="store_true", help="Stop the verified returning consist through a normal public command")
+    parser.add_argument("--cargo-source", type=int, choices=range(37), help="Fund this original producer and verify real cargo service with a single selected wagon")
+    parser.add_argument("--cargo-destination", type=int, choices=range(37), help="Original accepting industry for --cargo-source")
     parser.add_argument("--timeout", type=int, default=360)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
     executable = build / ("opentt3d.exe" if os.name == "nt" else "opentt3d")
     if not executable.is_file() or output.exists() or args.first_engine > args.last_engine:
         parser.error("Use a built executable, new output directory and increasing engine range")
+    if (args.cargo_source is None) != (args.cargo_destination is None):
+        parser.error("Cargo review requires both producer and accepting industry")
+    if args.cargo_source is not None and (args.first_engine != args.last_engine or args.cargo_source == args.cargo_destination):
+        parser.error("Cargo review needs one wagon engine and distinct industry types")
     root = Path(__file__).resolve().parents[2]
     graphics = json.loads((root / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "train", output / "ai/train-catalogue")
@@ -55,6 +61,7 @@ max_loan = 50000000
 town_council_tolerance = 0
 vehicle_breakdowns = 0
 [construction]
+raw_industry_construction = 1
 terraform_per_64k_frames = 1000000
 terraform_frame_burst = 4096
 [vehicle]
@@ -67,9 +74,13 @@ min_active_clients = 0
 pause_on_join = false
 """)
     engine = args.locomotive if args.locomotive is not None else -1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)}"\n')
+    source = args.cargo_source if args.cargo_source is not None else -1
+    destination = args.cargo_destination if args.cargo_destination is not None else 1
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_source={source},review_destination={destination}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave train-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
+    for state in ("empty", "full"):
+        (scripts / f"save_cargo_{state}.scr").write_text(f"pause\nsave train-cargo-{state}\n")
     with socket.socket() as probe:
         probe.bind(("127.0.0.1", 0))
         port = probe.getsockname()[1]
@@ -82,10 +93,37 @@ pause_on_join = false
         try:
             deadline = time.monotonic() + args.timeout
             manifest = None
+            cargo_snapshots = {}
             while time.monotonic() < deadline:
                 text = (output / "run.log").read_text()
                 if process.poll() is not None or "TRAIN_CATALOGUE_FAILED" in text or "script died unexpectedly" in text:
                     raise RuntimeError(f"Train fixture failed; inspect {output / 'run.log'}")
+                if args.cargo_source is not None:
+                    for match in re.finditer(r"TRAIN_CARGO_SNAPSHOT (\{[^\n]+\})", text):
+                        entry = json.loads(match[1])
+                        state = entry["state"]
+                        if state in cargo_snapshots:
+                            continue
+                        if (state not in ("empty", "full") or entry["capacity"] <= 0 or
+                            entry["amount"] != (0 if state == "empty" else entry["capacity"]) or entry["engine"] != args.first_engine):
+                            raise RuntimeError("Train snapshot did not observe a genuine selected empty/full wagon")
+                        count = (output / "run.log").read_text().count("Map successfully saved")
+                        process.stdin.write(f"exec scripts/save_cargo_{state}.scr\n")
+                        process.stdin.flush()
+                        saved = output / f"save/train-cargo-{state}.sav"
+                        while time.monotonic() < deadline:
+                            current = (output / "run.log").read_text()
+                            if process.poll() is not None or "Saving map failed" in current:
+                                raise RuntimeError("Train cargo snapshot save failed")
+                            if saved.is_file() and saved.stat().st_size > 100 and current.count("Map successfully saved") > count:
+                                break
+                            time.sleep(0.1)
+                        else:
+                            raise TimeoutError("Train cargo snapshot save timed out")
+                        entry["save"] = str(saved.relative_to(output))
+                        cargo_snapshots[state] = entry
+                        process.stdin.write("unpause\n")
+                        process.stdin.flush()
                 ready = re.search(r"TRAIN_CATALOGUE_READY (\{[^\n]+\})", text)
                 if ready:
                     manifest = json.loads(ready[1])
@@ -94,6 +132,14 @@ pause_on_join = false
                         any(not args.first_engine <= wagon["engine"] <= args.last_engine for wagon in manifest["wagons"]) or
                         (args.locomotive is not None and manifest["locomotive"] != args.locomotive)):
                         raise RuntimeError("Train fixture did not verify its selected operating consist")
+                    if args.cargo_source is not None:
+                        if (not manifest.get("full") or not manifest.get("delivered") or manifest["acceptance"] < 8 or
+                            manifest["source_type"] != args.cargo_source or manifest["destination_type"] != args.cargo_destination or
+                            set(cargo_snapshots) != {"empty", "full"} or
+                            any(entry["vehicle"] != manifest["wagons"][0]["vehicle"] for entry in cargo_snapshots.values())):
+                            raise RuntimeError("Train fixture did not complete original cargo production, full load, accepted delivery and both saved states")
+                        manifest["cargo_snapshots"] = cargo_snapshots
+                    save_count = (output / "run.log").read_text().count("Map successfully saved")
                     process.stdin.write("exec scripts/save_fixture.scr\n")
                     process.stdin.flush()
                     break
@@ -105,7 +151,7 @@ pause_on_join = false
                 text = (output / "run.log").read_text()
                 if "Saving map failed" in text or process.poll() is not None:
                     raise RuntimeError("Train fixture save failed")
-                if result.is_file() and result.stat().st_size > 100 and "Map successfully saved" in text:
+                if result.is_file() and result.stat().st_size > 100 and text.count("Map successfully saved") > save_count:
                     break
                 time.sleep(0.2)
             else:
