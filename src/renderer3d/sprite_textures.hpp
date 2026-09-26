@@ -113,7 +113,7 @@ void ExportFoundationGallery(unsigned slope, unsigned foundation);
 void VerifyFoundationModels();
 SpriteID IndustryBodySprite(unsigned graphics);
 void ExportHouseModelGallery(unsigned house, bool industry = false);
-void VerifyGPUScene();
+void VerifyGPUScene(bool vehicle_poses = true);
 void VerifyInstanceOrdering();
 void VerifyTextureMipCache();
 

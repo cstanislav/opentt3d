@@ -122,8 +122,11 @@ registered six-tile layouts and actual helicopter253 support/rotor observations 
 both backends. The1,247 checkpoint adds67 volumes for oil-well29…32, farm33…38,
 bank58/59, food60…63, paper64…71, plantations116/117, waterworks118…120 and airport
 63/64/69. The88-run actual industry sweep verifies288 independent grounds,242 body
-selections and46 original empty selections onGL/Vulkan. Both farm and food climates
-are included. All eight electric-engine curved-route/contact observations pass.
+selections and46 original empty selections onGL/Vulkan. Later source comparison
+revokes the eight Arctic farm runs:40/44 original layers differ, and independent
+Arctic volumes remain missing. The renderer retains their supplied artwork. The
+remaining80 runs validate240 grounds,198 bodies and42 original empty states,
+including both food climates. All eight electric-engine curved-route/contact observations pass.
 Catalogue breadth, final fidelity and production performance remain unfinished.
 
 **Pass 1 remains incomplete.** New bindings do not automatically establish correct

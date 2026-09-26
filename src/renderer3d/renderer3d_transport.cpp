@@ -267,6 +267,43 @@ TEST_CASE("Underground labels are visible through mouths rather than through wal
 	}
 }
 
+TEST_CASE("Tunnel scenery regions conservatively retain both mouths and crossing bounds", "[renderer3d]")
+{
+	for (auto kind : {TunnelKind::Rail,TunnelKind::ElectricRail,TunnelKind::Monorail,TunnelKind::Maglev,TunnelKind::Road,TunnelKind::Tram}) {
+		CHECK(TunnelSceneryRegions(kind,48,{7,8,4},{},2).empty());
+		CHECK(TunnelSceneryRegions(kind,48,{20,8,20},{},2).empty());
+		for (unsigned direction = 0; direction < 4; ++direction) for (Vec3 origin : {Vec3{},Vec3{500000,700000,96}}) {
+			Vec3 eye{20,8,4};
+			auto regions = TunnelSceneryRegions(kind,48,eye,origin,direction);
+			REQUIRE(regions.size() == 3);
+			auto retained = [&](Vec3 low, Vec3 high) {
+				Vec3 a = origin+TunnelPoint(direction,low), b = origin+TunnelPoint(direction,high);
+				Vec3 first{std::min(a.x,b.x),std::min(a.y,b.y),std::min(a.z,b.z)};
+				Vec3 last{std::max(a.x,b.x),std::max(a.y,b.y),std::max(a.z,b.z)};
+				return std::ranges::any_of(regions,[&](const ClipVolume &region) { return region.Intersects(first,last); });
+			};
+			CHECK(retained({18,7,2},{22,9,6}));
+			CHECK_FALSE(retained({18,7,20},{22,9,24}));
+			CHECK_FALSE(retained({18,40,2},{22,44,6}));
+			CHECK(retained({80,-30,0},{100,40,12})); // A box can cross the cone without containing a mouth.
+			CHECK(retained({1000000,8,4},{1000001,9,5})); // No draw-distance limit.
+			for (float x : {-100.0f,-1.0f,60.0f,100.0f,500.0f}) for (float y = -20; y <= 40; y += 3) for (float z = -3; z <= 25; z += 2) {
+				Vec3 point{x,y,z};
+				if (VisibleThroughTunnelMouth(kind,48,eye,point)) CHECK(retained(point,point));
+			}
+		}
+	}
+}
+
+TEST_CASE("Farm source-climate replacements do not inherit temperate models", "[renderer3d][voxel]")
+{
+	for (unsigned graphic = 33; graphic <= 38; ++graphic) {
+		CHECK(IndustryModelClimateSupported(graphic,0));
+		for (unsigned climate : {1U,2U,3U}) CHECK_FALSE(IndustryModelClimateSupported(graphic,climate));
+	}
+	for (unsigned graphic : {32U,39U,60U,63U}) for (unsigned climate = 0; climate < 4; ++climate) CHECK(IndustryModelClimateSupported(graphic,climate));
+}
+
 TEST_CASE("Tunnel excavation removes intersecting terrain while retaining the shoulders and charts", "[renderer3d]")
 {
 	Scene terrain;

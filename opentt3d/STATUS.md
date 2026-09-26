@@ -9,7 +9,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite196/196, including train physical pitch/contact, exact retained-source reconstruction, copied-scene CPU residency and active asynchronous-worker leases. Release`.9`LinuxGL, macOS and Windows x86/x64/arm64 pass; LinuxVulkan stays below4.15GB but its renderer matrix reaches the7200-second bound before completion.
+- [x] Current native suite198/198, including train physical pitch/contact, exact retained-source reconstruction, copied-scene CPU residency, active asynchronous-worker leases, conservative tunnel regions and farm climate restrictions. Release`.9`LinuxGL, macOS and Windows x86/x64/arm64 pass; LinuxVulkan stays below4.15GB but its renderer matrix reaches the7200-second bound before completion.
 - [x] Current1,247-volume asset/compiler/schema suite117/117 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
@@ -20,7 +20,12 @@ This file records implemented and verified work, not promises of completeness.
   Exact geometry, palettes, transparency, all climate/cargo bindings and world picking
   survive retirement/rebuild. Active geometry may exceed either soft cache budget.
 - [ ] Smooth dense-world/Cab performance remains unmet: the concluding expanded-control
-  samples average12.714/14.058fps. Interactive cache churn and Linux follow-up remain open.
+   samples average12.714/14.058fps. Interactive cache churn and Linux follow-up remain open.
+- [x] Opt-in tunnel-tree visibility regions preserve exact RGBA/picking across20
+  actual near-mouth/interior/exit, four-heading and tilted-Cab views on both backends.
+  Matched90-frame dense-Cab controls improve11.40/12.73 to38.11/40.33fpsGL/Vulkan,
+  reducing submitted vertices664,706,778→197,335,923. The optimization remains
+  disabled by default; broader tunnel/climate/world review and60fps remain open.
 - [x] Hidden native macOS framebuffer review with `--background`: GL, Vulkan and
   LaunchServices bundle report no activation/key/visible window and capture2560x1600.
   Same-backend56-view comparison preserves22,937,600 RGBA pixels; foreground interaction
@@ -89,9 +94,11 @@ This file records implemented and verified work, not promises of completeness.
 ## Artwork
 
 - [x] Reviewed development catalogue1,247 JSON volumes,110 house definitions with body or ground geometry,109 independent body/88 ground definitions,62 tree families/434 lifecycle volumes and256 voxel vehicle definitions. Industries have54 body definitions and58 independent ground definitions; airports have21 body definitions and3 independent grounds. No final approvals.
-- [x] Oil-well29…32, farm33…38, bank58/59, food60…63, paper64…71, plantations116/117 and waterworks118…120 preserve independent grounds, source-empty construction slots and source-permitted repeated artwork. All88 hidden actual-state runs pass:288 grounds,242 visible bodies and46 deliberate empty body states across both farm/food climates and both backends; peak2,704,411,720bytes.
+- [x] Oil-well29…32, temperate farm33…38, bank58/59, food60…63, paper64…71, plantations116/117 and waterworks118…120 preserve independent grounds, source-empty construction slots and source-permitted repeated artwork. The80 accepted hidden actual-state runs pass240 grounds,198 visible bodies and42 deliberate empty body states, including both food climates and both backends; peak2,704,411,720bytes.
+- [ ] Independent Arctic farm33…38 volumes remain missing. Source review finds40/44 layers differ, including a different farmhouse structure. The eight earlier Arctic binding runs are revoked as climate-coverage evidence; the current renderer retains supplied Arctic ground/body artwork instead of temperate voxel or legacy profiles.
 - [x] Low airport terminal63/64/69 retains an open L-plan courtyard, supported parapets, recessed entry, original fence ownership and separately opaque2634 apron. Both backend galleries pass96 mesh and72 ground/body visibility views plus exact atlas/picking; all27 climate-source layer pairs match exactly. Source review fixed a perpendicular-pier paint brush that covered the side windows. Fine roof/window/paving fidelity remains open.
 - [x] All eight9,000-frame curved-route runs pass for electric locomotives23…26: actual traversed corner-track bits, station/flat/grade/bridge/tunnel support and collector contact onGL/Vulkan. Peak2,816,019,552bytes. This is functional contact evidence, not smooth-frame-time approval.
+- [x] All20 loaded-route support observations now pass, including the three remaining Toyland engine6/wagon52 cases. Both backends also observe all six original oil-well pump volumes through graphics30/31/32, and helicopter254 passes120 actual54-unit oil-rig deck supports plus every rotor state/restart. Swept-rotor contextual clearance and water/light phases remain open.
 - [x] Eleven oil-rig volumes preserve all six original tile positions, four pilings/paired braces, intermediate platforms, completed derrick/flare and the54-unit landing deck. All20 actual construction selections pass, including the completed neutral station's water ground. Both native backends pass264 new mesh/1,616 industry-state views, exact atlas/picking and helicopter253 support/rotor observations. Source-registered joined and street views are retained; finer artwork, broader helicopter clearance and water/light phases remain open.
 - [x] All35 locomotive body definitions have bindings:38 new volumes cover33 definitions and repair the older SH electric wheel gauge. Seven Arctic/tropical pairs retain different bodies;13 permitted source-climate pairs match208 views/58,808 RGBA pixels. Both native backends pass46,784 locomotive poses and1,344 rail/depot mesh views, with exact world-atlas checks below6GiB.
 - [x] All55 locomotive/climate/railtype fixtures complete service, return and holding; all55 hiddenGL actual-selection captures pass below6GiB. Twelve additional public-NoAI train consists complete real bridge/ramp/tunnel journeys across all climates and original railtypes; rendered clearance review remains active.

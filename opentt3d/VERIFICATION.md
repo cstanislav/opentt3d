@@ -21,11 +21,56 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
-- **1,247-volume review reconciliation:** all88 actual construction-state runs pass
+- **Farm climate correction:** the source audit finds40/44 Arctic farm layers
+  differ from temperate across78,129 examined pixels, including structurally
+  different farmhouse33/34 and shelters35. Equal sprite numbers did not justify
+  the earlier alias. Runtime now retains supplied Arctic ground/body artwork
+  rather than either temperate voxel or legacy profiles, and inventory explicitly
+  records the missing Arctic volumes. The eight earlier Arctic farm selection
+  runs remain evidence of the erroneous alias, not accepted climate coverage.
+  The other80 construction runs retain240 required ground,198 body and42
+  source-empty selections. All16 fresh farm runs pass onGL/Vulkan; both completed
+  Arctic verifiers reject all44 temperate layer bindings, and no actual Arctic
+  farm voxel is captured. Fresh exports reconfirm40/44 source differences. Peak
+  sampled memory is2,686,061,784bytes; native tests now total198. Evidence is
+  `pass1-farm-climate-guard-{validation,reconciliation,source-comparison}.json`.
+- **Opt-in tunnel-tree occlusion:** all four matched90-frame controls pass; all16
+  paired screenshots/reference images are RGBA-identical. Submitted geometry falls
+  from664,706,778 to197,335,923 vertices/frame; rates improve11.400→38.107fpsGL and
+  12.735→40.331fpsVulkan. Twenty additional same-process views/backend compare exact
+  RGBA and picking through both mouths, four headings and tiltedCab, with no changes
+  to vehicle gameplay state. Each backend compares4,608,000 pixels and omits
+  5,950,236,045 hidden submitted vertices across those views. Peak of the exact
+  runs is3,636,104,768bytes. `OPENTT3D_TUNNEL_SCENERY_CULL=1` remains opt-in; no60fps
+  approval or arbitrary-world proof. Evidence: `pass1-tunnel-scenery-*`.
+- **Remaining live transport/animation cases complete:** Toyland wagon52GL retry
+  and engine6/wagon52Vulkan pass9,000-frame support observations. The reconciled
+  `pass1-pitch-loaded-validation.json` now contains20/20 passes across all four
+  original rail types and the Toyland route. Interrupted earlier evidence remains.
+- Both9,000-frame oil-well runs observe30's four,31's two and32's four distinct
+  source-table selections on the same actual tile, covering all six pump bodies.
+  Both1,800-frame helicopter254 runs verify120 support corners against the54-unit
+  oil-rig deck, every original rotor state and the stopped-to-running transition.
+  Peak across these seven follow-ups is2,729,004,200bytes; complete swept-rotor
+  contextual clearance and oil-rig water/light palette phases remain open.
+- Published`40e4209b0`/development release`.10` includes the1,247-volume artwork
+  checkpoint. The later CI candidate splits Vulkan's scene and complete engine
+  matrices into independently bounded jobs; default full verification is retained.
+  Its build,196 native tests,9 harness tests, boundary guard and disjoint256-engine
+  shard coverage check pass. Both native GPU scene-scope controls pass, including
+  explicit locomotive23/helicopter253 matrices, exact atlas/picking and all model/
+  tree/industry checks; peaks2,878,000,608/3,214,036,472bytes. The later combined
+  guard/culling candidate passes198 native tests and9 harness tests. Remote shards
+  remain pending; the real electric-route renderer now has900seconds and6GiB to
+  accommodate the added20 exact tunnel comparisons.
+
+- **Historical1,247-volume selection reconciliation:** all88 actual construction-state runs pass
   onGL/Vulkan. `pass1-industry-actual-state-reconciliation.json` requires288 grounds,
   242 visible bodies and46 source-empty bodies with no missing/unexpected selection;
   peak sampled memory2,704,411,720bytes. This covers oil-well, both farm climates,
   paper, both food climates, desert water supply/tower, town bank and both plantations.
+  The later source-climate audit above revokes the eight Arctic farm runs as fidelity
+  evidence; their matching bindings were selecting the wrong climate's artwork.
 - Both corrected low-airport galleries pass96 authored views and72 independent
   ground/body visibility views, exact CPU colour, transparent/hidden picking and
   world-atlas comparisons; sampled peaks2,394,033,056/2,396,310,504bytes. All three

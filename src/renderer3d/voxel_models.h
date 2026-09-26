@@ -13,6 +13,13 @@ std::optional<unsigned> VoxelHouseState(unsigned house, unsigned stage, unsigned
 bool HasVoxelHouseGround(unsigned house);
 std::optional<unsigned> VoxelHouseGroundState(unsigned house, unsigned stage, unsigned variant);
 bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned variant, SpriteID image, Vec3 origin, PaletteID palette);
+/** Known source-climate restrictions apply to both voxel and legacy profiles.
+ * Farm33..38 currently models the temperate artwork only; Arctic replaces its
+ * ground, farmhouse and shelters despite retaining the same sprite numbers. */
+inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate)
+{
+	return climate < 4 && (graphics < 33 || graphics > 38 || climate == 0);
+}
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground = false);
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);
 bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0, float opacity = 1);
@@ -56,7 +63,7 @@ inline float OriginalTrainVoxelScale(float heading, float authored_length)
 struct VoxelTrainSupport { float rear, front, height, length_scale; std::span<const float> contact_x; };
 std::optional<VoxelTrainSupport> VoxelTrainSupportBounds(unsigned engine, bool loaded, float heading);
 bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, float opacity = 1, unsigned climate = UINT_MAX, float grade = 0);
-void VerifyVoxelModels();
+void VerifyVoxelModels(bool vehicle_poses = true);
 void VerifyVoxelMeshes(std::string_view prefix = {});
 void VerifyVoxelVehicleModels(unsigned only_engine = UINT_MAX);
 void VerifyVoxelTreeModels();

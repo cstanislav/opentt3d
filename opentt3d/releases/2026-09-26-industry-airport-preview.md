@@ -3,6 +3,13 @@
 This source prerelease expands the catalogue from **1,180 to1,247 authored voxel
 volumes**. It remains provisional, with **zero final visual approvals**.
 
+**Subsequent climate-audit correction:**40/44 Arctic farm source layers differ from
+temperate. This checkpoint incorrectly reused temperate farm33…38 artwork in the
+Arctic; its eight Arctic binding captures are not accepted climate-fidelity evidence.
+The follow-up correction retains supplied Arctic body/ground artwork until independent
+volumes are authored. The other80 industry runs retain240 ground,198 body and42
+source-empty selections. Original evidence is preserved.
+
 ## Included progress
 
 - Oil-well pumps, joined farm buildings/silos, paper processing, banana/rubber

@@ -19,7 +19,7 @@ struct TileSurface;
 TileSurface MakeTileSurface(Slope slope);
 bool IsCapturing();
 void BeginCaptureFrame(float seconds);
-void BeginCapture(const Camera &camera, bool diagnostic = false);
+void BeginCapture(const Camera &camera, bool diagnostic = false, std::optional<bool> tunnel_scenery_cull = {});
 Scene FinishCapture();
 void RecycleCapture(Scene &scene);
 void CaptureTile(const TileInfo *tile);

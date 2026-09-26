@@ -7,6 +7,16 @@
   America/Chicago (CDT)**.
 - Updated requested minimum: **1 PM CST September 26, 2026**. Conservative endpoint:
   **2026-09-26 19:00:00 UTC**, covering fixed CST and Chicago daylight readings.
+- Progress clock audit **2026-09-26 18:21:23 UTC**: the minimum remains active.
+  Release`.10`/`40e4209b0` publishes1,247 volumes. Remaining Toyland loaded support,
+  six-pose pump animation and helicopter254 deck/rotor observations now pass. Both
+  local scene-scope controls pass for the new complete VulkanCI engine sharding.
+  Source review finds40/44 Arctic farm layers differ from temperate; the earlier
+  eight Arctic captures selected invalid aliases. Supplied Arctic ground/body art
+  is now retained pending independent volumes. An opt-in tunnel-tree occlusion
+  experiment preserves16 paired images and improves this paused dense-Cab sample
+  from11.40/12.73 to38.11/40.33fpsGL/Vulkan; exact picking and broader views are under
+  review. It remains disabled by default and60fps remains unmet.
 - Progress clock audit **2026-09-26 17:51:20 UTC**: the19:00UTC minimum remains active.
   The1,247-volume catalogue has54 industry body/58 ground and21 airport body/3 ground
   definitions. All88 actual construction runs pass288 ground,242 body and46 original

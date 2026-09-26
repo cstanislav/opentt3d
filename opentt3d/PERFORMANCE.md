@@ -3,6 +3,34 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Opt-in tunnel-tree occlusion: exact native comparisons (September26)
+
+`OPENTT3D_TUNNEL_SCENERY_CULL=1` retains trees intersecting the whole bore or either
+infinite enlarged mouth cone. It applies only inside original opaque tunnel pairs,
+away from lining boundaries; all other scene capture retains its normal frustum.
+Conservative plane/AABB rejection keeps overhanging volumes and has no draw-distance
+limit. The option is disabled by default.
+
+Matched1,247-volume90-frame paused title-world Cab controls:
+
+| Backend | Full fps | Culled fps | Full p95 work ms | Culled p95 work ms |
+| --- | ---: | ---: | ---: | ---: |
+| OpenGL | 11.400 | 38.107 | 93.665 | 28.229 |
+| Vulkan | 12.735 | 40.331 | 83.399 | 26.325 |
+
+Submitted vertices fall664,706,778→197,335,923/frame, entirely from hidden trees.
+Mean buffer wait falls66.237→13.311msGL and62.851→13.595msVulkan. All16 paired
+screenshots/reference images retain identical RGBA. A further20 same-process
+mouth/interior/exit/four-heading/tiltedCab views/backend preserve4,608,000 exact
+RGBA/picking pixels and unchanged vehicle state; peak3,636,104,768bytes. Unit tests
+exercise every tunnel kind/direction, large origins, crossing boxes and unlimited
+far-mouth visibility. Broader actual tunnel/climate/world evidence remains open.
+Every measured interval still exceeds20ms; this is not smooth60fps.
+
+Evidence: `build-macos/pass1-tunnel-scenery-validation.json`,
+`pass1-tunnel-scenery-exact-performance.json`, `pass1-tunnel-scenery-exact-validation.json`
+and their frozen binary/artwork/source hashes. Earlier baselines/failures remain.
+
 ## Linux residency follow-up (September26)
 
 Release`.9`/`d27740297` completes LinuxGL, macOS and all three Windows jobs. Its
@@ -13,9 +41,20 @@ all pitched train bindings and the243,629-pixel live-tunnel clearance check, but
 remains an incomplete/failed full run. Evidence is in
 `build-macos/pass1-release9-linux-vulkan-artifact/`; previous memory failures remain.
 
+The follow-up keeps the full OpenGL job and separates Vulkan's scene matrix from
+four complete vehicle-engine shards0…63/64…127/128…191/192…255. Each job keeps its
+7200-second renderer bound,180-minute job bound and6GiB sampled memory guard;
+at most three Linux jobs run concurrently. The default local renderer check still
+includes every vehicle pose. Sharding addresses diagnostic wall time, not runtime
+frame performance, and remote success still requires all five Vulkan jobs.
+
 The new88-run industry construction sweep peaks2,704,411,720bytes; eight electric
 corner-route/contact runs peak2,816,019,552bytes. Those fixture-scoped functional
 results do not establish smooth dense-Cab performance or all-day interactive limits.
+Their9,000-frame averages are49.997…50.085fpsGL and54.006…54.150fpsVulkan, with
+3,488…4,140 versus31…41 intervals over20ms. P95 draw-deadline lateness remains
+99.001…99.269msGL and97.440…97.668msVulkan. The full per-run performance summary
+is `build-macos/pass1-pitch-corner-performance-summary.json`.
 
 ## Scene-pinned residency: matched expanded controls pass (September26)
 

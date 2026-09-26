@@ -44,6 +44,20 @@ bool TunnelLabelVisible(const Camera &camera, Vec3 point)
 	return VisibleThroughTunnelMouth(tunnel.kind,tunnel.length,TunnelPoint(inverse,camera.Eye()-tunnel.origin),TunnelPoint(inverse,point-tunnel.origin));
 }
 
+std::vector<ClipVolume> CaptureTunnelSceneryRegions(const Camera &camera)
+{
+	if (!camera.first_person || camera.tunnel_entrance >= Map::Size()) return {};
+	TileIndex entrance{camera.tunnel_entrance};
+	TunnelKind kind, other_kind;
+	if (!GetVanillaTunnelKind(entrance,kind)) return {};
+	TileIndex other = GetOtherTunnelEnd(entrance);
+	if (!GetVanillaTunnelKind(other,other_kind) || kind != other_kind) return {};
+	Vec3 origin{TileX(entrance)*16.0f,TileY(entrance)*16.0f,static_cast<float>(GetTilePixelZ(entrance))};
+	float length = (std::abs(static_cast<int>(TileX(other))-static_cast<int>(TileX(entrance)))+std::abs(static_cast<int>(TileY(other))-static_cast<int>(TileY(entrance))))*16.0f;
+	unsigned direction = to_underlying(GetTunnelBridgeDirection(entrance));
+	return TunnelSceneryRegions(kind,length,TunnelPoint((4-direction)%4,camera.Eye()-origin),origin,direction);
+}
+
 bool GetVanillaTunnelKind(TileIndex entrance, TunnelKind &kind)
 {
 	if (!IsValidTile(entrance) || !IsTunnelTile(entrance)) return false;

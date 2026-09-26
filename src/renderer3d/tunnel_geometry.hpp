@@ -80,6 +80,42 @@ inline bool VisibleThroughTunnelMouth(TunnelKind kind, float length, Vec3 eye, V
 	return false;
 }
 
+/** Conservative scenery visibility from inside an original opaque tunnel.
+ * Keep the whole bore and two infinite cones through enlarged mouth rectangles.
+ * Rectangle corners deliberately include space outside the faceted arch; a box
+ * rejected by every region cannot contribute a visible scenery surface. */
+inline std::vector<ClipVolume> TunnelSceneryRegions(TunnelKind kind, float length, Vec3 local_eye, Vec3 origin, unsigned direction)
+{
+	const auto profile = TunnelProfile(kind,0);
+	if (length < 16 || local_eye.x <= 8.5f || local_eye.x >= length+7.5f ||
+		local_eye.y <= profile.front().y+0.25f || local_eye.y >= profile.back().y-0.25f ||
+		local_eye.z <= 0.25f || local_eye.z >= TunnelRoofHeight(kind,local_eye.y)-0.25f) return {};
+	float roof = 0;
+	for (Vec3 point : profile) roof = std::max(roof,point.z);
+	float left = profile.front().y-0.5f, right = profile.back().y+0.5f, bottom = -0.5f, top = roof+0.5f;
+	Vec3 zero = TunnelPoint(direction,{});
+	auto world = [&](std::array<std::array<float,4>,6> planes) {
+		ClipVolume result{origin+zero,planes};
+		for (auto &plane : result.planes) {
+			Vec3 normal = TunnelPoint(direction,{plane[0],plane[1],plane[2]})-zero;
+			plane[0] = normal.x; plane[1] = normal.y; plane[2] = normal.z;
+		}
+		return result;
+	};
+	std::vector<ClipVolume> regions;
+	regions.push_back(world({{{1,0,0,-7.5f},{-1,0,0,length+8.5f},{0,1,0,-left},{0,-1,0,right},{0,0,1,-bottom},{0,0,-1,top}}}));
+	for (float mouth : {8.0f,length+8.0f}) {
+		float sign = mouth < local_eye.x ? -1 : 1, distance = std::abs(mouth-local_eye.x);
+		auto through_eye = [&](Vec3 normal) { return std::array<float,4>{normal.x,normal.y,normal.z,-Dot(normal,local_eye)}; };
+		regions.push_back(world({{{sign,0,0,-sign*mouth+0.5f},
+			through_eye({-sign*(left-local_eye.y),distance,0}),
+			through_eye({sign*(right-local_eye.y),-distance,0}),
+			through_eye({-sign*(bottom-local_eye.z),0,distance}),
+			through_eye({sign*(top-local_eye.z),0,-distance}),{0,0,0,1}}}));
+	}
+	return regions;
+}
+
 /** Subtract one convex bore segment from terrain or rooted scenery triangles. Some legal slopes dip
  * below the vault beside the centreline; merely drawing a tube under them
  * leaves strips of grass crossing the interior. Material charts interpolate

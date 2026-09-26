@@ -874,6 +874,7 @@ void VerifyTreeModels()
 
 bool HasAuthoredIndustry(unsigned graphics, SpriteID sprite)
 {
+	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) return false;
 	if (VoxelIndustryState(graphics,sprite)) return true;
 	auto found = IndustryModels().find(graphics);
 	if (found == IndustryModels().end()) return false;
@@ -1050,6 +1051,7 @@ void VerifyIndustryModels()
 	VerifyVoxelIndustryModels();
 	unsigned views = 0;
 	for (const auto &[graphics, model] : IndustryModels()) {
+		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) continue;
 		SpriteID image = IndustryBodySprite(graphics);
 		if (!HasAuthoredIndustry(graphics, image)) throw std::runtime_error(fmt::format("Industry {} is not bound to its completed reference", graphics));
 		Textures().BeginScene();

@@ -16,6 +16,7 @@ bool IsVehicleInTunnel(const Vehicle &vehicle);
 std::optional<float> TrainTunnelContactHeight(const Vehicle &vehicle, Vec3 point);
 void BeginTunnelFrame();
 bool TunnelLabelVisible(const Camera &camera, Vec3 point);
+std::vector<ClipVolume> CaptureTunnelSceneryRegions(const Camera &camera);
 void ExportTunnelGallery(unsigned kind, unsigned direction);
 void VerifyTunnelModels();
 void VerifyLiveTunnelCapture();

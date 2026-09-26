@@ -326,6 +326,7 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground)
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
+	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) return {};
 	image &= SPRITE_MASK;
 	if (image == 0) return {};
 	std::string_view category = ground ? "industry_ground" : "industries";
@@ -487,6 +488,8 @@ bool DrawVoxelAsset(Scene &scene, std::string_view category, unsigned identifier
 	if (resolved == nullptr) return false;
 	const auto &model = resolved->surface;
 	if (scene.visibility && !scene.visibility->Intersects(origin+model.low,origin+model.high)) return true;
+	if (category == "trees" && !scene.scenery_regions.empty() && std::ranges::none_of(scene.scenery_regions,
+		[&](const ClipVolume &region) { return region.Intersects(origin+model.low,origin+model.high); })) return true;
 	AddVoxelInstance(scene,*resolved,Material(origin,palette,opacity));
 	return true;
 }
@@ -828,6 +831,7 @@ void ExportVoxelReviews(std::string_view prefix)
 			 * prefix, but it is still part of the requested original layout. */
 			bool selected = false;
 			for (const auto &part : layouts[layout]) for (unsigned stage = 0; stage < 4; ++stage) for (const char *category : {"industry_ground","industries"}) {
+				if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape))) continue;
 				auto binding = Models().bindings.find({category,part.gfx,stage});
 				selected |= binding != Models().bindings.end() && binding->second.starts_with(prefix);
 			}
@@ -836,6 +840,7 @@ void ExportVoxelReviews(std::string_view prefix)
 				std::vector<const VoxelModel *> group;
 				std::vector<Vec3> placements;
 				for (const auto &part : layouts[layout]) for (const char *category : {"industry_ground","industries"}) {
+					if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape))) continue;
 					auto binding = Models().bindings.find({category,part.gfx,stage});
 					if (binding == Models().bindings.end()) continue;
 					group.push_back(&Models().models.at(binding->second));
@@ -1006,7 +1011,7 @@ void ExportVoxelReviews(std::string_view prefix)
 			}
 			context(fmt::format("context-depot-{}-direction-{}",base,direction),group,placements,headings);
 		}
-		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix)) {
+		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix) && IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape))) {
 			bool ground_layer = category == "industry_ground";
 			Textures().BeginScene();
 			Scene industry;
@@ -1257,7 +1262,7 @@ void VerifyVoxelTreeModels()
 
 void VerifyVoxelIndustryModels()
 {
-	unsigned views = 0, ground_views = 0;
+	unsigned views = 0, ground_views = 0, climate_fallbacks = 0;
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,graphics,stage] = binding;
 		bool ground = category == "industry_ground";
@@ -1267,6 +1272,12 @@ void VerifyVoxelIndustryModels()
 		const auto &mesh = Models().models.at(name).surface;
 		SpriteID image = ground ? source.ground.sprite : source.building.sprite;
 		PaletteID palette = ground ? source.ground.pal : source.building.pal;
+		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) {
+			Scene fallback;
+			if (VoxelIndustryState(graphics,image,ground) || (ground ? DrawVoxelIndustryGround(fallback,graphics,image,{},palette) : HasAuthoredIndustry(graphics,image))) throw std::runtime_error("Unauthored climate selected a different climate's industry body/ground");
+			++climate_fallbacks;
+			continue;
+		}
 		if (!VoxelIndustryState(graphics,image,ground)) throw std::runtime_error("Industry state binding does not match its original sprite");
 		Textures().BeginScene();
 		const auto &texture = Textures().Get(image,palette,0,false);
@@ -1289,6 +1300,7 @@ void VerifyVoxelIndustryModels()
 	}
 	Debug(driver,1,"OpenTT3D: {} voxel industry construction/animation views preserve source selection, exact CPU geometry and transparent tile picking",views);
 	Debug(driver,1,"OpenTT3D: {} of these views verify explicit voxel industry ground/stockpile layers",ground_views);
+	Debug(driver,1,"OpenTT3D: {} industry layer bindings retain their supplied source because the active climate has no matching authored volume",climate_fallbacks);
 	if (VoxelIndustryState(10,SPR_IT_POWER_PLANT_TRANSFORMERS)) {
 		unsigned spark_views = 0;
 		const auto &parent = Models().models.at(Models().bindings.at({"industries",10,3})).surface;
@@ -1587,12 +1599,13 @@ void VerifyVoxelMeshes(std::string_view prefix)
 	Debug(driver,1,"OpenTT3D: voxel mesh selection '{}' passed exact geometry, palettes and picking",prefix);
 }
 
-void VerifyVoxelModels()
+void VerifyVoxelModels(bool vehicle_poses)
 {
 	VerifyVoxelMeshes();
 	std::vector<uint8_t> pixels, expected;
 	std::vector<uint32_t> ids, expected_ids;
-	VerifyVoxelVehicleModels();
+	if (vehicle_poses) VerifyVoxelVehicleModels();
+	else Debug(driver,1,"OpenTT3D: scene-only voxel verification delegates complete vehicle pose matrices to explicit engine shards");
 	unsigned lift_views = 0;
 	for (unsigned position = 0; position <= 36; ++position) {
 		size_t visible = 0;

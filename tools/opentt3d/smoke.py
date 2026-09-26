@@ -140,6 +140,7 @@ def main():
     house_palette.add_argument("--verify-house-palette", type=int, choices=(20,31,32,39,104,105), help="Observe original crowd, marquee, scoreboard or Toyland shop palette phases on one actually captured voxel house")
     parser.add_argument("--verify-dock-palette", type=int, choices=(4,5), help="Observe original lamp/foam palette phases on one actually captured non-Toyland dock")
     parser.add_argument("--verify-renderer", action="store_true")
+    parser.add_argument("--renderer-verification-scope", choices=("full","scene"), default="full", help="Scene scope retains renderer/model checks and delegates complete vehicle pose matrices to separate --verify-voxel-poses runs")
     parser.add_argument("--verify-instance-order", action="store_true", help="Check exact mesh-allocation, child-layer and mixed-opacity colour/picking precedence")
     parser.add_argument("--verify-world-atlas", action="store_true", help="Compare complete current-world RGBA/picking before and after atlas repacking")
     parser.add_argument("--verify-voxel-meshes", metavar="PREFIX", help="Run exact voxel cell/CPU/palette/picking checks for a named model family, including its house bindings and joins")
@@ -250,6 +251,8 @@ def main():
         parser.error("--fence-layout requires --gallery-fence 6")
     if args.fence_slope >= 32 and args.fence_layout is None:
         parser.error("Half-tile fence galleries require an explicit railway --fence-layout")
+    if args.renderer_verification_scope != "full" and not args.verify_renderer:
+        parser.error("--renderer-verification-scope requires --verify-renderer")
     if args.menu and (args.savegame or args.first_person or args.infinite_water or args.verify_renderer):
         parser.error("Menu capture cannot be combined with loaded-world options")
     if args.screenshot_size and (args.benchmark_frames or args.fullscreen):
@@ -463,7 +466,7 @@ server_advertise = false
     if args.gallery_vehicle is not None:
         commands.append(f"renderer3d vehicle-gallery {args.gallery_vehicle}" + (" loaded" if args.loaded_vehicle else ""))
     if args.verify_renderer:
-        commands.append("renderer3d verify")
+        commands.append("renderer3d verify" if args.renderer_verification_scope == "full" else "renderer3d verify-scene")
     if args.verify_instance_order:
         commands.append("renderer3d verify-instance-order")
     if args.verify_voxel_meshes is not None:
@@ -615,6 +618,11 @@ server_advertise = false
                 raise RuntimeError("Persistent mesh storage verification did not complete")
             if args.verify_renderer and "authored voxel views match unmerged geometry, CPU instances, palette recolouring and transparent picking; exact palette relocation passed" not in text:
                 raise RuntimeError("Authored voxel material/meshing verification did not complete")
+            if args.verify_renderer:
+                completion = ("voxel vehicle poses preserve all 16 company palettes and the original crash recolour" if args.renderer_verification_scope == "full" else
+                              "scene-only voxel verification delegates complete vehicle pose matrices to explicit engine shards")
+                if completion not in text:
+                    raise RuntimeError("The requested full/scene renderer verification scope did not complete")
             if (args.gallery_voxels or args.gallery_voxel_prefix) and "exported voxel turntables, street-level views and neighbouring-building context" not in text:
                 raise RuntimeError("Voxel review export did not complete")
             if args.verify_tile_picking and "roof/wall pixels select their owning tile across four rotations, with independent vehicle picking" not in text:
@@ -686,6 +694,8 @@ server_advertise = false
                 raise RuntimeError("Tunnel geometry verification did not complete")
             if args.verify_live_tunnel and "unobstructed lining pixels and unchanged vehicle state passed" not in text:
                 raise RuntimeError("Live tunnel integration verification did not complete")
+            if args.verify_live_tunnel and "live tunnel scenery culling views preserve exact RGBA and picking" not in text:
+                raise RuntimeError("Live tunnel scenery culling comparison did not complete")
             if args.verify_rails and "rail layout/slope views, reservation materials and instancing passed" not in text:
                 raise RuntimeError("Rail geometry verification did not complete")
             if args.verify_stations and "station layout views, company materials and transparent picking passed" not in text:

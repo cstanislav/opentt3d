@@ -87,16 +87,30 @@ Run the GPU and loaded-world navigation checks with an isolated fixture:
 python3 tools/opentt3d/smoke.py --build-dir build-macos \
   --output build-macos/verified-view --savegame media/baseset/opntitle.dat \
   --background --backend vulkan --rotation 1 --verify-renderer \
-  --memory-limit-mib 6144 --timeout 600
+  --memory-limit-mib 6144 --timeout 7200
 python3 tools/assets/inventory.py --require-complete
 ```
 
 The inventory command intentionally fails until complete geometry, states and
 visual review are available. `renderer3d references` exports resolved house/tree
 artwork; `renderer3d gallery <house-id-or-tree-sprite>` exports four model views.
-The JSON packs in `assets/3d/houses.json` and `assets/3d/trees.json` are the current
-authored sources. The older `models.json`/glTF compiler is retained as a prototype
-reference, and is not the current world-scene path.
+The authoritative voxel artwork is `assets/3d/voxels.json`. The older house/tree/
+industry profile packs and `models.json`/glTF prototype remain reference/fallback
+paths; their presence does not establish voxel coverage.
+
+The full renderer check includes every voxel vehicle climate/cargo/livery/heading
+comparison and can exceed two hours on software Vulkan. CI runs the scene checks
+with `--verify-renderer --renderer-verification-scope scene` and requires four
+separate `--verify-voxel-poses` runs covering engines0…63,64…127,128…191 and192…255.
+Each shard retains all original comparisons and its own7200-second/6GiB bounds.
+`renderer3d verify-scene` is the corresponding console command; ordinary
+`renderer3d verify` and `--verify-renderer` still run the complete matrix.
+
+`OPENTT3D_TUNNEL_SCENERY_CULL=1` enables an experimental conservative tree-visibility
+filter while the Cab is inside an original tunnel. Both mouth cones remain infinite,
+and intersecting tree bounds are retained. `--verify-live-tunnel` compares it with
+full capture in20 views using exact RGBA and picking. The option is disabled by
+default; native dense-Cab results improve but still miss60fps.
 
 On macOS, use `--background` for automated reviews while using the computer. It keeps
 the Cocoa window hidden and prohibits app activation while retaining normal GPU

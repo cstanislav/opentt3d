@@ -291,6 +291,9 @@ struct Scene {
 	std::vector<Vertex> vertices;
 	std::vector<MeshInstance> instances;
 	std::optional<ClipVolume> visibility;
+	/** Optional conservative regions for scenery behind an opaque tunnel lining.
+	 * An empty list retains ordinary frustum-only capture. */
+	std::vector<ClipVolume> scenery_regions;
 	struct WaterMaterial { Vec3 uv_origin{}; float uv_scale = 0; } water;
 	/** Authored instances have stable lifetime/address. Diagnostic references can
 	 * instead use call-scoped GPU uploads, retaining the same instanced shader path. */

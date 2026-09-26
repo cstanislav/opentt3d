@@ -201,7 +201,7 @@ struct ObjectTag {
 
 bool IsCapturing() { return capture.has_value(); }
 
-void BeginCapture(const Camera &camera, bool diagnostic)
+void BeginCapture(const Camera &camera, bool diagnostic, std::optional<bool> tunnel_scenery_cull)
 {
 	assert(!capture.has_value());
 	capture.emplace();
@@ -214,6 +214,8 @@ void BeginCapture(const Camera &camera, bool diagnostic)
 	capture->scene.vertices.swap(recycled_vertices);
 	capture->scene.instances.swap(recycled_instances);
 	capture->scene.visibility = camera.Frustum(16);
+	static const bool experimental_tunnel_scenery_cull = [] { const char *value = std::getenv("OPENTT3D_TUNNEL_SCENERY_CULL"); return value != nullptr && std::string_view(value) == "1"; }();
+	if (tunnel_scenery_cull.value_or(experimental_tunnel_scenery_cull)) capture->scene.scenery_regions = CaptureTunnelSceneryRegions(camera);
 	Textures().BeginScene();
 	CaptureOcean();
 	if (camera.tunnel_entrance < Map::Size()) CaptureTunnelPair(TileIndex{camera.tunnel_entrance});

@@ -14,6 +14,15 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Arctic farm source-selection repair:**40/44 farm33…38 source layers differ from
+  temperate (78,129 compared pixels). The Arctic farmhouse is structurally distinct,
+  and its roof/door/shelter colours also differ. Current volumes remain temperate-
+  only. Source artwork is retained for unauthored climates, including both ground
+  and body; the old legacy profiles cannot silently substitute either. The eight
+  prior Arctic selection runs exposed the invalid alias and are retained as failed
+  fidelity evidence. Author independent Arctic structures/grounds before restoring
+  their voxel bindings. Evidence: `pass1-farm-climate-source-comparison.json` and
+  `pass1-farm-climate-source-review.png`.
 - **Reviewed industry breadth:** oil-well29…32, farm33…38, paper64…71 and
   plantations116/117 have focused hiddenGL/Vulkan mesh/selection/atlas checks and
   source-registered/street sheets. Public grain/livestock, wood-to-paper, fruit and
@@ -30,7 +39,7 @@ full terrain/source-raster fidelity and final approval remain separate.
   palettes were exported in an actual tropical graphics set; the shared4550 number
   does not alias Arctic snow. Ground/contact/palette/state tests and both backend
   gallery/industry/atlas matrices pass; source and street sheets are inspected.
-  All actual construction slots now pass in the88-run two-backend sweep.
+  All waterworks actual construction slots pass in the two-backend sweep.
 - Twelve food-processing volumes preserve60…63's initial, open intermediate and
   completed states, independent2022 grounds and open silo with inset grain. Source
   exports prove Arctic/tropical body/ground layers identical across76,416 RGBA pixels.
@@ -54,6 +63,11 @@ full terrain/source-raster fidelity and final approval remain separate.
   pier brushes; the corrected brushes pass refreshedGL/Vulkan and street review.
   Roof-gravel grain, glazing/piers, plinth brightness and ground raster remain later
   source-fidelity findings. Actual63/64/69 selections pass on both backends.
+- Exact paired-backend review retains23/102 differing bank images (1,942 pixels)
+  and14/83 differing corrected-airport images (1,605 pixels). Both families pass
+  their own backend's CPU/reference comparisons; cross-backend equality remains
+  unproven. Detailed evidence is `pass1-bank-airport-backend-summary.json` and its
+  complete per-image reports.
 
 - **Oil-rig published candidate, not visually approved:** graphics24 remains body-empty and
   25 stays empty until its completed flare. Four initial pilings/paired braces are
@@ -64,8 +78,9 @@ full terrain/source-raster fidelity and final approval remain separate.
   construction selections and converted-neutral-station water ownership pass.
   The source's54-unit helipad datum is retained:40 actual helicopter253 support
   corners lie on captured deck triangles, and all four original rotor states plus
-  restart are observed on both backends. Broader swept rotor clearance, helicopter254
-  rendered checks and water/light animation observations remain open.
+  restart are observed on both backends. Helicopter254 now also passes120 actual
+  support corners, every rotor state and restart onGL/Vulkan. Broader swept rotor
+  clearance and water/light animation observations remain open.
 - Oil-rig later-pass findings: the service block's plan/proportions, intermediate
   platform heights and stepped walkway/well joins, cylinder ribs/paint, cabin window
   framing/recesses, derrick section widths, roof grain, rail-post spacing and the

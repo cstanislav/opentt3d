@@ -1350,6 +1350,32 @@ void VerifyLiveTunnelCapture()
 		}
 		checked_pixels += lining;
 	}
+	unsigned culling_views = 0;
+	size_t omitted_vertices = 0;
+	for (float position : {7.0f,12.0f,(length+16)*0.5f,length-4,length+9}) for (unsigned turn = 0; turn < 4; ++turn) {
+		Camera camera{origin+TunnelPoint(direction,{position,8,6}),1,640,360,direction+0.5f+turn};
+		camera.first_person = true; camera.vertical_fov = 40; camera.pitch = turn%2 == 0 ? 0 : 12; camera.tunnel_entrance = entrance.base();
+		auto world = [&](bool culled) {
+			for (unsigned attempt = 0; ; ++attempt) {
+				try { BeginCapture(camera,true,culled); CollectViewport3D(Viewport{}); return FinishCapture(); }
+				catch (const AtlasFull &) { if (IsCapturing()) FinishCapture(); if (attempt != 0) throw; Textures().Repack(); }
+				catch (...) { if (IsCapturing()) FinishCapture(); throw; }
+			}
+		};
+		Scene reference = world(false), actual = world(true);
+		std::vector<uint8_t> expected, pixels;
+		std::vector<uint32_t> expected_ids, ids;
+		if (!RenderScene(reference,camera,expected,&expected_ids) || !RenderScene(actual,camera,pixels,&ids)) throw std::runtime_error("Tunnel scenery culling comparison did not render");
+		if (pixels != expected || ids != expected_ids) {
+			WriteReviewImage(directory/fmt::format("tunnel-scenery-failed-{}-full.pam",culling_views),camera,expected);
+			WriteReviewImage(directory/fmt::format("tunnel-scenery-failed-{}-culled.pam",culling_views),camera,pixels);
+			throw std::runtime_error("Tunnel scenery culling changed exact world colour or picking");
+		}
+		if (actual.VertexCount() > reference.VertexCount()) throw std::runtime_error("Tunnel scenery culling added geometry");
+		omitted_vertices += reference.VertexCount()-actual.VertexCount();
+		++culling_views;
+	}
+	Debug(driver,1,"OpenTT3D: {} live tunnel scenery culling views preserve exact RGBA and picking across both mouths, four headings and tilted Cab; {} hidden submitted vertices omitted",culling_views,omitted_vertices);
 	for (const auto &state : vehicles) if (state.vehicle->x_pos != state.x || state.vehicle->y_pos != state.y || state.vehicle->z_pos != state.z || state.vehicle->direction != state.direction || state.vehicle->vehstatus != state.flags) throw std::runtime_error("Tunnel rendering changed vehicle gameplay state");
 	Debug(driver,1,"OpenTT3D: live tunnel hint, {} unobstructed lining pixels and unchanged vehicle state passed",checked_pixels);
 }
@@ -2029,12 +2055,12 @@ void VerifyInstanceOrdering()
 	OpenGL::VerifyPresentation();
 }
 
-void VerifyGPUScene()
+void VerifyGPUScene(bool vehicle_poses)
 {
 	VerifyTextureMipCache();
 	VerifyOrderedChildInstances();
 	VerifyMeshAllocationOrder();
-	VerifyVoxelModels();
+	VerifyVoxelModels(vehicle_poses);
 	Textures().BeginScene();
 	Scene scene;
 	scene.Quad({-20,-20,0},{20,-20,0},{20,20,0},{-20,20,0},{1,0,0});
