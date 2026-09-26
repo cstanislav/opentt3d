@@ -18,6 +18,8 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--industry", type=int, choices=range(37), default=0)
     parser.add_argument("--climate", choices=("temperate", "arctic", "tropic", "toyland"), default="temperate")
+    parser.add_argument("--terrain-type", type=int, choices=range(4), default=0, help="Normal map-generation terrain setting; Arctic forests require a sufficiently high site")
+    parser.add_argument("--snow-coverage", type=int, choices=range(101), help="Normal Arctic map-generation snow percentage")
     services = parser.add_mutually_exclusive_group()
     services.add_argument("--coal-service", action="store_true", help="After construction, require a real truck to load coal, deliver it to a funded power station and return")
     services.add_argument("--cargo-service", action="store_true", help="Operate the producer's real cargo to --destination-industry, requiring loading, delivery and return")
@@ -43,6 +45,8 @@ def main():
         parser.error("--cargo-snapshots requires --coal-service or --cargo-service")
     if args.depot_directions and not service_requested:
         parser.error("--depot-directions requires --coal-service or --cargo-service")
+    if args.snow_coverage is not None and args.climate != "arctic":
+        parser.error("--snow-coverage requires the Arctic climate")
     build, output = args.build_dir.resolve(), args.output.resolve()
     executable = build / ("opentt3d.exe" if os.name == "nt" else "opentt3d")
     if not executable.is_file():
@@ -54,6 +58,7 @@ def main():
     scripts = output / "scripts"
     scripts.mkdir()
     vehicle_settings = "[vehicle]\nnever_expire_vehicles = true\n" if args.truck_engine is not None else ""
+    snow_setting = f"snow_coverage = {args.snow_coverage}\n" if args.snow_coverage is not None else ""
     (output / "openttd.cfg").write_text(f"""[misc]
 language = english.lng
 [gui]
@@ -68,8 +73,8 @@ land_generator = 1
 custom_sea_level = {60 if args.industry == 5 else 1}
 custom_town_number = 1
 amount_of_rivers = 0
-[difficulty]
-terrain_type = 0
+{snow_setting}[difficulty]
+terrain_type = {args.terrain_type}
 quantity_sea_lakes = 4
 number_towns = 4
 industry_density = 0
@@ -139,7 +144,8 @@ pause_on_join = false
                 snapshots.append(entry)
                 if day != days[-1] or service_requested:
                     send("unpause")
-            manifest = {"starting_year": args.year, "climate": args.climate, "snapshots": snapshots}
+            manifest = {"starting_year": args.year, "climate": args.climate, "terrain_type": args.terrain_type,
+                        "snow_coverage": args.snow_coverage, "snapshots": snapshots}
             if service_requested:
                 cargo_snapshots = {}
 

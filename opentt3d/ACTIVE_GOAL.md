@@ -16,6 +16,20 @@
   LinuxVulkan still exceeds6GiB; a matching larger nativeCI workload also fails the
   guard. Train pitch/contact and memory investigation continue alongside publication
   and remaining catalogue breadth. This is not a stopping audit.
+- Progress clock audit **2026-09-26 11:31:56 UTC**: development preview`.8` publishes
+  1,180 volumes with the joined oil rig, all20 actual construction selections and
+  helicopter253 deck/rotor evidence on both backends. LinuxGL now completes the
+  preceding1,169 matrix below6GiB; LinuxVulkan's larger workload still fails. The
+  serialized residency matrix, pitched train/curve review, oil-well animation and
+  new farm coverage continue. The19:00UTC minimum remains active.
+- Progress clock audit **2026-09-26 12:20:27 UTC**: the minimum remains active.
+  Both expanded residency retries fail the6GiB guard. A lossless retained-source
+  candidate now passes194 native tests and reduces the matched1,169 catalogue's
+  source-cell storage from278,132,924 to19,733,848bytes. Its complete backend checks
+  continue. Source-aligned farm review corrects orientations, gables and roof scale;
+  real grain/livestock services and an Arctic forest-to-paper-mill service pass.
+  Provisional paper-mill and tropical-plantation coverage is under review, with
+  zero final approvals. This is a progress audit, not a stopping audit.
 - Publish progress frequently: commit and push coherent verified increments to main,
   merge feature work as appropriate, and make a release at least daily or at noteworthy
   milestones. Label incomplete development checkpoints accurately; retain all evidence.

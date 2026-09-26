@@ -21,6 +21,51 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **12:20UTC progress, still before19:00UTC:** the expanded residency retries fail
+  on both backends; exact details are in `PERFORMANCE.md`. The next lossless-source
+  candidate passes194 native tests, while its matched frozen1,169 GPU controls run.
+  Full asset/compiler tests pass112 cases before the newly added plantation test;
+  the latter separately passes four-root connectivity, palettes, latex collectors,
+  independent full soil and original absent0/1 bodies.
+- **Farm and paper public gameplay:** `pass1-farm-grain-service-fixture` loads20/20
+  grain with engine141, delivers to factory6 (acceptance64) and returns. The Arctic
+  `pass1-farm-livestock-service-fixture` loads14/14 livestock with engine135, delivers
+  to food processor13 (acceptance80) and returns. Both save full/empty cargo states
+  and construction days0/16/30/44. `pass1-paper-construction-fixture` funds paper
+  mill14 at42,34 in Arctic and saves all four construction checkpoints.
+- `pass1-forest-paper-service-fixture` is a retained failed attempt: the normal
+  low-relief Arctic map offered no legally fundable forest site. The explicit
+  normal terrain1/snow-coverage100 retry, `pass1-forest-paper-snow-service-fixture`,
+  succeeds: forest3 at74,50, engine144 loading20/20 wood, mill14 acceptance96,
+  delivery and return. No simulation/source state is forced. The fixture now
+  records these ordinary map-generation settings in its manifest.
+- `pass1-fruit-service-fixture` and `pass1-rubber-service-fixture` also complete
+  their public routes in tropical climate. Engine168 loads18/18 fruit and delivers
+  to food processor13 (acceptance80); engine171 loads17/17 rubber and delivers to
+  factory23 (acceptance64). Both return and save actual full/empty cargo states plus
+  all four construction checkpoints at58,34. The three new plantation volumes
+  still await native source-registered, all-angle and actual-state rendering.
+- **Source-review corrections:** all six initial oil-well/farmGL gallery runs pass
+  focused meshes, industry selections and exact atlas checks below6GiB, with the
+  largest sampled peak4,875,211,456bytes. Registered sheets reveal reversed barn/
+  livestock orientations, too-tall roofs, buried white gables and oil-well offset
+  differences. Those defects are corrected in frozen1,199 `pass1-farm-reviewed-build`;
+  refreshed rendering remains pending. Frozen1,214 `pass1-paper-first-build` adds
+  fifteen provisional paper-mill volumes. Neither candidate has final approval.
+- Generated-only lossless compaction preserves another596 Linux review images and
+  recovers1,004,357,594bytes. Original sources and failed captures remain retained;
+  manifests are in `build-linux-{user,novulkan}` dated20260926T1207.
+
+- **Completed LinuxGL1,169 matrix:** CI36233595585/job108381215698 passes191 native
+  tests,108 asset tests, eight then-current harness tests,28,056 voxel model views,
+  322,048 vehicle poses/592 climate-cargo bindings,10,880 joined collector poses,
+  384 joined rotor poses and GPU depth/picking/transparency. The sampled peak is
+  5,080,174,592bytes across22,949 samples. Artifacts and full job logs are retained
+  in `pass1-1169-linux-release7` and `pass1-1169-linux-opengl-release7-job.log`.
+  The matching Vulkan job108381215657 passes191 native tests, then crosses the
+  guard at6,442,815,488bytes/1,675 samples. Its failure remains retained. Windows
+  x64/arm64/x86 and macOS arm64 jobs complete successfully for the same SHA.
+
 - **Published1,180 oil-rig checkpoint:** `pass1-oilrig-service-hashes.json` pins source
   `c93dbcfaf07ee98bb756e0612993c2389320f490d606a2b6ed5c54f99f12335f` and compiled
   catalogue `d8fca0f58b2b64121d759ade5343ff8cffae28116714e7c755c8305cf3eddaf0`.

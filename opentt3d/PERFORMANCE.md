@@ -3,7 +3,43 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Retained-source candidate and complete residency failures (September26)
+
+`pass1-residency-serialized-validation.json` records complete-workload retries with
+unchanged7,200s/6GiB bounds. Vulkan crosses the memory guard at6,489,053,088bytes
+over6,679 samples after passing28,056 voxel views and322,048 vehicle poses; OpenGL
+crosses at6,463,641,888bytes over229 samples. Both are failures, retained alongside
+the earlier incomplete runs. GPU-cache retirement alone is insufficient.
+
+The next candidate stores lossless linear source-cell runs and one shared material
+palette. Only meshing and exact unit-cell diagnostics reconstruct a dense grid.
+The matched1,169 catalogue uses19,733,848 retained run bytes instead of278,132,924
+dense cell bytes, excluding the additional eliminated per-model palette copies.
+Native194/194 tests pass, including reconstruction after the original grid is
+destroyed, holes, six-face materials, anisotropic transforms, long runs crossing
+planes and16-bit material IDs. The ongoing fullGL/Vulkan controls use the frozen
+1,169 artwork and the same expanded scene/check selection and memory guard.
+
+A liveVulkan `vmmap` sample at12:22UTC reports5.6GiB physical footprint with4.3GiB
+allocated in the default malloc zone,537.3MiB graphics mappings and328.7MiB owned
+unmapped graphics. The complete catalogue's11,422,202 triangles alone occupy
+2,741,328,480bytes of80-byte CPU vertices; procedural cached geometry adds to this.
+Run compression is a bounded reduction, not evidence of a complete-world memory
+or smooth-frame-time solution. `pass1-compact-source-vulkan-vmmap.txt` retains the
+snapshot. The completedGL control still exceeds6GiB at6,536,140,968bytes over6,233
+samples after the full model/vehicle checks. Its pairedVulkan control continues.
+The next uncommitted candidate uses a1GiB soft CPU-surface cache, with scene-copy
+and asynchronous-visibility leases, stable vector/GPU-cache identities, and exact
+reconstruction from retained cells. Native195 tests pass before the added worker
+lease regression; updated native checks and complete GPU/interactive review are pending.
+
 ## Forest/refinery and synchronous upload retirement:1,169 volumes (September26)
+
+Release`.7` LinuxGL CI36233595585 completes its full native/software-renderer matrix
+with5,080,174,592 sampled bytes across22,949 samples. The matching expanded Vulkan
+job again crosses6GiB at6,442,815,488bytes. The passing GL workload and failing Vulkan
+workload have different selected scene/check sets; they are independent backend
+evidence, not a matched cross-backend memory comparison.
 
 The uncommitted mesh-residency candidate releases completed cold GPU storage under
 a512MiB soft budget. Vulkan protects in-flight pages and invalidates all cached
