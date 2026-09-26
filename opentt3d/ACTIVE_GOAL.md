@@ -30,6 +30,30 @@ views were inspected, retaining fine-fidelity findings and zero final approvals.
 All implementation/artwork/executable hashes match. Publishing this increment before
 continuing across missing industry families; this is a progress audit, not completion.
 
+The airport checkpoint is committed/pushed to`main`at
+`b157397ef79057c4528324783ec51b53e1091225`and published as source preview
+[`opentt3d-dev-20260926.14`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260926.14).
+At **2026-09-26 21:27:25 UTC**, the next candidate adds twelve lumbermill volumes
+for tropical tiles125…128, including all four actual construction stages and the
+source-permitted1/2 aliases. Industry coverage reaches58 body/62 ground definitions
+and1,286 volumes. Source review exposed a painted-over dark construction floor and
+the workshop roof's wrong axis; their corrected freeze is under background review.
+A public-command wood truck loads20units, delivers to tropical factory23 and returns.
+The shared2022 bare-soil palette also loses three invalid inherited3924 colours.
+Source imagery and failed/earlier evidence remain preserved. The airport compaction
+recovers1,232,993,477bytes and the first lumbermill gallery compaction585,555,039bytes,
+both through explicit successful manifests with zero conversion errors. Current
+coverage/fidelity/performance acceptance remains open, with zero final approvals.
+
+Progress audit **2026-09-26 21:44:08 UTC**: the corrected lumbermill candidate passes
+all14 final backend runs and121 asset/compiler/schema checks, with64 actual stage/
+layer selections, the wood delivery/return and full/empty truck144 pose controls.
+Maximum final sampled memory is2,396,392,328bytes. Source-aligned, four-sided street
+and live rainforest-world images were inspected. A reference-comment correction
+after validation leaves the entire compiled catalogue and executable byte-identical;
+`pass3-lumbermill-publication-hashes.json`records that reconciliation. The local app
+is refreshed. Publishing this increment before proceeding to factory coverage.
+
 ## September 26 follow-up: terrain, automatic LODs and projected trees
 
 The user resumed development after the19:00UTC minimum with these updated requirements:
@@ -188,9 +212,9 @@ failure log and pending platform status.
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: **1,274 JSON volumes**, houses0…109 with109
+- Current coverage remains partial: **1,286 JSON volumes**, houses0…109 with109
   independent bodies/eighty-eight grounds,53/74 airport definitions and35
-  independent airport grounds,54/175 industry body definitions and58 grounds,
+  independent airport grounds,58/175 industry body definitions and62 grounds,
   six power-station spark frames. Forest16/17 and farm33…38 remain temperate-only;
   non-temperate soil3924/oil-well2173 retain supplied climate artwork pending their
   independent volumes. Coverage also includes

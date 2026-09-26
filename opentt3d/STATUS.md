@@ -10,11 +10,16 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including airport/industry climate restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.11`LinuxGL and all five Vulkan scene/vehicle shards now pass below6GiB, with all256 engines/322,048 poses; macOS and Windows jobs pass. Newer doubled-terrain CI remains pending.
-- [x] Current1,274-volume asset/compiler/schema suite120/120 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,286-volume asset/compiler/schema suite121/121 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Tropical lumbermill125…128 adds twelve volumes with independent bare soil,
+  all four construction selections, joined open canopy and supported timber stacks.
+  Both backend geometry/state matrices, eight actual construction runs and four
+  loaded/empty wood-truck captures pass; a public-command delivery/return is verified.
+  Industry coverage reaches58 body/62 ground definitions; final artwork approval is open.
 - [x] Ground-only airport33/34 buildings retain original opaque ground ownership;
   tile35 keeps independent office/paving and cabin/tank layers. Coverage reaches
   53/74 definitions,47 body owners and35 independent grounds. Both backend focused

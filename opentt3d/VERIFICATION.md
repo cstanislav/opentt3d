@@ -1,5 +1,44 @@
 # Implementation verification
 
+## Tropical lumbermill125…128 and shared bare-soil palette
+
+Twelve volumes bring the catalogue to1,286 and industry coverage to58 body/62 ground
+definitions. The four original middle construction pairs share1/2 bindings; initial
+soil/excavations and completed workshops, chimneys, joined canopy and timber stacks
+remain distinct. All components are supported, both flues retain open bores, glazing
+has actual outer reveals and the two canopy owners have matching roof cross-sections.
+Source registration repaired a wall operation that overwrote the dark excavation
+floor, the workshop roof axis and its ground footprint. These are provisional
+coverage bindings with zero final source-fidelity approvals.
+
+- 200 native and121 asset/compiler/schema tests pass; the unchanged harness retains
+  its9/9 airport-checkpoint result. Presentation-boundary checks pass.
+- Both final backends pass288 lumbermill mesh/palette/CPU/picking views,2,424 industry
+  construction/animation views (including1,056 independent ground views) and4,096,000
+  exact world-atlas RGBA/picking pixels each. Shared`mine_ground_`controls also pass
+  on the preceding freeze; their compiled models are identical to the final candidate.
+- Eight final actual-world construction runs capture all64 selections: four tiles,
+  four stages, two independent layers and two backends. Public-command NoAI fixtures
+  build the mill through normal funding and calendar progression.
+- A normal wood-truck144 service loads20units, delivers to tropical factory23 and
+  returns. Four final loaded/empty captures and selected-engine pose matrices pass
+  on both backends. Four earlier commands used a nonexistent pose switch and exited
+  before native launch; their argument-error logs remain preserved.
+- The101 source-layer palette comparisons pass, including every existing direct
+  `mine_ground_bare`binding. Three colours inherited from3924 are removed from2022
+  without changing its geometry or the source palettes. All64 compared normal-climate
+  source layers match the tropical lumbermill references.
+- All14 final runs pass below6GiB; peak sampled memory is2,396,392,328bytes. Registered
+  joined-source, four-sided street and real rainforest-world images were inspected.
+  Evidence:`build-macos/pass3-lumbermill-placement-{hashes,validation,reconciliation}.json`
+  and`pass3-lumbermill-placement-palette-audit.json`. Earlier candidates remain distinct.
+
+The factory6 and printing-works7 public-command fixtures and full construction/layout
+references are now prepared. A128-pair climate audit finds only32 differing3924 ground
+layers for printing tiles43…46; the96 body/other-ground pairs are identical. This
+preparation is not authored coverage. The broader3924 palette/climate repair, remaining
+factories, Arctic farm/forest artwork and all later catalogue-wide passes remain open.
+
 ## September26 resumed breadth work: airport owners and sharded Linux result
 
 The continuation clock was recorded at20:24:14UTC and rechecked at20:50:38UTC;

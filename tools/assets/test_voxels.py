@@ -8,6 +8,58 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_lumbermill_preserves_construction_voids_log_stacks_and_roof_join(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("lumber_") or name in ("mine_ground_bare","mine_ground_site")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(125,129)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        soil_colours = {1,2,24,33,54,60,61,62,71,72,73,74,104,105,106,107,108,112,113,122,123}
+        self.assertTrue({c for m in volumes["mine_ground_bare"].values() for c in result["materials"][m-1]} <= soil_colours,
+                        "Original2022 must not inherit the extra colours of construction soil3924")
+        for graphics in range(125,129):
+            states = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(states["1"],states["2"],"Original middle construction sprites are identical")
+            self.assertEqual(len(set(states.values())),3,"Distinct original initial/middle/completed artwork must not alias")
+            self.assertEqual(set(result["bindings"]["industry_ground"][str(graphics)].values()),{"mine_ground_bare"})
+            for stage,name in states.items():
+                model,cells = result["models"][name],volumes[name]
+                self.assertEqual(model["origin"],[0,0,0])
+                self.assertEqual({(x,y) for x,y,z in cells if z == 0},{(x,y) for x in range(32) for y in range(32)})
+                self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in cells))
+                if stage == "0":
+                    self.assertEqual({z for x,y,z in cells},{0},"Initial soil/excavation must not acquire later buildings")
+                if stage != "3":
+                    self.assertFalse({colour for m in cells.values() for colour in result["materials"][m-1]} & {56,57,58,64,65},"Golden timber appears only on completion")
+                reached = {p for p in cells if p[2] == 0}
+                pending = list(reached)
+                for x,y,z in pending:
+                    for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if p in cells and p not in reached:
+                            reached.add(p); pending.append(p)
+                self.assertEqual(reached,set(cells),(graphics,stage,"Every beam, roof, log and chimney must reach a real support"))
+        for y in (13,19,25):
+            self.assertNotIn((22,y,6),volumes["lumber_shed_partial"])
+            self.assertIn((21,y,6),volumes["lumber_shed_finished"])
+            self.assertNotIn((22,y,6),volumes["lumber_shed_finished"],"Inset glazing must retain the outer reveal")
+        self.assertEqual(result["materials"][volumes["lumber_shed_partial"][(12,16,1)]-1],[1]*6,
+                         "Wall construction must not overwrite the source's dark excavation floor")
+        shed = volumes["lumber_shed_finished"]
+        self.assertIn((14,31,20),shed,"The source gable faces theY+ workshop entrance")
+        self.assertNotIn((24,16,20),shed,"The source ridge runs alongY rather than across the workshop")
+        self.assertNotIn((12,20,80),volumes["lumber_boiler_finished"],"Keep the tall chimney bore open through its cap")
+        self.assertNotIn((25,21,50),volumes["lumber_boiler_finished"],"Keep the smaller chimney bore open")
+        self.assertIn((8,20,80),volumes["lumber_boiler_finished"])
+        self.assertNotIn((20,20,10),volumes["lumber_yard_finished"],"The canopy must have an open loading bay")
+        a = {(x,z) for x,y,z in volumes["lumber_yard_finished"] if y == 31 and z >= 16}
+        b = {(x,z) for x,y,z in volumes["lumber_boiler_finished"] if y == 0 and z >= 16}
+        self.assertTrue(a)
+        self.assertEqual(a,b,"The two original canopy owners must join without a step or missing roof cells")
+
     def test_airport_surfaces_keep_source_ownership_runway_lanes_and_small_terminal_support(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

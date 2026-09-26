@@ -16,6 +16,23 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Lumbermill breadth candidate:** twelve volumes cover125…128 across all four
+  construction stages; only the original identical1/2 sprites share volumes. The
+  excavated workshop has real window/door openings, the completed courtyard retains
+  an open joined canopy, both chimney bores remain open and each golden timber stack
+  is assembled from supported individual beams. Independent2022 ground remains below
+  the body-owned worksite/paving. Source comparison found and repaired an overwritten
+  black construction floor and the workshop gable's orientation. The common2022 soil
+  inherited three colours exclusive to3924; separate bare-soil materials now preserve
+  the original palette for every bound industry. The final101-layer palette audit
+  and64 normal-climate source pairs pass. Fourteen final backend runs pass, including
+  all64 actual construction ground/body selections and full/empty wood-truck144
+  captures. The workshop footprint/roof axis was corrected from the registered source;
+  joined, four-sided street and ordinary-world views were inspected. Fine brick/tile/
+  wood paint, facade proportions,
+  shadow details and full source-fidelity acceptance remain later-pass work.
+  Evidence:`build-macos/pass3-lumbermill-*`; zero final visual approvals.
+
 - **Airport breadth candidate:**27 volumes add32 definitions, raising coverage to
   53/74 definitions and35 independent grounds. Complete apron/stand/runway/threshold
   slabs, source-owned fences, circular and plain-H helipads, timber terminals33/34

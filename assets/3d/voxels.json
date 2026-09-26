@@ -4,6 +4,28 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "lumber_soil": [105,108,106,112,105,113],
+    "lumber_soil_light": [106,112,107,113,106,114],
+    "lumber_soil_shadow": [71,73,72,73,71,73],
+    "lumber_initial_soil": [106,108,107,112,106,113],
+    "lumber_partial_soil_light": [106,112,107,113,106,113],
+    "lumber_trench": 1,
+    "lumber_stone": [6,9,7,11,6,10],
+    "lumber_stone_grain": [7,10,8,11,6,11],
+    "lumber_stone_partial": [6,8,7,10,6,9],
+    "lumber_stone_cap": [10,13,11,13,10,13],
+    "lumber_stone_white": [10,14,12,15,9,15],
+    "lumber_paving": [6,8,7,10,6,9],
+    "lumber_roof": [70,74,71,76,70,75],
+    "lumber_roof_rib": [71,75,72,76,71,76],
+    "lumber_roof_shadow": [70,72,71,73,70,73],
+    "lumber_boiler_roof": [71,74,72,76,71,75],
+    "lumber_boiler_roof_shadow": [71,72,71,73,71,73],
+    "lumber_glass": [129,132,130,133,129,131],
+    "lumber_gold": [56,64,57,65,56,63],
+    "lumber_gold_light": [57,65,58,65,57,65],
+    "lumber_end": [63,65,64,65,63,65],
+    "lumber_frame": [5,8,6,9,5,8],
     "air_surface_asphalt": [3,5,4,6,3,6],
     "air_surface_grain": [4,6,5,7,3,7],
     "air_surface_dark": [2,3,3,4,2,4],
@@ -1011,6 +1033,9 @@
     "mine_soil_dust": [53,53,54,61,53,54],
     "mine_soil_light": [113,112,112,113,112,113],
     "mine_soil_red": [122,122,123,124,122,123],
+    "mine_bare_ochre": [72,71,71,73,71,71],
+    "mine_bare_dust": [54,54,54,61,54,54],
+    "mine_bare_red": [122,122,123,123,122,123],
     "mine_heap_coal": [2,1,1,1,1,1],
     "mine_heap_soft": [3,2,2,2,1,2],
     "mine_heap_grain": [4,2,2,3,1,3],
@@ -1229,6 +1254,43 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "lumber_site": [
+      ["box","lumber_initial_soil",0,0,0,32,32,1],
+      ["scatter_paint","lumber_soil_light",5,2353,0,0,0,32,32,1],
+      ["scatter_paint","lumber_soil_shadow",7,2355,0,0,0,32,32,1]
+    ],
+    "lumber_finished_yard": [
+      ["box","lumber_paving",0,0,0,32,32,1],
+      ["scatter_paint","lumber_stone_grain",4,2361,0,0,0,32,32,1],
+      ["box","lumber_stone_white",0,0,1,1,32,3],
+      ["box","lumber_stone_white",0,0,1,32,1,3]
+    ],
+    "lumber_canopy_roof": [
+      ["box","lumber_roof_shadow",10,0,16,30,32,17],
+      ["gable","lumber_roof",10,0,17,30,32,24,"x"],
+      ["repeat",[0,3,0],11,[["paint","lumber_roof_rib",10,0,17,30,1,24]]]
+    ],
+    "lumber_log": [
+      ["prism","lumber_gold",1,2,28,[[0,2],[1,1],[2,1],[3,2],[3,3],[2,4],[1,4],[0,3]]],
+      ["face_paint","lumber_end",12,0,2,1,3,28,4],
+      ["face_paint","lumber_gold_light",32,1,2,3,2,28,4],
+      ["face_paint","lumber_gold",12,1,2,2,2,28,3]
+    ],
+    "lumber_stack": [
+      ["repeat",[3,0,0],4,[["use","lumber_log"]]],
+      ["repeat",[3,0,0],3,[["use","lumber_log",[1,0,3]]]],
+      ["repeat",[3,0,0],2,[["use","lumber_log",[3,0,6]]]],
+      ["scatter_paint","lumber_gold_light",7,2364,0,2,1,12,28,10,"lumber_gold"]
+    ],
+    "lumber_shed_walls": [
+      ["box","lumber_stone",6,10,1,23,31,13], ["erase",8,12,2,21,29,13],
+      ["repeat",[0,6,0],3,[["erase",21,12,3,23,16,11],["erase",6,12,3,8,16,11]]],
+      ["erase",12,29,1,17,31,11],
+      ["scatter_paint","lumber_stone_grain",6,2359,6,10,1,23,31,13,"lumber_stone"],
+      ["paint","lumber_stone_cap",6,10,11,23,31,13],
+      ["face_paint","lumber_frame",8,8,11,2,21,12,11],
+      ["face_paint","lumber_frame",4,8,29,2,21,30,11]
+    ],
     "airport_surface_lamps": [
       ["repeat",[8,0,0],4,[
         ["box","air_surface_lamp_base",2,2,0,5,5,1],
@@ -5543,6 +5605,100 @@
     ]
   },
   "models": {
+    "lumber_yard_initial": {
+      "size":[32,32,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Tropical lumbermill125 original2353 bare body-owned soil above independent2022 ground; no completed timber or canopy",
+      "ops":[["use","lumber_site"]]
+    },
+    "lumber_boiler_initial": {
+      "extends":"lumber_yard_initial",
+      "reference":"Lumbermill126 original2354 excavation footprint; construction slots1/2 use2358 and completion2362",
+      "ops":[["replace_material","lumber_soil_light","lumber_partial_soil_light"],["box","lumber_trench",2,10,0,30,25,1]]
+    },
+    "lumber_shed_initial": {
+      "extends":"lumber_yard_initial",
+      "reference":"Lumbermill127 original2355 separate rectangular excavation at the low workshop footprint",
+      "ops":[["replace_material","lumber_soil_light","lumber_partial_soil_light"],["box","lumber_trench",6,10,0,23,31,1]]
+    },
+    "lumber_stock_initial": {
+      "extends":"lumber_yard_initial",
+      "reference":"Lumbermill128 original2356 bare stockyard with two short perimeter trenches; no premature logs",
+      "ops":[["replace_material","lumber_soil_light","lumber_partial_soil_light"],["box","lumber_trench",0,0,0,1,18,1],["box","lumber_trench",0,0,0,20,1,1]]
+    },
+    "lumber_yard_partial": {
+      "extends":"lumber_yard_initial",
+      "reference":"Original2357 shared only by stages1/2: single white canopy pier and unfinished kerb",
+      "ops":[["box","lumber_stone_partial",28,14,1,30,16,13],
+        ["box","lumber_stone_cap",28,14,12,30,16,13],
+        ["box","lumber_stone_partial",28,16,1,30,32,2]]
+    },
+    "lumber_boiler_partial": {
+      "extends":"lumber_boiler_initial",
+      "reference":"Original2358 open white L-wall shell, grey foundation and long exposed dark trench; no roof/chimney before completion",
+      "ops":[["box","lumber_stone_partial",2,4,1,30,28,2],
+        ["box","lumber_trench",6,6,1,9,25,2],
+        ["box","lumber_stone_partial",28,4,2,30,28,10],
+        ["box","lumber_stone_partial",2,26,2,30,28,10],
+        ["paint","lumber_stone_cap",2,4,9,30,28,10],
+        ["scatter_paint","lumber_stone_grain",5,2358,2,4,1,30,28,9,"lumber_stone_partial"]]
+    },
+    "lumber_shed_partial": {
+      "extends":"lumber_shed_initial",
+      "reference":"Original2359 roofless white workshop with real open window/entrance apertures and a dark internal floor; slots1/2 are source-identical",
+      "ops":[["use","lumber_shed_walls"],["box","lumber_trench",8,12,1,21,29,2]]
+    },
+    "lumber_stock_partial": {
+      "extends":"lumber_stock_initial",
+      "reference":"Original2360 retains bare stockyard with two newly white kerbs; timber appears only in2364",
+      "ops":[["box","lumber_stone_partial",0,0,1,1,28,3],["box","lumber_stone_partial",0,0,1,28,1,3]]
+    },
+    "lumber_yard_finished": {
+      "size":[32,32,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2361 completed open timber yard, golden stacked logs and red clay canopy continuing across theY+ seam to2362; independent2022 ground remains below",
+      "ops":[["use","lumber_finished_yard"],["use","lumber_stack",[2,0,0]],
+        ["use","lumber_canopy_roof"],["erase",10,0,16,30,14,24],
+        ["repeat",[0,17,0],2,[["box","lumber_stone_white",10,14,1,11,15,16],["box","lumber_stone_white",29,14,1,30,15,16]]],
+        ["box","lumber_frame",10,14,14,30,15,16]]
+    },
+    "lumber_boiler_finished": {
+      "size":[32,32,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2362 white boiler hall, continuous red gable, tall open rectangular chimney with red flue and smaller open rear stack",
+      "ops":[["use","lumber_finished_yard"],["erase",1,0,1,32,1,3],
+        ["box","lumber_stone_white",0,31,1,32,32,3],
+        ["box","lumber_stone",10,0,1,30,28,16],["erase",12,0,2,28,26,16],
+        ["repeat",[0,5,0],4,[["erase",28,3,5,30,6,12],["box","lumber_frame",28,3,5,29,6,12]]],
+        ["use","lumber_canopy_roof"],["erase",10,28,16,30,32,24],
+        ["box","lumber_stone",8,16,1,16,24,84],
+        ["box","lumber_stone_white",7,15,82,17,25,84],
+        ["box","lumber_roof",9,17,84,15,23,86],
+        ["erase",10,18,2,14,22,86],
+        ["box","lumber_stone",23,19,20,28,24,50],
+        ["box","lumber_stone_white",22,18,49,29,25,51],
+        ["erase",24,20,24,27,23,51],
+        ["scatter_paint","lumber_stone_grain",5,2362,8,0,1,30,28,84,"lumber_stone"],
+        ["replace_material","lumber_roof","lumber_boiler_roof"],
+        ["replace_material","lumber_roof_shadow","lumber_boiler_roof_shadow"]]
+    },
+    "lumber_shed_finished": {
+      "size":[32,32,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2363 low white workshop with purple-blue glazing, red tiled gable and open external footpath; retains its own16x16 footprint",
+      "ops":[["use","lumber_finished_yard"],["erase",0,1,1,1,32,3],
+        ["box","lumber_stone_white",31,0,1,32,32,3],
+        ["use","lumber_shed_walls"],
+        ["repeat",[0,6,0],3,[["box","lumber_glass",21,12,3,22,16,11],["box","lumber_glass",7,12,3,8,16,11]]],
+        ["box","lumber_end",12,29,1,17,30,11],
+        ["box","lumber_roof_shadow",4,8,13,25,32,14],
+        ["gable","lumber_roof",4,8,14,25,32,21,"x"],
+        ["repeat",[0,3,0],8,[["paint","lumber_roof_rib",4,8,14,25,9,21]]],
+        ["face_paint","lumber_stone_cap",12,6,8,14,23,32,21]]
+    },
+    "lumber_stock_finished": {
+      "size":[32,32,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Original2364 twin golden log pyramids, visibly individual rounded beams and bright ends; white outer kerbs follow the joined mill perimeter",
+      "ops":[["use","lumber_finished_yard"],["erase",0,0,1,32,1,3],["erase",0,0,1,1,32,3],
+        ["box","lumber_stone_white",31,0,1,32,32,3],["box","lumber_stone_white",0,31,1,32,32,3],
+        ["use","lumber_stack",[2,0,0]],["use","lumber_stack",[18,0,0]]]
+    },
     "bank_north": {
       "size":[64,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
       "reference":"Original58/2180 is already finished in every construction slot. Explicit north half of the shared32x16 bank: beige/white colonnade, olive ribbed roof, striped cupola drum, faceted dome and fine white finial",
@@ -10088,6 +10244,9 @@
       "extends": "mine_ground_site",
       "reference": "Completed bare mine ground2022: the same brown soil with explicit scattered black coal and worn spill trails", "review_status": "work-in-progress",
       "ops": [
+        ["replace_material","mine_soil_ochre","mine_bare_ochre"],
+        ["replace_material","mine_soil_dust","mine_bare_dust"],
+        ["replace_material","mine_soil_red","mine_bare_red"],
         ["scatter_paint","mine_heap_coal",19,2022,0,0,0,32,32,1],
         ["repeat",[3,2,0],6,[["paint","mine_heap_coal",3,4,0,4,6,1]]],
         ["paint","mine_heap_coal",24,7,0,25,11,1],
@@ -13359,6 +13518,10 @@
     },
     "depot_wires":{"1":{"0":"rail_depot_wire","1":"rail_depot_wire","2":"rail_depot_wire","3":"rail_depot_wire"}},
     "industry_ground": {
+      "125":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "126":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "127":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "128":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
       "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
       "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -13419,6 +13582,10 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "125":{"0":"lumber_yard_initial","1":"lumber_yard_partial","2":"lumber_yard_partial","3":"lumber_yard_finished"},
+      "126":{"0":"lumber_boiler_initial","1":"lumber_boiler_partial","2":"lumber_boiler_partial","3":"lumber_boiler_finished"},
+      "127":{"0":"lumber_shed_initial","1":"lumber_shed_partial","2":"lumber_shed_partial","3":"lumber_shed_finished"},
+      "128":{"0":"lumber_stock_initial","1":"lumber_stock_partial","2":"lumber_stock_partial","3":"lumber_stock_finished"},
       "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
       "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
       "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},
