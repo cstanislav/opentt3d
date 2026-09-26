@@ -7,6 +7,77 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_authored_prisms_keep_concavities_winding_axes_and_component_offsets(self):
+        outline = [[0,0],[4,0],[4,1],[1,1],[1,4],[0,4]]
+        expected_plane = {(u,v) for u in range(4) for v in range(4) if u == 0 or v == 0}
+        for axis in range(3):
+            plane = [d for d in range(3) if d != axis]
+            for points in (outline,list(reversed(outline))):
+                source = self.source([["use","angle",[1,1,1]]])
+                source["components"] = {"angle":[["prism","wall",axis,0,2,points]]}
+                model = compile_catalogue(source)["models"]["house"]
+                actual = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+                expected = set()
+                for u,v in expected_plane:
+                    for depth in range(2):
+                        point = [1,1,1]
+                        point[axis] += depth
+                        point[plane[0]] += u
+                        point[plane[1]] += v
+                        expected.add(tuple(point))
+                self.assertEqual(actual,expected)
+        # Half-cell crossings use exact rational intervals, including a diagonal
+        # through sample centres. Reversing the outline must not shift the wing.
+        triangle = [[0,0],[4,0],[0,4]]
+        source = self.source([["prism","wall",2,0,1,triangle]])
+        first = compile_catalogue(source)["models"]["house"]
+        source["models"]["house"]["ops"][0][-1].reverse()
+        self.assertEqual(first,compile_catalogue(source)["models"]["house"])
+        self.assertEqual(first["occupied"],6)
+
+    def test_prisms_reject_clipped_self_crossing_and_degenerate_outlines(self):
+        outlines = [
+            [[0,0],[4,4],[4,0],[0,3]], [[0,0],[4,0],[4,0],[0,4]],
+            [[0,0],[1,1],[2,2]], [[0,0],[9,0],[0,4]],
+            [[0,0],[-1,0],[0,4]], [[0,0],[4.5,0],[0,4]],
+            [[0,0],[4,0]], [[0,0],[4,0,1],[0,4]],
+        ]
+        for outline in outlines:
+            with self.subTest(outline=outline), self.assertRaises(ValueError):
+                compile_catalogue(self.source([["prism","wall",2,0,1,outline]]))
+        for axis,low,high in ((3,0,1),(2,-1,1),(2,0,6),(2,2,2)):
+            with self.subTest(axis=axis,low=low,high=high), self.assertRaises(ValueError):
+                compile_catalogue(self.source([["prism","wall",axis,low,high,[[0,0],[4,0],[0,4]]]]))
+
+    def test_aircraft_source_aliases_and_thin_parts_remain_supported(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("aircraft_")}
+        source["bindings"] = {"vehicles":{str(engine):source["bindings"]["vehicles"][str(engine)] for engine in range(215,248)}}
+        result, definitions = compile_catalogue(source), vehicle_definitions()
+        source_families, model_families = {}, {}
+        for engine in range(215,248):
+            definition = definitions[str(engine)]
+            self.assertEqual(definition["sprites"],definition["loaded_sprites"],"The aircraft cargo-state alias lacks original sprite evidence")
+            states = result["bindings"]["vehicles"][str(engine)]
+            self.assertEqual(states["0"],states["1"])
+            signature = tuple(definition["sprites"])
+            source_families.setdefault(signature,set()).add(states["0"])
+            model_families.setdefault(states["0"],set()).add(signature)
+        self.assertTrue(all(len(names) == 1 for names in source_families.values()),"One source aircraft family acquired inconsistent aliases")
+        self.assertTrue(all(len(signatures) == 1 for signatures in model_families.values()),"Different original aircraft were collapsed into one volume")
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+            origin, step = model["origin"], model["cell_size"]
+            self.assertEqual(min(origin[2]+z*step[2] for x,y,z in cells),0,name)
+            supported = {p for p in cells if origin[2]+p[2]*step[2] == 0}
+            pending = list(supported)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in cells and point not in supported:
+                        supported.add(point)
+                        pending.append(point)
+            self.assertEqual(supported,cells,f"Detached propeller, engine, wing, tailplane or landing gear in {name}")
+
     def test_toyland_layers_meet_at_ground_without_coplanar_wrapping_or_floating_parts(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("house_toy_")}

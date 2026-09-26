@@ -142,7 +142,7 @@ def main():
     parser.add_argument("--verify-instance-order", action="store_true", help="Check exact mesh-allocation, child-layer and mixed-opacity colour/picking precedence")
     parser.add_argument("--verify-world-atlas", action="store_true", help="Compare complete current-world RGBA/picking before and after atlas repacking")
     parser.add_argument("--verify-voxel-meshes", metavar="PREFIX", help="Run exact voxel cell/CPU/palette/picking checks for a named model family, including its house bindings and joins")
-    parser.add_argument("--verify-voxel-poses", type=int, choices=range(256), help="Run the exact company/crash/cargo/heading matrix for one voxel vehicle engine")
+    parser.add_argument("--verify-voxel-poses", type=int, nargs="+", choices=range(256), help="Run the exact company/crash/cargo/heading matrix for selected voxel vehicle engines")
     parser.add_argument("--verify-voxel-vehicle", type=int, choices=range(256), help="Require an actual captured voxel vehicle of the selected vanilla engine type")
     parser.add_argument("--verify-voxel-cargo", type=int, choices=range(256), help="Observe one actual voxel vehicle at both zero cargo and full capacity with the corresponding original bindings")
     parser.add_argument("--verify-tile-picking", action="store_true")
@@ -455,7 +455,8 @@ server_advertise = false
     if args.verify_voxel_meshes is not None:
         commands.append(f"renderer3d verify-voxel-meshes {args.verify_voxel_meshes}")
     if args.verify_voxel_poses is not None:
-        commands.append(f"renderer3d verify-voxel-poses {args.verify_voxel_poses}")
+        for engine in dict.fromkeys(args.verify_voxel_poses):
+            commands.append(f"renderer3d verify-voxel-poses {engine}")
     if args.verify_tile_picking:
         commands.append("renderer3d verify-tile-picking")
     if args.verify_world_atlas:
@@ -633,7 +634,7 @@ server_advertise = false
                 raise RuntimeError("The vehicle-window Cab button did not activate first-person following")
             if args.verify_voxel_vehicle is not None and f"live voxel vehicle engine {args.verify_voxel_vehicle} cargo " not in text:
                 raise RuntimeError("The requested actual vehicle was not captured through its voxel binding")
-            if args.verify_voxel_poses is not None and f"voxel vehicle engine {args.verify_voxel_poses} pose matrix passed" not in text:
+            if args.verify_voxel_poses is not None and any(f"voxel vehicle engine {engine} pose matrix passed" not in text for engine in args.verify_voxel_poses):
                 raise RuntimeError("The requested voxel vehicle's complete pose matrix did not pass")
             if args.verify_voxel_meshes is not None and f"voxel mesh selection '{args.verify_voxel_meshes}' passed exact geometry, palettes and picking" not in text:
                 raise RuntimeError("The requested voxel model family did not pass its exact mesh comparisons")

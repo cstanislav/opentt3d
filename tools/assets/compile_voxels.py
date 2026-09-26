@@ -8,6 +8,7 @@ import argparse
 from array import array
 import json
 import math
+from fractions import Fraction
 from pathlib import Path
 import re
 
@@ -166,6 +167,61 @@ def compile_catalogue(data):
                     delta = vector(op[1], "repeat delta", True)
                     for i in range(integer(op[2], 1, 1024, "repeat count")):
                         apply(op[3], tuple(offset[d] + delta[d] * i for d in range(3)), depth + 1, target)
+                    continue
+                if kind == "prism":
+                    # Explicit integer outline, extruded on one stated axis.
+                    # Rational cell-centre scan conversion is winding independent;
+                    # no source image or floating-point edge tolerance is involved.
+                    if len(op) != 6 or op[1] not in names or not isinstance(op[5],list) or not 3 <= len(op[5]) <= 128:
+                        raise ValueError("Prism needs a material, axis, extent and simple integer outline")
+                    axis = integer(op[2],0,2,"prism axis")
+                    low,high = (integer(v,-1024,1024,"prism extent")+offset[axis] for v in op[3:5])
+                    if not 0 <= low < high <= size[axis]:
+                        raise ValueError(f"Prism extent is outside {name}")
+                    plane = [d for d in range(3) if d != axis]
+                    points = []
+                    for pair in op[5]:
+                        if not isinstance(pair,list) or len(pair) != 2:
+                            raise ValueError("Prism outline needs coordinate pairs")
+                        point = tuple(integer(v,-1024,1024,"prism coordinate")+offset[d] for v,d in zip(pair,plane))
+                        if any(not 0 <= point[i] <= size[d] for i,d in enumerate(plane)):
+                            raise ValueError(f"Prism outline is outside {name}")
+                        points.append(point)
+                    edges = list(zip(points,points[1:]+points[:1]))
+                    if any(a == b for a,b in edges) or sum(a[0]*b[1]-b[0]*a[1] for a,b in edges) == 0:
+                        raise ValueError("Prism outline has a degenerate edge or area")
+                    def side(a,b,c):
+                        return (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0])
+                    for i,(a,b) in enumerate(edges):
+                        for j,(c,d) in enumerate(edges[i+1:],i+1):
+                            if j == i+1 or (i == 0 and j == len(edges)-1):
+                                continue
+                            if (all(max(min(a[k],b[k]),min(c[k],d[k])) <= min(max(a[k],b[k]),max(c[k],d[k])) for k in (0,1)) and
+                                side(a,b,c)*side(a,b,d) <= 0 and side(c,d,a)*side(c,d,b) <= 0):
+                                raise ValueError("Prism outline crosses or touches itself")
+                    material = names[op[1]]
+                    for v in range(min(p[1] for p in points),max(p[1] for p in points)):
+                        crossings = []
+                        for a,b in edges:
+                            if a[1] > b[1]:
+                                a,b = b,a
+                            if not 2*a[1] <= 2*v+1 < 2*b[1]:
+                                continue
+                            dy = b[1]-a[1]
+                            crossings.append(Fraction(2*a[0]*dy+(2*v+1-2*a[1])*(b[0]-a[0]),2*dy))
+                        crossings.sort()
+                        for left,right in zip(crossings[::2],crossings[1::2]):
+                            start,end = math.ceil(left-Fraction(1,2)),math.ceil(right-Fraction(1,2))
+                            transform_work += (end-start)*(high-low)
+                            if transform_work > 16*1024*1024:
+                                raise ValueError("Voxel transforms exceed their cell budget")
+                            for u in range(start,end):
+                                point = [0,0,0]
+                                point[plane[0]],point[plane[1]] = u,v
+                                for cell_depth in range(low,high):
+                                    point[axis] = cell_depth
+                                    x,y,z = point
+                                    target[(z*size[1]+y)*size[0]+x] = material
                     continue
                 if kind == "hull":
                     # Explicit transverse sections of a flared/chined hull. Each

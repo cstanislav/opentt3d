@@ -51,13 +51,30 @@ full terrain/source-raster fidelity and final approval remain separate.
   deliberate palette selection. The first window palette was wrong and was corrected
   against the actual source colours (indices 128…133).
 
-## Current checkpoint: September26, 1,002 volumes
+## Current checkpoint: September26, 1,019 volumes
 
 All110 house definitions have body or ground bindings (109 body/88 ground definitions),
-and all62 original tree families have434 lifecycle volumes. Vehicles remain129/256,
+and all62 original tree families have434 lifecycle volumes. Vehicles now cover161/256,
 industry bodies8/175, industry grounds11, airports18/74 and depot families5/6. Exact
-counts and material/footprint metadata are in `build-macos/pass1-1002-final-inventory.json`.
+counts and material/footprint metadata are in `build-macos/pass1-1019-inventory.json`.
 All volumes remain work-in-progress and final approvals remain zero.
+
+Seventeen new aircraft volumes cover the33 ordinary fixed-wing definitions215…247
+together with the existing Dinger100. Original eight-direction/cargo signatures
+justify aliases within this climate. Each body is face-connected to its landing
+gear. Public NoAI fixtures observe all24 early and nine late aircraft moving and
+servicing the destination airport; their ordinary save files reload for renderer
+review. NativeGL andVulkan each pass432 all-model views and35,904 vehicle poses plus
+exact world-atlas checks, below6GiB. Full live-engine capture is underway.
+
+Native comparisons show remaining broad/triangular late wings, excessive nose/rear
+perspective heights, overly bright white tops, uniform side shading, absent small
+windows and oversized Dinger1000 diagonals. Source-led corrections already narrow
+the propeller wings, replace stair-step early fins with authored voxel prisms and
+shorten the Haugan delta's aft spread. Street sheets preserve the K6's real wing
+gap and Dinger200's dorsal arch opening. These are breadth-stage models, not source-
+pixel or all-airport-clearance acceptance. Toyland replaces the graphics behind
+overlapping sprite IDs; its five planes and the three helicopters remain separate.
 
 The315 new tree states include105 temperate,112 Arctic/snow and98 tropical states.
 Connected-root and snow-occupancy/face regressions pass. Native source review identifies
@@ -79,9 +96,9 @@ teddy face/body proportions and pixel painting still differ visibly from source.
 The joined boot must be judged with both original tile parts, not the isolated half.
 Corrected96-case live coverage is technical evidence, not visual approval.
 
-Current runtime catalogue statistics:8,234,112 occupied cells,6,156,826 exposed faces,
-1,400,316 conforming rectangles and8,690,654 triangles. Full1,002 nativeVulkan
-verification now completes at4.38GiB after retiring diagnostic CPU/GPU references;
+Current runtime catalogue statistics:8,371,966 occupied cells,6,273,730 exposed faces,
+1,418,364 conforming rectangles and8,859,842 triangles. Full1,002 nativeVulkan/GL
+verification completes at4.38/4.52GiB after retiring diagnostic CPU/GPU references;
 the earlier6GiB failure remains preserved. A600-frame generated-world wideGL run remains30.764fps. Full-quality
 wide-view performance and arbitrary-map/all-day memory remain unresolved.
 

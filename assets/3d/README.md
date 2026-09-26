@@ -24,8 +24,9 @@ another variant only when its original building sprite exactly matches variant0;
 source recolouring still applies. Use explicit states for different layouts, as with
 the steel/brick tall office and hip/gable townhouses. Statue9 and fountain10 bind
 stages2/3; their original empty early-stage bodies remain absent. Parks11/12 bind
-their identical stages1/2/3, with stage0 absent. Current coverage is614 volumes and1176
-nonempty resolved house bindings, not final approval. The office lift is
+their identical stages1/2/3, with stage0 absent. The historical614-volume checkpoint
+had1176 nonempty resolved house bindings. Current counts are in
+`opentt3d/VOXEL_PASSES.md`; they do not establish final approval. The office lift is
 an independent `infrastructure`1443 binding, positioned by the original lift state.
 `--reference-house-stage N --reference-house-id H --reference-house-variant V` selects
 an actual generated-world case. `--verify-house-lift --running --benchmark-frames N`
@@ -181,6 +182,23 @@ creates a public-NoAI service route; add `--aircraft-hold` for its verified retu
 loading stop. Stage each fixture's own `ai/` when loading the save. Full vehicle/state
 coverage, source precision and final approval remain open.
 
+The next aircraft batch adds distinct propeller, delta, high-wing, twin/four-engine
+and futuristic multi-body volumes. `fixture_aircraft.py --first-engine 215
+--last-engine 238` builds a normal operating fleet, observes each aircraft at an
+actual destination service stop and saves it outside its hangar. Use that fixture's
+`ai/` directory during reload. Native source comparisons remain required for each
+independent family; equal source-direction arrays justify aliases only within the
+same graphics climate. Toyland aircraft and helicopters are still separate work.
+
+Slender wings/fins can use `['prism', material, axis, lower, upper, outline]`, written
+as JSON with double quotes. The outline is an explicitly authored simple integer
+polygon in the two other axes, in their X/Y/Z order; axis2 gives an XY wing and
+axis1 an XZ fin. The half-open extent extrudes occupied voxel cells between the
+stated bounds. Rational cell-centre scan conversion preserves winding independence
+and concavities. Self-intersection, clipping and degenerate outlines are rejected.
+The resulting geometry remains ordinary voxel cells and uses the same mesher; this
+operation does not read source images or generate artwork from them.
+
 Vehicle verification includes all16 original company recolour tables and the crash
 palette. The colour oracle maps face indices through upstream tables into untextured
 vertices, independently of atlas/palette-strip sampling; geometric/CPU-instance and
@@ -204,6 +222,8 @@ requires that exact active climate/cargo binding in both focus and actual captur
 The complete renderer check covers every declared voxel vehicle binding. Mismatch diagnostics retain both
 CPU/GPU images. CPU yaw products round separately to prevent compiler-only fused
 multiply/add from selecting a neighbouring face at subpixel boundaries.
+Several IDs may follow `--verify-voxel-poses`; every requested matrix must report
+completion, enabling one bounded background process to check a complete new fleet.
 
 Open road cargo124/125 and141…152 binds genuine empty and loaded volumes. Grey
 tippers/company-ribbed hoppers, timber stakes/straps and red coil platforms remain

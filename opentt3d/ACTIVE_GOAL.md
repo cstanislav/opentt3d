@@ -31,13 +31,13 @@
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: 1,002 JSON volumes, houses0…109 and eighty-eight
+- Current coverage remains partial: 1,019 JSON volumes, houses0…109 and eighty-eight
   independent house grounds, eighteen airport
   definitions, industry bodies0…3/7…10 and grounds0…10, six power-station spark frames,
   depot families0…4 in four directions with source/weather-aware floors,
   both two-tile ship-depot orientations and all six ordinary/Toyland dock sections,
   separate ordinary/Toyland source-resolved Classic navigation buoys,
-  129 vehicle engine definitions (including all88 road definitions,27 closed-wagon definitions and all11 original ships) and all62 standalone tree families /434 lifecycle volumes
+  161 vehicle engine definitions (including all88 road definitions,27 closed-wagon definitions,all11 original ships and33 ordinary fixed-wing aircraft) and all62 standalone tree families /434 lifecycle volumes
   (all original families1576…2003, including snow and all nine Toyland families)
   (fine fidelity remains WIP), four running-track systems, seven fence families and13 foundation
   forms. No asset has final visual approval. Every remaining category/state in the
@@ -63,6 +63,13 @@ immediately; record cosmetic findings for their appropriate later pass.
 > - If by a chance you think you're done with everything on this list, DON'T STOP WORKING. Keep playtesting the game, do visual checks, make lists of things that don't work or don't look perfect, keep improving things. THE ONLY ALLOWED WAY OF STOPPING WORK IS THE TIME CHECK.
 
 ### Current-window progress
+
+- **Aircraft breadth checkpoint:**17 new volumes raise the catalogue to1,019 and
+  vehicles to161/256. Both native backends pass432 aircraft mesh views,35,904 poses
+  and world-atlas checks below6GiB;100 asset/compiler and8 harness tests pass.
+  All33 ordinary fixed-wing aircraft reach actual destination service in public
+  NoAI fixtures. Source comparisons record remaining shape/paint differences;
+  Toyland/helicopter/rotor work continues. No stopping audit or final approval.
 
 - **03:37UTC — complete nativeVulkan verifier fits below6GiB:** all1,002 model/state
   matrices pass after call-scoped diagnostic CPU/GPU reference ownership;4.38GiB peak.

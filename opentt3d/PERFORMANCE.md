@@ -16,8 +16,10 @@ addresses, comparing exact RGBA/IDs and checking no persistent-cache growth.
 
 This resolves the demonstrated full-verifier retention failure for this workload.
 It does not establish arbitrary-map/all-day limits or a readback-pool-only improvement.
-Its one paused capture frame is not a sustained performance benchmark. NativeGL,
-current Linux/core/synchronization and Windows follow-up remain pending.
+Its one paused capture frame is not a sustained performance benchmark. The full
+nativeGL follow-up also completes at4,854,550,992bytes /4.52GiB over2,980 samples
+(`pass1-1002-transient-gl`), preserving the same matrices and transient-address checks.
+Current Linux/core/synchronization and Windows follow-up remain pending.
 
 ## Earlier expanded catalogue checkpoint (September26 02:54UTC)
 

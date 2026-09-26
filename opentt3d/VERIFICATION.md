@@ -21,6 +21,35 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,019-volume aircraft breadth:**17 new bodies plus the prior Dinger100 bind
+  engines215…247 using only original directional/cargo aliases. The compiler now
+  supports explicit integer polygon prisms for narrow swept wings and fins; exact
+  rational scan conversion is winding-independent and tested on concave outlines,
+  offsets, all extrusion axes and invalid/clipped/self-crossing input. It reads no
+  source artwork. Ground-support traversal covers every aircraft component.
+- `pass1-1019-aircraft-native` and`pass1-1019-aircraft-vulkan` each pass432 model views,
+  **35,904 company/crash/cargo/heading poses across33 engines**, and4,096,000 exact
+  world-atlas RGBA/ID pixels. Sampled peaks are3,646,967,624bytes (GL,555 samples)
+  and3,574,304,488bytes (Vulkan,542 samples), under6GiB with hidden Cocoa windows.
+  `pass1-aircraft-{early,late}-fixture` observes actual destination service and positive
+  speed for all24/nine aircraft, saving ordinary NoAI games. All-engine live captures
+  are underway. One native engine215 and oneVulkan engine247 capture already pass.
+- Source/voxel comparisons cover all eighteen distinct fixed-wing families in eight
+  directions. Oversized propeller-wing chords and Haugan aft-delta spread were
+  corrected before the latest matrices. Later wing/fin/body proportions, painted
+  white/company shading, windows, gear and diagonal source discrepancies remain in
+  `VOXEL_REVIEW.md`; no final approvals. Updated tests pass100 asset/compiler,
+  eight harness and186 native cases. Full production performance remains unfinished.
+
+- Full1,002 nativeGL follow-up also completes (`pass1-1002-transient-gl`), peaking at
+  **4,854,550,992bytes /4.52GiB** across2,980 samples under the6GiB guard. Both backends
+  now complete the same full model/vehicle/tree/industry matrices with temporary
+  diagnostic references. Preserved executable SHA256 is
+  `6b63aec6e0440e13b0140c599bf79b1b77409e8f1e6662f545cdbd64bd8a84b9`; catalogue SHA256
+  remains`35a64d746d0ee9f994d434c0af75160cf398d9651fa2f43977e8bdcd01a52653`.
+  TheGL capture also contains only one paused benchmark frame. No sustained speed
+  conclusion follows. Renderer/portability repairs are pushed tomain as`ba7779131`.
+
 - **03:37UTC:** full1,002-volume Vulkan matrix completes in hidden mode after diagnostic
   reference lifetime repair (`pass1-1002-transient-full-native`), peaking at
   **4,703,080,960bytes /4.38GiB** across3,017 samples under the6GiB guard. References

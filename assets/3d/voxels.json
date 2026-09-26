@@ -500,6 +500,9 @@
     "radio_beacon_b": 240,
     "radio_fence_post": 8,
     "plane_company": [201,201,201,201,7,203],
+    "plane_white": [12,9,11,13,7,15],
+    "plane_white_shade": [10,8,9,11,6,12],
+    "plane_propeller": [7,5,6,8,4,9],
     "plane_company_light": [203,203,203,203,8,204],
     "plane_company_shadow": [199,199,199,199,6,201],
     "plane_belly": [10,8,9,11,7,12],
@@ -913,6 +916,15 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "plane_early_prop_nacelle": [
+      ["ellipsoid","plane_wing_edge",0,0,0,10,4,5],
+      ["box","plane_propeller",9,-2,2,10,6,3],
+      ["box","plane_propeller",9,1,-2,10,3,7]
+    ],
+    "plane_early_wheel": [
+      ["box","plane_intake",0,0,0,2,2,2],
+      ["box","plane_gear",0,0,2,1,1,6]
+    ],
     "tropical_palm_sage": [
       ["replace_material","palm_leaf","palm_fan_leaf"],
       ["replace_material","palm_leaf_light","palm_fan_leaf_light"],
@@ -8627,6 +8639,292 @@
         ["use","tree_lime_branches",[0,0,0]]
       ]
     },
+    "aircraft_early_sampson": {
+      "size":[42,46,18],"cell_size":[0.25,0.25,0.5],"origin":[-5.25,-5.75,0],"review_status":"work-in-progress",
+      "reference":"Sampson U52 sprites3773..3780: short blue trimotor, unswept broad pale wings, three separate propellers and conventional tail; original cargo art is identical",
+      "ops":[
+        ["prism","plane_wing",2,6,7,[[30,16],[30,30],[29,42],[27,46],[22,46],[20,40],[20,6],[22,0],[27,0],[29,4]]],
+        ["paint","plane_wing_edge",29,6,6,30,40,7],
+        ["box","plane_company",7,20,5,35,26,10],["box","plane_company_light",8,21,10,34,25,11],
+        ["ellipsoid","plane_company",0,21,5,14,25,11],["ellipsoid","plane_company",31,20,5,42,26,11],
+        ["paint","plane_company_shadow",0,20,5,42,26,7],
+        ["repeat",[3,0,0],8,[["paint","plane_window",10,20,8,11,21,9],["paint","plane_window",10,25,8,11,26,9]]],
+        ["paint","plane_cockpit",34,21,9,38,25,11],
+        ["box","plane_wing_edge",1,17,9,9,29,10],["box","plane_wing_edge",2,14,9,7,32,10],
+        ["prism","plane_company_shadow",1,22,24,[[1,9],[11,9],[4,16],[1,16]]],
+        ["use","plane_early_prop_nacelle",[24,10,5]],["use","plane_early_prop_nacelle",[24,32,5]],
+        ["box","plane_propeller",41,19,7,42,27,8],["box","plane_propeller",41,22,4,42,24,11],
+        ["use","plane_early_wheel",[24,13,0]],["use","plane_early_wheel",[24,32,0]],["use","plane_early_wheel",[4,22,0]]
+      ]
+    },
+    "aircraft_early_coleman": {
+      "size":[60,68,20],"cell_size":[0.25,0.25,0.5],"origin":[-7.5,-8.5,0],"review_status":"work-in-progress",
+      "reference":"Coleman Count sprites3765..3772: white upper fuselage, blue lower band and fin, four propeller nacelles on near-straight grey wings",
+      "ops":[
+        ["prism","plane_wing",2,6,7,[[36,26],[36,42],[32,64],[29,68],[24,68],[23,64],[25,42],[25,26],[23,4],[24,0],[29,0],[32,4]]],
+        ["box","plane_white",10,31,5,49,37,12],["box","plane_white",12,32,12,47,36,13],
+        ["ellipsoid","plane_white",0,32,5,20,36,12],["ellipsoid","plane_white",44,31,5,60,37,13],
+        ["paint","plane_company",0,31,5,60,37,8],
+        ["repeat",[3,0,0],13,[["paint","plane_window",12,31,8,13,32,9],["paint","plane_window",12,36,8,13,37,9]]],
+        ["paint","plane_cockpit",51,32,10,56,36,13],
+        ["box","plane_wing",2,23,10,11,45,11],["box","plane_wing",3,20,10,8,48,11],
+        ["prism","plane_company_shadow",1,33,35,[[1,10],[14,10],[5,19],[1,19]]],
+        ["use","plane_early_prop_nacelle",[25,9,5]],["use","plane_early_prop_nacelle",[28,21,5]],
+        ["use","plane_early_prop_nacelle",[28,43,5]],["use","plane_early_prop_nacelle",[25,55,5]],
+        ["use","plane_early_wheel",[31,23,0]],["use","plane_early_wheel",[31,44,0]],["use","plane_early_wheel",[51,33,0]]
+      ]
+    },
+    "aircraft_early_haugan": {
+      "size":[104,52,22],"cell_size":[0.25,0.25,0.5],"origin":[-13,-6.5,0],"review_status":"work-in-progress",
+      "reference":"Yate Haugan sprites3757..3764: long white pointed fuselage and delta wing, blue fin/side stripe, paired dark underslung engine groups; no invented conventional tailplane",
+      "ops":[
+        ["prism","plane_white_shade",2,5,6,[[18,23],[24,0],[34,7],[48,15],[67,22],[78,24],[78,28],[67,30],[48,37],[34,45],[24,52],[18,29]]],
+        ["box","plane_white",11,24,5,81,28,10],["box","plane_white",14,25,10,78,27,11],
+        ["hull","plane_white",26,[[0,0.5,0.5,6,8],[11,2,2,5,10]]],
+        ["hull","plane_white",26,[[81,2,2,5,10],[96,1,1,4,8],[104,0.5,0.5,4,6]]],
+        ["paint","plane_company",0,24,5,104,28,7],
+        ["repeat",[3,0,0],23,[["paint","plane_window",12,24,7,13,25,8],["paint","plane_window",12,27,7,13,28,8]]],
+        ["paint","plane_cockpit",86,24,7,94,28,9],
+        ["prism","plane_company_shadow",1,25,27,[[3,9],[23,9],[10,20],[3,20]]],
+        ["box","plane_white_shade",13,12,3,33,18,5],["box","plane_white_shade",13,34,3,33,40,5],
+        ["paint","plane_intake",31,12,3,33,18,5],["paint","plane_intake",31,34,3,33,40,5],
+        ["use","plane_early_wheel",[25,15,0]],["use","plane_early_wheel",[25,35,0]],["use","plane_early_wheel",[83,25,0]]
+      ]
+    },
+    "aircraft_early_cotswald": {
+      "size":[48,68,19],"cell_size":[0.25,0.25,0.5],"origin":[-6,-8.5,0],"review_status":"work-in-progress",
+      "reference":"Bakewell Cotswald LB-3 sprites3805..3812: compact blue twin turboprop, long grey tapering wings with blue tips, pale lower fuselage",
+      "ops":[
+        ["prism","plane_wing",2,6,7,[[34,26],[34,42],[27,63],[25,68],[22,68],[22,63],[25,42],[25,26],[22,5],[22,0],[25,0],[27,5]]],
+        ["paint","plane_company",20,0,6,28,3,7],["paint","plane_company",20,65,6,28,68,7],
+        ["box","plane_company",9,31,5,38,37,11],["box","plane_company_light",11,32,11,37,36,12],
+        ["ellipsoid","plane_company",0,32,5,18,36,11],["ellipsoid","plane_company",34,31,5,48,37,12],
+        ["paint","plane_white",0,31,5,48,37,7],
+        ["repeat",[3,0,0],9,[["paint","plane_window",12,31,8,13,32,9],["paint","plane_window",12,36,8,13,37,9]]],
+        ["paint","plane_cockpit",39,32,10,44,36,12],
+        ["box","plane_wing",1,24,10,9,44,11],["box","plane_wing",2,21,10,6,47,11],
+        ["prism","plane_company_shadow",1,33,35,[[1,10],[13,10],[5,18],[1,18]]],
+        ["use","plane_early_prop_nacelle",[27,21,5]],["use","plane_early_prop_nacelle",[27,43,5]],
+        ["use","plane_early_wheel",[30,23,0]],["use","plane_early_wheel",[30,44,0]],["use","plane_early_wheel",[39,33,0]]
+      ]
+    },
+    "aircraft_early_luckett8": {
+      "size":[60,58,24],"cell_size":[0.25,0.25,0.5],"origin":[-7.5,-7.25,0],"review_status":"work-in-progress",
+      "reference":"Bakewell Luckett LB-8 and YAe46 sprites3741..3748: short deep blue fuselage, high swept wings with four pale nacelles, tall white T-tail",
+      "ops":[
+        ["prism","plane_wing",2,12,13,[[25,29],[41,29],[37,40],[22,58],[17,58],[25,36]]],
+        ["prism","plane_wing",2,12,13,[[25,29],[41,29],[37,18],[22,0],[17,0],[25,22]]],
+        ["box","plane_company",13,24,4,46,34,12],["box","plane_company_light",17,25,12,44,33,14],
+        ["ellipsoid","plane_company",1,25,5,26,33,12],["ellipsoid","plane_company",39,24,4,60,34,14],
+        ["paint","plane_company_shadow",0,24,4,60,34,6],
+        ["paint","plane_cockpit",48,25,10,55,33,13],
+        ["repeat",[3,0,0],9,[["paint","plane_window",18,24,9,19,25,10],["paint","plane_window",18,33,9,19,34,10]]],
+        ["prism","plane_white",1,28,30,[[3,9],[18,9],[8,23],[3,23]]],
+        ["paint","plane_company",3,28,9,18,30,14],
+        ["box","plane_wing_edge",3,20,22,10,38,23],["box","plane_wing_edge",2,17,22,7,41,23],
+        ["ellipsoid","plane_white",22,7,8,33,12,12],["ellipsoid","plane_white",29,17,8,40,22,12],
+        ["ellipsoid","plane_white",29,36,8,40,41,12],["ellipsoid","plane_white",22,46,8,33,51,12],
+        ["box","plane_gear",24,9,10,28,10,13],["box","plane_gear",31,19,10,35,20,13],
+        ["box","plane_gear",31,38,10,35,39,13],["box","plane_gear",24,48,10,28,49,13],
+        ["paint","plane_intake",31,7,9,33,12,11],["paint","plane_intake",38,17,9,40,22,11],
+        ["paint","plane_intake",38,36,9,40,41,11],["paint","plane_intake",31,46,9,33,51,11],
+        ["use","plane_early_wheel",[29,23,0]],["use","plane_early_wheel",[29,33,0]],["use","plane_early_wheel",[49,28,0]]
+      ]
+    },
+    "aircraft_early_luckett10": {
+      "size":[88,78,22],"cell_size":[0.25,0.25,0.5],"origin":[-11,-9.75,0],"review_status":"work-in-progress",
+      "reference":"Luckett LB-10/LB-11/Guru Galaxy sprites3789..3796: blue narrowbody twinjet, low swept grey wings, two white underslung nacelles and low tailplane",
+      "ops":[
+        ["prism","plane_wing",2,6,7,[[38,39],[57,39],[50,50],[24,78],[20,78],[29,56]]],
+        ["prism","plane_wing",2,6,7,[[38,39],[57,39],[50,28],[24,0],[20,0],[29,22]]],
+        ["paint","plane_wing_edge",18,0,6,28,2,7],["paint","plane_wing_edge",18,76,6,28,78,7],
+        ["box","plane_company",10,36,5,75,42,12],["box","plane_company_light",13,37,12,74,41,13],
+        ["ellipsoid","plane_company",0,37,5,20,41,12],["ellipsoid","plane_company",70,36,5,88,42,13],
+        ["paint","plane_belly",0,36,5,88,42,6],["paint","plane_company_shadow",0,36,6,88,42,8],
+        ["repeat",[2,0,0],30,[["paint","plane_window",13,36,9,14,37,10],["paint","plane_window",13,41,9,14,42,10]]],
+        ["paint","plane_cockpit",78,37,10,84,41,13],
+        ["box","plane_wing",6,29,10,21,49,11],["box","plane_wing",3,24,10,15,29,11],["box","plane_wing",3,49,10,15,54,11],
+        ["prism","plane_company_shadow",1,38,40,[[3,10],[21,10],[8,21],[3,21]]],
+        ["ellipsoid","plane_white",40,24,3,57,30,6],["ellipsoid","plane_white",40,48,3,57,54,6],
+        ["box","plane_white_shade",43,27,5,49,28,7],["box","plane_white_shade",43,50,5,49,51,7],
+        ["paint","plane_intake",55,24,3,57,30,6],["paint","plane_intake",55,48,3,57,54,6],
+        ["use","plane_early_wheel",[44,34,0]],["use","plane_early_wheel",[44,42,0]],["use","plane_early_wheel",[78,38,0]]
+      ]
+    },
+    "aircraft_early_darwin200": {
+      "size":[94,94,23],"cell_size":[0.25,0.25,0.5],"origin":[-11.75,-11.75,0],"review_status":"work-in-progress",
+      "reference":"Darwin200/400/500/600 and Airtaxi A21/A31/A32/A33 sprites3797..3804: white long twinjet, blue lower stripe/fin/tailplane/wingtips and two blue nacelles",
+      "ops":[
+        ["prism","plane_wing",2,6,7,[[40,47],[59,47],[51,62],[25,94],[20,94],[29,72]]],
+        ["prism","plane_wing",2,6,7,[[40,47],[59,47],[51,32],[25,0],[20,0],[29,22]]],
+        ["paint","plane_company",18,0,6,28,4,7],["paint","plane_company",18,90,6,28,94,7],
+        ["box","plane_white",11,43,5,80,51,13],["box","plane_white",14,44,13,78,50,14],
+        ["ellipsoid","plane_white",0,44,5,22,50,13],["ellipsoid","plane_white",75,43,5,94,51,14],
+        ["paint","plane_white_shade",0,43,5,94,51,6],["paint","plane_company",0,43,6,94,51,8],
+        ["repeat",[3,0,0],23,[["paint","plane_window",13,43,9,14,44,10],["paint","plane_window",13,50,9,14,51,10]]],
+        ["paint","plane_cockpit",83,44,11,90,50,14],
+        ["box","plane_company",6,37,11,23,57,12],["box","plane_company",3,30,11,16,37,12],["box","plane_company",3,57,11,16,64,12],
+        ["prism","plane_company_shadow",1,46,48,[[3,11],[23,11],[9,22],[3,22]]],
+        ["ellipsoid","plane_company",41,27,3,56,34,6],["ellipsoid","plane_company",41,60,3,56,67,6],
+        ["box","plane_white_shade",43,31,5,49,32,7],["box","plane_white_shade",43,62,5,49,63,7],
+        ["paint","plane_intake",54,27,3,56,34,6],["paint","plane_intake",54,60,3,56,67,6],
+        ["use","plane_early_wheel",[47,41,0]],["use","plane_early_wheel",[47,51,0]],["use","plane_early_wheel",[83,46,0]]
+      ]
+    },
+    "aircraft_early_darwin300": {
+      "size":[98,94,25],"cell_size":[0.25,0.25,0.5],"origin":[-12.25,-11.75,0],"review_status":"work-in-progress",
+      "reference":"Darwin300 sprites3749..3756: large blue four-engine swept-wing aircraft, forward upper-deck hump, white lower stripe and blue-tipped grey wings",
+      "ops":[
+        ["prism","plane_wing",2,6,7,[[42,47],[62,47],[51,63],[26,94],[20,94],[30,71]]],
+        ["prism","plane_wing",2,6,7,[[42,47],[62,47],[51,31],[26,0],[20,0],[30,23]]],
+        ["paint","plane_company",18,0,6,29,4,7],["paint","plane_company",18,90,6,29,94,7],
+        ["box","plane_company_light",12,42,5,82,52,14],["box","plane_company_light",15,43,14,79,51,15],
+        ["ellipsoid","plane_company",0,44,5,24,50,14],["ellipsoid","plane_company_light",76,42,5,98,52,15],
+        ["box","plane_company_light",66,44,14,86,50,17],["ellipsoid","plane_company_light",78,43,12,95,51,17],
+        ["paint","plane_white",0,42,5,98,52,7],
+        ["repeat",[3,0,0],24,[["paint","plane_window",13,42,10,14,43,11],["paint","plane_window",13,51,10,14,52,11]]],
+        ["repeat",[3,0,0],6,[["paint","plane_window",68,44,15,69,45,16],["paint","plane_window",68,49,15,69,50,16]]],
+        ["paint","plane_cockpit",87,44,13,93,50,16],
+        ["box","plane_wing",6,37,11,23,57,12],["box","plane_wing",3,29,11,16,37,12],["box","plane_wing",3,57,11,16,65,12],
+        ["prism","plane_company_shadow",1,46,48,[[3,11],[25,11],[9,24],[3,24]]],
+        ["ellipsoid","plane_company",29,13,3,43,19,6],["ellipsoid","plane_company",42,28,3,57,34,6],
+        ["ellipsoid","plane_company",42,60,3,57,66,6],["ellipsoid","plane_company",29,75,3,43,81,6],
+        ["box","plane_gear",31,16,5,35,17,7],["box","plane_gear",44,31,5,49,32,7],
+        ["box","plane_gear",44,62,5,49,63,7],["box","plane_gear",31,77,5,35,78,7],
+        ["paint","plane_intake",41,13,3,43,19,6],["paint","plane_intake",55,28,3,57,34,6],
+        ["paint","plane_intake",55,60,3,57,66,6],["paint","plane_intake",41,75,3,43,81,6],
+        ["use","plane_early_wheel",[49,40,0]],["use","plane_early_wheel",[49,52,0]],["use","plane_early_wheel",[87,46,0]]
+      ]
+    },
+    "aircraft_late_airtaxi34": {
+      "size":[68,88,22],"cell_size":[0.25,0.25,0.5],"origin":[-8.5,-11,0],"review_status":"work-in-progress",
+      "reference":"AirTaxi A34-1000 sprites3853..3860: wide blue tailless delta, short raised blue centre fuselage, two long white overwing nacelles and upturned blue tips",
+      "ops":[
+        ["hull","plane_company_light",44,[[6,33,33,5,6],[14,43,43,5,6],[24,41,41,5,6],[39,24,24,5,6],[55,8,8,5,6]]],
+        ["ellipsoid","plane_company",10,37,5,68,51,19],
+        ["ellipsoid_paint","plane_company_light",15,38,12,65,50,21],
+        ["paint","plane_company_shadow",8,37,5,68,51,9],
+        ["ellipsoid","plane_white",14,20,6,46,29,12],["ellipsoid","plane_white",14,59,6,46,68,12],
+        ["paint","plane_intake",41,20,7,46,29,10],["paint","plane_intake",41,59,7,46,68,10],
+        ["box","plane_company",13,0,5,22,2,9],["box","plane_company",13,86,5,22,88,9],
+        ["box","plane_company_light",14,1,5,23,4,6],["box","plane_company_light",14,84,5,23,87,6],
+        ["use","plane_early_wheel",[25,25,0]],["use","plane_early_wheel",[25,62,0]],["use","plane_early_wheel",[57,43,0]]
+      ]
+    },
+    "aircraft_late_zshuttle": {
+      "size":[64,66,20],"cell_size":[0.25,0.25,0.5],"origin":[-8,-8.25,0],"review_status":"work-in-progress",
+      "reference":"Yate Z-Shuttle sprites3845..3852: broad white oval centre cabin with a blue dorsal stripe, blue short delta wings and two white side engine pods",
+      "ops":[
+        ["hull","plane_company_light",33,[[7,22,22,5,6],[15,32,32,5,6],[27,31,31,5,6],[42,17,17,5,6],[51,6,6,5,6]]],
+        ["ellipsoid","plane_white",0,25,4,64,41,18],
+        ["paint","plane_white_shade",0,25,4,64,41,8],
+        ["paint","plane_company",7,32,12,53,34,19],
+        ["ellipsoid","plane_white",15,7,6,39,17,13],["ellipsoid","plane_white",15,49,6,39,59,13],
+        ["paint","plane_intake",34,7,7,39,17,11],["paint","plane_intake",34,49,7,39,59,11],
+        ["use","plane_early_wheel",[24,15,0]],["use","plane_early_wheel",[24,49,0]],["use","plane_early_wheel",[52,32,0]]
+      ]
+    },
+    "aircraft_late_kelling1": {
+      "size":[58,64,17],"cell_size":[0.25,0.25,0.5],"origin":[-7.25,-8,0],"review_status":"work-in-progress",
+      "reference":"Kelling K1 sprites3885..3892: compact blue spine, broad curved white delta wing, small canards and a pale narrow dorsal window; no conventional high fin",
+      "ops":[
+        ["hull","plane_white",32,[[2,17,17,5,6],[7,28,28,5,6],[16,32,32,5,6],[28,26,26,5,6],[41,13,13,5,6],[49,4,4,5,6]]],
+        ["ellipsoid","plane_company",0,28,4,58,36,14],
+        ["paint","plane_company_light",8,30,11,51,34,15],
+        ["paint","plane_white_shade",38,31,12,49,33,15],
+        ["box","plane_wing_edge",44,24,8,46,40,9],
+        ["ellipsoid","plane_white_shade",13,20,3,26,24,5],["ellipsoid","plane_white_shade",13,40,3,26,44,5],
+        ["use","plane_early_wheel",[20,22,0]],["use","plane_early_wheel",[20,41,0]],["use","plane_early_wheel",[47,31,0]]
+      ]
+    },
+    "aircraft_late_kelling6": {
+      "size":[82,68,25],"cell_size":[0.25,0.25,0.5],"origin":[-10.25,-8.5,0],"review_status":"work-in-progress",
+      "reference":"Kelling K6 sprites3861..3868: long slender blue fuselage, separately raised white swept upper/lower wings with blue connecting struts and a white T-tail",
+      "ops":[
+        ["hull","plane_white",34,[[16,32,32,11,12],[23,33,33,11,12],[37,21,21,11,12],[51,6,6,11,12]]],
+        ["hull","plane_wing_edge",34,[[15,32,32,5,6],[22,34,34,5,6],[35,23,23,5,6],[46,6,6,5,6]]],
+        ["repeat",[0,11,0],3,[["box","plane_company",24,7,5,26,8,12]]],
+        ["repeat",[0,-11,0],3,[["box","plane_company",24,60,5,26,61,12]]],
+        ["box","plane_company",14,31,5,71,37,12],["box","plane_company_light",16,32,12,69,36,13],
+        ["ellipsoid","plane_company",0,32,5,25,36,11],["ellipsoid","plane_company",64,31,5,82,37,13],
+        ["paint","plane_company_shadow",0,31,5,82,37,7],
+        ["box","plane_gear",2,33,10,7,35,22],
+        ["box","plane_white",2,25,22,11,43,23],["box","plane_white",1,23,23,7,27,24],["box","plane_white",1,41,23,7,45,24],
+        ["use","plane_early_wheel",[28,27,0]],["use","plane_early_wheel",[28,39,0]],["use","plane_early_wheel",[71,33,0]]
+      ]
+    },
+    "aircraft_late_kelling7": {
+      "size":[74,40,27],"cell_size":[0.25,0.25,0.5],"origin":[-9.25,-5,0],"review_status":"work-in-progress",
+      "reference":"Kelling K7 sprites3869..3876: narrow long blue spine and dark blue fin, paired deep white fuselage pods with exposed rear ducts and small low blue wings",
+      "ops":[
+        ["hull","plane_company_light",20,[[17,15,15,5,6],[23,20,20,5,6],[36,18,18,5,6],[56,9,9,5,6]]],
+        ["ellipsoid","plane_white",19,7,3,74,19,14],["ellipsoid","plane_white",19,21,3,74,33,14],
+        ["box","plane_white_shade",15,10,4,27,17,10],["box","plane_white_shade",15,23,4,27,30,10],
+        ["paint","plane_intake",15,10,5,18,17,9],["paint","plane_intake",15,23,5,18,30,9],
+        ["box","plane_company",1,18,7,64,22,12],["ellipsoid","plane_company",57,17,7,74,23,13],
+        ["paint","plane_company_light",12,19,10,68,21,14],
+        ["box","plane_company_shadow",2,19,11,17,21,16],["box","plane_company_shadow",2,19,16,12,21,21],["box","plane_company_shadow",2,19,21,6,21,26],
+        ["use","plane_early_wheel",[29,13,0]],["use","plane_early_wheel",[29,26,0]],["use","plane_early_wheel",[65,19,0]]
+      ]
+    },
+    "aircraft_late_darwin700": {
+      "size":[74,52,27],"cell_size":[0.25,0.25,0.5],"origin":[-9.25,-6.5,0],"review_status":"work-in-progress",
+      "reference":"Darwin700 sprites3877..3884: broad white twin-lobed body, two open aft engine groups, short blue wings and lower spine, thin dark metal fin",
+      "ops":[
+        ["hull","plane_company_light",26,[[15,18,18,5,6],[22,26,26,5,6],[35,24,24,5,6],[57,10,10,5,6]]],
+        ["ellipsoid","plane_white",18,13,3,74,39,15],
+        ["box","plane_white_shade",13,14,4,26,23,11],["box","plane_white_shade",13,29,4,26,38,11],
+        ["paint","plane_intake",13,14,5,16,23,10],["paint","plane_intake",13,29,5,16,38,10],
+        ["box","plane_company",1,24,7,57,28,12],["paint","plane_company_light",24,24,11,66,28,16],
+        ["paint","plane_company",64,22,9,74,30,14],
+        ["box","plane_gear",2,25,11,17,27,16],["box","plane_gear",2,25,16,12,27,21],["box","plane_gear",2,25,21,6,27,26],
+        ["use","plane_early_wheel",[29,18,0]],["use","plane_early_wheel",[29,33,0]],["use","plane_early_wheel",[65,25,0]]
+      ]
+    },
+    "aircraft_late_hyperdart": {
+      "size":[54,52,25],"cell_size":[0.25,0.25,0.5],"origin":[-6.75,-6.5,0],"review_status":"work-in-progress",
+      "reference":"FFP Hyperdart2 sprites3821..3828: stubby blue cabin, large paired white rear engines with dark round exhausts, short white swept wings and thin high T-tail",
+      "ops":[
+        ["hull","plane_white",26,[[7,22,22,5,6],[14,26,26,5,6],[25,15,15,5,6],[37,5,5,5,6]]],
+        ["ellipsoid","plane_company",6,20,4,54,32,15],["box","plane_company",0,24,7,16,28,10],
+        ["paint","plane_company_light",19,22,11,49,30,16],
+        ["ellipsoid","plane_white",7,15,7,31,22,16],["ellipsoid","plane_white",7,30,7,31,37,16],
+        ["box","plane_white_shade",6,17,9,11,20,14],["box","plane_white_shade",6,32,9,11,35,14],
+        ["paint","plane_intake",6,17,10,8,20,13],["paint","plane_intake",6,32,10,8,35,13],
+        ["box","plane_gear",1,25,9,5,27,23],
+        ["box","plane_white",1,17,22,9,35,23],["box","plane_white",0,15,23,5,19,24],["box","plane_white",0,33,23,5,37,24],
+        ["use","plane_early_wheel",[23,18,0]],["use","plane_early_wheel",[23,33,0]],["use","plane_early_wheel",[44,25,0]]
+      ]
+    },
+    "aircraft_late_dinger200": {
+      "size":[70,64,29],"cell_size":[0.25,0.25,0.5],"origin":[-8.75,-8,0],"review_status":"work-in-progress",
+      "reference":"Dinger200 sprites3829..3836: three rounded blue fuselage lobes, small white swept side wings and a high rear dorsal arch with a real opening",
+      "ops":[
+        ["hull","plane_white",32,[[10,24,24,5,6],[17,32,32,5,6],[27,29,29,5,6],[42,11,11,5,6]]],
+        ["ellipsoid","plane_company",8,11,4,58,27,20],["ellipsoid","plane_company",8,37,4,58,53,20],
+        ["ellipsoid","plane_company",24,26,4,70,38,18],
+        ["ellipsoid_paint","plane_company_light",12,12,13,57,26,22],["ellipsoid_paint","plane_company_light",12,38,13,57,52,22],
+        ["paint","plane_company_light",37,28,13,65,36,19],
+        ["box","plane_company",5,25,7,38,39,10],
+        ["box","plane_company_shadow",3,31,9,12,33,28],["box","plane_company_shadow",9,31,24,39,33,26],
+        ["box","plane_company",37,31,16,41,33,25],["paint","plane_company_light",4,31,26,12,33,29],
+        ["use","plane_early_wheel",[29,18,0]],["use","plane_early_wheel",[29,45,0]],["use","plane_early_wheel",[59,31,0]]
+      ]
+    },
+    "aircraft_late_dinger1000": {
+      "size":[90,72,28],"cell_size":[0.25,0.25,0.5],"origin":[-11.25,-9,0],"review_status":"work-in-progress",
+      "reference":"Dinger1000 sprites3837..3844: three long parallel blue bodies, swept white connecting wings and two tall blue swept aft fins; side pods end behind the central nose",
+      "ops":[
+        ["hull","plane_white",36,[[8,19,19,5,6],[17,36,36,5,6],[29,34,34,5,6],[48,18,18,5,6],[65,5,5,5,6]]],
+        ["ellipsoid","plane_company",1,31,4,90,41,15],
+        ["ellipsoid","plane_company",3,17,4,78,25,14],["ellipsoid","plane_company",3,47,4,78,55,14],
+        ["paint","plane_company_light",9,34,11,84,38,16],
+        ["paint","plane_company_light",10,20,10,72,22,15],["paint","plane_company_light",10,50,10,72,52,15],
+        ["box","plane_company_shadow",4,20,11,23,22,16],["box","plane_company_shadow",4,20,16,17,22,22],["box","plane_company_shadow",4,20,22,9,22,27],
+        ["box","plane_company_shadow",4,50,11,23,52,16],["box","plane_company_shadow",4,50,16,17,52,22],["box","plane_company_shadow",4,50,22,9,52,27],
+        ["use","plane_early_wheel",[32,20,0]],["use","plane_early_wheel",[32,50,0]],["use","plane_early_wheel",[76,35,0]]
+      ]
+    },
     "aircraft_dinger_100": {
       "size": [40,28,18], "cell_size": [0.5,0.5,0.5], "origin": [-10,-7,0], "review_status": "work-in-progress",
       "ops": [
@@ -10034,7 +10332,39 @@
       "23": {"0": "rail_sh_electric", "1": "rail_sh_electric"},
       "24": {"0": "rail_sh_electric", "1": "rail_sh_electric"},
       "123": {"0": "road_balogh_coal_empty", "1": "road_balogh_coal_loaded"},
-      "238": {"0": "aircraft_dinger_100", "1": "aircraft_dinger_100"}
+      "215":{"0":"aircraft_early_sampson","1":"aircraft_early_sampson"},
+      "216":{"0":"aircraft_early_coleman","1":"aircraft_early_coleman"},
+      "217":{"0":"aircraft_dinger_100","1":"aircraft_dinger_100"},
+      "218":{"0":"aircraft_early_haugan","1":"aircraft_early_haugan"},
+      "219":{"0":"aircraft_early_cotswald","1":"aircraft_early_cotswald"},
+      "220":{"0":"aircraft_early_luckett8","1":"aircraft_early_luckett8"},
+      "221":{"0":"aircraft_dinger_100","1":"aircraft_dinger_100"},
+      "222":{"0":"aircraft_dinger_100","1":"aircraft_dinger_100"},
+      "223":{"0":"aircraft_early_luckett10","1":"aircraft_early_luckett10"},
+      "224":{"0":"aircraft_early_luckett10","1":"aircraft_early_luckett10"},
+      "225":{"0":"aircraft_dinger_100","1":"aircraft_dinger_100"},
+      "226":{"0":"aircraft_dinger_100","1":"aircraft_dinger_100"},
+      "227":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "228":{"0":"aircraft_early_darwin300","1":"aircraft_early_darwin300"},
+      "229":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "230":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "231":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "232":{"0":"aircraft_early_luckett10","1":"aircraft_early_luckett10"},
+      "233":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "234":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "235":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "236":{"0":"aircraft_early_darwin200","1":"aircraft_early_darwin200"},
+      "237":{"0":"aircraft_early_luckett8","1":"aircraft_early_luckett8"},
+      "238": {"0": "aircraft_dinger_100", "1": "aircraft_dinger_100"},
+      "239":{"0":"aircraft_late_airtaxi34","1":"aircraft_late_airtaxi34"},
+      "240":{"0":"aircraft_late_zshuttle","1":"aircraft_late_zshuttle"},
+      "241":{"0":"aircraft_late_kelling1","1":"aircraft_late_kelling1"},
+      "242":{"0":"aircraft_late_kelling6","1":"aircraft_late_kelling6"},
+      "243":{"0":"aircraft_late_kelling7","1":"aircraft_late_kelling7"},
+      "244":{"0":"aircraft_late_darwin700","1":"aircraft_late_darwin700"},
+      "245":{"0":"aircraft_late_hyperdart","1":"aircraft_late_hyperdart"},
+      "246":{"0":"aircraft_late_dinger200","1":"aircraft_late_dinger200"},
+      "247":{"0":"aircraft_late_dinger1000","1":"aircraft_late_dinger1000"}
     },
     "houses": {
       "91":{"0":"house_toy_gift_yellow_tall","1":"house_toy_church_unwrap","2":"house_toy_church_unwrap","3":"house_toy_church"},
