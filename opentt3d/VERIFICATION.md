@@ -21,6 +21,26 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Original train clearance routes:**`fixture_train.py --clearance-route` builds
+  a real eight-tile bridge with its original ramps and a tunnel through a raised
+  hill using public NoAI commands. All12 climate/railtype consists finish outbound
+  and return journeys, with both structures observed; complete results are retained
+  in`build-macos/pass1-train-clearance-fixtures.json`. The route uses the preserved
+  1,130 control, so this establishes operating layout/state evidence. Rendered body,
+  collector, wheel-contact and Cab clearance review is continuing on the repair.
+- All55 original locomotive/climate/railtype fixtures now pass service, return and
+  holding. All55 hiddenGL live-selection captures pass, with maximum sampled peak
+  3,721,662,232bytes;`pass1-locomotive-fixtures.json` and`pass1-1130-actual-all.json`
+  supersede the earlier43-case partial reports. Source/street comparisons remain
+  work-in-progress with no final visual approvals.
+- CI36219454794 completes macOS and all three Windows builds/tests. Linux passes
+  187native tests,24,744 mesh views,208,896 vehicle poses/384 bindings and384 joined
+  rotor poses, then reaches its inherited3600second bound during the remaining
+  matrix. Peak4,098,510,848bytes remains below6GiB. The original artifact is retained
+  at`pass1-aircraft-ci-362194-linux`; current Linux completion remains unproven.
+  SHA-specific workflow concurrency prevents later pushes replacing earlier pending
+  checkpoints; each newer Linux backend already has its own bounded180minute job.
+
 - **1,130-volume all-vehicle body bindings:**38 explicitly authored locomotive
   volumes cover the remaining33 definitions, bringing vehicle bindings to256/256.
   Both`pass1-1130-locomotives-{opengl,vulkan}-verified` pass46,784 poses across all35

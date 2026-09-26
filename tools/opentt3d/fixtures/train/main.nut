@@ -21,6 +21,7 @@ function TrainCatalogue::Start()
 		AICompany.SetName("OpenTT3D Train Review");
 		local rail_type = AIController.GetSetting("review_rail_type"), requested = AIController.GetSetting("review_engine");
 		local service = AIController.GetSetting("review_source") >= 0;
+		local clearance = AIController.GetSetting("review_clearance") != 0;
 		this.Require(AIRail.IsRailTypeAvailable(rail_type),"selected railtype is available");
 		AIRail.SetCurrentRailType(rail_type);
 		local engines = AIEngineList(AIVehicle.VT_RAIL), locomotive = -1, power = -1, wagons = [];
@@ -33,7 +34,7 @@ function TrainCatalogue::Start()
 		}
 		if (locomotive < 0 || wagons.len() == 0) throw "no selected original locomotive/wagons available for this climate and railtype";
 		if (service && wagons.len() != 1) throw "cargo review requires one selected wagon family";
-		local height = service ? 20 : 10;
+		local height = service ? 20 : clearance ? 14 : 10;
 		local found = false;
 		for (local y = 8; y < AIMap.GetMapSizeY()-20 && !found; y += 8) {
 			for (local x = 8; x < AIMap.GetMapSizeX()-80; x += 8) {
@@ -44,12 +45,32 @@ function TrainCatalogue::Start()
 			}
 		}
 		if (!found) throw "no buildable train review plateau";
+		local tunnel_first = -1, tunnel_last = -1;
+		if (clearance) {
+			for (local pass = 0; pass < 2; ++pass) {
+				for (local dy = 2; dy <= 8; ++dy) for (local dx = 42; dx <= 47; ++dx) {
+					this.Require(AITile.RaiseTile(this.Tile(dx,dy),AITile.SLOPE_N),"raise real tunnel hill");
+				}
+			}
+			for (local dx = 38; dx < 44; ++dx) {
+				local end = AITunnel.GetOtherTunnelEnd(this.Tile(dx,4));
+				if (AIMap.IsValidTile(end) && AIMap.GetTileY(end) == this.y+4 && AIMap.GetTileX(end) > this.x+dx) {
+					this.Require(AITunnel.BuildTunnel(AIVehicle.VT_RAIL,this.Tile(dx,4)),"build original railtype tunnel");
+					tunnel_first = dx; tunnel_last = AIMap.GetTileX(end)-this.x; break;
+				}
+			}
+			if (tunnel_first < 0) throw "no real tunnel route through the raised hill";
+			local bridges = AIBridgeList_Length(8);
+			if (bridges.IsEmpty()) throw "no eight-tile bridge available";
+			this.Require(AIBridge.BuildBridge(AIVehicle.VT_RAIL,bridges.Begin(),this.Tile(20,4),this.Tile(27,4)),"build original railtype bridge and ramps");
+		}
 		local depot = this.Tile(1,4), west = this.Tile(5,4), east = this.Tile(57,4);
 		this.Require(AIRail.BuildRailDepot(depot,this.Tile(2,4)),"build original rail depot");
 		this.Require(AIRail.BuildRailStation(west,AIRail.RAILTRACK_NE_SW,1,8,AIStation.STATION_NEW),"build west terminus");
 		this.Require(AIRail.BuildRailStation(east,AIRail.RAILTRACK_NE_SW,1,8,AIStation.STATION_NEW),"build east terminus");
 		for (local x = 2; x <= 69; ++x) {
 			if ((x >= 5 && x < 13) || (x >= 57 && x < 65)) continue;
+			if (clearance && ((x >= 20 && x <= 27) || (x >= tunnel_first && x <= tunnel_last))) continue;
 			this.Require(AIRail.BuildRailTrack(this.Tile(x,4),AIRail.RAILTRACK_NE_SW),"connect review line");
 		}
 		local train = AIVehicle.BuildVehicle(depot,locomotive);
@@ -76,17 +97,20 @@ function TrainCatalogue::Start()
 		this.Require(AIOrder.AppendOrder(train,west,AIOrder.OF_NONE),"order west station");
 		this.Require(AIVehicle.StartStopVehicle(train),"start original consist");
 		this.built = true;
-		local east_seen = false, returned = false, peak_speed = 0;
+		local east_seen = false, returned = false, peak_speed = 0, bridge_seen = false, tunnel_seen = false;
 		for (local tick = 0; tick < 3200 && !returned; tick += 4) {
 			if (!AIVehicle.IsValidVehicle(train) || AIVehicle.GetState(train) == AIVehicle.VS_CRASHED) throw "review train was lost";
 			local dx = AIMap.GetTileX(AIVehicle.GetLocation(train))-this.x;
 			local speed = AIVehicle.GetCurrentSpeed(train);
 			if (speed > peak_speed) peak_speed = speed;
+			bridge_seen = bridge_seen || (dx >= 20 && dx <= 27);
+			tunnel_seen = tunnel_seen || (clearance && dx >= tunnel_first && dx <= tunnel_last);
 			east_seen = east_seen || dx >= 57;
 			returned = east_seen && dx <= 12;
 			this.Sleep(4);
 		}
 		if (!returned || peak_speed <= 0) throw "the attached consist did not complete both terminus journeys";
+		if (clearance && !(bridge_seen && tunnel_seen)) throw "the consist did not traverse the actual bridge and tunnel";
 		local held = AIController.GetSetting("review_hold") != 0;
 		if (held) {
 			this.Require(AIVehicle.StartStopVehicle(train),"hold the verified returning consist");
@@ -95,7 +119,9 @@ function TrainCatalogue::Start()
 		}
 		AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+rail_type+
 			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
-			",\"returned\":true,\"held\":"+(held ? "true" : "false")+"}");
+			",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"clearance_route\":"+(clearance ? "true" : "false")+
+			",\"bridge_seen\":"+(clearance && bridge_seen ? "true" : "false")+",\"tunnel_seen\":"+(tunnel_seen ? "true" : "false")+
+			",\"tunnel_first\":"+tunnel_first+",\"tunnel_last\":"+tunnel_last+"}");
 	} catch (error) {
 		AILog.Error("TRAIN_CATALOGUE_FAILED "+error);
 	}

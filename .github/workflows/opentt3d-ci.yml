@@ -11,7 +11,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: opentt3d-${{ github.ref }}
+  # A ref-only group silently replaces older pending checkpoints on each push.
+  group: opentt3d-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: false
 
 jobs:

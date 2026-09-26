@@ -71,7 +71,9 @@ immediately; record cosmetic findings for their appropriate later pass.
   exact world-atlas checks;104 asset/compiler tests pass. A new clearance audit finds
   tall train volumes exceeding the existing one-level tunnel bore. This is an active
   structural defect, not accepted coverage; repair is ahead of further breadth work.
-  Actual55-case locomotive service/capture work is continuing.06:02:31UTC remains
+  All55 locomotive service/return/holding and hiddenGL captures now pass. Twelve
+  additional climate/railtype consists traverse real bridge/ramp/tunnel layouts;
+  rendered clearance and collector repairs remain under verification.06:58:50UTC remains
   before19:00UTC, and the complete objective remains active.
 - Fourteen further normal/Toyland freight services pass loading, accepted delivery
   and return, plus a monorail coal service. Their30 additional full/empty GL captures

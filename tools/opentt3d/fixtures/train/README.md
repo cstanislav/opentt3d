@@ -26,6 +26,14 @@ journey/held observations. Reload `save/train-catalogue.sav` with this fixture's
 worlds/logs are preserved. This is movement/coupling evidence, not cargo delivery,
 all-curve/slope/bridge clearance or source-fidelity approval.
 
+Add `--clearance-route` to replace part of the straight corridor with an actual
+eight-tile bridge, its original ramps, and a tunnel constructed through a raised
+hill. Both structures must be observed on the normal outbound/return journey.
+This works with all four climates and original railtypes. The saved manifest records
+the portal offsets and traversal observations. It supplies the route for subsequent
+voxel contact/clearance/Cab review; the AI's journey observation alone does not verify
+rendered geometry. Use a separate fixture for `--cargo-source` industry service.
+
 For actual open-wagon cargo review, select a single wagon and add a producing/
 accepting industry pair, for example `--first-engine 29 --last-engine 29
 --cargo-source 0 --cargo-destination 1` for coal to a power station. The AI funds
