@@ -19,16 +19,37 @@ full terrain/source-raster fidelity and final approval remain separate.
   source-registered/street sheets. Public grain/livestock, wood-to-paper, fruit and
   rubber routes complete actual loading/delivery/return. The registered review
   corrects oil-well origins, farm gable/roof axes, paper chimney/shelter placement
-  and plantation root/crown spacing. Later paper/plantation corrections await their
-  own native render. Fine shape/paint differences remain open; no final approvals.
+  and plantation root/crown spacing. Refreshed paper/plantationGL/Vulkan renders now
+  pass and their registered whole-layout/street sheets are inspected. Fine shape/
+  paint differences remain open; no final approvals.
 - Ten provisional waterworks volumes cover118…120 with independent full tropical
   desert4550 ground, open/braced steel stands, raised blue tanks/white pipe loops,
   low grey vessels, tilted solar panels and the town water tower's real open
   construction cylinder. Identical stages1/2 share only source-identical artwork.
   The water-tower roof closes only on completion. Tropical source imagery and
   palettes were exported in an actual tropical graphics set; the shared4550 number
-  does not alias Arctic snow. Ground/contact/palette/state tests pass; GPU/source/
-  street/actual-state review remains pending.
+  does not alias Arctic snow. Ground/contact/palette/state tests and both backend
+  gallery/industry/atlas matrices pass; source and street sheets are inspected.
+  Complete actual construction-slot capture remains active.
+- Twelve food-processing volumes preserve60…63's initial, open intermediate and
+  completed states, independent2022 grounds and open silo with inset grain. Source
+  exports prove Arctic/tropical body/ground layers identical across76,416 RGBA pixels.
+  Both backend galleries and registered joined/street review pass technical checks.
+  Four bank volumes add58/59's finished bodies in every construction slot, independent
+  initial2022 grounds and completed2182/2183 paving. Cupola/roof/colonnade ownership is
+  partitioned across the two original tiles and the entry is physically open.
+- Later-pass findings from refreshed sheets: paper roof/brick grain and chimney
+  colour bands, banana frond silhouette/branch openness, rubber crown asymmetry,
+  waterworks brace thickness/tank curvature/pipe fittings, food hall rib and window
+  spacing plus yard grain, pump head/beam profiles, and bank cupola drum/windows,
+  arched detail/roof heights and masonry/glass shading need source-painted refinement.
+  Native bounds remain recorded in each source-registration sidecar; they are not
+  dimensional or visual approvals.
+- The next provisional airport family recreates the low2095 L-plan terminal on
+  tiles63/64/69, with original2663/2664 fence ownership and separate complete2634
+  apron. Source-native placement was inspected manually; no geometry is generated
+  from imagery. Its1,247-volume freeze passes asset/native tests and awaits rendered
+  source/context/ground-transparency review. Two public helicopter fixtures are ready.
 
 - **Oil-rig published candidate, not visually approved:** graphics24 remains body-empty and
   25 stays empty until its completed flare. Four initial pilings/paired braces are

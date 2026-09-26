@@ -21,6 +21,27 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Refreshed industry/source review:** all ten frozen1,239-volume paper/plantation/
+  waterworks/food/oil-wellGL/Vulkan galleries pass, peaking2,521,333,760bytes. The two
+  later bank galleries also pass. Registered complete-layout and street sheets were
+  inspected; the original ground-only oil-well stage0 now exports correctly. Source
+  silhouettes/paint remain provisional. Paired backend manifests retain66/78/63/84/50
+  differing images across222/136/220/220/194 pairs for those five families; exact
+  within-backend comparisons do not establish cross-backend equality.
+- **Public airport-type services:** fixtures now select ordinary hangar-equipped
+  airport types. Helistation8/engine253 and helidepot6/engine254 both reach actual
+  destination service and save held-service worlds. The first failed helistation
+  searches and hangar-target order attempt remain retained. Normal buildable land
+  needs only height1; public station orders now choose a non-hangar airport tile,
+  because the helistation origin itself is a hangar. The bank town-site fixture's
+  normal initial city-size setting is also retained.
+- Four provisional low-airport volumes add63/64/69 bodies and an independently
+  opaque2634 apron. The L-plan courtyard, recessed entry, roof/parapet support and
+  original fence ownership pass source-palette/geometry tests; the1,247 candidate
+  passes196 native and117 compiler/schema tests. Airport registered exports and
+  exact opaque/transparent/hidden ground-owner checks are implemented; GPU review
+  follows the serialized curved-train workload. These are not visual approvals.
+
 - **Matched expanded memory controls complete:** both frozen1,169GL/Vulkan runs
   pass the full model/vehicle/tree/infrastructure matrix, CPU/GPU retirement and
   exact world-atlas/picking under6GiB. Peaks are5,779,248,360/5,359,801,360bytes.

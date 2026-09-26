@@ -22,6 +22,7 @@ def main():
     parser.add_argument("--snow-coverage", type=int, choices=range(101), help="Normal Arctic map-generation snow percentage")
     parser.add_argument("--desert-coverage", type=int, choices=range(101), help="Normal tropical map-generation desert percentage")
     parser.add_argument("--town-site", action="store_true", help="Fund a town-only industry on an existing house through ordinary commands")
+    parser.add_argument("--city-size", type=int, choices=range(1,11), help="Normal initial city-size multiplier, for industries requiring a sufficiently large town")
     services = parser.add_mutually_exclusive_group()
     services.add_argument("--coal-service", action="store_true", help="After construction, require a real truck to load coal, deliver it to a funded power station and return")
     services.add_argument("--cargo-service", action="store_true", help="Operate the producer's real cargo to --destination-industry, requiring loading, delivery and return")
@@ -66,6 +67,7 @@ def main():
     vehicle_settings = "[vehicle]\nnever_expire_vehicles = true\n" if args.truck_engine is not None else ""
     snow_setting = f"snow_coverage = {args.snow_coverage}\n" if args.snow_coverage is not None else ""
     desert_setting = f"desert_coverage = {args.desert_coverage}\n" if args.desert_coverage is not None else ""
+    city_setting = f"[economy]\nlarger_towns = 1\ninitial_city_size = {args.city_size}\n" if args.city_size is not None else ""
     (output / "openttd.cfg").write_text(f"""[misc]
 language = english.lng
 [gui]
@@ -91,7 +93,7 @@ town_council_tolerance = 0
 raw_industry_construction = 1
 terraform_per_64k_frames = 1000000
 terraform_frame_burst = 4096
-{vehicle_settings}[ai]
+{vehicle_settings}{city_setting}[ai]
 ai_in_multiplayer = true
 [network]
 server_advertise = false
@@ -153,7 +155,7 @@ pause_on_join = false
                     send("unpause")
             manifest = {"starting_year": args.year, "climate": args.climate, "terrain_type": args.terrain_type,
                         "snow_coverage": args.snow_coverage, "desert_coverage": args.desert_coverage,
-                        "town_site": args.town_site, "snapshots": snapshots}
+                        "town_site": args.town_site, "initial_city_size": args.city_size, "snapshots": snapshots}
             if service_requested:
                 cargo_snapshots = {}
 

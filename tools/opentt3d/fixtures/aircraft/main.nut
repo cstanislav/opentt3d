@@ -29,22 +29,32 @@ function AircraftCatalogue::Start()
 		this.Require(AICompany.SetLoanAmount(AICompany.GetMaxLoanAmount()), "fund aircraft catalogue company");
 		AICompany.SetName("OpenTT3D Aircraft Review");
 		local oilrig = AIController.GetSetting("review_oilrig") != 0;
-		local type = oilrig ? AIAirport.AT_HELIDEPOT : AIAirport.AT_INTERCON, airports = [], aircraft = [];
+		local type = oilrig ? AIAirport.AT_HELIDEPOT : AIController.GetSetting("review_airport_type"), airports = [], aircraft = [];
 		this.Require(AIAirport.IsValidAirportType(type), "review airport is available");
 		local width = AIAirport.GetAirportWidth(type), height = AIAirport.GetAirportHeight(type);
 		foreach (begin_x in [8, 88]) {
 			if (oilrig && airports.len() == 1) break;
-			local found = -1;
+			local found = -1, attempts = 0, last_error = "no candidate rectangle";
 			for (local y = 8; y < AIMap.GetMapSizeY()-height-8 && found < 0; y += 10) {
 				for (local x = begin_x; x < (oilrig ? AIMap.GetMapSizeX()-width-8 : begin_x+24); x += oilrig ? 4 : 10) {
 					local tile = AIMap.GetTileIndex(x,y);
-					if (AITile.GetMinHeight(tile) < (oilrig ? 1 : 2) || !AITile.IsBuildableRectangle(tile,width+1,height+1)) continue;
-					if (!AITile.LevelTiles(tile,AIMap.GetTileIndex(x+width,y+height))) continue;
+					if (AITile.GetMinHeight(tile) < 1 || !AITile.IsBuildableRectangle(tile,width+1,height+1)) continue;
+					++attempts;
+					if (!AITile.LevelTiles(tile,AIMap.GetTileIndex(x+width,y+height))) { last_error = AIError.GetLastErrorString(); continue; }
 					if (AIAirport.BuildAirport(tile,type,AIStation.STATION_NEW)) { found = tile; break; }
+					last_error = AIError.GetLastErrorString();
 				}
 			}
-			if (found < 0) throw "no buildable review airport site: " + begin_x;
-			airports.append(found);
+			if (found < 0) throw "no buildable review airport site: " + begin_x + ", attempts=" + attempts + ", last=" + last_error;
+			/* A helistation's origin is a hangar. Airport-service orders must target
+			 * an ordinary station tile, otherwise the public API creates depot orders. */
+			local destination = -1;
+			for (local y = 0; y < height && destination < 0; ++y) for (local x = 0; x < width; ++x) {
+				local tile = AIMap.GetTileIndex(AIMap.GetTileX(found)+x,AIMap.GetTileY(found)+y);
+				if (AIAirport.IsAirportTile(tile) && !AIAirport.IsHangarTile(tile)) { destination = tile; break; }
+			}
+			if (destination < 0) throw "airport has no public station-order tile";
+			airports.append(destination);
 		}
 		if (oilrig) {
 			this.Require(AIIndustryType.CanBuildIndustry(5), "original oil rig can be funded");
@@ -107,7 +117,7 @@ function AircraftCatalogue::Start()
 				foreach (plane in aircraft) {
 					manifest += (manifest.len() == 0 ? "" : ",") + "{\"engine\":" + plane.engine + ",\"vehicle\":" + plane.vehicle + ",\"serviced\":true,\"peak_speed\":" + plane.peak_speed + "}";
 				}
-				AILog.Info("AIRCRAFT_CATALOGUE_READY {\"airports\":[" + airports[0] + "," + airports[1] + "],\"aircraft\":[" + manifest + "]}");
+				AILog.Info("AIRCRAFT_CATALOGUE_READY {\"airport_type\":" + type + ",\"airports\":[" + airports[0] + "," + airports[1] + "],\"aircraft\":[" + manifest + "]}");
 				while (true) this.Sleep(1000);
 			}
 			this.Sleep(5);

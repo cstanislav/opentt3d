@@ -42,6 +42,14 @@
 - Run app checks in the background without activating/flashing windows while the
   computer is in use. Foreground execution is reserved for unavoidable native-input/
   presentation checks. Shell background execution alone does not satisfy this rule.
+- Progress clock audit **2026-09-26 14:12:26 UTC**: the19:00UTC minimum remains active.
+  Both expanded1,169-volume memory controls pass; renderer commit`d27740297` and
+  development release`.9` publish the residency/pitch repair. Dense Cab performance
+  remains12.714/14.058fps. Twelve refreshed focusedGL/Vulkan galleries cover paper,
+  plantations, waterworks, food processing, oil-well export and bank artwork; actual
+  construction-state and curved-train observations continue. The1,247-volume airport
+  candidate passes196 native/117 asset tests, awaiting native review. Public helicopter
+  services now reach helistation8 and helidepot6 through normal airport-service orders.
 - Extension recorded at **2026-09-26 00:53:04 UTC**. The prior00:51:14UTC audit belongs
   to the previous minimum and does not satisfy this extension. Resume breadth-first
   catalogue coverage, immediate correctness/footprint/clearance repairs and monitored
