@@ -24,18 +24,22 @@ def main():
     parser.add_argument("--clearance-route", action="store_true", help="Operate the consist across a real bridge with ramps and a tunnel built through a raised hill")
     parser.add_argument("--cargo-source", type=int, choices=range(37), help="Fund this original producer and verify real cargo service with a single selected wagon")
     parser.add_argument("--cargo-destination", type=int, choices=range(37), help="Original accepting industry for --cargo-source")
+    parser.add_argument("--cargo-town", action="store_true", help="Fund an ordinary town by the delivery station for town-accepted cargo")
+    parser.add_argument("--cargo-feeder", type=int, choices=range(37), help="Supply the processing industry by a real truck from this original input producer")
     parser.add_argument("--timeout", type=int, default=360)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
     executable = build / ("opentt3d.exe" if os.name == "nt" else "opentt3d")
     if not executable.is_file() or output.exists() or args.first_engine > args.last_engine:
         parser.error("Use a built executable, new output directory and increasing engine range")
-    if (args.cargo_source is None) != (args.cargo_destination is None):
-        parser.error("Cargo review requires both producer and accepting industry")
+    if args.cargo_town and args.cargo_destination is not None:
+        parser.error("Select one cargo destination: a funded town or industry")
+    if (args.cargo_source is None) != (args.cargo_destination is None and not args.cargo_town):
+        parser.error("Cargo review requires a producer and an accepting industry or town")
+    if args.cargo_feeder is not None and (args.cargo_source is None or args.cargo_feeder in (args.cargo_source,args.cargo_destination)):
+        parser.error("A cargo feeder needs a distinct input producer and processing source")
     if args.cargo_source is not None and (args.first_engine != args.last_engine or args.cargo_source == args.cargo_destination):
         parser.error("Cargo review needs one wagon engine and distinct industry types")
-    if args.clearance_route and args.cargo_source is not None:
-        parser.error("The clearance route and industry service need separate fixture layouts")
     root = Path(__file__).resolve().parents[2]
     graphics = json.loads((root / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "train", output / "ai/train-catalogue")
@@ -67,6 +71,8 @@ vehicle_breakdowns = 0
 raw_industry_construction = 1
 terraform_per_64k_frames = 1000000
 terraform_frame_burst = 4096
+[economy]
+found_town = 2
 [vehicle]
 never_expire_vehicles = true
 [ai]
@@ -78,8 +84,9 @@ pause_on_join = false
 """)
     engine = args.locomotive if args.locomotive is not None else -1
     source = args.cargo_source if args.cargo_source is not None else -1
-    destination = args.cargo_destination if args.cargo_destination is not None else 1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_clearance={int(args.clearance_route)},review_source={source},review_destination={destination}"\n')
+    destination = -1 if args.cargo_town else args.cargo_destination if args.cargo_destination is not None else 1
+    feeder = args.cargo_feeder if args.cargo_feeder is not None else -1
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_clearance={int(args.clearance_route)},review_source={source},review_destination={destination},review_feeder={feeder}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave train-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     for state in ("empty", "full"):
@@ -140,10 +147,14 @@ pause_on_join = false
                         raise RuntimeError("Train fixture did not verify its original bridge and tunnel route")
                     if args.cargo_source is not None:
                         if (not manifest.get("full") or not manifest.get("delivered") or manifest["acceptance"] < 8 or
-                            manifest["source_type"] != args.cargo_source or manifest["destination_type"] != args.cargo_destination or
+                            manifest["source_type"] != args.cargo_source or manifest["destination_type"] != destination or
                             set(cargo_snapshots) != {"empty", "full"} or
                             any(entry["vehicle"] != manifest["wagons"][0]["vehicle"] for entry in cargo_snapshots.values())):
                             raise RuntimeError("Train fixture did not complete original cargo production, full load, accepted delivery and both saved states")
+                        if args.cargo_feeder is not None and (manifest.get("feeder_type") != args.cargo_feeder or not manifest.get("feeder_delivered")):
+                            raise RuntimeError("The processor did not receive an observed real input-cargo delivery")
+                        if args.clearance_route and (manifest.get("bridge_cargo_states") != 3 or manifest.get("tunnel_cargo_states") != 3):
+                            raise RuntimeError("The cargo consist did not traverse both the bridge and tunnel with full and empty capacity")
                         manifest["cargo_snapshots"] = cargo_snapshots
                     save_count = (output / "run.log").read_text().count("Map successfully saved")
                     process.stdin.write("exec scripts/save_fixture.scr\n")

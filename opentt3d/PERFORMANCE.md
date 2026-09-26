@@ -18,8 +18,11 @@ obsolete oversized pages after the readback fence and command/descriptor reset,
 retaining one largest page plus at most32MiB of small scratch pages. An increasing-
 payload exact RGBA/picking regression now retains46,149,632bytes in two pages.
 Final refinery/ordering/atlas runs peak4,617,540,264 /4,513,206,856bytes. Complete1,169
-native and Linux matrices are active; the focused evidence is not yet a matched
-full-matrix or arbitrary-world memory bound.
+nativeGL/Vulkan matrices now pass at5,764,748,664 /5,889,987,864 sampled bytes. Linux
+CI36231074379 still exceeds6GiB at6,443,450,368bytes after the live-tunnel check. The
+larger matching nativeCI workload also exceeds the guard at6,463,543,728bytes during
+live-world review. All failures are retained; upload retirement alone is not a
+completeCI or arbitrary-world memory bound.
 
 ## Train loading-gauge and silhouette repair:1,133 volumes (September26)
 

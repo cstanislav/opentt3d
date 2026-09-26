@@ -21,6 +21,29 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Freight service and completed1,169 native matrices:** `pass1-fizzy-wagon-supplied-town-core`
+  records a real bubble-truck delivery from industry34 to33, wagon52 loading25/25
+  cargo11, accepted town unloading0/25 and return/holding. Acceptance is20, locomotive6,
+  train0/wagon1 and peak speed152. `pass1-fizzy-wagon52-{full,empty}-{opengl,vulkan}`
+  passes actual cargo checks, bindings7/6 and exact world-atlas/picking; maximum sampled
+  peak4,254,601,464bytes. Full/empty screenshots were inspected. Earlier insufficient-
+  acceptance/time-bound attempts remain preserved.
+- `pass1-loaded-clearance-fixtures.json` records five successful public-NoAI freight
+  routes: conventional steam0/wagon29, electric23/29, monorail54/59, maglev84/91 and
+  Toyland6/52. Each loads fully, delivers, returns and observes the real bridge and
+  tunnel in both cargo states. Coal capacities are30/30/35/37, fizzy drinks25; all
+  cargo/clearance masks are3. These fixtures use the published frozen1,169 executable.
+- Full `pass1-1169-full-{opengl,vulkan}` each passes28,056 model views,322,048 vehicle
+  poses/592 bindings,10,880 collector poses,384 rotor poses and exact4,096,000-pixel
+  world-atlas/picking. Sampled peaks5,764,748,664 /5,889,987,864bytes remain below6GiB;
+  4,876 /5,139 samples. `pass1-1169-final-validation.json` contains completed results.
+- CI36231074379 passes macOS and all three Windows build/test jobs. LinuxVulkan again
+  passes243,629 unobstructed live-tunnel pixels, then crosses6GiB at6,443,450,368bytes.
+  Evidence is `pass1-1169-linux-vulkan-{job.log,ci/}`. The larger matching native
+  workload `pass1-train-pitch-vulkan-ci-workload` also exceeds6GiB at6,463,543,728bytes
+  during live-world review. These are retained failures, not covered by the smaller
+  complete catalogue-matrix pass. LinuxGL completion and memory repair remain open.
+
 - **1,169-volume forest/refinery candidate:**190 native,108 asset/compiler and8
   harness tests pass, with the134-file presentation boundary. Source hash
   `486563f2082560a83f533d0a02350313dc044faaf9b12ca0889a46527a91dfac`; catalogue
@@ -49,8 +72,9 @@ Work continued on the user's reported memory incident; full-objective approval r
   completed fence and command/descriptor reset. Eight strictly increasing transient
   payloads retain46,149,632bytes /two pages (largest41,955,328), exact RGBA/picking and
   unchanged immutable-mesh storage. This focused regression passes on both native
-  backends; the complete1,169 and Linux matrices remain active, so no Linux memory
-  resolution or sustained gameplay improvement is claimed.
+  backends; the complete1,169 native matrices now pass as recorded above. The larger
+  Linux/nativeCI workload still fails, so no general memory resolution or sustained
+  gameplay improvement is claimed.
 
 - **1,144-volume train-clearance/sawmill candidate:**190 native,106 asset/compiler
   and8 harness tests pass. The134-source-file presentation boundary and whitespace

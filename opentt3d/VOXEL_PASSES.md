@@ -56,7 +56,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,144-volume verified candidate)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,169-volume verified candidate)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -106,8 +106,10 @@ engine/climate cases are captured in twelve normal consists. NativeGL/Vulkan eac
 pass68,544 new wagon poses. Source sheets retain side/diagonal proportions, bright
 uniform paint, simplified ribs/cargo grain and canopy/coil detail for later review.
 Sixteen freight routes pass actual full loading, accepted delivery and return with
-32 saved full/empty captures. Toyland fizzy drinks and complete contextual clearances
-remain open. All35 locomotives now have bindings and all55 climate/railtype service
+32 saved full/empty captures. Toyland fizzy drinks now also passes observed bubble-input
+delivery, full loading, accepted town delivery and both saved states onGL/Vulkan.
+Five loaded/empty freight routes pass real bridge/tunnel traversal; complete rendered
+contextual clearances remain open. All35 locomotives now have bindings and all55 climate/railtype service
 fixtures/captures pass. The1,133 repair clears the faceted tunnel gauge and independently
 fits the electric collectors; fullGL/Vulkan matrices pass. The1,144 sawmill addition
 preserves original construction differences, completed-only log/board piles and all

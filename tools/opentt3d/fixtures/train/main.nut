@@ -9,7 +9,8 @@ class TrainCatalogue extends AIController {
 	function Tile(dx,dy) { return AIMap.GetTileIndex(this.x+dx,this.y+dy); }
 	function Require(ok,operation) { if (!ok) throw operation+": "+AIError.GetLastErrorString(); }
 	function Start();
-	function CargoService(train, wagon, engine, manifest, west, east);
+	function CargoService(train, wagon, engine, manifest, west, east, tunnel_first, tunnel_last);
+	function FeedProcessor(processor);
 }
 
 function TrainCatalogue::Start()
@@ -67,7 +68,8 @@ function TrainCatalogue::Start()
 		local depot = this.Tile(1,4), west = this.Tile(5,4), east = this.Tile(57,4);
 		this.Require(AIRail.BuildRailDepot(depot,this.Tile(2,4)),"build original rail depot");
 		this.Require(AIRail.BuildRailStation(west,AIRail.RAILTRACK_NE_SW,1,8,AIStation.STATION_NEW),"build west terminus");
-		this.Require(AIRail.BuildRailStation(east,AIRail.RAILTRACK_NE_SW,1,8,AIStation.STATION_NEW),"build east terminus");
+		local delivery_platforms = service && AIController.GetSetting("review_destination") < 0 ? 5 : 1;
+		this.Require(AIRail.BuildRailStation(east,AIRail.RAILTRACK_NE_SW,delivery_platforms,8,AIStation.STATION_NEW),"build east terminus");
 		for (local x = 2; x <= 69; ++x) {
 			if ((x >= 5 && x < 13) || (x >= 57 && x < 65)) continue;
 			if (clearance && ((x >= 20 && x <= 27) || (x >= tunnel_first && x <= tunnel_last))) continue;
@@ -90,7 +92,7 @@ function TrainCatalogue::Start()
 		}
 		if (service) {
 			this.built = true;
-			this.CargoService(train,service_wagon,wagons[0],manifest,west,east);
+			this.CargoService(train,service_wagon,wagons[0],manifest,west,east,tunnel_first,tunnel_last);
 			while (true) this.Sleep(1000);
 		}
 		this.Require(AIOrder.AppendOrder(train,east,AIOrder.OF_NONE),"order east station");
@@ -128,30 +130,51 @@ function TrainCatalogue::Start()
 	while (true) this.Sleep(1000);
 }
 
-function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east)
+function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east, tunnel_first, tunnel_last)
 {
 	local source = AIController.GetSetting("review_source"), destination = AIController.GetSetting("review_destination");
 	local cargo = AIEngine.GetCargoType(engine), produced = AIIndustryType.GetProducedCargo(source);
 	this.Require(produced.HasItem(cargo),"wagon carries the original producer's cargo");
-	foreach (entry in [[source,6],[destination,58]]) {
+	local sites = [[source,6]];
+	if (destination >= 0) sites.append([destination,58]);
+	foreach (entry in sites) {
 		this.Require(AIIndustryType.CanBuildIndustry(entry[0]),"cargo industry can be funded");
 		this.Require(AIIndustryType.BuildIndustry(entry[0],this.Tile(entry[1],7)),"fund original cargo industry by the actual rail station");
 	}
+	if (destination < 0) {
+		this.Require(AITown.FoundTown(this.Tile(61,11),AITown.TOWN_SIZE_MEDIUM,true,AITown.ROAD_LAYOUT_3x3,null),"fund an ordinary accepting town by the rail terminus");
+	}
 	local radius = AIStation.GetCoverageRadius(AIStation.STATION_TRAIN);
 	this.Require(AITile.GetCargoProduction(west,cargo,8,1,radius) > 0,"loading station covers real producing tiles");
-	for (local tick = 0; tick < 1800 && AITile.GetCargoAcceptance(east,cargo,8,1,radius) < 8; tick += 2) this.Sleep(2);
-	local acceptance = AITile.GetCargoAcceptance(east,cargo,8,1,radius);
+	local delivery_platforms = destination < 0 ? 5 : 1;
+	for (local tick = 0; tick < 1800 && AITile.GetCargoAcceptance(east,cargo,8,delivery_platforms,radius) < 8; tick += 2) this.Sleep(2);
+	local acceptance = AITile.GetCargoAcceptance(east,cargo,8,delivery_platforms,radius);
 	if (acceptance < 8) throw "receiving station lacks actual cargo acceptance: "+acceptance;
+	local feeder_type = AIController.GetSetting("review_feeder"), feeder = null;
+	if (feeder_type >= 0) feeder = this.FeedProcessor(AIIndustry.GetIndustryID(this.Tile(6,7)));
 	this.Require(AIOrder.AppendOrder(train,west,AIOrder.OF_FULL_LOAD_ANY),"order original full-load rail pickup");
 	this.Require(AIOrder.AppendOrder(train,east,AIOrder.OF_NONE),"order original accepted rail delivery");
 	this.Require(AIVehicle.StartStopVehicle(train),"start the original cargo train");
 	local full = false, delivered = false, returned = false, peak_speed = 0;
+	local clearance = AIController.GetSetting("review_clearance") != 0, bridge_states = 0, tunnel_states = 0;
 	local pickup_station = AIStation.GetStationID(west), delivery_station = AIStation.GetStationID(east);
 	local capacity = AIVehicle.GetCapacity(train,cargo);
 	if (capacity <= 0) throw "attached train has no cargo capacity";
 	for (local tick = 0; tick < 6000 && !returned; tick += 2) {
 		if (!AIVehicle.IsValidVehicle(train) || AIVehicle.GetState(train) == AIVehicle.VS_CRASHED) throw "cargo train was lost";
 		local amount = AIVehicle.GetCargoLoad(train,cargo), speed = AIVehicle.GetCurrentSpeed(train);
+		if (clearance) {
+			local dx = AIMap.GetTileX(AIVehicle.GetLocation(train))-this.x;
+			local cargo_state = amount == capacity ? 1 : delivered && amount == 0 ? 2 : 0;
+			if (dx >= 20 && dx <= 27) bridge_states = bridge_states | cargo_state;
+			if (dx >= tunnel_first && dx <= tunnel_last) tunnel_states = tunnel_states | cargo_state;
+		}
+		if (feeder != null) {
+			local load = AIVehicle.GetCargoLoad(feeder.truck,feeder.cargo);
+			if (load > 0) feeder.loaded = true;
+			if (feeder.loaded && load == 0 && AIVehicle.GetState(feeder.truck) == AIVehicle.VS_AT_STATION &&
+				AIStation.GetStationID(AIVehicle.GetLocation(feeder.truck)) == feeder.station) feeder.delivered = true;
+		}
 		if (speed > peak_speed) peak_speed = speed;
 		local station = AIStation.GetStationID(AIVehicle.GetLocation(train));
 		local state = null;
@@ -166,10 +189,14 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 			/* Give the external harness a normal-script interval to pause/save. */
 			this.Sleep(10);
 		}
-		if (tick % 256 == 0) AILog.Info("TRAIN_CARGO_STATUS tick="+tick+" load="+amount+" speed="+speed+" station="+station);
+		if (tick % 256 == 0) AILog.Info("TRAIN_CARGO_STATUS tick="+tick+" load="+amount+" speed="+speed+" station="+station+
+			" acceptance="+AITile.GetCargoAcceptance(east,cargo,8,delivery_platforms,radius)+
+			" feeder_delivered="+(feeder != null && feeder.delivered ? "true" : "false"));
 		this.Sleep(2);
 	}
 	if (!full || !delivered || !returned || peak_speed <= 0) throw "cargo train did not fully load, deliver and return";
+	if (clearance && (bridge_states != 3 || tunnel_states != 3)) throw "cargo train did not cross the actual bridge and tunnel both full and empty";
+	if (feeder != null && !feeder.delivered) throw "processing input was not observed loading and unloading at its accepting industry";
 	local held = AIController.GetSetting("review_hold") != 0;
 	if (held) {
 		this.Require(AIVehicle.StartStopVehicle(train),"hold returned cargo train");
@@ -179,5 +206,58 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 	AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+AIController.GetSetting("review_rail_type")+
 		",\"locomotive\":"+AIVehicle.GetEngineType(train)+",\"train\":"+train+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
 		",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"cargo\":"+cargo+",\"capacity\":"+capacity+",\"acceptance\":"+acceptance+
-		",\"source_type\":"+source+",\"destination_type\":"+destination+",\"full\":true,\"delivered\":true}");
+		",\"source_type\":"+source+",\"destination_type\":"+destination+",\"feeder_type\":"+feeder_type+
+		",\"feeder_delivered\":"+(feeder != null && feeder.delivered ? "true" : "false")+",\"full\":true,\"delivered\":true"+
+		",\"clearance_route\":"+(clearance ? "true" : "false")+",\"bridge_seen\":"+(bridge_states == 3 ? "true" : "false")+
+		",\"tunnel_seen\":"+(tunnel_states == 3 ? "true" : "false")+",\"bridge_cargo_states\":"+bridge_states+",\"tunnel_cargo_states\":"+tunnel_states+
+		",\"tunnel_first\":"+tunnel_first+",\"tunnel_last\":"+tunnel_last+"}");
+}
+
+function TrainCatalogue::FeedProcessor(processor)
+{
+	local type = AIController.GetSetting("review_feeder");
+	this.Require(AIIndustry.IsValidIndustry(processor),"find the real processing industry");
+	this.Require(AIIndustryType.CanBuildIndustry(type),"input producer can be funded");
+	this.Require(AIIndustryType.BuildIndustry(type,this.Tile(30,7)),"fund actual processing-input producer");
+	local producer = AIIndustry.GetIndustryID(this.Tile(30,7)), cargo = -1;
+	local produced = AIIndustryType.GetProducedCargo(type);
+	for (local candidate = produced.Begin(); !produced.IsEnd(); candidate = produced.Next()) {
+		if (AIIndustry.IsCargoAccepted(processor,candidate) == AIIndustry.CAS_ACCEPTED) { cargo = candidate; break; }
+	}
+	if (cargo < 0) throw "processor does not accept this producer's original cargo";
+	local rows = [];
+	foreach (site in [[processor,6],[producer,30]]) {
+		local south = -1;
+		for (local y = 7; y < 17; ++y) for (local x = site[1]; x < site[1]+8; ++x) {
+			if (AIIndustry.GetIndustryID(this.Tile(x,y)) == site[0]) south = y;
+		}
+		if (south < 0) throw "input-route industry's actual tiles were not found";
+		rows.append(south+1);
+	}
+	AIRoad.SetCurrentRoadType(0);
+	local delivery = this.Tile(7,rows[0]), pickup = this.Tile(31,rows[1]);
+	this.Require(AIRoad.BuildRoad(this.Tile(5,rows[0]),this.Tile(22,rows[0])),"build processor-side input road");
+	if (rows[0] != rows[1]) this.Require(AIRoad.BuildRoad(this.Tile(22,rows[0]),this.Tile(22,rows[1])),"turn toward input producer");
+	this.Require(AIRoad.BuildRoad(this.Tile(22,rows[1]),this.Tile(35,rows[1])),"build input producer approach");
+	this.Require(AIRoad.BuildDriveThroughRoadStation(delivery,this.Tile(8,rows[0]),AIRoad.ROADVEHTYPE_TRUCK,AIStation.STATION_NEW),"build processor input stop");
+	this.Require(AIRoad.BuildDriveThroughRoadStation(pickup,this.Tile(32,rows[1]),AIRoad.ROADVEHTYPE_TRUCK,AIStation.STATION_NEW),"build input loading stop");
+	local depot = this.Tile(24,rows[1]+1);
+	this.Require(AIRoad.BuildRoadDepot(depot,this.Tile(24,rows[1])),"build input-truck depot");
+	this.Require(AIRoad.BuildRoad(depot,this.Tile(24,rows[1])),"connect input-truck depot");
+	local radius = AIStation.GetCoverageRadius(AIStation.STATION_TRUCK_STOP);
+	this.Require(AITile.GetCargoProduction(pickup,cargo,1,1,radius) > 0,"input stop covers original production");
+	for (local tick = 0; tick < 1800 && AITile.GetCargoAcceptance(delivery,cargo,1,1,radius) < 8; tick += 2) this.Sleep(2);
+	this.Require(AITile.GetCargoAcceptance(delivery,cargo,1,1,radius) >= 8,"processor stop actually accepts the input cargo");
+	local engine = -1, engines = AIEngineList(AIVehicle.VT_ROAD);
+	for (local candidate = engines.Begin(); !engines.IsEnd(); candidate = engines.Next()) {
+		if (AIEngine.GetCargoType(candidate) == cargo) { engine = candidate; break; }
+	}
+	if (engine < 0) throw "no original input-cargo truck is available";
+	local truck = AIVehicle.BuildVehicle(depot,engine);
+	this.Require(AIVehicle.IsValidVehicle(truck),"build the processing-input truck");
+	this.Require(AIOrder.AppendOrder(truck,pickup,AIOrder.OF_FULL_LOAD_ANY),"order real input loading");
+	this.Require(AIOrder.AppendOrder(truck,delivery,AIOrder.OF_NONE),"order accepted processing input");
+	this.Require(AIVehicle.StartStopVehicle(truck),"start real processing-input service");
+	AILog.Info("TRAIN_FEEDER_READY truck="+truck+" engine="+engine+" cargo="+cargo+" producer="+producer+" processor="+processor);
+	return {truck = truck,cargo = cargo,station = AIStation.GetStationID(delivery),loaded = false,delivered = false};
 }

@@ -10,12 +10,12 @@
 - Extension recorded at **2026-09-26 03:09:04 UTC**. Every prior stopping audit is
   historical and does not satisfy this new window. Continue breadth-first coverage,
   immediate correctness repairs and production review through19:00UTC.
-- Progress clock audit **2026-09-26 08:41:57 UTC**: the window is still active.
-  The1,169-volume forest/refinery candidate passes both incremental backend matrices,
-  both actual forest production/regrowth cycles and24 refinery construction selections.
-  Linux Vulkan now confirms the tunnel-root repair, then exceeds the6GiB guard later
-  in the catalogue matrix. Fence-safe diagnostic upload retirement and complete native
-  matrices are under review. Publication, remaining breadth and rail contact continue.
+- Progress clock audit **2026-09-26 09:37:22 UTC**: the window is still active.
+  Both complete1,169-volume native renderer matrices pass below6GiB. Real fizzy-drinks
+  production/supply/delivery and five loaded/empty bridge/tunnel services now pass.
+  LinuxVulkan still exceeds6GiB; a matching larger nativeCI workload also fails the
+  guard. Train pitch/contact and memory investigation continue alongside publication
+  and remaining catalogue breadth. This is not a stopping audit.
 - Publish progress frequently: commit and push coherent verified increments to main,
   merge feature work as appropriate, and make a release at least daily or at noteworthy
   milestones. Label incomplete development checkpoints accurately; retain all evidence.
@@ -69,6 +69,13 @@ immediately; record cosmetic findings for their appropriate later pass.
 > - If by a chance you think you're done with everything on this list, DON'T STOP WORKING. Keep playtesting the game, do visual checks, make lists of things that don't work or don't look perfect, keep improving things. THE ONLY ALLOWED WAY OF STOPPING WORK IS THE TIME CHECK.
 
 ### Current-window progress
+
+- **Freight-state follow-up:** public-NoAI fixtures now support accepting towns and
+  real processing-input truck routes. Wagon52 loads25/25 fizzy drinks after observed
+  bubble delivery, unloads at a town and returns. Both hidden native backends capture
+  its actual full/empty bindings. Five additional railtype/cargo fixtures traverse
+  real bridges and tunnels both full and empty. The complete frozen1,169 matrices
+  pass28,056 mesh views/322,048 vehicle poses/backend; broaderCI memory remains open.
 
 - **Forest/refinery candidate:**25 manually authored volumes add graphics16…23 and
   independent grounds. Both native backends observe the unchanged actual forest tile's
