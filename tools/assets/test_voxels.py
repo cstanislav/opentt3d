@@ -7,6 +7,66 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_oilrig_joined_construction_keeps_supported_parts_open_water_and_heli_contact(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("oilrig_")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 24 <= int(key) <= 28}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        for graphics, states in result["bindings"]["industries"].items():
+            for stage, name in states.items():
+                if graphics == "25":
+                    allowed = {1,4,7,9,73,76,118,151,152,153,187,188,189} | set(range(232,239))
+                elif stage == "0":
+                    allowed = set(range(70,80)) | {250,251,252,253,254}
+                else:
+                    allowed = set(range(2,16)) | set(range(70,80)) | set(range(114,122)) | set(range(128,135)) | {250,251,252,253,254}
+                    if graphics == "26" and stage == "3":
+                        allowed |= {169,241,242,243,244,255}
+                colours = {colour for *_,material in result["models"][name]["runs"] for colour in result["materials"][material-1]}
+                self.assertTrue(colours <= allowed,(graphics,stage,sorted(colours-allowed)))
+        self.assertNotIn("24",result["bindings"]["industries"],"The water-only oilrig tile must stay empty")
+        self.assertEqual(set(result["bindings"]["industries"]["25"]),{"3"})
+        for graphics in (26,27,28):
+            states = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(states["1"],states["2"])
+            self.assertEqual(len(set(states.values())),3)
+        for stage in range(4):
+            joined = set()
+            for x,y,graphics in ((0,2,25),(1,0,26),(1,1,27),(1,2,28)):
+                name = result["bindings"]["industries"].get(str(graphics),{}).get(str(stage))
+                if name is None:
+                    continue
+                model = result["models"][name]
+                self.assertEqual(model["cell_size"],[0.5,0.5,1])
+                ox,oy,oz = model["origin"]
+                cells = {(int(ox*2)+x*32+cx+i,int(oy*2)+y*32+cy,int(oz)+cz)
+                         for cx,cy,cz,length,_ in model["runs"] for i in range(length)}
+                self.assertTrue(joined.isdisjoint(cells),"Industry ownership must not duplicate a joined cell")
+                joined.update(cells)
+            supported = {cell for cell in joined if cell[2] == 0}
+            self.assertTrue(supported)
+            pending = list(supported)
+            for x,y,z in pending:
+                for neighbour in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if neighbour in joined and neighbour not in supported:
+                        supported.add(neighbour)
+                        pending.append(neighbour)
+            self.assertEqual(len(supported),len(joined),f"Unattached oilrig structure in stage{stage}: {len(joined-supported)} cells")
+            self.assertNotIn((48,40,8),joined,"The sea between pilings must remain open")
+            if stage == 0:
+                self.assertEqual(max(z for x,y,z in joined),26,"The earliest source contains pilings, without the later deck or buildings")
+            if stage in (1,2):
+                self.assertNotIn((28,36,80),joined,"The intermediate source has no erected derrick")
+            if stage >= 1:
+                # The original oilrig airport terminal is (31,9), delta_z=54.
+                self.assertIn((62,18,53),joined)
+                self.assertNotIn((62,18,54),joined)
+                self.assertFalse(any(54 <= x < 70 and 10 <= y < 26 and z >= 54 for x,y,z in joined))
+        ground = result["models"]["oilrig_water_ground"]
+        self.assertEqual(ground["origin"],[0,0,-1])
+        self.assertEqual(ground["occupied"],32*32)
+
     def test_authored_prisms_keep_concavities_winding_axes_and_component_offsets(self):
         outline = [[0,0],[4,0],[4,1],[1,1],[1,4],[0,4]]
         expected_plane = {(u,v) for u in range(4) for v in range(4) if u == 0 or v == 0}

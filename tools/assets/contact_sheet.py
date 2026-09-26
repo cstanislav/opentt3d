@@ -59,6 +59,7 @@ def main():
     parser.add_argument("--house-pair", type=int, nargs=2, choices=range(110), help="Join two original house tiles using their source offsets")
     parser.add_argument("--house-block", type=int, nargs=4, choices=range(110), help="Join four original house tiles in upstream north/east/west/south order, including their ground layers")
     joined_comparison = parser.add_mutually_exclusive_group()
+    joined_comparison.add_argument("--industry-layout-comparison", type=int, nargs=2, metavar=("TYPE", "LAYOUT"), help="Compare a complete native voxel industry layout with all original ground/body layers at their tile anchors")
     joined_comparison.add_argument("--house-block-comparison", type=int, choices=range(107), metavar="PRIMARY", help="Compare a complete four-tile voxel house with its registered original ground/body layers")
     joined_comparison.add_argument("--house-pair-comparison", type=int, choices=range(109), metavar="PRIMARY", help="Compare a complete two-tile voxel house with its original layers; select the original layout using --pair-axis")
     parser.add_argument("--pair-axis", choices=("x", "y"), default="y", help="World axis of the second tile in --house-pair")
@@ -139,6 +140,65 @@ def main():
         if not visible:
             return Image.new("RGBA", (1,1)), (0,0,0,0)
         return joined.crop(visible), (left+visible[0],top+visible[1],left+visible[2],top+visible[3])
+
+    if args.industry_layout_comparison is not None:
+        if args.source_directory is None:
+            parser.error("Joined industry comparison requires --source-directory")
+        industry, layout = args.industry_layout_comparison
+        catalogue = json.loads((args.source_directory / "industries.json").read_text())
+        panels, records = [], []
+        for stage in range(4):
+            name = args.directory / f"model-voxel-industry-layout-{industry}-{layout}-{stage}-native"
+            registration = json.loads(name.with_suffix(".json").read_text())
+            grounds, bodies = [], []
+            for tile in registration["tiles"]:
+                entry = next(item for item in catalogue if item["graphics"] == tile["graphics"] and item["stage"] == stage)
+                gx, gy, gz = map(int, tile["origin"])
+                if entry["ground_image"]:
+                    dx, dy = entry["ground_sprite_offset"]
+                    grounds.append((read_pam(args.source_directory / entry["ground_image"]), 2*(gy-gx)+dx//4, gx+gy-gz+dy//4))
+                if entry["image"]:
+                    x, y, z = entry["origin"]
+                    dx, dy = entry["sprite_offset"]
+                    bodies.append((read_pam(args.source_directory / entry["image"]), 2*(gy+y-gx-x)+dx//4, gx+x+gy+y-gz-z+dy//4))
+            pieces = grounds+bodies
+            left, top = min(x for _,x,y in pieces), min(y for _,x,y in pieces)
+            right, bottom = max(x+image.width for image,x,y in pieces), max(y+image.height for image,x,y in pieces)
+            original = Image.new("RGBA", (right-left,bottom-top))
+            for image, x, y in pieces:
+                original.alpha_composite(image, (x-left,y-top))
+            a = original.getchannel("A").getbbox()
+            model = read_pam(name.with_suffix(".pam")) if name.with_suffix(".pam").exists() else Image.open(name.with_suffix(".png")).convert("RGBA")
+            b = model.getchannel("A").getbbox()
+            if not a or not b:
+                parser.error("Complete industry source/model is empty")
+            ox, oy = registration["tile_origin"]
+            source_bounds = (left+a[0],top+a[1],left+a[2],top+a[3])
+            model_bounds = (b[0]-ox,b[1]-oy,b[2]-ox,b[3]-oy)
+            common = (min(source_bounds[0],model_bounds[0]),min(source_bounds[1],model_bounds[1]),
+                      max(source_bounds[2],model_bounds[2]),max(source_bounds[3],model_bounds[3]))
+            pair = []
+            for image, bounds in ((original.crop(a),source_bounds),(model.crop(b),model_bounds)):
+                canvas = Image.new("RGBA", (common[2]-common[0],common[3]-common[1]))
+                canvas.alpha_composite(image, (bounds[0]-common[0],bounds[1]-common[1]))
+                pair.append(canvas)
+            panels.append(pair)
+            records.append({"stage":stage,"original_tile_bounds":source_bounds,"model_tile_bounds":model_bounds,"tiles":registration["tiles"]})
+        width = max(480, 20+4*max(image.width for pair in panels for image in pair))
+        height = max(360, 50+4*max(image.height for pair in panels for image in pair))
+        sheet = Image.new("RGB", (width*4,height*2), (40,40,48))
+        draw = ImageDraw.Draw(sheet)
+        for stage, pair in enumerate(panels):
+            for row, (label,image) in enumerate(zip(("source","voxel"),pair)):
+                draw.text((stage*width+6,row*height+6),f"{label} industry {industry}, layout {layout}, stage {stage}\n4x native pixels; tile-aligned",fill="white")
+                panel = Image.new("RGBA",image.size,(40,40,48,255)); panel.alpha_composite(image)
+                panel = panel.resize((image.width*4,image.height*4),Image.Resampling.NEAREST)
+                sheet.paste(panel,(stage*width+(width-panel.width)//2,(row+1)*height-5-panel.height))
+        output = args.directory / f"industry-layout-{industry}-{layout}-source-registration.png"
+        sheet.save(output)
+        output.with_suffix(".json").write_text(json.dumps(records,indent=2)+"\n")
+        print(output)
+        return
 
     if args.house_block_comparison is not None or args.house_pair_comparison is not None:
         if args.source_directory is None:

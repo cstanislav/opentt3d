@@ -10,7 +10,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite190/190, including translated-root bore clipping, collector mounting/wire grades, silhouette-boundary diagonals, shared-result ownership and actual idle-worker cancellation release. Current Linux CI completion remains pending; the locomotive checkpoint passes187 native Linux tests before a live-tunnel overlap failure, now reproduced and repaired natively.
-- [x] Asset/compiler/schema tests108/108, downloader/screenshot/memory harness8/8; newest tests cover grounded forest/regrowth volumes, refinery construction footprints/openings, original palettes and independent full-tile grounds.
+- [x] Asset/compiler/schema tests109/109, downloader/screenshot/memory harness9/9; newest tests cover oil-rig construction ownership, supported joins, empty water states, the original helipad datum and process cleanup after a disk-full memory report.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -82,7 +82,8 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Artwork
 
-- [x] Verified1,169 JSON volumes,110 house definitions with body or ground geometry,109 independent body/88 ground definitions,62 tree families/434 lifecycle volumes and256 voxel vehicle definitions. Current inventory is `build-macos/pass1-1169-final-inventory.json`. No final approvals.
+- [x] Published1,180 JSON volumes,110 house definitions with body or ground geometry,109 independent body/88 ground definitions,62 tree families/434 lifecycle volumes and256 voxel vehicle definitions. Industries now have25 body definitions and29 independent ground definitions. No final approvals.
+- [x] Eleven oil-rig volumes preserve all six original tile positions, four pilings/paired braces, intermediate platforms, completed derrick/flare and the54-unit landing deck. All20 actual construction selections pass, including the completed neutral station's water ground. Both native backends pass264 new mesh/1,616 industry-state views, exact atlas/picking and helicopter253 support/rotor observations. Source-registered joined and street views are retained; finer artwork, broader helicopter clearance and water/light phases remain open.
 - [x] All35 locomotive body definitions have bindings:38 new volumes cover33 definitions and repair the older SH electric wheel gauge. Seven Arctic/tropical pairs retain different bodies;13 permitted source-climate pairs match208 views/58,808 RGBA pixels. Both native backends pass46,784 locomotive poses and1,344 rail/depot mesh views, with exact world-atlas checks below6GiB.
 - [x] All55 locomotive/climate/railtype fixtures complete service, return and holding; all55 hiddenGL actual-selection captures pass below6GiB. Twelve additional public-NoAI train consists complete real bridge/ramp/tunnel journeys across all climates and original railtypes; rendered clearance review remains active.
 - [x] Recalibrated train Z grids preserve XY footprints and the0.5-unit running support plane while clearing the faceted tunnel lining/ribs in every bound empty/loaded body. Three independent collector volumes follow each shoe's surface/portal/tunnel wire height; all four engines pass hidden live observation on both backends. Full1,133-volume GL/Vulkan matrices each pass27,192 mesh views,322,048 body poses and10,880 joined collector poses below6GiB.

@@ -56,7 +56,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,169-volume verified candidate)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,180-volume published candidate)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -66,7 +66,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states and three independently mounted train collector volumes | Flat-body tunnel gauge repaired; slope/curve wheel contact, contextual station/depot/bridge/Cab clearance and all-family source/dimensional work remain; bindings do not establish Pass1 acceptance |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
-| Industries | 21/175 body definitions,24 grounds | Forest16/17 and refinery18…23 join the mine/power/sawmill groups; remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
+| Industries | 25/175 body definitions,29 grounds | Oil-rig24…28 follows forest/refinery, with original empty bodies and converted-station water retained; remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
 | Airports | 18/74 tile definitions | Missing buildings/grounds/runways/aprons, helipads and state-driven equipment |
 | Depots | 5/6 families,20 directional bindings | Tram body/floor/wire and all-family source/ground/clearance review |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
@@ -117,8 +117,10 @@ five independent grounds. The1,169 candidate adds six forest and19 refinery volu
 four nine-pine growth bodies, production logs/stumps/litter, six refinery construction
 families and independent soil/paving. Both backend forest cycles and24 actual refinery
 construction selections pass. Source/street findings remain in `VOXEL_REVIEW.md`;
-oil-rig24…28 and remaining industry/infrastructure breadth follow the immediate
-train rail-contact/clearance and diagnostic-memory repairs.
+the1,180 oil-rig checkpoint adds11 volumes, all20 actual construction selections,
+registered six-tile layouts and actual helicopter253 support/rotor observations on
+both backends. Oil-well29…32 and remaining industry/infrastructure breadth continue
+alongside train rail-contact/clearance and diagnostic-memory repairs.
 
 **Pass 1 remains incomplete.** New bindings do not automatically establish correct
 source dimensions/ground registration or every clearance. Bus/van diagonal/profile

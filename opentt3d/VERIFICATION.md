@@ -21,6 +21,25 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Published1,180 oil-rig checkpoint:** `pass1-oilrig-service-hashes.json` pins source
+  `c93dbcfaf07ee98bb756e0612993c2389320f490d606a2b6ed5c54f99f12335f` and compiled
+  catalogue `d8fca0f58b2b64121d759ade5343ff8cffae28116714e7c755c8305cf3eddaf0`.
+  Totals are9,411,990 occupied cells,7,008,152 exposed faces,1,557,799 conforming
+  rectangles and11,543,322 triangles. The oil-rig artwork in the index is byte-exact
+  to that reviewed source. The verification executable also contains the separately
+  tracked pitch/residency candidate; its oil-rig geometry has no pitch transform.
+  `pass1-oilrig-actual-validation.json` records all20 day0/16/30/44 selections.
+  `pass1-oilrig-actual-26-0` and `pass1-oilrig-helicopter253-contact-vulkan` each pass
+  264 oil-rig mesh/1,616 industry-state views and exact atlas/picking, with sampled
+  peaks4,509,782,552 /4,515,172,984bytes. Vulkan also confirms the40 deck contacts,
+  four rotor states and restart over1,800 running frames. Source-registration and
+  all-angle/street sheets retain remaining fine differences and zero final approvals.
+- The public-NoAI follow-up now also completes helicopter254 service to the same
+  neutral airport (peak512), and electric locomotives24/25/26 with coal wagon29
+  complete the curved freight route. Every curve/bridge/tunnel cargo mask is3,
+  with full30/30 loading, delivery, empty return and holding. Their rendered
+  support/clearance checks are queued behind the serialized memory matrix.
+
 - **Disk-failure cleanup regression:** a failed final memory-report write could
   escape the smoke harness's `finally` block before terminating the game. The
   observed orphaned Toyland wagon52 run was stopped; its interrupted evidence stays

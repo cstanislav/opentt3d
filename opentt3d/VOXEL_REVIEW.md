@@ -14,15 +14,17 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
-- **Oil-rig candidate, not published/approved:** graphics24 remains body-empty and
+- **Oil-rig published candidate, not visually approved:** graphics24 remains body-empty and
   25 stays empty until its completed flare. Four initial pilings/paired braces are
   followed by the joined deck, three-storey accommodation and service block; only
   the completed state erects the derrick and flare. A full six-tile native export
   and tile-origin sidecars now support registered joined-source comparisons. The
-  first264 mesh/1,616 industry-state views pass onGL; subsequent footprint/material
-  corrections and converted-neutral-station water ownership remain under review.
-  The source's54-unit helipad datum is retained. Final acceptance additionally needs
-  actual helicopter support/rotor clearance and water/light animation checks.
+  reviewed264 mesh/1,616 industry-state views pass onGL andVulkan; all20 actual
+  construction selections and converted-neutral-station water ownership pass.
+  The source's54-unit helipad datum is retained:40 actual helicopter253 support
+  corners lie on captured deck triangles, and all four original rotor states plus
+  restart are observed on both backends. Broader swept rotor clearance, helicopter254
+  rendered checks and water/light animation observations remain open.
 - Oil-rig later-pass findings: the service block's plan/proportions, intermediate
   platform heights and stepped walkway/well joins, cylinder ribs/paint, cabin window
   framing/recesses, derrick section widths, roof grain, rail-post spacing and the

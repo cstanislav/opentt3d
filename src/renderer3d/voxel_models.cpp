@@ -358,8 +358,9 @@ bool FocusVoxelIndustry(unsigned graphics, unsigned stage, bool ground)
 	std::array<unsigned,4> counts{};
 	for (uint y = 1; y < Map::MaxY(); ++y) for (uint x = 1; x < Map::MaxX(); ++x) {
 		TileIndex tile = TileXY(x,y);
-		if (!IsTileType(tile,MP_INDUSTRY) || GetIndustryGfx(tile) != graphics) continue;
-		unsigned actual = GetIndustryConstructionStage(tile);
+		bool oilrig = graphics == GFX_OILRIG_1 && ground && IsTileType(tile,MP_STATION) && IsOilRig(tile);
+		if (!oilrig && (!IsTileType(tile,MP_INDUSTRY) || GetIndustryGfx(tile) != graphics)) continue;
+		unsigned actual = oilrig ? 3 : GetIndustryConstructionStage(tile);
 		++counts[actual];
 		const auto &source = _industry_draw_tile_data[graphics*4+actual];
 		if (actual != stage || !VoxelIndustryState(graphics,ground ? source.ground.sprite : source.building.sprite,ground)) continue;
@@ -731,7 +732,34 @@ void ExportVoxelReviews(std::string_view prefix)
 				group.push_back(&Models().models.at(binding->second));
 				placements.push_back({static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0});
 			}
-			if (selected && group.size() > 1) context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
+			if (!selected || group.size() <= 1) continue;
+			context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
+			Scene joined;
+			nlohmann::json tiles = nlohmann::json::array();
+			bool complete = true;
+			for (const auto &part : layouts[layout]) {
+				if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
+				const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
+				Vec3 origin{static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0};
+				complete &= DrawVoxelIndustryGround(joined,part.gfx,source.ground.sprite,origin,source.ground.pal);
+				if ((source.building.sprite&SPRITE_MASK) != 0) complete &= DrawVoxelAsset(joined,"industries",part.gfx,stage,origin,source.building.pal);
+				tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
+			}
+			if (!complete) continue;
+			for (auto &instance : joined.instances) instance.data.SetObjectId(1);
+			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
+			int left = 8192, top = 8192, right = 8192, bottom = 8192;
+			for (const auto &instance : joined.instances) for (const auto &vertex : *instance.mesh) {
+				auto point = camera.Project(ResolveInstanceVertex(vertex,instance.data).position);
+				if (!point.visible) throw std::runtime_error("Native joined industry review is outside the fixed-lens camera");
+				left = std::min(left,static_cast<int>(std::floor(point.x))-4); top = std::min(top,static_cast<int>(std::floor(point.y))-4);
+				right = std::max(right,static_cast<int>(std::ceil(point.x))+4); bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
+			}
+			std::string name = fmt::format("model-voxel-industry-layout-{}-{}-{}-native",type,layout,stage);
+			capture(joined,camera.Cropped(left,top,right-left,bottom-top),name,true);
+			std::ofstream registration(directory/(name+".json"));
+			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}},{"tiles",tiles}}.dump(2) << '\n';
+			if (!registration) throw std::runtime_error("Could not write native joined-industry registration");
 		}
 	}
 	std::set<unsigned> selected_houses;

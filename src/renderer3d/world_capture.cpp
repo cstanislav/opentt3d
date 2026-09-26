@@ -24,6 +24,8 @@
 #include "../water_map.h"
 #include "../station_map.h"
 #include "../station_func.h"
+#include "../station_base.h"
+#include "../airport.h"
 #include "../newgrf_canal.h"
 #include "../clear_map.h"
 #include "../rail_map.h"
@@ -1142,10 +1144,11 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 	if (tile.tileh == SLOPE_FLAT && offset_x == 0 && offset_y == 0) {
 		size_t first = capture->scene.instances.size();
 		bool industry = IsTileType(tile.tile,MP_INDUSTRY);
+		bool oilrig = IsTileType(tile.tile,MP_STATION) && IsOilRig(tile.tile);
 		bool house = IsTileType(tile.tile,MP_HOUSE) && HasVoxelHouseGround(GetHouseType(tile.tile));
-		unsigned graphics = industry ? GetIndustryGfx(tile.tile) : house ? GetHouseType(tile.tile) : 0;
+		unsigned graphics = industry ? GetIndustryGfx(tile.tile) : oilrig ? GFX_OILRIG_1 : house ? GetHouseType(tile.tile) : 0;
 		unsigned variant = house ? TileHash2Bit(tile.x,tile.y) : 0;
-		bool voxel = industry ? DrawVoxelIndustryGround(capture->scene,graphics,image,origin,palette) :
+		bool voxel = industry || oilrig ? DrawVoxelIndustryGround(capture->scene,graphics,image,origin,palette) :
 			house && DrawVoxelHouseGround(capture->scene,graphics,GetHouseBuildingStage(tile.tile),variant,image,origin,palette);
 		if (voxel) {
 			++capture->tile_layers;
@@ -1158,7 +1161,7 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 			capture->scene.instances.erase(std::remove_if(capture->scene.instances.begin()+first,capture->scene.instances.end(),
 				[](const auto &instance) { return instance.mesh->empty(); }),capture->scene.instances.end());
 			if (capture->scene.instances.size() > first && !capture->diagnostic) {
-				unsigned stage = industry ? GetIndustryConstructionStage(tile.tile) : GetHouseBuildingStage(tile.tile);
+				unsigned stage = industry ? GetIndustryConstructionStage(tile.tile) : oilrig ? 3 : GetHouseBuildingStage(tile.tile);
 				static std::set<std::tuple<bool,unsigned,unsigned,unsigned>> reported;
 				if (reported.emplace(house,graphics,stage,variant).second) {
 					Debug(driver,1,"OpenTT3D: live voxel {} ground {} construction stage {} captured at {},{}",house ? "house" : "industry",graphics,stage,TileX(tile.tile),TileY(tile.tile));
@@ -1387,6 +1390,40 @@ void BeginVoxelAircraftContactCheck(unsigned engine)
 	checked_aircraft_contact = engine;
 }
 
+/** Diagnostic only: every authored skid/wheel corner must land on an actual
+ * captured horizontal deck triangle, including joins between industry owners. */
+static unsigned CheckElevatedAircraftContacts(float height)
+{
+	std::set<std::pair<float,float>> contacts;
+	for (size_t i = capture->parent_instance_begin; i < capture->parent_instance_end; ++i) {
+		const auto &instance = capture->scene.instances[i];
+		for (const auto &vertex : *instance.mesh) {
+			Vec3 point = ResolveInstanceVertex(vertex,instance.data).position;
+			if (std::abs(point.z-height) < 0.001f) contacts.emplace(point.x,point.y);
+		}
+	}
+	unsigned count = contacts.size();
+	for (size_t i = 0; i < capture->parent_instance_begin && !contacts.empty(); ++i) {
+		const auto &instance = capture->scene.instances[i];
+		if ((instance.data.ObjectId()&TILE_PICK_ID) == 0) continue;
+		for (size_t v = 0; v < instance.mesh->size() && !contacts.empty(); v += 3) {
+			Vec3 a = ResolveInstanceVertex((*instance.mesh)[v],instance.data).position;
+			Vec3 b = ResolveInstanceVertex((*instance.mesh)[v+1],instance.data).position;
+			Vec3 c = ResolveInstanceVertex((*instance.mesh)[v+2],instance.data).position;
+			if (std::abs(a.z-height) >= 0.001f || std::abs(b.z-height) >= 0.001f || std::abs(c.z-height) >= 0.001f) continue;
+			auto cross = [](Vec3 a,Vec3 b,Vec3 p) { return (b.x-a.x)*(p.y-a.y)-(b.y-a.y)*(p.x-a.x); };
+			float area = cross(a,b,c);
+			if (area <= 0.000001f) continue;
+			std::erase_if(contacts,[&](const auto &point) {
+				Vec3 p{point.first,point.second,height};
+				return cross(a,b,p) >= -0.0001f && cross(b,c,p) >= -0.0001f && cross(c,a,p) >= -0.0001f;
+			});
+		}
+	}
+	if (count == 0 || !contacts.empty()) throw std::runtime_error(fmt::format("Elevated aircraft support has {} of {} corners outside the captured deck",contacts.size(),count));
+	return count;
+}
+
 void BeginVoxelHelicopterRotorCheck(unsigned engine)
 {
 	if (engine < 253 || engine > 255 || !VoxelVehicleState(engine,false)) throw std::invalid_argument("Rotor observation needs an original voxel helicopter in its proper climate");
@@ -1561,15 +1598,19 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 					}
 				}
 				if (auto state = VoxelVehicleState(vehicle.engine_type.base(),loaded); !capture->parent_culled && !capture->diagnostic && state) {
-					if (checked_aircraft_contact == vehicle.engine_type.base() && vehicle.cur_speed == 0 && IsValidTile(vehicle.tile) && IsTileType(vehicle.tile,MP_STATION) && IsAirport(vehicle.tile)) {
-						int ground = GetSlopePixelZ(vehicle.x_pos,vehicle.y_pos);
-						if (vehicle.z_pos == ground+1 && std::abs(position.z-ground) < 0.001f) {
+					if (checked_aircraft_contact == vehicle.engine_type.base() && vehicle.cur_speed == 0 && IsValidTile(vehicle.tile)) {
+						const auto *airport = Station::GetIfValid(Aircraft::From(&vehicle)->targetairport);
+						bool oilrig = airport != nullptr && airport->airport.type == AT_OILRIG;
+						bool on_airport = oilrig || (IsTileType(vehicle.tile,MP_STATION) && IsAirport(vehicle.tile));
+						int ground = GetSlopePixelZ(vehicle.x_pos,vehicle.y_pos)+(airport == nullptr ? 0 : airport->airport.GetFTA()->delta_z);
+						if (on_airport && vehicle.z_pos == ground+1 && std::abs(position.z-ground) < 0.001f) {
 							float lowest = INFINITY;
 							for (size_t i = capture->parent_instance_begin; i < capture->parent_instance_end; ++i) {
 								const auto &instance = capture->scene.instances[i];
 								for (const auto &vertex : *instance.mesh) lowest = std::min(lowest,vertex.position.z+instance.data.origin_opacity[2]);
 							}
 							if (std::abs(lowest-ground) >= 0.001f) throw std::runtime_error("Authored aircraft wheels/skids do not meet the actual airport surface");
+							if (oilrig) Debug(driver,1,"OpenTT3D: oil-rig helicopter deck contact passed: {} actual support corners on captured industry surfaces at height {}",CheckElevatedAircraftContacts(ground),ground);
 							Debug(driver,1,"OpenTT3D: voxel aircraft ground contact passed: engine {} vehicle {}, authored support plane {} matches actual airport surface",checked_aircraft_contact,vehicle.index.base(),lowest);
 							checked_aircraft_contact = UINT_MAX;
 						}

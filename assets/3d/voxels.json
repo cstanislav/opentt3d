@@ -4,6 +4,25 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "oilrig_rust_early": [70,73,72,76,70,78],
+    "oilrig_rust": [71,73,72,75,71,74],
+    "oilrig_rust_grain": [72,74,73,75,71,75],
+    "oilrig_shadow": [3,4,4,6,3,5],
+    "oilrig_white": [8,11,9,14,3,14],
+    "oilrig_glass": [128,129,130,131,128,132],
+    "oilrig_roof": [4,5,5,7,3,6],
+    "oilrig_roof_grain": 7,
+    "oilrig_light": 241,
+    "oilrig_yellow": 169,
+    "oilrig_foam": 253,
+    "oilrig_water": [245,247,246,248,131,247],
+    "oilrig_water_low": 246,
+    "oilrig_water_high": 249,
+    "oilrig_water_wave": 250,
+    "oilrig_flare_arm": [73,76,73,76,73,118],
+    "oilrig_flare_tip": [4,7,7,9,4,9],
+    "oilrig_flame": [232,234,233,236,232,237],
+    "oilrig_flame_core": [234,236,235,237,234,238],
     "refinery_footing": [2,1,2,3,1,2],
     "refinery_footing_grain": 3,
     "refinery_office_footing": 2,
@@ -1008,6 +1027,93 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "oilrig_piles": [
+      ["repeat",[0,48,0],2,[
+        ["repeat",[32,0,0],2,[
+          ["lathe","oilrig_rust",[16,12],[[0,6.5,0],[8,6.5,0],[9,7,0],[11,7,0],[12,6.5,0],[27,6.5,0]]],
+          ["scatter_paint","oilrig_rust_grain",9,2103,9,5,0,23,19,27,"oilrig_rust"],
+          ["paint","oilrig_foam",9,5,0,12,19,1]
+        ]],
+        ["box","oilrig_rust",16,10,8,48,14,12]
+      ]]
+    ],
+    "oilrig_derrick_level": [
+      ["box","oilrig_rust",25,33,0,39,35,4], ["box","oilrig_rust",25,45,0,39,47,4],
+      ["box","oilrig_rust",25,35,0,27,45,4], ["box","oilrig_rust",37,35,0,39,45,4]
+    ],
+    "oilrig_initial_structure": [
+      ["use","oilrig_piles"],
+      ["replace_material","oilrig_rust","oilrig_rust_early"],
+      ["replace_material","oilrig_rust_grain","oilrig_rust_early"]
+    ],
+    "oilrig_accommodation": [
+      ["prism","oilrig_white",2,28,52,[[34,2],[56,2],[66,12],[66,24],[60,30],[34,30]]],
+      ["erase",36,4,29,56,28,51],
+      ["prism","oilrig_white",2,52,54,[[32,0],[57,0],[68,11],[68,25],[61,32],[32,32]]],
+      ["prism","oilrig_roof",2,53,54,[[33,1],[56,1],[67,12],[67,24],[60,31],[33,31]]],
+      ["repeat",[0,0,8],3,[
+        ["paint","oilrig_glass",34,2,30,74,38,35],
+        ["repeat",[5,0,0],8,[["paint","oilrig_white",34,0,30,35,38,35]]],
+        ["repeat",[0,5,0],7,[["paint","oilrig_white",34,2,30,74,3,35]]],
+        ["paint","oilrig_rust",34,2,28,74,38,30]
+      ]],
+      ["scatter_paint","oilrig_roof_grain",6,541,33,1,53,73,37,54],
+      ["repeat",[0,5,0],7,[["box","oilrig_white",32,1,54,33,2,56]]],
+      ["repeat",[5,0,0],5,[["box","oilrig_white",33,0,54,34,1,56]]]
+    ],
+    "oilrig_partial_structure": [
+      ["use","oilrig_piles"],
+      ["box","oilrig_rust",4,0,24,64,72,28],
+      ["box","oilrig_roof",5,1,28,63,71,29],
+      ["box","oilrig_rust",12,8,28,44,52,36],
+      ["box","oilrig_roof",12,8,36,44,52,37],
+      ["repeat",[2,0,0],16,[["box","oilrig_rust_grain",12,51,28,13,52,36]]],
+      ["box","oilrig_rust",16,44,29,28,70,69], ["erase",18,46,30,26,68,68],
+      ["repeat",[0,0,8],5,[
+        ["paint","oilrig_glass",16,44,31,28,70,36],
+        ["repeat",[5,0,0],3,[["paint","oilrig_rust",16,44,31,17,70,36]]],
+        ["repeat",[6,0,0],2,[["paint","oilrig_rust",16,44,31,18,70,36]]],
+        ["repeat",[0,6,0],5,[["paint","oilrig_rust",16,44,31,28,46,36]]]
+      ]],
+      ["box","oilrig_white",15,43,69,29,71,71], ["paint","oilrig_roof",16,44,70,28,70,71],
+      ["scatter_paint","oilrig_roof_grain",5,719,16,44,70,28,70,71],
+      ["erase",42,56,24,58,67,29],
+      ["box","oilrig_rust",42,56,23,58,67,24],
+      ["box","oilrig_rust",42,56,24,44,67,25], ["box","oilrig_rust",56,56,24,58,67,25],
+      ["box","oilrig_rust",44,56,24,56,58,25], ["box","oilrig_rust",44,65,24,56,67,25],
+      ["repeat",[0,4,0],18,[
+        ["box","oilrig_white",4,0,28,5,1,34], ["box","oilrig_white",63,0,28,64,1,34]
+      ]],
+      ["repeat",[4,0,0],15,[["box","oilrig_white",4,71,28,5,72,34]]],
+      ["box","oilrig_white",4,0,32,5,72,33], ["box","oilrig_white",63,0,32,64,72,33],
+      ["box","oilrig_white",4,71,32,64,72,33],
+      ["use","oilrig_accommodation"],
+      ["box","oilrig_rust",29,37,37,35,43,39]
+    ],
+    "oilrig_finished_structure": [
+      ["use","oilrig_partial_structure"],
+      ["repeat",[8,0,0],2,[
+        ["box","oilrig_rust",27,35,37,29,37,92], ["box","oilrig_rust",27,43,37,29,45,92]
+      ]],
+      ["use","oilrig_derrick_level",[0,0,65]], ["use","oilrig_derrick_level",[0,0,91]],
+      ["box","oilrig_rust",27,35,94,37,45,95],
+      ["box","oilrig_rust",30,38,95,31,42,112], ["box","oilrig_rust",33,38,95,34,42,112],
+      ["box","oilrig_rust",29,37,111,35,43,116],
+      ["prism","oilrig_white",2,53,54,[[50,12],[54,8],[63,8],[67,12],[67,24],[63,28],[54,28],[50,24]]],
+      ["prism","oilrig_roof",2,53,54,[[52,13],[55,10],[62,10],[65,13],[65,23],[62,26],[55,26],[52,23]]],
+      ["box","oilrig_shadow",55,13,53,57,24,54], ["box","oilrig_shadow",60,13,53,62,24,54],
+      ["box","oilrig_shadow",57,17,53,60,19,54],
+      ["box","oilrig_yellow",52,13,53,53,15,54], ["box","oilrig_yellow",64,13,53,65,15,54],
+      ["box","oilrig_light",52,22,53,53,24,54], ["box","oilrig_light",64,22,53,65,24,54],
+      ["repeat",[-1,1,1],28,[
+        ["box","oilrig_flare_arm",29,62,31,32,64,34], ["box","oilrig_flare_arm",29,66,31,32,68,34]
+      ]],
+      ["repeat",[-5,5,5],6,[["box","oilrig_flare_arm",29,63,31,32,68,34]]],
+      ["box","oilrig_flare_tip",2,90,58,5,95,64],
+      ["ellipsoid","oilrig_flame",1,89,63,6,95,84],
+      ["ellipsoid","oilrig_flame_core",2,90,63,5,94,78],
+      ["prism","oilrig_flame",1,91,94,[[2,77],[5,82],[5,91],[3,87],[2,85]]]
+    ],
     "refinery_flare_platform": [
       ["box","refinery_platform_white",16,13,13,26,23,14],
       ["repeat",[3,0,0],4,[["box","refinery_platform_red",16,22,14,17,23,16]]],
@@ -4699,6 +4805,22 @@
     ]
   },
   "models": {
+    "oilrig_water_ground": {"size":[32,32,1],"origin":[0,0,-1],"ops":[
+      ["box","oilrig_water",0,0,0,32,32,1],
+      ["scatter_paint","oilrig_water_low",5,219,0,0,0,32,32,1],
+      ["scatter_paint","oilrig_water_high",7,887,0,0,0,32,32,1],
+      ["repeat",[5,7,0],4,[["paint","oilrig_water_wave",2,2,0,5,3,1]]]
+    ]},
+    "oilrig_helipad_initial": {"size":[80,96,140],"origin":[-16,0,0],"ops":[["use","oilrig_initial_structure"],["erase",0,0,0,32,96,140],["erase",0,32,0,80,96,140]]},
+    "oilrig_derrick_initial": {"size":[80,96,140],"origin":[-16,-16,0],"ops":[["use","oilrig_initial_structure"],["erase",32,0,0,80,32,140],["erase",0,48,0,80,96,140]]},
+    "oilrig_office_initial": {"size":[80,96,140],"origin":[-16,-32,0],"ops":[["use","oilrig_initial_structure"],["erase",0,0,0,80,48,140]]},
+    "oilrig_helipad_partial": {"size":[80,96,140],"origin":[-16,0,0],"ops":[["use","oilrig_partial_structure"],["erase",0,0,0,32,96,140],["erase",0,32,0,80,96,140]]},
+    "oilrig_derrick_partial": {"size":[80,96,140],"origin":[-16,-16,0],"ops":[["use","oilrig_partial_structure"],["erase",32,0,0,80,32,140],["erase",0,48,0,80,96,140]]},
+    "oilrig_office_partial": {"size":[80,96,140],"origin":[-16,-32,0],"ops":[["use","oilrig_partial_structure"],["erase",0,0,0,80,48,140]]},
+    "oilrig_helipad": {"size":[80,96,140],"origin":[-16,0,0],"ops":[["use","oilrig_finished_structure"],["erase",0,0,0,32,96,140],["erase",0,32,0,80,96,140]]},
+    "oilrig_derrick": {"size":[80,96,140],"origin":[-16,-16,0],"ops":[["use","oilrig_finished_structure"],["erase",32,0,0,80,32,140],["erase",0,48,0,80,96,140]]},
+    "oilrig_office": {"size":[80,96,140],"origin":[-16,-32,0],"ops":[["use","oilrig_finished_structure"],["erase",0,0,0,80,48,140],["erase",0,72,0,80,96,140],["replace_material","oilrig_flare_arm","oilrig_rust"]]},
+    "oilrig_flare": {"size":[80,96,140],"origin":[0,-32,0],"ops":[["use","oilrig_finished_structure"],["erase",0,0,0,80,72,140]]},
     "tree_tropical_bottle_00":{"size":[48,48,112],"cell_size":[0.25,0.25,0.65],"origin":[-6,-6,-0.65],"review_status":"work-in-progress","reference":"Tree1884 young bottle palm: green swollen base, narrow neck and open blue-green frond crown","ops":[["lathe","palm_fan_leaf",[24,24],[[0,2.5,0],[4,3.5,0],[12,2,0],[20,1,0]]],["use","palm_crown_seed",[0,0,20]]]},
     "tree_tropical_bottle_01":{"size":[48,48,112],"cell_size":[0.25,0.25,0.65],"origin":[-6,-6,-0.65],"review_status":"work-in-progress","reference":"Tree1885 growing bottle palm: ridged green swollen trunk and tufted teal crown","ops":[["lathe","palm_fan_leaf",[24,24],[[0,3.5,0],[5,4.5,0],[17,2.5,0],[29,1.5,0]]],["repeat",[0,0,4],4,[["paint","palm_fan_leaf_light",18,18,3,31,31,4]]],["use","palm_crown_small",[0,0,29]]]},
     "tree_tropical_bottle_02":{"size":[48,48,112],"cell_size":[0.25,0.25,0.65],"origin":[-6,-6,-0.65],"review_status":"work-in-progress","reference":"Tree1886 near-mature bottle palm with a broad ringed green base and a small dark-green neck below teal fronds","ops":[["lathe","palm_fan_leaf",[24,24],[[0,4,0],[6,5.5,0],[20,3,0],[38,1.5,0]]],["repeat",[0,0,4],5,[["paint","palm_fan_leaf_light",17,17,3,32,32,4]]],["use","palm_crown_medium",[0,0,38]]]},
@@ -11847,7 +11969,12 @@
       "20": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
       "21": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
       "22": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
-      "23": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"}
+      "23": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
+      "24": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
+      "25": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
+      "26": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
+      "27": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
+      "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
       "0": {"0":"mine_head_skeleton","1":"mine_head_shell","2":"mine_head_00","3":"mine_head_00"},
@@ -11870,7 +11997,11 @@
       "20": {"0":"refinery_flare_site","1":"refinery_flare_open","2":"refinery_flare_open","3":"refinery_flare"},
       "21": {"0":"refinery_process_site","1":"refinery_process_build","2":"refinery_process","3":"refinery_process"},
       "22": {"0":"refinery_cooler_site","1":"refinery_cooler_build","2":"refinery_cooler","3":"refinery_cooler"},
-      "23": {"0":"refinery_office_site","1":"refinery_office_build","2":"refinery_office","3":"refinery_office"}
+      "23": {"0":"refinery_office_site","1":"refinery_office_build","2":"refinery_office","3":"refinery_office"},
+      "25": {"3":"oilrig_flare"},
+      "26": {"0":"oilrig_helipad_initial","1":"oilrig_helipad_partial","2":"oilrig_helipad_partial","3":"oilrig_helipad"},
+      "27": {"0":"oilrig_derrick_initial","1":"oilrig_derrick_partial","2":"oilrig_derrick_partial","3":"oilrig_derrick"},
+      "28": {"0":"oilrig_office_initial","1":"oilrig_office_partial","2":"oilrig_office_partial","3":"oilrig_office"}
     },
     "trees": {
       "1884":{"0":"tree_tropical_bottle_00","1":"tree_tropical_bottle_01","2":"tree_tropical_bottle_02","3":"tree_tropical_bottle_03","4":"tree_tropical_bottle_04","5":"tree_tropical_bottle_05","6":"tree_tropical_bottle_06"},
