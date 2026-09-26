@@ -84,12 +84,12 @@ TEST_CASE("Palm leaflets and succulent blades have closed raised surfaces", "[re
 		TreeLeaf(leaf,{0,0,5},tip,1.2f,2.5f,0.25f,lod);
 		CheckClosedTreeMesh(leaf);
 	}
-	Scene near, far;
-	TreePalmFrond(near,{0,0,32},{8,1,26},2,0);
-	TreePalmFrond(far,{0,0,32},{8,1,26},2,2);
-	CHECK(near.vertices.size() > far.vertices.size());
-	CheckClosedTreeMesh(near);
-	CheckClosedTreeMesh(far);
+	Scene near_scene, far_scene;
+	TreePalmFrond(near_scene,{0,0,32},{8,1,26},2,0);
+	TreePalmFrond(far_scene,{0,0,32},{8,1,26},2,2);
+	CHECK(near_scene.vertices.size() > far_scene.vertices.size());
+	CheckClosedTreeMesh(near_scene);
+	CheckClosedTreeMesh(far_scene);
 }
 
 TEST_CASE("Toyland turned crowns and individual gores are closed volumes", "[renderer3d]")

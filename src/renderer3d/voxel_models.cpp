@@ -857,7 +857,6 @@ void ExportVoxelReviews(std::string_view prefix)
 
 void VerifyVoxelTreeModels()
 {
-	static std::map<std::string,VoxelMesh> cell_meshes;
 	std::map<unsigned,std::set<PaletteID>> palettes;
 	for (const auto &row : _tree_layout_sprite) for (const auto &sprite : row) palettes[sprite.sprite].insert(sprite.pal);
 	unsigned views = 0;
@@ -893,10 +892,10 @@ void VerifyVoxelTreeModels()
 				}
 				std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR))/"renderer3d-reference";
 				std::filesystem::create_directories(directory);
-				auto [entry,inserted] = cell_meshes.try_emplace(name);
-				if (inserted) entry->second = Models().models.at(name).grid->Mesh(false);
+				const auto cell_mesh = Models().models.at(name).grid->Mesh(false);
 				Scene cells = scene;
-				cells.instances.front().mesh = &entry->second.vertices;
+				cells.persistent_meshes = false;
+				cells.instances.front().mesh = &cell_mesh.vertices;
 				std::vector<uint8_t> cell_pixels;
 				std::vector<uint32_t> cell_ids;
 				if (RenderScene(cells,camera,cell_pixels,&cell_ids)) {
@@ -925,22 +924,21 @@ void VerifyVoxelTreeModels()
 	/* Far, non-power-of-two framebuffers exercise pixel visibility rather than
 	 * only the close review matrices. A separate copy retains the exact original
 	 * triangle stream and cannot take any registered optimized-mesh path. */
-	static std::map<std::string,std::vector<Vertex>> original_meshes;
 	unsigned distant_views = 0;
 	size_t distant_pixels = 0;
 	for (const auto &[name,model] : Models().models) {
 		if (!name.starts_with("tree_")) continue;
-		auto [entry,inserted] = original_meshes.try_emplace(name);
-		if (inserted) entry->second = model.surface.vertices;
+		const auto original_mesh = model.surface.vertices;
 		for (Vec3 origin : {Vec3{},Vec3{500000,700000,100}}) for (float scale : {0.03f,0.12f,0.3f}) for (float turn : {0.15f,1.25f,2.65f,3.1f}) for (bool child_layer : {false,true}) {
 			Textures().BeginScene();
 			Scene actual, reference;
+			reference.persistent_meshes = false;
 			for (unsigned instance = 0; instance < 3; ++instance) {
 				auto data = Material(origin+(instance == 1 ? Vec3{3,1,0} : Vec3{}),instance == 2 ? PALETTE_TO_STRUCT_BROWN : PAL_NONE,1);
 				data.SetObjectId(TILE_PICK_ID|static_cast<uint32_t>(1001+instance));
 				data.SetChildLayer(child_layer && instance == 0);
 				actual.instances.push_back({&model.surface.vertices,data});
-				reference.instances.push_back({&entry->second,data});
+				reference.instances.push_back({&original_mesh,data});
 			}
 			Camera camera{origin+(model.surface.low+model.surface.high)*0.5f,scale,240,180,turn}; camera.vertical_fov = 40;
 			std::vector<uint8_t> pixels, expected;
@@ -957,6 +955,7 @@ void VerifyVoxelTreeModels()
 	 * boundaries without moving the camera. An unregistered original mesh keeps
 	 * this independent of page reuse, indexing and background preparation. */
 	const auto &model = Models().models.at("tree_lime_03");
+	const auto original_mesh = model.surface.vertices;
 	Scene edited;
 	for (unsigned i = 0; i < 1025; ++i) {
 		auto data = Material({(i%32)*12.0f,(i/32)*12.0f,0},i%3 == 0 ? PALETTE_TO_STRUCT_BROWN : PAL_NONE,1);
@@ -974,7 +973,8 @@ void VerifyVoxelTreeModels()
 		if (change == 3) std::swap(edited.instances[2],edited.instances[900]);
 		if (change == 4) { UsePaletteMaterial(edited.instances[600].data,PALETTE_TO_STRUCT_BROWN); edited.instances[600].data.SetObjectId(TILE_PICK_ID|3000); }
 		Scene reference = edited;
-		for (auto &instance : reference.instances) instance.mesh = &original_meshes.at("tree_lime_03");
+		reference.persistent_meshes = false;
+		for (auto &instance : reference.instances) instance.mesh = &original_mesh;
 		std::vector<uint8_t> pixels, expected;
 		std::vector<uint32_t> ids, expected_ids;
 		if (!RenderScene(edited,edit_camera,pixels,&ids) || !RenderScene(reference,edit_camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) {
@@ -1067,7 +1067,6 @@ void VerifyVoxelIndustryModels()
 
 void VerifyVoxelMeshes(std::string_view prefix)
 {
-	static std::map<std::string,VoxelMesh> individual_faces;
 	std::vector<uint8_t> pixels, expected;
 	std::vector<uint32_t> ids, expected_ids;
 	unsigned views = 0;
@@ -1133,14 +1132,14 @@ void VerifyVoxelMeshes(std::string_view prefix)
 	}
 	for (const auto &[name,model] : Models().models) {
 		if (!name.starts_with(prefix)) continue;
-		auto [naive,inserted] = individual_faces.try_emplace(name);
-		if (inserted) naive->second = model.grid->Mesh(false);
+		const auto naive = model.grid->Mesh(false);
 		for (PaletteID palette : {PAL_NONE,PALETTE_TO_STRUCT_WHITE,PALETTE_TO_STRUCT_BROWN}) for (unsigned turn = 0; turn < 4; ++turn) for (bool street : {false,true}) {
 			Textures().BeginScene();
 			Scene merged, reference, expanded;
+			reference.persistent_meshes = false;
 			auto data = Material({},palette,1); data.SetObjectId(213);
 			merged.instances.push_back({&model.surface.vertices,data});
-			reference.instances.push_back({&naive->second.vertices,data});
+			reference.instances.push_back({&naive.vertices,data});
 			expanded.vertices = merged.ExpandedVertices(true);
 			Vec3 centre = (model.surface.low+model.surface.high)*0.5f;
 			Vec3 extent = model.surface.high-model.surface.low;
@@ -1206,7 +1205,9 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		auto offsets = HouseReviewOffsets(house);
 		if (offsets.empty()) continue;
 		for (unsigned stage = 0; stage < 4; ++stage) {
+			std::map<std::string,VoxelMesh> individual_faces;
 			Scene joined, reference;
+			reference.persistent_meshes = false;
 			bool selected = false;
 			unsigned parts = 0;
 			Vec3 low{INFINITY,INFINITY,INFINITY}, high{-INFINITY,-INFINITY,-INFINITY};

@@ -712,7 +712,7 @@ public:
 		auto &batches = instance_batches;
 		batches.clear();
 		const auto volume_frustum = camera.Frustum();
-		bool pixel_cull = VoxelPixelCullEnabled() && !camera.first_person && camera.pixels_per_unit < 0.5f;
+		bool pixel_cull = scene.persistent_meshes && VoxelPixelCullEnabled() && !camera.first_person && camera.pixels_per_unit < 0.5f;
 		static const bool synchronous_visibility = [] { const char *setting = std::getenv("OPENTT3D_VOXEL_CULL_SYNC"); return setting != nullptr && std::string_view(setting) == "1"; }();
 		bool asynchronous = pixel_cull && !diagnostic && !synchronous_visibility;
 		if (asynchronous) {
@@ -733,7 +733,7 @@ public:
 			const auto *mesh = batch.mesh;
 			VkDescriptorBufferInfo volume_storage{};
 			uint32_t volume_mode = 0;
-			if (const auto *volume = FindVoxelVolume(mesh); volume != nullptr && !volume->bounds.empty() &&
+			if (const auto *volume = scene.persistent_meshes ? FindVoxelVolume(mesh) : nullptr; volume != nullptr && !volume->bounds.empty() &&
 					std::all_of(records.begin()+batch.first,records.begin()+batch.first+batch.count,[&](const InstanceData &data) {
 						return VolumeInstanceCompatible(data) && VolumeOutsideNearPlane(*volume,data,volume_frustum);
 					})) {
@@ -747,7 +747,7 @@ public:
 				volume_mode = VoxelSlicesEnabled() ? 2 : 1;
 				mesh = VoxelSlicesEnabled() ? &volume->slices : &volume->bounds;
 			}
-			const auto *packed = FindPackedVoxelMesh(mesh);
+			const auto *packed = scene.persistent_meshes ? FindPackedVoxelMesh(mesh) : nullptr;
 			if (packed != nullptr) {
 				auto [entry,inserted] = packed_formats.try_emplace(packed);
 				if (inserted) {
@@ -827,7 +827,8 @@ public:
 					}
 				}
 			}
-			auto found = meshes.find(mesh);
+			auto found = scene.persistent_meshes ? meshes.find(mesh) : meshes.end();
+			MeshStorage temporary{};
 			if (found == meshes.end()) {
 				Profile::Scope upload_time(Profile::Section::MeshUpload);
 				IndexedMesh indexed;
@@ -850,7 +851,11 @@ public:
 				}
 				size_t bytes = vertex_bytes+index_bytes;
 				Slice storage;
-				if (pool_meshes) {
+				if (!scene.persistent_meshes) {
+					/* Frame-arena slices are reusable only after their fence/readback
+					 * completes. Never retain a pointer to a diagnostic's local mesh. */
+					storage = Allocate(bytes);
+				} else if (pool_meshes) {
 					storage = AllocateIn(mesh_arena, bytes);
 				} else {
 					mesh_arena.push_back(MakeBuffer(bytes, VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT));
@@ -860,11 +865,12 @@ public:
 				}
 				if (vertex_bytes != 0) std::memcpy(storage.data,vertex_data,vertex_bytes);
 				if (index_bytes != 0) std::memcpy(static_cast<std::byte *>(storage.data)+vertex_bytes,short_indices.empty() ? static_cast<const void *>(indexed.indices.data()) : short_indices.data(),index_bytes);
-				found = meshes.emplace(mesh,MeshStorage{storage,storage.offset+vertex_bytes,static_cast<uint32_t>(mesh->size()),static_cast<uint32_t>(stored_vertices),use_indices,index_type}).first;
+				temporary = {storage,storage.offset+vertex_bytes,static_cast<uint32_t>(mesh->size()),static_cast<uint32_t>(stored_vertices),use_indices,index_type};
+				if (scene.persistent_meshes) found = meshes.emplace(mesh,temporary).first;
 				if (packed != nullptr) Debug(driver,2,"OpenTT3D: lossless packed voxel mesh {} source vertices / {} stored, {} bytes",mesh->size(),stored_vertices,bytes);
 				Profile::AddMeshUpload(bytes);
 			}
-			const auto &stored = found->second;
+			const auto &stored = scene.persistent_meshes ? found->second : temporary;
 			batches.push_back({stored.storage.buffer,stored.storage.offset,stored.index_offset,stored.source_vertices,static_cast<uint32_t>(batch.first),static_cast<uint32_t>(batch.count),batch.transparent,stored.indexed,instance_staging.PaletteOnly(batch),batch.both_passes,stored.index_type,volume_storage,volume_mode,packed == nullptr ? 0U : packed->format[7] != 0 ? 2U : 1U});
 		}
 		if (tested_vertices != 0 && waiting_visibility == 0 && !target.visibility_reported) {

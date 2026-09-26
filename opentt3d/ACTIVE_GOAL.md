@@ -64,6 +64,13 @@ immediately; record cosmetic findings for their appropriate later pass.
 
 ### Current-window progress
 
+- **03:37UTC — complete nativeVulkan verifier fits below6GiB:** all1,002 model/state
+  matrices pass after call-scoped diagnostic CPU/GPU reference ownership;4.38GiB peak.
+  Source preview`opentt3d-dev-20260926.1` is published frommain. CI exposes a Windows
+  macro collision and an inherited90second Linux timeout; repair while the fullGL
+  follow-up runs. New manually authored early-aircraft families and a public-NoAI
+  operating fixture are in progress. The19:00UTC minimum and complete goal remain active.
+
 - **03:18UTC — quiet review path verified:** hidden nativeGL/Vulkan and LaunchServices
   bundle captures pass with no visible/key/active Cocoa window. Exact sameGL comparison
   preserves56 model views /22,937,600 RGBA pixels. The crossGL/Vulkan street comparison

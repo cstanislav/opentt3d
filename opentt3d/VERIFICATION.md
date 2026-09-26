@@ -21,6 +21,31 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **03:37UTC:** full1,002-volume Vulkan matrix completes in hidden mode after diagnostic
+  reference lifetime repair (`pass1-1002-transient-full-native`), peaking at
+  **4,703,080,960bytes /4.38GiB** across3,017 samples under the6GiB guard. References
+  now use local CPU geometry and nonpersistent GPU uploads; normal immutable authored
+  meshes retain their original ownership. GL deletes call-scoped buffers; Vulkan
+  reuses fence-owned frame-arena slices. Eight changing payloads reuse the same vector
+  addresses and preserve exact colour/IDs without growing the persistent mesh cache.
+- Completed Vulkan checks include24,048 all-model views,1,584 house-body/1,332 ground
+  cases,320 joined views,165,376 vehicle company/crash/heading poses,24,528 tree
+  lifecycle views,20,832 distant views, five edited visibility streams,568 industry
+  cases,48 spark poses,148 lift poses,4,096,000 world-atlas RGBA/ID pixels and the full
+  renderer/camera/picking checks. The final benchmark contains one paused capture frame
+  only; it does not establish sustained60fps. Native186/186 tests pass after this change.
+- First source preview is published as
+  [`opentt3d-dev-20260926.1`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260926.1),
+  targeting `d445819f18f465908fe2e95bfcf1b20e571fc94f` onmain. It accurately records the
+  then-current1,002 catalogue and preceding verifier-memory failure.
+- GitHub run36214521756 completes native macOS and187 Linux tests, then Linux's full
+  catalogue smoke hits its inherited90second timeout during the model matrix. All
+  Windows targets fail compilation because the SDK's `near` macro erases an identifier
+  in depot geometry; additional projector/test identifiers need the same repair.
+  Failed logs/artifacts remain in`pass1-checkpoint-ci-failures.log` and
+  `pass1-checkpoint-linux-ci/`. Local Docker still times out. CI timeout/portability
+  corrections and nativeGL full-matrix follow-up are underway.
+
 - **03:18UTC:** new Cocoa `OPENTT3D_BACKGROUND=1` / smoke `--background` skips every
   startup activation/front-order request, uses prohibited activation policy and retains
   hidden native views for GPU rendering. Event polling rejects accidental active/key/

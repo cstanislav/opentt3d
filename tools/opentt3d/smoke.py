@@ -614,6 +614,8 @@ server_advertise = false
                 raise RuntimeError("Child-layer or mixed-opacity ordering verification did not complete")
             if args.verify_instance_order and "GPU multi-mesh storage, large uploads and reuse preserve colour and picking" not in text:
                 raise RuntimeError("Instance storage verification did not complete")
+            if (args.verify_renderer or args.verify_instance_order) and "8 transient mesh payloads preserve exact instancing and address reuse without persistent cache growth" not in text:
+                raise RuntimeError("Transient diagnostic mesh ownership verification did not complete")
             if (args.verify_renderer or args.verify_instance_order) and args.backend == "opengl" and not args.readback_presentation and "OpenGL frame-slot instance uploads retain bounded storage and fresh offsets" not in text:
                 raise RuntimeError("Bounded OpenGL frame-slot upload verification did not complete")
             if args.verify_world_atlas and "whole-world atlas relocation preserves" not in text:

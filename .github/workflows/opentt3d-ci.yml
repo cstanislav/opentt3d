@@ -18,7 +18,7 @@ jobs:
   linux:
     name: Linux x86-64 / Mesa
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v6
         with:
@@ -33,9 +33,9 @@ jobs:
       - name: Build game and run tests
         run: docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/build.py --build-dir build-linux --jobs 4
       - name: Render with Mesa in a virtual display
-        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --savegame media/baseset/opntitle.dat --graphics-from-config "OpenGFX2 High Def" --rotation 1 --verify-renderer --verify-tile-picking --verify-bridges --reference-bridge
+        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/smoke-ci --savegame media/baseset/opntitle.dat --graphics-from-config "OpenGFX2 High Def" --rotation 1 --verify-renderer --verify-tile-picking --verify-bridges --reference-bridge --timeout 3600 --memory-limit-mib 6144 --brief
       - name: Validate Vulkan presentation and synchronization
-        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/vulkan-ci --backend vulkan --vulkan-validation --savegame media/baseset/opntitle.dat --blitter 40bpp-anim --verify-renderer --verify-tile-picking --verify-vehicles --verify-industries --verify-bridges --verify-fences --verify-foundations --verify-tunnels --verify-live-tunnel --verify-rails --verify-stations --verify-ground-details --verify-rail-details --first-person tunnel --benchmark-frames 30 --timeout 240
+        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-linux --output build-linux/vulkan-ci --backend vulkan --vulkan-validation --savegame media/baseset/opntitle.dat --blitter 40bpp-anim --verify-renderer --verify-tile-picking --verify-vehicles --verify-industries --verify-bridges --verify-fences --verify-foundations --verify-tunnels --verify-live-tunnel --verify-rails --verify-stations --verify-ground-details --verify-rail-details --first-person tunnel --benchmark-frames 30 --timeout 3600 --memory-limit-mib 6144 --brief
       - name: Build and render a real electric-rail journey
         run: |
           docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-dev python3 tools/opentt3d/fixture_rail.py --build-dir build-linux --output build-linux/electric-fixture-ci

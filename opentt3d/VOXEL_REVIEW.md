@@ -80,8 +80,9 @@ The joined boot must be judged with both original tile parts, not the isolated h
 Corrected96-case live coverage is technical evidence, not visual approval.
 
 Current runtime catalogue statistics:8,234,112 occupied cells,6,156,826 exposed faces,
-1,400,316 conforming rectangles and8,690,654 triangles. Full1,002 verification exceeds
-the6GiB guard; a600-frame generated-world wideGL run remains30.764fps. Full-quality
+1,400,316 conforming rectangles and8,690,654 triangles. Full1,002 nativeVulkan
+verification now completes at4.38GiB after retiring diagnostic CPU/GPU references;
+the earlier6GiB failure remains preserved. A600-frame generated-world wideGL run remains30.764fps. Full-quality
 wide-view performance and arbitrary-map/all-day memory remain unresolved.
 
 ## Historical614 checkpoint: first and later findings

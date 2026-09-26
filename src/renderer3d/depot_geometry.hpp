@@ -93,8 +93,8 @@ inline DepotAssembly MakeDepotAssembly(unsigned kind, unsigned direction, unsign
 			box(DepotMaterial::Detail,{rear-0.04f,y,8.5f},{rear-0.02f,y+1,9.5f},dark);
 			if (lod == 0) for (float z = 8.7f; z < 9.5f; z += 0.25f) beam(DepotMaterial::Metal,{rear-0.065f,y,z},{rear-0.065f,y+1,z},0.025f,iron);
 		}
-		for (float x : {4.0f,8.0f,12.0f}) for (bool near : {false,true}) {
-			float y = near ? right+0.01f : left-0.01f;
+		for (float x : {4.0f,8.0f,12.0f}) for (bool near_side : {false,true}) {
+			float y = near_side ? right+0.01f : left-0.01f;
 			box(DepotMaterial::Detail,{x-1.05f,y-0.035f,3.5f},{x+1.05f,y+0.035f,8.8f},cream);
 			box(DepotMaterial::Glazing,{x-0.88f,y-0.06f,3.8f},{x+0.88f,y+0.06f,8.8f},{0.17f,0.14f,0.075f});
 			for (unsigned i = 0; i < 8; ++i) {
@@ -103,7 +103,7 @@ inline DepotAssembly MakeDepotAssembly(unsigned kind, unsigned direction, unsign
 				mesh(DepotMaterial::Glazing).Triangle({x,y,8.8f},p,q,{0.17f,0.14f,0.075f});
 				beam(DepotMaterial::Detail,p,q,0.065f,cream);
 			}
-			if (lod == 0) for (float z : {4.8f,6.5f}) beam(DepotMaterial::Detail,{x-0.85f,y+(near ? 0.07f : -0.07f),z},{x+0.85f,y+(near ? 0.07f : -0.07f),z},0.035f,cream);
+			if (lod == 0) for (float z : {4.8f,6.5f}) beam(DepotMaterial::Detail,{x-0.85f,y+(near_side ? 0.07f : -0.07f),z},{x+0.85f,y+(near_side ? 0.07f : -0.07f),z},0.035f,cream);
 		}
 	} else if (kind == 3) {
 		/* Shallow glass pyramid and perimeter mullions match the fallback maglev shed. */

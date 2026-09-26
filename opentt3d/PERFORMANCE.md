@@ -3,7 +3,23 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
-## Expanded catalogue checkpoint (September26 02:54UTC)
+## Full-catalogue diagnostic retention repair (September26 03:37UTC)
+
+`pass1-1002-transient-full-native` completes the entire1,002-volume nativeVulkan
+matrix with a4,703,080,960-byte sampled peak (4.38GiB,3,017 samples) below6GiB.
+The previous full-matrix failure retained every unmerged reference mesh in static
+CPU maps and immutable GPU caches. Call-scoped CPU reference geometry now requests
+nonpersistent instanced uploads: GL retires its temporary VAOs/buffers and Vulkan
+uses reusable fence-owned frame slices. Persistent authored mesh ownership is unchanged.
+An address-reuse regression renders eight changed payloads at identical vector
+addresses, comparing exact RGBA/IDs and checking no persistent-cache growth.
+
+This resolves the demonstrated full-verifier retention failure for this workload.
+It does not establish arbitrary-map/all-day limits or a readback-pool-only improvement.
+Its one paused capture frame is not a sustained performance benchmark. NativeGL,
+current Linux/core/synchronization and Windows follow-up remain pending.
+
+## Earlier expanded catalogue checkpoint (September26 02:54UTC)
 
 The catalogue has grown from614 to1,002 volumes, with all62 tree families now voxel
 bound. Earlier614 wide-view/soak figures below do not bound this larger catalogue.
@@ -16,7 +32,7 @@ checks at5,603,366,096bytes. This remains fixture-scoped tooling evidence, not a
 all-day/multi-viewport or current wide-view performance bound. Full current validation
 and the preserved pre-pool executable control are tracked in `VERIFICATION.md`.
 
-The latest full1,002 run also exceeds6GiB (6,444,292,888bytes), after1584 body/1332
+The earlier full1,002 run also exceeds6GiB (6,444,292,888bytes), after1584 body/1332
 ground checks and before the all-model matrix completes. The pre-pool executable
 control fails framing (requested zoom1,measured2.5), so there is still no controlled
 readback-pool memory improvement result. The ownership change is not a fix for the

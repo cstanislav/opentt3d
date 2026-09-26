@@ -100,8 +100,23 @@ struct TextureBuffer {
 static std::array<TextureBuffer,2> instance_frames;
 struct VisibleMeshBuffer { PackedVoxelLookup lookup; TextureBuffer format; };
 static std::unordered_map<const PackedVoxelMesh *,VisibleMeshBuffer> visible_meshes;
-struct MeshBuffer { GLuint vao = 0, buffer = 0, indices = 0; GLenum index_type = GL_UNSIGNED_INT; size_t bytes = 0; };
-static std::unordered_map<const std::vector<Vertex> *, MeshBuffer> meshes;
+struct MeshBuffer {
+	GLuint vao = 0, buffer = 0, indices = 0;
+	GLenum index_type = GL_UNSIGNED_INT;
+	size_t bytes = 0;
+	void Destroy() const
+	{
+		r_glDeleteVertexArrays(1,&vao);
+		r_glDeleteBuffers(1,&buffer);
+		if (indices != 0) r_glDeleteBuffers(1,&indices);
+	}
+};
+using MeshBuffers = std::unordered_map<const std::vector<Vertex> *,MeshBuffer>;
+static MeshBuffers meshes;
+struct TransientMeshBuffers {
+	MeshBuffers buffers;
+	~TransientMeshBuffers() { for (const auto &[mesh,buffer] : buffers) buffer.Destroy(); }
+};
 static InstanceBatcher instance_staging;
 struct InstanceBatch {
 	const std::vector<Vertex> *mesh; GLuint vao; GLint first; GLsizei count;
@@ -178,6 +193,11 @@ std::string BackendDescription()
 {
 	if (Vulkan::Active()) return Vulkan::Description();
 	return HasOpenGLBackend() ? "OpenGL: " + OpenGLBackend::Get()->GetDriverName() : "unavailable";
+}
+
+size_t PersistentMeshCount()
+{
+	return Vulkan::Active() ? Vulkan::GetMeshCacheStats().meshes : meshes.size();
 }
 
 static bool LoadFunctions()
@@ -604,9 +624,9 @@ static void VertexLayout()
 	r_glVertexAttribIPointer(7, 1, GL_UNSIGNED_INT, sizeof(Vertex), reinterpret_cast<const void *>(offsetof(Vertex, object_id)));
 }
 
-static const MeshBuffer &GetMesh(const std::vector<Vertex> *mesh)
+static const MeshBuffer &GetMesh(const std::vector<Vertex> *mesh, MeshBuffers &storage)
 {
-	auto [found, inserted] = meshes.try_emplace(mesh);
+	auto [found, inserted] = storage.try_emplace(mesh);
 	if (inserted) {
 		Profile::Scope upload_time(Profile::Section::MeshUpload);
 		IndexedMesh indexed;
@@ -677,6 +697,9 @@ static bool RenderTarget(Target &target, const Scene &scene, const Camera &camer
 		Debug(driver, 2, "OpenTT3D: pre-existing OpenGL error before mesh pass ({})", error);
 	}
 	StateGuard state;
+	/* Declared after the state guard so temporary VAOs/buffers are retired
+	 * before restoring the caller's bindings, including on an early return. */
+	TransientMeshBuffers transient;
 	if (!Initialize()) { initialization_failed = true; return false; }
 	const int maximum = MaximumFramebufferSize();
 	if (camera.width > maximum || camera.height > maximum) return false;
@@ -753,7 +776,7 @@ static bool RenderTarget(Target &target, const Scene &scene, const Camera &camer
 	auto &records = instance_staging.records;
 	auto &batches = instance_batches;
 	batches.clear();
-	bool pixel_cull = visible_program != 0 && maximum_buffer_texels > 0 && !camera.first_person && camera.pixels_per_unit < 0.5f;
+	bool pixel_cull = scene.persistent_meshes && visible_program != 0 && maximum_buffer_texels > 0 && !camera.first_person && camera.pixels_per_unit < 0.5f;
 	static const bool synchronous_visibility = [] { const char *value = std::getenv("OPENTT3D_VOXEL_CULL_SYNC"); return value != nullptr && std::string_view(value) == "1"; }();
 	bool asynchronous = pixel_cull && pixels == nullptr && !synchronous_visibility;
 	if (asynchronous) {
@@ -901,7 +924,7 @@ static bool RenderTarget(Target &target, const Scene &scene, const Camera &camer
 				}
 			}
 		}
-		const auto &buffer = GetMesh(batch.mesh);
+		const auto &buffer = GetMesh(batch.mesh,scene.persistent_meshes ? meshes : transient.buffers);
 		batches.push_back({batch.mesh,buffer.vao,static_cast<GLint>(batch.first),static_cast<GLsizei>(batch.count),buffer.indices != 0,instance_staging.PaletteOnly(batch),batch.transparent,batch.both_passes,buffer.index_type});
 	}
 	if (tested_vertices != 0 && waiting_visibility == 0 && !target.visibility_reported) {
@@ -1338,11 +1361,7 @@ void DestroyOpenGLResources()
 		r_glDeleteVertexArrays(1, &vertex_array); r_glDeleteBuffers(1, &vertex_buffer);
 		r_glDeleteTextures(1, &atlas_colour); r_glDeleteTextures(1, &atlas_remap);
 		for (auto &palette : frame_palettes) r_glDeleteTextures(1,&palette.name);
-		for (const auto &[mesh, buffer] : meshes) {
-			r_glDeleteVertexArrays(1, &buffer.vao);
-			r_glDeleteBuffers(1, &buffer.buffer);
-			if (buffer.indices != 0) r_glDeleteBuffers(1,&buffer.indices);
-		}
+		for (const auto &[mesh,buffer] : meshes) buffer.Destroy();
 	}
 	meshes.clear();
 	visible_meshes.clear();

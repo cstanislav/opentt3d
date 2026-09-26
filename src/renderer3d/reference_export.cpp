@@ -1858,6 +1858,31 @@ static void VerifyMeshStorage()
 		Debug(driver,1,"OpenTT3D: Vulkan {} mesh storage holds {} meshes in {} buffers ({} / {} bytes)",uploaded.pooled ? "pooled" : "unpooled",uploaded.meshes,uploaded.buffers,uploaded.used_bytes,uploaded.capacity_bytes);
 	}
 	Debug(driver,1,"OpenTT3D: GPU multi-mesh storage, large uploads and reuse preserve colour and picking");
+	/* Reuse the same vector objects for changed payloads. A pointer-keyed cache
+	 * would silently draw the first payload and retain every temporary reference. */
+	size_t persistent_count = PersistentMeshCount();
+	auto usage = Vulkan::GetMeshCacheStats();
+	std::array<std::vector<Vertex>,5> temporary;
+	for (unsigned change = 0; change < 8; ++change) {
+		temporary = meshes;
+		Scene transient = instanced;
+		transient.persistent_meshes = false;
+		for (size_t i = 0; i < temporary.size(); ++i) {
+			for (auto &vertex : temporary[i]) {
+				vertex.position.z += change*0.75f;
+				vertex.colour.r = 0.05f+change*0.1f;
+			}
+			transient.instances[i].mesh = &temporary[i];
+		}
+		Scene expected;
+		expected.vertices = transient.ExpandedVertices();
+		Camera camera{{0,0,0},2,256,256,change*0.5f};
+		if (!RenderScene(expected,camera,reference_pixels,&reference_ids) || !RenderScene(transient,camera,pixels,&ids) || pixels != reference_pixels || ids != reference_ids) {
+			throw std::runtime_error("GPU verification: transient mesh address reuse changed geometry, colour or picking");
+		}
+		if (PersistentMeshCount() != persistent_count || Vulkan::GetMeshCacheStats() != usage) throw std::runtime_error("GPU verification: transient mesh references grew persistent storage");
+	}
+	Debug(driver,1,"OpenTT3D: 8 transient mesh payloads preserve exact instancing and address reuse without persistent cache growth");
 }
 
 /** One shared mesh, interleaved opaque/transparent records, overlapping colours and

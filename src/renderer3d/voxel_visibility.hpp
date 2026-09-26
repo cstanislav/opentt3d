@@ -18,7 +18,7 @@ namespace Renderer3D {
 class VoxelPixelProjector {
 	std::array<float,16> matrix;
 	std::array<double,3> origin, scale, centre, focus;
-	double width, height, near, subpixel;
+	double width, height, near_plane, subpixel;
 public:
 	struct ProjectedPoint { double x = 0, y = 0, ex = 0, ey = 0; bool uncertain = true; };
 	VoxelPixelProjector(const Camera &camera, const InstanceData &data, unsigned precision) : matrix(camera.Matrix()),
@@ -26,7 +26,7 @@ public:
 		scale{data.scale_center[0],data.scale_center[0],data.scale_center[1]},
 		centre{data.scale_center[2],data.scale_center[3],0},
 		focus{camera.focus.x,camera.focus.y,camera.focus.z}, width(camera.width), height(camera.height),
-		near(camera.Near()), subpixel(std::ldexp(1.0,-static_cast<int>(precision))) {}
+		near_plane(camera.Near()), subpixel(std::ldexp(1.0,-static_cast<int>(precision))) {}
 
 	ProjectedPoint Project(Vec3 point) const
 	{
@@ -48,7 +48,7 @@ public:
 			}
 			error[component] += factor*magnitude+1e-10;
 		}
-		if (!std::isfinite(clip[0]+clip[1]+clip[2]) || clip[2]-error[2] <= near) return {};
+		if (!std::isfinite(clip[0]+clip[1]+clip[2]) || clip[2]-error[2] <= near_plane) return {};
 		double x = clip[0]/clip[2], y = clip[1]/clip[2];
 		double ex = (error[0]+std::abs(x)*error[2])/(clip[2]-error[2]), ey = (error[1]+std::abs(y)*error[2])/(clip[2]-error[2]);
 		double sx = (x+1)*width*0.5, sy = (1-y)*height*0.5;
@@ -110,7 +110,7 @@ public:
 		}
 		double denominator = clip[2]-error[2];
 		for (unsigned axis = 0; axis < 3; ++axis) denominator -= std::abs(matrix[axis*4+3])*extent[axis];
-		if (!std::isfinite(clip[0]+clip[1]+clip[2]) || denominator <= near) return true;
+		if (!std::isfinite(clip[0]+clip[1]+clip[2]) || denominator <= near_plane) return true;
 		double x = clip[0]/clip[2], y = clip[1]/clip[2];
 		double ex = error[0]+std::abs(x)*error[2], ey = error[1]+std::abs(y)*error[2];
 		/* For a box displacement d, projected deviation from its centre is

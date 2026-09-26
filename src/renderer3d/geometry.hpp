@@ -194,7 +194,7 @@ struct alignas(16) InstanceData {
 static_assert(sizeof(InstanceData) == 96);
 
 struct MeshInstance {
-	const std::vector<Vertex> *mesh; ///< Immutable, renderer-owned authored mesh.
+	const std::vector<Vertex> *mesh; ///< Immutable during rendering; persistent authored meshes have stable storage.
 	InstanceData data;
 };
 
@@ -268,6 +268,9 @@ struct Scene {
 	std::vector<MeshInstance> instances;
 	std::optional<ClipVolume> visibility;
 	struct WaterMaterial { Vec3 uv_origin{}; float uv_scale = 0; } water;
+	/** Authored instances have stable lifetime/address. Diagnostic references can
+	 * instead use call-scoped GPU uploads, retaining the same instanced shader path. */
+	bool persistent_meshes = true;
 
 	size_t VertexCount() const
 	{
