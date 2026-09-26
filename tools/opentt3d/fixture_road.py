@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import shutil
 import socket
+import struct
 import subprocess
 import time
 
@@ -18,6 +19,7 @@ def main():
     parser.add_argument("--climate", choices=("temperate","arctic","tropic","toyland"), default="temperate")
     parser.add_argument("--first-engine", type=int, choices=range(116,204), default=116)
     parser.add_argument("--last-engine", type=int, choices=range(116,204), default=203)
+    parser.add_argument("--tram-depots", action="store_true", help="Enable a fixture-only tram test vehicle and build all four original tram-depot exits")
     parser.add_argument("--timeout", type=int, default=300)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
@@ -29,6 +31,19 @@ def main():
     shutil.copytree(Path(__file__).with_name("fixtures") / "road", output / "ai/road-catalogue")
     scripts = output / "scripts"
     scripts.mkdir()
+    newgrf_setting = ""
+    if args.tram_depots:
+        # No vanilla engine enables the original tram infrastructure. This tiny
+        # test-only NewGRF changes engine116's tram flag and climate availability;
+        # it supplies no graphics and leaves every original depot sprite intact.
+        records = [b"\x08\x08O3TRTram depot fixture\0Test-only original bus116 on tram tracks; no sprite replacements.\0",
+                   bytes((0,1,2,1,0,0x1c,1,0x06,15))]
+        def pseudo(payload):
+            return struct.pack("<HB",len(payload),0xff)+payload
+        grf = pseudo(struct.pack("<I",len(records)))+b"".join(map(pseudo,records))+b"\0\0"
+        (output / "newgrf").mkdir()
+        (output / "newgrf/tram-fixture.grf").write_bytes(grf)
+        newgrf_setting = "[newgrf]\ntram-fixture.grf =\n"
     (output / "openttd.cfg").write_text(f"""[misc]
 language = english.lng
 [gui]
@@ -62,8 +77,9 @@ ai_in_multiplayer = true
 server_advertise = false
 min_active_clients = 0
 pause_on_join = false
+{newgrf_setting}
 """)
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Road Catalogue" "review_first={args.first_engine},review_last={args.last_engine}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Road Catalogue" "review_first={args.first_engine},review_last={args.last_engine},review_tram={int(args.tram_depots)}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave road-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     with socket.socket() as probe:
@@ -87,6 +103,8 @@ pause_on_join = false
                     manifest = json.loads(ready[1])
                     if not manifest["vehicles"] or any(not args.first_engine <= vehicle["engine"] <= args.last_engine or vehicle["peak_speed"] <= 0 for vehicle in manifest["vehicles"]):
                         raise RuntimeError("Road fixture did not verify the selected moving vehicles")
+                    if args.tram_depots and manifest.get("depot_directions") != [0,1,2,3]:
+                        raise RuntimeError("The four original tram-depot exits were not built and observed")
                     process.stdin.write("exec scripts/save_fixture.scr\n")
                     process.stdin.flush()
                     break
@@ -104,6 +122,9 @@ pause_on_join = false
             else:
                 raise TimeoutError("Road fixture save timed out")
             manifest.update(climate=args.climate,starting_year=2050,save="save/road-catalogue.sav")
+            if args.tram_depots:
+                manifest["fixture_newgrf"] = {"path":"newgrf/tram-fixture.grf", "engine":116,
+                                             "changes":"tram flag and all-climate availability only; no graphics replacements"}
             (output / "fixture.json").write_text(json.dumps(manifest,indent=2)+"\n")
             process.stdin.write("quit\n"); process.stdin.flush()
             process.wait(timeout=15)

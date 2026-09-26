@@ -4,6 +4,15 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "tram_depot_company": [200,199,199,202,199,202],
+    "tram_depot_sw_brick": [73,71,71,75,71,73],
+    "tram_depot_sw_grain": [74,72,72,76,71,74],
+    "tram_depot_sw_shadow": [71,71,71,72,71,71],
+    "tram_depot_company_dark": [199,199,199,200,199,200],
+    "tram_depot_glass": [104,104,104,105,104,105],
+    "tram_depot_transformer": [35,33,34,38,33,37],
+    "tram_depot_floor": [4,3,3,5,3,6],
+    "tram_depot_rail": [6,4,5,7,3,8],
     "print_blue": [200,201,200,202,200,202],
     "print_blue_partial": [201,202,201,202,201,202],
     "print_metal": [6,8,7,10,6,9],
@@ -1294,6 +1303,31 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "tram_depot_body": [
+      ["use","road_depot_body"],
+      ["replace_material","depot_company","tram_depot_company"],
+      ["replace_material","depot_company_shadow","tram_depot_company_dark"],
+      ["repeat",[7,0,0],4,[["erase",3,1,2,7,3,9],["box","tram_depot_glass",3,2,2,7,3,9],
+        ["erase",3,29,2,7,31,9],["box","tram_depot_glass",3,29,2,7,30,9]]],
+      ["box","depot_steel",13,8,17,19,24,19],
+      ["box","tram_depot_transformer",14,14,19,18,18,29],
+      ["repeat",[0,12,0],2,[["box","depot_steel",15,9,19,17,11,34],
+        ["repeat",[0,0,2],6,[["box","tram_depot_company",14,8,21,18,12,22]]]]],
+      ["line","depot_steel",16,7,32,16,16,36],
+      ["line","depot_steel",16,16,36,16,25,32]
+    ],
+    "tram_depot_floor": [
+      ["box","tram_depot_floor",0,0,0,64,64,1],
+      ["scatter_paint","depot_floor_grit",5,2634,0,0,0,64,64,1],
+      ["repeat",[0,10,0],2,[["box","tram_depot_rail",6,15,1,64,16,2],
+        ["box","tram_depot_rail",6,39,1,64,40,2]]]
+    ],
+    "tram_depot_wire": [
+      ["box","depot_steel",6,20,38,64,21,39],
+      ["box","depot_steel",6,44,38,64,45,39],
+      ["box","depot_steel",31,20,39,32,21,61],
+      ["box","depot_steel",31,44,39,32,45,61]
+    ],
     "print_yard": [
       ["box","print_paving",0,0,0,32,32,1],
       ["scatter_paint","print_paving_grain",4,2168,0,0,0,32,32,1]
@@ -5765,6 +5799,69 @@
     ]
   },
   "models": {
+    "tram_depot_sw": {
+      "size":[32,32,40],"origin":[-0.25,0.25,0],
+      "reference":"Tram depot6101/6102 SW: source-sized folded roof, open entrance, recessed lower windows, paired blue insulators and roof transformer; all four climate sources identical",
+      "ops":[["use","tram_depot_body"],
+        ["replace_material","depot_brick","tram_depot_sw_brick"],
+        ["replace_material","depot_brick_grain","tram_depot_sw_grain"],
+        ["replace_material","depot_brick_shadow","tram_depot_sw_shadow"]]
+    },
+    "tram_depot_se": {
+      "size":[32,32,40],"origin":[-0.25,0.25,0],
+      "reference":"Tram depot6099/6100 SE: independently rotated original open-bay assembly",
+      "ops":[["rotate_z",90,[16,16,0],[["use","tram_depot_body"]]]]
+    },
+    "tram_depot_ne": {
+      "size":[32,32,40],"origin":[-0.25,0.25,0],
+      "reference":"Tram depot6103 NE: rear walls and transformer follow original exit direction",
+      "ops":[["rotate_z",180,[16,16,0],[["use","tram_depot_body"]]]]
+    },
+    "tram_depot_nw": {
+      "size":[32,32,40],"origin":[-0.25,0.25,0],
+      "reference":"Tram depot6104 NW: rear walls and transformer follow original exit direction",
+      "ops":[["rotate_z",270,[16,16,0],[["use","tram_depot_body"]]]]
+    },
+    "tram_depot_floor_sw": {
+      "size":[64,64,2],"cell_size":[0.25,0.25,0.125],"origin":[0,0,-0.125],
+      "reference":"Independent2634 concrete and two pairs of embedded tram rails, SW axis, retained with invisible buildings",
+      "ops":[["use","tram_depot_floor"]]
+    },
+    "tram_depot_floor_se": {
+      "size":[64,64,2],"cell_size":[0.25,0.25,0.125],"origin":[0,0,-0.125],
+      "reference":"Independent concrete and embedded tram rails, SE axis",
+      "ops":[["rotate_z",90,[32,32,0],[["use","tram_depot_floor"]]]]
+    },
+    "tram_depot_floor_ne": {
+      "size":[64,64,2],"cell_size":[0.25,0.25,0.125],"origin":[0,0,-0.125],
+      "reference":"Independent concrete and embedded tram rails, NE axis",
+      "ops":[["rotate_z",180,[32,32,0],[["use","tram_depot_floor"]]]]
+    },
+    "tram_depot_floor_nw": {
+      "size":[64,64,2],"cell_size":[0.25,0.25,0.125],"origin":[0,0,-0.125],
+      "reference":"Independent concrete and embedded tram rails, NW axis",
+      "ops":[["rotate_z",270,[32,32,0],[["use","tram_depot_floor"]]]]
+    },
+    "tram_depot_wire_sw": {
+      "size":[64,64,64],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],
+      "reference":"Two independent9.5-unit-high contact wires and roof hangers; catenary visibility remains independent of buildings",
+      "ops":[["use","tram_depot_wire"]]
+    },
+    "tram_depot_wire_se": {
+      "size":[64,64,64],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],
+      "reference":"SE oriented depot contact wires",
+      "ops":[["rotate_z",90,[32,32,0],[["use","tram_depot_wire"]]]]
+    },
+    "tram_depot_wire_ne": {
+      "size":[64,64,64],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],
+      "reference":"NE oriented depot contact wires",
+      "ops":[["rotate_z",180,[32,32,0],[["use","tram_depot_wire"]]]]
+    },
+    "tram_depot_wire_nw": {
+      "size":[64,64,64],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],
+      "reference":"NW oriented depot contact wires",
+      "ops":[["rotate_z",270,[32,32,0],[["use","tram_depot_wire"]]]]
+    },
     "print_site_ground": {
       "extends":"mine_ground_site",
       "reference":"Original3924 temperate independent soil with its source-permitted colour set; other climates retain their supplied ground",
@@ -13922,6 +14019,7 @@
       "35":{"0":"stadium_gridiron_ground_s","1":"stadium_gridiron_ground_s","2":"stadium_gridiron_ground_s","3":"stadium_gridiron_ground_s"}
     },
     "depots": {
+      "5":{"0":"tram_depot_ne","1":"tram_depot_se","2":"tram_depot_sw","3":"tram_depot_nw","4":"tram_depot_ne","5":"tram_depot_se","6":"tram_depot_sw","7":"tram_depot_nw"},
       "0":{"0":"rail_depot_classic_ne","1":"rail_depot_classic_se","2":"rail_depot_classic_sw","3":"rail_depot_classic_nw","4":"rail_depot_classic_ne","5":"rail_depot_classic_se","6":"rail_depot_classic_sw","7":"rail_depot_classic_nw"},
       "1":{"0":"rail_depot_classic_ne","1":"rail_depot_classic_se","2":"rail_depot_classic_sw","3":"rail_depot_classic_nw","4":"rail_depot_classic_ne","5":"rail_depot_classic_se","6":"rail_depot_classic_sw","7":"rail_depot_classic_nw"},
       "2":{"0":"rail_depot_mono_ne","1":"rail_depot_mono_se","2":"rail_depot_mono_sw","3":"rail_depot_mono_nw","4":"rail_depot_mono_ne","5":"rail_depot_mono_se","6":"rail_depot_mono_sw","7":"rail_depot_mono_nw"},
@@ -13929,13 +14027,17 @@
       "4":{"0":"road_depot_ne","1":"road_depot_se","2":"road_depot_sw","3":"road_depot_nw","4":"road_depot_toy_ne","5":"road_depot_toy_se","6":"road_depot_toy_sw","7":"road_depot_toy_nw"}
     },
     "depot_floors": {
+      "5":{"0":"tram_depot_floor_ne","1":"tram_depot_floor_se","2":"tram_depot_floor_sw","3":"tram_depot_floor_nw"},
       "0":{"0":"rail_depot_floor_grass","1":"rail_depot_floor_snow","2":"rail_depot_floor_desert","3":"rail_depot_floor_toyland"},
       "1":{"0":"rail_depot_floor_grass","1":"rail_depot_floor_snow","2":"rail_depot_floor_desert","3":"rail_depot_floor_toyland"},
       "2":{"0":"rail_depot_floor_grass","1":"rail_depot_floor_snow","2":"rail_depot_floor_desert","3":"rail_depot_floor_toyland"},
       "3":{"0":"rail_depot_floor_grass","1":"rail_depot_floor_snow","2":"rail_depot_floor_desert","3":"rail_depot_floor_toyland"},
       "4":{"0":"road_depot_floor"}
     },
-    "depot_wires":{"1":{"0":"rail_depot_wire","1":"rail_depot_wire","2":"rail_depot_wire","3":"rail_depot_wire"}},
+    "depot_wires":{
+      "1":{"0":"rail_depot_wire","1":"rail_depot_wire","2":"rail_depot_wire","3":"rail_depot_wire"},
+      "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
+    },
     "industry_ground": {
       "121":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_north_ground"},
       "122":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_east_ground"},

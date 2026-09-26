@@ -87,9 +87,10 @@ Set `OPENTT3D_AUTO_LOD=0` for a full-detail comparison. Trees use the previous
 projected-material3D geometry by default after matched voxel-tree LOD tests remained
 too slow. `OPENTT3D_TREE_STYLE=voxel` selects the retained voxel trees for diagnostics.
 
-The current artwork is a development subset: **1,314 voxel volumes**, covering
+The current artwork is a development subset: **1,326 voxel volumes**, covering
 110 house IDs,62 diagnostic tree sprite families and all256 vanilla vehicle definitions,
-plus70/175 industry body definitions,74 independent industry grounds and53/74 airport definitions. Climate/state
+plus70/175 industry body definitions,74 independent industry grounds,53/74 airport
+definitions and all six depot families. Climate/state
 coverage remains incomplete: Arctic farms/forests and several non-temperate industry
 grounds retain supplied source artwork pending independent volumes. No model has
 final visual approval. Remaining industry and
@@ -113,6 +114,22 @@ The authoritative voxel artwork is `assets/3d/voxels.json`. The tree profile pac
 provides the active projected-material3D trees; the older house/industry profiles
 and `models.json`/glTF prototype remain reference/fallback paths. Profile-pack
 presence does not establish voxel coverage.
+
+The original tram depots can be exercised with a local public-command fixture:
+
+```sh
+python3 tools/opentt3d/fixture_road.py --build-dir build-macos \
+  --output build-macos/tram-fixture --tram-depots --first-engine 116 --last-engine 116
+python3 tools/opentt3d/smoke.py --build-dir build-macos --background --backend vulkan \
+  --output build-macos/tram-review --savegame build-macos/tram-fixture/save/road-catalogue.sav \
+  --ai-dir build-macos/tram-fixture/ai --newgrf-dir build-macos/tram-fixture/newgrf \
+  --reference-voxel-depot 5 --reference-depot-direction 2 --verify-depots
+```
+
+The fixture creates a tiny no-graphics NewGRF that enables engine116 on tram tracks
+in all climates, then builds four actual depot exits and a working route. Its saved
+orders include an ordinary depot visit. The NewGRF stays local to the fixture and
+its review; the original depot sprites and production vehicle definitions are retained.
 
 The full renderer check includes every voxel vehicle climate/cargo/livery/heading
 comparison and can exceed two hours on software Vulkan. CI runs the scene checks

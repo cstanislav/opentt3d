@@ -1,5 +1,27 @@
 # Active extended development goal
 
+## Tram-depot progress — September26,23:57:54UTC
+
+Printing/tropical-factory commit`c46175aaa93f5e0bab368129ca94b61964710caa`is pushed
+to main and published as`opentt3d-dev-20260926.17`. The next12-volume tram increment
+reaches1,326 volumes and all six depot families/24 exit bindings. It passes200 native,
+125 asset and nine harness checks, all40 source-climate layers, four directional
+source palettes and46 final background backend/bundle controls. Those include32
+actual climate/exit selections and four visible/inside/visible tram-depot traversals.
+Peak sampled memory is2,676,313,088bytes; all1,314 previous models retain their
+semantic geometry/material hashes. The actual clock is**2026-09-26 23:57:54UTC**.
+
+The first four traversal controls watched the southwest depot while the vehicle
+serviced at the northern one. Correctly focused repetitions pass unchanged fixtures
+and renderer, with original failures retained. The bounded3,600-frame tram scenes
+hold60fps; sustained arbitrary-world performance remains unfinished. Source/street/
+world comparisons retain later-pass findings, with zero final visual approvals.
+Publish this increment, then continue missing industry/infrastructure families.
+Steel52…57 has a prepared public construction fixture and144 source-climate layer
+comparisons; six Toyland initial-ground differences retain the existing2022 guard.
+Steel bodies/grounds are not yet authored. This remains a progress audit, not a
+claim that the complete catalogue or multi-pass objective is finished.
+
 ## Printing/tropical-factory progress — September26,23:23:41UTC
 
 The actual clock is **2026-09-26 23:23:41 UTC**, beyond the requested19:00UTC/1PM

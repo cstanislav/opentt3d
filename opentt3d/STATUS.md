@@ -10,11 +10,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.13`LinuxGL, all four Vulkan vehicle shards, macOS and Windows pass; its Vulkan scene job passes the main matrix but times out repeating trees in the electric journey. The active-tree scope repair awaits CI.
-- [x] Current1,314-volume asset/compiler/schema suite124/124 passes; downloader/screenshot/memory harness retains9/9. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,326-volume asset/compiler/schema suite125/125 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Twelve tram-depot volumes add the final depot family: all6 families/24 exit
+  bindings now have voxel bodies, with separate oriented floors/embedded rails and
+  contact wires. Source-climate comparisons permit exact cross-climate body reuse.
+  Source offset selection now recognizes the original tram depot; a fixture-only
+  no-graphics NewGRF enables a normal public-NoAI tram route and all four depot exits.
+  All46 final backend/bundle controls pass, including32 actual exit selections and
+  four observed vehicle/depot traversals. Peak sampled memory is2,676,313,088bytes.
 - [x] Printing43…46 adds13 volumes with distinct construction, tiered joined roofs,
   four open flues, exposed workshop rafters and an open courtyard. Tropical factory
   121…124 shares39…42 only after128 climate/layer comparisons agree in pixels and

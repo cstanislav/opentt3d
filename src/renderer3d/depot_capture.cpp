@@ -59,12 +59,13 @@ unsigned VoxelDepotState(unsigned direction)
 
 bool HasVoxelDepot(unsigned kind, unsigned direction)
 {
-	if (kind > 4 || direction >= 4 || !HasVoxelAsset("depots",kind,VoxelDepotState(direction)) || !HasVoxelAsset("depot_floors",kind,0)) return false;
-	if (kind < 4) for (unsigned state = 1; state < 4; ++state) if (!HasVoxelAsset("depot_floors",kind,state)) return false;
-	if (kind == 1 && !HasVoxelAsset("depot_wires",kind,direction)) return false;
+	if (kind >= 6 || direction >= 4 || !HasVoxelAsset("depots",kind,VoxelDepotState(direction)) || !HasVoxelAsset("depot_floors",kind,0)) return false;
+	if (kind != 4) for (unsigned state = 1; state < 4; ++state) if (!HasVoxelAsset("depot_floors",kind,state)) return false;
+	if ((kind == 1 || kind == 5) && !HasVoxelAsset("depot_wires",kind,direction)) return false;
 	for (unsigned view = 0; view < 4; ++view) {
 		const auto &source = kind < 4 ? _depot_gfx_table[view] : GetRoadDepotDrawData(static_cast<DiagDirection>(view));
-		unsigned offset = kind < 4 ? GetRailTypeInfo(static_cast<RailType>(kind))->GetRailtypeSpriteOffset() : 0;
+		unsigned offset = kind < 4 ? GetRailTypeInfo(static_cast<RailType>(kind))->GetRailtypeSpriteOffset() :
+			kind == 5 ? SPR_TRAMWAY_DEPOT_NO_TRACK-SPR_ROAD_DEPOT : 0;
 		SpriteID ground = source.ground.sprite&SPRITE_MASK;
 		if (kind < 4 && ground != SPR_FLAT_GRASS_TILE) ground += offset;
 		if (!IsBaseGraphicsSprite(ground)) return false;
@@ -77,13 +78,15 @@ void DrawDepot(Scene &scene, const Camera &camera, Vec3 origin, unsigned kind, u
 {
 	bool voxel = original_family && HasVoxelDepot(kind,direction);
 	if (voxel) {
+		/* Tram floors include oriented embedded rails; they are not climate slots. */
+		if (kind == 5) floor_state = direction;
 		if (floor_state == UINT_MAX) floor_state = kind < 4 && _settings_game.game_creation.landscape == LandscapeType::Toyland ? 3 : 0;
 		if (!DrawVoxelAsset(scene,"depot_floors",kind,floor_state,origin,PAL_NONE,1)) throw std::runtime_error("Missing voxel depot ground state");
 		if (!invisible) DrawVoxelAsset(scene,"depots",kind,VoxelDepotState(direction),origin,palette,transparent ? 0.38f : 1);
-		if (kind == 1 && !IsInvisibilitySet(TO_CATENARY) && HasRailCatenaryDrawn(RAILTYPE_ELECTRIC)) {
+		if ((kind == 5 || (kind == 1 && HasRailCatenaryDrawn(RAILTYPE_ELECTRIC))) && !IsInvisibilitySet(TO_CATENARY)) {
 			DrawVoxelAsset(scene,"depot_wires",kind,direction,origin,PAL_NONE,IsTransparencySet(TO_CATENARY) ? 0.38f : 1);
 		}
-		if (kind == 4) return;
+		if (kind >= 4) return;
 	}
 	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,24})) return;
 	unsigned lod = camera.PixelScaleAt(origin+Vec3{8,8,8}) >= 1 ? 0 : 1;

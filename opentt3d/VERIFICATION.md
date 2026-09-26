@@ -1,5 +1,64 @@
 # Implementation verification
 
+## Tram-depot family5
+
+Twelve volumes raise the catalogue to1,326: four rotated open-bay buildings, four
+directional concrete/embedded-rail floors and four independently controlled contact
+wire sets. All six depot families now have all24 exit-direction bindings. Tram
+floors use directional slots rather than the rail-depot climate slots. The original
+tram sprite relocation is recognized in both the eligibility guard and world capture;
+the prior guard excluded kind5 entirely. No production gameplay, save or vehicle
+availability code changes.
+
+- 200 native,125 asset/compiler/schema and9 harness checks pass. Structural tests
+  require supported roof transformers/insulators, open source-sized entry corridors,
+  recessed side windows, full opaque floors and rails/contact wires reaching their
+  correct exits. All1,314 previous model geometry/material hashes agree, and all12
+  new compiled models exactly match their current source definitions.
+- The40-layer original source audit finds identical pixels/registration across
+  all four climates. Every direction passes its own source palette audit after the
+  SW body stops inheriting shade70 from the other three views.
+- Four public NoAI fixtures build all four exits in all climates and observe a
+  moving vehicle. Two additional temperate/Toyland fixtures retain an ordinary depot
+  visit order for live traversal checks. Vanilla has no tram engine: a fixture-local,
+  no-graphics NewGRF changes only engine116's tram flag and climate availability.
+  `smoke.py --newgrf-dir` stages its required save dependency without changing the
+  production game's configured NewGRFs.
+- All eight climate/backend matrices pass. Each verifies96 depot direction views,
+  384 original company-palette views,256 joined ship-depot controls and288 focused
+  tram mesh/palette views. The temperateOpenGL run also checks1,024,000 exact
+  whole-world atlas relocation/picking pixels. All32 actual climate/exit/backend
+  selections pass, retaining their original tile ownership.
+- Both macOS LaunchServices background controls pass with actual tram-depot selection
+  and tile picking. The development bundle executable matches the retained build,
+  and all four resource links resolve directly into the current build. Foreground
+  native-input acceptance remains a separate unresolved item.
+- Registered source, four-sided street and actual track/depot views were inspected.
+  Roof ridges, transformer silhouette, insulator thickness and painted detail remain
+  later-pass work; no final visual approval is claimed.
+
+Four initial moving traversal checks observed entry into the northern depot while
+the camera was centred on the southwest depot, so the required inside-geometry
+observation failed. All four correctly focused northern-depot controls pass without
+changing the fixture or renderer: visible/inside/visible states and the actual voxel
+depot are captured on both backends in temperate and Toyland. Each completes3,600
+presented frames at60fps, with p95 work4.42…5.98ms in this bounded scene. Arbitrary-world
+smooth60fps remains unproven. The final46 successful runs peak at2,676,313,088bytes;
+all frozen executable/artwork/implementation hashes match. Original failures remain.
+Evidence:`build-macos/breadth-tram-*`. Initial focused tests caught an inverted
+coordinate in the test's NE exit measurement; the corrected geometric measurement
+passes. The initial SW source-colour audit failure and compact logs remain available.
+The next steel-mill52…57 source audit covers144 climate/layer pairs with six Toyland
+ground differences. Its normal-command construction fixture is prepared; no steel
+coverage is claimed by this tram increment.
+
+The latest CI audit finds macOS and all Windows jobs passing for factory`.16`and
+printing`.17`; Linux scene/OpenGL/vehicle work remains active or queued. Lumbermill
+`.15`has the same electric-journey900-second timeout seen in`.13`/`.14`, before the
+active-tree-scope repair. Its remaining vehicle shard is still running. Retained
+JSON job status and gzip failure logs are in`breadth-tram-ci-*`and
+`breadth-release15-ci-*`; latest-release Linux acceptance remains pending.
+
 ## Printing43…46 and source-identical tropical factory121…124
 
 Thirteen new volumes raise the catalogue to1,314, with70/175 industry body

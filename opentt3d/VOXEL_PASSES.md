@@ -68,7 +68,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,314-volume printing checkpoint)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,326-volume tram-depot checkpoint)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -80,7 +80,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
 | Industries | 70/175 body definitions,74 grounds | Printing43…46 and source-identical tropical factory121…124 join factory39…42, lumbermill125…128, oil-well, farm, bank, food, paper, plantations, waterworks, oil-rig, forest and refinery; steelworks, mines, other production/storage/machinery families, climate grounds, construction, animation, cargo and multi-tile layouts remain |
 | Airports | 53/74 tile definitions:47 body owners and6 ground-only definitions;35 independent grounds | Added apron/runway/threshold/fence/helipad families and small terminals33/34/35; remaining taxiway/grass/small-runway grounds, heliport44, radar grounds and independent Toyland terminal/hangar artwork |
-| Depots | 5/6 families,20 directional bindings | Tram body/floor/wire and all-family source/ground/clearance review |
+| Depots | 6/6 families,24 directional bindings | Tram body/floor/wire bindings now cover the missing family; all-family source/ground/vehicle clearance and later fidelity review remain |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
 | Other transport | Both ship-depot axes/four voxel sections; six dock sections/twelve ordinary-Toyland volumes; separate source-resolved ordinary/Toyland buoys | Roads/trams/stops, locks/aqueducts and remaining infrastructure; full water-class/ship/bridge fidelity and clearance review |
 | Terrain | Seven fences,13 foundations | All remaining ground/detail/water/climate/seasonal surfaces and transitions |

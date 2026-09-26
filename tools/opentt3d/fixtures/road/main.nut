@@ -29,13 +29,26 @@ function RoadCatalogue::Start()
 		}
 		if (!found) throw "no ordinary buildable road review site";
 		AILog.Info("ROAD_CATALOGUE_SITE "+this.x+","+this.y);
-		AIRoad.SetCurrentRoadType(0);
+		local tram=AIController.GetSetting("review_tram")!=0;
+		local roadtype=tram ? AIRoad.ROADTYPE_TRAM : AIRoad.ROADTYPE_ROAD;
+		this.Require(AIRoad.IsRoadTypeAvailable(roadtype),"requested road/tram type available");
+		AIRoad.SetCurrentRoadType(roadtype);
 		this.Require(AIRoad.BuildRoad(this.Tile(3,3),this.Tile(29,3)),"north road");
 		this.Require(AIRoad.BuildRoad(this.Tile(29,3),this.Tile(29,9)),"east road");
 		this.Require(AIRoad.BuildRoad(this.Tile(29,9),this.Tile(3,9)),"south road");
 		this.Require(AIRoad.BuildRoad(this.Tile(3,9),this.Tile(3,3)),"west road");
 		this.Require(AIRoad.BuildRoadDepot(this.Tile(1,6),this.Tile(2,6)),"review depot");
 		this.Require(AIRoad.BuildRoad(this.Tile(1,6),this.Tile(3,6)),"depot connection");
+		if (tram) {
+			foreach (pair in [[this.Tile(31,6),this.Tile(30,6)],[this.Tile(16,1),this.Tile(16,2)],[this.Tile(16,11),this.Tile(16,10)]]) {
+				this.Require(AIRoad.BuildRoadDepot(pair[0],pair[1]),"additional oriented tram depot");
+				this.Require(AIRoad.GetRoadDepotFrontTile(pair[0])==pair[1],"actual tram depot exit");
+			}
+			this.Require(AIRoad.GetRoadDepotFrontTile(this.Tile(1,6))==this.Tile(2,6),"actual service-depot exit");
+			this.Require(AIRoad.BuildRoad(this.Tile(29,6),this.Tile(31,6)),"east depot connection");
+			this.Require(AIRoad.BuildRoad(this.Tile(16,1),this.Tile(16,3)),"north depot connection");
+			this.Require(AIRoad.BuildRoad(this.Tile(16,9),this.Tile(16,11)),"south depot connection");
+		}
 		this.Require(AIRoad.BuildDriveThroughRoadStation(this.Tile(9,3),this.Tile(10,3),AIRoad.ROADVEHTYPE_BUS,AIStation.STATION_NEW),"north bus stop");
 		this.Require(AIRoad.BuildDriveThroughRoadStation(this.Tile(23,9),this.Tile(22,9),AIRoad.ROADVEHTYPE_BUS,AIStation.STATION_NEW),"south bus stop");
 		this.Require(AIRoad.BuildDriveThroughRoadStation(this.Tile(12,3),this.Tile(13,3),AIRoad.ROADVEHTYPE_TRUCK,AIStation.STATION_NEW),"north truck stop");
@@ -44,10 +57,12 @@ function RoadCatalogue::Start()
 		local engines=AIEngineList(AIVehicle.VT_ROAD), vehicles=[];
 		for (local engine=engines.Begin(); !engines.IsEnd(); engine=engines.Next()) {
 			if (engine<first || engine>last) continue;
+			if (!AIEngine.CanRunOnRoad(engine,roadtype)) continue;
 			local vehicle=AIVehicle.BuildVehicle(this.Tile(1,6),engine);
 			this.Require(AIVehicle.IsValidVehicle(vehicle),"build engine "+engine);
 			local passenger=AIEngine.GetCargoType(engine)==0;
 			this.Require(AIOrder.AppendOrder(vehicle,passenger ? this.Tile(9,3) : this.Tile(12,3),AIOrder.OF_NONE),"north order");
+			if (tram) this.Require(AIOrder.AppendOrder(vehicle,this.Tile(1,6),AIOrder.OF_NONE),"ordinary tram-depot visit order");
 			this.Require(AIOrder.AppendOrder(vehicle,passenger ? this.Tile(23,9) : this.Tile(20,9),AIOrder.OF_NONE),"south order");
 			this.Require(AIVehicle.StartStopVehicle(vehicle),"start engine "+engine);
 			vehicles.append({engine=engine,vehicle=vehicle,moved=false,peak=0});
@@ -76,7 +91,7 @@ function RoadCatalogue::Start()
 			if (index!=0) result+=",";
 			result+="{\"engine\":"+entry.engine+",\"vehicle\":"+entry.vehicle+",\"peak_speed\":"+entry.peak+"}";
 		}
-		AILog.Info("ROAD_CATALOGUE_READY "+result+"]}");
+		AILog.Info("ROAD_CATALOGUE_READY "+result+"]"+(tram ? ",\"depot_directions\":[0,1,2,3]" : "")+"}");
 	} catch (error) {
 		AILog.Error("ROAD_CATALOGUE_FAILED "+error);
 	}

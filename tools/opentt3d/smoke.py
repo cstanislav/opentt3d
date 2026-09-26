@@ -51,6 +51,7 @@ def main():
     parser.add_argument("--climate", choices=("temperate", "arctic", "tropic", "toyland"))
     parser.add_argument("--savegame", type=Path)
     parser.add_argument("--ai-dir", type=Path, help="Stage a fixture's local AI scripts alongside the isolated save")
+    parser.add_argument("--newgrf-dir", type=Path, help="Stage the NewGRF files required by a fixture save")
     parser.add_argument("--executable", type=Path, help="Override game executable, for official upstream interoperability checks")
     parser.add_argument("--graphics-from-config", choices=("OpenGFX2 Classic", "OpenGFX2 High Def"), help="Exercise saved base-set selection/migration without a command-line graphics override")
     parser.add_argument("--reference-model", action="store_true")
@@ -275,6 +276,8 @@ def main():
         parser.error(f"Missing savegame: {args.savegame}")
     if args.ai_dir and not args.ai_dir.is_dir():
         parser.error(f"Missing AI directory: {args.ai_dir}")
+    if args.newgrf_dir and not args.newgrf_dir.is_dir():
+        parser.error(f"Missing NewGRF directory: {args.newgrf_dir}")
     if output.exists():
         parser.error("Use a new output directory to avoid confusing stale screenshots with a successful run")
     output.mkdir(parents=True)
@@ -282,6 +285,8 @@ def main():
     scripts.mkdir()
     if args.ai_dir:
         shutil.copytree(args.ai_dir, output / "ai")
+    if args.newgrf_dir:
+        shutil.copytree(args.newgrf_dir, output / "newgrf")
     if args.executable:
         # Stock binaries have their own bundled fonts/languages. Supply only the
         # pinned OpenGFX pack via this isolated test's data directory.

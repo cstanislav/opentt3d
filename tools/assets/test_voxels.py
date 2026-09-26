@@ -8,6 +8,50 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_tram_depots_keep_open_bays_oriented_rails_and_independent_wires(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("tram_depot_")}
+        source["bindings"] = {category:{"5":source["bindings"][category]["5"]}
+                              for category in ("depots","depot_floors","depot_wires")}
+        result = compile_catalogue(source)
+        def cells(name):
+            return {(x+i,y,z):material for x,y,z,length,material in result["models"][name]["runs"] for i in range(length)}
+        body_palette = {1,2,3,4,5,6,7,8,9,33,34,35,36,37,38,70,71,72,73,74,75,76,77,104,105,199,200,202}
+        for direction in range(4):
+            name = result["bindings"]["depots"]["5"][str(direction)]
+            self.assertEqual(name,result["bindings"]["depots"]["5"][str(direction+4)],
+                             "All four source climates share the identical tram building")
+            body = cells(name)
+            self.assertTrue({c for m in body.values() for c in result["materials"][m-1]} <= body_palette)
+            reached = {p for p in body if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in body and p not in reached:
+                        reached.add(p); pending.append(p)
+            self.assertEqual(reached,set(body),"Roof transformer/insulators must have physical support")
+            # Check the actual entry corridors in the four original exit directions.
+            for x,y,z in body:
+                along,across = ((31-x,31-y),(y,31-x),(x,y),(31-y,x))[direction]
+                self.assertFalse(along >= 16 and 7 <= across < 25 and z < 10,
+                                 "Do not close the vehicle bay below its source lintel")
+            floor = cells(result["bindings"]["depot_floors"]["5"][str(direction)])
+            self.assertEqual({(x,y) for x,y,z in floor if z == 0},{(x,y) for x in range(64) for y in range(64)})
+            self.assertTrue({c for m in floor.values() for c in result["materials"][m-1]} <= {3,4,5,6,7,8})
+            wire = cells(result["bindings"]["depot_wires"]["5"][str(direction)])
+            self.assertEqual(min(z for x,y,z in wire),38,"Contact wires retain the9.5-unit local height")
+            rail_mouth, wire_mouth = set(),set()
+            for volume,level,mouth in ((floor,1,rail_mouth),(wire,38,wire_mouth)):
+                for x,y,z in volume:
+                    along,across = ((63-x,63-y),(y,63-x),(x,y),(63-y,x))[direction]
+                    if along == 63 and z == level: mouth.add(across)
+            self.assertEqual(rail_mouth,{15,25,39,49},"All four embedded rails reach the original exit")
+            self.assertEqual(wire_mouth,{20,44},"Each contact wire aligns with its running-track centre")
+        sw = cells("tram_depot_sw")
+        self.assertNotIn((4,1,5),sw,"Side glazing keeps the outer wall recess")
+        self.assertIn((4,2,5),sw)
+
     def test_printing_works_preserves_open_construction_courtyard_flues_and_join(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

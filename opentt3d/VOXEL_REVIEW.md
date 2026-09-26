@@ -16,6 +16,18 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Tram-depot breadth:**12 volumes cover four source exits with open bays,
+  recessed lower glazing, folded roofs and supported paired insulators/transformer.
+  Four oriented concrete/embedded-rail floors and four contact-wire volumes retain
+  independent ownership. All40 source layers compare identically across the four
+  climates, allowing the same body models in Toyland; theSW brick shade is corrected
+  to its own source palette. Registered original views, four-sided street views and
+  actual tram-track/depot context were inspected. The source roof ridges, transformer
+  silhouette, insulator thickness, highlights and brick/glass detail need later
+  catalogue-wide refinement. Native source registration is within a few raster pixels,
+  with original16-unit ground footprint and an actual unobstructed entry corridor.
+  Evidence:`build-macos/breadth-tram-*`; zero final visual approvals.
+
 - **Printing and tropical-factory breadth:**13 volumes cover43…46 with distinct
   excavations, open wall/rafter stages, tiered joined roofs and four hollow flues.
   Courtyard46 stays open. Registered source comparisons repair the eastern workshop

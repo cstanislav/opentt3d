@@ -158,7 +158,7 @@ void BeginCaptureFrame(float seconds)
 	if (checked_depot_vehicle != UINT32_MAX && checked_depot_phase == 1) {
 		const Vehicle *vehicle = Vehicle::GetIfValid(VehicleID{checked_depot_vehicle});
 		bool supported = vehicle != nullptr && vehicle->IsInDepot() &&
-			((vehicle->type == VEH_ROAD && IsRoadDepotTile(vehicle->tile) && GetRoadTypeRoad(vehicle->tile) != INVALID_ROADTYPE && HasVoxelDepot(4,GetRoadDepotDirection(vehicle->tile))) ||
+			((vehicle->type == VEH_ROAD && IsRoadDepotTile(vehicle->tile) && HasVoxelDepot(GetRoadTypeRoad(vehicle->tile) == INVALID_ROADTYPE ? 5 : 4,GetRoadDepotDirection(vehicle->tile))) ||
 			 (vehicle->type == VEH_SHIP && IsShipDepotTile(vehicle->tile) && HasVoxelShipDepot(GetShipDepotAxis(vehicle->tile),to_underlying(GetShipDepotPart(vehicle->tile)))));
 		if (supported) {
 			checked_depot_tile = vehicle->tile;
@@ -732,7 +732,8 @@ bool CaptureDepot(const TileInfo &tile, unsigned kind, unsigned direction, const
 		kind == 4 ? SPR_ROAD_DEPOT+4 : SPR_TRAMWAY_DEPOT_NO_TRACK+4;
 	if (!IsBaseGraphicsSprite(canonical) || !IsBaseGraphicsSprite(SPR_RAIL_PLATFORM_X_REAR)) return false;
 	if (kind < 4) ground = IsSnowRailGround(tile.tile) ? SPR_FLAT_SNOW_DESERT_TILE : SPR_FLAT_GRASS_TILE;
-	int original_offset = kind < 4 ? GetRailTypeInfo(static_cast<RailType>(kind))->GetRailtypeSpriteOffset() : 0;
+	int original_offset = kind < 4 ? GetRailTypeInfo(static_cast<RailType>(kind))->GetRailtypeSpriteOffset() :
+		kind == 5 ? SPR_TRAMWAY_DEPOT_NO_TRACK-SPR_ROAD_DEPOT : 0;
 	bool original_family = relocation == original_offset;
 	bool voxel = original_family && HasVoxelDepot(kind,direction);
 	unsigned floor_state = 0;

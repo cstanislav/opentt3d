@@ -1041,7 +1041,7 @@ void ExportVoxelReviews(std::string_view prefix)
 			DrawDepot(depot,camera,{},base,direction,PALETTE_TO_BLUE);
 			for (auto &instance : depot.instances) instance.data.SetObjectId(1);
 			capture(depot,camera.Cropped(8192-64,8192-80,128,128),fmt::format("model-voxel-depot-{}-native-{}",base,direction),true);
-			std::vector<const VoxelModel *> group{&Models().models.at(name),&Models().models.at(Models().bindings.at({"depot_floors",base,0}))};
+			std::vector<const VoxelModel *> group{&Models().models.at(name),&Models().models.at(Models().bindings.at({"depot_floors",base,base == 5 ? direction : 0}))};
 			std::vector<Vec3> placements{{},{}};
 			std::vector<float> headings{0,0};
 			if (base == 4 && HasVoxelAsset("vehicles",123,1)) {
