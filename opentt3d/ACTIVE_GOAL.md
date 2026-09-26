@@ -10,11 +10,12 @@
 - Extension recorded at **2026-09-26 03:09:04 UTC**. Every prior stopping audit is
   historical and does not satisfy this new window. Continue breadth-first coverage,
   immediate correctness repairs and production review through19:00UTC.
-- Progress clock audit **2026-09-26 07:30:32 UTC**: the window is still active.
-  Full1,133 GL/Vulkan geometry/vehicle matrices and eight live collector runs pass;
-  the1,144 sawmill candidate passes both incremental backends and20 actual states.
-  Publication and matched-performance review continue, followed by remaining industry
-  breadth and contextual rail-contact/clearance work. Final visual approvals remain zero.
+- Progress clock audit **2026-09-26 08:41:57 UTC**: the window is still active.
+  The1,169-volume forest/refinery candidate passes both incremental backend matrices,
+  both actual forest production/regrowth cycles and24 refinery construction selections.
+  Linux Vulkan now confirms the tunnel-root repair, then exceeds the6GiB guard later
+  in the catalogue matrix. Fence-safe diagnostic upload retirement and complete native
+  matrices are under review. Publication, remaining breadth and rail contact continue.
 - Publish progress frequently: commit and push coherent verified increments to main,
   merge feature work as appropriate, and make a release at least daily or at noteworthy
   milestones. Label incomplete development checkpoints accurately; retain all evidence.
@@ -36,9 +37,9 @@
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: 1,130 JSON volumes, houses0…109 and eighty-eight
+- Current coverage remains partial: 1,169 JSON volumes, houses0…109 and eighty-eight
   independent house grounds, eighteen airport
-  definitions, industry bodies0…3/7…10 and grounds0…10, six power-station spark frames,
+  definitions, industry bodies0…3/7…23 and grounds0…23, six power-station spark frames,
   depot families0…4 in four directions with source/weather-aware floors,
   both two-tile ship-depot orientations and all six ordinary/Toyland dock sections,
   separate ordinary/Toyland source-resolved Classic navigation buoys,
@@ -68,6 +69,13 @@ immediately; record cosmetic findings for their appropriate later pass.
 > - If by a chance you think you're done with everything on this list, DON'T STOP WORKING. Keep playtesting the game, do visual checks, make lists of things that don't work or don't look perfect, keep improving things. THE ONLY ALLOWED WAY OF STOPPING WORK IS THE TIME CHECK.
 
 ### Current-window progress
+
+- **Forest/refinery candidate:**25 manually authored volumes add graphics16…23 and
+  independent grounds. Both native backends observe the unchanged actual forest tile's
+  wood-dispatch/log/regrowth lifecycle; all24 refinery construction body/ground selections
+  pass. Source/street review corrects orientation, occupied footprints, log ends and a
+  diagnostic crop that hid tall flare geometry. Fine material/proportion differences
+  remain recorded with zero final visual approvals. Full1169/memory review is active.
 
 - **All vehicle body bindings:**38 new locomotive volumes bind the remaining33
   definitions. The1,130-volume working checkpoint covers256/256 vehicles, with

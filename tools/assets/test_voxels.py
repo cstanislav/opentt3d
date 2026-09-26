@@ -2150,6 +2150,113 @@ class VoxelCompilerTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"complete independently mounted collectors"):
                 compile_catalogue(broken)
 
+    def test_refinery_vessels_frames_and_pipes_keep_source_states_openings_and_ground_contact(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("refinery_") or name == "mine_ground_site"}
+        source["bindings"] = {category:{graphics:states for graphics,states in source["bindings"][category].items() if 18 <= int(graphics) <= 23} for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        palettes = {
+            (18,0): {1,2,3,76,123}, (18,1): set(range(2,14)) | set(range(198,206)),
+            (18,2): set(range(2,15)) | {66,122,123,124} | set(range(73,79)) | set(range(198,205)),
+            (19,0): {1,2,3}, (19,1): set(range(2,14)) | set(range(199,205)),
+            (19,2): set(range(1,14)) | {56,65,66,162,163,179,180,181,195} | set(range(199,205)),
+            (20,0): {1,2,3}, (20,1): set(range(2,14)) | {163,181},
+            (20,3): {1} | set(range(3,14)) | {56,65,151,152,153,162,163,179,180,181,187,188,189,195} | set(range(232,239)),
+            (21,0): set(range(71,78)) | {122,123,124},
+            (21,1): set(range(71,79)) | {122,123,124,163} | set(range(178,183)) | set(range(200,205)),
+            (21,2): {56,65} | set(range(71,78)) | {122,123,124,162,163,164} | set(range(178,183)) | set(range(200,206)),
+            (22,0): set(range(71,78)) | {122,123,124},
+            (22,1): set(range(2,13)) | set(range(71,78)) | {122,123,124},
+            (22,2): set(range(2,13)) | set(range(71,79)) | {122,123,124} | set(range(199,205)),
+            (23,0): {2}, (23,1): {1,2} | set(range(5,16)) | set(range(32,37)),
+            (23,2): set(range(5,16)) | set(range(32,37)) | set(range(128,132)),
+        }
+        cells = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)} for name,model in result["models"].items()}
+        for graphics,states in result["bindings"]["industries"].items():
+            self.assertEqual(set(states),{"0","1","2","3"})
+            self.assertEqual(states["1"] if graphics == "20" else states["3"],states["2"])
+            for stage,name in states.items():
+                canonical = (1 if int(stage) in (1,2) else int(stage)) if graphics == "20" else min(int(stage),2)
+                original = palettes[int(graphics),canonical]
+                colours = {colour for material in cells[name].values() for colour in result["materials"][material-1]}
+                self.assertTrue(colours <= original,(name,sorted(colours-original)))
+        for name,occupied in cells.items():
+            model = result["models"][name]
+            pending = set(occupied)
+            while pending:
+                points = [pending.pop()]
+                for x,y,z in points:
+                    for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if point in pending:
+                            pending.remove(point); points.append(point)
+                self.assertTrue(any(z == 0 for x,y,z in points),(name,"Detached pipe, flame, tank or frame",points[:4]))
+            self.assertTrue(all(0 <= model["origin"][axis]+point[axis]*model["cell_size"][axis] < 16 for point in occupied for axis in (0,1)),name)
+        for name,centre,top in (("refinery_tank_open",(16,16),24),("refinery_fractionator_open",(16,16),58)):
+            self.assertTrue(all((*centre,z) not in cells[name] for z in range(1,top)),"Construction vessels must remain genuinely hollow")
+        for name in ("refinery_cooler_build","refinery_cooler"):
+            self.assertTrue(all((16,18,z) not in cells[name] for z in range(38,55)),"The cooling box lost its original open top")
+        for name in ("refinery_process_site","refinery_process_build","refinery_process"):
+            self.assertNotIn((16,16,18),cells[name],"Open process framing became a solid block")
+        for name in ("refinery_office_site","refinery_office_build","refinery_office"):
+            self.assertTrue(all((22,24,z) not in cells[name] for z in range(15)),"The original office's L-shaped footprint was filled")
+        for states in result["bindings"]["industry_ground"].values():
+            self.assertEqual([states[str(stage)] for stage in range(4)],["mine_ground_site"]*3+["refinery_paved_ground"])
+            for name in states.values():
+                model = result["models"][name]
+                self.assertEqual(len(cells[name]),32*32)
+                self.assertEqual(model["origin"][2]+model["cell_size"][2],0)
+
+    def test_forest_growth_keeps_nine_rooted_pines_and_independent_original_litter(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("forest_")}
+        source["bindings"] = {category:{graphics:states for graphics,states in source["bindings"][category].items() if int(graphics) in (16,17)} for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        growing = result["bindings"]["industries"]["16"]
+        self.assertEqual(set(growing),{"0","1","2","3"})
+        self.assertEqual(len(set(growing.values())),4)
+        logs = result["bindings"]["industries"]["17"]
+        self.assertEqual(set(logs),{"0","1","2","3"})
+        self.assertEqual(len(set(logs.values())),1,"Original2076 is identical in all four source-table slots")
+        heights = []
+        for stage,name in growing.items():
+            model = result["models"][name]
+            cells = {(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+            heights.append(max(z for x,y,z in cells))
+            original = {2} | set(range(80,87)) | set(range(104,111 if stage == "1" else 112))
+            colours = {colour for material in cells.values() for colour in result["materials"][material-1]}
+            self.assertTrue(colours <= original,(name,sorted(colours-original)))
+            # No growth stage may move the plantation's roots or connect its
+            # nine original trunks into a raised solid base.
+            roots = {(x,y) for x,y,z in cells if z == 0}
+            patches = []
+            while roots:
+                points = [roots.pop()]
+                for x,y in points:
+                    for point in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+                        if point in roots:
+                            roots.remove(point); points.append(point)
+                patches.append(tuple(model["origin"][axis]+(min(p[axis] for p in points)+max(p[axis] for p in points)+1)*model["cell_size"][axis]/2 for axis in (0,1)))
+            self.assertEqual(set(patches),{(x,y) for x in (3,8,13) for y in (3,8,13)})
+        self.assertEqual(heights,sorted(set(heights)),"Every original forest growth stage must increase the crown height")
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+            if name == "forest_ground":
+                self.assertEqual(len(cells),32*32)
+                self.assertEqual(model["origin"],[0,0,-0.25])
+                self.assertEqual(model["cell_size"],[0.5,0.5,0.25])
+                continue
+            pending = set(cells)
+            while pending:
+                points = [pending.pop()]
+                for x,y,z in points:
+                    for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if point in pending:
+                            pending.remove(point); points.append(point)
+                self.assertTrue(any(z == 0 for x,y,z in points),(name,"Unsupported crown, log or stump",points[:4]))
+        for states in result["bindings"]["industry_ground"].values():
+            self.assertEqual(set(states),{"0","1","2","3"})
+            self.assertEqual(set(states.values()),{"forest_ground"})
+
     def test_sawmill_construction_roofs_and_timbers_have_grounded_parts_and_source_palettes(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("sawmill_") or name == "mine_ground_site"}
@@ -2265,7 +2372,8 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_mine_ground_keeps_playable_tile_coverage_and_matching_coal_contact(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name: model for name, model in source["models"].items() if name.startswith("mine_ground_")}
-        source["bindings"] = {"industry_ground": source["bindings"]["industry_ground"]}
+        source["bindings"] = {"industry_ground": {graphics:states for graphics,states in source["bindings"]["industry_ground"].items()
+                                                 if all(name in source["models"] for name in states.values())}}
         result = compile_catalogue(source)
         volumes = {}
         for name, model in result["models"].items():

@@ -51,12 +51,12 @@ full terrain/source-raster fidelity and final approval remain separate.
   deliberate palette selection. The first window palette was wrong and was corrected
   against the actual source colours (indices 128…133).
 
-## Current checkpoint: September26, 1,144-volume verified candidate
+## Current checkpoint: September26, 1,169-volume candidate
 
 All110 house definitions have body or ground bindings (109 body/88 ground definitions),
 and all62 original tree families have434 lifecycle volumes. Vehicles now cover256/256,
-industry bodies13/175, industry grounds16, airports18/74 and depot families5/6. Exact
-counts are in `build-macos/pass1-1144-inventory.json`.
+industry bodies21/175, industry grounds24, airports18/74 and depot families5/6. Exact
+counts are in `build-macos/pass1-1169-final-inventory.json`.
 All volumes remain work-in-progress and final approvals remain zero.
 
 Thirty-eight new locomotive volumes bind the remaining33 definitions. Native source
@@ -82,8 +82,9 @@ The Linux title-world tunnel check additionally found a tree's below-ground root
 covering640 lining pixels. That exact failure reproduces natively. Tree instances
 now use finite bore subtraction with their own tile-relative offset, preserving the
 above-ground crown and roots outside the current segment. Both native backends pass
-the original saved-world Cab review with243,635 unobstructed lining pixels; Linux
-revalidation remains pending.
+the original saved-world Cab review with243,635 unobstructed lining pixels. Linux
+Vulkan CI36228046438 now passes243,629 unobstructed lining pixels and unchanged vehicle
+state; its later full catalogue matrix still exceeds the6GiB guard.
 
 Eleven sawmill volumes add original11…15: separate low foundations, open timber
 frames, three northlight/cutting-shed roofs, a monitor-roof store, cutting table and
@@ -95,6 +96,29 @@ every disconnected physical part to reach ground and every state to use its sour
 palette. Both native backends pass264 mesh views/840 industry views; all20 actual
 state selections pass. Corrugation shading, timber grain, pile profile/end-grain and
 small saw/worker details remain queued for the later catalogue-wide fidelity pass.
+
+Six forest volumes add four nine-pine growth states, original2076 logs/stumps and
+independent litter. Rooted-geometry checks, source palettes and both native mesh/industry
+matrices pass. The log profiles are octagonal with painted end cores and retained bark
+rims. Real wood service loads20units in engine144, delivers to a sawmill and returns.
+Both9,000-frame native backend observations follow one unchanged tile53,35 /industry0
+through mature16→completed17→16 stages0/1/2/3. The earlier6,000-frame attempts end before
+maturity and remain failed evidence. Construction17/stage0 was an incorrect observer
+assumption; the source simulation leaves17 completed at stage3.
+
+Nineteen refinery volumes add18…23 with all24 actual construction body/ground selections.
+Reviewed source registrations and street galleries preserve hollow steel cylinders,
+separate blue bands/pipes, grounded open frames, three flare platforms, cooler and
+L-shaped office. A fixed80-pixel native-export top crop hid the flame; adaptive crops
+and explicit tile-origin sidecars now retain its full108-pixel silhouette against the
+109-pixel source. No geometry is inferred from these images.
+
+The source/street pass records remaining refinements: tank hatch/ladder placement,
+foundation/post heights, cylinder radial shading and curved-top grain, fractionator
+band/hatch detail, process pipe widths/brace offsets, cooler pipe arrangement, office
+rear-wall material and fine window/roof detail. The flare has a solid narrow extruded
+flame whose side profile needs broader volumetric shaping. Forest crown tiers, bark
+grain and log-end shading need further fidelity work. These are not final approvals.
 
 The61 new wagon volumes bind the remaining54 wagon definitions, completing81/81
 bindings. Manual source inspection distinguishes Arctic brown coal tubs, tropical

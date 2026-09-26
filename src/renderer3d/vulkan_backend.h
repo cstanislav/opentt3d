@@ -25,6 +25,13 @@ struct MeshCacheStats {
 	bool operator==(const MeshCacheStats &) const = default;
 };
 
+/** Synchronous diagnostic uploads may retain one largest page plus this scratch budget. */
+inline constexpr uint64_t READBACK_ARENA_SCRATCH_BYTES = 32ULL * 1024 * 1024;
+struct ReadbackArenaStats {
+	size_t buffers = 0;
+	uint64_t capacity_bytes = 0, largest_bytes = 0;
+};
+
 #ifdef WITH_VULKAN
 bool CreateInstance(std::span<const char *const> extensions);
 VkInstance Instance();
@@ -35,6 +42,7 @@ const std::string &LastError();
 std::string Description();
 int MaximumImageSize();
 MeshCacheStats GetMeshCacheStats();
+ReadbackArenaStats GetReadbackArenaStats();
 bool Resize(int width, int height);
 void *VideoBuffer();
 uint8_t *AnimationBuffer();
@@ -50,6 +58,7 @@ inline bool Active() { return false; }
 inline std::string Description() { return "unavailable"; }
 inline int MaximumImageSize() { return 0; }
 inline MeshCacheStats GetMeshCacheStats() { return {}; }
+inline ReadbackArenaStats GetReadbackArenaStats() { return {}; }
 inline bool CapturePresentation(PresentationCapture) { return false; }
 inline bool RenderViewport(const void *, const Scene &, const Camera &) { return false; }
 inline void ComposeViewport(const void *, int, int, int, int, int, int) {}

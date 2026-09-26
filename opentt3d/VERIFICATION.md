@@ -21,6 +21,37 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,169-volume forest/refinery candidate:**190 native,108 asset/compiler and8
+  harness tests pass, with the134-file presentation boundary. Source hash
+  `486563f2082560a83f533d0a02350313dc044faaf9b12ca0889a46527a91dfac`; catalogue
+  `7f891fd0651dfd5ea315337c90f24727aa446e83800a8bb190d2988fdf771114`; frozen executable
+  `e7715b713c1621a53e9202594e2227ee1eaebd47263cc082afc396c3ff38ec8a` is in
+  `pass1-1169-final-build`. Runtime:9,273,652 occupied cells,6,928,372 exposed faces,
+  1,548,605 conforming rectangles /11,422,202 triangles. Zero final approvals.
+- Both forest/refinery reviewed matrices pass:144 forest and456 refinery mesh views,
+  1,352 industry views per run and exact4,096,000-pixel atlas/picking checks. All24
+  refinery body/ground selections use actual day0/16/30/44 saves. The final flare crop/
+  silhouette follow-up passes both backends at4,617,540,264 /4,513,206,856 sampled bytes.
+  Evidence: `pass1-1169-forest-refinery-validation.json`, `pass1-1169-final-validation.json`
+  and original/registered/street sheets in their GL reference directories.
+- `pass1-1169-forest-cycle-{opengl,vulkan}` passes9,000 actual running frames on the
+  ordinary wood-service save. One unchanged tile53,35 /industry0 captures mature16,
+  completed17/stage3 and graphics16 stages0/1/2/3. Sampled peaks4,372,910,400 /
+  4,214,034,680bytes remain under6GiB. Earlier observer-stage and too-short6,000-frame
+  failures are retained. The extended36,000-frame diagnostic cap leaves simulation
+  timing/state untouched; runs still require explicit time/memory bounds.
+- CI36228046438 confirms191 Linux native tests and the repairedVulkan live tunnel:
+  243,629 unobstructed lining pixels with unchanged vehicle state. The later catalogue
+  matrix exceeds6GiB at6,452,998,144 sampled bytes; retained artifact is
+  `pass1-1144-linux-vulkan-ci`. macOS and all three Windows build/test jobs pass;
+  LinuxGL is still running at the latest query.
+- Vulkan's synchronous upload arena now drops historical oversized pages after the
+  completed fence and command/descriptor reset. Eight strictly increasing transient
+  payloads retain46,149,632bytes /two pages (largest41,955,328), exact RGBA/picking and
+  unchanged immutable-mesh storage. This focused regression passes on both native
+  backends; the complete1,169 and Linux matrices remain active, so no Linux memory
+  resolution or sustained gameplay improvement is claimed.
+
 - **1,144-volume train-clearance/sawmill candidate:**190 native,106 asset/compiler
   and8 harness tests pass. The134-source-file presentation boundary and whitespace
   checks pass. No final visual approvals. Runtime totals:9,139,438 occupied

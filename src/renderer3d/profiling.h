@@ -9,6 +9,9 @@
 
 namespace Renderer3D::Profile {
 
+/** Ten minutes at 60 Hz accommodates original industry regrowth and service cycles. */
+inline constexpr unsigned MAX_BENCHMARK_FRAMES = 36000;
+
 enum class Section {
 	Capture, Backend, Readback, Composite, BufferWait, GameWait, WindowDraw, Present,
 	TextureDecode, AtlasRepack, MeshUpload, SwapchainAcquire, PresentationUpload, QueueSubmit, QueuePresent, MeshIndex, PaletteUpload, UIPaletteUpload, Count

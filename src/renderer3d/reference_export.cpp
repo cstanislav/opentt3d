@@ -1865,6 +1865,10 @@ static void VerifyMeshStorage()
 	std::array<std::vector<Vertex>,5> temporary;
 	for (unsigned change = 0; change < 8; ++change) {
 		temporary = meshes;
+		/* Strictly increasing CPU-expanded uploads used to leave every smaller
+		 * oversized frame-arena page resident, even after synchronous readback. */
+		Vertex padding = temporary[0].front();
+		temporary[0].insert(temporary[0].begin(),((change+1)*2*1024*1024/(3*sizeof(Vertex)))*3,padding);
 		Scene transient = instanced;
 		transient.persistent_meshes = false;
 		for (size_t i = 0; i < temporary.size(); ++i) {
@@ -1881,8 +1885,16 @@ static void VerifyMeshStorage()
 			throw std::runtime_error("GPU verification: transient mesh address reuse changed geometry, colour or picking");
 		}
 		if (PersistentMeshCount() != persistent_count || Vulkan::GetMeshCacheStats() != usage) throw std::runtime_error("GPU verification: transient mesh references grew persistent storage");
+		if (Vulkan::Active()) {
+			auto arena = Vulkan::GetReadbackArenaStats();
+			if (arena.capacity_bytes > arena.largest_bytes+Vulkan::READBACK_ARENA_SCRATCH_BYTES) throw std::runtime_error("GPU verification: completed Vulkan uploads retained historical oversized arena pages");
+		}
 	}
 	Debug(driver,1,"OpenTT3D: 8 transient mesh payloads preserve exact instancing and address reuse without persistent cache growth");
+	if (Vulkan::Active()) {
+		auto arena = Vulkan::GetReadbackArenaStats();
+		Debug(driver,1,"OpenTT3D: increasing Vulkan readback uploads retain {} bytes in {} pages, largest {} bytes, with exact colour and picking",arena.capacity_bytes,arena.buffers,arena.largest_bytes);
+	}
 }
 
 /** One shared mesh, interleaved opaque/transparent records, overlapping colours and

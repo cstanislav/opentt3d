@@ -401,6 +401,25 @@ Use `fixture_industry.py --industry 2` for real construction checkpoints and
 per-state palettes and grounding of every disconnected physical part; source-painted
 roof/wood detail and final approval remain open.
 
+Six `forest_` volumes cover four distinct nine-pine growth bodies, felled logs/stumps
+and their independent full-tile litter. Original graphics17 is a production state:
+wood dispatch changes a mature graphics16 tile to completed17 (construction stage3),
+then the normal tile loop restores16 and restarts growth. Its four identical2076
+source slots share one body. `--verify-forest-cycle --running --benchmark-frames 9000`
+observes mature→logs→all four growth states on one unchanged tile/industry. Use the
+ordinary forest-to-sawmill fixture's service save; a newly funded construction save
+alone never establishes the dispatched-log state. Observation consumes no simulation RNG.
+
+Nineteen `refinery_` volumes bind graphics18…23, including hollow open vessels, pipe
+and cross-braced process frames, three flare service platforms, the completed flare,
+the raised cooler and an L-shaped office. Original3924 construction soil and1420
+completed paving remain independent full-tile grounds. Stages2/3 share bodies where
+their original sprites match; flare20 instead shares open stages1/2. Every disconnected
+physical component is grounded, openings are real air cells, and occupied XY bounds
+remain inside the tile. Use `fixture_industry.py --industry 4` and `--reference-industry
+GRAPHICS STAGE` / `--reference-industry-ground GRAPHICS STAGE` for actual selection.
+Palette grain, hatches, pipe/brace profiles and final visual fidelity remain under review.
+
 Power-station bodies7/8 add cooling-tower and boiler/chimney construction volumes;
 ground7/8 reuses the identical original3924 soil. Body8's transparent source2048 gets
 no stage0 volume. `fixture_industry.py --industry 1` creates ordinary public-API
@@ -416,7 +435,10 @@ complete original family. Sparks have independent frustum bounds and an explicit
 child draw layer that preserves ordinary depth and picking without a depth bias.
 
 Industry comparisons use alpha-visible bounds and retain original carrier dimensions
-separately; transparent padding is not geometry. House-native galleries include all
+separately; transparent padding is not geometry. Native exports expand their crop to
+include tall/overhanging geometry and write a tile-origin registration sidecar; source
+registration sheets retain both complete silhouettes at the same native scale.
+House-native galleries include all
 selected source variants and original ground-only empty-body stages. Layered house
 composition retains source offsets while cropping only transparent padding.
 

@@ -2946,7 +2946,7 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 	}
 	if (argv.size() >= 3 && argv.size() <= 5 && argv[1] == "benchmark") {
 		auto frames = ParseType<unsigned>(argv[2]);
-		if (!frames || *frames == 0 || *frames > 6000) return false;
+		if (!frames || *frames == 0 || *frames > Renderer3D::Profile::MAX_BENCHMARK_FRAMES) return false;
 		bool fullscreen = false, capture = false;
 		for (size_t i = 3; i < argv.size(); ++i) {
 			if (argv[i] == "fullscreen") fullscreen = true;
@@ -3090,6 +3090,13 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		}
 		VideoDriver::GetInstance()->QueueOnMainThread([graphics=std::move(graphics)] {
 			try { Renderer3D::BeginVoxelIndustryAnimationChecks(graphics); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "verify-forest-cycle") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::BeginVoxelForestCycleCheck(); }
 			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
 		});
 		return true;

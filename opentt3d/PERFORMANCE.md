@@ -3,6 +3,24 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Forest/refinery and synchronous upload retirement:1,169 volumes (September26)
+
+The catalogue contains11,422,202 triangles. Both9,000-frame forest production/regrowth
+observations pass at approximately60fps with4,372,910,400 /4,214,034,680byte sampled
+peaks. Their p95 work is5.154 /5.331ms, but669 /650 presentation intervals exceed20ms.
+Other CPU/tooling work was active: these are lifecycle checks, not isolated matched
+performance measurements, and they do not establish sustained smooth pacing.
+
+LinuxVulkan CI36228046438 passes the tunnel-root repair and then exceeds the6GiB
+guard at6,452,998,144bytes in the expanded catalogue matrix. Synchronous diagnostic
+uploads retained all historical near-sized arena allocations. The follow-up retires
+obsolete oversized pages after the readback fence and command/descriptor reset,
+retaining one largest page plus at most32MiB of small scratch pages. An increasing-
+payload exact RGBA/picking regression now retains46,149,632bytes in two pages.
+Final refinery/ordering/atlas runs peak4,617,540,264 /4,513,206,856bytes. Complete1,169
+native and Linux matrices are active; the focused evidence is not yet a matched
+full-matrix or arbitrary-world memory bound.
+
 ## Train loading-gauge and silhouette repair:1,133 volumes (September26)
 
 The complete nativeGL/Vulkan matrices pass with sampled peaks6,080,894,760 and

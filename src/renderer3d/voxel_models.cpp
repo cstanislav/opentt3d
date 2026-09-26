@@ -852,7 +852,22 @@ void ExportVoxelReviews(std::string_view prefix)
 			material.SetObjectId(1);
 			industry.instances.push_back({&Models().models.at(name).surface.vertices,material});
 			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
-			capture(industry,camera.Cropped(8192-64,8192-80,128,128),fmt::format("model-voxel-industry{}-{}-native-{}",ground_layer ? "-ground" : "",base,stage),true);
+			int left = 8192-64, top = 8192-80, right = 8192+64, bottom = 8192+48;
+			/* Tall flare stacks and joined rig parts must retain their full source-
+			 * scale silhouette. The former fixed crop silently cut their tops. */
+			for (const auto &vertex : *industry.instances.front().mesh) {
+				auto point = camera.Project(ResolveInstanceVertex(vertex,material).position);
+				if (!point.visible) throw std::runtime_error("Native industry review is outside the fixed-lens camera");
+				left = std::min(left,static_cast<int>(std::floor(point.x))-4);
+				top = std::min(top,static_cast<int>(std::floor(point.y))-4);
+				right = std::max(right,static_cast<int>(std::ceil(point.x))+4);
+				bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
+			}
+			std::string export_name = fmt::format("model-voxel-industry{}-{}-native-{}",ground_layer ? "-ground" : "",base,stage);
+			capture(industry,camera.Cropped(left,top,right-left,bottom-top),export_name,true);
+			std::ofstream registration(directory/(export_name+".json"));
+			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}}}.dump(2) << '\n';
+			if (!registration) throw std::runtime_error("Could not write native industry registration");
 		}
 		if (category == "vehicles" && name.starts_with(prefix) && VoxelVehicleState(base,(stage&1U) != 0) == stage) {
 			if (base >= 23 && base <= 26 && stage == 0) for (unsigned lowered = 0; lowered < 3; ++lowered) for (unsigned view = 0; view < 8; ++view) {

@@ -129,6 +129,7 @@ def main():
     parser.add_argument("--verify-crossing-transitions", action="store_true", help="Require both actual open/barred states during a running viewport benchmark")
     parser.add_argument("--verify-airport-animation", nargs="+", type=int, choices=range(74), metavar="GFX", help="Observe every actual upstream animation frame of the selected voxel airport tiles")
     parser.add_argument("--verify-industry-animation", nargs="+", type=int, choices=range(175), metavar="GFX", help="Observe every distinct original sprite frame of the selected voxel industry animations")
+    parser.add_argument("--verify-forest-cycle", action="store_true", help="Observe one unchanged actual forest tile dispatch logs and pass through every original regrowth state")
     parser.add_argument("--verify-power-sparks", action="store_true", help="Observe all six actual voxel power-station spark children on one unchanged industry tile")
     parser.add_argument("--verify-house-lift", action="store_true", help="Observe at least eight actual positions of one moving voxel office lift")
     parser.add_argument("--verify-radio-beacons", action="store_true", help="Observe both original blinking palette entries on one emitted voxel radio tower")
@@ -185,6 +186,8 @@ def main():
         parser.error("Airport animation checks require --running and --benchmark-frames")
     if args.verify_industry_animation and (not args.running or not args.benchmark_frames):
         parser.error("Industry animation checks require --running and --benchmark-frames")
+    if args.verify_forest_cycle and (not args.running or not args.benchmark_frames):
+        parser.error("Forest production/regrowth requires --running and --benchmark-frames")
     if args.verify_power_sparks and (not args.running or not args.benchmark_frames):
         parser.error("Power-station spark checks require --running and --benchmark-frames")
     if args.verify_voxel_cargo is not None and (not args.running or not args.benchmark_frames):
@@ -223,8 +226,8 @@ def main():
         parser.error("--reference-industry-ground requires original graphics0..174 and construction stage0..3")
     if args.screenshot_size and min(args.screenshot_size) <= 0:
         parser.error("Screenshot dimensions must be positive")
-    if not 0 <= args.benchmark_frames <= 6000:
-        parser.error("Benchmark frame count must be between 0 and 6000")
+    if not 0 <= args.benchmark_frames <= 36000:
+        parser.error("Benchmark frame count must be between 0 and 36000")
     if args.infinite_water and args.savegame:
         parser.error("--infinite-water configures a newly generated world, not a loaded save")
     if args.climate and args.savegame:
@@ -478,6 +481,8 @@ server_advertise = false
         commands.append("renderer3d verify-airport-animation " + " ".join(map(str,args.verify_airport_animation)))
     if args.verify_industry_animation:
         commands.append("renderer3d verify-industry-animation " + " ".join(map(str,args.verify_industry_animation)))
+    if args.verify_forest_cycle:
+        commands.append("renderer3d verify-forest-cycle")
     if args.verify_power_sparks:
         commands.append("renderer3d verify-power-sparks")
     if args.verify_voxel_cargo is not None:
@@ -764,6 +769,8 @@ server_advertise = false
                     raise RuntimeError(f"Industry {graphic} did not render every distinct original animation frame; inspect run.log")
             if args.verify_power_sparks and "voxel power-station spark verification passed:" not in text:
                 raise RuntimeError("A single actual power-station tile did not render all six original spark children; inspect run.log")
+            if args.verify_forest_cycle and "voxel forest cycle verification passed:" not in text:
+                raise RuntimeError("A single unchanged forest tile did not render dispatched logs and every original regrowth state; inspect run.log")
             if args.verify_voxel_cargo is not None and f"voxel vehicle cargo verification passed: engine {args.verify_voxel_cargo}," not in text:
                 raise RuntimeError("A single voxel vehicle did not render both actual empty and full-capacity states; inspect run.log")
             if args.verify_train_collectors is not None and f"voxel train collector observation passed: engine {args.verify_train_collectors} " not in text:

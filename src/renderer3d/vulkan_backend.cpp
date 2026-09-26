@@ -211,6 +211,36 @@ public:
 
 	Slice Allocate(VkDeviceSize bytes, VkDeviceSize alignment = 16) { return AllocateIn(Current().arena, bytes, alignment); }
 
+	ReadbackArenaStats ReadbackArenaUsage()
+	{
+		ReadbackArenaStats stats;
+		for (const auto &buffer : Current().arena) {
+			++stats.buffers; stats.capacity_bytes += buffer->size;
+			stats.largest_bytes = std::max<uint64_t>(stats.largest_bytes,buffer->size);
+		}
+		return stats;
+	}
+
+	/** Called only after the readback fence and command/descriptor reset. No
+	 * submitted command or CPU readback references these upload-only slices. */
+	void RetireReadbackArena()
+	{
+		auto &arena = Current().arena;
+		if (arena.empty()) return;
+		auto largest = std::max_element(arena.begin(),arena.end(),[](const auto &a,const auto &b) { return a->size < b->size; })->get();
+		uint64_t scratch = 0, retired = 0;
+		std::erase_if(arena,[&](const auto &buffer) {
+			if (buffer.get() == largest) return false;
+			/* A growing catalogue otherwise retains every preceding near-sized
+			 * allocation forever. Keep small reusable pages, not obsolete peaks. */
+			if (buffer->size <= 4ULL*1024*1024 && scratch+buffer->size <= READBACK_ARENA_SCRATCH_BYTES) {
+				scratch += buffer->size; return false;
+			}
+			retired += buffer->size; return true;
+		});
+		if (retired != 0) Debug(driver,2,"OpenTT3D: retired {} completed Vulkan upload bytes; retaining {} scratch pages / {} bytes",retired,arena.size(),largest->size+scratch);
+	}
+
 	MeshCacheStats MeshUsage() const
 	{
 		MeshCacheStats stats{meshes.size(), mesh_arena.size()};
@@ -323,6 +353,7 @@ public:
 		Current().retired_buffers.clear();
 		Check(vkResetCommandPool(device, Current().commands, 0), "reset readback commands");
 		Check(vkResetDescriptorPool(device, Current().descriptors, 0), "reset readback descriptors");
+		RetireReadbackArena();
 		for (auto &buffer : Current().arena) buffer->used = 0;
 		VkCommandBufferBeginInfo begin{}; begin.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 		begin.flags = VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT;
@@ -1148,6 +1179,7 @@ const std::string &LastError() { return error; }
 std::string Description() { return Active() ? fmt::format("Vulkan: {}", context->properties.deviceName) : "unavailable"; }
 int MaximumImageSize() { return Active() ? static_cast<int>(context->properties.limits.maxImageDimension2D) : 0; }
 MeshCacheStats GetMeshCacheStats() { return Active() ? context->MeshUsage() : MeshCacheStats{}; }
+ReadbackArenaStats GetReadbackArenaStats() { return Active() ? context->ReadbackArenaUsage() : ReadbackArenaStats{}; }
 bool Resize(int width, int height) { return Active() && Try([&] { context->Resize(width, height); }); }
 void *VideoBuffer() { if (!Active()) return nullptr; if (!Try([] { context->Begin(); })) return nullptr; return context->video.data(); }
 uint8_t *AnimationBuffer() { return Active() ? context->animation.data() : nullptr; }

@@ -4,6 +4,53 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "refinery_footing": [2,1,2,3,1,2],
+    "refinery_footing_grain": 3,
+    "refinery_office_footing": 2,
+    "refinery_steel": [5,7,6,9,3,11],
+    "refinery_steel_grain": [4,6,5,8,3,10],
+    "refinery_rim": [8,9,9,11,6,13],
+    "refinery_inside": [3,5,4,7,3,8],
+    "refinery_blue": [199,201,200,203,199,204],
+    "refinery_blue_grain": [200,202,201,204,199,203],
+    "refinery_process_blue": [200,201,200,203,200,204],
+    "refinery_frame": [71,73,72,74,71,75],
+    "refinery_frame_light": [72,74,73,75,71,76],
+    "refinery_ring_post": [76,123,123,76,76,123],
+    "refinery_gas_pipe": [179,180,180,181,179,181],
+    "refinery_yellow_pipe": [56,65,65,66,56,66],
+    "refinery_flare_yellow": [56,65,65,65,56,65],
+    "refinery_pipe_white": [8,10,10,12,7,13],
+    "refinery_platform_white": [8,10,10,12,7,12],
+    "refinery_platform_red": [163,181,181,181,163,181],
+    "refinery_hatch": [2,2,2,3,2,65],
+    "refinery_tank_hatch": [2,2,2,3,2,66],
+    "refinery_flame": [232,233,234,235,232,236],
+    "refinery_flame_core": [235,236,237,238,235,238],
+    "refinery_office_frame": [32,33,33,35,32,36],
+    "refinery_office_wall": [9,11,10,13,5,14],
+    "refinery_office_glass": [128,129,129,130,128,131],
+    "refinery_office_roof": [5,7,6,9,5,10],
+    "refinery_office_roof_grain": [6,8,7,10,5,11],
+    "refinery_paving": [5,6,6,8,5,9],
+    "refinery_paving_grain": 8,
+    "refinery_paving_joint": 6,
+    "forest_bark": [106,104,108,110,104,109],
+    "forest_bark_shade": [104,104,106,108,104,107],
+    "forest_leaf": [81,80,82,84,80,85],
+    "forest_leaf_light": [82,81,84,85,80,86],
+    "forest_leaf_dark": [80,80,81,82,80,83],
+    "forest_litter": [104,104,106,107,104,105],
+    "forest_litter_light": 108,
+    "forest_litter_ochre": 33,
+    "forest_moss": 25,
+    "forest_moss_light": 27,
+    "forest_moss_dark": 24,
+    "forest_moss_sage": 89,
+    "forest_litter_twig": 1,
+    "forest_log": [61,60,62,63,60,64],
+    "forest_log_end": [53,54,55,56,53,56],
+    "forest_stump": [106,104,108,110,104,111],
     "sawmill_wood": [104,106,107,109,104,108],
     "sawmill_wood_grain": [105,107,108,110,104,109],
     "sawmill_wood_finished_grain": [105,108,109,109,104,109],
@@ -961,6 +1008,115 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "refinery_flare_platform": [
+      ["box","refinery_platform_white",16,13,13,26,23,14],
+      ["repeat",[3,0,0],4,[["box","refinery_platform_red",16,22,14,17,23,16]]],
+      ["repeat",[0,3,0],3,[["box","refinery_platform_red",25,13,14,26,14,16]]]
+    ],
+    "refinery_tank_shell": [
+      ["lathe","refinery_blue",[16,16],[[0,15,0],[1,15,13],[8,15,13]]],
+      ["lathe","refinery_steel",[16,16],[[8,14.5,13],[24,14.5,13]]],
+      ["scatter_paint","refinery_steel_grain",5,2079,1,1,8,31,31,24,"refinery_steel"],
+      ["scatter_paint","refinery_blue_grain",5,9072,1,1,0,31,31,8,"refinery_blue"],
+      ["lathe_paint_inner","refinery_inside",[16,16],[[1,14.5,13],[24,14.5,13]]],
+      ["lathe","refinery_rim",[16,16],[[23,14.5,13],[24,14.5,13]]]
+    ],
+    "refinery_fractionator_shell": [
+      ["lathe","refinery_steel",[16,16],[[0,8,0],[1,8,6.5],[58,8,6.5]]],
+      ["repeat",[0,0,10],5,[["lathe","refinery_blue",[16,16],[[7,8,6.5],[11,8,6.5]]]]],
+      ["scatter_paint","refinery_steel_grain",5,2082,8,8,1,24,24,58,"refinery_steel"],
+      ["scatter_paint","refinery_blue_grain",5,2802,8,8,1,24,24,58,"refinery_blue"],
+      ["lathe_paint_inner","refinery_inside",[16,16],[[1,8,6.5],[58,8,6.5]]],
+      ["lathe","refinery_rim",[16,16],[[57,8,6.5],[58,8,6.5]]]
+    ],
+    "refinery_flare_shell": [
+      ["lathe","refinery_steel",[16,16],[[0,4,0],[1,4,2.5],[65,4,2.5]]],
+      ["scatter_paint","refinery_steel_grain",5,2085,12,12,1,20,20,65,"refinery_steel"],
+      ["lathe_paint_inner","refinery_inside",[16,16],[[1,4,2.5],[65,4,2.5]]],
+      ["use","refinery_flare_platform"],
+      ["use","refinery_flare_platform",[0,0,24]],
+      ["use","refinery_flare_platform",[0,0,40]]
+    ],
+    "refinery_process_frame": [
+      ["repeat",[22,0,0],2,[["repeat",[0,13,0],3,[["box","refinery_frame",4,0,0,6,2,49]]]]],
+      ["repeat",[0,0,17],3,[
+        ["repeat",[0,13,0],3,[["box","refinery_frame",4,0,8,28,2,10]]],
+        ["repeat",[22,0,0],2,[["box","refinery_frame",4,0,8,6,28,10]]]
+      ]],
+      ["repeat",[22,0,0],2,[["line","refinery_frame_light",5,1,9,5,14,26],["line","refinery_frame_light",5,14,9,5,27,26]]],
+      ["scatter_paint","refinery_frame_light",7,2087,4,0,0,28,32,49,"refinery_frame"]
+    ],
+    "refinery_process_plant": [
+      ["use","refinery_process_frame"],
+      ["box","refinery_blue",6,3,26,26,14,34],
+      ["erase",8,5,27,24,12,35],
+      ["box","refinery_blue",8,17,26,26,28,34],
+      ["erase",10,19,27,24,26,35],
+      ["box","refinery_gas_pipe",8,5,34,10,28,36],
+      ["box","refinery_gas_pipe",9,26,34,24,28,36],
+      ["box","refinery_gas_pipe",22,20,28,24,28,36],
+      ["replace_material","refinery_blue","refinery_process_blue"]
+    ],
+    "refinery_cooler_frame": [
+      ["repeat",[10,0,0],2,[["repeat",[0,10,0],2,[["box","refinery_frame",12,10,0,14,12,38]]]]],
+      ["repeat",[0,0,11],3,[
+        ["repeat",[0,10,0],2,[["box","refinery_frame",12,10,8,24,12,10]]],
+        ["repeat",[10,0,0],2,[["box","refinery_frame",12,10,8,14,22,10]]]
+      ]],
+      ["scatter_paint","refinery_frame_light",6,2090,12,10,0,24,22,38,"refinery_frame"]
+    ],
+    "refinery_cooler_box": [
+      ["box","refinery_platform_white",11,9,36,25,23,38],
+      ["box","refinery_steel",12,10,38,24,22,55],
+      ["erase",14,12,38,22,20,56],
+      ["scatter_paint","refinery_steel_grain",5,2091,12,10,38,24,22,55,"refinery_steel"],
+      ["face_paint","refinery_inside",2,13,11,38,14,21,55],
+      ["face_paint","refinery_inside",8,13,11,38,23,12,55]
+    ],
+    "refinery_office_base": [
+      ["box","refinery_office_wall",6,2,0,26,28,1],
+      ["erase",17,18,0,27,29,2]
+    ],
+    "refinery_office_frame": [
+      ["use","refinery_office_base"],
+      ["repeat",[9,0,0],3,[["box","refinery_office_frame",6,2,1,7,3,9]]],
+      ["repeat",[0,8,0],4,[["box","refinery_office_frame",6,2,1,7,3,9]]],
+      ["box","refinery_office_frame",24,16,1,26,18,9],
+      ["box","refinery_office_frame",15,16,1,17,18,9],
+      ["box","refinery_office_frame",15,26,1,17,28,9],
+      ["box","refinery_office_frame",6,2,8,26,4,10],
+      ["box","refinery_office_frame",6,2,8,8,28,10],
+      ["box","refinery_office_frame",24,2,8,26,18,10],
+      ["box","refinery_office_frame",15,16,8,26,18,10],
+      ["box","refinery_office_frame",15,16,8,17,28,10],
+      ["box","refinery_office_frame",6,26,8,17,28,10]
+    ],
+    "forest_tree_seed": [
+      ["box","forest_bark",7,7,0,9,9,39],
+      ["paint","forest_bark_shade",7,7,0,8,9,39],
+      ["lathe","forest_leaf",[8,8],[[10,1,0],[12,2.75,0],[20,1.75,0],[21,3,0],[29,1.5,0],[30,2.5,0],[39,1,0],[44,0.5,0]]],
+      ["scatter_paint","forest_leaf_dark",4,2072,5,5,10,11,11,44,"forest_leaf"],
+      ["scatter_paint","forest_leaf_light",4,8072,5,5,10,11,11,44,"forest_leaf"]
+    ],
+    "forest_tree_young": [
+      ["box","forest_bark",7,7,0,9,9,59],
+      ["paint","forest_bark_shade",7,7,0,8,9,59],
+      ["lathe","forest_leaf",[8,8],[[12,1,0],[15,4,0],[24,2.25,0],[25,4.5,0],[35,2.5,0],[36,4.25,0],[46,2,0],[47,3.25,0],[57,1,0],[64,0.5,0]]],
+      ["scatter_paint","forest_leaf_dark",4,2073,3,3,12,13,13,64,"forest_leaf"],
+      ["scatter_paint","forest_leaf_light",4,8073,3,3,12,13,13,64,"forest_leaf"]
+    ],
+    "forest_tree_half": [
+      ["lathe","forest_bark",[8,8],[[0,1.8,0],[2,1.25,0],[77,1,0]]],
+      ["lathe","forest_leaf",[8,8],[[18,1,0],[21,4.25,0],[29,2.5,0],[30,5.75,0],[40,3,0],[41,6,0],[51,3,0],[52,5.25,0],[62,2.5,0],[63,4,0],[72,1.75,0],[73,2.5,0],[84,0.5,0]]],
+      ["scatter_paint","forest_leaf_dark",4,2074,2,2,18,14,14,84,"forest_leaf"],
+      ["scatter_paint","forest_leaf_light",4,8074,2,2,18,14,14,84,"forest_leaf"]
+    ],
+    "forest_tree_full": [
+      ["lathe","forest_bark",[8,8],[[0,2,0],[2,1.25,0],[92,1,0]]],
+      ["lathe","forest_leaf",[8,8],[[20,1,0],[23,4.5,0],[32,2.75,0],[33,6.5,0],[44,3.75,0],[45,7,0],[56,3.5,0],[57,6,0],[68,3,0],[69,4.75,0],[80,2.25,0],[81,3.5,0],[90,1.25,0],[98,0.5,0]]],
+      ["scatter_paint","forest_leaf_dark",4,2075,1,1,20,15,15,98,"forest_leaf"],
+      ["scatter_paint","forest_leaf_light",4,8075,1,1,20,15,15,98,"forest_leaf"]
+    ],
     "plane_early_prop_nacelle": [
       ["ellipsoid","plane_wing_edge",0,0,0,10,4,5],
       ["box","plane_propeller",9,-2,2,10,6,3],
@@ -7427,6 +7583,196 @@
       "reference": "Original2060, final child frame: upper arc at the original(-3,-1) native offset relative to frame5; fine source silhouette remains under review", "review_status": "work-in-progress",
       "ops": []
     },
+    "refinery_paved_ground": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Refinery18..23 completed original1420: full independent grey concrete paving; original3924 construction soil remains separately selected through stage2",
+      "ops":[["box","refinery_paving",0,0,0,32,32,1],["scatter_paint","refinery_paving_grain",4,1420,0,0,0,32,32,1],
+        ["repeat",[8,0,0],4,[["paint","refinery_paving_joint",0,0,0,1,32,1]]],["repeat",[0,8,0],4,[["paint","refinery_paving_joint",0,0,0,32,1,1]]]]
+    },
+    "refinery_tank_site": {
+      "size":[32,32,30],"review_status":"work-in-progress",
+      "reference":"Refinery18 stage0 original2078: circular dark slab with upright perimeter starter bars, not a completed tank",
+      "ops":[["lathe","refinery_footing",[16,16],[[0,15,0],[1,15,0]]],["scatter_paint","refinery_footing_grain",4,2078,1,1,0,31,31,1],
+        ["rotate_z",0,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",30,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",60,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",90,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",120,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",150,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",180,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",210,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",240,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",270,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",300,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]],
+        ["rotate_z",330,[16,16,0],[["box","refinery_ring_post",29,15,0,30,17,3]]]]
+    },
+    "refinery_tank_open": {
+      "size":[32,32,30],"review_status":"work-in-progress",
+      "reference":"Refinery18 stage1 original2079: large circular storage shell, original company-blue lower skirt and grey upper wall; genuine open top and dark inner faces",
+      "ops":[["use","refinery_tank_shell"]]
+    },
+    "refinery_tank": {
+      "size":[32,32,30],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery18 matching2080 stages2/3: silver domed closure, brown perimeter rail posts, blue lower skirt and front inspection hatch; ground ownership changes at completion",
+      "ops":[["use","refinery_tank_shell"],["lathe","refinery_rim",[16,16],[[23,14.5,0],[24,14.5,0],[26,7,0],[27,1,0]]],
+        ["scatter_paint","refinery_steel",5,2080,1,1,23,31,31,27],
+        ["radial_paint","refinery_ring_post",[16,16],22,24,24,5592405],
+        ["box","refinery_tank_hatch",14,30,12,18,31,17],["paint","refinery_rim",14,30,12,15,31,17],
+        ["paint","refinery_tank_hatch",15,30,13,17,31,16],
+        ["box","refinery_ring_post",14,28,0,15,31,13],["box","refinery_ring_post",17,28,0,18,31,13]]
+    },
+    "refinery_fractionator_site": {
+      "size":[32,32,72],"review_status":"work-in-progress",
+      "reference":"Refinery19 stage0 original2081: small circular dark footing only",
+      "ops":[["lathe","refinery_footing",[16,16],[[0,8,0],[1,8,0]]],["scatter_paint","refinery_footing_grain",4,2081,8,8,0,24,24,1]]
+    },
+    "refinery_fractionator_open": {
+      "size":[32,32,72],"review_status":"work-in-progress",
+      "reference":"Refinery19 stage1 original2082: tall open fractionation vessel, five company-blue bands separated by grey steel courses and a real hollow mouth",
+      "ops":[["use","refinery_fractionator_shell"]]
+    },
+    "refinery_fractionator": {
+      "size":[32,32,72],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery19 matching2083 stages2/3: domed banded fractionation vessel, two front hatches, grounded yellow side pipe with bent top, red lower riser and blue foot elbow",
+      "ops":[["use","refinery_fractionator_shell"],["lathe","refinery_steel",[16,16],[[57,8,0],[59,7,0],[61,3,0],[62,0.75,0]]],
+        ["repeat",[0,0,17],2,[["box","refinery_hatch",13,23,32,19,25,36],["paint","refinery_yellow_pipe",14,24,32,18,25,33]]],
+        ["box","refinery_yellow_pipe",27,15,0,28,16,68],["line","refinery_yellow_pipe",27,15,67,17,15,71],
+        ["box","refinery_yellow_pipe",17,15,60,18,16,72],
+        ["box","refinery_gas_pipe",7,20,0,8,21,27],["box","refinery_gas_pipe",7,20,26,12,21,28],
+        ["box","refinery_blue",7,20,1,13,22,3]]
+    },
+    "refinery_flare_site": {
+      "size":[32,32,108],"review_status":"work-in-progress",
+      "reference":"Refinery20 stage0 original2084: small circular dark flare-tower footing only",
+      "ops":[["lathe","refinery_footing",[16,16],[[0,4,0],[1,4,0]]],["scatter_paint","refinery_footing_grain",4,2084,12,12,0,20,20,1]]
+    },
+    "refinery_flare_open": {
+      "size":[32,32,108],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery20 shared2085 stages1/2: open grey flare tower and three white maintenance platforms with red safety posts",
+      "ops":[["use","refinery_flare_shell"]]
+    },
+    "refinery_flare": {
+      "size":[32,32,108],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery20 completed2086: tower and three working platforms, grounded red supply pipe and yellow riser, narrow flare nozzle and original232..238 glowing flame ramp; authored volumetric flame outline",
+      "ops":[["use","refinery_flare_shell"],["lathe","refinery_rim",[16,16],[[64,4,0],[66,3,0],[67,1.5,0]]],
+        ["box","refinery_gas_pipe",10,16,0,12,18,61],["box","refinery_gas_pipe",10,16,60,17,18,62],
+        ["box","refinery_gas_pipe",15,15,66,17,17,83],["box","refinery_flare_yellow",13,15,61,14,16,74],
+        ["lathe","refinery_rim",[16,16],[[81,1.5,0],[83,2,0],[84,1,0]]],
+        ["prism","refinery_flame",1,14,18,[[15,83],[12,87],[13,92],[15,93],[15,98],[20,106],[19,96],[21,99],[20,90],[18,85]]],
+        ["prism","refinery_flame_core",1,14,18,[[15,84],[14,89],[17,94],[18,98],[18,90],[17,86]]]]
+    },
+    "refinery_process_site": {
+      "size":[36,36,53],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery21 stage0 original2087: open rust-brown process frame with six rooted columns, three transverse levels and connected diagonal braces",
+      "ops":[["use","refinery_process_frame"]]
+    },
+    "refinery_process_build": {
+      "size":[36,36,53],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery21 stage1 original2088: same open rooted frame with suspended blue process tanks and installed red pipe loops; no finished ground piping yet",
+      "ops":[["use","refinery_process_plant"]]
+    },
+    "refinery_process": {
+      "size":[36,36,53],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery21 shared2089 stages2/3: full open process frame, two blue tanks, red overhead and ground distribution loops plus pair of grounded yellow service pipes",
+      "ops":[["use","refinery_process_plant"],
+        ["repeat",[3,0,0],3,[["box","refinery_gas_pipe",17,29,0,18,30,10],["box","refinery_gas_pipe",17,29,9,18,32,11],["box","refinery_gas_pipe",17,31,0,18,32,11]]],
+        ["box","refinery_gas_pipe",17,28,9,26,30,11],["box","refinery_gas_pipe",25,27,9,27,30,28],
+        ["repeat",[3,0,0],2,[["box","refinery_flare_yellow",7,29,0,8,30,28],["box","refinery_flare_yellow",7,24,27,8,30,29]]],
+        ["box","refinery_gas_pipe",6,3,37,26,5,39],["box","refinery_gas_pipe",24,3,33,26,10,39]]
+    },
+    "refinery_cooler_site": {
+      "size":[32,32,58],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery22 stage0 original2090: narrow tall four-column brown cooling-tower frame, three connected crossbar levels and open interior",
+      "ops":[["use","refinery_cooler_frame"]]
+    },
+    "refinery_cooler_build": {
+      "size":[32,32,58],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery22 stage1 original2091: original frame with elevated open rectangular steel cooling box; rim and dark inner faces remain explicit",
+      "ops":[["use","refinery_cooler_frame"],["use","refinery_cooler_box"]]
+    },
+    "refinery_cooler": {
+      "size":[32,32,58],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Refinery22 shared2092 stages2/3: open steel cooling box and four grounded pump cans, long blue pipework with grey clamps, and independent brown supporting frame",
+      "ops":[["use","refinery_cooler_frame"],["use","refinery_cooler_box"],
+        ["repeat",[4,0,0],4,[["lathe","refinery_steel",[10,27],[[0,1.5,0],[8,1.5,0]]],["box","refinery_blue",9,26,7,11,28,13],["box","refinery_steel",9,27,13,10,28,30]]],
+        ["box","refinery_blue",7,11,0,8,28,2],["box","refinery_blue",7,11,1,8,12,39],["box","refinery_blue",7,11,38,13,12,40],
+        ["box","refinery_blue",26,15,0,27,29,2],["box","refinery_blue",26,15,1,27,16,35],["box","refinery_blue",23,15,34,27,16,36],
+        ["box","refinery_blue",7,27,10,27,29,12],["repeat",[0,0,9],4,[["paint","refinery_platform_white",7,11,2,8,12,3],["paint","refinery_platform_white",26,15,2,27,16,3]]]]
+    },
+    "refinery_office_site": {
+      "size":[32,32,15],"cell_size":[0.5,0.5,0.8],"review_status":"work-in-progress",
+      "reference":"Refinery23 stage0 original2093: dark L-shaped footprint with the front corner deliberately absent; separate full-tile construction soil",
+      "ops":[["use","refinery_office_base"],["replace_material","refinery_office_wall","refinery_office_footing"]]
+    },
+    "refinery_office_build": {
+      "size":[32,32,15],"cell_size":[0.5,0.5,0.8],"review_status":"work-in-progress",
+      "reference":"Refinery23 stage1 original2094: light L-shaped foundation, brown upright/open wall frame and white upper perimeter; open roof through which the foundation remains visible",
+      "ops":[["use","refinery_office_frame"],["paint","refinery_office_wall",6,2,8,26,28,10]]
+    },
+    "refinery_office": {
+      "size":[32,32,15],"cell_size":[0.5,0.5,0.8],"review_status":"work-in-progress",
+      "reference":"Refinery23 matching2095 stages2/3: low L-shaped glazed office with grey pitched roof, bright white eaves, brown mullions and dark purple original128..131 glazing; entrance opens onto original notch",
+      "ops":[["use","refinery_office_frame"],["box","refinery_office_wall",6,2,1,26,28,8],["erase",8,4,1,24,26,8],
+        ["erase",17,18,0,27,29,15],["box","refinery_office_wall",15,16,1,26,18,8],["box","refinery_office_wall",15,16,1,17,28,8],
+        ["paint","refinery_office_glass",6,3,2,26,27,7],
+        ["repeat",[4,0,0],5,[["paint","refinery_office_frame",6,2,1,7,28,8]]],
+        ["repeat",[0,4,0],6,[["paint","refinery_office_frame",6,2,1,26,3,8]]],
+        ["box","refinery_office_wall",6,2,8,26,28,9],["erase",17,18,8,28,30,10],
+        ["hip","refinery_office_roof",6,2,9,26,18,14,5],["hip","refinery_office_roof",6,2,9,17,28,14,4],
+        ["scatter_paint","refinery_office_roof_grain",5,2095,6,2,9,26,28,14],
+        ["erase",15,20,0,18,24,7]]
+    },
+    "forest_ground": {
+      "size":[32,32,1], "cell_size":[0.5,0.5,0.25], "origin":[0,0,-0.25], "review_status":"work-in-progress",
+      "reference":"Forest16/17 original2077 throughout construction: independently owned full-tile brown needle litter, patchy olive/sage moss and dark twigs; no forest-body alias to ordinary tree grounds",
+      "ops":[
+        ["box","forest_litter",0,0,0,32,32,1],
+        ["scatter_paint","forest_litter_light",3,2077,0,0,0,32,32,1,"forest_litter"],
+        ["scatter_paint","forest_litter_ochre",7,1772,0,0,0,32,32,1,"forest_litter"],
+        ["scatter_paint","forest_moss",3,7702,0,0,0,32,32,1],
+        ["scatter_paint","forest_moss_dark",4,1707,0,0,0,32,32,1,"forest_moss"],
+        ["scatter_paint","forest_moss_light",4,2071,0,0,0,32,32,1,"forest_moss"],
+        ["scatter_paint","forest_moss_sage",9,1077,0,0,0,32,32,1,"forest_moss"],
+        ["scatter_paint","forest_litter_twig",29,2770,0,0,0,32,32,1]
+      ]
+    },
+    "forest_seedlings": {
+      "size":[36,36,100], "cell_size":[0.5,0.5,0.5], "origin":[-1,-1,0], "review_status":"work-in-progress",
+      "reference":"Forest16 stage0 sprite2072: nine separately rooted narrow conifers in the original three-by-three rows; visible brown trunks and three irregular foliage tiers",
+      "ops":[["repeat",[10,0,0],3,[["repeat",[0,10,0],3,[["use","forest_tree_seed"]]]]]]
+    },
+    "forest_young": {
+      "size":[36,36,100], "cell_size":[0.5,0.5,0.5], "origin":[-1,-1,0], "review_status":"work-in-progress",
+      "reference":"Forest16 stage1 sprite2073: nine broader and taller intermediate pines on the same original root centres, retaining source80..86 foliage and104..110 bark",
+      "ops":[["repeat",[10,0,0],3,[["repeat",[0,10,0],3,[["use","forest_tree_young"]]]]]]
+    },
+    "forest_half_grown": {
+      "size":[36,36,100], "cell_size":[0.5,0.5,0.5], "origin":[-1,-1,0], "review_status":"work-in-progress",
+      "reference":"Forest16 stage2 sprite2074: nearly closed nine-pine canopy with high bare trunks and individually tiered connected conifer crowns; original growth selection is independent of ordinary tree lifecycles",
+      "ops":[["repeat",[10,0,0],3,[["repeat",[0,10,0],3,[["use","forest_tree_half"]]]]]]
+    },
+    "forest_mature": {
+      "size":[36,36,100], "cell_size":[0.5,0.5,0.5], "origin":[-1,-1,0], "review_status":"work-in-progress",
+      "reference":"Forest16 stage3 sprite2075: full nine-pine canopy, taller broad lower tiers, fine upper leaders and independent rooted brown trunks; authored foliage half-unit overhang follows the mature source silhouette",
+      "ops":[["repeat",[10,0,0],3,[["repeat",[0,10,0],3,[["use","forest_tree_full"]]]]]]
+    },
+    "forest_felled_logs": {
+      "size":[32,32,20], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress", "transpose_xy":true,
+      "reference":"Forest17 identical2076 in all four construction states: staggered dark bark logs with pale cut ends and four independently grounded fresh stumps; distinct from the sawmill's larger2070 stockpile",
+      "ops":[
+        ["repeat",[0,4,0],6,[["box","forest_log",0,1,0,25,3,4],["box","forest_log",0,0,1,25,4,3],["face_paint","forest_log_end",12,0,1,1,25,3,3]]],
+        ["repeat",[0,4,0],5,[["box","forest_log",1,3,3,27,5,7],["box","forest_log",1,2,4,27,6,6],["face_paint","forest_log_end",12,1,3,4,27,5,6]]],
+        ["repeat",[0,4,0],4,[["box","forest_log",0,5,6,24,7,10],["box","forest_log",0,4,7,24,8,9],["face_paint","forest_log_end",12,0,5,7,24,7,9]]],
+        ["repeat",[0,4,0],3,[["box","forest_log",1,7,9,25,9,13],["box","forest_log",1,6,10,25,10,12],["face_paint","forest_log_end",12,1,7,10,25,9,12]]],
+        ["scatter_paint","forest_bark_shade",5,2076,2,0,0,23,24,13],
+        ["lathe","forest_stump",[29,8],[[0,2,0],[1,1.4,0],[5,1.3,0]]],
+        ["lathe","forest_stump",[26,25],[[0,2,0],[1,1.4,0],[5,1.3,0]]],
+        ["lathe","forest_stump",[15,28],[[0,2,0],[1,1.4,0],[4,1.3,0]]],
+        ["lathe","forest_stump",[28,17],[[0,1.8,0],[1,1.2,0],[3,1,0]]],
+        ["paint","forest_log_end",27,6,4,31,10,5], ["paint","forest_log_end",24,23,4,28,27,5],
+        ["paint","forest_log_end",13,26,3,17,30,4], ["paint","forest_log_end",26,15,2,30,19,3]
+      ]
+    },
     "sawmill_northlight_site": {
       "size":[32,32,32], "cell_size":[0.5,0.5,0.5], "origin":[0,0,0], "review_status":"work-in-progress",
       "reference":"Sawmill11 sprite2061: dark low foundation, separate from original3924 full-tile rubble; the later timber hall is absent",
@@ -11493,7 +11839,15 @@
       "12": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
       "13": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
       "14": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
-      "15": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"}
+      "15": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_site"},
+      "16": {"0":"forest_ground","1":"forest_ground","2":"forest_ground","3":"forest_ground"},
+      "17": {"0":"forest_ground","1":"forest_ground","2":"forest_ground","3":"forest_ground"},
+      "18": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
+      "19": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
+      "20": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
+      "21": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
+      "22": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"},
+      "23": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground"}
     },
     "industries": {
       "0": {"0":"mine_head_skeleton","1":"mine_head_shell","2":"mine_head_00","3":"mine_head_00"},
@@ -11508,7 +11862,15 @@
       "12": {"0":"sawmill_cutting_site","1":"sawmill_cutting_frame","2":"sawmill_cutting_house","3":"sawmill_cutting_house"},
       "13": {"0":"sawmill_store_site","1":"sawmill_store_frame","2":"sawmill_store_house","3":"sawmill_store_house"},
       "14": {"3":"sawmill_logs"},
-      "15": {"3":"sawmill_boards"}
+      "15": {"3":"sawmill_boards"},
+      "16": {"0":"forest_seedlings","1":"forest_young","2":"forest_half_grown","3":"forest_mature"},
+      "17": {"0":"forest_felled_logs","1":"forest_felled_logs","2":"forest_felled_logs","3":"forest_felled_logs"},
+      "18": {"0":"refinery_tank_site","1":"refinery_tank_open","2":"refinery_tank","3":"refinery_tank"},
+      "19": {"0":"refinery_fractionator_site","1":"refinery_fractionator_open","2":"refinery_fractionator","3":"refinery_fractionator"},
+      "20": {"0":"refinery_flare_site","1":"refinery_flare_open","2":"refinery_flare_open","3":"refinery_flare"},
+      "21": {"0":"refinery_process_site","1":"refinery_process_build","2":"refinery_process","3":"refinery_process"},
+      "22": {"0":"refinery_cooler_site","1":"refinery_cooler_build","2":"refinery_cooler","3":"refinery_cooler"},
+      "23": {"0":"refinery_office_site","1":"refinery_office_build","2":"refinery_office","3":"refinery_office"}
     },
     "trees": {
       "1884":{"0":"tree_tropical_bottle_00","1":"tree_tropical_bottle_01","2":"tree_tropical_bottle_02","3":"tree_tropical_bottle_03","4":"tree_tropical_bottle_04","5":"tree_tropical_bottle_05","6":"tree_tropical_bottle_06"},

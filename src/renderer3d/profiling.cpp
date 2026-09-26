@@ -61,7 +61,7 @@ void AddGPUTime(double milliseconds) { current.gpu = milliseconds; current.gpu_a
 
 void StartBenchmark(unsigned frames, bool fullscreen, bool capture)
 {
-	requested = std::clamp(frames, 1U, 6000U);
+	requested = std::clamp(frames, 1U, MAX_BENCHMARK_FRAMES);
 	warmup = 30;
 	require_fullscreen = fullscreen;
 	capture_on_complete = capture;

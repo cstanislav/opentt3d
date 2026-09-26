@@ -609,6 +609,8 @@ def main():
                 continue
             if model is None:
                 parser.error(f"Native-scale industry stage {stage} is missing for a visible original source")
+            registration = name.with_suffix(".json")
+            anchor = json.loads(registration.read_text())["tile_origin"] if registration.exists() else [64,80]
             bounds = model.getchannel("A").getbbox()
             if not bounds:
                 parser.error(f"Native-scale industry stage {stage} has no visible geometry")
@@ -622,17 +624,19 @@ def main():
                           "original_carrier_size": list(original.size), "model_size": [bounds[2]-bounds[0], bounds[3]-bounds[1]],
                           "original_carrier_tile_bounds": [original_left,original_top,original_left+original.width,original_top+original.height],
                           "original_tile_bounds": source_bounds,
-                          "model_tile_bounds": [bounds[0]-64, bounds[1]-80, bounds[2]-64, bounds[3]-80]})
+                           "model_tile_bounds": [bounds[0]-anchor[0], bounds[1]-anchor[1], bounds[2]-anchor[0], bounds[3]-anchor[1]]})
             if args.registration:
-                # The native export places the original world-tile origin at
-                # (64,80). Keep sprite drawing offsets; centring independent crops
-                # hides registration errors even when their dimensions agree.
-                registered = Image.new("RGBA", model.size)
-                registered.alpha_composite(original, (64+original_left, 80+original_top))
-                source_bounds = registered.getchannel("A").getbbox() or bounds
-                common = (min(bounds[0], source_bounds[0]), min(bounds[1], source_bounds[1]),
-                          max(bounds[2], source_bounds[2]), max(bounds[3], source_bounds[3]))
-                original, model = registered.crop(common), model.crop(common)
+                # Sidecars keep the tile anchor when tall/overhanging geometry
+                # enlarges a native crop. Include both complete source silhouettes.
+                model_bounds = sizes[-1]["model_tile_bounds"]
+                source_bounds = source_bounds or model_bounds
+                common = (min(model_bounds[0],source_bounds[0]),min(model_bounds[1],source_bounds[1]),
+                          max(model_bounds[2],source_bounds[2]),max(model_bounds[3],source_bounds[3]))
+                extent = (common[2]-common[0],common[3]-common[1])
+                registered_source,registered_model = Image.new("RGBA",extent),Image.new("RGBA",extent)
+                registered_source.alpha_composite(original,(original_left-common[0],original_top-common[1]))
+                registered_model.alpha_composite(model,(-anchor[0]-common[0],-anchor[1]-common[1]))
+                original,model = registered_source,registered_model
             else:
                 if visible:
                     original = original.crop(visible)
