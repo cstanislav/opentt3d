@@ -27,11 +27,18 @@ unmapped graphics. The complete catalogue's11,422,202 triangles alone occupy
 Run compression is a bounded reduction, not evidence of a complete-world memory
 or smooth-frame-time solution. `pass1-compact-source-vulkan-vmmap.txt` retains the
 snapshot. The completedGL control still exceeds6GiB at6,536,140,968bytes over6,233
-samples after the full model/vehicle checks. Its pairedVulkan control continues.
+samples after the full model/vehicle checks. Its pairedVulkan control also fails
+at6,528,587,800bytes across6,663 samples. Both completed failure records remain in
+`pass1-compact-source-control-validation.json`.
 The next uncommitted candidate uses a1GiB soft CPU-surface cache, with scene-copy
 and asynchronous-visibility leases, stable vector/GPU-cache identities, and exact
-reconstruction from retained cells. Native195 tests pass before the added worker
-lease regression; updated native checks and complete GPU/interactive review are pending.
+reconstruction from retained cells. All196 native tests pass, including copied-scene
+retirement/rebuild and active asynchronous-worker leases. Eight focusedGL/Vulkan
+farm/paper/plantation/oil-well runs pass forced retirement/rebuild, source selections,
+exact within-backend RGBA/picking and atlas comparisons; maximum sampled memory is
+2,501,165,056bytes. These smaller workloads do not establish the full expanded-memory
+repair. The matched1,169 expanded controls and interactive memory/pacing review remain
+pending. The candidate is frozen in `pass1-cpu-residency-{control,catalogue}-build`.
 
 ## Forest/refinery and synchronous upload retirement:1,169 volumes (September26)
 

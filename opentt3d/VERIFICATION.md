@@ -21,6 +21,33 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **13:12UTC progress, still before19:00UTC:** all196 native CPU/cache/worker tests,
+ 114 asset/compiler tests and9 harness tests pass. Eight focused hiddenGL/Vulkan
+ runs cover corrected farm/oil-well and provisional paper/plantation meshes,
+ actual completed-state selection, industry matrices, CPU/GPU cache retirement
+ and exact within-backend atlas/picking; peak2,501,165,056bytes. Full matched1,169
+ expandedGL/Vulkan memory controls remain in progress. Boundary135 and diff checks pass.
+- Source-registered paper review finds reversed chimney placement and an oversized
+  loading shelter/process footprint; plantation roots are too far back and crowns
+  too broad. Explicit source-aligned corrections are frozen with ten provisional
+  waterworks volumes as `pass1-water-paper-reviewed-build` (1,227 volumes).
+  This later artwork passes114 compiler tests but still awaits native rendering.
+  Cross-backend gallery differences are retained in
+  `pass1-cpu-residency-gallery-backend-pixels.json`; per-backend exact checks do not
+  imply cross-backend pixel equality. The original ground-only oil-well layout
+  stage0 is also missing from prefix-filtered joined exports; the exporter repair
+  is under verification.
+- **Tropical public construction:** the initial water-supply fixture has no legal
+  desert site and remains failed evidence. Normal `desert_coverage=100` then funds
+  water supply21 at58,34. The town-only path finds an existing house and funds water
+  tower22 at80,70 through ordinary NoAI commands. Both save days0/16/30/44 and record
+  the actual generation settings/site mode in their manifests. Evidence is in
+  `pass1-water-{supply,tower}-desert-construction-fixture` and
+  `pass1-water-public-construction-validation.json`. No gameplay state or RNG is forced.
+- Latest published-code CI36242354134 passes macOS arm64 and Windows x86/x64/arm64;
+  LinuxVulkan fails and LinuxGL remains in progress. It predates the uncommitted
+  CPU-cache candidate. Release`.8` has the same platform outcomes so far.
+
 - **12:20UTC progress, still before19:00UTC:** the expanded residency retries fail
   on both backends; exact details are in `PERFORMANCE.md`. The next lossless-source
   candidate passes194 native tests, while its matched frozen1,169 GPU controls run.

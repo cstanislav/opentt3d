@@ -37,8 +37,20 @@ function IndustryFixture::Start()
 		this.Require(AIIndustryType.IsValidIndustryType(type) && AIIndustryType.CanBuildIndustry(type), "industry can be funded at a chosen site");
 		local industry = -1;
 		local water = AIIndustryType.IsBuiltOnWater(type);
+		local town_site = AIController.GetSetting("review_town_site") != 0;
+		if (town_site && service) throw "town-site source review does not have an open producer road site";
+		if (town_site) {
+			for (local y = 2; y < AIMap.GetMapSizeY() - 3 && industry < 0; ++y) for (local x = 2; x < AIMap.GetMapSizeX() - 3; ++x) {
+				local tile = AIMap.GetTileIndex(x,y);
+				if (!AITile.IsHouseTile(tile) || !AIIndustryType.BuildIndustry(type,tile)) continue;
+				industry = AIIndustry.GetIndustryID(tile);
+				if (!AIIndustry.IsValidIndustry(industry)) throw "funded town industry did not occupy its chosen house site";
+				this.x = x - 2; this.y = y - 2;
+				break;
+			}
+		}
 		local width = service ? 32 : 8, height = service ? 12 : 8;
-		for (local y = water ? 8 : 32; y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
+		for (local y = water ? 8 : 32; !town_site && y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
 			for (local x = water ? 8 : 32; x < AIMap.GetMapSizeX() - width - 8; x += 8) {
 				local tile = AIMap.GetTileIndex(x, y);
 				if (water) {

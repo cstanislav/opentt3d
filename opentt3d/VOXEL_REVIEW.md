@@ -14,6 +14,22 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Uncommitted industry breadth:** oil-well29…32, farm33…38, paper64…71 and
+  plantations116/117 have focused hiddenGL/Vulkan mesh/selection/atlas checks and
+  source-registered/street sheets. Public grain/livestock, wood-to-paper, fruit and
+  rubber routes complete actual loading/delivery/return. The registered review
+  corrects oil-well origins, farm gable/roof axes, paper chimney/shelter placement
+  and plantation root/crown spacing. Later paper/plantation corrections await their
+  own native render. Fine shape/paint differences remain open; no final approvals.
+- Ten provisional waterworks volumes cover118…120 with independent full tropical
+  desert4550 ground, open/braced steel stands, raised blue tanks/white pipe loops,
+  low grey vessels, tilted solar panels and the town water tower's real open
+  construction cylinder. Identical stages1/2 share only source-identical artwork.
+  The water-tower roof closes only on completion. Tropical source imagery and
+  palettes were exported in an actual tropical graphics set; the shared4550 number
+  does not alias Arctic snow. Ground/contact/palette/state tests pass; GPU/source/
+  street/actual-state review remains pending.
+
 - **Oil-rig published candidate, not visually approved:** graphics24 remains body-empty and
   25 stays empty until its completed flare. Four initial pilings/paired braces are
   followed by the joined deck, three-storey accommodation and service block; only

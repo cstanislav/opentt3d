@@ -33,6 +33,12 @@
 - Publish progress frequently: commit and push coherent verified increments to main,
   merge feature work as appropriate, and make a release at least daily or at noteworthy
   milestones. Label incomplete development checkpoints accurately; retain all evidence.
+- Progress clock audit **2026-09-26 13:12:00 UTC**: the19:00UTC minimum remains active.
+  The scene-pinned CPU-cache candidate passes196 native tests and eight focused
+  GL/Vulkan industry runs below2.51GB. Its matched expanded1,169 matrices continue.
+  Public tropical water-supply/town-water-tower construction fixtures now pass;
+  corrected paper/plantation placement and ten provisional waterworks volumes bring
+  the uncommitted candidate to1,227, with114 asset tests and zero final approvals.
 - Run app checks in the background without activating/flashing windows while the
   computer is in use. Foreground execution is reserved for unavoidable native-input/
   presentation checks. Shell background execution alone does not satisfy this rule.

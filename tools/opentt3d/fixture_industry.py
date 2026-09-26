@@ -20,6 +20,8 @@ def main():
     parser.add_argument("--climate", choices=("temperate", "arctic", "tropic", "toyland"), default="temperate")
     parser.add_argument("--terrain-type", type=int, choices=range(4), default=0, help="Normal map-generation terrain setting; Arctic forests require a sufficiently high site")
     parser.add_argument("--snow-coverage", type=int, choices=range(101), help="Normal Arctic map-generation snow percentage")
+    parser.add_argument("--desert-coverage", type=int, choices=range(101), help="Normal tropical map-generation desert percentage")
+    parser.add_argument("--town-site", action="store_true", help="Fund a town-only industry on an existing house through ordinary commands")
     services = parser.add_mutually_exclusive_group()
     services.add_argument("--coal-service", action="store_true", help="After construction, require a real truck to load coal, deliver it to a funded power station and return")
     services.add_argument("--cargo-service", action="store_true", help="Operate the producer's real cargo to --destination-industry, requiring loading, delivery and return")
@@ -47,6 +49,10 @@ def main():
         parser.error("--depot-directions requires --coal-service or --cargo-service")
     if args.snow_coverage is not None and args.climate != "arctic":
         parser.error("--snow-coverage requires the Arctic climate")
+    if args.desert_coverage is not None and args.climate != "tropic":
+        parser.error("--desert-coverage requires the tropical climate")
+    if args.town_site and service_requested:
+        parser.error("--town-site is a construction fixture; the producer cargo route requires an open site")
     build, output = args.build_dir.resolve(), args.output.resolve()
     executable = build / ("opentt3d.exe" if os.name == "nt" else "opentt3d")
     if not executable.is_file():
@@ -59,6 +65,7 @@ def main():
     scripts.mkdir()
     vehicle_settings = "[vehicle]\nnever_expire_vehicles = true\n" if args.truck_engine is not None else ""
     snow_setting = f"snow_coverage = {args.snow_coverage}\n" if args.snow_coverage is not None else ""
+    desert_setting = f"desert_coverage = {args.desert_coverage}\n" if args.desert_coverage is not None else ""
     (output / "openttd.cfg").write_text(f"""[misc]
 language = english.lng
 [gui]
@@ -73,7 +80,7 @@ land_generator = 1
 custom_sea_level = {60 if args.industry == 5 else 1}
 custom_town_number = 1
 amount_of_rivers = 0
-{snow_setting}[difficulty]
+{snow_setting}{desert_setting}[difficulty]
 terrain_type = {args.terrain_type}
 quantity_sea_lakes = 4
 number_towns = 4
@@ -92,7 +99,7 @@ min_active_clients = 0
 pause_on_join = false
 """)
     destination = args.destination_industry if args.cargo_service else 1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1}"\n')
     days = (0, 16, 30, 44)
     for day in days:
         (scripts / f"save_day_{day}.scr").write_text(f"pause\nsave industry-day-{day}\n")
@@ -145,7 +152,8 @@ pause_on_join = false
                 if day != days[-1] or service_requested:
                     send("unpause")
             manifest = {"starting_year": args.year, "climate": args.climate, "terrain_type": args.terrain_type,
-                        "snow_coverage": args.snow_coverage, "snapshots": snapshots}
+                        "snow_coverage": args.snow_coverage, "desert_coverage": args.desert_coverage,
+                        "town_site": args.town_site, "snapshots": snapshots}
             if service_requested:
                 cargo_snapshots = {}
 
