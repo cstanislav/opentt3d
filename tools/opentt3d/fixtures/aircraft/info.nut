@@ -13,6 +13,7 @@ class AircraftCatalogueInfo extends AIInfo {
 		AddSetting({name = "review_first", description = "First original aircraft engine ID", min_value = 215, max_value = 255, default_value = 215, flags = CONFIG_NONE});
 		AddSetting({name = "review_last", description = "Last original aircraft engine ID", min_value = 215, max_value = 255, default_value = 238, flags = CONFIG_NONE});
 		AddSetting({name = "review_hold_ticks", description = "Hold destination service until this many ticks after reloading", min_value = 0, max_value = 4096, default_value = 0, flags = CONFIG_NONE});
+		AddSetting({name = "review_oilrig", description = "Build a real oil rig as the helicopter destination", min_value = 0, max_value = 1, default_value = 0, flags = CONFIG_NONE});
 	}
 }
 RegisterAI(AircraftCatalogueInfo());

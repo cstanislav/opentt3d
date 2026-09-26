@@ -5,6 +5,22 @@ zoom level. This target is **not yet met**.
 
 ## Forest/refinery and synchronous upload retirement:1,169 volumes (September26)
 
+The uncommitted mesh-residency candidate releases completed cold GPU storage under
+a512MiB soft budget. Vulkan protects in-flight pages and invalidates all cached
+slices sharing an evicted page; GL uses deferred object deletion. Active geometry
+may exceed the budget. Completed CPU voxel surfaces also relinquish their growth
+capacity, including procedural railway/fence/foundation variants. Both native
+backends pass four exact forced-retirement/reupload views and transient ownership
+checks. Complete-workload and interactive review remain in progress.
+
+`pass1-residency-vulkan-ci` runs the previously failing expanded workload for2,400s
+without crossing6GiB:6,290,298,928 sampled bytes across9,328 samples. It passes all
+28,056 voxel model views and reaches engine67's added pitch matrix before the harness
+timeout. This is a retained **incomplete timed-out run**, not a full pass. The matching
+pre-residency pitch workload failed at6,463,543,728bytes. Both backend repetitions use
+the existing7,200s full-matrix allowance with the unchanged6GiB guard. Sustained frame
+pacing, multiple viewports and complete-world CPU cache growth remain open.
+
 The catalogue contains11,422,202 triangles. Both9,000-frame forest production/regrowth
 observations pass at approximately60fps with4,372,910,400 /4,214,034,680byte sampled
 peaks. Their p95 work is5.154 /5.331ms, but669 /650 presentation intervals exceed20ms.

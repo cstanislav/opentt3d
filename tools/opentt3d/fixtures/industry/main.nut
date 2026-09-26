@@ -36,12 +36,17 @@ function IndustryFixture::Start()
 		if (coal_service && type != 0) throw "the coal-service fixture requires original industry type0";
 		this.Require(AIIndustryType.IsValidIndustryType(type) && AIIndustryType.CanBuildIndustry(type), "industry can be funded at a chosen site");
 		local industry = -1;
+		local water = AIIndustryType.IsBuiltOnWater(type);
 		local width = service ? 32 : 8, height = service ? 12 : 8;
-		for (local y = 32; y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
-			for (local x = 32; x < AIMap.GetMapSizeX() - width - 8; x += 8) {
+		for (local y = water ? 8 : 32; y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
+			for (local x = water ? 8 : 32; x < AIMap.GetMapSizeX() - width - 8; x += 8) {
 				local tile = AIMap.GetTileIndex(x, y);
-				if (AITile.GetMinHeight(tile) < 2 || !AITile.IsBuildableRectangle(tile, width, height)) continue;
-				AITile.LevelTiles(tile, AIMap.GetTileIndex(x + width - 1, y + height - 1));
+				if (water) {
+					if (!AITile.IsWaterTile(tile)) continue;
+				} else {
+					if (AITile.GetMinHeight(tile) < 2 || !AITile.IsBuildableRectangle(tile, width, height)) continue;
+					AITile.LevelTiles(tile, AIMap.GetTileIndex(x + width - 1, y + height - 1));
+				}
 				if (service && AIController.GetSetting("review_depot_directions") != 0) {
 					for (local dy = 0; dy < height; ++dy) for (local dx = 0; dx < width; ++dx) {
 						local ground = AIMap.GetTileIndex(x + dx, y + dy);

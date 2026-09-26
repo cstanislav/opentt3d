@@ -28,21 +28,46 @@ function AircraftCatalogue::Start()
 		AIController.SetCommandDelay(1);
 		this.Require(AICompany.SetLoanAmount(AICompany.GetMaxLoanAmount()), "fund aircraft catalogue company");
 		AICompany.SetName("OpenTT3D Aircraft Review");
-		local type = AIAirport.AT_INTERCON, airports = [], aircraft = [];
-		this.Require(AIAirport.IsValidAirportType(type), "intercontinental airport is available");
+		local oilrig = AIController.GetSetting("review_oilrig") != 0;
+		local type = oilrig ? AIAirport.AT_HELIDEPOT : AIAirport.AT_INTERCON, airports = [], aircraft = [];
+		this.Require(AIAirport.IsValidAirportType(type), "review airport is available");
 		local width = AIAirport.GetAirportWidth(type), height = AIAirport.GetAirportHeight(type);
 		foreach (begin_x in [8, 88]) {
+			if (oilrig && airports.len() == 1) break;
 			local found = -1;
 			for (local y = 8; y < AIMap.GetMapSizeY()-height-8 && found < 0; y += 10) {
-				for (local x = begin_x; x < begin_x+24; x += 10) {
+				for (local x = begin_x; x < (oilrig ? AIMap.GetMapSizeX()-width-8 : begin_x+24); x += oilrig ? 4 : 10) {
 					local tile = AIMap.GetTileIndex(x,y);
-					if (AITile.GetMinHeight(tile) < 2 || !AITile.IsBuildableRectangle(tile,width+1,height+1)) continue;
+					if (AITile.GetMinHeight(tile) < (oilrig ? 1 : 2) || !AITile.IsBuildableRectangle(tile,width+1,height+1)) continue;
 					if (!AITile.LevelTiles(tile,AIMap.GetTileIndex(x+width,y+height))) continue;
 					if (AIAirport.BuildAirport(tile,type,AIStation.STATION_NEW)) { found = tile; break; }
 				}
 			}
 			if (found < 0) throw "no buildable review airport site: " + begin_x;
 			airports.append(found);
+		}
+		if (oilrig) {
+			this.Require(AIIndustryType.CanBuildIndustry(5), "original oil rig can be funded");
+			local site = -1;
+			for (local y = 8; y < AIMap.GetMapSizeY()-16 && site < 0; y += 8) {
+				for (local x = 8; x < AIMap.GetMapSizeX()-16; x += 8) {
+					local tile = AIMap.GetTileIndex(x,y);
+					if (AITile.IsWaterTile(tile) && AIIndustryType.BuildIndustry(5,tile)) { site = tile; break; }
+				}
+			}
+			if (site < 0) throw "no fundable oil-rig water site";
+			local station = -1;
+			for (local tick = 0; tick < 4096 && station < 0; tick += 10) {
+				for (local y = 0; y < 8 && station < 0; ++y) for (local x = 0; x < 8; ++x) {
+					local tile = AIMap.GetTileIndex(AIMap.GetTileX(site)+x,AIMap.GetTileY(site)+y);
+					local candidate = AIStation.GetStationID(tile);
+					if (AIStation.IsValidStation(candidate) && AIStation.HasStationType(candidate,AIStation.STATION_AIRPORT)) { station = tile; break; }
+				}
+				if (station < 0) this.Sleep(10);
+			}
+			if (station < 0) throw "completed oil rig did not create its neutral airport";
+			airports.append(station);
+			AILog.Info("AIRCRAFT_CATALOGUE_OILRIG tile=" + station);
 		}
 		local available = AIEngineList(AIVehicle.VT_AIR);
 		for (local engine = available.Begin(); !available.IsEnd(); engine = available.Next()) {
@@ -63,8 +88,10 @@ function AircraftCatalogue::Start()
 				local vehicle = plane.vehicle, speed = AIVehicle.GetCurrentSpeed(vehicle);
 				if (AIVehicle.GetState(vehicle) == AIVehicle.VS_CRASHED) throw "review aircraft crashed: " + plane.engine;
 				if (speed > plane.peak_speed) plane.peak_speed = speed;
-				if (!plane.serviced && AIVehicle.GetState(vehicle) == AIVehicle.VS_AT_STATION &&
-						AIStation.GetStationID(AIVehicle.GetLocation(vehicle)) == AIStation.GetStationID(airports[1])) {
+				local at_destination = oilrig ? AIOrder.ResolveOrderPosition(vehicle,AIOrder.ORDER_CURRENT) == 0 &&
+					AIMap.DistanceMax(AIVehicle.GetLocation(vehicle),airports[1]) <= 3 :
+					AIStation.GetStationID(AIVehicle.GetLocation(vehicle)) == AIStation.GetStationID(airports[1]);
+				if (!plane.serviced && AIVehicle.GetState(vehicle) == AIVehicle.VS_AT_STATION && at_destination) {
 					plane.serviced = true;
 					if (AIController.GetSetting("review_hold_ticks") == 0) this.Require(AIOrder.SetOrderFlags(vehicle,0,AIOrder.OF_NONE), "release observed airport service");
 					AILog.Info("AIRCRAFT_CATALOGUE_SERVICE engine=" + plane.engine + " vehicle=" + vehicle);

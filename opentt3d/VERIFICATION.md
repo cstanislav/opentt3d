@@ -21,6 +21,23 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Public-NoAI oil-rig fixtures:** `pass1-oilrig-construction-fixture` funds original
+  industry5 at10,10 and saves ordinary day0/16/30/44 construction. The aircraft
+  harness now supports `--oilrig`, builds a helidepot, funds a water-site rig and
+  waits for its actual neutral airport facility. `pass1-oilrig-helicopter253-neutral-fixture`
+  records helicopter253/vehicle0 servicing station1032 from helidepot2368, peak
+  speed320 and a256-tick held-service release after reload. Fixture generation uses
+  the frozen published1,169 executable and public settings/NoAI APIs only. Earlier
+  unsuitable-airport-site and airport-tile-type attempts remain retained failures.
+- The uncommitted oil-rig/presentation candidate additionally passes the actual
+  elevated landing check onGL:40 authored support corners lie on captured industry
+  deck triangles at54 units, with the converted station's independent water ground.
+  All four rotor states and stopped-to-running transition pass over1,800 hidden
+  running frames; sampled peak4,090,204,360bytes. `pass1-oilrig-helicopter253-contact-opengl`
+  averages60.001fps with1.928ms p95 work and no work overruns, but228 presentation
+  intervals exceed20ms while other checks run. This is functional evidence, not an
+  isolated or sustained smoothness result. Artwork/full-backend review remains active.
+
 - **Freight service and completed1,169 native matrices:** `pass1-fizzy-wagon-supplied-town-core`
   records a real bubble-truck delivery from industry34 to33, wagon52 loading25/25
   cargo11, accepted town unloading0/25 and return/holding. Acceptance is20, locomotive6,

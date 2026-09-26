@@ -19,6 +19,7 @@ def main():
     parser.add_argument("--first-engine", type=int, choices=range(215, 256), default=215)
     parser.add_argument("--last-engine", type=int, choices=range(215, 256), default=238)
     parser.add_argument("--service-hold-ticks", type=int, default=0, help="Keep full-load service in the fixture, then release this many ordinary AI ticks after reload (0..4096)")
+    parser.add_argument("--oilrig", action="store_true", help="Fund a real oil rig and operate a selected helicopter from a heliport with a hangar to its elevated landing pad")
     parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
@@ -27,6 +28,8 @@ def main():
         parser.error("Use a built executable, new output directory and increasing engine range")
     if not 0 <= args.service_hold_ticks <= 4096:
         parser.error("Service hold must be0..4096 ticks")
+    if args.oilrig and (args.climate != "temperate" or args.first_engine < 253 or args.last_engine > 254):
+        parser.error("Oil-rig service requires a temperate original helicopter253 or254")
     root = Path(__file__).resolve().parents[2]
     graphics = json.loads((root / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "aircraft", output / "ai/aircraft-catalogue")
@@ -43,7 +46,7 @@ starting_year = 2050
 generation_seed = 314159
 landscape = {args.climate}
 land_generator = 1
-custom_sea_level = 1
+custom_sea_level = {60 if args.oilrig else 1}
 custom_town_number = 1
 amount_of_rivers = 0
 [difficulty]
@@ -55,6 +58,7 @@ max_loan = 50000000
 town_council_tolerance = 0
 vehicle_breakdowns = 0
 [construction]
+raw_industry_construction = 1
 terraform_per_64k_frames = 1000000
 terraform_frame_burst = 4096
 [vehicle]
@@ -72,7 +76,7 @@ server_advertise = false
 min_active_clients = 0
 pause_on_join = false
 """)
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Aircraft Catalogue" "review_first={args.first_engine},review_last={args.last_engine},review_hold_ticks={args.service_hold_ticks}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Aircraft Catalogue" "review_first={args.first_engine},review_last={args.last_engine},review_hold_ticks={args.service_hold_ticks},review_oilrig={int(args.oilrig)}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave aircraft-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     with socket.socket() as probe:
@@ -114,7 +118,7 @@ pause_on_join = false
                 time.sleep(0.2)
             else:
                 raise TimeoutError("Aircraft fixture save timed out")
-            manifest.update(climate=args.climate, starting_year=2050, service_hold_ticks=args.service_hold_ticks, save="save/aircraft-catalogue.sav")
+            manifest.update(climate=args.climate, starting_year=2050, service_hold_ticks=args.service_hold_ticks, oilrig=args.oilrig, save="save/aircraft-catalogue.sav")
             (output / "fixture.json").write_text(json.dumps(manifest, indent=2) + "\n")
             process.stdin.write("quit\n")
             process.stdin.flush()

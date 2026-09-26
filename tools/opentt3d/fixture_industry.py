@@ -65,7 +65,7 @@ starting_year = {args.year}
 generation_seed = 314159
 landscape = {args.climate}
 land_generator = 1
-custom_sea_level = 1
+custom_sea_level = {60 if args.industry == 5 else 1}
 custom_town_number = 1
 amount_of_rivers = 0
 [difficulty]

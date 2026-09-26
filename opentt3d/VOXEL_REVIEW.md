@@ -14,6 +14,23 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Oil-rig candidate, not published/approved:** graphics24 remains body-empty and
+  25 stays empty until its completed flare. Four initial pilings/paired braces are
+  followed by the joined deck, three-storey accommodation and service block; only
+  the completed state erects the derrick and flare. A full six-tile native export
+  and tile-origin sidecars now support registered joined-source comparisons. The
+  first264 mesh/1,616 industry-state views pass onGL; subsequent footprint/material
+  corrections and converted-neutral-station water ownership remain under review.
+  The source's54-unit helipad datum is retained. Final acceptance additionally needs
+  actual helicopter support/rotor clearance and water/light animation checks.
+- Oil-rig later-pass findings: the service block's plan/proportions, intermediate
+  platform heights and stepped walkway/well joins, cylinder ribs/paint, cabin window
+  framing/recesses, derrick section widths, roof grain, rail-post spacing and the
+  flame's narrow side silhouette need source-painted fidelity review. The first
+  draft's premature construction frames and blue flare girder were corrected as
+  source/state defects. Source sprite cuts are not treated as physical tile walls;
+  shared authored components retain exclusive body ownership across the joined rig.
+
 - Editable source: `assets/3d/voxels.json`; compiler: `tools/assets/compile_voxels.py`.
 - Explicit cell operations: boxes, occupied-cell paint, erasure, repeated authored
   components, bounded ellipsoids, stepped gables/hips, hollow barrel roofs/end fills, reusable named parts,
