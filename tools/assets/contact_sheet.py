@@ -310,7 +310,10 @@ def main():
         for entry in entries:
             x,y,z = entry.get("origin",[0,0,0])
             dx,dy = entry["offset"]
-            pieces.append((read_pam(args.source_directory / entry["image"]),2*(y-x)+dx//4,x+y-z+dy//4))
+            # Original -128 child entries use native screen offsets relative to
+            # the tile anchor, rather than world XYZ coordinates.
+            px,py = (x+dx//4,y+dy//4) if z == -128 else (2*(y-x)+dx//4,x+y-z+dy//4)
+            pieces.append((read_pam(args.source_directory / entry["image"]),px,py))
         left,top = min(x for _,x,y in pieces),min(y for _,x,y in pieces)
         right,bottom = max(x+image.width for image,x,y in pieces),max(y+image.height for image,x,y in pieces)
         original = Image.new("RGBA",(right-left,bottom-top))

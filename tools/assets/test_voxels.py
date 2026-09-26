@@ -8,6 +8,69 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_airport_surfaces_keep_source_ownership_runway_lanes_and_small_terminal_support(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        ids = {0,1,2,3,14,15,16,17,18,33,34,35,45,46,48,49,50,53,54,55,56,57,58,59,60,61,62,65,66,67,68,70}
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith(("airport_surface_","airport_small_terminal_")) or name in ("airport_small_control_tank","airport_low_ground","road_depot_floor")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in ids}
+                              for category in ("airport_tiles","airport_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        original = (root / "src/table/station_land.h").read_text().split("_station_display_datas_airport[] = {",1)[1].split("};",1)[0]
+        body_owners = [kind != "LINE_NOTHING" for kind in re.findall(r"\bTILE_SPRITE_(LINE_NOTHING|LINE|NULL)\(",original)]
+        self.assertEqual(len(body_owners),74)
+        for graphics in ids:
+            self.assertEqual(str(graphics) in result["bindings"]["airport_tiles"],body_owners[graphics],graphics)
+            floor_name = result["bindings"]["airport_ground"][str(graphics)]["0"]
+            floor = result["models"][floor_name]
+            self.assertEqual({(x,y) for x,y,z in volumes[floor_name] if z == 0},{(x,y) for x in range(32) for y in range(32)})
+            self.assertEqual(floor["origin"][:2],[0,0])
+            self.assertEqual(floor["cell_size"][:2],[0.5,0.5])
+        # The source end bars and longitudinal dashes are distinct. Ground paint
+        # remains level with the aircraft running datum, including its lamps.
+        for name in (n for n in volumes if n.startswith("airport_surface_runway")):
+            model = result["models"][name]
+            self.assertEqual({model["origin"][2]+(z+1)*model["cell_size"][2] for x,y,z in volumes[name]},{0})
+            colours = {c for m in volumes[name].values() for c in result["materials"][m-1]}
+            self.assertTrue({241,243} <= colours or name.endswith(("_1","_3","_4")))
+        middle,end = (volumes[n] for n in ("airport_surface_runway_middle","airport_surface_runway_end"))
+        white = lambda m: result["materials"][m-1][5] == 15
+        self.assertTrue(white(middle[(2,15,0)]))
+        self.assertFalse(white(middle[(16,15,0)]))
+        self.assertEqual([y for y in range(32) if white(end[(16,y,0)])],[*range(4,8),*range(11,15),*range(18,22),*range(25,29)])
+        # Source fence owners leave all usable runway/parking space open.
+        for graphics in ids-{33,34,35}:
+            binding = result["bindings"]["airport_tiles"].get(str(graphics))
+            if not binding:
+                continue
+            model = result["models"][binding["0"]]
+            self.assertTrue(all(x in (0,30) or y in (0,30) or z == 0 for x,y,z in volumes[binding["0"]]),graphics)
+            self.assertLessEqual(max((z+1)*model["cell_size"][2] for x,y,z in volumes[binding["0"]]),3)
+        # Compare actual occupied quarter-unit cells, so mixed ground/body grids
+        # cannot hide overlaps or disconnected tank legs and cabin platforms.
+        def occupied(name):
+            model = result["models"][name]
+            step = [round(v*4) for v in model["cell_size"]]
+            origin = [round(v*4) for v in model["origin"]]
+            return {(origin[0]+x*step[0]+dx,origin[1]+y*step[1]+dy,origin[2]+z*step[2]+dz)
+                    for x,y,z in volumes[name] for dx in range(step[0]) for dy in range(step[1]) for dz in range(step[2])}
+        for graphics in (33,34,35):
+            ground = occupied(result["bindings"]["airport_ground"][str(graphics)]["0"])
+            body = occupied(result["bindings"]["airport_tiles"][str(graphics)]["0"]) if graphics == 35 else set()
+            self.assertFalse(ground & body,"Original ground and body owners must not overlap")
+            joined = ground | body
+            reached = {p for p in joined if p[2] == -2}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in joined and p not in reached:
+                        reached.add(p); pending.append(p)
+            self.assertEqual(reached,joined,(graphics,"Every wall, roof, platform and tank must reach ground"))
+        self.assertNotIn((8,25,8),volumes["airport_small_control_tank"],"Keep the water tank's supporting frame open")
+
     def test_low_airport_preserves_original_l_plan_fence_owners_and_independent_ground(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

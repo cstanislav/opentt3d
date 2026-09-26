@@ -9,12 +9,17 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite199/199, including automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, exact retained-source reconstruction, copied-scene CPU residency, active asynchronous-worker leases, conservative tunnel regions and farm climate restrictions. Release`.9`LinuxGL, macOS and Windows x86/x64/arm64 pass; LinuxVulkan stays below4.15GB but its renderer matrix reaches the7200-second bound before completion.
-- [x] Current1,247-volume asset/compiler/schema suite117/117 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current native suite200/200, including airport/industry climate restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.11`LinuxGL and all five Vulkan scene/vehicle shards now pass below6GiB, with all256 engines/322,048 poses; macOS and Windows jobs pass. Newer doubled-terrain CI remains pending.
+- [x] Current1,274-volume asset/compiler/schema suite120/120 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Ground-only airport33/34 buildings retain original opaque ground ownership;
+  tile35 keeps independent office/paving and cabin/tank layers. Coverage reaches
+  53/74 definitions,47 body owners and35 independent grounds. Both backend focused
+  meshes and all six non-temperate airport matrices pass; older distinct Toyland
+  terminals/hangars retain supplied art pending independent volumes.
 - [x] Terrain steps render8→16 while retaining authored object dimensions. Raised
   foundations, bridge ramps/pillars, rails/catenary, tunnel earth and dock decks/piles
   pass the updatedGL/Vulkan infrastructure, ground-continuity, atlas and picking checks.

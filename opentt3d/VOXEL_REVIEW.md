@@ -16,6 +16,19 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Airport breadth candidate:**27 volumes add32 definitions, raising coverage to
+  53/74 definitions and35 independent grounds. Complete apron/stand/runway/threshold
+  slabs, source-owned fences, circular and plain-H helipads, timber terminals33/34
+  and control-cabin/tank35 retain their original layer ownership. Ground-only33/34
+  never acquire fabricated body sequences;35 retains independent transparent body
+  and opaque office/paving. Original828 climate-layer pairs expose137 replacements;
+  new layers match across climates, while older Toyland19…28/43/47 remain supplied
+  artwork until separately authored. No climate alias is inferred from sprite IDs.
+  First source comparison corrects small-building door/roof orientation and the
+  over-tall control cabin/tank. Fine timber/roof shading, paved-brick edges, runway
+  lamps/grain and helipad painted highlights remain later-pass findings.
+  Evidence:`build-macos/pass3-airport-*`; these are provisional bindings, not approvals.
+
 - **Terrain-height follow-up:** rendered map levels double8→16. Authored object
   dimensions retain their scale; support datums, slopes, foundations, bridge spans
   and dock piles/decks follow the terrain. The twelve dock volumes keep their

@@ -68,7 +68,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,180-volume published candidate)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,274-volume airport candidate)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -79,7 +79,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
 | Industries | 54/175 body definitions,58 grounds | Oil-well, farm, bank, food, paper, plantations and waterworks now join oil-rig/forest/refinery; remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
-| Airports | 21/74 tile definitions,3 independent grounds | Low terminal/fence family63/64/69 added; missing buildings/grounds/runways/aprons, helipads and state-driven equipment |
+| Airports | 53/74 tile definitions:47 body owners and6 ground-only definitions;35 independent grounds | Added apron/runway/threshold/fence/helipad families and small terminals33/34/35; remaining taxiway/grass/small-runway grounds, heliport44, radar grounds and independent Toyland terminal/hangar artwork |
 | Depots | 5/6 families,20 directional bindings | Tram body/floor/wire and all-family source/ground/clearance review |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
 | Other transport | Both ship-depot axes/four voxel sections; six dock sections/twelve ordinary-Toyland volumes; separate source-resolved ordinary/Toyland buoys | Roads/trams/stops, locks/aqueducts and remaining infrastructure; full water-class/ship/bridge fidelity and clearance review |

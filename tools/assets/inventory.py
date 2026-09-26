@@ -120,12 +120,20 @@ def inventory():
     airport_specs = (ROOT / "src/table/airporttiles.h").read_text().split("_origin_airporttile_specs[] = {", 1)[1].split("};", 1)[0]
     frame_counts = [1 if kind == "AT_NOANIM" else int(last)+1 for kind,last in
                     re.findall(r"\b(AT_NOANIM|AT\(\s*(\d+)\s*,\s*\d+\s*\))", airport_specs)]
-    if len(frame_counts) != len(airports):
+    airport_layouts = (ROOT / "src/table/station_land.h").read_text().split("_station_display_datas_airport[] = {",1)[1].split("};",1)[0]
+    body_owners = [kind != "LINE_NOTHING" for kind in re.findall(r"\bTILE_SPRITE_(LINE_NOTHING|LINE|NULL)\(",airport_layouts)]
+    if len(frame_counts) != len(airports) or len(body_owners) != len(airports):
         raise ValueError("Airport definitions and animation tables disagree")
-    for airport,frames in zip(airports,frame_counts):
+    for airport,frames,body in zip(airports,frame_counts,body_owners):
         airport["source_frames"] = frames
-        airport["missing_voxel_states"] = sorted(set(range(frames))-set(airport["voxel_states"]))
+        airport["source_has_body"] = body
+        airport["bound_voxel_states"] = airport["voxel_states"] if body else airport["voxel_ground_states"]
+        airport["missing_voxel_states"] = sorted(set(range(frames))-set(airport["bound_voxel_states"]))
+        airport["missing_voxel_ground_states"] = sorted(set(range(frames))-set(airport["voxel_ground_states"]))
         airport["all_source_frames_bound"] = not airport["missing_voxel_states"]
+        if airport["id"] in (*range(19,29),43,47):
+            airport["missing_voxel_climates"] = ["toyland"]
+            airport["climate_source_note"] = "Toyland replaces the original body paint; the complete supplied tile is retained pending independent artwork."
     depots = [{"kind": kind, "name": name, "voxel_states": voxel_states("depots", kind),
                "voxel_directions": sorted({state%4 for state in voxel_states("depots", kind)}),
                "climate_variant_states": {label: [state%4 for state in voxel_states("depots", kind) if state//4 == variant]
@@ -182,7 +190,7 @@ def main():
     print(f"Industry tile definitions: {len(data['industry_tiles'])}; authored: {sum(i['authored_profile'] for i in data['industry_tiles'])}; voxel bodies: {sum(bool(i['voxel_states']) for i in data['industry_tiles'])}; voxel grounds: {sum(bool(i['voxel_ground_states']) for i in data['industry_tiles'])}")
     print("Forest16/17 and farm33..38 voxel coverage is temperate-only; independent Arctic body/ground artwork remains missing")
     print("Industry grounds3924/2173 retain supplied source layers outside temperate; unchanged bodies keep independent voxel ownership")
-    print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
+    print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound body or ground-only: {sum(bool(a['bound_voxel_states']) for a in data['airport_tiles'])}; body owners: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
     print(f"Independently bound voxel airport grounds: {sum(bool(a['voxel_ground_states']) for a in data['airport_tiles'])}")
     print(f"Depot families: {len(data['depots'])}; voxel directions: {sum(len(d['voxel_directions']) for d in data['depots'])}; full four-direction families: {sum(len(d['voxel_directions']) == 4 for d in data['depots'])}")
     print(f"Ship-depot axes: {sum(d['voxel_parts'] == [0,1] for d in data['ship_depots'])} / 2; both original tile parts required; water remains independent")

@@ -19,6 +19,16 @@ the 13 common foundation forms.
 All remaining categories/states and final visual approval remain work.
 See `opentt3d/VOXEL_REVIEW.md`.
 
+Airport binding ownership follows the original tile sequence. Ground-only source
+tiles require an `airport_ground` binding and no fabricated `airport_tiles` body;
+this includes the timber buildings33/34. Tile35 splits the lower office/paving
+from its control cabin/tank body. All grounds remain opaque under building
+transparency/invisibility. Current provisional airport coverage is53/74 definitions,
+47 body owners and35 independent grounds. Source-ID equality alone does not permit
+a climate alias: distinct Toyland19…28/43/47 artwork remains supplied until separate
+volumes are authored. OriginalZ=-128 fence children use native screen-space offsets
+in source registration rather than world-space XYZ.
+
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;
 source recolouring still applies. Use explicit states for different layouts, as with

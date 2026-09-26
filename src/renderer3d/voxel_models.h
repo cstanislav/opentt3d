@@ -7,6 +7,11 @@
 namespace Renderer3D {
 bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state);
 bool HasVoxelAirport(unsigned graphics, unsigned frame);
+/** The Toyland set supplies different terminal/hangar paint under the same IDs. */
+inline bool AirportModelClimateSupported(unsigned graphics, unsigned climate)
+{
+	return climate < 4 && (climate != 3 || !((graphics >= 19 && graphics <= 28) || graphics == 43 || graphics == 47));
+}
 bool DrawVoxelAirportGround(Scene &scene, unsigned graphics, unsigned frame, Vec3 origin, PaletteID palette);
 bool HasVoxelTree(SpriteID image);
 bool UseVoxelTrees();

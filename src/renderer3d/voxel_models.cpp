@@ -444,7 +444,7 @@ bool FocusVoxelAirport(unsigned graphics)
 {
 	for (uint y = 1; y < Map::MaxY(); ++y) for (uint x = 1; x < Map::MaxX(); ++x) {
 		TileIndex tile = TileXY(x,y);
-		if (!IsTileType(tile,MP_STATION) || !IsAirport(tile) || !HasVoxelAsset("airport_tiles",GetAirportGfx(tile),0)) continue;
+		if (!IsTileType(tile,MP_STATION) || !IsAirport(tile) || !HasVoxelAirport(GetAirportGfx(tile),0)) continue;
 		if (graphics != UINT_MAX && GetAirportGfx(tile) != graphics) continue;
 		ScrollMainWindowToTile(tile,true);
 		Debug(driver,1,"OpenTT3D: focused voxel airport tile {} at {},{}",GetAirportGfx(tile),x,y);
@@ -457,14 +457,19 @@ bool HasVoxelAirport(unsigned graphics, unsigned frame)
 {
 	static uint64_t generation = UINT64_MAX;
 	static std::array<int,74> supported{};
-	if (graphics >= supported.size() || !HasVoxelAsset("airport_tiles",graphics,frame)) return false;
+	if (graphics >= supported.size() || !AirportModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) return false;
+	auto layouts = GetAirportTileLayouts(graphics);
+	if (frame >= layouts.size()) return false;
+	/* Several original airport buildings belong entirely to the ground sprite.
+	 * Empty body sequences need a ground binding, never a fabricated body. */
+	if (layouts[frame]->GetSequence().empty() ? !HasVoxelAsset("airport_ground",graphics,frame) : !HasVoxelAsset("airport_tiles",graphics,frame)) return false;
 	if (generation != TextureGeneration()) { generation = TextureGeneration(); supported.fill(0); }
 	int &value = supported[graphics];
 	if (value == 0) {
 		bool base = true;
 		/* A partial source replacement keeps the supplied ground/body/animation
 		 * together, including airports whose ground has a separate voxel owner. */
-		for (const auto *source : GetAirportTileLayouts(graphics)) {
+		for (const auto *source : layouts) {
 			base &= IsBaseGraphicsSprite(source->ground.sprite & SPRITE_MASK);
 			for (const auto &component : source->GetSequence()) base &= IsBaseGraphicsSprite(component.image.sprite & SPRITE_MASK);
 		}
@@ -959,12 +964,13 @@ void ExportVoxelReviews(std::string_view prefix)
 	}
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,base,stage] = binding;
-		if (category == "airport_tiles" && HasVoxelAirport(base,stage)) {
+		if ((category == "airport_tiles" || (category == "airport_ground" && !HasVoxelAsset("airport_tiles",base,stage))) && HasVoxelAirport(base,stage)) {
 			auto floor = Models().bindings.find({"airport_ground",base,stage});
 			if (!name.starts_with(prefix) && (floor == Models().bindings.end() || !floor->second.starts_with(prefix))) continue;
 			Textures().BeginScene();
 			Scene airport;
-			std::vector<const VoxelModel *> group{&Models().models.at(name)};
+			std::vector<const VoxelModel *> group;
+			if (category == "airport_tiles") group.push_back(&Models().models.at(name));
 			if (DrawVoxelAirportGround(airport,base,stage,{},PAL_NONE)) group.push_back(&Models().models.at(floor->second));
 			DrawVoxelAsset(airport,"airport_tiles",base,stage,{},PALETTE_TO_BLUE);
 			for (auto &instance : airport.instances) instance.data.SetObjectId(1);
@@ -1600,14 +1606,24 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		}
 	}
 	Debug(driver,1,"OpenTT3D: {} joined multi-tile house views preserve exact cell references and independent tile picking",joined_views);
-	unsigned airport_views = 0;
+	unsigned airport_views = 0, airport_climate_fallbacks = 0;
+	for (const auto &[binding,name] : Models().bindings) {
+		const auto &[category,graphics,frame] = binding;
+		if ((category != "airport_tiles" && category != "airport_ground") || !name.starts_with(prefix)) continue;
+		if (AirportModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) continue;
+		Scene fallback;
+		if (HasVoxelAirport(graphics,frame) || DrawVoxelAirportGround(fallback,graphics,frame,{},PAL_NONE) || !fallback.instances.empty()) throw std::runtime_error("Unauthored airport climate selected a different climate's ground/body");
+		++airport_climate_fallbacks;
+	}
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,graphics,frame] = binding;
 		if (category != "airport_ground" || !HasVoxelAirport(graphics,frame)) continue;
-		const auto &body_name = Models().bindings.at({"airport_tiles",graphics,frame});
-		if (!name.starts_with(prefix) && !body_name.starts_with(prefix)) continue;
-		const auto &body = Models().models.at(body_name).surface;
+		auto body_binding = Models().bindings.find({"airport_tiles",graphics,frame});
+		bool has_body = body_binding != Models().bindings.end();
+		if (!name.starts_with(prefix) && (!has_body || !body_binding->second.starts_with(prefix))) continue;
 		const auto &floor = Models().models.at(name).surface;
+		const auto &body = has_body ? Models().models.at(body_binding->second).surface : floor;
+		if (has_body == GetAirportTileLayouts(graphics)[frame]->GetSequence().empty()) throw std::runtime_error("Airport body ownership disagrees with the original empty sequence");
 		Vec3 low{std::min(body.low.x,floor.low.x),std::min(body.low.y,floor.low.y),std::min(body.low.z,floor.low.z)};
 		Vec3 high{std::max(body.high.x,floor.high.x),std::max(body.high.y,floor.high.y),std::max(body.high.z,floor.high.z)};
 		for (unsigned turn = 0; turn < 4; ++turn) for (bool street : {false,true}) for (unsigned visibility = 0; visibility < 3; ++visibility) {
@@ -1615,7 +1631,7 @@ void VerifyVoxelMeshes(std::string_view prefix)
 			Scene actual, reference;
 			if (!DrawVoxelAirportGround(actual,graphics,frame,{},PAL_NONE) || actual.instances.size() != 1 || actual.instances.front().mesh != &floor.vertices) throw std::runtime_error("Airport lost its independent original ground binding");
 			actual.instances.front().data.SetObjectId(TILE_PICK_ID|81);
-			if (visibility != 2) {
+			if (visibility != 2 && has_body) {
 				if (!DrawVoxelAsset(actual,"airport_tiles",graphics,frame,{},PALETTE_TO_BLUE,visibility == 1 ? 0.38f : 1)) throw std::runtime_error("Airport lost its original body binding");
 				actual.instances.back().data.SetObjectId(TILE_PICK_ID|82);
 			}
@@ -1628,6 +1644,7 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		}
 	}
 	Debug(driver,1,"OpenTT3D: {} voxel airport ground/body views preserve independent opaque ground, exact CPU colour and visible/transparent/hidden picking",airport_views);
+	Debug(driver,1,"OpenTT3D: {} airport layer bindings retain their supplied source because the active climate has no matching authored volume",airport_climate_fallbacks);
 	Debug(driver,1,"OpenTT3D: voxel mesh selection '{}' passed exact geometry, palettes and picking",prefix);
 }
 

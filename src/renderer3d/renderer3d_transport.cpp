@@ -206,6 +206,16 @@ TEST_CASE("Tunnel entrances and lining leave actual Cab and vehicle clearances",
 	}
 }
 
+TEST_CASE("Airport source climate guards preserve distinct Toyland terminal artwork", "[renderer3d][voxel]")
+{
+	for (unsigned graphics = 0; graphics < 74; ++graphics) {
+		for (unsigned climate = 0; climate < 3; ++climate) CHECK(AirportModelClimateSupported(graphics,climate));
+		bool replaced = (graphics >= 19 && graphics <= 28) || graphics == 43 || graphics == 47;
+		CHECK(AirportModelClimateSupported(graphics,3) == !replaced);
+		CHECK_FALSE(AirportModelClimateSupported(graphics,4));
+	}
+}
+
 TEST_CASE("Tunnel directions connect paired portals without moving the track centre", "[renderer3d]")
 {
 	for (unsigned direction = 0; direction < 4; ++direction) {

@@ -1,5 +1,60 @@
 # Implementation verification
 
+## September26 resumed breadth work: airport owners and sharded Linux result
+
+The continuation clock was recorded at20:24:14UTC and rechecked at20:50:38UTC;
+both are after the requested19:00UTC minimum. The full four-pass objective remains
+active. Native app reviews use background mode.
+
+Run[`36262577053`](https://github.com/cstanislav/opentt3d/actions/runs/36262577053)
+has completed successfully for release`.11`commit
+`c7b7cfff1d4020b4d032d5a8f067dd0988a8c462`. LinuxGL's complete matrix, the Vulkan
+scene/synchronization and electric-journey checks, and all four Vulkan vehicle
+shards pass. The shards cover all256 engines and322,048 poses
+(100,096/79,424/72,896/69,632). Maximum sampled renderer memory is4,537,843,712bytes,
+below the6GiB guard. macOS and Windows jobs pass; Windowsarm64 builds but does not
+execute its native tests on the x64 runner. This resolves that older checkpoint's
+full Linux timeout; it does not establish the newer doubled-terrain release's CI.
+Artifacts and reconciliation are retained in`build-macos/pass3-release11-ci-artifacts/`
+and`pass3-release11-ci-reconciliation.json`.
+
+The provisional airport batch adds32 definitions and27 volumes, reaching1,274
+volumes,53/74 airport body-or-ground-only definitions,47 body owners and35 independent
+grounds. Tiles33/34 have original empty body sequences: their timber buildings
+belong to their ground sprites. Tile35 keeps its ground-owned office independent
+from the raised control cabin/tank. The runtime, inventory and exact ground/body
+checks now recognize this distinction. Source child fences withZ=-128 use native
+screen offsets in registered comparison sheets.
+
+The828-pair airport climate audit finds137 differing layers. New apron/runway/
+helipad/small-terminal layers are source-identical across climates; several older
+Toyland terminal/hangar bodies differ under unchanged sprite numbers. Tiles19…28,
+43 and47 therefore retain supplied Toyland art pending independent volumes.
+Evidence:`pass3-airport-climate-source-audit.json`.
+
+The first four backend runs pass552 surface and120 small-family exact mesh views
+per backend, plus4,096,000 total world-atlas/picking pixels; peak2,361,527,200bytes.
+Their source sheets expose wrong door/roof orientation and excessive control-tower/
+tank height. Corrected geometry and original palette-only materials are undergoing
+a separately frozen review in`pass3-airport-final-build/`; the earlier results are
+not substituted for that candidate. Zero final visual approvals.
+
+The corrected freeze now passes200/200 native,120/120 asset/compiler/schema and9/9
+harness tests plus the presentation boundary. Both backend focused runs repeat552
+surface/120 small-family mesh views and696/72 independent ground/body views, preserving
+16,384,000 total world-atlas RGBA/picking pixels. Six Arctic/tropical/Toyland matrices
+each pass1,728 authored and840 ground/body views; Toyland explicitly retains12 older
+body bindings as supplied artwork. All58 newly bound layers pass their original-layer
+palette audit. The18 actual selections for tiles0/3/14/18/33/34/35/53/66 pass on both
+backends, using ordinary country/city/international/helistation saves. Initial live
+commands omitted the required`--reference-airport`switch and exited before launching;
+their18 argument-failure logs are retained, with corrected commands in a separate
+manifest. Highest final/live sampled memory:2,802,306,168bytes. Source-aligned and
+four-sided street sheets plus the live joined airport were inspected; no final visual
+approvals. Evidence:`pass3-airport-final-{hashes,validation,reconciliation}.json`,
+`pass3-airport-final-palette-audit.json`and`pass3-airport-live-{validation,reconciliation}.json`.
+All frozen source/artwork/executable hashes match at the21:05:28UTC check.
+
 ## September26 follow-up: doubled terrain, automatic LODs and projected trees
 
 Work resumed after the completed19:00UTC minimum under the user's revised terrain,

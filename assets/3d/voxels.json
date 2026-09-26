@@ -4,6 +4,34 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "air_surface_asphalt": [3,5,4,6,3,6],
+    "air_surface_grain": [4,6,5,7,3,7],
+    "air_surface_dark": [2,3,3,4,2,4],
+    "air_surface_white": [9,14,13,15,9,15],
+    "air_surface_middle_white": [9,15,9,15,9,15],
+    "air_surface_pad_grey": [5,6,5,7,5,6],
+    "air_surface_lamp_base": [3,5,4,7,3,8],
+    "air_surface_lamp_rim": [17,19,18,21,17,20],
+    "air_surface_lamp_0": 241,
+    "air_surface_lamp_1": 242,
+    "air_surface_lamp_2": 243,
+    "air_surface_lamp_3": 244,
+    "air_small_wood": [104,107,105,108,104,107],
+    "air_small_wood_light": [105,108,106,112,104,108],
+    "air_small_wood_shadow": [104,105,104,106,104,105],
+    "air_small_paving": [6,8,7,10,6,9],
+    "air_small_paving_grain": [7,9,8,10,6,10],
+    "air_small_roof": [2,4,3,6,2,5],
+    "air_small_roof_light": [3,5,4,8,2,7],
+    "air_small_glass": [130,131,130,131,130,131],
+    "air_small_white": [9,12,10,14,9,12],
+    "air_small_brick": 72,
+    "air_small_ground_blue": [201,202,201,204,201,202],
+    "air_small_tower_wood": [104,106,105,108,104,106],
+    "air_small_tower_wood_light": [105,109,106,110,104,109],
+    "air_small_tower_roof": [6,9,7,11,6,10],
+    "air_small_tank": [200,202,201,204,200,203],
+    "air_small_tank_light": [201,203,202,205,200,204],
     "air_low_stone": [32,34,33,36,32,35],
     "air_low_stone_light": [33,35,34,36,32,36],
     "air_low_glass": [128,130,129,131,128,131],
@@ -1201,6 +1229,67 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "airport_surface_lamps": [
+      ["repeat",[8,0,0],4,[
+        ["box","air_surface_lamp_base",2,2,0,5,5,1],
+        ["box","air_surface_lamp_rim",3,3,0,4,4,1],
+        ["box","air_surface_lamp_base",2,27,0,5,30,1],
+        ["box","air_surface_lamp_rim",3,28,0,4,29,1]
+      ]],
+      ["box","air_surface_lamp_0",2,2,0,4,4,1],
+      ["box","air_surface_lamp_2",2,28,0,4,30,1]
+    ],
+    "airport_surface_fence_nw": [
+      ["repeat",[2,0,0],16,[["box","air_low_fence_post",0,0,0,1,1,12]]],
+      ["box","air_low_fence",0,0,8,32,1,12]
+    ],
+    "airport_surface_fence_ne": [
+      ["repeat",[0,2,0],16,[["box","air_low_fence_post",0,0,0,1,1,12]]],
+      ["box","air_low_fence",0,0,8,1,32,12]
+    ],
+    "airport_surface_fence_sw": [["use","airport_surface_fence_ne",[30,0,0]]],
+    "airport_surface_fence_se": [["use","airport_surface_fence_nw",[0,30,0]]],
+    "airport_surface_helipad_ring": [
+      ["lathe","air_surface_pad_grey",[16,17],[[0,13,0],[1,13,0]]],
+      ["lathe","air_surface_white",[16,17],[[0,13,12],[1,13,12]]],
+      ["box","air_surface_white",10,12,0,22,14,1],
+      ["box","air_surface_white",10,20,0,22,22,1],
+      ["box","air_surface_white",15,14,0,17,20,1],
+      ["box","air_surface_lamp_0",5,14,0,6,15,1],
+      ["box","air_surface_lamp_1",9,7,0,10,8,1],
+      ["box","air_surface_lamp_2",18,5,0,19,6,1],
+      ["box","air_surface_lamp_3",25,10,0,26,11,1],
+      ["box","air_surface_lamp_0",27,19,0,28,20,1],
+      ["box","air_surface_lamp_1",22,26,0,23,27,1],
+      ["box","air_surface_lamp_2",13,28,0,14,29,1],
+      ["box","air_surface_lamp_3",6,23,0,7,24,1]
+    ],
+    "airport_surface_helipad_h": [
+      ["box","air_surface_white",5,10,0,19,11,1],
+      ["box","air_surface_white",5,20,0,19,21,1],
+      ["box","air_surface_white",11,11,0,12,20,1]
+    ],
+    "airport_small_paving": [
+      ["box","air_small_roof",0,0,0,32,32,1],
+      ["scatter_paint","air_small_roof_light",4,2665,0,0,0,32,32,1],
+      ["box","air_small_paving",4,24,0,30,30,2],
+      ["box","air_small_paving",26,8,0,30,30,2],
+      ["scatter_paint","air_small_paving_grain",5,2666,4,8,1,30,30,2,"air_small_paving"],
+      ["repeat",[2,0,0],13,[["paint","air_small_brick",4,29,0,5,30,2]]],
+      ["repeat",[0,2,0],11,[["paint","air_small_brick",29,8,0,30,9,2]]]
+    ],
+    "airport_small_hut": [
+      ["box","air_small_wood",0,0,1,12,20,15], ["erase",1,1,2,11,19,15],
+      ["repeat",[2,0,0],6,[["face_paint","air_small_wood_light",12,0,0,1,1,20,15]]],
+      ["repeat",[0,2,0],10,[["face_paint","air_small_wood_shadow",3,0,0,1,12,1,15]]],
+      ["box","air_small_roof",0,0,15,12,20,16],
+      ["gable","air_small_roof",0,0,16,12,20,22,"x"],
+      ["scatter_paint","air_small_roof_light",7,2665,0,0,15,12,20,22],
+      ["erase",6,19,2,10,20,12],
+      ["box","air_small_white",5,18,1,11,19,13],
+      ["paint","air_small_glass",6,18,2,10,19,11],
+      ["box","air_small_white",5,19,11,11,20,13]
+    ],
     "airport_low_building_body": [
       ["box","air_low_stone",6,6,0,27,27,7],
       ["erase",8,8,1,25,25,7],
@@ -12006,6 +12095,129 @@
         ["box","plane_intake",19,10,0,20,11,1], ["box","plane_intake",19,17,0,20,18,1]
       ]
     },
+    "airport_surface_apron": {
+      "extends": "airport_low_ground", "reference": "Original2634 full apron; aliases only identical ground sprites", "ops": []
+    },
+    "airport_surface_stand": {
+      "extends": "airport_surface_apron", "reference": "Original2635 square white parking boundary with four centred interruptions",
+      "ops": [
+        ["paint","air_surface_white",3,3,0,29,5,1], ["paint","air_surface_white",3,27,0,29,29,1],
+        ["paint","air_surface_white",3,3,0,5,29,1], ["paint","air_surface_white",27,3,0,29,29,1],
+        ["paint","air_surface_asphalt",13,3,0,19,5,1], ["paint","air_surface_asphalt",13,27,0,19,29,1],
+        ["paint","air_surface_asphalt",3,13,0,5,19,1], ["paint","air_surface_asphalt",27,13,0,29,19,1]
+      ]
+    },
+    "airport_surface_runway_middle": {
+      "extends": "airport_surface_apron", "reference": "Original2646 centre-line dashes run alongX; edge lamps lie outside the aircraft lane",
+      "ops": [
+        ["paint","air_surface_asphalt",0,0,0,32,32,1],
+        ["scatter_paint","air_surface_grain",4,2646,0,0,0,32,32,1],
+        ["box","air_surface_middle_white",0,15,0,12,17,1], ["box","air_surface_middle_white",20,15,0,32,17,1],
+        ["use","airport_surface_lamps"]
+      ]
+    },
+    "airport_surface_runway_1": {
+      "extends": "airport_surface_runway_middle", "reference": "Original2645 distinct asphalt grain and left approach lamp phase",
+      "ops": [["scatter_paint","air_surface_grain",6,2645,0,0,0,32,32,1,"air_surface_asphalt"],["box","air_surface_lamp_1",2,2,0,4,4,1]]
+    },
+    "airport_surface_runway_3": {
+      "extends": "airport_surface_runway_middle", "reference": "Original2647 opposite middle asphalt and edge-lamp phase",
+      "ops": [["scatter_paint","air_surface_grain",6,2647,0,0,0,32,32,1,"air_surface_asphalt"],["box","air_surface_lamp_3",2,28,0,4,30,1]]
+    },
+    "airport_surface_runway_4": {
+      "extends": "airport_surface_runway_middle", "reference": "Original2648 end-middle asphalt and opposite lamp phase",
+      "ops": [["scatter_paint","air_surface_grain",6,2648,0,0,0,32,32,1,"air_surface_asphalt"],["box","air_surface_lamp_2",2,2,0,4,4,1]]
+    },
+    "airport_surface_runway_end": {
+      "extends": "airport_surface_apron", "reference": "Original2649 four white threshold bars across the runway, with open boundary joins",
+      "ops": [
+        ["paint","air_surface_asphalt",0,0,0,32,32,1],
+        ["scatter_paint","air_surface_grain",4,2649,0,0,0,32,32,1],
+        ["repeat",[0,7,0],4,[["box","air_surface_white",8,4,0,24,8,1]]],
+        ["use","airport_surface_lamps"]
+      ]
+    },
+    "airport_surface_fence_nw": {"size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],"ops":[["use","airport_surface_fence_nw"]]},
+    "airport_surface_fence_ne": {"size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],"ops":[["use","airport_surface_fence_ne"]]},
+    "airport_surface_fence_sw": {"size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],"ops":[["use","airport_surface_fence_sw"]]},
+    "airport_surface_fence_se": {"size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],"ops":[["use","airport_surface_fence_se"]]},
+    "airport_surface_fence_ne_sw": {"extends":"airport_surface_fence_ne","ops":[["use","airport_surface_fence_sw"]]},
+    "airport_surface_fence_nw_sw": {"extends":"airport_surface_fence_nw","ops":[["use","airport_surface_fence_sw"]]},
+    "airport_surface_fence_se_sw": {"extends":"airport_surface_fence_se","ops":[["use","airport_surface_fence_sw"]]},
+    "airport_surface_fence_ne_nw": {"extends":"airport_surface_fence_ne","ops":[["use","airport_surface_fence_nw"]]},
+    "airport_surface_fence_ne_se": {"extends":"airport_surface_fence_ne","ops":[["use","airport_surface_fence_se"]]},
+    "airport_surface_helipad": {
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],
+      "reference":"Original4982 painted circular helipad, white H and all four source light palette phases; separate2634 apron",
+      "ops":[["use","airport_surface_helipad_ring"]]
+    },
+    "airport_surface_helipad_sw": {"extends":"airport_surface_helipad","ops":[["use","airport_surface_fence_sw"]]},
+    "airport_surface_helipad_nw": {"extends":"airport_surface_helipad","ops":[["use","airport_surface_fence_nw"]]},
+    "airport_surface_helipad_ne_se": {"extends":"airport_surface_helipad","ops":[["use","airport_surface_fence_ne"],["use","airport_surface_fence_se"]]},
+    "airport_surface_helipad_h_se_sw": {
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],
+      "reference":"Original5966 plain white H without the international pad's ring or lamps; original southeast/southwest fence ownership",
+      "ops":[["use","airport_surface_helipad_h"],["use","airport_surface_fence_se"],["use","airport_surface_fence_sw"]]
+    },
+    "airport_surface_helipad_h_nw_sw": {
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],
+      "ops":[["use","airport_surface_helipad_h"],["use","airport_surface_fence_nw"],["use","airport_surface_fence_sw"]]
+    },
+    "airport_surface_helipad_h_nw": {
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],
+      "ops":[["use","airport_surface_helipad_h"],["use","airport_surface_fence_nw"]]
+    },
+    "airport_small_terminal_a_ground": {
+      "size":[32,32,24],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Airport33 original2665 owns the complete brown timber hut, dark gabled roof, recessed entry and paved approach in its ground sprite; no body",
+      "ops":[["use","airport_small_paving"],["use","airport_small_hut",[10,4,0]],
+        ["box","air_small_wood",22,4,1,29,20,5], ["erase",23,5,2,28,19,5],
+        ["gable","air_small_wood_shadow",21,3,5,30,21,11,"x"]]
+    },
+    "airport_small_terminal_b_ground": {
+      "size":[32,32,24],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Airport34 original2666 ground-owned paired timber offices with a lower perpendicular dark roof and two source-facing doors",
+      "ops":[["use","airport_small_paving"],["use","airport_small_hut",[3,4,0]],
+        ["box","air_small_wood",15,4,1,29,24,11], ["erase",16,5,2,28,23,11],
+        ["box","air_small_roof",14,3,11,30,24,12],
+        ["gable","air_small_roof",14,3,12,30,24,16,"y"],
+        ["repeat",[4,0,0],4,[["paint","air_small_roof_light",14,3,12,15,24,16]]],
+        ["repeat",[7,0,0],2,[["erase",17,23,2,20,24,10],
+          ["box","air_small_white",16,22,1,21,23,11],
+          ["paint","air_small_glass",17,22,2,20,23,10]]]]
+    },
+    "airport_small_terminal_c_ground": {
+      "size":[32,32,24],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Airport35 original2667 separate timber office/paving owner; tower and tank2668 remain independently transparent",
+      "ops":[["use","airport_small_paving"],["use","airport_small_hut",[14,6,0]],
+        ["box","air_small_wood",10,2,1,22,12,15], ["erase",11,3,2,21,11,15],
+        ["box","air_small_wood",10,2,15,22,12,16],
+        ["box","air_small_glass",25,10,5,26,14,12],
+        ["paint","air_small_ground_blue",14,6,13,26,20,17],
+        ["erase",9,1,15,23,13,24], ["box","air_small_wood",10,2,14,22,12,15],
+        ["erase",5,26,1,6,27,2], ["erase",12,26,1,13,27,2]]
+    },
+    "airport_small_control_tank": {
+      "size":[32,32,33],"origin":[0,0,0],
+      "reference":"Airport35 original2668 raised glazed timber control cabin, grey roof/antenna and separate blue water tank on four open timber legs",
+      "ops":[
+        ["box","air_small_tower_wood",10,2,7,22,12,14], ["erase",11,3,8,21,11,14],
+        ["paint","air_small_glass",10,2,9,22,12,13],
+        ["repeat",[3,0,0],4,[["paint","air_small_tower_wood",10,2,8,11,12,14]]],
+        ["repeat",[0,3,0],4,[["face_paint","air_small_tower_wood",3,10,2,8,22,3,14]]],
+        ["box","air_small_tower_roof",9,1,14,23,13,15],
+        ["hip","air_small_tower_roof",9,1,15,23,13,18,4],
+        ["box","air_small_roof",13,3,16,14,4,21],
+        ["box","air_small_roof",20,8,16,21,9,20],
+        ["box","air_small_white",9,1,7,23,2,8], ["box","air_small_white",9,1,7,10,13,8],
+        ["repeat",[0,3,0],2,[["box","air_small_tower_wood",5,23,0,6,24,15],["box","air_small_tower_wood",12,23,0,13,24,15]]],
+        ["line","air_small_tower_wood_light",5,23,1,12,23,14], ["line","air_small_tower_wood_light",12,26,1,5,26,14],
+        ["lathe","air_small_tank",[9,25],[[14,5,0],[15,6,0],[25,6,0],[27,5,0]]],
+        ["paint","air_small_tank_light",9,20,15,15,31,26],
+        ["face_paint","air_small_white",3,3,21,18,15,29,21],
+        ["face_paint","air_small_white",12,5,19,22,13,31,24]
+      ]
+    },
     "airport_low_building": {
       "size": [32,32,9], "origin": [0,0,0], "review_status": "work-in-progress",
       "reference": "Airport69 original2095 at(3,3): low L-plan terminal, tan piers, purple glazing, white plinth/parapet, recessed entrance and grey gravel roof; independent2634 apron",
@@ -13335,11 +13547,69 @@
       "2059": {"0":"power_spark_5"}, "2060": {"0":"power_spark_6"}
     },
     "airport_ground": {
+      "0":{"0":"airport_surface_apron"},
+      "1":{"0":"airport_surface_apron"},
+      "2":{"0":"airport_surface_apron"},
+      "3":{"0":"airport_surface_stand"},
+      "14":{"0":"airport_surface_runway_1"},
+      "15":{"0":"airport_surface_runway_middle"},
+      "16":{"0":"airport_surface_runway_3"},
+      "17":{"0":"airport_surface_runway_4"},
+      "18":{"0":"airport_surface_runway_end"},
+      "33":{"0":"airport_small_terminal_a_ground"},
+      "34":{"0":"airport_small_terminal_b_ground"},
+      "35":{"0":"airport_small_terminal_c_ground"},
+      "45":{"0":"airport_surface_runway_end"},
+      "46":{"0":"airport_surface_runway_middle"},
+      "48":{"0":"airport_surface_apron"},
+      "49":{"0":"airport_surface_runway_end"},
+      "50":{"0":"airport_surface_runway_middle"},
+      "53":{"0":"airport_surface_apron"},
+      "54":{"0":"airport_surface_apron"},
+      "55":{"0":"airport_surface_apron"},
+      "56":{"0":"airport_surface_apron"},
+      "57":{"0":"airport_surface_runway_end"},
+      "58":{"0":"airport_surface_runway_end"},
+      "59":{"0":"airport_surface_runway_end"},
+      "60":{"0":"airport_surface_runway_end"},
+      "61":{"0":"airport_surface_apron"},
+      "62":{"0":"airport_surface_apron"},
+      "65":{"0":"airport_surface_apron"},
+      "66":{"0":"airport_surface_apron"},
+      "67":{"0":"airport_surface_apron"},
+      "68":{"0":"airport_surface_apron"},
+      "70":{"0":"airport_surface_apron"},
       "63":{"0":"airport_low_ground"},
       "64":{"0":"airport_low_ground"},
       "69":{"0":"airport_low_ground"}
     },
     "airport_tiles": {
+      "1":{"0":"airport_surface_fence_nw"},
+      "2":{"0":"airport_surface_fence_sw"},
+      "14":{"0":"airport_surface_fence_se"},
+      "15":{"0":"airport_surface_fence_se"},
+      "16":{"0":"airport_surface_fence_se"},
+      "17":{"0":"airport_surface_fence_se"},
+      "18":{"0":"airport_surface_fence_se"},
+      "35":{"0":"airport_small_control_tank"},
+      "48":{"0":"airport_surface_fence_ne"},
+      "49":{"0":"airport_surface_fence_nw"},
+      "50":{"0":"airport_surface_fence_nw"},
+      "53":{"0":"airport_surface_helipad_sw"},
+      "54":{"0":"airport_surface_helipad_nw"},
+      "55":{"0":"airport_surface_helipad"},
+      "56":{"0":"airport_surface_fence_ne_sw"},
+      "57":{"0":"airport_surface_fence_nw_sw"},
+      "58":{"0":"airport_surface_fence_se_sw"},
+      "59":{"0":"airport_surface_fence_ne_nw"},
+      "60":{"0":"airport_surface_fence_ne_se"},
+      "61":{"0":"airport_surface_helipad_ne_se"},
+      "62":{"0":"airport_surface_fence_se_sw"},
+      "65":{"0":"airport_surface_fence_se"},
+      "66":{"0":"airport_surface_helipad_h_se_sw"},
+      "67":{"0":"airport_surface_helipad_h_nw_sw"},
+      "68":{"0":"airport_surface_helipad_h_nw"},
+      "70":{"0":"airport_surface_fence_ne_se"},
       "63":{"0":"airport_low_building_fence_n"},
       "64":{"0":"airport_low_building_fence_nw"},
       "69":{"0":"airport_low_building"},

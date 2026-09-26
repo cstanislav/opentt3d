@@ -575,6 +575,11 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 		if (DrawVoxelAirportGround(capture->scene,graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},GroundSpritePaletteTransform(ground,source.ground.pal,palette))) {
 			static std::set<unsigned> reported;
 			if (!capture->diagnostic && reported.insert(graphics).second) Debug(driver,1,"OpenTT3D: live independent voxel airport ground {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
+			if (source.GetSequence().empty()) {
+				++capture->voxel_airport_sections;
+				static std::set<unsigned> reported_ground_only;
+				if (!capture->diagnostic && reported_ground_only.insert(graphics).second) Debug(driver,1,"OpenTT3D: live voxel airport tile {} captured at {},{} (original ground-only ownership)",graphics,TileX(tile.tile),TileY(tile.tile));
+			}
 		} else {
 			CaptureGround(ground,GroundSpritePaletteTransform(ground,source.ground.pal,palette),tile.x,tile.y,tile.z,tile,nullptr,0,0);
 		}

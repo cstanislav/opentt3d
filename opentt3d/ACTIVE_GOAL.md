@@ -1,5 +1,35 @@
 # Active extended development goal
 
+## Breadth-first continuation — September 26, 20:24:14 UTC
+
+The user renewed the complete four-pass objective. The actual clock for this new
+continuation is **2026-09-26 20:24:14 UTC**, after the specified September26
+19:00UTC/1PM fixed-CST minimum; earlier stopping audits are not used to establish
+that fact. Continue across missing catalogue families, beginning with industry and
+airport coverage, with frequent verified main commits and noteworthy releases.
+Keep app reviews backgrounded. Every source/state/footprint/clearance defect remains
+an immediate repair; record cosmetic findings for later catalogue-wide passes.
+Completion remains unproven. Projected-tree performance fallback is recorded as
+active rendering, not completed voxel coverage. Preserve the full catalogue,
+state, source-fidelity and production-quality requirements across continuations.
+
+Clock recheck **2026-09-26 20:50:38 UTC** confirms this continuation is past the
+requested minimum. The provisional airport increment now adds32 definitions with
+27 volumes, reaching1,274 total volumes and53/74 airport definitions (47 body owners,
+six originally ground-only). Source registration found door/roof orientation and
+tower/tank height defects; corrected geometry is in background verification. The
+828-pair climate audit also repairs invalid older Toyland terminal/hangar aliases.
+Release`.11`CI has completed all LinuxGL/Vulkan scene/four vehicle shards, macOS and
+Windows jobs below the6GiB renderer guard. The newer terrain release's CI is still
+pending. Complete catalogue, source fidelity and smooth60fps remain unfinished.
+
+At **2026-09-26 21:05:28 UTC**, the corrected1,274-volume airport freeze passes200
+native,120 asset/compiler/schema and9 harness checks; ten focused/climate backend
+runs and18 actual airport selections pass below6GiB. Source, street and live joined
+views were inspected, retaining fine-fidelity findings and zero final approvals.
+All implementation/artwork/executable hashes match. Publishing this increment before
+continuing across missing industry families; this is a progress audit, not completion.
+
 ## September 26 follow-up: terrain, automatic LODs and projected trees
 
 The user resumed development after the19:00UTC minimum with these updated requirements:
@@ -158,8 +188,8 @@ failure log and pending platform status.
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: **1,247 JSON volumes**, houses0…109 with109
-  independent bodies/eighty-eight grounds,21/74 airport definitions and three
+- Current coverage remains partial: **1,274 JSON volumes**, houses0…109 with109
+  independent bodies/eighty-eight grounds,53/74 airport definitions and35
   independent airport grounds,54/175 industry body definitions and58 grounds,
   six power-station spark frames. Forest16/17 and farm33…38 remain temperate-only;
   non-temperate soil3924/oil-well2173 retain supplied climate artwork pending their
