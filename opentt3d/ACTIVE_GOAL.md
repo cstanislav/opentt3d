@@ -31,13 +31,13 @@
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: 1,092 JSON volumes, houses0…109 and eighty-eight
+- Current coverage remains partial: 1,130 JSON volumes, houses0…109 and eighty-eight
   independent house grounds, eighteen airport
   definitions, industry bodies0…3/7…10 and grounds0…10, six power-station spark frames,
   depot families0…4 in four directions with source/weather-aware floors,
   both two-tile ship-depot orientations and all six ordinary/Toyland dock sections,
   separate ordinary/Toyland source-resolved Classic navigation buoys,
-  223 vehicle engine definitions (including all88 road definitions,all81 wagon definitions,all11 original ships and41 aircraft with four independent rotor states) and all62 standalone tree families /434 lifecycle volumes
+  all256 vehicle engine definitions (including35 locomotives,88 road definitions,81 wagon definitions,11 original ships and41 aircraft with four independent rotor states) and all62 standalone tree families /434 lifecycle volumes
   (all original families1576…2003, including snow and all nine Toyland families)
   (fine fidelity remains WIP), four running-track systems, seven fence families and13 foundation
   forms. No asset has final visual approval. Every remaining category/state in the
@@ -63,6 +63,19 @@ immediately; record cosmetic findings for their appropriate later pass.
 > - If by a chance you think you're done with everything on this list, DON'T STOP WORKING. Keep playtesting the game, do visual checks, make lists of things that don't work or don't look perfect, keep improving things. THE ONLY ALLOWED WAY OF STOPPING WORK IS THE TIME CHECK.
 
 ### Current-window progress
+
+- **All vehicle body bindings:**38 new locomotive volumes bind the remaining33
+  definitions. The1,130-volume working checkpoint covers256/256 vehicles, with
+  seven independent Arctic/tropical locomotive pairs and separate Toyland artwork.
+  Both native backends pass46,784 locomotive poses,1,344 rail/depot mesh views and
+  exact world-atlas checks;104 asset/compiler tests pass. A new clearance audit finds
+  tall train volumes exceeding the existing one-level tunnel bore. This is an active
+  structural defect, not accepted coverage; repair is ahead of further breadth work.
+  Actual55-case locomotive service/capture work is continuing.06:02:31UTC remains
+  before19:00UTC, and the complete objective remains active.
+- Fourteen further normal/Toyland freight services pass loading, accepted delivery
+  and return, plus a monorail coal service. Their30 additional full/empty GL captures
+  pass actual cargo selection; the earlier conventional coal pair also remains valid.
 
 - **All-wagon bindings:**61 new volumes cover the remaining54 wagon definitions,
   bringing the catalogue to1,092 and vehicles to223/256. NativeGL/Vulkan each pass

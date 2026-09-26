@@ -10,7 +10,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite186/186, including shared-result ownership and actual idle-worker cancellation release. Earlier Linux ARM64 184/184 checkpoint covers exact packed/indexed streams, conservative visibility and local-UV precision; post-memory-change Linux execution is pending because Docker daemon queries time out.
-- [x] Asset/compiler/schema tests103/103, downloader/screenshot/memory harness8/8; newest tests cover explicit polygon prisms, climate-safe vehicle aliases, connected bodies/cargo, real wagon voids and independent rotor/spindle clearance.
+- [x] Asset/compiler/schema tests104/104, downloader/screenshot/memory harness8/8; newest tests cover explicit polygon prisms, climate-safe vehicle aliases, connected bodies/cargo/collectors, wheel gauge, real wagon voids and independent rotor/spindle clearance.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -82,7 +82,9 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Artwork
 
-- [x] Current1,092 JSON volumes,110 house definitions with body or ground geometry,109 independent body/88 ground definitions,62 tree families/434 lifecycle volumes and223 voxel vehicle definitions. Current inventory is `build-macos/pass1-1092-inventory.json`. No final approvals.
+- [x] Current1,130 JSON volumes,110 house definitions with body or ground geometry,109 independent body/88 ground definitions,62 tree families/434 lifecycle volumes and256 voxel vehicle definitions. Current inventory is `build-macos/pass1-1130-inventory.json`. No final approvals.
+- [x] All35 locomotive body definitions have bindings:38 new volumes cover33 definitions and repair the older SH electric wheel gauge. Seven Arctic/tropical pairs retain different bodies;13 permitted source-climate pairs match208 views/58,808 RGBA pixels. Both native backends pass46,784 locomotive poses and1,344 rail/depot mesh views, with exact world-atlas checks below6GiB.
+- [ ] The train loading-gauge audit exposes64 unique empty-body volumes exceeding the existing one-level tunnel arch in91 declared engine/climate cases; loaded states and pantograph/wire fit also need repair. These bindings do not establish accepted Pass1 coverage. Preserve source detail, rail contact, original terrain levels and full footprints during the immediate clearance correction.
 - [x] All81 wagon definitions now have voxel bindings:61 new volumes cover30 ordinary/Arctic/tropical and24 Toyland definitions. Empty beds, loaded heaps/logs/coils/rolls, raised canopies, open bubble/tank frames, rail-gauge contact and climate-specific artwork are preserved. NativeGL/Vulkan each pass68,544 new wagon poses; all69 new engine/climate combinations are captured in twelve operating-consist saves. Public NoAI coal loading/delivery/return and actual full/empty renderer selection pass. Complete cargo, clearance and source fidelity remain open.
 - [x] Seventeen new aircraft bodies plus the existing Dinger100 bind33 ordinary fixed-wing definitions. Both native backends pass432 model views/35,904 company-crash-cargo-heading poses and exact atlas checks; all33 aircraft service destinations and pass live capture. Source comparisons retain shape/shading discrepancies.
 - [x] Five Toyland planes, three helicopters and four original rotor states complete41/41 aircraft body bindings. Each helicopter passes128 joined poses, actual airport ground contact, all four rotor states and stopped-to-running transitions in held-service fixtures. One-unit aircraft ground-anchor offset and disconnected struts are repaired. Full source fidelity and airport/Cab clearance remain open.

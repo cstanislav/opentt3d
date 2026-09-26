@@ -21,6 +21,40 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,130-volume all-vehicle body bindings:**38 explicitly authored locomotive
+  volumes cover the remaining33 definitions, bringing vehicle bindings to256/256.
+  Both`pass1-1130-locomotives-{opengl,vulkan}-verified` pass46,784 poses across all35
+  locomotives,1,344 rail/depot model views and4,096,000 exact world-atlas RGBA/ID pixels.
+  Sampled peaks are3,780,415,472 /3,539,963,672bytes over621 /672 samples. Separate
+  Arctic/tropical/Toyland galleries and actual selected-locomotive/world-atlas checks
+  pass, peaking3,895,889,832bytes. All app windows remain hidden. The first GL attempt
+  selected an engine absent from that fixture; its failure is retained separately.
+- Runtime totals are9,105,233 occupied cells,6,716,282 exposed faces,1,473,036 conforming
+  rectangles and9,527,302 triangles.104 asset/compiler tests pass. Source inspection
+  requires different models for Arctic/tropical engines1,16…21; the13 remaining
+  source-climate comparisons match208 views/58,808 RGBA pixels. Toyland models keep
+  their own body/eye/lamp artwork. SH23/24 wheel treads now straddle both running rails.
+- `pass1-1130-train-tunnel-clearance-audit.json` exposes an essential loading-gauge
+  defect:64 unique empty-body models exceed the existing analytic one-level rail
+  tunnel arch in91 declared engine/climate cases. This includes prior wagons and
+  electric collectors as well as new locomotives. Native geometry/state equality
+  does not validate that clearance. Immediate dimension/collector correction and
+  actual tunnel/slope/bridge/station/Cab review remain active before Pass1 acceptance.
+- `pass1-1130-{hashes,verification-summary,inventory}.json` retain the current
+  candidate. Executable`opentt3d-pass1-1130-vehicles` SHA256:
+  `c450c244bc86b507ecd842e03856be6a634143c3553bf9f5cef2f3b67980dfa8`;
+  runtime catalogue SHA256:
+  `7680a069d8dcab2c1a8edcc99628849b060bc4c294152e58a52ae8bd6e0125d8`.
+  `pass1-1130-control-build` keeps that executable/catalogue together for subsequent
+  contextual comparisons. The development app remains at the preceding checkpoint.
+- Fourteen further normal/Toyland freight routes and monorail coal pass real full
+  loading, accepted delivery and return. Their30 additional saved full/empty GL
+  captures pass (`pass1-1092-cargo-{normal,toyland}-captures.json`), with maximum peaks
+  3,609,923,280 /3,598,438,120bytes. Tropical tree occlusion limits some screenshots'
+  visual usefulness; the actual selector checks pass but do not approve those views.
+  Wagon checkpoint`848116ae3ca18e4cda3b9dc67b8ba09b251f5baa` is onmain and published as
+  `opentt3d-dev-20260926.4`; later source/clearance work remains open.
+
 - **1,092-volume all-wagon binding checkpoint:**45 ordinary/Arctic/tropical and16
   Toyland volumes bind the remaining54 wagon definitions. Vehicles now cover223/256,
   including81/81 wagons. The runtime reports8,796,136 occupied cells,6,569,334 exposed

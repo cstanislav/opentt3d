@@ -2055,6 +2055,46 @@ class VoxelCompilerTests(unittest.TestCase):
         for stage in range(7):
             self.assertNotEqual(result["models"][f"tree_palm_bent_{stage:02}"]["runs"],result["models"][f"tree_palm_tuft_{stage:02}"]["runs"])
 
+    def test_locomotives_keep_rail_contact_connected_fittings_and_distinct_toyland_art(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("rail_loco_")}
+        source["bindings"] = {"vehicles":{engine:states for engine,states in source["bindings"]["vehicles"].items() if any(name.startswith("rail_loco_") for name in states.values())}}
+        result,definitions = compile_catalogue(source),vehicle_definitions()
+        for engine,states in result["bindings"]["vehicles"].items():
+            for state,name in states.items():
+                self.assertEqual(name,states[str(int(state)^1)],"Original locomotive body artwork has identical cargo states")
+            if definitions[engine]["climates"] == ["Y"]:
+                self.assertEqual(set(states),{"6","7"})
+            for climate in definitions[engine]["climates"]:
+                for loaded in range(2):
+                    self.assertTrue(str("TASY".index(climate)*2+loaded) in states or str(loaded) in states,(engine,climate,loaded))
+        for first,second in ((0,2),(8,3),(9,4)):
+            self.assertNotEqual(result["bindings"]["vehicles"][str(first)]["0"],result["bindings"]["vehicles"][str(second)]["6"],"Different Toyland artwork aliased an ordinary locomotive")
+        self.assertEqual(result["bindings"]["vehicles"]["8"],result["bindings"]["vehicles"]["10"])
+        self.assertEqual(result["bindings"]["vehicles"]["13"],result["bindings"]["vehicles"]["15"])
+        for engine in (1,16,17,18,19,20,21):
+            states = result["bindings"]["vehicles"][str(engine)]
+            self.assertEqual(set(states),{"2","3","4","5"})
+            self.assertNotEqual(states["2"],states["4"],"Distinct Arctic/tropical locomotive artwork was aliased")
+        for normal,toy in ((17,5),(16,6),(55,56),(84,88)):
+            first = result["bindings"]["vehicles"][str(normal)]
+            second = result["bindings"]["vehicles"][str(toy)]
+            self.assertFalse(set(first.values()) & set(second.values()),"Independent Toyland eyes/lamp/body artwork was lost")
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+            self.assertEqual(model["origin"][2]+min(z for x,y,z in cells)*model["cell_size"][2],0.5)
+            self.assertEqual({model["origin"][1]+(y+0.5)*model["cell_size"][1] for x,y,z in cells if z == 0},{-1.375,-1.125,1.125,1.375},name)
+            visited = {next(iter(cells))}; pending = list(visited)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in cells and point not in visited:
+                        visited.add(point); pending.append(point)
+            self.assertEqual(len(visited),len(cells),f"Detached locomotive wheels, chimney, cab or fittings in {name}: {sorted(cells-visited)[:8]}")
+            if name in ("rail_loco_kirby","rail_loco_jubilee","rail_loco_a4","rail_loco_ploddyphut","rail_loco_powernaut","rail_loco_mightymover"):
+                self.assertNotIn((4,6,20),cells,"The steam cab lost its actual rear opening")
+                self.assertNotIn((9,0,2),cells,"The first steam driving wheel lost its open spoke aperture")
+                self.assertIn((10,0,3),cells,"The original coupled driving-rod connection disappeared")
+
     def test_sh_electric_has_connected_running_gear_and_open_pantograph_frames(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {"rail_sh_electric": source["models"]["rail_sh_electric"]}
@@ -2074,8 +2114,7 @@ class VoxelCompilerTests(unittest.TestCase):
             for y in (4, 9):
                 self.assertNotIn((x,y,31), cells, "The pantograph diamond was filled in")
                 self.assertIn((x,y,38), cells)
-        self.assertTrue(any(y == 0 for x,y,z in cells))
-        self.assertTrue(any(y == 13 for x,y,z in cells))
+        self.assertEqual({model["origin"][1]+(y+0.5)*model["cell_size"][1] for x,y,z in cells if z == 0},{-1.375,-1.125,1.125,1.375},"SH electric wheel treads must straddle the running rails")
 
     def test_shops_offices_keep_one_footprint_with_open_construction_rooms(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())

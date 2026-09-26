@@ -581,6 +581,17 @@
     "loco_steel": [5,3,4,7,2,7],
     "loco_insulator": 51,
     "loco_lamp": 15,
+    "loco_steam_company": [203,200,201,204,198,205],
+    "loco_steam_band": [204,201,202,205,198,205],
+    "loco_steam_wheel": [7,3,4,8,2,7],
+    "loco_steam_brass": [64,62,62,64,51,68],
+    "loco_toy_brass": [35,34,34,35,17,57],
+    "loco_toy_red": [181,179,179,181,179,181],
+    "loco_toy_lamp": [180,180,180,182,180,182],
+    "loco_silver": [10,8,9,11,3,12],
+    "loco_cream": [37,35,36,38,34,39],
+    "loco_blue_light": [203,201,202,204,198,205],
+    "loco_red_beam": [180,178,179,181,178,182],
     "wagon_panel": [202,200,200,202,198,203],
     "wagon_rib": [204,201,202,204,198,205],
     "wagon_trim": [203,200,201,203,198,204],
@@ -3805,6 +3816,154 @@
         ]]
       ]],
       ["paint","mine_glass",16,8,25,18,10,27], ["paint","mine_glass",16,24,25,18,26,27]
+    ],
+    "loco_steam_driver": [
+      ["prism","loco_steam_wheel",1,0,2,[[0,2],[2,0],[6,0],[8,2],[8,6],[6,8],[2,8],[0,6]]],
+      ["paint","loco_wheel",1,0,1,7,2,7],
+      ["box","loco_steel",3,0,1,5,2,7], ["box","loco_steel",1,0,3,7,2,5],
+      ["erase",2,0,2,3,2,3], ["erase",5,0,2,6,2,3],
+      ["erase",2,0,5,3,2,6], ["erase",5,0,5,6,2,6]
+    ],
+    "loco_steam_gear": [
+      ["box","loco_roof",2,2,6,39,10,10],
+      ["repeat",[10,0,0],3,[
+        ["use","loco_steam_driver",[7,0,0]], ["use","loco_steam_driver",[7,10,0]],
+        ["box","loco_wheel",10,1,3,12,11,6]
+      ]],
+      ["box","loco_steel",10,0,3,33,1,4], ["box","loco_steel",10,11,3,33,12,4],
+      ["box","loco_sill",0,3,6,3,5,8], ["box","loco_sill",0,7,6,3,9,8],
+      ["box","loco_sill",38,3,6,41,5,8], ["box","loco_sill",38,7,6,41,9,8]
+    ],
+    "loco_steam_cab": [
+      ["box","loco_steam_company",3,1,9,13,11,27],
+      ["erase",2,2,13,11,10,26],
+      ["paint","loco_window",5,1,20,9,2,25], ["paint","loco_window",5,10,20,9,11,25],
+      ["paint","loco_window",12,2,22,13,5,26], ["paint","loco_window",12,7,22,13,10,26],
+      ["box","loco_steam_company",2,0,26,14,12,28],
+      ["barrel_fill","loco_steam_band",2,0,28,14,12,31,"y"],
+      ["box","loco_steam_company",3,0,8,7,1,13], ["box","loco_steam_company",3,11,8,7,12,13]
+    ],
+    "loco_steam_boiler": [
+      ["prism","loco_steam_company",0,12,35,[[2,18],[4,14],[8,14],[10,18],[10,24],[8,28],[4,28],[2,24]]],
+      ["box","loco_roof",13,4,9,36,8,15],
+      ["repeat",[8,0,0],3,[["paint","loco_steam_band",14,2,14,16,10,28]]],
+      ["box","loco_steam_company",11,1,10,36,2,12], ["box","loco_steam_company",11,10,10,36,11,12],
+      ["prism","loco_roof",0,34,38,[[2,18],[4,14],[8,14],[10,18],[10,24],[8,28],[4,28],[2,24]]],
+      ["paint","loco_roof_light",37,3,17,38,9,25],
+      ["paint","loco_recess",37,5,19,38,7,23],
+      ["box","loco_roof",33,4,26,37,8,33], ["box","loco_roof_light",32,4,32,38,8,34],
+      ["box","loco_hub",20,4,27,23,8,31],
+      ["box","loco_lamp",38,2,9,39,3,11], ["box","loco_lamp",38,9,9,39,10,11]
+    ],
+    "loco_steam_streamline": [
+      ["prism","loco_steam_company",1,2,10,[[12,11],[39,11],[39,17],[35,24],[30,29],[12,29]]],
+      ["prism","loco_steam_band",1,4,8,[[12,28],[30,28],[34,25],[38,18],[39,18],[35,26],[30,31],[12,31]]],
+      ["box","loco_steam_company",10,1,9,39,2,15], ["box","loco_steam_company",10,10,9,39,11,15],
+      ["repeat",[7,0,0],3,[["paint","loco_steam_band",14,2,17,15,10,29]]],
+      ["paint","loco_company_dark",12,2,13,32,3,18], ["paint","loco_company_dark",12,9,13,32,10,18],
+      ["paint","loco_roof",35,4,18,39,8,26],
+      ["box","loco_roof",29,4,28,34,8,32],
+      ["box","loco_lamp",38,2,10,39,3,12], ["box","loco_lamp",38,9,10,39,10,12]
+    ],
+    "loco_diesel_gear": [
+      ["use","wagon_running_gear"],
+      ["box","loco_roof",16,3,3,25,9,8],
+      ["box","loco_sill",2,1,7,39,11,10]
+    ],
+    "loco_diesel_shell": [
+      ["prism","loco_company",0,3,38,[[1,10],[11,10],[11,23],[9,27],[3,27],[1,23]]],
+      ["paint","loco_roof",3,1,23,38,11,27],
+      ["paint","loco_roof_light",4,4,26,37,9,27],
+      ["paint","loco_yellow",3,1,21,38,2,23], ["paint","loco_yellow",3,10,21,38,11,23],
+      ["paint","loco_yellow",3,2,10,4,10,24], ["paint","loco_yellow",37,2,10,38,10,24],
+      ["paint","loco_window",3,3,18,4,9,22], ["paint","loco_window",37,3,18,38,9,22],
+      ["repeat",[27,0,0],2,[
+        ["paint","loco_window",5,1,18,8,2,22], ["paint","loco_window",5,10,18,8,11,22],
+        ["paint","loco_roof_light",11,1,11,14,2,18], ["paint","loco_roof_light",11,10,11,14,11,18]
+      ]],
+      ["paint","loco_roof",10,4,25,13,8,27], ["paint","loco_roof",28,4,25,31,8,27],
+      ["paint","loco_lamp",3,2,12,4,3,13], ["paint","loco_lamp",3,9,12,4,10,13],
+      ["paint","loco_lamp",37,2,12,38,3,13], ["paint","loco_lamp",37,9,12,38,10,13]
+    ],
+    "loco_dmu_body": [
+      ["box","loco_company",2,1,9,38,11,23],
+      ["paint","loco_silver",2,1,14,38,11,23],
+      ["barrel_fill","loco_roof",2,1,22,38,11,28,"y"],
+      ["paint","loco_roof_light",3,4,27,37,9,28],
+      ["repeat",[5,0,0],6,[
+        ["paint","loco_window",4,1,16,7,2,21], ["paint","loco_window",4,10,16,7,11,21]
+      ]],
+      ["repeat",[22,0,0],2,[
+        ["paint","loco_sill",8,1,10,9,2,22], ["paint","loco_sill",8,10,10,9,11,22]
+      ]],
+      ["prism","loco_yellow",1,2,10,[[37,9],[39,9],[39,21],[37,26]]],
+      ["paint","loco_window",37,3,19,40,9,23],
+      ["paint","loco_yellow_shade",38,4,12,40,8,15],
+      ["paint","loco_lamp",38,2,10,40,3,12], ["paint","loco_lamp",38,9,10,40,10,12],
+      ["box","loco_roof",1,4,10,3,8,24], ["paint","loco_window",1,5,17,2,7,21]
+    ],
+    "loco_long_hood": [
+      ["prism","loco_company",0,3,29,[[3,10],[9,10],[9,23],[8,26],[4,26],[3,23]]],
+      ["repeat",[3,0,0],7,[
+        ["paint","loco_blue_light",6,3,11,7,4,20], ["paint","loco_blue_light",6,8,11,7,9,20]
+      ]],
+      ["paint","loco_roof",4,3,18,11,9,26],
+      ["repeat",[3,0,0],2,[["paint","loco_steel",5,3,18,6,9,26]]],
+      ["box","loco_company",28,1,10,35,11,27],
+      ["prism","loco_blue_light",0,28,35,[[1,26],[11,26],[9,29],[3,29]]],
+      ["paint","loco_window",29,1,20,33,2,25], ["paint","loco_window",29,10,20,33,11,25],
+      ["paint","loco_window",34,2,20,35,5,25], ["paint","loco_window",34,7,20,35,10,25],
+      ["box","loco_company",35,3,10,39,9,17],
+      ["box","loco_blue_light",35,3,16,39,9,18],
+      ["paint","loco_lamp",38,3,12,39,4,14], ["paint","loco_lamp",38,8,12,39,9,14]
+    ],
+    "loco_hood_walkways": [
+      ["box","loco_sill",2,0,8,39,1,10], ["box","loco_sill",2,11,8,39,12,10],
+      ["box","loco_sill",2,0,14,28,1,15], ["box","loco_sill",2,11,14,28,12,15],
+      ["repeat",[8,0,0],4,[
+        ["box","loco_sill",3,0,9,4,1,15], ["box","loco_sill",3,11,9,4,12,15]
+      ]]
+    ],
+    "loco_streamlined_body": [
+      ["prism","loco_company",1,1,11,[[2,9],[39,9],[39,15],[34,24],[29,27],[2,27]]],
+      ["paint","loco_roof",2,1,24,32,11,27],
+      ["paint","loco_roof_light",3,4,26,29,9,27],
+      ["paint","loco_window",30,1,20,37,11,26],
+      ["paint","loco_company_dark",2,1,11,30,2,15], ["paint","loco_company_dark",2,10,11,30,11,15],
+      ["box","loco_roof",1,4,10,3,8,24], ["paint","loco_window",1,5,17,2,7,21],
+      ["paint","loco_lamp",37,1,13,40,3,15], ["paint","loco_lamp",37,9,13,40,11,15]
+    ],
+    "loco_single_pantograph": [
+      ["box","loco_insulator",8,3,26,11,5,28], ["box","loco_insulator",8,7,26,11,9,28],
+      ["box","loco_steel",8,3,28,11,9,29],
+      ["line","loco_steel",10,3,29,6,3,34], ["line","loco_steel",6,3,34,12,3,38],
+      ["line","loco_steel",10,8,29,6,8,34], ["line","loco_steel",6,8,34,12,8,38],
+      ["box","loco_steel",11,2,38,14,10,39]
+    ],
+    "loco_maglev_gear": [
+      ["repeat",[21,0,0],2,[
+        ["box","loco_wheel",4,1,1,16,11,5],
+        ["box","loco_steel",5,0,0,15,2,4], ["box","loco_steel",5,10,0,15,12,4],
+        ["repeat",[3,0,0],3,[
+          ["paint","loco_hub",5,0,1,7,1,4], ["paint","loco_hub",5,11,1,7,12,4]
+        ]]
+      ]],
+      ["box","loco_roof",2,2,4,39,10,8],
+      ["box","loco_sill",2,1,7,39,11,10],
+      ["box","loco_sill",0,3,5,3,5,7], ["box","loco_sill",0,7,5,3,9,7],
+      ["box","loco_sill",38,3,5,41,5,7], ["box","loco_sill",38,7,5,41,9,7]
+    ],
+    "loco_maglev_cabs": [
+      ["box","loco_company",10,1,9,31,11,27],
+      ["box","loco_blue_light",12,3,26,29,9,30],
+      ["paint","loco_sill",15,4,29,26,8,30],
+      ["prism","loco_yellow",0,2,11,[[1,9],[11,9],[11,25],[9,29],[3,29],[1,25]]],
+      ["prism","loco_yellow",0,30,39,[[1,9],[11,9],[11,25],[9,29],[3,29],[1,25]]],
+      ["paint","loco_window",2,2,17,3,10,23], ["paint","loco_window",38,2,17,39,10,23],
+      ["paint","loco_window",4,1,17,8,2,23], ["paint","loco_window",4,10,17,8,11,23],
+      ["paint","loco_window",33,1,17,37,2,23], ["paint","loco_window",33,10,17,37,11,23],
+      ["paint","loco_lamp",2,2,12,3,3,14], ["paint","loco_lamp",2,9,12,3,10,14],
+      ["paint","loco_lamp",38,2,12,39,3,14], ["paint","loco_lamp",38,9,12,39,10,14]
     ],
     "sh_wheel": [
       ["ellipsoid","loco_wheel",0,0,0,4,2,5],
@@ -8220,16 +8379,519 @@
       "reference": "Industry3 stage0 sprite2019: only original2/4/6 grey support frame; no upper building", "review_status": "work-in-progress",
       "ops": [["use","mine_machine_piers"]]
     },
+    "rail_loco_kirby": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Kirby Paul Tank0 temperate2921..2928: short side tanks around the boiler, open-backed cab, three coupled driving axles, grey dome, brass whistle and front chimney",
+      "ops":[
+        ["use","loco_steam_gear"], ["use","loco_steam_cab"], ["use","loco_steam_boiler"],
+        ["box","loco_steam_company",12,1,11,35,3,22], ["box","loco_steam_company",12,9,11,35,11,22],
+        ["paint","loco_steam_band",12,1,20,35,3,22], ["paint","loco_steam_band",12,9,20,35,11,22],
+        ["box","loco_steam_brass",13,5,28,15,7,34],
+        ["paint","loco_company_dark",17,1,11,21,2,13], ["paint","loco_company_dark",27,1,11,31,2,13],
+        ["paint","loco_company_dark",17,10,11,21,11,13], ["paint","loco_company_dark",27,10,11,31,11,13]
+      ]
+    },
+    "rail_loco_jubilee": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Chaney Jubilee8/SH8 engine10, temperate2905..2912: identical original long exposed banded boiler, open blue cab, black smokebox, dome, front lamps and three spoked coupled drivers",
+      "ops":[["use","loco_steam_gear"],["use","loco_steam_cab"],["use","loco_steam_boiler"]]
+    },
+    "rail_loco_a4": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Ginzu A4 engine9, temperate2913..2920: original blue streamlined boiler/nose with dark top slot, cab and long side skirts over the three visible coupled drivers",
+      "ops":[["use","loco_steam_gear"],["use","loco_steam_cab"],["use","loco_steam_streamline"]]
+    },
+    "rail_loco_ploddyphut": {
+      "extends":"rail_loco_jubilee", "reference":"Ploddyphut Choo-Choo2 Toyland2921..2928: independent narrow blue boiler, silver/brown bands, tall grey chimney, blue cab and red cowcatcher; same numbers are unrelated to Kirby's normal artwork",
+      "ops":[
+        ["replace_material","loco_steam_band","loco_toy_brass"],
+        ["box","loco_hub",33,4,25,37,8,39], ["box","loco_steel",32,3,36,38,9,39],
+        ["paint","loco_recess",33,4,38,37,8,39],
+        ["box","loco_steam_band",2,0,26,14,12,28], ["barrel_fill","loco_steam_band",2,0,28,14,12,31,"y"],
+        ["box","loco_steel",11,1,11,36,2,13], ["box","loco_steel",11,10,11,36,11,13],
+        ["prism","loco_toy_red",1,1,11,[[36,4],[42,4],[42,6],[37,10],[36,10]]],
+        ["paint","loco_toy_lamp",37,4,20,38,8,23]
+      ]
+    },
+    "rail_loco_powernaut": {
+      "extends":"rail_loco_jubilee", "reference":"Powernaut Choo-Choo3 Toyland2905..2912: separate silver running rail, smooth blue boiler bands, red forward lamp and blue-grey open cab",
+      "ops":[
+        ["replace_material","loco_steam_band","loco_steam_company"],
+        ["box","loco_steel",11,1,11,36,2,13], ["box","loco_steel",11,10,11,36,11,13],
+        ["paint","loco_toy_lamp",37,5,20,38,7,23],
+        ["paint","loco_steam_band",2,0,28,14,12,31],
+        ["paint","loco_hub",32,4,32,38,8,34]
+      ]
+    },
+    "rail_loco_mightymover": {
+      "extends":"rail_loco_a4", "reference":"Mightymover Choo-Choo4 Toyland2913..2920: own squared blue front with red lamp, grey side bars and yellow rear steps beneath the original streamlined blue boiler",
+      "ops":[
+        ["box","loco_steam_company",37,2,9,40,10,24],
+        ["paint","loco_toy_lamp",39,4,19,40,8,22],
+        ["box","loco_steel",11,1,11,36,2,13], ["box","loco_steel",11,10,11,36,11,13],
+        ["paint","loco_yellow",3,0,8,7,1,10], ["paint","loco_yellow",3,11,8,7,12,10]
+      ]
+    },
+    "rail_loco_wills": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Wills2-8-0 engine7 Arctic/tropical3041..3048, inspected matching sources: black boiler and three grey domes, open blue rear cab, four coupled drivers and front lamp",
+      "ops":[
+        ["use","loco_steam_boiler"], ["replace_material","loco_steam_company","loco_roof"], ["replace_material","loco_steam_band","loco_steel"],
+        ["use","loco_steam_cab"], ["box","loco_roof",2,2,6,39,10,10],
+        ["repeat",[7,0,0],4,[
+          ["use","loco_steam_driver",[7,0,0]], ["use","loco_steam_driver",[7,10,0]],
+          ["box","loco_wheel",10,1,3,12,11,6]
+        ]],
+        ["box","loco_steel",10,0,3,33,1,4], ["box","loco_steel",10,11,3,33,12,4],
+        ["repeat",[7,0,0],3,[["box","loco_hub",16,4,27,19,8,31]]],
+        ["box","loco_sill",0,3,6,3,5,8], ["box","loco_sill",0,7,6,3,9,8],
+        ["box","loco_sill",38,3,6,41,5,8], ["box","loco_sill",38,7,6,41,9,8],
+        ["paint","loco_blue_light",11,1,10,36,2,12], ["paint","loco_blue_light",11,10,10,36,11,12],
+        ["paint","loco_lamp",37,5,20,38,7,22]
+      ]
+    },
+    "rail_loco_mjs250_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"MJS250 engine1 Arctic3065..3072: yellow rear-offset cab and sill, tall narrow blue long hood, black radiator grille and exposed walkways",
+      "ops":[
+        ["use","loco_diesel_gear"], ["box","loco_yellow",2,0,8,39,12,10],
+        ["box","loco_company",3,3,10,10,9,21], ["box","loco_yellow",10,1,10,17,11,29],
+        ["prism","loco_yellow",0,10,17,[[1,28],[11,28],[9,31],[3,31]]],
+        ["paint","loco_window",11,1,21,15,2,27], ["paint","loco_window",11,10,21,15,11,27],
+        ["paint","loco_window",10,3,23,11,9,28], ["paint","loco_window",16,3,23,17,9,28],
+        ["prism","loco_company",0,17,38,[[3,10],[9,10],[9,22],[8,25],[4,25],[3,22]]],
+        ["repeat",[3,0,0],6,[
+          ["paint","loco_blue_light",18,3,11,19,4,20], ["paint","loco_blue_light",18,8,11,19,9,20]
+        ]],
+        ["paint","loco_roof",32,3,19,38,9,25],
+        ["box","loco_roof_light",23,5,25,25,7,28],
+        ["paint","loco_yellow",37,3,13,38,9,15], ["paint","loco_lamp",37,5,17,38,7,19]
+      ]
+    },
+    "rail_loco_mjs250_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"MJS250 engine1 tropical3065..3072: independent silver-grey low hood, forward cab with grey cap, blue walls, black wheels and red end buffer beams",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_long_hood"],
+        ["paint","loco_sill",3,3,20,29,9,26], ["paint","loco_roof",4,4,24,8,8,26],
+        ["paint","loco_sill",28,1,26,35,11,29],
+        ["box","loco_roof",30,5,29,33,7,32],
+        ["paint","loco_roof",2,1,7,39,11,10],
+        ["box","loco_red_beam",1,0,6,3,12,8], ["box","loco_red_beam",38,0,6,40,12,8]
+      ]
+    },
+    "rail_loco_dmu": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Manley-MorelDMU engine11 temperate2949..2956: blue lower panels, pale silver six-window band with two passenger doors, rounded dark roof, yellow cab and open rear gangway outline",
+      "ops":[["use","loco_diesel_gear"],["use","loco_dmu_body"]]
+    },
+    "rail_loco_dash": {
+      "extends":"rail_loco_dmu", "reference":"Dash engine12 temperate2957..2964: own lighter blue continuous waist stripe and split yellow front gangway with two dark front windscreens",
+      "ops":[
+        ["paint","loco_blue_light",2,1,12,38,2,15], ["paint","loco_blue_light",2,10,12,38,11,15],
+        ["box","loco_roof",38,5,9,40,7,20],
+        ["paint","loco_yellow",39,5,10,40,6,19],
+        ["paint","loco_window",37,2,19,40,5,23], ["paint","loco_window",37,7,19,40,10,23]
+      ]
+    },
+    "rail_loco_hendry": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"SH/Hendry25 engine13/Floss47 engine15 identical temperate2929..2932: twin yellow windscreens, grey sill, blue full-width body, yellow cantrail, dark barrel roof and two broad side vents",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_diesel_shell"],
+        ["paint","loco_roof_light",27,1,11,30,2,18], ["paint","loco_roof_light",27,10,11,30,11,18],
+        ["paint","loco_company",19,1,16,24,2,18], ["paint","loco_company",19,10,16,24,11,18]
+      ]
+    },
+    "rail_loco_uu37": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"UU37 engine14 temperate2933..2936: symmetrical projecting yellow noses with raised blue cab ends, recessed black roof and low grey bogie sill",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_diesel_shell"],
+        ["erase",3,1,16,8,11,28], ["erase",33,1,16,38,11,28],
+        ["box","loco_company",7,1,10,12,11,26], ["box","loco_company",29,1,10,34,11,26],
+        ["barrel_fill","loco_roof",7,1,25,12,11,29,"y"], ["barrel_fill","loco_roof",29,1,25,34,11,29,"y"],
+        ["prism","loco_yellow",1,2,10,[[2,10],[8,10],[8,19],[2,16]]],
+        ["prism","loco_yellow",1,2,10,[[33,10],[39,10],[39,16],[33,19]]],
+        ["paint","loco_window",7,2,20,8,10,25], ["paint","loco_window",33,2,20,34,10,25],
+        ["paint","loco_window",8,1,20,11,2,25], ["paint","loco_window",8,10,20,11,11,25],
+        ["paint","loco_window",30,1,20,33,2,25], ["paint","loco_window",30,10,20,33,11,25],
+        ["paint","loco_lamp",2,2,12,3,3,14], ["paint","loco_lamp",2,9,12,3,10,14],
+        ["paint","loco_lamp",38,2,12,39,3,14], ["paint","loco_lamp",38,9,12,39,10,14]
+      ]
+    },
+    "rail_loco_cs4000_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"CS4000 engine16 Arctic3033..3040: angular forward blue cab, twin dark long-hood radiator banks, silver-grey narrow walkways and handrail, grey bogies and two yellow headlights",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_long_hood"],
+        ["paint","loco_roof",18,3,18,27,9,26],
+        ["repeat",[3,0,0],3,[["paint","loco_steel",19,3,18,20,9,26]]],
+        ["use","loco_hood_walkways"], ["paint","loco_lamp",38,3,12,39,4,14], ["paint","loco_lamp",38,8,12,39,9,14]
+      ]
+    },
+    "rail_loco_cs4000_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"CS4000 engine16 tropical3033..3040: separate blue full-width sloped roof/hood, pale double waist stripes, short front cab and silver perimeter running board; no Arctic radiator banks",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["prism","loco_company",0,3,29,[[1,10],[11,10],[11,21],[8,28],[4,28],[1,21]]],
+        ["box","loco_company",28,1,10,35,11,23],
+        ["barrel_fill","loco_blue_light",28,1,22,35,11,26,"y"],
+        ["box","loco_company",35,2,10,39,10,17],
+        ["paint","loco_window",29,1,18,34,2,22], ["paint","loco_window",29,10,18,34,11,22],
+        ["paint","loco_window",34,2,18,35,10,22],
+        ["paint","loco_sill",3,1,17,28,2,18], ["paint","loco_sill",3,10,17,28,11,18],
+        ["paint","loco_sill",3,1,11,39,2,12], ["paint","loco_sill",3,10,11,39,11,12],
+        ["box","loco_sill",2,0,8,39,1,10], ["box","loco_sill",2,11,8,39,12,10],
+        ["paint","loco_silver",38,2,14,39,10,16]
+      ]
+    },
+    "rail_loco_cs2400_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"CS2400 engine17 Arctic3017..3024: tall yellow front cab and sill, blue rear long hood, single black rear radiator bank and grey front short hood",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_long_hood"],
+        ["paint","loco_yellow",2,1,7,39,11,10], ["paint","loco_yellow",28,1,10,35,11,29],
+        ["paint","loco_window",29,1,20,33,2,25], ["paint","loco_window",29,10,20,33,11,25],
+        ["paint","loco_window",34,2,21,35,10,26], ["paint","loco_sill",35,3,10,39,9,18],
+        ["box","loco_blue_light",13,4,25,25,8,27],
+        ["paint","loco_lamp",38,4,14,39,8,16]
+      ]
+    },
+    "rail_loco_cs2400_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"CS2400 engine17 tropical3017..3024: silver-grey full-width roof over blue sides with white cab/side highlights, rectangular front blue nose and light sill, distinct from Arctic yellow-cab hood",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["box","loco_company",3,1,10,36,11,22], ["barrel_fill","loco_sill",3,1,21,34,11,28,"y"],
+        ["paint","loco_roof",4,3,25,9,9,28], ["paint","loco_roof",16,3,26,20,9,28],
+        ["box","loco_blue_light",32,2,14,38,10,24],
+        ["paint","loco_window",36,2,17,38,10,22],
+        ["paint","loco_silver",8,1,17,12,2,21], ["paint","loco_silver",8,10,17,12,11,21],
+        ["paint","loco_silver",24,1,16,28,2,21], ["paint","loco_silver",24,10,16,28,11,21],
+        ["paint","loco_window",29,1,18,32,2,22], ["paint","loco_window",29,10,18,32,11,22],
+        ["paint","loco_silver",37,2,14,38,10,16]
+      ]
+    },
+    "rail_loco_centennial_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Centennial engine18 Arctic3025..3032: twin roof and side radiator banks on a wide blue hood, forward black-capped blue cab, yellow sill/handrail and yellow front headlight",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_long_hood"],
+        ["box","loco_company",3,2,10,29,10,25],
+        ["repeat",[10,0,0],2,[
+          ["paint","loco_roof",6,3,24,13,9,25],
+          ["paint","loco_roof",6,2,17,14,3,21], ["paint","loco_roof",6,9,17,14,10,21]
+        ]],
+        ["paint","loco_roof",28,1,25,35,11,29],
+        ["paint","loco_yellow",2,1,7,39,11,10],
+        ["box","loco_yellow",3,0,9,4,1,26], ["box","loco_yellow",3,11,9,4,12,26],
+        ["paint","loco_yellow",38,4,13,39,8,15]
+      ]
+    },
+    "rail_loco_centennial_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Centennial engine18 tropical3025..3032: independent long cream radiator panels and end panels, blue ridge roof, blue forward cab with dark windows and low dark chassis",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["prism","loco_company",0,3,38,[[1,10],[11,10],[11,22],[9,27],[3,27],[1,22]]],
+        ["paint","loco_cream",3,1,11,28,2,20], ["paint","loco_cream",3,10,11,28,11,20],
+        ["repeat",[3,0,0],8,[
+          ["paint","loco_sill",5,1,11,6,2,19], ["paint","loco_sill",5,10,11,6,11,19]
+        ]],
+        ["paint","loco_cream",35,1,11,38,11,22],
+        ["paint","loco_window",29,1,18,33,2,23], ["paint","loco_window",29,10,18,33,11,23],
+        ["paint","loco_window",37,3,20,38,9,24],
+        ["paint","loco_blue_light",3,4,26,38,8,27],
+        ["paint","loco_sill",3,1,10,38,11,11]
+      ]
+    },
+    "rail_loco_kelling_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Kelling3100 engine19 Arctic3049..3052: twin dark cab ends around a tall blue machinery casing with two large black side/roof grilles, pale horizontal strip and low silver sill",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["box","loco_company",2,1,10,39,11,18],
+        ["box","loco_blue_light",8,2,17,33,10,28],
+        ["repeat",[13,0,0],2,[
+          ["paint","loco_recess",10,2,21,20,3,25], ["paint","loco_recess",10,9,21,20,10,25],
+          ["paint","loco_recess",11,4,27,19,8,28]
+        ]],
+        ["paint","loco_sill",8,2,19,33,3,20], ["paint","loco_sill",8,9,19,33,10,20],
+        ["prism","loco_roof",1,2,10,[[2,16],[8,16],[8,23],[5,23],[2,19]]],
+        ["prism","loco_roof",1,2,10,[[33,16],[39,16],[39,19],[36,23],[33,23]]],
+        ["paint","loco_window",2,2,17,8,10,20], ["paint","loco_window",33,2,17,39,10,20],
+        ["paint","loco_silver",2,3,13,3,9,14], ["paint","loco_silver",38,3,13,39,9,14],
+        ["paint","loco_yellow",2,5,15,3,7,17], ["paint","loco_yellow",38,5,15,39,7,17]
+      ]
+    },
+    "rail_loco_kelling_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Kelling3100 engine19 tropical3049..3052: own broad grey roof with two recessed square fans, blue full-width body, thin grey waist stripe and blue low cab noses",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["box","loco_company",2,1,10,39,11,22],
+        ["prism","loco_sill",0,4,37,[[1,21],[11,21],[10,27],[2,27]]],
+        ["repeat",[16,0,0],2,[
+          ["paint","loco_roof",7,3,25,14,9,27], ["paint","loco_hub",9,5,26,12,7,27]
+        ]],
+        ["paint","loco_silver",2,1,15,39,2,16], ["paint","loco_silver",2,10,15,39,11,16],
+        ["paint","loco_window",2,2,18,3,10,22], ["paint","loco_window",38,2,18,39,10,22],
+        ["paint","loco_silver",2,3,14,3,9,16], ["paint","loco_silver",38,3,14,39,9,16]
+      ]
+    },
+    "rail_loco_turner_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"TurnerTurbo engine20 Arctic3053..3060: pointed blue nose and raised forward driver, dark stepped turbine roof, long side glazing and two horizontal front-side grilles",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_window",3,1,14,22,2,21], ["paint","loco_window",3,10,14,22,11,21],
+        ["repeat",[5,0,0],4,[
+          ["paint","loco_sill",4,1,14,5,2,21], ["paint","loco_sill",4,10,14,5,11,21]
+        ]],
+        ["repeat",[0,0,4],2,[
+          ["paint","loco_recess",25,1,15,32,2,17], ["paint","loco_recess",25,10,15,32,11,17]
+        ]],
+        ["box","loco_roof",13,3,26,21,9,29], ["paint","loco_hub",15,4,28,19,8,29]
+      ]
+    },
+    "rail_loco_turner_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"TurnerTurbo engine20 tropical3053..3060: separate almost-square grey multi-fan roof, blue engine walls and low yellow stripe, blue front cab with black centre glass",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["box","loco_company",2,1,9,39,11,22], ["barrel_fill","loco_roof_light",2,1,21,35,11,28,"y"],
+        ["repeat",[7,0,0],4,[["paint","loco_recess",4,3,25,8,9,28]]],
+        ["paint","loco_yellow",2,1,9,39,11,11],
+        ["paint","loco_window",38,2,16,39,10,21], ["paint","loco_recess",38,5,12,39,7,21],
+        ["paint","loco_blue_light",32,1,17,38,2,22], ["paint","loco_blue_light",32,10,17,38,11,22],
+        ["paint","loco_sill",38,3,11,39,9,12]
+      ]
+    },
+    "rail_loco_mjs1000_arctic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"MJS1000 engine21 Arctic3061..3064: symmetrical narrow blue hoods, tall yellow centre cab and running boards, paired black radiator banks and low silver wheels",
+      "ops":[
+        ["use","loco_diesel_gear"], ["paint","loco_yellow",2,1,7,39,11,10],
+        ["box","loco_company",3,3,10,38,9,24],
+        ["repeat",[24,0,0],2,[
+          ["paint","loco_recess",5,3,19,12,9,24],
+          ["paint","loco_blue_light",7,3,19,8,9,24], ["paint","loco_blue_light",10,3,19,11,9,24]
+        ]],
+        ["box","loco_yellow",17,1,10,24,11,29],
+        ["barrel_fill","loco_yellow",17,1,28,24,11,32,"y"],
+        ["paint","loco_window",18,1,21,22,2,26], ["paint","loco_window",18,10,21,22,11,26],
+        ["paint","loco_window",17,3,24,18,9,28], ["paint","loco_window",23,3,24,24,9,28],
+        ["paint","loco_lamp",3,5,16,4,7,18], ["paint","loco_lamp",37,5,16,38,7,18]
+      ]
+    },
+    "rail_loco_mjs1000_tropic": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"MJS1000 engine21 tropical3061..3064: independent smooth full-width blue roof and walls, twin end cabs, silver angular side flash, dark lower sill and fine grey bogies",
+      "ops":[
+        ["use","loco_diesel_gear"],
+        ["prism","loco_company_dark",0,2,39,[[1,10],[11,10],[11,22],[9,28],[3,28],[1,22]]],
+        ["paint","loco_blue_light",2,1,23,39,11,28],
+        ["paint","loco_roof",2,1,10,39,11,11],
+        ["repeat",[28,0,0],2,[
+          ["paint","loco_window",5,1,17,8,2,22], ["paint","loco_window",5,10,17,8,11,22]
+        ]],
+        ["paint","loco_window",2,3,18,3,9,23], ["paint","loco_window",38,3,18,39,9,23],
+        ["line","loco_silver",9,1,20,14,1,15], ["line","loco_silver",14,1,15,10,1,12],
+        ["line","loco_silver",9,10,20,14,10,15], ["line","loco_silver",14,10,15,10,10,12]
+      ]
+    },
+    "rail_loco_sh125": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"SH125 engine22 temperate2941..2948: swept yellow driver nose and front skirt, blue side engine panels, large black rear grilles and dark full-length roof",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_yellow",29,1,9,40,11,28],
+        ["paint","loco_window",31,2,19,38,10,25],
+        ["paint","loco_recess",3,1,13,13,2,21], ["paint","loco_recess",3,10,13,13,11,21],
+        ["paint","loco_yellow",23,1,9,29,2,11], ["paint","loco_yellow",23,10,9,29,11,11],
+        ["paint","loco_blue_light",29,1,14,33,2,22], ["paint","loco_blue_light",29,10,14,33,11,22],
+        ["paint","loco_lamp",37,1,13,40,3,15], ["paint","loco_lamp",37,9,13,40,11,15]
+      ]
+    },
+    "rail_loco_tim": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"TIM engine25 temperate2973..2980: long silver sloping roof, blue cab nose, broad silver engine grille band, black rear insulator bay and open single-arm roof collector",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_sill",12,1,21,35,11,28],
+        ["paint","loco_sill",3,1,11,26,2,18], ["paint","loco_sill",3,10,11,26,11,18],
+        ["repeat",[3,0,0],7,[
+          ["paint","loco_roof_light",5,1,11,6,2,18], ["paint","loco_roof_light",5,10,11,6,11,18]
+        ]],
+        ["paint","loco_blue_light",30,1,12,39,11,19],
+        ["paint","loco_window",31,2,20,37,10,25],
+        ["paint","loco_lamp",37,1,13,40,3,15], ["paint","loco_lamp",37,9,13,40,11,15],
+        ["use","loco_single_pantograph"]
+      ]
+    },
+    "rail_loco_asiastar": {
+      "size":[42,12,42], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"AsiaStar engine26 temperate2965..2972: blue high-speed power body, long recessed blue engine panel, yellow swept windscreen rim and low waist stripe, charcoal roof and open rear single-arm collector",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_yellow",30,1,17,40,11,27], ["paint","loco_window",32,2,19,38,10,25],
+        ["paint","loco_company_dark",5,1,13,28,2,20], ["paint","loco_company_dark",5,10,13,28,11,20],
+        ["paint","loco_blue_light",4,1,13,5,2,21], ["paint","loco_blue_light",4,10,13,5,11,21],
+        ["paint","loco_yellow",2,1,9,23,2,11], ["paint","loco_yellow",2,10,9,23,11,11],
+        ["paint","loco_lamp",37,1,13,40,3,15], ["paint","loco_lamp",37,9,13,40,11,15],
+        ["use","loco_single_pantograph"]
+      ]
+    },
+    "rail_loco_toy_ploddy_diesel": {
+      "extends":"rail_loco_cs2400_arctic", "reference":"PloddyphutDiesel engine5 Toyland3017..3024: own high blue hood/forward yellow cab, white side eyes, chequered engine intake and a red circular front lamp",
+      "ops":[
+        ["paint","loco_silver",29,1,20,33,2,25], ["paint","loco_silver",29,10,20,33,11,25],
+        ["paint","loco_window",31,1,21,32,2,24], ["paint","loco_window",31,10,21,32,11,24],
+        ["paint","loco_yellow",35,3,10,39,9,18], ["paint","loco_toy_lamp",38,4,13,39,8,17],
+        ["repeat",[3,0,0],2,[
+          ["paint","loco_roof",5,3,12,7,4,14], ["paint","loco_roof",5,8,12,7,9,14]
+        ]]
+      ]
+    },
+    "rail_loco_toy_powernaut_diesel": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"PowernautDiesel engine6 Toyland3033..3040: independent blue long hood, low grey side shutters, yellow waist, black forward roof cap, pale cab eyes and red forward lamp",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_long_hood"],
+        ["paint","loco_company_dark",3,3,10,12,9,26],
+        ["paint","loco_sill",12,3,11,28,4,18], ["paint","loco_sill",12,8,11,28,9,18],
+        ["repeat",[3,0,0],5,[
+          ["paint","loco_steel",13,3,11,14,4,18], ["paint","loco_steel",13,8,11,14,9,18]
+        ]],
+        ["paint","loco_blue_light",28,1,10,39,11,26],
+        ["paint","loco_roof",28,1,25,35,11,29],
+        ["paint","loco_silver",29,1,21,33,2,25], ["paint","loco_silver",29,10,21,33,11,25],
+        ["paint","loco_window",31,1,22,32,2,24], ["paint","loco_window",31,10,22,32,11,24],
+        ["paint","loco_yellow",2,1,7,39,11,10],
+        ["paint","loco_toy_lamp",38,4,13,39,8,17],
+        ["box","loco_silver",3,0,9,4,1,24], ["box","loco_silver",3,11,9,4,12,24]
+      ]
+    },
+    "rail_loco_x2001": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"X2001 monorail54, identical normal/Arctic/tropical2981..2984: twin flat yellow split windscreens, black barrel roof, blue machinery sides with paired dark horizontal grilles and yellow lower sill",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_diesel_shell"],
+        ["paint","loco_company",8,1,10,33,2,23], ["paint","loco_company",8,10,10,33,11,23],
+        ["repeat",[17,0,0],2,[
+          ["paint","loco_recess",10,1,14,14,2,16], ["paint","loco_recess",10,10,14,14,11,16],
+          ["paint","loco_recess",10,1,18,14,2,20], ["paint","loco_recess",10,10,18,14,11,20]
+        ]],
+        ["paint","loco_yellow",3,5,16,4,7,23], ["paint","loco_yellow",37,5,16,38,7,23],
+        ["paint","loco_yellow",11,1,7,30,2,9], ["paint","loco_yellow",11,10,7,30,11,9]
+      ]
+    },
+    "rail_loco_millennium": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"MillenniumZ1 monorail55, identical normal/Arctic/tropical2985..2992: half silver rear roof and glazing, yellow centre pillar, forward black grilles, dark roof and smoothly sloped blue nose",
+      "ops":[
+        ["use","loco_diesel_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_silver",2,1,22,19,11,28],
+        ["paint","loco_window",4,1,13,18,2,21], ["paint","loco_window",4,10,13,18,11,21],
+        ["repeat",[5,0,0],3,[
+          ["paint","loco_sill",5,1,13,6,2,21], ["paint","loco_sill",5,10,13,6,11,21]
+        ]],
+        ["paint","loco_yellow",18,1,10,20,11,28],
+        ["paint","loco_yellow",2,1,9,19,2,11], ["paint","loco_yellow",2,10,9,19,11,11],
+        ["repeat",[0,0,5],2,[
+          ["paint","loco_recess",21,1,13,33,2,15], ["paint","loco_recess",21,10,13,33,11,15]
+        ]],
+        ["paint","loco_window",32,1,18,39,11,25],
+        ["paint","loco_blue_light",37,2,11,39,10,15]
+      ]
+    },
+    "rail_loco_toy_wizzowow": {
+      "extends":"rail_loco_millennium", "reference":"WizzowowZ99 engine56 Toyland2985..2992: independent paired pale front eye strips and central red nose lamp on the original silver/blue/yellow monorail body",
+      "ops":[
+        ["paint","loco_silver",33,1,15,36,2,22], ["paint","loco_silver",33,10,15,36,11,22],
+        ["paint","loco_recess",34,1,17,35,2,21], ["paint","loco_recess",34,10,17,35,11,21],
+        ["paint","loco_toy_lamp",38,4,11,39,8,15]
+      ]
+    },
+    "rail_loco_leviathan": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Leviathan maglev84, identical normal/Arctic/tropical3009..3012: two large yellow driver ends, raised blue central casing, three rows of split black machinery grilles, grey roof plate and separate running shoes",
+      "ops":[
+        ["use","loco_maglev_gear"], ["use","loco_maglev_cabs"],
+        ["repeat",[0,0,5],3,[
+          ["paint","loco_recess",14,1,12,27,2,15], ["paint","loco_recess",14,10,12,27,11,15]
+        ]],
+        ["paint","loco_blue_light",20,1,11,21,2,27], ["paint","loco_blue_light",20,10,11,21,11,27],
+        ["paint","loco_yellow",2,5,11,3,7,22], ["paint","loco_yellow",38,5,11,39,7,22]
+      ]
+    },
+    "rail_loco_cyclops": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Cyclops maglev85, identical normal/Arctic/tropical3013..3016: larger slanted yellow cab noses, single broad windscreens, paired central dark intake rows and raised grey machinery roof",
+      "ops":[
+        ["use","loco_maglev_gear"], ["use","loco_maglev_cabs"],
+        ["erase",2,1,20,7,11,30], ["erase",34,1,20,39,11,30],
+        ["prism","loco_yellow",1,2,10,[[2,16],[7,16],[7,29],[2,22]]],
+        ["prism","loco_yellow",1,2,10,[[34,16],[39,16],[39,22],[34,29]]],
+        ["paint","loco_window",2,2,18,6,10,24], ["paint","loco_window",35,2,18,39,10,24],
+        ["repeat",[0,0,6],2,[
+          ["paint","loco_recess",16,1,13,25,2,17], ["paint","loco_recess",16,10,13,25,11,17]
+        ]],
+        ["paint","loco_yellow",14,1,9,27,2,11], ["paint","loco_yellow",14,10,9,27,11,11]
+      ]
+    },
+    "rail_loco_pegasus": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Pegasus maglev86, identical normal/Arctic/tropical2993..3000: blue power body with long rear intake slots, bright yellow roof-edge/sill and swept front glazing, dark central roof and running shoes",
+      "ops":[
+        ["use","loco_maglev_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_yellow",2,1,24,40,11,28],
+        ["paint","loco_roof",2,3,25,29,9,27],
+        ["paint","loco_yellow",2,1,9,39,2,11], ["paint","loco_yellow",2,10,9,39,11,11],
+        ["paint","loco_yellow",35,1,12,40,11,25], ["paint","loco_window",32,2,18,39,10,25],
+        ["repeat",[0,0,5],2,[
+          ["paint","loco_recess",7,1,12,17,2,14], ["paint","loco_recess",7,10,12,17,11,14]
+        ]],
+        ["paint","loco_recess",6,1,21,29,2,23], ["paint","loco_recess",6,10,21,29,11,23],
+        ["paint","loco_lamp",38,2,12,39,3,14], ["paint","loco_lamp",38,9,12,39,10,14]
+      ]
+    },
+    "rail_loco_chimaera": {
+      "size":[42,12,36], "cell_size":[0.25,0.25,0.25], "origin":[-5.125,-1.5,0.5], "review_status":"work-in-progress",
+      "reference":"Chimaera maglev87, identical normal/Arctic/tropical3001..3008: thick pale silver roof and tapered nose, blue side panels split by two grey vertical frames, yellow lower side strip and wide dark windscreen",
+      "ops":[
+        ["use","loco_maglev_gear"], ["use","loco_streamlined_body"],
+        ["paint","loco_silver",2,1,21,40,11,28],
+        ["paint","loco_sill",26,1,10,40,11,22],
+        ["paint","loco_window",31,2,19,38,10,25],
+        ["paint","loco_yellow",2,1,9,22,2,11], ["paint","loco_yellow",2,10,9,22,11,11],
+        ["repeat",[14,0,0],2,[["paint","loco_sill",12,1,9,13,11,28]]],
+        ["paint","loco_silver",18,1,10,26,2,14], ["paint","loco_silver",18,10,10,26,11,14],
+        ["paint","loco_lamp",38,2,12,39,3,14], ["paint","loco_lamp",38,9,12,39,10,14]
+      ]
+    },
+    "rail_loco_toy_rocketeer": {
+      "extends":"rail_loco_leviathan", "reference":"WizzowowRocketeer engine88 Toyland3009..3012: separate solid yellow ends without ordinary driver windows, pale circular eye surrounds, black eyes and central red nose lamps",
+      "ops":[
+        ["replace_material","loco_window","loco_yellow"], ["replace_material","loco_lamp","loco_yellow"],
+        ["paint","loco_silver",2,3,16,3,9,22], ["paint","loco_silver",38,3,16,39,9,22],
+        ["paint","loco_recess",2,4,18,3,5,21], ["paint","loco_recess",2,7,18,3,8,21],
+        ["paint","loco_recess",38,4,18,39,5,21], ["paint","loco_recess",38,7,18,39,8,21],
+        ["paint","loco_toy_lamp",2,5,14,3,7,17], ["paint","loco_toy_lamp",38,5,14,39,7,17]
+      ]
+    },
     "rail_sh_electric": {
       "size": [40,14,42], "cell_size": [0.25,0.25,0.25], "origin": [-5,-1.75,0.5],
       "reference": "SH30/SH40 engines23/24, identical original2937..2940 in all directions/cargo states: yellow cab ends, company sides, grey sill, black roof, twin open diamond pantographs", "review_status": "work-in-progress",
       "ops": [
         ["box","loco_wheel",5,2,1,16,12,5],
         ["box","loco_wheel",24,2,1,35,12,5],
-        ["use","sh_wheel",[6,0,0]], ["use","sh_wheel",[12,0,0]],
-        ["use","sh_wheel",[25,0,0]], ["use","sh_wheel",[31,0,0]],
-        ["use","sh_wheel",[6,12,0]], ["use","sh_wheel",[12,12,0]],
-        ["use","sh_wheel",[25,12,0]], ["use","sh_wheel",[31,12,0]],
+        ["use","sh_wheel",[6,1,0]], ["use","sh_wheel",[12,1,0]],
+        ["use","sh_wheel",[25,1,0]], ["use","sh_wheel",[31,1,0]],
+        ["use","sh_wheel",[6,11,0]], ["use","sh_wheel",[12,11,0]],
+        ["use","sh_wheel",[25,11,0]], ["use","sh_wheel",[31,11,0]],
         ["box","loco_roof",3,3,4,37,11,7],
         ["box","loco_sill",3,2,6,37,12,10],
         ["box","loco_company",5,2,10,35,12,20],
@@ -10714,6 +11376,39 @@
       "73": {"0":"airport_flag_0","1":"airport_flag_1","2":"airport_flag_2","3":"airport_flag_3"}
     },
     "vehicles": {
+      "0":{"0":"rail_loco_kirby","1":"rail_loco_kirby"},
+      "1":{"2":"rail_loco_mjs250_arctic","3":"rail_loco_mjs250_arctic","4":"rail_loco_mjs250_tropic","5":"rail_loco_mjs250_tropic"},
+      "2":{"6":"rail_loco_ploddyphut","7":"rail_loco_ploddyphut"},
+      "3":{"6":"rail_loco_powernaut","7":"rail_loco_powernaut"},
+      "4":{"6":"rail_loco_mightymover","7":"rail_loco_mightymover"},
+      "5":{"6":"rail_loco_toy_ploddy_diesel","7":"rail_loco_toy_ploddy_diesel"},
+      "6":{"6":"rail_loco_toy_powernaut_diesel","7":"rail_loco_toy_powernaut_diesel"},
+      "7":{"2":"rail_loco_wills","3":"rail_loco_wills","4":"rail_loco_wills","5":"rail_loco_wills"},
+      "8":{"0":"rail_loco_jubilee","1":"rail_loco_jubilee"},
+      "9":{"0":"rail_loco_a4","1":"rail_loco_a4"},
+      "10":{"0":"rail_loco_jubilee","1":"rail_loco_jubilee"},
+      "11":{"0":"rail_loco_dmu","1":"rail_loco_dmu"},
+      "12":{"0":"rail_loco_dash","1":"rail_loco_dash"},
+      "13":{"0":"rail_loco_hendry","1":"rail_loco_hendry"},
+      "14":{"0":"rail_loco_uu37","1":"rail_loco_uu37"},
+      "15":{"0":"rail_loco_hendry","1":"rail_loco_hendry"},
+      "16":{"2":"rail_loco_cs4000_arctic","3":"rail_loco_cs4000_arctic","4":"rail_loco_cs4000_tropic","5":"rail_loco_cs4000_tropic"},
+      "17":{"2":"rail_loco_cs2400_arctic","3":"rail_loco_cs2400_arctic","4":"rail_loco_cs2400_tropic","5":"rail_loco_cs2400_tropic"},
+      "18":{"2":"rail_loco_centennial_arctic","3":"rail_loco_centennial_arctic","4":"rail_loco_centennial_tropic","5":"rail_loco_centennial_tropic"},
+      "19":{"2":"rail_loco_kelling_arctic","3":"rail_loco_kelling_arctic","4":"rail_loco_kelling_tropic","5":"rail_loco_kelling_tropic"},
+      "20":{"2":"rail_loco_turner_arctic","3":"rail_loco_turner_arctic","4":"rail_loco_turner_tropic","5":"rail_loco_turner_tropic"},
+      "21":{"2":"rail_loco_mjs1000_arctic","3":"rail_loco_mjs1000_arctic","4":"rail_loco_mjs1000_tropic","5":"rail_loco_mjs1000_tropic"},
+      "22":{"0":"rail_loco_sh125","1":"rail_loco_sh125"},
+      "25":{"0":"rail_loco_tim","1":"rail_loco_tim"},
+      "26":{"0":"rail_loco_asiastar","1":"rail_loco_asiastar"},
+      "54":{"0":"rail_loco_x2001","1":"rail_loco_x2001"},
+      "55":{"0":"rail_loco_millennium","1":"rail_loco_millennium"},
+      "56":{"6":"rail_loco_toy_wizzowow","7":"rail_loco_toy_wizzowow"},
+      "84":{"0":"rail_loco_leviathan","1":"rail_loco_leviathan"},
+      "85":{"0":"rail_loco_cyclops","1":"rail_loco_cyclops"},
+      "86":{"0":"rail_loco_pegasus","1":"rail_loco_pegasus"},
+      "87":{"0":"rail_loco_chimaera","1":"rail_loco_chimaera"},
+      "88":{"6":"rail_loco_toy_rocketeer","7":"rail_loco_toy_rocketeer"},
       "44":{"6":"wagon_toy_sugar_empty","7":"wagon_toy_sugar_loaded"},
       "45":{"6":"wagon_toy_candyfloss_empty","7":"wagon_toy_candyfloss_loaded"},
       "46":{"6":"wagon_toy_toffee_empty","7":"wagon_toy_toffee_loaded"},

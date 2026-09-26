@@ -56,14 +56,14 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-26; 1,092 volumes, focused checks ongoing)
+## Pass 1 coverage checkpoint and queue (2026-09-26; 1,130 volumes, focused checks ongoing)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
 
 | Category | Existing voxel bindings | Pass 1 coverage work |
 | --- | --- | --- |
-| Vehicles | 223/256 engine definitions, including88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states | Remaining33 locomotives and applicable states; all-family source/clearance/dimensional review remains |
+| Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states | Immediate tall-train/tunnel loading-gauge correction, actual locomotive/climate review, and all-family source/clearance/dimensional work; bindings do not establish Pass1 acceptance |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
 | Industries | 8/175 body definitions,11 grounds | Remaining production/storage/machinery families, construction, animation, cargo and multi-tile layouts |
