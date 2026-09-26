@@ -4,6 +4,16 @@
 > are being developed here. See [OpenTT3D documentation](opentt3d/README.md) and
 > [implementation status](opentt3d/STATUS.md). The upstream README follows.
 
+## Screenshots
+
+[![OpenTT3D's 3D view of a coastal city with roads, towers and water](docs/screenshots/coastal-city.webp)](docs/screenshots/coastal-city.webp)
+
+*A coastal city in the rotatable 3D world.*
+
+| Arctic landscape | Street-level Cab view |
+| :---: | :---: |
+| [![Snow-covered forest and industry in the Arctic climate](docs/screenshots/arctic-landscape.webp)](docs/screenshots/arctic-landscape.webp) | [![A road vehicle's Cab view between two bus-stop shelters](docs/screenshots/bus-cab.webp)](docs/screenshots/bus-cab.webp) |
+
 ## Table of contents
 
 - 1.0) [About](#10-about)
