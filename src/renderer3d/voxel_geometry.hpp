@@ -26,6 +26,7 @@ struct VoxelMesh {
 };
 
 class VoxelGrid {
+	friend class VoxelSource;
 	std::array<int,3> size;
 	std::vector<uint16_t> cells;
 	std::vector<VoxelMaterial> materials;
@@ -419,8 +420,46 @@ public:
 			}
 		}
 		result.vertices = std::move(mesh.vertices);
+		/* Finished voxel surfaces are immutable, including the many generated
+		 * slope/fence/rail variants. Do not retain geometric growth capacity in
+		 * those long-lived caches after authoring the final triangle stream. */
+		result.vertices.shrink_to_fit();
 		return result;
 	}
+};
+
+/** Lossless retained authoring cells. Dense grids are needed only while meshing
+ * or building a diagnostic reference, never for ordinary mesh rendering. The
+ * palette is supplied from the catalogue so every model shares that ownership. */
+class VoxelSource {
+	struct Run { uint32_t first; uint16_t length, material; };
+	static_assert(sizeof(Run) == 8);
+	std::array<int,3> size;
+	Vec3 origin, step;
+	std::vector<Run> runs;
+public:
+	explicit VoxelSource(const VoxelGrid &grid) : size(grid.size), origin(grid.origin), step(grid.step)
+	{
+		for (size_t first = 0; first < grid.cells.size();) {
+			uint16_t material = grid.cells[first];
+			if (material == 0) { ++first; continue; }
+			size_t end = first+1;
+			while (end < grid.cells.size() && end-first < UINT16_MAX && grid.cells[end] == material) ++end;
+			runs.push_back({static_cast<uint32_t>(first),static_cast<uint16_t>(end-first),material});
+			first = end;
+		}
+		runs.shrink_to_fit();
+	}
+	VoxelGrid Expand(const std::vector<VoxelMaterial> &materials) const
+	{
+		VoxelGrid grid(size,materials,origin,step);
+		for (const auto &run : runs) {
+			if (run.material > materials.size()) throw std::invalid_argument("Missing retained voxel source material");
+			std::fill_n(grid.cells.begin()+run.first,run.length,run.material);
+		}
+		return grid;
+	}
+	size_t StorageBytes() const { return runs.capacity()*sizeof(Run); }
 };
 
 } // namespace Renderer3D

@@ -16,6 +16,7 @@
 #include "../debug.h"
 #include <map>
 #include <memory>
+#include <set>
 #include <unordered_map>
 #include <utility>
 #ifdef __APPLE__
@@ -42,6 +43,8 @@ struct Buffer {
 	VkDeviceMemory memory = VK_NULL_HANDLE;
 	void *mapped = nullptr;
 	VkDeviceSize size = 0, used = 0;
+	uint64_t last_mesh_use = 0;
+	unsigned pending_frames = 0;
 	~Buffer()
 	{
 		if (mapped != nullptr) vkUnmapMemory(device, memory);
@@ -91,7 +94,7 @@ struct Frame {
 	std::vector<std::unique_ptr<Buffer>> retired_buffers;
 };
 
-struct Slice { VkBuffer buffer; VkDeviceSize offset; void *data; };
+struct Slice { VkBuffer buffer; VkDeviceSize offset; void *data; Buffer *page = nullptr; };
 struct Region { Target *target; int sx, sy, width, height, dx, dy; };
 struct SwapImage { VkImage image; VkImageView view; VkFramebuffer framebuffer; VkSemaphore complete; };
 struct WorldPush {
@@ -142,6 +145,7 @@ public:
 	/* Immutable meshes share append-only pages. Existing slices are never moved
 	 * or overwritten while either submitted frame can still reference them. */
 	std::vector<std::unique_ptr<Buffer>> mesh_arena;
+	uint64_t mesh_generation = 0;
 	struct MeshStorage { Slice storage; VkDeviceSize index_offset; uint32_t source_vertices, stored_vertices; bool indexed; VkIndexType index_type; };
 	std::unordered_map<const std::vector<Vertex> *, MeshStorage> meshes;
 	std::unordered_map<const VoxelVolume *,std::unique_ptr<Buffer>> volumes;
@@ -200,13 +204,13 @@ public:
 			VkDeviceSize offset = (buffer->used + alignment - 1) / alignment * alignment;
 			if (offset + bytes > buffer->size) continue;
 			buffer->used = offset + bytes;
-			return {buffer->handle, offset, static_cast<std::byte *>(buffer->mapped) + offset};
+			return {buffer->handle, offset, static_cast<std::byte *>(buffer->mapped) + offset, buffer.get()};
 		}
 		VkDeviceSize capacity = std::max<VkDeviceSize>(4 * 1024 * 1024, (bytes + 4095) / 4096 * 4096);
 		arena.push_back(MakeBuffer(capacity, VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT));
 		auto &buffer = arena.back();
 		buffer->used = bytes;
-		return {buffer->handle, 0, buffer->mapped};
+		return {buffer->handle, 0, buffer->mapped, buffer.get()};
 	}
 
 	Slice Allocate(VkDeviceSize bytes, VkDeviceSize alignment = 16) { return AllocateIn(Current().arena, bytes, alignment); }
@@ -254,6 +258,30 @@ public:
 			if (mesh.indexed) { ++stats.indexed_meshes; stats.index_bytes += mesh.source_vertices*(mesh.index_type == VK_INDEX_TYPE_UINT16 ? sizeof(uint16_t) : sizeof(uint32_t)); }
 		}
 		return stats;
+	}
+
+	/** Only completed, unused pages may be discarded. Every slice on a shared
+	 * page is invalidated together; a later draw reuploads its exact CPU stream. */
+	void TrimMeshes(uint64_t budget)
+	{
+		uint64_t bytes = 0;
+		std::vector<Buffer *> cold;
+		for (const auto &page : mesh_arena) {
+			bytes += page->size;
+			if (page->pending_frames == 0 && page->last_mesh_use != mesh_generation) cold.push_back(page.get());
+		}
+		if (bytes <= budget) return;
+		std::ranges::sort(cold,{},&Buffer::last_mesh_use);
+		std::set<Buffer *> discarded;
+		uint64_t retired = 0;
+		for (auto page : cold) {
+			if (bytes <= budget) break;
+			bytes -= page->size; retired += page->size; discarded.insert(page);
+		}
+		if (discarded.empty()) return;
+		std::erase_if(meshes,[&](const auto &entry) { return discarded.contains(entry.second.storage.page); });
+		std::erase_if(mesh_arena,[&](const auto &page) { return discarded.contains(page.get()); });
+		Debug(driver,2,"OpenTT3D: retired {} cold Vulkan mesh bytes; {} resident bytes / {} meshes",retired,bytes,meshes.size());
 	}
 
 	std::unique_ptr<Image> MakeImage(uint32_t w, uint32_t h, VkFormat format, VkImageUsageFlags usage, uint32_t layers = 1, VkImageAspectFlags aspect = VK_IMAGE_ASPECT_COLOR_BIT)
@@ -328,6 +356,8 @@ public:
 		if (!retired.empty()) { Check(vkDeviceWaitIdle(device), "retire viewports"); retired.clear(); }
 		Check(vkResetCommandPool(device, frame.commands, 0), "reset commands");
 		Check(vkResetDescriptorPool(device, frame.descriptors, 0), "reset descriptors");
+		for (auto &page : mesh_arena) page->pending_frames &= ~(1U<<frame_index);
+		TrimMeshes(MeshCacheBudgetBytes());
 		for (auto &buffer : frame.arena) buffer->used = 0;
 		regions.clear();
 		VkCommandBufferBeginInfo begin{}; begin.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
@@ -353,6 +383,8 @@ public:
 		Current().retired_buffers.clear();
 		Check(vkResetCommandPool(device, Current().commands, 0), "reset readback commands");
 		Check(vkResetDescriptorPool(device, Current().descriptors, 0), "reset readback descriptors");
+		for (auto &page : mesh_arena) page->pending_frames &= ~(1U<<frame_index);
+		TrimMeshes(MeshCacheBudgetBytes());
 		RetireReadbackArena();
 		for (auto &buffer : Current().arena) buffer->used = 0;
 		VkCommandBufferBeginInfo begin{}; begin.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
@@ -735,6 +767,7 @@ public:
 		Profile::Scope timing(Profile::Section::Backend);
 		Profile::AddGeometry(scene.VertexCount());
 		Begin(); UploadAtlas();
+		++mesh_generation;
 		Slice vertices = Allocate(scene.vertices.size() * sizeof(Vertex));
 		if (!scene.vertices.empty()) std::memcpy(vertices.data, scene.vertices.data(), scene.vertices.size() * sizeof(Vertex));
 		bool transparent_vertices = std::any_of(scene.vertices.begin(), scene.vertices.end(), [](const Vertex &vertex) { return vertex.opacity < 0.99f; });
@@ -814,7 +847,7 @@ public:
 						for (size_t i = 0; i < batch.count && missing <= visibility_budget; ++i) missing += !target.visibility.HasPacked(*mesh,records[batch.first+i]);
 						if (missing <= visibility_budget) { prepare_now = true; visibility_budget -= missing; }
 						else {
-							target.visibility_worker->Request(*mesh,PackedVoxelMeshRegistry().at(mesh),std::span(records).subspan(batch.first,batch.count),records.size());
+							target.visibility_worker->Request(*mesh,PackedVoxelMeshRegistry().at(mesh),std::span(records).subspan(batch.first,batch.count),records.size(),scene.instances[batch.source].source_lease);
 							++waiting_visibility;
 						}
 					}
@@ -892,7 +925,7 @@ public:
 					mesh_arena.push_back(MakeBuffer(bytes, VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT));
 					auto &buffer = mesh_arena.back();
 					buffer->used = bytes;
-					storage = {buffer->handle, 0, buffer->mapped};
+					storage = {buffer->handle, 0, buffer->mapped, buffer.get()};
 				}
 				if (vertex_bytes != 0) std::memcpy(storage.data,vertex_data,vertex_bytes);
 				if (index_bytes != 0) std::memcpy(static_cast<std::byte *>(storage.data)+vertex_bytes,short_indices.empty() ? static_cast<const void *>(indexed.indices.data()) : short_indices.data(),index_bytes);
@@ -902,6 +935,10 @@ public:
 				Profile::AddMeshUpload(bytes);
 			}
 			const auto &stored = scene.persistent_meshes ? found->second : temporary;
+			if (scene.persistent_meshes) {
+				stored.storage.page->last_mesh_use = mesh_generation;
+				stored.storage.page->pending_frames |= 1U<<frame_index;
+			}
 			batches.push_back({stored.storage.buffer,stored.storage.offset,stored.index_offset,stored.source_vertices,static_cast<uint32_t>(batch.first),static_cast<uint32_t>(batch.count),batch.transparent,stored.indexed,instance_staging.PaletteOnly(batch),batch.both_passes,stored.index_type,volume_storage,volume_mode,packed == nullptr ? 0U : packed->format[7] != 0 ? 2U : 1U});
 		}
 		if (tested_vertices != 0 && waiting_visibility == 0 && !target.visibility_reported) {
@@ -909,6 +946,20 @@ public:
 			target.visibility_reported = true;
 		}
 		Slice instances = Allocate(records.size() * sizeof(InstanceData), std::max<VkDeviceSize>(16, properties.limits.minStorageBufferOffsetAlignment));
+		static const bool memory_diagnostics = std::getenv("OPENTT3D_MEMORY_DIAGNOSTICS") != nullptr;
+		if (memory_diagnostics) {
+			auto usage = MeshUsage();
+			uint64_t arena = 0;
+			for (const auto &frame : frames) for (const auto &buffer : frame.arena) arena += buffer->size;
+			static uint64_t reported = 0;
+			uint64_t total = usage.capacity_bytes+arena;
+			if (total > reported+64ULL*1024*1024) {
+				uint64_t source_capacity = 0;
+				for (const auto &[mesh,stored] : meshes) source_capacity += mesh->capacity()*sizeof(Vertex);
+				Debug(driver,1,"OpenTT3D: Vulkan memory: {} cached meshes / {} bytes, {} upload bytes, CPU sources {} bytes / {} capacity, {} direct vertices / {} capacity, {} instances",usage.meshes,usage.capacity_bytes,arena,usage.source_vertices*sizeof(Vertex),source_capacity,scene.vertices.size(),scene.vertices.capacity(),scene.instances.size());
+				reported = total;
+			}
+		}
 		std::memcpy(instances.data, records.data(), records.size() * sizeof(InstanceData));
 		VkDescriptorBufferInfo storage{instances.buffer, instances.offset, records.size() * sizeof(InstanceData)};
 		Image *images[] = {atlas.get(), remap.get(), palette.get()};
@@ -1179,6 +1230,7 @@ const std::string &LastError() { return error; }
 std::string Description() { return Active() ? fmt::format("Vulkan: {}", context->properties.deviceName) : "unavailable"; }
 int MaximumImageSize() { return Active() ? static_cast<int>(context->properties.limits.maxImageDimension2D) : 0; }
 MeshCacheStats GetMeshCacheStats() { return Active() ? context->MeshUsage() : MeshCacheStats{}; }
+void TrimMeshCache(uint64_t budget) { if (Active()) context->TrimMeshes(budget); }
 ReadbackArenaStats GetReadbackArenaStats() { return Active() ? context->ReadbackArenaUsage() : ReadbackArenaStats{}; }
 bool Resize(int width, int height) { return Active() && Try([&] { context->Resize(width, height); }); }
 void *VideoBuffer() { if (!Active()) return nullptr; if (!Try([] { context->Begin(); })) return nullptr; return context->video.data(); }

@@ -15,6 +15,7 @@ namespace Renderer3D {
 class InstanceBatcher {
 	struct Bucket {
 		std::array<size_t,2> count{}, write{};
+		size_t source = 0;
 		uint64_t epoch = 0;
 		bool boundary = false;
 	};
@@ -25,7 +26,7 @@ class InstanceBatcher {
 	std::vector<Owner> owners;
 	uint64_t epoch = 0;
 public:
-	struct Batch { const std::vector<Vertex> *mesh; size_t first, count; bool transparent, both_passes; };
+	struct Batch { const std::vector<Vertex> *mesh; size_t first, count; bool transparent, both_passes; size_t source; };
 	std::vector<Batch> batches;
 	std::vector<InstanceData> records;
 
@@ -59,7 +60,7 @@ public:
 				owner = {&*entry,child};
 			}
 			auto &bucket = owner.entry->second;
-			if (bucket.epoch != epoch) { bucket.epoch = epoch; bucket.count = {}; bucket.boundary = false; active[child].push_back(owner.entry); }
+			if (bucket.epoch != epoch) { bucket.epoch = epoch; bucket.count = {}; bucket.boundary = false; bucket.source = i; active[child].push_back(owner.entry); }
 			float opacity = instance.data.origin_opacity[3];
 			++bucket.count[split_transparency && opacity < 0.99f];
 			/* Interpolation can move an otherwise constant alpha across 0.99. Keep
@@ -76,11 +77,11 @@ public:
 			if (!split_transparency || bucket.boundary) {
 				size_t count = bucket.count[0]+bucket.count[1];
 				bucket.write[0] = offset;
-				batches.push_back({mesh,offset,count,false,true});
+				batches.push_back({mesh,offset,count,false,true,bucket.source});
 				offset += count;
 			} else for (unsigned pass = 0; pass < 2; ++pass) {
 				bucket.write[pass] = offset;
-				if (bucket.count[pass] != 0) batches.push_back({mesh,offset,bucket.count[pass],pass != 0,false});
+				if (bucket.count[pass] != 0) batches.push_back({mesh,offset,bucket.count[pass],pass != 0,false,bucket.source});
 				offset += bucket.count[pass];
 			}
 		}

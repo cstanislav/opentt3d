@@ -104,6 +104,7 @@ struct MeshBuffer {
 	GLuint vao = 0, buffer = 0, indices = 0;
 	GLenum index_type = GL_UNSIGNED_INT;
 	size_t bytes = 0;
+	uint64_t last_use = 0;
 	void Destroy() const
 	{
 		r_glDeleteVertexArrays(1,&vao);
@@ -113,6 +114,28 @@ struct MeshBuffer {
 };
 using MeshBuffers = std::unordered_map<const std::vector<Vertex> *,MeshBuffer>;
 static MeshBuffers meshes;
+static uint64_t mesh_generation = 0;
+
+void TrimMeshCache(uint64_t budget)
+{
+	if (Vulkan::Active()) { Vulkan::TrimMeshCache(budget); return; }
+	uint64_t bytes = 0;
+	std::vector<MeshBuffers::iterator> cold;
+	for (auto entry = meshes.begin(); entry != meshes.end(); ++entry) {
+		bytes += entry->second.bytes;
+		if (entry->second.last_use != mesh_generation) cold.push_back(entry);
+	}
+	if (bytes <= budget) return;
+	std::ranges::sort(cold,[](const auto &a,const auto &b) { return a->second.last_use < b->second.last_use; });
+	uint64_t retired = 0;
+	for (auto entry : cold) {
+		if (bytes <= budget) break;
+		bytes -= entry->second.bytes; retired += entry->second.bytes;
+		/* GL retains storage referenced by queued commands until their completion. */
+		entry->second.Destroy(); meshes.erase(entry);
+	}
+	if (retired != 0) Debug(driver,2,"OpenTT3D: retired {} cold OpenGL mesh bytes; {} resident bytes / {} meshes",retired,bytes,meshes.size());
+}
 struct TransientMeshBuffers {
 	MeshBuffers buffers;
 	~TransientMeshBuffers() { for (const auto &[mesh,buffer] : buffers) buffer.Destroy(); }
@@ -381,6 +404,12 @@ vec2 canonical_rotate(vec2 value, float cs, float sn) {
     ROTATION_PRECISE vec2 result = vec2(products.x - cross_products.x, cross_products.y + products.y);
     return result;
 }
+vec2 canonical_pitch(vec2 value, vec3 pitch) {
+    ROTATION_PRECISE vec2 products = value * pitch.x;
+    ROTATION_PRECISE vec2 cross_products = value.yx * pitch.zy;
+    ROTATION_PRECISE vec2 result = vec2(products.x - cross_products.x, cross_products.y + products.y);
+    return result;
+}
 void main() {
 #ifdef VOXEL_VISIBLE
     uvec2 reference = texelFetch(voxel_vertices, gl_VertexID).xy;
@@ -414,13 +443,14 @@ void main() {
     vec4 region = texture_region;
     uint object_value = object_id;
     if (instanced != 0) {
-        int base = (instance_base + instance_index) * 6;
+        int base = (instance_base + instance_index) * 7;
         vec4 origin = texelFetch(instance_data, base);
         vec4 scale_center = texelFetch(instance_data, base + 1);
         vec4 mirror = texelFetch(instance_data, base + 2);
         vec4 transform = texelFetch(instance_data, base + 3);
         region = texelFetch(instance_data, base + 4);
         vec4 identity = texelFetch(instance_data, base + 5);
+        vec4 pitch = texelFetch(instance_data, base + 6);
         vec3 local = vec3((position.xy - scale_center.zw) * scale_center.x, position.z * scale_center.y);
         n = normalize(normal / vec3(scale_center.x, scale_center.x, scale_center.y));
         bool longitudinal = (uint(identity.z) & 16u) != 0u;
@@ -436,6 +466,12 @@ void main() {
         }
         sample_position = vec3((sample_position.xy - scale_center.zw) * scale_center.x, sample_position.z * scale_center.y);
         if (longitudinal) sample_position.x *= mirror.z;
+        if (pitch.y != 0.0) {
+            local.xz = canonical_pitch(local.xz - vec2(0.0, pitch.w), pitch.xyz) + vec2(0.0, pitch.w);
+            sample_position.xz = canonical_pitch(sample_position.xz - vec2(0.0, pitch.w), pitch.xyz) + vec2(0.0, pitch.w);
+            n.xz = canonical_pitch(n.xz, pitch.xzy);
+            n = normalize(n);
+        }
         bool canonical_yaw = (uint(identity.z) & 8u) != 0u;
         float cs = canonical_yaw ? mirror.x : cos(mirror.w);
         float sn = canonical_yaw ? mirror.y : sin(mirror.w);
@@ -649,6 +685,7 @@ static const MeshBuffer &GetMesh(const std::vector<Vertex> *mesh, MeshBuffers &s
 		Profile::AddMeshUpload(data.size()*sizeof(Vertex)+index_bytes);
 		found->second.bytes = data.size()*sizeof(Vertex)+index_bytes;
 	}
+	found->second.last_use = mesh_generation;
 	return found->second;
 }
 
@@ -697,6 +734,7 @@ static bool RenderTarget(Target &target, const Scene &scene, const Camera &camer
 		Debug(driver, 2, "OpenTT3D: pre-existing OpenGL error before mesh pass ({})", error);
 	}
 	StateGuard state;
+	++mesh_generation;
 	/* Declared after the state guard so temporary VAOs/buffers are retired
 	 * before restoring the caller's bindings, including on an early return. */
 	TransientMeshBuffers transient;
@@ -821,7 +859,7 @@ static bool RenderTarget(Target &target, const Scene &scene, const Camera &camer
 					for (size_t i = 0; i < batch.count && missing <= visibility_budget; ++i) missing += !cached.geometry.contains(VoxelVisibilityTransform(records[batch.first+i])) && !target.visibility.HasPacked(*batch.mesh,records[batch.first+i]);
 					if (missing <= visibility_budget) { prepare_now = true; visibility_budget -= missing; }
 					else {
-						target.visibility_worker->Request(*batch.mesh,PackedVoxelMeshRegistry().at(batch.mesh),std::span(records).subspan(batch.first,batch.count),records.size());
+						target.visibility_worker->Request(*batch.mesh,PackedVoxelMeshRegistry().at(batch.mesh),std::span(records).subspan(batch.first,batch.count),records.size(),scene.instances[batch.source].source_lease);
 						++waiting_visibility;
 					}
 				}
@@ -996,6 +1034,7 @@ static bool RenderTarget(Target &target, const Scene &scene, const Camera &camer
 	r_glEnable(GL_BLEND); r_glDepthMask(GL_FALSE);
 	r_glColorMaski(1,GL_FALSE,GL_FALSE,GL_FALSE,GL_FALSE);
 	draw(true);
+	TrimMeshCache(MeshCacheBudgetBytes());
 	if (pixels != nullptr) {
 		Profile::Scope readback_time(Profile::Section::Readback);
 		pixels->resize(static_cast<size_t>(camera.width) * camera.height * 4);
@@ -1387,6 +1426,7 @@ bool HasOpenGLBackend() { return false; }
 int MaximumFramebufferSize() { return Vulkan::MaximumImageSize(); }
 std::string BackendDescription() { return Vulkan::Description(); }
 bool RenderScene(const Scene &scene, const Camera &camera, std::vector<uint8_t> &pixels, std::vector<uint32_t> *ids) { return Vulkan::Readback(scene, camera, pixels, ids); }
+void TrimMeshCache(uint64_t budget) { Vulkan::TrimMeshCache(budget); }
 void DestroyOpenGLResources() {}
 namespace OpenGL {
 bool Active() { return false; }

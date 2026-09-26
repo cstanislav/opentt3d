@@ -12,6 +12,7 @@ struct TileInfo;
 
 namespace Renderer3D {
 bool CaptureRailTile(TileInfo &tile, TrackBits tracks);
+bool SupportedRailType(RailType type);
 void DrawRailTracks(Scene &scene, const Camera &camera, Vec3 origin, Slope slope, RailType type, TrackBits tracks, TrackBits reserved);
 const RailAssembly &RailGeometry(RailType type, Track track, Slope slope, unsigned lod = 0, TrackBits layout = TRACK_BIT_NONE);
 void ExportRailGallery(unsigned type, unsigned tracks, unsigned slope);

@@ -78,6 +78,32 @@ inline float RailPathDistance(Vec3 point, unsigned track)
 	return std::sqrt(distance);
 }
 
+struct RailSupportContact { float smooth, stepped; };
+
+/** Read-only support metadata for the exact quarter-cell running surface. */
+struct RailSupportSurface {
+	Vec3 origin;
+	TileSurface surface;
+	unsigned kind = 0, tracks = 0;
+	std::optional<RailSupportContact> Contact(Vec3 point) const
+	{
+		Vec3 local = point-origin;
+		if (local.x < 0 || local.y < 0 || local.x >= 16 || local.y >= 16) return {};
+		float nearest = INFINITY;
+		for (unsigned track = 0; track < 6; ++track) if ((tracks & (1U<<track)) != 0) nearest = std::min(nearest,RailPathDistance({local.x,local.y,0},track));
+		if (nearest > 1.75f) return {};
+		float x = std::floor(local.x*4)*0.25f, y = std::floor(local.y*4)*0.25f, highest = -INFINITY;
+		/* A point on a step edge touches both closed cell volumes. In a
+		 * descending section the previous cell, not floor(point), is higher. */
+		float left = x > 0 && local.x == x ? x-0.25f : x, back = y > 0 && local.y == y ? y-0.25f : y;
+		for (float px : {left,x+0.25f}) for (float py : {back,y+0.25f}) highest = std::max(highest,surface.Height(px,py));
+		/* Preserve the authored half-unit running datum. Monorail underframes
+		 * straddle their raised central beam; maglev keeps a quarter-unit gap
+		 * over the slab rather than riding atop its outside guide walls. */
+		return RailSupportContact{origin.z+surface.Height(local.x,local.y)+0.5f,origin.z+std::ceil(highest*8)*0.125f+0.5f};
+	}
+};
+
 /** Keep guide walls outside every route's running clearance. Overlaying whole
  * single-track channels would put a solid wall across a crossing or turnout. */
 inline std::vector<std::array<float,2>> RailGuideRanges(unsigned track, float side, unsigned layout)

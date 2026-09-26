@@ -61,6 +61,7 @@ static_assert(2*MAX_MAP_SIZE_BITS <= 24, "Tile picking payload must exactly repr
 struct CaptureState {
 	Camera camera;
 	std::map<TileIndex,std::vector<ContactWireSegment>> contact_wires;
+	std::map<TileIndex,std::vector<RailSupportSurface>> rail_surfaces;
 	Vec3 depth_direction;
 	float distance = 0, focal_scale = 0, near_plane = 0;
 	Scene scene;
@@ -445,6 +446,13 @@ void CaptureRailTracks(const TileInfo &tile, RailType type, TrackBits tracks, Tr
 	DrawRailTracks(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},tile.tileh,type,tracks,reserved);
 	if (Profile::IsBenchmarking()) for (size_t i = first; i < capture->scene.instances.size(); ++i) capture->rail_vertices += capture->scene.instances[i].mesh->size();
 	if (capture->scene.instances.size() != first) ++capture->rail_sections;
+}
+
+void CaptureRailSupport(Vec3 origin, Slope slope, RailType type, TrackBits tracks)
+{
+	if (!capture || tracks == TRACK_BIT_NONE || type > RAILTYPE_MAGLEV || origin.x < 0 || origin.y < 0 || origin.x >= Map::MaxX()*16 || origin.y >= Map::MaxY()*16) return;
+	auto &surfaces = capture->rail_surfaces[TileVirtXY(static_cast<int>(origin.x),static_cast<int>(origin.y))];
+	surfaces.push_back({origin,MakeTileSurface(slope),to_underlying(type),to_underlying(tracks)});
 }
 
 bool CaptureRailStation(const TileInfo &tile, unsigned layout, const DrawTileSprites &source, PaletteID palette)
@@ -1355,6 +1363,101 @@ static unsigned checked_aircraft_contact = UINT_MAX;
 static unsigned checked_collector_engine = UINT_MAX;
 static uint32_t checked_collector_vehicle = UINT32_MAX;
 static unsigned checked_collector_states = 0;
+static unsigned checked_support_engine = UINT_MAX, checked_support_states = 0;
+static uint32_t checked_support_vehicle = UINT32_MAX;
+static unsigned checked_support_corners = 0;
+static bool check_support_corners = false;
+
+static std::optional<RailSupportContact> CapturedRailSupport(Vec3 point)
+{
+	if (point.x < 0 || point.y < 0 || point.x >= Map::MaxX()*16 || point.y >= Map::MaxY()*16) return {};
+	auto tile = capture->rail_surfaces.find(TileVirtXY(static_cast<int>(point.x),static_cast<int>(point.y)));
+	if (tile == capture->rail_surfaces.end()) return {};
+	std::optional<RailSupportContact> result;
+	float nearest = 4;
+	for (const auto &surface : tile->second) if (auto contact = surface.Contact(point)) {
+		float distance = std::abs(contact->smooth-point.z);
+		/* A track below an overpass or above a tunnel cannot attract the train
+		 * to the wrong deck. Source-replaced tracks contribute no metadata. */
+		if (distance < nearest) { nearest = distance; result = contact; }
+	}
+	return result;
+}
+
+static float FitTrainToCapturedRail(unsigned engine, bool loaded, Vec3 &position, float heading)
+{
+	auto support = VoxelTrainSupportBounds(engine,loaded,heading);
+	if (!support || support->front-support->rear < 0.5f) return 0;
+	Vec3 along{std::cos(heading),std::sin(heading),0};
+	float grade = 0, height = position.z+support->height;
+	for (unsigned iteration = 0; iteration < 4; ++iteration) {
+		float cosine = 1/std::sqrt(1+grade*grade*Camera::WORLD_Z_SCALE*Camera::WORLD_Z_SCALE);
+		Vec3 rear = position+along*(support->rear*cosine), front = position+along*(support->front*cosine);
+		rear.z = height+support->rear*cosine*grade; front.z = height+support->front*cosine*grade;
+		auto a = CapturedRailSupport(rear), b = CapturedRailSupport(front);
+		if (!a || !b) return 0;
+		grade = (b->smooth-a->smooth)/((support->front-support->rear)*cosine);
+		if (std::abs(grade) > 0.501f) return 0;
+		height = std::max(a->stepped-support->rear*cosine*grade,b->stepped-support->front*cosine*grade);
+		/* At a grade transition a rigid underframe can span a crest. Keep its
+		 * intermediate wheelsets above the same stepped running surface. */
+		for (float contact_x : support->contact_x) {
+			float x = contact_x*support->length_scale*cosine;
+			Vec3 point = position+along*x; point.z = height+x*grade;
+			if (auto contact = CapturedRailSupport(point)) height = std::max(height,contact->stepped-x*grade);
+		}
+	}
+	position.z = height-support->height;
+	return grade;
+}
+
+void BeginVoxelTrainSupportCheck(unsigned engine, bool corners)
+{
+	if (engine >= 116 || !VoxelVehicleState(engine,false)) throw std::invalid_argument("Train support observation requires an original voxel train");
+	checked_support_engine = engine; checked_support_vehicle = UINT32_MAX; checked_support_states = 0;
+	checked_support_corners = 0; check_support_corners = corners;
+}
+
+static void CheckTrainSupport(const Vehicle &vehicle, const MeshInstance &instance, float heading, float grade, bool loaded)
+{
+	if (capture->diagnostic || checked_support_engine != vehicle.engine_type.base()) return;
+	if (checked_support_vehicle == UINT32_MAX) checked_support_vehicle = vehicle.index.base();
+	if (checked_support_vehicle != vehicle.index.base()) return;
+	auto support = VoxelTrainSupportBounds(vehicle.engine_type.base(),loaded,heading);
+	if (!support) return;
+	unsigned samples = 0;
+	float minimum = INFINITY, maximum = -INFINITY;
+	for (const auto &vertex : *instance.mesh) if (vertex.position.z == support->height) {
+		Vec3 point = ResolveInstanceVertex(vertex,instance.data).position;
+		if (auto contact = CapturedRailSupport(point)) {
+			float gap = point.z-contact->stepped;
+			minimum = std::min(minimum,gap); maximum = std::max(maximum,gap); ++samples;
+		}
+	}
+	if (samples == 0) return;
+	if (minimum < -0.126f || ((std::abs(grade) < 0.0001f || std::abs(grade) >= 0.499f) && maximum > 0.251f)) {
+		throw std::runtime_error(fmt::format("Train support engine {} vehicle {} at {},{},{} grade {} has wheel gaps {}..{}",checked_support_engine,checked_support_vehicle,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,grade,minimum,maximum));
+	}
+	unsigned state = grade > 0.49f ? 4U : grade < -0.49f ? 8U : 0U;
+	if (std::abs(grade) < 0.0001f && IsValidTile(vehicle.tile)) {
+		state |= IsRailStationTile(vehicle.tile) ? 1U : IsTileType(vehicle.tile,MP_RAILWAY) ? 2U :
+			IsBridgeTile(vehicle.tile) ? 16U : IsTunnelTile(vehicle.tile) ? 32U : 0U;
+	}
+	if ((checked_support_states | state) != checked_support_states) Debug(driver,1,"OpenTT3D: train support engine {} vehicle {} at {},{},{} grade {} gap {}..{} states {}",checked_support_engine,checked_support_vehicle,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,grade,minimum,maximum,state);
+	checked_support_states |= state;
+	if (IsValidTile(vehicle.tile) && IsPlainRailTile(vehicle.tile)) {
+		unsigned corners = Train::From(&vehicle)->track & GetTrackBits(vehicle.tile) & (TRACK_BIT_UPPER | TRACK_BIT_LOWER | TRACK_BIT_LEFT | TRACK_BIT_RIGHT);
+		if ((checked_support_corners | corners) != checked_support_corners) {
+			Debug(driver,1,"OpenTT3D: train corner support engine {} vehicle {} at {},{} tracks {} heading {} gap {}..{} samples {}",checked_support_engine,checked_support_vehicle,vehicle.x_pos,vehicle.y_pos,corners,heading,minimum,maximum,samples);
+		}
+		checked_support_corners |= corners;
+	}
+	if (checked_support_states == 63 && (!check_support_corners || checked_support_corners == (TRACK_BIT_UPPER | TRACK_BIT_LOWER | TRACK_BIT_LEFT | TRACK_BIT_RIGHT))) {
+		Debug(driver,1,"OpenTT3D: voxel train support observation passed: engine {} vehicle {}, station/flat/ascending/descending/bridge/tunnel support and original vehicle state",checked_support_engine,checked_support_vehicle);
+		if (check_support_corners) Debug(driver,1,"OpenTT3D: voxel train corner observation passed: engine {} vehicle {}, all four original corner tracks with actual smoothed headings and captured support",checked_support_engine,checked_support_vehicle);
+		checked_support_engine = UINT_MAX;
+	}
+}
 
 static std::optional<float> CapturedContactWireHeight(Vec3 point)
 {
@@ -1476,6 +1579,15 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 		return;
 	}
 	if (const auto *bridge = CurrentBridgeCapture(); bridge != nullptr && DrawCapturedBridge(capture->scene,*bridge,image,palette,origin,TextureZoom(origin),transparent,sub)) {
+		if ((bridge->shape.role == BridgeRole::Ramp || bridge->shape.role == BridgeRole::Deck) && !bridge->custom && bridge->rail != INVALID_RAILTYPE && SupportedRailType(bridge->rail)) {
+			Vec3 floor = bridge->origin;
+			Slope slope = SLOPE_FLAT;
+			if (bridge->shape.sloped) { floor.z -= TILE_HEIGHT; slope = InclinedSlope(static_cast<DiagDirection>(bridge->shape.ramp_direction)); }
+			TrackBits tracks = bridge->shape.along_y ? TRACK_BIT_Y : TRACK_BIT_X;
+			size_t first = capture->scene.instances.size();
+			DrawRailTracks(capture->scene,capture->camera,floor,slope,bridge->rail,tracks,bridge->reserved ? tracks : TRACK_BIT_NONE);
+			for (size_t i = first; i < capture->scene.instances.size(); ++i) if (transparent) capture->scene.instances[i].data.origin_opacity[3] = 0.38f;
+		}
 		capture->parent_instance_end = capture->scene.instances.size();
 		capture->parent_culled = capture->parent_instance_begin == capture->parent_instance_end;
 		if (capture->parent_culled) return;
@@ -1551,31 +1663,40 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				if (sequence.count != 1 || !IsBaseGraphicsSprite(sequence.seq[0].sprite)) { supported = false; break; }
 				references[direction] = sequence.seq[0].sprite;
 			}
-			if (supported && DrawAuthoredVehicle(capture->scene, vehicle.engine_type.base(), loaded, position, heading, palette, TextureZoom(position), 1, &references)) {
+			float grade = supported && vehicle.type == VEH_TRAIN ? FitTrainToCapturedRail(vehicle.engine_type.base(),loaded,position,heading) : 0;
+			if (supported && DrawAuthoredVehicle(capture->scene, vehicle.engine_type.base(), loaded, position, heading, palette, TextureZoom(position), 1, &references, grade)) {
+				if (vehicle.type == VEH_TRAIN && capture->scene.instances.size() > capture->parent_instance_begin) CheckTrainSupport(vehicle,capture->scene.instances[capture->parent_instance_begin],heading,grade,loaded);
 				if (vehicle.type == VEH_TRAIN && VoxelTrainCollectorMount(vehicle.engine_type.base(),0,heading)) {
 					std::array<float,2> contacts{10,10};
 					unsigned observed_states = 0;
-					for (unsigned part = 0; part < contacts.size(); ++part) {
-						auto mount = VoxelTrainCollectorMount(vehicle.engine_type.base(),part,heading);
+					for (unsigned part = 0; part < contacts.size(); ++part) for (unsigned iteration = 0; iteration < 3; ++iteration) {
+						auto mount = VoxelTrainCollectorMount(vehicle.engine_type.base(),part,heading,grade,contacts[part]);
 						if (!mount) continue;
 						if (auto height = TrainTunnelContactHeight(vehicle,position+*mount)) {
 							contacts[part] = *height-position.z;
 							observed_states |= contacts[part] > 9.99f ? 1U : contacts[part] < 7.56f ? 4U : 2U;
-						} else if (auto height = CapturedContactWireHeight({position.x+mount->x,position.y+mount->y,position.z+10})) {
+						} else if (auto height = CapturedContactWireHeight(position+*mount)) {
 							contacts[part] = *height-position.z;
 							observed_states |= 1U;
 						}
 					}
 					size_t first = capture->scene.instances.size();
-					unsigned drawn = DrawVoxelTrainCollectors(capture->scene,vehicle.engine_type.base(),position,heading,palette,contacts);
+					unsigned drawn = DrawVoxelTrainCollectors(capture->scene,vehicle.engine_type.base(),position,heading,palette,contacts,grade);
 					if (drawn != 0 && !capture->diagnostic && checked_collector_engine == vehicle.engine_type.base()) {
 						if (checked_collector_vehicle == UINT32_MAX) checked_collector_vehicle = vehicle.index.base();
 						if (checked_collector_vehicle == vehicle.index.base()) {
 							for (size_t i = first; i < capture->scene.instances.size(); ++i) {
 								const auto &instance = capture->scene.instances[i];
-								float highest = -INFINITY;
-								for (const auto &vertex : *instance.mesh) highest = std::max(highest,ResolveInstanceVertex(vertex,instance.data).position.z);
-								bool matched = std::ranges::any_of(contacts,[&](float height) { return std::abs(highest-position.z-height) < 0.0001f; });
+								float top = -INFINITY;
+								for (const auto &vertex : *instance.mesh) top = std::max(top,vertex.position.z);
+								Vec3 low{INFINITY,INFINITY,top},high{-INFINITY,-INFINITY,top};
+								for (const auto &vertex : *instance.mesh) if (vertex.position.z == top) {
+									low.x = std::min(low.x,vertex.position.x); low.y = std::min(low.y,vertex.position.y);
+									high.x = std::max(high.x,vertex.position.x); high.y = std::max(high.y,vertex.position.y);
+								}
+								Vertex shoe{}; shoe.position = (low+high)*0.5f; shoe.normal = {0,0,1};
+								float contact = ResolveInstanceVertex(shoe,instance.data).position.z;
+								bool matched = std::ranges::any_of(contacts,[&](float height) { return std::abs(contact-position.z-height) < 0.0001f; });
 								if (!matched || tag.id != vehicle.index.base()+1) throw std::runtime_error("Voxel collector lost wire contact or vehicle ownership");
 							}
 							if ((checked_collector_states | observed_states) != checked_collector_states) Debug(driver,1,"OpenTT3D: voxel train collector engine {} vehicle {} observed contact heights {},{} states {}",checked_collector_engine,checked_collector_vehicle,contacts[0],contacts[1],observed_states);

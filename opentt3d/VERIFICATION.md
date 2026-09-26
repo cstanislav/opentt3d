@@ -21,6 +21,27 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Matched expanded memory controls complete:** both frozen1,169GL/Vulkan runs
+  pass the full model/vehicle/tree/infrastructure matrix, CPU/GPU retirement and
+  exact world-atlas/picking under6GiB. Peaks are5,779,248,360/5,359,801,360bytes.
+  The concluding dense Cab samples remain12.714/14.058fps, so this is a bounded
+  memory/correctness result.196 native tests pass, including exact retained-source
+  reconstruction and scene/worker lifetime checks. Train pitch retains original
+  running datums, physical-scale normals, support contact and independent roof
+  collector ownership on station, slopes, bridge and tunnel. All16 temperate loaded
+  locomotive/wagon backend observations pass across four rail types; Toyland engine6
+  GL passes, with the interrupted wagon52 and remaining Toyland checks still open.
+- **Release`.8`CI completes:** macOS arm64, Windows x86/x64/arm64 and LinuxGL pass.
+  LinuxGL runs191 native,109 asset and9 harness tests plus the full1,180 renderer
+  matrix. LinuxVulkan fails at6146.1MiB against the6144MiB guard; its logs are retained.
+  Both Linux jobs predate the new CPU surface residency fix.
+- Prefix-filtered joined-industry exports now select the complete family across
+  all construction slots, including original ground-only stage0 and one-part layouts.
+  New all-angle/native/street reviews are running for the corrected paper/plantation,
+  waterworks and food-processing candidates. The exporter and optional four-corner
+  support observer build and pass196 native tests. The corner observer still awaits
+  live route evidence; its public fixtures already complete loaded/empty travel.
+
 - **13:12UTC progress, still before19:00UTC:** all196 native CPU/cache/worker tests,
  114 asset/compiler tests and9 harness tests pass. Eight focused hiddenGL/Vulkan
  runs cover corrected farm/oil-well and provisional paper/plantation meshes,

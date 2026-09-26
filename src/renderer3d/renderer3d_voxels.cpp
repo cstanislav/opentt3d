@@ -3,6 +3,7 @@
 #include "../stdafx.h"
 #include "../3rdparty/catch2/catch.hpp"
 #include "voxel_geometry.hpp"
+#include "voxel_mesh_cache.hpp"
 #include "voxel_models.h"
 #include "camera.hpp"
 #include "voxel_visibility.hpp"
@@ -13,6 +14,140 @@
 
 using namespace Renderer3D;
 using Catch::Detail::Approx;
+
+TEST_CASE("CPU voxel retirement pins scene copies and restores exact meshes at stable addresses", "[renderer3d][voxel]")
+{
+	std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{3,4,5,6,7,8}}};
+	std::array<VoxelCachedSurface,3> models;
+	for (unsigned i = 0; i < models.size(); ++i) {
+		VoxelGrid grid({8,8,8},materials,{-4,3,0.5f},{0.25f,0.5f,1});
+		grid.Fill({1,1,0},{7,7,2},1);
+		grid.Fill({2,2,1},{6,6,8},2);
+		grid.Fill({3,3,2},{5,5,8},0);
+		models[i].merged = i != 2;
+		models[i].source = std::make_unique<VoxelSource>(grid);
+		models[i].surface = grid.Mesh(models[i].merged);
+	}
+	auto expected = models[0].surface.vertices, unmerged = models[2].surface.vertices;
+	const auto *stable = &models[0].surface.vertices;
+	uint64_t one_mesh = expected.capacity()*sizeof(Vertex);
+	VoxelMeshCache cache(one_mesh);
+	cache.Register(models[0]);
+	Scene copied;
+	{
+		Scene original;
+		original.instances.push_back({stable,{},cache.Pin(models[0],materials)});
+		copied = original;
+	}
+	cache.Register(models[1]);
+	CHECK(cache.IsPinned(models[0]));
+	CHECK_FALSE(cache.IsPinned(models[1]));
+	CHECK(models[1].surface.vertices.empty());
+	cache.Trim(0);
+	CHECK(cache.ResidentBytes() == one_mesh);
+	REQUIRE(copied.VertexCount() == expected.size());
+	CHECK(std::memcmp(copied.instances.front().mesh->data(),expected.data(),expected.size()*sizeof(Vertex)) == 0);
+	copied.instances.clear();
+	cache.Trim(0);
+	CHECK(cache.ResidentBytes() == 0);
+	CHECK(models[0].surface.vertices.capacity() == 0);
+	{
+		auto pin = cache.Pin(models[0],materials);
+		CHECK(&models[0].surface.vertices == stable);
+		REQUIRE(models[0].surface.vertices.size() == expected.size());
+		CHECK(std::memcmp(models[0].surface.vertices.data(),expected.data(),expected.size()*sizeof(Vertex)) == 0);
+		cache.Register(models[2]);
+		auto second_pin = cache.Pin(models[2],materials);
+		cache.Trim(0);
+		CHECK(cache.ResidentBytes() > one_mesh); // Active geometry may exceed the soft budget.
+		REQUIRE(models[2].surface.vertices.size() == unmerged.size());
+		CHECK(std::memcmp(models[2].surface.vertices.data(),unmerged.data(),unmerged.size()*sizeof(Vertex)) == 0);
+	}
+	cache.Trim(0);
+	CHECK(cache.ResidentBytes() == 0);
+	CHECK(cache.Rebuilds() == 2);
+}
+
+TEST_CASE("Retained voxel sources release dense storage and reproduce exact diagnostic geometry", "[renderer3d][voxel]")
+{
+	const std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{3,4,5,6,7,8}}};
+	VoxelMesh expected;
+	std::vector<uint32_t> volume;
+	std::unique_ptr<VoxelSource> source;
+	{
+		VoxelGrid grid({18,14,20},materials,{-9,17,0.5f},{0.25f,0.5f,1});
+		grid.Fill({1,2,0},{17,13,5},1);
+		grid.Fill({4,3,3},{11,10,19},2);
+		grid.Fill({5,4,4},{10,9,17},0);
+		expected = grid.Mesh(false);
+		volume = grid.Volume()->words;
+		source = std::make_unique<VoxelSource>(grid);
+		CHECK(source->StorageBytes() < 18*14*20*sizeof(uint16_t));
+	}
+	/* The dense original has been destroyed. The independent unit reference,
+	 * including holes, face materials and nonuniform coordinates, stays exact. */
+	auto restored = source->Expand(materials);
+	auto actual = restored.Mesh(false);
+	CHECK(actual.occupied == expected.occupied);
+	CHECK(actual.exposed_faces == expected.exposed_faces);
+	REQUIRE(actual.vertices.size() == expected.vertices.size());
+	CHECK(std::memcmp(actual.vertices.data(),expected.vertices.data(),actual.vertices.size()*sizeof(Vertex)) == 0);
+	CHECK(restored.Volume()->words == volume);
+	CHECK_THROWS_AS(source->Expand({materials.front()}),std::invalid_argument);
+	/* A single run can cross rows and planes, and must split before its bounded
+	 * length wraps. Exercise a material ID beyond the eight-bit palette range. */
+	std::vector<VoxelMaterial> many(300,materials.front());
+	VoxelGrid large({257,257,2},many);
+	large.Fill({0,0,0},{257,257,2},300);
+	VoxelSource compact(large);
+	CHECK(compact.StorageBytes() == 3*8);
+	auto expanded = compact.Expand(many);
+	for (int z = 0; z < 2; ++z) for (int y = 0; y < 257; ++y) for (int x = 0; x < 257; ++x) REQUIRE(expanded.Get(x,y,z) == 300);
+	VoxelGrid empty({3,4,5},materials);
+	VoxelSource empty_source(empty);
+	CHECK(empty_source.StorageBytes() == 0);
+	CHECK(empty_source.Expand(materials).Mesh().vertices.empty());
+}
+
+TEST_CASE("Background visibility jobs pin retired CPU voxel sources until their last read", "[renderer3d][voxel]")
+{
+	std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}}};
+	VoxelGrid grid({12,12,20},materials);
+	grid.Fill({1,1,0},{11,11,18},1);
+	grid.Fill({3,3,2},{9,9,20},0);
+	VoxelCachedSurface model;
+	model.source = std::make_unique<VoxelSource>(grid);
+	model.surface = grid.Mesh();
+	const auto expected_mesh = model.surface.vertices;
+	auto packed = grid.Pack(model.surface,true);
+	REQUIRE(packed != nullptr);
+	VoxelMeshCache cache(0);
+	cache.Register(model);
+	VoxelVisibilityWorker worker;
+	Camera camera{{40,40,4},0.1f,128,96,0.15f};
+	std::vector<InstanceData> instances(80);
+	for (unsigned i = 0; i < instances.size(); ++i) instances[i].origin_opacity = {static_cast<float>(i%10)*8,static_cast<float>(i/10)*8,0,1};
+	worker.SetCamera(camera,8);
+	for (unsigned request = 0; request < 8; ++request) {
+		auto lease = cache.Pin(model,materials);
+		instances.front().origin_opacity[0] = request;
+		worker.Request(model.surface.vertices,packed,instances,instances.size(),lease);
+		lease.reset();
+		cache.Trim(0); // Either the job still pins the mesh, or its reads are complete.
+	}
+	REQUIRE(worker.WaitIdle(std::chrono::seconds(10)));
+	CHECK(worker.TakeError().empty());
+	auto result = worker.Take(model.surface.vertices);
+	REQUIRE(result.has_value());
+	VoxelVisibilityCache reference;
+	reference.Begin(camera,8,instances.size());
+	auto lookup = MakePackedVoxelLookup(packed->vertices);
+	REQUIRE(result->geometry.size() == instances.size());
+	for (size_t i = 0; i < instances.size(); ++i) {
+		auto expected = reference.SharedPackedTriangles(expected_mesh,instances[i],lookup.indices,lookup.bits);
+		CHECK(*result->geometry[i] == *expected);
+	}
+}
 
 TEST_CASE("Background voxel visibility cancels stale cameras and owns its complete value snapshot", "[renderer3d][voxel]")
 {
@@ -487,6 +622,56 @@ TEST_CASE("Original train voxel bodies retain source proportions without overlap
 	CHECK(OriginalTrainVoxelScale(std::numbers::pi_v<float>/4,10.25f) == Approx(1.0002974f));
 	CHECK_THROWS_AS(OriginalTrainVoxelScale(0,0),std::invalid_argument);
 	CHECK_THROWS_AS(OriginalTrainVoxelScale(std::numeric_limits<float>::infinity(),10),std::invalid_argument);
+}
+
+TEST_CASE("Pitched train instances preserve physical lengths, rail support and outward normals", "[renderer3d][voxel]")
+{
+	for (float grade : {-0.5f,-0.25f,0.0f,0.25f,0.5f}) for (float heading : {0.0f,0.71f,1.57f,3.14f}) {
+		InstanceData data;
+		data.origin_opacity = {128,256,16,1};
+		data.identity[2] = 1;
+		data.SetLongitudinalScale(0.725f);
+		data.mirror_layer_heading[3] = heading;
+		data.SetPitch(grade,Camera::WORLD_Z_SCALE,0.5f);
+		data.SetObjectId(177);
+		Vertex a{},b{},c{};
+		a.position = {-3,0,0.5f}; b.position = {3,0,0.5f}; c.position = {0,2,0.5f};
+		a.normal = b.normal = c.normal = {0,0,1};
+		a.texture = b.texture = c.texture = {0.5f,0.5f,-1};
+		a = ResolveInstanceVertex(a,data); b = ResolveInstanceVertex(b,data); c = ResolveInstanceVertex(c,data);
+		Vec3 along = b.position-a.position, across = c.position-a.position;
+		CHECK(std::sqrt(along.x*along.x+along.y*along.y) * grade == Approx(along.z).margin(0.00004f));
+		CHECK(std::sqrt(along.x*along.x+along.y*along.y+std::pow(along.z*Camera::WORLD_Z_SCALE,2)) == Approx(6*0.725f).margin(0.00004f));
+		CHECK(std::abs(Dot(along,a.normal)) < 0.00004f);
+		CHECK(std::abs(Dot(across,a.normal)) < 0.00004f);
+		CHECK(a.normal.z > 0);
+		CHECK((a.position.z+b.position.z)*0.5f == Approx(16.5f).margin(0.00004f));
+		CHECK(a.object_id == 177);
+		CHECK(data.CanonicalGPURecord().pitch == data.pitch);
+	}
+	InstanceData data;
+	CHECK_THROWS_AS(data.SetPitch(INFINITY,1),std::invalid_argument);
+	CHECK_THROWS_AS(data.SetPitch(0.5f,0),std::invalid_argument);
+}
+
+TEST_CASE("Pitched collectors retain every roof mount while independently meeting their wire", "[renderer3d][voxel]")
+{
+	for (float grade : {-0.5f,0.0f,0.5f}) for (float heading : {0.0f,0.71f,3.14f}) for (float contact : {7.55f,8.8f,10.0f,11.0f}) {
+		InstanceData body;
+		body.origin_opacity = {128,256,16,1}; body.identity[2] = 1;
+		body.mirror_layer_heading[3] = heading;
+		body.SetLongitudinalScale(0.725f); body.SetPitch(grade,Camera::WORLD_Z_SCALE,0.5f);
+		auto frame = body;
+		constexpr float mount = 6.5f, top = 10.0f, contact_x = -1.0f;
+		FitVoxelCollectorToWire(frame,mount,top,contact,contact_x*0.725f);
+		for (float x : {-3.0f,-1.0f,2.0f}) for (float y : {-1.0f,1.0f}) {
+			Vertex vertex{}; vertex.position = {x,y,mount}; vertex.normal = {0,0,1};
+			Vec3 a = ResolveInstanceVertex(vertex,body).position, b = ResolveInstanceVertex(vertex,frame).position;
+			CHECK(a.x == Approx(b.x).margin(0.00004f)); CHECK(a.y == Approx(b.y).margin(0.00004f)); CHECK(a.z == Approx(b.z).margin(0.00004f));
+		}
+		Vertex shoe{}; shoe.position = {contact_x,0,top}; shoe.normal = {0,0,1};
+		CHECK(ResolveInstanceVertex(shoe,frame).position.z == Approx(16+contact).margin(0.00004f));
+	}
 }
 
 static std::pair<double,double> VoxelAreaVolume(const VoxelMesh &mesh)

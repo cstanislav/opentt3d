@@ -35,6 +35,7 @@ const RailAssembly &RailGeometry(RailType type, Track track, Slope slope, unsign
 
 void DrawRailTracks(Scene &scene, const Camera &camera, Vec3 origin, Slope slope, RailType type, TrackBits tracks, TrackBits reserved)
 {
+	CaptureRailSupport(origin,slope,type,tracks);
 	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,GetSlopeMaxPixelZ(slope)+1.0f})) return;
 	float scale = camera.PixelScaleAt(origin+Vec3{8,8,0});
 	unsigned lod = scale >= 1.25f ? 0 : scale >= 0.35f ? 1 : 2;
@@ -56,7 +57,7 @@ void DrawRailTracks(Scene &scene, const Camera &camera, Vec3 origin, Slope slope
 
 /** Resolve provenance before replacing any source drawing. Partial Action-A
  * replacements and custom rail types retain the upstream reference path. */
-static bool SupportedRailType(RailType type)
+bool SupportedRailType(RailType type)
 {
 	if (type > RAILTYPE_MAGLEV) return false;
 	const auto *rti = GetRailTypeInfo(type);

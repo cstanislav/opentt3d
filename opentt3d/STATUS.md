@@ -9,12 +9,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite190/190, including translated-root bore clipping, collector mounting/wire grades, silhouette-boundary diagonals, shared-result ownership and actual idle-worker cancellation release. Current Linux CI completion remains pending; the locomotive checkpoint passes187 native Linux tests before a live-tunnel overlap failure, now reproduced and repaired natively.
-- [x] Asset/compiler/schema tests109/109, downloader/screenshot/memory harness9/9; newest tests cover oil-rig construction ownership, supported joins, empty water states, the original helipad datum and process cleanup after a disk-full memory report.
+- [x] Current native suite196/196, including train physical pitch/contact, exact retained-source reconstruction, copied-scene CPU residency and active asynchronous-worker leases. Release`.8`LinuxGL passes191 native tests; LinuxVulkan's prior memory failure predates the new residency repair.
+- [x] Published asset/compiler/schema tests109/109, downloader/screenshot/memory harness9/9; the provisional food-processing candidate passes115 asset tests. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Matched expanded1,169GL/Vulkan matrices complete below6GiB with scene-pinned
+  CPU surfaces and cold immutable GPU-page retirement:5,779,248,360/5,359,801,360bytes.
+  Exact geometry, palettes, transparency, all climate/cargo bindings and world picking
+  survive retirement/rebuild. Active geometry may exceed either soft cache budget.
+- [ ] Smooth dense-world/Cab performance remains unmet: the concluding expanded-control
+  samples average12.714/14.058fps. Interactive cache churn and Linux follow-up remain open.
 - [x] Hidden native macOS framebuffer review with `--background`: GL, Vulkan and
   LaunchServices bundle report no activation/key/visible window and capture2560x1600.
   Same-backend56-view comparison preserves22,937,600 RGBA pixels; foreground interaction

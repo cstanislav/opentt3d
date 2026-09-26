@@ -21,7 +21,7 @@ using Clock = std::chrono::steady_clock;
 enum class GeometryOwner { Clear, Rail, Road, House, Trees, Station, Water, Void, Industry, TunnelBridge, Object, Vehicle, Unowned, Count };
 using GeometryCounts = std::array<size_t,static_cast<size_t>(GeometryOwner::Count)>;
 
-void BeginFrame();
+void BeginFrame(Clock::time_point deadline);
 void EndFrame();
 void StartBenchmark(unsigned frames, bool fullscreen = false, bool capture = false);
 void AddTime(Section section, double milliseconds);

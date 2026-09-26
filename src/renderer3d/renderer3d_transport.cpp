@@ -486,7 +486,32 @@ TEST_CASE("Rail assemblies sit on legal gameplay foundations at every detail lev
 			for (size_t i = 0; i < rails.size(); i += 3) if (auto ray = TriangleHit({{p.x,p.y,ground+2},{0,0,-1}},rails[i].position,rails[i+1].position,rails[i+2].position)) hit = std::min(hit,*ray);
 			CHECK(hit <= 1.5001f);
 			CHECK(hit >= 1.1249f);
+			RailSupportSurface support{{},surface,type,static_cast<unsigned>(TrackToTrackBits(track))};
+			auto contact = support.Contact(p);
+			REQUIRE(contact.has_value());
+			CHECK(contact->stepped == Approx(ground+2-hit).margin(0.0001f));
+			CHECK(contact->stepped >= contact->smooth-0.0001f);
+			CHECK(contact->stepped-contact->smooth <= 0.3751f);
 		}
+	}
+}
+
+TEST_CASE("Bridge rail supports match the ramp deck in all four world orientations", "[renderer3d]")
+{
+	for (unsigned direction = 0; direction < 4; ++direction) {
+		auto surface = MakeTileSurface(InclinedSlope(static_cast<DiagDirection>(direction)));
+		RailSupportSurface support{{128,256,16},surface,0,1U<<(direction%2)};
+		for (float distance : {0.125f,3.125f,8.125f,15.125f}) {
+			Vec3 p = direction%2 == 0 ? Vec3{distance,8,0} : Vec3{8,distance,0};
+			auto contact = support.Contact(p+support.origin);
+			REQUIRE(contact.has_value());
+			CHECK(contact->smooth == Approx(16.5f+BridgeRampHeight(direction,p.x,p.y)));
+			CHECK(contact->stepped >= contact->smooth);
+			CHECK(contact->stepped-contact->smooth <= 0.1251f);
+		}
+		CHECK_FALSE(support.Contact(support.origin+Vec3{1,1,0}));
+		CHECK_FALSE(support.Contact(support.origin+Vec3{-1,8,0}));
+		CHECK_FALSE(support.Contact(support.origin+Vec3{16,8,0}));
 	}
 }
 

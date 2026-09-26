@@ -12,7 +12,7 @@ bool TreeHasComponentMaterials(SpriteID image);
 void VerifyTreeModels();
 bool HasAuthoredIndustry(unsigned graphics, SpriteID sprite);
 bool DrawAuthoredIndustry(Scene &scene, unsigned graphics, SpriteID sprite, const SpriteTexture &texture, Vec3 origin, Vec3 sprite_origin, float opacity, float pixel_scale = 4);
-bool DrawAuthoredVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, unsigned texture_zoom, float opacity = 1, const std::array<SpriteID, 8> *resolved = nullptr);
+bool DrawAuthoredVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, unsigned texture_zoom, float opacity = 1, const std::array<SpriteID, 8> *resolved = nullptr, float grade = 0);
 void ExportVehicleReferences();
 void ExportVehicleModelGallery(unsigned engine, bool loaded);
 void VerifyVehicleModels();

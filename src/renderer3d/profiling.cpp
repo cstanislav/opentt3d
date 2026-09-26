@@ -23,6 +23,7 @@ namespace Renderer3D::Profile {
 
 struct Sample {
 	double interval = 0, work = 0;
+	double deadline_lateness = 0;
 	double gpu = 0;
 	bool gpu_available = false;
 	std::array<double, static_cast<size_t>(Section::Count)> sections{};
@@ -39,10 +40,11 @@ static unsigned requested = 0, warmup = 0;
 static bool require_fullscreen = false, capture_on_complete = false;
 static int measured_width = 0, measured_height = 0;
 
-void BeginFrame()
+void BeginFrame(Clock::time_point deadline)
 {
 	auto now = Clock::now();
 	current = {};
+	current.deadline_lateness = std::max(0.0,std::chrono::duration<double,std::milli>(now-deadline).count());
 	if (previous != Clock::time_point{}) current.interval = std::chrono::duration<double, std::milli>(now - previous).count();
 	previous = start = now;
 }
@@ -99,6 +101,7 @@ void EndFrame()
 		{"width", _screen.width}, {"height", _screen.height}, {"fullscreen", _fullscreen},
 		{"requested_refresh_rate", _settings_client.gui.refresh_rate}, {"rotation", GetRotation()},
 		{"frame_interval_ms", summary([](const Sample &s) { return s.interval; })},
+		{"frame_deadline_lateness_ms", summary([](const Sample &s) { return s.deadline_lateness; })},
 		{"frame_work_ms", summary([](const Sample &s) { return s.work; })},
 		{"vertices", summary([](const Sample &s) { return static_cast<double>(s.vertices); })},
 		{"passes", summary([](const Sample &s) { return static_cast<double>(s.passes); })},
@@ -141,6 +144,7 @@ void EndFrame()
 		const auto &sample = samples[index];
 		if (sample.work <= 20 && sample.interval <= 20) continue;
 		Json slow{{"index", index}, {"work_ms", sample.work}, {"interval_ms", sample.interval}, {"vertices", sample.vertices}, {"passes", sample.passes},
+			{"deadline_lateness_ms", sample.deadline_lateness},
 			{"mesh_uploads", sample.mesh_uploads}, {"mesh_upload_bytes", sample.mesh_upload_bytes}};
 		for (size_t i = 0; i < std::size(names); ++i) slow[names[i]] = sample.sections[i];
 		report["slow_frames"].push_back(std::move(slow));

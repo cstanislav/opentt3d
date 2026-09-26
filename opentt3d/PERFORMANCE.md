@@ -3,7 +3,34 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
-## Retained-source candidate and complete residency failures (September26)
+## Scene-pinned residency: matched expanded controls pass (September26)
+
+`pass1-cpu-residency-control-validation.json` now records both complete expanded
+1,169-volume controls, using the same title save, original full geometry and
+7,200-second/6GiB bounds as the preceding failures:
+
+| Backend | Sampled peak bytes | Samples | Result |
+| --- | ---: | ---: | --- |
+| OpenGL | 5,779,248,360 | 6,395 | Pass |
+| Vulkan | 5,359,801,360 | 6,696 | Pass |
+
+Both pass28,056 authored model views,322,048 vehicle poses/592 declared climate/cargo
+bindings, pitched support-plane and collector poses,24,528 tree lifecycle views,
+the additional rail/bridge/tunnel/foundation/infrastructure checks, forced CPU/GPU
+cache retirement/reconstruction and exact4,096,000-pixel world-atlas/picking comparisons.
+The CPU surface cache retains immutable vector identities and lossless source runs;
+scene copies and asynchronous visibility jobs pin their streams. Its1GiB soft
+budget and the512MiB GPU soft budget retain active/in-flight geometry even when
+that geometry exceeds a budget. The frozen candidate hashes and prior failures remain.
+
+The final30-frame title-world Cab samples average only12.714/14.058fps onGL/Vulkan,
+with p95 work82.845/71.844ms and all30 intervals over20ms. OpenGL records zero mesh
+uploads during those measured frames and63.489ms average buffer wait. The memory
+regression passes this expanded workload; sustained smooth60fps, interactive
+camera/reload/multiple-viewport residency, arbitrary-world limits and Linux follow-up
+remain open. Focused industry matrices do not replace those larger reviews.
+
+### Preceding retained-source and GPU-residency failures
 
 `pass1-residency-serialized-validation.json` records complete-workload retries with
 unchanged7,200s/6GiB bounds. Vulkan crosses the memory guard at6,489,053,088bytes
@@ -36,9 +63,9 @@ reconstruction from retained cells. All196 native tests pass, including copied-s
 retirement/rebuild and active asynchronous-worker leases. Eight focusedGL/Vulkan
 farm/paper/plantation/oil-well runs pass forced retirement/rebuild, source selections,
 exact within-backend RGBA/picking and atlas comparisons; maximum sampled memory is
-2,501,165,056bytes. These smaller workloads do not establish the full expanded-memory
-repair. The matched1,169 expanded controls and interactive memory/pacing review remain
-pending. The candidate is frozen in `pass1-cpu-residency-{control,catalogue}-build`.
+2,501,165,056bytes. The matched1,169 expanded controls subsequently pass as recorded
+above; interactive memory/pacing review remains pending. The candidate is frozen in
+`pass1-cpu-residency-{control,catalogue}-build`.
 
 ## Forest/refinery and synchronous upload retirement:1,169 volumes (September26)
 

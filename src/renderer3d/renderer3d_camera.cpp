@@ -290,6 +290,8 @@ TEST_CASE("Reusable instance batches retain submission order and discard previou
 		CHECK(staging.batches.size() == (split ? 4 : 2));
 		std::set<unsigned> seen;
 		for (const auto &batch : staging.batches) {
+			REQUIRE(batch.source < instances.size());
+			CHECK(instances[batch.source].mesh == batch.mesh);
 			unsigned previous = 0;
 			for (size_t i = batch.first; i < batch.first+batch.count; ++i) {
 				const auto &data = staging.records[i];
@@ -333,6 +335,7 @@ TEST_CASE("Instance staging preserves composite order through rehash and retirem
 		bool correct = true;
 		for (const auto &batch : staging.batches) {
 			Key key{first_capture.at(batch.mesh),batch.transparent};
+			CHECK(batch.source == first_capture.at(batch.mesh));
 			correct &= !previous || std::less<Key>{}(*previous,key);
 			previous = key;
 			uint32_t last_id = 0;

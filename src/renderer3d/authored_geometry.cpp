@@ -887,11 +887,11 @@ bool DrawAuthoredIndustry(Scene &scene, unsigned graphics, SpriteID sprite, cons
 	return HasAuthoredIndustry(graphics, sprite) && DrawRegisteredModel(scene, IndustryModels().at(graphics), 3, texture, origin, sprite_origin, opacity, pixel_scale);
 }
 
-bool DrawAuthoredVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, unsigned texture_zoom, float opacity, const std::array<SpriteID, 8> *resolved)
+bool DrawAuthoredVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, unsigned texture_zoom, float opacity, const std::array<SpriteID, 8> *resolved, float grade)
 {
 	if (VoxelVehicleState(engine,loaded)) {
 		auto references = resolved != nullptr ? *resolved : EngineReferenceSprites(engine,loaded);
-		if (std::ranges::all_of(references,[](SpriteID sprite) { return IsBaseGraphicsSprite(sprite); }) && DrawVoxelVehicle(scene,engine,loaded,origin,heading,palette,opacity)) return true;
+		if (std::ranges::all_of(references,[](SpriteID sprite) { return IsBaseGraphicsSprite(sprite); }) && DrawVoxelVehicle(scene,engine,loaded,origin,heading,palette,opacity,UINT_MAX,grade)) return true;
 	}
 	const auto &models = VehicleModels();
 	auto found = models.find(engine);

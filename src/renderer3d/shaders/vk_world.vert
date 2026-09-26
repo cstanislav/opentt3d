@@ -47,6 +47,7 @@ struct Instance {
     vec4 uv_transform;
     vec4 region;
     vec4 identity;
+    vec4 pitch;
 };
 layout(std430, set=0, binding=3) readonly buffer Instances { Instance items[]; } instances;
 layout(location=0) out vec3 lit_colour;
@@ -65,6 +66,14 @@ vec2 canonical_rotate(vec2 value, float cs, float sn)
 {
     precise vec2 products = value * cs;
     precise vec2 cross_products = value.yx * sn;
+    precise vec2 result = vec2(products.x - cross_products.x, cross_products.y + products.y);
+    return result;
+}
+
+vec2 canonical_pitch(vec2 value, vec3 pitch)
+{
+    precise vec2 products = value * pitch.x;
+    precise vec2 cross_products = value.yx * pitch.zy;
     precise vec2 result = vec2(products.x - cross_products.x, cross_products.y + products.y);
     return result;
 }
@@ -152,6 +161,13 @@ void main()
         }
         sample_position = vec3((sample_position.xy - scale.zw) * scale.x, sample_position.z * scale.y);
         if (longitudinal) sample_position.x *= mirror.z;
+        if (instance.pitch.y != 0) {
+            vec4 pitch = instance.pitch;
+            local.xz = canonical_pitch(local.xz - vec2(0, pitch.w), pitch.xyz) + vec2(0, pitch.w);
+            sample_position.xz = canonical_pitch(sample_position.xz - vec2(0, pitch.w), pitch.xyz) + vec2(0, pitch.w);
+            n.xz = canonical_pitch(n.xz, pitch.xzy);
+            n = normalize(n);
+        }
         if (mirror.w != 0) {
             bool canonical_yaw = (uint(instance.identity.z) & 8u) != 0u;
             float cs = canonical_yaw ? mirror.x : cos(mirror.w);

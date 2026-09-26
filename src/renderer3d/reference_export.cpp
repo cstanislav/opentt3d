@@ -1895,6 +1895,18 @@ static void VerifyMeshStorage()
 		auto arena = Vulkan::GetReadbackArenaStats();
 		Debug(driver,1,"OpenTT3D: increasing Vulkan readback uploads retain {} bytes in {} pages, largest {} bytes, with exact colour and picking",arena.capacity_bytes,arena.buffers,arena.largest_bytes);
 	}
+	/* Force cold-page retirement between exact multi-mesh captures. This covers
+	 * nonzero shared-page offsets, both index widths and transparent ownership
+	 * after reuploading the same immutable CPU identities. */
+	for (unsigned view = 0; view < 4; ++view) {
+		Camera camera{{0,0,0},2,256,256,view*0.5f};
+		if (!RenderScene(reference,camera,reference_pixels,&reference_ids)) throw std::runtime_error("GPU verification: residency reference failed");
+		size_t before = PersistentMeshCount();
+		TrimMeshCache(0);
+		if (PersistentMeshCount() >= before) throw std::runtime_error("GPU verification: completed cold mesh storage did not retire");
+		if (!RenderScene(instanced,camera,pixels,&ids) || pixels != reference_pixels || ids != reference_ids) throw std::runtime_error("GPU verification: retired mesh reupload changed exact colour or picking");
+	}
+	Debug(driver,1,"OpenTT3D: 4 cold mesh retirement/reupload views preserve exact geometry, colour, transparency and picking");
 }
 
 /** One shared mesh, interleaved opaque/transparent records, overlapping colours and

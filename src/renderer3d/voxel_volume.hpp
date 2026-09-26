@@ -125,7 +125,7 @@ inline const VoxelVolume *FindVoxelVolume(const std::vector<Vertex> *mesh)
 
 inline bool VolumeInstanceCompatible(const InstanceData &data)
 {
-	return data.origin_opacity[3] == 1 && data.mirror_layer_heading[2] == 0 && data.mirror_layer_heading[3] == 0 &&
+	return data.origin_opacity[3] == 1 && data.mirror_layer_heading[2] == 0 && data.mirror_layer_heading[3] == 0 && data.pitch[1] == 0 &&
 		data.identity[3] == 2 && (static_cast<uint32_t>(data.identity[1])&79U) == 69U && (static_cast<uint32_t>(data.identity[2])&17U) == 1U &&
 		data.scale_center[0] > 0 && data.scale_center[1] > 0;
 }

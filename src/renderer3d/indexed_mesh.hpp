@@ -12,6 +12,21 @@
 
 namespace Renderer3D {
 
+/** Soft residency budget: active/in-flight geometry is always retained. Zero
+ * disables retirement for matched diagnostic controls, without changing art. */
+inline uint64_t MeshCacheBudgetBytes()
+{
+	static const uint64_t bytes = [] {
+		const char *setting = std::getenv("OPENTT3D_MESH_CACHE_MIB");
+		if (setting == nullptr) return uint64_t{512}*1024*1024;
+		char *end = nullptr;
+		auto mib = std::strtoull(setting,&end,10);
+		if (end == setting || *end != '\0' || mib > UINT64_MAX/(1024*1024)) throw std::invalid_argument("Invalid mesh residency budget");
+		return mib == 0 ? UINT64_MAX : static_cast<uint64_t>(mib)*1024*1024;
+	}();
+	return bytes;
+}
+
 inline bool IndexImmutableMeshes()
 {
 	static const bool enabled = [] {

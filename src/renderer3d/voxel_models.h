@@ -15,16 +15,20 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);
 bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0, float opacity = 1);
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0);
-std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading);
+std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading, float grade = 0, float contact_height = 10);
 unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette,
-	std::array<float,2> contact_heights = {10,10});
+	std::array<float,2> contact_heights = {10,10}, float grade = 0);
 /** Keep a collector's fixed roof mounting while moving only its upper frame. */
-inline void FitVoxelCollectorToWire(InstanceData &data, float mount, float top, float contact)
+inline void FitVoxelCollectorToWire(InstanceData &data, float mount, float top, float contact, float contact_x = 0)
 {
-	if (!std::isfinite(mount) || !std::isfinite(top) || !std::isfinite(contact) || top <= mount || contact <= mount) throw std::invalid_argument("Invalid voxel collector contact");
-	float scale = (contact-mount)/(top-mount);
+	float level = data.pitch[3]+(contact-data.pitch[3]-contact_x*data.pitch[1])/data.pitch[0];
+	if (!std::isfinite(mount) || !std::isfinite(top) || !std::isfinite(level) || top <= mount || level <= mount) throw std::invalid_argument("Invalid voxel collector contact");
+	float scale = (level-mount)/(top-mount);
 	data.scale_center[1] = scale;
-	data.origin_opacity[2] += mount*(1-scale);
+	Vec3 offset = PitchInstanceVector({0,0,mount*(1-scale)},data.pitch);
+	data.origin_opacity[0] += offset.x*std::cos(data.mirror_layer_heading[3]);
+	data.origin_opacity[1] += offset.x*std::sin(data.mirror_layer_heading[3]);
+	data.origin_opacity[2] += offset.z;
 }
 uint32_t VoxelPaletteMask(std::span<const Vertex> vertices, unsigned first, unsigned count);
 bool DrawVoxelAsset(Scene &scene, std::string_view category, unsigned identifier, unsigned state,
@@ -47,7 +51,9 @@ inline float OriginalTrainVoxelScale(float heading, float authored_length)
 	if (!std::isfinite(heading) || !std::isfinite(authored_length) || authored_length <= 0) throw std::invalid_argument("Invalid original train voxel dimensions");
 	return 7.25f/(std::max(std::abs(std::cos(heading)),std::abs(std::sin(heading)))*authored_length);
 }
-bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, float opacity = 1, unsigned climate = UINT_MAX);
+struct VoxelTrainSupport { float rear, front, height, length_scale; std::span<const float> contact_x; };
+std::optional<VoxelTrainSupport> VoxelTrainSupportBounds(unsigned engine, bool loaded, float heading);
+bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, float opacity = 1, unsigned climate = UINT_MAX, float grade = 0);
 void VerifyVoxelModels();
 void VerifyVoxelMeshes(std::string_view prefix = {});
 void VerifyVoxelVehicleModels(unsigned only_engine = UINT_MAX);

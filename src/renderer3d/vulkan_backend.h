@@ -42,6 +42,7 @@ const std::string &LastError();
 std::string Description();
 int MaximumImageSize();
 MeshCacheStats GetMeshCacheStats();
+void TrimMeshCache(uint64_t budget);
 ReadbackArenaStats GetReadbackArenaStats();
 bool Resize(int width, int height);
 void *VideoBuffer();
@@ -58,6 +59,7 @@ inline bool Active() { return false; }
 inline std::string Description() { return "unavailable"; }
 inline int MaximumImageSize() { return 0; }
 inline MeshCacheStats GetMeshCacheStats() { return {}; }
+inline void TrimMeshCache(uint64_t) {}
 inline ReadbackArenaStats GetReadbackArenaStats() { return {}; }
 inline bool CapturePresentation(PresentationCapture) { return false; }
 inline bool RenderViewport(const void *, const Scene &, const Camera &) { return false; }

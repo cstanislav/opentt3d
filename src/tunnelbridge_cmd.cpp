@@ -1491,7 +1491,9 @@ static void DrawTile_TunnelBridge(TileInfo *ti)
 		Renderer3D::BridgeCaptureScope bridge_capture({
 			{bridge_type, BRIDGE_PIECE_HEAD, Renderer3D::BridgeRole::None, DiagDirToAxis(tunnelbridge_direction) == AXIS_Y,
 				to_underlying(tunnelbridge_direction), ti->tileh == SLOPE_FLAT},
-			{static_cast<float>(ti->x),static_cast<float>(ti->y),static_cast<float>(ti->z + TILE_HEIGHT)},is_custom_layout});
+			{static_cast<float>(ti->x),static_cast<float>(ti->y),static_cast<float>(ti->z + TILE_HEIGHT)},is_custom_layout,
+			transport_type == TRANSPORT_RAIL ? GetRailType(ti->tile) : INVALID_RAILTYPE,
+			transport_type == TRANSPORT_RAIL && _game_mode != GM_MENU && _settings_client.gui.show_track_reservation && HasTunnelBridgeReservation(ti->tile)});
 
 		/* Draw Trambits and PBS Reservation as SpriteCombine */
 		if (transport_type == TRANSPORT_ROAD || transport_type == TRANSPORT_RAIL) StartSpriteCombine();
@@ -1683,7 +1685,9 @@ void DrawBridgeMiddle(const TileInfo *ti, BridgePillarFlags blocked_pillars)
 	int z = bridge_z - BRIDGE_Z_START;
 	Renderer3D::BridgeCaptureScope bridge_capture({
 		{bridge_type,to_underlying(bridge_piece),Renderer3D::BridgeRole::None,axis == AXIS_Y,0,false},
-		{static_cast<float>(x),static_cast<float>(y),static_cast<float>(bridge_z)},is_custom_layout});
+		{static_cast<float>(x),static_cast<float>(y),static_cast<float>(bridge_z)},is_custom_layout,
+		transport_type == TRANSPORT_RAIL ? GetRailType(rampsouth) : INVALID_RAILTYPE,
+		transport_type == TRANSPORT_RAIL && _game_mode != GM_MENU && _settings_client.gui.show_track_reservation && HasTunnelBridgeReservation(rampnorth)});
 
 	/* Add a bounding box that separates the bridge from things below it. */
 	AddSortableSpriteToDraw(SPR_EMPTY_BOUNDING_BOX, PAL_NONE, x, y, bridge_z - TILE_HEIGHT + BB_Z_SEPARATOR, {{}, {TILE_SIZE, TILE_SIZE, 1}, {}});

@@ -9,6 +9,7 @@
 #include <cmath>
 #include <stdexcept>
 #include <cstdint>
+#include <memory>
 #include <span>
 #include <optional>
 #include <string_view>
@@ -144,7 +145,7 @@ struct ClipVolume {
 	}
 };
 
-/** Six vec4 records, shared by the GL texture-buffer and Vulkan storage-buffer paths.
+/** Seven vec4 records, shared by the GL texture-buffer and Vulkan storage-buffer paths.
  * Vehicle pick IDs are below 2^20 and therefore represented exactly as floats. */
 struct alignas(16) InstanceData {
 	std::array<float, 4> origin_opacity{0, 0, 0, 1};
@@ -153,6 +154,14 @@ struct alignas(16) InstanceData {
 	std::array<float, 4> uv_transform{0, 0, 1, -1}; ///< Bias U/V, scale, atlas page.
 	TextureRegion region;
 	std::array<float, 4> identity{}; ///< ID payload, surface mode, flags (1 unmirrored / 2 tile ID / 4 child / 8 canonical yaw / 16 longitudinal scale / 32 sprite-local UV bias), UV mode (3 phase / 4 density-scaled phase).
+	std::array<float, 4> pitch{1,0,0,0}; ///< cos, sin / physical Z scale, sin * physical Z scale, local Z pivot.
+	/** Rotate in physical world proportions about the longitudinal support plane. */
+	void SetPitch(float grade, float height_scale, float pivot = 0)
+	{
+		if (!std::isfinite(grade) || !std::isfinite(height_scale) || !std::isfinite(pivot) || height_scale <= 0) throw std::invalid_argument("Invalid instance pitch");
+		float tangent = grade*height_scale, cosine = 1/std::sqrt(1+tangent*tangent);
+		pitch = {cosine,grade*cosine,grade*height_scale*height_scale*cosine,pivot};
+	}
 	void SetSpriteLocalUVBias() { identity[2] = static_cast<float>(static_cast<uint32_t>(identity[2]) | 32U); }
 	void SetLongitudinalScale(float scale)
 	{
@@ -191,11 +200,20 @@ struct alignas(16) InstanceData {
 		return static_cast<uint32_t>(identity[0]) | ((static_cast<uint32_t>(identity[2]) & 2U) != 0 ? TILE_PICK_ID : 0U);
 	}
 };
-static_assert(sizeof(InstanceData) == 96);
+static_assert(sizeof(InstanceData) == 112);
+
+/** Rounded products match the GPU transform, including the inverse-transpose normal. */
+inline Vec3 PitchInstanceVector(Vec3 value, const std::array<float,4> &pitch, bool normal = false)
+{
+	volatile float xx = value.x*pitch[0], zz = value.z*pitch[0];
+	volatile float zx = value.z*pitch[normal ? 1 : 2], xz = value.x*pitch[normal ? 2 : 1];
+	return {xx-zx,value.y,xz+zz};
+}
 
 struct MeshInstance {
 	const std::vector<Vertex> *mesh; ///< Immutable during rendering; persistent authored meshes have stable storage.
 	InstanceData data;
+	std::shared_ptr<const void> source_lease{}; ///< Optional CPU-residency pin, retained by scene copies and cached captures.
 };
 
 /** CPU reference for instance validation and non-instanced tooling. */
@@ -219,6 +237,12 @@ inline Vertex ResolveInstanceVertex(Vertex vertex, const InstanceData &instance,
 	}
 	sample = {(sample.x - cx) * xy, (sample.y - cy) * xy, sample.z * z};
 	if (longitudinal) sample.x *= instance.mirror_layer_heading[2];
+	if (instance.pitch[1] != 0) {
+		Vec3 pivot{0,0,instance.pitch[3]};
+		local = PitchInstanceVector(local-pivot,instance.pitch)+pivot;
+		sample = PitchInstanceVector(sample-pivot,instance.pitch)+pivot;
+		normal = Normalize(PitchInstanceVector(normal,instance.pitch,true));
+	}
 	bool canonical_yaw = (static_cast<uint32_t>(instance.identity[2]) & 8U) != 0;
 	float cs = canonical_yaw ? instance.mirror_layer_heading[0] : std::cos(instance.mirror_layer_heading[3]);
 	float sn = canonical_yaw ? instance.mirror_layer_heading[1] : std::sin(instance.mirror_layer_heading[3]);

@@ -4,6 +4,7 @@
 #define RENDERER3D_BRIDGE_CAPTURE_H
 #include "bridge_geometry.hpp"
 #include "../sprite.h"
+#include "../rail_type.h"
 
 namespace Renderer3D {
 
@@ -11,6 +12,8 @@ struct BridgeCaptureInfo {
 	BridgeShape shape;
 	Vec3 origin;
 	bool custom = false;
+	RailType rail = INVALID_RAILTYPE;
+	bool reserved = false;
 };
 
 class BridgeCaptureScope {

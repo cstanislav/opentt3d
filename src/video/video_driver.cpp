@@ -118,12 +118,13 @@ void VideoDriver::Tick()
 
 	auto now = std::chrono::steady_clock::now();
 	if (this->HasGUI() && now >= this->next_draw_tick) {
+		auto draw_deadline = this->next_draw_tick;
 		this->next_draw_tick += this->GetDrawInterval();
 		/* Avoid next_draw_tick getting behind more and more if it cannot keep up. */
 		if (this->next_draw_tick < now - ALLOWED_DRIFT * this->GetDrawInterval()) this->next_draw_tick = now;
 
 		/* Locking video buffer can block (especially with vsync enabled), do it before taking game state lock. */
-		Renderer3D::Profile::BeginFrame();
+		Renderer3D::Profile::BeginFrame(draw_deadline);
 		{
 			Renderer3D::Profile::Scope timing(Renderer3D::Profile::Section::BufferWait);
 			this->LockVideoBuffer();

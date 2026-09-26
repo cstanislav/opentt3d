@@ -15,6 +15,7 @@ struct Instance {
     vec4 uv_transform;
     vec4 region;
     vec4 identity;
+    vec4 pitch;
 };
 layout(std430, set=0, binding=3) readonly buffer Instances { Instance items[]; } instances;
 layout(std430, set=0, binding=4) readonly buffer Volume { uint words[]; } volume;

@@ -27,6 +27,7 @@ private:
 		size_t scene_instances;
 		uint64_t generation;
 		const std::vector<Vertex> *mesh;
+		std::shared_ptr<const void> source_lease;
 		std::shared_ptr<const PackedVoxelMesh> packed;
 		std::vector<InstanceData> instances;
 		std::vector<std::array<uint32_t,7>> transforms;
@@ -166,7 +167,7 @@ public:
 	}
 
 	void Request(const std::vector<Vertex> &mesh, std::shared_ptr<const PackedVoxelMesh> packed,
-			std::span<const InstanceData> instances, size_t scene_instances)
+			std::span<const InstanceData> instances, size_t scene_instances, std::shared_ptr<const void> source_lease = {})
 	{
 		std::lock_guard lock(mutex);
 		if (failed || !camera) return;
@@ -197,6 +198,7 @@ public:
 		job->worker = owner->second;
 		job->camera = *camera; job->precision = precision; job->scene_instances = scene_instances;
 		job->generation = generation.load(std::memory_order_relaxed); job->mesh = &mesh; job->packed = std::move(packed);
+		job->source_lease = std::move(source_lease);
 		job->instances.assign(instances.begin(),instances.end());
 		job->transforms.reserve(instances.size());
 		for (const auto &instance : instances) job->transforms.push_back(VoxelVisibilityTransform(instance));

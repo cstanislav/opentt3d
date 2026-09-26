@@ -17,6 +17,8 @@ int MaximumFramebufferSize();
 std::string BackendDescription();
 /** Diagnostic ownership check; transient references must never enter this cache. */
 size_t PersistentMeshCount();
+/** Retire cold immutable GPU storage, preserving active and queued geometry. */
+void TrimMeshCache(uint64_t budget);
 /** RGBA pixels, bottom row first. Caller composites into the upstream framebuffer. */
 bool RenderScene(const Scene &scene, const Camera &camera, std::vector<uint8_t> &pixels, std::vector<uint32_t> *picking = nullptr);
 /** Called with the video driver's context current, before that context is destroyed. */

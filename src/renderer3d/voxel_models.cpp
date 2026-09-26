@@ -3,6 +3,7 @@
 #include "../stdafx.h"
 #include "voxel_models.h"
 #include "voxel_geometry.hpp"
+#include "voxel_mesh_cache.hpp"
 #include "authored_geometry.h"
 #include "sprite_textures.hpp"
 #include "gl_backend.hpp"
@@ -39,14 +40,23 @@
 
 namespace Renderer3D {
 namespace {
-struct VoxelModel {
-	std::unique_ptr<VoxelGrid> grid;
-	VoxelMesh surface;
-};
+using VoxelModel = VoxelCachedSurface;
+
+uint64_t VoxelCPUCacheBudget()
+{
+	const char *value = std::getenv("OPENTT3D_CPU_VOXEL_CACHE_MIB");
+	if (value == nullptr || *value == '\0') return 1024ULL*1024*1024;
+	char *end = nullptr;
+	unsigned long long mib = std::strtoull(value,&end,10);
+	if (*value == '-' || *end != '\0' || mib > 1024*1024) throw std::runtime_error("Invalid CPU voxel cache budget");
+	return mib == 0 ? UINT64_MAX : mib*1024*1024;
+}
 struct Catalogue {
+	std::vector<VoxelMaterial> materials;
 	std::map<std::string,VoxelModel,std::less<>> models;
 	std::map<std::tuple<std::string,unsigned,unsigned>,std::string> bindings;
-	std::array<const VoxelMesh *,2009-1576+1> tree_meshes{};
+	std::array<const VoxelModel *,2009-1576+1> tree_models{};
+	VoxelMeshCache surfaces{VoxelCPUCacheBudget()};
 };
 
 const Catalogue &Models()
@@ -71,31 +81,35 @@ const Catalogue &Models()
 		const char *unit_setting = std::getenv("OPENTT3D_VOXEL_TREE_UNIT_REFERENCE");
 		const bool unit_reference = unit_setting != nullptr && std::string_view(unit_setting) == "1";
 		if (unit_reference) Debug(driver,1,"OpenTT3D: unmerged tree cell reference enabled; volume substitution disabled");
-		size_t occupied = 0, faces = 0, quads = 0, triangles = 0;
+		size_t occupied = 0, faces = 0, quads = 0, triangles = 0, source_bytes = 0, dense_bytes = 0;
 		for (const auto &[name,entry] : data.at("models").items()) {
 			if (name.empty() || name.size() > 96 || name.find_first_not_of("abcdefghijklmnopqrstuvwxyz0123456789_") != std::string::npos) throw std::runtime_error("Invalid voxel model name");
 			auto origin = entry.at("origin").get<std::array<float,3>>();
 			auto size = entry.at("size").get<std::array<int,3>>();
 			auto cell_size = entry.value("cell_size",std::array<float,3>{0.5f,0.5f,1});
 			VoxelModel model;
-			model.grid = std::make_unique<VoxelGrid>(size,materials,Vec3{origin[0],origin[1],origin[2]},Vec3{cell_size[0],cell_size[1],cell_size[2]});
+			VoxelGrid grid(size,materials,Vec3{origin[0],origin[1],origin[2]},Vec3{cell_size[0],cell_size[1],cell_size[2]});
 			for (const auto &run : entry.at("runs")) {
 				auto values = run.get<std::array<int,5>>();
 				if (values[4] < 1 || static_cast<size_t>(values[4]) > materials.size()) throw std::runtime_error("Invalid voxel run material");
 				if (values[3] < 1 || values[3] > size[0] || values[0] < 0 || values[0] > size[0]-values[3] ||
 					values[1] < 0 || values[1] >= size[1] || values[2] < 0 || values[2] >= size[2]) throw std::runtime_error("Voxel run is outside its grid");
-				model.grid->Fill({values[0],values[1],values[2]},{values[0]+values[3],values[1]+1,values[2]+1},values[4]);
+				grid.Fill({values[0],values[1],values[2]},{values[0]+values[3],values[1]+1,values[2]+1},values[4]);
 			}
-			model.surface = model.grid->Mesh(!(unit_reference && name.starts_with("tree_")));
-			/* Catalogue meshes are immutable; release authoring growth capacity. */
-			model.surface.vertices.shrink_to_fit();
+			model.merged = !(unit_reference && name.starts_with("tree_"));
+			model.surface = grid.Mesh(model.merged);
+			model.source = std::make_unique<VoxelSource>(grid);
+			source_bytes += model.source->StorageBytes();
+			dense_bytes += static_cast<size_t>(size[0])*size[1]*size[2]*sizeof(uint16_t);
 			if (model.surface.occupied != entry.at("occupied").get<size_t>()) throw std::runtime_error("Voxel run occupancy does not match its manifest");
 			occupied += model.surface.occupied; faces += model.surface.exposed_faces; quads += model.surface.quads;
 			triangles += model.surface.vertices.size()/3;
 			auto [entry_model,inserted] = result.models.emplace(name,std::move(model));
-			if (VoxelVolumesEnabled() && !unit_reference && name.starts_with("tree_")) VoxelVolumeRegistry().emplace(&entry_model->second.surface.vertices,entry_model->second.grid->Volume());
-			if (PackedVoxelMeshesEnabled()) if (auto packed = entry_model->second.grid->Pack(entry_model->second.surface,name.starts_with("tree_"))) PackedVoxelMeshRegistry().emplace(&entry_model->second.surface.vertices,std::move(packed));
+			if (VoxelVolumesEnabled() && !unit_reference && name.starts_with("tree_")) VoxelVolumeRegistry().emplace(&entry_model->second.surface.vertices,grid.Volume());
+			if (PackedVoxelMeshesEnabled()) if (auto packed = grid.Pack(entry_model->second.surface,name.starts_with("tree_"))) PackedVoxelMeshRegistry().emplace(&entry_model->second.surface.vertices,std::move(packed));
+			result.surfaces.Register(entry_model->second);
 		}
+		result.materials = std::move(materials);
 		for (const auto &[category,identifiers] : data.at("bindings").items()) for (const auto &[id,states] : identifiers.items()) for (const auto &[state,name] : states.items()) {
 			std::string model = name.get<std::string>();
 			if (!result.models.contains(model)) throw std::runtime_error("Voxel binding references a missing model");
@@ -103,14 +117,28 @@ const Catalogue &Models()
 			result.bindings.emplace(std::tuple{category,static_cast<unsigned>(std::stoul(id)),static_cast<unsigned>(std::stoul(state))},model);
 			if (category == "trees") {
 				unsigned base = std::stoul(id), stage = std::stoul(state);
-				if (base >= 1576 && base <= 2003 && (base-1576)%7 == 0 && stage < 7) result.tree_meshes[base-1576+stage] = &result.models.at(model).surface;
+				if (base >= 1576 && base <= 2003 && (base-1576)%7 == 0 && stage < 7) result.tree_models[base-1576+stage] = &result.models.at(model);
 			}
 		}
 		Debug(driver,1,"OpenTT3D: loaded {} authored voxel models, {} occupied cells, {} exposed cell faces merged to {} conforming rectangles / {} triangles",result.models.size(),occupied,faces,quads,triangles);
+		Debug(driver,1,"OpenTT3D: retained lossless voxel sources use {} bytes instead of {} dense cell bytes, with one shared palette",source_bytes,dense_bytes);
+		Debug(driver,1,"OpenTT3D: CPU voxel surfaces retain {} bytes under a scene-pinned soft budget",result.surfaces.ResidentBytes());
 		if (PackedVoxelMeshesEnabled()) Debug(driver,1,"OpenTT3D: {} voxel meshes support lossless packed vertex streams",PackedVoxelMeshRegistry().size());
 		return result;
 	}();
 	return catalogue;
+}
+
+std::shared_ptr<const void> PinVoxelModel(const VoxelModel &model)
+{
+	const auto &catalogue = Models();
+	return catalogue.surfaces.Pin(model,catalogue.materials);
+}
+
+void AddVoxelInstance(Scene &scene, const VoxelModel &model, const InstanceData &data)
+{
+	auto lease = PinVoxelModel(model);
+	scene.instances.push_back({&model.surface.vertices,data,std::move(lease)});
 }
 
 InstanceData Material(Vec3 origin, PaletteID palette, float opacity)
@@ -306,6 +334,17 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	/* Keep custom replacements and special drawing procedures on their supplied
 	 * path. A shared original stage sprite may resolve to a shared volume. */
 	unsigned first = graphics <= 1 ? 0 : graphics, last = graphics <= 1 ? 1 : graphics;
+	if (graphics >= GFX_OILRIG_1 && graphics <= GFX_OILRIG_5) {
+		/* These source cuts share physical deck/building components. A partial
+		 * replacement must retain the supplied art across the complete rig. */
+		first = GFX_OILRIG_1; last = GFX_OILRIG_5;
+	} else if (graphics >= GFX_OILWELL_NOT_ANIMATED && graphics <= GFX_OILWELL_ANIMATED_3) {
+		first = GFX_OILWELL_NOT_ANIMATED; last = GFX_OILWELL_ANIMATED_3;
+	} else if (graphics == 33 || graphics == 34) {
+		first = 33; last = 34; // The two source cuts form one connected farmhouse.
+	} else if (graphics == 58 || graphics == 59) {
+		first = 58; last = 59; // One bank's roof, colonnade and arch cross this seam.
+	}
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 		SpriteID spark = SPR_IT_POWER_PLANT_TRANSFORMERS+frame;
@@ -412,17 +451,17 @@ bool FocusVoxelHouseStage(unsigned stage, unsigned house, unsigned variant)
 bool DrawVoxelAsset(Scene &scene, std::string_view category, unsigned identifier, unsigned state, Vec3 origin, PaletteID palette, float opacity)
 {
 	const auto &models = Models();
-	const VoxelMesh *resolved = nullptr;
+	const VoxelModel *resolved = nullptr;
 	if (category == "trees" && identifier >= 1576 && identifier <= 2003 && (identifier-1576)%7 == 0 && state < 7) {
-		resolved = models.tree_meshes[identifier-1576+state];
+		resolved = models.tree_models[identifier-1576+state];
 	} else {
 		auto found = models.bindings.find({std::string(category),identifier,state});
-		if (found != models.bindings.end()) resolved = &models.models.at(found->second).surface;
+		if (found != models.bindings.end()) resolved = &models.models.at(found->second);
 	}
 	if (resolved == nullptr) return false;
-	const auto &model = *resolved;
+	const auto &model = resolved->surface;
 	if (scene.visibility && !scene.visibility->Intersects(origin+model.low,origin+model.high)) return true;
-	scene.instances.push_back({&model.vertices,Material(origin,palette,opacity)});
+	AddVoxelInstance(scene,*resolved,Material(origin,palette,opacity));
 	return true;
 }
 
@@ -445,7 +484,25 @@ std::optional<unsigned> VoxelVehicleState(unsigned engine, bool loaded, unsigned
 	return SelectVoxelVehicleState(masks[engine],loaded,climate);
 }
 
-bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, float opacity, unsigned climate)
+std::optional<VoxelTrainSupport> VoxelTrainSupportBounds(unsigned engine, bool loaded, float heading)
+{
+	if (engine >= 116) return {};
+	auto state = VoxelVehicleState(engine,loaded);
+	if (!state) return {};
+	const auto &model = Models().models.at(Models().bindings.at({"vehicles",engine,*state}));
+	static std::map<const VoxelMesh *,std::vector<float>> contacts;
+	auto [found,inserted] = contacts.try_emplace(&model.surface);
+	if (inserted) {
+		auto lease = PinVoxelModel(model);
+		for (const auto &vertex : model.surface.vertices) if (vertex.position.z == model.surface.low.z) found->second.push_back(vertex.position.x);
+		std::ranges::sort(found->second);
+		found->second.erase(std::unique(found->second.begin(),found->second.end()),found->second.end());
+	}
+	float scale = OriginalTrainVoxelScale(heading,model.surface.high.x-model.surface.low.x);
+	return VoxelTrainSupport{found->second.front()*scale,found->second.back()*scale,model.surface.low.z,scale,found->second};
+}
+
+bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, float opacity, unsigned climate, float grade)
 {
 	auto state = VoxelVehicleState(engine,loaded,climate);
 	if (!state) return false;
@@ -454,15 +511,43 @@ bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, f
 	if (binding == models.bindings.end()) return false;
 	const auto &mesh = models.models.at(binding->second).surface;
 	float radius = std::max({std::abs(mesh.low.x),std::abs(mesh.low.y),std::abs(mesh.high.x),std::abs(mesh.high.y)})*1.42f;
-	if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,mesh.low.z},origin+Vec3{radius,radius,mesh.high.z})) return true;
+	float pitch_margin = grade == 0 ? 0 : radius*std::abs(grade)+1;
+	if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,mesh.low.z-pitch_margin},origin+Vec3{radius,radius,mesh.high.z+pitch_margin})) return true;
 	auto data = Material(origin,palette,opacity);
 	data.mirror_layer_heading[3] = heading;
 	if (engine < 116) data.SetLongitudinalScale(OriginalTrainVoxelScale(heading,mesh.high.x-mesh.low.x));
-	scene.instances.push_back({&mesh.vertices,data});
+	if (engine < 116 && grade != 0) data.SetPitch(grade,Camera::WORLD_Z_SCALE,mesh.low.z);
+	AddVoxelInstance(scene,models.models.at(binding->second),data);
 	return true;
 }
 
-std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading)
+static Vec3 CollectorContactCentre(const VoxelMesh &mesh)
+{
+	/* A single-arm frame is asymmetric: its overall bounds are not the wire
+	 * contact shoe. Cache the top surface's XY centre in immutable model space. */
+	static std::map<const VoxelMesh *,Vec3> contacts;
+	auto [contact,inserted] = contacts.try_emplace(&mesh);
+	if (inserted) {
+		Vec3 low{INFINITY,INFINITY,mesh.high.z},high{-INFINITY,-INFINITY,mesh.high.z};
+		for (const auto &vertex : mesh.vertices) if (vertex.position.z == mesh.high.z) {
+			low.x = std::min(low.x,vertex.position.x); low.y = std::min(low.y,vertex.position.y);
+			high.x = std::max(high.x,vertex.position.x); high.y = std::max(high.y,vertex.position.y);
+		}
+		contact->second = (low+high)*0.5f;
+	}
+	return contact->second;
+}
+
+static void SetCollectorPose(InstanceData &data, const VoxelMesh &body, const VoxelMesh &mesh, float heading, float grade, float height)
+{
+	data.mirror_layer_heading[3] = heading;
+	float length_scale = OriginalTrainVoxelScale(heading,body.high.x-body.low.x);
+	data.SetLongitudinalScale(length_scale);
+	data.SetPitch(grade,Camera::WORLD_Z_SCALE,body.low.z);
+	FitVoxelCollectorToWire(data,mesh.low.z,mesh.high.z,height,CollectorContactCentre(mesh).x*length_scale);
+}
+
+std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading, float grade, float contact_height)
 {
 	const auto &models = Models();
 	auto binding = models.bindings.find({"vehicle_collectors",engine,part});
@@ -470,24 +555,14 @@ std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, flo
 	if (binding == models.bindings.end() || !state) return {};
 	const auto &body = models.models.at(models.bindings.at({"vehicles",engine,*state})).surface;
 	const auto &mesh = models.models.at(binding->second).surface;
-	/* A single-arm frame is asymmetric: its overall bounds are not the wire
-	 * contact shoe. Cache the top surface's XY centre in immutable model space. */
-	static std::map<const VoxelMesh *,Vec3> contacts;
-	auto [contact,inserted] = contacts.try_emplace(&mesh);
-	if (inserted) {
-		Vec3 low{INFINITY,INFINITY,mesh.low.z},high{-INFINITY,-INFINITY,mesh.low.z};
-		for (const auto &vertex : mesh.vertices) if (vertex.position.z == mesh.high.z) {
-			low.x = std::min(low.x,vertex.position.x); low.y = std::min(low.y,vertex.position.y);
-			high.x = std::max(high.x,vertex.position.x); high.y = std::max(high.y,vertex.position.y);
-		}
-		contact->second = (low+high)*0.5f;
-	}
-	Vec3 centre = contact->second;
-	centre.x *= OriginalTrainVoxelScale(heading,body.high.x-body.low.x);
-	return Vec3{centre.x*std::cos(heading)-centre.y*std::sin(heading),centre.x*std::sin(heading)+centre.y*std::cos(heading),mesh.low.z};
+	auto lease = PinVoxelModel(models.models.at(binding->second));
+	InstanceData data;
+	SetCollectorPose(data,body,mesh,heading,grade,contact_height);
+	Vertex contact{}; contact.position = CollectorContactCentre(mesh); contact.normal = {0,0,1};
+	return ResolveInstanceVertex(contact,data).position;
 }
 
-unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette, std::array<float,2> contact_heights)
+unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette, std::array<float,2> contact_heights, float grade)
 {
 	const auto &models = Models();
 	auto state = VoxelVehicleState(engine,false);
@@ -499,12 +574,12 @@ unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, fl
 		if (binding == models.bindings.end()) continue;
 		const auto &mesh = models.models.at(binding->second).surface;
 		float radius = std::max({std::abs(body.low.x),std::abs(body.high.x),std::abs(mesh.low.y),std::abs(mesh.high.y)})*1.42f;
-		if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,mesh.low.z},origin+Vec3{radius,radius,contact_heights[part]})) continue;
+		float margin = radius*std::abs(grade)+1;
+		if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,mesh.low.z-margin},origin+Vec3{radius,radius,contact_heights[part]+margin})) continue;
+		auto lease = PinVoxelModel(models.models.at(binding->second));
 		auto data = Material(origin,palette,1);
-		data.mirror_layer_heading[3] = heading;
-		data.SetLongitudinalScale(OriginalTrainVoxelScale(heading,body.high.x-body.low.x));
-		FitVoxelCollectorToWire(data,mesh.low.z,mesh.high.z,contact_heights[part]);
-		scene.instances.push_back({&mesh.vertices,data});
+		SetCollectorPose(data,body,mesh,heading,grade,contact_heights[part]);
+		scene.instances.push_back({&mesh.vertices,data,std::move(lease)});
 		++drawn;
 	}
 	return drawn;
@@ -555,7 +630,7 @@ void ExportVoxelReviews(std::string_view prefix)
 		if (!name.starts_with(prefix)) continue;
 		Textures().BeginScene();
 		Scene scene;
-		scene.instances.push_back({&model.surface.vertices,Material({},PAL_NONE,1)});
+		AddVoxelInstance(scene,model,Material({},PAL_NONE,1));
 		Vec3 centre = (model.surface.low+model.surface.high)*0.5f;
 		Camera camera{centre,3,640,640,static_cast<float>(view)};
 		if (view >= 4) camera = StreetReviewCamera(model.surface.low,model.surface.high,640,640,view-4+1.5f);
@@ -598,7 +673,7 @@ void ExportVoxelReviews(std::string_view prefix)
 			scene.instances.push_back({&ground.vertices,Material({0,0,has_ground ? -0.25f : 0},PAL_NONE,1)});
 			for (unsigned slot = 0; slot < group.size(); ++slot) {
 				Vec3 origin = place(slot);
-				scene.instances.push_back({&group[slot]->surface.vertices,Material(origin,PAL_NONE,1)});
+				AddVoxelInstance(scene,*group[slot],Material(origin,PAL_NONE,1));
 				if (!headings.empty()) scene.instances.back().data.mirror_layer_heading[3] = headings[slot];
 				if (!children.empty()) scene.instances.back().data.SetChildLayer(children[slot]);
 			}
@@ -721,45 +796,54 @@ void ExportVoxelReviews(std::string_view prefix)
 	 * unrelated adjacent parts cannot establish their in-game spacing/clearance. */
 	for (IndustryType type = 0; type < NUM_INDUSTRYTYPES; ++type) {
 		const auto &layouts = GetIndustrySpec(type)->layouts;
-		for (unsigned layout = 0; layout < layouts.size(); ++layout) for (unsigned stage = 0; stage < 4; ++stage) {
-			std::vector<const VoxelModel *> group;
-			std::vector<Vec3> placements;
+		for (unsigned layout = 0; layout < layouts.size(); ++layout) {
+			/* Select the whole family before looking at construction slots. A
+			 * ground-only first state may use a shared soil model with a different
+			 * prefix, but it is still part of the requested original layout. */
 			bool selected = false;
-			for (const auto &part : layouts[layout]) for (const char *category : {"industry_ground","industries"}) {
+			for (const auto &part : layouts[layout]) for (unsigned stage = 0; stage < 4; ++stage) for (const char *category : {"industry_ground","industries"}) {
 				auto binding = Models().bindings.find({category,part.gfx,stage});
-				if (binding == Models().bindings.end()) continue;
-				selected |= binding->second.starts_with(prefix);
-				group.push_back(&Models().models.at(binding->second));
-				placements.push_back({static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0});
+				selected |= binding != Models().bindings.end() && binding->second.starts_with(prefix);
 			}
-			if (!selected || group.size() <= 1) continue;
-			context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
-			Scene joined;
-			nlohmann::json tiles = nlohmann::json::array();
-			bool complete = true;
-			for (const auto &part : layouts[layout]) {
-				if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
-				const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
-				Vec3 origin{static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0};
-				complete &= DrawVoxelIndustryGround(joined,part.gfx,source.ground.sprite,origin,source.ground.pal);
-				if ((source.building.sprite&SPRITE_MASK) != 0) complete &= DrawVoxelAsset(joined,"industries",part.gfx,stage,origin,source.building.pal);
-				tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
+			if (!selected) continue;
+			for (unsigned stage = 0; stage < 4; ++stage) {
+				std::vector<const VoxelModel *> group;
+				std::vector<Vec3> placements;
+				for (const auto &part : layouts[layout]) for (const char *category : {"industry_ground","industries"}) {
+					auto binding = Models().bindings.find({category,part.gfx,stage});
+					if (binding == Models().bindings.end()) continue;
+					group.push_back(&Models().models.at(binding->second));
+					placements.push_back({static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0});
+				}
+				if (group.empty()) continue;
+				context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
+				Scene joined;
+				nlohmann::json tiles = nlohmann::json::array();
+				bool complete = true;
+				for (const auto &part : layouts[layout]) {
+					if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
+					const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
+					Vec3 origin{static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0};
+					complete &= DrawVoxelIndustryGround(joined,part.gfx,source.ground.sprite,origin,source.ground.pal);
+					if ((source.building.sprite&SPRITE_MASK) != 0) complete &= DrawVoxelAsset(joined,"industries",part.gfx,stage,origin,source.building.pal);
+					tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
+				}
+				if (!complete) continue;
+				for (auto &instance : joined.instances) instance.data.SetObjectId(1);
+				Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
+				int left = 8192, top = 8192, right = 8192, bottom = 8192;
+				for (const auto &instance : joined.instances) for (const auto &vertex : *instance.mesh) {
+					auto point = camera.Project(ResolveInstanceVertex(vertex,instance.data).position);
+					if (!point.visible) throw std::runtime_error("Native joined industry review is outside the fixed-lens camera");
+					left = std::min(left,static_cast<int>(std::floor(point.x))-4); top = std::min(top,static_cast<int>(std::floor(point.y))-4);
+					right = std::max(right,static_cast<int>(std::ceil(point.x))+4); bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
+				}
+				std::string name = fmt::format("model-voxel-industry-layout-{}-{}-{}-native",type,layout,stage);
+				capture(joined,camera.Cropped(left,top,right-left,bottom-top),name,true);
+				std::ofstream registration(directory/(name+".json"));
+				registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}},{"tiles",tiles}}.dump(2) << '\n';
+				if (!registration) throw std::runtime_error("Could not write native joined-industry registration");
 			}
-			if (!complete) continue;
-			for (auto &instance : joined.instances) instance.data.SetObjectId(1);
-			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
-			int left = 8192, top = 8192, right = 8192, bottom = 8192;
-			for (const auto &instance : joined.instances) for (const auto &vertex : *instance.mesh) {
-				auto point = camera.Project(ResolveInstanceVertex(vertex,instance.data).position);
-				if (!point.visible) throw std::runtime_error("Native joined industry review is outside the fixed-lens camera");
-				left = std::min(left,static_cast<int>(std::floor(point.x))-4); top = std::min(top,static_cast<int>(std::floor(point.y))-4);
-				right = std::max(right,static_cast<int>(std::ceil(point.x))+4); bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
-			}
-			std::string name = fmt::format("model-voxel-industry-layout-{}-{}-{}-native",type,layout,stage);
-			capture(joined,camera.Cropped(left,top,right-left,bottom-top),name,true);
-			std::ofstream registration(directory/(name+".json"));
-			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}},{"tiles",tiles}}.dump(2) << '\n';
-			if (!registration) throw std::runtime_error("Could not write native joined-industry registration");
 		}
 	}
 	std::set<unsigned> selected_houses;
@@ -791,7 +875,7 @@ void ExportVoxelReviews(std::string_view prefix)
 		if (state) {
 			const auto &name = Models().bindings.at({"houses",base,*state});
 			auto material = Material({},source.building.pal,1); material.SetObjectId(1);
-			house.instances.push_back({&Models().models.at(name).surface.vertices,material});
+			AddVoxelInstance(house,Models().models.at(name),material);
 		}
 		Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 		/* Keep native scale and tile registration while fitting tall masts/cores.
@@ -878,7 +962,7 @@ void ExportVoxelReviews(std::string_view prefix)
 			const auto &source = _industry_draw_tile_data[base*4+stage];
 			auto material = Material({},ground_layer ? source.ground.pal : source.building.pal,1);
 			material.SetObjectId(1);
-			industry.instances.push_back({&Models().models.at(name).surface.vertices,material});
+			AddVoxelInstance(industry,Models().models.at(name),material);
 			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 			int left = 8192-64, top = 8192-80, right = 8192+64, bottom = 8192+48;
 			/* Tall flare stacks and joined rig parts must retain their full source-
@@ -915,7 +999,7 @@ void ExportVoxelReviews(std::string_view prefix)
 				const auto &mesh = Models().models.at(name).surface;
 				if (base < 116) material.SetLongitudinalScale(OriginalTrainVoxelScale(material.mirror_layer_heading[3],mesh.high.x-mesh.low.x));
 				material.SetObjectId(1);
-				vehicle.instances.push_back({&Models().models.at(name).surface.vertices,material});
+				AddVoxelInstance(vehicle,Models().models.at(name),material);
 				DrawVoxelTrainCollectors(vehicle,base,{},material.mirror_layer_heading[3],PALETTE_RECOLOUR_START);
 				for (auto &instance : vehicle.instances) instance.data.SetObjectId(1);
 				Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
@@ -945,7 +1029,7 @@ void ExportVoxelReviews(std::string_view prefix)
 		Scene native;
 		/* Black ground hides embedded root cells exactly as the world terrain does. */
 		native.Quad({-16,-16,0},{16,-16,0},{16,16,0},{-16,16,0},{0,0,0});
-		native.instances.push_back({&Models().models.at(name).surface.vertices,Material({},PAL_NONE,1)});
+		AddVoxelInstance(native,Models().models.at(name),Material({},PAL_NONE,1));
 		native.instances.back().data.SetObjectId(1);
 		Camera native_camera{{},1,16384,16384,0};
 		native_camera.vertical_fov = 40;
@@ -1023,7 +1107,7 @@ void VerifyVoxelTreeModels()
 				}
 				std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR))/"renderer3d-reference";
 				std::filesystem::create_directories(directory);
-				const auto cell_mesh = Models().models.at(name).grid->Mesh(false);
+				const auto cell_mesh = Models().models.at(name).source->Expand(Models().materials).Mesh(false);
 				Scene cells = scene;
 				cells.persistent_meshes = false;
 				cells.instances.front().mesh = &cell_mesh.vertices;
@@ -1059,6 +1143,7 @@ void VerifyVoxelTreeModels()
 	size_t distant_pixels = 0;
 	for (const auto &[name,model] : Models().models) {
 		if (!name.starts_with("tree_")) continue;
+		auto lease = PinVoxelModel(model);
 		const auto original_mesh = model.surface.vertices;
 		for (Vec3 origin : {Vec3{},Vec3{500000,700000,100}}) for (float scale : {0.03f,0.12f,0.3f}) for (float turn : {0.15f,1.25f,2.65f,3.1f}) for (bool child_layer : {false,true}) {
 			Textures().BeginScene();
@@ -1068,7 +1153,7 @@ void VerifyVoxelTreeModels()
 				auto data = Material(origin+(instance == 1 ? Vec3{3,1,0} : Vec3{}),instance == 2 ? PALETTE_TO_STRUCT_BROWN : PAL_NONE,1);
 				data.SetObjectId(TILE_PICK_ID|static_cast<uint32_t>(1001+instance));
 				data.SetChildLayer(child_layer && instance == 0);
-				actual.instances.push_back({&model.surface.vertices,data});
+				AddVoxelInstance(actual,model,data);
 				reference.instances.push_back({&original_mesh,data});
 			}
 			Camera camera{origin+(model.surface.low+model.surface.high)*0.5f,scale,240,180,turn}; camera.vertical_fov = 40;
@@ -1086,12 +1171,13 @@ void VerifyVoxelTreeModels()
 	 * boundaries without moving the camera. An unregistered original mesh keeps
 	 * this independent of page reuse, indexing and background preparation. */
 	const auto &model = Models().models.at("tree_lime_03");
+	auto lease = PinVoxelModel(model);
 	const auto original_mesh = model.surface.vertices;
 	Scene edited;
 	for (unsigned i = 0; i < 1025; ++i) {
 		auto data = Material({(i%32)*12.0f,(i/32)*12.0f,0},i%3 == 0 ? PALETTE_TO_STRUCT_BROWN : PAL_NONE,1);
 		data.SetObjectId(TILE_PICK_ID|(1001+i));
-		edited.instances.push_back({&model.surface.vertices,data});
+		AddVoxelInstance(edited,model,data);
 	}
 	Camera edit_camera{{192,192,20},0.12f,320,240,0.35f}; edit_camera.vertical_fov = 40;
 	for (unsigned change = 0; change < 5; ++change) {
@@ -1200,6 +1286,32 @@ void VerifyVoxelMeshes(std::string_view prefix)
 {
 	std::vector<uint8_t> pixels, expected;
 	std::vector<uint32_t> ids, expected_ids;
+	/* A copied scene pins CPU storage even after its original is destroyed.
+	 * Once all pins are gone, retire and restore at the same GPU cache key. */
+	const auto &catalogue = Models();
+	auto cold = std::ranges::find_if(catalogue.models,[&](const auto &entry) {
+		return entry.second.surface.occupied != 0 && !catalogue.surfaces.IsPinned(entry.second);
+	});
+	if (cold == catalogue.models.end()) throw std::runtime_error("No unused voxel source for CPU residency verification");
+	const auto &retained = cold->second;
+	for (unsigned view = 0; view < 4; ++view) {
+		Textures().BeginScene();
+		Scene scene;
+		auto data = Material({},PALETTE_RECOLOUR_START,view&1U ? 0.38f : 1); data.SetObjectId(217);
+		AddVoxelInstance(scene,retained,data);
+		Camera camera = StreetReviewCamera(retained.surface.low,retained.surface.high,256,256,view+0.17f);
+		if (!RenderScene(scene,camera,expected,&expected_ids)) throw std::runtime_error("CPU voxel residency reference did not render");
+		auto copy = scene; scene = {};
+		size_t vertices = copy.VertexCount();
+		catalogue.surfaces.Trim(0);
+		if (vertices == 0 || copy.VertexCount() != vertices) throw std::runtime_error("CPU voxel retirement invalidated a copied scene");
+		copy = {};
+		catalogue.surfaces.Trim(0);
+		if (retained.surface.vertices.capacity() != 0) throw std::runtime_error("Unused CPU voxel storage was not released");
+		AddVoxelInstance(scene,retained,data);
+		if (scene.VertexCount() != vertices || !RenderScene(scene,camera,pixels,&ids) || pixels != expected || ids != expected_ids) throw std::runtime_error("Restored CPU voxel geometry changed exact colour, transparency or picking");
+	}
+	Debug(driver,1,"OpenTT3D: 4 CPU voxel retirement/rebuild views preserve scene pins, stable GPU keys, exact colour, transparency and picking");
 	unsigned views = 0;
 	unsigned bindings = 0;
 	unsigned ground_bindings = 0;
@@ -1263,13 +1375,14 @@ void VerifyVoxelMeshes(std::string_view prefix)
 	}
 	for (const auto &[name,model] : Models().models) {
 		if (!name.starts_with(prefix)) continue;
-		const auto naive = model.grid->Mesh(false);
+		auto lease = PinVoxelModel(model);
+		const auto naive = model.source->Expand(Models().materials).Mesh(false);
 		for (PaletteID palette : {PAL_NONE,PALETTE_TO_STRUCT_WHITE,PALETTE_TO_STRUCT_BROWN}) for (unsigned turn = 0; turn < 4; ++turn) for (bool street : {false,true}) {
 			Textures().BeginScene();
 			Scene merged, reference, expanded;
 			reference.persistent_meshes = false;
 			auto data = Material({},palette,1); data.SetObjectId(213);
-			merged.instances.push_back({&model.surface.vertices,data});
+			AddVoxelInstance(merged,model,data);
 			reference.instances.push_back({&naive.vertices,data});
 			expanded.vertices = merged.ExpandedVertices(true);
 			Vec3 centre = (model.surface.low+model.surface.high)*0.5f;
@@ -1353,10 +1466,10 @@ void VerifyVoxelMeshes(std::string_view prefix)
 					const auto &mesh = model.surface;
 					/* Include every adjoining layer even outside the selected prefix. */
 					auto [naive,inserted] = individual_faces.try_emplace(name);
-					if (inserted) naive->second = model.grid->Mesh(false);
+					if (inserted) naive->second = model.source->Expand(Models().materials).Mesh(false);
 					auto data = Material(offsets[part],ground ? source.ground.pal : source.building.pal,1);
 					data.SetObjectId(TILE_PICK_ID | (31+part));
-					joined.instances.push_back({&mesh.vertices,data});
+					AddVoxelInstance(joined,model,data);
 					reference.instances.push_back({&naive->second.vertices,data});
 					Vec3 a = offsets[part]+mesh.low, b = offsets[part]+mesh.high;
 					low = {std::min(low.x,a.x),std::min(low.y,a.y),std::min(low.z,a.z)};
@@ -1438,6 +1551,7 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 		bool loaded = (state&1U) != 0;
 		unsigned climate = state/2;
 		if (state >= 8 || VoxelVehicleState(engine,loaded,climate) != state) throw std::runtime_error("Vehicle climate/cargo binding cannot be selected");
+		auto lease = PinVoxelModel(Models().models.at(name));
 		const auto &mesh = Models().models.at(name).surface;
 		if (engine < 116) for (const auto &vertex : mesh.vertices) {
 			/* Use the actual faceted lining and inward ribs, not its bounding box
@@ -1500,6 +1614,27 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 			if (!RenderScene(actual,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),engine+1) != 0) throw std::runtime_error("Transparent voxel vehicle intercepted picking");
 			++vehicle_views;
 		}
+		if (engine < 116) {
+			unsigned pitched_views = 0;
+			auto unit_mesh = Models().models.at(name).source->Expand(Models().materials).Mesh(false);
+			for (float grade : {-0.5f,-0.25f,0.25f,0.5f}) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) for (PaletteID palette : {PAL_NONE,PALETTE_RECOLOUR_START,PALETTE_CRASH}) {
+				Scene actual, reference, cells;
+				float heading = pose*std::numbers::pi_v<float>/4+0.07f;
+				DrawVoxelVehicle(actual,engine,loaded,{},heading,palette,1,climate,grade);
+				auto &instance = actual.instances.front().data;
+				instance.SetObjectId(engine+1);
+				reference.vertices = actual.ExpandedVertices(true);
+				cells.persistent_meshes = false;
+				cells.instances.push_back({&unit_mesh.vertices,instance});
+				Camera camera{{0,0,4},2,256,256,0.17f};
+				if (street) camera = StreetReviewCamera({-9,-3,-3},{9,3,11},256,256,0.17f);
+				if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error(fmt::format("Pitched train {} binding {} grade {} pose {} street {} differs from exact CPU geometry",engine,state,grade,pose,street));
+				if (!RenderScene(cells,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error(fmt::format("Pitched train {} binding {} grade {} pose {} street {} differs from unit-cell geometry",engine,state,grade,pose,street));
+				if (std::count(ids.begin(),ids.end(),engine+1) < 16) throw std::runtime_error("Pitched train disappeared or lost picking ownership");
+				++pitched_views;
+			}
+			Debug(driver,1,"OpenTT3D: train engine {} binding {} passed {} pitched support-plane poses with exact colour and picking",engine,state,pitched_views);
+		}
 		if (engine >= 23 && engine <= 26 && !loaded) {
 			unsigned collector_views = 0, parts = engine <= 24 ? 2 : 1;
 			for (auto heights : {std::array{10.0f,10.0f},std::array{8.8f,8.8f},std::array{7.55f,7.55f},std::array{10.0f,7.55f},std::array{7.55f,10.0f}}) {
@@ -1531,6 +1666,31 @@ void VerifyVoxelVehicleModels(unsigned only_engine)
 				}
 			}
 			Debug(driver,1,"OpenTT3D: voxel train engine {} passed {} joined collector poses with fixed roof mounts, independent wire heights, company/crash palettes and original picking ownership",engine,collector_views);
+			unsigned pitched_collectors = 0;
+			for (float grade : {-0.5f,0.5f}) for (unsigned pose = 0; pose < 8; ++pose) for (bool street : {false,true}) {
+				Scene actual, reference;
+				float heading = pose*std::numbers::pi_v<float>/4+0.07f;
+				DrawVoxelVehicle(actual,engine,false,{},heading,PALETTE_RECOLOUR_START,1,climate,grade);
+				std::array<float,2> heights{9,11};
+				if (DrawVoxelTrainCollectors(actual,engine,{},heading,PALETTE_RECOLOUR_START,heights,grade) != parts) throw std::runtime_error("Pitched electric train lost its collectors");
+				for (unsigned part = 0; part < parts; ++part) {
+					const auto &frame = Models().models.at(Models().bindings.at({"vehicle_collectors",engine,part})).surface;
+					const auto &instance = actual.instances[part+1];
+					for (const auto &vertex : frame.vertices) if (vertex.position.z == frame.low.z) {
+						Vec3 a = ResolveInstanceVertex(vertex,actual.instances[0].data).position, b = ResolveInstanceVertex(vertex,instance.data).position;
+						if (Dot(a-b,a-b) > 1e-8f) throw std::runtime_error("Pitched collector detached from its original roof mount");
+					}
+					Vertex shoe{}; shoe.position = CollectorContactCentre(frame); shoe.normal = {0,0,1};
+					if (std::abs(ResolveInstanceVertex(shoe,instance.data).position.z-heights[part]) > 0.00001f) throw std::runtime_error("Pitched collector missed its independent wire contact");
+				}
+				for (auto &instance : actual.instances) instance.data.SetObjectId(engine+1);
+				reference.vertices = actual.ExpandedVertices(true);
+				Camera camera{{0,0,5},2,256,256,0.17f};
+				if (street) camera = StreetReviewCamera({-9,-3,-3},{9,3,13},256,256,0.17f);
+				if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error("Pitched collector and body differ from exact CPU placement");
+				++pitched_collectors;
+			}
+			Debug(driver,1,"OpenTT3D: train engine {} passed {} pitched collector poses with attached mounts and independent wire contacts",engine,pitched_collectors);
 		}
 		if (engine >= 253 && engine <= 255 && !loaded) {
 			unsigned rotor_views = 0;
