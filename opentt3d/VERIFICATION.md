@@ -86,6 +86,12 @@ as the default after the matched LOD-only controls remain too slow.
   portal/tree images were inspected structurally, with zero final visual approvals.
   Successful-only compaction for the final32 generated images recovers87,532,225bytes
   (`review-compaction-20260926T201139905812Z.json`), retaining original/failed evidence.
+- Published source prerelease`.13`targets the verified terrain/LOD commit
+  `731cb98efc11e8a079fdaec528f8d91c5f72eb99`; stopping audit20:22:46UTC records completion
+  of this increment, not the entire catalogue/quality goal. Release`.10`remoteCI now
+  confirms LinuxGL/macOS/Windows success and the old unsharded LinuxVulkan7200-second
+  timeout. Full failed-job output is retained in`pass2-release10-failed-ci.log`.
+  The sharded`.11`run has started; current`.13`CI`36268907301`remains queued.
 
 **Renewed-window stopping audit:2026-09-26 19:00:01 UTC**, after the requested
 19:00UTC/1PM fixedCST minimum. The clock endpoint is the stopping reason. Full

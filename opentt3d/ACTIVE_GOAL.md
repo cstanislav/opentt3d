@@ -39,6 +39,20 @@ Earlier controls and failures remain preserved. Roof slopes are authorized, not 
 claim that every existing roof has been rebuilt. Catalogue/state/fidelity and current
 Linux verification remain unfinished, with **zero final visual approvals**.
 
+**Follow-up stopping audit:2026-09-26 20:22:46 UTC.** The requested terrain/automatic-
+LOD/projected-tree increment is verified, committed and pushed to`main`at
+`731cb98efc11e8a079fdaec528f8d91c5f72eb99`, and published as source prerelease
+[`opentt3d-dev-20260926.13`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260926.13).
+Stopping reason: completion and publication of this follow-up increment; the wider
+catalogue/fidelity/performance objective is not complete. No new minimum duration
+was specified, and the earlier19:00UTC minimum remains satisfied. Local reviews have
+exited. Release`.10`has now completed: LinuxGL, macOS and Windows pass; its unsharded
+LinuxVulkan run reaches7200 seconds. The sharded`.11`run is active, and current`.13`
+CI run`36268907301`is queued. The closing audit reconfirms all twelve final controls,
+both moving-route controls and all ten geometry/performance/helicopter controls pass;
+frozen source/artwork/executable hashes and the local app still match. Preserve the
+failure log and pending platform status.
+
 ## Extended September 22–26 objective: complete voxel recreation
 
 - User's approximate start: **9:30 PM CST, September 22, 2026**.
