@@ -87,9 +87,9 @@ Set `OPENTT3D_AUTO_LOD=0` for a full-detail comparison. Trees use the previous
 projected-material3D geometry by default after matched voxel-tree LOD tests remained
 too slow. `OPENTT3D_TREE_STYLE=voxel` selects the retained voxel trees for diagnostics.
 
-The current artwork is a development subset: **1,301 voxel volumes**, covering
+The current artwork is a development subset: **1,314 voxel volumes**, covering
 110 house IDs,62 diagnostic tree sprite families and all256 vanilla vehicle definitions,
-plus62/175 industry body definitions and53/74 airport definitions. Climate/state
+plus70/175 industry body definitions,74 independent industry grounds and53/74 airport definitions. Climate/state
 coverage remains incomplete: Arctic farms/forests and several non-temperate industry
 grounds retain supplied source artwork pending independent volumes. No model has
 final visual approval. Remaining industry and

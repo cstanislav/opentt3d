@@ -8,9 +8,65 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_printing_works_preserves_open_construction_courtyard_flues_and_join(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("print_") or name == "mine_ground_site"}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(43,47)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        for graphics in range(43,47):
+            states = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(states["1"],states["2"])
+            self.assertEqual(len(set(states.values())),3)
+            for stage,name in states.items():
+                cells = volumes[name]
+                self.assertEqual({(x,y) for x,y,z in cells if z == 0},{(x,y) for x in range(32) for y in range(32)})
+                if stage == "0": self.assertEqual({z for x,y,z in cells},{0})
+                reached = {p for p in cells if p[2] == 0}
+                pending = list(reached)
+                for x,y,z in pending:
+                    for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if p in cells and p not in reached:
+                            reached.add(p); pending.append(p)
+                self.assertEqual(reached,set(cells),(graphics,stage,"Every rafter, rim and wall must have physical support"))
+        for name in ("print_north_partial","print_west_partial"):
+            self.assertNotIn((12,10,35),volumes[name],"Construction has no finished main roof")
+            self.assertNotIn((4,31,8),volumes[name],"Tall lower openings remain genuine apertures")
+        north = volumes["print_north_finished"]
+        self.assertIn((4,30,8),north)
+        self.assertNotIn((4,31,8),north,"Completed glazing keeps a recessed outer face")
+        for x,y,z in ((16,4,64),(10,14,98),(6,22,60),(4,26,74)):
+            self.assertNotIn((x,y,z),north,"Every white flue stays open through its rim")
+        self.assertNotIn((10,2,27),volumes["print_north_partial"],"The source's high back-wall opening must remain open")
+        self.assertNotIn((0,5,12),volumes["print_north_partial"],"The source's tall end-wall bays must remain open")
+        self.assertIn((1,5,12),north)
+        self.assertIn((28,18,5),volumes["print_east_partial"],"The exposed workshop frame runs alongX, notY")
+        self.assertEqual({(y,z) for x,y,z in north if x == 31 and z >= 32},
+                         {(y,z) for x,y,z in volumes["print_west_finished"] if x == 0 and z >= 32})
+        for name in ("print_south_partial","print_south_finished"):
+            self.assertTrue(all(z == 0 for x,y,z in volumes[name] if 3 <= x < 30 and 3 <= y < 30),
+                            "The original courtyard must remain empty")
+        soil = volumes["print_site_ground"]
+        allowed = {33,53,54,61,71,72,73,74,105,106,107,108,112,113,123,124}
+        self.assertTrue({c for m in soil.values() for c in result["materials"][m-1]} <= allowed,
+                        "Printing ground3924 must retain its own source palette")
+
     def test_factory_layers_preserve_empty_body_support_and_roof_ownership(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
+        table = (root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0]
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",table)
+        for graphics in range(121,125):
+            for stage in range(4):
+                self.assertEqual([field.strip() for field in rows[graphics*4+stage].split(",")],
+                                 [field.strip() for field in rows[(graphics-82)*4+stage].split(",")],
+                                 "Tropical factory aliases require identical source layers and registration")
+            for category in ("industries","industry_ground"):
+                self.assertEqual(source["bindings"][category][str(graphics)],source["bindings"][category][str(graphics-82)])
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("factory_") or name in ("mine_ground_bare","mine_ground_site")}
         source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(39,43)}

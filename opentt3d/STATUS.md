@@ -10,11 +10,17 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.13`LinuxGL, all four Vulkan vehicle shards, macOS and Windows pass; its Vulkan scene job passes the main matrix but times out repeating trees in the electric journey. The active-tree scope repair awaits CI.
-- [x] Current1,301-volume asset/compiler/schema suite122/122 and three retirement checks pass (123 unique checks); downloader/screenshot/memory harness9/9 passes. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,314-volume asset/compiler/schema suite124/124 passes; downloader/screenshot/memory harness retains9/9. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Printing43…46 adds13 volumes with distinct construction, tiered joined roofs,
+  four open flues, exposed workshop rafters and an open courtyard. Tropical factory
+  121…124 shares39…42 only after128 climate/layer comparisons agree in pixels and
+  registration. Coverage reaches70 industry bodies/74 grounds. All26 final backend
+  checks pass, including32 printing bodies,62 tropical ground/body selections and
+  the delivered-wood context. Peak sampled memory is2,675,067,928bytes.
 - [x] Factory39…42 adds fifteen provisional volumes, including both original
   multi-block layouts and independently owned completed lower walls/paving. The
   completed42 body remains empty. Coverage reaches62 industry bodies/66 grounds.

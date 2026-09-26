@@ -4,6 +4,20 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "print_blue": [200,201,200,202,200,202],
+    "print_blue_partial": [201,202,201,202,201,202],
+    "print_metal": [6,8,7,10,6,9],
+    "print_paving": [4,7,5,8,4,6],
+    "print_paving_grain": [5,8,6,8,4,7],
+    "print_glass": [128,131,129,132,128,130],
+    "print_roof": [2,4,3,6,2,5],
+    "print_roof_rib": [3,5,4,7,3,6],
+    "print_flue": [6,10,8,12,5,11],
+    "print_flue_rim": [8,12,10,14,6,13],
+    "print_dark_soil": [104,105,104,112,104,105],
+    "print_site_soil": [112,105,106,113,105,112],
+    "print_site_clay": [107,105,106,108,105,107],
+    "print_site_red": [123,123,123,124,123,123],
     "factory_brick": [71,74,72,76,71,75],
     "factory_brick_grain": [72,75,73,76,71,74],
     "factory_west_brick": [71,74,72,75,71,75],
@@ -1280,6 +1294,53 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "print_yard": [
+      ["box","print_paving",0,0,0,32,32,1],
+      ["scatter_paint","print_paving_grain",4,2168,0,0,0,32,32,1]
+    ],
+    "print_main_shell": [
+      ["box","factory_brick",0,2,1,32,20,32],
+      ["erase",0,4,1,32,18,32],
+      ["repeat",[8,0,0],4,[["erase",2,18,3,7,20,22],
+        ["box","print_blue_partial",1,19,1,2,20,24],
+        ["box","print_blue_partial",7,19,1,8,20,24]]],
+      ["erase",5,18,26,27,20,30],
+      ["erase",5,2,25,27,4,30],
+      ["scatter_paint","factory_brick_grain",7,2165,0,2,1,32,20,32,"factory_brick"]
+    ],
+    "print_low_shell": [
+      ["box","factory_brick",0,20,1,32,32,20],
+      ["erase",0,22,1,32,30,20],
+      ["repeat",[8,0,0],4,[["erase",2,30,1,7,32,16],
+        ["box","print_blue_partial",1,31,1,2,32,17],
+        ["box","print_blue_partial",7,31,1,8,32,17]]],
+      ["scatter_paint","factory_brick_grain",7,2167,0,20,1,32,32,20,"factory_brick"]
+    ],
+    "print_roofs": [
+      ["gable","print_roof",0,1,32,32,21,43,"y"],
+      ["gable","print_roof",0,19,20,32,32,28,"y"],
+      ["repeat",[5,0,0],7,[["paint","print_roof_rib",0,1,32,1,21,43],
+        ["paint","print_roof_rib",0,19,20,1,32,28]]],
+      ["paint","print_blue",0,1,32,32,2,33],
+      ["paint","print_blue",0,19,20,32,20,21],
+      ["paint","print_blue",0,31,20,32,32,21]
+    ],
+    "print_east_frames": [
+      ["repeat",[0,7,0],5,[["box","factory_brick",2,0,1,4,2,32],
+        ["box","print_blue",18,0,1,20,2,24],
+        ["line","factory_brick",2,0,32,10,0,39],
+        ["line","factory_brick",10,0,39,19,0,32]]],
+      ["box","print_blue",18,0,23,20,32,25],
+      ["box","print_metal",18,0,25,20,32,32],
+      ["repeat",[0,3,0],10,[["erase",19,1,26,20,3,31]]],
+      ["box","factory_brick",2,0,31,4,32,33],
+      ["box","factory_brick",18,0,31,20,32,33]
+    ],
+    "print_yard_posts": [
+      ["box","factory_brick",0,0,1,32,2,3],
+      ["repeat",[8,0,0],4,[["box","factory_brick",1,0,1,3,2,12]]],
+      ["paint","print_blue_partial",2,0,1,3,2,12]
+    ],
     "factory_site": [
       ["box","lumber_initial_soil",0,0,0,32,32,1],
       ["scatter_paint","lumber_partial_soil_light",5,2153,0,0,0,32,32,1],
@@ -5704,6 +5765,119 @@
     ]
   },
   "models": {
+    "print_site_ground": {
+      "extends":"mine_ground_site",
+      "reference":"Original3924 temperate independent soil with its source-permitted colour set; other climates retain their supplied ground",
+      "ops":[["replace_material","mine_soil","print_site_soil"],
+        ["replace_material","mine_soil_clay","print_site_clay"],
+        ["replace_material","mine_soil_ochre","mine_bare_ochre"],
+        ["replace_material","mine_soil_red","print_site_red"]]
+    },
+    "print_north_initial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "transpose_xy":true,
+      "reference":"Printing43 original2161 distinct broad excavated north hall; ground3924 remains independent",
+      "ops":[["use","factory_site"],["box","factory_pit",0,10,0,32,30,1],
+        ["scatter_paint","factory_pit_grain",4,2161,0,10,0,32,30,1,"factory_pit"]]
+    },
+    "print_east_initial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Printing44 original2162 two short eastern foundation cuts",
+      "ops":[["use","factory_site"],["box","factory_pit",2,0,0,10,8,1],["box","factory_pit",22,4,0,30,12,1]]
+    },
+    "print_west_initial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Printing45 original2163 almost entirely exposed dark excavation, with only narrow soil edges",
+      "ops":[["box","factory_pit",0,0,0,32,32,1],
+        ["scatter_paint","factory_pit_grain",4,2163,0,0,0,32,32,1],
+        ["paint","print_dark_soil",30,28,0,32,32,1]]
+    },
+    "print_south_initial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Printing46 original2164 soil with two small courtyard foundations",
+      "ops":[["use","factory_site"],["box","factory_pit",1,1,0,11,6,1],["box","factory_pit",22,0,0,30,4,1]]
+    },
+    "print_north_partial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Printing43 original2165 roofless brick hall and lower annex, with real tall openings and exposed courtyard; original1/2 alias",
+      "ops":[["use","print_yard"],["use","print_main_shell"],["use","print_low_shell"],
+        ["box","factory_pit",0,4,0,32,18,1],["box","factory_pit",0,22,0,32,30,1],
+        ["box","factory_brick",0,2,1,2,32,32],["erase",0,20,21,2,32,32],
+        ["repeat",[0,6,0],3,[["erase",0,4,3,2,7,23]]],
+        ["erase",0,6,26,2,16,30],
+        ["erase",0,24,14,2,30,19]]
+    },
+    "print_east_partial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "transpose_xy":true,
+      "reference":"Printing44 original2166 exposed red rafters over blue columns and a grey clerestory; no completed corner tower",
+      "ops":[["use","print_yard"],["use","print_east_frames"]]
+    },
+    "print_west_partial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Printing45 original2167 open brick shells and blue floor-height pilasters; roof spaces remain genuinely empty at1/2",
+      "ops":[["use","print_yard"],["use","print_main_shell"],["use","print_low_shell"],
+        ["box","factory_pit",0,4,0,32,18,1],["box","factory_pit",0,22,0,32,30,1],
+        ["box","factory_brick",30,2,1,32,32,32],["erase",30,20,21,32,32,32],
+        ["erase",30,6,26,32,16,30],["erase",30,24,14,32,30,19],
+        ["repeat",[0,7,0],4,[["erase",30,4,2,32,9,23],["box","print_blue_partial",31,3,1,32,4,24]]]]
+    },
+    "print_south_partial": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Printing46 original2168 open paved courtyard with incomplete north-edge masonry and original low columns",
+      "ops":[["use","print_yard"],["use","print_yard_posts"]]
+    },
+    "print_north_finished": {
+      "extends":"print_north_partial",
+      "reference":"Printing43 original2169 dark blue-edged tiered roofs and four distinct supported hollow white flues",
+      "ops":[["use","print_roofs"],["replace_material","print_blue_partial","print_blue"],
+        ["repeat",[8,0,0],4,[["box","print_glass",2,18,3,7,19,22],["box","print_glass",2,30,2,7,31,16]]],
+        ["box","print_glass",5,18,26,27,19,30],
+        ["box","print_glass",5,3,25,27,4,30],
+        ["repeat",[0,6,0],3,[["box","print_glass",1,4,3,2,7,23]]],
+        ["box","print_glass",1,6,26,2,16,30],["box","print_glass",1,24,14,2,30,19],
+        ["face_paint","factory_brick",3,0,2,32,2,20,43],
+        ["face_paint","factory_brick",3,0,20,20,2,31,28],
+        ["box","print_glass",0,6,33,1,16,37],
+        ["lathe","print_flue",[16,4],[[33,2,1],[64,2,1]]],
+        ["lathe","print_flue",[10,14],[[36,2,1],[98,2,1]]],
+        ["lathe","print_flue",[6,22],[[23,2,1],[60,2,1]]],
+        ["lathe","print_flue",[4,26],[[26,2,1],[74,2,1]]],
+        ["lathe","print_flue_rim",[16,4],[[63,2.5,1],[65,2.5,1]]],
+        ["lathe","print_flue_rim",[10,14],[[97,2.5,1],[99,2.5,1]]],
+        ["lathe","print_flue_rim",[6,22],[[59,2.5,1],[61,2.5,1]]],
+        ["lathe","print_flue_rim",[4,26],[[73,2.5,1],[75,2.5,1]]]]
+    },
+    "print_east_finished": {
+      "size":[32,32,116],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"transpose_xy":true,
+      "reference":"Printing44 original2170 completed brick corner tower with inset glazing and grey glazed cap; rear exposed rafters remain",
+      "ops":[["use","print_yard"],["use","print_east_frames"],
+        ["box","factory_brick",10,22,1,23,32,44],["erase",12,24,2,21,30,44],
+        ["repeat",[0,0,13],3,[["erase",21,24,4,23,29,12],["box","print_glass",21,24,4,22,29,12],
+          ["erase",13,30,4,19,32,12],["box","print_glass",13,30,4,19,31,12]]],
+        ["hip","print_metal",9,21,44,24,32,51,4],
+        ["paint","print_glass",12,24,46,21,29,51]]
+    },
+    "print_west_finished": {
+      "extends":"print_west_partial",
+      "reference":"Printing45 original2171 joined dark roof ridges and glazed end gables above blue lower pilasters",
+      "ops":[["use","print_roofs"],["replace_material","print_blue_partial","print_blue"],
+        ["repeat",[0,7,0],4,[["box","print_glass",30,4,2,31,9,23]]],
+        ["repeat",[8,0,0],4,[["box","print_glass",2,18,3,7,19,22],["box","print_glass",2,30,2,7,31,16]]],
+        ["box","print_glass",5,18,26,27,19,30],
+        ["box","print_glass",5,3,25,27,4,30],
+        ["box","print_glass",30,6,26,31,16,30],["box","print_glass",30,24,14,31,30,19],
+        ["face_paint","factory_brick",3,30,2,32,32,20,43],
+        ["box","print_glass",30,6,33,31,16,37]]
+    },
+    "print_south_finished": {
+      "extends":"print_south_partial",
+      "reference":"Printing46 original2172 completed paved open courtyard with a low blue/white perimeter; no invented courtyard building",
+      "ops":[["replace_material","print_blue_partial","print_blue"],
+        ["box","print_blue",31,0,1,32,32,3],["box","print_blue",0,31,1,32,32,3],
+        ["repeat",[0,3,0],11,[["paint","print_metal",31,0,1,32,1,3]]],
+        ["repeat",[3,0,0],11,[["paint","print_metal",0,31,1,1,32,3]]]]
+    },
     "factory_north_initial": {
       "size":[32,32,144],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
       "reference":"Factory39 original2153 L-shaped dark excavation in body-owned soil over independent2022 ground",
@@ -13763,6 +13937,14 @@
     },
     "depot_wires":{"1":{"0":"rail_depot_wire","1":"rail_depot_wire","2":"rail_depot_wire","3":"rail_depot_wire"}},
     "industry_ground": {
+      "121":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_north_ground"},
+      "122":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_east_ground"},
+      "123":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_west_ground"},
+      "124":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_south_ground"},
+      "43":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"print_site_ground"},
+      "44":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"print_site_ground"},
+      "45":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"print_site_ground"},
+      "46":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"print_site_ground"},
       "39":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_north_ground"},
       "40":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_east_ground"},
       "41":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_west_ground"},
@@ -13831,6 +14013,14 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "121":{"0":"factory_north_initial","1":"factory_north_partial","2":"factory_north_partial","3":"factory_north_finished"},
+      "122":{"0":"factory_east_initial","1":"factory_east_partial","2":"factory_east_partial","3":"factory_east_finished"},
+      "123":{"0":"factory_west_initial","1":"factory_west_partial","2":"factory_west_partial","3":"factory_west_finished"},
+      "124":{"0":"factory_south_initial","1":"factory_south_partial","2":"factory_south_partial"},
+      "43":{"0":"print_north_initial","1":"print_north_partial","2":"print_north_partial","3":"print_north_finished"},
+      "44":{"0":"print_east_initial","1":"print_east_partial","2":"print_east_partial","3":"print_east_finished"},
+      "45":{"0":"print_west_initial","1":"print_west_partial","2":"print_west_partial","3":"print_west_finished"},
+      "46":{"0":"print_south_initial","1":"print_south_partial","2":"print_south_partial","3":"print_south_finished"},
       "39":{"0":"factory_north_initial","1":"factory_north_partial","2":"factory_north_partial","3":"factory_north_finished"},
       "40":{"0":"factory_east_initial","1":"factory_east_partial","2":"factory_east_partial","3":"factory_east_finished"},
       "41":{"0":"factory_west_initial","1":"factory_west_partial","2":"factory_west_partial","3":"factory_west_finished"},

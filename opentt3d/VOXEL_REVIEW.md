@@ -16,6 +16,21 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Printing and tropical-factory breadth:**13 volumes cover43…46 with distinct
+  excavations, open wall/rafter stages, tiered joined roofs and four hollow flues.
+  Courtyard46 stays open. Registered source comparisons repair the eastern workshop
+  axis, high/end-wall apertures, dark interior floors and scattered flue positions.
+  Both original joined layouts, four-sided street views and actual Arctic world
+  views were inspected. Facade heights, end-gable profiles, roof cut/blue edging,
+  glazing subdivisions, floor texture and paint fidelity remain later-pass findings.
+  The separate temperate3924 ground uses its original palette; Arctic/tropical/Toyland
+  grounds retain supplied source artwork. The48 cross-climate printing body pairs
+  match. Tropical121…124 shares39…42 only after128 ground/body pairs match pixels,
+  offsets, extents and palette metadata across all climates; completed124 stays empty.
+  All63 new bound source palettes and26 final backend controls pass, with zero final
+  visual approvals. Evidence:`build-macos/breadth-printing-*` and
+  `breadth-tropical-factory-alias-audit.json`.
+
 - **Factory breadth candidate:** fifteen volumes add39…42, including complete
   original1/2 construction aliases and independent completed2146…2149 grounds.
   Completed42 has no body: its entire low shed, black roof, crates and boundary

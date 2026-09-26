@@ -1,5 +1,26 @@
 # Active extended development goal
 
+## Printing/tropical-factory progress — September26,23:23:41UTC
+
+The actual clock is **2026-09-26 23:23:41 UTC**, beyond the requested19:00UTC/1PM
+fixed-CST minimum. Factory commit`238a5ee52a3c71858882f4166a121f268bc1c66f`is pushed
+to main and published as`opentt3d-dev-20260926.16`.
+
+The printing43…46 and tropical factory121…124 increment reaches1,314 volumes,
+70 industry body definitions and74 grounds. It passes200 native and124 asset checks,
+63 bound palettes,48 printing climate-body pairs,128 tropical factory alias pairs
+and26 final background native controls. Actual fixtures verify32 printing body and
+62 tropical ground/body selections; completed124 remains empty. All1,301 previous
+models retain their semantic geometry/material hashes. Selected source/registered/
+street/world views were inspected. Peak sampled memory is2,675,067,928bytes.
+
+Publish this breadth increment before continuing the missing tram-depot family,
+industry machinery/storage and distinct climate grounds. A source-climate tram
+audit and preliminary local draft are prepared, but tram integration is not claimed.
+All four catalogue passes and the complete fidelity/performance objective persist,
+with zero final visual approvals. Background-only reviews and compact retention
+remain required. This is a progress audit, not a completion or stopping claim.
+
 ## Renewed continuation — September 26, 22:39:24 UTC
 
 Actual clock **2026-09-26 22:39:24 UTC** independently establishes that this renewed

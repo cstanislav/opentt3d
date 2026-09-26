@@ -1,5 +1,49 @@
 # Implementation verification
 
+## Printing43…46 and source-identical tropical factory121…124
+
+Thirteen new volumes raise the catalogue to1,314, with70/175 industry body
+definitions and74 grounds. Printing construction1/2 shares only source-identical
+sprites; initial excavations and final buildings remain distinct. Supported walls,
+open tall/end-wall construction apertures, recessed completed glazing, four hollow
+flues, the main roof join and the open courtyard receive structural regressions.
+Tropical factory121…124 shares existing39…42 models after128 cross-climate layer
+comparisons agree in source pixels and metadata; completed124 has no fabricated body.
+
+- 200/200 native and124/124 asset/compiler/schema checks pass. The unchanged harness
+  retains9/9. Semantic hashes verify all1,301 previous models retain exactly the same
+  geometry/materials; the change adds13 volumes and source-permitted bindings.
+- All63 newly bound source-layer palettes match, and48 printing body comparisons
+  confirm identical original art across the other three climates. Independent3924
+  ground retains its existing non-temperate source guards.
+- All26 final native runs pass. TemperateGL/Vulkan each verify4,328 industry views,
+  including2,368 ground views, plus312 focused printing mesh/palette views and
+  1,024,000 exact world-atlas relocation pixels. Arctic/tropic each verify3,048
+  industry views (1,312 grounds); Toyland verifies1,944 (312 grounds), checking
+  retained-source selection for unsupported climate layers.
+- Sixteen actual construction runs capture32 printing body selections and62
+  tropical factory ground/body selections. Both completed124 bodies stay empty.
+  Two existing delivered-wood service worlds render tropical factory121…124 at
+  their saved construction stage2. Initial stage3 requests fail correctly; both
+  corrected requests pass and original failure logs remain retained.
+- Peak sampled memory is2,675,067,928bytes. Final executable/artwork/source hashes
+  match. Both joined layouts, source-registered bodies, four-sided street views and
+  actual Arctic/tropical worlds were inspected; no final artwork approval follows.
+
+Evidence:`build-macos/breadth-printing-final-{hashes,validation,reconciliation,
+palette-audit,unchanged-models,inventory}.json`, the separate delivered-wood manifests,
+`breadth-printing-climate-audit.json` and`breadth-tropical-factory-alias-audit.json`.
+The first Arctic voxel-only joined export omitted unsupported ground3924 as designed;
+its source-comparison command failed on missing layout images. A temperate export
+supplies the registered joined review after verifying the building artwork matches.
+All16 initial native controls and the subsequent temperate gallery also pass.
+
+Airport release`.14`run`36271834932`has now completed. LinuxOpenGL, all four Vulkan
+vehicle shards, macOS and Windows pass; its sole failure is again the900-second
+electric-journey timeout addressed by the later active-tree scope. The factory`.16`
+workflow remains queued; current Linux acceptance is pending. Compact status/failure
+evidence is in`breadth-release14-ci-*`.
+
 ## Factory39…42 coverage and Linux tree-sweep timeout repair
 
 Fifteen volumes bring the catalogue to1,301 and industry coverage to62
