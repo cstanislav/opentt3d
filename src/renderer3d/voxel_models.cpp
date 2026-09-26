@@ -326,8 +326,8 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground)
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
-	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) return {};
 	image &= SPRITE_MASK;
+	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape),ground,image)) return {};
 	if (image == 0) return {};
 	std::string_view category = ground ? "industry_ground" : "industries";
 	bool bound = false;
@@ -831,7 +831,9 @@ void ExportVoxelReviews(std::string_view prefix)
 			 * prefix, but it is still part of the requested original layout. */
 			bool selected = false;
 			for (const auto &part : layouts[layout]) for (unsigned stage = 0; stage < 4; ++stage) for (const char *category : {"industry_ground","industries"}) {
+				if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
 				if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape))) continue;
+				if (std::string_view(category) == "industry_ground" && !IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),true,_industry_draw_tile_data[part.gfx*4+stage].ground.sprite&SPRITE_MASK)) continue;
 				auto binding = Models().bindings.find({category,part.gfx,stage});
 				selected |= binding != Models().bindings.end() && binding->second.starts_with(prefix);
 			}
@@ -840,7 +842,9 @@ void ExportVoxelReviews(std::string_view prefix)
 				std::vector<const VoxelModel *> group;
 				std::vector<Vec3> placements;
 				for (const auto &part : layouts[layout]) for (const char *category : {"industry_ground","industries"}) {
+					if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
 					if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape))) continue;
+					if (std::string_view(category) == "industry_ground" && !IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),true,_industry_draw_tile_data[part.gfx*4+stage].ground.sprite&SPRITE_MASK)) continue;
 					auto binding = Models().bindings.find({category,part.gfx,stage});
 					if (binding == Models().bindings.end()) continue;
 					group.push_back(&Models().models.at(binding->second));
@@ -1013,11 +1017,12 @@ void ExportVoxelReviews(std::string_view prefix)
 		}
 		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix) && IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape))) {
 			bool ground_layer = category == "industry_ground";
+			const auto &source = _industry_draw_tile_data[base*4+stage];
+			if (!IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape),ground_layer,source.ground.sprite&SPRITE_MASK)) continue;
 			Textures().BeginScene();
 			Scene industry;
 			float z = ground_layer ? -0.25f : 0;
 			industry.Quad({-16,-16,z},{48,-16,z},{48,48,z},{-16,48,z},{0,0,0});
-			const auto &source = _industry_draw_tile_data[base*4+stage];
 			auto material = Material({},ground_layer ? source.ground.pal : source.building.pal,1);
 			material.SetObjectId(1);
 			AddVoxelInstance(industry,Models().models.at(name),material);
@@ -1272,7 +1277,7 @@ void VerifyVoxelIndustryModels()
 		const auto &mesh = Models().models.at(name).surface;
 		SpriteID image = ground ? source.ground.sprite : source.building.sprite;
 		PaletteID palette = ground ? source.ground.pal : source.building.pal;
-		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) {
+		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape),ground,image&SPRITE_MASK)) {
 			Scene fallback;
 			if (VoxelIndustryState(graphics,image,ground) || (ground ? DrawVoxelIndustryGround(fallback,graphics,image,{},palette) : HasAuthoredIndustry(graphics,image))) throw std::runtime_error("Unauthored climate selected a different climate's industry body/ground");
 			++climate_fallbacks;

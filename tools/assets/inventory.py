@@ -103,6 +103,17 @@ def inventory():
             industry["voxel_climates"] = ["temperate"]
             industry["missing_voxel_climates"] = ["arctic"]
             industry["climate_source_note"] = "Arctic replaces these source layers; equal sprite numbers do not permit a temperate alias. Runtime retains supplied artwork."
+        if industry["graphics"] in (16,17):
+            industry["voxel_climates"] = ["temperate"]
+            industry["missing_voxel_climates"] = ["arctic"]
+            industry["climate_source_note"] = "Arctic source replaces both ground and trees with snowy artwork; independent voxel volumes remain missing."
+        restricted_grounds = []
+        for stage in industry["voxel_ground_states"]:
+            sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[0].strip(),0)
+            if sprite in (3924,2173):
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
+        if restricted_grounds:
+            industry["ground_climate_restrictions"] = restricted_grounds
     airport_source = (ROOT / "src/table/airporttile_ids.h").read_text().split("enum AirportTiles", 1)[1].split("};", 1)[0]
     airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i), "voxel_ground_states": voxel_states("airport_ground", i), "reviewed": False}
                 for i, name in enumerate(re.findall(r"\b(APT_\w+)\s*,", airport_source))]
@@ -169,7 +180,8 @@ def main():
     print(f"Authored vehicle bindings: {sum(v['authored_profile'] for v in data['vehicles'])}; visually reviewed vehicles: {sum(v['reviewed'] for v in data['vehicles'])}")
     print(f"Tree sprite families: {len(data['trees'])}; authored tree profiles: {sum(t['authored_profile'] for t in data['trees'])}; visually reviewed: {sum(t['reviewed'] for t in data['trees'])}")
     print(f"Industry tile definitions: {len(data['industry_tiles'])}; authored: {sum(i['authored_profile'] for i in data['industry_tiles'])}; voxel bodies: {sum(bool(i['voxel_states']) for i in data['industry_tiles'])}; voxel grounds: {sum(bool(i['voxel_ground_states']) for i in data['industry_tiles'])}")
-    print("Farm33..38 voxel coverage is temperate-only; independent Arctic body/ground artwork remains missing")
+    print("Forest16/17 and farm33..38 voxel coverage is temperate-only; independent Arctic body/ground artwork remains missing")
+    print("Industry grounds3924/2173 retain supplied source layers outside temperate; unchanged bodies keep independent voxel ownership")
     print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
     print(f"Independently bound voxel airport grounds: {sum(bool(a['voxel_ground_states']) for a in data['airport_tiles'])}")
     print(f"Depot families: {len(data['depots'])}; voxel directions: {sum(len(d['voxel_directions']) for d in data['depots'])}; full four-direction families: {sum(len(d['voxel_directions']) == 4 for d in data['depots'])}")

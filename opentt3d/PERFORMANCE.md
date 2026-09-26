@@ -40,6 +40,9 @@ peak over28,702 samples and no6GiB breach. It completes28,320 authored views,
 all pitched train bindings and the243,629-pixel live-tunnel clearance check, but
 remains an incomplete/failed full run. Evidence is in
 `build-macos/pass1-release9-linux-vulkan-artifact/`; previous memory failures remain.
+The subsequent`6539128b4`CI likewise passes LinuxGL/macOS/all Windows builds and
+reaches the Vulkan matrix bound without a memory breach:4,164,407,296bytes over
+28,707 samples. Its complete artifact is `pass1-public-fixtures-linux-vulkan-artifact/`.
 
 The follow-up keeps the full OpenGL job and separates Vulkan's scene matrix from
 four complete vehicle-engine shards0…63/64…127/128…191/192…255. Each job keeps its

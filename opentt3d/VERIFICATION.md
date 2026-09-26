@@ -21,6 +21,26 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **Expanded industry climate audit:**323 original layer pairs/623,286 pixels
+  identify153 differences, all recorded in `pass1-industry-cross-climate-source-audit.json`.
+  All107 compared coal/power/refinery/oil-well body pairs and32 food pairs match.
+  Arctic forest16/17 needs snowy body/ground volumes; grounds3924/2173 also need
+  independent climate paint. The guard now scopes those differing grounds separately
+  from unchanged bodies. Public Arctic/tropical well construction fixtures pass.
+  All six three-climate/two-backend selection/industry/atlas runs pass:3,320 industry
+  views in temperate and2,168 in each other climate, rejecting144 unsupported layer
+  bindings while retaining the original well body. All eight actual snowy-forest
+  stage captures pass and contain no temperate forest voxel. Maximum sampled memory
+  is2,651,393,264bytes. Evidence: `pass1-industry-climate-scoped-{validation,reconciliation}.json`.
+  The source-correct snowy forest and three-climate pump/ground sheets were inspected;
+  a1280-pixel crop mistake in the first pump sheet is retained and corrected in its
+  `-v2` sheet and audit.198 native tests and the boundary check pass.
+- The broader tunnel route's first conventional-rail run passes all20 exact views
+  but fails the requested paused `--first-person tunnel` lookup: no fixture train is
+  inside a tunnel at that checkpoint. Its evidence remains retained. The retry uses
+  the actual tunnel diagnostic views without requiring an already-underground train;
+  all railtype/Toyland and running Cab checks are continuing.
+
 - **Farm climate correction:** the source audit finds40/44 Arctic farm layers
   differ from temperate across78,129 examined pixels, including structurally
   different farmhouse33/34 and shelters35. Equal sprite numbers did not justify

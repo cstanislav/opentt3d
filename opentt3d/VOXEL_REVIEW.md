@@ -14,6 +14,17 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Expanded industry climate audit:**323 layer pairs across623,286 original RGBA
+  pixels find153 differences:15 coal-ground,16 power-ground,16 forest body/ground,
+  36 refinery-ground,30 oil-well-ground and40 farm pairs. All107 compared coal/
+  power/refinery/oil-well body pairs match exactly, as do all32 Arctic/tropical
+  food pairs. Arctic forest16/17 replaces every body/ground slot with snowy artwork;
+  soil3924 and oil-well2173 also change across climates. Current matching volumes
+  for these differing layers are temperate-only. Runtime retains supplied climate
+  ground while keeping an unchanged voxel body independently; forest/farm body
+  replacements retain supplied artwork as well. Missing variants remain catalogue
+  work. Evidence: `pass1-industry-cross-climate-source-audit.json` and
+  `pass1-industry-climate-differences-source-sheet.png`.
 - **Arctic farm source-selection repair:**40/44 farm33…38 source layers differ from
   temperate (78,129 compared pixels). The Arctic farmhouse is structurally distinct,
   and its roof/door/shelter colours also differ. Current volumes remain temperate-
@@ -54,6 +65,11 @@ full terrain/source-raster fidelity and final approval remain separate.
   arched detail/roof heights and masonry/glass shading need source-painted refinement.
   Native bounds remain recorded in each source-registration sidecar; they are not
   dimensional or visual approvals.
+- The waterworks support cages have real open cells, but four coarse cross-braced
+  faces overlap into a nearly solid silhouette from some source/street angles.
+  The tower's leg/tank proportions and narrow lattice apertures need a finer
+  explicitly authored support grid; generic occupied-cell speckling is not a
+  substitute for open structure. Source and street sheets retain this finding.
 - The next provisional airport family recreates the low2095 L-plan terminal on
   tiles63/64/69, with original2663/2664 fence ownership and separate complete2634
   apron. Source-native placement was inspected manually; no geometry is generated

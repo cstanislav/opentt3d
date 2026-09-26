@@ -127,6 +127,10 @@ revokes the eight Arctic farm runs:40/44 original layers differ, and independent
 Arctic volumes remain missing. The renderer retains their supplied artwork. The
 remaining80 runs validate240 grounds,198 bodies and42 original empty states,
 including both food climates. All eight electric-engine curved-route/contact observations pass.
+The expanded323-pair source audit also identifies missing Arctic snow-forest bodies/
+grounds and independently painted non-temperate soil3924/oil-well2173 grounds.
+Those source layers are retained until independently authored variants exist;
+matching coal/power/refinery/oil-well bodies retain their own voxel ownership.
 Catalogue breadth, final fidelity and production performance remain unfinished.
 
 **Pass 1 remains incomplete.** New bindings do not automatically establish correct

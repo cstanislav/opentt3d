@@ -7,6 +7,15 @@
   America/Chicago (CDT)**.
 - Updated requested minimum: **1 PM CST September 26, 2026**. Conservative endpoint:
   **2026-09-26 19:00:00 UTC**, covering fixed CST and Chicago daylight readings.
+- Progress clock audit **2026-09-26 18:41:23 UTC**: the minimum remains active.
+  Release`.11` publishes the farm climate repair, completeCI sharding and opt-in
+  tunnel-tree visibility controls. The broader323-pair industry audit additionally
+  identifies Arctic snowy forest and soil3924/oil-well2173 ground replacements.
+  All six climate/backend industry matrices and eight snow-forest stage captures
+  pass the expanded independent-layer guard; unchanged pump bodies remain voxelized.
+  Wider four-railtype/Toyland tunnel and moving-Cab checks continue. A failed paused
+  Cab lookup is retained; its exact tunnel comparisons passed. Full catalogue and
+  smooth60fps remain unmet, with zero final visual approvals.
 - Progress clock audit **2026-09-26 18:21:23 UTC**: the minimum remains active.
   Release`.10`/`40e4209b0` publishes1,247 volumes. Remaining Toyland loaded support,
   six-pose pump animation and helicopter254 deck/rotor observations now pass. Both

@@ -295,13 +295,21 @@ TEST_CASE("Tunnel scenery regions conservatively retain both mouths and crossing
 	}
 }
 
-TEST_CASE("Farm source-climate replacements do not inherit temperate models", "[renderer3d][voxel]")
+TEST_CASE("Industry source-climate replacements retain independent ground and body ownership", "[renderer3d][voxel]")
 {
-	for (unsigned graphic = 33; graphic <= 38; ++graphic) {
+	for (unsigned graphic : {16U,17U,33U,34U,35U,36U,37U,38U}) {
 		CHECK(IndustryModelClimateSupported(graphic,0));
 		for (unsigned climate : {1U,2U,3U}) CHECK_FALSE(IndustryModelClimateSupported(graphic,climate));
 	}
 	for (unsigned graphic : {32U,39U,60U,63U}) for (unsigned climate = 0; climate < 4; ++climate) CHECK(IndustryModelClimateSupported(graphic,climate));
+	for (unsigned climate = 1; climate < 4; ++climate) {
+		CHECK(IndustryModelClimateSupported(7,climate,false,2035));
+		CHECK_FALSE(IndustryModelClimateSupported(7,climate,true,3924));
+		CHECK(IndustryModelClimateSupported(29,climate,false,2174));
+		CHECK_FALSE(IndustryModelClimateSupported(29,climate,true,2173));
+		CHECK(IndustryModelClimateSupported(29,climate,true,2022));
+		CHECK(IndustryModelClimateSupported(18,climate,true,1420));
+	}
 }
 
 TEST_CASE("Tunnel excavation removes intersecting terrain while retaining the shoulders and charts", "[renderer3d]")
