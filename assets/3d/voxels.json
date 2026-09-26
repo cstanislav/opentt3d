@@ -4,6 +4,180 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "air_low_stone": [32,34,33,36,32,35],
+    "air_low_stone_light": [33,35,34,36,32,36],
+    "air_low_glass": [128,130,129,131,128,131],
+    "air_low_glass_shade": [128,129,128,130,128,129],
+    "air_low_white": [8,12,10,14,7,15],
+    "air_low_roof": [5,8,6,10,5,9],
+    "air_low_roof_grain": [6,9,7,11,5,10],
+    "air_low_roof_shadow": [5,6,5,7,5,6],
+    "air_low_fence": [202,202,202,204,202,204],
+    "air_low_fence_post": 8,
+    "air_low_ground": [4,3,3,5,3,6],
+    "air_low_ground_dark": [4,3,3,5,3,4],
+    "bank_stone": [34,37,35,38,34,37],
+    "bank_stone_light": [35,38,36,39,34,39],
+    "bank_marble": [6,10,8,12,5,13],
+    "bank_marble_cap": [8,12,10,13,6,14],
+    "bank_drum_shadow": [3,5,4,6,3,7],
+    "bank_glass": [129,131,130,133,129,134],
+    "bank_recess": 2,
+    "bank_roof": [24,26,25,28,24,27],
+    "bank_roof_rib": [25,27,26,29,24,28],
+    "bank_roof_shadow": [24,25,24,26,24,25],
+    "bank_paving": [6,8,7,9,5,10],
+    "bank_paving_grain": [7,9,8,10,6,11],
+    "bank_paving_seam": 5,
+    "bank_planter": [104,105,104,106,104,105],
+    "bank_hedge": [82,83,82,84,82,83],
+    "bank_hedge_dark": [24,25,24,25,24,25],
+    "food_brick": [71,74,72,76,70,75],
+    "food_brick_grain": [72,75,73,77,70,76],
+    "food_brick_shadow": [70,71,70,72,70,71],
+    "food_floor_dark": [1,2,2,3,1,2],
+    "food_floor_grain": 3,
+    "food_partial_lintel": [6,7,6,8,6,9],
+    "food_paving": [5,7,6,8,4,9],
+    "food_paving_grain": [6,8,7,9,5,10],
+    "food_white_frame": [6,8,7,9,5,10],
+    "food_glass": [129,131,130,132,129,133],
+    "food_company_roof": [198,200,199,202,198,201],
+    "food_company_roof_rib": [199,201,200,203,198,202],
+    "food_boiler_roof": [200,201,200,202,200,201],
+    "food_silo_blue": [199,201,200,203,199,202],
+    "food_silo_blue_light": [200,202,201,204,199,203],
+    "food_silo_blue_dark": [199,200,199,201,199,200],
+    "food_silo_rim": [4,6,5,8,4,9],
+    "food_silo_inside": [198,199,198,200,198,199],
+    "food_silo_grain": [36,38,37,39,35,39],
+    "food_silo_grain_light": [37,39,38,53,35,53],
+    "food_soil": [105,107,106,108,105,107],
+    "food_soil_light": [106,108,107,112,105,108],
+    "food_soil_dark": [71,72,71,73,71,72],
+    "food_yard_grass": [25,27,26,28,25,27],
+    "food_yard_edge": [199,200,199,200,199,200],
+    "food_yard_brick": [71,74,72,76,71,75],
+    "food_yard_brick_grain": [72,75,73,77,71,76],
+    "food_yard_bin": [199,200,199,202,199,203],
+    "food_yard_grain": [37,39,38,53,35,53],
+    "food_yard_grain_light": [38,53,39,54,37,54],
+    "waterworks_sand": [115,116,115,117,114,116],
+    "waterworks_sand_gold": [62,64,63,65,62,64],
+    "waterworks_sand_light": [116,117,116,118,115,117],
+    "waterworks_sand_shadow": 63,
+    "waterworks_frame": [3,5,3,7,3,5],
+    "waterworks_tower_frame": [2,5,2,8,2,5],
+    "waterworks_blue": [199,201,200,203,199,202],
+    "waterworks_blue_light": [200,202,201,204,199,203],
+    "waterworks_blue_dark": [199,200,199,201,199,200],
+    "waterworks_pump_blue": [200,201,200,202,200,203],
+    "waterworks_pump_blue_light": [200,202,201,203,200,204],
+    "waterworks_pump_blue_dark": [200,200,200,201,200,201],
+    "waterworks_tower_roof": [200,203,201,204,199,205],
+    "waterworks_tower_hoop": [2,5,3,7,2,8],
+    "waterworks_tower_inner": [198,199,199,201,198,200],
+    "waterworks_pipe": [5,9,7,11,4,12],
+    "waterworks_vessel": [4,7,6,9,3,10],
+    "waterworks_vessel_grain": [3,6,5,8,3,9],
+    "waterworks_control": [131,132,131,133,131,133],
+    "waterworks_solar_frame": [7,11,9,12,7,13],
+    "waterworks_solar_panel": [132,133,132,134,132,135],
+    "plantation_soil": [105,107,106,109,105,108],
+    "plantation_soil_light": [110,113,112,115,105,114],
+    "plantation_moss": [24,26,25,28,24,27],
+    "plantation_grass": [89,91,90,92,89,91],
+    "plantation_root_shadow": [24,24,24,25,24,24],
+    "plantation_banana_stem": [24,26,25,28,24,27],
+    "plantation_banana_ring": [24,25,24,26,24,25],
+    "plantation_banana_leaf": [80,81,80,83,80,82],
+    "plantation_banana_vein": [81,83,82,85,80,84],
+    "plantation_banana_leaf_dark": [80,81,80,82,80,81],
+    "plantation_banana_fruit": [64,66,65,67,64,67],
+    "plantation_rubber_bark": [32,34,33,35,32,34],
+    "plantation_rubber_scar": [32,33,32,34,32,33],
+    "plantation_rubber_leaf": [1,97,96,98,1,99],
+    "plantation_rubber_leaf_light": [96,99,97,100,1,101],
+    "plantation_rubber_leaf_dark": [1,96,1,97,1,96],
+    "plantation_rubber_cup": [2,3,3,4,2,15],
+    "plantation_rubber_latex": 15,
+    "paper_brick": [33,35,34,37,32,36],
+    "paper_brick_grain": [34,36,35,37,32,37],
+    "paper_brick_shadow": [32,33,32,34,32,34],
+    "paper_loading_brick": [33,35,34,37,33,36],
+    "paper_floor": [1,2,2,3,1,2],
+    "paper_floor_grain": 3,
+    "paper_concrete": [6,7,7,9,6,8],
+    "paper_concrete_grain": [7,8,8,10,6,9],
+    "paper_plaster_partial": [6,6,6,7,6,7],
+    "paper_post": [6,7,7,9,6,7],
+    "paper_roof": [1,2,2,3,1,3],
+    "paper_roof_rib": [2,4,3,5,1,5],
+    "paper_white": [9,12,11,14,9,13],
+    "paper_white_edge": [10,13,12,14,9,15],
+    "paper_glass": [128,130,129,132,128,134],
+    "paper_vent_glass": [130,131,130,132,130,133],
+    "paper_boiler_glass": [132,133,132,133,132,133],
+    "paper_yard_glass": 133,
+    "paper_lumber_glass": 132,
+    "paper_yard_brick": [33,35,34,36,32,36],
+    "paper_fan_rim": [8,12,9,13,8,12],
+    "paper_fan_blade": [130,131,132,133,130,202],
+    "paper_fan_glint": 253,
+    "paper_metal": [19,19,20,21,19,21],
+    "paper_stack_cap": [9,12,11,14,9,13],
+    "paper_roll": [11,13,12,14,10,15],
+    "paper_roll_inside": [8,9,9,11,8,10],
+    "paper_soil": [105,106,106,107,105,112],
+    "paper_soil_grain": 113,
+    "paper_timber": [55,57,56,58,55,59],
+    "paper_timber_end": [56,58,57,59,55,58],
+    "farm_white": [9,12,10,13,3,14],
+    "farm_white_grain": [10,13,11,14,3,14],
+    "farm_glass": [130,131,132,134,130,133],
+    "farm_glass_south": [128,129,130,132,128,131],
+    "farm_door": [112,116,116,118,112,117],
+    "farm_roof": [1,2,2,3,1,3],
+    "farm_roof_grain": 4,
+    "farm_brick": [73,75,74,76,73,77],
+    "farm_brick_grain": [74,76,75,77,73,78],
+    "farm_brick_north": [73,75,74,76,73,76],
+    "farm_brick_north_grain": [74,76,75,76,73,76],
+    "farm_pen_brick_grain": [74,76,75,77,73,77],
+    "farm_soil": [104,105,105,106,104,107],
+    "farm_soil_light": 108,
+    "farm_grass": [82,83,83,84,82,84],
+    "farm_shadow": [1,2,2,3,1,2],
+    "farm_ground_shadow": [1,2,2,2,1,2],
+    "farm_yard": [2,3,3,4,1,4],
+    "farm_yard_grain": 3,
+    "farm_hay": [54,56,55,58,54,59],
+    "farm_hay_grain": [55,57,56,59,54,58],
+    "farm_straw": [54,55,55,56,54,58],
+    "farm_sheet": [2,3,3,4,2,4],
+    "farm_sheet_rib": [3,4,4,6,3,7],
+    "farm_barn_wall": [7,10,9,12,3,11],
+    "farm_barn_grain": [8,11,10,13,3,12],
+    "farm_barn_door": [112,34,112,34,112,36],
+    "farm_trough": 36,
+    "farm_silo": [3,5,4,7,3,6],
+    "farm_silo_grain": [4,6,5,8,3,7],
+    "farm_silo_inside": [2,4,3,5,2,5],
+    "farm_pig": [116,118,117,119,116,166],
+    "farm_pig_face": 167,
+    "oilwell_frame": [74,76,74,76,74,77],
+    "oilwell_frame_edge": [76,77,76,79,74,79],
+    "oilwell_machine": [2,4,3,5,2,7],
+    "oilwell_head": [2,4,3,6,2,7],
+    "oilwell_rod": 1,
+    "oilwell_engine_rib": [3,5,4,6,2,8],
+    "oilwell_grass": [82,83,83,84,82,85],
+    "oilwell_grass_light": 86,
+    "oilwell_grass_dry": 89,
+    "oilwell_soil": [104,105,105,106,104,107],
+    "oilwell_soil_light": 108,
+    "oilwell_oil": [1,2,2,3,1,2],
+    "oilwell_concrete": [3,4,4,5,2,7],
     "oilrig_rust_early": [70,73,72,76,70,78],
     "oilrig_rust": [71,73,72,75,71,74],
     "oilrig_rust_grain": [72,74,73,75,71,75],
@@ -1027,6 +1201,473 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "airport_low_building_body": [
+      ["box","air_low_stone",6,6,0,27,27,7],
+      ["erase",8,8,1,25,25,7],
+      ["erase",18,18,0,27,27,7],
+      ["box","air_low_stone",17,18,0,19,27,7],
+      ["box","air_low_stone",18,17,0,27,19,7],
+      ["paint","air_low_white",6,6,0,27,27,1],
+      ["paint","air_low_glass",6,6,2,27,27,5],
+      ["paint","air_low_glass_shade",6,6,4,27,27,5],
+      ["repeat",[5,0,0],5,[
+        ["paint","air_low_stone_light",6,6,1,7,8,7],
+        ["paint","air_low_stone_light",6,25,1,7,27,7]
+      ]],
+      ["repeat",[0,5,0],5,[
+        ["paint","air_low_stone_light",6,6,1,8,7,7],
+        ["paint","air_low_stone_light",25,6,1,27,7,7]
+      ]],
+      ["paint","air_low_stone_light",17,18,1,19,19,7],
+      ["paint","air_low_stone_light",17,25,1,19,27,7],
+      ["paint","air_low_stone_light",18,17,1,19,19,7],
+      ["paint","air_low_stone_light",22,17,1,23,19,7],
+      ["paint","air_low_stone_light",25,17,1,27,19,7],
+      ["erase",17,20,1,19,24,6],
+      ["box","air_low_glass",16,20,1,17,24,6],
+      ["box","air_low_white",5,5,7,28,28,9],
+      ["erase",18,18,7,28,28,9],
+      ["erase",6,6,8,27,27,9],
+      ["box","air_low_white",17,18,7,18,28,9],
+      ["box","air_low_white",18,17,7,28,18,9],
+      ["paint","air_low_roof",6,6,7,27,27,8],
+      ["scatter_paint","air_low_roof_grain",4,2095,6,6,7,27,27,8,"air_low_roof"],
+      ["paint","air_low_roof_shadow",6,6,7,7,27,8],
+      ["paint","air_low_roof_shadow",6,6,7,27,7,8]
+    ],
+    "airport_low_fence_nw": [
+      ["repeat",[0,2,0],16,[["box","air_low_fence_post",0,0,0,1,1,3]]],
+      ["box","air_low_fence",0,0,2,1,32,3]
+    ],
+    "airport_low_fence_ne": [
+      ["repeat",[2,0,0],16,[["box","air_low_fence_post",0,0,0,1,1,3]]],
+      ["box","air_low_fence",0,0,2,32,1,3]
+    ],
+    "bank_joined_body": [
+      ["box","bank_stone",2,3,0,62,25,1],
+      ["box","bank_stone",2,4,1,62,24,19], ["erase",3,5,1,61,23,19],
+      ["box","bank_marble",1,3,18,63,25,20], ["erase",3,5,18,61,23,20],
+      ["repeat",[8,0,0],7,[
+        ["box","bank_marble",4,23,1,6,25,19], ["box","bank_marble",4,3,1,6,5,19],
+        ["box","bank_stone_light",7,23,2,12,24,18], ["box","bank_glass",8,23,3,11,24,17],
+        ["box","bank_stone_light",7,4,2,12,5,18], ["box","bank_glass",8,4,3,11,5,17],
+        ["paint","bank_stone",8,23,10,11,24,11], ["paint","bank_stone",8,4,10,11,5,11]
+      ]],
+      ["repeat",[0,7,0],3,[
+        ["box","bank_marble",1,3,1,3,5,19], ["box","bank_marble",61,3,1,63,5,19],
+        ["box","bank_stone_light",2,5,2,3,9,18], ["box","bank_glass",2,6,3,3,8,17],
+        ["box","bank_stone_light",61,5,2,62,9,18], ["box","bank_glass",61,6,3,62,8,17]
+      ]],
+      ["repeat",[42,0,0],2,[
+        ["gable","bank_roof",2,4,19,20,24,27,"y"],
+        ["repeat",[3,0,0],6,[["paint","bank_roof_rib",2,4,19,3,24,27]]]
+      ]],
+      ["prism","bank_marble_cap",0,1,3,[[3,19],[14,28],[25,19],[25,21],[14,30],[3,21]]],
+      ["prism","bank_marble_cap",0,61,63,[[3,19],[14,28],[25,19],[25,21],[14,30],[3,21]]],
+      ["box","bank_stone",18,4,1,44,18,20], ["erase",19,5,1,43,17,20],
+      ["box","bank_roof_shadow",18,4,19,44,18,21],
+      ["box","bank_marble",18,21,18,44,25,23],
+      ["box","bank_marble_cap",17,20,22,45,26,24],
+      ["erase",28,22,0,36,26,21],
+      ["box","bank_recess",28,20,1,36,21,17],
+      ["box","bank_marble",26,22,0,28,26,20], ["box","bank_marble",36,22,0,38,26,20],
+      ["prism","bank_marble_cap",1,24,26,[[26,17],[26,21],[28,23],[36,23],[38,21],[38,17],[36,17],[36,20],[34,21],[30,21],[28,20],[28,17]]],
+      ["lathe","bank_marble",[25,9],[[1,6,0],[22,6,0]]],
+      ["repeat",[3,0,0],4,[["paint","bank_drum_shadow",20,3,17,21,15,22]]],
+      ["lathe","bank_roof",[25,9],[[22,6,0],[26,5.5,0],[32,4,0],[36,2,0],[39,1,0]]],
+      ["line","bank_roof_rib",25,9,38,30,9,23], ["line","bank_roof_rib",25,9,38,19,9,23],
+      ["line","bank_roof_rib",25,9,38,25,14,23], ["line","bank_roof_rib",25,9,38,25,3,23],
+      ["box","bank_marble_cap",25,9,38,26,10,44],
+      ["scatter_paint","bank_stone_light",9,2180,2,3,0,62,25,18,"bank_stone",[1,1,2]],
+      ["scatter_paint","bank_roof_shadow",7,3180,2,3,19,62,25,38,"bank_roof",[2,2,1]]
+    ],
+    "bank_finished_paving": [
+      ["box","bank_paving",0,0,0,32,32,1],
+      ["scatter_paint","bank_paving_grain",4,2182,0,0,0,32,32,1,"bank_paving"],
+      ["repeat",[8,0,0],4,[["paint","bank_paving_seam",0,0,0,1,32,1]]],
+      ["repeat",[0,8,0],4,[["paint","bank_paving_seam",0,0,0,32,1,1]]]
+    ],
+    "food_soil_slab": [
+      ["box","food_soil",0,0,0,32,32,1],
+      ["scatter_paint","food_soil_light",4,2191,0,0,0,32,32,1,"food_soil"],
+      ["scatter_paint","food_soil_dark",6,3191,0,0,0,32,32,1,"food_soil"]
+    ],
+    "food_hall_floor": [
+      ["box","food_floor_dark",0,0,0,32,32,1],
+      ["scatter_paint","food_floor_grain",3,2188,0,0,0,32,32,1,"food_floor_dark"]
+    ],
+    "food_hall_walls": [
+      ["use","food_hall_floor"],
+      ["box","food_brick",0,0,1,32,32,21], ["erase",1,1,1,31,31,21],
+      ["prism","food_brick",0,0,1,[[0,20],[16,29],[32,20]]],
+      ["prism","food_brick",0,31,32,[[0,20],[16,29],[32,20]]],
+      ["erase",31,7,1,32,18,10],
+      ["repeat",[0,6,0],5,[["erase",31,1,13,32,6,19],["erase",0,1,13,1,6,19]]],
+      ["repeat",[6,0,0],5,[["erase",1,31,13,6,32,19],["erase",1,0,13,6,1,19]]],
+      ["repeat",[6,0,0],5,[["erase",1,31,3,6,32,8],["erase",1,0,3,6,1,8]]],
+      ["box","food_brick",24,20,1,31,31,25], ["erase",25,21,1,30,30,25],
+      ["erase",25,30,17,30,31,22],
+      ["repeat",[0,6,0],5,[["box","food_partial_lintel",31,1,12,32,6,13]]],
+      ["scatter_paint","food_brick_grain",7,2189,0,0,1,32,32,29,"food_brick"]
+    ],
+    "food_hall_roof_windows": [
+      ["gable","food_company_roof",0,0,20,32,32,30,"y"],
+      ["repeat",[4,0,0],8,[["paint","food_company_roof_rib",0,0,20,1,32,30]]],
+      ["erase",24,20,21,32,32,30],
+      ["box","food_brick",24,20,20,25,32,25], ["box","food_brick",24,31,20,32,32,25],
+      ["box","food_paving",24,20,24,32,32,25],
+      ["scatter_paint","food_paving_grain",4,3190,24,20,24,32,32,25,"food_paving"],
+      ["repeat",[0,6,0],5,[
+        ["box","food_white_frame",31,1,13,32,6,19], ["box","food_glass",31,2,14,32,5,18],
+        ["box","food_white_frame",0,1,13,1,6,19], ["box","food_glass",0,2,14,1,5,18]
+      ]],
+      ["repeat",[6,0,0],5,[
+        ["box","food_white_frame",1,31,13,6,32,19], ["box","food_glass",2,31,14,5,32,18],
+        ["box","food_white_frame",1,0,13,6,1,19], ["box","food_glass",2,0,14,5,1,18],
+        ["box","food_white_frame",1,31,3,6,32,8], ["box","food_glass",2,31,4,5,32,7],
+        ["box","food_white_frame",1,0,3,6,1,8], ["box","food_glass",2,0,4,5,1,7]
+      ]],
+      ["box","food_white_frame",25,30,17,30,31,22], ["box","food_glass",26,30,18,29,31,21],
+      ["lathe","food_brick",[7,25],[[1,2,0],[39,2,0],[48,2,1],[49,2,1]]],
+      ["lathe","food_brick",[15,25],[[1,2,0],[32,2,0],[41,2,1],[42,2,1]]],
+      ["scatter_paint","food_brick_grain",5,2190,5,23,21,17,27,49,"food_brick"]
+    ],
+    "food_boiler_floor": [
+      ["box","food_paving",0,0,0,32,32,1],
+      ["scatter_paint","food_paving_grain",4,2192,0,0,0,32,32,1,"food_paving"]
+    ],
+    "food_boiler_walls": [
+      ["use","food_boiler_floor"],
+      ["box","food_brick",2,2,1,30,10,24], ["erase",3,3,1,29,9,24],
+      ["box","food_brick",2,10,1,14,28,14], ["erase",3,9,1,13,27,14],
+      ["repeat",[0,0,11],2,[
+        ["erase",29,4,4,30,8,9]
+      ]],
+      ["repeat",[8,0,0],3,[["erase",4,9,15,10,10,20]]],
+      ["repeat",[8,0,0],2,[["erase",16,9,4,22,10,9]]],
+      ["erase",13,13,1,14,20,9], ["erase",5,27,4,10,28,9],
+      ["scatter_paint","food_brick_grain",7,2192,2,2,1,30,28,24,"food_brick"]
+    ],
+    "food_boiler_finish": [
+      ["gable","food_paving",2,2,23,30,10,27,"y"],
+      ["scatter_paint","food_paving_grain",4,2193,2,2,23,30,10,27,"food_paving"],
+      ["gable","food_boiler_roof",2,10,13,14,28,17,"x"],
+      ["lathe","food_brick",[24,6],[[1,2,0],[41,2,0],[50,2,1],[51,2,1]]],
+      ["lathe","food_brick",[7,20],[[1,2,0],[25,2,0],[34,2,1],[35,2,1]]],
+      ["scatter_paint","food_brick_grain",6,3193,5,4,14,26,22,51,"food_brick"],
+      ["repeat",[0,0,11],2,[
+        ["box","food_white_frame",29,4,4,30,8,9], ["box","food_glass",29,5,5,30,7,8]
+      ]],
+      ["repeat",[8,0,0],3,[
+        ["box","food_white_frame",4,9,15,10,10,20], ["box","food_glass",5,9,16,9,10,19]
+      ]],
+      ["repeat",[8,0,0],2,[
+        ["box","food_white_frame",16,9,4,22,10,9], ["box","food_glass",17,9,5,21,10,8]
+      ]],
+      ["box","food_white_frame",5,27,4,10,28,9], ["box","food_glass",6,27,5,9,28,8],
+      ["box","food_brick",29,10,1,30,29,3],
+      ["box","food_brick",14,28,1,30,29,3],
+      ["repeat",[0,6,0],4,[["box","food_white_frame",30,10,1,31,11,5]]],
+      ["repeat",[5,0,0],4,[["box","food_white_frame",14,28,1,15,29,5]]]
+    ],
+    "food_silo_cylinder": [
+      ["lathe","food_silo_blue",[16,16],[[1,7,0],[2,7,0]]],
+      ["lathe","food_silo_blue",[16,16],[[2,7,5.5],[38,7,5.5]]],
+      ["repeat",[0,0,7],5,[["paint","food_silo_rim",9,9,8,23,23,10]]],
+      ["scatter_paint","food_silo_blue_dark",5,2195,9,9,1,23,23,38,"food_silo_blue"],
+      ["scatter_paint","food_silo_blue_light",4,3195,9,9,1,23,23,38,"food_silo_blue",[2,2,2]]
+    ],
+    "food_yard_floor": [
+      ["use","food_soil_slab"],
+      ["paint","food_yard_grass",0,0,0,2,32,1], ["paint","food_yard_grass",0,0,0,32,2,1],
+      ["paint","food_yard_grass",0,30,0,32,32,1], ["paint","food_yard_grass",30,0,0,32,32,1],
+      ["box","food_brick",1,1,1,2,31,3], ["box","food_brick",1,1,1,31,2,3],
+      ["box","food_yard_edge",2,29,1,30,30,2], ["box","food_yard_edge",29,2,1,30,30,2],
+      ["scatter_paint","food_brick_grain",5,2198,1,1,1,31,31,3,"food_brick"]
+    ],
+    "waterworks_frame14": [
+      ["repeat",[6,0,0],2,[["repeat",[0,6,0],2,[["box","waterworks_frame",0,0,0,1,1,14]]]]],
+      ["repeat",[0,0,7],2,[
+        ["repeat",[0,6,0],2,[
+          ["box","waterworks_frame",0,0,6,7,1,7],
+          ["line","waterworks_frame",0,0,0,6,0,6], ["line","waterworks_frame",6,0,0,0,0,6]
+        ]],
+        ["repeat",[6,0,0],2,[
+          ["box","waterworks_frame",0,0,6,1,7,7],
+          ["line","waterworks_frame",0,0,0,0,6,6], ["line","waterworks_frame",0,6,0,0,0,6]
+        ]]
+      ]]
+    ],
+    "waterworks_supply_frames": [
+      ["use","waterworks_frame14",[19,14,0]],
+      ["use","waterworks_frame14",[9,18,0]], ["use","waterworks_frame14",[9,18,12]]
+    ],
+    "waterworks_supply_tanks": [
+      ["box","waterworks_blue",18,13,14,27,22,24],
+      ["hip","waterworks_blue_light",18,13,24,27,22,26,4],
+      ["box","waterworks_blue",8,17,26,17,26,38],
+      ["hip","waterworks_blue_light",8,17,38,17,26,40,4],
+      ["box","waterworks_control",25,21,17,27,22,21], ["box","waterworks_control",15,25,29,17,26,34],
+      ["scatter_paint","waterworks_blue_dark",7,2348,8,13,14,27,26,38,"waterworks_blue"],
+      ["scatter_paint","waterworks_blue_light",9,3348,8,13,14,27,26,38,"waterworks_blue"],
+      ["lathe","waterworks_vessel",[28,28],[[0,3,0],[12,3,0],[14,1,0]]],
+      ["scatter_paint","waterworks_vessel_grain",6,4348,25,25,0,31,31,14,"waterworks_vessel"]
+    ],
+    "waterworks_supply_finished": [
+      ["repeat",[0,4,0],2,[
+        ["box","waterworks_pipe",23,17,24,24,18,45],
+        ["box","waterworks_pipe",11,17,44,24,18,45],
+        ["box","waterworks_pipe",11,17,38,12,18,45]
+      ]],
+      ["lathe","waterworks_vessel",[18,28],[[0,3,0],[13,3,0],[15,1,0]]],
+      ["lathe","waterworks_vessel",[8,28],[[0,3,0],[14,3,0],[16,1,0]]],
+      ["scatter_paint","waterworks_vessel_grain",6,2349,5,25,0,21,31,16,"waterworks_vessel"]
+    ],
+    "waterworks_pump_frame": [
+      ["box","waterworks_pipe",4,4,0,5,5,29],
+      ["box","waterworks_pipe",28,4,0,29,5,29],
+      ["box","waterworks_pipe",4,4,28,29,5,29],
+      ["box","waterworks_frame",14,4,0,15,5,28], ["box","waterworks_frame",20,4,0,21,5,28],
+      ["repeat",[0,0,7],4,[
+        ["box","waterworks_frame",14,4,6,21,5,7],
+        ["line","waterworks_frame",14,4,0,20,4,6], ["line","waterworks_frame",20,4,0,14,4,6]
+      ]],
+      ["lathe","waterworks_vessel",[28,4],[[0,3,0],[11,3,0],[13,1,0]]],
+      ["scatter_paint","waterworks_vessel_grain",5,2350,25,1,0,31,7,13,"waterworks_vessel"]
+    ],
+    "waterworks_pump_solar": [
+      ["box","waterworks_blue",8,14,0,16,22,11],
+      ["hip","waterworks_blue_light",8,14,11,16,22,13,3],
+      ["scatter_paint","waterworks_blue_dark",7,2351,8,14,0,16,22,11,"waterworks_blue"],
+      ["repeat",[0,6,0],2,[
+        ["box","waterworks_frame",7,23,0,8,24,12], ["box","waterworks_frame",18,23,0,19,24,6],
+        ["prism","waterworks_solar_frame",1,21,26,[[5,11],[20,3],[20,5],[5,13]]],
+        ["prism","waterworks_solar_panel",1,22,25,[[6,11],[19,4],[19,5],[6,12]]],
+        ["paint","waterworks_solar_frame",10,21,0,11,26,14],
+        ["paint","waterworks_solar_frame",15,21,0,16,26,14]
+      ]]
+    ],
+    "waterworks_pump_finished": [
+      ["box","waterworks_pipe",4,10,0,5,11,29], ["box","waterworks_pipe",28,10,0,29,11,29],
+      ["box","waterworks_pipe",4,10,28,29,11,29],
+      ["box","waterworks_pipe",4,16,0,5,17,23], ["box","waterworks_pipe",28,16,0,29,17,23],
+      ["box","waterworks_pipe",4,16,22,29,17,23]
+    ],
+    "waterworks_tower_legs": [
+      ["repeat",[16,0,0],2,[["repeat",[0,16,0],2,[["use","waterworks_frame14",[4,4,0]]]]]],
+      ["replace_material","waterworks_frame","waterworks_tower_frame"]
+    ],
+    "waterworks_tower_open": [
+      ["use","waterworks_tower_legs"],
+      ["lathe","waterworks_blue",[16,16],[[14,15,0],[15,15,0]]],
+      ["lathe","waterworks_blue",[16,16],[[15,15,13],[34,15,13]]],
+      ["lathe_paint_inner","waterworks_tower_inner",[16,16],[[15,15,13],[34,15,13]]],
+      ["repeat",[0,0,10],2,[["paint","waterworks_tower_hoop",1,1,20,31,31,24]]],
+      ["scatter_paint","waterworks_blue_dark",7,2345,1,1,14,31,31,34,"waterworks_blue"],
+      ["scatter_paint","waterworks_blue_light",9,3345,1,1,14,31,31,34,"waterworks_blue"]
+    ],
+    "plantation_banana_crown": [
+      ["prism","plantation_banana_leaf",1,5,7,[[0,2],[2,6],[6,5],[8,7],[12,4],[12,2],[8,5],[6,3],[2,4]]],
+      ["prism","plantation_banana_leaf",0,5,7,[[0,3],[2,7],[6,5],[9,7],[12,4],[12,2],[9,5],[6,3],[2,5]]],
+      ["line","plantation_banana_leaf",0,6,2,2,6,5], ["line","plantation_banana_leaf",2,6,5,6,6,4],
+      ["line","plantation_banana_leaf",6,0,3,6,2,6], ["line","plantation_banana_leaf",6,2,6,6,6,4],
+      ["line","plantation_banana_leaf",6,6,4,1,1,7],
+      ["line","plantation_banana_leaf",6,6,4,10,10,7],
+      ["line","plantation_banana_leaf",6,6,4,1,10,2],
+      ["line","plantation_banana_leaf",6,6,4,10,1,5],
+      ["ellipsoid","plantation_banana_leaf",0,0,5,4,4,9],
+      ["ellipsoid","plantation_banana_leaf",8,8,5,12,12,9],
+      ["ellipsoid","plantation_banana_leaf",0,8,0,4,12,4],
+      ["ellipsoid","plantation_banana_leaf",8,0,3,12,4,7],
+      ["line","plantation_banana_vein",6,6,5,2,6,6],
+      ["line","plantation_banana_vein",6,6,5,9,6,7],
+      ["line","plantation_banana_vein",6,6,5,6,2,7],
+      ["line","plantation_banana_vein",6,6,5,6,9,7],
+      ["scatter_paint","plantation_banana_leaf_dark",4,2342,0,0,0,12,12,9,"plantation_banana_leaf"],
+      ["scatter_paint","plantation_banana_vein",11,7342,0,0,0,12,12,9,"plantation_banana_leaf"]
+    ],
+    "plantation_banana_bunch": [
+      ["line","plantation_banana_stem",6,6,6,9,6,2],
+      ["ellipsoid","plantation_banana_fruit",8,5,0,11,8,5],
+      ["box","plantation_banana_fruit",10,6,0,12,8,3],
+      ["line","plantation_banana_stem",6,6,6,5,9,2],
+      ["ellipsoid","plantation_banana_fruit",4,8,0,7,11,5]
+    ],
+    "plantation_rubber_crown": [
+      ["line","plantation_rubber_bark",6,6,0,6,6,18],
+      ["line","plantation_rubber_bark",6,6,4,2,3,9],
+      ["line","plantation_rubber_bark",6,6,7,9,8,12],
+      ["line","plantation_rubber_bark",6,6,5,4,10,8],
+      ["ellipsoid","plantation_rubber_leaf",3,3,7,10,10,22],
+      ["ellipsoid","plantation_rubber_leaf",0,1,3,6,7,16],
+      ["ellipsoid","plantation_rubber_leaf",7,5,6,13,12,18],
+      ["ellipsoid","plantation_rubber_leaf",1,7,0,7,13,12],
+      ["ellipsoid","plantation_rubber_leaf",4,0,9,10,6,20],
+      ["scatter_paint","plantation_rubber_leaf_dark",4,2343,0,0,0,13,13,22,"plantation_rubber_leaf",[2,2,3]],
+      ["scatter_paint","plantation_rubber_leaf_light",5,8343,0,0,0,13,13,22,"plantation_rubber_leaf",[2,2,3]]
+    ],
+    "plantation_rubber_foot": [
+      ["lathe","plantation_rubber_bark",[6,6],[[0,1.75,0],[2,1,0],[12,1,0]]],
+      ["line","plantation_rubber_bark",6,6,0,4,5,0], ["line","plantation_rubber_bark",6,6,0,8,7,0],
+      ["paint","plantation_rubber_scar",5,5,6,7,7,7],
+      ["box","plantation_rubber_cup",6,7,5,8,9,7],
+      ["paint","plantation_rubber_latex",6,7,6,8,9,7]
+    ],
+    "paper_office_footprint": [
+      ["box","paper_floor",2,1,0,30,31,1],
+      ["scatter_paint","paper_floor_grain",5,2200,2,1,0,30,31,1,"paper_floor"]
+    ],
+    "paper_office_walls": [
+      ["use","paper_office_footprint"],
+      ["box","paper_brick",2,1,1,30,31,9], ["erase",3,2,1,29,30,9],
+      ["box","paper_brick",2,1,9,16,31,19], ["erase",3,2,9,15,30,19],
+      ["box","paper_plaster_partial",3,1,8,29,2,10], ["box","paper_plaster_partial",3,30,8,29,31,10],
+      ["repeat",[0,7,0],4,[
+        ["erase",29,3,2,30,8,7], ["erase",2,3,11,3,8,17],
+        ["erase",15,3,11,16,8,17]
+      ]],
+      ["repeat",[7,0,0],4,[["erase",3,1,2,8,2,7],["erase",3,30,2,8,31,7]]],
+      ["scatter_paint","paper_brick_grain",7,2201,2,1,1,30,31,19,"paper_brick"]
+    ],
+    "paper_process_footprint": [
+      ["prism","paper_floor",2,0,1,[[26,6],[26,28],[12,28],[8,24],[18,10]]],
+      ["scatter_paint","paper_floor_grain",5,2203,8,6,0,26,28,1,"paper_floor"]
+    ],
+    "paper_process_walls": [
+      ["use","paper_process_footprint"],
+      ["box","paper_brick",12,6,0,26,21,21], ["erase",13,7,1,25,20,21],
+      ["prism","paper_brick",1,6,7,[[12,20],[19,26],[26,20]]],
+      ["prism","paper_brick",1,20,21,[[12,20],[19,26],[26,20]]],
+      ["repeat",[0,0,10],2,[
+        ["repeat",[0,4,0],3,[["erase",25,7,3,26,10,9]]],
+        ["erase",17,20,3,21,21,9], ["erase",17,6,3,21,7,9]
+      ]],
+      ["scatter_paint","paper_brick_grain",7,2204,12,6,0,26,21,26,"paper_brick"]
+    ],
+    "paper_process_roofs": [
+      ["gable","paper_roof",11,5,20,27,22,27,"x"],
+      ["prism","paper_brick",1,21,22,[[12,20],[19,26],[26,20]]],
+      ["repeat",[0,2,0],9,[["paint","paper_roof_rib",11,5,20,27,6,27]]],
+      ["box","paper_brick",12,21,0,26,28,10], ["erase",13,22,1,25,27,9],
+      ["gable","paper_roof",11,21,9,27,29,14,"x"],
+      ["prism","paper_brick",1,28,29,[[12,9],[19,13],[26,9]]],
+      ["repeat",[0,2,0],4,[["paint","paper_roof_rib",11,22,9,27,23,14]]],
+      ["box","paper_glass",17,27,2,21,28,7],
+      ["scatter_paint","paper_brick_grain",7,2205,12,21,0,26,29,14,"paper_brick"]
+    ],
+    "paper_boiler_base": [
+      ["box","paper_concrete",0,0,0,32,32,1],
+      ["scatter_paint","paper_concrete_grain",3,2207,0,0,0,32,32,1,"paper_concrete"],
+      ["lathe","paper_brick",[26,4],[[1,4,0],[3,4,0],[50,3,0],[59,2.75,1.5],[60,2.75,1.5]]],
+      ["lathe","paper_brick",[14,4],[[1,4,0],[3,4,0],[26,3,0],[35,2.75,1.5],[36,2.75,1.5]]],
+      ["repeat",[0,0,3],3,[
+        ["paint","paper_stack_cap",22,0,52,30,8,54],
+        ["paint","paper_stack_cap",10,0,28,18,8,30]
+      ]],
+      ["scatter_paint","paper_brick_grain",7,2208,10,0,1,30,8,60,"paper_brick"],
+      ["box","paper_brick",21,8,1,31,21,9], ["erase",22,9,1,30,20,9],
+      ["prism","paper_brick",1,8,9,[[21,8],[26,14],[31,8]]],
+      ["prism","paper_brick",1,20,21,[[21,8],[26,14],[31,8]]],
+      ["box","paper_boiler_glass",30,10,4,31,13,7], ["box","paper_boiler_glass",30,16,4,31,19,7]
+    ],
+    "paper_boiler_finish": [
+      ["gable","paper_roof",20,7,8,32,22,15,"x"],
+      ["prism","paper_brick",1,21,22,[[21,8],[26,14],[31,8]]],
+      ["repeat",[0,2,0],7,[["paint","paper_roof_rib",20,8,8,32,9,15]]],
+      ["box","paper_brick",0,0,1,32,1,3], ["box","paper_brick",0,0,1,1,32,3],
+      ["box","paper_brick",0,31,1,32,32,3], ["box","paper_brick",31,0,1,32,32,3],
+      ["erase",31,22,1,32,29,3]
+    ],
+    "paper_yard_paving": [
+      ["box","paper_concrete",0,0,0,32,32,1],
+      ["scatter_paint","paper_concrete_grain",3,2211,0,0,0,32,32,1,"paper_concrete"]
+    ],
+    "paper_yard_shed": [
+      ["box","paper_brick",4,4,1,14,14,8], ["erase",5,5,1,13,13,8],
+      ["prism","paper_brick",1,4,5,[[4,7],[9,12],[14,7]]],
+      ["prism","paper_brick",1,13,14,[[4,7],[9,12],[14,7]]],
+      ["box","paper_yard_glass",13,7,3,14,10,6],
+      ["scatter_paint","paper_brick_grain",7,2211,4,4,1,14,14,12,"paper_brick"]
+    ],
+    "paper_yard_finish": [
+      ["gable","paper_roof",3,3,7,15,15,13,"x"],
+      ["prism","paper_brick",1,14,15,[[4,7],[9,12],[14,7]]],
+      ["repeat",[0,2,0],6,[["paint","paper_roof_rib",3,3,7,15,4,13]]],
+      ["repeat",[0,5,0],7,[["box","paper_metal",31,0,1,32,1,5]]],
+      ["repeat",[5,0,0],7,[["box","paper_metal",0,31,1,1,32,5]]],
+      ["box","paper_metal",31,0,3,32,32,4], ["box","paper_metal",0,31,3,32,32,4]
+    ],
+    "farm_earth": [
+      ["box","farm_soil",0,0,0,32,32,1],
+      ["scatter_paint","farm_soil_light",5,2106,0,0,0,32,32,1,"farm_soil"],
+      ["scatter_paint","farm_grass",3,2107,0,0,0,32,3,1],
+      ["scatter_paint","farm_grass",3,2108,0,29,0,32,32,1],
+      ["scatter_paint","farm_grass",3,2109,0,3,0,3,29,1],
+      ["scatter_paint","farm_grass",3,2110,29,3,0,32,29,1]
+    ],
+    "farm_house_structure": [
+      ["box","farm_white",4,15,0,29,31,9],
+      ["box","farm_white",7,27,0,22,48,9],
+      ["erase",5,16,1,28,30,8], ["erase",8,28,1,21,47,8],
+      ["gable","farm_roof",3,14,8,30,32,16,"y"],
+      ["gable","farm_roof",6,26,8,23,49,18,"x"],
+      ["scatter_paint","farm_roof_grain",9,2111,3,14,8,30,49,18,"farm_roof"],
+      ["scatter_paint","farm_white_grain",9,2133,4,15,0,29,48,9,"farm_white"],
+      ["prism","farm_white",0,29,30,[[15,8],[23,15],[31,8]]],
+      ["prism","farm_white",1,48,49,[[7,8],[14,17],[22,8]]],
+      ["box","farm_white",10,20,12,13,23,18], ["box","farm_white",17,37,13,20,40,21],
+      ["box","farm_roof",11,21,17,12,22,18], ["box","farm_roof",18,38,20,19,39,21],
+      ["repeat",[0,6,0],2,[
+        ["erase",28,18,3,29,20,7], ["box","farm_glass",27,18,3,28,20,7],
+        ["box","farm_white",28,18,5,29,20,6]
+      ]],
+      ["repeat",[6,0,0],3,[
+        ["erase",7,15,3,9,16,7], ["box","farm_glass",7,16,3,9,17,7],
+        ["box","farm_white",7,15,5,9,16,6]
+      ]],
+      ["repeat",[0,7,0],2,[
+        ["erase",21,32,3,22,35,7], ["box","farm_glass",20,32,3,21,35,7],
+        ["box","farm_white",21,32,5,22,35,6]
+      ]],
+      ["erase",10,47,3,12,48,7], ["box","farm_glass",10,46,3,12,47,7],
+      ["erase",16,47,3,18,48,7], ["box","farm_glass",16,46,3,18,47,7],
+      ["box","farm_white",10,47,5,12,48,6], ["box","farm_white",16,47,5,18,48,6],
+      ["box","farm_door",13,47,0,15,48,8],
+      ["box","farm_brick",29,20,0,31,31,3],
+      ["box","farm_brick",29,33,0,31,61,3], ["box","farm_brick",4,59,0,31,61,3],
+      ["box","farm_brick",4,49,0,6,59,3],
+      ["scatter_paint","farm_brick_grain",7,2134,4,20,0,31,61,3,"farm_brick"]
+    ],
+    "farm_hay_shelter": [
+      ["box","farm_brick",4,3,0,5,13,8],
+      ["box","farm_shadow",24,3,0,25,4,8], ["box","farm_shadow",24,12,0,25,13,8],
+      ["gable","farm_sheet",3,2,7,28,15,12,"y"],
+      ["erase",5,4,7,24,12,8],
+      ["repeat",[3,0,0],8,[["paint","farm_sheet_rib",4,2,7,5,15,12]]],
+      ["prism","farm_shadow",0,27,28,[[3,7],[8,11],[14,7]]]
+    ],
+    "farm_pig": [
+      ["repeat",[3,0,0],2,[
+        ["box","farm_pig",0,0,0,1,1,3], ["box","farm_pig",0,2,0,1,3,3]
+      ]],
+      ["box","farm_pig",0,0,2,4,3,4], ["box","farm_pig_face",4,1,2,6,3,4],
+      ["box","farm_pig_face",4,0,3,5,1,5], ["box","farm_pig_face",4,3,3,5,4,5]
+    ],
+    "oilwell_base": [
+      ["repeat",[0,9,0],2,[
+        ["box","oilwell_frame",7,12,0,8,13,13], ["box","oilwell_frame",18,12,0,19,13,13],
+        ["box","oilwell_frame",7,12,11,19,13,12],
+        ["line","oilwell_frame",7,12,12,13,12,30],
+        ["line","oilwell_frame",18,12,12,13,12,30],
+        ["box","oilwell_frame_edge",13,12,29,14,13,35],
+        ["line","oilwell_frame",7,12,1,18,12,11]
+      ]],
+      ["box","oilwell_frame",7,12,11,8,22,12], ["box","oilwell_frame",18,12,11,19,22,12],
+      ["box","oilwell_machine",5,13,12,14,22,19],
+      ["box","oilwell_head",6,13,19,13,22,20],
+      ["repeat",[0,2,0],4,[["box","oilwell_engine_rib",5,13,14,6,14,19]]],
+      ["box","oilwell_machine",13,12,29,14,22,31]
+    ],
     "oilrig_piles": [
       ["repeat",[0,48,0],2,[
         ["repeat",[32,0,0],2,[
@@ -4805,6 +5446,532 @@
     ]
   },
   "models": {
+    "bank_north": {
+      "size":[64,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original58/2180 is already finished in every construction slot. Explicit north half of the shared32x16 bank: beige/white colonnade, olive ribbed roof, striped cupola drum, faceted dome and fine white finial",
+      "ops":[["use","bank_joined_body"],["erase",32,0,0,64,32,46]]
+    },
+    "bank_south": {
+      "size":[64,32,46],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Original59/2181 retains its distinct joined south wing in all four slots. The explicit other half owns the matching roof/colonnade and entry arch only at its source tile; the common bank geometry is partitioned without overlap",
+      "ops":[["use","bank_joined_body"],["erase",0,0,0,32,32,46]]
+    },
+    "bank_north_ground": {
+      "size":[32,32,5],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "reference":"Original2182 completed north paving: full independent tile with small front planters; stages0/1/2 retain original2022 bare ground instead",
+      "ops":[["use","bank_finished_paving"],
+        ["box","bank_planter",10,27,1,17,31,2], ["ellipsoid","bank_hedge",9,26,1,18,32,5],
+        ["scatter_paint","bank_hedge_dark",5,2182,9,26,1,18,32,5,"bank_hedge"]]
+    },
+    "bank_south_ground": {
+      "size":[32,32,5],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "reference":"Original2183 separate south paving and front planter, not the north ground sprite or an alias of its soil construction states",
+      "ops":[["use","bank_finished_paving"],
+        ["box","bank_planter",18,27,1,25,31,2], ["ellipsoid","bank_hedge",17,26,1,26,32,5],
+        ["scatter_paint","bank_hedge_dark",5,2183,17,26,1,26,32,5,"bank_hedge"]]
+    },
+    "food_hall_initial": {
+      "size":[32,32,1],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original60/2188 black construction slab over independent2022 ground; no brick walls or roofs in stage0",
+      "ops":[["use","food_hall_floor"]]
+    },
+    "food_hall_partial": {
+      "size":[32,32,52],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original60/2189 repeated stages1/2: open brick perimeter/gables, real loading aperture and vacant window/roof openings",
+      "ops":[["use","food_hall_walls"]]
+    },
+    "food_hall": {
+      "size":[32,32,52],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original60/2190: blue ribbed gable, two unequal open brick chimneys, white-framed paired window bands, lower loading opening and front roof recess",
+      "ops":[["use","food_hall_walls"],["use","food_hall_roof_windows"],
+        ["replace_material","food_floor_dark","food_brick_shadow"], ["replace_material","food_floor_grain","food_brick"],
+        ["replace_material","food_partial_lintel","food_white_frame"]]
+    },
+    "food_boiler_initial": {
+      "size":[32,32,1],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original61/2191 independent dark L-shaped foundation set into a complete body-owned soil surface",
+      "ops":[["use","food_soil_slab"],["box","food_floor_dark",2,2,0,30,10,1],["box","food_floor_dark",2,10,0,14,28,1],
+        ["scatter_paint","food_floor_grain",4,2191,2,2,0,30,28,1,"food_floor_dark"]]
+    },
+    "food_boiler_partial": {
+      "size":[32,32,52],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original61/2192 stages1/2 share tall open brick wing and lower annex over the independent grey body-owned platform",
+      "ops":[["use","food_boiler_walls"]]
+    },
+    "food_boiler": {
+      "size":[32,32,52],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original61/2193 unequal open chimneys, grey main roof, blue annex roof, real entry, window rows and separately supported yard railing",
+      "ops":[["use","food_boiler_walls"],["use","food_boiler_finish"]]
+    },
+    "food_silo_initial": {
+      "size":[32,32,40],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original62/2194: one round dark foundation on full soil, with no raised tank during stage0",
+      "ops":[["use","food_soil_slab"],["lathe","food_floor_dark",[16,16],[[0,7,0],[1,7,0]]],
+        ["scatter_paint","food_floor_grain",4,2194,9,9,0,23,23,1,"food_floor_dark"]]
+    },
+    "food_silo_partial": {
+      "size":[32,32,40],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original62/2195: source-identical stages1/2 erect the hollow blue cylinder with five grey hoops; keep its mouth/interior genuinely empty",
+      "ops":[["use","food_soil_slab"],["use","food_silo_cylinder"],
+        ["lathe_paint_inner","food_silo_inside",[16,16],[[2,7,5.5],[38,7,5.5]]]]
+    },
+    "food_silo": {
+      "size":[32,32,40],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original62/2196 adds the pale grain fill below its open rim, a grounded external bent feed pipe and front vertical strip, without closing the vessel with a lid",
+      "ops":[["use","food_soil_slab"],["use","food_silo_cylinder"],
+        ["lathe_paint_inner","food_silo_blue_dark",[16,16],[[2,7,5.5],[38,7,5.5]]],
+        ["lathe","food_silo_grain",[16,16],[[2,5.5,0],[36,5.5,0]]],
+        ["scatter_paint","food_silo_grain_light",3,2196,10,10,35,22,22,36,"food_silo_grain"],
+        ["box","food_silo_rim",25,12,1,26,13,34], ["box","food_silo_rim",22,12,33,26,13,34],
+        ["box","food_silo_rim",22,12,30,23,13,34],
+        ["box","food_silo_rim",21,20,1,22,21,37]]
+    },
+    "food_yard_initial": {
+      "size":[32,32,8],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original63/2197 is a complete separate bare-soil body, not an absent stage or completed stocked bin",
+      "ops":[["use","food_soil_slab"]]
+    },
+    "food_yard_partial": {
+      "size":[32,32,8],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original63/2198 identical stages1/2 retain bare yard, rear brick walls and low blue front borders",
+      "ops":[["use","food_yard_floor"],["replace_material","food_brick","food_yard_brick"],
+        ["replace_material","food_brick_grain","food_yard_brick_grain"]]
+    },
+    "food_yard": {
+      "size":[32,32,8],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original63/2199 adds the pale grain heap and blue bins/supports to its own soil/wall footprint only on completion",
+      "ops":[["use","food_yard_floor"],
+        ["mound","food_yard_grain",11,9,1,26,26,7],
+        ["scatter_paint","food_yard_grain_light",3,2199,11,9,1,26,26,7,"food_yard_grain",[2,2,1]],
+        ["repeat",[7,0,0],4,[["box","food_yard_bin",3,27,1,5,30,6]]],
+        ["box","food_yard_bin",28,24,1,30,26,6],
+        ["replace_material","food_yard_edge","food_yard_bin"],
+        ["replace_material","food_brick","food_yard_brick"],
+        ["replace_material","food_brick_grain","food_yard_brick_grain"]]
+    },
+    "waterworks_desert_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "reference":"Tropical4550 source, exported in the active tropical graphics set: complete red/gold desert slab independent of every118..120 body and construction state; never aliases Arctic snow4550",
+      "ops":[
+        ["box","waterworks_sand",0,0,0,32,32,1],
+        ["scatter_paint","waterworks_sand_gold",3,4550,0,0,0,32,32,1,"waterworks_sand"],
+        ["scatter_paint","waterworks_sand_light",5,5550,0,0,0,32,32,1,"waterworks_sand"],
+        ["scatter_paint","waterworks_sand_shadow",6,6550,0,0,0,32,32,1,"waterworks_sand"]
+      ]
+    },
+    "waterworks_supply_initial": {
+      "size":[32,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original118/2347: two independent rooted cross-braced steel stands, with no tanks or finished connecting pipes",
+      "ops":[["use","waterworks_supply_frames"]]
+    },
+    "waterworks_supply_partial": {
+      "size":[32,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original118/2348: the two elevated blue tanks and one low grey vessel appear in source-identical stages1/2",
+      "ops":[["use","waterworks_supply_frames"],["use","waterworks_supply_tanks"]]
+    },
+    "waterworks_supply": {
+      "extends":"waterworks_supply_partial","review_status":"work-in-progress",
+      "reference":"Original118/2349: two raised white connecting pipes and three lower grey vessels complete the blue tank pair",
+      "ops":[["use","waterworks_supply_finished"]]
+    },
+    "waterworks_pump_initial": {
+      "size":[32,32,32],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original119/2350: independently rooted tall pipe, open lattice brace and one grey vessel before the pump/solar machinery appears",
+      "ops":[["use","waterworks_pump_frame"]]
+    },
+    "waterworks_pump_partial": {
+      "size":[32,32,32],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original119/2351: source-identical stages1/2 add a blue pump and six separately framed, tilted lavender solar panels",
+      "ops":[["use","waterworks_pump_frame"],["use","waterworks_pump_solar"],
+        ["replace_material","waterworks_blue","waterworks_pump_blue"],
+        ["replace_material","waterworks_blue_light","waterworks_pump_blue_light"],
+        ["replace_material","waterworks_blue_dark","waterworks_pump_blue_dark"]]
+    },
+    "waterworks_pump": {
+      "extends":"waterworks_pump_partial","review_status":"work-in-progress",
+      "reference":"Original119/2352: two additional freestanding pipe loops complete the pump array",
+      "ops":[["use","waterworks_pump_finished"],["replace_material","waterworks_pump_blue_light","waterworks_pump_blue"]]
+    },
+    "waterworks_tower_initial": {
+      "size":[32,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original120/2344: four open cross-braced support cages only; no tank volume in construction stage0",
+      "ops":[["use","waterworks_tower_legs"]]
+    },
+    "waterworks_tower_partial": {
+      "size":[32,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original120/2345: identical stages1/2 contain a shorter, truly open blue cylinder with two broad grey hoops and independently painted inside walls",
+      "ops":[["use","waterworks_tower_open"]]
+    },
+    "waterworks_tower": {
+      "size":[32,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original120/2346: the completed taller third blue tank section, third grey hoop and blue closed lid replace the original open construction mouth",
+      "ops":[
+        ["use","waterworks_tower_legs"],
+        ["lathe","waterworks_blue",[16,16],[[14,15,0],[15,15,0]]],
+        ["lathe","waterworks_blue",[16,16],[[15,15,13],[44,15,13]]],
+        ["lathe_paint_inner","waterworks_blue_dark",[16,16],[[15,15,13],[44,15,13]]],
+        ["repeat",[0,0,10],3,[["paint","waterworks_tower_hoop",1,1,20,31,31,24]]],
+        ["lathe","waterworks_tower_roof",[16,16],[[43,14,0],[44,14,0]]],
+        ["scatter_paint","waterworks_blue_light",5,2346,2,2,43,30,30,44,"waterworks_tower_roof",[2,2,1]],
+        ["scatter_paint","waterworks_blue_dark",7,3346,1,1,14,31,31,40,"waterworks_blue"],
+        ["scatter_paint","waterworks_blue_light",9,4346,1,1,14,31,31,40,"waterworks_blue"]
+      ]
+    },
+    "plantation_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "reference":"Original2341 shared by fruit116 and rubber117: complete tan/olive planted soil with four independently positioned dark root pockets, present in all four stages",
+      "ops":[
+        ["box","plantation_soil",0,0,0,32,32,1],
+        ["scatter_paint","plantation_soil_light",3,2341,0,0,0,32,32,1,"plantation_soil"],
+        ["scatter_paint","plantation_moss",3,3341,0,0,0,32,32,1,"plantation_soil",[2,2,1]],
+        ["scatter_paint","plantation_grass",7,4341,0,0,0,32,32,1,"plantation_soil_light"],
+        ["repeat",[16,0,0],2,[["repeat",[0,16,0],2,[
+          ["ellipsoid_paint","plantation_root_shadow",8,8,0,16,16,1]
+        ]]]]
+      ]
+    },
+    "plantation_banana": {
+      "size":[36,36,40],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original2342: four independent olive-stemmed banana plants, broad parted radial leaves and hanging yellow fruit. Bodies stay absent in stages0/1; identical2/3 share this volume",
+      "ops":[
+        ["lathe","plantation_banana_stem",[12,12],[[0,1.3,0],[3,1,0],[30,1,0]]],
+        ["lathe","plantation_banana_stem",[12,28],[[0,1.3,0],[3,1,0],[28,1,0]]],
+        ["lathe","plantation_banana_stem",[28,12],[[0,1.3,0],[3,1,0],[26,1,0]]],
+        ["lathe","plantation_banana_stem",[28,28],[[0,1.3,0],[3,1,0],[18,1,0]]],
+        ["repeat",[0,0,4],7,[["paint","plantation_banana_ring",11,11,1,13,29,2],["paint","plantation_banana_ring",27,11,1,29,29,2]]],
+        ["use","plantation_banana_crown",[6,6,25]], ["use","plantation_banana_bunch",[6,6,19]],
+        ["use","plantation_banana_crown",[6,22,23]], ["use","plantation_banana_bunch",[6,22,17]],
+        ["use","plantation_banana_crown",[22,6,21]], ["use","plantation_banana_bunch",[22,6,15]],
+        ["use","plantation_banana_crown",[22,22,13]], ["use","plantation_banana_bunch",[22,22,7]]
+      ]
+    },
+    "plantation_rubber": {
+      "size":[36,36,52],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original2343: four separately rooted dark-barked trees, irregular blue-green leaf clumps, low white latex taps/cups and distinct open branches; only completed2/3 have bodies",
+      "ops":[
+        ["use","plantation_rubber_foot",[6,6,0]], ["use","plantation_rubber_foot",[6,22,0]],
+        ["use","plantation_rubber_foot",[22,6,0]], ["use","plantation_rubber_foot",[22,22,0]],
+        ["box","plantation_rubber_bark",11,11,10,13,13,36],
+        ["box","plantation_rubber_bark",11,27,10,13,29,32],
+        ["box","plantation_rubber_bark",27,11,10,29,13,30],
+        ["box","plantation_rubber_bark",27,27,10,29,29,26],
+        ["use","plantation_rubber_crown",[6,6,27]], ["use","plantation_rubber_crown",[6,22,25]],
+        ["use","plantation_rubber_crown",[22,6,21]], ["use","plantation_rubber_crown",[22,22,19]],
+        ["line","plantation_rubber_bark",28,12,10,25,11,17], ["line","plantation_rubber_bark",25,11,17,25,11,25],
+        ["line","plantation_rubber_bark",28,28,12,31,29,19], ["line","plantation_rubber_bark",31,29,19,31,29,26],
+        ["scatter_paint","plantation_rubber_scar",7,2343,0,0,0,36,36,36,"plantation_rubber_bark",[1,1,3]]
+      ]
+    },
+    "paper_office_initial": {
+      "size":[32,32,1],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original64: a separate dark slab in stage0, open masonry in identical1/2, then the white upper office and black lean-to roof",
+      "ops":[["use","paper_office_footprint"]]
+    },
+    "paper_office_partial": {
+      "size":[32,32,28],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[["use","paper_office_walls"]]
+    },
+    "paper_office": {
+      "size":[32,32,28],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","paper_office_walls"],
+        ["repeat",[0,7,0],4,[
+          ["box","paper_glass",29,3,2,30,8,7],
+          ["box","paper_brick",29,5,2,30,6,7]
+        ]],
+        ["repeat",[7,0,0],4,[
+          ["box","paper_glass",3,1,2,8,2,7], ["box","paper_glass",3,30,2,8,31,7],
+          ["box","paper_brick",5,1,2,6,2,7], ["box","paper_brick",5,30,2,6,31,7]
+        ]],
+        ["box","paper_white",2,1,12,16,31,24], ["erase",3,2,13,15,30,23],
+        ["box","paper_roof",3,2,24,15,30,25],
+        ["scatter_paint","paper_roof_rib",7,2202,3,2,24,15,30,25,"paper_roof"],
+        ["repeat",[0,7,0],4,[
+          ["box","paper_glass",15,3,15,16,8,21], ["box","paper_glass",2,3,15,3,8,21],
+          ["box","paper_white_edge",15,5,15,16,6,21], ["box","paper_white_edge",2,5,15,3,6,21]
+        ]],
+        ["box","paper_glass",5,30,15,12,31,21], ["box","paper_glass",5,1,15,12,2,21],
+        ["box","paper_white_edge",8,30,15,9,31,21], ["box","paper_white_edge",8,1,15,9,2,21],
+        ["prism","paper_roof",1,0,32,[[15,12],[31,7],[31,9],[15,15]]],
+        ["repeat",[0,2,0],16,[["paint","paper_roof_rib",15,0,7,31,1,15]]]
+      ]
+    },
+    "paper_loading_shelter": {
+      "size":[32,32,18],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original65 stays body-empty through stage2. Completion adds an open post-supported corrugated loading canopy and its timber platform",
+      "ops":[
+        ["repeat",[0,13,0],3,[
+          ["box","paper_post",2,2,0,3,3,14], ["box","paper_post",11,2,0,12,3,11],
+          ["box","paper_post",15,2,0,16,3,6]
+        ]],
+        ["box","paper_brick",2,2,4,17,30,6],
+        ["scatter_paint","paper_brick_grain",7,2214,2,2,4,17,30,6,"paper_brick"],
+        ["prism","paper_roof",1,1,31,[[0,14],[12,10],[12,12],[0,16]]],
+        ["repeat",[0,2,0],15,[["paint","paper_roof_rib",0,1,10,12,2,16]]],
+        ["replace_material","paper_brick","paper_loading_brick"], ["replace_material","paper_brick_grain","paper_loading_brick"]
+      ]
+    },
+    "paper_process_initial": {
+      "size":[32,32,1],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[["use","paper_process_footprint"]]
+    },
+    "paper_process_partial": {
+      "size":[32,32,32],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[["use","paper_process_walls"]]
+    },
+    "paper_process": {
+      "size":[32,32,32],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","paper_process_walls"], ["use","paper_process_roofs"],
+        ["repeat",[0,0,10],2,[
+          ["repeat",[0,4,0],3,[["box","paper_glass",25,7,3,26,10,9],["box","paper_brick",25,8,3,26,9,9]]],
+          ["box","paper_glass",17,20,3,21,21,9], ["box","paper_glass",17,6,3,21,7,9],
+          ["box","paper_brick",19,20,3,20,21,9], ["box","paper_brick",19,6,3,20,7,9]
+        ]]
+      ]
+    },
+    "paper_ventilation": {
+      "extends":"paper_process","review_status":"work-in-progress",
+      "reference":"Original67 has its own completed artwork and empty construction states; two independent raised fans replace the front windows",
+      "ops":[
+        ["replace_material","paper_glass","paper_vent_glass"],
+        ["box","paper_brick",25,6,0,26,21,21],
+        ["repeat",[0,0,10],2,[
+          ["prism","paper_fan_rim",0,25,27,[[9,4],[12,2],[16,2],[19,4],[19,8],[16,10],[12,10],[9,8]]],
+          ["prism","paper_fan_blade",0,27,28,[[10,4],[12,3],[14,6],[12,8],[10,8]]],
+          ["prism","paper_fan_blade",0,27,28,[[14,6],[16,3],[18,4],[18,8],[16,9]]],
+          ["box","paper_fan_rim",27,13,5,28,15,7],
+          ["paint","paper_fan_glint",27,13,6,28,15,7]
+        ]]
+      ]
+    },
+    "paper_boiler_partial": {
+      "size":[32,32,60],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original68/69 retain empty first bodies and source-identical2207/2208 stages. Twin tapered stacks already stand during partial construction",
+      "ops":[["use","paper_boiler_base"]]
+    },
+    "paper_boiler": {
+      "size":[32,32,60],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[["use","paper_boiler_base"],["use","paper_boiler_finish"]]
+    },
+    "paper_boiler_stocked": {
+      "extends":"paper_boiler","review_status":"work-in-progress",
+      "ops":[
+        ["lathe","paper_roll",[25,25],[[1,3,0],[2,3,1],[8,3,1]]],
+        ["lathe_paint_inner","paper_roll_inside",[25,25],[[2,3,1],[8,3,1]]],
+        ["lathe","paper_roll",[16,18],[[1,3,0],[2,3,1],[10,3,1]]],
+        ["lathe_paint_inner","paper_roll_inside",[16,18],[[2,3,1],[10,3,1]]],
+        ["lathe","paper_roll",[18,26],[[1,3,0],[2,3,1],[6,3,1]]],
+        ["lathe_paint_inner","paper_roll_inside",[18,26],[[2,3,1],[6,3,1]]]
+      ]
+    },
+    "paper_yard_initial": {
+      "size":[32,32,1],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original70/71 stage0 is absent; shared2210 stage1 owns the complete soil-and-curb slab, independently over bare2022 ground",
+      "ops":[
+        ["box","paper_soil",0,0,0,32,32,1],
+        ["scatter_paint","paper_soil_grain",3,2210,0,0,0,32,32,1,"paper_soil"],
+        ["box","paper_metal",0,0,0,32,1,1], ["box","paper_metal",0,31,0,32,32,1],
+        ["box","paper_metal",0,1,0,1,31,1], ["box","paper_metal",31,1,0,32,31,1]
+      ]
+    },
+    "paper_yard_partial": {
+      "size":[32,32,16],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[["use","paper_yard_paving"],["use","paper_yard_shed"]]
+    },
+    "paper_yard": {
+      "size":[32,32,16],"origin":[0,0,0],"review_status":"work-in-progress",
+      "ops":[["use","paper_yard_paving"],["use","paper_yard_shed"],["use","paper_yard_finish"],
+        ["replace_material","paper_brick_grain","paper_yard_brick"],["replace_material","paper_brick","paper_yard_brick"]]
+    },
+    "paper_yard_lumber": {
+      "extends":"paper_yard","review_status":"work-in-progress",
+      "ops":[["repeat",[4,0,0],4,[
+        ["barrel_fill","paper_timber",15,4,1,19,28,5,"x"],
+        ["paint","paper_timber_end",15,4,1,19,5,5]
+      ]],["replace_material","paper_yard_glass","paper_lumber_glass"]]
+    },
+    "farm_house_north": {
+      "size":[32,64,32],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original33/34 joined farmhouse: finished white wings, dark intersecting gables, recessed glazing and separate courtyard walls in every construction slot",
+      "ops":[["use","farm_house_structure"],["erase",0,32,0,32,64,32],
+        ["replace_material","farm_brick","farm_brick_north"],["replace_material","farm_brick_grain","farm_brick_north_grain"]]
+    },
+    "farm_house_south": {
+      "size":[32,64,32],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "ops":[["use","farm_house_structure"],["erase",0,0,0,32,32,32],
+        ["replace_material","farm_glass","farm_glass_south"],["replace_material","farm_roof_grain","farm_roof"]]
+    },
+    "farm_house_north_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "ops":[["use","farm_earth"],["box","farm_ground_shadow",4,15,0,29,32,1]]
+    },
+    "farm_house_south_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "ops":[
+        ["box","farm_soil",0,0,0,32,32,1],
+        ["scatter_paint","farm_soil_light",5,2107,0,0,0,32,32,1,"farm_soil"],
+        ["box","farm_yard",4,8,0,31,30,1],
+        ["scatter_paint","farm_yard_grain",3,2108,4,8,0,31,30,1,"farm_yard"],
+        ["box","farm_ground_shadow",7,0,0,22,16,1]
+      ]
+    },
+    "farm_hay_sheds": {
+      "size":[32,32,22],"origin":[0,0,0],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Original35: two open, corrugated gabled shelters. Hay is owned by the independent2110 ground, and the first body is absent",
+      "ops":[["use","farm_hay_shelter"],["use","farm_hay_shelter",[0,16,0]]]
+    },
+    "farm_hay_ground": {
+      "size":[32,32,11],"origin":[0,0,-1],"transpose_xy":true,"review_status":"work-in-progress",
+      "ops":[
+        ["box","farm_soil",0,0,0,32,32,1],
+        ["scatter_paint","farm_soil_light",5,2110,0,0,0,32,32,1,"farm_soil"],
+        ["repeat",[0,16,0],2,[
+          ["mound","farm_hay",5,3,1,24,13,8],
+          ["scatter_paint","farm_hay_grain",3,2110,5,3,1,24,13,8,"farm_hay"]
+        ]]
+      ]
+    },
+    "farm_barn": {
+      "size":[32,32,24],"origin":[0,0,0],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Original36: white-sided barn, transverse timber doors and ribbed grey gable; identical completed1/2/3 bodies follow an empty first state",
+      "ops":[
+        ["box","farm_barn_wall",8,7,0,26,25,10], ["erase",9,8,1,25,24,9],
+        ["scatter_paint","farm_barn_grain",7,2113,8,7,0,26,25,10,"farm_barn_wall"],
+        ["gable","farm_sheet",7,6,9,27,26,17,"y"],
+        ["repeat",[3,0,0],7,[["paint","farm_sheet_rib",7,6,9,8,26,17]]],
+        ["prism","farm_barn_wall",0,26,27,[[7,9],[16,16],[25,9]]],
+        ["repeat",[0,4,0],4,[
+          ["box","farm_barn_door",25,8,0,26,11,9],
+          ["paint","farm_barn_wall",25,8,4,26,11,5],
+          ["paint","farm_barn_wall",25,8,8,26,11,9]
+        ]]
+      ]
+    },
+    "farm_barn_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"transpose_xy":true,"review_status":"work-in-progress",
+      "ops":[["use","farm_earth"],["box","farm_ground_shadow",8,7,0,26,25,1]]
+    },
+    "farm_silos": {
+      "size":[32,32,40],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original37: two separate thin cylindrical silos with open dark rims and vertical painted highlights, never a shared rectangular tower",
+      "ops":[["repeat",[0,14,0],2,[
+        ["lathe","farm_silo",[7,10],[[0,4.25,0],[1,4.25,0],[2,4.25,3.25],[35,4.25,3.25]]],
+        ["lathe_paint_inner","farm_silo_inside",[7,10],[[1,4.25,3.25],[35,4.25,3.25]]],
+        ["scatter_paint","farm_silo_grain",7,2115,2,5,1,12,15,35,"farm_silo"],
+        ["paint","farm_silo_grain",4,6,1,5,15,34]
+      ]]]
+    },
+    "farm_silo_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "ops":[
+        ["use","farm_earth"],
+        ["repeat",[0,14,0],2,[["mound","farm_ground_shadow",2,5,0,12,15,1]]],
+        ["scatter_paint","farm_straw",31,2114,0,0,0,32,32,1,"farm_soil"]
+      ]
+    },
+    "farm_livestock_yard": {
+      "size":[32,32,20],"origin":[0,0,0],"transpose_xy":true,"review_status":"work-in-progress",
+      "reference":"Original38: low brick enclosure, covered white lean-to and three separate small livestock bodies; independent soil/straw stays on2116",
+      "ops":[
+        ["box","farm_yard",3,3,0,30,30,1],
+        ["box","farm_brick",2,2,0,31,4,3], ["box","farm_brick",2,29,0,31,31,3],
+        ["box","farm_brick",2,4,0,4,29,3], ["box","farm_brick",29,4,0,31,29,3],
+        ["scatter_paint","farm_pen_brick_grain",7,2117,2,2,0,31,31,3,"farm_brick"],
+        ["box","farm_barn_wall",29,4,1,30,29,10],
+        ["box","farm_barn_wall",19,4,1,29,5,6], ["box","farm_barn_wall",19,28,1,29,29,6],
+        ["prism","farm_sheet",1,3,30,[[18,6],[30,10],[30,12],[18,8]]],
+        ["repeat",[0,3,0],9,[["paint","farm_sheet_rib",18,3,6,30,4,12]]],
+        ["box","farm_shadow",19,4,1,20,5,7], ["box","farm_shadow",19,16,1,20,17,7],
+        ["box","farm_shadow",19,28,1,20,29,7],
+        ["box","farm_trough",4,5,1,6,27,2], ["box","farm_shadow",4,5,2,5,27,3],
+        ["use","farm_pig",[7,6,1]], ["use","farm_pig",[9,15,1]], ["use","farm_pig",[6,23,1]]
+      ]
+    },
+    "farm_livestock_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"transpose_xy":true,"review_status":"work-in-progress",
+      "ops":[
+        ["use","farm_earth"],["box","farm_ground_shadow",19,4,0,30,29,1],
+        ["scatter_paint","farm_straw",23,2116,4,4,0,17,29,1,"farm_soil"]
+      ]
+    },
+    "oilwell_ground": {
+      "size":[32,32,1],"origin":[0,0,-1],"review_status":"work-in-progress",
+      "reference":"Original2173 ground: full-tile grass with central oil-stained earth and independent concrete footings; body29 stage0 retains original2022 bare ground instead",
+      "ops":[
+        ["box","oilwell_grass",0,0,0,32,32,1],
+        ["scatter_paint","oilwell_grass_light",4,2173,0,0,0,32,32,1],
+        ["scatter_paint","oilwell_grass_dry",7,2911,0,0,0,32,32,1],
+        ["prism","oilwell_soil",2,0,1,[[4,8],[22,9],[29,13],[30,24],[24,28],[9,25],[4,20]]],
+        ["scatter_paint","oilwell_soil_light",5,2100,4,8,0,30,28,1,"oilwell_soil"],
+        ["prism","oilwell_oil",2,0,1,[[20,11],[27,12],[29,17],[25,22],[17,22],[18,17]]],
+        ["repeat",[12,0,0],2,[
+          ["box","oilwell_concrete",5,10,0,9,14,1], ["box","oilwell_concrete",5,20,0,9,24,1]
+        ]],
+        ["box","oilwell_concrete",26,15,0,30,19,1]
+      ]
+    },
+    "oilwell_pump_0": {
+      "size":[32,32,48],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "reference":"Original2174 upright horsehead: shared four-legged A frame, motor and pivot; independently authored pitched walking beam, curved head and polished rod",
+      "ops":[
+        ["use","oilwell_base"],
+        ["prism","oilwell_frame",1,16,18,[[11,28],[27,40],[27,42],[11,30]]],
+        ["prism","oilwell_frame_edge",1,16,17,[[11,29],[27,41],[27,42],[11,30]]],
+        ["prism","oilwell_head",1,16,19,[[24,40],[26,44],[28,42],[29,38],[28,30],[26,28],[25,31]]],
+        ["box","oilwell_rod",27,17,0,28,18,39]
+      ]
+    },
+    "oilwell_pump_1": {
+      "size":[32,32,48],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","oilwell_base"],
+        ["prism","oilwell_frame",1,16,18,[[11,29],[27,35],[27,37],[11,31]]],
+        ["prism","oilwell_frame_edge",1,16,17,[[11,30],[27,36],[27,37],[11,31]]],
+        ["prism","oilwell_head",1,16,19,[[24,34],[26,39],[28,37],[29,33],[28,25],[26,23],[25,26]]],
+        ["box","oilwell_rod",27,17,0,28,18,34]
+      ]
+    },
+    "oilwell_pump_2": {
+      "size":[32,32,48],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","oilwell_base"],
+        ["prism","oilwell_frame",1,16,18,[[11,30],[27,30],[27,32],[11,32]]],
+        ["prism","oilwell_frame_edge",1,16,17,[[11,31],[27,31],[27,32],[11,32]]],
+        ["prism","oilwell_head",1,16,19,[[24,30],[26,34],[28,32],[29,28],[28,20],[26,18],[25,21]]],
+        ["box","oilwell_rod",27,17,0,28,18,29]
+      ]
+    },
+    "oilwell_pump_3": {
+      "size":[32,32,48],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","oilwell_base"],
+        ["prism","oilwell_frame",1,16,18,[[11,31],[27,26],[27,28],[11,33]]],
+        ["prism","oilwell_frame_edge",1,16,17,[[11,32],[27,27],[27,28],[11,33]]],
+        ["prism","oilwell_head",1,16,19,[[24,26],[26,30],[28,28],[29,24],[28,16],[26,14],[25,17]]],
+        ["box","oilwell_rod",27,17,0,28,18,25]
+      ]
+    },
+    "oilwell_pump_4": {
+      "size":[32,32,48],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","oilwell_base"],
+        ["prism","oilwell_frame",1,16,18,[[11,32],[27,21],[27,23],[11,34]]],
+        ["prism","oilwell_frame_edge",1,16,17,[[11,33],[27,22],[27,23],[11,34]]],
+        ["prism","oilwell_head",1,16,19,[[24,21],[26,25],[28,23],[29,19],[28,11],[26,9],[25,12]]],
+        ["box","oilwell_rod",27,17,0,28,18,20]
+      ]
+    },
+    "oilwell_pump_5": {
+      "size":[32,32,48],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "ops":[
+        ["use","oilwell_base"],
+        ["prism","oilwell_frame",1,16,18,[[11,33],[27,17],[27,19],[11,35]]],
+        ["prism","oilwell_frame_edge",1,16,17,[[11,34],[27,18],[27,19],[11,35]]],
+        ["prism","oilwell_head",1,16,19,[[24,17],[26,21],[28,19],[29,15],[28,7],[26,5],[25,8]]],
+        ["box","oilwell_rod",27,17,0,28,18,16]
+      ]
+    },
     "oilrig_water_ground": {"size":[32,32,1],"origin":[0,0,-1],"ops":[
       ["box","oilrig_water",0,0,0,32,32,1],
       ["scatter_paint","oilrig_water_low",5,219,0,0,0,32,32,1],
@@ -10825,6 +11992,26 @@
         ["box","plane_intake",19,10,0,20,11,1], ["box","plane_intake",19,17,0,20,18,1]
       ]
     },
+    "airport_low_building": {
+      "size": [32,32,9], "origin": [0,0,0], "review_status": "work-in-progress",
+      "reference": "Airport69 original2095 at(3,3): low L-plan terminal, tan piers, purple glazing, white plinth/parapet, recessed entrance and grey gravel roof; independent2634 apron",
+      "ops": [["use","airport_low_building_body"]]
+    },
+    "airport_low_building_fence_nw": {
+      "extends": "airport_low_building", "review_status": "work-in-progress",
+      "reference": "Airport64: identical2095 body plus independent original2664 rear fence alongY=0",
+      "ops": [["use","airport_low_fence_ne"]]
+    },
+    "airport_low_building_fence_n": {
+      "extends": "airport_low_building_fence_nw", "review_status": "work-in-progress",
+      "reference": "Airport63: identical2095 body with original2664/2663 fence pair alongY=0 andX=0",
+      "ops": [["use","airport_low_fence_nw"]]
+    },
+    "airport_low_ground": {
+      "extends": "road_depot_floor", "review_status": "work-in-progress",
+      "reference": "Airport63/64/69 use the identical original2634 concrete ground: a complete separate16x16 slab, opaque under building transparency and invisibility",
+      "ops": [["replace_material","depot_floor","air_low_ground"],["replace_material","depot_plinth","air_low_ground_dark"]]
+    },
     "airport_pier_stand": {
       "size": [32,32,17], "origin": [0,0,0], "review_status": "work-in-progress",
       "ops": [
@@ -11946,6 +13133,35 @@
     },
     "depot_wires":{"1":{"0":"rail_depot_wire","1":"rail_depot_wire","2":"rail_depot_wire","3":"rail_depot_wire"}},
     "industry_ground": {
+      "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
+      "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
+      "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "61":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "62":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "63":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "118":{"0":"waterworks_desert_ground","1":"waterworks_desert_ground","2":"waterworks_desert_ground","3":"waterworks_desert_ground"},
+      "119":{"0":"waterworks_desert_ground","1":"waterworks_desert_ground","2":"waterworks_desert_ground","3":"waterworks_desert_ground"},
+      "120":{"0":"waterworks_desert_ground","1":"waterworks_desert_ground","2":"waterworks_desert_ground","3":"waterworks_desert_ground"},
+      "116":{"0":"plantation_ground","1":"plantation_ground","2":"plantation_ground","3":"plantation_ground"},
+      "117":{"0":"plantation_ground","1":"plantation_ground","2":"plantation_ground","3":"plantation_ground"},
+      "64":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "65":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "66":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "67":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "68":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "69":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "70":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "71":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "33":{"0":"farm_house_north_ground","1":"farm_house_north_ground","2":"farm_house_north_ground","3":"farm_house_north_ground"},
+      "34":{"0":"farm_house_south_ground","1":"farm_house_south_ground","2":"farm_house_south_ground","3":"farm_house_south_ground"},
+      "35":{"0":"mine_ground_bare","1":"farm_hay_ground","2":"farm_hay_ground","3":"farm_hay_ground"},
+      "36":{"0":"mine_ground_bare","1":"farm_barn_ground","2":"farm_barn_ground","3":"farm_barn_ground"},
+      "37":{"0":"mine_ground_bare","1":"farm_silo_ground","2":"farm_silo_ground","3":"farm_silo_ground"},
+      "38":{"0":"mine_ground_bare","1":"farm_livestock_ground","2":"farm_livestock_ground","3":"farm_livestock_ground"},
+      "29":{"0":"mine_ground_bare","1":"oilwell_ground","2":"oilwell_ground","3":"oilwell_ground"},
+      "30":{"0":"oilwell_ground","1":"oilwell_ground","2":"oilwell_ground","3":"oilwell_ground"},
+      "31":{"0":"oilwell_ground","1":"oilwell_ground","2":"oilwell_ground","3":"oilwell_ground"},
+      "32":{"0":"oilwell_ground","1":"oilwell_ground","2":"oilwell_ground","3":"oilwell_ground"},
       "0": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_bare"},
       "1": {"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "2": {"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"mine_ground_bare"},
@@ -11977,6 +13193,35 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
+      "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
+      "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},
+      "61":{"0":"food_boiler_initial","1":"food_boiler_partial","2":"food_boiler_partial","3":"food_boiler"},
+      "62":{"0":"food_silo_initial","1":"food_silo_partial","2":"food_silo_partial","3":"food_silo"},
+      "63":{"0":"food_yard_initial","1":"food_yard_partial","2":"food_yard_partial","3":"food_yard"},
+      "118":{"0":"waterworks_supply_initial","1":"waterworks_supply_partial","2":"waterworks_supply_partial","3":"waterworks_supply"},
+      "119":{"0":"waterworks_pump_initial","1":"waterworks_pump_partial","2":"waterworks_pump_partial","3":"waterworks_pump"},
+      "120":{"0":"waterworks_tower_initial","1":"waterworks_tower_partial","2":"waterworks_tower_partial","3":"waterworks_tower"},
+      "116":{"2":"plantation_banana","3":"plantation_banana"},
+      "117":{"2":"plantation_rubber","3":"plantation_rubber"},
+      "64":{"0":"paper_office_initial","1":"paper_office_partial","2":"paper_office_partial","3":"paper_office"},
+      "65":{"3":"paper_loading_shelter"},
+      "66":{"0":"paper_process_initial","1":"paper_process_partial","2":"paper_process_partial","3":"paper_process"},
+      "67":{"3":"paper_ventilation"},
+      "68":{"1":"paper_boiler_partial","2":"paper_boiler","3":"paper_boiler"},
+      "69":{"1":"paper_boiler_partial","2":"paper_boiler","3":"paper_boiler_stocked"},
+      "70":{"1":"paper_yard_initial","2":"paper_yard_partial","3":"paper_yard"},
+      "71":{"1":"paper_yard_initial","2":"paper_yard_partial","3":"paper_yard_lumber"},
+      "33":{"0":"farm_house_north","1":"farm_house_north","2":"farm_house_north","3":"farm_house_north"},
+      "34":{"0":"farm_house_south","1":"farm_house_south","2":"farm_house_south","3":"farm_house_south"},
+      "35":{"1":"farm_hay_sheds","2":"farm_hay_sheds","3":"farm_hay_sheds"},
+      "36":{"1":"farm_barn","2":"farm_barn","3":"farm_barn"},
+      "37":{"1":"farm_silos","2":"farm_silos","3":"farm_silos"},
+      "38":{"1":"farm_livestock_yard","2":"farm_livestock_yard","3":"farm_livestock_yard"},
+      "29":{"1":"oilwell_pump_0","2":"oilwell_pump_0","3":"oilwell_pump_0"},
+      "30":{"0":"oilwell_pump_0","1":"oilwell_pump_1","2":"oilwell_pump_2","3":"oilwell_pump_3"},
+      "31":{"0":"oilwell_pump_4","1":"oilwell_pump_5","2":"oilwell_pump_5","3":"oilwell_pump_4"},
+      "32":{"0":"oilwell_pump_3","1":"oilwell_pump_2","2":"oilwell_pump_1","3":"oilwell_pump_0"},
       "0": {"0":"mine_head_skeleton","1":"mine_head_shell","2":"mine_head_00","3":"mine_head_00"},
       "1": {"0":"mine_head_00","1":"mine_head_01","2":"mine_head_02","3":"mine_head_02"},
       "2": {"0":"mine_engine_site","1":"mine_engine_frame","2":"mine_engine_house","3":"mine_engine_house"},
@@ -12075,7 +13320,15 @@
       "2057": {"0":"power_spark_3"}, "2058": {"0":"power_spark_4"},
       "2059": {"0":"power_spark_5"}, "2060": {"0":"power_spark_6"}
     },
+    "airport_ground": {
+      "63":{"0":"airport_low_ground"},
+      "64":{"0":"airport_low_ground"},
+      "69":{"0":"airport_low_ground"}
+    },
     "airport_tiles": {
+      "63":{"0":"airport_low_building_fence_n"},
+      "64":{"0":"airport_low_building_fence_nw"},
+      "69":{"0":"airport_low_building"},
       "19": {"0": "airport_terminal_a"},
       "20": {"0": "airport_control_tower_fenced"},
       "21": {"0": "airport_terminal_round"},

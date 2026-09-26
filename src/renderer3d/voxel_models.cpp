@@ -16,6 +16,7 @@
 #include "../palette_func.h"
 #include "../spritecache.h"
 #include "../station_map.h"
+#include "../station_func.h"
 #include "../town_map.h"
 #include "../tree_map.h"
 #include "../town.h"
@@ -424,6 +425,31 @@ bool FocusVoxelAirport(unsigned graphics)
 	return false;
 }
 
+bool HasVoxelAirport(unsigned graphics, unsigned frame)
+{
+	static uint64_t generation = UINT64_MAX;
+	static std::array<int,74> supported{};
+	if (graphics >= supported.size() || !HasVoxelAsset("airport_tiles",graphics,frame)) return false;
+	if (generation != TextureGeneration()) { generation = TextureGeneration(); supported.fill(0); }
+	int &value = supported[graphics];
+	if (value == 0) {
+		bool base = true;
+		/* A partial source replacement keeps the supplied ground/body/animation
+		 * together, including airports whose ground has a separate voxel owner. */
+		for (const auto *source : GetAirportTileLayouts(graphics)) {
+			base &= IsBaseGraphicsSprite(source->ground.sprite & SPRITE_MASK);
+			for (const auto &component : source->GetSequence()) base &= IsBaseGraphicsSprite(component.image.sprite & SPRITE_MASK);
+		}
+		value = base ? 1 : -1;
+	}
+	return value > 0;
+}
+
+bool DrawVoxelAirportGround(Scene &scene, unsigned graphics, unsigned frame, Vec3 origin, PaletteID palette)
+{
+	return HasVoxelAirport(graphics,frame) && DrawVoxelAsset(scene,"airport_ground",graphics,frame,origin,palette);
+}
+
 bool FocusVoxelHouseStage(unsigned stage, unsigned house, unsigned variant)
 {
 	if (stage > TOWN_HOUSE_COMPLETED) return false;
@@ -648,7 +674,7 @@ void ExportVoxelReviews(std::string_view prefix)
 		if (group.empty()) return;
 		if ((!placements.empty() && placements.size() != group.size()) || (!headings.empty() && headings.size() != group.size()) || (!children.empty() && children.size() != group.size())) throw std::runtime_error("Invalid voxel review placements");
 		bool has_ground = std::ranges::any_of(Models().bindings,[&](const auto &entry) {
-			return (std::get<0>(entry.first) == "industry_ground" || std::get<0>(entry.first) == "house_ground" || std::get<0>(entry.first) == "depot_floors") && std::ranges::find(group,&Models().models.at(entry.second)) != group.end();
+			return (std::get<0>(entry.first) == "industry_ground" || std::get<0>(entry.first) == "house_ground" || std::get<0>(entry.first) == "airport_ground" || std::get<0>(entry.first) == "depot_floors") && std::ranges::find(group,&Models().models.at(entry.second)) != group.end();
 		});
 		auto place = [&](unsigned slot) { return placements.empty() ? Vec3{static_cast<float>(slot%2)*16,static_cast<float>(slot/2)*16,0} : placements[slot]; };
 		Vec3 low{INFINITY,INFINITY,INFINITY}, high{-INFINITY,-INFINITY,-INFINITY};
@@ -897,6 +923,33 @@ void ExportVoxelReviews(std::string_view prefix)
 	}
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,base,stage] = binding;
+		if (category == "airport_tiles" && HasVoxelAirport(base,stage)) {
+			auto floor = Models().bindings.find({"airport_ground",base,stage});
+			if (!name.starts_with(prefix) && (floor == Models().bindings.end() || !floor->second.starts_with(prefix))) continue;
+			Textures().BeginScene();
+			Scene airport;
+			std::vector<const VoxelModel *> group{&Models().models.at(name)};
+			if (DrawVoxelAirportGround(airport,base,stage,{},PAL_NONE)) group.push_back(&Models().models.at(floor->second));
+			DrawVoxelAsset(airport,"airport_tiles",base,stage,{},PALETTE_TO_BLUE);
+			for (auto &instance : airport.instances) instance.data.SetObjectId(1);
+			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
+			int left = 8192-64, top = 8192-80, right = 8192+64, bottom = 8192+48;
+			for (const auto &instance : airport.instances) for (const auto &vertex : *instance.mesh) {
+				auto point = camera.Project(ResolveInstanceVertex(vertex,instance.data).position);
+				if (!point.visible) throw std::runtime_error("Native airport review is outside the fixed-lens camera");
+				left = std::min(left,static_cast<int>(std::floor(point.x))-4);
+				top = std::min(top,static_cast<int>(std::floor(point.y))-4);
+				right = std::max(right,static_cast<int>(std::ceil(point.x))+4);
+				bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
+			}
+			std::string label = fmt::format("model-voxel-airport-{}-{}-native",base,stage);
+			capture(airport,camera.Cropped(left,top,right-left,bottom-top),label,true);
+			std::ofstream registration(directory/(label+".json"));
+			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}}}.dump(2) << '\n';
+			if (!registration) throw std::runtime_error("Could not write native airport registration");
+			std::vector<Vec3> placements(group.size());
+			context(fmt::format("context-airport-{}-{}",base,stage),group,placements);
+		}
 		if (category == "docks" && stage == VoxelDockState() && name.starts_with(prefix) && HasVoxelDock(base)) {
 			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 			capture(DockReviewScene(base,PAL_NONE),camera.Cropped(8192-64,8192-80,128,128),fmt::format("model-voxel-dock-native-{}",base),true);
@@ -1503,6 +1556,34 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		}
 	}
 	Debug(driver,1,"OpenTT3D: {} joined multi-tile house views preserve exact cell references and independent tile picking",joined_views);
+	unsigned airport_views = 0;
+	for (const auto &[binding,name] : Models().bindings) {
+		const auto &[category,graphics,frame] = binding;
+		if (category != "airport_ground" || !HasVoxelAirport(graphics,frame)) continue;
+		const auto &body_name = Models().bindings.at({"airport_tiles",graphics,frame});
+		if (!name.starts_with(prefix) && !body_name.starts_with(prefix)) continue;
+		const auto &body = Models().models.at(body_name).surface;
+		const auto &floor = Models().models.at(name).surface;
+		Vec3 low{std::min(body.low.x,floor.low.x),std::min(body.low.y,floor.low.y),std::min(body.low.z,floor.low.z)};
+		Vec3 high{std::max(body.high.x,floor.high.x),std::max(body.high.y,floor.high.y),std::max(body.high.z,floor.high.z)};
+		for (unsigned turn = 0; turn < 4; ++turn) for (bool street : {false,true}) for (unsigned visibility = 0; visibility < 3; ++visibility) {
+			Textures().BeginScene();
+			Scene actual, reference;
+			if (!DrawVoxelAirportGround(actual,graphics,frame,{},PAL_NONE) || actual.instances.size() != 1 || actual.instances.front().mesh != &floor.vertices) throw std::runtime_error("Airport lost its independent original ground binding");
+			actual.instances.front().data.SetObjectId(TILE_PICK_ID|81);
+			if (visibility != 2) {
+				if (!DrawVoxelAsset(actual,"airport_tiles",graphics,frame,{},PALETTE_TO_BLUE,visibility == 1 ? 0.38f : 1)) throw std::runtime_error("Airport lost its original body binding");
+				actual.instances.back().data.SetObjectId(TILE_PICK_ID|82);
+			}
+			reference.vertices = actual.ExpandedVertices(true);
+			Camera camera{(low+high)*0.5f,2,256,256,turn+0.15f};
+			if (street) camera = StreetReviewCamera(low,high,256,256,turn+0.15f);
+			if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error("Airport ground/body visibility changed exact CPU colour or ownership");
+			if (std::count(ids.begin(),ids.end(),TILE_PICK_ID|81) < 8 || (visibility != 0 && std::ranges::find(ids,TILE_PICK_ID|82) != ids.end())) throw std::runtime_error("Airport transparency hid its opaque ground or intercepted picking");
+			++airport_views;
+		}
+	}
+	Debug(driver,1,"OpenTT3D: {} voxel airport ground/body views preserve independent opaque ground, exact CPU colour and visible/transparent/hidden picking",airport_views);
 	Debug(driver,1,"OpenTT3D: voxel mesh selection '{}' passed exact geometry, palettes and picking",prefix);
 }
 

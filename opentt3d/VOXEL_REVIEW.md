@@ -14,7 +14,7 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
-- **Uncommitted industry breadth:** oil-well29…32, farm33…38, paper64…71 and
+- **Reviewed industry breadth:** oil-well29…32, farm33…38, paper64…71 and
   plantations116/117 have focused hiddenGL/Vulkan mesh/selection/atlas checks and
   source-registered/street sheets. Public grain/livestock, wood-to-paper, fruit and
   rubber routes complete actual loading/delivery/return. The registered review
@@ -30,7 +30,7 @@ full terrain/source-raster fidelity and final approval remain separate.
   palettes were exported in an actual tropical graphics set; the shared4550 number
   does not alias Arctic snow. Ground/contact/palette/state tests and both backend
   gallery/industry/atlas matrices pass; source and street sheets are inspected.
-  Complete actual construction-slot capture remains active.
+  All actual construction slots now pass in the88-run two-backend sweep.
 - Twelve food-processing volumes preserve60…63's initial, open intermediate and
   completed states, independent2022 grounds and open silo with inset grain. Source
   exports prove Arctic/tropical body/ground layers identical across76,416 RGBA pixels.
@@ -48,8 +48,12 @@ full terrain/source-raster fidelity and final approval remain separate.
 - The next provisional airport family recreates the low2095 L-plan terminal on
   tiles63/64/69, with original2663/2664 fence ownership and separate complete2634
   apron. Source-native placement was inspected manually; no geometry is generated
-  from imagery. Its1,247-volume freeze passes asset/native tests and awaits rendered
-  source/context/ground-transparency review. Two public helicopter fixtures are ready.
+  from imagery. Its1,247-volume freeze passes117 asset/196 native tests and both
+  rendered source/context/ground-transparency reviews. All27 climate-source layer
+  pairs match. The first render exposed side windows overwritten by perpendicular
+  pier brushes; the corrected brushes pass refreshedGL/Vulkan and street review.
+  Roof-gravel grain, glazing/piers, plinth brightness and ground raster remain later
+  source-fidelity findings. Actual63/64/69 selections pass on both backends.
 
 - **Oil-rig published candidate, not visually approved:** graphics24 remains body-empty and
   25 stays empty until its completed flare. Four initial pilings/paired braces are

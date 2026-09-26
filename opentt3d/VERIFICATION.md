@@ -21,6 +21,28 @@ Work continued on the user's reported memory incident; full-objective approval r
 
 ## September26 renewed window: publication, quiet reviews and breadth
 
+- **1,247-volume review reconciliation:** all88 actual construction-state runs pass
+  onGL/Vulkan. `pass1-industry-actual-state-reconciliation.json` requires288 grounds,
+  242 visible bodies and46 source-empty bodies with no missing/unexpected selection;
+  peak sampled memory2,704,411,720bytes. This covers oil-well, both farm climates,
+  paper, both food climates, desert water supply/tower, town bank and both plantations.
+- Both corrected low-airport galleries pass96 authored views and72 independent
+  ground/body visibility views, exact CPU colour, transparent/hidden picking and
+  world-atlas comparisons; sampled peaks2,394,033,056/2,396,310,504bytes. All three
+  actual airport definitions render on both backends. All27 original layer pairs
+  across Arctic/tropical/Toyland match temperate RGBA exactly. Source/street sheets
+  exposed and corrected a facade-pier brush repainting entire perpendicular walls;
+  fine silhouettes/paint remain provisional.117 asset tests and196 native tests pass.
+- All eight9,000-frame engine23…26 actual-corner/support/collector runs pass, with
+  peak2,816,019,552bytes. `pass1-bank-corner-render-validation.json` retains their
+  individual results; all four actually traversed corner bits are required.
+- Release`.9`/`d27740297`CI completes LinuxGL, macOS and Windows x86/x64/arm64.
+  LinuxVulkan reaches the7200-second renderer limit before finishing its expanded
+  vehicle matrix. Its retained artifact peaks4,148,486,144bytes across28,702 samples,
+  with no memory breach. It passes28,320 authored views, all rail/pitched train
+  bindings and live tunnel243,629-pixel clearance before the timeout; the full run
+  remains a failure. Evidence: `pass1-release9-linux-vulkan-artifact/`.
+
 - **Refreshed industry/source review:** all ten frozen1,239-volume paper/plantation/
   waterworks/food/oil-wellGL/Vulkan galleries pass, peaking2,521,333,760bytes. The two
   later bank galleries also pass. Registered complete-layout and street sheets were

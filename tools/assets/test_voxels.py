@@ -1,12 +1,441 @@
 import json
 import math
 from pathlib import Path
+import re
 import unittest
 from compile_voxels import compile_catalogue
 from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_low_airport_preserves_original_l_plan_fence_owners_and_independent_ground(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("airport_low_") or name == "road_depot_floor"}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in (63,64,69)}
+                              for category in ("airport_tiles","airport_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        original_body = set(range(5,16)) | set(range(32,37)) | set(range(128,132))
+        for graphics in (63,64,69):
+            name = result["bindings"]["airport_tiles"][str(graphics)]["0"]
+            body = volumes[name]
+            allowed = original_body | ({8,202,204} if graphics != 69 else set())
+            colours = {colour for material in body.values() for colour in result["materials"][material-1]}
+            self.assertTrue(colours <= allowed)
+            self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 and 0 <= z < 9 for x,y,z in body))
+            self.assertFalse(any(x >= 19 and y >= 19 for x,y,z in body),"Keep the original L-plan courtyard open through the roof")
+            self.assertNotIn((18,21,3),body,"The recessed entrance must remain open at its outer face")
+            self.assertIn((16,21,3),body,"The recessed entrance needs its source glazing behind the reveal")
+            self.assertNotIn((12,12,3),body,"The low terminal must retain a hollow interior")
+            for point in ((6,9,3),(9,6,3),(26,9,3),(9,26,3),(18,19,3),(20,18,3)):
+                self.assertTrue(set(result["materials"][body[point]-1]) <= set(range(128,132)),
+                                "Facade piers must not repaint an entire perpendicular glazed wall")
+            reached = {p for p in body if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in body and p not in reached:
+                        reached.add(p); pending.append(p)
+            self.assertEqual(reached,set(body),"The parapet, glazing and fence rails must reach actual supports")
+            floor_name = result["bindings"]["airport_ground"][str(graphics)]["0"]
+            self.assertEqual(floor_name,"airport_low_ground")
+            floor = result["models"][floor_name]
+            self.assertEqual(floor["origin"],[0,0,-0.25])
+            self.assertEqual(floor["cell_size"],[0.5,0.5,0.25])
+            self.assertEqual(set(volumes[floor_name]),{(x,y,0) for x in range(32) for y in range(32)})
+            self.assertTrue({colour for material in volumes[floor_name].values() for colour in result["materials"][material-1]} <= set(range(3,9)))
+        plain,nw,n = (volumes[name] for name in ("airport_low_building","airport_low_building_fence_nw","airport_low_building_fence_n"))
+        self.assertEqual({p:m for p,m in nw.items() if p[1] != 0},plain)
+        self.assertEqual({p:m for p,m in n.items() if p[0] != 0},{p:m for p,m in nw.items() if p[0] != 0})
+        self.assertIn((31,0,2),nw)
+        self.assertIn((0,31,2),n)
+
+    def test_bank_keeps_joined_owners_completed_body_slots_and_independent_paving(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith(("bank_","mine_ground_"))}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in (58,59)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        body_palettes = {
+            58:set(range(1,16)) | set(range(24,31)) | set(range(33,40)) | set(range(128,135)),
+            59:set(range(2,15)) | set(range(24,30)) | set(range(34,40)) | set(range(129,135)),
+        }
+        ground_palettes = {
+            58:{1,4,5,6,7,8,9,10,11,20,21,24,25,71,82,83,84,89,90,91,104,105,106,107,112,206},
+            59:{1,2,3,4,5,6,7,8,9,10,11,19,20,21,24,25,32,71,82,83,84,85,89,90,91,98,104,105,106,112,206},
+        }
+        def cells(name, offset=0):
+            model = result["models"][name]
+            ox,oy,oz = model["origin"]
+            return {(int(ox*2)+x+i+offset,int(oy*2)+y,int(oz)+z):material
+                    for x,y,z,length,material in model["runs"] for i in range(length)}
+        joined = {}
+        for graphics,offset in ((58,0),(59,32)):
+            bodies = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(set(bodies),{"0","1","2","3"})
+            self.assertEqual(len(set(bodies.values())),1,"The original uses its finished bank body in every construction slot")
+            grounds = result["bindings"]["industry_ground"][str(graphics)]
+            self.assertEqual({grounds[str(stage)] for stage in range(3)},{"mine_ground_bare"})
+            self.assertNotEqual(grounds["3"],grounds["0"],"Only completion replaces the independent2022 ground with paving")
+            body, ground = cells(bodies["3"],offset), cells(grounds["3"],offset)
+            for volume,allowed in ((body,body_palettes[graphics]),(ground,ground_palettes[graphics])):
+                colours = {colour for material in volume.values() for colour in result["materials"][material-1]}
+                self.assertTrue(colours <= allowed,(graphics,sorted(colours-allowed)))
+                self.assertTrue(all(offset <= x < offset+32 and 0 <= y < 32 for x,y,z in volume))
+                self.assertFalse(set(joined) & set(volume),"The bank's ground and two body owners must not overlap")
+                joined.update(volume)
+            self.assertEqual({(x,y) for x,y,z in ground if z == -1},{(x,y) for x in range(offset,offset+32) for y in range(32)})
+        reached = {p for p in joined if p[2] == -1}
+        pending = list(reached)
+        for x,y,z in pending:
+            for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                if p in joined and p not in reached:
+                    reached.add(p)
+                    pending.append(p)
+        self.assertEqual(reached,set(joined),"The cupola, arch and shared roof must all have physical support")
+        north,south = cells("bank_north"),cells("bank_south",32)
+        self.assertTrue(any((32,y,z) in south for x,y,z in north if x == 31),"The original X seam must physically join")
+        for x in range(28,36):
+            for z in range(1,17):
+                self.assertNotIn((x,24,z),joined,"Retain the shared bank's usable entrance beneath its arch")
+        self.assertIn((25,9,43),joined,"Keep the original fine white finial above its supported dome")
+
+    def test_food_processing_retains_independent_ground_source_states_and_open_vessels(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith(("food_","mine_ground_"))}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(60,64)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        def cells(name):
+            return {(x+i,y,z):material for x,y,z,length,material in result["models"][name]["runs"] for i in range(length)}
+        palettes = {
+            2188:{1,2,3,24,70,71,104,105,107,112},
+            2189:{1,2,3,6,7,8,9,19,44,46,70,71,72,73,74,75,76,77,125,126,132,133},
+            2190:{1,4,5,6,7,8,9,10,18,19,44,70,71,72,73,74,75,76,77,78,79,125,126,129,130,131,132,133,198,199,200,201,202,203},
+            2191:{1,2,3,24,33,54,61,62,70,71,72,73,104,105,106,107,108,112,113,122,123,124},
+            2192:{1,2,3,4,5,6,7,8,9,10,19,20,21,34,43,44,45,70,71,72,73,74,75,76,77,114,124,125,126,127,132},
+            2193:{1,2,4,5,6,7,8,9,10,11,19,20,21,70,71,72,73,74,75,76,77,124,125,126,127,128,129,130,131,132,133,200,201,202,227,228,229,230,231},
+            2194:{1,2,3,24,33,53,54,60,61,62,70,71,72,73,74,104,105,106,107,108,112,113,123,124},
+            2195:{2,4,5,6,7,8,9,17,18,19,20,24,33,54,61,62,71,72,73,74,100,101,104,105,106,107,108,112,113,122,123,156,157,198,199,200,201,202,203,204},
+            2196:{2,4,5,6,7,8,9,18,19,20,24,25,32,35,36,37,38,39,53,54,61,62,71,72,73,74,100,101,105,106,107,108,112,113,123,158,199,200,201,202,203,204},
+            2197:{1,2,3,24,54,60,61,62,71,72,73,104,105,106,107,108,112,113,122,123,124},
+            2198:{3,4,24,25,26,27,28,33,34,35,40,54,55,56,57,58,60,61,62,71,72,73,74,75,76,77,90,91,105,106,107,108,109,112,113,114,122,123,124,179,199,200},
+            2199:{4,25,26,27,28,32,33,34,35,37,38,39,53,54,55,56,57,58,60,61,62,63,71,72,73,74,75,76,77,90,91,105,106,107,108,109,110,112,113,114,122,123,178,199,200,202,203},
+        }
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",(root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0])
+        aliases = {}
+        for graphics in range(60,64):
+            for stage in range(4):
+                fields = rows[graphics*4+stage].split(",")
+                sprite = int(fields[2].strip().split("|")[0],0)
+                name = result["bindings"]["industries"][str(graphics)][str(stage)]
+                self.assertEqual(aliases.setdefault(sprite,name),name,"Only source-identical construction slots may share geometry")
+                self.assertEqual(int(fields[0].strip(),0),2022)
+                self.assertEqual(result["bindings"]["industry_ground"][str(graphics)][str(stage)],"mine_ground_bare")
+                volume = cells(name)
+                colours = {colour for material in volume.values() for colour in result["materials"][material-1]}
+                self.assertTrue(colours <= palettes[sprite],(name,sorted(colours-palettes[sprite])))
+        for name in (name for name in result["models"] if name.startswith("food_")):
+            volume = cells(name)
+            self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in volume),name)
+            reached = {p for p in volume if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in volume and p not in reached:
+                        reached.add(p)
+                        pending.append(p)
+            self.assertEqual(reached,set(volume),f"{name} has unsupported walls, chimneys, pipes or fencing")
+        partial, final = cells("food_silo_partial"), cells("food_silo")
+        self.assertNotIn((16,16,35),partial,"The initial erected silo has an empty interior")
+        self.assertIn((16,16,35),final,"Completion adds the original visible grain")
+        self.assertNotIn((16,16,37),final,"Keep grain below an open rim, never substitute a closed lid")
+        for name,openings in (("food_hall",((7,25,48),(15,25,41),(31,12,5))),
+                              ("food_boiler",((24,6,50),(7,20,34),(13,16,5)))):
+            for point in openings:
+                self.assertNotIn(point,cells(name),f"{name} must retain original open chimneys and loading doors")
+
+    def test_waterworks_keep_tropical_soil_construction_tanks_and_open_supports(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("waterworks_")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in (118,119,120)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        def cells(name):
+            return {(x+i,y,z):material for x,y,z,length,material in result["models"][name]["runs"] for i in range(length)}
+        # Manually inspected original2344..2352, plus4550 from a tropical export.
+        palettes = {
+            "waterworks_supply_initial":{3,5,7},
+            "waterworks_supply_partial":set(range(2,12)) | {131,132,133,199,200,201,202,203,204},
+            "waterworks_supply":set(range(2,13)) | {130,131,132,133,199,200,201,202,203,204},
+            "waterworks_pump_initial":set(range(2,13)),
+            "waterworks_pump_partial":set(range(2,14)) | {132,133,134,135,200,201,202,203,204},
+            "waterworks_pump":set(range(2,14)) | {132,133,134,135,200,201,202,203},
+            "waterworks_tower_initial":{2,5,8},
+            "waterworks_tower_partial":set(range(2,9)) | set(range(198,205)),
+            "waterworks_tower":set(range(1,9)) | set(range(199,206)),
+            "waterworks_desert_ground":{56,57,62,63,64,65,73,74,75,76,77,108,109,110,113,114,115,116,117,118,119,123,124,126,192,195},
+        }
+        for name,allowed in palettes.items():
+            volume = cells(name)
+            colours = {colour for material in volume.values() for colour in result["materials"][material-1]}
+            self.assertTrue(colours <= allowed,(name,sorted(colours-allowed)))
+            self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in volume),name)
+            reached = {p for p in volume if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in volume and p not in reached:
+                        reached.add(p)
+                        pending.append(p)
+            self.assertEqual(reached,set(volume),f"{name} has unsupported tanks, panels or pipes")
+        ground = cells("waterworks_desert_ground")
+        self.assertEqual(len(ground),32*32)
+        self.assertEqual(result["models"]["waterworks_desert_ground"]["origin"],[0,0,-1])
+        for graphics in ("118","119","120"):
+            bodies = result["bindings"]["industries"][graphics]
+            self.assertEqual(set(bodies),{"0","1","2","3"})
+            self.assertEqual(bodies["1"],bodies["2"],"Only source-identical intermediate states may share geometry")
+            self.assertEqual(set(result["bindings"]["industry_ground"][graphics].values()),{"waterworks_desert_ground"})
+        early = cells("waterworks_tower_initial")
+        partial = cells("waterworks_tower_partial")
+        final = cells("waterworks_tower")
+        self.assertTrue(all(z < 14 for x,y,z in early))
+        self.assertNotIn((16,16,33),partial,"The original construction tank must stay open")
+        self.assertNotIn((16,16,20),partial,"Retain its real interior cavity")
+        self.assertIn((16,16,14),partial,"The open cylinder still needs an independent structural bottom")
+        self.assertIn((16,16,43),final,"Only completion closes the blue roof")
+        self.assertNotIn((16,16,7),final,"Keep the tank's essential open clearance between support cages")
+        self.assertNotIn((23,17,44),cells("waterworks_supply_partial"))
+        self.assertIn((23,17,44),cells("waterworks_supply"),"Finished elevated pipes need explicit connected geometry")
+
+    def test_plantations_keep_four_rooted_trees_independent_soil_and_empty_early_bodies(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("plantation_")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in (116,117)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        def cells(name):
+            return {(x+i,y,z):material for x,y,z,length,material in result["models"][name]["runs"] for i in range(length)}
+        ground = cells("plantation_ground")
+        self.assertEqual(len(ground),32*32)
+        self.assertEqual(result["models"]["plantation_ground"]["origin"],[0,0,-1])
+        roots = ((12,12),(12,28),(28,12),(28,28))
+        palettes = {
+            "plantation_banana":{2,24,25,26,27,28,64,65,66,67,80,81,82,83,84,85,86},
+            "plantation_rubber":{1,2,3,4,15,32,33,34,35,36,96,97,98,99,100,101},
+            "plantation_ground":{3,4,24,25,26,27,28,34,35,36,54,55,56,57,63,64,65,76,89,90,91,92,96,97,98,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119},
+        }
+        for name,allowed in palettes.items():
+            volume = cells(name)
+            colours = {colour for material in volume.values() for colour in result["materials"][material-1]}
+            self.assertTrue(colours <= allowed,(name,sorted(colours-allowed)))
+            self.assertTrue(all(0 <= x < (32 if z == 0 else 36) and 0 <= y < (32 if z == 0 else 36) for x,y,z in volume),
+                            "All roots remain on the full tile; only the original overhanging crowns may cross its edge")
+            if name == "plantation_ground":
+                continue
+            for x,y in roots:
+                self.assertTrue((x,y,0) in volume,(name,"missing original tree root",x,y))
+            reached = {p for p in volume if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in volume and p not in reached:
+                        reached.add(p)
+                        pending.append(p)
+            self.assertTrue(reached == set(volume),(name,"detached foliage/fruit",sorted(set(volume)-reached)[:12]))
+        for graphics in ("116","117"):
+            self.assertEqual(set(result["bindings"]["industries"][graphics]),{"2","3"})
+            self.assertEqual(result["bindings"]["industries"][graphics]["2"],result["bindings"]["industries"][graphics]["3"])
+            self.assertEqual(set(result["bindings"]["industry_ground"][graphics].values()),{"plantation_ground"})
+        rubber = cells("plantation_rubber")
+        for x,y in roots:
+            self.assertEqual(result["materials"][rubber[x,y+1,6]-1],[15]*6,"Preserve all four white latex collectors")
+
+    def test_paper_mill_keeps_original_state_aliases_empty_bodies_and_supported_machinery(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("paper_") or name in ("mine_ground_bare","mine_ground_site")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 64 <= int(key) <= 71}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        table = (root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0]
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",table)
+        palettes = {
+            2200:{1,2,3}, 2201:{1,2,3,6,7,32,33,34,35,36,37,38},
+            2202:set(range(1,16)) | set(range(32,39)) | set(range(128,135)),
+            2203:{1,2,3}, 2204:{1,2,3,32,33,34,35,36,37},
+            2205:{1,2,3,4,5,32,33,34,35,36,37,128,129,130,131,132,133,134},
+            2206:{1,2,3,4,5,8,9,12,13,32,33,34,35,36,37,130,131,132,133,202,203,250,251,252,253,254},
+            2207:set(range(1,15)) | {19,20,21,26,32,33,34,35,36,37,90,93,104,105,132,133},
+            2208:set(range(1,15)) | {19,20,21,32,33,34,35,36,37,38,90,104,105,127,131,132,133,134},
+            2209:set(range(1,16)) | {19,20,21,32,33,34,35,36,37,90,91,104,105,130,131,132,133},
+            2210:{6,7,8,9,10,19,20,21,24,54,60,61,62,71,72,73,74,105,106,107,108,112,113,122,123,124},
+            2211:{1,2,3,5,6,7,8,9,10,19,20,21,32,33,34,35,36,37,90,133},
+            2212:{1,2,3,4,5,6,7,8,9,10,11,19,20,21,32,33,34,35,36,91,132,133},
+            2213:{1,2,3,4,5,6,7,8,9,10,19,20,21,29,30,32,33,34,35,36,55,56,57,58,59,91,105,106,107,108,109,110,127,130,131,132},
+            2214:{1,2,3,4,5,6,7,9,33,34,35,36,37},
+        }
+        aliases = {}
+        for graphics in range(64,72):
+            for stage in range(4):
+                fields = rows[graphics*4+stage].split(",")
+                for category,index in (("industry_ground",0),("industries",2)):
+                    sprite = int(fields[index].strip(),0)
+                    name = result["bindings"][category][str(graphics)].get(str(stage))
+                    if sprite == 0:
+                        self.assertIsNone(name,"Original empty construction bodies must stay absent")
+                    else:
+                        self.assertIsNotNone(name)
+                        self.assertEqual(aliases.setdefault((category,sprite),name),name)
+                        if category == "industries":
+                            colours = {colour for *_,material in result["models"][name]["runs"] for colour in result["materials"][material-1]}
+                            self.assertTrue(colours <= palettes[sprite],(name,sorted(colours-palettes[sprite])))
+                self.assertEqual(result["bindings"]["industry_ground"][str(graphics)][str(stage)],"mine_ground_bare")
+        def cells(name):
+            return {(x+i,y,z):material for x,y,z,length,material in result["models"][name]["runs"] for i in range(length)}
+        for name in (name for name in result["models"] if name.startswith("paper_")):
+            volume = cells(name)
+            self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in volume))
+            reached = {p for p in volume if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in volume and p not in reached:
+                        reached.add(p)
+                        pending.append(p)
+            self.assertEqual(reached,set(volume),f"{name} has unsupported components")
+        partial = cells("paper_office_partial")
+        self.assertNotIn((10,10,15),partial,"The unfinished office must stay open")
+        self.assertNotIn((29,4,4),partial,"The unfinished window openings must stay empty")
+        self.assertIn((29,4,4),cells("paper_office"))
+        boilers = cells("paper_boiler")
+        for x,y,z in ((26,4,59),(14,4,35)):
+            self.assertNotIn((x,y,z),boilers,"Keep the two original chimney mouths open")
+            self.assertIn((x,y,1),boilers,"Preserve source-aligned chimney feet")
+        self.assertNotIn((18,26,5),boilers)
+        self.assertTrue((16,26,5) in cells("paper_boiler_stocked"),"Only original2209 carries the white paper rolls")
+        self.assertNotIn((20,20,2),cells("paper_yard"))
+        self.assertIn((20,20,2),cells("paper_yard_lumber"),"Keep the completed lumber stockpile distinct from the empty yard")
+
+    def test_farm_preserves_joined_owners_empty_states_hay_ground_and_open_silos(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("farm_") or name in ("mine_ground_bare","mine_ground_site")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 33 <= int(key) <= 38}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        # Visible palette indices manually reviewed in the pinned original source.
+        body_palettes = {
+            33:set(range(1,15)) | {73,74,75,76,112,116,117,118,130,131,132,133,134},
+            34:{1,2,3,6,7,8,9,10,11,12,13,14,73,74,75,76,77,78,112,116,117,118,128,129,130,131,132},
+            35:set(range(1,11)) | set(range(73,79)),
+            36:set(range(1,14)) | {34,36,112},
+            37:set(range(2,12)),
+            38:set(range(1,13)) | {36,72,73,74,75,76,77,116,117,118,119,166,167},
+        }
+        ground_palettes = {
+            33:{1,2,3,4,16,24,33,54,60,61,62,70,71,72,73,82,83,84,85,89,90,91,97,104,105,106,107,108,112,113,122,123,124,206},
+            34:{1,2,3,4,5,16,24,53,54,60,61,62,70,71,72,73,104,105,106,107,108,112,113,114,122,123,124},
+            35:{1,2,24,40,41,53,54,55,56,57,58,59,60,61,70,71,72,73,104,105,106,107,108,112,113,114,115,116,117,118,119,122,123,124,178,179,180},
+            36:{1,2,24,32,33,54,60,61,62,70,71,72,73,82,83,84,85,86,89,90,91,104,105,106,107,108,112,113,114,123,124,206},
+            37:{1,2,24,32,33,40,53,54,55,56,57,58,60,61,62,70,71,72,73,82,83,84,85,88,89,90,91,96,104,105,106,107,108,112,113,122,123,124,206},
+            38:{1,2,24,33,54,55,56,57,58,60,61,62,70,71,72,73,74,82,83,84,89,90,104,105,106,107,108,112,113,122,123},
+        }
+        def cells(name, offset=(0,0,0)):
+            model = result["models"][name]
+            ox,oy,oz = model["origin"]
+            return {(int(ox*2)+x+i+offset[0],int(oy*2)+y+offset[1],int(oz)+z+offset[2]):material
+                    for x,y,z,length,material in model["runs"] for i in range(length)}
+        def rooted(volume):
+            reached = {p for p in volume if p[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in volume and p not in reached:
+                        reached.add(p)
+                        pending.append(p)
+            return reached
+        for graphics in range(33,39):
+            states = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(set(states),{"0","1","2","3"} if graphics < 35 else {"1","2","3"})
+            self.assertEqual(len(set(states.values())),1,"The original repeats its completed artwork")
+            name = states["3"]
+            colours = {colour for *_,material in result["models"][name]["runs"] for colour in result["materials"][material-1]}
+            self.assertTrue(colours <= body_palettes[graphics],(graphics,sorted(colours-body_palettes[graphics])))
+            ground = cells(result["bindings"]["industry_ground"][str(graphics)]["3"])
+            ground_colours = {colour for material in ground.values() for colour in result["materials"][material-1]}
+            self.assertTrue(ground_colours <= ground_palettes[graphics],(graphics,sorted(ground_colours-ground_palettes[graphics])))
+            self.assertEqual({(x,y) for x,y,z in ground if z == -1},{(x,y) for x in range(32) for y in range(32)})
+            body = cells(name)
+            self.assertFalse(set(body) & set(ground),"A raised ground-owned hay pile must not intersect the shelter")
+            if graphics >= 35:
+                self.assertEqual(rooted(body),set(body),f"Farm graphic {graphics} has floating components")
+                self.assertEqual(result["bindings"]["industry_ground"][str(graphics)]["0"],"mine_ground_bare")
+        north,south = cells("farm_house_north"),cells("farm_house_south",(0,32,0))
+        self.assertFalse(set(north)&set(south),"The farmhouse's two owners must be exclusive")
+        joined = north | south
+        self.assertEqual(rooted(joined),set(joined),"The joined house, glazing and chimneys must remain grounded")
+        self.assertTrue(any((x,32,z) in south for x,y,z in north if y == 31),"The farmhouse must physically join across the original Y seam")
+        silos = cells("farm_silos")
+        for y in (10,24):
+            self.assertNotIn((7,y,34),silos,"Keep the original dark silo aperture open")
+            self.assertIn((7,y,0),silos)
+        shelters = cells("farm_hay_sheds")
+        self.assertNotIn((27,8,5),shelters,"The hay shelters must remain open")
+        self.assertIn((8,14,4),cells("farm_hay_ground"),"Raised hay belongs to original ground2110")
+
+    def test_oilwell_animation_keeps_source_aliases_rooted_frames_and_fixed_supports(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("oilwell_") or name in ("mine_ground_bare","mine_ground_site")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 29 <= int(key) <= 32}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        table = (root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0]
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",table)
+        aliases = {}
+        for graphics in range(29,33):
+            for stage in range(4):
+                fields = rows[graphics*4+stage].split(",")
+                for category,index in (("industry_ground",0),("industries",2)):
+                    sprite = int(fields[index].strip(),0)
+                    name = result["bindings"][category][str(graphics)].get(str(stage))
+                    if sprite == 0:
+                        self.assertIsNone(name,"The first construction body must stay absent")
+                    else:
+                        self.assertIsNotNone(name)
+                        self.assertEqual(aliases.setdefault((category,sprite),name),name)
+        bodies = [result["models"][aliases[("industries",sprite)]] for sprite in range(2174,2180)]
+        frames = [{(x+i,y,z):material for x,y,z,length,material in body["runs"] for i in range(length)} for body in bodies]
+        self.assertEqual(len({tuple(sorted(frame.items())) for frame in frames}),6,"Every distinct horsehead pose needs its own volume")
+        for frame in frames:
+            supported = {point for point in frame if point[2] == 0}
+            self.assertTrue(supported)
+            pending = list(supported)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in frame and point not in supported:
+                        supported.add(point)
+                        pending.append(point)
+            self.assertEqual(supported,set(frame),"Walking beam, head, rod and frame must remain supported in every pose")
+            self.assertNotIn((12,16,5),frame,"Keep the open frame below the motor")
+            self.assertEqual({p:m for p,m in frame.items() if p[0] < 22 and p[2] < 20},
+                             {p:m for p,m in frames[0].items() if p[0] < 22 and p[2] < 20},"Animation must not move the motor or its fixed feet")
+            self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in frame))
+        ground = result["models"]["oilwell_ground"]
+        self.assertEqual(ground["origin"],[0,0,-1])
+        self.assertEqual(ground["occupied"],32*32)
+
     def test_oilrig_joined_construction_keeps_supported_parts_open_water_and_heli_contact(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("oilrig_")}

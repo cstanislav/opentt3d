@@ -48,6 +48,7 @@ def main():
     parser.add_argument("--dock-source", action="store_true", help="Review all six original dock sections with their ground/body layer offsets")
     parser.add_argument("--dock-comparison", action="store_true", help="Compare all four complete voxel docks with their registered original shore/water layers")
     parser.add_argument("--depot-comparison", type=int, choices=range(6), help="Compare native voxel depots with the four original layered directions")
+    parser.add_argument("--airport-comparison", type=int, choices=range(74), help="Compare original airport ground/body layers with the registered native export; --variant selects its animation frame")
     parser.add_argument("--vehicle-source", type=int, nargs="+", choices=range(256), help="Review all eight original directions and both cargo states of selected vehicles")
     parser.add_argument("--tree-source", type=int, nargs="+", choices=range(1576, 2010, 7), help="Review every original palette and all seven lifecycle stages of selected tree sprite families at one scale")
     parser.add_argument("--tree-comparison", type=int, choices=range(1576, 2010, 7), help="Compare one family's seven native-scale voxel views with original sources")
@@ -96,8 +97,8 @@ def main():
         parser.error("Foundation context requires --gallery and --foundation")
     if args.fence_layout is not None and (not args.gallery or args.fence_style != 6):
         parser.error("A railway fence layout requires --gallery --fence-style 6")
-    if args.registration and args.industry_comparison is None and args.depot_comparison is None and args.house_comparison is None and args.vehicle_comparison is None:
-        parser.error("--registration requires an industry, depot, house or vehicle comparison")
+    if args.registration and args.industry_comparison is None and args.depot_comparison is None and args.house_comparison is None and args.vehicle_comparison is None and args.airport_comparison is None:
+        parser.error("--registration requires an industry, depot, house, vehicle or airport comparison")
     if args.helicopter_rotor_state is not None and args.vehicle_comparison is None:
         parser.error("--helicopter-rotor-state requires --vehicle-comparison")
     if args.industry_ground and not (args.industry_source or args.industry_comparison is not None):
@@ -295,6 +296,54 @@ def main():
         report = {"original_tile_bounds":original_bounds,"model_tile_bounds":model_bounds,"original_size":[a[2]-a[0],a[3]-a[1]],"model_size":[b[2]-b[0],b[3]-b[1]]}
         sheet.save(output); output.with_suffix(".json").write_text(json.dumps(report,indent=2)+"\n")
         print(output); print(json.dumps(report))
+        return
+
+    if args.airport_comparison is not None:
+        if args.source_directory is None:
+            parser.error("--airport-comparison requires --source-directory")
+        entries = sorted((entry for entry in json.loads((args.source_directory / "infrastructure.json").read_text())
+                          if entry["category"] == "airport" and entry["style"] == args.airport_comparison and entry.get("frame",0) == args.variant),
+                         key=lambda entry: entry["variant"])
+        if not entries:
+            parser.error("Airport comparison needs the selected original frame's layers")
+        pieces = []
+        for entry in entries:
+            x,y,z = entry.get("origin",[0,0,0])
+            dx,dy = entry["offset"]
+            pieces.append((read_pam(args.source_directory / entry["image"]),2*(y-x)+dx//4,x+y-z+dy//4))
+        left,top = min(x for _,x,y in pieces),min(y for _,x,y in pieces)
+        right,bottom = max(x+image.width for image,x,y in pieces),max(y+image.height for image,x,y in pieces)
+        original = Image.new("RGBA",(right-left,bottom-top))
+        for image,x,y in pieces:
+            original.alpha_composite(image,(x-left,y-top))
+        a = original.getchannel("A").getbbox()
+        name = args.directory / f"model-voxel-airport-{args.airport_comparison}-{args.variant}-native"
+        model = read_pam(name.with_suffix(".pam")) if name.with_suffix(".pam").exists() else Image.open(name.with_suffix(".png")).convert("RGBA")
+        origin = json.loads(name.with_suffix(".json").read_text())["tile_origin"]
+        b = model.getchannel("A").getbbox()
+        if not a or not b:
+            parser.error("Airport comparison needs visible source layers and native geometry")
+        source_bounds = (left+a[0],top+a[1],left+a[2],top+a[3])
+        model_bounds = (b[0]-origin[0],b[1]-origin[1],b[2]-origin[0],b[3]-origin[1])
+        common = tuple(min(source_bounds[i],model_bounds[i]) if i < 2 else max(source_bounds[i],model_bounds[i]) for i in range(4))
+        panel_width = max(400,20+6*(common[2]-common[0]))
+        panel_height = max(300,50+6*(common[3]-common[1]))
+        sheet = Image.new("RGB",(panel_width*2,panel_height),(40,40,48))
+        draw = ImageDraw.Draw(sheet)
+        for column,(label,image,bounds) in enumerate((("source",original.crop(a),source_bounds),("voxel",model.crop(b),model_bounds))):
+            panel = Image.new("RGBA",(common[2]-common[0],common[3]-common[1]),(40,40,48,255))
+            panel.alpha_composite(image,(bounds[0]-common[0],bounds[1]-common[1]))
+            panel = panel.resize((panel.width*6,panel.height*6),Image.Resampling.NEAREST)
+            draw.text((column*panel_width+6,6),f"{label} airport {args.airport_comparison}, frame {args.variant}\n6x native pixels; tile-aligned; bounds {bounds}",fill="white")
+            sheet.paste(panel,(column*panel_width+(panel_width-panel.width)//2,panel_height-panel.height-5))
+        record = {"graphics":args.airport_comparison,"frame":args.variant,"source_sprites":[entry["sprite"] for entry in entries],
+                  "original_tile_bounds":source_bounds,"model_tile_bounds":model_bounds,
+                  "original_size":[a[2]-a[0],a[3]-a[1]],"model_size":[b[2]-b[0],b[3]-b[1]]}
+        output = args.directory / f"airport-{args.airport_comparison}-{args.variant}-source-registration.png"
+        sheet.save(output)
+        output.with_suffix(".json").write_text(json.dumps(record,indent=2)+"\n")
+        print(output)
+        print(json.dumps(record))
         return
 
     if args.house_comparison is not None:

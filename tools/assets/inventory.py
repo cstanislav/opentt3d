@@ -100,7 +100,7 @@ def inventory():
         industry["voxel_states"] = voxel_states("industries", industry["graphics"])
         industry["voxel_ground_states"] = voxel_states("industry_ground", industry["graphics"])
     airport_source = (ROOT / "src/table/airporttile_ids.h").read_text().split("enum AirportTiles", 1)[1].split("};", 1)[0]
-    airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i), "reviewed": False}
+    airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i), "voxel_ground_states": voxel_states("airport_ground", i), "reviewed": False}
                 for i, name in enumerate(re.findall(r"\b(APT_\w+)\s*,", airport_source))]
     airport_specs = (ROOT / "src/table/airporttiles.h").read_text().split("_origin_airporttile_specs[] = {", 1)[1].split("};", 1)[0]
     frame_counts = [1 if kind == "AT_NOANIM" else int(last)+1 for kind,last in
@@ -166,6 +166,7 @@ def main():
     print(f"Tree sprite families: {len(data['trees'])}; authored tree profiles: {sum(t['authored_profile'] for t in data['trees'])}; visually reviewed: {sum(t['reviewed'] for t in data['trees'])}")
     print(f"Industry tile definitions: {len(data['industry_tiles'])}; authored: {sum(i['authored_profile'] for i in data['industry_tiles'])}; voxel bodies: {sum(bool(i['voxel_states']) for i in data['industry_tiles'])}; voxel grounds: {sum(bool(i['voxel_ground_states']) for i in data['industry_tiles'])}")
     print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
+    print(f"Independently bound voxel airport grounds: {sum(bool(a['voxel_ground_states']) for a in data['airport_tiles'])}")
     print(f"Depot families: {len(data['depots'])}; voxel directions: {sum(len(d['voxel_directions']) for d in data['depots'])}; full four-direction families: {sum(len(d['voxel_directions']) == 4 for d in data['depots'])}")
     print(f"Ship-depot axes: {sum(d['voxel_parts'] == [0,1] for d in data['ship_depots'])} / 2; both original tile parts required; water remains independent")
     print(f"Dock sections: {sum(d['voxel_states'] == [0,1] for d in data['docks'])} / 6; ordinary/Toyland states required; shore/water remains independent")
@@ -181,7 +182,7 @@ def main():
                 print(json.dumps(family))
     print(f"Procedural voxel families: {len(data['procedural_voxels']['fences'])} fences, {len(data['procedural_voxels']['running_rails'])} running-rail systems, {len(data['procedural_voxels']['foundations'])} foundation forms; all work-in-progress")
     if args.footprints:
-        for category in ("houses", "house_ground", "industries", "industry_ground", "airport_tiles", "depots", "depot_floors", "ship_depots", "docks"):
+        for category in ("houses", "house_ground", "industries", "industry_ground", "airport_tiles", "airport_ground", "depots", "depot_floors", "ship_depots", "docks"):
             names = sorted({name for states in data["voxel_bindings"].get(category, {}).values() for name in states.values()})
             for name in names:
                 model = data["voxel_models"][name]

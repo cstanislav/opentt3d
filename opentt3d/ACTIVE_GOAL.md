@@ -7,6 +7,15 @@
   America/Chicago (CDT)**.
 - Updated requested minimum: **1 PM CST September 26, 2026**. Conservative endpoint:
   **2026-09-26 19:00:00 UTC**, covering fixed CST and Chicago daylight readings.
+- Progress clock audit **2026-09-26 17:51:20 UTC**: the19:00UTC minimum remains active.
+  The1,247-volume catalogue has54 industry body/58 ground and21 airport body/3 ground
+  definitions. All88 actual construction runs pass288 ground,242 body and46 original
+  empty-state selections; both farm and food climates are included. Corrected low
+  airport source/street renders pass, and all27 climate-source layer pairs match.
+  All eight electric-engine actual-corner/support/collector runs pass. The remaining
+  Toyland support, pump animation and helicopter254 observations continue quietly.
+  Release`.9`LinuxGL/macOS/Windows CI passes; LinuxVulkan stays below4.15GB but reaches
+  the7200-second matrix limit. Catalogue-wide fidelity and smooth60fps remain unmet.
 - Extension recorded at **2026-09-26 03:09:04 UTC**. Every prior stopping audit is
   historical and does not satisfy this new window. Continue breadth-first coverage,
   immediate correctness repairs and production review through19:00UTC.

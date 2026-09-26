@@ -3,6 +3,20 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Linux residency follow-up (September26)
+
+Release`.9`/`d27740297` completes LinuxGL, macOS and all three Windows jobs. Its
+LinuxVulkan renderer matrix reaches the unchanged7200-second bound before the
+expanded vehicle checks finish. The retained artifact reports4,148,486,144bytes
+peak over28,702 samples and no6GiB breach. It completes28,320 authored views,
+all pitched train bindings and the243,629-pixel live-tunnel clearance check, but
+remains an incomplete/failed full run. Evidence is in
+`build-macos/pass1-release9-linux-vulkan-artifact/`; previous memory failures remain.
+
+The new88-run industry construction sweep peaks2,704,411,720bytes; eight electric
+corner-route/contact runs peak2,816,019,552bytes. Those fixture-scoped functional
+results do not establish smooth dense-Cab performance or all-day interactive limits.
+
 ## Scene-pinned residency: matched expanded controls pass (September26)
 
 `pass1-cpu-residency-control-validation.json` now records both complete expanded

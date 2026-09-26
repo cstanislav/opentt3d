@@ -6,6 +6,8 @@
 
 namespace Renderer3D {
 bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state);
+bool HasVoxelAirport(unsigned graphics, unsigned frame);
+bool DrawVoxelAirportGround(Scene &scene, unsigned graphics, unsigned frame, Vec3 origin, PaletteID palette);
 bool HasVoxelTree(SpriteID image);
 std::optional<unsigned> VoxelHouseState(unsigned house, unsigned stage, unsigned variant);
 bool HasVoxelHouseGround(unsigned house);

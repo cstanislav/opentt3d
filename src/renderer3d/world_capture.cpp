@@ -548,33 +548,21 @@ void BeginVoxelDepotTraversalCheck(unsigned vehicle)
 	Debug(driver,1,"OpenTT3D: observing visible/depot/visible traversal for vehicle {} without changing its orders or state",vehicle);
 }
 
-static bool SupportedVoxelAirport(unsigned graphics)
-{
-	static uint64_t generation = UINT64_MAX;
-	static std::array<int,74> supported{};
-	if (graphics >= supported.size()) return false;
-	if (generation != TextureGeneration()) { generation = TextureGeneration(); supported.fill(0); }
-	int &value = supported[graphics];
-	if (value == 0) {
-		bool base = true;
-		/* An Action-A replacement of one animation frame must keep the entire
-		 * sequence on its original path, rather than alternating visual styles. */
-		for (const auto *frame : GetAirportTileLayouts(graphics)) {
-			base &= IsBaseGraphicsSprite(frame->ground.sprite & SPRITE_MASK);
-			for (const auto &component : frame->GetSequence()) base &= IsBaseGraphicsSprite(component.image.sprite & SPRITE_MASK);
-		}
-		value = base ? 1 : -1;
-	}
-	return value > 0;
-}
-
 bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTileSprites &source, PaletteID palette)
 {
 	if (!capture || !IsAirport(tile.tile) || GetAirportGfx(tile.tile) >= 74) return false;
 	unsigned frame = GetAirportTileLayouts(graphics).size() == 1 ? 0 : GetAnimationFrame(tile.tile);
-	if (!HasVoxelAsset("airport_tiles",graphics,frame) || !SupportedVoxelAirport(graphics)) return false;
+	if (!HasVoxelAirport(graphics,frame)) return false;
 	SpriteID ground = source.ground.sprite;
-	CaptureGround(ground,GroundSpritePaletteTransform(ground,source.ground.pal,palette),tile.x,tile.y,tile.z,tile,nullptr,0,0);
+	{
+		ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
+		if (DrawVoxelAirportGround(capture->scene,graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),static_cast<float>(tile.z)},GroundSpritePaletteTransform(ground,source.ground.pal,palette))) {
+			static std::set<unsigned> reported;
+			if (!capture->diagnostic && reported.insert(graphics).second) Debug(driver,1,"OpenTT3D: live independent voxel airport ground {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
+		} else {
+			CaptureGround(ground,GroundSpritePaletteTransform(ground,source.ground.pal,palette),tile.x,tile.y,tile.z,tile,nullptr,0,0);
+		}
+	}
 	if (IsInvisibilitySet(TO_BUILDINGS)) return true;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
