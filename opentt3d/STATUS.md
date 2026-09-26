@@ -26,6 +26,10 @@ This file records implemented and verified work, not promises of completeness.
   Matched90-frame dense-Cab controls improve11.40/12.73 to38.11/40.33fpsGL/Vulkan,
   reducing submitted vertices664,706,778→197,335,923. The optimization remains
   disabled by default; broader tunnel/climate/world review and60fps remain open.
+- [x] Wider tunnel visibility controls pass all ten four-railtype/Toyland backend
+  cases plus both18,000-frame moving-Cab runs:240 exact comparison views and
+  55,296,000 RGBA/picking pixels; peak2,962,001,184bytes. Route timing still has
+  missed deadlines/stalls, so production60fps remains unapproved.
 - [x] Hidden native macOS framebuffer review with `--background`: GL, Vulkan and
   LaunchServices bundle report no activation/key/visible window and capture2560x1600.
   Same-backend56-view comparison preserves22,937,600 RGBA pixels; foreground interaction

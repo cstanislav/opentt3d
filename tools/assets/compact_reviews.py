@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Losslessly compact generated model-gallery PAMs; run in the Pillow art container.
 
-Only build-*/<run>/renderer3d-reference/model-*.pam files are eligible. Original
+Only successful runs listed in explicit validation manifests are eligible, using
+build-*/<run>/renderer3d-reference/model-*.pam files. Original
 sprite references, screenshots, saves, model sources and logs are left in place.
 PNG metadata retains the complete PAM header, and every RGBA byte is verified
 before the uncompressed generated image is removed.
@@ -14,7 +15,6 @@ import io
 import json
 import os
 from pathlib import Path
-from PIL import Image, PngImagePlugin
 
 
 def load_pam(path):
@@ -44,6 +44,8 @@ def load_pam(path):
 
 
 def verify_png(source, header, size, pixels):
+    from PIL import Image
+
     with Image.open(source) as image:
         if image.mode != "RGBA" or image.size != size or image.tobytes() != pixels:
             raise ValueError("PNG does not preserve every original RGBA byte")
@@ -51,19 +53,47 @@ def verify_png(source, header, size, pixels):
             raise ValueError("PNG does not preserve the original PAM header")
 
 
+def verified_runs(build, manifests):
+    """Run paths are absolute or relative to the build's parent; failures win."""
+    outcomes = {}
+    for manifest in manifests:
+        rows = json.loads(manifest.read_text())
+        if not isinstance(rows, list):
+            raise ValueError(f"Expected a list of completed run records: {manifest}")
+        for row in rows:
+            if not isinstance(row, dict) or not isinstance(row.get("output"), str) or type(row.get("exit_code")) is not int:
+                raise ValueError(f"Missing explicit output/exit_code in {manifest}")
+            run = Path(row["output"])
+            if not run.is_absolute():
+                run = build.parent / run
+            linked = run.is_symlink()
+            run = run.resolve()
+            if run.parent != build:
+                continue
+            outcomes[run] = outcomes.get(run, True) and row["exit_code"] == 0 and not linked
+    return sorted(run for run, success in outcomes.items() if success)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("build_dirs", nargs="+", type=Path)
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--validation-manifest", type=Path, action="append", default=[],
+                        help="Completed run records with output and exit_code; repeat as needed. Required to apply.")
     args = parser.parse_args()
+    if args.apply and not args.validation_manifest:
+        parser.error("--apply requires explicit successful-run --validation-manifest evidence")
+    if args.apply:
+        from PIL import Image, PngImagePlugin
     for requested in args.build_dirs:
         build = requested.resolve()
         if not build.name.startswith("build-") or not (build / "CMakeCache.txt").is_file():
             parser.error(f"Not a configured build directory: {build}")
-        paths = sorted(path for path in build.glob("*/renderer3d-reference/model-*.pam")
-                       if not path.is_symlink() and path.resolve().is_relative_to(build))
+        runs = verified_runs(build, args.validation_manifest)
+        paths = sorted(path for run in runs for path in (run / "renderer3d-reference").glob("model-*.pam")
+                       if not path.is_symlink() and path.resolve().parent == run / "renderer3d-reference")
         if not args.apply:
-            print(json.dumps({"build": str(build), "eligible_images": len(paths), "raw_bytes": sum(path.stat().st_size for path in paths), "apply": False}))
+            print(json.dumps({"build": str(build), "verified_runs": len(runs), "eligible_images": len(paths), "raw_bytes": sum(path.stat().st_size for path in paths), "apply": False}))
             continue
         records, errors = [], []
         raw_bytes = png_bytes = 0
@@ -98,7 +128,8 @@ def main():
             except (OSError, ValueError, KeyError, SyntaxError) as error:
                 errors.append({"file": str(path.relative_to(build)), "error": str(error)})
         manifest = build / ("review-compaction-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ") + ".json")
-        manifest.write_text(json.dumps({"images": records, "preserved_errors": errors}, indent=2) + "\n")
+        manifest.write_text(json.dumps({"validation_manifests": [str(path.resolve()) for path in args.validation_manifest],
+                                        "images": records, "preserved_errors": errors}, indent=2) + "\n")
         print(json.dumps({"build": str(build), "converted": len(records), "raw_bytes": raw_bytes, "png_bytes": png_bytes,
                           "saved_bytes": raw_bytes - png_bytes, "preserved_errors": len(errors), "manifest": str(manifest)}))
 

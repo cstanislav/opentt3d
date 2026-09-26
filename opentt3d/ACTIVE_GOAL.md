@@ -7,6 +7,18 @@
   America/Chicago (CDT)**.
 - Updated requested minimum: **1 PM CST September 26, 2026**. Conservative endpoint:
   **2026-09-26 19:00:00 UTC**, covering fixed CST and Chicago daylight readings.
+- **Stopping clock audit:2026-09-26 19:00:01 UTC /1:00:01 PM fixed CST September26.**
+  The renewed minimum has now elapsed. Stopping reason: the requested clock endpoint
+  has been reached, not completion of the objective. Releases`.10`/`.11`/`.12` publish
+  the1,247-volume breadth checkpoint and source-climate/renderer corrections. The
+  final12 tunnel-route/Cab runs pass240 exact views/55,296,000 RGBA/picking pixels;
+  both moving-Cab runs complete18,000 frames. No native review process remains active.
+  The compactor's explicit-success selection passes two regressions and end-to-end
+  preservation checks; generated-image compaction retains original/failed evidence.
+  Disk headroom has recovered to1.9GiB, but sustained memory/disk review remains open.
+  Catalogue coverage, independent Arctic farm/forest art, climate grounds, waterworks
+  lattice fidelity, swept-rotor clearance, complete currentLinuxCI, cross-backend
+  pixels and smooth60fps remain unfinished. **Zero final visual approvals.**
 - Progress clock audit **2026-09-26 18:41:23 UTC**: the minimum remains active.
   Release`.11` publishes the farm climate repair, completeCI sharding and opt-in
   tunnel-tree visibility controls. The broader323-pair industry audit additionally
@@ -93,9 +105,12 @@
 - Explicit added requirement: **all models must preserve their original footprint
   and align with the ground texture**. Source sprite bounds alone are insufficient;
   review world-space placement, full-tile coverage, foundations and neighbouring joins.
-- Current coverage remains partial: 1,169 JSON volumes, houses0…109 and eighty-eight
-  independent house grounds, eighteen airport
-  definitions, industry bodies0…3/7…23 and grounds0…23, six power-station spark frames,
+- Current coverage remains partial: **1,247 JSON volumes**, houses0…109 with109
+  independent bodies/eighty-eight grounds,21/74 airport definitions and three
+  independent airport grounds,54/175 industry body definitions and58 grounds,
+  six power-station spark frames. Forest16/17 and farm33…38 remain temperate-only;
+  non-temperate soil3924/oil-well2173 retain supplied climate artwork pending their
+  independent volumes. Coverage also includes
   depot families0…4 in four directions with source/weather-aware floors,
   both two-tile ship-depot orientations and all six ordinary/Toyland dock sections,
   separate ordinary/Toyland source-resolved Classic navigation buoys,

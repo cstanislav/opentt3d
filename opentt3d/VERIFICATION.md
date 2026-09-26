@@ -1,5 +1,12 @@
 # Implementation verification
 
+**Renewed-window stopping audit:2026-09-26 19:00:01 UTC**, after the requested
+19:00UTC/1PM fixedCST minimum. The clock endpoint is the stopping reason. Full
+objective completion remains unproven; final catalogue, climate, clearance,
+cross-backend, Linux and production-performance gaps are retained below. The final
+native reviews have exited; release`.12`is published and all work is integrated
+into`main`. No model has final visual approval.
+
 **Active minimum extended at2026-09-26 03:09:04UTC to2026-09-26 19:00:00UTC
 (1PM fixedCST September26).** Earlier endpoint audits below are historical and do
 not satisfy this new window. Catalogue-wide breadth-first coverage and all later
@@ -39,7 +46,21 @@ Work continued on the user's reported memory incident; full-objective approval r
   but fails the requested paused `--first-person tunnel` lookup: no fixture train is
   inside a tunnel at that checkpoint. Its evidence remains retained. The retry uses
   the actual tunnel diagnostic views without requiring an already-underground train;
-  all railtype/Toyland and running Cab checks are continuing.
+  all ten railtype/Toyland/backend cases and both18,000-frame moving-Cab runs now
+  pass. The12 runs compare240 exact tunnel views/55,296,000 RGBA/picking pixels;
+  maximum sampled memory is2,962,001,184bytes. Moving-Cab rates are57.588/59.898fps,
+  with892/1,739 intervals over20ms and a1,067.529msGL maximum work sample. This
+  retains opt-in status and does not establish smooth60fps or an off/on speedup.
+- The review-image compactor now requires explicit completed-run manifests before
+  applying conversion. Failed results override conflicting success entries;
+  incomplete records and linked/outside review paths cannot select evidence. Two
+  focused regression tests and a real temporary-directory conversion verify exact
+  PNG/header reconstruction and unchanged failed/original imagery. Evidence:
+  `pass1-compaction-selection-validation-final.json`. The earlier successful246-image
+  compaction recovered1,120,330,200bytes. Disk/swap pressure remains substantial.
+- Release`.10`CI`36260774346`has passed macOS and Windows x86/x64/arm64; its Linux
+  jobs are still active at18:55UTC. Corrective`.11`/`.12`sharded runs are queued;
+  complete current LinuxVulkan success remains unproven.
 
 - **Farm climate correction:** the source audit finds40/44 Arctic farm layers
   differ from temperate across78,129 examined pixels, including structurally

@@ -75,9 +75,12 @@ including up/down, without ending follow. The first-person geometry, terrain,
 picking and labels have no fixed draw-distance limit. Scene collection is bounded
 by the real map and view frustum; the infinite-water exterior reaches the horizon.
 
-The current artwork is a development subset. There are initial geometry profiles
-for 110 house IDs, 62 tree sprite families and all 256 vanilla vehicle definitions;
-their individual visual/state review is still incomplete. Remaining industry and
+The current artwork is a development subset: **1,247 voxel volumes**, covering
+110 house IDs,62 tree sprite families and all256 vanilla vehicle definitions,
+plus54/175 industry body definitions and21/74 airport definitions. Climate/state
+coverage remains incomplete: Arctic farms/forests and several non-temperate industry
+grounds retain supplied source artwork pending independent volumes. No model has
+final visual approval. Remaining industry and
 infrastructure objects use reference sprite planes counted as missing geometry.
 See [status](STATUS.md) and [verified results](VERIFICATION.md).
 

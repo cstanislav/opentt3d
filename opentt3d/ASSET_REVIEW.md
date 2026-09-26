@@ -141,7 +141,12 @@ queue. No voxel model has final visual approval.
   `verify-road-stops` support later passes. Kind 0 is bus, 1 is truck; layouts 0…3
   are bay directions and 4/5 are drive-through X/Y.
 - Generated `model-*.pam` review captures may be compacted with
-  `tools/assets/compact_reviews.py` in the art container. Each PNG retains the exact
+  `tools/assets/compact_reviews.py` in the art container with explicit completed-run
+  evidence, for example `build-macos --validation-manifest
+  build-macos/pass1-industry-climate-scoped-validation.json --apply`. Only runs with
+  integer `exit_code: 0` qualify; failures override conflicting success records,
+  incomplete records are rejected, and linked/outside review paths are excluded.
+  Without manifests the preview selects no images. Each PNG retains the exact
   pixels and PAM header; source references remain PAM. `contact_sheet.py --gallery`
   supports both formats and prefers a newly exported PAM over an older PNG.
 - `clear_surface_geometry.hpp` adds natural turf blades/pebbles, rough-ground

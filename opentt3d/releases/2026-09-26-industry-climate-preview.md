@@ -29,6 +29,14 @@ painted climate grounds while confirming which existing body aliases are valid.
   and no temperate voxel alias. Source/context sheets were inspected.
 - Maximum sampled memory across these focused matrices is **2,651,393,264bytes**.
 
+### Follow-up on the same renderer/artwork
+
+All ten tunnel railtype/Toyland backend cases and both18,000-frame moving-Cab runs
+pass. Their240 tunnel comparisons preserve55,296,000 exact RGBA/picking pixels;
+peak sampled memory is2,962,001,184bytes. Moving-Cab rates average57.588/59.898fps,
+but missed deadlines and a1.07-secondGL work stall remain; smooth60fps is not met.
+The tunnel-tree filter stays opt-in. Current Linux/shardedCI remains unfinished.
+
 This remains a **1,247-volume development source prerelease with zero final visual
 approvals**. Catalogue completion, fine source fidelity, independent Arctic art,
 cross-backend differences, production memory and smooth60fps remain unfinished.

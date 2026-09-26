@@ -31,6 +31,16 @@ Evidence: `build-macos/pass1-tunnel-scenery-validation.json`,
 `pass1-tunnel-scenery-exact-performance.json`, `pass1-tunnel-scenery-exact-validation.json`
 and their frozen binary/artwork/source hashes. Earlier baselines/failures remain.
 
+The follow-up route matrix passes all ten conventional/electric/monorail/maglev/
+Toyland backend cases and both18,000-frame moving-Cab checks. Across the12 runs,
+240 tunnel comparison views preserve55,296,000 exact RGBA/picking pixels; peak
+sampled memory is2,962,001,184bytes. Moving-Cab rates are57.588fpsGL/59.898fpsVulkan,
+with p95 work19.965/9.323ms and892/1,739 frame intervals over20ms. GL's maximum work
+is1,067.529ms, so these functional passes do not establish smooth production60fps.
+These route timings have no matched off-control and do not establish a speedup.
+Evidence: `pass1-tunnel-scenery-route2-{validation,reconciliation}.json`. The initial
+paused fixture's failed underground-Cab lookup remains retained separately.
+
 ## Linux residency follow-up (September26)
 
 Release`.9`/`d27740297` completes LinuxGL, macOS and all three Windows jobs. Its
