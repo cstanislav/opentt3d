@@ -1,5 +1,29 @@
 # Active extended development goal
 
+## Plastic-fountain desktop release verified — September27,13:46:37UTC
+
+Release`.15`atab1a7788727ca846b42383d5132e72cca026a05d passes all eight hosted jobs.
+Independent public checks reconcile19 attachments,18 checksums,2,066 exact-commit
+source files and all six embedded package commits. Every catalogue contains1,617
+matching models apart from Windows's trailingCRLF. Three downloaded Mac startup/save
+controls and architecture/signature/dependency/minimum15.0 audits pass. Seven hosted
+graphical controls pass72 clipping views; Windows x64/x86 native load/save passes.
+Reviewed ARM/Intel software-OpenGL captures contain zero black world pixels and nine
+differences from matched Vulkan. Linux's900-frame support/collector journey passes
+at1.714fps under llvmpipe and2,253,066,240 peak sampled bytes. Public instructions
+now link to`.15`. Evidence:`playable-release15-{download-audit,ci-reconciliation,
+hosted-visual-comparison}.json`. Sustained performance acceptance remains open.
+
+Fizzy156…159's seven provisional volumes are in the working tree for verification. The source
+audit passes24 palettes,26 aliases, eight genuine absences and96 climate comparisons;
+compact polylines/repeats/masks preserve all seven reviewed prototype hashes. The
+prototype's completed layout has no overlapping cells; construction1/2 retains371
+overlap cells at the source's distinct158 owner and needs later cut/depth refinement.
+Live five-material palette and legacy steel regressions pass; missing bindings
+correctly reject. Integrated frozen controls and full source/build checks are next.
+Final visual approvals remain0. Continue the remaining catalogue-wide breadth and
+fidelity/performance work; toy-factory main structures and ordered children remain.
+
 ## Plastic-fountain paired animation verified — September27,12:45:44UTC
 
 Sixteen provisional volumes bring the catalogue to1,617 and primary industry coverage

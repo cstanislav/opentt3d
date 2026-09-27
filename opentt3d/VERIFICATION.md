@@ -1,5 +1,19 @@
 # Implementation verification
 
+## Plastic-fountain desktop package audit
+
+At13:46:37UTC, release`.15`atab1a7788727ca846b42383d5132e72cca026a05d passes all
+eight hosted jobs. Independent public checks reconcile19 attachments,18 checksums,
+2,066 exact-commit source files and six matching embedded commits/catalogues of1,617
+models. Three downloaded Mac startup/save controls and architecture/signature/
+dependency/minimum15.0 audits pass. Seven hosted graphical controls pass72 clipping
+views; Windows x64/x86 native load/save passes. Reviewed ARM/Intel software-OpenGL
+images contain zero black world pixels and nine differences from matched Vulkan.
+Linux's900-frame electric support/collector journey passes at1.714fps under llvmpipe
+and2,253,066,240 peak sampled bytes. Evidence:
+`build-macos/playable-release15-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Sustained arbitrary-world performance acceptance remains open.
+
 ## Plastic-fountain paired grounds and airborne animation
 
 At12:45:44UTC, all24 frozen background controls pass. Sixteen models reach1,617
