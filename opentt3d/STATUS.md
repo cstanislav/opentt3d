@@ -9,12 +9,21 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite201/201, including original factory child motion, source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,636-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current native suite202/202, including original factory/bubble child motion and construction absence, source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
+- [x] Current1,641-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Bubble160…163 adds five provisional volumes and reuses two independently checked
+  grounds: three original body cuts, fixed cylinder4746 and moving plunger4747. Coverage
+  reaches164/175 primary definitions,123 body owners and164 grounds. All26 frozen
+  controls pass50 construction-layer selections, full/empty cargo, climates, clipping,
+  bundles and both40-frame observations on one unchanged tile/industry. Two9,000-frame
+  factory regressions retain all50 frames. All27 palettes,33 aliases, seven absent
+  bodies,96 climate comparisons and1,636 preceding hashes pass. No static or moving
+  child intersections remain. All220 Vulkan prototype views and76 native backend
+  views agree; exact paint/shape and75 wider differing views remain provisional.
 - [x] Factory142…147 adds twelve provisional volumes: seven body owners, four ordered
   children and independent4675 ground. Coverage reaches160/175 primary definitions,
   120 body owners and160 grounds. All28 frozen controls pass68 actual construction

@@ -1,5 +1,48 @@
 # Active extended development goal
 
+## Bubble-generator artwork and original travel verified — September27,16:47:06UTC
+
+Five provisional volumes reach1,641 and164/175 primary industry definitions:123
+body owners and164 grounds. Three source-owned bodies retain the four open blue
+pipes, raised rings, feet and copper funnel. Fixed cylinder4746 and yellow plunger4747
+follow the original source names and registration. Stage0 has no children; stages1/2
+have only4746; completed162 draws4747 then4746 through40 original frames and19 heights.
+Motion changes only-Z; construction ignores the animation-frame byte. Shared4675/4676
+grounds are independently checked. Body160…162 and both children retain linked source
+fallback, independent culling and original tile identities. No simulation/RNG changes.
+
+All26 frozen background controls pass50 actual construction layers, full17/17 and
+empty0/17 bubble trucks, four climates, clipping, bundles, both1,800-frame40-frame
+observations and both9,000-frame factory50-frame regressions. Bubble observation stays
+on tile52,35, industry0. Missing plunger correctly rejects, while stages1/3 retain
+eight independent ground selections with linked body/child fallback. A120-frame
+idle run sees only frame0 and correctly fails. Native202, asset136, harness12 and
+the137-file presentation boundary pass. All27 palettes,33 aliases, seven empty bodies,
+96 climate comparisons and1,636 preceding hashes agree. Seven compact components
+and explicit ownership masks preserve the five prototype volumes and two shared floors.
+
+Static body/child joins and all40 moving poses have zero intersecting cells. All220
+integrated Vulkan views match the prototype; all76 native backend views agree.
+75/144 wider views retain3,771 differing pixels. Fine ring tilt/bracket curves, pipe
+highlights/feet, copper paint, collar metal, glints and plunger detail remain open.
+Final visual approvals:0. Services average60.004/60.003fps but retain221/258 intervals
+over20ms; factory regressions retain1,034/590. Peak matrix memory:3,827,617,776 sampled
+bytes. Sustained smooth60fps and long-duration/reload/multiple-viewport acceptance remain
+open. Initial/final successful captures compact1,294/448 images losslessly, saving
+1,576,407,589/651,992,354bytes while preserving original images, failures and metadata.
+Evidence:`breadth-bubble-final-{audit,reconciliation,source-review,negative-controls}.json`.
+
+Verified downloads remain factory`.17`. Toffee source study records24 visible layers,
+36 aliases,36 identical body/36 differing ground climate comparisons,73 procedural
+states and70 completed frames. Its original4766 child exactly redraws parent4764;
+share physical ownership with an explicit retained-source alias check. Its two children
+are present at every construction stage. Ordinary35→27 service loads17/17, delivers,
+empties and returns after898 observed ticks; isolated cutter proportions/metal paint
+remain pending. Sugar source study records44 visible layers,20 absent bodies,192
+climate comparisons,99 procedural states and15 original child images. Its ordinary
+36→27 route loads17/17, delivers, empties and returns after876 observed ticks. Continue
+11 primary definitions, distinct climates, children, infrastructure/effects and later passes.
+
 ## Toy-factory desktop release verified — September27,16:30:52UTC
 
 Release`.17`atf1d2d501bf67c7fb22b639eef43537f86a6553ed passes all eight hosted jobs.

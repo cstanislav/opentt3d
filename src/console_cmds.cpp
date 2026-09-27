@@ -3142,6 +3142,13 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		});
 		return true;
 	}
+	if (argv.size() == 2 && argv[1] == "verify-bubble-generator") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::BeginVoxelBubbleGeneratorCheck(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
 	if (argv.size() >= 3 && argv.size() <= 5 && argv[1] == "house-stage-locate") {
 		auto stage = ParseType<unsigned>(argv[2]);
 		if (!stage || *stage > 3) return false;

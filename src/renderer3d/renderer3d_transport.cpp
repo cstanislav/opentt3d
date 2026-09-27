@@ -390,6 +390,35 @@ TEST_CASE("Toy-factory source children preserve physical press and conveyor moti
 	CHECK_THROWS_AS(VoxelToyFactoryChildren(50),std::invalid_argument);
 }
 
+TEST_CASE("Bubble-generator children preserve construction absence and axial plunger travel", "[renderer3d][voxel]")
+{
+	std::set<int> heights;
+	for (unsigned stage = 0; stage < 4; ++stage) for (unsigned frame = 0; frame < 40; ++frame) {
+		auto children = VoxelBubbleGeneratorChildren(stage,frame);
+		CHECK(children[0].image == (stage == 3 ? 4747 : 0));
+		CHECK(children[1].image == (stage != 0 ? 4746 : 0));
+		CHECK(Dot(children[1].offset,children[1].offset) == 0);
+		if (stage != 0) { CHECK(children[1].x == 3); CHECK(children[1].y == 67); }
+		if (stage != 3) continue;
+		const auto &plunger = children[0];
+		CHECK(plunger.x == 5); CHECK(plunger.y >= 68); CHECK(plunger.y <= 86);
+		CHECK(plunger.offset.x == 0); CHECK(plunger.offset.y == 0);
+		CHECK(-plunger.offset.z == plunger.y-68);
+		heights.insert(plunger.y);
+	}
+	CHECK(heights.size() == 19);
+	CHECK(VoxelBubbleGeneratorChildren(3,0)[0].offset.z == 0);
+	CHECK(VoxelBubbleGeneratorChildren(3,39)[0].offset.z == 0);
+	for (unsigned frame = 8; frame <= 21; ++frame) CHECK(VoxelBubbleGeneratorChildren(3,frame)[0].offset.z == -18);
+	for (unsigned stage = 0; stage < 3; ++stage) {
+		auto children = VoxelBubbleGeneratorChildren(stage,255);
+		CHECK(children[0].image == 0);
+		CHECK(children[1].image == (stage == 0 ? 0 : 4746));
+	}
+	CHECK_THROWS_AS(VoxelBubbleGeneratorChildren(4,0),std::invalid_argument);
+	CHECK_THROWS_AS(VoxelBubbleGeneratorChildren(3,40),std::invalid_argument);
+}
+
 TEST_CASE("Tunnel excavation removes intersecting terrain while retaining the shoulders and charts", "[renderer3d]")
 {
 	Scene terrain;

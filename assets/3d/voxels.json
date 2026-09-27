@@ -4,6 +4,29 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "bubble_metal":[3,7,8,12,2,14],
+    "bubble_metal_dark":1,
+    "bubble_metal_light":15,
+    "bubble_metal_inner":[1,2,3,5,1,4],
+    "bubble_glass":148,
+    "bubble_glass_light":153,
+    "bubble_glass_dark":145,
+    "bubble_neck":[74,75,76,78,74,79],
+    "bubble_yellow":[64,65,66,67,64,68],
+    "bubble_yellow_light":68,
+    "bubble_yellow_dark":65,
+    "bubble_pipe":[198,201,202,204,198,205],
+    "bubble_pipe_inner":[198,199,200,201,198,202],
+    "bubble_pipe_edge":205,
+    "bubble_pipe_cut160":[198,202,202,204,198,205],
+    "bubble_pipe_inner160":198,
+    "bubble_metal162":[3,7,8,12,3,14],
+    "bubble_bottom_disk":9,
+    "bubble_bottom_rim":147,
+    "bubble_copper":[70,74,73,76,70,78],
+    "bubble_copper_inner":[70,71,72,74,70,73],
+    "bubble_copper_rim":79,
+    "bubble_cut":255,
     "toy_factory_stamp_metal":[5,8,9,11,2,13],
     "toy_factory_stamp_light":12,
     "toy_factory_stamp_blue":[199,200,201,203,199,204],
@@ -1635,6 +1658,64 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "bubble_pipe_0":[
+      ["lathe","bubble_pipe",[69,99],[[0,11.0,8.6],[224,11.0,8.6],[228,13.4,8.6],[232,13.4,9.6]]],
+      ["lathe_paint_inner","bubble_pipe_inner",[69,99],[[0,11.0,8.6],[224,11.0,8.6],[228,13.4,8.6],[232,13.4,9.6]]],
+      ["lathe","bubble_metal",[82,99],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[62,111],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[62,87],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[69,99],[[272,13.4,10.4],[275,15.2,10.4],[278,15.2,11.4]]],
+      ["repeat",[1,0,0],3,[["repeat",[0,1,0],3,[["polyline","bubble_metal",[[69,111,234],[65,123,244],[65,123,264],[69,111,274]]]]]]]
+    ],
+    "bubble_pipe_1":[
+      ["lathe","bubble_pipe",[131,105],[[0,11.0,8.6],[252,11.0,8.6],[256,13.4,8.6],[260,13.4,9.6]]],
+      ["lathe_paint_inner","bubble_pipe_inner",[131,105],[[0,11.0,8.6],[252,11.0,8.6],[256,13.4,8.6],[260,13.4,9.6]]],
+      ["lathe","bubble_metal",[144,105],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[124,117],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[124,93],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[131,105],[[300,13.4,10.4],[303,15.2,10.4],[306,15.2,11.4]]],
+      ["repeat",[1,0,0],3,[["repeat",[0,1,0],3,[["polyline","bubble_metal",[[131,117,262],[127,129,272],[127,129,292],[131,117,302]]]]]]]
+    ],
+    "bubble_pipe_2":[
+      ["lathe","bubble_pipe",[117,51],[[0,11.0,8.6],[184,11.0,8.6],[188,13.4,8.6],[192,13.4,9.6]]],
+      ["lathe_paint_inner","bubble_pipe_inner",[117,51],[[0,11.0,8.6],[184,11.0,8.6],[188,13.4,8.6],[192,13.4,9.6]]],
+      ["lathe","bubble_metal",[130,51],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[110,63],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[110,39],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[117,51],[[232,13.4,10.4],[235,15.2,10.4],[238,15.2,11.4]]],
+      ["repeat",[1,0,0],3,[["repeat",[0,1,0],3,[["polyline","bubble_metal",[[117,63,194],[113,75,204],[113,75,224],[117,63,234]]]]]]]
+    ],
+    "bubble_pipe_3":[
+      ["lathe","bubble_pipe",[162,78],[[0,11.0,8.6],[156,11.0,8.6],[160,13.4,8.6],[164,13.4,9.6]]],
+      ["lathe_paint_inner","bubble_pipe_inner",[162,78],[[0,11.0,8.6],[156,11.0,8.6],[160,13.4,8.6],[164,13.4,9.6]]],
+      ["lathe","bubble_metal",[175,78],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[155,90],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[155,66],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[162,78],[[204,13.4,10.4],[207,15.2,10.4],[210,15.2,11.4]]],
+      ["repeat",[1,0,0],3,[["repeat",[0,1,0],3,[["polyline","bubble_metal",[[162,90,166],[158,102,176],[158,102,196],[162,90,206]]]]]]]
+    ],
+    "bubble_funnel":[
+      ["lathe","bubble_copper",[214,89],[[224,2.8,1.0],[296,2.8,1.0],[316,4.8,1.8],[412,14.8,12.2],[426,19.0,16.4],[428,19.0,16.4]]],
+      ["lathe_paint_inner","bubble_copper_inner",[214,89],[[224,2.8,1.0],[296,2.8,1.0],[316,4.8,1.8],[412,14.8,12.2],[426,19.0,16.4],[428,19.0,16.4]]],
+      ["lathe","bubble_bottom_disk",[214,89],[[34,10.4,0],[35,10.4,0]]],
+      ["lathe","bubble_bottom_rim",[214,89],[[35,11.2,10.4],[36,11.2,10.4]]]
+    ],
+    "bubble_machine":[
+      ["use","bubble_pipe_0"],
+      ["use","bubble_pipe_1"],
+      ["use","bubble_pipe_2"],
+      ["use","bubble_pipe_3"],
+      ["use","bubble_funnel"]
+    ],
+    "bubble_pipe_0_160":[
+      ["lathe","bubble_pipe_cut160",[69,99],[[0,11.0,8.6],[224,11.0,8.6],[228,13.4,8.6],[232,13.4,9.6]]],
+      ["lathe_paint_inner","bubble_pipe_inner160",[69,99],[[0,11.0,8.6],[224,11.0,8.6],[228,13.4,8.6],[232,13.4,9.6]]],
+      ["lathe","bubble_metal",[82,99],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[62,111],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[62,87],[[0,4.6,0],[4,5.6,0],[36,5.6,0],[42,3.2,0]]],
+      ["lathe","bubble_metal",[69,99],[[272,13.4,10.4],[275,15.2,10.4],[278,15.2,11.4]]],
+      ["repeat",[1,0,0],3,[["repeat",[0,1,0],3,[["polyline","bubble_metal",[[69,111,234],[65,123,244],[65,123,264],[69,111,274]]]]]]]
+    ],
     "toy_factory_taper_0":[
       ["box","toy_factory_red",7,35,160,61,99,166]
     ],
@@ -8108,6 +8189,86 @@
     ]
   },
   "models": {
+    "bubble_spring":{
+      "size":[144,144,256],
+      "cell_size":[0.25,0.25,0.25],
+      "origin":[-16,-16,0],
+      "review_status":"work-in-progress",
+      "reference":"Original4746 fixed source-named spring is a clear cylinder with metal end caps, blue reflective edges and the lower copper spindle. Main162 funnel ownership and native registration remain unverified.",
+      "ops":[
+        ["lathe","bubble_metal_inner",[118,89],[[0,8.8,0],[2,11.2,0]]],
+        ["lathe","bubble_metal",[118,89],[[2,11.2,9.6],[4,12,9.6],[16,12,9.6],[20,11.0,9.6]]],
+        ["lathe","bubble_glass",[118,89],[[20,11.0,9.6],[24,11.0,9.6]]],
+        ["lathe","bubble_glass",[118,89],[[180,11.0,9.6],[184,11.0,9.6]]],
+        ["lathe","bubble_metal",[118,89],[[184,12,0],[204,12,0],[210,10.4,0],[216,5.6,0]]],
+        ["lathe","bubble_neck",[118,89],[[208,2.2,0],[224,2.2,0]]],
+        ["polyline","bubble_glass_light",[[111,99,24],[111,99,180]]],
+        ["polyline","bubble_glass_light",[[109,98,24],[109,98,180]]],
+        ["polyline","bubble_glass_dark",[[125,79,24],[125,79,180]]],
+        ["polyline","bubble_glass_dark",[[127,80,24],[127,80,180]]],
+        ["polyline","bubble_glass_light",[[113,101,32],[111,99,32],[109,98,32]]],
+        ["polyline","bubble_glass_light",[[113,101,44],[111,99,44],[109,98,44]]],
+        ["polyline","bubble_glass_light",[[113,101,56],[111,99,56],[109,98,56]]],
+        ["polyline","bubble_glass_light",[[113,101,68],[111,99,68],[109,98,68]]],
+        ["polyline","bubble_glass_light",[[113,101,80],[111,99,80],[109,98,80]]],
+        ["polyline","bubble_glass_light",[[113,101,92],[111,99,92],[109,98,92]]],
+        ["polyline","bubble_glass_light",[[113,101,104],[111,99,104],[109,98,104]]],
+        ["polyline","bubble_glass_light",[[113,101,116],[111,99,116],[109,98,116]]],
+        ["polyline","bubble_glass_light",[[113,101,128],[111,99,128],[109,98,128]]],
+        ["polyline","bubble_glass_light",[[113,101,140],[111,99,140],[109,98,140]]],
+        ["polyline","bubble_glass_light",[[113,101,152],[111,99,152],[109,98,152]]],
+        ["polyline","bubble_glass_light",[[113,101,164],[111,99,164],[109,98,164]]]
+      ]
+    },
+    "bubble_plunger":{
+      "size":[144,144,256],
+      "cell_size":[0.25,0.25,0.25],
+      "origin":[-16,-16,0],
+      "review_status":"work-in-progress",
+      "reference":"Original4747 source-named bubble is a yellow plunger/liquid body inside4746. Frame0 at originaldy68; later motion is only-Z by(dy-68). This is not the separately emitted floating-bubble effect.",
+      "ops":[
+        ["lathe","bubble_yellow",[118,89],[[132,10.8,0],[136,11.6,0],[164,11.6,0],[173,10.0,0],[175,6.0,0]]]
+      ]
+    },
+    "bubble_160_body":{
+      "size":[256,136,472],
+      "origin":[-8,-16,0],
+      "cell_size":[0.25,0.25,0.25],
+      "review_status":"work-in-progress",
+      "reference":"Original4743 source ownership of four hollow blue pipes, separate raised metal rings/feet and open copper funnel. Construction1/2/3 is identical; stage0 is absent. First source registration and all-angle review remain pending.",
+      "ops":[
+        ["use","bubble_pipe_0_160"],
+        ["prism","bubble_cut",2,0,440,[[48,28],[240,28],[240,136],[103,136],[48,81]]],
+        ["erase_material","bubble_cut"]
+      ]
+    },
+    "bubble_161_body":{
+      "size":[256,136,472],
+      "origin":[-24,-16,0],
+      "cell_size":[0.25,0.25,0.25],
+      "review_status":"work-in-progress",
+      "reference":"Original4744 source ownership of four hollow blue pipes, separate raised metal rings/feet and open copper funnel. Construction1/2/3 is identical; stage0 is absent. First source registration and all-angle review remain pending.",
+      "ops":[
+        ["use","bubble_machine"],
+        ["prism","bubble_cut",2,0,440,[[123,28],[240,28],[240,136],[231,136]]],
+        ["erase_material","bubble_cut"],
+        ["prism","bubble_cut",2,0,440,[[103,136],[48,136],[48,81]]],
+        ["erase_material","bubble_cut"]
+      ]
+    },
+    "bubble_162_body":{
+      "size":[256,136,472],
+      "origin":[-40,-16,0],
+      "cell_size":[0.25,0.25,0.25],
+      "review_status":"work-in-progress",
+      "reference":"Original4745 source ownership of four hollow blue pipes, separate raised metal rings/feet and open copper funnel. Construction1/2/3 is identical; stage0 is absent. First source registration and all-angle review remain pending.",
+      "ops":[
+        ["use","bubble_machine"],
+        ["prism","bubble_cut",2,0,440,[[48,28],[123,28],[231,136],[48,136]]],
+        ["erase_material","bubble_cut"],
+        ["replace_material","bubble_metal","bubble_metal162"]
+      ]
+    },
     "toy_factory_142_construction":{
       "size":[264,128,496],"cell_size":[0.25,0.25,0.25],"origin":[-2,-16,0],"review_status":"work-in-progress",
       "reference":"Original4708 lower red-tower construction cut; open hopper, outlet and recessed windows. Registered source/street review remains provisional.",
@@ -17765,6 +17926,10 @@
       "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
     },
     "industry_ground": {
+      "160":{"0":"toy_factory_ground","1":"toy_factory_ground","2":"toy_factory_ground","3":"toy_factory_ground"},
+      "161":{"0":"fizzy_ground","1":"fizzy_ground","2":"fizzy_ground","3":"fizzy_ground"},
+      "162":{"0":"toy_factory_ground","1":"toy_factory_ground","2":"toy_factory_ground","3":"toy_factory_ground"},
+      "163":{"0":"fizzy_ground","1":"fizzy_ground","2":"fizzy_ground","3":"fizzy_ground"},
       "142":{"0":"toy_factory_ground","1":"toy_factory_ground","2":"toy_factory_ground","3":"toy_factory_ground"},
       "143":{"0":"toy_factory_ground","1":"toy_factory_ground","2":"toy_factory_ground","3":"toy_factory_ground"},
       "144":{"0":"toy_factory_ground","1":"toy_factory_ground","2":"toy_factory_ground","3":"toy_factory_ground"},
@@ -17927,6 +18092,9 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "160":{"1":"bubble_160_body","2":"bubble_160_body","3":"bubble_160_body"},
+      "161":{"1":"bubble_161_body","2":"bubble_161_body","3":"bubble_161_body"},
+      "162":{"1":"bubble_162_body","2":"bubble_162_body","3":"bubble_162_body"},
       "142":{"1":"toy_factory_142_construction","2":"toy_factory_142_construction","3":"toy_factory_142_finished"},
       "143":{"1":"toy_factory_143_construction","2":"toy_factory_143_construction","3":"toy_factory_143_finished"},
       "144":{"1":"toy_factory_144_construction","2":"toy_factory_144_construction"},
@@ -18109,6 +18277,8 @@
       "1919": {"0":"tree_column_cactus_00","1":"tree_column_cactus_01","2":"tree_column_cactus_02","3":"tree_column_cactus_03","4":"tree_column_cactus_04","5":"tree_column_cactus_05","6":"tree_column_cactus_06"}
     },
     "infrastructure": {
+      "4746":{"0":"bubble_spring"},
+      "4747":{"0":"bubble_plunger"},
       "4718":{"0":"toy_factory_stamp"},
       "4719":{"0":"toy_factory_clay"},
       "4720":{"0":"toy_factory_robot"},

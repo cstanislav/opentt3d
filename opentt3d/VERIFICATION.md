@@ -1,5 +1,36 @@
 # Implementation verification
 
+## Integrated bubble-generator construction and original40-frame motion
+
+At16:47:06UTC, five provisional volumes bring the catalogue to1,641 and primary
+industry coverage to164/175. All27 palettes,33 aliases, seven absent body states,
+96 climate comparisons, five reviewed prototypes and1,636 preceding model hashes
+pass. Native202, asset136, harness12 and the137-file presentation boundary pass.
+The frozen binary/catalogue/tool hashes and development app bundles agree across
+all26 background controls. Seven compact components preserve exact occupied cells.
+
+Both backends capture50 actual construction layers and full17/17/empty0/17 engine201
+bubble trucks. Original stages1/2 emit cylinder4746 only; stage3 emits4747 then4746.
+Both1,800-frame services observe all40 frames on tile52,35, industry0. Both9,000-frame
+factory regressions retain all50 original frames on tile51,35, industry0. Four climates,
+world atlas, tile picking,72 clipping views and app bundles pass. Missing-plunger
+rejection and separate stages1/3 floor controls retain eight grounds while connected
+bodies/children fall back. A120-frame idle observation correctly fails with frame0 only.
+
+All220 Vulkan galleries match the prototype; all76 native backend views agree.
+75/144 wider views retain3,771 pixel differences. Static/body/child joins and all40
+plunger poses have zero occupied-cell overlap. Native body bounds agree or differ
+by at most2pixels; soil retains[-1,0,-1,+1]. Exact source shape/paint remains in
+`ASSET_REVIEW.md`, with final visual approvals:0. Earlier gallery omission and
+clearance failures remain preserved. Initial successful captures compact1,294 images
+losslessly by1,576,407,589bytes;448 final captures save651,992,354 additional bytes.
+Services average60.004/60.003fps but retain221/258
+intervals above20ms; peak matrix memory is3,827,617,776 sampled bytes.
+
+Evidence:`build-macos/breadth-bubble-final-{audit,reconciliation,source-review,
+opengl-registration-audit,negative-controls,short-observer-negative}.json`, prototype/
+backend comparisons and retained compaction manifests. Sustained smooth60fps remains open.
+
 ## Toy-factory desktop release independently verified
 
 At16:30:52UTC, release`.17`atf1d2d501bf67c7fb22b639eef43537f86a6553ed has eight passing

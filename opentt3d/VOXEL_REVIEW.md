@@ -16,6 +16,19 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Bubble160…163:**five provisional volumes retain three original body owners,
+  fixed clear cylinder4746 and moving yellow plunger4747; shared4675/4676 grounds
+  remain independent. Seven absent bodies stay empty. Both original construction
+  poses and all40 completed child frames preserve their order and axial travel.
+  All27 palettes,33 aliases,96 climate comparisons and1,636 preceding hashes pass.
+  All26 controls pass50 construction layers, full/empty cargo, both40-frame services
+  and both9,000-frame factory regressions. Missing-child/idle negatives reject.
+  Static/child joins and all moving poses have zero occupied-cell intersections.
+  All220 Vulkan prototype and76 native backend views agree;75/144 wider views retain
+  3,771 differing pixels. Ring/bracket geometry, pipe/footing shape and paint, funnel
+  gradients, collar metal, cylinder glints and plunger highlights remain provisional.
+  Evidence:`build-macos/breadth-bubble-final-*`. Final visual approvals:0.
+
 - **Toy-factory142…147:**twelve provisional volumes retain seven construction/completed
   body owners, four original ordered children and independent4675 soil. Fourteen empty
   body slots stay absent; construction144 and completed145 have distinct ownership.

@@ -3,6 +3,18 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Bubble-generator child-cycle and factory regression observations
+
+The26-control matrix peaks at3,827,617,776 sampled bytes. Two1,800-frame services
+average60.004/60.003fps for OpenGL/Vulkan, with4.501/5.481ms p95 work,221/258 intervals
+above20ms and22.734/23.238ms maximum intervals. Both observe all40 original child
+frames on one unchanged tile/industry. Two9,000-frame factory regressions average
+60.001/60.002fps and retain1,034/590 intervals above20ms, with23.699/36.825ms maxima.
+Concurrent package checks, authoring, source audits, fallback controls and ordinary
+industry fixtures remain part of this environment. Sustained arbitrary-world
+smoothness and long-duration/reload/multiple-viewport memory acceptance remain open.
+Source:`breadth-bubble-final-reconciliation.json`.
+
 ## Toy-factory original child-cycle observations
 
 The28-control matrix peaks at3,768,750,112 sampled bytes. Two9,000-frame supplied

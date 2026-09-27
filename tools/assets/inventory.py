@@ -105,6 +105,12 @@ def inventory():
                 for name,sprite in (("clay",4719),("robot_duck",4720),("stamp",4718),("holder",4717))]
             industry["procedural_source_frames"] = 50
             industry["procedural_source_note"] = "Original ordered completed frames and255 absences; conveyor+X and press-Z motion. Construction has no children. All four source/binding checks are linked to142..146 bodies;4675 ground remains independent."
+        elif industry["graphics"] == 162:
+            industry["procedural_children"] = [
+                {"name":name,"sprite":sprite,"voxel_states":voxel_states("infrastructure",sprite)}
+                for name,sprite in (("bubble_plunger",4747),("spring_cylinder",4746))]
+            industry["procedural_source_frames"] = 40
+            industry["procedural_source_note"] = "Stage0 has no children; stages1/2 draw only4746; completed40-frame motion draws4747 then4746. Plunger travel is only-Z. Body sources160..162 and both children are linked;4675/4676 grounds remain independent. Floating-bubble effects are separate."
         if 33 <= industry["graphics"] <= 38:
             industry["voxel_climates"] = ["temperate"]
             industry["missing_voxel_climates"] = ["arctic"]

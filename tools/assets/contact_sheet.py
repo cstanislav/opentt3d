@@ -58,7 +58,7 @@ def main():
     parser.add_argument("--industry-effect-source", type=int, choices=(10,), help="Review original power-station sparks at their actual parent-relative positions")
     parser.add_argument("--industry-effect-comparison", type=int, choices=(10,), help="Compare six native voxel gantry/spark composites with their original registered layers")
     parser.add_argument("--industry-procedural-source", type=int, choices=(143,162,165,174), help="Review ordered original Toyland children and genuine absent intervals; --stage selects construction or completed animation")
-    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,), help="Compare every original completed factory child combination at its actual parent/tile origin")
+    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,162), help="Compare every original child combination for the selected stage at its actual parent/tile origin")
     parser.add_argument("--industry-ground", action="store_true", help="Select original industry ground layers for --industry-source or --industry-comparison")
     parser.add_argument("--depot-source", type=int, choices=range(6), help="Assemble the four original depot directions from their actual layer offsets")
     parser.add_argument("--ship-depot-source", action="store_true", help="Assemble both original two-tile ship depots with their actual layer offsets")
@@ -657,12 +657,12 @@ def main():
             print(json.dumps(entries))
         return
     if args.industry_procedural_comparison is not None:
-        if args.source_directory is None or args.stage != 3:
-            parser.error("Procedural comparison requires --source-directory and completed --stage 3")
+        if args.source_directory is None or args.stage not in (1,2,3):
+            parser.error("Procedural comparison requires --source-directory and a visible --stage 1..3")
         graphics = args.industry_procedural_comparison
-        originals = {row["frame"]:row for row in json.loads((args.source_directory / "industry-procedural.json").read_text()) if row["graphics"] == graphics and row["stage"] == 3}
-        models = json.loads((args.directory / f"voxel-industry-procedural-{graphics}.json").read_text())
-        if {row["frame"] for row in models} != set(originals) or len(models) != len(originals):
+        originals = {row["frame"]:row for row in json.loads((args.source_directory / "industry-procedural.json").read_text()) if row["graphics"] == graphics and row["stage"] == args.stage}
+        models = [row for row in json.loads((args.directory / f"voxel-industry-procedural-{graphics}.json").read_text()) if row["stage"] == args.stage]
+        if not originals or {row["frame"] for row in models} != set(originals) or len(models) != len(originals):
             parser.error("Procedural comparison requires every original animation frame exactly once")
         panels, records = [], []
         for row in models:
@@ -693,11 +693,12 @@ def main():
         for slot,(pair,record) in enumerate(zip(panels,records)):
             x,y = slot%4*width,slot//4*height
             absent = ", ".join(record["intentionally_absent"]) or "none"
-            draw.text((x+6,y+6),f"{graphics} frame {record['frame']}: source / voxel\nabsent: {absent}; 2x fixed origin",fill="white")
+            draw.text((x+6,y+6),f"{graphics} stage {args.stage} frame {record['frame']}: source / voxel\nabsent: {absent}; 2x fixed origin",fill="white")
             for column,image in enumerate(pair):
                 image = image.resize((image.width*2,image.height*2),Image.Resampling.NEAREST)
                 sheet.paste(image,(x+column*(width//2)+(width//2-image.width)//2,y+height-4-image.height),image)
-        output = args.directory / f"industry-procedural-{graphics}-source-registration.png"
+        stage_suffix = f"-stage-{args.stage}" if args.stage != 3 else ""
+        output = args.directory / f"industry-procedural-{graphics}{stage_suffix}-source-registration.png"
         sheet.save(output); output.with_suffix(".json").write_text(json.dumps(records,indent=2)+"\n"); print(output)
         return
     if args.industry_procedural_source is not None:

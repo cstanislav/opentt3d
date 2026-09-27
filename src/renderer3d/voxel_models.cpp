@@ -372,6 +372,26 @@ std::array<VoxelIndustryChild,4> VoxelToyFactoryChildren(unsigned frame)
 	return children;
 }
 
+static bool HasVoxelBubbleGeneratorChildren()
+{
+	for (SpriteID image : {SPR_IT_BUBBLE_GENERATOR_SPRING,SPR_IT_BUBBLE_GENERATOR_BUBBLE}) {
+		if (!IsBaseGraphicsSprite(image) || !HasVoxelAsset("infrastructure",image,0)) return false;
+	}
+	return true;
+}
+
+std::array<VoxelIndustryChild,2> VoxelBubbleGeneratorChildren(unsigned stage, unsigned frame)
+{
+	if (stage > 3 || (stage == 3 && frame >= std::size(_industry_anim_offs_bubbles))) throw std::invalid_argument("Invalid original bubble-generator stage/frame");
+	std::array<VoxelIndustryChild,2> children{};
+	/* The source-named bubble is a yellow plunger inside the fixed glass cylinder.
+	 * Its vertical screen motion changes only world Z; emitted bubbles are separate.
+	 * Construction does not consult the animation frame in the original draw path. */
+	if (stage == 3) children[0] = {SPR_IT_BUBBLE_GENERATOR_BUBBLE,5,_industry_anim_offs_bubbles[frame],{0,0,static_cast<float>(_industry_anim_offs_bubbles[0])-static_cast<float>(_industry_anim_offs_bubbles[frame])}};
+	if (stage != 0) children[1] = {SPR_IT_BUBBLE_GENERATOR_SPRING,3,67,{}};
+	return children;
+}
+
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground)
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
@@ -425,8 +445,13 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* Construction swaps the blue tower's owner, and the fixed holder owns
 		 * wall cuts across the press. Keep every connected body on one source path. */
 		first = 142; last = 146;
+	} else if (!ground && graphics >= 160 && graphics <= 162) {
+		/* The blue pipes and copper funnel span all three source cuts. The cylinder's
+		 * two children are checked together; each checker ground stays independent. */
+		first = 160; last = 162;
 	}
 	bool toy_factory = graphics >= 142 && graphics <= 146 && (ground || HasVoxelToyFactoryChildren());
+	bool bubble_generator = graphics >= 160 && graphics <= 162 && (ground || HasVoxelBubbleGeneratorChildren());
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 		SpriteID spark = SPR_IT_POWER_PLANT_TRANSFORMERS+frame;
@@ -435,7 +460,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	for (unsigned family = first; family <= last; ++family) for (unsigned stage = 0; stage < 4; ++stage) {
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
-		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
 		if (first == 72 && last == 88) {
 			SpriteID other = (ground ? source.building.sprite : source.ground.sprite)&SPRITE_MASK;
 			if (other != 0 && !IsBaseGraphicsSprite(other)) return {};
@@ -470,6 +495,20 @@ bool DrawVoxelToyFactoryChild(Scene &scene, SpriteID image, unsigned frame, Vec3
 	image &= SPRITE_MASK;
 	if (!VoxelIndustryState(143,_industry_draw_tile_data[143*4+3].building.sprite)) return false;
 	for (const auto &child : VoxelToyFactoryChildren(frame)) if (child.image != 0 && child.image == image) {
+		size_t before = scene.instances.size();
+		if (!DrawVoxelAsset(scene,"infrastructure",image,0,origin+child.offset,palette,opacity)) return false;
+		for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
+		return true;
+	}
+	return false;
+}
+
+bool DrawVoxelBubbleGeneratorChild(Scene &scene, SpriteID image, unsigned stage, unsigned frame, Vec3 origin, PaletteID palette, float opacity)
+{
+	auto children = VoxelBubbleGeneratorChildren(stage,frame);
+	image &= SPRITE_MASK;
+	if (!VoxelIndustryState(162,_industry_draw_tile_data[162*4+stage].building.sprite)) return false;
+	for (const auto &child : children) if (child.image != 0 && child.image == image) {
 		size_t before = scene.instances.size();
 		if (!DrawVoxelAsset(scene,"infrastructure",image,0,origin+child.offset,palette,opacity)) return false;
 		for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
@@ -955,6 +994,7 @@ void ExportVoxelReviews(std::string_view prefix)
 	}
 	/* Place industry members at their actual layout offsets. A gallery page of
 	 * unrelated adjacent parts cannot establish their in-game spacing/clearance. */
+	std::set<unsigned> industry_native_families;
 	for (IndustryType type = 0; type < NUM_INDUSTRYTYPES; ++type) {
 		const auto &layouts = GetIndustrySpec(type)->layouts;
 		for (unsigned layout = 0; layout < layouts.size(); ++layout) {
@@ -971,6 +1011,9 @@ void ExportVoxelReviews(std::string_view prefix)
 				selected |= binding != Models().bindings.end() && binding->second.starts_with(prefix);
 			}
 			if (!selected) continue;
+			/* A ground-only member can share an older family's exact floor model.
+			 * It still needs its own registered layer views in this selected layout. */
+			for (const auto &part : layouts[layout]) if (part.gfx < std::size(_industry_draw_tile_data)/4) industry_native_families.insert(part.gfx);
 			for (unsigned stage = 0; stage < 4; ++stage) {
 				std::vector<const VoxelModel *> group;
 				std::vector<Vec3> placements;
@@ -986,6 +1029,13 @@ void ExportVoxelReviews(std::string_view prefix)
 					if (!ground && part.gfx == 143 && stage == 3 && VoxelIndustryState(143,source.building.sprite)) {
 						Vec3 origin = placements.back();
 						for (const auto &child : VoxelToyFactoryChildren(0)) if (child.image != 0) {
+							group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+							placements.push_back(origin+child.offset);
+						}
+					}
+					if (!ground && part.gfx == 162 && stage != 0 && VoxelIndustryState(162,source.building.sprite)) {
+						Vec3 origin = placements.back();
+						for (const auto &child : VoxelBubbleGeneratorChildren(stage,0)) if (child.image != 0) {
 							group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
 							placements.push_back(origin+child.offset);
 						}
@@ -1011,8 +1061,11 @@ void ExportVoxelReviews(std::string_view prefix)
 					if (part.gfx == 143 && stage == 3) {
 						for (const auto &child : VoxelToyFactoryChildren(0)) if (child.image != 0) complete &= DrawVoxelToyFactoryChild(joined,child.image,0,origin,source.building.pal);
 					}
+					if (part.gfx == 162 && stage != 0) {
+						for (const auto &child : VoxelBubbleGeneratorChildren(stage,0)) if (child.image != 0) complete &= DrawVoxelBubbleGeneratorChild(joined,child.image,stage,0,origin,source.building.pal);
+					}
 					tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
-					if (part.gfx == 143 && stage == 3) tiles.back()["procedural_frame"] = 0;
+					if ((part.gfx == 143 && stage == 3) || (part.gfx == 162 && stage != 0)) tiles.back()["procedural_frame"] = 0;
 				}
 				if (!complete) continue;
 				for (auto &instance : joined.instances) instance.data.SetObjectId(1);
@@ -1058,6 +1111,41 @@ void ExportVoxelReviews(std::string_view prefix)
 			}
 			std::ofstream manifest(directory/"voxel-industry-procedural-143.json"); manifest << frames.dump(2) << '\n';
 			if (!manifest) throw std::runtime_error("Could not write toy-factory diagnostic manifest");
+		}
+	}
+	/* The bubble generator also has a fixed child during construction. Export
+	 * those two stages independently from all40 completed plunger positions. */
+	if (auto state = VoxelIndustryState(162,_industry_draw_tile_data[162*4+3].building.sprite)) {
+		const auto &name = Models().bindings.at({"industries",162,*state});
+		if (name.starts_with(prefix)) {
+			nlohmann::json frames = nlohmann::json::array();
+			for (unsigned stage = 1; stage < 4; ++stage) {
+				const auto &source = _industry_draw_tile_data[162*4+stage];
+				auto body = VoxelIndustryState(162,source.building.sprite);
+				if (!body) continue;
+				const auto &body_name = Models().bindings.at({"industries",162,*body});
+				for (unsigned frame = 0; frame < (stage == 3 ? std::size(_industry_anim_offs_bubbles) : 1); ++frame) {
+					Textures().BeginScene();
+					Scene scene;
+					DrawVoxelAsset(scene,"industries",162,*body,{},source.building.pal);
+					nlohmann::json children = nlohmann::json::array();
+					std::vector<const VoxelModel *> group{&Models().models.at(body_name)};
+					std::vector<Vec3> placements{{}};
+					for (const auto &child : VoxelBubbleGeneratorChildren(stage,frame)) if (child.image != 0) {
+						if (!DrawVoxelBubbleGeneratorChild(scene,child.image,stage,frame,{},source.building.pal)) throw std::runtime_error("Incomplete bubble-generator diagnostic children");
+						children.push_back({{"sprite",child.image},{"child_offset",{child.x,child.y}},{"world_offset",{child.offset.x,child.offset.y,child.offset.z}}});
+						group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+						placements.push_back(child.offset);
+					}
+					std::string label = stage == 3 ? fmt::format("model-voxel-industry-procedural-162-{}-native",frame) : fmt::format("model-voxel-industry-procedural-162-stage-{}-{}-native",stage,frame);
+					native_model(scene,label);
+					frames.push_back({{"graphics",162},{"stage",stage},{"frame",frame},{"image",label+".pam"},{"children",children}});
+					if (stage != 3) context(fmt::format("context-industry-procedural-162-stage-{}",stage),group,placements);
+					else if (frame == 0 || frame == 8 || frame == 21 || frame == 39) context(fmt::format("context-industry-procedural-162-{}",frame),group,placements);
+				}
+			}
+			std::ofstream manifest(directory/"voxel-industry-procedural-162.json"); manifest << frames.dump(2) << '\n';
+			if (!manifest) throw std::runtime_error("Could not write bubble-generator diagnostic manifest");
 		}
 	}
 	std::set<unsigned> selected_houses;
@@ -1112,7 +1200,6 @@ void ExportVoxelReviews(std::string_view prefix)
 	/* A family's construction floor can share a differently named soil model.
 	 * Export all native ground/body states of each selected industry definition
 	 * so the registered source sheet retains its complete ownership history. */
-	std::set<unsigned> industry_native_families;
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,base,stage] = binding;
 		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix)) industry_native_families.insert(base);

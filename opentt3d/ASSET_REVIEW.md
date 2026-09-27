@@ -4,6 +4,33 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Bubble160…163: open pipes, cylinder and plunger (September27)
+
+Five provisional volumes reach1,641: three source-owned bodies, fixed cylinder4746
+and yellow plunger4747. Independently checked4675/4676 floors reuse existing models.
+Seven absent body slots remain empty. Stage0 has no children; stages1/2 have only
+4746; completed162 draws4747 then4746 through40 original frames and19 original
+heights. The plunger moves only-Z. Original emitted floating bubbles are separate.
+Seven compact components and bounded ownership masks preserve every prototype cell
+and all1,636 preceding model hashes. All27 palettes,33 aliases and96 climate comparisons
+pass. Static body joins, fixed-child joins and all40 moving poses have zero intersecting
+cells. Earlier158…164 moving/fixed overlap cells and98 fixed/body overlaps remain in
+the isolated`floors`study;`clearance`retains2…3 glint collisions, corrected by`bore`.
+
+All26 controls pass50 actual construction layers, full/empty bubble cargo, both
+40-frame cycles and both9,000-frame factory regressions. Missing plunger rejects and
+retains eight independently captured grounds across stages1/3;120 frames with only
+idle frame0 correctly fails. All220 integrated Vulkan views match the prototype;
+all76 native backend views agree.75/144 wider images retain3,771 differing pixels,
+including955/885/301 pixels in three ground-only street views.
+
+Native body160 bounds differ[-1,-1,+1,0],161[-1,-1,0,-2],162 match, and floors retain
+[-1,0,-1,+1]. Exact ring tilt/return brackets, blue highlights/footing profile, copper
+gradient/interior/rim paint, collar metal, cylinder glints and plunger highlights
+remain provisional. Evidence:`build-macos/breadth-bubble-final-*`and`breadth-bubble-bore-*`.
+The first source163 floor-export omission is retained; selected layouts now export
+their ground-only shared-model members. Final visual approvals:0.
+
 ## Toy-factory142…147: separate walls and original press (September27)
 
 Twelve provisional volumes reach1,636: seven body owners, holder4717, stamp4718,

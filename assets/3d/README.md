@@ -250,6 +250,21 @@ add all50 original child compositions and`voxel-industry-procedural-143.json`.
 checks exact ordered source selections/absences and places source/model images at
 the same parent origin. Joined industry sheets include declared procedural children.
 
+Bubble160…163 uses three source-owned bodies plus the fixed clear cylinder4746 and
+yellow plunger4747. The original names`spring`and`bubble`refer to those two children;
+floating-bubble effects4748…4762 are separate. Stage0 has no children, stages1/2 only
+4746, and completed162 draws4747 then4746 through the original40-frame sequence.
+The plunger's screen travel changes only world-Z by`dy-68`; construction ignores
+the animation-frame byte. Body sources160…162 and both child bindings are linked
+for custom-source fallback. Shared4675/4676 grounds retain independent checks.
+
+`--verify-bubble-generator --running --benchmark-frames 1800` observes every original
+frame from actual same-capture child selections on one unchanged tile/industry.
+Diagnostic captures cannot count. Bound galleries export both construction child
+compositions and all40 completed poses; use`--industry-procedural-comparison 162`
+with`--stage 1`, `2`or`3`. Ground-only members receive individual native captures even
+when their selected layout reuses an older family's exact soil model.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→

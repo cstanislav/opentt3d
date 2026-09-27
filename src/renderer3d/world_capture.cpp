@@ -104,8 +104,8 @@ struct CaptureState {
 	bool parent_culled = false;
 	uint32_t parent_id = 0;
 	std::map<TileIndex,unsigned> plastic_fountain_grounds;
-	unsigned toy_factory_next_child = 0;
-	bool toy_factory_children_visible = true;
+	unsigned industry_next_child = 0;
+	bool industry_children_visible = true;
 };
 static std::optional<CaptureState> capture;
 static std::vector<Vertex> recycled_vertices;
@@ -136,6 +136,10 @@ static bool check_toy_factory = false;
 static TileIndex checked_toy_factory_tile = INVALID_TILE;
 static uint32_t checked_toy_factory_industry = UINT32_MAX;
 static uint64_t checked_toy_factory_frames = 0;
+static bool check_bubble_generator = false;
+static TileIndex checked_bubble_tile = INVALID_TILE;
+static uint32_t checked_bubble_industry = UINT32_MAX;
+static uint64_t checked_bubble_frames = 0;
 static unsigned checked_cargo_engine = UINT_MAX;
 static uint32_t checked_cargo_vehicle = UINT32_MAX;
 static unsigned checked_cargo_capacity = 0, checked_cargo_states = 0;
@@ -1681,8 +1685,8 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	capture->parent_mesh_begin = capture->parent_mesh_end = capture->scene.vertices.size();
 	capture->parent_instance_begin = capture->parent_instance_end = capture->scene.instances.size();
 	capture->parent_culled = false;
-	capture->toy_factory_next_child = 0;
-	capture->toy_factory_children_visible = true;
+	capture->industry_next_child = 0;
+	capture->industry_children_visible = true;
 	capture->parent_left = capture->parent_top = 0;
 	capture->parent_offsets_pending = false;
 	if ((image & SPRITE_MASK) == SPR_EMPTY_BOUNDING_BOX) return;
@@ -2062,6 +2066,14 @@ void BeginVoxelToyFactoryCheck()
 	Debug(driver,1,"OpenTT3D: observing all 50 actual toy-factory frames and ordered child absences");
 }
 
+void BeginVoxelBubbleGeneratorCheck()
+{
+	if (!VoxelIndustryState(162,_industry_draw_tile_data[162*4+3].building.sprite)) throw std::runtime_error("Bubble generator needs its original body and both voxel children");
+	check_bubble_generator = true; checked_bubble_tile = INVALID_TILE;
+	checked_bubble_industry = UINT32_MAX; checked_bubble_frames = 0;
+	Debug(driver,1,"OpenTT3D: observing all 40 actual bubble-generator frames with ordered plunger and cylinder");
+}
+
 void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transparent, const SubSprite *, bool scale, bool relative)
 {
 	if (!capture || !capture->have_parent) return;
@@ -2073,15 +2085,19 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		GetIndustryGfx(capture->tile->tile) == 143 && IsIndustryCompleted(capture->tile->tile) &&
 		capture->parent_sprite == (_industry_draw_tile_data[143*4+3].building.sprite&SPRITE_MASK) &&
 		VoxelIndustryState(143,capture->parent_sprite).has_value();
+	bool bubble_generator = capture->tile != nullptr && IsTileType(capture->tile->tile,MP_INDUSTRY) &&
+		GetIndustryGfx(capture->tile->tile) == 162 &&
+		capture->parent_sprite == (_industry_draw_tile_data[162*4+GetIndustryConstructionStage(capture->tile->tile)].building.sprite&SPRITE_MASK) &&
+		VoxelIndustryState(162,capture->parent_sprite).has_value();
 	/* A rising arc has its own bounds above the gantry. Keep its independent
 	 * frustum check even when the solid parent has just left the viewport. */
-	if (capture->parent_culled && !power_spark && !toy_factory) return;
+	if (capture->parent_culled && !power_spark && !toy_factory && !bubble_generator) return;
 	ObjectTag tag{capture->scene.vertices.size(), capture->parent_id};
 	if (toy_factory) {
 		TileIndex tile = capture->tile->tile;
 		unsigned frame = GetAnimationFrame(tile);
 		auto children = VoxelToyFactoryChildren(frame);
-		auto &next = capture->toy_factory_next_child;
+		auto &next = capture->industry_next_child;
 		while (next < children.size() && children[next].image == 0) ++next;
 		if (next >= children.size() || !scale || !relative || children[next].image != (image&SPRITE_MASK) || children[next].x != x || children[next].y != y) {
 			throw std::runtime_error("Toy-factory child lost its original order, absence or screen offset");
@@ -2090,8 +2106,8 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		size_t before = capture->scene.instances.size();
 		if (!DrawVoxelToyFactoryChild(capture->scene,image,frame,origin,palette,transparent ? 0.38f : 1)) throw std::runtime_error("Missing original toy-factory voxel child");
 		if (frame != GetAnimationFrame(tile)) throw std::runtime_error("Toy-factory rendering changed its original animation");
-		capture->toy_factory_children_visible &= capture->scene.instances.size() != before;
-		if (++next == children.size() && capture->toy_factory_children_visible && !capture->parent_culled && !capture->diagnostic && check_toy_factory) {
+		capture->industry_children_visible &= capture->scene.instances.size() != before;
+		if (++next == children.size() && capture->industry_children_visible && !capture->parent_culled && !capture->diagnostic && check_toy_factory) {
 			uint32_t industry = GetIndustryIndex(tile).base();
 			if (checked_toy_factory_tile == INVALID_TILE) { checked_toy_factory_tile = tile; checked_toy_factory_industry = industry; }
 			if (checked_toy_factory_tile == tile && checked_toy_factory_industry == industry) {
@@ -2102,6 +2118,41 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 				if (std::popcount(checked_toy_factory_frames) == std::size(_industry_anim_offs_toys)) {
 					Debug(driver,1,"OpenTT3D: voxel toy-factory verification passed: 50 original ordered child frames and absences on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
 					check_toy_factory = false;
+				}
+			}
+		}
+		return;
+	}
+	if (bubble_generator) {
+		TileIndex tile = capture->tile->tile;
+		unsigned stage = GetIndustryConstructionStage(tile), frame = GetAnimationFrame(tile);
+		auto children = VoxelBubbleGeneratorChildren(stage,frame);
+		auto &next = capture->industry_next_child;
+		while (next < children.size() && children[next].image == 0) ++next;
+		if (next >= children.size() || !scale || !relative || children[next].image != (image&SPRITE_MASK) || children[next].x != x || children[next].y != y) {
+			throw std::runtime_error("Bubble-generator child lost its original construction, order or screen offset");
+		}
+		Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
+		size_t before = capture->scene.instances.size();
+		if (!DrawVoxelBubbleGeneratorChild(capture->scene,image,stage,frame,origin,palette,transparent ? 0.38f : 1)) throw std::runtime_error("Missing original bubble-generator voxel child");
+		if (frame != GetAnimationFrame(tile) || stage != GetIndustryConstructionStage(tile)) throw std::runtime_error("Bubble-generator rendering changed its original state");
+		capture->industry_children_visible &= capture->scene.instances.size() != before;
+		if (++next == children.size() && capture->industry_children_visible && !capture->parent_culled && !capture->diagnostic) {
+			static unsigned reported_stages = 0;
+			if ((reported_stages & (1U<<stage)) == 0) {
+				reported_stages |= 1U<<stage;
+				Debug(driver,1,"OpenTT3D: live voxel bubble-generator stage {} children plunger {} cylinder {} captured at {},{}",stage,children[0].image,children[1].image,TileX(tile),TileY(tile));
+			}
+			if (stage == 3 && check_bubble_generator) {
+				uint32_t industry = GetIndustryIndex(tile).base();
+				if (checked_bubble_tile == INVALID_TILE) { checked_bubble_tile = tile; checked_bubble_industry = industry; }
+				if (checked_bubble_tile == tile && checked_bubble_industry == industry) {
+					if ((checked_bubble_frames & (uint64_t{1}<<frame)) == 0) Debug(driver,1,"OpenTT3D: bubble-generator frame {} captured at {},{} industry {}, plunger {} cylinder {}",frame,TileX(tile),TileY(tile),industry,children[0].image,children[1].image);
+					checked_bubble_frames |= uint64_t{1}<<frame;
+					if (std::popcount(checked_bubble_frames) == std::size(_industry_anim_offs_bubbles)) {
+						Debug(driver,1,"OpenTT3D: voxel bubble-generator verification passed: 40 original ordered child frames on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
+						check_bubble_generator = false;
+					}
 				}
 			}
 		}
