@@ -31,6 +31,7 @@ def main():
     parser.add_argument("--truck-engine", type=int, choices=range(116,204), help="Select one original road engine for the route; its real cargo type and availability are checked by NoAI")
     parser.add_argument("--year", type=int, default=1970, help="Normal world start year; later trucks need an appropriate year")
     parser.add_argument("--cargo-snapshots", action="store_true", help="Also pause/save the actual full truck and its empty state after delivery")
+    parser.add_argument("--service-observation-ticks", type=int, default=2400, help="Maximum ordinary AI ticks to observe loading, delivery and return (2400 by default; use a longer window for distant towns)")
     parser.add_argument("--depot-directions", action="store_true", help="Build and verify all four original road-depot exits through normal public commands")
     parser.add_argument("--timeout", type=int, default=360)
     args = parser.parse_args()
@@ -49,6 +50,8 @@ def main():
         parser.error("--year must be a supported normal calendar year")
     if args.cargo_snapshots and not service_requested:
         parser.error("--cargo-snapshots requires --coal-service or --cargo-service")
+    if not 128 <= args.service_observation_ticks <= 16384:
+        parser.error("--service-observation-ticks must be128..16384")
     if args.depot_directions and not service_requested:
         parser.error("--depot-directions requires --coal-service or --cargo-service")
     if args.snow_coverage is not None and args.climate != "arctic":
@@ -104,7 +107,7 @@ min_active_clients = 0
 pause_on_join = false
 """)
     destination = args.destination_industry if args.cargo_service else 1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_destination_town_site={int(args.destination_town_site)},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_destination_town_site={int(args.destination_town_site)},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1},review_service_ticks={args.service_observation_ticks}"\n')
     days = (0, 16, 30, 44)
     for day in days:
         (scripts / f"save_day_{day}.scr").write_text(f"pause\nsave industry-day-{day}\n")
@@ -184,6 +187,8 @@ pause_on_join = false
 
                 ready = wait_for(service_ready, "verifying actual cargo service")
                 service = json.loads(ready[1])
+                if not 0 <= service["observed_ticks"] < args.service_observation_ticks:
+                    raise RuntimeError("The service observation did not finish within its requested window")
                 if service["truck"] < 0 or service["acceptance"] < 8 or service["peak_load"] <= 0 or service["peak_speed"] <= 0 or not service["returned"]:
                     raise RuntimeError("The cargo-service route did not complete its live cargo checks")
                 if args.truck_engine is not None and service["engine"] != args.truck_engine:

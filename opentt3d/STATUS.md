@@ -10,10 +10,17 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,539-volume asset/compiler/schema suite131/131 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,543-volume asset/compiler/schema suite131/131 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Arctic/tropical bank89/90 adds four provisional volumes, bringing industry
+  coverage to120/175 definitions,88 body owners and120 independent grounds. Original
+  finished-body construction aliases, separate completed paving, joined columns and
+  dome ownership are preserved. All1,539 prior models agree. Twenty-eight controls
+  pass, including64 actual construction-layer selections and ordinary gold service.
+  Native registration and source/street fidelity remain provisional.
 
 - [x] Seventy airport-surface volumes bring primary airport coverage to 73/74 and
   independently bound grounds to 74/74. Explicit climate/frame ground selection

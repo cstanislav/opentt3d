@@ -1,5 +1,28 @@
 # Implementation verification
 
+## Arctic/tropical bank and longer public-command cargo routes
+
+At07:00:52UTC, all28 bank controls pass with frozen source/build hashes and matching
+development bundles. Sixty-four actual ground/body construction selections cover
+both Arctic and tropical bank worlds. Four climate matrices retain independent
+Toyland2022 soil fallback. All16 palettes,18 state aliases and48 climate comparisons
+are reconciled; all1,539 preceding models agree. Native200, asset131 and harness12
+checks pass. The catalogue now has1,543 volumes and120/175 industry definitions.
+
+Native registered source/model captures and joined layouts match across backends.
+The wider108-image comparison retains18 differences/1,782 pixels. Source proportions,
+grain and final fidelity remain provisional. Peak sampled memory is3,464,744,392bytes.
+Evidence:`build-macos/breadth-bank2-{source-build-agreement,final-reconciliation,backend-comparison}.json`.
+
+Two diamond-service failures are retained: the first360-second wall-clock limit ends
+after full loading, and the next2,400-tick AI window ends after accepted delivery but
+before return. The new explicit6,000-tick observation passes all original service
+requirements after3,056 ticks: engine153,cargo10,12/12 loaded,acceptance16,empty delivery
+and return over a120-edge town road. The unchanged default2,400-tick gold route passes
+after1,710 ticks,acceptance8 and the same12-unit capacity. Full/empty saves and actual
+service manifests remain in `breadth-diamond-service-fixture3/` and
+`breadth-bank2-gold-regression/`; no simulation or cargo values are changed.
+
 ## Elevated heliport checkpoint
 
 At06:33:24UTC, all20 frozen controls pass both backends, four climates,192 independent

@@ -4,6 +4,25 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "bank2_brick": [73,76,74,77,73,76],
+    "bank2_brick_light": [74,77,75,78,73,77],
+    "bank2_frame": [9,12,10,13,6,14],
+    "bank2_column": [10,13,11,14,8,14],
+    "bank2_column_shade": [7,10,8,11,6,12],
+    "bank2_glass": [130,132,130,133,130,131],
+    "bank2_glass_shade": [130,131,130,132,130,130],
+    "bank2_roof": [24,26,25,27,24,26],
+    "bank2_roof_grain": [24,27,25,27,24,27],
+    "bank2_gold": [60,62,62,64,60,64],
+    "bank2_gold_rib": [62,66,64,67,60,67],
+    "bank2_finial": [11,14,12,15,10,15],
+    "bank2_ground_shadow": 1,
+    "bank2_paving": [6,8,7,9,6,10],
+    "bank2_paving_grain": [7,9,8,10,6,11],
+    "bank2_paving_seam": 6,
+    "bank2_planter": [24,26,26,27,24,28],
+    "bank2_planter_green": [104,105,104,106,104,105],
+    "bank2_planter_grain": [56,57,56,57,56,57],
     "heliport_blue": [198,201,198,202,198,201],
     "heliport_blue_dark": [198,199,198,200,198,199],
     "heliport_blue_light": [199,202,200,203,198,202],
@@ -1426,6 +1445,66 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "bank2_joined_shell": [
+      ["box","bank2_brick",10,0,0,52,23,54],
+      ["erase",12,2,1,50,20,53],
+      ["box","bank2_frame",10,0,26,52,23,28],["erase",12,2,26,50,20,28],
+      ["repeat",[0,0,27],2,[
+        ["repeat",[0,7,0],3,[
+          ["erase",10,2,4,11,7,23],["box","bank2_frame",11,2,4,12,7,23],
+          ["box","bank2_glass",11,3,5,12,6,22],
+          ["erase",51,2,4,52,7,23],["box","bank2_frame",50,2,4,51,7,23],
+          ["box","bank2_glass",50,3,5,51,6,22],
+          ["paint","bank2_glass_shade",11,3,12,12,6,13],
+          ["paint","bank2_glass_shade",50,3,12,51,6,13]
+        ]],
+        ["repeat",[6,0,0],6,[
+          ["erase",13,0,4,18,1,23],["box","bank2_frame",13,1,4,18,2,23],
+          ["box","bank2_glass",14,1,5,17,2,22],
+          ["paint","bank2_glass_shade",14,1,12,17,2,13]
+        ]]
+      ]],
+      ["erase",15,21,1,47,23,53],
+      ["box","bank2_frame",15,20,1,47,23,53],
+      ["repeat",[5,0,0],6,[
+        ["box","bank2_glass",16,22,3,20,23,25],
+        ["box","bank2_glass",16,22,29,20,23,51],
+        ["paint","bank2_glass_shade",16,22,14,20,23,15],
+        ["paint","bank2_glass_shade",16,22,40,20,23,41]
+      ]],
+      ["box","bank2_frame",14,22,0,48,27,1],
+      ["box","bank2_column",14,22,1,48,26,2],
+      ["repeat",[5,0,0],7,[
+        ["box","bank2_column_shade",14,23,2,15,24,53],
+        ["face_paint","bank2_column",10,14,23,3,15,24,51],
+        ["box","bank2_column",13,22,2,16,25,4],
+        ["box","bank2_column",13,22,50,16,25,53]
+      ]],
+      ["box","bank2_frame",9,0,52,53,24,55],["erase",10,1,53,52,23,55],
+      ["box","bank2_column",13,22,52,49,26,55],
+      ["box","bank2_roof",10,1,53,52,23,54],
+      ["scatter_paint","bank2_roof_grain",4,2186,10,1,53,52,23,54,"bank2_roof"],
+      ["scatter_paint","bank2_brick_light",6,3186,10,0,1,52,23,52,"bank2_brick",[1,1,2]]
+    ],
+    "bank2_rooftop_dome": [
+      ["lathe","bank2_frame",[28,8],[[54,6.5,0],[56,6.5,0]]],
+      ["lathe","bank2_gold",[28,8],[[56,6.5,5],[59,6.5,5],[69,5,3.5],[77,2.5,1],[80,1,0]]],
+      ["line","bank2_gold_rib",21,8,56,23,8,70],["line","bank2_gold_rib",23,8,70,27,8,79],
+      ["line","bank2_gold_rib",34,8,56,32,8,70],["line","bank2_gold_rib",32,8,70,28,8,79],
+      ["line","bank2_gold_rib",28,1,56,28,3,70],["line","bank2_gold_rib",28,3,70,28,7,79],
+      ["line","bank2_gold_rib",28,14,56,28,12,70],["line","bank2_gold_rib",28,12,70,28,8,79],
+      ["line","bank2_gold_rib",23,3,56,26,6,77],["line","bank2_gold_rib",32,3,56,29,6,77],
+      ["line","bank2_gold_rib",23,12,56,26,9,77],["line","bank2_gold_rib",32,12,56,29,9,77],
+      ["box","bank2_gold_rib",27,7,79,29,9,84],
+      ["box","bank2_finial",28,8,83,29,9,88]
+    ],
+    "bank2_finished_front_paving": [
+      ["box","bank2_ground_shadow",0,0,0,32,32,1],
+      ["paint","bank2_paving",0,23,0,32,32,1],
+      ["scatter_paint","bank2_paving_grain",3,2184,0,0,0,32,32,1,"bank2_paving"],
+      ["repeat",[4,0,0],8,[["paint","bank2_paving_seam",0,23,0,1,32,1]]],
+      ["repeat",[0,4,0],2,[["paint","bank2_paving_seam",0,24,0,32,25,1]]]
+    ],
     "airport_edge_temperate_grain": [
       ["scatter_paint","air_edge_t_grey",3,3981,0,0,0,32,32,1,"air_edge_t_base"],
       ["scatter_paint","air_edge_t_soil",2,8143,0,0,0,32,32,1,"air_edge_t_base"],
@@ -6287,6 +6366,34 @@
     ]
   },
   "models": {
+    "bank2_north": {
+      "size":[64,32,90],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original Arctic/tropical bank89 body2186 is finished in every construction slot. Joined red two-storey brick office, recessed colonnade glazing, flat olive roof and white cornice; this original owner alone retains the hollow golden ribbed dome and fine finial",
+      "ops":[["use","bank2_joined_shell"],["erase",32,0,0,64,32,90],["use","bank2_rooftop_dome"]]
+    },
+    "bank2_south": {
+      "size":[64,32,90],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Original bank90 body2187: independent near wing of the same joined office, with two rows of end windows, continuous white bands, open colonnade bays and white entry steps. Original stages0/1/2/3 share identical finished body artwork",
+      "ops":[["use","bank2_joined_shell"],["erase",0,0,0,32,32,90]]
+    },
+    "bank2_north_ground": {
+      "size":[32,32,3],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original2184 north finished bank ground: independent full tile, dark under-building shadow, stone front/end paving and long end planter. Construction stages retain source2022 soil",
+      "ops":[["use","bank2_finished_front_paving"],["paint","bank2_paving",0,0,0,10,32,1],
+        ["scatter_paint","bank2_paving_grain",3,3184,0,0,0,10,32,1,"bank2_paving"],
+        ["repeat",[0,4,0],8,[["paint","bank2_paving_seam",0,0,0,10,1,1]]],
+        ["box","bank2_planter",2,2,1,6,23,2],["box","bank2_planter_green",3,3,2,5,22,3],
+        ["scatter_paint","bank2_planter_grain",3,2184,3,3,2,5,22,3,"bank2_planter_green"]]
+    },
+    "bank2_south_ground": {
+      "size":[32,32,3],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original2185 south finished bank ground: separate dark footprint and grey front/end paving, with the long near-end ochre/green planter. No bank body or construction surface is part of this ground owner",
+      "ops":[["use","bank2_finished_front_paving"],["paint","bank2_paving",20,0,0,32,32,1],
+        ["scatter_paint","bank2_paving_grain",3,3185,20,0,0,32,32,1,"bank2_paving"],
+        ["repeat",[0,4,0],8,[["paint","bank2_paving_seam",20,0,0,32,1,1]]],
+        ["box","bank2_planter",25,2,1,29,23,2],["box","bank2_planter_green",26,3,2,28,22,3],
+        ["scatter_paint","bank2_planter_grain",3,2185,26,3,2,28,22,3,"bank2_planter_green"]]
+    },
     "airport_heliport_tower": {
       "size":[36,32,120],"cell_size":[0.5,0.5,0.5],"origin":[-2,0,0],"review_status":"work-in-progress",
       "reference":"Original heliport44 body2633: tall blue/glazed stepped office, projecting low wing, checkerboard rooftop parapet, dark cylindrical head and round elevated pad. Landing plane remains exactly60 above terrain; ground3981 is independent. Source paint/geometry identical in all four climates",
@@ -15446,6 +15553,8 @@
       "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
     },
     "industry_ground": {
+      "89":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank2_north_ground"},
+      "90":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank2_south_ground"},
       "72":{"0":"gold_72_initial","1":"gold_bare_underlay","2":"gold_bare_underlay","3":"gold_bare_underlay"},
       "73":{"0":"gold_73_initial","1":"gold_73_middle","2":"gold_73_middle","3":"gold_73_finished"},
       "74":{"0":"gold_74_initial","1":"gold_bare_underlay","2":"gold_bare_underlay","3":"gold_bare_underlay"},
@@ -15566,6 +15675,8 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "89":{"0":"bank2_north","1":"bank2_north","2":"bank2_north","3":"bank2_north"},
+      "90":{"0":"bank2_south","1":"bank2_south","2":"bank2_south","3":"bank2_south"},
       "72":{"1":"gold_72_middle","2":"gold_72_middle","3":"gold_72_finished"},
       "74":{"1":"gold_74_middle","2":"gold_74_middle","3":"gold_74_finished"},
       "75":{"1":"gold_75_middle","2":"gold_75_middle","3":"gold_75_finished"},

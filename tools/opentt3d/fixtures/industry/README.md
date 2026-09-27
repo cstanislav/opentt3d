@@ -102,6 +102,12 @@ depot entry/exit are required. No cargo, production, construction or map state i
 Generic results use `cargo_service`; the existing `--coal-service` command retains
 its `coal_service` manifest key and default coal-mine/power-station selection.
 
+For a distant town destination, increase both the observation and wall-clock windows,
+for example `--service-observation-ticks 6000 --timeout 900`. The default observation
+remains2400 ordinary AI ticks. All loading, accepted delivery, return and requested
+full/empty snapshots must still occur; the manifest records the actual observed ticks.
+This affects only how long the fixture watches the public-command service.
+
 Current sugar174 and cola177 (`--industry 29 --destination-industry 33`) fixtures
 each observe0/17 and17/17, accepted delivery, return and all four depot exits. A
 new default-climate coal123 regression observes0/20 and20/20 after the generalized

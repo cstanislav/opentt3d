@@ -16,6 +16,21 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Arctic/tropical bank89/90:**four independent volumes retain the red two-storey
+  office, hollow interior, recessed windows, thin colonnade, olive flat roof and
+  golden ribbed dome. Only owner89 has the original gold paint. Both bodies are
+  already complete in all four source construction slots; only the separate paving/
+  planter grounds replace2022 soil on completion. Source review repairs detached
+  inset windows and columns deep enough to occlude the native glazing. All16 bound
+  palettes,18 state aliases and48 climate comparisons are checked; the six distinct
+  Toyland soil selections retain their prior independent guard. All1,539 preceding
+  model hashes agree. Twenty-eight controls include64 live construction selections
+  in both native climates. Registered bodies/layouts agree across backends; the wider
+  108-image gallery retains1,782 differing pixels in18 images. Body bounds remain
+  47×55/48×48 versus44×54/45×48, and the joined ground96×74 versus96×73. Source clipping
+  of the original owner images, dome ribs, facade/roof grain and paving are still
+  provisional. Evidence:`build-macos/breadth-bank2-*`. Final visual approvals:0.
+
 - **Elevated heliport:**the last primary airport definition44 has a stepped office,
   hollow recessed/glazed facades, lower wing, actual rooftop railing openings, hollow
   supporting head and independently painted round landing pad. The original body2633

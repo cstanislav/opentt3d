@@ -3,6 +3,14 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Arctic/tropical bank observations
+
+The28-control bank matrix peaks at3,464,744,392 sampled bytes. The two600-frame gold
+service observations average60.003/60.004fps with5.044/6.461ms p95 work, but retain70/85
+intervals above20ms. Concurrent correctness fixtures and separate software-renderer
+diagnostics make this a bounded correctness checkpoint, not isolated throughput
+acceptance. Source:`breadth-bank2-final-reconciliation.json`.
+
 ## Elevated heliport observations
 
 The20 heliport controls peak at2,882,800,808 sampled bytes. Four6,000-frame original

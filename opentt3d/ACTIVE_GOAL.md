@@ -1,5 +1,38 @@
 # Active extended development goal
 
+## Arctic/tropical bank verified — September 27, 07:00:52 UTC
+
+Four provisional bank89/90 volumes raise the catalogue to1,543 and industry coverage
+to120/175 definitions:88 body owners and120 grounds. Original finished bodies remain
+identical in all four construction slots; independent soil changes to completed
+paving/planters only at stage3. The joined brick office retains recessed glazing,
+thin columns, flat olive roof and a hollow golden dome owned by89. First source review
+catches overly deep columns hiding the windows; the corrected native view exposes
+those openings. All1,539 preceding geometry/paint hashes agree.
+
+The28 frozen background controls pass both backends, including64 actual construction
+layer selections in both native bank climates, four-climate source guards, real gold
+service and app bundles. Native200, asset131 and harness12 checks pass. All16 palettes,
+18 state aliases and48 climate comparisons are reconciled; the six different Toyland
+soil selections keep their existing independent source fallback. Peak sampled memory
+is3,464,744,392bytes. Native registered individual/layout captures agree across backends;
+the wider108-image audit retains18 differences/1,782 pixels. Joined registration stays
+96×74 against the original96×73; dome/facade grain, columns and paving remain provisional.
+
+The diamond-to-town route needs longer observation: the first360-second harness run
+expires after loading; the next reaches accepted delivery but its2,400-tick AI window
+ends before return. Both failures and saves remain. An explicit6,000-tick window now
+observes full12-unit loading, acceptance16, delivery and return after3,056 ticks. A
+default2,400-tick gold regression passes after1,710 ticks with acceptance8. No cargo or
+simulation state is forced. Diamond artwork remains the next unbound industry family.
+
+Airport release`.7`is published at3c263730d1cdec348f0214ae002e072399e99998; hosted
+package run36300868157 remains under its background watcher. Heliport captures compact
+losslessly by780,853,013bytes. The ARM software-OpenGL black triangles reproduce locally
+when the viewport matches the hosted640×480 size. Diagnostic shader controls rule out
+fragment colour, alpha discard, depth writes and ordinary face culling; diagnosis
+continues without changing the published renderer. The full goal remains open.
+
 ## Elevated heliport verified — September 27, 06:33:24 UTC
 
 The heliport body adds the final primary airport binding:74/74 definitions,56 body

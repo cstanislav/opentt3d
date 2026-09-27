@@ -244,7 +244,9 @@ function IndustryFixture::CargoService(industry)
 	local loaded = false, delivered = false, returned = false, peak_load = 0, peak_speed = 0;
 	local full_reported = false, empty_reported = false;
 	local pickup_station = AIStation.GetStationID(pickup), delivery_station = AIStation.GetStationID(delivery);
-	for (local tick = 0; tick < 2400 && !returned; tick += 2) {
+	local observed_ticks = 0, service_ticks = AIController.GetSetting("review_service_ticks");
+	for (local tick = 0; tick < service_ticks && !returned; tick += 2) {
+		observed_ticks = tick;
 		if (!AIVehicle.IsValidVehicle(truck) || AIVehicle.GetState(truck) == AIVehicle.VS_CRASHED) throw "cargo truck was lost during its route";
 		local load = AIVehicle.GetCargoLoad(truck, cargo), speed = AIVehicle.GetCurrentSpeed(truck);
 		if (load > peak_load) peak_load = load;
@@ -286,5 +288,5 @@ function IndustryFixture::CargoService(industry)
 		",\"source_type\":" + source_type + ",\"destination_type\":" + destination_type +
 		",\"truck\":" + truck + ",\"engine\":" + engine + ",\"cargo\":" + cargo +
 		",\"pickup_station\":" + pickup_station + ",\"delivery_station\":" + delivery_station +
-		",\"acceptance\":" + acceptance + ",\"peak_load\":" + peak_load + ",\"peak_speed\":" + peak_speed + ",\"returned\":true}");
+		",\"acceptance\":" + acceptance + ",\"peak_load\":" + peak_load + ",\"peak_speed\":" + peak_speed + ",\"observed_ticks\":" + observed_ticks + ",\"returned\":true}");
 }
