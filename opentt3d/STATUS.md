@@ -10,7 +10,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,538-volume asset/compiler/schema suite130/130 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,539-volume asset/compiler/schema suite131/131 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -20,8 +20,14 @@ This file records implemented and verified work, not promises of completeness.
   preserves distinct grass, taxiways, worn airfields and small runways; identical
   triangular overlays retain independent body ownership. All 1,468 earlier model
   hashes agree. Twenty background controls pass, including 8,016 visibility/picking
-  views, live animations and aircraft contact. The elevated heliport body and final
-  source/street fidelity remain open.
+  views, live animations and aircraft contact. Final source/street fidelity remains open.
+
+- [x] The elevated heliport brings primary airport coverage to74/74, with56 body
+  owners and74 independent grounds. Its local60-unit deck remains unscaled above
+  doubled terrain. All120 Guru/84 Powernaut support corners meet actual captured deck
+  triangles. Twenty background controls pass four climates,192 visibility/picking
+  views, original rotor stop/restart, development bundles and the oil-rig regression.
+  All1,538 prior models agree. Separate Toyland body paint and final fidelity remain open.
 
 - [x] Normal launches request3D without developer environment variables. Explicit
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated

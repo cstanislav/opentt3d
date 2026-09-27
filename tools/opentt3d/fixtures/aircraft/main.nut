@@ -31,9 +31,13 @@ function AircraftCatalogue::Start()
 		local oilrig = AIController.GetSetting("review_oilrig") != 0;
 		local type = oilrig ? AIAirport.AT_HELIDEPOT : AIController.GetSetting("review_airport_type"), airports = [], aircraft = [];
 		this.Require(AIAirport.IsValidAirportType(type), "review airport is available");
-		local width = AIAirport.GetAirportWidth(type), height = AIAirport.GetAirportHeight(type);
+		local destination_type = AIController.GetSetting("review_destination_type");
+		if (destination_type < 0) destination_type = type;
 		foreach (begin_x in [8, 88]) {
 			if (oilrig && airports.len() == 1) break;
+			local endpoint_type = airports.len() == 0 ? type : destination_type;
+			this.Require(AIAirport.IsValidAirportType(endpoint_type), "endpoint airport is available");
+			local width = AIAirport.GetAirportWidth(endpoint_type), height = AIAirport.GetAirportHeight(endpoint_type);
 			local found = -1, attempts = 0, last_error = "no candidate rectangle";
 			for (local y = 8; y < AIMap.GetMapSizeY()-height-8 && found < 0; y += 10) {
 				for (local x = begin_x; x < (oilrig ? AIMap.GetMapSizeX()-width-8 : begin_x+24); x += oilrig ? 4 : 10) {
@@ -41,7 +45,7 @@ function AircraftCatalogue::Start()
 					if (AITile.GetMinHeight(tile) < 1 || !AITile.IsBuildableRectangle(tile,width+1,height+1)) continue;
 					++attempts;
 					if (!AITile.LevelTiles(tile,AIMap.GetTileIndex(x+width,y+height))) { last_error = AIError.GetLastErrorString(); continue; }
-					if (AIAirport.BuildAirport(tile,type,AIStation.STATION_NEW)) { found = tile; break; }
+					if (AIAirport.BuildAirport(tile,endpoint_type,AIStation.STATION_NEW)) { found = tile; break; }
 					last_error = AIError.GetLastErrorString();
 				}
 			}
@@ -117,7 +121,7 @@ function AircraftCatalogue::Start()
 				foreach (plane in aircraft) {
 					manifest += (manifest.len() == 0 ? "" : ",") + "{\"engine\":" + plane.engine + ",\"vehicle\":" + plane.vehicle + ",\"serviced\":true,\"peak_speed\":" + plane.peak_speed + "}";
 				}
-				AILog.Info("AIRCRAFT_CATALOGUE_READY {\"airport_type\":" + type + ",\"airports\":[" + airports[0] + "," + airports[1] + "],\"aircraft\":[" + manifest + "]}");
+				AILog.Info("AIRCRAFT_CATALOGUE_READY {\"airport_type\":" + type + ",\"destination_airport_type\":" + (oilrig ? -1 : destination_type) + ",\"airports\":[" + airports[0] + "," + airports[1] + "],\"aircraft\":[" + manifest + "]}");
 				while (true) this.Sleep(1000);
 			}
 			this.Sleep(5);

@@ -1805,6 +1805,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 							}
 							if (std::abs(lowest-ground) >= 0.001f) throw std::runtime_error("Authored aircraft wheels/skids do not meet the actual airport surface");
 							if (oilrig) Debug(driver,1,"OpenTT3D: oil-rig helicopter deck contact passed: {} actual support corners on captured industry surfaces at height {}",CheckElevatedAircraftContacts(ground),ground);
+							if (airport != nullptr && airport->airport.type == AT_HELIPORT && HasVoxelAirport(44,0)) Debug(driver,1,"OpenTT3D: heliport helicopter deck contact passed: {} actual support corners on captured airport surfaces at height {}",CheckElevatedAircraftContacts(ground),ground);
 							Debug(driver,1,"OpenTT3D: voxel aircraft ground contact passed: engine {} vehicle {}, authored support plane {} matches actual airport surface",checked_aircraft_contact,vehicle.index.base(),lowest);
 							checked_aircraft_contact = UINT_MAX;
 						}

@@ -21,6 +21,7 @@ def main():
     parser.add_argument("--service-hold-ticks", type=int, default=0, help="Keep full-load service in the fixture, then release this many ordinary AI ticks after reload (0..4096)")
     parser.add_argument("--oilrig", action="store_true", help="Fund a real oil rig and operate a selected helicopter from a heliport with a hangar to its elevated landing pad")
     parser.add_argument("--airport-type", type=int, choices=(0,1,3,4,5,6,7,8), help="Original hangar-equipped airport type; defaults to intercontinental7 or oil-rig feeder helidepot6")
+    parser.add_argument("--destination-airport-type", type=int, choices=range(9), help="Original destination airport type, including elevated heliport2; defaults to the origin type")
     parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
@@ -34,8 +35,11 @@ def main():
     airport_type = args.airport_type if args.airport_type is not None else 6 if args.oilrig else 7
     if args.oilrig and airport_type != 6:
         parser.error("Oil-rig service uses the original helidepot feeder")
-    if airport_type in (6,8) and args.first_engine < 253:
-        parser.error("Helidepot and helistation services require helicopter engines253..255")
+    if args.oilrig and args.destination_airport_type is not None:
+        parser.error("An oil rig supplies its own destination airport")
+    destination_type = args.destination_airport_type if args.destination_airport_type is not None else airport_type
+    if (airport_type in (6,8) or destination_type in (2,6,8)) and args.first_engine < 253:
+        parser.error("Heliport, helidepot and helistation services require helicopter engines253..255")
     root = Path(__file__).resolve().parents[2]
     graphics = json.loads((root / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "aircraft", output / "ai/aircraft-catalogue")
@@ -82,7 +86,7 @@ server_advertise = false
 min_active_clients = 0
 pause_on_join = false
 """)
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Aircraft Catalogue" "review_first={args.first_engine},review_last={args.last_engine},review_hold_ticks={args.service_hold_ticks},review_oilrig={int(args.oilrig)},review_airport_type={airport_type}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Aircraft Catalogue" "review_first={args.first_engine},review_last={args.last_engine},review_hold_ticks={args.service_hold_ticks},review_oilrig={int(args.oilrig)},review_airport_type={airport_type},review_destination_type={destination_type}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave aircraft-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     with socket.socket() as probe:
@@ -104,7 +108,8 @@ pause_on_join = false
                 ready = re.search(r"AIRCRAFT_CATALOGUE_READY (\{[^\n]+\})", text)
                 if ready:
                     manifest = json.loads(ready[1])
-                    if (len(manifest["airports"]) != 2 or manifest.get("airport_type") != airport_type or not manifest["aircraft"] or
+                    if (len(manifest["airports"]) != 2 or manifest.get("airport_type") != airport_type or
+                        manifest.get("destination_airport_type") != (-1 if args.oilrig else destination_type) or not manifest["aircraft"] or
                         any(not plane["serviced"] or plane["peak_speed"] <= 0 or
                             not args.first_engine <= plane["engine"] <= args.last_engine for plane in manifest["aircraft"])):
                         raise RuntimeError("Aircraft fixture did not verify its selected operating fleet")

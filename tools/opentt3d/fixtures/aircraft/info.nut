@@ -4,9 +4,9 @@ class AircraftCatalogueInfo extends AIInfo {
 	function GetName()        { return "OpenTT3D Aircraft Catalogue"; }
 	function GetShortName()   { return "3DAC"; }
 	function GetDescription() { return "Operate original aircraft through public NoAI construction and orders."; }
-	function GetVersion()     { return 1; }
+	function GetVersion()     { return 2; }
 	function GetAPIVersion()  { return "15"; }
-	function GetDate()        { return "2026-09-26"; }
+	function GetDate()        { return "2026-09-27"; }
 	function CreateInstance() { return "AircraftCatalogue"; }
 	function UseAsRandomAI()  { return false; }
 	function GetSettings() {
@@ -15,6 +15,7 @@ class AircraftCatalogueInfo extends AIInfo {
 		AddSetting({name = "review_hold_ticks", description = "Hold destination service until this many ticks after reloading", min_value = 0, max_value = 4096, default_value = 0, flags = CONFIG_NONE});
 		AddSetting({name = "review_oilrig", description = "Build a real oil rig as the helicopter destination", min_value = 0, max_value = 1, default_value = 0, flags = CONFIG_NONE});
 		AddSetting({name = "review_airport_type", description = "Original airport type for both service endpoints", min_value = 0, max_value = 8, default_value = 7, flags = CONFIG_NONE});
+		AddSetting({name = "review_destination_type", description = "Destination airport type, or -1 to reuse the origin type", min_value = -1, max_value = 8, default_value = -1, flags = CONFIG_NONE});
 	}
 }
 RegisterAI(AircraftCatalogueInfo());

@@ -17,3 +17,9 @@ that order's full-load flag. This gives the simulation enough dwell time to stop
 rotor before normal departure. Stage that fixture's own `ai/` directory on reload;
 `smoke.py --running --verify-helicopter-rotor <engine> --benchmark-frames 3600`
 requires all four actually captured source states on one helicopter.
+
+For the original elevated heliport, use `--airport-type 6 --destination-airport-type 2`
+with a climate-compatible helicopter. The origin helidepot supplies the hangar and
+the destination's original landing datum remains 60 units above its terrain. For
+example, `--first-engine 254 --last-engine 254 --service-hold-ticks 256` retains an
+ordinary held destination service for skid/deck contact and rotor restart review.

@@ -3,6 +3,14 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Elevated heliport observations
+
+The20 heliport controls peak at2,882,800,808 sampled bytes. Four6,000-frame original
+rotor observations average59.576…60.003fps, with5.085…5.510ms p95 work. They still
+contain482…796 intervals above20ms and a151.72ms maximum work sample. Ordinary headless
+fixture preparation overlaps part of this correctness review; these figures are not
+an isolated performance acceptance run. Source:`breadth-heliport-final-reconciliation.json`.
+
 ## Hosted release .6 acceptance
 
 The900-frame Linux llvmpipe electric journey passes complete support and collector

@@ -16,6 +16,20 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Elevated heliport:**the last primary airport definition44 has a stepped office,
+  hollow recessed/glazed facades, lower wing, actual rooftop railing openings, hollow
+  supporting head and independently painted round landing pad. The original body2633
+  is identical in all four climates;3981 ground remains independently climate-selected.
+  Source review corrects lower-wing placement, company-paint brightness and pad marking
+  direction. The deck stays exactly60 local units above doubled terrain. Actual Guru
+  and Powernaut landings place all120/84 support corners on captured deck triangles;
+  rotor stop/restart preserves every original state. Native registered64×88 images
+  retain a one-pixel offset against the source and agree across backends. The wider33
+  images retain13 differences/699 pixels, including259 in individual views and268 in
+  the joined airport context. Facade grain, head proportions, lamp marks/phases and
+  street silhouettes still need refinement. All1,538 older model hashes agree and20
+  frozen controls pass. Evidence:`build-macos/breadth-heliport-*`. Zero final approvals.
+
 - **Airport edge/surface breadth:**70 provisional volumes add the nine distinct
   taxiway grounds, four climate-specific lawns, worn small-airfield paths and three
   short-runway surfaces. All 74 airport grounds now have independent bindings,

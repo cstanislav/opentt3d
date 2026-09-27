@@ -492,6 +492,23 @@ class VoxelCompilerTests(unittest.TestCase):
             self.assertEqual(reached,joined,(graphics,"Every wall, roof, platform and tank must reach ground"))
         self.assertNotIn((8,25,8),volumes["airport_small_control_tank"],"Keep the water tank's supporting frame open")
 
+    def test_heliport_keeps_original_elevated_landing_plane_and_independent_lawn(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        self.assertEqual(source["bindings"]["airport_tiles"]["44"],{"0":"airport_heliport_tower"})
+        self.assertEqual(set(source["bindings"]["airport_ground"]["44"]),{"0","16","32","48"})
+        source["models"] = {"airport_heliport_tower":source["models"]["airport_heliport_tower"]}
+        source["bindings"] = {}
+        model = compile_catalogue(source)["models"]["airport_heliport_tower"]
+        volume = {(x+i,y,z) for x,y,z,length,material in model["runs"] for i in range(length)}
+        self.assertEqual(max(z+1 for x,y,z in volume)*model["cell_size"][2]+model["origin"][2],60,
+                         "The original heliport landing offset must not follow doubled terrain heights")
+        self.assertGreater(sum(z == 119 for x,y,z in volume),500,"The raised landing pad needs a complete surface, not a hollow ring")
+        self.assertNotIn((16,16,40),volume,"Keep the stepped office interior hollow")
+        self.assertNotIn((15,17,100),volume,"Keep the head's independent supporting cylinder hollow")
+        self.assertIn((15,17,119),volume,"The landing pad closes over the head's open interior")
+        self.assertTrue(any(z == 0 for x,y,z in volume),"The tower must retain physical ground support")
+
     def test_airport_edges_keep_climate_grounds_level_empty_owners_and_overlay_partition(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

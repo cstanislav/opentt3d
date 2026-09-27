@@ -68,7 +68,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-27; 1,538-volume airport surfaces)
+## Pass 1 coverage checkpoint and queue (2026-09-27; 1,539-volume airport checkpoint)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -79,7 +79,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
 | Industries | 118/175 definitions with body or ground bindings:86 body owners,118 grounds | Gold72…88 joins copper47…51, ground-only iron-ore100…115, steel52…57, printing43…46, tropical factory121…124, factory39…42, lumbermill125…128, oil-well, farm, bank, food, paper, plantations, waterworks, oil-rig, forest and refinery;57 definitions, distinct climate grounds and complete source/state/layout acceptance remain |
-| Airports | 73/74 tile definitions:55 body owners and18 ground-only definitions;74 independent grounds | Four-climate taxiway/grass/worn-airfield/small-runway surfaces and all radar/windsock grounds are bound; heliport44, independent Toyland terminal/hangar artwork and complete source/street/layout acceptance remain |
+| Airports | 74/74 primary tile definitions:56 body owners and18 ground-only definitions;74 independent grounds | Elevated heliport44, four-climate taxiway/grass/worn-airfield/small-runway surfaces and radar/windsock grounds are bound; independent Toyland terminal/hangar artwork, exact lamp phases and complete source/street/layout acceptance remain |
 | Depots | 6/6 families,24 directional bindings | Tram body/floor/wire bindings now cover the missing family; all-family source/ground/vehicle clearance and later fidelity review remain |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
 | Other transport | Both ship-depot axes/four voxel sections; six dock sections/twelve ordinary-Toyland volumes; separate source-resolved ordinary/Toyland buoys | Roads/trams/stops, locks/aqueducts and remaining infrastructure; full water-class/ship/bridge fidelity and clearance review |

@@ -1,5 +1,31 @@
 # Active extended development goal
 
+## Elevated heliport verified — September 27, 06:33:24 UTC
+
+The heliport body adds the final primary airport binding:74/74 definitions,56 body
+owners and74 independent grounds. The catalogue contains1,539 provisional volumes.
+All1,538 preceding model hashes agree. Native200, asset131 and harness12 checks pass.
+Twenty frozen background controls pass on both backends, including four climates,
+192 ground/body visibility/picking views, real Guru/Powernaut landings, original
+four-state rotor stop/restart, development bundles and the oil-rig contact regression.
+All120/84 authored support corners meet the captured deck at world76: doubled terrain16
+plus the original local60. Peak sampled memory is2,882,800,808bytes.
+
+Registered native source/model images are64×88, with a retained one-pixel offset
+difference, and match across backends. The wider33-image comparison retains699
+differing pixels in13 images; source paint, lamp phases, street silhouettes and
+the roof/head proportions remain provisional. No final visual approvals are granted.
+The updated aircraft fixture uses public construction/orders for a separate destination
+airport type; both city and oil-rig regressions pass. Distinct Toyland airport body
+paint and complete catalogue-wide state/fidelity/performance acceptance remain open.
+
+The next bank89/90 and diamond91…99 source audit retains264 climate/layer comparisons;
+21 differ, all involving Toyland2022 soil. Bank bodies are already complete in all
+four construction slots; diamond preserves21 empty bodies. Original imagery, hashes,
+registered joined sheets and authoring notes are retained under `breadth-bank-*` and
+`breadth-diamond-*`. Their ordinary construction/delivery fixtures are being prepared;
+no new bank or diamond bindings are claimed yet.
+
 ## Public desktop downloads verified — September 27, 06:23:09 UTC
 
 Release `opentt3d-dev-20260927.6` at `6628fd8df6d0b25677f00538985965590c65f617`

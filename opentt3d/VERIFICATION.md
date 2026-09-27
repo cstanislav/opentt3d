@@ -1,5 +1,24 @@
 # Implementation verification
 
+## Elevated heliport checkpoint
+
+At06:33:24UTC, all20 frozen controls pass both backends, four climates,192 independent
+ground/body/picking views, normal destination service for engines254/255, all four
+rotor states with stopped-to-running transition, linked bundles and oil-rig deck contact.
+The new ordinary-command fixture permits a separate destination airport type; its city
+and oil-rig service regressions also pass. All120 Guru and84 Powernaut support corners
+land on actual captured deck triangles at world76, preserving terrain16 plus local60.
+No vehicle/airport simulation coordinates or original rotor offsets are changed.
+
+The native200, asset131 and harness12 checks pass. All1,538 preceding model hashes,
+frozen source/build hashes and bundle links agree. The catalogue reaches1,539 volumes
+and74/74 primary airport definitions; explicit Toyland body restrictions remain. Peak
+sampled memory is2,882,800,808bytes. Native registered images agree across backends,
+while the complete33-image gallery comparison retains699 differing pixels/13 images.
+Source paint/registration, lamp details and final visual acceptance remain provisional.
+Evidence:`build-macos/breadth-heliport-{source-audit,final-reconciliation,backend-comparison}.json`,
+ordinary service fixtures, retained initial/refined source sheets and street galleries.
+
 ## Public executable attachments verified
 
 Release`.6`run36296305317 passes every source, platform and publish job. At06:23:09UTC,
