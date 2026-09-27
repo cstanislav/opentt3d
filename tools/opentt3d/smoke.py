@@ -162,6 +162,7 @@ def main():
     parser.add_argument("--benchmark-frames", type=int, default=0)
     parser.add_argument("--zoom", type=int, default=1, choices=range(-6, 6))
     parser.add_argument("--fullscreen", action="store_true")
+    parser.add_argument("--resolution", nargs=2, type=int, default=(1280,800), metavar=("WIDTH", "HEIGHT"), help="Window dimensions; smaller scenes improve software-rendered live-state sampling")
     parser.add_argument("--center", nargs=2, type=int, default=(64, 64), metavar=("TILE_X", "TILE_Y"))
     parser.add_argument("--infinite-water", action="store_true", help="Generate a new world with infinite water borders")
     parser.add_argument("--first-person", metavar="VEHICLE_ID", help="Exercise the vehicle window's Cab button; use 'auto' for the first visible primary vehicle")
@@ -174,6 +175,8 @@ def main():
     parser.add_argument("--keep-open", action="store_true")
     parser.add_argument("--brief", action="store_true", help="Print a short result; retain the complete artifact reports")
     args = parser.parse_args()
+    if not (640 <= args.resolution[0] <= 8192 and 480 <= args.resolution[1] <= 8192):
+        parser.error("--resolution requires width 640…8192 and height 480…8192")
     if args.background and (platform.system() != "Darwin" or args.verify_native_input or args.fullscreen):
         parser.error("--background requires macOS windowed rendering without --verify-native-input")
     if args.memory_limit_mib is not None and (args.memory_limit_mib <= 0 or args.keep_open):
@@ -305,7 +308,7 @@ def main():
 language = english.lng
 display_opt = SHOW_TOWN_NAMES|SHOW_STATION_NAMES|SHOW_SIGNS|FULL_ANIMATION|FULL_DETAIL|WAYPOINTS
 fullscreen = false
-resolution = 1280,800
+resolution = {args.resolution[0]},{args.resolution[1]}
 screenshot_format = png
 
 [gui]
@@ -546,7 +549,7 @@ server_advertise = false
     (scripts / ("autoexec.scr" if args.menu else "game_start.scr")).write_text("\n".join(commands) + "\n")
     command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", "-X",
                "-v", driver, "-b", args.blitter, "-s", "null", "-m", "null",
-               *([] if args.graphics_from_config else ["-I", graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", "1280x800", "-d", "driver=2,console=1", "-G", "314159", "-t", str(args.year), "-g"]
+               *([] if args.graphics_from_config else ["-I", graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", "driver=2,console=1", "-G", "314159", "-t", str(args.year), "-g"]
     if args.menu:
         command.pop()  # No -g: use the original title-game/menu startup path.
     if args.savegame:

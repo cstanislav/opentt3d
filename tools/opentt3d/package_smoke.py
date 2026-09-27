@@ -24,9 +24,12 @@ def verify(package, output, driver=None, *, headless=False, without_vulkan_devic
     (output / "scripts").mkdir()
     (output / "scripts/game_start.scr").write_text(
         "pause\nsave package-smoke\nquit\n" if headless else
-        "pause\nrenderer3d benchmark 30 capture\nsave package-smoke\n")
+        # A close, small viewport also exercises hosted macOS's software OpenGL.
+        # Keep ordinary default renderer selection and the complete title save;
+        # this checks package startup/resources, not wide-scene performance.
+        "pause\nscrollto instant 64 64\nrenderer3d zoom -2\nrenderer3d benchmark 3 capture\nsave package-smoke\n")
     (output / "openttd.cfg").write_text(
-        "[misc]\nlanguage = english.lng\nfullscreen = false\nresolution = 960,640\n"
+        "[misc]\nlanguage = english.lng\nfullscreen = false\nresolution = 640,480\n"
         "screenshot_format = png\n[gui]\nautosave_interval = 0\nrefresh_rate = 60\n")
     shutil.copyfile(resources / "baseset/opntitle.dat", output / "input.sav")
     # Upstream -X also excludes a macOS app's Resources directory. Exercise the

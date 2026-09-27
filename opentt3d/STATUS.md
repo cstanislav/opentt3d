@@ -24,7 +24,9 @@ This file records implemented and verified work, not promises of completeness.
   its software OpenGL scene times out and Intel aborts inside MoltenVK's argument-
   buffer probe. Linux's short software-rendered journey misses the intermediate
   portal collector state without repeating the prior exception. No downloads publish;
-  complete hosted acceptance remains open.
+  complete hosted acceptance remains open. The next correction selects direct Metal
+  bindings on Intel and uses smaller package scenes/denser Linux journey sampling;
+  native tests, extracted local launches and a direct-binding collector replay pass.
 
 - [x] Gold72…88 adds52 provisional volumes and82 independent body/ground layers,
   preserving54 empty bodies, the three original wheel poses, cross-owner roof/trough

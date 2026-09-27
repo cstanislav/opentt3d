@@ -2,6 +2,25 @@
 
 ## Gold checkpoint and second hosted-package results
 
+The`.5`follow-up uses `VK_EXT_layer_settings` on Intel macOS to disable MoltenVK's
+optional argument-buffer path. The renderer's seven resource bindings fit direct
+Metal limits. A compiled x86_64 probe run under Rosetta creates the device and reports
+discrete resource indexes even with the contrary environment setting enabled; this
+verifies the setting's syntax and precedence, not the hosted Intel driver itself.
+Apple-silicon Vulkan retains its existing default binding path. Package smoke now
+uses a640×480 close-up title-world viewport with30 warm-up/3 measured frames. Both
+extracted local backends present identical full screenshots and save, without a
+renderer-enable command or injected resources. Linux's live journey retains all
+checks but uses640×480 and900 frames instead of1280×800 and120 to improve sparse
+software-rendered portal sampling. Native200, harness12, actionlint1.7.12 and the
+137-file boundary pass. The9,000-frame local direct-binding Vulkan replay of the
+actual`.5`Linux fixture captures every support/collector state. Evidence:
+`playable-release6-{build,native,harness,package}.log`,
+`playable-release6-metal-setting-x86_64-verified.log`, `playable-release6-direct-metal/`
+and `package-smoke-opentt3d-prototype-package6-macos-arm64/`. Local prototype dependencies
+require macOS26; hosted releases continue to target/audit macOS15. Fresh hosted
+acceptance and public executable attachments remain pending.
+
 Gold's source/build audit verifies52 added volumes,82 bound layers,54 preserved empty
 bodies and all1,416 preceding model hashes unchanged. Source aliases, palette indices,
 supported geometry and exclusive cross-owner occupancy pass. All408 source climate/

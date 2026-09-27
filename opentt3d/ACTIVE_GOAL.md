@@ -26,6 +26,18 @@ The next airport worklist has21 primary definitions and30 independent source lay
 retained under `build-macos/breadth-airport-remainder-*`. No new airport bindings are
 claimed by that source audit.
 
+Gold is committed/pushed to `main` at `c1be0b143`. At **05:05:55 UTC**, the next
+package correction is locally verified: Intel MoltenVK selects direct resource
+bindings through its standard layer-settings extension; an x86_64 probe under
+Rosetta confirms that setting overrides the opposite environment value. Extracted
+macOS default-Vulkan/OpenGL launches both render and save in a smaller close-up
+title-world scene. Native200 and harness12 checks, actionlint and the boundary pass.
+A9,000-frame direct-binding Vulkan journey on the exact`.5`Linux save captures all
+support/collector states. The Linux hosted control receives a640×480 window and900
+frames to sample the brief portal state more densely. Fresh hosted acceptance is
+still required. Gold's accepted captures compact losslessly by another2,053,935,800
+bytes; all original imagery and failures remain retained.
+
 ## Earlier hosted package failures and gold continuation
 
 The continuation clock was **2026-09-27 04:08:52 UTC**. Hosted release run36292341479

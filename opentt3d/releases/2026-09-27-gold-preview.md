@@ -21,5 +21,18 @@ The preceding`.5`package run passes Windows packaging and Linux's extracted3D/Op
 fallback launches, but fails the complete release gate. Intel macOS aborts inside the
 MoltenVK Metal argument-buffer probe; Apple-silicon software OpenGL exceeds its smoke
 timeout; Linux's sparse120-frame journey misses a brief collector transition. No
-public executable downloads from that run are claimed. Corrective package work follows
-this artwork checkpoint; see `PLAYING.md` for the intended installation procedure.
+public executable downloads from that run are claimed.
+
+The package follow-up selects direct Metal resource bindings on Intel macOS, avoiding
+the optional argument-encoder probe. A compiled x86_64 setting/device control passes
+under Rosetta. The startup smoke uses a smaller close-up title-world viewport that
+both extracted local renderers can present and save; the Linux journey receives a
+smaller window and more presented frames to capture its brief portal transition.
+Native200 and harness12 checks pass, along with a9,000-frame direct-binding Vulkan
+support/collector replay. Fresh hosted results remain required.
+
+**Executable downloads appear under Assets only after every package job passes.**
+See [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+Required OpenGFX2 graphics, models, languages and runtime dependencies are bundled;
+sound/music are optional Online Content downloads. Windows ARM64 native execution,
+foreground input acceptance and sustained arbitrary-world60fps remain open.

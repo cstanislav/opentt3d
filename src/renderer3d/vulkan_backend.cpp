@@ -1211,6 +1211,20 @@ bool CreateInstance(std::span<const char *const> required)
 			extensions.push_back(VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME);
 			create.enabledLayerCount = 1; create.ppEnabledLayerNames = &layer; create.pNext = &features;
 		}
+#if defined(__APPLE__) && defined(__x86_64__)
+		/* MoltenVK 1.4.2's argument-encoder feature probe aborts in Intel macOS's
+		 * paravirtualized Metal driver. Our seven descriptor bindings fit direct
+		 * Metal resource limits; avoid that optional probe on Intel macOS. */
+		VkBool32 argument_buffers = VK_FALSE;
+		VkLayerSettingEXT setting{"MoltenVK", "MVK_CONFIG_USE_METAL_ARGUMENT_BUFFERS", VK_LAYER_SETTING_TYPE_BOOL32_EXT, 1, &argument_buffers};
+		VkLayerSettingsCreateInfoEXT settings{}; settings.sType = VK_STRUCTURE_TYPE_LAYER_SETTINGS_CREATE_INFO_EXT;
+		if (std::ranges::any_of(available, [](const auto &extension) { return std::strcmp(extension.extensionName, VK_EXT_LAYER_SETTINGS_EXTENSION_NAME) == 0; })) {
+			extensions.push_back(VK_EXT_LAYER_SETTINGS_EXTENSION_NAME);
+			settings.settingCount = 1; settings.pSettings = &setting;
+			settings.pNext = create.pNext; create.pNext = &settings;
+			Debug(driver, 1, "OpenTT3D: Intel MoltenVK uses direct Metal resource bindings");
+		}
+#endif
 		create.enabledExtensionCount = static_cast<uint32_t>(extensions.size()); create.ppEnabledExtensionNames = extensions.data();
 		Check(vkCreateInstance(&create, nullptr, &context->instance), "create instance");
 		if (validate) {
