@@ -24,7 +24,12 @@ observations average about60fps but retain60/34 intervals over20ms. Sustained sm
 
 ## Downloads
 
-The [verified `.10` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.10)
-is available for Windows, macOS and Linux. This sweet-factory preview's executables
-appear after its exact-commit package workflow passes. See the
+The [verified `.11` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.11)
+is available for Windows, macOS and Linux. All eight hosted jobs pass after an
+exact-tag rerun of Intel macOS's busy-DMG failure. Independent audits verify19 public
+attachments,18 checksums,2,062 exact-commit source files and all six embedded commits.
+Every package contains1,585 models. Three downloaded Mac launches, seven hosted
+graphical clipping/startup/save controls and Windows x64/x86 native load/save pass.
+Linux's900-frame electric support/collector journey passes; smooth60fps remains open.
+See the
 [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).

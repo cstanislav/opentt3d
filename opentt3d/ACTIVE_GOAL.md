@@ -1,5 +1,24 @@
 # Active extended development goal
 
+## Sweet-factory desktop release verified — September27,11:10:22UTC
+
+All eight hosted jobs for`.11`at4790c3defbb10008b2ddb828e348565f059f4994 now pass.
+Intel macOS's first DMG creation failed with`hdiutil: Resource busy`; the failed job
+passes on an exact-tag rerun, and its original log remains. Independent public audits
+verify19 attachments,18 checksum entries,2,062 exact-commit source files and all six
+embedded package commits. Every package contains the same1,585 models, with only a
+trailingCRLF difference on Windows. Three extracted Mac startup/save controls pass,
+alongside architecture/signature/dependency/minimum15.0 checks.
+
+Seven hosted graphical controls pass72 clipping views; Windows x64/x86 extracted
+native load/save passes. Reviewed ARM/Intel software-OpenGL captures have zero black
+world pixels and nine differences from matched Vulkan. Linux's900-frame electric
+journey passes support/collector observations at3.005fps under llvmpipe and2,233,671,680
+peak sampled bytes. Sustained performance acceptance remains open. Public instructions
+now link to`.11`; evidence:`playable-release11-{download-audit,ci-reconciliation,
+hosted-visual-comparison}.json`. Battery is committed/pushed as37dc38aae and release`.12`
+is building. Cola's separate three-volume increment is under fresh frozen controls.
+
 ## Battery growth and original procedural sources verified — September27,10:53:37UTC
 
 Five provisional battery135/136 bodies raise the catalogue to1,590 and primary

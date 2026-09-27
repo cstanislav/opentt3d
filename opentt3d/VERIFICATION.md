@@ -1,5 +1,20 @@
 # Implementation verification
 
+## Sweet-factory desktop package audit
+
+At11:10:22UTC, release`.11`at4790c3defbb10008b2ddb828e348565f059f4994 passes all
+eight hosted jobs. Its Intel DMG job first failed with`hdiutil: Resource busy` and
+passes on the exact-tag rerun; original failure evidence remains. Independent public
+checks verify19 attachments,18 checksums,2,062 exact-commit source files and six
+embedded commits. All six catalogues contain1,585 identical models; Windows differs
+only by a trailingCRLF. Mac architecture/signature/dependency/minimum15.0 checks,
+three downloaded startup/save launches, seven hosted graphical clipping controls
+and Windows x64/x86 native load/save pass. Actual ARM/Intel software-OpenGL captures
+have zero black world pixels and nine differences from matched Vulkan. Linux's900-frame
+electric journey passes support/collector coverage at3.005fps and2,233,671,680 sampled
+bytes; these hosted timings do not establish sustained performance acceptance.
+Evidence:`build-macos/playable-release11-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Battery harvest cycles and complete original Toyland child references
 
 At10:53:37UTC, all28 frozen background controls pass. Sixteen actual construction-layer
