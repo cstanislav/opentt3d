@@ -1,5 +1,26 @@
 # Active extended development goal
 
+## Hosted package failures and gold continuation
+
+The continuation clock was **2026-09-27 04:08:52 UTC**. Hosted release run36292341479
+finished unsuccessfully: the source job and native platform builds/tests pass, but
+no downloads were published. Linux's Debian Python3.11.2 lacks the tar extraction
+filter keyword; Windows's dependency exclusion missed native backslash paths and
+recursed into an optional system DLL. Both are corrected locally with regression
+checks. The Apple-silicon extracted default-Vulkan launch passes; its explicit
+OpenGL launch and Intel's automatic launch time out. Cocoa's diagnostic software-GL
+setting now also permits a software context; hidden fatal dialogs report to stderr,
+and package startup timeouts retain a process sample. Fresh hosted acceptance is
+required, including the Linux electric journey skipped after packaging failed.
+
+Gold72…88 is a local52-volume draft. Its82 bound layers pass source-palette checks,
+all54 empty bodies and original aliases are preserved, joined construction/roof/
+trough/tower geometry is supported and exclusively owned, and all1,416 preceding
+model hashes agree. Native source-comparable review and the new ordinary town-bank
+cargo-service fixture are in progress. Keep the complete four-pass catalogue,
+source-fidelity, gameplay and smooth-performance goal active, with zero final
+visual approvals.
+
 ## Hosted-package verification wait — September27,03:50:14UTC
 
 The actual clock is **2026-09-27 03:50:14 UTC**. The playable-release workflow and

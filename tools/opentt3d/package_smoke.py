@@ -78,6 +78,15 @@ def verify(package, output, driver=None, *, headless=False, without_vulkan_devic
                     break
                 time.sleep(0.25)
             else:
+                if is_mac:
+                    # Preserve a real startup hang before reaping the process;
+                    # a two-line driver log alone cannot identify AppKit/GL waits.
+                    with (output / "sample-driver.log").open("w") as sample_log:
+                        try:
+                            subprocess.run(["/usr/bin/sample", str(process.pid), "3", "-file", str(output / "sample.txt")],
+                                           stdout=sample_log, stderr=subprocess.STDOUT, timeout=20, check=False)
+                        except subprocess.TimeoutExpired:
+                            sample_log.write("Process sampling timed out.\n")
                 raise TimeoutError(f"Packaged game did not render and save: {log_path}")
             if not re.search(r"captured (?:OpenGL|Vulkan) presentation with [1-9]\d* GPU viewport regions", text):
                 raise RuntimeError(f"Default launch did not present a 3D viewport: {log_path}")

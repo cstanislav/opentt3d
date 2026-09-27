@@ -30,6 +30,14 @@ def digest(path):
         return hashlib.file_digest(source, "sha256").hexdigest()
 
 
+def extract_generated_tar(archive, destination):
+    """Extract our own CPack/git archive on Debian 12's original Python 3.11."""
+    # Extraction filters were backported after Debian's 3.11.2. Both callers
+    # create the archive locally; no downloaded tar is extracted by this helper.
+    with tarfile.open(archive) as source:
+        source.extractall(destination, **({"filter": "data"} if hasattr(tarfile, "data_filter") else {}))
+
+
 def metadata(tag):
     if not re.fullmatch(r"opentt3d-[A-Za-z0-9][A-Za-z0-9._-]*", tag):
         raise ValueError("Release tags must start with opentt3d- and contain only letters, digits, dots, underscores and hyphens")
@@ -161,18 +169,18 @@ def package(build, output, tag, target):
                 source.extractall(temporary)
             extracted = temporary / name
         else:
-            with tarfile.open(archive) as source:
-                source.extractall(temporary, filter="data")
+            extract_generated_tar(archive, temporary)
             extracted = temporary / name
         audit(extracted)
         from package_smoke import verify
+        checks = build / f"package-smoke-{name}"
         if target.startswith(("macos-", "linux-")):
-            verify(extracted, build / "package-smoke-default")
-            verify(extracted, build / "package-smoke-opengl", "cocoa-opengl" if target.startswith("macos-") else "sdl-opengl")
+            verify(extracted, checks / "default")
+            verify(extracted, checks / "opengl", "cocoa-opengl" if target.startswith("macos-") else "sdl-opengl")
             if target.startswith("linux-"):
-                verify(extracted, build / "package-smoke-fallback", without_vulkan_device=True)
+                verify(extracted, checks / "fallback", without_vulkan_device=True)
         elif target != "windows-arm64":
-            verify(extracted, build / "package-smoke-headless", headless=True)
+            verify(extracted, checks / "headless", headless=True)
         report = {**metadata(tag), "platform": target, "archive_verified": archive.name,
                   "launch_check": "cross-compiled; native execution pending" if target == "windows-arm64" else
                                   "extracted default 3D and OpenGL rendering/save" if not target.startswith("windows-") else
@@ -188,8 +196,7 @@ def source_archive(output, tag):
         root = temporary / tag
         archive = temporary / "source.tar"
         run("git", "archive", "--format=tar", "--output", str(archive), info["commit"], cwd=ROOT)
-        with tarfile.open(archive) as source:
-            source.extractall(root, filter="data")
+        extract_generated_tar(archive, root)
         external = root / "external"
         external.mkdir()
         graphics = PIN["graphics"]

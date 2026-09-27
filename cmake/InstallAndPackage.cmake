@@ -89,7 +89,9 @@ if(WIN32)
                 RESOLVED_DEPENDENCIES_VAR DEPENDENCIES
                 UNRESOLVED_DEPENDENCIES_VAR UNRESOLVED_DEPENDENCIES
                 PRE_EXCLUDE_REGEXES "[Aa][Pp][Ii]-[Mm][Ss]-" "[Ee][Xx][Tt]-[Mm][Ss]-"
-                POST_EXCLUDE_REGEXES ".*[Ww][Ii][Nn][Dd][Oo][Ww][Ss]/.*")
+                # Older CMake policies retain native backslashes in resolved
+                # Windows paths. Stop before recursing into system DLLs.
+                POST_EXCLUDE_REGEXES [=[.*[Ww][Ii][Nn][Dd][Oo][Ww][Ss][/\\].*]=])
         if(UNRESOLVED_DEPENDENCIES)
             message(FATAL_ERROR "Unresolved package dependencies: ${UNRESOLVED_DEPENDENCIES}")
         endif()

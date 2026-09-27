@@ -19,7 +19,10 @@ This file records implemented and verified work, not promises of completeness.
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
   desktop-release workflow builds bundled graphics/dependencies and matching sources;
   both extracted macOS default-Vulkan/OpenGL rendering-and-save controls pass locally.
-  Initial hosted public downloads and Linux/Windows package checks are pending CI.
+  The first hosted run fails in packaging: Debian Python tar API compatibility,
+  Windows system-DLL path exclusion and two macOS startup timeouts. The ARM macOS
+  automatic Vulkan launch passes. Compatibility fixes and startup diagnostics are
+  under verification; public downloads and Linux/Windows package checks remain pending.
 
 - [x] Copper47…51 adds14 provisional bodies with all construction selections and
   three original wheel poses. Open frame, hollow flues, recessed bays and separated

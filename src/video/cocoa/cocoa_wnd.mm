@@ -431,6 +431,12 @@ void CocoaExitApplication()
  */
 void CocoaDialog(std::string_view title, std::string_view message, std::string_view buttonLabel)
 {
+	/* Hidden automated reviews have no operator to dismiss a modal alert. Keep
+	 * the original failure/exit path, with its actual diagnostic in the log. */
+	if (CocoaBackgroundMode()) {
+		fmt::print(stderr, "{}: {}\n", title, message);
+		return;
+	}
 	_cocoa_video_dialog = true;
 
 	bool wasstarted = _cocoa_video_started;

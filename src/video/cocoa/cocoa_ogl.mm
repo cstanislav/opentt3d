@@ -196,7 +196,8 @@ std::optional<std::string_view> VideoDriver_CocoaOpenGL::Start(const StringList 
 	}
 
 	/* Try to allocate GL context. */
-	err = this->AllocateContext(GetDriverParamBool(param, "software"));
+	const char *allow_software = std::getenv("OPENTT3D_ALLOW_SOFTWARE_GL");
+	err = this->AllocateContext(GetDriverParamBool(param, "software") || (allow_software != nullptr && std::string_view(allow_software) == "1"));
 	if (err) {
 		this->Stop();
 		return err;

@@ -143,6 +143,8 @@ jobs:
         run: |
           cmake -S . -B build-release -DCMAKE_OSX_ARCHITECTURES="$TARGET_ARCH" -DCMAKE_OSX_DEPLOYMENT_TARGET=15.0
           python3 tools/opentt3d/build.py --build-dir build-release --jobs 3
+      - name: Record hosted graphics capabilities
+        run: system_profiler -detailLevel mini SPDisplaysDataType
       - name: Package, sign and test the extracted app on both renderers
         env:
           TARGET_ARCH: ${{ matrix.arch }}

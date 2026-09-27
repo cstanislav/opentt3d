@@ -1,5 +1,36 @@
 # Implementation verification
 
+## First hosted-package results and compatibility follow-up
+
+Release`.4`run36292341479 does **not** publish downloads. The source job and native
+build/test steps pass, followed by these retained packaging failures:
+
+- Linux: Python3.11.2 rejects `TarFile.extractall(filter=...)`. Generated CPack/git
+  archives now use filters when available and the original API otherwise. The
+  regression extracts a real archive through both API shapes.
+- Windows, all three architectures: the system-DLL regex assumed forward slashes.
+  It now accepts either separator, with a CMake control proving system paths are
+  excluded and app-local Vulkan DLL paths remain eligible.
+- macOS: extracted Apple-silicon automatic Vulkan rendering/save passes on the
+  Apple Paravirtual device. Explicit OpenGL there and automatic Intel startup time
+  out. Existing `OPENTT3D_ALLOW_SOFTWARE_GL=1` now applies to Cocoa context creation
+  as well as backend acceptance. Hidden fatal alerts go to stderr, and future
+  timeout reports include the actual process sample. These changes still require
+  hosted verification; the timeout cause is not yet established.
+
+Evidence: `build-macos/playable-release-ci-{result.json,failures.log}` and
+`playable-release4-ci/`. Linux's extracted-launch/fallback and collector checks,
+Windows native package load/save and public attachments remain pending.
+
+The follow-up passes all200 native tests,12 harness tests, both slash-direction
+CMake controls, actionlint1.7.12 and a fresh extracted local macOS automatic-Vulkan/
+explicit-OpenGL rendering-and-save pair. Evidence:`playable-fix-build.log`,
+`playable-fix-harness.log`, `playable-windows-path-check.cmake`,
+`playable-fix-package2.log` and `package-smoke-opentt3d-prototype-packaging-fix-*`.
+Those local prototype archives contain the in-progress gold catalogue and host-only
+macOS26 dependencies; they are not public release artifacts. Hosted source remains
+the exact committed1,416-volume catalogue until gold is independently reviewed.
+
 ## Full-elapsed presentation smoothing and packaged first launches
 
 A3,000ms presentation delay outside the game-state mutex reproduces the retained
