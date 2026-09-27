@@ -575,6 +575,34 @@
     "cola_straw_white": [9,11,13,14,9,14],
     "cola_straw_red": [180,181,182,184,180,183],
     "cola_straw_inner": [2,4,4,9,2,4],
+    "toy_shop_blue": [145,146,148,150,145,151],
+    "toy_shop_blue_seam": [145,145,146,148,145,149],
+    "toy_shop_blue_edge": [146,148,150,151,145,151],
+    "toy_shop_red": [180,180,182,184,180,165],
+    "toy_shop_red_seam": [180,180,181,183,180,164],
+    "toy_shop_red_edge": [181,182,184,165,180,165],
+    "toy_shop_green": [81,82,84,86,81,87],
+    "toy_shop_green_seam": [81,81,82,84,81,85],
+    "toy_shop_green_edge": [82,84,86,87,81,87],
+    "toy_shop_yellow": [62,64,66,51,62,52],
+    "toy_shop_yellow_seam": [62,62,64,65,62,67],
+    "toy_shop_yellow_edge": [64,65,67,52,62,52],
+    "toy_shop_wall": [154,155,157,159,154,160],
+    "toy_shop_wall_seam": [154,154,155,157,154,158],
+    "toy_shop_wall_139": [155,156,157,159,155,160],
+    "toy_shop_wall_seam_139": [155,155,156,157,155,159],
+    "toy_shop_wall_140_early": [155,155,157,159,155,159],
+    "toy_shop_wall_seam_140_early": [155,155,155,157,155,158],
+    "toy_shop_pole": [22,22,23,23,22,23],
+    "toy_shop_green_flag": [82,83,84,85,82,86],
+    "toy_shop_yellow_flag": [64,65,66,67,64,51],
+    "toy_shop_red_flag": [180,181,182,184,180,183],
+    "toy_shop_blue_flag": [146,147,148,150,146,149],
+    "toy_shop_gate_cutout": 155,
+    "toy_shop_green_flag_glint": 86,
+    "toy_shop_yellow_flag_glint": 51,
+    "toy_shop_red_flag_glint": 184,
+    "toy_shop_blue_flag_glint": 150,
     "sawmill_wood": [104,106,107,109,104,108],
     "sawmill_wood_grain": [105,107,108,110,104,109],
     "sawmill_wood_finished_grain": [105,108,109,109,104,109],
@@ -3121,6 +3149,112 @@
       ["lathe","cola_swirl_light",[36,28],[[67,7,6],[69,7,6]]],
       ["radial_paint","cola_liquid",[36,28],67,69,8,85,[0,4]]
     ],
+    "toy_shop_blue_course_0": [
+      ["box","toy_shop_blue",0,0,0,12,12,20],["paint","toy_shop_blue_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_blue_seam",5,0,1,6,1,20],["paint","toy_shop_blue_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_blue_seam",0,5,1,1,6,20],["paint","toy_shop_blue_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_blue_edge",2,11,1,4,12,16],["paint","toy_shop_blue_edge",2,11,1,9,12,3],
+      ["paint","toy_shop_blue_edge",11,8,4,12,10,19],["paint","toy_shop_blue_edge",11,3,17,12,10,19],
+      ["erase",2,0,3,5,1,16],["erase",7,11,3,10,12,16]
+    ],
+    "toy_shop_blue_course_1": [
+      ["box","toy_shop_blue",0,0,0,12,12,20],["paint","toy_shop_blue_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_blue_seam",5,0,1,6,1,20],["paint","toy_shop_blue_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_blue_seam",0,5,1,1,6,20],["paint","toy_shop_blue_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_blue_edge",8,11,4,10,12,19],["paint","toy_shop_blue_edge",3,11,17,10,12,19],
+      ["paint","toy_shop_blue_edge",11,2,1,12,4,16],["paint","toy_shop_blue_edge",11,2,1,12,9,3],
+      ["erase",0,2,3,1,5,16],["erase",11,7,3,12,10,16]
+    ],
+    "toy_shop_blue_tower": [
+      ["repeat",[0,0,40],3,[["use","toy_shop_blue_course_0"],["use","toy_shop_blue_course_1",[0,0,20]]]],
+      ["lathe","toy_shop_blue",[3,3],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_blue",[9,3],[[120,1.7,0],[123,1.7,0]]],
+      ["lathe","toy_shop_blue",[3,9],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_blue",[9,9],[[120,1.7,0],[123,1.7,0]]]
+    ],
+    "toy_shop_red_course_0": [
+      ["box","toy_shop_red",0,0,0,12,12,20],["paint","toy_shop_red_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_red_seam",5,0,1,6,1,20],["paint","toy_shop_red_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_red_seam",0,5,1,1,6,20],["paint","toy_shop_red_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_red_edge",2,11,1,4,12,16],["paint","toy_shop_red_edge",2,11,1,9,12,3],
+      ["paint","toy_shop_red_edge",11,8,4,12,10,19],["paint","toy_shop_red_edge",11,3,17,12,10,19],
+      ["erase",2,0,3,5,1,16],["erase",7,11,3,10,12,16]
+    ],
+    "toy_shop_red_course_1": [
+      ["box","toy_shop_red",0,0,0,12,12,20],["paint","toy_shop_red_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_red_seam",5,0,1,6,1,20],["paint","toy_shop_red_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_red_seam",0,5,1,1,6,20],["paint","toy_shop_red_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_red_edge",8,11,4,10,12,19],["paint","toy_shop_red_edge",3,11,17,10,12,19],
+      ["paint","toy_shop_red_edge",11,2,1,12,4,16],["paint","toy_shop_red_edge",11,2,1,12,9,3],
+      ["erase",0,2,3,1,5,16],["erase",11,7,3,12,10,16]
+    ],
+    "toy_shop_red_tower": [
+      ["repeat",[0,0,40],3,[["use","toy_shop_red_course_0"],["use","toy_shop_red_course_1",[0,0,20]]]],
+      ["lathe","toy_shop_red",[3,3],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_red",[9,3],[[120,1.7,0],[123,1.7,0]]],
+      ["lathe","toy_shop_red",[3,9],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_red",[9,9],[[120,1.7,0],[123,1.7,0]]]
+    ],
+    "toy_shop_green_course_0": [
+      ["box","toy_shop_green",0,0,0,12,12,20],["paint","toy_shop_green_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_green_seam",5,0,1,6,1,20],["paint","toy_shop_green_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_green_seam",0,5,1,1,6,20],["paint","toy_shop_green_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_green_edge",2,11,1,4,12,16],["paint","toy_shop_green_edge",2,11,1,9,12,3],
+      ["paint","toy_shop_green_edge",11,8,4,12,10,19],["paint","toy_shop_green_edge",11,3,17,12,10,19],
+      ["erase",2,0,3,5,1,16],["erase",7,11,3,10,12,16]
+    ],
+    "toy_shop_green_course_1": [
+      ["box","toy_shop_green",0,0,0,12,12,20],["paint","toy_shop_green_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_green_seam",5,0,1,6,1,20],["paint","toy_shop_green_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_green_seam",0,5,1,1,6,20],["paint","toy_shop_green_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_green_edge",8,11,4,10,12,19],["paint","toy_shop_green_edge",3,11,17,10,12,19],
+      ["paint","toy_shop_green_edge",11,2,1,12,4,16],["paint","toy_shop_green_edge",11,2,1,12,9,3],
+      ["erase",0,2,3,1,5,16],["erase",11,7,3,12,10,16]
+    ],
+    "toy_shop_green_tower": [
+      ["repeat",[0,0,40],3,[["use","toy_shop_green_course_0"],["use","toy_shop_green_course_1",[0,0,20]]]],
+      ["lathe","toy_shop_green",[3,3],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_green",[9,3],[[120,1.7,0],[123,1.7,0]]],
+      ["lathe","toy_shop_green",[3,9],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_green",[9,9],[[120,1.7,0],[123,1.7,0]]]
+    ],
+    "toy_shop_yellow_course_0": [
+      ["box","toy_shop_yellow",0,0,0,12,12,20],["paint","toy_shop_yellow_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_yellow_seam",5,0,1,6,1,20],["paint","toy_shop_yellow_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_yellow_seam",0,5,1,1,6,20],["paint","toy_shop_yellow_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_yellow_edge",2,11,1,4,12,16],["paint","toy_shop_yellow_edge",2,11,1,9,12,3],
+      ["paint","toy_shop_yellow_edge",11,8,4,12,10,19],["paint","toy_shop_yellow_edge",11,3,17,12,10,19],
+      ["erase",2,0,3,5,1,16],["erase",7,11,3,10,12,16]
+    ],
+    "toy_shop_yellow_course_1": [
+      ["box","toy_shop_yellow",0,0,0,12,12,20],["paint","toy_shop_yellow_seam",0,0,0,12,12,2],
+      ["paint","toy_shop_yellow_seam",5,0,1,6,1,20],["paint","toy_shop_yellow_seam",5,11,1,6,12,20],
+      ["paint","toy_shop_yellow_seam",0,5,1,1,6,20],["paint","toy_shop_yellow_seam",11,5,1,12,6,20],
+      ["paint","toy_shop_yellow_edge",8,11,4,10,12,19],["paint","toy_shop_yellow_edge",3,11,17,10,12,19],
+      ["paint","toy_shop_yellow_edge",11,2,1,12,4,16],["paint","toy_shop_yellow_edge",11,2,1,12,9,3],
+      ["erase",0,2,3,1,5,16],["erase",11,7,3,12,10,16]
+    ],
+    "toy_shop_yellow_tower": [
+      ["repeat",[0,0,40],3,[["use","toy_shop_yellow_course_0"],["use","toy_shop_yellow_course_1",[0,0,20]]]],
+      ["lathe","toy_shop_yellow",[3,3],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_yellow",[9,3],[[120,1.7,0],[123,1.7,0]]],
+      ["lathe","toy_shop_yellow",[3,9],[[120,1.7,0],[123,1.7,0]]],["lathe","toy_shop_yellow",[9,9],[[120,1.7,0],[123,1.7,0]]]
+    ],
+    "toy_shop_green_flag": [["box","toy_shop_pole",5,5,120,6,6,170],["prism","toy_shop_green_flag",0,5,6,[[6,170],[10,176],[14,179],[19,181],[19,165],[14,165],[10,164],[6,158]]],["scatter_paint","toy_shop_green_flag_glint",5,4705,5,6,158,6,19,182,"toy_shop_green_flag"]],
+    "toy_shop_yellow_flag": [["box","toy_shop_pole",5,5,120,6,6,170],["prism","toy_shop_yellow_flag",0,5,6,[[6,170],[10,176],[14,179],[19,181],[19,165],[14,165],[10,164],[6,158]]],["scatter_paint","toy_shop_yellow_flag_glint",5,4705,5,6,158,6,19,182,"toy_shop_yellow_flag"]],
+    "toy_shop_red_flag": [["box","toy_shop_pole",5,5,120,6,6,170],["prism","toy_shop_red_flag",0,5,6,[[6,170],[10,176],[14,179],[19,181],[19,165],[14,165],[10,164],[6,158]]],["scatter_paint","toy_shop_red_flag_glint",5,4705,5,6,158,6,19,182,"toy_shop_red_flag"]],
+    "toy_shop_blue_flag": [["box","toy_shop_pole",5,5,120,6,6,170],["prism","toy_shop_blue_flag",0,5,6,[[6,170],[10,176],[14,179],[19,181],[19,165],[14,165],[10,164],[6,158]]],["scatter_paint","toy_shop_blue_flag_glint",5,4705,5,6,158,6,19,182,"toy_shop_blue_flag"]],
+    "toy_shop_first_towers": [["use","toy_shop_blue_tower",[2,50,0]],["use","toy_shop_red_tower",[50,2,0]]],
+    "toy_shop_all_towers": [["use","toy_shop_blue_tower",[2,50,0]],["use","toy_shop_red_tower",[50,2,0]],["use","toy_shop_green_tower",[2,2,0]],["use","toy_shop_yellow_tower",[50,50,0]]],
+    "toy_shop_wall_segment": [
+      ["box","toy_shop_wall",0,0,0,4,36,72],
+      ["repeat",[0,12,0],3,[["box","toy_shop_wall",0,0,72,4,6,80]]],
+      ["repeat",[0,0,16],5,[["paint","toy_shop_wall_seam",0,0,0,4,36,1]]],
+      ["repeat",[0,0,32],3,[["repeat",[0,8,0],4,[["paint","toy_shop_wall_seam",0,4,0,1,5,16],["paint","toy_shop_wall_seam",3,4,0,4,5,16]]]]],
+      ["repeat",[0,0,32],2,[["repeat",[0,8,0],4,[["paint","toy_shop_wall_seam",0,8,16,1,9,32],["paint","toy_shop_wall_seam",3,8,16,4,9,32]]]]]
+    ],
+    "toy_shop_back_walls": [["use","toy_shop_wall_segment",[6,14,0]],["rotate_z",90,[32,32,0],[["use","toy_shop_wall_segment",[6,14,0]]]]],
+    "toy_shop_front_walls": [
+      ["use","toy_shop_wall_segment",[54,14,0]],["rotate_z",90,[32,32,0],[["use","toy_shop_wall_segment",[54,14,0]]]],
+      ["prism","toy_shop_gate_cutout",1,54,58,[[24,0],[40,0],[40,34],[38,42],[34,46],[30,46],[26,42],[24,34]]],["erase_material","toy_shop_gate_cutout"]
+    ],
+    "toy_shop_flags": [["use","toy_shop_green_flag",[2,50,0]],["use","toy_shop_yellow_flag",[50,2,0]],["use","toy_shop_red_flag",[2,2,0]],["use","toy_shop_blue_flag",[50,50,0]]],
+    "toy_shop_first": [["use","toy_shop_first_towers"]],
+    "toy_shop_walls": [["use","toy_shop_back_walls"],["use","toy_shop_all_towers"]],
+    "toy_shop_finished": [["use","toy_shop_back_walls"],["use","toy_shop_front_walls"],["use","toy_shop_all_towers"],["use","toy_shop_flags"]],
     "forest_tree_young": [
       ["box","forest_bark",7,7,0,9,9,59],
       ["paint","forest_bark_shade",7,7,0,8,9,59],
@@ -11909,6 +12043,46 @@
       "reference":"Cola well137 original4693: original completed open blue/gold cup with a leaning hollow red/white straw and brown surface swirl; retain original straw height beyond the sorting box",
       "ops":[["use","cola_tall_cup"],["use","cola_surface_swirl"],["use","cola_straw"]]
     },
+    "toy_shop_139_first": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop139 stage0: blue interlocking-brick tower with four top studs; retain projected body ownership and independent Toyland2022 soil",
+      "ops":[["use","toy_shop_first"],["radial_erase",[0,32],0,192,8,225],["replace_material","toy_shop_wall","toy_shop_wall_139"],["replace_material","toy_shop_wall_seam","toy_shop_wall_seam_139"]]
+    },
+    "toy_shop_139_walls": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop139 identical stages1/2: blue tower beside its crenellated back-wall edge; preserve source cut and real courtyard void",
+      "ops":[["use","toy_shop_walls"],["radial_erase",[0,32],0,192,8,225],["replace_material","toy_shop_wall","toy_shop_wall_139"],["replace_material","toy_shop_wall_seam","toy_shop_wall_seam_139"]]
+    },
+    "toy_shop_139_finished": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop139 completed blue tower, green flag on a thin pole and bordering crenellated walls; retain projected source ownership",
+      "ops":[["use","toy_shop_finished"],["radial_erase",[0,32],0,192,8,225],["replace_material","toy_shop_wall","toy_shop_wall_139"],["replace_material","toy_shop_wall_seam","toy_shop_wall_seam_139"]]
+    },
+    "toy_shop_140_first": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop140 stage0: red interlocking-brick tower with four top studs; retain projected body ownership and independent Toyland2022 soil",
+      "ops":[["use","toy_shop_first"],["radial_erase",[31,0],0,192,8,30],["replace_material","toy_shop_wall","toy_shop_wall_140_early"],["replace_material","toy_shop_wall_seam","toy_shop_wall_seam_140_early"]]
+    },
+    "toy_shop_140_walls": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop140 identical stages1/2: red tower beside its crenellated back-wall edge; preserve source cut and real courtyard void",
+      "ops":[["use","toy_shop_walls"],["radial_erase",[31,0],0,192,8,30],["replace_material","toy_shop_wall","toy_shop_wall_140_early"],["replace_material","toy_shop_wall_seam","toy_shop_wall_seam_140_early"]]
+    },
+    "toy_shop_140_finished": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop140 completed red tower, yellow flag on a thin pole and bordering crenellated walls; retain projected source ownership",
+      "ops":[["use","toy_shop_finished"],["radial_erase",[31,0],0,192,8,30]]
+    },
+    "toy_shop_141_walls": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop141 identical stages1/2: rear green and near yellow towers with cyan crenellated back walls around the open courtyard; stage0 is genuinely transparent",
+      "ops":[["use","toy_shop_walls"],["radial_erase",[0,32],0,192,8,30],["radial_erase",[31,0],0,192,8,225]]
+    },
+    "toy_shop_141_finished": {
+      "size":[72,80,192],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,0],"review_status":"work-in-progress",
+      "reference":"Original toy-shop141 completed green/yellow towers, red/blue flags and full cyan perimeter with an actual open arched gateway; keep source cuts and independent soil",
+      "ops":[["use","toy_shop_finished"],["radial_erase",[0,32],0,192,8,30],["radial_erase",[31,0],0,192,8,225]]
+    },
     "forest_ground": {
       "size":[32,32,1], "cell_size":[0.5,0.5,0.25], "origin":[0,0,-0.25], "review_status":"work-in-progress",
       "reference":"Forest16/17 original2077 throughout construction: independently owned full-tile brown needle litter, patchy olive/sage moss and dark twigs; no forest-body alias to ordinary tree grounds",
@@ -16248,6 +16422,10 @@
       "135":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "136":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "137":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
+      "138":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "139":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "140":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "141":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
       "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
       "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
       "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -16355,6 +16533,9 @@
       "135":{"0":"battery_seed","1":"battery_young","2":"battery_half","3":"battery_mature"},
       "136":{"0":"battery_harvested","1":"battery_harvested","2":"battery_harvested","3":"battery_harvested"},
       "137":{"0":"cola_bowl","1":"cola_cup","2":"cola_cup","3":"cola_finished"},
+      "139":{"0":"toy_shop_139_first","1":"toy_shop_139_walls","2":"toy_shop_139_walls","3":"toy_shop_139_finished"},
+      "140":{"0":"toy_shop_140_first","1":"toy_shop_140_walls","2":"toy_shop_140_walls","3":"toy_shop_140_finished"},
+      "141":{"1":"toy_shop_141_walls","2":"toy_shop_141_walls","3":"toy_shop_141_finished"},
       "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
       "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
       "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},

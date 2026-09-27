@@ -1,5 +1,50 @@
 # Active extended development goal
 
+## Toy-shop castle and real supplied service verified — September27,11:47:05UTC
+
+Eight provisional toy-shop138…141 bodies bring the catalogue to1,601 models and
+primary industry coverage to142/175:104 body owners and142 independent grounds.
+Four coloured interlocking-brick towers retain studs, raised flags, crenellated walls,
+the open courtyard and an actual arched gateway. All four138 body states and141's
+transparent nonzero4701 stage0 remain empty. Stages1/2 share source-identical bodies;
+original2022 soil shares the sweet factory's independently guarded Toyland volume.
+Three projected body cuts retain linked custom-source fallback.
+
+All26 frozen controls pass:54 actual construction-layer selections, two additional
+transparent-stage ground controls,17/17 and0/17 cargo, four climates, clipping and
+development bundles. All27 palettes,27 aliases,96 climate comparisons, five empty
+body states and1,593 preceding model hashes reconcile. Joined construction/full
+models have zero overlapping or unsupported cells; courtyard/gateway openings stay
+clear. Compact repeated brick controls match candidate geometry and paint exactly.
+Native200, asset134, harness12 and the137-file presentation boundary pass.
+
+Ordinary battery28→factory31→town-shop30 service loads/delivers/returns both trucks:
+engine192 carries17/17 batteries, acceptance64, return at1,846 observed ticks;
+engine186 carries17/17 toys, acceptance32, return at3,866 ticks. Unsupplied output
+and too-close supplier attempts remain preserved failures. The corrected20-tile
+spacing respects the original14-tile conflict restriction. Three invalid CLI inputs
+are rejected before launch. The default two-industry regression returns after740
+ticks with full/empty snapshots and no supplier, matching its prior service result.
+
+All27 native backend captures agree;26 of147 wider captures retain313 differing
+pixels. Fresh registered-layer, joined-layout and street views retain1–4pixel bounds
+differences, tower brick relief/highlights, flag folds and wall cuts for later fidelity.
+Final visual approvals remain0. Accepted evidence compacts losslessly by545,195,395
+bytes; earlier successful cola/toy-shop prototypes save1,642,856,320bytes, preserving
+source imagery, failures, all RGBA bytes and metadata. The matrix peaks at
+3,396,882,080 sampled bytes. Two600-frame services average59.994/59.996fps but retain
+65/96 intervals over20ms and22.630/22.660ms maxima. Sustained arbitrary-world smooth60fps
+and long-duration/reload/multiple-viewport memory acceptance remain open.
+
+Evidence:`breadth-toy-shop-final-{audit,reconciliation,registration-audit,backend-comparison}.json`
+and`breadth-toy-shop-default-service-regression/fixture.json`. Verified public downloads
+remain battery`.12`; cola`.13`is under its exact-tag workflow. Next factory142…147
+source preparation identifies14 genuinely empty body slots, including nonzero4711/
+4714,34 visible layers,144 identical climate comparisons and53 original143 procedural
+states. Main structures and the ordered clay/robot/stamp/holder child voxels remain
+required. Continue33 remaining primary definitions, climate/procedural coverage and
+the later catalogue-wide fidelity/performance passes.
+
 ## Battery desktop release verified — September27,11:38:33UTC
 
 Release`.12`at37dc38aae1eaa77f73609d6efe441f98b4dca211 passes all eight hosted jobs.

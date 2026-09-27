@@ -1,5 +1,36 @@
 # Implementation verification
 
+## Toy-shop castle, transparent construction and real supplied production
+
+At11:47:05UTC, all26 frozen background controls pass on both backends:54 actual
+construction-layer selections, two transparent-stage ground controls,17/17 loaded
+and0/17 empty trucks, four climates, clipping and development bundles. Eight bodies
+reach1,601 models and142/175 primary industry definitions. All27 palettes,27 aliases,
+five genuinely empty body slots,96 climate comparisons and1,593 prior hashes agree.
+Joined stages have no overlapping/unsupported cells, preserve clear courtyard/gateway
+voids, and match compact/candidate paint and geometry. Native200, asset134, harness12
+and the137-file presentation boundary pass.
+
+The new optional `--supply-industry 28` funds a real third industry and separate
+input truck for `--industry 31 --destination-industry 30 --destination-town-site`.
+Input engine192 carries17/17 batteries, acceptance64, and returns after1,846 observed
+ticks. Output engine186 carries17/17 toys, acceptance32, and returns after3,866 ticks.
+Both output cargo snapshots remain. The unsupplied route timeout and conflicting
+supplier-site failure remain; ordinary20-tile spacing fixes the latter without
+changing gameplay restrictions. Three invalid CLI cases reject before launch. The
+ordinary default28→31 regression still passes full/empty cargo and returns after740
+ticks. The NoAI fixture uses public funding/road/vehicle/order commands throughout.
+
+All27 native backend captures agree;26/147 wider views differ at313 pixels. Reviewed
+layer/layout/street captures retain1–4pixel registration differences, brick relief/
+highlights, wall cuts and flag folds for later fidelity; final approvals remain0.
+Accepted captures save545,195,395bytes losslessly; preceding cola/toy-shop prototypes
+save1,642,856,320bytes. Original images and failures remain. Peak sampled memory is
+3,396,882,080bytes. Short600-frame services retain65/96 intervals over20ms; sustained
+smooth60fps remains open. Evidence:`build-macos/breadth-toy-shop-final-{audit,
+reconciliation,registration-audit,backend-comparison}.json` and
+`build-macos/breadth-toy-shop-default-service-regression/fixture.json`.
+
 ## Battery desktop package audit
 
 At11:38:33UTC, release`.12`at37dc38aae1eaa77f73609d6efe441f98b4dca211 passes all

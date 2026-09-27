@@ -10,10 +10,20 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,593-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite134/134 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,601-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite134/134 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Toy-shop138…141 adds eight provisional castle bodies, preserving five empty
+  construction slots, the courtyard/gateway and independent Toyland2022 soil.
+  Coverage reaches142/175 primary definitions,104 body owners and142 grounds.
+  All26 controls,54 actual construction layers,27 palettes,27 aliases,96 climate
+  comparisons and1,593 preceding model hashes pass. All27 native backend views agree.
+- [x] Optional ordinary third-industry input service supplies a processing factory
+  through a separate full-load/delivery/return truck. Battery→factory→town-shop service
+  passes17/17 input/output cargo and both returns; the existing two-industry regression
+  retains its740-tick result. Original industry-spacing restrictions remain in force.
 
 - [x] Cola137 adds three provisional bowl/cup/straw volumes and shares exact Toyland
   checker soil. Primary industry coverage reaches138/175 definitions,101 body owners

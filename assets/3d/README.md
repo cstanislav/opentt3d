@@ -186,6 +186,21 @@ height beyond the sorting box. Joined industry reviews accept a nonzero base spr
 with no resolved ink as genuinely absent (toy-shop141 stage0); a visible unbound body
 still prevents complete export. No empty placeholder model is inserted.
 
+Toy-shop138…141 adds eight `toy_shop_` bodies with four coloured interlocking-brick
+towers, top studs, crenellated walls, an open courtyard/gateway and four raised flags.
+138 remains ground-only in every stage;141 stage0 remains genuinely transparent.
+Stages1/2 share source-identical volumes. The three projected body cuts retain linked
+custom-source fallback; original2022 soil shares the sweet factory's Toyland-only
+ground. `--gallery-voxel-prefix toy_shop_` includes the joined four-tile layout.
+
+`fixture_industry.py --industry 31 --climate toyland --cargo-service
+--destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
+--cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→
+town-shop chain. The optional third supplier uses ordinary funding, roads, a separate
+truck and full-load/accepted-delivery orders. Both trucks must load, deliver and
+return; the input truck must reach actual full capacity. Original industry-spacing
+rules remain in force. The ordinary two-industry route retains its existing defaults.
+
 `water_buoy` is infrastructure693's semantic state0 binding; `water_buoy_toyland` is
 state1's separate solid green/orange/red marker. Classic's world image is resolved
 through `GetCanalSprite(CF_BUOY,tile)`; the GUI/base-table image is different. The

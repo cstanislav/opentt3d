@@ -16,6 +16,17 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Toy-shop138…141:**eight bodies retain staged coloured brick towers, studs,
+  crenellated perimeter walls, a real arched gateway, open courtyard and four flags.
+  All four138 bodies and141's transparent nonzero first sprite remain absent.
+  Source-identical stages1/2 and sweet-factory2022 soil are shared; projected cuts
+  retain linked source fallback. All27 palettes,27 aliases,96 climate comparisons,
+  five absences and1,593 prior hashes pass. All26 live controls pass54 actual layers,
+  full/empty cargo, real supplied production and both backends. All27 native views
+  agree;26/147 wider views differ at313 pixels. Source registration differs by1–4pixels;
+  brick relief/highlights, wall cuts and flag folds remain provisional. Evidence:
+  `build-macos/breadth-toy-shop-*`. Final visual approvals:0.
+
 - **Cola137:**three bodies preserve gold-bowl construction, blue/gold raised cups
   and the completed leaning hollow straw. Both layouts and independent2077 checker
   soil retain source ownership. All8 palettes,7 aliases,24 climate comparisons and

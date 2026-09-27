@@ -3,6 +3,15 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Toy-shop supplied-service observations
+
+The26-control matrix peaks at3,396,882,080 sampled bytes. Two600-frame real supplied
+factory→shop services average59.994/59.996fps for OpenGL/Vulkan, with4.586/5.197ms p95
+work. They retain65/96 intervals over20ms and22.630/22.660ms maximum intervals.
+Concurrent authoring remains part of this environment. Sustained arbitrary-world
+smoothness and long-duration/reload/multiple-viewport memory acceptance remain open.
+Source:`breadth-toy-shop-final-reconciliation.json`.
+
 ## Cola-well service observations
 
 The24-control matrix peaks at3,419,262,528 sampled bytes. Two600-frame service runs

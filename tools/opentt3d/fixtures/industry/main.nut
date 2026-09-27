@@ -13,6 +13,7 @@ class IndustryFixture extends AIController {
 	function Start();
 	function Tile(dx, dy) { return AIMap.GetTileIndex(this.x + dx, this.y + dy); }
 	function CargoService(industry);
+	function SupplyService(industry, delivery, depot, delivery_row);
 	function FundTownDestination(type);
 	function ConnectRoad(start, finish);
 	function TownDeliveryStop(destination, cargo);
@@ -53,6 +54,7 @@ function IndustryFixture::Start()
 			}
 		}
 		local width = service ? 32 : 8, height = service ? 12 : 8;
+		if (service && AIController.GetSetting("review_supply_industry") >= 0 && AIController.GetSetting("review_destination_town_site") == 0) width = 52;
 		for (local y = water ? 8 : 32; !town_site && y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
 			for (local x = water ? 8 : 32; x < AIMap.GetMapSizeX() - width - 8; x += 8) {
 				local tile = AIMap.GetTileIndex(x, y);
@@ -241,12 +243,33 @@ function IndustryFixture::CargoService(industry)
 		this.Require(AIOrder.AppendOrder(truck, depot, AIOrder.OF_NONE), "order ordinary depot maintenance on each delivery loop");
 	}
 	this.Require(AIVehicle.StartStopVehicle(truck), "start cargo truck");
+	local supply = AIController.GetSetting("review_supply_industry") >= 0 ? this.SupplyService(industry,pickup,depot,pickup_row) : null;
 	local loaded = false, delivered = false, returned = false, peak_load = 0, peak_speed = 0;
 	local full_reported = false, empty_reported = false;
 	local pickup_station = AIStation.GetStationID(pickup), delivery_station = AIStation.GetStationID(delivery);
 	local observed_ticks = 0, service_ticks = AIController.GetSetting("review_service_ticks");
-	for (local tick = 0; tick < service_ticks && !returned; tick += 2) {
+	for (local tick = 0; tick < service_ticks && (!returned || (supply != null && !supply.returned)); tick += 2) {
 		observed_ticks = tick;
+		if (supply != null && !supply.returned) {
+			if (!AIVehicle.IsValidVehicle(supply.truck) || AIVehicle.GetState(supply.truck) == AIVehicle.VS_CRASHED) throw "input truck was lost during its route";
+			local input_load = AIVehicle.GetCargoLoad(supply.truck,supply.cargo), input_speed = AIVehicle.GetCurrentSpeed(supply.truck);
+			if (input_load > supply.peak_load) supply.peak_load = input_load;
+			if (input_speed > supply.peak_speed) supply.peak_speed = input_speed;
+			if (AIVehicle.GetState(supply.truck) == AIVehicle.VS_AT_STATION) {
+				local station = AIStation.GetStationID(AIVehicle.GetLocation(supply.truck));
+				if (station == supply.pickup_station && input_load > 0) supply.loaded = true;
+				if (station == supply.delivery_station && supply.loaded && input_load == 0) supply.delivered = true;
+				if (station == supply.pickup_station && supply.delivered) supply.returned = true;
+			}
+			if (tick % 128 == 0) AILog.Info("INDUSTRY_SUPPLY_STATUS tick="+tick+" load="+input_load+" speed="+input_speed);
+			if (supply.returned) {
+				if (supply.peak_load != supply.capacity || supply.peak_speed == 0) throw "input truck did not complete an ordinary full-load service";
+				AILog.Info("INDUSTRY_SUPPLY_READY {\"industry\":"+supply.industry+",\"destination\":"+industry+
+					",\"source_type\":"+supply.type+",\"truck\":"+supply.truck+",\"engine\":"+supply.engine+",\"cargo\":"+supply.cargo+
+					",\"acceptance\":"+supply.acceptance+",\"capacity\":"+supply.capacity+",\"peak_load\":"+supply.peak_load+
+					",\"peak_speed\":"+supply.peak_speed+",\"observed_ticks\":"+tick+",\"returned\":true}");
+			}
+		}
 		if (!AIVehicle.IsValidVehicle(truck) || AIVehicle.GetState(truck) == AIVehicle.VS_CRASHED) throw "cargo truck was lost during its route";
 		local load = AIVehicle.GetCargoLoad(truck, cargo), speed = AIVehicle.GetCurrentSpeed(truck);
 		if (load > peak_load) peak_load = load;
@@ -273,6 +296,7 @@ function IndustryFixture::CargoService(industry)
 		this.Sleep(2);
 	}
 	if (!loaded || !delivered || !returned || peak_speed == 0) throw "cargo truck did not load, deliver and return";
+	if (supply != null && !supply.returned) throw "input truck did not load, deliver and return";
 	if (AIController.GetSetting("review_depot_directions") != 0) {
 		this.Require(AIVehicle.SendVehicleToDepot(truck), "send the working cargo truck to its actual depot");
 		for (local tick = 0; tick < 600 && !AIVehicle.IsStoppedInDepot(truck); tick += 2) this.Sleep(2);
@@ -289,4 +313,49 @@ function IndustryFixture::CargoService(industry)
 		",\"truck\":" + truck + ",\"engine\":" + engine + ",\"cargo\":" + cargo +
 		",\"pickup_station\":" + pickup_station + ",\"delivery_station\":" + delivery_station +
 		",\"acceptance\":" + acceptance + ",\"peak_load\":" + peak_load + ",\"peak_speed\":" + peak_speed + ",\"observed_ticks\":" + observed_ticks + ",\"returned\":true}");
+}
+
+/** Fund a real input producer and deliver its accepted cargo through ordinary orders. */
+function IndustryFixture::SupplyService(industry, delivery, depot, delivery_row)
+{
+	local type = AIController.GetSetting("review_supply_industry");
+	if (type == AIIndustry.GetIndustryType(industry) || type == AIController.GetSetting("review_destination")) throw "input industry must be a distinct third type";
+	this.Require(AIIndustryType.CanBuildIndustry(type), "input industry can be funded");
+	/* Original conflicting industry types must be more than14 tiles apart. */
+	local dx = AIController.GetSetting("review_destination_town_site") != 0 ? 22 : 42;
+	this.Require(AIIndustryType.BuildIndustry(type,this.Tile(dx,2)), "fund input industry on the ordinary review site");
+	local supplier = -1, industries = AIIndustryList();
+	for (local candidate = industries.Begin(); !industries.IsEnd(); candidate = industries.Next()) {
+		if (AIIndustry.GetIndustryType(candidate) == type) { supplier = candidate; break; }
+	}
+	if (!AIIndustry.IsValidIndustry(supplier)) throw "funded input industry was not found";
+	local cargo = -1, produced = AIIndustryType.GetProducedCargo(type);
+	for (local candidate = produced.Begin(); !produced.IsEnd(); candidate = produced.Next()) {
+		if (AIIndustry.IsCargoAccepted(industry,candidate) == AIIndustry.CAS_ACCEPTED) { cargo = candidate; break; }
+	}
+	if (cargo < 0) throw "input industry supplies no accepted cargo to the reviewed producer";
+	local row = this.SouthRoadRow(supplier,dx), pickup = this.Tile(dx+2,row);
+	this.Require(AIRoad.BuildRoad(this.Tile(17,row),this.Tile(dx+7,row)), "build input loading approach");
+	if (row != delivery_row) {
+		this.Require(AIRoad.BuildRoad(this.Tile(17,row),this.Tile(17,delivery_row)), "join input road to producer route");
+	}
+	this.Require(AIRoad.BuildDriveThroughRoadStation(pickup,this.Tile(dx+3,row),AIRoad.ROADVEHTYPE_TRUCK,AIStation.STATION_NEW), "build actual input loading stop");
+	local radius = AIStation.GetCoverageRadius(AIStation.STATION_TRUCK_STOP);
+	for (local tick = 0; tick < 1200 && AITile.GetCargoProduction(pickup,cargo,1,1,radius) == 0; tick += 2) this.Sleep(2);
+	this.Require(AITile.GetCargoProduction(pickup,cargo,1,1,radius) > 0, "input loading stop covers real production");
+	local acceptance = AITile.GetCargoAcceptance(delivery,cargo,1,1,radius);
+	if (acceptance < 8) throw "producer stop does not cover enough actual input acceptance";
+	local engine = -1, engines = AIEngineList(AIVehicle.VT_ROAD);
+	for (local candidate = engines.Begin(); !engines.IsEnd(); candidate = engines.Next()) {
+		if (AIEngine.GetCargoType(candidate) == cargo) { engine = candidate; break; }
+	}
+	if (engine < 0) throw "no available original truck for input cargo";
+	local truck = AIVehicle.BuildVehicle(depot,engine);
+	this.Require(AIVehicle.IsValidVehicle(truck), "build real input truck");
+	this.Require(AIOrder.AppendOrder(truck,pickup,AIOrder.OF_FULL_LOAD_ANY), "order ordinary input full-load pickup");
+	this.Require(AIOrder.AppendOrder(truck,delivery,AIOrder.OF_NONE), "order normal accepted-input delivery");
+	this.Require(AIVehicle.StartStopVehicle(truck), "start input truck");
+	return {industry=supplier,type=type,cargo=cargo,engine=engine,truck=truck,acceptance=acceptance,
+		capacity=AIVehicle.GetCapacity(truck,cargo),pickup_station=AIStation.GetStationID(pickup),delivery_station=AIStation.GetStationID(delivery),
+		loaded=false,delivered=false,returned=false,peak_load=0,peak_speed=0};
 }

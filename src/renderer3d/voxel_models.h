@@ -27,14 +27,14 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
  * rig bodies26..28 and paper2206. Cotton-candy129/130 uses its distinct Toyland
  * replacements of2072..2077, never the other climates' forest artwork. Sweet
  * factory131..134 models Toyland2022 soil; battery135/136 and cola137 share cotton's2077 ground.
- * Those factory and battery bodies are unchanged across climates.
+ * Toy-shop138..141 shares the factory's2022 soil. These bodies are unchanged across climates.
  * Body ownership is
  * independent, so an unsupported ground need not hide an unchanged body. */
 inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, bool ground = false, SpriteID sprite = 0)
 {
 	if (climate >= 4) return false;
 	if (graphics == 129 || graphics == 130) return climate == 3;
-	if (ground && graphics >= 131 && graphics <= 134 && sprite == 2022) return climate == 3;
+	if (ground && ((graphics >= 131 && graphics <= 134) || (graphics >= 138 && graphics <= 141)) && sprite == 2022) return climate == 3;
 	if (ground && graphics >= 135 && graphics <= 137 && sprite == 2077) return climate == 3;
 	if (climate == 0) return true;
 	if (graphics == 16 || graphics == 17 || (graphics >= 33 && graphics <= 38)) return false;

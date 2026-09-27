@@ -387,6 +387,10 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* Gift wrapping and the peppermint roof cross all three projected body
 		 * cuts. Keep partial custom body replacements together; soil is separate. */
 		first = 132; last = 134;
+	} else if (!ground && graphics >= 139 && graphics <= 141) {
+		/* Castle walls and flags cross these three projected source cuts. Keep
+		 * partial body replacements together while preserving independent soil. */
+		first = 139; last = 141;
 	}
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {

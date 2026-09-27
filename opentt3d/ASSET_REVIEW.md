@@ -4,6 +4,16 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Toy-shop138…141: brick castles and open gateways (September27)
+
+Eight provisional castle bodies reach1,601, retaining four distinct brick towers,
+studs/flags, crenellated walls and a genuine courtyard/gateway void. All27 palettes,
+27 aliases,96 climate comparisons, five empty body slots and1,593 prior hashes pass.
+All26 construction/cargo/climate/bundle controls pass;27 native backend views agree.
+The26/147 wider differences total313 pixels. Fresh layer/layout/street reviews retain
+1–4pixel bounds differences, brick relief/paint, wall cuts and flag folds for later
+fidelity. All original imagery and unsuccessful prototypes remain. Final approvals:0.
+
 ## Cola137: open cups and a hollow leaning straw (September27)
 
 - Three bodies preserve shallow-bowl construction, identical raised stage1/2 cups and

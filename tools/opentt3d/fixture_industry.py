@@ -28,6 +28,7 @@ def main():
     services.add_argument("--cargo-service", action="store_true", help="Operate the producer's real cargo to --destination-industry, requiring loading, delivery and return")
     parser.add_argument("--destination-industry", type=int, choices=range(37), help="Original accepting industry to fund for --cargo-service")
     parser.add_argument("--destination-town-site", action="store_true", help="Fund the accepting industry on an actual town house and connect its public road network")
+    parser.add_argument("--supply-industry", type=int, choices=range(37), help="Fund a third industry and operate a real input truck to the reviewed producer")
     parser.add_argument("--truck-engine", type=int, choices=range(116,204), help="Select one original road engine for the route; its real cargo type and availability are checked by NoAI")
     parser.add_argument("--year", type=int, default=1970, help="Normal world start year; later trucks need an appropriate year")
     parser.add_argument("--cargo-snapshots", action="store_true", help="Also pause/save the actual full truck and its empty state after delivery")
@@ -44,6 +45,8 @@ def main():
         parser.error("The cargo destination must be a separate industry type")
     if args.destination_town_site and not args.cargo_service:
         parser.error("--destination-town-site requires --cargo-service")
+    if args.supply_industry is not None and (not args.cargo_service or args.supply_industry in (args.industry, args.destination_industry)):
+        parser.error("--supply-industry requires --cargo-service and a third, distinct industry type")
     if args.truck_engine is not None and not service_requested:
         parser.error("--truck-engine requires --coal-service or --cargo-service")
     if not 0 <= args.year <= 5000000:
@@ -107,7 +110,7 @@ min_active_clients = 0
 pause_on_join = false
 """)
     destination = args.destination_industry if args.cargo_service else 1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_destination_town_site={int(args.destination_town_site)},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1},review_service_ticks={args.service_observation_ticks}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_destination_town_site={int(args.destination_town_site)},review_supply_industry={args.supply_industry if args.supply_industry is not None else -1},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1},review_service_ticks={args.service_observation_ticks}"\n')
     days = (0, 16, 30, 44)
     for day in days:
         (scripts / f"save_day_{day}.scr").write_text(f"pause\nsave industry-day-{day}\n")
@@ -202,6 +205,16 @@ pause_on_join = false
                          "saving the working cargo-service route")
                 service["save"] = str(saved.relative_to(output))
                 manifest["coal_service" if args.coal_service else "cargo_service"] = service
+                if args.supply_industry is not None:
+                    supplied = re.search(r"INDUSTRY_SUPPLY_READY (\{[^\n]+\})", (output / "run.log").read_text())
+                    if not supplied:
+                        raise RuntimeError("The requested real input route was not observed")
+                    supply = json.loads(supplied[1])
+                    if (supply["source_type"] != args.supply_industry or supply["destination"] != service["industry"] or
+                            supply["truck"] == service["truck"] or supply["acceptance"] < 8 or supply["capacity"] <= 0 or
+                            supply["peak_load"] != supply["capacity"] or supply["peak_speed"] <= 0 or not supply["returned"]):
+                        raise RuntimeError("The input truck did not complete its actual full-load/delivery/return checks")
+                    manifest["supply_service"] = supply
                 if args.depot_directions:
                     directions = re.search(r"INDUSTRY_DEPOT_DIRECTIONS_READY (\{[^\n]+\})", (output / "run.log").read_text())
                     if not directions or (depots := json.loads(directions[1]))["directions"] != list(range(4)):
