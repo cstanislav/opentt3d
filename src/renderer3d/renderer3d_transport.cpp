@@ -354,6 +354,42 @@ TEST_CASE("Industry source-climate replacements retain independent ground and bo
 	}
 }
 
+TEST_CASE("Toy-factory source children preserve physical press and conveyor motion", "[renderer3d][voxel]")
+{
+	unsigned clay = 0, robots = 0, stamp = 0, holder = 0;
+	std::set<int> stamp_positions;
+	for (unsigned frame = 0; frame < 50; ++frame) {
+		auto children = VoxelToyFactoryChildren(frame);
+		for (unsigned slot = 0; slot < children.size(); ++slot) {
+			const auto &child = children[slot];
+			if (child.image == 0) continue;
+			float sx = 2*(child.offset.y-child.offset.x), sy = child.offset.x+child.offset.y-child.offset.z;
+			if (slot == 0 || slot == 1) {
+				CHECK(child.image == (slot == 0 ? 4719 : 4720));
+				CHECK(sx == child.x-(slot == 0 ? 50 : 16));
+				CHECK(sy == child.y-(slot == 0 ? 96 : 100));
+				CHECK(child.offset.y == 0); CHECK(child.offset.z == 0);
+				(slot == 0 ? clay : robots)++;
+			} else if (slot == 2) {
+				CHECK(child.image == 4718); CHECK(child.x == 7);
+				CHECK(child.offset.x == 0); CHECK(child.offset.y == 0);
+				CHECK(sy == child.y); CHECK(child.offset.z >= -29);
+				stamp_positions.insert(child.y); ++stamp;
+			} else {
+				CHECK(child.image == 4717); CHECK(child.x == 0); CHECK(child.y == 42);
+				CHECK(Dot(child.offset,child.offset) == 0); ++holder;
+			}
+		}
+	}
+	CHECK(clay == 29); CHECK(robots == 19); CHECK(stamp == 50); CHECK(holder == 50);
+	CHECK(stamp_positions == std::set<int>{0,1,2,4,6,8,11,14,17,20,24,29});
+	for (unsigned frame : {0U,49U}) {
+		auto children = VoxelToyFactoryChildren(frame);
+		CHECK(children[0].image == 0); CHECK(children[1].image == 0);
+	}
+	CHECK_THROWS_AS(VoxelToyFactoryChildren(50),std::invalid_argument);
+}
+
 TEST_CASE("Tunnel excavation removes intersecting terrain while retaining the shoulders and charts", "[renderer3d]")
 {
 	Scene terrain;

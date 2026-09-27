@@ -40,6 +40,7 @@ void BeginVoxelPlasticFountainCheck();
 void BeginVoxelIndustryPaletteCheck(unsigned graphics);
 void BeginVoxelForestCycleCheck(std::optional<unsigned> graphics = {});
 void BeginVoxelPowerSparkCheck();
+void BeginVoxelToyFactoryCheck();
 void BeginVoxelVehicleCargoCheck(unsigned engine);
 void BeginVoxelHelicopterRotorCheck(unsigned engine);
 void BeginVoxelAircraftContactCheck(unsigned engine);

@@ -224,6 +224,23 @@ phases on one unchanged tile/industry. Diagnostic captures cannot count. The sam
 observer retains steel grounds52…57's seven original fire phases and at least two
 emitted animated materials. Missing bindings and a body lacking231 correctly fail.
 
+The factory143 child path uses independent infrastructure bindings4717…4720 and the
+original ordered50-frame draw table. Conveyor screen steps(-2,+1) become world+X;
+stamp offsets(0,+dy) become world-Z. All four original children must be bound before
+connected142…146 bodies use this path.4675 ground remains independently selectable.
+`--verify-toy-factory --running --benchmark-frames 9000` observes all selected children
+from the same actual capture on one unchanged industry tile. Supply the factory
+through ordinary cargo delivery; its idle frame0 alone cannot pass. The current
+factory artwork is an isolated study and does not yet add catalogue coverage.
+
+Every named voxel gallery also exports`model-voxel-NAME-native.{pam,json}` at the
+fixed source-scale lens and actual model origin. The JSON`model_origin`keeps spatial
+registration visible before a study has a runtime binding. Bound factory galleries
+add all50 original child compositions and`voxel-industry-procedural-143.json`.
+`contact_sheet.py --industry-procedural-comparison 143 --source-directory EXPORT`
+checks exact ordered source selections/absences and places source/model images at
+the same parent origin. Joined industry sheets include declared procedural children.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→

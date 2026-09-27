@@ -21,6 +21,22 @@ def read_pam(path):
         return Image.frombytes("RGBA", (int(fields["WIDTH"]), int(fields["HEIGHT"])), source.read())
 
 
+def compose_registered(layers):
+    """Composite ordered images while retaining their shared world/tile origin."""
+    if not layers:
+        return Image.new("RGBA", (1,1)), (0,0,0,0)
+    left,top = min(x for _,x,y in layers), min(y for _,x,y in layers)
+    right = max(x+image.width for image,x,y in layers)
+    bottom = max(y+image.height for image,x,y in layers)
+    joined = Image.new("RGBA", (right-left,bottom-top))
+    for image,x,y in layers:
+        joined.alpha_composite(image,(x-left,y-top))
+    visible = joined.getchannel("A").getbbox()
+    if not visible:
+        return Image.new("RGBA", (1,1)), (0,0,0,0)
+    return joined.crop(visible), (left+visible[0],top+visible[1],left+visible[2],top+visible[3])
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path)
@@ -42,6 +58,7 @@ def main():
     parser.add_argument("--industry-effect-source", type=int, choices=(10,), help="Review original power-station sparks at their actual parent-relative positions")
     parser.add_argument("--industry-effect-comparison", type=int, choices=(10,), help="Compare six native voxel gantry/spark composites with their original registered layers")
     parser.add_argument("--industry-procedural-source", type=int, choices=(143,162,165,174), help="Review ordered original Toyland children and genuine absent intervals; --stage selects construction or completed animation")
+    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,), help="Compare every original completed factory child combination at its actual parent/tile origin")
     parser.add_argument("--industry-ground", action="store_true", help="Select original industry ground layers for --industry-source or --industry-comparison")
     parser.add_argument("--depot-source", type=int, choices=range(6), help="Assemble the four original depot directions from their actual layer offsets")
     parser.add_argument("--ship-depot-source", action="store_true", help="Assemble both original two-tile ship depots with their actual layer offsets")
@@ -130,24 +147,14 @@ def main():
             x,y,z = entry["origin"]
             dx,dy = entry["sprite_offset"]
             layers.append((read_pam(directory / entry["image"]),2*(y-x)+dx//4,x+y-z+dy//4))
-        if not layers:
-            return Image.new("RGBA", (1,1)), (0,0,0,0)
-        left, top = min(x for _,x,y in layers), min(y for _,x,y in layers)
-        right = max(x+image.width for image,x,y in layers)
-        bottom = max(y+image.height for image,x,y in layers)
-        joined = Image.new("RGBA", (right-left,bottom-top))
-        for image,x,y in layers:
-            joined.alpha_composite(image,(x-left,y-top))
-        visible = joined.getchannel("A").getbbox()
-        if not visible:
-            return Image.new("RGBA", (1,1)), (0,0,0,0)
-        return joined.crop(visible), (left+visible[0],top+visible[1],left+visible[2],top+visible[3])
+        return compose_registered(layers)
 
     if args.industry_layout_comparison is not None:
         if args.source_directory is None:
             parser.error("Joined industry comparison requires --source-directory")
         industry, layout = args.industry_layout_comparison
         catalogue = json.loads((args.source_directory / "industries.json").read_text())
+        procedural = None
         panels, records = [], []
         for stage in range(4):
             name = args.directory / f"model-voxel-industry-layout-{industry}-{layout}-{stage}-native"
@@ -163,6 +170,14 @@ def main():
                     x, y, z = entry["origin"]
                     dx, dy = entry["sprite_offset"]
                     bodies.append((read_pam(args.source_directory / entry["image"]), 2*(gy+y-gx-x)+dx//4, gx+x+gy+y-gz-z+dy//4))
+                    if "procedural_frame" in tile:
+                        if procedural is None:
+                            procedural = json.loads((args.source_directory / "industry-procedural.json").read_text())
+                        frame = next(row for row in procedural if row["graphics"] == tile["graphics"] and row["stage"] == stage and row["frame"] == tile["procedural_frame"])
+                        _,px,py = bodies[-1]
+                        for child in frame["children"]:
+                            cx,cy = child["child_offset"]; ox,oy = child["sprite_offset"]
+                            bodies.append((read_pam(args.source_directory / child["image"]),px+cx+ox//4,py+cy+oy//4))
             pieces = grounds+bodies
             left, top = min(x for _,x,y in pieces), min(y for _,x,y in pieces)
             right, bottom = max(x+image.width for image,x,y in pieces), max(y+image.height for image,x,y in pieces)
@@ -640,6 +655,50 @@ def main():
             sheet.save(output)
             print(output)
             print(json.dumps(entries))
+        return
+    if args.industry_procedural_comparison is not None:
+        if args.source_directory is None or args.stage != 3:
+            parser.error("Procedural comparison requires --source-directory and completed --stage 3")
+        graphics = args.industry_procedural_comparison
+        originals = {row["frame"]:row for row in json.loads((args.source_directory / "industry-procedural.json").read_text()) if row["graphics"] == graphics and row["stage"] == 3}
+        models = json.loads((args.directory / f"voxel-industry-procedural-{graphics}.json").read_text())
+        if {row["frame"] for row in models} != set(originals) or len(models) != len(originals):
+            parser.error("Procedural comparison requires every original animation frame exactly once")
+        panels, records = [], []
+        for row in models:
+            original = originals[row["frame"]]
+            if [(c["sprite"],c["child_offset"]) for c in row["children"]] != [(c["sprite"],c["child_offset"]) for c in original["children"]]:
+                parser.error("Voxel procedural children differ from the original ordered selections/absences")
+            px,py = (v//4 for v in original["parent_sprite_offset"])
+            layers = [(read_pam(args.source_directory / original["parent_image"]),px,py)]
+            for child in original["children"]:
+                x,y = child["child_offset"]; ox,oy = child["sprite_offset"]
+                layers.append((read_pam(args.source_directory / child["image"]),px+x+ox//4,py+y+oy//4))
+            source,source_bounds = compose_registered(layers)
+            path = args.directory / row["image"]
+            model = read_pam(path) if path.exists() else Image.open(path.with_suffix(".png")).convert("RGBA")
+            registration = json.loads(path.with_suffix(".json").read_text()); ox,oy = registration["model_origin"]
+            bounds = model.getchannel("A").getbbox()
+            model_bounds = (bounds[0]-ox,bounds[1]-oy,bounds[2]-ox,bounds[3]-oy)
+            common = (min(source_bounds[0],model_bounds[0]),min(source_bounds[1],model_bounds[1]),max(source_bounds[2],model_bounds[2]),max(source_bounds[3],model_bounds[3]))
+            pair = []
+            for image,bound in ((source,source_bounds),(model.crop(bounds),model_bounds)):
+                canvas = Image.new("RGBA",(common[2]-common[0],common[3]-common[1]))
+                canvas.alpha_composite(image,(bound[0]-common[0],bound[1]-common[1])); pair.append(canvas)
+            panels.append(pair)
+            records.append({"frame":row["frame"],"source_bounds":source_bounds,"model_bounds":model_bounds,"children":row["children"],"intentionally_absent":original["intentionally_absent"]})
+        width = max(320,4*max(image.width for pair in panels for image in pair)+12)
+        height = max(400,2*max(image.height for pair in panels for image in pair)+52)
+        sheet = Image.new("RGB",(width*4,height*((len(panels)+3)//4)),(40,40,48)); draw = ImageDraw.Draw(sheet)
+        for slot,(pair,record) in enumerate(zip(panels,records)):
+            x,y = slot%4*width,slot//4*height
+            absent = ", ".join(record["intentionally_absent"]) or "none"
+            draw.text((x+6,y+6),f"{graphics} frame {record['frame']}: source / voxel\nabsent: {absent}; 2x fixed origin",fill="white")
+            for column,image in enumerate(pair):
+                image = image.resize((image.width*2,image.height*2),Image.Resampling.NEAREST)
+                sheet.paste(image,(x+column*(width//2)+(width//2-image.width)//2,y+height-4-image.height),image)
+        output = args.directory / f"industry-procedural-{graphics}-source-registration.png"
+        sheet.save(output); output.with_suffix(".json").write_text(json.dumps(records,indent=2)+"\n"); print(output)
         return
     if args.industry_procedural_source is not None:
         if args.stage not in range(4):

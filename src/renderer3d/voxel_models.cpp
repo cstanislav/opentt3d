@@ -350,6 +350,28 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
 	return DrawVoxelAsset(scene,"house_ground",house,*state,origin,palette,1);
 }
 
+static bool HasVoxelToyFactoryChildren()
+{
+	for (SpriteID image : {SPR_IT_TOY_FACTORY_STAMP_HOLDER,SPR_IT_TOY_FACTORY_STAMP,SPR_IT_TOY_FACTORY_CLAY,SPR_IT_TOY_FACTORY_ROBOT}) {
+		if (!IsBaseGraphicsSprite(image) || !HasVoxelAsset("infrastructure",image,0)) return false;
+	}
+	return true;
+}
+
+std::array<VoxelIndustryChild,4> VoxelToyFactoryChildren(unsigned frame)
+{
+	if (frame >= std::size(_industry_anim_offs_toys)) throw std::invalid_argument("Invalid original toy-factory frame");
+	const auto &source = _industry_anim_offs_toys[frame];
+	std::array<VoxelIndustryChild,4> children{};
+	/* The source's (-2,+1) screen steps move the conveyor along +X. The
+	 * press's (0,+dy) steps move only -Z, not along an inverse-screen diagonal. */
+	if (source.image_1 != 0xFF) children[0] = {SPR_IT_TOY_FACTORY_CLAY,source.x,96+source.image_1,{static_cast<float>(source.image_1),0,0}};
+	if (source.image_2 != 0xFF) children[1] = {SPR_IT_TOY_FACTORY_ROBOT,16-source.image_2*2,100+source.image_2,{static_cast<float>(source.image_2),0,0}};
+	children[2] = {SPR_IT_TOY_FACTORY_STAMP,7,source.image_3,{0,0,-static_cast<float>(source.image_3)}};
+	children[3] = {SPR_IT_TOY_FACTORY_STAMP_HOLDER,0,42,{}};
+	return children;
+}
+
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground)
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
@@ -399,7 +421,12 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* Glass chambers and circulation tubing cross all three source cuts.
 		 * A partial custom replacement retains the connected supplied apparatus. */
 		first = 157; last = 159;
+	} else if (!ground && graphics >= 142 && graphics <= 146) {
+		/* Construction swaps the blue tower's owner, and the fixed holder owns
+		 * wall cuts across the press. Keep every connected body on one source path. */
+		first = 142; last = 146;
 	}
+	bool toy_factory = graphics >= 142 && graphics <= 146 && (ground || HasVoxelToyFactoryChildren());
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 		SpriteID spark = SPR_IT_POWER_PLANT_TRANSFORMERS+frame;
@@ -408,7 +435,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	for (unsigned family = first; family <= last; ++family) for (unsigned stage = 0; stage < 4; ++stage) {
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
-		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
 		if (first == 72 && last == 88) {
 			SpriteID other = (ground ? source.building.sprite : source.ground.sprite)&SPRITE_MASK;
 			if (other != 0 && !IsBaseGraphicsSprite(other)) return {};
@@ -436,6 +463,19 @@ bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID
 	if (!DrawVoxelAsset(scene,"infrastructure",image,0,origin,palette,opacity)) return false;
 	for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
 	return true;
+}
+
+bool DrawVoxelToyFactoryChild(Scene &scene, SpriteID image, unsigned frame, Vec3 origin, PaletteID palette, float opacity)
+{
+	image &= SPRITE_MASK;
+	if (!VoxelIndustryState(143,_industry_draw_tile_data[143*4+3].building.sprite)) return false;
+	for (const auto &child : VoxelToyFactoryChildren(frame)) if (child.image != 0 && child.image == image) {
+		size_t before = scene.instances.size();
+		if (!DrawVoxelAsset(scene,"infrastructure",image,0,origin+child.offset,palette,opacity)) return false;
+		for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
+		return true;
+	}
+	return false;
 }
 
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette)
@@ -719,7 +759,7 @@ void ExportVoxelReviews(std::string_view prefix)
 	if (std::ranges::none_of(Models().models,[&](const auto &entry) { return entry.first.starts_with(prefix); })) throw std::runtime_error("No voxel models match the review prefix");
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR))/"renderer3d-reference";
 	std::filesystem::create_directories(directory);
-	auto capture = [&](const Scene &scene, const Camera &camera, const std::string &name, bool object_alpha = false) {
+		auto capture = [&](const Scene &scene, const Camera &camera, const std::string &name, bool object_alpha = false) {
 		std::vector<uint8_t> pixels;
 		std::vector<uint32_t> ids;
 		if (!RenderScene(scene,camera,pixels,object_alpha ? &ids : nullptr)) throw std::runtime_error("Voxel review capture failed");
@@ -728,6 +768,23 @@ void ExportVoxelReviews(std::string_view prefix)
 		output << "P7\nWIDTH " << camera.width << "\nHEIGHT " << camera.height << "\nDEPTH 4\nMAXVAL 255\nTUPLTYPE RGB_ALPHA\nENDHDR\n";
 		for (int y = camera.height-1; y >= 0; --y) output.write(reinterpret_cast<const char *>(pixels.data()+static_cast<size_t>(y)*camera.width*4),camera.width*4);
 		if (!output) throw std::runtime_error("Could not write voxel review capture");
+	};
+	/* Even an unbound authoring study needs a fixed source-scale registration.
+	 * Keep its actual model origin, rather than centring the visible silhouette. */
+	auto native_model = [&](Scene scene, const std::string &name) {
+		for (auto &instance : scene.instances) instance.data.SetObjectId(1);
+		Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
+		int left = 8192, top = 8192, right = 8192, bottom = 8192;
+		for (const auto &instance : scene.instances) for (const auto &vertex : *instance.mesh) {
+			auto point = camera.Project(ResolveInstanceVertex(vertex,instance.data).position);
+			if (!point.visible) throw std::runtime_error("Native voxel study is outside the fixed-lens camera");
+			left = std::min(left,static_cast<int>(std::floor(point.x))-4); top = std::min(top,static_cast<int>(std::floor(point.y))-4);
+			right = std::max(right,static_cast<int>(std::ceil(point.x))+4); bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
+		}
+		capture(scene,camera.Cropped(left,top,right-left,bottom-top),name,true);
+		std::ofstream registration(directory/(name+".json"));
+		registration << nlohmann::json{{"model_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}}}.dump(2) << '\n';
+		if (!registration) throw std::runtime_error("Could not write native voxel study registration");
 	};
 	for (const auto &[name,model] : Models().models) for (unsigned view = 0; view < 8; ++view) {
 		if (!name.starts_with(prefix)) continue;
@@ -738,6 +795,7 @@ void ExportVoxelReviews(std::string_view prefix)
 		Camera camera{centre,3,640,640,static_cast<float>(view)};
 		if (view >= 4) camera = StreetReviewCamera(model.surface.low,model.surface.high,640,640,view-4+1.5f);
 		capture(scene,camera,fmt::format("model-voxel-{}-{}",name,view));
+		if (view == 0) native_model(scene,fmt::format("model-voxel-{}-native",name));
 	}
 	static const VoxelMesh ground = [] {
 		VoxelGrid grid({112,112,1},{{{4,4,4,4,4,4}},{{7,7,7,7,7,7}}},{-8,-8,-1});
@@ -925,6 +983,13 @@ void ExportVoxelReviews(std::string_view prefix)
 					if (binding == Models().bindings.end()) continue;
 					group.push_back(&Models().models.at(binding->second));
 					placements.push_back({static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0});
+					if (!ground && part.gfx == 143 && stage == 3 && VoxelIndustryState(143,source.building.sprite)) {
+						Vec3 origin = placements.back();
+						for (const auto &child : VoxelToyFactoryChildren(0)) if (child.image != 0) {
+							group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+							placements.push_back(origin+child.offset);
+						}
+					}
 				}
 				if (group.empty()) continue;
 				context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
@@ -943,7 +1008,11 @@ void ExportVoxelReviews(std::string_view prefix)
 						const auto &texture = Textures().Get(source.building.sprite,source.building.pal);
 						complete &= texture.base_graphics && texture.ink_width == 0 && texture.ink_height == 0;
 					}
+					if (part.gfx == 143 && stage == 3) {
+						for (const auto &child : VoxelToyFactoryChildren(0)) if (child.image != 0) complete &= DrawVoxelToyFactoryChild(joined,child.image,0,origin,source.building.pal);
+					}
 					tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
+					if (part.gfx == 143 && stage == 3) tiles.back()["procedural_frame"] = 0;
 				}
 				if (!complete) continue;
 				for (auto &instance : joined.instances) instance.data.SetObjectId(1);
@@ -961,6 +1030,34 @@ void ExportVoxelReviews(std::string_view prefix)
 				registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}},{"tiles",tiles}}.dump(2) << '\n';
 				if (!registration) throw std::runtime_error("Could not write native joined-industry registration");
 			}
+		}
+	}
+	/* Retain all original factory child combinations, including sentinel absences.
+	 * These are read-only diagnostic scenes, never animation on an actual tile. */
+	if (auto state = VoxelIndustryState(143,_industry_draw_tile_data[143*4+3].building.sprite)) {
+		const auto &name = Models().bindings.at({"industries",143,*state});
+		if (name.starts_with(prefix)) {
+			nlohmann::json frames = nlohmann::json::array();
+			for (unsigned frame = 0; frame < std::size(_industry_anim_offs_toys); ++frame) {
+				Textures().BeginScene();
+				Scene scene;
+				DrawVoxelAsset(scene,"industries",143,*state,{},PAL_NONE);
+				nlohmann::json children = nlohmann::json::array();
+				std::vector<const VoxelModel *> group{&Models().models.at(name)};
+				std::vector<Vec3> placements{{}};
+				for (const auto &child : VoxelToyFactoryChildren(frame)) if (child.image != 0) {
+					if (!DrawVoxelToyFactoryChild(scene,child.image,frame,{},PAL_NONE)) throw std::runtime_error("Incomplete toy-factory diagnostic children");
+					children.push_back({{"sprite",child.image},{"child_offset",{child.x,child.y}},{"world_offset",{child.offset.x,child.offset.y,child.offset.z}}});
+					group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+					placements.push_back(child.offset);
+				}
+				std::string label = fmt::format("model-voxel-industry-procedural-143-{}-native",frame);
+				native_model(scene,label);
+				frames.push_back({{"graphics",143},{"stage",3},{"frame",frame},{"image",label+".pam"},{"children",children}});
+				if (frame == 0 || frame == 19 || frame == 30 || frame == 41) context(fmt::format("context-industry-procedural-143-{}",frame),group,placements);
+			}
+			std::ofstream manifest(directory/"voxel-industry-procedural-143.json"); manifest << frames.dump(2) << '\n';
+			if (!manifest) throw std::runtime_error("Could not write toy-factory diagnostic manifest");
 		}
 	}
 	std::set<unsigned> selected_houses;

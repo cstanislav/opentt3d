@@ -1,5 +1,31 @@
 # Implementation verification
 
+## Toy-factory child mechanism and fixed model-origin reviews
+
+At14:56:00UTC, the isolated factory study captures all50 original ordered child
+frames on tile51,35, industry0. It records29 clay and19 duck appearances, with stamp
+and holder present50 times each. Ordinary input delivery begins after54 seconds;
+the preceding1,800-frame idle observation fails with only frame0, while9,000 frames
+pass. Unbound/missing-holder negatives reject. The latter's separate floor control
+captures all six independent grounds and no connected voxel bodies. The initial
+negative harness's premature ground-capture assertion is retained and reconciled
+with that separate completed control.
+
+Native201, asset136, harness12 and the137-file boundary pass.750 assertions verify
+physical conveyor/press motion against original screen offsets and absent intervals.
+All148 preceding fizzy captures remain identical; seven new fixed-model-origin
+captures add source registration. Fifty ordered procedural native composites and
+registered source sheets retain child order/absence metadata. No simulation state
+or RNG is changed. Study captures compact losslessly by769,888,808bytes. The twelve
+prototype volumes are still outside the integrated1,624-model catalogue; geometry,
+source paint and frozen artwork acceptance remain open. Evidence:
+`build-macos/breadth-toy-factory-runtime-reconciliation.json`. Final approvals:0.
+
+Release`.16`'s first Linux gate misses ascending-ramp observation at1.54fps over900
+frames, while five other support states and collector contact pass without a logged
+wheel-gap violation. Original failure artifacts are retained; the failed job is
+rerunning. This attempt does not establish a verified`.16`desktop release.
+
 ## Fizzy-drink construction and original bubble palette
 
 At14:00:37UTC, all26 frozen background controls pass. Seven provisional models bring

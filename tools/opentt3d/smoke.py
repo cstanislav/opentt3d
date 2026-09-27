@@ -136,6 +136,7 @@ def main():
     harvest_cycle.add_argument("--verify-forest-cycle", action="store_true", help="Observe one unchanged actual timber/cotton forest tile dispatch cargo and pass through its harvested and every original regrowth state")
     harvest_cycle.add_argument("--verify-harvest-cycle", type=int, choices=(16,129,135), metavar="GRAPHICS", help="Explicitly observe original timber16, cotton129 or battery135 on one unchanged harvested/regrowing tile")
     parser.add_argument("--verify-power-sparks", action="store_true", help="Observe all six actual voxel power-station spark children on one unchanged industry tile")
+    parser.add_argument("--verify-toy-factory", action="store_true", help="Observe all 50 original toy-factory frames with ordered voxel children and genuine absences on one unchanged tile")
     parser.add_argument("--verify-house-lift", action="store_true", help="Observe at least eight actual positions of one moving voxel office lift")
     parser.add_argument("--verify-radio-beacons", action="store_true", help="Observe both original blinking palette entries on one emitted voxel radio tower")
     parser.add_argument("--verify-buoy-beacon", action="store_true", help="Observe original239/240 beacon and250..254 foam phases on one actually captured voxel buoy")
@@ -203,6 +204,8 @@ def main():
         parser.error("Forest production/regrowth requires --running and --benchmark-frames")
     if args.verify_power_sparks and (not args.running or not args.benchmark_frames):
         parser.error("Power-station spark checks require --running and --benchmark-frames")
+    if args.verify_toy_factory and (not args.running or not args.benchmark_frames):
+        parser.error("Toy-factory child checks require --running and --benchmark-frames")
     if args.verify_voxel_cargo is not None and (not args.running or not args.benchmark_frames):
         parser.error("Vehicle cargo checks require --running and --benchmark-frames")
     if args.reference_cargo and (args.reference_vehicle is None or args.running):
@@ -518,6 +521,8 @@ server_advertise = false
         commands.append(f"renderer3d verify-forest-cycle {args.verify_harvest_cycle}")
     if args.verify_power_sparks:
         commands.append("renderer3d verify-power-sparks")
+    if args.verify_toy_factory:
+        commands.append("renderer3d verify-toy-factory")
     if args.verify_voxel_cargo is not None:
         commands.append(f"renderer3d verify-vehicle-cargo {args.verify_voxel_cargo}")
     if args.verify_depot_traversal is not None:
@@ -818,6 +823,8 @@ server_advertise = false
                     raise RuntimeError(f"Industry {graphic} did not render every distinct original animation frame; inspect run.log")
             if args.verify_power_sparks and "voxel power-station spark verification passed:" not in text:
                 raise RuntimeError("A single actual power-station tile did not render all six original spark children; inspect run.log")
+            if args.verify_toy_factory and "voxel toy-factory verification passed:" not in text:
+                raise RuntimeError("One unchanged toy-factory tile did not render all 50 original ordered child frames and absences; inspect run.log")
             if args.verify_plastic_fountain and "voxel plastic-fountain verification passed:" not in text:
                 raise RuntimeError("One unchanged plastic-fountain tile did not render all eight matching original ground/body pairs; inspect run.log")
             if (args.verify_forest_cycle or args.verify_harvest_cycle is not None) and "voxel forest cycle verification passed:" not in text:

@@ -104,6 +104,8 @@ struct CaptureState {
 	bool parent_culled = false;
 	uint32_t parent_id = 0;
 	std::map<TileIndex,unsigned> plastic_fountain_grounds;
+	unsigned toy_factory_next_child = 0;
+	bool toy_factory_children_visible = true;
 };
 static std::optional<CaptureState> capture;
 static std::vector<Vertex> recycled_vertices;
@@ -130,6 +132,10 @@ static std::map<TileIndex,std::pair<IndustryID,unsigned>> forest_cycles;
 static bool check_power_sparks = false;
 static TileIndex checked_spark_tile = INVALID_TILE;
 static unsigned checked_spark_frames = 0;
+static bool check_toy_factory = false;
+static TileIndex checked_toy_factory_tile = INVALID_TILE;
+static uint32_t checked_toy_factory_industry = UINT32_MAX;
+static uint64_t checked_toy_factory_frames = 0;
 static unsigned checked_cargo_engine = UINT_MAX;
 static uint32_t checked_cargo_vehicle = UINT32_MAX;
 static unsigned checked_cargo_capacity = 0, checked_cargo_states = 0;
@@ -1675,6 +1681,8 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	capture->parent_mesh_begin = capture->parent_mesh_end = capture->scene.vertices.size();
 	capture->parent_instance_begin = capture->parent_instance_end = capture->scene.instances.size();
 	capture->parent_culled = false;
+	capture->toy_factory_next_child = 0;
+	capture->toy_factory_children_visible = true;
 	capture->parent_left = capture->parent_top = 0;
 	capture->parent_offsets_pending = false;
 	if ((image & SPRITE_MASK) == SPR_EMPTY_BOUNDING_BOX) return;
@@ -2046,6 +2054,14 @@ void BeginVoxelPowerSparkCheck()
 	Debug(driver,1,"OpenTT3D: observing all six actual power-station spark child frames");
 }
 
+void BeginVoxelToyFactoryCheck()
+{
+	if (!VoxelIndustryState(143,_industry_draw_tile_data[143*4+3].building.sprite)) throw std::runtime_error("Toy factory needs its original completed body and all four voxel children");
+	check_toy_factory = true; checked_toy_factory_tile = INVALID_TILE;
+	checked_toy_factory_industry = UINT32_MAX; checked_toy_factory_frames = 0;
+	Debug(driver,1,"OpenTT3D: observing all 50 actual toy-factory frames and ordered child absences");
+}
+
 void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transparent, const SubSprite *, bool scale, bool relative)
 {
 	if (!capture || !capture->have_parent) return;
@@ -2053,10 +2069,44 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		IsTileType(capture->tile->tile,MP_INDUSTRY) && GetIndustryGfx(capture->tile->tile) == 10 &&
 		(image&SPRITE_MASK) > SPR_IT_POWER_PLANT_TRANSFORMERS && (image&SPRITE_MASK) <= SPR_IT_POWER_PLANT_TRANSFORMERS+6 &&
 		VoxelIndustryState(10,SPR_IT_POWER_PLANT_TRANSFORMERS).has_value();
+	bool toy_factory = capture->tile != nullptr && IsTileType(capture->tile->tile,MP_INDUSTRY) &&
+		GetIndustryGfx(capture->tile->tile) == 143 && IsIndustryCompleted(capture->tile->tile) &&
+		capture->parent_sprite == (_industry_draw_tile_data[143*4+3].building.sprite&SPRITE_MASK) &&
+		VoxelIndustryState(143,capture->parent_sprite).has_value();
 	/* A rising arc has its own bounds above the gantry. Keep its independent
 	 * frustum check even when the solid parent has just left the viewport. */
-	if (capture->parent_culled && !power_spark) return;
+	if (capture->parent_culled && !power_spark && !toy_factory) return;
 	ObjectTag tag{capture->scene.vertices.size(), capture->parent_id};
+	if (toy_factory) {
+		TileIndex tile = capture->tile->tile;
+		unsigned frame = GetAnimationFrame(tile);
+		auto children = VoxelToyFactoryChildren(frame);
+		auto &next = capture->toy_factory_next_child;
+		while (next < children.size() && children[next].image == 0) ++next;
+		if (next >= children.size() || !scale || !relative || children[next].image != (image&SPRITE_MASK) || children[next].x != x || children[next].y != y) {
+			throw std::runtime_error("Toy-factory child lost its original order, absence or screen offset");
+		}
+		Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
+		size_t before = capture->scene.instances.size();
+		if (!DrawVoxelToyFactoryChild(capture->scene,image,frame,origin,palette,transparent ? 0.38f : 1)) throw std::runtime_error("Missing original toy-factory voxel child");
+		if (frame != GetAnimationFrame(tile)) throw std::runtime_error("Toy-factory rendering changed its original animation");
+		capture->toy_factory_children_visible &= capture->scene.instances.size() != before;
+		if (++next == children.size() && capture->toy_factory_children_visible && !capture->parent_culled && !capture->diagnostic && check_toy_factory) {
+			uint32_t industry = GetIndustryIndex(tile).base();
+			if (checked_toy_factory_tile == INVALID_TILE) { checked_toy_factory_tile = tile; checked_toy_factory_industry = industry; }
+			if (checked_toy_factory_tile == tile && checked_toy_factory_industry == industry) {
+				if ((checked_toy_factory_frames & (uint64_t{1}<<frame)) == 0) {
+					Debug(driver,1,"OpenTT3D: toy-factory frame {} captured at {},{} industry {}, clay {} robot {} stamp {} holder {}",frame,TileX(tile),TileY(tile),industry,children[0].image,children[1].image,children[2].image,children[3].image);
+				}
+				checked_toy_factory_frames |= uint64_t{1}<<frame;
+				if (std::popcount(checked_toy_factory_frames) == std::size(_industry_anim_offs_toys)) {
+					Debug(driver,1,"OpenTT3D: voxel toy-factory verification passed: 50 original ordered child frames and absences on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
+					check_toy_factory = false;
+				}
+			}
+		}
+		return;
+	}
 	if (power_spark) {
 		unsigned frame = (image&SPRITE_MASK)-SPR_IT_POWER_PLANT_TRANSFORMERS;
 		const auto &offset = _coal_plant_sparks[frame-1];

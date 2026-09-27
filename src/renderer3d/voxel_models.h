@@ -44,6 +44,10 @@ inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, b
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground = false);
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);
 bool DrawVoxelIndustrySpark(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0, float opacity = 1);
+/** Original ordered factory children; image0 is an intentional absent slot. */
+struct VoxelIndustryChild { SpriteID image = 0; int x = 0, y = 0; Vec3 offset{}; };
+std::array<VoxelIndustryChild,4> VoxelToyFactoryChildren(unsigned frame);
+bool DrawVoxelToyFactoryChild(Scene &scene, SpriteID image, unsigned frame, Vec3 origin, PaletteID palette = 0, float opacity = 1);
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0);
 std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading, float grade = 0, float contact_height = 10);
 unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette,

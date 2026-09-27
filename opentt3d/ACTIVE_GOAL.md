@@ -1,5 +1,41 @@
 # Active extended development goal
 
+## Toy-factory child mechanism verified in an isolated study — September27,14:56:00UTC
+
+The renderer preserves the original50-frame factory143 child order and255 absences.
+Clay/duck conveyor steps move only+X; the press moves only-Z through12 original heights.
+All four child bindings and connected142…146 body sources are required together;
+independent4675 ground keeps its own source check. Each child has its own frustum
+test and original tile identity. The live observer requires every selected child from
+one actual capture, ignores diagnostics and retains the same tile/industry identity.
+
+An isolated12-model source study passes all50 live original frames on tile51,35,
+industry0:29 clay,19 duck and50 stamp/holder appearances. Ordinary battery delivery
+starts the cycle after54 seconds. The preceding1,800-frame idle run correctly fails
+with only frame0; a9,000-frame run passes. Unbound and missing-holder negatives reject.
+A separate missing-holder control still captures all six independent grounds while
+all connected voxel bodies use their supplied fallback. No tile/animation/RNG writes
+are introduced. Native201, asset136, harness12 and the137-file presentation boundary
+pass, including750 motion assertions. All148 preceding fizzy gallery views remain
+identical; seven additional model-origin views make unbound source registration visible.
+
+All50 diagnostic native child compositions and source-aligned comparison sheets are
+available. Early ownership prototypes retain38 source palette slots,39 aliases,14
+absent bodies and144 climate comparisons. Current geometry revisions correct the
+red tower datum, checker-paint extents, blue conveyor inlet and independently owned
+holder walls. These volumes are not yet integrated: catalogue coverage remains1,624
+models and154/175 primary definitions. Final visual approvals:0. Successful study
+captures compact losslessly by769,888,808bytes; original imagery and failures remain.
+Evidence:`breadth-toy-factory-runtime-reconciliation.json` and`breadth-toy-factory-*`.
+
+Fizzy release`.16`at99c058219d9646a151309db0261bc86990844efb has a retained Linux gate
+failure: its900-frame1.54fps llvmpipe journey saw five of six support states, missing
+the ascending ramp, with no wheel-gap violation. Collector contact passed. The failed
+job is rerunning; public verified downloads remain`.15`. Preserve the original Linux
+artifact under`playable-release16-failed-ci/`and inspect the retry before publishing
+verified links. Continue factory source/street/clearance reviews, compact integration,
+frozen controls, the remaining industry definitions and catalogue-wide later passes.
+
 ## Fizzy-drink construction and live bubble palette verified — September27,14:00:37UTC
 
 Seven provisional volumes bring the catalogue to1,624 and primary industry coverage
