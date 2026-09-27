@@ -1,5 +1,46 @@
 # Active extended development goal
 
+## Plastic-fountain paired animation verified — September27,12:45:44UTC
+
+Sixteen provisional volumes bring the catalogue to1,617 and primary industry coverage
+to150/175:112 body owners and150 independent grounds. Eight completed splash poses
+retain rounded droplets, tapering jets and low grains. Eight separate basin grounds
+retain recessed floors, white/yellow retaining edges and raised liquid lobes. All24
+early construction bodies remain absent. Fifty shared components preserve every
+occupied cell/colour of the reviewed prototype; all1,601 earlier model hashes agree.
+
+All24 frozen controls pass:30 actual construction-layer selections,17/17 loaded and
+0/17 empty cargo, four climates, clipping, both backends and development bundles.
+Ordinary plastic32→toy-factory31 service carries cargo10 in engine198, acceptance64,
+full loading and return after792 observed ticks. Both600-frame running controls
+observe all eight matching ground/body pairs on the same tile50,34, industry0.
+The observer accepts only the current capture's ground and body, never a preceding
+frame or diagnostic scene. Missing bindings and the paused120-frame single-pose
+negative control correctly fail. Tile/game state and simulation RNG are untouched.
+
+All40 source palettes,48 aliases,192 climate comparisons and24 absences pass. Native200,
+asset134, harness12 and the137-file boundary pass. All48 native backend views agree;
+126 of232 non-native gallery images retain2,010 differing pixels. Body bounds agree
+or differ by at most one pixel; ground bounds retain[-1,0,-1,+1] offsets. Both joined
+layouts, all eight poses and street views are reviewed. Softer crest shapes, exact
+highlights/dark outlines, tiny satellite beads, grains and rim paint remain provisional.
+Final visual approvals remain0.
+
+Successful prototypes save1,232,117,109bytes and accepted captures save940,563,597bytes
+through verified lossless compression. Original images, rejected prototypes, negative
+controls and all metadata remain. Peak sampled memory is3,341,127,376bytes. Short
+service observations average60.016/60.025fps but retain72/77 intervals over20ms and
+23.785/22.798ms maxima. Sustained arbitrary-world smooth60fps and long-duration/reload/
+multiple-viewport memory acceptance remain open. Evidence:
+`breadth-plastic-final-{audit,reconciliation,registration-audit,backend-comparison}.json`.
+
+Verified downloads remain toy-shop`.14`. Next fizzy156…159 source preparation records
+24 visible layers, eight genuine absences,96 identical climate comparisons and its
+distinct4676 ground. Ordinary construction saves and the existing real cola29→33
+input route are ready. Toy-factory142…147 still requires the connected construction
+cuts and ordered child voxels. Continue25 primary definitions, climate/procedural
+coverage, infrastructure/effects and later catalogue-wide fidelity/performance passes.
+
 ## Toy-shop desktop release verified — September27,12:39:14UTC
 
 Release`.14`atde82feb8c338fba8a3d0c0d1cb301d54841dfffe passes all eight hosted jobs.

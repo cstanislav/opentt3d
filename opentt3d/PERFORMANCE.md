@@ -3,6 +3,16 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Plastic-fountain paired-animation observations
+
+The24-control matrix peaks at3,341,127,376 sampled bytes. Two600-frame live services
+average60.016/60.025fps for OpenGL/Vulkan, with4.616/7.440ms p95 work. They retain72/77
+intervals over20ms and23.785/22.798ms maximum intervals. Both observe all eight paired
+ground/body poses on one unchanged tile. Concurrent package checks, tests and authoring
+remain part of the observation environment. These short controls do not establish
+sustained arbitrary-world smoothness or long-duration/reload/multiple-viewport memory
+acceptance. Source:`breadth-plastic-final-reconciliation.json`.
+
 ## Toy-shop supplied-service observations
 
 The26-control matrix peaks at3,396,882,080 sampled bytes. Two600-frame real supplied

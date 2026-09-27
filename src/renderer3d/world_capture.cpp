@@ -103,6 +103,7 @@ struct CaptureState {
 	size_t parent_instance_begin = 0, parent_instance_end = 0;
 	bool parent_culled = false;
 	uint32_t parent_id = 0;
+	std::map<TileIndex,unsigned> plastic_fountain_grounds;
 };
 static std::optional<CaptureState> capture;
 static std::vector<Vertex> recycled_vertices;
@@ -119,6 +120,10 @@ struct IndustryAnimationCheck {
 	bool complete = false;
 };
 static std::map<unsigned,IndustryAnimationCheck> industry_animation_checks;
+static bool check_plastic_fountain = false;
+static TileIndex checked_plastic_tile = INVALID_TILE;
+static uint32_t checked_plastic_industry = UINT32_MAX;
+static unsigned checked_plastic_frames = 0;
 static bool check_forest_cycle = false;
 static unsigned checked_forest_base = 16;
 static std::map<TileIndex,std::pair<IndustryID,unsigned>> forest_cycles;
@@ -532,6 +537,45 @@ void BeginVoxelIndustryAnimationChecks(std::span<const unsigned> graphics)
 	}
 	industry_animation_checks = std::move(checks);
 	Debug(driver,1,"OpenTT3D: observing {} live voxel industry animations without changing game state",industry_animation_checks.size());
+}
+
+void BeginVoxelPlasticFountainCheck()
+{
+	for (unsigned graphics = GFX_PLASTIC_FOUNTAIN_ANIMATED_1; graphics <= GFX_PLASTIC_FOUNTAIN_ANIMATED_8; ++graphics) {
+		for (unsigned stage = 0; stage < 4; ++stage) {
+			const auto &source = _industry_draw_tile_data[graphics*4+stage];
+			if (!VoxelIndustryState(graphics,source.ground.sprite,true) ||
+				(stage == 3 && !VoxelIndustryState(graphics,source.building.sprite)) ||
+				(stage < 3 && (source.building.sprite != 0 || HasVoxelAsset("industries",graphics,stage)))) {
+				throw std::runtime_error("Plastic fountain needs all eight original ground/body poses and its empty construction bodies");
+			}
+		}
+	}
+	checked_plastic_tile = INVALID_TILE; checked_plastic_industry = UINT32_MAX; checked_plastic_frames = 0;
+	check_plastic_fountain = true;
+	Debug(driver,1,"OpenTT3D: observing all eight plastic-fountain ground/body pairs on one unchanged industry tile without changing game state");
+}
+
+static void ObserveVoxelPlasticFountain(TileIndex tile, unsigned graphics)
+{
+	if (!check_plastic_fountain || graphics < GFX_PLASTIC_FOUNTAIN_ANIMATED_1 || graphics > GFX_PLASTIC_FOUNTAIN_ANIMATED_8 || GetIndustryConstructionStage(tile) != 3) return;
+	/* The body must share this actual capture with its original ground pose.
+	 * A previous viewport/frame's floor cannot qualify a newly visible body. */
+	auto ground = capture->plastic_fountain_grounds.find(tile);
+	if (ground == capture->plastic_fountain_grounds.end() || ground->second != graphics) return;
+	if (checked_plastic_tile == INVALID_TILE) checked_plastic_tile = tile;
+	if (tile != checked_plastic_tile) return;
+	uint32_t industry = GetIndustryIndex(tile).base();
+	if (checked_plastic_industry != industry) { checked_plastic_industry = industry; checked_plastic_frames = 0; }
+	unsigned phase = graphics-GFX_PLASTIC_FOUNTAIN_ANIMATED_1;
+	if ((checked_plastic_frames & (1U<<phase)) == 0) {
+		Debug(driver,1,"OpenTT3D: plastic fountain tile {},{} industry {} graphics {} paired ground/body pose {} captured",TileX(tile),TileY(tile),industry,graphics,phase);
+		checked_plastic_frames |= 1U<<phase;
+	}
+	if (checked_plastic_frames == 0xFF) {
+		Debug(driver,1,"OpenTT3D: voxel plastic-fountain verification passed: eight original ground/body poses on one unchanged tile {},{} industry {}",TileX(tile),TileY(tile),industry);
+		check_plastic_fountain = false;
+	}
 }
 
 struct IndustryPaletteCheck {
@@ -1226,6 +1270,7 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 			if (capture->scene.instances.size() > first && !capture->diagnostic) {
 				unsigned stage = industry ? GetIndustryConstructionStage(tile.tile) : oilrig ? 3 : GetHouseBuildingStage(tile.tile);
 				if (industry && !industry_palette_checks.empty()) ObserveVoxelIndustryPalette(tile.tile,graphics,first);
+				if (industry && check_plastic_fountain && stage == 3 && graphics >= GFX_PLASTIC_FOUNTAIN_ANIMATED_1 && graphics <= GFX_PLASTIC_FOUNTAIN_ANIMATED_8) capture->plastic_fountain_grounds[tile.tile] = graphics;
 				static std::set<std::tuple<bool,unsigned,unsigned,unsigned>> reported;
 				if (reported.emplace(house,graphics,stage,variant).second) {
 					Debug(driver,1,"OpenTT3D: live voxel {} ground {} construction stage {} captured at {},{}",house ? "house" : "industry",graphics,stage,TileX(tile.tile),TileY(tile.tile));
@@ -1893,6 +1938,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				unsigned graphics = GetIndustryGfx(capture->tile->tile), stage = GetIndustryConstructionStage(capture->tile->tile);
 				static std::set<std::pair<unsigned,unsigned>> reported;
 				if (reported.emplace(graphics,stage).second) Debug(driver,1,"OpenTT3D: live voxel industry {} construction stage {} captured at {},{}",graphics,stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
+				ObserveVoxelPlasticFountain(capture->tile->tile,graphics);
 				if (check_forest_cycle && (graphics == checked_forest_base || graphics == checked_forest_base+1)) {
 					TileIndex tile = capture->tile->tile;
 					IndustryID industry = GetIndustryIndex(tile);

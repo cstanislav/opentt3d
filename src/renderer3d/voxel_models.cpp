@@ -391,6 +391,10 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* Castle walls and flags cross these three projected source cuts. Keep
 		 * partial body replacements together while preserving independent soil. */
 		first = 139; last = 141;
+	} else if (graphics >= GFX_PLASTIC_FOUNTAIN_ANIMATED_1 && graphics <= GFX_PLASTIC_FOUNTAIN_ANIMATED_8) {
+		/* The original animation changes graphics IDs. Keep each independently
+		 * owned layer on one source path throughout all eight liquid poses. */
+		first = GFX_PLASTIC_FOUNTAIN_ANIMATED_1; last = GFX_PLASTIC_FOUNTAIN_ANIMATED_8;
 	}
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {

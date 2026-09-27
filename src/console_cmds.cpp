@@ -3112,6 +3112,13 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		});
 		return true;
 	}
+	if (argv.size() == 2 && argv[1] == "verify-plastic-fountain") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::BeginVoxelPlasticFountainCheck(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
 	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "verify-forest-cycle") {
 		auto graphics = argv.size() == 3 ? ParseType<unsigned>(argv[2]) : std::optional<unsigned>{};
 		if (argv.size() == 3 && (!graphics || (*graphics != 16 && *graphics != 129 && *graphics != 135))) return false;

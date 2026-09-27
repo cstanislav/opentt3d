@@ -10,10 +10,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,601-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite134/134 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,617-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite134/134 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Plastic-fountain148…155 adds eight completed splash poses and eight independently
+  animated recessed basin grounds; all24 early body slots remain empty. Coverage
+  reaches150/175 primary definitions,112 body owners and150 grounds. All24 controls,
+  30 actual construction layers,40 palettes,48 aliases,192 climate comparisons and
+  1,601 preceding hashes pass. Both backends observe all eight matching ground/body
+  poses on one unchanged live tile. Missing-binding/paused negative controls reject.
+  All48 native views agree; non-native differences and source fidelity remain open.
 
 - [x] Toy-shop138…141 adds eight provisional castle bodies, preserving five empty
   construction slots, the courtyard/gateway and independent Toyland2022 soil.

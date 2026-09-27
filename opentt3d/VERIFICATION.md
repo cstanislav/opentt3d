@@ -1,5 +1,34 @@
 # Implementation verification
 
+## Plastic-fountain paired grounds and airborne animation
+
+At12:45:44UTC, all24 frozen background controls pass. Sixteen models reach1,617
+volumes and150/175 primary industry definitions. All40 source palettes,48 ground
+aliases,24 genuinely empty early body states,192 climate comparisons and1,601 prior
+hashes reconcile. Factored authoring controls match all16 prototype hashes exactly.
+The recessed basin covers16×16 with supported retaining walls/lobes; airborne body
+components retain their separate source ownership.
+
+Both backends capture30 construction-layer selections across actual calendar saves,
+17/17 loaded and0/17 empty engine198/cargo10 trucks, climate restrictions,72 clipping
+views and app bundles. The ordinary plastic32→factory31 route passes acceptance64,
+full loading, delivery and return after792 observed ticks. Both600-frame services
+observe all eight graphics148…155 ground/body pairs on the same tile50,34, industry0.
+Each counted pair belongs to one capture; the observer ignores diagnostic scenes and
+reads original animation without tile/RNG mutation. Missing bindings reject before
+observation; a paused120-frame control sees only graphics150/pose2 and correctly fails.
+
+All48 native backend captures agree. The remaining232 gallery captures retain126
+differing images/2,010 pixels. Body bounds differ by at most one pixel and ground
+bounds by[-1,0,-1,+1]. Reviewed poses, both joined layouts and street views leave
+crest/paint/satellite-bead/grain/rim detail provisional. Final approvals:0. Native200,
+asset134, harness12 and the137-file boundary pass. Successful prototypes and accepted
+captures save1,232,117,109 and940,563,597bytes losslessly, with originals/failures intact.
+Peak sampled memory is3,341,127,376bytes; short service runs retain72/77 intervals
+above20ms. Evidence:`build-macos/breadth-plastic-final-{audit,reconciliation,
+registration-audit,backend-comparison}.json` and
+`build-macos/breadth-plastic-observer-negative-controls.json`.
+
 ## Toy-shop desktop package audit
 
 At12:39:14UTC, release`.14`atde82feb8c338fba8a3d0c0d1cb301d54841dfffe passes every

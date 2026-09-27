@@ -16,6 +16,17 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Plastic-fountain148…155:**sixteen volumes retain eight completed rounded-bead/
+  tapered-jet poses and eight independently animated recessed basin grounds. All24
+  early body states remain empty. All40 palettes,48 aliases,192 climate comparisons
+  and1,601 preceding hashes pass. Fifty shared components match the reviewed prototype
+  exactly. All24 live controls pass30 construction layers, full/empty cargo and both
+  same-tile eight-phase ground/body observations; two negative observers correctly fail.
+  All48 native backend views agree;126 of232 non-native images differ at2,010 pixels.
+  Body/ground registration is within one pixel. Crest shape, exact paint, satellite
+  beads, grains and rim detail remain provisional. Evidence:`build-macos/breadth-plastic-*`.
+  Final visual approvals:0.
+
 - **Toy-shop138…141:**eight bodies retain staged coloured brick towers, studs,
   crenellated perimeter walls, a real arched gateway, open courtyard and four flags.
   All four138 bodies and141's transparent nonzero first sprite remain absent.

@@ -193,6 +193,22 @@ Stages1/2 share source-identical volumes. The three projected body cuts retain l
 custom-source fallback; original2022 soil shares the sweet factory's Toyland-only
 ground. `--gallery-voxel-prefix toy_shop_` includes the joined four-tile layout.
 
+Plastic-fountain148…155 adds sixteen `plastic_` volumes: eight completed airborne
+splash poses and eight independently animated basin grounds. All24 stage0/1/2 body
+slots remain empty; each original ground exists at every construction stage. The
+recessed16×16 basins retain white/yellow retaining edges and raised liquid lobes.
+The front retaining slopes meet the original tile boundary. Fifty shared authoring
+components preserve the reviewed prototype's occupied cells and paint exactly.
+
+`--verify-plastic-fountain` / `renderer3d verify-plastic-fountain` observes all eight
+actual graphics-ID phases on one unchanged industry tile. Each counted body must
+share that capture with the matching independently emitted voxel ground. Diagnostic
+captures cannot qualify; missing/replaced layers reject at setup, and paused one-pose
+observations do not pass. The observer reads the ordinary animation without changing
+tile state or simulation RNG. Partial custom replacements retain the supplied path
+across each layer's eight original source poses. Use a running service save and
+`--gallery-voxel-prefix plastic_` for the independent source/layout review.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→

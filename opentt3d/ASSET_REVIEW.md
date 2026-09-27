@@ -4,6 +4,19 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Plastic-fountain148…155: paired liquid animation (September27)
+
+Sixteen provisional volumes reach1,617: eight completed splashes and eight separate
+basin grounds. All24 early bodies remain absent. Native review revises shallow pools
+into recessed white/yellow basins and removes the five-pixel front-skirt overhang;
+ground bounds now differ by one pixel, as do at most the eight body bounds. Both joined
+layouts and all street views retain real volumes, including intentionally airborne
+droplets and tapered jets. Softer crests, highlights/outlines, satellite beads, grain
+placement and rim paint remain provisional. All40 palettes,48 aliases,192 climate
+comparisons and1,601 prior hashes pass. All24 controls and both unchanged-tile eight-pose
+observers pass. All48 native backend views agree;126 of232 non-native views differ at
+2,010 pixels. Prototype factoring preserves all16 model hashes. Final approvals:0.
+
 ## Toy-shop138…141: brick castles and open gateways (September27)
 
 Eight provisional castle bodies reach1,601, retaining four distinct brick towers,
