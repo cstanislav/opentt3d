@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Bubble-generator desktop release verified — September27,17:30:52UTC
+
+Release`.18`at6ca6130ebd9425ffb6c8c98b3968f402f4c11890 passes all eight hosted jobs.
+Independent public checks reconcile19 assets,18 checksums,2,069 exact-commit source
+files and six matching1,641-model catalogues. Three downloaded Mac startup/save
+controls and architecture/signature/dependency/minimum15.0 audits pass. Seven hosted
+graphical controls pass72 clipping views; Windows x64/x86 native load/save passes.
+Reviewed ARM/Intel software-OpenGL worlds contain zero black pixels and nine
+differences from the matched Vulkan capture. Linux's900-frame llvmpipe journey
+observes all six support states and collector contact at1.709fps, peaking at
+2,364,407,808 sampled bytes. Public downloads now link to`.18`.
+
+Evidence:`playable-release18-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Toffee runtime is pushed separately at5a562321c. Its four-volume artwork remains
+isolated: the latest dome/source-ownership study has zero static/cutter intersections
+through70 frames, native body registration within3pixels, and exact shared-ground/
+prototype compaction hashes. Integrated acceptance and source surface/shape refinement
+remain open. Continue catalogue breadth and later fidelity/performance passes.
+Final visual approvals:0.
+
 ## Toffee-quarry original child mechanism verified — September27,17:15:31UTC
 
 Runtime and diagnostic support preserve both original children at all four

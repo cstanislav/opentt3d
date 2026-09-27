@@ -1,5 +1,18 @@
 # Implementation verification
 
+## Bubble-generator desktop release independently verified
+
+At17:30:52UTC, release`.18`at6ca6130ebd9425ffb6c8c98b3968f402f4c11890 has eight passing
+hosted jobs. Public audits verify19 attachments,18 checksums,2,069 exact source files,
+six embedded commits and six matching1,641-model catalogues. Three downloaded Mac
+startup/save controls pass alongside architecture/signature/dependency/minimum15.0
+checks. Seven hosted graphical controls pass72 clipping views, and Windows x64/x86
+native load/save passes. ARM/Intel software OpenGL has zero black world pixels and
+nine differing pixels from Vulkan in the reviewed hosted startup scene. Linux's
+900-frame llvmpipe journey observes all six support states and collector contact at
+1.709fps with2,364,407,808 peak sampled bytes. Evidence:
+`build-macos/playable-release18-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Toffee-quarry inclined cutter and shared-parent runtime
 
 The isolated prototype preserves all four construction stages and all70 original
