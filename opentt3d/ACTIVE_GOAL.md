@@ -1,5 +1,26 @@
 # Active extended development goal
 
+## Bank/software-OpenGL desktop release verified — September 27, 08:17:25 UTC
+
+Release`.8`at54c30579ddbf089a9c4f02691febda185c48b55e passes all eight hosted jobs.
+Independent public-download checks reconcile19 attachments,18 checksum entries,
+2,059 tracked source blobs and all six embedded package commits. Every package has
+the same1,543-model catalogue; Windows differs only by its trailingCRLF. Downloaded
+Mac signatures, architectures, local libraries and15.0 minimums pass, together with
+Apple-silicon Vulkan/OpenGL and Intel-under-Rosetta Vulkan startup/save controls.
+
+All seven hosted graphical package controls pass the new72-view clipping gate.
+The actual hosted ARM and Intel software-OpenGL images are reviewed: the preceding
+ARM crop's88,931 black pixels fall to zero, and both repaired software images differ
+from the matched Vulkan image at nine world pixels. Original captures remain.
+Linux's900-frame electric journey passes all support/collector observations at
+2.953fps under llvmpipe, peaking at2,186,727,424 sampled bytes. Windows x64/x86 native
+load/save controls pass; WindowsARM native/GPU/input acceptance remains open.
+
+Public download instructions now point to`.8`. Evidence:
+`playable-release8-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Diamond91…99 artwork is under its separate frozen review and is not part of`.8`.
+
 ## Software OpenGL clipping repaired — September 27, 07:43:54 UTC
 
 The hosted ARM black-triangle defect is reproduced in Apple's local software driver.

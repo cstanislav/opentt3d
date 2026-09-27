@@ -1,5 +1,23 @@
 # Implementation verification
 
+## Bank/software-OpenGL release package audit
+
+Release`.8`at54c30579ddbf089a9c4f02691febda185c48b55e passes all eight hosted jobs.
+Independent downloaded-archive checks verify19 attachments,18 checksum entries,
+2,059 exact source blobs and six embedded commits with the same1,543 models.
+Downloaded Mac architectures, signatures, local dependencies and15.0 minimums pass.
+Apple-silicon Vulkan/OpenGL and Intel-under-Rosetta Vulkan launches pass the clipping
+gate and save successfully. Windows x64/x86 extracted native load/save also pass.
+
+All seven hosted graphical package launches pass72 perspective views and21,180
+ray-tested samples. Both hosted Mac software-OpenGL screenshots are reviewed: the
+ARM crop's88,931 black world pixels in`.7`fall to0, with nine remaining differing
+pixels against`.8`'s matched Vulkan crop. The Intel software image has the same
+nine differing pixels. Linux's900-frame electric journey observes every required
+support/collector state at2.953fps and2,186,727,424 peak sampled bytes. This does
+not establish sustained arbitrary-world performance or final artwork fidelity.
+Evidence:`build-macos/playable-release8-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Apple software OpenGL perspective clipping
 
 The retained local640×480 reproduction matches the hosted ARM black triangles.

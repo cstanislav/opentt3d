@@ -22,14 +22,20 @@ Disabling the correction reproduces a failed clipping check. Local software Open
 hardware OpenGL and Vulkan pass the new package checks. All five frozen background
 controls pass the broader ground/voxel/order matrices, packed software voxel path
 and wider software landscape. Native200 and harness12 checks pass, and all frozen
-source/build hashes reconcile. The hosted platform package gate follows publication.
+source/build hashes reconcile. All eight hosted source, platform and publish jobs pass.
+Both hosted Mac software-OpenGL captures now have zero black world pixels, with nine
+pixels differing from the matched Vulkan capture. All seven graphical package
+controls pass the72-view ray-based gate.
 
 Bank source/street details, catalogue-wide coverage and sustained smooth60fps remain
 in progress. Final visual approvals remain zero.
 
 ## Downloads
 
-The [verified `.7` airport release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.7)
-is available for Windows, macOS and Linux. This preview's executable assets appear
-after its exact-commit package workflow passes. See the
+**Windows, macOS and Linux executables are available under Assets.** Independent
+checks verify all19 public attachments,18 checksum entries,2,059 exact-commit source
+files and all six embedded package commits. Every package contains the same1,543
+models. Downloaded Mac signatures, architectures, local dependencies and startup/save
+controls pass. Linux's900-frame electric journey observes every support and collector
+state; Windows x64/x86 pass extracted load/save controls. See the
 [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
