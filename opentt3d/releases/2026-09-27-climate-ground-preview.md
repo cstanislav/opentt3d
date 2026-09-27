@@ -5,10 +5,15 @@ preserving all 1,685 preceding model hashes.
 
 ## Play
 
-The [verified `.22` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.22)
-is available for Windows, macOS and Linux. This climate-ground preview's executable
-assets appear after its exact-commit package workflow passes. Required graphics are
-bundled; see the [installation and first-launch guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+Download the **[verified `.23` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.23)**
+for Windows, macOS and Linux. All eight packaging jobs passed on their first attempt
+at commit `3ecdb3ea83c154d13c83bc8f98b3e9ca397deb99`. Required graphics are bundled;
+see the [installation and first-launch guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+
+Independent download checks verify all 19 attachments, 18 checksums, 2,074 matching
+source files and six identical 1,689-model catalogues. Downloaded Mac packages start,
+render, verify clipping and save. Hosted evidence passes seven graphical controls,
+Windows x64/x86 load/save, and Linux's full electric-train support/contact journey.
 
 ## New artwork and original behavior
 

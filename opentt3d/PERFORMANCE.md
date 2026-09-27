@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Climate-ground public-package follow-up
+
+Release`.23`Linux llvmpipe completes900 frames, all six original train support states
+and collector contact at1.710fps, with2,439,852,032 peak sampled bytes. The independent
+airport-climate runtime matrix peaks at3,670,802,432bytes. These functional controls
+leave the arbitrary-world sustained60fps and long-duration memory objectives open.
+
 ## Climate-ground oil services and farm regressions
 
 The62-control matrix peaks at3,659,010,344 sampled bytes. Four1,800-frame oil services

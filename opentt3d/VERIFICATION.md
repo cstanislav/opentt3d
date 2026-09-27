@@ -1,5 +1,23 @@
 # Implementation verification
 
+## Public climate-ground release `.23`
+
+Workflow36353928970 passes all eight jobs on its first attempt at exact tagged
+commit3ecdb3ea83c154d13c83bc8f98b3e9ca397deb99. The independent22:41:40UTC audit
+verifies19 public attachments,18 checksum entries,2,074 exact tracked source files
+and six identical1,689-model catalogues. Three downloaded Mac startup/render/save
+controls pass72 clipping views each; signatures, dependency closure, architectures
+and macOS15.0 minimums agree. Hosted evidence adds seven graphical controls, Windows
+x64/x86 native load/save, and the full900-frame Linux electric support/collector
+journey. ARM/Intel software-OpenGL world crops have zero black pixels and nine
+differences from Vulkan. Linux llvmpipe averages1.710fps at2,439,852,032 peak sampled
+bytes. Evidence:`build-macos/playable-release23-{download-audit,ci-reconciliation,
+hosted-visual-comparison}.json`. Public installation links now point to`.23`.
+
+The preceding airport-runtime regression's5,264 successful captures compact losslessly
+with zero errors, saving8,375,660,718bytes. All earlier originals/failures and image
+registration metadata remain;`review-compaction-20260927T222833442149Z.json`lists hashes.
+
 ## Explicit airport climate selection
 
 At22:22:14UTC, native206 and asset140 checks pass. All2,632 temperate airport views

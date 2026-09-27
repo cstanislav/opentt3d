@@ -1,5 +1,24 @@
 # Active extended development goal
 
+## Climate-ground desktop release verified — September27,22:41:40UTC
+
+Release`.23`at exact commit3ecdb3ea83c154d13c83bc8f98b3e9ca397deb99 passes all eight
+jobs on the first attempt. Independent public-download audits verify19 attachments,
+18 checksums,2,074 matching source files and six identical1,689-model catalogues.
+Three downloaded Mac startup/render/clipping/save controls, signatures, dependencies,
+architectures and minimum15.0 checks pass. Seven hosted graphical controls retain
+72 clipping views each; Windows x64/x86 native load/save and Linux's900-frame support/
+collector journey pass. Reviewed ARM/Intel software-OpenGL worlds have zero black
+pixels and nine differences from Vulkan. Verified public links now use`.23`.
+
+The airport artwork remains isolated while corrected piers receive registered spatial
+paint and actual aircraft-service review. The earlier pier study's former cell-grid
+paint bounds no longer reached three corrected branches; the new source-aligned study
+checks nonuniform material transitions in all twelve bodies. The source-identical
+boarding-stand fence now keeps only its original8/202/204 palette in both climates.
+5,264 verified runtime-regression captures compact losslessly, saving8,375,660,718bytes.
+Sources, failures and metadata remain; final visual approvals remain zero.
+
 ## Airport climate selection verified — September27,22:22:14UTC
 
 Airport body/ground selection now reserves16 original frames per climate, prefers
