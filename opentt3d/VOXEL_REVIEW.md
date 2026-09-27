@@ -16,6 +16,19 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Toffee164…166:**four provisional volumes preserve the inclined hollow actuator,
+  transverse motor, supports, original pile cuts and moving cutter4767. The exact
+  parent4764/child4766 redraw uses one physical owner at all four construction stages.
+  Toyland3981 grass is independently source-checked. Nine compact components preserve
+  all four prototype hashes and1,641 preceding models. All26 palettes,36 stage aliases,
+  73 redraws and72 climate comparisons pass. All26 controls pass48 construction layers,
+  full/empty cargo, both70-frame services and both40-frame bubble regressions. Missing
+  cutter/wrong owner/incomplete-cycle negatives reject. Static and moving joins have
+  zero intersections. All249 prototype views and105 native backend views agree;
+  62/144 wider views retain939 pixels. Casing/cap/support/rock shape, source paint and
+  precise cutter occlusion remain provisional. Evidence:`build-macos/breadth-toffee-final-*`
+  and`breadth-toffee-domes-full-occlusion-audit.json`. Final visual approvals:0.
+
 - **Bubble160…163:**five provisional volumes retain three original body owners,
   fixed clear cylinder4746 and moving yellow plunger4747; shared4675/4676 grounds
   remain independent. Seven absent bodies stay empty. Both original construction

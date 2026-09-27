@@ -138,6 +138,8 @@ def inventory():
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted bare soil; unchanged factory bodies remain bound"})
             elif industry["graphics"] in (135,136,137) and sprite == 2077:
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted forest ground; unchanged battery/cola bodies remain bound"})
+            elif 164 <= industry["graphics"] <= 166 and sprite == 3981:
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted grass; unchanged toffee bodies and children remain bound"})
             elif sprite in (3924,2173):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
             elif sprite in (2022,2077,2257,2260,2261,4061):

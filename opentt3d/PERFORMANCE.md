@@ -3,6 +3,18 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Toffee-quarry cycle and bubble regression observations
+
+The26-control matrix peaks at3,850,358,792 sampled bytes. Two2,400-frame services
+average59.766/60.005fps for OpenGL/Vulkan, with5.404/6.762ms p95 work,3/4 intervals
+above20ms and189.068/30.690ms maximum intervals. Both observe all70 original frames
+with the cutter and shared redraw on one unchanged tile/industry. Two1,800-frame
+bubble regressions average60.001/60.001fps and retain2/8 intervals above20ms, with
+21.992/20.172ms maxima. Concurrent source audits, negative controls, authoring and
+review compaction remain part of this environment. Sustained arbitrary-world
+smoothness and long-duration/reload/multiple-viewport memory acceptance remain open.
+Source:`breadth-toffee-final-reconciliation.json`.
+
 ## Bubble-generator child-cycle and factory regression observations
 
 The26-control matrix peaks at3,827,617,776 sampled bytes. Two1,800-frame services

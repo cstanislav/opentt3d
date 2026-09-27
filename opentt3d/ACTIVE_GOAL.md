@@ -1,5 +1,45 @@
 # Active extended development goal
 
+## Toffee-quarry artwork and shared redraw verified — September27,17:58:54UTC
+
+Four provisional volumes reach1,645 and167/175 primary industry definitions:126
+body owners and167 grounds. Three connected body cuts retain the inclined hollow
+actuator, transverse motor, supports and shaped toffee rocks. Cutter4767 travels
+along its original shaft; both original children occur at every construction stage.
+Child4766 exactly redraws parent4764 and shares its physical body. All73 original
+redraws,36 stage aliases,26 palettes and72 climate comparisons reconcile. The distinct
+Toyland3981 grass reuses the exactly checked airport model with independent selection.
+Nine compact components preserve the four prototype hashes, shared ground and every
+one of1,641 preceding models. Static joins and all70 cutter poses have zero overlap.
+
+All26 frozen background controls pass48 construction-layer selections, full17/17 and
+empty0/17 engine183 cargo, four climates, clipping, picking and bundles. Both2,400-frame
+services capture all70 ordered child selections on tile51,34, industry0. Both1,800-frame
+bubble regressions retain all40 frames. Missing cutter and wrong shared owner reject,
+with twelve independent ground selections across stages0/3. A120-frame observation
+captures only27/70 frames and correctly fails. Native203, asset136, harness12 and the
+137-file presentation boundary pass; frozen binary/catalogue/tool hashes reconcile.
+
+All249 integrated Vulkan views match the prototype. All105 native backend views
+agree:24 individual layers, four model-origin views, four layouts and73 procedural
+states.62/144 wider views retain939 differing pixels. Native body bounds are within
+three pixels of source. Casing/cap/support/rock shape, metallic/blue/gold paint and
+exact cutter occlusion remain provisional. Original redraw hides79…113 of164 cutter
+pixels depending on pose; its single physical voxel owner remains intact. Earlier
+22-cell idle collisions, source-cut/paint failures and cropped diagnostics are retained.
+Final visual approvals:0. Services average59.766/60.005fps, with3/4 intervals above20ms
+and189.068/30.690ms maxima. Peak sampled memory:3,850,358,792bytes. Sustained smooth60fps
+and long-duration/reload/multiple-viewport acceptance remain open.
+
+Successful initial/prototype/final captures compact718/498/506 images losslessly,
+saving805,413,700/539,168,458/658,231,290bytes. Original images, failures and metadata
+remain. Evidence:`breadth-toffee-final-{audit,reconciliation,source-review,negative-controls}.json`
+and`breadth-toffee-domes-full-occlusion-audit.json`. Verified public downloads remain
+bubble`.18`; publish this noteworthy increment after committing. Continue sugar167…174,
+distinct climates, remaining children, infrastructure/effects and later catalogue-wide
+passes. Sugar's original stand/stockpile masks and15 child images are reviewed; five
+isolated sieve/fill studies do not yet count as integrated coverage.
+
 ## Bubble-generator desktop release verified — September27,17:30:52UTC
 
 Release`.18`at6ca6130ebd9425ffb6c8c98b3968f402f4c11890 passes all eight hosted jobs.

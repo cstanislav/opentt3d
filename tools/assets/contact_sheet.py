@@ -813,10 +813,7 @@ def main():
                                           if entry["graphics"] == args.industry_comparison), key=lambda entry: entry["stage"]))
         if [entry["stage"] for entry in entries] != list(range(4)):
             parser.error("Comparison requires all four original industry construction records")
-        panel_height = max(360, 50+5*max(entry.get("sprite_size", [0,0])[1]//4 for entry in entries))
-        sheet = Image.new("RGB", (1280, panel_height*2), (40, 40, 48))
-        draw = ImageDraw.Draw(sheet)
-        sizes = []
+        sizes, panels = [], []
         for stage, entry in enumerate(entries):
             layer = "-ground" if args.industry_ground else ""
             name = args.directory / f"model-voxel-industry{layer}-{args.industry_comparison}-native-{stage}"
@@ -829,8 +826,7 @@ def main():
                 sizes.append({"stage": stage, "original_size": list(original.size), "model_size": [0,0],
                               "original_tile_bounds": None, "model_tile_bounds": None,
                               "source_empty": True, "model_exported": exported})
-                draw.text((stage*320+6,6), f"source {entry.get('state_kind', 'state')} {stage}\noriginal body is transparent", fill="white")
-                draw.text((stage*320+6,panel_height+6), "empty body export" if exported else "no body binding; source is transparent", fill="white")
+                panels.append(None)
                 continue
             if model is None:
                 parser.error(f"Native-scale industry stage {stage} is missing for a visible original source")
@@ -866,14 +862,26 @@ def main():
                 if visible:
                     original = original.crop(visible)
                 model = model.crop(bounds)
-            for row, (label, image) in enumerate((("source", original), ("voxel", model))):
-                dimensions = sizes[-1]["original_size" if label == "source" else "model_size"]
+            panels.append((original,model))
+        # Size from the full registered union: a larger voxel silhouette must
+        # remain visible rather than being clipped by the old320-pixel columns.
+        panel_width = max(320, max((image.width*5+10 for pair in panels if pair for image in pair),default=0))
+        panel_height = max(360, max((image.height*5+50 for pair in panels if pair for image in pair),default=0))
+        sheet = Image.new("RGB", (panel_width*4, panel_height*2), (40, 40, 48))
+        draw = ImageDraw.Draw(sheet)
+        for stage, (entry,pair) in enumerate(zip(entries,panels)):
+            if pair is None:
+                draw.text((stage*panel_width+6,6), f"source {entry.get('state_kind', 'state')} {stage}\noriginal body is transparent", fill="white")
+                draw.text((stage*panel_width+6,panel_height+6), "empty body export" if sizes[stage]["model_exported"] else "no body binding; source is transparent", fill="white")
+                continue
+            for row, (label, image) in enumerate(zip(("source","voxel"),pair)):
+                dimensions = sizes[stage]["original_size" if label == "source" else "model_size"]
                 aligned = ", tile-aligned" if args.registration else ""
-                draw.text((stage * 320 + 6, row * panel_height + 6), f"{label} {entry.get('state_kind', 'state')} {stage}, {dimensions[0]}x{dimensions[1]}\n5x native pixels{aligned}", fill="white")
+                draw.text((stage * panel_width + 6, row * panel_height + 6), f"{label} {entry.get('state_kind', 'state')} {stage}, {dimensions[0]}x{dimensions[1]}\n5x native pixels{aligned}", fill="white")
                 panel = Image.new("RGBA", image.size, (40, 40, 48, 255))
                 panel.alpha_composite(image)
                 panel = panel.resize((image.width * 5, image.height * 5), Image.Resampling.NEAREST)
-                sheet.paste(panel, (stage * 320 + (320 - panel.width) // 2, (row + 1) * panel_height - 5 - panel.height))
+                sheet.paste(panel, (stage * panel_width + (panel_width - panel.width) // 2, (row + 1) * panel_height - 5 - panel.height))
         label = "registration" if args.registration else "comparison"
         layer = "-ground" if args.industry_ground else ""
         output = args.directory / f"industry-{args.industry_comparison}{layer}-source-{label}.png"

@@ -1,5 +1,28 @@
 # Implementation verification
 
+## Toffee-quarry artwork, real construction and70-frame cycle
+
+At17:58:54UTC, all26 frozen controls pass48 actual construction-layer selections,
+17/17 and0/17 engine183 cargo, four climates, picking, clipping and app bundles.
+Both2,400-frame observations capture every original frame on tile51,34, industry0,
+with ordered4767/4766 selections and one shared parent/redraw volume. Both1,800-frame
+bubble regressions retain all40 frames. Missing cutter and wrong shared owner reject;
+twelve ground selections survive across stages0/3. The short120-frame control sees
+27/70 frames and correctly fails. No simulation, animation or RNG state is changed.
+
+Native203, asset136, harness12 and the137-file presentation boundary pass. Nine
+compact components preserve all four prototype hashes, the shared grass and1,641
+preceding models. All26 palettes,36 aliases,73 exact parent redraws and72 climate
+comparisons reconcile. Static and moving source joins have zero intersections.
+All249 prototype images agree; all105 native backend views agree, while62/144 wider
+views retain939 differing pixels. Frozen binary/catalogue/tool hashes and development
+bundles reconcile. Successful initial/prototype/final reviews compact718/498/506
+captures losslessly, retaining original imagery, failures, RGBA/header data and manifests.
+
+Evidence:`build-macos/breadth-toffee-final-{audit,reconciliation,source-review,negative-controls}.json`
+and`breadth-toffee-domes-full-occlusion-audit.json`. Exact source shape/paint and
+sustained smooth60fps remain open. Final visual approvals:0.
+
 ## Bubble-generator desktop release independently verified
 
 At17:30:52UTC, release`.18`at6ca6130ebd9425ffb6c8c98b3968f402f4c11890 has eight passing

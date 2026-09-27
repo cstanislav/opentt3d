@@ -4,6 +4,33 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Toffee164…166: inclined cutter and shared parent redraw (September27)
+
+Four provisional volumes reach1,645: three source-owned machine/pile cuts and
+cutter4767. The original4766 child is a byte-identical, zero-offset redraw of4764;
+both bindings share one physical model. Both children occur at every construction
+stage. Completed travel follows(+d/2,0,-d/2) through70 frames;255 means zero shift.
+Toyland3981 grass exactly matches the reused airport model's source and remains
+independently guarded/selected. Nine compact components retain every prototype cell
+and all1,641 preceding hashes. All26 palettes,36 stage aliases,73 redraws and72 climate
+comparisons pass. Static source joins and all70 moving poses have zero intersections.
+The original redraw hides79…113 of164 cutter pixels; exact voxel silhouette/paint
+occlusion remains provisional. The initial22-cell idle collision is retained.
+
+All26 frozen controls pass48 actual construction layers, full/empty toffee cargo,
+both70-frame observations and both40-frame bubble regressions. Missing cutter and
+wrong shared owner reject while twelve grounds remain independently selected across
+stages0/3. A120-frame run with27/70 observed states correctly rejects. All249 integrated
+Vulkan views match the prototype; all105 native backend views agree.62/144 wider views
+retain939 differing pixels. Body164 bounds differ[-1,-1,-1,+2],165[-1,0,0,+1],
+166[-1,-3,0,-1]; shared floors retain[-1,0,-1,+1]. Industry comparison panels now size
+from complete registered unions, preserving overhanging silhouettes in the sheet.
+
+Fine casing/cap proportions and reflectance, concrete/support shape and grain, gold
+rock contours/paint, cutter detail and all-angle fidelity remain open. Evidence:
+`build-macos/breadth-toffee-final-*`and`breadth-toffee-domes-full-occlusion-audit.json`.
+Original syntax, climate, source-cut and cropped-review failures remain. Final approvals:0.
+
 ## Bubble160…163: open pipes, cylinder and plunger (September27)
 
 Five provisional volumes reach1,641: three source-owned bodies, fixed cylinder4746

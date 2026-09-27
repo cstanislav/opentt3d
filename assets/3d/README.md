@@ -280,6 +280,13 @@ ignores the animation byte. Procedural galleries retain73 states, including stag
 `--industry-procedural-comparison 165 --stage 0`through`3`; source comparisons verify
 that the alias's original pixels and net registration really match the parent.
 
+The integrated toffee family contains four provisional volumes and nine shared
+components. Three independently bound Toyland grass tiles reuse the source-checked
+airport lawn. The native/street review, source aliases,70-frame travel, zero-intersection
+audit and all1,641 preceding-model hashes are retained under`breadth-toffee-final-*`.
+Industry source comparison sheets expand to fit the complete registered source/model
+union, including overhangs. Exact surface paint and fine shape remain in later passes.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→
