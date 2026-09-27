@@ -1,5 +1,25 @@
 # Implementation verification
 
+## Airport surface checkpoint
+
+At05:36:37UTC, the frozen20-control matrix passes on OpenGL and Vulkan. It includes
+four climates,8,016 exact ground/body visible/transparent/hidden picking views,
+city/small/intercontinental airports, real engine238 aircraft contact, all12 radar
+frames, both four-frame windsocks and linked development bundles. The source,
+executable and compiled artwork hashes remain frozen throughout. All1,468 preceding
+model hashes agree;70 new volumes bring the total to1,538. The200 native and130 asset
+checks pass. Peak sampled memory is2,928,839,896bytes.
+
+The source audit checks172 authored layer/palette selections,172 exact reused-layer
+aliases and120 climate comparisons. Native registered captures agree across backends.
+The wider1,090-image audit retains113 differing images/21,829 pixels:56 in four
+new individual overlay street silhouettes,533 in joined airport contexts and21,240
+in the wider context gallery. No exact cross-backend street agreement is claimed.
+Original64×31 versus model64×32 ground registration, paint and fence details remain
+provisional. Evidence:`build-macos/breadth-airport-edge-final-reconciliation.json`,
+`breadth-airport-edge-{source-audit,shared-source-aliases,climate-comparisons,backend-comparison}.json`,
+three registered source pages and native street galleries. Final visual approvals:0.
+
 ## Gold checkpoint and second hosted-package results
 
 The`.5`follow-up uses `VK_EXT_layer_settings` on Intel macOS to disable MoltenVK's

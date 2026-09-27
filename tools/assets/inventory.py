@@ -125,7 +125,10 @@ def inventory():
         if restricted_bodies:
             industry["body_climate_restrictions"] = restricted_bodies
     airport_source = (ROOT / "src/table/airporttile_ids.h").read_text().split("enum AirportTiles", 1)[1].split("};", 1)[0]
-    airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i), "voxel_ground_states": voxel_states("airport_ground", i), "reviewed": False}
+    airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i),
+                 "voxel_ground_states": [state for state in voxel_states("airport_ground", i) if state < 16],
+                 "explicit_ground_climate_states": {climate:[state%16 for state in voxel_states("airport_ground",i) if state//16 == index]
+                     for index,climate in enumerate(("temperate","arctic","tropic","toyland"))}, "reviewed": False}
                 for i, name in enumerate(re.findall(r"\b(APT_\w+)\s*,", airport_source))]
     airport_specs = (ROOT / "src/table/airporttiles.h").read_text().split("_origin_airporttile_specs[] = {", 1)[1].split("};", 1)[0]
     frame_counts = [1 if kind == "AT_NOANIM" else int(last)+1 for kind,last in

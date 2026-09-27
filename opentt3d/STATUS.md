@@ -10,10 +10,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is now locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls and8 clean crash-save/bundle/live-route controls pass. Fresh Linux acceptance remains pending.
-- [x] Current1,468-volume asset/compiler/schema suite129/129 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,538-volume asset/compiler/schema suite130/130 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Seventy airport-surface volumes bring primary airport coverage to 73/74 and
+  independently bound grounds to 74/74. Explicit climate/frame ground selection
+  preserves distinct grass, taxiways, worn airfields and small runways; identical
+  triangular overlays retain independent body ownership. All 1,468 earlier model
+  hashes agree. Twenty background controls pass, including 8,016 visibility/picking
+  views, live animations and aircraft contact. The elevated heliport body and final
+  source/street fidelity remain open.
 
 - [x] Normal launches request3D without developer environment variables. Explicit
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated

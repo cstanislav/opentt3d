@@ -553,6 +553,8 @@ def compile_catalogue(data):
                     raise ValueError(f"Invalid voxel binding {category}/{identifier}/{state}")
             if category == "vehicle_collectors" and (int(identifier) not in (23,24,25,26) or set(states) != ({"0","1"} if int(identifier) in (23,24) else {"0"})):
                 raise ValueError("Original electric locomotives need their complete independently mounted collectors")
+            if category in ("airport_tiles", "airport_ground") and (int(identifier) >= 74 or any(int(state) >= (64 if category == "airport_ground" else 16) for state in states)):
+                raise ValueError("Airport bindings use original tile IDs, body frames0..15 and ground climate*16+frame states0..63")
             if category == "vehicles":
                 if int(identifier) >= 256 or any(int(state) >= 8 for state in states):
                     raise ValueError("Vehicle bindings use original engine IDs and climate*2+cargo states0..7")

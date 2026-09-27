@@ -4,6 +4,37 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "air_edge_t_base": 83,
+    "air_edge_t_grey": 90,
+    "air_edge_t_soil": 89,
+    "air_edge_t_dark": 82,
+    "air_edge_t_light": 84,
+    "air_edge_a_base": 34,
+    "air_edge_a_green": 91,
+    "air_edge_a_soil": 27,
+    "air_edge_a_dark": 26,
+    "air_edge_a_light": 28,
+    "air_edge_a_grey": 35,
+    "air_edge_r_base": 91,
+    "air_edge_r_dark": 90,
+    "air_edge_r_light": 92,
+    "air_edge_r_soil": 89,
+    "air_edge_r_dry": 99,
+    "air_edge_y_base": 84,
+    "air_edge_y_dark": 83,
+    "air_edge_y_light": 85,
+    "air_edge_y_bright": 86,
+    "air_edge_y_grain": 82,
+    "air_edge_gravel": 6,
+    "air_edge_gravel_dark": 5,
+    "air_edge_gravel_light": 7,
+    "air_edge_gravel_worn": 4,
+    "air_edge_tarmac_edge": 3,
+    "air_edge_earth": 26,
+    "air_edge_earth_light": 34,
+    "air_edge_earth_dark": 112,
+    "air_edge_timber": 105,
+    "air_edge_timber_light": 106,
     "gold_soil": [105,112,105,113,105,112],
     "gold_soil_light": [112,113,112,113,105,113],
     "gold_soil_dark": 105,
@@ -1383,6 +1414,111 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "airport_edge_temperate_grain": [
+      ["scatter_paint","air_edge_t_grey",3,3981,0,0,0,32,32,1,"air_edge_t_base"],
+      ["scatter_paint","air_edge_t_soil",2,8143,0,0,0,32,32,1,"air_edge_t_base"],
+      ["scatter_paint","air_edge_t_dark",3,8151,0,0,0,32,32,1,"air_edge_t_base"],
+      ["scatter_paint","air_edge_t_light",4,8157,0,0,0,32,32,1,"air_edge_t_base"]
+    ],
+    "airport_edge_gravel_grain": [
+      ["scatter_paint","air_edge_gravel_dark",2,2634,0,0,0,32,32,1,"air_edge_gravel"],
+      ["scatter_paint","air_edge_gravel_light",5,2625,0,0,0,32,32,1,"air_edge_gravel"],
+      ["scatter_paint","air_edge_gravel_worn",5,2615,0,0,0,32,32,1,"air_edge_gravel_dark"]
+    ],
+    "airport_edge_cut_4": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[15,0],[32,0],[32,17]]],
+      ["prism","air_edge_gravel",2,0,1,[[17,0],[32,0],[32,15]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_cut_5": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[32,6],[32,32],[6,32]]],
+      ["prism","air_edge_gravel",2,0,1,[[32,8],[32,32],[8,32]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_cut_6": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[0,0],[17,0],[32,15],[32,32],[15,32],[0,17]]],
+      ["prism","air_edge_gravel",2,0,1,[[0,0],[15,0],[32,17],[32,32],[17,32],[0,15]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_cut_7": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[6,0],[32,0],[32,18],[18,32],[0,32],[0,6]]],
+      ["prism","air_edge_gravel",2,0,1,[[8,0],[32,0],[32,16],[16,32],[0,32],[0,8]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_cut_8": [
+      ["use","airport_edge_cut_6"],
+      ["scatter_paint","air_edge_gravel",3,2640,0,0,0,32,32,1,"air_edge_gravel_dark"],
+      ["scatter_paint","air_edge_gravel_dark",4,3640,0,0,0,32,32,1,"air_edge_gravel"]
+    ],
+    "airport_edge_cut_9": [
+      ["use","airport_edge_cut_7"],
+      ["scatter_paint","air_edge_gravel",3,2641,0,0,0,32,32,1,"air_edge_gravel_dark"],
+      ["scatter_paint","air_edge_gravel_worn",5,3641,0,0,0,32,32,1,"air_edge_gravel"]
+    ],
+    "airport_edge_cut_10": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[0,15],[17,32],[0,32]]],
+      ["prism","air_edge_gravel",2,0,1,[[0,17],[15,32],[0,32]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_cut_11": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[0,0],[17,0],[0,17]]],
+      ["prism","air_edge_gravel",2,0,1,[[0,0],[15,0],[0,15]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_cut_12": [
+      ["use","airport_edge_cut_7"],
+      ["scatter_paint","air_edge_gravel",3,2644,0,0,0,32,32,1,"air_edge_gravel_dark"],
+      ["scatter_paint","air_edge_gravel_worn",6,3644,0,0,0,32,32,1,"air_edge_gravel"]
+    ],
+    "airport_edge_worn_grain": [
+      ["scatter_paint","air_edge_earth_dark",3,2669,0,0,0,32,32,1,"air_edge_earth"],
+      ["scatter_paint","air_edge_earth_light",4,4669,0,0,0,32,32,1,"air_edge_earth"]
+    ],
+    "airport_edge_wear_36": [
+      ["prism","air_edge_earth",2,0,1,[[10,0],[13,0],[12,6],[14,8],[12,13],[10,14],[11,7]]],
+      ["prism","air_edge_earth",2,0,1,[[23,0],[26,0],[27,5],[25,10],[26,14],[23,13],[24,7]]],
+      ["prism","air_edge_earth",2,0,1,[[0,22],[10,22],[10,20],[15,21],[17,23],[22,23],[22,20],[26,21],[27,25],[15,26],[11,24],[5,26],[0,24]]],
+      ["use","airport_edge_worn_grain"]
+    ],
+    "airport_edge_wear_37": [
+      ["prism","air_edge_earth",2,0,1,[[0,6],[6,7],[9,9],[14,8],[19,7],[23,10],[23,13],[20,12],[17,10],[10,11],[7,9],[0,8]]],
+      ["prism","air_edge_earth",2,0,1,[[0,22],[5,22],[8,24],[14,23],[16,20],[19,21],[20,24],[27,22],[31,24],[31,27],[25,25],[18,26],[14,25],[8,27],[4,24],[0,24]]],
+      ["use","airport_edge_worn_grain"]
+    ],
+    "airport_edge_wear_38": [
+      ["prism","air_edge_earth",2,0,1,[[0,6],[4,7],[9,6],[12,9],[16,10],[21,6],[25,7],[31,6],[31,9],[26,10],[22,8],[18,13],[11,12],[8,9],[3,10],[0,8]]],
+      ["prism","air_edge_earth",2,0,1,[[0,14],[4,15],[6,18],[9,19],[12,21],[20,22],[25,24],[31,24],[31,27],[24,27],[20,25],[10,24],[7,21],[3,20],[0,17]]],
+      ["use","airport_edge_worn_grain"]
+    ],
+    "airport_edge_wear_39": [
+      ["prism","air_edge_earth",2,0,1,[[0,8],[7,8],[9,10],[13,8],[18,8],[18,6],[25,6],[26,9],[20,10],[14,11],[10,13],[8,11],[0,11]]],
+      ["prism","air_edge_earth",2,0,1,[[17,14],[20,14],[21,24],[26,26],[26,29],[20,28],[18,25]]],
+      ["prism","air_edge_earth",2,0,1,[[2,24],[6,25],[7,28],[5,30],[3,28]]],
+      ["use","airport_edge_worn_grain"]
+    ],
+    "airport_edge_runway_41": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[0,2],[32,2],[32,28],[29,30],[23,28],[19,30],[12,29],[8,31],[2,29],[0,30]]],
+      ["prism","air_edge_gravel",2,0,1,[[0,3],[32,3],[32,26],[28,28],[23,26],[19,28],[12,27],[8,29],[2,27],[0,28]]],
+      ["use","airport_edge_gravel_grain"]
+    ],
+    "airport_edge_runway_40": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[0,2],[28,2],[31,6],[30,14],[31,23],[28,29],[24,28],[20,30],[12,29],[7,31],[0,28]]],
+      ["prism","air_edge_gravel",2,0,1,[[0,3],[27,3],[29,7],[28,14],[29,23],[27,27],[24,26],[20,28],[12,27],[7,29],[0,26]]],
+      ["use","airport_edge_gravel_grain"],
+      ["prism","air_edge_timber",2,0,1,[[4,2],[6,2],[7,7],[5,7]]],
+      ["prism","air_edge_timber",2,0,1,[[17,0],[19,0],[20,9],[18,9]]],
+      ["prism","air_edge_timber",2,0,1,[[8,8],[11,8],[10,12],[6,14],[5,13],[9,10]]],
+      ["scatter_paint","air_edge_timber_light",3,2673,0,0,0,32,32,1,"air_edge_timber"]
+    ],
+    "airport_edge_runway_42": [
+      ["prism","air_edge_tarmac_edge",2,0,1,[[2,0],[6,1],[14,0],[19,2],[25,1],[32,2],[32,28],[24,27],[19,29],[12,28],[5,29],[2,24],[1,17],[3,10]]],
+      ["prism","air_edge_gravel",2,0,1,[[4,0],[7,2],[14,1],[19,3],[25,2],[32,3],[32,26],[24,25],[19,27],[12,26],[6,27],[4,23],[3,17],[5,10]]],
+      ["use","airport_edge_gravel_grain"],
+      ["prism","air_edge_timber",2,0,1,[[4,0],[6,0],[8,8],[6,8]]],
+      ["prism","air_edge_timber",2,0,1,[[9,0],[12,0],[17,6],[20,8],[20,10],[17,9]]],
+      ["prism","air_edge_timber",2,0,1,[[20,0],[22,0],[26,5],[28,8],[26,8]]],
+      ["scatter_paint","air_edge_timber_light",3,2675,0,0,0,32,32,1,"air_edge_timber"]
+    ],
     "gold_site": [
       ["box","gold_soil",0,0,0,32,32,1],
       ["scatter_paint","gold_soil_light",5,2215,0,0,0,32,32,1]
@@ -6139,6 +6275,116 @@
     ]
   },
   "models": {
+    "airport_edge_lawn_temperate": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Original airport3981 temperate grass: complete independent16x16 ground footprint, native green/grey/brown mottling; terrain and aircraft datum remain0",
+      "ops":[["box","air_edge_t_base",0,0,0,32,32,1],["use","airport_edge_temperate_grain"]]
+    },
+    "airport_edge_lawn_arctic": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Original Arctic3981 is independently painted ochre/grey/green turf, not the temperate lawn or an automatically whitened snow tile",
+      "ops":[["box","air_edge_a_base",0,0,0,32,32,1],
+        ["scatter_paint","air_edge_a_green",4,3981,0,0,0,32,32,1,"air_edge_a_base"],
+        ["scatter_paint","air_edge_a_soil",4,8261,0,0,0,32,32,1,"air_edge_a_base"],
+        ["scatter_paint","air_edge_a_dark",5,8263,0,0,0,32,32,1,"air_edge_a_base"],
+        ["scatter_paint","air_edge_a_light",6,8273,0,0,0,32,32,1,"air_edge_a_base"],
+        ["scatter_paint","air_edge_a_grey",7,8279,0,0,0,32,32,1,"air_edge_a_base"]]
+    },
+    "airport_edge_lawn_tropic": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Original tropical3981 has its own muted grey-green lawn and dry flecks; not temperate grass or desert substitution",
+      "ops":[["box","air_edge_r_base",0,0,0,32,32,1],
+        ["scatter_paint","air_edge_r_dark",3,3981,0,0,0,32,32,1,"air_edge_r_base"],
+        ["scatter_paint","air_edge_r_light",7,8361,0,0,0,32,32,1,"air_edge_r_base"],
+        ["scatter_paint","air_edge_r_soil",11,8371,0,0,0,32,32,1,"air_edge_r_base"],
+        ["scatter_paint","air_edge_r_dry",13,8381,0,0,0,32,32,1,"air_edge_r_base"]]
+    },
+    "airport_edge_lawn_toyland": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Original Toyland3981 uses broad lime-green patches and sparse fine grain; preserve its distinct palette/paint rather than recolouring temperate noise",
+      "ops":[["box","air_edge_y_base",0,0,0,32,32,1],
+        ["prism","air_edge_y_dark",2,0,1,[[0,0],[12,0],[10,6],[8,12],[3,15],[0,12]]],
+        ["prism","air_edge_y_dark",2,0,1,[[25,0],[32,0],[32,12],[28,8],[23,6]]],
+        ["prism","air_edge_y_light",2,0,1,[[5,7],[15,5],[20,8],[18,14],[21,20],[17,27],[9,25],[11,18],[4,15]]],
+        ["prism","air_edge_y_bright",2,0,1,[[0,20],[5,18],[11,22],[9,28],[12,32],[0,32]]],
+        ["prism","air_edge_y_bright",2,0,1,[[23,14],[28,12],[32,16],[32,32],[22,32],[25,26],[21,21]]],
+        ["scatter_paint","air_edge_y_grain",13,3981,0,0,0,32,32,1,"air_edge_y_base"],
+        ["scatter_paint","air_edge_y_dark",9,8449,0,0,0,32,32,1,"air_edge_y_light"]]
+    },
+    "airport_edge_apron_4_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2636 west taxiway corner, thin irregular dark asphalt/grass boundary","ops":[["use","airport_edge_cut_4"]]},
+    "airport_edge_apron_4_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2636 west taxiway corner","ops":[["use","airport_edge_cut_4"]]},
+    "airport_edge_apron_4_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2636 west taxiway corner","ops":[["use","airport_edge_cut_4"]]},
+    "airport_edge_apron_4_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2636 west taxiway corner","ops":[["use","airport_edge_cut_4"]]},
+    "airport_edge_apron_5_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2637 south taxiway corner with its wider diagonal asphalt cut","ops":[["use","airport_edge_cut_5"]]},
+    "airport_edge_apron_5_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2637 south taxiway corner","ops":[["use","airport_edge_cut_5"]]},
+    "airport_edge_apron_5_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2637 south taxiway corner","ops":[["use","airport_edge_cut_5"]]},
+    "airport_edge_apron_5_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2637 south taxiway corner","ops":[["use","airport_edge_cut_5"]]},
+    "airport_edge_apron_6_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2638 diagonal taxiway crossing with two opposite grass corners","ops":[["use","airport_edge_cut_6"]]},
+    "airport_edge_apron_6_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2638 crossing","ops":[["use","airport_edge_cut_6"]]},
+    "airport_edge_apron_6_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2638 crossing","ops":[["use","airport_edge_cut_6"]]},
+    "airport_edge_apron_6_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2638 crossing","ops":[["use","airport_edge_cut_6"]]},
+    "airport_edge_apron_7_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2639 transverse crossing, separate from the vertical crossing paint","ops":[["use","airport_edge_cut_7"]]},
+    "airport_edge_apron_7_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2639 crossing","ops":[["use","airport_edge_cut_7"]]},
+    "airport_edge_apron_7_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2639 crossing","ops":[["use","airport_edge_cut_7"]]},
+    "airport_edge_apron_7_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2639 crossing","ops":[["use","airport_edge_cut_7"]]},
+    "airport_edge_apron_8_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2640 northern vertical crossing with its own asphalt grain","ops":[["use","airport_edge_cut_8"]]},
+    "airport_edge_apron_8_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2640 crossing","ops":[["use","airport_edge_cut_8"]]},
+    "airport_edge_apron_8_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2640 crossing","ops":[["use","airport_edge_cut_8"]]},
+    "airport_edge_apron_8_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2640 crossing","ops":[["use","airport_edge_cut_8"]]},
+    "airport_edge_apron_9_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2641 eastern transverse crossing with its own weathered grain","ops":[["use","airport_edge_cut_9"]]},
+    "airport_edge_apron_9_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2641 crossing","ops":[["use","airport_edge_cut_9"]]},
+    "airport_edge_apron_9_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2641 crossing","ops":[["use","airport_edge_cut_9"]]},
+    "airport_edge_apron_9_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2641 crossing","ops":[["use","airport_edge_cut_9"]]},
+    "airport_edge_apron_10_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2642 east taxiway corner opposite2636","ops":[["use","airport_edge_cut_10"]]},
+    "airport_edge_apron_10_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2642 east corner","ops":[["use","airport_edge_cut_10"]]},
+    "airport_edge_apron_10_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2642 east corner","ops":[["use","airport_edge_cut_10"]]},
+    "airport_edge_apron_10_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2642 east corner","ops":[["use","airport_edge_cut_10"]]},
+    "airport_edge_apron_11_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2643 northern apron corner, shared by11/13 only because the ground sprite is identical","ops":[["use","airport_edge_cut_11"]]},
+    "airport_edge_apron_11_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2643 north corner","ops":[["use","airport_edge_cut_11"]]},
+    "airport_edge_apron_11_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2643 north corner","ops":[["use","airport_edge_cut_11"]]},
+    "airport_edge_apron_11_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2643 north corner","ops":[["use","airport_edge_cut_11"]]},
+    "airport_edge_apron_12_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2644 central horizontal apron, separately painted from2639/2641","ops":[["use","airport_edge_cut_12"]]},
+    "airport_edge_apron_12_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2644 central apron","ops":[["use","airport_edge_cut_12"]]},
+    "airport_edge_apron_12_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2644 central apron","ops":[["use","airport_edge_cut_12"]]},
+    "airport_edge_apron_12_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2644 central apron","ops":[["use","airport_edge_cut_12"]]},
+    "airport_edge_worn_36_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2669 airfield grass with paired worn tracks and southern linking cut","ops":[["use","airport_edge_wear_36"]]},
+    "airport_edge_worn_36_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2669 worn airfield grass","ops":[["use","airport_edge_wear_36"]]},
+    "airport_edge_worn_36_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2669 worn airfield grass","ops":[["use","airport_edge_wear_36"]]},
+    "airport_edge_worn_36_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2669 worn airfield grass","ops":[["use","airport_edge_wear_36"]]},
+    "airport_edge_worn_37_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2670 two wandering transverse dirt bands across grass","ops":[["use","airport_edge_wear_37"]]},
+    "airport_edge_worn_37_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2670 worn airfield grass","ops":[["use","airport_edge_wear_37"]]},
+    "airport_edge_worn_37_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2670 worn airfield grass","ops":[["use","airport_edge_wear_37"]]},
+    "airport_edge_worn_37_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2670 worn airfield grass","ops":[["use","airport_edge_wear_37"]]},
+    "airport_edge_worn_38_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2671 separate bent grass/dirt cuts, not an alias of2670","ops":[["use","airport_edge_wear_38"]]},
+    "airport_edge_worn_38_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2671 worn airfield grass","ops":[["use","airport_edge_wear_38"]]},
+    "airport_edge_worn_38_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2671 worn airfield grass","ops":[["use","airport_edge_wear_38"]]},
+    "airport_edge_worn_38_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2671 worn airfield grass","ops":[["use","airport_edge_wear_38"]]},
+    "airport_edge_worn_39_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2672 wind-sock ground has its own bent dirt track; independent of all four flag poses","ops":[["use","airport_edge_wear_39"]]},
+    "airport_edge_worn_39_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2672 wind-sock ground","ops":[["use","airport_edge_wear_39"]]},
+    "airport_edge_worn_39_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2672 wind-sock ground","ops":[["use","airport_edge_wear_39"]]},
+    "airport_edge_worn_39_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2672 wind-sock ground","ops":[["use","airport_edge_wear_39"]]},
+    "airport_edge_runway_40_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2673 short runway near end: irregular margins and flush timber repair marks; landing plane stays0","ops":[["use","airport_edge_runway_40"]]},
+    "airport_edge_runway_40_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2673 short runway near end","ops":[["use","airport_edge_runway_40"]]},
+    "airport_edge_runway_40_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2673 short runway near end","ops":[["use","airport_edge_runway_40"]]},
+    "airport_edge_runway_40_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2673 short runway near end","ops":[["use","airport_edge_runway_40"]]},
+    "airport_edge_runway_41_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2674 short-runway middle: uninterrupted level aircraft lane, ragged grass and dark tarmac edges","ops":[["use","airport_edge_runway_41"]]},
+    "airport_edge_runway_41_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2674 short-runway middle","ops":[["use","airport_edge_runway_41"]]},
+    "airport_edge_runway_41_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2674 short-runway middle","ops":[["use","airport_edge_runway_41"]]},
+    "airport_edge_runway_41_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2674 short-runway middle","ops":[["use","airport_edge_runway_41"]]},
+    "airport_edge_runway_42_temperate":{"extends":"airport_edge_lawn_temperate","reference":"Original2675 short-runway far end: distinct southwest worn edge and three flush timber marks","ops":[["use","airport_edge_runway_42"]]},
+    "airport_edge_runway_42_arctic":{"extends":"airport_edge_lawn_arctic","reference":"Arctic2675 short-runway far end","ops":[["use","airport_edge_runway_42"]]},
+    "airport_edge_runway_42_tropic":{"extends":"airport_edge_lawn_tropic","reference":"Tropical2675 short-runway far end","ops":[["use","airport_edge_runway_42"]]},
+    "airport_edge_runway_42_toyland":{"extends":"airport_edge_lawn_toyland","reference":"Toyland2675 short-runway far end","ops":[["use","airport_edge_runway_42"]]},
+    "airport_edge_half_east": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original5968 is an independently owned triangular grass body over complete2634 apron. Identical source pixels/registration in all climates permit this unchanged green overlay",
+      "ops":[["prism","air_edge_t_base",2,0,1,[[0,0],[32,0],[32,32]]],["use","airport_edge_temperate_grain"]]
+    },
+    "airport_edge_half_west": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Original5967 opposite triangular grass body over2634, separately hidden/picked from the complete apron; source remains identical in Arctic/tropical/Toyland",
+      "ops":[["prism","air_edge_t_base",2,0,1,[[0,0],[32,32],[0,32]]],["use","airport_edge_temperate_grain"]]
+    },
     "gold_72_initial": {
       "size":[64,64,112],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
       "reference":"Gold72 ground2215: north corner, irregular pale excavated shoulders, brown floor and white boundary posts; the initial body is empty",
@@ -15389,6 +15635,57 @@
       "2059": {"0":"power_spark_5"}, "2060": {"0":"power_spark_6"}
     },
     "airport_ground": {
+      "4":{"0":"airport_edge_apron_4_temperate","16":"airport_edge_apron_4_arctic","32":"airport_edge_apron_4_tropic","48":"airport_edge_apron_4_toyland"},
+      "5":{"0":"airport_edge_apron_5_temperate","16":"airport_edge_apron_5_arctic","32":"airport_edge_apron_5_tropic","48":"airport_edge_apron_5_toyland"},
+      "6":{"0":"airport_edge_apron_6_temperate","16":"airport_edge_apron_6_arctic","32":"airport_edge_apron_6_tropic","48":"airport_edge_apron_6_toyland"},
+      "7":{"0":"airport_edge_apron_7_temperate","16":"airport_edge_apron_7_arctic","32":"airport_edge_apron_7_tropic","48":"airport_edge_apron_7_toyland"},
+      "8":{"0":"airport_edge_apron_8_temperate","16":"airport_edge_apron_8_arctic","32":"airport_edge_apron_8_tropic","48":"airport_edge_apron_8_toyland"},
+      "9":{"0":"airport_edge_apron_9_temperate","16":"airport_edge_apron_9_arctic","32":"airport_edge_apron_9_tropic","48":"airport_edge_apron_9_toyland"},
+      "10":{"0":"airport_edge_apron_10_temperate","16":"airport_edge_apron_10_arctic","32":"airport_edge_apron_10_tropic","48":"airport_edge_apron_10_toyland"},
+      "11":{"0":"airport_edge_apron_11_temperate","16":"airport_edge_apron_11_arctic","32":"airport_edge_apron_11_tropic","48":"airport_edge_apron_11_toyland"},
+      "12":{"0":"airport_edge_apron_12_temperate","16":"airport_edge_apron_12_arctic","32":"airport_edge_apron_12_tropic","48":"airport_edge_apron_12_toyland"},
+      "13":{"0":"airport_edge_apron_11_temperate","16":"airport_edge_apron_11_arctic","32":"airport_edge_apron_11_tropic","48":"airport_edge_apron_11_toyland"},
+      "19":{"0":"airport_surface_apron"},
+      "20":{"0":"airport_edge_lawn_temperate","16":"airport_edge_lawn_arctic","32":"airport_edge_lawn_tropic","48":"airport_edge_lawn_toyland"},
+      "21":{"0":"airport_surface_apron"},
+      "22":{"0":"airport_surface_apron"},
+      "23":{"0":"airport_surface_apron"},
+      "24":{"0":"airport_surface_apron"},
+      "25":{"0":"airport_surface_stand"},
+      "26":{"0":"airport_surface_stand"},
+      "27":{"0":"airport_surface_apron"},
+      "28":{"0":"airport_surface_apron"},
+      "29":{"0":"airport_edge_lawn_temperate","16":"airport_edge_lawn_arctic","32":"airport_edge_lawn_tropic","48":"airport_edge_lawn_toyland"},
+      "30":{"0":"airport_edge_lawn_temperate","16":"airport_edge_lawn_arctic","32":"airport_edge_lawn_tropic","48":"airport_edge_lawn_toyland"},
+      "31":{
+        "0":"airport_edge_lawn_temperate","1":"airport_edge_lawn_temperate","2":"airport_edge_lawn_temperate","3":"airport_edge_lawn_temperate","4":"airport_edge_lawn_temperate","5":"airport_edge_lawn_temperate","6":"airport_edge_lawn_temperate","7":"airport_edge_lawn_temperate","8":"airport_edge_lawn_temperate","9":"airport_edge_lawn_temperate","10":"airport_edge_lawn_temperate","11":"airport_edge_lawn_temperate",
+        "16":"airport_edge_lawn_arctic","17":"airport_edge_lawn_arctic","18":"airport_edge_lawn_arctic","19":"airport_edge_lawn_arctic","20":"airport_edge_lawn_arctic","21":"airport_edge_lawn_arctic","22":"airport_edge_lawn_arctic","23":"airport_edge_lawn_arctic","24":"airport_edge_lawn_arctic","25":"airport_edge_lawn_arctic","26":"airport_edge_lawn_arctic","27":"airport_edge_lawn_arctic",
+        "32":"airport_edge_lawn_tropic","33":"airport_edge_lawn_tropic","34":"airport_edge_lawn_tropic","35":"airport_edge_lawn_tropic","36":"airport_edge_lawn_tropic","37":"airport_edge_lawn_tropic","38":"airport_edge_lawn_tropic","39":"airport_edge_lawn_tropic","40":"airport_edge_lawn_tropic","41":"airport_edge_lawn_tropic","42":"airport_edge_lawn_tropic","43":"airport_edge_lawn_tropic",
+        "48":"airport_edge_lawn_toyland","49":"airport_edge_lawn_toyland","50":"airport_edge_lawn_toyland","51":"airport_edge_lawn_toyland","52":"airport_edge_lawn_toyland","53":"airport_edge_lawn_toyland","54":"airport_edge_lawn_toyland","55":"airport_edge_lawn_toyland","56":"airport_edge_lawn_toyland","57":"airport_edge_lawn_toyland","58":"airport_edge_lawn_toyland","59":"airport_edge_lawn_toyland"},
+      "32":{"0":"airport_edge_lawn_temperate","16":"airport_edge_lawn_arctic","32":"airport_edge_lawn_tropic","48":"airport_edge_lawn_toyland"},
+      "36":{"0":"airport_edge_worn_36_temperate","16":"airport_edge_worn_36_arctic","32":"airport_edge_worn_36_tropic","48":"airport_edge_worn_36_toyland"},
+      "37":{"0":"airport_edge_worn_37_temperate","16":"airport_edge_worn_37_arctic","32":"airport_edge_worn_37_tropic","48":"airport_edge_worn_37_toyland"},
+      "38":{"0":"airport_edge_worn_38_temperate","16":"airport_edge_worn_38_arctic","32":"airport_edge_worn_38_tropic","48":"airport_edge_worn_38_toyland"},
+      "39":{
+        "0":"airport_edge_worn_39_temperate","1":"airport_edge_worn_39_temperate","2":"airport_edge_worn_39_temperate","3":"airport_edge_worn_39_temperate",
+        "16":"airport_edge_worn_39_arctic","17":"airport_edge_worn_39_arctic","18":"airport_edge_worn_39_arctic","19":"airport_edge_worn_39_arctic",
+        "32":"airport_edge_worn_39_tropic","33":"airport_edge_worn_39_tropic","34":"airport_edge_worn_39_tropic","35":"airport_edge_worn_39_tropic",
+        "48":"airport_edge_worn_39_toyland","49":"airport_edge_worn_39_toyland","50":"airport_edge_worn_39_toyland","51":"airport_edge_worn_39_toyland"},
+      "40":{"0":"airport_edge_runway_40_temperate","16":"airport_edge_runway_40_arctic","32":"airport_edge_runway_40_tropic","48":"airport_edge_runway_40_toyland"},
+      "41":{"0":"airport_edge_runway_41_temperate","16":"airport_edge_runway_41_arctic","32":"airport_edge_runway_41_tropic","48":"airport_edge_runway_41_toyland"},
+      "42":{"0":"airport_edge_runway_42_temperate","16":"airport_edge_runway_42_arctic","32":"airport_edge_runway_42_tropic","48":"airport_edge_runway_42_toyland"},
+      "43":{"0":"airport_surface_apron"},
+      "44":{"0":"airport_edge_lawn_temperate","16":"airport_edge_lawn_arctic","32":"airport_edge_lawn_tropic","48":"airport_edge_lawn_toyland"},
+      "47":{"0":"airport_surface_apron"},
+      "51":{"0":"airport_surface_apron","1":"airport_surface_apron","2":"airport_surface_apron","3":"airport_surface_apron","4":"airport_surface_apron","5":"airport_surface_apron","6":"airport_surface_apron","7":"airport_surface_apron","8":"airport_surface_apron","9":"airport_surface_apron","10":"airport_surface_apron","11":"airport_surface_apron"},
+      "52":{"0":"airport_surface_apron","1":"airport_surface_apron","2":"airport_surface_apron","3":"airport_surface_apron","4":"airport_surface_apron","5":"airport_surface_apron","6":"airport_surface_apron","7":"airport_surface_apron","8":"airport_surface_apron","9":"airport_surface_apron","10":"airport_surface_apron","11":"airport_surface_apron"},
+      "71":{"0":"airport_surface_apron"},
+      "72":{"0":"airport_surface_apron"},
+      "73":{
+        "0":"airport_edge_lawn_temperate","1":"airport_edge_lawn_temperate","2":"airport_edge_lawn_temperate","3":"airport_edge_lawn_temperate",
+        "16":"airport_edge_lawn_arctic","17":"airport_edge_lawn_arctic","18":"airport_edge_lawn_arctic","19":"airport_edge_lawn_arctic",
+        "32":"airport_edge_lawn_tropic","33":"airport_edge_lawn_tropic","34":"airport_edge_lawn_tropic","35":"airport_edge_lawn_tropic",
+        "48":"airport_edge_lawn_toyland","49":"airport_edge_lawn_toyland","50":"airport_edge_lawn_toyland","51":"airport_edge_lawn_toyland"},
       "0":{"0":"airport_surface_apron"},
       "1":{"0":"airport_surface_apron"},
       "2":{"0":"airport_surface_apron"},
@@ -15426,6 +15723,14 @@
       "69":{"0":"airport_low_ground"}
     },
     "airport_tiles": {
+      "13":{"0":"airport_surface_fence_sw"},
+      "30":{"0":"airport_surface_fence_ne"},
+      "36":{"0":"airport_surface_fence_sw"},
+      "40":{"0":"airport_surface_fence_se"},
+      "41":{"0":"airport_surface_fence_se"},
+      "42":{"0":"airport_surface_fence_se"},
+      "71":{"0":"airport_edge_half_east"},
+      "72":{"0":"airport_edge_half_west"},
       "1":{"0":"airport_surface_fence_nw"},
       "2":{"0":"airport_surface_fence_sw"},
       "14":{"0":"airport_surface_fence_se"},

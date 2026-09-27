@@ -1,5 +1,31 @@
 # Active extended development goal
 
+## Airport surface checkpoint — September 27, 05:36:37 UTC
+
+Seventy new provisional volumes cover the remaining taxiway, grass, worn airfield,
+small-runway and triangular-overlay surfaces. The catalogue reaches 1,538 volumes,
+73/74 primary airport definitions and 74 independently bound airport grounds. The
+elevated heliport body remains unauthored. Explicit ground states select all four
+original climate paints while preserving animation frames and identical source
+aliases. All 1,468 preceding model hashes remain unchanged.
+
+The 200 native and 130 asset checks pass. Twenty frozen background controls pass on
+both backends, including 8,016 exact ground/body visibility and picking views, four
+climates, city/small/intercontinental layouts, real aircraft contact, the 12 radar
+frames and both four-frame windsocks, and development bundles. Peak sampled memory
+is 2,928,839,896 bytes. Native registered images agree across backends. The wider
+1,090-image audit retains 21,829 differing pixels; only 56 are in the four new
+individual overlay street views, along a one-pixel silhouette strip. Source paint,
+registration, street contacts and production fidelity remain provisional. Final
+visual approvals remain zero.
+
+Gold and the package correction are published as `opentt3d-dev-20260927.6` at
+`6628fd8df6d0b25677f00538985965590c65f617`; hosted run `36296305317` is awaiting its
+background completion report. Public downloads remain unclaimed until every package
+job passes and the exact-commit attachments are audited. The next airport body is
+the elevated heliport: a new ordinary-command fixture already operates engine 254
+from a helidepot to that original 60-unit landing datum.
+
 ## Gold checkpoint and hosted-package diagnostics
 
 The continuation clock is **2026-09-27 04:58:02 UTC**. Gold72…88 adds52 provisional

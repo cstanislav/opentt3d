@@ -16,6 +16,22 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Airport edge/surface breadth:**70 provisional volumes add the nine distinct
+  taxiway grounds, four climate-specific lawns, worn small-airfield paths and three
+  short-runway surfaces. All 74 airport grounds now have independent bindings,
+  including every radar/windsock frame; primary coverage reaches 73/74. The original
+  empty body sequences stay empty. The two opposite triangular overlays own thin
+  quarter-unit volumes above their independent apron and retain identical source
+  paint across climates. All172 selected source palettes,172 reused source-layer
+  aliases and120 climate comparisons pass; all1,468 earlier model hashes agree.
+  Four climates,8,016 exact ground/body/picking views, actual engine238 contact,
+  radar/windsock cycles and bundles pass in20 frozen background controls. Registered
+  source sheets retain64×32 versus original64×31 ground bounds, approximate worn
+  grain/grass patches and inherited fence shapes. All native captures match across
+  backends; the1,090-image audit retains21,829 differing pixels, including56 in four
+  new overlay street silhouettes and533 in joined airport contexts. Final fidelity
+  and those edge differences remain unresolved. Evidence:`build-macos/breadth-airport-edge-*`.
+
 - **Gold-mine breadth:**52 provisional volumes cover72…88 through82 independent
   source layers, with54 empty bodies preserved. Bodies72/74/75 retain their original
   full-tile painted substrate;79 first gains its hoist at completion, and88 preserves

@@ -467,6 +467,14 @@ bool FocusVoxelAirport(unsigned graphics)
 	return false;
 }
 
+/** Original airports have at most12 frames. Ground states reserve16 per climate;
+ * an absent override retains an explicitly shared original base-ground binding. */
+static unsigned VoxelAirportGroundState(unsigned graphics, unsigned frame)
+{
+	unsigned state = 16*to_underlying(_settings_game.game_creation.landscape)+frame;
+	return HasVoxelAsset("airport_ground",graphics,state) ? state : frame;
+}
+
 bool HasVoxelAirport(unsigned graphics, unsigned frame)
 {
 	static uint64_t generation = UINT64_MAX;
@@ -476,7 +484,7 @@ bool HasVoxelAirport(unsigned graphics, unsigned frame)
 	if (frame >= layouts.size()) return false;
 	/* Several original airport buildings belong entirely to the ground sprite.
 	 * Empty body sequences need a ground binding, never a fabricated body. */
-	if (layouts[frame]->GetSequence().empty() ? !HasVoxelAsset("airport_ground",graphics,frame) : !HasVoxelAsset("airport_tiles",graphics,frame)) return false;
+	if (layouts[frame]->GetSequence().empty() ? !HasVoxelAsset("airport_ground",graphics,VoxelAirportGroundState(graphics,frame)) : !HasVoxelAsset("airport_tiles",graphics,frame)) return false;
 	if (generation != TextureGeneration()) { generation = TextureGeneration(); supported.fill(0); }
 	int &value = supported[graphics];
 	if (value == 0) {
@@ -494,7 +502,7 @@ bool HasVoxelAirport(unsigned graphics, unsigned frame)
 
 bool DrawVoxelAirportGround(Scene &scene, unsigned graphics, unsigned frame, Vec3 origin, PaletteID palette)
 {
-	return HasVoxelAirport(graphics,frame) && DrawVoxelAsset(scene,"airport_ground",graphics,frame,origin,palette);
+	return HasVoxelAirport(graphics,frame) && DrawVoxelAsset(scene,"airport_ground",graphics,VoxelAirportGroundState(graphics,frame),origin,palette);
 }
 
 bool FocusVoxelHouseStage(unsigned stage, unsigned house, unsigned variant)
@@ -992,15 +1000,17 @@ void ExportVoxelReviews(std::string_view prefix)
 	}
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,base,stage] = binding;
-		if ((category == "airport_tiles" || (category == "airport_ground" && !HasVoxelAsset("airport_tiles",base,stage))) && HasVoxelAirport(base,stage)) {
-			auto floor = Models().bindings.find({"airport_ground",base,stage});
+		unsigned airport_frame = stage%16;
+		if (category == "airport_ground" && stage != VoxelAirportGroundState(base,airport_frame)) continue;
+		if ((category == "airport_tiles" || (category == "airport_ground" && !HasVoxelAsset("airport_tiles",base,airport_frame))) && HasVoxelAirport(base,airport_frame)) {
+			auto floor = Models().bindings.find({"airport_ground",base,VoxelAirportGroundState(base,airport_frame)});
 			if (!name.starts_with(prefix) && (floor == Models().bindings.end() || !floor->second.starts_with(prefix))) continue;
 			Textures().BeginScene();
 			Scene airport;
 			std::vector<const VoxelModel *> group;
 			if (category == "airport_tiles") group.push_back(&Models().models.at(name));
-			if (DrawVoxelAirportGround(airport,base,stage,{},PAL_NONE)) group.push_back(&Models().models.at(floor->second));
-			DrawVoxelAsset(airport,"airport_tiles",base,stage,{},PALETTE_TO_BLUE);
+			if (DrawVoxelAirportGround(airport,base,airport_frame,{},PAL_NONE)) group.push_back(&Models().models.at(floor->second));
+			DrawVoxelAsset(airport,"airport_tiles",base,airport_frame,{},PALETTE_TO_BLUE);
 			for (auto &instance : airport.instances) instance.data.SetObjectId(1);
 			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 			int left = 8192-64, top = 8192-80, right = 8192+64, bottom = 8192+48;
@@ -1012,13 +1022,13 @@ void ExportVoxelReviews(std::string_view prefix)
 				right = std::max(right,static_cast<int>(std::ceil(point.x))+4);
 				bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
 			}
-			std::string label = fmt::format("model-voxel-airport-{}-{}-native",base,stage);
+			std::string label = fmt::format("model-voxel-airport-{}-{}-native",base,airport_frame);
 			capture(airport,camera.Cropped(left,top,right-left,bottom-top),label,true);
 			std::ofstream registration(directory/(label+".json"));
 			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}}}.dump(2) << '\n';
 			if (!registration) throw std::runtime_error("Could not write native airport registration");
 			std::vector<Vec3> placements(group.size());
-			context(fmt::format("context-airport-{}-{}",base,stage),group,placements);
+			context(fmt::format("context-airport-{}-{}",base,airport_frame),group,placements);
 		}
 		if (category == "docks" && stage == VoxelDockState() && name.starts_with(prefix) && HasVoxelDock(base)) {
 			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
@@ -1638,16 +1648,19 @@ void VerifyVoxelMeshes(std::string_view prefix)
 	Debug(driver,1,"OpenTT3D: {} joined multi-tile house views preserve exact cell references and independent tile picking",joined_views);
 	unsigned airport_views = 0, airport_climate_fallbacks = 0;
 	for (const auto &[binding,name] : Models().bindings) {
-		const auto &[category,graphics,frame] = binding;
+		const auto &[category,graphics,state] = binding;
 		if ((category != "airport_tiles" && category != "airport_ground") || !name.starts_with(prefix)) continue;
+		unsigned frame = state%16;
+		if (category == "airport_ground" && state != VoxelAirportGroundState(graphics,frame)) continue;
 		if (AirportModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape))) continue;
 		Scene fallback;
 		if (HasVoxelAirport(graphics,frame) || DrawVoxelAirportGround(fallback,graphics,frame,{},PAL_NONE) || !fallback.instances.empty()) throw std::runtime_error("Unauthored airport climate selected a different climate's ground/body");
 		++airport_climate_fallbacks;
 	}
 	for (const auto &[binding,name] : Models().bindings) {
-		const auto &[category,graphics,frame] = binding;
-		if (category != "airport_ground" || !HasVoxelAirport(graphics,frame)) continue;
+		const auto &[category,graphics,state] = binding;
+		unsigned frame = state%16;
+		if (category != "airport_ground" || state != VoxelAirportGroundState(graphics,frame) || !HasVoxelAirport(graphics,frame)) continue;
 		auto body_binding = Models().bindings.find({"airport_tiles",graphics,frame});
 		bool has_body = body_binding != Models().bindings.end();
 		if (!name.starts_with(prefix) && (!has_body || !body_binding->second.starts_with(prefix))) continue;

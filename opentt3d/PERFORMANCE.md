@@ -3,6 +3,15 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Airport surface observations
+
+The20 airport-surface controls peak at2,928,839,896 sampled bytes. City-animation
+OpenGL/Vulkan runs of3,600 frames average60.003/60.000fps with6.152/6.009ms p95 work,
+but retain303/251 frame intervals above20ms. The two1,800-frame intercontinental
+controls retain164/179 such intervals and a41.03ms maximum Vulkan work sample.
+These bounded background observations do not establish smooth arbitrary-world60fps.
+Evidence:`build-macos/breadth-airport-edge-final-reconciliation.json`.
+
 ## Gold checkpoint observations
 
 Two18,000-frame background gold controls capture the complete original wheel cycle.

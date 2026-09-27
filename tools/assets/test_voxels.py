@@ -492,6 +492,46 @@ class VoxelCompilerTests(unittest.TestCase):
             self.assertEqual(reached,joined,(graphics,"Every wall, roof, platform and tank must reach ground"))
         self.assertNotIn((8,25,8),volumes["airport_small_control_tank"],"Keep the water tank's supporting frame open")
 
+    def test_airport_edges_keep_climate_grounds_level_empty_owners_and_overlay_partition(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        ground_bindings = source["bindings"]["airport_ground"]
+        self.assertEqual({int(g) for g in ground_bindings},set(range(74)))
+        for graphics,frames in ((31,12),(39,4),(73,4)):
+            self.assertEqual({int(s) for s in ground_bindings[str(graphics)]},
+                             {climate*16+frame for climate in range(4) for frame in range(frames)})
+            for climate in range(4):
+                self.assertEqual(len({ground_bindings[str(graphics)][str(climate*16+frame)] for frame in range(frames)}),1)
+        for graphics in (*range(4,13),29,37,38):
+            self.assertNotIn(str(graphics),source["bindings"]["airport_tiles"],"An empty original sequence must remain empty")
+        for climate in range(4):
+            self.assertEqual(ground_bindings["11"][str(climate*16)],ground_bindings["13"][str(climate*16)])
+            self.assertEqual(ground_bindings["29"][str(climate*16)],ground_bindings["30"][str(climate*16)])
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("airport_edge_")}
+        source["bindings"] = {}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        square = {(x,y) for x in range(32) for y in range(32)}
+        for name,volume in volumes.items():
+            model = result["models"][name]
+            self.assertEqual(model["cell_size"],[0.5,0.5,0.25])
+            self.assertEqual({z for x,y,z in volume},{0})
+            if "half_" not in name:
+                self.assertEqual(model["origin"],[0,0,-0.25])
+                self.assertEqual({(x,y) for x,y,z in volume},square,"Every independently owned surface keeps its complete footprint")
+        east,west = (set(volumes["airport_edge_half_"+side]) for side in ("east","west"))
+        self.assertFalse(east & west)
+        self.assertEqual({(x,y) for x,y,z in east|west},square)
+        self.assertTrue(all(x >= y for x,y,z in east))
+        self.assertTrue(all(x < y for x,y,z in west))
+        for family in ("lawn",*(f"apron_{g}" for g in range(4,13)),*(f"worn_{g}" for g in range(36,40)),*(f"runway_{g}" for g in range(40,43))):
+            paint = []
+            for climate in ("temperate","arctic","tropic","toyland"):
+                volume = volumes[f"airport_edge_{family}_{climate}"]
+                paint.append(tuple(result["materials"][volume[x,y,0]-1][5] for x,y in sorted(square)))
+            self.assertEqual(len(set(paint)),4,"Distinct original climate paint must not silently alias")
+
     def test_low_airport_preserves_original_l_plan_fence_owners_and_independent_ground(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
