@@ -8,6 +8,54 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_iron_ore_layout_keeps_ground_owned_roofs_supported_and_original_bodies_empty(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        for graphics in range(100,116):
+            self.assertNotIn(str(graphics),source["bindings"]["industries"],"Every original iron-ore body is intentionally empty")
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("ore_")}
+        source["bindings"] = {"industry_ground":{key:value for key,value in source["bindings"]["industry_ground"].items() if int(key) in range(100,116)}}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z) for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",(root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0])
+        for graphics in range(100,116):
+            states = result["bindings"]["industry_ground"][str(graphics)]
+            self.assertEqual(set(states),{"0","1","2","3"})
+            self.assertEqual(states["1"],states["2"])
+            self.assertEqual(len(set(states.values())),3)
+            self.assertEqual(rows[graphics*4+1],rows[graphics*4+2],"Only the original middle construction states may alias")
+            for stage in range(4):
+                fields = rows[graphics*4+stage].split(",")
+                self.assertEqual(int(fields[2],0),0)
+                self.assertEqual(int(fields[0],0),2293+graphics-100+(0,16,16,32)[stage])
+                model = result["models"][states[str(stage)]]
+                self.assertEqual(model["cell_size"],[0.5,0.5,0.5])
+                self.assertEqual(model["origin"],[0,0,-0.5])
+                cells = volumes[states[str(stage)]]
+                self.assertEqual({(x,y) for x,y,z in cells if z == 0},{(x,y) for x in range(32) for y in range(32)},"Each owner covers exactly its original ground tile")
+        for stage in range(4):
+            joined = set()
+            for graphics in range(100,116):
+                name = result["bindings"]["industry_ground"][str(graphics)][str(stage)]
+                offset_x,offset_y = (graphics-100)//4*32,(graphics-100)%4*32
+                placed = {(x+offset_x,y+offset_y,z) for x,y,z in volumes[name]}
+                self.assertFalse(joined & placed,(graphics,stage,"Roof, wall and ground ownership must remain exclusive"))
+                joined |= placed
+            self.assertTrue(all(0 <= x < 128 and 0 <= y < 128 for x,y,z in joined),"The joined industry stays inside its original four-by-four footprint")
+            reached = {point for point in joined if point[2] == 0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in joined and point not in reached:
+                        reached.add(point); pending.append(point)
+            self.assertEqual(reached,joined,(stage,"Cross-owner hall/works roofs, open trusses and raised hopper need physical support"))
+            entrance = volumes[result["bindings"]["industry_ground"]["115"][str(stage)]]
+            self.assertEqual(max(z for x,y,z in entrance),0,"The source entrance remains unbuilt through all stages")
+        for name,opening,back in (("ore_111_finished",(15,6,20),(14,6,20)),("ore_114_finished",(27,12,20),(26,12,20))):
+            self.assertNotIn(opening,volumes[name],"Windows are recessed apertures, not face paint")
+            self.assertIn(back,volumes[name],"The glazing/recess remains behind the window rim")
+
     def test_steel_mill_layers_keep_open_furnace_flues_roof_joins_and_empty_stock_body(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

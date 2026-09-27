@@ -3,6 +3,21 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Iron-ore checkpoint electric-route controls
+
+Both background9,000-frame replays of the actual factory`.16`CI fixture pass
+engine26's support and collector observations after the diagnostic rebuild. OpenGL
+averages59.930fps with9.744ms p95 work; Vulkan averages59.813fps with10.639ms p95 work.
+They still have94/109 frame intervals over20ms and119.26/165.50ms maximum work.
+These are successful bounded gameplay controls, not sustained arbitrary-world60fps
+acceptance. The24-run ore matrix peaks at3,257,437,472 sampled bytes.
+
+Paused/normal replays and injected350/1,500ms local capture delays also fail to
+reproduce the earlier Linux collector exception. The delays are removed from the
+published implementation; numerical collector pose inputs are retained in errors.
+The elapsed-time-clamp hypothesis remains unproven. Evidence:
+`build-macos/breadth-ore-final-collector-*` and `breadth-collector-local-reproduction-audit.json`.
+
 ## Automatic model LODs and restored projected trees (September26 follow-up)
 
 The user's new priority permits generated distance LODs and requires restoring the

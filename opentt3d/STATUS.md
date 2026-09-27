@@ -9,12 +9,21 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.13`LinuxGL, all four Vulkan vehicle shards, macOS and Windows pass; its Vulkan scene job passes the main matrix but times out repeating trees in the electric journey. The active-tree scope repair awaits CI.
-- [x] Current1,354-volume asset/compiler/schema suite126/126 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass their LinuxVulkan scene/electric-journey jobs, macOS and Windows; remaining Linux jobs are active/queued. Factory`.16`'s intermittent collector crash remains unresolved despite successful local replays.
+- [x] Current1,402-volume asset/compiler/schema suite127/127 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Iron-ore100…115 adds48 provisional ground-owned volumes, including terraced
+  workings, boundary posts, raised hopper, open construction frames and joined roofs.
+  All64 original body states stay empty; only source-identical1/2 stages alias.
+  Coverage reaches96 industry definitions with ground bindings and76 body owners.
+  All24 final background controls pass, including128 actual ground selections,
+  full/empty22-unit delivery saves, both app bundles and two9,000-frame electric
+  support/collector journeys. Peak sampled memory is3,257,437,472bytes. All1,354
+  prior model hashes remain unchanged. Collector errors now include numerical pose
+  inputs; temporary slow-frame injection is removed, and no crash repair is claimed.
 - [x] Steel-mill52…57 adds28 provisional volumes for exposed construction frames,
   glazed roof bays, hollow flues, open furnace mouths and separate ground-owned
   machinery/molten metal. Only original-identical construction1/2 stages alias;

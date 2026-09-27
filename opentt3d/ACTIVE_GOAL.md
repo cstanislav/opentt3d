@@ -1,5 +1,59 @@
 # Active extended development goal
 
+## Iron-ore breadth verified — September27,01:29:42UTC
+
+The actual reconciliation clock is**2026-09-27 01:29:42UTC**. The48 new ground-owned iron-ore
+volumes cover100…115 and retain all64 empty original body states. Only identical
+middle1/2 states share models. Coverage reaches1,402 volumes,76 industry body
+definitions and96 independent grounds. The200 native,127 asset and9 harness checks
+pass; all1,354 prior model geometry/material hashes agree. All24 final background
+backend/construction/cargo/bundle/electric-route controls pass, including128 actual
+ground selections and both9,000-frame engine26 support/collector journeys. Peak
+sampled memory is3,257,437,472bytes; source/build/bundle hashes match.
+
+Source review corrects the main roof axis, cliff profile and boundary posts; exact
+palette and supported/exclusive cross-owner geometry audits pass. Source paint,
+irregular cliff profiles, facade/window detail and proportions need later review;
+zero final visual approvals remain. The original collector crash is unresolved:
+only error context is improved, with every temporary capture delay removed.
+
+Copper47…51 source audit is prepared: all60 cross-climate body comparisons agree;
+44 of60 ground comparisons retain distinct3924/2022 art under the existing guards.
+A public1970 MPS162 service delivers22units to tropical factory23 and returns, with
+construction/full/empty saves. The first Uhl163 fixture correctly fails because
+that engine is not yet available. Its failure is retained. A14-body standalone draft
+passes preliminary palette/support checks but is not integrated or natively reviewed.
+Continue the full catalogue-wide
+four-pass goal, source/state/ownership/clearance requirements and smooth production
+performance after publishing verified iron-ore coverage. This is a progress audit.
+
+The fresh catalogue inventory still finds79 industry definitions without either
+body or ground bindings and21 airport definitions without their primary binding,
+plus distinct climate grounds, infrastructure/effects and all later fidelity passes.
+All four registered iron-ore layouts agree pixel-for-pixel between backends. The
+retained street comparison has up to863 differing pixels along its ground-contact
+strip; exact street/backend parity remains unaudited. Smooth arbitrary-world60fps
+is not achieved, and no broader completion claim follows from this increment.
+
+## Renewed continuation — September27,00:47:49UTC
+
+The actual clock is**2026-09-27 00:47:49UTC**, independently checked for this
+continuation and after the requested September26,19:00UTC/1PM fixed-CST minimum.
+Steel coverage is published at`0bcb29767f46d67082685832afef70d86311be45`as
+`opentt3d-dev-20260927.1`. Continue the complete breadth-first four-pass objective,
+background-only native reviews and frequent verified main publication.
+
+The intermittent factory`.16`Linux electric-collector crash has a retained actual
+crash save. The paused save, a9,000-frame normal-speed replay and a600-frame injected
+350ms slow-capture run pass locally. A150-frame injected1,500ms control also passes;
+temporary delay instrumentation is removed. Precise contact parameters are added to
+the exception for future reproduction. The original crash remains unresolved.
+Next-family iron-ore100…115 has384 identical climate/layer comparisons and ordinary
+construction/service saves. All64 original body states are empty: this family needs
+48 independently ground-owned volumes for16 definitions, with only identical1/2
+construction stages shared; never invent body bindings. Preserve all
+coverage, fidelity, gameplay, state, clearance and production-performance requirements.
+
 ## Steel-mill progress — September27,00:33:04UTC
 
 Tram coverage is pushed to`main`at`8e2b32e47d861c0885975dd1abe4d206bab685ee`and

@@ -16,6 +16,21 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Iron-ore breadth:**48 volumes cover100…115 through three distinct ground
+  states. All original bodies are empty; only identical1/2 middle states share
+  geometry. Layered ochre workings, white boundary posts, open construction frames,
+  raised hopper and two joined grey roofs stay inside the original four-by-four
+  footprint with independent source ownership. The64 bound palettes and384 climate/
+  layer comparisons agree. Source review corrects the main roof axis, cliff profile
+  and post proportions; structural checks eliminate duplicate roof/wall cells and
+  unsupported chute/truss cells. Source-registered, street and real construction/
+  delivery views were inspected. Irregular rock cuts, facade/window rhythm, exact
+  roof proportions, source shadow/highlight paint and haul-track marks need later
+  catalogue-wide refinement. All four native joined states agree across backends;
+  the retained street audit finds up to863 differing pixels along the ground-contact
+  strip, requiring production review. Evidence:`build-macos/breadth-ore-*`; zero
+  final visual approvals. Initial defects and source images remain retained.
+
 - **Steel-mill breadth:**28 volumes add52…57, with real open construction frames,
   independently owned lower works, glazed red roof bays, hollow flues and recessed
   furnace mouths. Source55 has no body after its initial foundation mark; its paved

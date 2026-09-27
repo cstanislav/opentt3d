@@ -1,5 +1,58 @@
 # Implementation verification
 
+## Iron-ore100…115 and collector diagnostics
+
+Forty-eight new volumes bring the catalogue to1,402, with76 industry body owners
+and96 ground definitions. The whole four-by-four iron-ore layout is ground-owned;
+all64 original body states stay empty. All16 tiles have three distinct source ground
+states, with only construction1/2 aliases. A384-pair climate/layer audit agrees in
+pixels and registration. Partial custom source replacement keeps the supplied layout
+together because the hall and small-works roofs cross independent ground owners.
+
+- 200 native,127 asset/compiler/schema and9 harness checks pass. New structural
+  checks require full tile contact, exclusive cross-owner occupancy, supported
+  buildings/roof trusses/hopper, real recessed windows and the unbuilt entrance.
+  All64 bound palettes agree with their source; all48 new source/build volumes match.
+  All1,354 preceding models retain identical geometry/material hashes.
+- All24 final background runs pass. TemperateGL/Vulkan each verify5,200 industry
+  views, including3,072 ground views;1,152 focused ore mesh/palette/picking views;
+  and4,096,000 exact world-atlas relocation pixels. Arctic/tropic each verify3,920
+  industry views (2,016 grounds); Toyland verifies2,768 views (968 grounds).
+- Eight ordinary construction-save controls capture all128 actual ground selections
+  across16 tiles, four states and both backends. No ore body is fabricated. Both
+  background LaunchServices controls retain correct selection and tile picking.
+- The existing public iron-ore service loads22units, delivers to steel and returns.
+  All four actual full/empty engine147 captures pass after adding mine geometry.
+- Both9,000-frame actual factory`.16`CI-fixture replays pass train support on
+  station/flat/ascending/descending/bridge/tunnel surfaces and collector contact on
+  surface/portal/tunnel wires. The original Linux crash remains unresolved. Error
+  reports now include mount, top, requested contact, shoe X, heading, grade and body
+  base. Temporary350/1,500ms capture sleeps are removed. Earlier paused crash-save,
+  normal and delayed local controls also passed; the elapsed-time hypothesis is
+  unproven and no production behaviour change is presented as a repair.
+- Peak sampled memory is3,257,437,472bytes. Final executable/artwork/source hashes
+  and the development bundle executable/resource links match. Source registration
+  corrected the main roof axis, cliff profile and post proportions. All four native
+  joined states are pixel-identical acrossGL/Vulkan; a retained street comparison
+  still differs by up to863 pixels along the ground-contact strip. Exact street
+  parity and final artwork approval remain open.
+
+Evidence:`build-macos/breadth-ore-final-*`, `breadth-iron-ore-*` and
+`breadth-collector-local-reproduction-audit.json`. Lossless compaction retains1,256
+initial generated images in9,972,748bytes, recovering1,912,573,500bytes. Initial
+palette/ownership/support audit failures and all original source references remain.
+The168 final generated images are also retained losslessly, recovering another
+366,478,924bytes. The01:33:57UTC storage audit measures4,066,608KiB checkout and
+3,662,176KiB build, with every frozen implementation/artwork hash still matching.
+The fresh goal inventory has79 industry definitions without body/ground bindings
+and21 airport definitions without their primary binding; catalogue completion is
+still false. Copper47…51 has a source audit and normal22-unit MPS162 delivery fixture.
+The first Uhl163 fixture's unavailable-engine failure is preserved.
+
+The reconciled printing/tram/steel workflows pass LinuxVulkan scene/electric journeys,
+macOS and Windows. Their remaining Linux jobs are active/queued, so complete current
+Linux acceptance is still pending. The original factory`.16`failure stays actionable.
+
 ## Steel-mill52…57
 
 Twenty-eight new volumes bring the catalogue to1,354, with76 industry body

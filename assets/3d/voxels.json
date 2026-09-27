@@ -4,6 +4,30 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "ore_soil": [71,73,72,73,71,72],
+    "ore_soil_grain": [105,108,105,112,105,108],
+    "ore_clay": [105,112,108,113,105,112],
+    "ore_rock": [108,116,112,119,108,117],
+    "ore_stratum": [112,118,113,124,112,119],
+    "ore_rock_grain": [108,114,112,116,108,114],
+    "ore_grass": [82,84,83,88,82,84],
+    "ore_south_grass": [82,84,83,89,82,84],
+    "ore_post": [7,11,8,14,7,11],
+    "ore_frame": [2,4,2,6,2,4],
+    "ore_light_frame": [3,7,4,8,3,7],
+    "ore_brick": [55,58,56,59,55,58],
+    "ore_brick_light": [56,59,58,60,56,59],
+    "ore_east_brick": [56,58,56,59,56,58],
+    "ore_east_brick_light": [57,59,58,59,57,59],
+    "ore_wood": [55,58,56,59,55,58],
+    "ore_hopper": [53,57,55,58,53,57],
+    "ore_hopper_partial": [55,57,55,58,55,57],
+    "ore_hopper_fill": 56,
+    "ore_apron": [63,64,63,64,63,64],
+    "ore_roof": [3,7,4,8,3,7],
+    "ore_roof_rib": [4,9,6,11,4,10],
+    "ore_belt": [3,7,3,8,3,7],
+    "ore_glass": [130,132,130,133,130,132],
     "steel_wall": [72,74,73,76,72,75],
     "steel_wall_grain": [73,75,74,77,72,76],
     "steel_frame": [6,8,7,9,6,9],
@@ -1323,6 +1347,65 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "ore_site": [
+      ["box","ore_soil",0,0,0,32,32,1],
+      ["scatter_paint","ore_soil_grain",6,2293,0,0,0,32,32,1]
+    ],
+    "ore_north_fence": [
+      ["paint","ore_grass",0,0,0,32,5,1],
+      ["repeat",[3,0,0],10,[["box","ore_post",2,3,1,3,4,13]]]
+    ],
+    "ore_west_fence": [
+      ["paint","ore_grass",0,0,0,5,32,1],
+      ["repeat",[0,3,0],10,[["box","ore_post",3,2,1,4,3,13]]]
+    ],
+    "ore_east_fence": [
+      ["paint","ore_grass",27,0,0,32,32,1],
+      ["repeat",[0,3,0],10,[["box","ore_post",28,2,1,29,3,13]]]
+    ],
+    "ore_low_heap": [
+      ["mound","ore_clay",0,0,1,18,20,9],
+      ["paint","ore_soil",0,0,2,18,20,4],
+      ["scatter_paint","ore_soil_grain",5,2308,0,0,1,18,20,9]
+    ],
+    "ore_tall_heap": [
+      ["prism","ore_rock",1,0,24,[[0,1],[20,1],[20,5],[16,7],[14,11],[14,16],[10,25],[5,24],[2,18],[0,6]]],
+      ["erase",0,0,19,20,3,26],["erase",0,21,17,20,24,26],
+      ["paint","ore_stratum",0,0,5,20,24,7],
+      ["paint","ore_clay",0,0,10,20,24,12],
+      ["paint","ore_stratum",0,0,17,20,24,19],
+      ["scatter_paint","ore_rock_grain",5,2325,0,0,1,20,24,25]
+    ],
+    "ore_hall_frame": [
+      ["repeat",[22,0,0],2,[["repeat",[0,26,0],2,[["box","ore_frame",24,20,1,26,22,11]]]]],
+      ["box","ore_frame",24,20,9,48,22,11],["box","ore_frame",24,46,9,48,48,11]
+    ],
+    "ore_hall_upper": [
+      ["box","ore_brick",24,20,11,48,48,33],
+      ["erase",26,22,11,46,46,33],
+      ["repeat",[0,8,0],3,[["erase",46,24,17,48,27,24],
+        ["box","ore_soil",46,24,17,47,27,24]]],
+      ["repeat",[7,0,0],3,[["erase",28,46,17,31,48,24],
+        ["box","ore_soil",28,46,17,31,47,24]]]
+    ],
+    "ore_hall_roof_frame": [
+      ["repeat",[7,0,0],4,[["line","ore_wood",24,20,33,24,34,45],
+        ["line","ore_wood",24,34,45,24,47,33]]],
+      ["box","ore_wood",24,20,33,25,48,35],
+      ["box","ore_wood",47,20,33,48,48,35],
+      ["gable","ore_brick",24,20,33,26,48,45,"y"],
+      ["gable","ore_brick",46,20,33,48,48,45,"y"]
+    ],
+    "ore_hopper_frame": [
+      ["repeat",[22,0,0],2,[["repeat",[0,22,0],2,[["box","ore_frame",4,6,1,6,8,13]]]]],
+      ["box","ore_frame",4,6,11,28,8,13],["box","ore_frame",4,28,11,28,30,13],
+      ["box","ore_frame",4,6,11,6,30,13],["box","ore_frame",26,6,11,28,30,13]
+    ],
+    "ore_small_frame": [
+      ["repeat",[18,0,0],2,[["repeat",[0,18,0],2,[["box","ore_frame",8,4,1,10,6,11]]]]],
+      ["box","ore_frame",8,4,9,28,6,11],["box","ore_frame",8,22,9,28,24,11],
+      ["box","ore_frame",8,4,9,10,24,11],["box","ore_frame",26,4,9,28,24,11]
+    ],
     "steel_yard": [
       ["box","steel_soil",0,0,0,32,32,1],
       ["box","steel_paving",1,1,0,31,31,1],
@@ -5867,6 +5950,192 @@
     ]
   },
   "models": {
+    "ore_100_initial": {
+      "size":[64,64,64],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Iron ore100 ground2293: north corner strata heaps, permanent white boundary posts and grass; every body state is empty",
+      "ops":[["use","ore_site"],["use","ore_north_fence"],["use","ore_west_fence"],
+        ["use","ore_tall_heap",[10,7,0]],["use","ore_low_heap",[8,12,0]]]
+    },
+    "ore_101_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_west_fence"],
+        ["use","ore_tall_heap",[8,0,0]],["use","ore_tall_heap",[12,8,0]]],
+      "reference":"Iron ore101 ground2294: exposed red-orange workings along the west fence, with two unequal stratified shoulders"
+    },
+    "ore_102_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_west_fence"],
+        ["use","ore_tall_heap",[5,0,0]],["use","ore_low_heap",[14,12,0]]],
+      "reference":"Iron ore102 ground2295: existing shoulders and fence before the hall's loading apron/conveyor appears"
+    },
+    "ore_103_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["paint","ore_grass",0,0,0,14,32,1],
+        ["paint","ore_grass",0,26,0,32,32,1],
+        ["use","ore_tall_heap",[12,0,0]],["box","ore_post",12,4,1,13,5,9]],
+      "reference":"Iron ore103 ground2296: final rocky shoulder beside the broad grassy south-west corner"
+    },
+    "ore_104_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_north_fence"],
+        ["use","ore_tall_heap",[0,7,0]],["use","ore_tall_heap",[12,6,0]]],
+      "reference":"Iron ore104 ground2297: paired excavated shoulders along the northern boundary"
+    },
+    "ore_105_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_tall_heap",[0,0,0]],
+        ["use","ore_tall_heap",[0,8,0]],["box","ore_post",19,5,1,20,6,9],
+        ["box","ore_post",19,18,1,20,19,9]],
+      "reference":"Iron ore105 ground2298: exposed central rock face and two survey/boundary posts, before the hopper apron"
+    },
+    "ore_106_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_hall_frame"],
+        ["erase",32,0,0,64,64,64],["erase",0,32,0,32,64,64]],
+      "reference":"Iron ore106 ground2299: its part of the low hall foundation frame; completed roof ownership extends over the joined hall, independently of neighbouring ground owners"
+    },
+    "ore_107_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["paint","ore_grass",0,26,0,32,32,1],
+        ["use","ore_tall_heap",[0,6,0]],
+        ["box","ore_light_frame",24,14,1,26,16,11],
+        ["repeat",[5,0,0],3,[["box","ore_post",2,27,1,3,28,9]]]],
+      "reference":"Iron ore107 ground2300: the southern rock bank and white posts beside the hall foundation"
+    },
+    "ore_108_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_north_fence"],
+        ["use","ore_tall_heap",[0,7,0]],["use","ore_low_heap",[14,12,0]],
+        ["paint","ore_soil",0,0,9,32,32,17]],
+      "reference":"Iron ore108 ground2301: dark northern terraces, permanent white fence and an open interior floor"
+    },
+    "ore_109_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_hopper_frame"]],
+      "reference":"Iron ore109 ground2302: open steel hopper supports only; the raised beige bin is absent in the initial source"
+    },
+    "ore_110_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_low_heap",[0,0,0]],
+        ["box","ore_frame",14,20,1,16,22,11],
+        ["box","ore_frame",0,20,9,16,22,11]],
+      "reference":"Iron ore110 ground2303: interior brown ground and the near side of the real hall foundation"
+    },
+    "ore_111_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["paint","ore_south_grass",0,28,0,32,32,1],
+        ["box","ore_frame",14,14,1,16,16,11],
+        ["box","ore_frame",0,14,9,16,16,11]],
+      "reference":"Iron ore111 ground2304: the other near-side hall frame and original grassy front edge"
+    },
+    "ore_112_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_north_fence"],["use","ore_east_fence"],
+        ["use","ore_low_heap",[4,8,0]],
+        ["paint","ore_soil",0,0,5,32,32,9]],
+      "reference":"Iron ore112 ground2305: rounded dark outer excavation enclosed by north/east white posts"
+    },
+    "ore_113_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["use","ore_east_fence"],
+        ["use","ore_tall_heap",[6,0,0]]],
+      "reference":"Iron ore113 ground2306: tall eastern ochre bank; the adjacent small works has no roof yet"
+    },
+    "ore_114_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["paint","ore_grass",28,0,0,32,32,1],
+        ["use","ore_small_frame"]],
+      "reference":"Iron ore114 ground2307: initial four-sided small-works steel frame, with no beige walls or finished grey roof"
+    },
+    "ore_115_initial": {
+      "extends":"ore_100_initial","ops":[["erase",0,0,0,64,64,64],
+        ["use","ore_site"],["paint","ore_south_grass",28,0,0,32,32,1],
+        ["paint","ore_south_grass",0,28,0,32,32,1],
+        ["line","ore_soil_grain",8,1,0,12,12,0],
+        ["line","ore_soil_grain",12,12,0,9,25,0]],
+      "reference":"Iron ore115 ground2308: flat brown entrance with curved haul-road markings and two grassy outer edges, no body or future building"
+    },
+    "ore_100_middle": {"extends":"ore_100_initial","reference":"Iron ore100 ground2309: unchanged workings with distinct middle-stage soil paint; only stages1/2 are identical","ops":[["scatter_paint","ore_clay",7,2309,4,5,0,30,31,1]]},
+    "ore_101_middle": {"extends":"ore_101_initial","reference":"Iron ore101 ground2310: source-specific middle-stage exposed-earth paint","ops":[["scatter_paint","ore_clay",7,2310,5,0,0,32,32,1]]},
+    "ore_102_middle": {"extends":"ore_102_initial","reference":"Iron ore102 ground2311 adds the timber loading apron before its grey completed conveyor","ops":[["box","ore_wood",22,18,1,32,24,3]]},
+    "ore_103_middle": {"extends":"ore_103_initial","reference":"Iron ore103 ground2312: middle-stage bare-earth changes inside the persistent rock/grass boundary","ops":[["scatter_paint","ore_clay",7,2312,14,1,0,31,25,1]]},
+    "ore_104_middle": {"extends":"ore_104_initial","reference":"Iron ore104 ground2313 adds the olive/tan work apron south of its rock face","ops":[["paint","ore_apron",20,24,0,32,32,1]]},
+    "ore_105_middle": {"extends":"ore_105_initial","reference":"Iron ore105 ground2314: beige hopper-side work apron added to the excavated face","ops":[["box","ore_wood",20,10,1,32,22,3]]},
+    "ore_106_middle": {
+      "extends":"ore_106_initial","reference":"Iron ore106 ground2315 owns the hall's complete open roof trusses and its far wall quarter; other wall quarters remain107/110/111-owned",
+      "ops":[["use","ore_hall_upper"],["erase",32,0,0,64,64,33],
+        ["erase",0,32,0,32,64,33],["use","ore_site"],
+        ["use","ore_hall_roof_frame"],["box","ore_wood",0,18,1,24,24,3]]
+    },
+    "ore_107_middle": {
+      "extends":"ore_107_initial","reference":"Iron ore107 ground2316: far-right beige hall wall over its foundation, beside the permanent rock bank",
+      "ops":[["box","ore_brick",24,0,11,26,16,33],["box","ore_brick",26,14,11,32,16,33],
+        ["erase",24,4,18,26,8,24],["box","ore_soil",24,4,18,25,8,24],
+        ["box","ore_light_frame",24,0,9,26,16,11]]
+    },
+    "ore_108_middle": {"extends":"ore_108_initial","reference":"Iron ore108 ground2317: northern terrace and its new hopper-side work apron","ops":[["paint","ore_apron",22,24,0,32,32,1]]},
+    "ore_109_middle": {
+      "extends":"ore_109_initial","reference":"Iron ore109 ground2318: raised open beige ore bin on the existing grey frame, with dark contents and an unfinished loading chute",
+      "ops":[["box","ore_hopper_partial",4,6,13,28,30,29],["erase",6,8,15,26,28,29],
+        ["box","ore_hopper_fill",6,8,15,26,28,17],
+        ["prism","ore_wood",1,10,22,[[0,1],[7,8],[7,13],[0,4]]]]
+    },
+    "ore_110_middle": {
+      "extends":"ore_110_initial","reference":"Iron ore110 ground2319: near-left hall wall quarter and grey underside supports, paired with the upper roof owner106",
+      "ops":[["box","ore_brick",0,20,11,16,22,33],["box","ore_brick",14,22,11,16,32,33],
+        ["erase",14,25,18,16,29,24],["box","ore_soil",14,25,18,15,29,24]]
+    },
+    "ore_111_middle": {
+      "extends":"ore_111_initial","reference":"Iron ore111 ground2320: near hall corner on grey stilts and beige walls with real recessed apertures",
+      "ops":[["box","ore_east_brick",14,0,11,16,16,33],["box","ore_east_brick",0,14,11,14,16,33],
+        ["erase",14,4,18,16,8,24],["box","ore_soil",14,4,18,15,8,24],
+        ["erase",4,14,18,8,16,24],["box","ore_soil",4,14,18,8,15,24]]
+    },
+    "ore_112_middle": {"extends":"ore_112_initial","reference":"Iron ore112 ground2321: distinct middle-stage soil within the original rounded fence corner","ops":[["scatter_paint","ore_clay",7,2321,4,5,0,27,31,1]]},
+    "ore_113_middle": {
+      "extends":"ore_113_initial","reference":"Iron ore113 ground2322 owns the small works' open timber roof frame above114, independently of its ochre bank",
+      "ops":[["repeat",[0,6,0],4,[["line","ore_wood",8,36,29,18,36,39],
+        ["line","ore_wood",18,36,39,28,36,29]]],
+        ["box","ore_wood",8,36,29,9,56,31],["box","ore_wood",27,36,29,28,56,31]]
+    },
+    "ore_114_middle": {
+      "extends":"ore_114_initial","reference":"Iron ore114 ground2323: beige small works on its grey frame, with recessed windows and a supported open gable; upper trusses belong to113",
+      "ops":[["box","ore_east_brick",8,4,11,28,24,29],["erase",10,6,11,26,22,29],
+        ["repeat",[7,0,0],2,[["erase",12,22,17,15,24,23],["box","ore_soil",12,22,17,15,23,23]]],
+        ["erase",26,11,17,28,15,23],["box","ore_soil",26,11,17,27,15,23]]
+    },
+    "ore_115_middle": {"extends":"ore_115_initial","reference":"Iron ore115 ground2324: distinct middle-stage entrance soil/track paint, with unchanged original grass and no body","ops":[["scatter_paint","ore_clay",7,2324,2,2,0,28,28,1]]},
+    "ore_100_finished": {"extends":"ore_100_middle","reference":"Iron ore100 ground2325: completed north-corner strata/soil artwork","ops":[["scatter_paint","ore_soil_grain",5,2325,5,5,0,31,31,1]]},
+    "ore_101_finished": {"extends":"ore_101_middle","reference":"Iron ore101 ground2326: completed western terraces and distinct floor paint","ops":[["scatter_paint","ore_soil_grain",5,2326,5,1,0,31,31,1]]},
+    "ore_102_finished": {"extends":"ore_102_middle","reference":"Iron ore102 ground2327 adds the completed grey ribbed loading belt beside its original rock bank","ops":[["paint","ore_belt",22,18,1,32,24,3],["repeat",[2,0,0],5,[["box","ore_post",22,18,3,23,24,4]]]]},
+    "ore_103_finished": {"extends":"ore_103_middle","reference":"Iron ore103 ground2328: completed grassy corner and source-specific bare-soil markings","ops":[["scatter_paint","ore_soil_grain",5,2328,14,1,0,31,25,1]]},
+    "ore_104_finished": {"extends":"ore_104_middle","reference":"Iron ore104 ground2329: completed boundary workings, retained apron and separate fine ground markings","ops":[["scatter_paint","ore_clay",5,2329,5,5,0,29,24,1]]},
+    "ore_105_finished": {"extends":"ore_105_middle","reference":"Iron ore105 ground2330: completed excavated hopper approach with source-specific soil variation","ops":[["scatter_paint","ore_clay",5,2330,1,1,0,20,30,1]]},
+    "ore_106_finished": {
+      "extends":"ore_106_middle","reference":"Iron ore106 ground2331 owns the finished corrugated hall roof over all four supported wall quarters, retaining its independent footprint/ground ownership",
+      "ops":[["erase",20,16,33,52,52,48],["gable","ore_roof",24,20,33,48,48,45,"y"],
+        ["repeat",[3,0,0],8,[["paint","ore_roof_rib",24,20,33,25,48,45]]],
+        ["paint","ore_brick",24,20,33,25,48,45],["paint","ore_brick",47,20,33,48,48,45],
+        ["paint","ore_belt",0,18,1,24,24,3]]
+    },
+    "ore_107_finished": {"extends":"ore_107_middle","reference":"Iron ore107 ground2332: completed hall wall quarter with its own source paint, and the unchanged ochre bank","ops":[["scatter_paint","ore_brick_light",8,2332,24,0,11,32,16,33,"ore_brick"]]},
+    "ore_108_finished": {"extends":"ore_108_middle","reference":"Iron ore108 ground2333: completed northern working face and distinct exposed-earth paint","ops":[["scatter_paint","ore_clay",5,2333,4,5,0,31,24,1]]},
+    "ore_109_finished": {
+      "extends":"ore_109_middle","reference":"Iron ore109 ground2334: completed ore bin and grey ribbed loading chute, on the original unfilled support frame",
+      "ops":[["replace_material","ore_hopper_partial","ore_hopper"],
+        ["prism","ore_frame",1,10,22,[[0,1],[7,8],[7,13],[0,4]]],
+        ["repeat",[1,0,1],7,[["box","ore_frame",0,10,3,1,22,4]]]]
+    },
+    "ore_110_finished": {"extends":"ore_110_middle","reference":"Iron ore110 ground2335: completed near hall wall quarter and original dark brown interior apron","ops":[["scatter_paint","ore_brick_light",8,2335,0,20,11,16,32,33,"ore_brick"]]},
+    "ore_111_finished": {"extends":"ore_111_middle","reference":"Iron ore111 ground2336: completed near hall corner, open support bays and source-specific wall colour","ops":[["scatter_paint","ore_east_brick_light",8,2336,0,0,11,16,16,33,"ore_east_brick"]]},
+    "ore_112_finished": {"extends":"ore_112_middle","reference":"Iron ore112 ground2337: completed rounded working face and independent perimeter grass/soil paint","ops":[["scatter_paint","ore_soil_grain",5,2337,4,5,0,27,31,1]]},
+    "ore_113_finished": {
+      "extends":"ore_113_middle","reference":"Iron ore113 ground2338 owns the finished small works' grey roof, with the original ochre face retained below its white boundary posts",
+      "ops":[["erase",8,36,29,29,57,41],["gable","ore_belt",8,36,29,28,56,39,"x"],
+        ["repeat",[0,3,0],7,[["paint","ore_post",8,36,29,28,37,39]]]]
+    },
+    "ore_114_finished": {"extends":"ore_114_middle","reference":"Iron ore114 ground2339: completed small works' beige walls and recessed glazing under the independently owned113 roof","ops":[["box","ore_glass",26,11,17,27,15,23],["repeat",[7,0,0],2,[["box","ore_glass",12,22,17,15,23,23]]],["scatter_paint","ore_brick_light",8,2339,8,4,11,28,24,29,"ore_east_brick"]]},
+    "ore_115_finished": {"extends":"ore_115_middle","reference":"Iron ore115 ground2340: completed unbuilt entrance/haul-track soil, retaining its intentionally empty original body","ops":[["scatter_paint","ore_soil_grain",5,2340,2,2,0,28,28,1]]},
     "steel_north_initial": {
       "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
       "reference":"Steel52 original2140: dark excavated foundation and the first exposed steel columns, without later roofs or flues",
@@ -14327,6 +14596,22 @@
       "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
     },
     "industry_ground": {
+      "100":{"0":"ore_100_initial","1":"ore_100_middle","2":"ore_100_middle","3":"ore_100_finished"},
+      "101":{"0":"ore_101_initial","1":"ore_101_middle","2":"ore_101_middle","3":"ore_101_finished"},
+      "102":{"0":"ore_102_initial","1":"ore_102_middle","2":"ore_102_middle","3":"ore_102_finished"},
+      "103":{"0":"ore_103_initial","1":"ore_103_middle","2":"ore_103_middle","3":"ore_103_finished"},
+      "104":{"0":"ore_104_initial","1":"ore_104_middle","2":"ore_104_middle","3":"ore_104_finished"},
+      "105":{"0":"ore_105_initial","1":"ore_105_middle","2":"ore_105_middle","3":"ore_105_finished"},
+      "106":{"0":"ore_106_initial","1":"ore_106_middle","2":"ore_106_middle","3":"ore_106_finished"},
+      "107":{"0":"ore_107_initial","1":"ore_107_middle","2":"ore_107_middle","3":"ore_107_finished"},
+      "108":{"0":"ore_108_initial","1":"ore_108_middle","2":"ore_108_middle","3":"ore_108_finished"},
+      "109":{"0":"ore_109_initial","1":"ore_109_middle","2":"ore_109_middle","3":"ore_109_finished"},
+      "110":{"0":"ore_110_initial","1":"ore_110_middle","2":"ore_110_middle","3":"ore_110_finished"},
+      "111":{"0":"ore_111_initial","1":"ore_111_middle","2":"ore_111_middle","3":"ore_111_finished"},
+      "112":{"0":"ore_112_initial","1":"ore_112_middle","2":"ore_112_middle","3":"ore_112_finished"},
+      "113":{"0":"ore_113_initial","1":"ore_113_middle","2":"ore_113_middle","3":"ore_113_finished"},
+      "114":{"0":"ore_114_initial","1":"ore_114_middle","2":"ore_114_middle","3":"ore_114_finished"},
+      "115":{"0":"ore_115_initial","1":"ore_115_middle","2":"ore_115_middle","3":"ore_115_finished"},
       "52":{"0":"mine_ground_bare","1":"steel_north_ground_partial","2":"steel_north_ground_partial","3":"steel_north_ground"},
       "53":{"0":"mine_ground_bare","1":"steel_casting_ground_partial","2":"steel_casting_ground_partial","3":"steel_casting_ground"},
       "54":{"0":"mine_ground_bare","1":"steel_rolling_ground_partial","2":"steel_rolling_ground_partial","3":"steel_rolling_ground"},

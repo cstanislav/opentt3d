@@ -373,6 +373,11 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		first = 33; last = 34; // The two source cuts form one connected farmhouse.
 	} else if (graphics == 58 || graphics == 59) {
 		first = 58; last = 59; // One bank's roof, colonnade and arch cross this seam.
+	} else if (ground && graphics >= 100 && graphics <= 115) {
+		/* The iron-ore works is entirely ground-owned. Its hall and small-works
+		 * roofs cross source cuts; a partial replacement must keep the supplied
+		 * layout rather than mixing it with neighbouring voxel walls/roofs. */
+		first = 100; last = 115;
 	}
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
@@ -605,7 +610,11 @@ static void SetCollectorPose(InstanceData &data, const VoxelMesh &body, const Vo
 	float length_scale = OriginalTrainVoxelScale(heading,body.high.x-body.low.x);
 	data.SetLongitudinalScale(length_scale);
 	data.SetPitch(grade,Camera::WORLD_Z_SCALE,body.low.z);
-	FitVoxelCollectorToWire(data,mesh.low.z,mesh.high.z,height,CollectorContactCentre(mesh).x*length_scale);
+	try {
+		FitVoxelCollectorToWire(data,mesh.low.z,mesh.high.z,height,CollectorContactCentre(mesh).x*length_scale);
+	} catch (const std::invalid_argument &error) {
+		throw std::invalid_argument(fmt::format("{}: mount {} top {} contact {} contact_x {} heading {} grade {} body_base {}",error.what(),mesh.low.z,mesh.high.z,height,CollectorContactCentre(mesh).x*length_scale,heading,grade,body.low.z));
+	}
 }
 
 std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading, float grade, float contact_height)
