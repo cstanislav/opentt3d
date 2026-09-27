@@ -1,5 +1,45 @@
 # Active extended development goal
 
+## Sweet-factory construction verified — September 27, 10:16:39 UTC
+
+Sweet-factory131…134 adds ten provisional volumes: nine body states and independently
+painted Toyland2022 soil. The catalogue reaches1,585 models and135/175 primary industry
+definitions, with98 body owners and135 grounds. All four131 body slots remain empty.
+The original gift wrapper/open folded bow, partly unwrapped factory and completed
+peppermint roof remain distinct. Both original three-module layouts, striped poles,
+scalloped window bays and recessed doors are retained. Body cuts132…134 share custom
+replacement provenance; independently supplied soil keeps its own source/climate guard.
+
+All24 accepted background controls pass: four climates,56 actual construction-layer
+selections, full17/17 and empty0/17 trucks with the factory's actual0/1 construction
+states, completed service and development bundles. Two initial full-cargo camera
+views locate but fail to render the distant loaded truck; zoom2 captures both original
+objects without advancing or altering the save. Twenty-two valid controls and those
+two repaired views retain the same source/build freeze. The earlier wrong-stage
+failures and oversized-hall matrix remain. Native200, asset132 and the137-file boundary
+pass; the unchanged harness retains12 passing tests. All1,575 preceding model hashes
+agree. All28 source palettes,27 aliases, four empty bodies and96 climate comparisons
+reconcile;48 ground layers differ outside Toyland. Joined volumes have no owner overlap
+or unsupported cells. The curved radial paint brush preserves existing geometry/voids;
+independent cardinal/radius, height-range and malformed-parameter checks pass.
+
+Both layouts and individual native/street views are reviewed. Lower poles and a
+narrower hall repair oversized dimensions. Thirty-six native captures agree across
+backends; the full220-image comparison retains83 differing images/18,919 pixels.
+Exact bow folding/paint, scalloped facade detail, roof edge/spiral shape, per-cut
+registration and ground grain remain provisional. Final visual approvals remain0.
+The two600-frame service observations average59.977/60.008fps, with60/34 intervals
+above20ms and3,290,664,440 peak sampled bytes. Sustained smooth60fps remains open.
+Evidence:`breadth-sweets-accepted-{audit,reconciliation}.json`,
+`breadth-sweets-reviewed-{backend-comparison,registration-audit}.json` and preserved
+`breadth-sweets-{first-matrix,reviewed-focus}-review.md`.
+
+Battery135/136's five-body prototype has source-correct growth/dispatch states and
+shared cotton checker ground, but plate/contact/socket artwork remains under review.
+Its actual harvest/regrowth observer and climate integration are still required.
+Continue the40 remaining primary Toyland definitions, procedural children, distinct
+climate artwork and the later catalogue-wide fidelity/performance passes.
+
 ## Cotton desktop release verified — September 27, 10:10:22 UTC
 
 Release`.10`at1b503e93888363d6af3edf9aec14d01be8fff9b5 passes all eight hosted jobs.
@@ -16,12 +56,12 @@ peaking at2,219,712,512 sampled bytes. These hosted observations do not establis
 sustained performance acceptance. Public instructions now link to`.10`. Evidence:
 `playable-release10-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
 
-Sweet-factory131…134 remains a separate ten-volume working increment. Its first
+At this release audit, sweet-factory131…134 remained a separate working increment. Its first
 matrix passes20 controls but four cargo-focus checks requested the wrong construction
 stage. The original full/empty saves actually contain134 at stage0/1; preserve those
 snapshots and require their actual stages and17/17 versus0/17 truck cargo. Source
 review also narrows the oversized hall, preserving the roof, door and wrapper.
-The corrected candidate is under a fresh24-control freeze. All1,575 prior model
+The corrected candidate entered a fresh24-control freeze. All1,575 prior model
 hashes,28 palettes,27 aliases and four intentionally empty131 bodies reconcile.
 
 ## Cotton-candy growth and harvest verified — September 27, 09:31:12 UTC

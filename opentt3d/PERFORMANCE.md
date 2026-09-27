@@ -3,6 +3,15 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Sweet-factory service observations
+
+The24-control narrow-hall checkpoint peaks at3,290,664,440 sampled bytes. Two600-frame
+cotton-delivery route observations average59.977/60.008fps for OpenGL/Vulkan, with
+3.658/5.260ms p95 work. They retain60/34 intervals above20ms and23.811/22.563ms maximum
+intervals. Concurrent authoring/package checks and these short observations do not
+establish isolated sustained smoothness. Full arbitrary-world performance and
+long-duration memory acceptance remain open. Source:`breadth-sweets-accepted-reconciliation.json`.
+
 ## Cotton-candy harvest/regrowth observations
 
 The24-control revised-paint matrix peaks at3,260,468,704 sampled bytes. Both9,000-frame

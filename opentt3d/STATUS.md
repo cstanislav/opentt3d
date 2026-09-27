@@ -10,10 +10,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,575-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite131/131 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,585-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite132/132 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Sweet-factory131…134 adds ten provisional volumes, bringing primary industry
+  coverage to135/175 definitions,98 body owners and135 independent grounds. Four
+  original131 bodies stay empty. Gift wrapping, partial unwrapping and the finished
+  peppermint-roofed hall retain both source layouts,28 palettes,27 aliases and the
+  distinct Toyland2022 soil. Twenty-four controls pass56 actual construction-layer
+  selections,17/17 and0/17 cargo, four climates, service and bundles. All1,575 prior
+  model hashes and36 native backend captures agree. Fine fidelity remains provisional.
 
 - [x] Cotton129/130 adds six provisional volumes, bringing primary industry coverage
   to131/175 definitions,95 body owners and131 independent grounds. Four growth states,
@@ -21,7 +29,7 @@ This file records implemented and verified work, not promises of completeness.
   Toyland source guards. Twenty-four fresh frozen controls pass, including16 actual
   construction-layer selections, loaded/empty cargo, bundles and both unchanged-tile
   harvest/regrowth cycles. Timber regressions and all1,569 preceding models agree.
-  Exact crown registration/paint remains provisional;44 primary definitions remain.
+  Exact crown registration/paint remains provisional; this checkpoint precedes sweets.
 
 - [x] Diamond91…99 adds26 provisional volumes and brings primary industry coverage
   to129/175 definitions,93 body owners and129 grounds. All21 empty body states and
@@ -37,7 +45,7 @@ This file records implemented and verified work, not promises of completeness.
   voxel paths, mixed ground and exact draw-order/picking regressions. The new
   extracted-package gate rejects the deliberately disabled correction. The title
   capture's88,931 black pixels disappear;10 hardware/software pixels still differ.
-   Published`.10`passes every hosted job and independent attachment audit. Both hosted
+  Published`.10`passes every hosted job and independent attachment audit. Both hosted
   Mac software-OpenGL captures have zero black world pixels and differ from the
   matched Vulkan image at nine pixels. All seven hosted graphical package controls
   pass the72-view ray-based gate.

@@ -4,6 +4,23 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Sweet-factory131…134: original gift construction and peppermint hall (September27)
+
+- Nine distinct body states preserve the source gift wrapper and folded/open bow,
+  partial unwrapping and completed round blue/white roof. The four131 body slots stay
+  empty. Independent Toyland2022 soil retains its beige grit and red/purple/yellow
+  patches. Both original three-module layouts and projected source cuts are retained.
+- Native review repairs poles11 units too tall, excessively broad hall/window bays,
+  and grain brushes obscuring the ground patches. All earlier candidates and failures
+  remain. The compact curved radial brush produces the same authored roof cells as
+  the explicit spiral paint rows; it changes no geometry and samples no source image.
+- All28 layer palettes,27 state aliases,96 climate comparisons and1,575 prior model
+  hashes pass. All36 native OpenGL/Vulkan captures agree. The220-image comparison
+  retains83 differences/18,919 pixels. Bow folding/shading, roof spiral/profile and
+  edge grain, facade proportions and small registration errors remain provisional.
+  Twenty-four accepted controls pass actual construction and full/empty cargo states;
+  original wrong-stage and offscreen-truck failures remain. Final visual approvals:0.
+
 ## Cotton-candy129/130: four roots and original harvest state (September27)
 
 - Source2072…2075 contains four growing pink crowns on cyan stems.2076 depicts four

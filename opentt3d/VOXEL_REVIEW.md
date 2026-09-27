@@ -16,6 +16,22 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Sweet-factory131…134:**ten volumes preserve nine distinct body images and native
+  Toyland2022 soil. All four131 bodies are genuinely absent. The source-specific
+  wrapped-gift construction has crossed ribbons and four open folded loops; stages1/2
+  partly unwrap it, and stage3 reveals the peppermint dome, separate striped poles,
+  scalloped facade/window bays and recessed doors. Both original three-module layouts
+  retain projected132/133/134 ownership. All28 palettes,27 aliases and96 climate
+  comparisons reconcile; every preceding1,575 model hash agrees. Native review lowers
+  poles by11 local units and narrows the hall radius14→12 while preserving the door
+  and roof. Stage3 side132 bounds are now16×59 versus16×56,13316×59 versus18×57;
+  central13464×86 matches source size with small registration differences. All36 native
+  backend captures agree, but83 of220 wider images retain18,919 differing pixels.
+  Bow folds/paint, roof edge/spiral, scalloped bays and soil grain remain provisional.
+  Twenty-four accepted controls pass56 live layer selections and actual loaded/empty
+  trucks in their original factory0/1 states; failed wrong-stage/offscreen focus checks
+  remain retained. Final approvals:0. Evidence:`build-macos/breadth-sweets-*`.
+
 - **Cotton-candy129/130:**six source-specific volumes retain four growing pink crowns,
   original cyan root centres, four bare standing sticks after dispatch and independent
   blue/grey checker soil. The shared2072…2077 sprite numbers conceal different source

@@ -166,6 +166,9 @@ The nine Toyland tree families1947…2003 use63 `tree_toy_` volumes. Preserve th
 last-state rules: some retain candy/caps/discs, some lose all cloth, and the tiered
 family starts with a full-height bare pole. Angular `radial_paint` and `radial_erase`
 brushes use explicit sector masks on occupied cells; erasure can filter a material.
+`radial_paint` optionally ends with `[phase_degrees, twist_degrees_per_cell]` to curve
+its painted sectors with distance from the centre, as on a peppermint roof. These
+finite angles stay within−360…360; the brush preserves holes and other height ranges.
 They do not sample images. All63 actual states and exact palette/lifecycle checks
 are recorded, but wide-view geometry cost is currently a severe performance defect.
 

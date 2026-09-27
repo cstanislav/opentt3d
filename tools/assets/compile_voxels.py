@@ -282,7 +282,7 @@ def compile_catalogue(data):
                     # Authored angular panels on existing volume cells. This is
                     # independent of source images and never fills empty space.
                     painting = kind == "radial_paint"
-                    if (painting and (len(op) != 7 or op[1] not in names)) or (not painting and len(op) not in (6,7)):
+                    if (painting and (len(op) not in (7,8) or op[1] not in names)) or (not painting and len(op) not in (6,7)):
                         raise ValueError("Radial brush needs a centre, height range, sector count and mask")
                     values = op[2:] if painting else op[1:]
                     if not isinstance(values[0],list) or len(values[0]) != 2:
@@ -296,6 +296,17 @@ def compile_catalogue(data):
                     if high <= low or (not painting and len(values) == 6 and values[5] not in names):
                         raise ValueError("Invalid radial brush height or material filter")
                     only = names[values[5]] if not painting and len(values) == 6 else None
+                    phase, twist = 0, 0
+                    if painting and len(values) == 6:
+                        # An authored angular phase and degrees per radial cell
+                        # paint spiral bands without changing the occupied volume.
+                        curve = values[5]
+                        if not isinstance(curve,list) or len(curve) != 2 or any(
+                            isinstance(value,bool) or not isinstance(value,(int,float)) or not math.isfinite(value)
+                            or not -360 <= value <= 360 for value in curve
+                        ):
+                            raise ValueError("Radial paint curve needs finite phase and twist angles in -360..360")
+                        phase,twist = map(math.radians,curve)
                     material = names[op[1]] if painting else 0
                     zmin,zmax = max(0,low),min(size[2],high)
                     transform_work += size[0]*size[1]*max(0,zmax-zmin)
@@ -304,6 +315,8 @@ def compile_catalogue(data):
                     for y in range(size[1]):
                         for x in range(size[0]):
                             angle = math.atan2(y+0.5-cy,x+0.5-cx) % math.tau
+                            if phase or twist:
+                                angle = (angle+phase+twist*math.hypot(x+0.5-cx,y+0.5-cy)) % math.tau
                             sector = math.floor(angle*sectors/math.tau+1e-12) % sectors
                             if not mask & (1 << sector):
                                 continue

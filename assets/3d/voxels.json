@@ -525,6 +525,30 @@
     "cotton_ground_glint": 21,
     "cotton_ground_moss": 99,
     "cotton_ground_moss_light": 100,
+    "sweets_wrap": [200,200,202,202,200,204],
+    "sweets_wrap_dots": [198,198,201,201,198,203],
+    "sweets_wrap_right": [201,201,202,202,201,204],
+    "sweets_wrap_right_dots": [201,201,201,201,201,203],
+    "sweets_wrap_left": [200,200,203,203,200,204],
+    "sweets_wrap_left_dots": [198,198,199,199,198,203],
+    "sweets_ribbon": [41,42,44,46,40,48],
+    "sweets_ribbon_glint": [44,45,46,48,41,49],
+    "sweets_roof_blue": [202,203,203,204,202,204],
+    "sweets_roof_white": [12,13,13,14,12,15],
+    "sweets_red": [180,180,181,182,180,184],
+    "sweets_white": [9,11,12,14,9,15],
+    "sweets_wall": [4,5,6,8,4,10],
+    "sweets_wall_glint": [6,8,9,11,5,12],
+    "sweets_glass": [130,130,131,132,130,132],
+    "sweets_soil": 37,
+    "sweets_soil_light": 59,
+    "sweets_soil_ochre": 58,
+    "sweets_soil_pale": 31,
+    "sweets_soil_red": 44,
+    "sweets_soil_red_edge": 43,
+    "sweets_soil_purple": 140,
+    "sweets_soil_purple_edge": 139,
+    "sweets_soil_gold": 66,
     "sawmill_wood": [104,106,107,109,104,108],
     "sawmill_wood_grain": [105,107,108,110,104,109],
     "sawmill_wood_finished_grain": [105,108,109,109,104,109],
@@ -2953,6 +2977,66 @@
       ["paint","cotton_ground_light",2,2,0,6,6,1],
       ["paint","cotton_ground_glint",3,3,0,5,5,1]
     ],
+    "sweets_wrapped_gift": [
+      ["box","sweets_wrap",0,0,0,64,64,120],["erase",1,1,1,63,63,118],
+      ["repeat",[0,5,0],12,[["repeat",[0,0,7],16,[["paint","sweets_wrap_dots",63,3,3,64,4,4],["paint","sweets_wrap_dots",0,3,3,1,4,4]]]]],
+      ["repeat",[5,0,0],12,[["repeat",[0,0,7],16,[["paint","sweets_wrap_dots",3,63,3,4,64,4],["paint","sweets_wrap_dots",3,0,3,4,1,4]]]]],
+      ["paint","sweets_ribbon",26,0,0,38,64,120],["paint","sweets_ribbon",0,26,0,64,38,120],
+      ["paint","sweets_ribbon_glint",27,0,0,29,64,120],["paint","sweets_ribbon_glint",0,27,0,64,29,120],
+      ["scatter_paint","sweets_ribbon_glint",7,4678,0,0,0,64,64,120,"sweets_ribbon",[1,1,4]],
+      ["ellipsoid","sweets_ribbon",26,26,118,38,38,134],
+      ["rotate_z",0,[32,32,0],[["use","sweets_bow_loop"]]],["rotate_z",90,[32,32,0],[["use","sweets_bow_loop"]]],
+      ["rotate_z",180,[32,32,0],[["use","sweets_bow_loop"]]],["rotate_z",270,[32,32,0],[["use","sweets_bow_loop"]]]
+    ],
+    "sweets_bow_loop": [
+      ["prism","sweets_ribbon",1,28,36,[[32,123],[17,129],[12,139],[12,153],[18,160],[26,157],[32,143],[28,141],[24,153],[19,155],[16,151],[16,141],[20,133],[30,128]]],
+      ["prism","sweets_ribbon_glint",1,28,30,[[32,123],[17,129],[12,139],[12,153],[18,160],[26,157],[32,143],[28,141],[24,153],[19,155],[16,151],[16,141],[20,133],[30,128]]],
+      ["prism","sweets_ribbon",1,28,36,[[13,120],[28,120],[32,126],[27,128],[18,123]]]
+    ],
+    "sweets_candy_roof": [
+      ["lathe","sweets_roof_white",[32,32],[[57,26,0],[60,30,0],[65,31,0],[73,29.5,0],[82,24,0],[88,13,0],[90,0.5,0]]],
+      ["radial_paint","sweets_roof_blue",[32,32],57,90,20,349525,[0,2.3491269600363753]]
+    ],
+    "sweets_pole": [
+      ["lathe","sweets_white",[3,3],[[0,1.8,0],[2,1.35,0],[79,1.35,0],[82,0.9,0]]],
+      ["repeat",[0,0,12],7,[["paint","sweets_red",1,1,3,3,5,7],["paint","sweets_red",3,1,6,5,5,10]]],
+      ["paint","sweets_white",1,1,80,5,5,82]
+    ],
+    "sweets_poles": [
+      ["use","sweets_pole",[1,15,0]],["use","sweets_pole",[15,1,0]],
+      ["use","sweets_pole",[1,45,0]],["use","sweets_pole",[45,1,0]],
+      ["use","sweets_pole",[41,57,0]],["use","sweets_pole",[57,41,0]]
+    ],
+    "sweets_blue_shell": [
+      ["lathe","sweets_roof_blue",[32,32],[[0,24,0],[1,24,0],[2,24,21],[57,24,21]]]
+    ],
+    "sweets_window_bay": [
+      ["prism","sweets_wall",1,58,62,[[25,1],[39,1],[39,32],[37,46],[35,57],[29,57],[27,46],[25,32]]],
+      ["box","sweets_wall_glint",26,60,13,38,62,31],["erase",27,60,15,37,62,29],
+      ["box","sweets_glass",27,59,15,37,61,29],["box","sweets_wall",31,60,15,33,62,29],
+      ["box","sweets_wall",27,60,21,37,62,23],["box","sweets_wall_glint",26,60,12,38,63,14]
+    ],
+    "sweets_door_bay": [
+      ["prism","sweets_wall",1,58,63,[[22,0],[42,0],[42,34],[40,46],[36,51],[28,51],[24,46],[22,34]]],
+      ["erase",25,59,1,39,63,37],["box","sweets_roof_blue",25,59,1,39,61,37],
+      ["box","sweets_wall_glint",31,60,1,33,62,37],["box","sweets_glass",27,60,23,30,62,33],
+      ["box","sweets_glass",34,60,23,37,62,33],["box","sweets_wall_glint",24,60,37,40,63,40],
+      ["box","sweets_glass",24,59,0,40,64,2]
+    ],
+    "sweets_finished_hall": [
+      ["use","sweets_blue_shell"],["rotate_z",0,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],
+      ["rotate_z",45,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],["rotate_z",90,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],
+      ["rotate_z",135,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],["rotate_z",180,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],
+      ["rotate_z",225,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],["rotate_z",270,[32,32,0],[["use","sweets_window_bay",[0,-4,0]]]],
+      ["rotate_z",-45,[32,32,0],[["use","sweets_door_bay"]]],["use","sweets_candy_roof"],["use","sweets_poles"]
+    ],
+    "sweets_partly_unwrapped": [
+      ["use","sweets_blue_shell"],["use","sweets_candy_roof"],["use","sweets_poles"],
+      ["box","sweets_wrap",0,63,0,64,64,64],["box","sweets_wrap",63,0,0,64,63,64]
+    ],
+    "sweets_trim_132": [["radial_erase",[0,32],0,176,8,225]],
+    "sweets_trim_133": [["radial_erase",[31,0],0,176,8,30]],
+    "sweets_trim_134": [["radial_erase",[0,32],0,176,8,30],["radial_erase",[31,0],0,176,8,225]],
     "forest_tree_young": [
       ["box","forest_bark",7,7,0,9,9,59],
       ["paint","forest_bark_shade",7,7,0,8,9,59],
@@ -11646,6 +11730,61 @@
       "reference":"Toyland130 original2076 is identical in every construction slot: four bare standing cyan sticks after cotton dispatch, no pink crowns and no felled-log geometry",
       "ops":[["use","cotton_four_stems"],["erase",0,0,32,48,48,104]]
     },
+    "sweets_132_gift": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory132 original4677: source-specific dotted blue gift wrapper with crossed pink ribbon and open folded bow; original construction artwork; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_wrapped_gift"],["use","sweets_trim_132"],["replace_material","sweets_wrap","sweets_wrap_right"],["replace_material","sweets_wrap_dots","sweets_wrap_right_dots"]]
+    },
+    "sweets_132_unwrapping": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory132 original4680: original identical stages1/2 partly remove the gift wrapper, revealing a swirled peppermint roof and striped poles; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_partly_unwrapped"],["use","sweets_trim_132"],["replace_material","sweets_wrap","sweets_wrap_right"],["replace_material","sweets_wrap_dots","sweets_wrap_right_dots"]]
+    },
+    "sweets_132_finished": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory132 original4683: rounded blue/white peppermint roof, striped red/cream poles, scalloped grey window bays and recessed double doors; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_finished_hall"],["use","sweets_trim_132"],["replace_material","sweets_wrap","sweets_wrap_right"],["replace_material","sweets_wrap_dots","sweets_wrap_right_dots"]]
+    },
+    "sweets_133_gift": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory133 original4679: source-specific dotted blue gift wrapper with crossed pink ribbon and open folded bow; original construction artwork; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_wrapped_gift"],["use","sweets_trim_133"],["replace_material","sweets_wrap","sweets_wrap_left"],["replace_material","sweets_wrap_dots","sweets_wrap_left_dots"]]
+    },
+    "sweets_133_unwrapping": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory133 original4682: original identical stages1/2 partly remove the gift wrapper, revealing a swirled peppermint roof and striped poles; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_partly_unwrapped"],["use","sweets_trim_133"],["replace_material","sweets_wrap","sweets_wrap_left"],["replace_material","sweets_wrap_dots","sweets_wrap_left_dots"]]
+    },
+    "sweets_133_finished": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory133 original4685: rounded blue/white peppermint roof, striped red/cream poles, scalloped grey window bays and recessed double doors; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_finished_hall"],["use","sweets_trim_133"],["replace_material","sweets_wrap","sweets_wrap_left"],["replace_material","sweets_wrap_dots","sweets_wrap_left_dots"]]
+    },
+    "sweets_134_gift": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory134 original4678: source-specific dotted blue gift wrapper with crossed pink ribbon and open folded bow; original construction artwork; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_wrapped_gift"],["use","sweets_trim_134"]]
+    },
+    "sweets_134_unwrapping": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory134 original4681: original identical stages1/2 partly remove the gift wrapper, revealing a swirled peppermint roof and striped poles; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_partly_unwrapped"],["use","sweets_trim_134"]]
+    },
+    "sweets_134_finished": {
+      "size":[64,64,176],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,0],"review_status":"work-in-progress",
+      "reference":"Sweet factory134 original4684: rounded blue/white peppermint roof, striped red/cream poles, scalloped grey window bays and recessed double doors; preserve projected source ownership and independently painted Toyland ground",
+      "ops":[["use","sweets_finished_hall"],["use","sweets_trim_134"]]
+    },
+    "sweets_ground": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Independent Toyland2022 soil: beige gritty soil with distinct red, purple and yellow rectangular patches; no body invented for131",
+      "ops":[["box","sweets_soil",0,0,0,32,32,1],["paint","sweets_soil_red",8,0,0,24,10,1],
+        ["paint","sweets_soil_purple",20,10,0,32,22,1],["paint","sweets_soil_gold",0,20,0,10,32,1],
+        ["scatter_paint","sweets_soil_light",5,2022,0,0,0,32,32,1,"sweets_soil"],["scatter_paint","sweets_soil_ochre",5,2202,0,0,0,32,32,1,"sweets_soil"],
+        ["scatter_paint","sweets_soil_pale",13,2212,0,0,0,32,32,1,"sweets_soil"],
+        ["scatter_paint","sweets_soil_red_edge",4,2222,8,0,0,24,10,1,"sweets_soil_red"],
+        ["scatter_paint","sweets_soil_purple_edge",4,2232,20,10,0,32,22,1,"sweets_soil_purple"]]
+    },
     "forest_ground": {
       "size":[32,32,1], "cell_size":[0.5,0.5,0.25], "origin":[0,0,-0.25], "review_status":"work-in-progress",
       "reference":"Forest16/17 original2077 throughout construction: independently owned full-tile brown needle litter, patchy olive/sage moss and dark twigs; no forest-body alias to ordinary tree grounds",
@@ -15978,6 +16117,10 @@
       "128":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "129":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "130":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
+      "131":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "132":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "133":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "134":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
       "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
       "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
       "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -16079,6 +16222,9 @@
       "128":{"0":"lumber_stock_initial","1":"lumber_stock_partial","2":"lumber_stock_partial","3":"lumber_stock_finished"},
       "129":{"0":"cotton_seedlings","1":"cotton_young","2":"cotton_half_grown","3":"cotton_mature"},
       "130":{"0":"cotton_harvested","1":"cotton_harvested","2":"cotton_harvested","3":"cotton_harvested"},
+      "132":{"0":"sweets_132_gift","1":"sweets_132_unwrapping","2":"sweets_132_unwrapping","3":"sweets_132_finished"},
+      "133":{"0":"sweets_133_gift","1":"sweets_133_unwrapping","2":"sweets_133_unwrapping","3":"sweets_133_finished"},
+      "134":{"0":"sweets_134_gift","1":"sweets_134_unwrapping","2":"sweets_134_unwrapping","3":"sweets_134_finished"},
       "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
       "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
       "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},

@@ -1821,6 +1821,30 @@ class VoxelCompilerTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 compile_catalogue(source)
 
+    def test_spiral_paint_turns_with_radius_without_filling_holes_or_other_heights(self):
+        source = {"format":1,"materials":{"blue":198,"white":15},"models":{
+            "base":{"size":[9,9,2],"ops":[["box","blue",0,0,0,9,9,2],["erase",4,4,0,5,5,2]]},
+            "spiral":{"extends":"base","ops":[["radial_paint","white",[4.5,4.5],0,1,4,1,[0,90]]]},
+            "phase":{"extends":"base","ops":[["radial_paint","white",[4.5,4.5],0,1,4,1,[90,0]]]}
+        },"bindings":{}}
+        result = compile_catalogue(source)
+        cells = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)} for name,model in result["models"].items()}
+        self.assertEqual(set(cells["base"]),set(cells["spiral"]))
+        self.assertNotIn((4,4,0),cells["spiral"])
+        self.assertTrue(all(material == 1 for (x,y,z),material in cells["spiral"].items() if z == 1))
+        # Cardinal samples have known radii and quarter-turn angles, independent
+        # of the implementation's cell-wise polar calculation.
+        for point in ((8,4,0),(4,3,0),(2,4,0),(4,7,0)):
+            self.assertEqual(cells["spiral"][point],2)
+        for point in ((5,4,0),(6,4,0),(7,4,0),(4,5,0),(4,6,0)):
+            self.assertEqual(cells["spiral"][point],1)
+        self.assertEqual(cells["phase"][4,3,0],2)
+        self.assertEqual(cells["phase"][5,4,0],1)
+        for curve in ([0],[0,1,2],[0,True],[float("nan"),0],[0,float("inf")],[361,0],"curve"):
+            source["models"]["spiral"]["ops"][0][-1] = curve
+            with self.assertRaises(ValueError):
+                compile_catalogue(source)
+
     def test_suspended_and_arctic_houses_preserve_source_states_snow_and_ground_contacts(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("house_next_") or name == "mine_ground_site"}

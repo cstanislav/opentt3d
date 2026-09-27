@@ -1,5 +1,28 @@
 # Implementation verification
 
+## Sweet-factory source ownership and real construction/cargo snapshots
+
+At10:16:39UTC,24 accepted background controls pass on OpenGL/Vulkan, including56
+actual construction-layer selections, full17/17 and empty0/17 cargo snapshots,
+four climates, completed service and bundles. The full save contains134 stage0 and
+the empty save contains stage1; requesting completed134 originally failed. Two
+subsequent full-cargo views located the truck but put it outside the close factory
+camera. Widening only those two views to zoom2 captures both actual objects. All22
+other controls and both repaired views retain the same source/build hashes. All
+failed controls, original saves and prior oversized-hall images remain available.
+
+Ten volumes raise the catalogue to1,585; all1,575 prior model hashes agree. All28
+palettes,27 aliases, four intentionally empty131 bodies and96 climate comparisons
+reconcile. The48 distinct ground comparisons retain Toyland2022 soil ownership.
+Joined cells have no overlaps or unsupported components. Native200, asset132 and
+the137-file presentation boundary pass; the unchanged harness retains12 passing tests.
+
+All36 native backend captures agree. The wider220-image comparison retains83
+differences/18,919 pixels. Source registration, bow/facade/roof/ground detail remain
+provisional, with final approvals0. Peak sampled memory is3,290,664,440bytes. Evidence:
+`build-macos/breadth-sweets-accepted-{audit,reconciliation}.json` and
+`breadth-sweets-reviewed-{backend-comparison,registration-audit}.json`.
+
 ## Cotton desktop package audit
 
 At10:10:22UTC, release`.10`at1b503e93888363d6af3edf9aec14d01be8fff9b5 passes all
