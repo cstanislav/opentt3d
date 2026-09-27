@@ -179,6 +179,13 @@ and genuinely absent intervals. `contact_sheet.py <references>
 layers at one fixed registration across every frame. Source export does not change
 industry animation or simulation state; it does not establish voxel child coverage.
 
+Cola137 uses three `cola_` volumes: a shallow gold bowl, source-identical stage1/2
+blue cup and completed cup with an open leaning straw. Its original2077 soil shares
+cotton's independent Toyland-only binding. Both original layouts retain full straw
+height beyond the sorting box. Joined industry reviews accept a nonzero base sprite
+with no resolved ink as genuinely absent (toy-shop141 stage0); a visible unbound body
+still prevents complete export. No empty placeholder model is inserted.
+
 `water_buoy` is infrastructure693's semantic state0 binding; `water_buoy_toyland` is
 state1's separate solid green/orange/red marker. Classic's world image is resolved
 through `GetCanalSprite(CF_BUOY,tile)`; the GUI/base-table image is different. The
@@ -463,8 +470,11 @@ selected source variants and original ground-only empty-body stages. Layered hou
 composition retains source offsets while cropping only transparent padding.
 
 `lathe` takes a material, XY centre and explicit `[z, outer_radius, inner_radius]`
-knots, optionally `[x_scale,y_scale,angle_degrees]`. Heights increase strictly; volumes
-are bounded and consume no simulation RNG. `lathe_paint_inner` uses the same profile
+profile knots. Optional five-value knots add `[dx, dy]` centre offsets, interpolated
+through height for leaning open tubes. The inner lining follows adjacent sloping air
+cells while preserving exterior faces, and the complete swept bounds are checked.
+An optional `[x_scale,y_scale,angle_degrees]` transforms the cross-section. Heights
+increase strictly; volumes are bounded and consume no simulation RNG. `lathe_paint_inner` uses the same profile
 but only repaints faces beside its inner air column, preserving occupied cells,
 exterior colours and rim faces. An optional final `[frequency,seed]` gives deterministic
 inner-face grain. Generated per-face palette combinations share the normal16-bit

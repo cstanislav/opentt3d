@@ -4,6 +4,21 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Cola137: open cups and a hollow leaning straw (September27)
+
+- Three bodies preserve shallow-bowl construction, identical raised stage1/2 cups and
+  the completed red/white straw above the source sorting box. Cotton's2077 soil is
+  source-identical and stays independently climate-guarded. All8 palettes,7 aliases,
+  24 climate comparisons and1,590 earlier model hashes pass.
+- Native review replaces the initial full-height taper and thin rims with a short
+  flared foot, cylindrical sides and deeper gold bands. A shorter straw restores
+  original top/left/right bounds; the lower edge differs by one pixel. All16 native
+  backend views agree;62 of120 wider views retain8,149 different pixels. Liquid/swirl,
+  gold/blue highlights, straw paint and small registration differences remain open.
+- The compact authored hollow profile preserves all occupied cells and changes only
+  132 inward vertical-step cells. Every prototype/failure is retained. All24 actual
+  construction/cargo/climate/bundle controls pass. Final visual approvals remain0.
+
 ## Battery135/136 and original Toyland procedural children (September27)
 
 - Five battery bodies preserve four distinct growth states and the repeated harvested

@@ -2749,6 +2749,44 @@ class VoxelCompilerTests(unittest.TestCase):
             with self.subTest(transform=transform), self.assertRaises(ValueError):
                 compile_catalogue(self.source([["lathe", "wall", [4,3], [[0,3,1],[4,3,1]], transform]]))
 
+    def test_leaning_hollow_profile_has_exact_layers_and_component_registration(self):
+        profile = [[0,2,1,-0.5,0.5],[4,2,1,3.5,-3.5]]
+        source = self.source([["use", "tube", [0,0,0]]])
+        source["models"]["house"]["size"] = [12,12,8]
+        source["components"] = {"tube": [["lathe", "wall", [3,6], profile]]}
+        def cells():
+            return {(x+i,y,z) for x,y,z,length,material in compile_catalogue(source)["models"]["house"]["runs"] for i in range(length)}
+        # Each annulus has eight cells; four central air cells stay empty as it leans.
+        ring = [(-2,-1),(-2,0),(1,-1),(1,0),(-1,-2),(0,-2),(-1,1),(0,1)]
+        expected = {(3+z+x,6-z+y,z) for z in range(4) for x,y in ring}
+        self.assertEqual(cells(), expected)
+        source["models"]["house"]["ops"][0][2] = [1,2,3]
+        self.assertEqual(cells(), {(x+1,y+2,z+3) for x,y,z in expected})
+        for invalid in ([[0,2,1,0],[4,2,1]], [[0,2,1,True,0],[4,2,1]],
+                        [[0,2,1,0,float("nan")],[4,2,1]], [[0,2,1,0,0],[4,2,1,1025,0]],
+                        [[0,2,1,0,0],[4,2,1,10,0]], [[0,2,1,0,0],[4,2,1,0,-8]]):
+            source["components"]["tube"][0][3] = invalid
+            with self.subTest(profile=invalid), self.assertRaises(ValueError):
+                compile_catalogue(source)
+
+    def test_leaning_inner_paint_follows_adjacent_air_without_repainting_outer_faces(self):
+        profile = [[0,2,1,-0.5,0.5],[4,2,1,3.5,-3.5]]
+        source = self.source([["lathe", "wall", [3,6], profile]])
+        source["models"]["house"]["size"] = [10,10,5]
+        def cells():
+            result = compile_catalogue(source)
+            return {(x+i,y,z): result["materials"][material-1]
+                    for x,y,z,length,material in result["models"]["house"]["runs"] for i in range(length)}
+        original = cells()
+        source["models"]["house"]["ops"].append(["lathe_paint_inner", "window", [3,6], profile])
+        painted = cells()
+        self.assertEqual(set(original), set(painted))
+        self.assertEqual(painted[2,5,1][1], 135, "The inward +X face lost its lining")
+        self.assertEqual(painted[2,5,1][4], 134, "The downward step borders the previous layer's hollow centre")
+        self.assertEqual(painted[2,5,1][0], 74, "Lining leaked onto the exterior -X face")
+        self.assertEqual(painted[2,5,1][5], 74, "Lining leaked onto an exterior upward step")
+        self.assertNotIn((3,5,1), painted, "Painting filled the sloping air passage")
+
     def test_inner_lathe_paint_preserves_exterior_grain_occupancy_and_rim(self):
         profile = [[0,3,2],[4,3,2]]
         source = self.source([["lathe", "wall", [4,4], profile],

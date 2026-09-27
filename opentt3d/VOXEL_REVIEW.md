@@ -16,6 +16,17 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Cola137:**three bodies preserve gold-bowl construction, blue/gold raised cups
+  and the completed leaning hollow straw. Both layouts and independent2077 checker
+  soil retain source ownership. All8 palettes,7 aliases,24 climate comparisons and
+  1,590 prior hashes pass. Compact centre-offset lathe controls preserve geometry;
+  only132 inward vertical-step cells receive corrected lining. All24 live controls
+  pass16 actual construction layers, full/empty cargo and both backends. All16 native
+  backend captures agree;62 of120 wider images differ at8,149 pixels. Body bounds
+  match original top/left/right, with one-pixel lower differences. Cup faceting and
+  metallic paint, rim shading, liquid swirl and straw stripes remain provisional.
+  Evidence:`build-macos/breadth-cola-*`. Final visual approvals:0.
+
 - **Battery135/136:**five bodies retain four growth stages, red plates on the original
   four centres, gold caps/positive contacts and dark cylindrical cans. Harvest leaves
   genuinely hollow dark-lined socket collars. Initial tiny rectangular contacts,

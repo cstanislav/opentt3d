@@ -563,6 +563,18 @@
     "battery_socket_wall": [178,180,181,44,178,44],
     "battery_socket_cutout": 1,
     "battery_socket_lining": [180,1,178,1,1,44],
+    "cola_gold": [62,63,64,66,62,50],
+    "cola_gold_glint": [64,65,66,67,64,68],
+    "cola_blue": [198,199,200,203,198,205],
+    "cola_blue_glint": [200,201,202,204,200,205],
+    "cola_inner": [70,70,71,72,70,70],
+    "cola_liquid": [70,70,71,71,70,70],
+    "cola_grain": 71,
+    "cola_swirl": 74,
+    "cola_swirl_light": 75,
+    "cola_straw_white": [9,11,13,14,9,14],
+    "cola_straw_red": [180,181,182,184,180,183],
+    "cola_straw_inner": [2,4,4,9,2,4],
     "sawmill_wood": [104,106,107,109,104,108],
     "sawmill_wood_grain": [105,107,108,110,104,109],
     "sawmill_wood_finished_grain": [105,108,109,109,104,109],
@@ -3082,6 +3094,32 @@
       ["lathe","battery_socket",[8,8],[[0,2.8,0],[1,2.8,0]]],
       ["lathe","battery_socket_wall",[8,8],[[2,3.3,2.3],[5,3.1,2.3]]],
       ["lathe_paint_inner","battery_socket_lining",[8,8],[[0,3.75,2.3],[5,3.75,2.3]]]
+    ],
+    "cola_shallow_bowl": [
+      ["lathe","cola_gold",[32,32],[[0,24,0],[2,26,0],[3,27,22],[8,29.5,26.5],[24,29.5,26.5]]],
+      ["scatter_paint","cola_gold_glint",13,4691,0,0,0,64,64,24,"cola_gold"],
+      ["lathe_paint_inner","cola_inner",[32,32],[[0,24,0],[2,26,0],[3,27,22],[8,29.5,26.5],[24,29.5,26.5]]],
+      ["lathe","cola_liquid",[32,32],[[2,21,0],[12,26.2,0]]],
+      ["scatter_paint","cola_grain",29,4693,5,5,11,59,59,12,"cola_liquid"]
+    ],
+    "cola_tall_cup": [
+      ["lathe","cola_gold",[32,32],[[0,24,0],[2,26,0],[3,27,22],[8,29.5,26.5],[80,29.5,26.5]]],
+      ["paint","cola_blue",0,0,28,64,64,64],["radial_paint","cola_blue_glint",[32,32],28,64,32,286331153],
+      ["scatter_paint","cola_gold_glint",13,4691,0,0,0,64,64,80,"cola_gold"],
+      ["lathe_paint_inner","cola_inner",[32,32],[[0,24,0],[2,26,0],[3,27,22],[8,29.5,26.5],[80,29.5,26.5]]],
+      ["lathe","cola_liquid",[32,32],[[2,21,0],[68,26.2,0]]],
+      ["scatter_paint","cola_grain",29,4693,5,5,67,59,59,68,"cola_liquid"]
+    ],
+    "cola_straw": [
+      ["lathe","cola_straw_white",[36,28],[[60,2.25,1,0,0],[232,2.25,1,30,-14]]],
+      ["repeat",[0,0,24],7,[["scatter_paint","cola_straw_red",1,0,0,0,72,80,64,84,"cola_straw_white"]]],
+      ["paint","cola_straw_white",0,0,224,80,64,232],
+      ["lathe_paint_inner","cola_straw_inner",[36,28],[[60,2.25,1,0,0],[232,2.25,1,30,-14]]]
+    ],
+    "cola_surface_swirl": [
+      ["lathe","cola_swirl",[36,28],[[67,11,10],[69,11,10]]],
+      ["lathe","cola_swirl_light",[36,28],[[67,7,6],[69,7,6]]],
+      ["radial_paint","cola_liquid",[36,28],67,69,8,85,[0,4]]
     ],
     "forest_tree_young": [
       ["box","forest_bark",7,7,0,9,9,59],
@@ -11856,6 +11894,21 @@
       "reference":"Battery farm original4690: source-identical136 slots leave four genuinely recessed dark sockets in the red plates; no remaining batteries",
       "ops":[["use","battery_harvested_plate",[0,0,0]],["use","battery_harvested_plate",[16,0,0]],["use","battery_harvested_plate",[0,16,0]],["use","battery_harvested_plate",[16,16,0]]]
     },
+    "cola_bowl": {
+      "size":[80,64,256],"cell_size":[0.25,0.25,0.25],"origin":[-0.375,-0.125,0],"review_status":"work-in-progress",
+      "reference":"Cola well137 original4691: initial shallow gold-rimmed bowl with a smaller grounded foot and real dark liquid cavity",
+      "ops":[["use","cola_shallow_bowl"]]
+    },
+    "cola_cup": {
+      "size":[80,64,256],"cell_size":[0.25,0.25,0.25],"origin":[-0.375,-0.125,0],"review_status":"work-in-progress",
+      "reference":"Cola well137 original4692: source-identical stages1/2 raise the blue-sided open cup above its separate gold foot and below the thin gold upper rim",
+      "ops":[["use","cola_tall_cup"]]
+    },
+    "cola_finished": {
+      "size":[80,64,256],"cell_size":[0.25,0.25,0.25],"origin":[-0.375,-0.125,0],"review_status":"work-in-progress",
+      "reference":"Cola well137 original4693: original completed open blue/gold cup with a leaning hollow red/white straw and brown surface swirl; retain original straw height beyond the sorting box",
+      "ops":[["use","cola_tall_cup"],["use","cola_surface_swirl"],["use","cola_straw"]]
+    },
     "forest_ground": {
       "size":[32,32,1], "cell_size":[0.5,0.5,0.25], "origin":[0,0,-0.25], "review_status":"work-in-progress",
       "reference":"Forest16/17 original2077 throughout construction: independently owned full-tile brown needle litter, patchy olive/sage moss and dark twigs; no forest-body alias to ordinary tree grounds",
@@ -16194,6 +16247,7 @@
       "134":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
       "135":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "136":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
+      "137":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
       "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
       "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -16300,6 +16354,7 @@
       "134":{"0":"sweets_134_gift","1":"sweets_134_unwrapping","2":"sweets_134_unwrapping","3":"sweets_134_finished"},
       "135":{"0":"battery_seed","1":"battery_young","2":"battery_half","3":"battery_mature"},
       "136":{"0":"battery_harvested","1":"battery_harvested","2":"battery_harvested","3":"battery_harvested"},
+      "137":{"0":"cola_bowl","1":"cola_cup","2":"cola_cup","3":"cola_finished"},
       "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
       "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
       "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},

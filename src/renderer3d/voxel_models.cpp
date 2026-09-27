@@ -924,7 +924,13 @@ void ExportVoxelReviews(std::string_view prefix)
 					const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
 					Vec3 origin{static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0};
 					complete &= DrawVoxelIndustryGround(joined,part.gfx,source.ground.sprite,origin,source.ground.pal);
-					if ((source.building.sprite&SPRITE_MASK) != 0) complete &= DrawVoxelAsset(joined,"industries",part.gfx,stage,origin,source.building.pal);
+					if ((source.building.sprite&SPRITE_MASK) != 0 && !DrawVoxelAsset(joined,"industries",part.gfx,stage,origin,source.building.pal)) {
+						/* A nonzero source number can still resolve to genuine absence
+						 * (toy-shop141 construction0). Only actual empty base artwork
+						 * may complete this review without an authored body. */
+						const auto &texture = Textures().Get(source.building.sprite,source.building.pal);
+						complete &= texture.base_graphics && texture.ink_width == 0 && texture.ink_height == 0;
+					}
 					tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
 				}
 				if (!complete) continue;

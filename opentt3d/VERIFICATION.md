@@ -1,5 +1,29 @@
 # Implementation verification
 
+## Cola construction, compact hollow profile and transparent-source gallery control
+
+At11:18:26UTC, all24 frozen background controls pass on both backends:16 actual
+construction-layer selections,17/17 and0/17 cargo, four climates, clipping and
+development bundles. Ordinary29→33 cargo7 service uses engine177, acceptance32 and
+returns after816 observed ticks. All8 palettes,7 aliases,24 climate comparisons,
+1,590 earlier hashes and source/build/candidate/bundle checks reconcile. Three new
+models reach1,593. Native200, asset134 and the137-file boundary pass.
+
+All16 native captures agree;62 of120 wider images retain8,149 differing pixels.
+Original43×25/43×39/50×64 bodies compare with43×26/43×40/50×65, with matching top/left/
+right bounds. Fine cup/straw/liquid paint and lower registration remain provisional.
+Peak sampled memory is3,419,262,528bytes; short600-frame observations retain89/40
+intervals over20ms. Final approvals remain0 and sustained smooth60fps remains open.
+
+Independent cell comparison verifies344 straw operations compact to four with no
+geometry change, preserving all other model paint. Only132 inward step cells gain
+the correct adjacent-air lining. Exact annuli, offsets, hollow passage, exterior
+preservation and malformed profiles pass. The initial broad paint and test-palette
+failures remain. Toy-shop's transparent nonzero4701 now permits joined stage0 export;
+removing visible139 still rejects it, with stages1–3 byte-identical. Evidence:
+`build-macos/breadth-cola-final-{audit,reconciliation,backend-comparison,registration-audit}.json`
+and`build-macos/breadth-toy-shop-transparent-gallery-audit.json`.
+
 ## Sweet-factory desktop package audit
 
 At11:10:22UTC, release`.11`at4790c3defbb10008b2ddb828e348565f059f4994 passes all

@@ -3,6 +3,15 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Cola-well service observations
+
+The24-control matrix peaks at3,419,262,528 sampled bytes. Two600-frame service runs
+average60.001/59.990fps for OpenGL/Vulkan, with4.971/5.357ms p95 work and89/40 intervals
+over20ms. Maximum intervals are23.401/22.788ms. Concurrent authoring and package
+checks remain part of the observation environment. These short runs verify the
+ordinary cargo route, not sustained arbitrary-world smoothness or long-duration
+memory acceptance. Source:`breadth-cola-final-reconciliation.json`.
+
 ## Battery and harvest-observer regression observations
 
 The28-control matrix peaks at3,240,988,200 sampled bytes. Both9,000-frame battery cycles

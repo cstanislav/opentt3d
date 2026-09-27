@@ -335,7 +335,7 @@ TEST_CASE("Industry source-climate replacements retain independent ground and bo
 			CHECK(IndustryModelClimateSupported(graphic,climate));
 			CHECK(IndustryModelClimateSupported(graphic,climate,true,2022) == (climate == 3));
 		}
-		for (unsigned graphic : {135U,136U}) {
+		for (unsigned graphic : {135U,136U,137U}) {
 			CHECK(IndustryModelClimateSupported(graphic,climate));
 			CHECK(IndustryModelClimateSupported(graphic,climate,true,2077) == (climate == 3));
 		}

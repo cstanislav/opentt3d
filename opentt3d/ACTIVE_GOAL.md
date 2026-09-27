@@ -1,5 +1,45 @@
 # Active extended development goal
 
+## Cola-well construction and service verified — September27,11:18:26UTC
+
+Three provisional cola137 bodies reach1,593 models and138/175 primary industry
+definitions:101 body owners and138 independent grounds. The shallow gold bowl,
+blue/gold cup and completed hollow leaning straw retain all four original stages
+and both layouts. Stages1/2 share identical source4692; checker ground2077 shares
+cotton's exact Toyland volume and retains independent climate/source fallback.
+All8 palettes,7 aliases,24 climate comparisons and1,590 preceding model hashes pass.
+
+All24 frozen background controls pass:16 actual construction-layer selections,
+17/17 loaded and0/17 empty trucks, four climates, clipping and bundles. Ordinary
+cola29→fizzy-drinks33 service retains cargo7/engine177, acceptance32 and return after
+816 observed ticks. Source/build/candidate hashes and development bundles agree.
+Native200, asset134 and the137-file presentation boundary pass; the unchanged harness
+retains12 passing tests. All16 native backend captures agree;62 of120 wider captures
+retain8,149 differing pixels. Source body bounds43×25/43×39/50×64 compare with
+43×26/43×40/50×65 at the same top/left/right registration. Cup paint/faceting, rim and
+liquid shading/swirl, straw stripe/inner detail and lower-edge registration remain
+provisional. Native/layout/street reviews retain every prototype; final approvals:0.
+
+Optional XY offsets in authored lathe knots replace344 explicit straw slice
+operations with four compact operations. Every occupied cell is preserved; only132
+inward vertical-step cell colours change as the complete profile follows adjacent
+air. An initial broad paint brush recoloured the cup rim; its evidence remains,
+and material-filtered stripes correct it. Exact annulus/offset/lining and invalid
+profile tests pass. Existing upright profiles remain byte-identical after rebuild.
+Joined industry gallery export now accepts genuinely transparent resolved base
+artwork, demonstrated by toy-shop141's nonzero4701 stage0. A negative control removes
+visible139 stage0 and correctly rejects that joined export while preserving stages1–3.
+
+The matrix peaks at3,419,262,528 sampled bytes. Two600-frame service observations
+average60.001/59.990fps, but retain89/40 intervals over20ms and23.401/22.788ms maxima.
+Sustained smooth arbitrary-world60fps and long-duration memory acceptance remain open.
+Evidence:`breadth-cola-final-{audit,reconciliation,backend-comparison,registration-audit}.json`
+and`breadth-toy-shop-transparent-gallery-audit.json`. Verified desktop release`.11`
+remains linked; battery`.12`is under its exact-tag package workflow. Toy-shop's eight
+castle candidates retain true construction absences, open courtyard/gateway and
+four distinct towers/flags; live service and integrated acceptance remain pending.
+Continue the37 remaining primary definitions, climate/procedural coverage and later passes.
+
 ## Sweet-factory desktop release verified — September27,11:10:22UTC
 
 All eight hosted jobs for`.11`at4790c3defbb10008b2ddb828e348565f059f4994 now pass.

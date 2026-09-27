@@ -327,8 +327,8 @@ def compile_catalogue(data):
                     continue
                 if kind in ("lathe", "lathe_paint_inner"):
                     # Explicit radial sections, not a sampled picture/height map.
-                    # Each knot is [height, outer radius, inner radius]; an optional
-                    # authored XY scale/angle also permits oblique oval footprints.
+                    # Knots optionally add XY centre offsets for a leaning hollow
+                    # profile. An authored XY scale/angle permits oval footprints.
                     if len(op) not in ((4, 5, 6) if kind == "lathe_paint_inner" else (4, 5)) or op[1] not in names or not isinstance(op[2], list) or len(op[2]) != 2:
                         raise ValueError("Lathe needs a material, XY centre and radius profile")
                     if cell_size[0] != cell_size[1]:
@@ -349,20 +349,27 @@ def compile_catalogue(data):
                         raise ValueError("Lathe needs two or more bounded profile knots")
                     profile = []
                     for knot in op[3]:
-                        z, outer, inner = vector(knot, "lathe profile knot")
+                        if not isinstance(knot, list) or len(knot) not in (3, 5):
+                            raise ValueError("Lathe knots need height/radii and optional XY centre offsets")
+                        z, outer, inner = vector(knot[:3], "lathe profile knot")
+                        dx, dy, _ = vector([*knot[3:], 0] if len(knot) == 5 else [0,0,0], "lathe centre offset")
+                        if abs(dx) > 1024 or abs(dy) > 1024:
+                            raise ValueError("Lathe centre offset exceeds the grid budget")
                         integer(z, 0, size[2], "lathe profile height")
                         z += offset[2]
                         if not 0 <= z <= size[2] or not 0 <= inner < outer <= 1024 or (profile and z <= profile[-1][0]):
                             raise ValueError("Lathe profile must increase in height with valid inner/outer radii")
-                        profile.append((z, outer, inner))
+                        profile.append((z, outer, inner, dx, dy))
                     cs, sn = math.cos(math.radians(angle)), math.sin(math.radians(angle))
                     radius = max(knot[1] for knot in profile)
                     rx = radius*math.hypot(sx*cs, sy*sn)
                     ry = radius*math.hypot(sx*sn, sy*cs)
-                    if cx-rx < -1e-7 or cy-ry < -1e-7 or cx+rx > size[0]+1e-7 or cy+ry > size[1]+1e-7:
+                    left, right = cx+min(k[3] for k in profile)-rx, cx+max(k[3] for k in profile)+rx
+                    top, bottom = cy+min(k[4] for k in profile)-ry, cy+max(k[4] for k in profile)+ry
+                    if left < -1e-7 or top < -1e-7 or right > size[0]+1e-7 or bottom > size[1]+1e-7:
                         raise ValueError(f"Lathe is outside {name}")
-                    bounds = (max(0, math.floor(cx-rx)), min(size[0], math.ceil(cx+rx)),
-                              max(0, math.floor(cy-ry)), min(size[1], math.ceil(cy+ry)))
+                    bounds = (max(0, math.floor(left)), min(size[0], math.ceil(right)),
+                              max(0, math.floor(top)), min(size[1], math.ceil(bottom)))
                     transform_work += (1 if kind == "lathe" else 7)*(bounds[1]-bounds[0])*(bounds[3]-bounds[2])*(profile[-1][0]-profile[0][0])
                     if transform_work > 16*1024*1024:
                         raise ValueError("Voxel transforms exceed their cell budget")
@@ -370,16 +377,17 @@ def compile_catalogue(data):
                     for first, last in zip(profile, profile[1:]):
                         for z in range(first[0], last[0]):
                             fraction = (z+0.5-first[0])/(last[0]-first[0])
-                            radii[z] = (first[1]+fraction*(last[1]-first[1]), first[2]+fraction*(last[2]-first[2]))
-                    def radial_squared(x, y):
-                        dx, dy = x+0.5-cx, y+0.5-cy
+                            radii[z] = tuple(first[i]+fraction*(last[i]-first[i]) for i in range(1,5))
+                    def radial_squared(x, y, section):
+                        dx, dy = x+0.5-cx-section[2], y+0.5-cy-section[3]
                         return ((dx*cs+dy*sn)/sx)**2 + ((-dx*sn+dy*cs)/sy)**2
-                    for z, (outer, inner) in radii.items():
+                    for z, section in radii.items():
+                        outer, inner = section[:2]
                         for y in range(bounds[2], bounds[3]):
                             for x in range(bounds[0], bounds[1]):
                                 if frequency > 1 and grain_value(x,y,z,seed) % frequency != 0:
                                     continue
-                                r2 = radial_squared(x,y)
+                                r2 = radial_squared(x,y,section)
                                 if inner*inner <= r2 < outer*outer:
                                     index = (z*size[1]+y)*size[0]+x
                                     if kind == "lathe":
@@ -393,7 +401,7 @@ def compile_catalogue(data):
                                         lining = materials[names[op[1]]-1]
                                         for face, (dx,dy,dz) in enumerate(((-1,0,0),(1,0,0),(0,-1,0),(0,1,0),(0,0,-1),(0,0,1))):
                                             neighbour = radii.get(z+dz)
-                                            if neighbour and radial_squared(x+dx,y+dy) < neighbour[1]*neighbour[1]:
+                                            if neighbour and radial_squared(x+dx,y+dy,neighbour) < neighbour[1]*neighbour[1]:
                                                 colours[face] = lining[face]
                                         if colours != original:
                                             target[index] = face_material(colours)
