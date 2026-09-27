@@ -4,6 +4,29 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Toy-factory142…147: separate walls and original press (September27)
+
+Twelve provisional volumes reach1,636: seven body owners, holder4717, stamp4718,
+clay4719, duck4720 and independent4675 soil. Construction144 and completed145 own
+different blue-tower cuts; fourteen original body slots remain empty. Forty-five
+factored components preserve all twelve prototype hashes and1,624 preceding models.
+All38 source palettes,39 aliases and144 climate comparisons pass. All28 controls
+capture68 construction layers, both full/empty routes and two full50-frame live cycles.
+
+Static joined stages0/1/3 have no overlapping cells. Original source occlusion hides
+59/117 clay pixels at frame29, all104 duck pixels at30 and57/104 at31; corresponding
+press intersections are576,3,661 and404 quarter-unit cells. This supports the original
+compression sequence, while all-angle contact remains provisional. Original first
+cropped review and its corrected actor-centred sheet are retained.
+
+All300 integrated Vulkan views match the prototype. All34 individual native layers
+and12 model-origin views agree across backends;54 joined/procedural native views retain
+59 differing pixels and83/200 wider views retain2,739. Most bounds are within1–2pixels;
+completed143 retains[-4,-1,0,-3],146 retains[0,0,0,-2], and ground[-1,0,-1,+1]. Brick/
+window paint, wall-cut depth, hopper/hood rims, wheel highlights, press/collar paint,
+clay grain and duck detail remain open. Evidence:`build-macos/breadth-toy-factory-final-*`
+and`breadth-toy-factory-press-occlusion-audit.json`. Final visual approvals:0.
+
 ## Fizzy156…159: hollow can and clear apparatus (September27)
 
 Seven provisional volumes reach1,624, preserving eight absent body states and the

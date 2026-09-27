@@ -1,5 +1,44 @@
 # Active extended development goal
 
+## Toy-factory artwork integrated and verified — September27,15:50:21UTC
+
+Twelve provisional factory volumes reach1,636 and160/175 primary industry definitions:
+120 body owners and160 independent grounds. Seven original bodies, four ordered children
+and4675 soil preserve fourteen empty body slots, including transparent4711/4714. Early
+144 and completed145 have distinct blue-tower ownership;4717 owns its original wall
+and front-shaft cuts. Forty-five compact components preserve all twelve reviewed
+prototype hashes and every one of1,624 preceding models. No simulation/RNG changes.
+
+All28 frozen background controls pass68 actual construction layers, full17/17 and
+empty0/17 trucks on input/output routes, four climates, clipping and app bundles.
+Both9,000-frame supplied observations capture all50 original frames on tile51,35,
+industry0:29 clay,19 duck and50 stamp/holder appearances. Missing-holder rejection and
+a separate floor control retain all six independent grounds with linked body fallback.
+Native201, asset136, harness12 and the137-file presentation boundary pass. All38 palettes,
+39 aliases and144 climate comparisons reconcile. All300 integrated Vulkan views match
+the prototype. Successful factory captures compact908 images losslessly, saving
+1,199,370,310bytes; originals, failures and RGBA/header evidence remain.
+
+Static joined stages have no overlapping cells. Original press drawing hides59/117
+clay pixels at29, all104 duck pixels at30 and57/104 at31; recorded voxel compression
+is576/3,661/404 cells. Exact all-angle contact and final fidelity remain provisional.
+All34 native individual layers and12 model-origin views match across backends;
+54 native composites retain59 differing pixels and83/200 wider views retain2,739.
+Body143 overhang,146 lower-wheel registration, brick/window paint, wall cuts, hopper/
+hood rims, press metal and moving-child detail remain open. Final visual approvals:0.
+
+Services average60.004/60.002fps but retain949/574 intervals over20ms and55.080/25.678ms
+maxima; the matrix peaks at3,768,750,112 sampled bytes. Sustained arbitrary-world
+smooth60fps and long-duration/reload/multiple-viewport memory acceptance remain open.
+Evidence:`breadth-toy-factory-final-{audit,reconciliation,source-review,negative-controls}.json`
+and`breadth-toy-factory-press-occlusion-audit.json`.
+
+Public verified downloads remain fizzy`.16`. Continue bubble160…163, toffee164…166,
+sugar167…174, distinct climates, procedural children, infrastructure/effects and later
+catalogue-wide passes. Bubble source study reconciles25 visible layers, seven absences,
+96 climate comparisons and43 procedural states. Its two child studies remain isolated;
+ordinary34→33 cargo loads17/17, delivers, empties and returns after796 observed ticks.
+
 ## Fizzy desktop release verified — September27,15:15:45UTC
 
 Release`.16`at99c058219d9646a151309db0261bc86990844efb passes all eight hosted jobs

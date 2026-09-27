@@ -230,8 +230,17 @@ stamp offsets(0,+dy) become world-Z. All four original children must be bound be
 connected142…146 bodies use this path.4675 ground remains independently selectable.
 `--verify-toy-factory --running --benchmark-frames 9000` observes all selected children
 from the same actual capture on one unchanged industry tile. Supply the factory
-through ordinary cargo delivery; its idle frame0 alone cannot pass. The current
-factory artwork is an isolated study and does not yet add catalogue coverage.
+through ordinary cargo delivery; its idle frame0 alone cannot pass.
+
+The twelve provisional factory volumes cover seven body owners, four children and
+independent4675 soil; fourteen genuinely empty body slots remain unbound. In particular,
+144 owns the early blue tower while145 owns the completed tower, and holder4717 owns
+separate wall/front-shaft fragments. Forty-five factored components preserve the
+reviewed quarter-unit occupied-cell/material hashes. Static joined stages have no
+cross-owner cell overlap. Original frame30 completely occludes the duck under the
+press; frames29/31 retain partial compression. Exact contact and surface fidelity
+remain provisional. Both9,000-frame supplied-service observations capture all50 frames,
+and all1,624 preceding models retain their hashes. See`opentt3d/VOXEL_REVIEW.md`.
 
 Every named voxel gallery also exports`model-voxel-NAME-native.{pam,json}` at the
 fixed source-scale lens and actual model origin. The JSON`model_origin`keeps spatial

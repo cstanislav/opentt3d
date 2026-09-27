@@ -3,6 +3,17 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Toy-factory original child-cycle observations
+
+The28-control matrix peaks at3,768,750,112 sampled bytes. Two9,000-frame supplied
+services average60.004/60.002fps for OpenGL/Vulkan, with4.997/6.532ms p95 work. They
+retain949/574 intervals above20ms and55.080/25.678ms maximum intervals. Both observe
+all50 original ordered child frames on one unchanged tile/industry, after ordinary
+battery delivery. Concurrent tests, authoring, source audits and fallback controls
+remain part of this environment. Sustained arbitrary-world smoothness and long-duration/
+reload/multiple-viewport memory acceptance remain open. Source:
+`breadth-toy-factory-final-reconciliation.json`.
+
 ## Fizzy-drink palette and steel-regression observations
 
 The26-control matrix peaks at3,711,930,448 sampled bytes. Two600-frame live services

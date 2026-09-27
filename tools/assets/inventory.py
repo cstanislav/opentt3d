@@ -99,6 +99,12 @@ def inventory():
         industry["modelled_sprites"] = model.get("sprites", ["completed-table-sprite"]) if model else []
         industry["voxel_states"] = voxel_states("industries", industry["graphics"])
         industry["voxel_ground_states"] = voxel_states("industry_ground", industry["graphics"])
+        if industry["graphics"] == 143:
+            industry["procedural_children"] = [
+                {"name":name,"sprite":sprite,"voxel_states":voxel_states("infrastructure",sprite)}
+                for name,sprite in (("clay",4719),("robot_duck",4720),("stamp",4718),("holder",4717))]
+            industry["procedural_source_frames"] = 50
+            industry["procedural_source_note"] = "Original ordered completed frames and255 absences; conveyor+X and press-Z motion. Construction has no children. All four source/binding checks are linked to142..146 bodies;4675 ground remains independent."
         if 33 <= industry["graphics"] <= 38:
             industry["voxel_climates"] = ["temperate"]
             industry["missing_voxel_climates"] = ["arctic"]

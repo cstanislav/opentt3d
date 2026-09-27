@@ -10,16 +10,20 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite201/201, including original factory child motion, source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,624-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,636-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
-- [x] Factory143 child capture preserves the original50-frame order/absence sequence,
-  conveyor+X and press-Z motion. An isolated artwork study passes one unchanged
-  tile/industry's full cycle after ordinary supply delivery. Missing-holder fallback
-  retains all six independent grounds. Native model-origin and all-frame procedural
-  source comparisons are available; the twelve study volumes await integration.
+- [x] Factory142…147 adds twelve provisional volumes: seven body owners, four ordered
+  children and independent4675 ground. Coverage reaches160/175 primary definitions,
+  120 body owners and160 grounds. All28 frozen controls pass68 actual construction
+  layers, both full/empty cargo routes, climates, clipping and bundles. Both9,000-frame
+  cycles capture all50 original frames on one unchanged tile/industry after ordinary
+  supply delivery. All38 palettes,39 aliases,14 empty bodies,144 climate comparisons
+  and1,624 preceding hashes pass. Missing-holder fallback retains all six grounds.
+  Static joins have zero overlap; press compression, exact paint and backend pixel
+  differences remain provisional. All300 integrated Vulkan views match the prototype.
 
 - [x] Fizzy156…159 adds six hollow-can/glass-apparatus bodies and independent4676 soil,
   preserving eight empty body slots. Coverage reaches154/175 primary definitions,

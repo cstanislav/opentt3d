@@ -1,5 +1,36 @@
 # Implementation verification
 
+## Integrated toy-factory original states and supplied cycles
+
+At15:50:21UTC, twelve provisional volumes bring the catalogue to1,636 and primary
+industry coverage to160/175. All38 source palettes,39 aliases,14 empty bodies and
+144 climate comparisons pass. All twelve compacted prototypes and1,624 preceding
+models retain their occupied-cell/material hashes. Native201, asset136, harness12
+and the137-file presentation boundary pass. The frozen binary/catalogue/tool hashes
+and development app bundle agree throughout all28 background controls.
+
+Both backends capture68 construction layers and full17/17/empty0/17 trucks on the
+battery→factory and supplied factory→town-shop routes. Both9,000-frame services see
+all50 original ordered frames on tile51,35, industry0:29 clay,19 duck and50 stamp/
+holder appearances. Missing-holder rejection preserves the expected error; a separate
+completed floor control captures all six grounds with every connected body on fallback.
+Four climates, world atlas, tile picking,72 clipping views and app bundles pass.
+
+All300 integrated Vulkan gallery images match the prototype. All34 individual native
+layers and12 fixed-origin views agree across backends;54 native composites retain59
+differences and83/200 wider images retain2,739. Static stage joins have no intersecting
+cells. Source press occlusion fully hides frame30's104-pixel duck and partially hides
+29's clay/31's duck;576/3,661/404 voxel compression cells remain documented, with final
+all-angle contact and fidelity unapproved. Exact source registration/paint remains in
+`ASSET_REVIEW.md`. Final visual approvals:0. Successful captures compact908 images
+losslessly, saving1,199,370,310bytes and preserving all RGBA/header bytes and failures.
+
+Services average60.004/60.002fps but retain949/574 intervals above20ms; peak matrix
+memory is3,768,750,112 sampled bytes. These are state-coverage observations with
+concurrent authoring/tests. Evidence:`build-macos/breadth-toy-factory-final-{audit,
+reconciliation,source-review,registration-audit,negative-controls}.json` and the
+prototype/backend gallery comparisons. Sustained smooth60fps remains open.
+
 ## Fizzy desktop release independently verified
 
 At15:15:45UTC, release`.16`at99c058219d9646a151309db0261bc86990844efb has eight passing

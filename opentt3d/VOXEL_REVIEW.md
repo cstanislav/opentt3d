@@ -16,6 +16,22 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Toy-factory142…147:**twelve provisional volumes retain seven construction/completed
+  body owners, four original ordered children and independent4675 soil. Fourteen empty
+  body slots stay absent; construction144 and completed145 have distinct ownership.
+  All38 palettes,39 aliases,144 climate comparisons and1,624 preceding model hashes
+  pass. Forty-five compact components preserve the prototype exactly. All28 controls
+  pass68 actual construction layers, full/empty input/output, climates, clipping,
+  bundles and both9,000-frame same-tile50-frame cycles. Missing-holder fallback retains
+  all six grounds. Static joins have no cell overlap. Original press occlusion fully
+  hides the duck at frame30, with partial compression at29/31;576/3,661/404 intersecting
+  cells and exact all-angle contact remain recorded. All300 Vulkan prototype views
+  agree. All34 native layers and12 model-origin views agree across backends;54 native
+  composites retain59 differing pixels and83/200 wider views retain2,739. Body143's
+  overhang,146's lower wheel, brick/window paint, wall cuts, hood/hopper rims, press
+  metal and moving-child detail remain provisional. Final visual approvals:0.
+  Evidence:`build-macos/breadth-toy-factory-final-*` and source press-occlusion audit.
+
 - **Fizzy156…159:**seven provisional volumes retain the hollow can, open glass
   chambers/circulation tubing, liquid, leaning hollow straw and independent4676 soil.
   All eight absent body states remain empty. All24 palettes,26 aliases,96 climate
