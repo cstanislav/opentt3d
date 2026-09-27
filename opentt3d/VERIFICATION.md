@@ -1,5 +1,19 @@
 # Implementation verification
 
+## Battery desktop package audit
+
+At11:38:33UTC, release`.12`at37dc38aae1eaa77f73609d6efe441f98b4dca211 passes all
+eight hosted jobs. Independent verification reconciles19 public attachments,18
+checksums,2,063 exact-commit source files and six embedded package commits. All
+catalogues contain1,590 identical models apart from trailingWindowsCRLF. Three
+downloaded Mac startup/save controls and architecture/signature/dependency/minimum15.0
+audits pass. Seven hosted graphical controls pass72 clipping views; Windows x64/x86
+native load/save passes. Reviewed ARM/Intel software-OpenGL captures have zero black
+world pixels and nine differences from matched Vulkan. Linux's900-frame electric
+journey passes support/collector coverage at1.711fps and2,304,483,328 sampled bytes.
+Sustained performance acceptance remains open. Evidence:
+`build-macos/playable-release12-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Cola construction, compact hollow profile and transparent-source gallery control
 
 At11:18:26UTC, all24 frozen background controls pass on both backends:16 actual

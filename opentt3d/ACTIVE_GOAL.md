@@ -1,5 +1,29 @@
 # Active extended development goal
 
+## Battery desktop release verified — September27,11:38:33UTC
+
+Release`.12`at37dc38aae1eaa77f73609d6efe441f98b4dca211 passes all eight hosted jobs.
+Independent public checks verify19 attachments,18 checksums,2,063 exact-commit source
+files and every embedded package commit. All six catalogues contain the same1,590
+models; Windows differs only by its trailingCRLF. Mac architecture/signature/dependency/
+minimum15.0 audits and three downloaded startup/save controls pass. Seven hosted
+graphical controls pass72 clipping views, and Windows x64/x86 native load/save passes.
+
+Reviewed ARM/Intel software-OpenGL images contain zero black world pixels and differ
+from matched Vulkan at nine pixels. Linux's900-frame support/collector journey passes
+at1.711fps under llvmpipe and2,304,483,328 peak sampled bytes. These hosted observations
+do not establish sustained performance acceptance. Public instructions now link to`.12`.
+Evidence:`playable-release12-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Cola is committed/pushed as4caddec41; exact-tag release`.13`is building.
+
+Toy-shop's separate eight-volume increment reaches1,601 working models and is under
+frozen26-control acceptance. Its27 palettes,27 aliases, five genuine empty body states,
+96 climate comparisons and1,593 preceding hashes pass. A real battery28→factory31→
+town-shop30 chain supplies17/17 batteries, then delivers17/17 toys and returns both
+trucks. The first unsupplied output route times out; the first supplier site violates
+the original14-tile conflict distance. Both failures remain. A20-tile supplier spacing
+preserves the ordinary funding restriction and passes input/output service requirements.
+
 ## Cola-well construction and service verified — September27,11:18:26UTC
 
 Three provisional cola137 bodies reach1,593 models and138/175 primary industry
