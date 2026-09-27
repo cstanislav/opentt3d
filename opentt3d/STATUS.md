@@ -10,11 +10,23 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite205/205, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,685-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite138/138 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,689-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite139/139 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Four independent climate-ground volumes add Arctic/tropical soil, separate
+  Arctic/tropical recessed oil-well grounds and Toyland blue-grey paving. All1,685
+  preceding models remain hash-identical.480 explicit bindings cover336 original
+  3924/2173 states and144 source-identical Toyland2022 aliases. Full16×16 footprints,
+  supported quarter-unit cells and sealed well bottoms preserve independent machinery.
+  All62 controls and eight missing-layer checks pass:168 live layer selections,
+  full21/21 and empty0/21 oil, delivery/return, every30/31/32 animation frame, farm
+  regressions, four climates, clipping, picking and bundles.2,640 prototype and3,176
+  temperate views agree exactly;720 native layers and12 model-origin views agree
+  across backends.36/196 joined views retain40 differing pixels and1,382/1,712 wider
+  views retain352,322. Source soil grain, paving/strip/rim paint and registration remain
+  provisional. Native205, asset139, harness12 and137-file presentation boundary pass.
 - [x] Arctic farm33…38 adds twelve provisional volumes and44 explicit layer bindings,
   retaining all1,673 preceding hashes and four genuinely empty first-stage bodies.
   Source-structured farmhouses, supported glazing/stairs, independently oriented hay
@@ -25,7 +37,7 @@ This file records implemented and verified work, not promises of completeness.
   All408 prototype/408 temperate-regression views and80 native backend views agree;
   161 wider views retain11,054 differing pixels. Native205, asset138 and137-file
   boundary checks pass. Final source fidelity remains
-  provisional; independently painted non-temperate industrial grounds remain in study.
+  provisional; the next climate-ground increment is recorded above.
 - [x] Arctic forest16/17 adds six provisional volumes with explicit16…19 body/ground
   states, retaining all1,667 preceding hashes. Four growth stages keep nine rooted
   conifers; the six-tier log pile, four stumps and independent snow/thaw ground are
@@ -370,8 +382,9 @@ This file records implemented and verified work, not promises of completeness.
 
 - [x] Reviewed development catalogue1,247 JSON volumes,110 house definitions with body or ground geometry,109 independent body/88 ground definitions,62 tree families/434 lifecycle volumes and256 voxel vehicle definitions. Industries have54 body definitions and58 independent ground definitions; airports have21 body definitions and3 independent grounds. No final approvals.
 - [x] Oil-well29…32, temperate farm33…38, bank58/59, food60…63, paper64…71, plantations116/117 and waterworks118…120 preserve independent grounds, source-empty construction slots and source-permitted repeated artwork. The80 accepted hidden actual-state runs pass240 grounds,198 visible bodies and42 deliberate empty body states, including both food climates and both backends; peak2,704,411,720bytes.
-- [ ] Independent Arctic farm33…38 volumes remain missing. Source review finds40/44 layers differ, including a different farmhouse structure. The eight earlier Arctic binding runs are revoked as climate-coverage evidence; the current renderer retains supplied Arctic ground/body artwork instead of temperate voxel or legacy profiles.
-- [ ] The expanded323-pair industry climate audit also finds snowy Arctic forest16/17 replacements and distinct soil3924/oil-well2173 grounds. Those layers now retain their supplied source outside temperate; unchanged coal/power/refinery/pump bodies remain independently voxel-bound. Complete climate-aware industry coverage is still missing.
+- [x] Independent Arctic farm33…38 volumes are integrated at1,685 models. The initial source review found40/44 differing layers and revoked eight earlier binding runs; twelve new volumes now pass the independent44-layer/88-live-selection review recorded above. Source-fidelity reservations remain open.
+- [x] Snowy Arctic forest16/17 replacements are integrated at1,673 models, preserving original harvest/regrowth and independently owned snow/litter. The initial323-pair source audit remains retained.
+- [ ] Distinct non-temperate soil3924/oil-well2173 grounds are undergoing separate four-volume integration. Unchanged coal/power/refinery/pump bodies keep independent ownership. Complete climate-aware industry coverage remains open.
 - [x] Low airport terminal63/64/69 retains an open L-plan courtyard, supported parapets, recessed entry, original fence ownership and separately opaque2634 apron. Both backend galleries pass96 mesh and72 ground/body visibility views plus exact atlas/picking; all27 climate-source layer pairs match exactly. Source review fixed a perpendicular-pier paint brush that covered the side windows. Fine roof/window/paving fidelity remains open.
 - [x] All eight9,000-frame curved-route runs pass for electric locomotives23…26: actual traversed corner-track bits, station/flat/grade/bridge/tunnel support and collector contact onGL/Vulkan. Peak2,816,019,552bytes. This is functional contact evidence, not smooth-frame-time approval.
 - [x] All20 loaded-route support observations now pass, including the three remaining Toyland engine6/wagon52 cases. Both backends also observe all six original oil-well pump volumes through graphics30/31/32, and helicopter254 passes120 actual54-unit oil-rig deck supports plus every rotor state/restart. Swept-rotor contextual clearance and water/light phases remain open.

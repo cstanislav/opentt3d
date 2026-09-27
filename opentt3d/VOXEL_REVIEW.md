@@ -16,6 +16,19 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Climate industry grounds3924/2173:**four provisional volumes bring the catalogue
+  to1,689 while preserving all1,685 preceding hashes. Independent Arctic/tropical
+  soil and oil-well paint and eight-panel Toyland blue-grey paving retain full16×16
+  ownership, supported quarter-unit colour cells, top datum0 and sealed recessed mouths.
+  336 explicit source states plus144 verified Toyland2022 aliases retain separate body
+  owners.62 controls reconcile168 live layer selections, full/empty oil, accepted service,
+  every oil animation frame and farm regressions; eight missing-layer controls pass.
+  2,640 prototype/3,176 temperate views agree;732 isolated native/backend views agree.
+  Joined layouts retain40 differing pixels across36 views;1,382 wider views retain352,322.
+  Source soil flecks, rim/strip shapes, paving contours/bands and registration remain
+  provisional. Existing Toyland2173 geometry/paint remains exactly unchanged and retains
+  its earlier64×33 native bounds. Original sources, failed studies and audit corrections
+  remain in evidence. Final visual approvals:0.
 - **Arctic farm33…38:**twelve provisional volumes preserve source-structured white/blue
   farmhouse rooms, external supported landing/stairs, recessed glazing and the north
   annex; open hay shelters retain the Arctic orientation and independent raised hay.

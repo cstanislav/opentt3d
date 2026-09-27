@@ -152,9 +152,15 @@ def inventory():
             elif 164 <= industry["graphics"] <= 174 and sprite == 3981:
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted grass; unchanged toffee/sugar bodies and children remain bound"})
             elif sprite in (3924,2173):
-                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
+                explicit = [climate for index,climate in enumerate(("temperate","arctic","tropic","toyland"))
+                            if index and index*16+stage in ground_states]
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate",*explicit],
+                                           "missing_voxel_climates":[climate for climate in ("arctic","tropic","toyland") if climate not in explicit],
+                                           "source_note":"Explicit climate states retain independently painted grounds or audited exact source aliases; body ownership stays independent"})
             elif sprite in (2022,2077,2257,2260,2261,4061):
-                restricted_grounds.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":["toyland"],"other_climates":"retain supplied Toyland source ground"})
+                explicit = 48+stage in ground_states
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":[] if explicit else ["toyland"],
+                                           "toyland_source":"explicit independently authored or exact source-alias ground" if explicit else "retain supplied Toyland source ground"})
         if restricted_grounds:
             industry["ground_climate_restrictions"] = restricted_grounds
         restricted_bodies = []
@@ -243,7 +249,8 @@ def main():
     print(f"Industry tile definitions: {len(data['industry_tiles'])}; authored: {sum(i['authored_profile'] for i in data['industry_tiles'])}; voxel bodies: {sum(bool(i['voxel_states']) for i in data['industry_tiles'])}; voxel grounds: {sum(bool(i['voxel_ground_states']) for i in data['industry_tiles'])}")
     missing_arctic = [i["graphics"] for i in data["industry_tiles"] if "arctic" in i.get("missing_voxel_climates",[])]
     print(f"Industry definitions still missing complete explicit Arctic body/ground artwork: {missing_arctic}")
-    print("Industry grounds3924/2173 retain supplied source layers outside temperate; unchanged bodies keep independent voxel ownership")
+    climate_grounds = [r for industry in data["industry_tiles"] for r in industry.get("ground_climate_restrictions",[]) if r["sprite"] in (3924,2173)]
+    print(f"Industry grounds3924/2173: {len(climate_grounds)} original layers; missing explicit non-temperate layer states: {sum(len(r['missing_voxel_climates']) for r in climate_grounds)}; independent body ownership retained")
     print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound body or ground-only: {sum(bool(a['bound_voxel_states']) for a in data['airport_tiles'])}; body owners: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
     print(f"Independently bound voxel airport grounds: {sum(bool(a['voxel_ground_states']) for a in data['airport_tiles'])}")
     print(f"Depot families: {len(data['depots'])}; voxel directions: {sum(len(d['voxel_directions']) for d in data['depots'])}; full four-direction families: {sum(len(d['voxel_directions']) == 4 for d in data['depots'])}")

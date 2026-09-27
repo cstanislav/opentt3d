@@ -53,10 +53,13 @@ function IndustryFixture::Start()
 				break;
 			}
 		}
+		/* Original oil refineries require a site near the map edge. Test the
+		 * destination through the public API before committing the producer. */
+		local coastal_destination = service && AIController.GetSetting("review_destination") == 4;
 		local width = service ? 32 : 8, height = service ? 12 : 8;
 		if (service && AIController.GetSetting("review_supply_industry") >= 0 && AIController.GetSetting("review_destination_town_site") == 0) width = 52;
-		for (local y = water ? 8 : 32; !town_site && y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
-			for (local x = water ? 8 : 32; x < AIMap.GetMapSizeX() - width - 8; x += 8) {
+		for (local y = water || coastal_destination ? 8 : 32; !town_site && y < AIMap.GetMapSizeY() - height - 8 && industry < 0; y += 8) {
+			for (local x = water || coastal_destination ? 8 : 32; x < AIMap.GetMapSizeX() - width - 8; x += 8) {
 				local tile = AIMap.GetTileIndex(x, y);
 				if (water) {
 					if (!AITile.IsWaterTile(tile)) continue;
@@ -69,6 +72,11 @@ function IndustryFixture::Start()
 						local ground = AIMap.GetTileIndex(x + dx, y + dy);
 						if (AITile.HasTreeOnTile(ground)) this.Require(AITile.DemolishTile(ground), "clear a tree from the ordinary depot review site");
 					}
+				}
+				if (coastal_destination) {
+					local allowed;
+					{ local test = AITestMode(); allowed = AIIndustryType.BuildIndustry(4,AIMap.GetTileIndex(x+22,y+2)); }
+					if (!allowed) continue;
 				}
 				if (!AIIndustryType.BuildIndustry(type, AIMap.GetTileIndex(x + 2, y + 2))) continue;
 				this.x = x;

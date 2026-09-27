@@ -1,5 +1,31 @@
 # Active extended development goal
 
+## Climate-ground integration verified — September27,22:00:04UTC
+
+The four-volume increment reaches1,689 while preserving all1,685 preceding source
+entries and compiled hashes.480 explicit bindings cover336 climate3924/2173 states
+and144 exact Toyland2022 aliases. Grounded quarter-unit geometry retains full playable
+footprints and sealed oil-well recesses. All62 frozen background controls, eight
+missing-layer/linked-fallback checks,168 actual construction-layer selections,
+full21/21 and empty0/21 oil, accepted delivery/return, all30/31/32 frames, farm regressions,
+four climates, clipping, picking and bundles pass. Native205, asset139, harness12 and
+137-file presentation boundary pass. The completed-coal focus and animation-versus-
+construction audit failures remain retained with their corrected source-based checks.
+
+2,640 prototype and3,176 temperate regression views agree exactly.720 native layers
+and12 model-origin views agree across backends;36 joined views retain40 differing
+pixels and1,382 wider views retain352,322. Registered source, joined coal/power/oil and
+street reviews retain soil grain, oil rim/strip, paving panel and registration reservations.
+Final visual approvals:0. Peak sampled memory is3,659,010,344bytes; service averages
+near60fps retain146…225 intervals above20ms.12,036 successful captures compact losslessly,
+saving13,545,731,719bytes with zero errors. Sources, failures, saves and metadata remain.
+
+Verified public links use`.22`; release the next exact-commit preview after committing
+this increment. Toyland airport's twelve isolated material variants and three ordinary
+service endpoints are prepared; explicit runtime selection and native reviews remain
+next. Continue catalogue-wide climate/child/infrastructure/effect coverage before later
+fidelity passes, preserving the complete performance/gameplay objective.
+
 ## Arctic farm packages independently verified — September27,21:42:56UTC
 
 Release`.22`atfa0d5f90a422733da058bec70352b36d843e5033 passes all eight jobs in

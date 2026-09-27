@@ -3,6 +3,22 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Climate-ground oil services and farm regressions
+
+The62-control matrix peaks at3,659,010,344 sampled bytes. Four1,800-frame oil services
+average60.000…60.011fps, with4.710…6.114ms p95 work,152…225 intervals above20ms and
+22.836…24.021ms maximum intervals. Both climates render full21/21 and empty0/21 oil
+and capture every original30/31/32 animation frame. The two1,800-frame farm regressions
+average60.005/60.004fps, with146/203 intervals above20ms and22.770/23.649ms maxima.
+Concurrent source review, fixture generation, missing-layer controls and package audits
+remain part of this environment. These results leave sustained arbitrary-world smoothness
+and long-duration/reload/multiple-viewport memory acceptance open. Source:
+`breadth-ground-climates-final-reconciliation.json`.
+
+Release`.22`Linux llvmpipe captures all six train support states and collector contact
+at1.699fps with2,420,404,224 peak sampled bytes. This is functional package evidence;
+it does not meet the60fps target.
+
 ## Arctic farm service and forest-regression observations
 
 The26-control matrix peaks at3,832,201,216 sampled bytes. Two1,800-frame farm services

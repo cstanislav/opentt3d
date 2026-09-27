@@ -4,7 +4,7 @@ class IndustryFixtureInfo extends AIInfo {
 	function GetName()        { return "OpenTT3D Industry Fixture"; }
 	function GetShortName()   { return "3DIF"; }
 	function GetDescription() { return "Fund an industry and observe ordinary construction using the public NoAI API."; }
-	function GetVersion()     { return 7; }
+	function GetVersion()     { return 8; }
 	function GetAPIVersion()  { return "15"; }
 	function GetDate()        { return "2026-09-27"; }
 	function CreateInstance() { return "IndustryFixture"; }

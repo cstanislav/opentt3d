@@ -8,6 +8,41 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_industry_climate_grounds_keep_recessed_mouths_full_footprints_and_source_aliases(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        grounds = source["bindings"]["industry_ground"]
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",(root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0])
+        for index,row in enumerate(rows):
+            sprite = int(row.split(",")[0].split("|",1)[0].strip(),0)
+            if sprite not in (3924,2173):
+                continue
+            graphics,stage = divmod(index,4)
+            states = grounds[str(graphics)]
+            for climate in (1,2,3):
+                self.assertIn(str(climate*16+stage),states,"A climate ground lost an original construction/animation slot")
+            if sprite == 3924:
+                self.assertEqual(states[str(16+stage)],states[str(32+stage)],"Only the exactly matching Arctic/tropical soil may share artwork")
+                self.assertNotEqual(states[str(48+stage)],states[str(stage)])
+            else:
+                self.assertEqual(states[str(48+stage)],states[str(stage)],"Toyland's oil-well ground exactly aliases temperate2173")
+                self.assertNotEqual(states[str(16+stage)],states[str(32+stage)])
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("industry_climate_")}
+        source["bindings"] = {}
+        result = compile_catalogue(source)
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z):result["materials"][material-1] for x,y,z,n,material in model["runs"] for i in range(n)}
+            self.assertEqual([model["size"][i]*model["cell_size"][i] for i in (0,1)],[16,16])
+            self.assertEqual({(x,y) for x,y,z in cells if z == 0},{(x,y) for x in range(64) for y in range(64)})
+            self.assertEqual(max(model["origin"][2]+(z+1)*model["cell_size"][2] for x,y,z in cells),0,"Independent soil cannot protrude into unchanged machinery")
+            self.assertTrue(all((x,y,z-1) in cells for x,y,z in cells if z > 0),"A well rim or substrate floats")
+            if "_oil_ground" in name:
+                self.assertTrue(all((x,y,1) not in cells and (x,y,0) in cells for x in range(48,53) for y in range(28,33)),"The well mouth is a real recess with a sealed bottom")
+            if name.endswith("toyland_paving"):
+                top = [colour[5] for colour in cells.values()]
+                self.assertLess(sum(c in (99,100,101) for c in top),len(top)//20,"Source paving has sparse grass flecks, not green stone panels")
+                self.assertGreater(sum(c in (18,19,20) for c in top),len(top)//20,"The original panels retain their blue-grey paint")
+
     def test_gold_layout_preserves_empty_bodies_cross_owner_channels_roofs_and_wheel_poses(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
@@ -81,7 +116,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("copper_") or name in ("mine_ground_site","mine_ground_bare","print_site_ground")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(47,52)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in range(47,52)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
@@ -179,7 +215,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("steel_") or name in ("mine_ground_site","mine_ground_bare")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(52,58)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in range(52,58)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         for name,model in result["models"].items():
@@ -274,7 +311,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("print_") or name == "mine_ground_site"}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(43,47)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in range(43,47)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
@@ -330,7 +368,8 @@ class VoxelCompilerTests(unittest.TestCase):
                 self.assertEqual(source["bindings"][category][str(graphics)],source["bindings"][category][str(graphics-82)])
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("factory_") or name in ("mine_ground_bare","mine_ground_site")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(39,43)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in range(39,43)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
@@ -382,7 +421,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("lumber_") or name in ("mine_ground_bare","mine_ground_site")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(125,129)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in range(125,129)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
@@ -597,7 +637,8 @@ class VoxelCompilerTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith(("bank_","mine_ground_"))}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in (58,59)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in (58,59)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         body_palettes = {
@@ -648,7 +689,8 @@ class VoxelCompilerTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith(("food_","mine_ground_"))}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(60,64)}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if int(key) in range(60,64)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         def cells(name):
@@ -804,7 +846,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("paper_") or name in ("mine_ground_bare","mine_ground_site")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 64 <= int(key) <= 71}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if 64 <= int(key) <= 71}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         table = (root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0]
@@ -979,7 +1022,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("oilwell_") or name in ("mine_ground_bare","mine_ground_site")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 29 <= int(key) <= 32}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if 29 <= int(key) <= 32}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         table = (root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0]
@@ -3318,7 +3362,9 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_refinery_vessels_frames_and_pipes_keep_source_states_openings_and_ground_contact(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("refinery_") or name == "mine_ground_site"}
-        source["bindings"] = {category:{graphics:states for graphics,states in source["bindings"][category].items() if 18 <= int(graphics) <= 23} for category in ("industries","industry_ground")}
+        source["bindings"] = {category:{graphics:{state:name for state,name in states.items() if int(state) < 4}
+                                      for graphics,states in source["bindings"][category].items() if 18 <= int(graphics) <= 23}
+                              for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         palettes = {
             (18,0): {1,2,3,76,123}, (18,1): set(range(2,14)) | set(range(198,206)),
@@ -3484,7 +3530,9 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_sawmill_construction_roofs_and_timbers_have_grounded_parts_and_source_palettes(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("sawmill_") or name == "mine_ground_site"}
-        source["bindings"] = {category:{graphics:states for graphics,states in source["bindings"][category].items() if 11 <= int(graphics) <= 15} for category in ("industries","industry_ground")}
+        source["bindings"] = {category:{graphics:{state:name for state,name in states.items() if int(state) < 4}
+                                      for graphics,states in source["bindings"][category].items() if 11 <= int(graphics) <= 15}
+                              for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         palettes = {
             (11,0): {1,2,3}, (11,1): set(range(1,7)) | set(range(104,111)), (11,2): set(range(1,13)) | set(range(104,110)),
@@ -3596,8 +3644,9 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_mine_ground_keeps_playable_tile_coverage_and_matching_coal_contact(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name: model for name, model in source["models"].items() if name.startswith("mine_ground_")}
-        source["bindings"] = {"industry_ground": {graphics:states for graphics,states in source["bindings"]["industry_ground"].items()
-                                                 if all(name in source["models"] for name in states.values())}}
+        source["bindings"] = {"industry_ground": {graphics:{state:name for state,name in states.items() if int(state) < 4}
+                                                 for graphics,states in source["bindings"]["industry_ground"].items()
+                                                 if all(name in source["models"] for state,name in states.items() if int(state) < 4)}}
         result = compile_catalogue(source)
         volumes = {}
         for name, model in result["models"].items():

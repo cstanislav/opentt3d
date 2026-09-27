@@ -1,5 +1,35 @@
 # Implementation verification
 
+## Climate-ground integration and retained-source aliases
+
+At22:00:04UTC, all62 background controls and eight independent/linked missing-layer
+checks pass against the frozen1,689-model catalogue.168 actual construction-layer
+selections reconcile, including66 explicit climate grounds. Arctic/tropical oil11→4
+services use original engine132, full21/21 and empty0/21 oil, acceptance8 and return
+after768/778 observation ticks. Graphics30/31/32 each observe4/2/4 distinct original
+sprite/frame selections. Two farm-service regressions, four climates, clipping,
+picking and bundles pass. A retained completed-coal focus failure requested idle0
+after animation selected1; both targeted unchanged-save replays pass. The first audit
+confused construction with the original independent animation table frame; source-spec
+and sprite-driven reconciliation now checks both fields.
+
+All1,685 preceding source entries and compiled hashes remain unchanged. Four new
+volumes retain supported quarter-unit cells, complete16×16 footprints, top datum0
+and sealed recessed well bottoms.480 explicit bindings cover336 climate3924/2173
+states and144 Toyland2022 aliases. All336 native climate sidecars reconcile.2,640
+prototype views and3,176 temperate regression views agree exactly. Across backends,
+720 native layers and12 model-origin views agree;36/196 joined views retain40 pixels
+and1,382/1,712 wider views retain352,322 differing pixels. Fifteen Toyland2173 native
+aliases are exactly unchanged from the preceding temperate images and registration.
+Two extra oilwell_ controls review their existing joined layouts. Registered source,
+coal/power/oil layouts and street views were reviewed; grain, paving panels, oil rims,
+foot strips and source-registration fidelity remain provisional. Final approvals:0.
+Native205, asset139, harness12 and137-file presentation-boundary checks pass. Evidence:
+`build-macos/breadth-ground-climates-final-{reconciliation,source-review}.json`.
+12,036 successful captures compact losslessly, saving13,545,731,719bytes with zero
+errors. Originals, failures, screenshots, saves and registration metadata remain;
+`build-macos/review-compaction-20260927T220144240652Z.json` records every image hash.
+
 ## Arctic farm`.22`public desktop package audit
 
 At21:42:28UTC, workflow36350226602 passes all eight jobs on its first attempt at
