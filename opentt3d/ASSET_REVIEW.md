@@ -4,6 +4,28 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Cotton-candy129/130: four roots and original harvest state (September27)
+
+- Source2072…2075 contains four growing pink crowns on cyan stems.2076 depicts four
+  bare standing sticks in all four130 slots.2077 is independent blue/grey checker soil.
+  Every one of48 non-native-climate/layer comparisons differs despite identical sprite
+  numbers; the new cotton guard is owner-specific and precedes temperate acceptance.
+- Six provisional volumes preserve those roots, all16 palettes and18 original aliases.
+  The first all-state matrix passes but joined review catches nearly uniform pale crowns.
+  Narrower painted highlights improve head separation without changing any occupied cell;
+  mature pale168/169 coverage is54.5% versus48.6% in the source. Exact shoulders/tips,
+  coral placement, grain and one-pixel registration remain open. Final approvals stay0.
+- Both fresh9,000-frame backend observations capture the unchanged industry tile's
+  mature129→harvested130→129 stages0/1/2/3. Real cargo loading, accepted delivery, empty
+  return, construction and climate checks pass. Both joined layouts and street views are
+  reviewed. Two of24 native captures differ by one pixel across backends; the full168-image
+  comparison retains84 differing images/4,908 pixels. All original failures remain.
+- Sweet-factory131…134 is the next gallery prototype: original gift wrapping and folded
+  bow, partial unwrapping, round swirled roof, separate striped poles and recessed bays.
+  The four131 bodies are intentionally empty. Distinct Toyland2022 ground has beige grain
+  and red/purple/yellow patches; it cannot alias temperate soil. Battery135/136 and256
+  additional Toyland procedural-child frames are separately inventoried.
+
 ## Diamond mine91…99: source cuts and upright hoist (September27)
 
 - The3×3 mine retains21 empty body slots,10 distinct body volumes and16 new grounds.

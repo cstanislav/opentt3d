@@ -3,6 +3,16 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Cotton-candy harvest/regrowth observations
+
+The24-control revised-paint matrix peaks at3,260,468,704 sampled bytes. Both9,000-frame
+cotton cycles average60.003fps for OpenGL/Vulkan, with4.847/5.282ms p95 work. They still
+contain838/681 intervals above20ms,20.898/20.506ms p95 intervals and46.084/81.474ms maxima.
+These150-second background observations establish original-state cycle coverage but
+retain visible scheduling outliers. Isolated sustained arbitrary-world throughput and
+long-duration/reload/multiple-viewport memory acceptance remain open. Earlier first-matrix
+and timber-regression timings remain retained. Source:`breadth-cotton-reviewed-reconciliation.json`.
+
 ## Diamond mine observations
 
 The24-control upright-hoist matrix peaks at3,229,666,784 sampled bytes. Two600-frame

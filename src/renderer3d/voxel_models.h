@@ -24,12 +24,14 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
  * ground3924 and oil-well ground2173 also have independently painted climate
  * replacements despite retaining the same source numbers. Toyland additionally
  * replaces bare soil2022, forest2077, rig4061, gold pools2257/2260/2261,
- * rig bodies26..28 and paper2206.
+ * rig bodies26..28 and paper2206. Cotton-candy129/130 uses its distinct Toyland
+ * replacements of2072..2077, never the other climates' forest artwork.
  * Body ownership is
  * independent, so an unsupported ground need not hide an unchanged body. */
 inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, bool ground = false, SpriteID sprite = 0)
 {
 	if (climate >= 4) return false;
+	if (graphics == 129 || graphics == 130) return climate == 3;
 	if (climate == 0) return true;
 	if (graphics == 16 || graphics == 17 || (graphics >= 33 && graphics <= 38)) return false;
 	if (ground) return sprite != 3924 && sprite != 2173 && (climate != 3 || (sprite != 2022 && sprite != 2077 && sprite != 4061 && sprite != 2257 && sprite != 2260 && sprite != 2261));

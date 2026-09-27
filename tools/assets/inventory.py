@@ -107,11 +107,16 @@ def inventory():
             industry["voxel_climates"] = ["temperate"]
             industry["missing_voxel_climates"] = ["arctic"]
             industry["climate_source_note"] = "Arctic source replaces both ground and trees with snowy artwork; independent voxel volumes remain missing."
+        if industry["graphics"] in (129,130):
+            industry["voxel_climates"] = ["toyland"]
+            industry["climate_source_note"] = "Cotton-candy crowns, bare sticks and checker soil replace forest2072..2077 in Toyland; other climates retain independently supplied artwork."
         restricted_grounds = []
         for stage in industry["voxel_ground_states"]:
             # Colour modifiers belong to sprite rendering, not the source ID.
             sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[0].split("|",1)[0].strip(),0)
-            if sprite in (3924,2173):
+            if industry["graphics"] in (129,130):
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted forest ground"})
+            elif sprite in (3924,2173):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
             elif sprite in (2022,2077,2257,2260,2261,4061):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":["toyland"],"other_climates":"retain supplied Toyland source ground"})

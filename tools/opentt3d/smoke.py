@@ -131,7 +131,7 @@ def main():
     parser.add_argument("--verify-crossing-transitions", action="store_true", help="Require both actual open/barred states during a running viewport benchmark")
     parser.add_argument("--verify-airport-animation", nargs="+", type=int, choices=range(74), metavar="GFX", help="Observe every actual upstream animation frame of the selected voxel airport tiles")
     parser.add_argument("--verify-industry-animation", nargs="+", type=int, choices=range(175), metavar="GFX", help="Observe every distinct original sprite frame of the selected voxel industry animations")
-    parser.add_argument("--verify-forest-cycle", action="store_true", help="Observe one unchanged actual forest tile dispatch logs and pass through every original regrowth state")
+    parser.add_argument("--verify-forest-cycle", action="store_true", help="Observe one unchanged actual timber/cotton forest tile dispatch cargo and pass through its harvested and every original regrowth state")
     parser.add_argument("--verify-power-sparks", action="store_true", help="Observe all six actual voxel power-station spark children on one unchanged industry tile")
     parser.add_argument("--verify-house-lift", action="store_true", help="Observe at least eight actual positions of one moving voxel office lift")
     parser.add_argument("--verify-radio-beacons", action="store_true", help="Observe both original blinking palette entries on one emitted voxel radio tower")
@@ -812,7 +812,7 @@ server_advertise = false
             if args.verify_power_sparks and "voxel power-station spark verification passed:" not in text:
                 raise RuntimeError("A single actual power-station tile did not render all six original spark children; inspect run.log")
             if args.verify_forest_cycle and "voxel forest cycle verification passed:" not in text:
-                raise RuntimeError("A single unchanged forest tile did not render dispatched logs and every original regrowth state; inspect run.log")
+                raise RuntimeError("A single unchanged forest tile did not render its harvested and every original regrowth state; inspect run.log")
             if args.verify_voxel_cargo is not None and f"voxel vehicle cargo verification passed: engine {args.verify_voxel_cargo}," not in text:
                 raise RuntimeError("A single voxel vehicle did not render both actual empty and full-capacity states; inspect run.log")
             if args.verify_train_collectors is not None and f"voxel train collector observation passed: engine {args.verify_train_collectors} " not in text:

@@ -10,10 +10,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,569-volume asset/compiler/schema suite131/131 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,575-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite131/131 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Cotton129/130 adds six provisional volumes, bringing primary industry coverage
+  to131/175 definitions,95 body owners and131 independent grounds. Four growth states,
+  harvested bare sticks and checker soil retain all16 palettes/18 aliases and distinct
+  Toyland source guards. Twenty-four fresh frozen controls pass, including16 actual
+  construction-layer selections, loaded/empty cargo, bundles and both unchanged-tile
+  harvest/regrowth cycles. Timber regressions and all1,569 preceding models agree.
+  Exact crown registration/paint remains provisional;44 primary definitions remain.
 
 - [x] Diamond91…99 adds26 provisional volumes and brings primary industry coverage
   to129/175 definitions,93 body owners and129 grounds. All21 empty body states and
@@ -21,7 +29,7 @@ This file records implemented and verified work, not promises of completeness.
   shelter; an earlier leaning-frame revision is retained. Twenty-four frozen controls
   pass102 actual construction-layer selections, four climates, full/empty diamond
   service and bundles. All1,543 previous models agree. Exact rock/source registration,
-  paint and platform detail remain provisional; the46 Toyland definitions are next.
+  paint and platform detail remain provisional; this checkpoint precedes cotton.
 
 - [x] Apple's software OpenGL missing-triangle defect is reproduced and repaired
   locally with explicit homogeneous clipping. Five frozen controls, three package
@@ -61,8 +69,8 @@ This file records implemented and verified work, not promises of completeness.
   Linux x86-64 packages in release`.9`. Every hosted job passes. All19 public assets,
   18 checksum entries,2,060 exact-commit source files and all six embedded package
   commits are verified. Mac signatures/dependencies/minimum15.0 and published local
-  launches pass. Hosted ARM software OpenGL retains a visible triangular-region
-  defect; Windows GPU/input and ARM64 native execution remain open.
+  launches pass. Hosted ARM software OpenGL passes the repaired clipping gate and
+  reviewed screenshots; Windows GPU/input and ARM64 native execution remain open.
 
 - [x] Gold72…88 adds52 provisional volumes and82 independent body/ground layers,
   preserving54 empty bodies, the three original wheel poses, cross-owner roof/trough

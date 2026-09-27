@@ -16,6 +16,23 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Cotton-candy129/130:**six source-specific volumes retain four growing pink crowns,
+  original cyan root centres, four bare standing sticks after dispatch and independent
+  blue/grey checker soil. The shared2072…2077 sprite numbers conceal different source
+  artwork in every non-native climate; owner-specific guards preserve that distinction.
+  All16 palettes,18 aliases and48 climate comparisons reconcile. Source129 body bounds
+  45×49/55×56/56×62/61×66 compare with46×50/54×57/58×62/62×67. Source130 is35×35 versus36×36;
+  ground64×31 becomes64×32 with quarter-unit thickness. The first directional-shading
+  candidate stripes at cell steps; its successor's overbroad highlights merge neighbouring
+  heads. Both remain retained. The narrower final highlight preserves every occupied cell
+  and reduces mature pale paint from97.5% to54.5% versus48.6% in the source. Crown tips,
+  shoulder shape, exact paint/grain and registration remain provisional. Twenty-four
+  fresh frozen controls pass; both cotton cycles and prior timber regressions preserve
+  actual unchanged-tile transitions. Twenty-two of24 native images agree across backends;
+  two joined views differ by one pixel each. The168-image comparison retains84 differences/
+  4,908 pixels. All1,569 earlier models agree. Evidence:`build-macos/breadth-cotton-*`.
+  Final visual approvals:0.
+
 - **Arctic/tropical bank89/90:**four independent volumes retain the red two-storey
   office, hollow interior, recessed windows, thin colonnade, olive flat roof and
   golden ribbed dome. Only owner89 has the original gold paint. Both bodies are

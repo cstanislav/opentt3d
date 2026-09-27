@@ -1,5 +1,28 @@
 # Implementation verification
 
+## Cotton-candy construction, cargo and unchanged-tile production cycle
+
+At09:31:12UTC,24 fresh frozen controls pass both backends: four climates,16 actual
+construction-layer selections, full/empty engine180 cargo snapshots and development
+bundles. Both9,000-frame runs observe the same tile53,35/industry0 from mature129 to
+harvested130 stage3 and back through129 stages0/1/2/3. The original simulation and
+NoAI commands are unchanged. Two timber16/17 cycle regressions remain valid against
+unchanged code and model hashes. The cotton26→27 service loads17/17, reaches acceptance64,
+unloads and returns after732 observed ticks.
+
+All16 visible palettes,18 source-identical aliases and48 differing non-native climate
+layers reconcile. Six new volumes bring the catalogue to1,575; every preceding1,569
+model hash agrees. Native200, asset131, harness12 and the137-file boundary pass.
+Source/build freezes and bundle resources match. Peak sampled memory:3,260,468,704bytes.
+
+The first26-control matrix exposed excessive pale crown paint in the joined plantation;
+that source freeze and its captures remain. The correction preserves all occupied cells
+and bindings. Twenty-two of24 native views agree across backends, with two one-pixel
+joined-view differences; the wider168-image audit retains84 differences/4,908 pixels.
+Source silhouettes, registration and fine paint remain provisional; final approvals:0.
+Evidence:`build-macos/breadth-cotton-reviewed-{reconciliation,audit,backend-comparison}.json`
+and`breadth-cotton-contrast-review.json`.
+
 ## Diamond desktop package audit
 
 Release`.9`at3d558589def7c7d8563f151fc74d1fec9d861bf2 passes all eight hosted jobs.

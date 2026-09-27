@@ -1,5 +1,49 @@
 # Active extended development goal
 
+## Cotton-candy growth and harvest verified — September 27, 09:31:12 UTC
+
+Six provisional cotton129/130 volumes raise the catalogue to1,575 and primary
+industry coverage to131/175 definitions:95 body owners and131 independent grounds.
+Four growing pink crowns retain their original cyan root/stem positions; dispatch
+leaves four bare standing sticks. The blue/grey checker ground is independently
+owned. All16 layer palettes,18 source-identical aliases and48 distinct non-native
+climate comparisons reconcile. Owner-specific climate guards prevent the shared
+2072…2077 sprite numbers from selecting temperate forest artwork for cotton.
+Every preceding1,569 model retains its normalized geometry/paint hash.
+
+All24 fresh frozen controls pass both backends, including16 actual construction-layer
+selections, true17/17 loaded and0/17 empty cargo snapshots, four climates and bundles.
+Both9,000-frame cycles observe one unchanged tile53,35, industry0 through completed129,
+harvested130 stage3 and129 stages0/1/2/3. Two preceding timber16/17 regressions retain
+the same code/model hashes. Native200, asset131, harness12 and the137-file presentation
+boundary pass. The ordinary cotton26→sweet-factory27 route has acceptance64 and returns
+after732 observed ticks. Source/build freezes and development bundle links agree.
+
+Individual, both joined layouts and street views are reviewed. The first26-control
+matrix passes state checks but exposes overbroad pale paint; its captures are retained.
+The revised mature pale fraction falls from97.5% to54.5%, against48.6% in the source,
+without moving any occupied cell. Exact crown shoulders/tips, paint distribution,
+grain and one-pixel registration differences remain provisional. Twenty-two of24
+native views agree across backends; two joined captures differ by one pixel each.
+The full168-image comparison retains84 differing images/4,908 pixels. Final approvals:0.
+
+The9,000-frame cycles average60.003fps, but retain838/681 intervals over20ms and
+46.084/81.474ms maximum intervals. Peak sampled memory is3,260,468,704bytes. Sustained
+arbitrary-world smooth60fps and long-duration memory acceptance remain open. Evidence:
+`breadth-cotton-reviewed-{reconciliation,audit,backend-comparison}.json` and
+`breadth-cotton-contrast-review.json`. Preliminary and first-matrix captures compact
+losslessly by1,170,645,393bytes. Audited`.9`duplicate retirement saves756,525,663
+extracted bytes and350,113,679 hosted archive bytes; public archives/evidence remain.
+
+Next sweet-factory131…134 has nine source-specific body candidates plus independent
+Toyland2022 soil in an isolated gallery prototype. Four original131 bodies stay empty;
+gift construction, partly removed wrapper and peppermint-roofed factory stay distinct.
+Its28 layer palettes,27 state aliases and joined support/ownership audits pass, but
+native/street review and live/climate controls remain. Battery135/136 source preparation
+retains a successful17/17 cargo4 route with acceptance64 and return after740 ticks.
+The additional Toyland child worklist covers256 original frames/108 poses/23 sprites;
+resolved imagery and voxel child artwork remain missing. Continue catalogue breadth.
+
 ## Diamond desktop release verified — September 27, 09:10:23 UTC
 
 Release`.9`at3d558589def7c7d8563f151fc74d1fec9d861bf2 passes all eight hosted jobs.

@@ -120,6 +120,7 @@ struct IndustryAnimationCheck {
 };
 static std::map<unsigned,IndustryAnimationCheck> industry_animation_checks;
 static bool check_forest_cycle = false;
+static unsigned checked_forest_base = 16;
 static std::map<TileIndex,std::pair<IndustryID,unsigned>> forest_cycles;
 static bool check_power_sparks = false;
 static TileIndex checked_spark_tile = INVALID_TILE;
@@ -585,14 +586,15 @@ void BeginVoxelVehicleCargoCheck(unsigned engine)
 
 void BeginVoxelForestCycleCheck()
 {
-	for (unsigned graphics : {16U,17U}) for (unsigned stage = 0; stage < 4; ++stage) {
+	checked_forest_base = _settings_game.game_creation.landscape == LandscapeType::Toyland ? 129 : 16;
+	for (unsigned graphics : {checked_forest_base,checked_forest_base+1}) for (unsigned stage = 0; stage < 4; ++stage) {
 		const auto &source = _industry_draw_tile_data[graphics*4+stage];
 		if (!VoxelIndustryState(graphics,source.building.sprite) || !VoxelIndustryState(graphics,source.ground.sprite,true)) {
 			throw std::runtime_error("Forest production cycle requires every original body and independent ground binding");
 		}
 	}
 	forest_cycles.clear(); check_forest_cycle = true;
-	Debug(driver,1,"OpenTT3D: observing actual mature forest, dispatched logs and all regrowth states without changing industry state");
+	Debug(driver,1,"OpenTT3D: observing actual mature forest graphics {}, harvested {} and all regrowth states without changing industry state",checked_forest_base,checked_forest_base+1);
 }
 
 void BeginVoxelDepotTraversalCheck(unsigned vehicle)
@@ -1889,26 +1891,26 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				unsigned graphics = GetIndustryGfx(capture->tile->tile), stage = GetIndustryConstructionStage(capture->tile->tile);
 				static std::set<std::pair<unsigned,unsigned>> reported;
 				if (reported.emplace(graphics,stage).second) Debug(driver,1,"OpenTT3D: live voxel industry {} construction stage {} captured at {},{}",graphics,stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
-				if (check_forest_cycle && (graphics == 16 || graphics == 17)) {
+				if (check_forest_cycle && (graphics == checked_forest_base || graphics == checked_forest_base+1)) {
 					TileIndex tile = capture->tile->tile;
 					IndustryID industry = GetIndustryIndex(tile);
 					auto found = forest_cycles.find(tile);
 					if (found != forest_cycles.end() && found->second.first != industry) {
 						forest_cycles.erase(found); found = forest_cycles.end();
 					}
-					if (found == forest_cycles.end() && graphics == 16 && stage == 3 && forest_cycles.size() < 128) {
+					if (found == forest_cycles.end() && graphics == checked_forest_base && stage == 3 && forest_cycles.size() < 128) {
 						found = forest_cycles.emplace(tile,std::pair{industry,0U}).first;
 					}
 					if (found != forest_cycles.end()) {
 						unsigned &phase = found->second.second;
-						/* Dispatch changes16 to completed17; the next original tile
-						 * loop changes17 back to16 and resets its construction. */
-						if ((phase == 0 && graphics == 17 && stage == 3) ||
-							(phase >= 1 && phase <= 4 && graphics == 16 && stage == phase-1)) {
+						/* Dispatch changes16/129 to completed17/130; the next original
+						 * tile loop restores16/129 and resets its construction. */
+						if ((phase == 0 && graphics == checked_forest_base+1 && stage == 3) ||
+							(phase >= 1 && phase <= 4 && graphics == checked_forest_base && stage == phase-1)) {
 							++phase;
 							Debug(driver,1,"OpenTT3D: forest cycle tile {},{} industry {} phase {} graphics {} stage {} captured",TileX(tile),TileY(tile),industry.base(),phase,graphics,stage);
 							if (phase == 5) {
-								Debug(driver,1,"OpenTT3D: voxel forest cycle verification passed: one unchanged industry tile {},{} captured mature/logs/seedling/young/half-grown/mature",TileX(tile),TileY(tile));
+								Debug(driver,1,"OpenTT3D: voxel forest cycle verification passed: one unchanged industry tile {},{} captured mature/{}/seedling/young/half-grown/mature",TileX(tile),TileY(tile),checked_forest_base == 129 ? "bare-sticks" : "logs");
 								check_forest_cycle = false; forest_cycles.clear();
 							}
 						}

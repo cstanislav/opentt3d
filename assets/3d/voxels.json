@@ -509,6 +509,22 @@
     "forest_log": [61,60,62,63,60,64],
     "forest_log_end": [53,54,55,56,53,56],
     "forest_stump": [106,104,108,110,104,111],
+    "cotton_stick": [201,202,202,204,201,205],
+    "cotton_stick_glint": [202,203,203,205,201,205],
+    "cotton_seed": 168,
+    "cotton_seed_shade": 167,
+    "cotton_seed_glint": 169,
+    "cotton_pink": 167,
+    "cotton_coral": 166,
+    "cotton_pink_glint": 168,
+    "cotton_ground": 6,
+    "cotton_ground_shadow": 5,
+    "cotton_ground_edge": 7,
+    "cotton_ground_blue": 19,
+    "cotton_ground_light": 20,
+    "cotton_ground_glint": 21,
+    "cotton_ground_moss": 99,
+    "cotton_ground_moss_light": 100,
     "sawmill_wood": [104,106,107,109,104,108],
     "sawmill_wood_grain": [105,107,108,110,104,109],
     "sawmill_wood_finished_grain": [105,108,109,109,104,109],
@@ -2895,6 +2911,47 @@
       ["lathe","forest_leaf",[8,8],[[10,1,0],[12,2.75,0],[20,1.75,0],[21,3,0],[29,1.5,0],[30,2.5,0],[39,1,0],[44,0.5,0]]],
       ["scatter_paint","forest_leaf_dark",4,2072,5,5,10,11,11,44,"forest_leaf"],
       ["scatter_paint","forest_leaf_light",4,8072,5,5,10,11,11,44,"forest_leaf"]
+    ],
+    "cotton_stem": [
+      ["box","cotton_stick",11,11,0,13,13,49],
+      ["scatter_paint","cotton_stick_glint",3,2076,11,11,0,13,13,49,"cotton_stick",[1,1,3]]
+    ],
+    "cotton_seed_crown": [
+      ["lathe","cotton_seed",[12,12],[[34,0.8,0],[39,3.5,0],[44,4.5,0],[50,4.4,0],[55,3.5,0],[59,1.4,0],[60,0.4,0]]],
+      ["ellipsoid_paint","cotton_seed_shade",13,5,33,21,12,59],
+      ["scatter_paint","cotton_seed_shade",11,2272,6,6,34,18,18,61,"cotton_seed",[1,1,2]],
+      ["scatter_paint","cotton_seed_glint",17,2072,6,6,34,18,18,61,"cotton_seed",[1,1,2]]
+    ],
+    "cotton_young_crown": [
+      ["lathe","cotton_pink",[12,12],[[33,1,0],[38,4,0],[45,6.9,0],[54,7.7,0],[63,6.7,0],[70,4.1,0],[74,0.7,0]]],
+      ["ellipsoid_paint","cotton_coral",12,0,31,25,16,73],
+      ["ellipsoid_paint","cotton_pink_glint",0,5,36,18,24,92],
+      ["scatter_paint","cotton_pink_glint",4,2073,3,3,33,21,21,75,"cotton_pink",[1,1,2]],
+      ["scatter_paint","cotton_seed_glint",11,2173,3,3,34,21,21,75,"cotton_pink_glint",[1,1,2]]
+    ],
+    "cotton_half_crown": [
+      ["lathe","cotton_pink",[12,12],[[33,1,0],[40,5.3,0],[49,8,0],[60,8.6,0],[72,7.3,0],[80,4.1,0],[84,0.7,0]]],
+      ["ellipsoid_paint","cotton_coral",12,0,31,26,16,81],
+      ["ellipsoid_paint","cotton_pink_glint",0,4,37,18,24,104],
+      ["scatter_paint","cotton_pink_glint",4,2074,2,2,33,22,22,85,"cotton_pink",[1,1,2]],
+      ["scatter_paint","cotton_seed_glint",11,2174,2,2,34,22,22,85,"cotton_pink_glint",[1,1,2]]
+    ],
+    "cotton_full_crown": [
+      ["lathe","cotton_pink",[12,12],[[32,1,0],[39,5.5,0],[49,9.3,0],[63,10.1,0],[79,9,0],[89,4.8,0],[94,0.7,0]]],
+      ["ellipsoid_paint","cotton_coral",12,0,30,26,16,91],
+      ["ellipsoid_paint","cotton_pink_glint",0,3,38,18,24,104],
+      ["scatter_paint","cotton_pink_glint",4,2075,1,1,32,23,23,95,"cotton_pink",[1,1,2]],
+      ["scatter_paint","cotton_seed_glint",11,2175,1,1,34,23,23,95,"cotton_pink_glint",[1,1,2]]
+    ],
+    "cotton_four_stems": [
+      ["use","cotton_stem",[0,6,0]],["use","cotton_stem",[18,2,0]],
+      ["use","cotton_stem",[22,20,0]],["use","cotton_stem",[8,24,0]]
+    ],
+    "cotton_ground_square": [
+      ["paint","cotton_ground_edge",0,0,0,8,8,1],
+      ["paint","cotton_ground_blue",1,1,0,7,7,1],
+      ["paint","cotton_ground_light",2,2,0,6,6,1],
+      ["paint","cotton_ground_glint",3,3,0,5,5,1]
     ],
     "forest_tree_young": [
       ["box","forest_bark",7,7,0,9,9,59],
@@ -11551,6 +11608,44 @@
         ["scatter_paint","refinery_office_roof_grain",5,2095,6,2,9,26,28,14],
         ["erase",15,20,0,18,24,7]]
     },
+    "cotton_ground": {
+      "size":[32,32,1],"cell_size":[0.5,0.5,0.25],"origin":[0,0,-0.25],"review_status":"work-in-progress",
+      "reference":"Toyland129/130 original2077: independent grey and blue-grey four-by-four checker soil, pale square centres and scattered green marks; distinct from temperate forest litter despite the shared sprite number",
+      "ops":[["box","cotton_ground",0,0,0,32,32,1],
+        ["repeat",[16,0,0],2,[["repeat",[0,16,0],2,[["use","cotton_ground_square",[0,8,0]],["use","cotton_ground_square",[8,0,0]]]]]],
+        ["scatter_paint","cotton_ground_shadow",19,2770,0,0,0,32,32,1,"cotton_ground"],
+        ["scatter_paint","cotton_ground_moss",31,2077,0,0,0,32,32,1,"cotton_ground"],
+        ["scatter_paint","cotton_ground_moss_light",53,7702,0,0,0,32,32,1,"cotton_ground"]]
+    },
+    "cotton_seedlings": {
+      "size":[48,48,104],"cell_size":[0.5,0.5,0.5],"origin":[-4,-4,0],"review_status":"work-in-progress",
+      "reference":"Toyland129 stage0 original2072: four separate small pear-shaped pale pink crowns on standing cyan sticks at the four original root centres; seed palette167..169 remains distinct from later coral shading",
+      "ops":[["use","cotton_four_stems"],["use","cotton_seed_crown",[0,6,0]],["use","cotton_seed_crown",[18,2,-2]],
+        ["use","cotton_seed_crown",[22,20,-1]],["use","cotton_seed_crown",[8,24,0]]]
+    },
+    "cotton_young": {
+      "size":[48,48,104],"cell_size":[0.5,0.5,0.5],"origin":[-4,-4,0],"review_status":"work-in-progress",
+      "reference":"Toyland129 stage1 original2073: four larger individually rooted cotton crowns, pale right/top highlights and coral lower/left shading; open cyan stems remain",
+      "ops":[["use","cotton_four_stems"],["use","cotton_young_crown",[0,6,0]],["use","cotton_young_crown",[18,2,-2]],
+        ["use","cotton_young_crown",[22,20,-1]],["use","cotton_young_crown",[8,24,0]]]
+    },
+    "cotton_half_grown": {
+      "size":[48,48,104],"cell_size":[0.5,0.5,0.5],"origin":[-4,-4,0],"review_status":"work-in-progress",
+      "reference":"Toyland129 stage2 original2074: four tall rounded cotton-candy heads, broader lower shoulders and independent pale highlights on the original cyan sticks",
+      "ops":[["use","cotton_four_stems"],["use","cotton_half_crown",[0,6,0]],["use","cotton_half_crown",[18,2,-2]],
+        ["use","cotton_half_crown",[22,20,-1]],["use","cotton_half_crown",[8,24,0]]]
+    },
+    "cotton_mature": {
+      "size":[48,48,104],"cell_size":[0.5,0.5,0.5],"origin":[-4,-4,0],"review_status":"work-in-progress",
+      "reference":"Toyland129 stage3 original2075: four full teardrop cotton crowns over their separate cyan stems; dense but genuinely volumetric canopies preserve the source coral/pink/pale palette",
+      "ops":[["use","cotton_four_stems"],["use","cotton_full_crown",[0,6,0]],["use","cotton_full_crown",[18,2,-2]],
+        ["use","cotton_full_crown",[22,20,-1]],["use","cotton_full_crown",[8,24,0]]]
+    },
+    "cotton_harvested": {
+      "size":[48,48,104],"cell_size":[0.5,0.5,0.5],"origin":[-4,-4,0],"review_status":"work-in-progress",
+      "reference":"Toyland130 original2076 is identical in every construction slot: four bare standing cyan sticks after cotton dispatch, no pink crowns and no felled-log geometry",
+      "ops":[["use","cotton_four_stems"],["erase",0,0,32,48,48,104]]
+    },
     "forest_ground": {
       "size":[32,32,1], "cell_size":[0.5,0.5,0.25], "origin":[0,0,-0.25], "review_status":"work-in-progress",
       "reference":"Forest16/17 original2077 throughout construction: independently owned full-tile brown needle litter, patchy olive/sage moss and dark twigs; no forest-body alias to ordinary tree grounds",
@@ -15881,6 +15976,8 @@
       "126":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "127":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "128":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "129":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
+      "130":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
       "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
       "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -15980,6 +16077,8 @@
       "126":{"0":"lumber_boiler_initial","1":"lumber_boiler_partial","2":"lumber_boiler_partial","3":"lumber_boiler_finished"},
       "127":{"0":"lumber_shed_initial","1":"lumber_shed_partial","2":"lumber_shed_partial","3":"lumber_shed_finished"},
       "128":{"0":"lumber_stock_initial","1":"lumber_stock_partial","2":"lumber_stock_partial","3":"lumber_stock_finished"},
+      "129":{"0":"cotton_seedlings","1":"cotton_young","2":"cotton_half_grown","3":"cotton_mature"},
+      "130":{"0":"cotton_harvested","1":"cotton_harvested","2":"cotton_harvested","3":"cotton_harvested"},
       "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
       "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
       "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},
