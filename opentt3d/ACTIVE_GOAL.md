@@ -1,6 +1,32 @@
 # Active extended development goal
 
-## Hosted package failures and gold continuation
+## Gold checkpoint and hosted-package diagnostics
+
+The continuation clock is **2026-09-27 04:58:02 UTC**. Gold72…88 adds52 provisional
+volumes and82 independently bound body/ground layers. All24 reconciled background
+controls pass, including148 actual construction selections, full/empty12-unit cargo
+saves, both development app bundles and two18,000-frame original wheel observations.
+The shorter6,000-frame animation runs captured only the resting pose and remain
+retained failures. All1,416 preceding model hashes agree; the catalogue now contains
+1,468 volumes,86 industry body owners and118 grounds. Native200, asset129 and harness12
+checks pass. Source/all-angle/street reviews remain provisional, with zero final
+visual approvals and the complete breadth/fidelity/performance objective still open.
+
+Hosted release`.5`run36294169856 finishes unsuccessfully and publishes no downloads.
+All three Windows package jobs pass; x64/x86 extracted load/save passes and ARM64
+remains cross-compiled. Linux's extracted default/OpenGL/fallback launches pass, but
+its120-frame software-rendered electric journey misses the brief intermediate
+collector state. Original support checks pass without the prior contact exception.
+Apple-silicon default Vulkan passes; OpenGL times out in Apple's software rasterizer.
+Intel aborts inside MoltenVK1.4.2's Metal argument-buffer feature probe. Those actual
+diagnostics now guide the next package corrections.
+
+The next airport worklist has21 primary definitions and30 independent source layers;
+57 of90 climate comparisons differ. Original imagery, hashes and source notes are
+retained under `build-macos/breadth-airport-remainder-*`. No new airport bindings are
+claimed by that source audit.
+
+## Earlier hosted package failures and gold continuation
 
 The continuation clock was **2026-09-27 04:08:52 UTC**. Hosted release run36292341479
 finished unsuccessfully: the source job and native platform builds/tests pass, but

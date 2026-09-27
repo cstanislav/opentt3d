@@ -333,6 +333,12 @@ TEST_CASE("Industry source-climate replacements retain independent ground and bo
 		CHECK(IndustryModelClimateSupported(24,climate,false,2094));
 		CHECK(IndustryModelClimateSupported(24,climate,true,4061) == (climate != 3));
 		CHECK(IndustryModelClimateSupported(39,climate,true,2146));
+		for (auto [graphic,sprite] : {std::pair{82U,2257U},std::pair{85U,2260U},std::pair{86U,2261U}}) {
+			CHECK(IndustryModelClimateSupported(graphic,climate,true,sprite) == (climate != 3));
+			CHECK(IndustryModelClimateSupported(graphic,climate,true,sprite-16)); // Dry construction remains independently bound.
+		}
+		CHECK(IndustryModelClimateSupported(75,climate,false,2250));
+		CHECK(IndustryModelClimateSupported(75,climate,true,2022) == (climate != 3));
 	}
 }
 

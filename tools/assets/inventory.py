@@ -113,7 +113,7 @@ def inventory():
             sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[0].split("|",1)[0].strip(),0)
             if sprite in (3924,2173):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
-            elif sprite in (2022,2077,4061):
+            elif sprite in (2022,2077,2257,2260,2261,4061):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":["toyland"],"other_climates":"retain supplied Toyland source ground"})
         if restricted_grounds:
             industry["ground_climate_restrictions"] = restricted_grounds

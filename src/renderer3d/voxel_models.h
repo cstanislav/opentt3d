@@ -23,7 +23,8 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
  * Forest16/17 and farm33..38 currently model temperate artwork only. Industry
  * ground3924 and oil-well ground2173 also have independently painted climate
  * replacements despite retaining the same source numbers. Toyland additionally
- * replaces bare soil2022, forest2077, rig4061, rig bodies26..28 and paper2206.
+ * replaces bare soil2022, forest2077, rig4061, gold pools2257/2260/2261,
+ * rig bodies26..28 and paper2206.
  * Body ownership is
  * independent, so an unsupported ground need not hide an unchanged body. */
 inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, bool ground = false, SpriteID sprite = 0)
@@ -31,7 +32,7 @@ inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, b
 	if (climate >= 4) return false;
 	if (climate == 0) return true;
 	if (graphics == 16 || graphics == 17 || (graphics >= 33 && graphics <= 38)) return false;
-	if (ground) return sprite != 3924 && sprite != 2173 && (climate != 3 || (sprite != 2022 && sprite != 2077 && sprite != 4061));
+	if (ground) return sprite != 3924 && sprite != 2173 && (climate != 3 || (sprite != 2022 && sprite != 2077 && sprite != 4061 && sprite != 2257 && sprite != 2260 && sprite != 2261));
 	return climate != 3 || !((graphics >= 26 && graphics <= 28) || (graphics == 67 && sprite == 2206));
 }
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground = false);

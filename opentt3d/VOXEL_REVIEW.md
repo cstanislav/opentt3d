@@ -16,6 +16,25 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Gold-mine breadth:**52 provisional volumes cover72…88 through82 independent
+  source layers, with54 empty bodies preserved. Bodies72/74/75 retain their original
+  full-tile painted substrate;79 first gains its hoist at completion, and88 preserves
+  three original wheel poses. Only identical construction1/2 and animation2/3 slots
+  alias. Joined rock workings, boundary posts, open troughs, cross-owner roofs,
+  workshop and supported wheel stays pass source-palette/support/exclusive-occupancy
+  audits. All408 climate/layer comparisons are retained; Toyland pools2257/2260/2261
+  and bare soil2022 keep independent supplied art. Partial custom replacements keep
+  the whole linked gold family together. Registered review corrects wheel orientation,
+  stepped-building direction, visible windows, channel supports, roof joins and the
+  diagnostic plane clipping body-owned substrates. Native registered layers/layouts
+  agree across backends. The broader654-image audit retains177 differing images/
+  11,758 pixels, including4,512 pixels in98 gold model views and3,691 in24 joined
+  contexts, mainly street ground-contact strips. The hoist remains40×53 versus43×55
+  original pixels; exact rock/grass grain, roof/facade paint, wheel framing and
+  source registration need later catalogue-wide refinement. All24 reconciled controls
+  pass; the two short resting-pose-only animation failures are retained. Evidence:
+  `build-macos/breadth-gold-*`. Zero final visual approvals.
+
 - **Copper-mine breadth:**14 provisional bodies add47…51,
   with a narrow winding tower, three distinct open wheel/spoke poses, stepped
   engine house and two hollow flues, recessed machine bay and paired storage rows.

@@ -68,7 +68,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-27; 1,416-volume copper checkpoint)
+## Pass 1 coverage checkpoint and queue (2026-09-27; 1,468-volume gold checkpoint)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -78,7 +78,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states and three independently mounted train collector volumes | Flat-body tunnel gauge repaired; slope/curve wheel contact, contextual station/depot/bridge/Cab clearance and all-family source/dimensional work remain; bindings do not establish Pass1 acceptance |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
-| Industries | 101/175 definitions with body or ground bindings:81 body owners,101 grounds | Copper47…51 joins ground-only iron-ore100…115, steel52…57, printing43…46, tropical factory121…124, factory39…42, lumbermill125…128, oil-well, farm, bank, food, paper, plantations, waterworks, oil-rig, forest and refinery;74 definitions, distinct climate grounds and complete source/state/layout acceptance remain. Gold72…88 has audited sources and ordinary construction saves |
+| Industries | 118/175 definitions with body or ground bindings:86 body owners,118 grounds | Gold72…88 joins copper47…51, ground-only iron-ore100…115, steel52…57, printing43…46, tropical factory121…124, factory39…42, lumbermill125…128, oil-well, farm, bank, food, paper, plantations, waterworks, oil-rig, forest and refinery;57 definitions, distinct climate grounds and complete source/state/layout acceptance remain |
 | Airports | 53/74 tile definitions:47 body owners and6 ground-only definitions;35 independent grounds | Added apron/runway/threshold/fence/helipad families and small terminals33/34/35; remaining taxiway/grass/small-runway grounds, heliport44, radar grounds and independent Toyland terminal/hangar artwork |
 | Depots | 6/6 families,24 directional bindings | Tram body/floor/wire bindings now cover the missing family; all-family source/ground/vehicle clearance and later fidelity review remain |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |

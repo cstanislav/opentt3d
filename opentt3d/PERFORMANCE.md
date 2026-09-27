@@ -3,6 +3,22 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Gold checkpoint observations
+
+Two18,000-frame background gold controls capture the complete original wheel cycle.
+OpenGL/Vulkan average60.003/60.002fps, with5.312/6.395ms p95 work and34.74/27.21ms
+maximum work. They retain1,558/1,612 frame intervals above20ms and21.064/20.942ms p95
+intervals, despite the60fps averages. These300-second runs do not establish smooth
+arbitrary-world performance. The24-control matrix peaks at3,411,643,800 sampled bytes.
+Evidence:`build-macos/breadth-gold-extended-animation-*` and
+`breadth-gold-final-reconciliation.json`.
+
+Hosted`.5`Linux software rendering averages1.01fps in the120-frame electric control.
+The original collector exception does not recur, but sparse presentation misses the
+intermediate portal state; complete Linux acceptance remains open. Apple-silicon
+OpenGL package startup times out while actively executing Apple's software rasterizer;
+the default Vulkan package succeeds. Neither result establishes desktop-GPU throughput.
+
 ## Collector timing repair controls
 
 The formerly capped analytic vehicle/Cab smoothing now receives full elapsed

@@ -8,6 +8,74 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_gold_layout_preserves_empty_bodies_cross_owner_channels_roofs_and_wheel_poses(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("gold_") or name in ("mine_ground_site","mine_ground_bare")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(72,89)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",(root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0])
+        empty = 0
+        for graphics in range(72,89):
+            for stage in range(4):
+                fields = rows[graphics*4+stage].split(",")
+                body = result["bindings"]["industries"].get(str(graphics),{}).get(str(stage))
+                self.assertEqual(bool(body),int(fields[2],0) != 0,"An intentionally empty source body must stay empty")
+                empty += not body
+                self.assertIn(str(stage),result["bindings"]["industry_ground"][str(graphics)])
+            if graphics < 88:
+                self.assertEqual(rows[graphics*4+1],rows[graphics*4+2])
+                for bindings in result["bindings"].values():
+                    self.assertEqual(bindings.get(str(graphics),{}).get("1"),bindings.get(str(graphics),{}).get("2"))
+        self.assertEqual(empty,54)
+        self.assertEqual(result["bindings"]["industries"]["79"]["3"],result["bindings"]["industries"]["88"]["0"])
+        self.assertEqual(set(result["bindings"]["industry_ground"]["88"].values()),{result["bindings"]["industry_ground"]["79"]["3"]})
+        for graphics in (72,74,75):
+            body = result["models"][f"gold_{graphics}_middle"]
+            underlay = result["models"]["gold_bare_underlay"]
+            self.assertEqual(underlay["origin"][2]+underlay["cell_size"][2],body["origin"][2],"Independent2022 soil touches the body-owned substrate without coincident top faces")
+        for stage in range(4):
+            joined = set()
+            for graphics in range(72,88):
+                for bindings in result["bindings"].values():
+                    name = bindings.get(str(graphics),{}).get(str(stage))
+                    if not name or name == "gold_bare_underlay": continue
+                    model = result["models"][name]
+                    offset = ((graphics-72)//4*32+round(model["origin"][0]*2),(graphics-72)%4*32+round(model["origin"][1]*2),round(model["origin"][2]*2))
+                    placed = {(x+offset[0],y+offset[1],z+offset[2]) for x,y,z in volumes[name]}
+                    self.assertFalse(joined & placed,(stage,graphics,"Cross-owner roofs, stays, fences and floors need exclusive occupancy"))
+                    joined |= placed
+            self.assertTrue(all(0 <= x < 128 and 0 <= y < 128 for x,y,z in joined))
+            reached = {p for p in joined if p[2] <= 0}; pending = list(reached)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in joined and point not in reached:
+                        reached.add(point); pending.append(point)
+            self.assertEqual(reached,joined,"Even cross-owner roof cuts and descending troughs need physical support")
+        for stage in ("middle","finished"):
+            for x in (8,12,16):
+                for name,y in ((f"gold_73_{stage}",31),(f"gold_74_{stage}",0)):
+                    self.assertIn((x,y,25),volumes[name]); self.assertIn((x+2,y,25),volumes[name])
+                    self.assertNotIn((x+1,y,25),volumes[name],"Three independently open troughs continue across the73/74 owner boundary")
+        self.assertNotIn((15,15,34),volumes["gold_72_middle"],"The middle-stage works has an open roof")
+        self.assertNotIn((12,27,12),volumes["gold_86_middle"],"The front workshop remains roofless during construction")
+        for point,back in (((5,19,23),(5,18,23)),((16,19,8),(16,18,8))):
+            self.assertNotIn(point,volumes["gold_75_finished"],"The defining upper/lower windows face the original visible facade")
+            self.assertIn(back,volumes["gold_75_finished"])
+        for graphics in (82,85,86):
+            for stage in ("initial","middle","finished"):
+                colours = {c for material in volumes[f"gold_{graphics}_{stage}"].values() for c in result["materials"][material-1]}
+                self.assertEqual(bool(colours & set(range(245,250))),stage == "finished","Original animated pool water first appears on completion")
+        poses = [volumes[f"gold_hoist_{pose:02d}"] for pose in range(3)]
+        self.assertEqual(len({frozenset(p.items()) for p in poses}),3)
+        self.assertEqual({p:m for p,m in poses[0].items() if p[2] < 60},{p:m for p,m in poses[1].items() if p[2] < 60})
+        for pose in poses:
+            self.assertNotIn((24,15,40),pose,"The winding tower is an open frame")
+
     def test_copper_hoist_poses_open_construction_bays_and_flues_keep_source_ownership(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

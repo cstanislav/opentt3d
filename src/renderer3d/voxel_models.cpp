@@ -374,6 +374,10 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		first = 33; last = 34; // The two source cuts form one connected farmhouse.
 	} else if (graphics == 58 || graphics == 59) {
 		first = 58; last = 59; // One bank's roof, colonnade and arch cross this seam.
+	} else if (graphics >= 72 && graphics <= 88) {
+		/* Gold's troughs cross body/ground ownership,74 owns part of75's roof,
+		 * and86/87 share a workshop. Keep partial custom replacements together. */
+		first = 72; last = 88;
 	} else if (ground && graphics >= 100 && graphics <= 115) {
 		/* The iron-ore works is entirely ground-owned. Its hall and small-works
 		 * roofs cross source cuts; a partial replacement must keep the supplied
@@ -389,6 +393,10 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
 		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		if (first == 72 && last == 88) {
+			SpriteID other = (ground ? source.building.sprite : source.ground.sprite)&SPRITE_MASK;
+			if (other != 0 && !IsBaseGraphicsSprite(other)) return {};
+		}
 	}
 	for (unsigned stage = 0; stage < 4; ++stage) if (HasVoxelAsset(category,graphics,stage)) {
 		const auto &source = _industry_draw_tile_data[graphics*4+stage];
@@ -1074,7 +1082,9 @@ void ExportVoxelReviews(std::string_view prefix)
 			if (!IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape),ground_layer,(ground_layer ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
 			Textures().BeginScene();
 			Scene industry;
-			float z = ground_layer ? -0.25f : 0;
+			/* Some original body sprites own a complete ground substrate. Keep the
+			 * diagnostic plane below that geometry instead of clipping its top. */
+			float z = std::min(ground_layer ? -0.25f : 0.0f,Models().models.at(name).surface.low.z-0.25f);
 			industry.Quad({-16,-16,z},{48,-16,z},{48,48,z},{-16,48,z},{0,0,0});
 			auto material = Material({},ground_layer ? source.ground.pal : source.building.pal,1);
 			material.SetObjectId(1);

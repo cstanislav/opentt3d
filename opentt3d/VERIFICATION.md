@@ -1,5 +1,43 @@
 # Implementation verification
 
+## Gold checkpoint and second hosted-package results
+
+Gold's source/build audit verifies52 added volumes,82 bound layers,54 preserved empty
+bodies and all1,416 preceding model hashes unchanged. Source aliases, palette indices,
+supported geometry and exclusive cross-owner occupancy pass. All408 source climate/
+layer comparisons remain recorded. The native200, asset129 and harness12 tests pass.
+
+The reconciled24 background controls pass both renderers, four climates, four real
+construction checkpoints, full/empty12-unit gold-truck saves and development bundles.
+They capture148 actual selected construction layers. Both18,000-frame animations
+observe2263/2264/2265 on one actual tile without changing game state. The original
+6,000-frame controls saw only the resting pose; those failures remain retained.
+Frozen source/executable/artwork hashes and linked development-bundle resources agree
+at04:58:02UTC. Peak sampled memory is3,411,643,800bytes. The ordinary Arctic fixture
+funds a town bank, connects54 road edges, delivers12 gold with acceptance8 and returns;
+the existing fixed-destination copper fixture still delivers22 units and returns.
+
+Evidence:`build-macos/breadth-gold-final-reconciliation.json`,
+`breadth-gold-accepted-validation.json`, `breadth-gold-source-build-agreement.json`,
+`breadth-gold-town-service-fixture2/`, `breadth-gold-fixture-copper-regression2/` and
+native source/street sheets. Native registered views agree across backends; the wider
+654-image comparison retains11,758 differing pixels rather than claiming exact street
+agreement. Initial reviewed captures compact losslessly by2,002,096,888bytes; original
+source images and failed animation evidence remain intact. Final visual approvals:0.
+
+Release`.5`at52d2a1014392398be12e70fcddabe33a507dcb58 finishes with no published downloads.
+All three Windows package jobs pass, including extracted native x64/x86 load/save;
+ARM64 remains cross-compiled. Linux's extracted automatic-Vulkan, OpenGL and explicit
+absent-Vulkan fallback launches render and save. Its subsequent120-frame electric
+journey passes actual train support without the old contact exception, but observes
+only surface and interior collector states at1.01fps, missing the brief intermediate
+portal state. Complete collector acceptance is still open. On macOS the Apple-silicon
+default Vulkan package passes; OpenGL's sample shows active Apple software rasterization
+at timeout. Intel's crash stack reaches Metal's argument encoder through MoltenVK1.4.2
+`initMetalFeatures` during instance creation. Evidence:`playable-release5-ci/`,
+`playable-release5-{final-results.json,linux.log,intel.log,arm.log}`. These demonstrated
+failures guide the next corrections; the platform gate remains in place.
+
 ## First hosted-package results and compatibility follow-up
 
 Release`.4`run36292341479 does **not** publish downloads. The source job and native

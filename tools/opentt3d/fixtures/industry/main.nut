@@ -13,6 +13,9 @@ class IndustryFixture extends AIController {
 	function Start();
 	function Tile(dx, dy) { return AIMap.GetTileIndex(this.x + dx, this.y + dy); }
 	function CargoService(industry);
+	function FundTownDestination(type);
+	function ConnectRoad(start, finish);
+	function TownDeliveryStop(destination, cargo);
 	function SouthRoadRow(industry, dx) {
 		local south = -1;
 		for (local y = 2; y < 10; ++y) for (local x = dx; x < dx + 8; ++x) {
@@ -102,11 +105,79 @@ function IndustryFixture::Start()
 	while (true) this.Sleep(1000);
 }
 
+function IndustryFixture::FundTownDestination(type)
+{
+	local sites = AITileList();
+	for (local tile = 0; tile < AIMap.GetMapSize(); ++tile) if (AITile.IsHouseTile(tile)) sites.AddItem(tile, AIMap.DistanceManhattan(tile,this.Tile(2,2)));
+	sites.Sort(AIList.SORT_BY_VALUE, true);
+	for (local tile = sites.Begin(); !sites.IsEnd(); tile = sites.Next()) {
+		if (!AIIndustryType.BuildIndustry(type,tile)) continue;
+		local destination = AIIndustry.GetIndustryID(tile);
+		if (!AIIndustry.IsValidIndustry(destination)) throw "funded town destination did not occupy its house site";
+		AILog.Info("INDUSTRY_TOWN_DESTINATION type="+type+" tile="+AIMap.GetTileX(tile)+","+AIMap.GetTileY(tile));
+		return destination;
+	}
+	throw "no legal existing-house site for the accepting industry";
+}
+
+function IndustryFixture::ConnectRoad(start, finish)
+{
+	/* Public test commands search buildable edges; actual construction then uses
+	 * those same ordinary commands. No map bytes, ownership or RNG are edited. */
+	local previous = {}, queue = [start];
+	previous[start] <- start;
+	for (local cursor = 0; cursor < queue.len() && !(finish in previous); ++cursor) {
+		local tile = queue[cursor], x = AIMap.GetTileX(tile), y = AIMap.GetTileY(tile);
+		foreach (step in [[1,0],[-1,0],[0,1],[0,-1]]) {
+			local nx = x+step[0], ny = y+step[1];
+			if (nx < 1 || ny < 1 || nx >= AIMap.GetMapSizeX()-1 || ny >= AIMap.GetMapSizeY()-1) continue;
+			local next = AIMap.GetTileIndex(nx,ny);
+			if (next in previous || AITile.IsWaterTile(next) || AITile.IsHouseTile(next) || AIIndustry.IsValidIndustry(AIIndustry.GetIndustryID(next))) continue;
+			local allowed = AIRoad.AreRoadTilesConnected(tile,next);
+			if (!allowed) { local test = AITestMode(); allowed = AIRoad.BuildRoad(tile,next); }
+			if (!allowed) continue;
+			previous[next] <- tile;
+			queue.append(next);
+		}
+	}
+	if (!(finish in previous)) throw "no public-command road route to the town destination";
+	local path = [finish];
+	while (path.top() != start) path.append(previous[path.top()]);
+	for (local i = path.len()-1; i > 0; --i) if (!AIRoad.AreRoadTilesConnected(path[i],path[i-1])) {
+		this.Require(AIRoad.BuildRoad(path[i],path[i-1]), "connect a town-service road edge");
+	}
+	AILog.Info("INDUSTRY_TOWN_ROAD edges="+(path.len()-1));
+}
+
+function IndustryFixture::TownDeliveryStop(destination, cargo)
+{
+	local centre = AIIndustry.GetLocation(destination), radius = AIStation.GetCoverageRadius(AIStation.STATION_TRUCK_STOP);
+	local x = AIMap.GetTileX(centre), y = AIMap.GetTileY(centre);
+	/* Let the newly funded bank complete through the normal calendar/tile loop. */
+	local start = AIDate.GetCurrentDate();
+	while (AIDate.GetCurrentDate()-start < 44) this.Sleep(2);
+	for (local dy = -radius; dy <= radius+1; ++dy) for (local dx = -radius; dx <= radius+1; ++dx) {
+		if (x+dx < 1 || y+dy < 1 || x+dx >= AIMap.GetMapSizeX()-1 || y+dy >= AIMap.GetMapSizeY()-1) continue;
+		local tile = AIMap.GetTileIndex(x+dx,y+dy);
+		if (!AIRoad.IsRoadTile(tile) || AITile.GetCargoAcceptance(tile,cargo,1,1,radius) < 8) continue;
+		foreach (front in [tile+1,tile+AIMap.GetMapSizeX()]) {
+			local allowed;
+			{ local test = AITestMode(); allowed = AIRoad.BuildDriveThroughRoadStation(tile,front,AIRoad.ROADVEHTYPE_TRUCK,AIStation.STATION_NEW); }
+			if (!allowed) continue;
+			this.Require(AIRoad.BuildDriveThroughRoadStation(tile,front,AIRoad.ROADVEHTYPE_TRUCK,AIStation.STATION_NEW), "build the bank's actual accepting road stop");
+			return tile;
+		}
+	}
+	throw "no accepting public-road stop beside the town destination";
+}
+
 function IndustryFixture::CargoService(industry)
 {
 	local source_type = AIIndustry.GetIndustryType(industry), destination_type = AIController.GetSetting("review_destination");
 	this.Require(AIIndustryType.CanBuildIndustry(destination_type), "cargo destination can be funded");
-	this.Require(AIIndustryType.BuildIndustry(destination_type, this.Tile(22,2)), "fund cargo destination");
+	local town_destination = AIController.GetSetting("review_destination_town_site") != 0;
+	if (town_destination) this.FundTownDestination(destination_type);
+	else this.Require(AIIndustryType.BuildIndustry(destination_type, this.Tile(22,2)), "fund cargo destination");
 	local destination = -1, industries = AIIndustryList();
 	for (local candidate = industries.Begin(); !industries.IsEnd(); candidate = industries.Next()) {
 		if (AIIndustry.GetIndustryType(candidate) == destination_type) { destination = candidate; break; }
@@ -122,14 +193,18 @@ function IndustryFixture::CargoService(industry)
 		if (!produced.HasItem(cargo)) throw "requested truck does not carry the source industry's real cargo";
 	}
 	this.Require(AIIndustry.IsCargoAccepted(destination, cargo) == AIIndustry.CAS_ACCEPTED, "destination accepts the source industry's cargo");
-	local pickup_row = this.SouthRoadRow(industry,2), delivery_row = this.SouthRoadRow(destination,22);
+	local pickup_row = this.SouthRoadRow(industry,2);
 	AIRoad.SetCurrentRoadType(0);
 	this.Require(AIRoad.BuildRoad(this.Tile(1,pickup_row), this.Tile(17,pickup_row)), "build producer-side service road");
-	if (pickup_row != delivery_row) this.Require(AIRoad.BuildRoad(this.Tile(17,pickup_row), this.Tile(17,delivery_row)), "turn toward the accepting industry tiles");
-	this.Require(AIRoad.BuildRoad(this.Tile(17,delivery_row), this.Tile(29,delivery_row)), "build destination approach");
-	local pickup = this.Tile(4,pickup_row), delivery = this.Tile(23,delivery_row), depot = this.Tile(3,pickup_row+1);
+	local delivery_row = town_destination ? pickup_row : this.SouthRoadRow(destination,22);
+	local pickup = this.Tile(4,pickup_row), delivery = town_destination ? this.TownDeliveryStop(destination,cargo) : this.Tile(23,delivery_row), depot = this.Tile(3,pickup_row+1);
+	if (town_destination) this.ConnectRoad(this.Tile(17,pickup_row),delivery);
+	else {
+		if (pickup_row != delivery_row) this.Require(AIRoad.BuildRoad(this.Tile(17,pickup_row), this.Tile(17,delivery_row)), "turn toward the accepting industry tiles");
+		this.Require(AIRoad.BuildRoad(this.Tile(17,delivery_row), this.Tile(29,delivery_row)), "build destination approach");
+		this.Require(AIRoad.BuildDriveThroughRoadStation(delivery, this.Tile(24,delivery_row), AIRoad.ROADVEHTYPE_TRUCK, AIStation.STATION_NEW), "build cargo delivery stop");
+	}
 	this.Require(AIRoad.BuildDriveThroughRoadStation(pickup, this.Tile(5,pickup_row), AIRoad.ROADVEHTYPE_TRUCK, AIStation.STATION_NEW), "build cargo loading stop");
-	this.Require(AIRoad.BuildDriveThroughRoadStation(delivery, this.Tile(24,delivery_row), AIRoad.ROADVEHTYPE_TRUCK, AIStation.STATION_NEW), "build cargo delivery stop");
 	this.Require(AIRoad.BuildRoadDepot(depot, this.Tile(3,pickup_row)), "build cargo-truck depot");
 	this.Require(AIRoad.BuildRoad(depot, this.Tile(3,pickup_row)), "connect cargo-truck depot");
 	if (AIController.GetSetting("review_depot_directions") != 0) {

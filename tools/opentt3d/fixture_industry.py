@@ -27,6 +27,7 @@ def main():
     services.add_argument("--coal-service", action="store_true", help="After construction, require a real truck to load coal, deliver it to a funded power station and return")
     services.add_argument("--cargo-service", action="store_true", help="Operate the producer's real cargo to --destination-industry, requiring loading, delivery and return")
     parser.add_argument("--destination-industry", type=int, choices=range(37), help="Original accepting industry to fund for --cargo-service")
+    parser.add_argument("--destination-town-site", action="store_true", help="Fund the accepting industry on an actual town house and connect its public road network")
     parser.add_argument("--truck-engine", type=int, choices=range(116,204), help="Select one original road engine for the route; its real cargo type and availability are checked by NoAI")
     parser.add_argument("--year", type=int, default=1970, help="Normal world start year; later trucks need an appropriate year")
     parser.add_argument("--cargo-snapshots", action="store_true", help="Also pause/save the actual full truck and its empty state after delivery")
@@ -40,6 +41,8 @@ def main():
         parser.error("--cargo-service and --destination-industry require each other")
     if args.destination_industry == args.industry:
         parser.error("The cargo destination must be a separate industry type")
+    if args.destination_town_site and not args.cargo_service:
+        parser.error("--destination-town-site requires --cargo-service")
     if args.truck_engine is not None and not service_requested:
         parser.error("--truck-engine requires --coal-service or --cargo-service")
     if not 0 <= args.year <= 5000000:
@@ -101,7 +104,7 @@ min_active_clients = 0
 pause_on_join = false
 """)
     destination = args.destination_industry if args.cargo_service else 1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Industry Fixture" "review_industry={args.industry},review_town_site={int(args.town_site)},review_coal_service={int(args.coal_service)},review_cargo_service={int(args.cargo_service)},review_destination={destination},review_destination_town_site={int(args.destination_town_site)},review_depot_directions={int(args.depot_directions)},review_truck_engine={args.truck_engine if args.truck_engine is not None else -1}"\n')
     days = (0, 16, 30, 44)
     for day in days:
         (scripts / f"save_day_{day}.scr").write_text(f"pause\nsave industry-day-{day}\n")
@@ -155,7 +158,8 @@ pause_on_join = false
                     send("unpause")
             manifest = {"starting_year": args.year, "climate": args.climate, "terrain_type": args.terrain_type,
                         "snow_coverage": args.snow_coverage, "desert_coverage": args.desert_coverage,
-                        "town_site": args.town_site, "initial_city_size": args.city_size, "snapshots": snapshots}
+                        "town_site": args.town_site, "destination_town_site": args.destination_town_site,
+                        "initial_city_size": args.city_size, "snapshots": snapshots}
             if service_requested:
                 cargo_snapshots = {}
 

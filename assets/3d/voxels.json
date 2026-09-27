@@ -4,6 +4,32 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "gold_soil": [105,112,105,113,105,112],
+    "gold_soil_light": [112,113,112,113,105,113],
+    "gold_soil_dark": 105,
+    "gold_grass": [89,90,89,91,89,90],
+    "gold_grass_light": 91,
+    "gold_rock": [34,37,35,38,34,38],
+    "gold_rock_light": [35,38,36,39,34,39],
+    "gold_rock_worn": [34,36,35,37,34,37],
+    "gold_rock_shadow": [33,35,34,36,33,35],
+    "gold_rim": 38,
+    "gold_post": [7,11,9,13,7,11],
+    "gold_trough": [4,7,4,9,4,7],
+    "gold_channel": [1,2,1,3,1,2],
+    "gold_brick": [71,74,72,75,71,74],
+    "gold_brick_light": [72,75,73,76,71,75],
+    "gold_brick_low": [71,73,72,74,71,73],
+    "gold_roof": [24,26,25,28,24,27],
+    "gold_roof_rib": [4,7,4,9,4,7],
+    "gold_glass_partial": 130,
+    "gold_glass": 132,
+    "gold_plinth": [16,19,17,21,16,20],
+    "gold_plinth_band": [17,20,18,22,17,21],
+    "gold_hoist_frame": [1,16,2,18,1,16],
+    "gold_wheel": [16,19,18,20,16,19],
+    "gold_water": [245,246,245,247,245,246],
+    "gold_water_light": 201,
     "copper_site": [1,2,1,3,1,2],
     "copper_site_grain": [2,1,2,1,2,1],
     "copper_frame": [2,4,3,6,2,4],
@@ -1357,6 +1383,109 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "gold_site": [
+      ["box","gold_soil",0,0,0,32,32,1],
+      ["scatter_paint","gold_soil_light",5,2215,0,0,0,32,32,1]
+    ],
+    "gold_edge_x0": [
+      ["paint","gold_grass",0,0,0,5,32,1],
+      ["repeat",[0,5,0],6,[["box","gold_post",2,2,1,3,3,7]]]
+    ],
+    "gold_edge_y0": [
+      ["paint","gold_grass",0,0,0,32,5,1],
+      ["repeat",[5,0,0],6,[["box","gold_post",2,2,1,3,3,7]]]
+    ],
+    "gold_edge_x1": [
+      ["paint","gold_grass",28,0,0,32,32,1],
+      ["repeat",[0,5,0],6,[["box","gold_post",29,2,1,30,3,7]]]
+    ],
+    "gold_edge_y1": [
+      ["paint","gold_grass",0,28,0,32,32,1],
+      ["repeat",[5,0,0],6,[["box","gold_post",2,29,1,3,30,7]]]
+    ],
+    "gold_north_bank": [
+      ["prism","gold_rock",1,0,7,[[5,1],[30,1],[28,4],[23,9],[21,17],[16,23],[12,25],[9,18],[7,9]]],
+      ["prism","gold_rock",1,7,14,[[6,1],[29,1],[26,5],[22,11],[20,18],[15,29],[11,28],[9,17]]],
+      ["prism","gold_rock",1,14,23,[[6,1],[28,1],[25,4],[23,8],[19,12],[17,19],[11,17],[9,8]]],
+      ["prism","gold_rock",1,23,32,[[5,1],[30,1],[28,5],[22,9],[20,15],[16,25],[12,24],[8,12]]],
+      ["erase",18,26,10,32,32,30],
+      ["paint","gold_rock_shadow",5,0,1,12,32,12],
+      ["paint","gold_soil_dark",9,0,22,19,7,30],["paint","gold_soil_dark",9,7,26,19,14,30],
+      ["paint","gold_soil_dark",9,14,16,19,23,30],["paint","gold_soil_dark",9,23,22,19,32,30],
+      ["scatter_paint","gold_rock_worn",5,2216,5,0,1,30,32,30,"gold_rock"]
+    ],
+    "gold_west_bank": [
+      ["rotate_z",90,[16,16,0],[["use","gold_north_bank"]]]
+    ],
+    "gold_small_rock": [
+      ["prism","gold_rock",1,0,12,[[0,1],[12,1],[12,3],[9,5],[8,10],[4,11],[2,7]]],
+      ["paint","gold_rock_worn",0,0,1,12,12,4]
+    ],
+    "gold_trough_y": [
+      ["box","gold_channel",0,0,0,3,32,1],
+      ["box","gold_trough",0,0,1,1,32,3],
+      ["box","gold_trough",2,0,1,3,32,3]
+    ],
+    "gold_72_shell": [
+      ["box","gold_rock",7,6,1,25,26,17],
+      ["box","gold_brick",7,6,17,25,26,33],["erase",9,8,18,23,24,33],
+      ["erase",11,24,19,17,26,25],["box","gold_soil_dark",11,24,19,17,25,25],
+      ["scatter_paint","gold_brick_light",7,2231,7,6,17,25,26,33,"gold_brick"],
+      ["gable","gold_brick",7,6,33,9,26,41,"y"],
+      ["gable","gold_brick",23,6,33,25,26,41,"y"]
+    ],
+    "gold_72_channels": [
+      ["repeat",[4,0,0],3,[["box","gold_channel",8,25,24,11,32,25],
+        ["box","gold_trough",8,25,25,9,32,27],["box","gold_trough",10,25,25,11,32,27]]],
+      ["repeat",[0,4,0],2,[["box","gold_channel",24,10,24,32,13,25],
+        ["box","gold_trough",24,10,25,32,11,27],["box","gold_trough",24,12,25,32,13,27]]],
+      ["repeat",[0,6,0],2,[["box","gold_trough",28,10,1,29,11,24]]],
+      ["repeat",[10,0,0],2,[["box","gold_trough",8,29,1,9,30,24]]],
+      ["box","gold_trough",28,10,22,29,17,24],["box","gold_trough",8,29,22,19,30,24]
+    ],
+    "gold_74_roof_cut": [
+      ["gable","gold_roof",8,40,29,11,52,37,"y"],
+      ["erase",8,43,29,11,52,37],["erase",8,41,29,9,43,37],["erase",9,42,29,10,43,37],
+      ["paint","gold_roof_rib",8,40,29,11,41,37]
+    ],
+    "gold_75_works": [
+      ["box","gold_brick",0,8,1,10,20,29],["erase",0,10,2,8,18,29],
+      ["box","gold_brick",10,8,1,21,20,17],["erase",10,10,2,19,18,17],
+      ["erase",3,18,19,8,20,27],["box","gold_glass_partial",3,18,19,8,19,27],
+      ["erase",14,18,4,18,20,12],["box","gold_glass_partial",14,18,4,18,19,12],
+      ["scatter_paint","gold_brick_light",7,2234,0,8,1,21,20,29,"gold_brick"],
+      ["gable","gold_roof",0,8,29,11,20,37,"y"],
+      ["gable","gold_roof",10,8,17,22,20,23,"y"],
+      ["repeat",[0,5,0],3,[["paint","gold_roof_rib",0,8,29,11,9,37],
+        ["paint","gold_roof_rib",10,8,17,22,9,23]]],
+      ["erase",8,8,29,11,9,37],["erase",9,9,29,11,10,37],["erase",10,10,29,11,11,37]
+    ],
+    "gold_hoist_structure": [
+      ["box","gold_plinth",17,9,0,31,23,16],
+      ["repeat",[0,0,4],4,[["paint","gold_plinth_band",17,9,2,31,23,3]]],
+      ["box","gold_plinth",16,8,16,32,24,20],
+      ["repeat",[8,0,0],2,[["repeat",[0,8,0],2,[["box","gold_hoist_frame",20,10,20,22,12,75]]]]],
+      ["repeat",[0,0,16],3,[["box","gold_hoist_frame",20,10,21,30,12,23],
+        ["box","gold_hoist_frame",20,18,21,30,20,23],
+        ["line","gold_hoist_frame",21,11,23,28,11,36],
+        ["line","gold_hoist_frame",21,19,23,28,19,36]]],
+      ["box","gold_hoist_frame",20,10,73,30,20,75],
+      ["erase",22,12,73,28,18,75],
+      ["box","gold_hoist_frame",24,13,73,32,16,79],
+      ["line","gold_hoist_frame",20,19,74,14,29,0],
+      ["line","gold_hoist_frame",29,19,74,22,29,0],
+      ["line","gold_wheel",30,14,60,30,18,65],["line","gold_wheel",30,18,65,30,20,78],
+      ["line","gold_wheel",30,20,78,30,18,91],["line","gold_wheel",30,18,91,30,14,96],
+      ["line","gold_wheel",30,14,96,30,10,91],["line","gold_wheel",30,10,91,30,8,78],
+      ["line","gold_wheel",30,8,78,30,10,65],["line","gold_wheel",30,10,65,30,14,60]
+    ],
+    "gold_front_workshop": [
+      ["box","gold_brick",6,20,1,22,55,13],["erase",8,22,2,20,53,13],
+      ["erase",20,26,4,22,31,9],["box","gold_soil_dark",20,26,4,21,31,9],
+      ["erase",20,42,1,22,49,9],["box","gold_soil_dark",20,42,1,21,49,9],
+      ["paint","gold_roof_rib",6,20,12,22,55,13],
+      ["scatter_paint","gold_brick_light",7,2245,6,20,1,22,55,12,"gold_brick"]
+    ] ,
     "copper_tower_frame": [
       ["repeat",[8,0,0],2,[["repeat",[0,6,0],2,[["box","copper_frame",11,6,0,12,7,36]]]]],
       ["repeat",[0,0,10],3,[["box","copper_frame",11,6,7,20,7,8],["box","copper_frame",11,12,7,20,13,8],
@@ -6010,6 +6139,248 @@
     ]
   },
   "models": {
+    "gold_72_initial": {
+      "size":[64,64,112],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Gold72 ground2215: north corner, irregular pale excavated shoulders, brown floor and white boundary posts; the initial body is empty",
+      "ops":[["use","gold_site"],["use","gold_edge_x0"],["use","gold_edge_y0"],
+        ["use","gold_small_rock",[8,7,0]],["use","gold_small_rock",[18,18,0]],
+        ["prism","gold_rock",1,15,27,[[10,1],[23,1],[23,5],[19,9],[16,17],[12,15]]],
+        ["paint","gold_soil_dark",9,6,9,21,20,18]]
+    },
+    "gold_73_initial": {
+      "extends":"gold_72_initial","reference":"Gold73 ground2216: continuous pale northern rock face with a dark excavated upper rim",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_x0"],["use","gold_north_bank"],
+        ["use","gold_small_rock",[20,8,0]],["replace_material","gold_grass","gold_grass_light"]]
+    },
+    "gold_74_initial": {
+      "extends":"gold_72_initial","reference":"Gold74 ground2217: broken eastern end of the northern rock bank, before its curved troughs and neighbouring roof cut",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_x0"],["use","gold_north_bank"],
+        ["erase",16,22,8,32,32,24],["use","gold_small_rock",[20,17,0]]]
+    },
+    "gold_75_initial": {
+      "extends":"gold_72_initial","reference":"Gold75 ground2218: grass and brown entrance margin, with no prebuilt brick office",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_x0"],
+        ["paint","gold_grass",0,16,0,32,32,1],["use","gold_edge_y1"]]
+    },
+    "gold_76_initial": {
+      "extends":"gold_72_initial","reference":"Gold76 ground2219: western rock face and fence, with a real dark excavation below its pale stepped shoulder",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_y0"],["use","gold_west_bank"],
+        ["erase",0,13,8,8,27,24],["use","gold_small_rock",[18,18,0]]]
+    },
+    "gold_77_initial": {
+      "extends":"gold_72_initial","reference":"Gold77 ground2220: two unequal white inner shoulders and an open brown passage before the descending troughs",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],
+        ["use","gold_small_rock",[0,2,0]],["use","gold_small_rock",[18,0,0]],
+        ["prism","gold_rock",1,0,9,[[0,1],[31,1],[31,6],[21,15],[11,19],[4,15],[0,6]]],
+        ["paint","gold_soil_dark",0,0,13,32,9,20]]
+    },
+    "gold_78_initial": {
+      "extends":"gold_72_initial","reference":"Gold78 ground2221: open inner workings and a low dark bank, with no complete trough structure yet",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],
+        ["mound","gold_soil_dark",0,0,1,17,11,9],
+        ["line","gold_soil_light",4,9,0,10,15,0],["line","gold_soil_dark",10,15,0,9,29,0]]
+    },
+    "gold_79_initial": {
+      "extends":"gold_72_initial","reference":"Gold79 ground2222: the fenced hoist site has brown raised spoil but no tower in the initial construction state",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_y1"],
+        ["mound","gold_soil",0,2,1,17,24,6],["scatter_paint","gold_soil_light",5,2222,0,2,1,17,24,6]]
+    },
+    "gold_80_initial": {
+      "extends":"gold_72_initial","reference":"Gold80 ground2223: two irregular pale spurs below the western fence with a recessed dark notch",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_y0"],
+        ["use","gold_west_bank"],["erase",9,12,5,18,32,24],
+        ["use","gold_small_rock",[4,18,0]],["use","gold_small_rock",[18,21,0]]]
+    },
+    "gold_81_initial": {
+      "extends":"gold_72_initial","reference":"Gold81 ground2224: low interior rock lip, two pale fragments and mostly exposed brown floor",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],
+        ["use","gold_small_rock",[1,0,0]],["use","gold_small_rock",[19,1,0]],
+        ["mound","gold_soil_dark",4,0,1,23,12,9]]
+    },
+    "gold_82_initial": {
+      "extends":"gold_72_initial","reference":"Gold82 ground2225: open earthen route and pale pool-bank trace; water is absent until completion",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],
+        ["line","gold_soil_dark",8,0,0,11,13,0],["line","gold_soil_dark",11,13,0,8,31,0],
+        ["line","gold_rock",24,0,0,27,5,0],["line","gold_rock",27,5,0,31,6,0],
+        ["replace_material","gold_rock","gold_rim"]]
+    },
+    "gold_83_initial": {
+      "extends":"gold_72_initial","reference":"Gold83 ground2226: open brown haul route beside the pale-post eastern fence",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_y1"],
+        ["line","gold_soil_dark",8,0,0,12,14,0],["line","gold_soil_dark",12,14,0,8,31,0],
+        ["replace_material","gold_grass","gold_grass_light"]]
+    },
+    "gold_84_initial": {
+      "extends":"gold_72_initial","reference":"Gold84 ground2227: lower western corner with broken pale rock around an open dark notch and grassy margins",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_y0"],["use","gold_edge_x1"],
+        ["use","gold_small_rock",[0,7,0]],["use","gold_small_rock",[13,7,0]],
+        ["prism","gold_rock",1,18,26,[[0,1],[23,1],[22,5],[15,10],[6,9],[0,5]]],
+        ["paint","gold_soil_dark",0,7,8,20,22,12]]
+    },
+    "gold_85_initial": {
+      "extends":"gold_72_initial","reference":"Gold85 ground2228: front excavation, pale rim and persistent fence before the independent water surface appears",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_x1"],
+        ["prism","gold_rock",2,0,2,[[0,0],[20,0],[26,4],[23,6],[17,3],[0,3]]],
+        ["line","gold_soil_dark",13,3,0,14,16,0],["line","gold_soil_dark",14,16,0,27,22,0],
+        ["replace_material","gold_grass","gold_grass_light"]]
+    },
+    "gold_86_initial": {
+      "extends":"gold_72_initial","reference":"Gold86 ground2229: front fenced soil and dark workshop footing only, before the ground-owned open brick shell",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],["use","gold_edge_x1"],
+        ["paint","gold_soil_dark",6,20,0,22,32,1],["replace_material","gold_grass","gold_grass_light"]]
+    },
+    "gold_87_initial": {
+      "extends":"gold_72_initial","reference":"Gold87 ground2230: brown front corner, grassy entrance margins and a curved dark track; no completed workshop",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_site"],
+        ["paint","gold_grass_light",28,0,0,32,32,1],["paint","gold_grass_light",0,28,0,32,32,1],
+        ["repeat",[0,5,0],3,[["box","gold_post",28,2,1,29,3,7]]],
+        ["line","gold_soil_dark",8,0,0,13,15,0],["line","gold_soil_dark",13,15,0,11,31,0]]
+    },
+    "gold_72_middle": {
+      "extends":"gold_72_initial","reference":"Gold72 body2231 owns the entire painted tile, rock foundations, square open brick works and branching troughs; bare2022 remains a separate lower underlay",
+      "ops":[["use","gold_72_shell"],["use","gold_72_channels"],
+        ["repeat",[5,0,0],4,[["line","gold_roof_rib",8,6,33,8,16,40],["line","gold_roof_rib",8,16,40,8,25,33]]],
+        ["box","gold_roof_rib",7,15,40,25,17,41]]
+    },
+    "gold_72_finished": {
+      "extends":"gold_72_middle","reference":"Gold72 body2247 completes the olive corrugated roof while retaining its original full-tile ground/body ownership and open branch troughs",
+      "ops":[["gable","gold_roof",7,6,33,25,26,41,"y"],
+        ["repeat",[5,0,0],4,[["paint","gold_roof_rib",8,6,33,9,26,41]]],
+        ["scatter_paint","gold_soil_light",6,2247,5,5,0,32,32,1]]
+    },
+    "gold_73_middle": {
+      "extends":"gold_73_initial","reference":"Gold73 ground2232 carries three open parallel troughs over its northern bank, aligned to72 and74",
+      "ops":[["repeat",[4,0,0],3,[["use","gold_trough_y",[8,0,24]]]],
+        ["repeat",[0,8,0],4,[["repeat",[10,0,0],2,[["box","gold_trough",8,3,1,9,4,24]]],
+          ["box","gold_trough",8,3,22,19,4,24]]],
+        ["scatter_paint","gold_soil_light",6,2232,4,0,0,32,32,1]]
+    },
+    "gold_73_finished": {"extends":"gold_73_middle","reference":"Gold73 ground2248 retains its three original troughs with distinct completed source soil paint","ops":[["scatter_paint","gold_soil_dark",7,2248,5,0,0,32,32,1]]},
+    "gold_74_middle": {
+      "extends":"gold_74_initial","reference":"Gold74 body2233 owns its painted rock tile, three elbow troughs and only the rear source cut of75's supported upper roof",
+      "ops":[["repeat",[4,4,0],3,[["box","gold_channel",8,0,24,11,11,25],
+        ["box","gold_trough",8,0,25,9,11,27],["box","gold_trough",10,0,25,11,9,27],
+        ["box","gold_channel",8,8,24,32,11,25],
+        ["box","gold_trough",8,10,25,32,11,27],["box","gold_trough",10,8,25,32,9,27]]],
+        ["box","gold_channel",12,0,24,15,4,25],["box","gold_trough",12,0,25,13,4,27],["box","gold_trough",14,0,25,15,4,27],
+        ["box","gold_channel",16,0,24,19,8,25],["box","gold_trough",16,0,25,17,8,27],["box","gold_trough",18,0,25,19,8,27],
+        ["erase",32,0,0,64,64,112],
+        ["repeat",[6,0,0],4,[["repeat",[0,10,0],2,[["box","gold_trough",9,8,1,10,9,24]]],
+          ["box","gold_trough",9,8,22,10,19,24]]],
+        ["use","gold_74_roof_cut"]]
+    },
+    "gold_74_finished": {"extends":"gold_74_middle","reference":"Gold74 body2249 keeps the same connected elbows and exclusive roof cut with completed earth/roof paint","ops":[["scatter_paint","gold_soil_light",6,2249,5,0,0,32,32,1],["paint","gold_roof",10,28,30,12,32,36]]},
+    "gold_75_middle": {
+      "extends":"gold_75_initial","reference":"Gold75 body2234 owns its complete painted substrate and a two-height brick works with olive roofs, recessed upper/lower windows, and the roof joining74",
+      "ops":[["use","gold_75_works"]]
+    },
+    "gold_75_finished": {"extends":"gold_75_middle","reference":"Gold75 body2250 preserves the same stepped structure with source-completed blue glazing and soil paint","ops":[["replace_material","gold_glass_partial","gold_glass"],["scatter_paint","gold_soil_light",6,2250,5,0,0,32,32,1]]},
+    "gold_76_middle": {
+      "extends":"gold_76_initial","reference":"Gold76 ground2235 bends the two open western branch troughs around its rock face, descending toward77",
+      "ops":[["repeat",[0,4,0],2,[["box","gold_channel",0,10,24,13,13,25],
+        ["box","gold_trough",0,10,25,13,11,27],["box","gold_trough",0,12,25,11,13,27]]],
+        ["repeat",[4,0,0],2,[["line","gold_channel",10,12,24,10,31,16],["line","gold_channel",11,12,24,11,31,16],
+          ["line","gold_channel",12,12,24,12,31,16],
+          ["line","gold_trough",10,12,25,10,31,17],["line","gold_trough",12,12,25,12,31,17],
+          ["line","gold_trough",10,12,26,10,31,18],["line","gold_trough",12,12,26,12,31,18]]],
+        ["box","gold_trough",10,20,1,17,21,21],["box","gold_trough",10,29,1,17,30,17]]
+    },
+    "gold_76_finished": {"extends":"gold_76_middle","reference":"Gold76 ground2251: completed soil remains separate from the permanent paired west-branch troughs","ops":[["scatter_paint","gold_soil_light",6,2251,4,4,0,32,32,1]]},
+    "gold_77_middle": {
+      "extends":"gold_77_initial","reference":"Gold77 ground2236: two open channels descend between rock shoulders, then turn into78 across the interior floor",
+      "ops":[["repeat",[4,0,0],2,[["line","gold_channel",10,0,16,20,20,4],["line","gold_channel",11,0,16,21,20,4],["line","gold_channel",12,0,16,22,20,4],
+        ["line","gold_trough",10,0,17,20,20,5],["line","gold_trough",12,0,17,22,20,5],
+        ["line","gold_trough",10,0,18,20,20,6],["line","gold_trough",12,0,18,22,20,6],
+        ["box","gold_channel",20,20,4,23,32,5],["box","gold_trough",20,20,5,21,32,7],["box","gold_trough",22,20,5,23,32,7]]],
+        ["box","gold_trough",16,10,1,23,11,11],["box","gold_trough",20,25,1,27,26,4]]
+    },
+    "gold_77_finished": {"extends":"gold_77_middle","reference":"Gold77 ground2252: completed interior paint around the same descending channels","ops":[["scatter_paint","gold_soil_light",6,2252,4,6,0,32,32,1]]},
+    "gold_78_middle": {
+      "extends":"gold_78_initial","reference":"Gold78 ground2237: the two low troughs from77 end in open drops, while the three northern elbows terminate as separate descending spouts from74",
+      "ops":[["repeat",[4,0,0],2,[["box","gold_channel",20,0,4,23,24,5],
+        ["box","gold_trough",20,0,5,21,24,7],["box","gold_trough",22,0,5,23,24,7],
+        ["box","gold_trough",20,23,1,21,24,5],["box","gold_trough",22,23,1,23,24,5]]],
+        ["repeat",[0,4,0],3,[["line","gold_channel",0,8,24,5,8,2],["line","gold_channel",0,9,24,5,9,2],
+          ["line","gold_channel",0,10,24,5,10,2],
+          ["line","gold_trough",0,8,25,5,8,3],["line","gold_trough",0,10,25,5,10,3]]],
+        ["repeat",[0,8,0],3,[["box","gold_trough",20,2,1,27,3,4]]]]
+    },
+    "gold_78_finished": {"extends":"gold_78_middle","reference":"Gold78 ground2253: completed earth around the original open channel terminations","ops":[["scatter_paint","gold_soil_light",6,2253,0,0,0,32,32,1]]},
+    "gold_79_middle": {"extends":"gold_79_initial","reference":"Gold79 ground2238 keeps the winding site empty above ground during middle construction","ops":[["scatter_paint","gold_soil_light",6,2238,0,0,0,32,28,1]]},
+    "gold_79_finished": {"extends":"gold_79_middle","reference":"Gold79/88 ground2254: identical completed soil across the construction-to-animation transition, with clear independent plinth/stay footings","ops":[["erase",16,8,1,32,25,8],["erase",22,29,1,23,30,7],["scatter_paint","gold_soil_dark",7,2254,0,0,0,32,28,1]]},
+    "gold_80_middle": {"extends":"gold_80_initial","reference":"Gold80 ground2239 retains its split pale western faces with distinct middle-stage floor paint","ops":[["scatter_paint","gold_soil_light",6,2239,4,5,0,32,32,1]]},
+    "gold_80_finished": {"extends":"gold_80_middle","reference":"Gold80 ground2255 retains the source's split exposed rock, without invented buildings","ops":[["scatter_paint","gold_soil_dark",7,2255,4,5,0,32,32,1]]},
+    "gold_81_middle": {
+      "extends":"gold_81_initial","reference":"Gold81 ground2240 adds the separate short paired open trough on the lower workings",
+      "ops":[["repeat",[4,0,0],2,[["box","gold_channel",10,7,5,13,28,6],
+        ["box","gold_trough",10,7,6,11,28,8],["box","gold_trough",12,7,6,13,28,8]]],
+        ["repeat",[0,8,0],3,[["box","gold_trough",10,8,1,17,9,5]]]]
+    },
+    "gold_81_finished": {
+      "extends":"gold_81_middle","reference":"Gold81 ground2256 adds the small red-brick sump beside the lower open troughs",
+      "ops":[["box","gold_brick",18,16,1,26,25,9],["erase",20,18,2,24,23,9],
+        ["paint","gold_brick_light",18,16,8,26,25,9],["scatter_paint","gold_soil_light",6,2256,0,0,0,32,32,1]]
+    },
+    "gold_82_middle": {"extends":"gold_82_initial","reference":"Gold82 ground2241 preserves the dry marked channel before the pool appears","ops":[["scatter_paint","gold_soil_light",6,2241,0,0,0,32,32,1]]},
+    "gold_82_finished": {
+      "extends":"gold_82_middle","reference":"Gold82 ground2257 owns the small northern tip of the blue pool; distinct Toyland water remains separately guarded",
+      "ops":[["prism","gold_water",2,0,1,[[25,0],[32,0],[32,10],[29,9],[27,5]]],
+        ["scatter_paint","gold_water_light",7,2257,25,0,0,32,10,1,"gold_water"]]
+    },
+    "gold_83_middle": {"extends":"gold_83_initial","reference":"Gold83 ground2242: middle-stage haul-route and fence paint, no body","ops":[["scatter_paint","gold_soil_light",6,2242,0,0,0,32,27,1]]},
+    "gold_83_finished": {"extends":"gold_83_middle","reference":"Gold83 ground2258: finished haul-route paint beside the unchanged eastern fence","ops":[["scatter_paint","gold_soil_dark",7,2258,0,0,0,32,27,1]]},
+    "gold_84_middle": {"extends":"gold_84_initial","reference":"Gold84 ground2243: persistent broken front-west shoulder and its middle-stage exposed floor","ops":[["scatter_paint","gold_soil_light",6,2243,4,5,0,28,32,1]]},
+    "gold_84_finished": {"extends":"gold_84_middle","reference":"Gold84 ground2259: completed soil beneath the same irregular pale excavation face","ops":[["scatter_paint","gold_soil_dark",7,2259,4,5,0,28,32,1]]},
+    "gold_85_middle": {"extends":"gold_85_initial","reference":"Gold85 ground2244: dry front pool site retains its rim and fence in the middle stage","ops":[["scatter_paint","gold_soil_light",6,2244,0,0,0,28,32,1]]},
+    "gold_85_finished": {
+      "extends":"gold_85_middle","reference":"Gold85 ground2260 owns the broad blue pool between the pale rim and front fence, meeting82/86 at their original tile anchors",
+      "ops":[["prism","gold_water",2,0,1,[[0,5],[17,5],[25,10],[28,21],[26,32],[0,32]]],
+        ["scatter_paint","gold_water_light",7,2260,0,5,0,28,32,1,"gold_water"]]
+    },
+    "gold_86_middle": {
+      "extends":"gold_86_initial","reference":"Gold86 ground2245 owns the first half of the long open red-brick workshop shell, joined to87 without duplicate walls",
+      "ops":[["use","gold_front_workshop"],["erase",0,32,0,64,64,112]]
+    },
+    "gold_86_finished": {
+      "extends":"gold_86_middle","reference":"Gold86 ground2261 owns the pool's east edge and its half of the completed olive workshop roof; the Toyland pool palette stays independent",
+      "ops":[["gable","gold_roof",6,20,13,22,32,19,"x"],
+        ["replace_material","gold_brick","gold_brick_low"],["replace_material","gold_brick_light","gold_brick_low"],
+        ["repeat",[0,4,0],3,[["paint","gold_roof_rib",6,20,13,22,21,19]]],
+        ["prism","gold_water",2,0,1,[[0,0],[26,0],[26,6],[21,10],[12,13],[0,9]]],
+        ["scatter_paint","gold_water_light",7,2261,0,0,0,26,13,1,"gold_water"]]
+    },
+    "gold_87_middle": {
+      "extends":"gold_87_initial","reference":"Gold87 ground2246 owns the second half of the open workshop, including the real front doorway and clear yard",
+      "ops":[["box","gold_brick",6,0,1,22,23,13],["erase",8,0,2,20,21,13],
+        ["erase",20,10,1,22,17,9],["box","gold_soil_dark",20,10,1,21,17,9],
+        ["paint","gold_roof_rib",6,0,12,22,23,13],
+        ["scatter_paint","gold_brick_light",7,2246,6,0,1,22,23,12,"gold_brick"]]
+    },
+    "gold_87_finished": {
+      "extends":"gold_87_middle","reference":"Gold87 ground2262 completes the olive front workshop roof at the86 join while preserving its recessed doorway and surrounding entrance",
+      "ops":[["gable","gold_roof",6,0,13,22,23,19,"x"],
+        ["repeat",[0,4,0],6,[["paint","gold_roof_rib",6,0,13,22,1,19]]]]
+    },
+    "gold_bare_underlay": {
+      "extends":"mine_ground_bare","origin":[0,0,-0.75],
+      "reference":"Gold72/74/75 retain original2022 as an independent buried quarter-unit layer below their body-owned half-unit substrate; visible source surfaces remain at zero without coincident floor faces",
+      "ops":[]
+    },
+    "gold_hoist_00": {
+      "size":[64,64,112],"cell_size":[0.5,0.5,0.5],"origin":[0.5,1,0],
+      "reference":"Gold79/88 source2263: stepped blue-grey shaft plinth, open braced grey winding frame, open wheel with the first spoke pose and two long skewed rear stays",
+      "ops":[["use","gold_hoist_structure"],["line","gold_wheel",30,14,60,30,14,96],["line","gold_wheel",30,8,78,30,20,78]]
+    },
+    "gold_hoist_01": {
+      "extends":"gold_hoist_00","reference":"Gold88 source2264: second original spoke pose; the stepped plinth, open frame, axle and twin stays remain fixed",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_hoist_structure"],
+        ["line","gold_wheel",30,10,65,30,18,91],["line","gold_wheel",30,10,91,30,18,65]]
+    },
+    "gold_hoist_02": {
+      "extends":"gold_hoist_00","reference":"Gold88 source2265: third original spoke pose, shared only by the source-identical2/3 animation slots",
+      "ops":[["erase",0,0,0,64,64,112],["use","gold_hoist_structure"],
+        ["line","gold_wheel",30,12,61,30,16,95],["line","gold_wheel",30,8,84,30,20,72]]
+    },
     "copper_head_initial": {
       "size":[32,32,64],"cell_size":[0.5,0.5,1],"origin":[1.5,1.5,0],
       "reference":"Copper47 source2026: narrow open hoist frame with three braced levels; no completed wheel, brick pit house or diagonal stays",
@@ -14738,6 +15109,23 @@
       "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
     },
     "industry_ground": {
+      "72":{"0":"gold_72_initial","1":"gold_bare_underlay","2":"gold_bare_underlay","3":"gold_bare_underlay"},
+      "73":{"0":"gold_73_initial","1":"gold_73_middle","2":"gold_73_middle","3":"gold_73_finished"},
+      "74":{"0":"gold_74_initial","1":"gold_bare_underlay","2":"gold_bare_underlay","3":"gold_bare_underlay"},
+      "75":{"0":"gold_75_initial","1":"gold_bare_underlay","2":"gold_bare_underlay","3":"gold_bare_underlay"},
+      "76":{"0":"gold_76_initial","1":"gold_76_middle","2":"gold_76_middle","3":"gold_76_finished"},
+      "77":{"0":"gold_77_initial","1":"gold_77_middle","2":"gold_77_middle","3":"gold_77_finished"},
+      "78":{"0":"gold_78_initial","1":"gold_78_middle","2":"gold_78_middle","3":"gold_78_finished"},
+      "79":{"0":"gold_79_initial","1":"gold_79_middle","2":"gold_79_middle","3":"gold_79_finished"},
+      "80":{"0":"gold_80_initial","1":"gold_80_middle","2":"gold_80_middle","3":"gold_80_finished"},
+      "81":{"0":"gold_81_initial","1":"gold_81_middle","2":"gold_81_middle","3":"gold_81_finished"},
+      "82":{"0":"gold_82_initial","1":"gold_82_middle","2":"gold_82_middle","3":"gold_82_finished"},
+      "83":{"0":"gold_83_initial","1":"gold_83_middle","2":"gold_83_middle","3":"gold_83_finished"},
+      "84":{"0":"gold_84_initial","1":"gold_84_middle","2":"gold_84_middle","3":"gold_84_finished"},
+      "85":{"0":"gold_85_initial","1":"gold_85_middle","2":"gold_85_middle","3":"gold_85_finished"},
+      "86":{"0":"gold_86_initial","1":"gold_86_middle","2":"gold_86_middle","3":"gold_86_finished"},
+      "87":{"0":"gold_87_initial","1":"gold_87_middle","2":"gold_87_middle","3":"gold_87_finished"},
+      "88":{"0":"gold_79_finished","1":"gold_79_finished","2":"gold_79_finished","3":"gold_79_finished"},
       "47":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"mine_ground_bare"},
       "48":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
       "49":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"mine_ground_bare"},
@@ -14841,6 +15229,11 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "72":{"1":"gold_72_middle","2":"gold_72_middle","3":"gold_72_finished"},
+      "74":{"1":"gold_74_middle","2":"gold_74_middle","3":"gold_74_finished"},
+      "75":{"1":"gold_75_middle","2":"gold_75_middle","3":"gold_75_finished"},
+      "79":{"3":"gold_hoist_00"},
+      "88":{"0":"gold_hoist_00","1":"gold_hoist_01","2":"gold_hoist_02","3":"gold_hoist_02"},
       "47":{"0":"copper_head_initial","1":"copper_head_partial","2":"copper_head_00","3":"copper_head_00"},
       "48":{"0":"copper_head_00","1":"copper_head_01","2":"copper_head_02","3":"copper_head_02"},
       "49":{"0":"copper_engine_initial","1":"copper_engine_partial","2":"copper_engine_finished","3":"copper_engine_finished"},

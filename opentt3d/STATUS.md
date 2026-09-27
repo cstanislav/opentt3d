@@ -10,7 +10,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is now locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls and8 clean crash-save/bundle/live-route controls pass. Fresh Linux acceptance remains pending.
-- [x] Current1,416-volume asset/compiler/schema suite128/128 and downloader/screenshot/memory harness11/11 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,468-volume asset/compiler/schema suite129/129 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -19,10 +19,21 @@ This file records implemented and verified work, not promises of completeness.
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
   desktop-release workflow builds bundled graphics/dependencies and matching sources;
   both extracted macOS default-Vulkan/OpenGL rendering-and-save controls pass locally.
-  The first hosted run fails in packaging: Debian Python tar API compatibility,
-  Windows system-DLL path exclusion and two macOS startup timeouts. The ARM macOS
-  automatic Vulkan launch passes. Compatibility fixes and startup diagnostics are
-  under verification; public downloads and Linux/Windows package checks remain pending.
+  Hosted`.5`passes all three Windows package jobs and Linux's extracted automatic,
+  OpenGL and absent-Vulkan-device fallback launches. Apple-silicon Vulkan passes;
+  its software OpenGL scene times out and Intel aborts inside MoltenVK's argument-
+  buffer probe. Linux's short software-rendered journey misses the intermediate
+  portal collector state without repeating the prior exception. No downloads publish;
+  complete hosted acceptance remains open.
+
+- [x] Gold72…88 adds52 provisional volumes and82 independent body/ground layers,
+  preserving54 empty bodies, the three original wheel poses, cross-owner roof/trough
+  joins and distinct Toyland water/soil restrictions. Coverage reaches86 industry
+  body owners and118 grounds. All24 reconciled background controls pass, including
+  148 actual construction selections, full/empty12-unit gold delivery saves, both
+  app bundles and18,000-frame live animations on both backends. All1,416 preceding
+  model hashes agree; peak sampled memory is3,411,643,800bytes. The town-bank route
+  uses ordinary public commands; the existing copper delivery route also passes.
 
 - [x] Copper47…51 adds14 provisional bodies with all construction selections and
   three original wheel poses. Open frame, hollow flues, recessed bays and separated
@@ -32,7 +43,8 @@ This file records implemented and verified work, not promises of completeness.
   app bundles and live three-pose wheel observations on both backends. All1,402 prior
   model hashes agree; peak sampled memory is3,060,075,880bytes. The Linux memory
   sampler now reports zombie/disappeared-process exits without masking the retained
-  game log or fabricating zero-memory samples. The collector crash itself remains open.
+   game log or fabricating zero-memory samples. The later full-elapsed timing repair
+   passes local controls; complete Linux collector observation remains open.
 
 - [x] Iron-ore100…115 adds48 provisional ground-owned volumes, including terraced
   workings, boundary posts, raised hopper, open construction frames and joined roofs.
