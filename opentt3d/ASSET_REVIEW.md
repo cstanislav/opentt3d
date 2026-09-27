@@ -4,6 +4,34 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Sugar167…174: hollow sieve, falling grains and stockpile grounds (September27)
+
+Twenty-two provisional volumes reach1,667: three source-owned post cuts, four
+stockpile grounds and fifteen independently registered children. Twenty empty body
+slots stay absent. Five sieves retain the open rim and wire grille, six clouds use
+solid grains, and four growing piles preserve the original screen placement. The
+sieve travels at constantZ through real rod passages; all96 frames have zero body,
+ground or child intersections. Three shared components and stepped ownership masks
+preserve the prototype and all1,645 preceding hashes. Exact Toyland3981 ground reuse,
+59 palettes,33 stage aliases and192 climate comparisons reconcile.
+
+All26 controls pass88 actual construction layers, full/empty sugar cargo, both
+96-frame observations and both70-frame toffee regressions. Missing cloud/post rejects
+preserve independent grounds; missing stockpile falls back as a linked group while
+body/grass remain selected. The120-frame control observes only frame0 and rejects.
+All497 integrated Vulkan views match the prototype.44 native layers and22 model-origin
+views agree across backends; four joined and four procedural native views differ by
+one pixel each.173/328 wider views retain5,743 pixels. Native172/173/174 body bounds
+differ[0,+1,0,+2]/[0,+1,+1,+2]/[0,0,+1,+1]; grounds retain[-1,0,-1,+1]. Sieve bounds
+differ[-1,0,0,-1], piles[0,-1,0,0], and cloud bounds stay within2pixels.
+
+Pillar/cap/foot profiles and metallic-blue paint, sieve reflection/grille/fill shapes,
+stockpile facets and raised blue checker substrate, pile shoulders/glints and the exact
+grain pattern/density/continuity remain provisional. Source, all99 procedural states,
+joined layouts and street sheets were reviewed. The initial6…38-cell rod collisions,
+2…38-cell grain/pile collisions, authoring failures and all negative controls remain.
+Evidence:`build-macos/breadth-sugar-final-*`. Final visual approvals:0.
+
 ## Toffee164…166: inclined cutter and shared parent redraw (September27)
 
 Four provisional volumes reach1,645: three source-owned machine/pile cuts and

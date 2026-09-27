@@ -1,5 +1,26 @@
 # Implementation verification
 
+## Sugar mine: integrated construction, cargo and96-frame matrix
+
+At19:02:44UTC, all26 frozen controls pass on both native backends:88 actual
+construction-layer selections, full17/17 and empty0/17 engine174 cargo, four climates,
+clipping, picking and bundle resources. Both2,400-frame services observe all96 original
+ordered sieve/cloud/pile frames and genuine absences on tile53,35, industry0. Both
+2,400-frame toffee regressions capture all70 cutter/shared-parent frames. Missing
+cloud/post controls reject while24 grass and16 stockpile selections survive; missing
+stockpile controls retain six body selections.120 frames with only frame0 correctly
+reject. No animation, simulation or RNG writes are involved.
+
+All22 new prototype/source/build hashes and1,645 preceding models match.59 palettes,
+33 stage aliases,20 empty body slots,16 shared grass sources and192 climate comparisons
+pass. Static joins and all96 moving poses have zero intersections. All497 integrated
+Vulkan views match the prototype.44 native layers and22 model-origin views agree across
+backends; eight native composites differ by one pixel each, and173/328 wider views
+retain5,743 pixels. Native204, asset136, harness12 and137-file boundary pass. Frozen
+binary/catalogue/tool and bundle checks reconcile. Main has1,667 models and175/175
+primary layer bindings; distinct climates, fidelity and final approval remain open.
+Evidence:`build-macos/breadth-sugar-final-*`.
+
 ## Toffee`.19`public desktop package audit
 
 At18:39:15UTC, workflow36339117089 passes all eight jobs at exact commit

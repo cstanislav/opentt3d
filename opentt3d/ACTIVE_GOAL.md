@@ -1,5 +1,44 @@
 # Active extended development goal
 
+## Sugar mine integrated; primary industry bindings complete — September27,19:02:44UTC
+
+Twenty-two provisional volumes reach1,667 and175/175 primary industry definitions:
+129 body owners and175 independent grounds. Sugar167…174 retains three original post
+cuts, four stockpile grounds, five hollow wire sieves, six grain clouds and four piles.
+Twenty body slots remain genuinely empty. Toyland3981 grass exactly reuses the checked
+airport volume. Three compact components retain the prototype and all1,645 preceding
+hashes.59 source palettes,33 stage aliases,16 exact grass sources and192 climate
+comparisons pass. Static source joins and all96 moving frames have zero intersections.
+
+All26 frozen background controls pass88 construction-layer selections, full17/17 and
+empty0/17 engine174 cargo, four climates, clipping, picking and bundles. Both2,400-frame
+services capture all96 original ordered children/absences on tile53,35, industry0;
+both2,400-frame toffee regressions retain all70 frames. Missing cloud/post controls
+reject while24 grass and16 independent stockpile selections survive. Missing-stockpile
+fallback retains six independent body selections. A120-frame run observes only frame0
+and correctly rejects. Native204, asset136, harness12 and137-file boundary checks pass.
+Frozen binary/catalogue/tool hashes and bundle resources reconcile.
+
+All497 integrated Vulkan views match the prototype. All44 individual native layers
+and22 model-origin views agree across backends; four joined and four procedural native
+views retain one differing pixel each.173/328 wider views retain5,743 differing pixels.
+Body bounds are within2pixels; sieve/pile bounds within1pixel; cloud bounds within2.
+Post/cap/foot shape and paint, rim reflectance/grille, stockpile facets/checker substrate,
+pile shoulders/glints and exact grain distribution remain provisional. The original
+intersection and authoring failures remain. Final visual approvals:0.
+
+Services average60.004/60.001fps with12/11 intervals above20ms and75.045/89.604ms maxima;
+the matrix peaks at3,752,169,456 sampled bytes. Sustained arbitrary-world smooth60fps
+and long-duration/reload/multiple-viewport acceptance remain open. Evidence:
+`breadth-sugar-final-{audit,reconciliation,source-review,negative-controls}.json`.
+Successful prototype/final reviews compact994/1,002 captures losslessly, saving
+1,168,130,969/1,287,166,788bytes; originals, failures and metadata remain.
+Verified public downloads are toffee`.19`; publish this primary-binding milestone.
+Continue distinct industry climates, remaining procedural children, infrastructure,
+effects and later catalogue-wide passes. Six isolated Arctic forest models have passing
+source palettes and no floating growth cells, but source geometry/paint and explicit
+climate selection remain pending; they do not count as integrated coverage.
+
 ## Toffee desktop downloads independently verified — September27,18:39:15UTC
 
 Release`.19`atb7ebd04dd00b8ba300e42c3f53f2c77174f7ca5c passes all eight jobs in

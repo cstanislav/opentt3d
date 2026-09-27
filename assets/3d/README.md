@@ -297,8 +297,14 @@ source/binding check.171…174 Toyland3981 grass remains independently selectabl
 `--verify-sugar-mine --running --benchmark-frames 2400` observes all96 actual frames
 on one unchanged tile/industry; galleries and hidden children cannot satisfy it.
 `--industry-procedural-comparison 174 --stage 0`through3 reconciles the original
-ordered selections and99 total diagnostic states. The current22-volume artwork
-study is isolated; runtime support does not establish integrated artwork coverage.
+ordered selections and99 total diagnostic states. The integrated22-volume family
+contains three source-owned post cuts, four ground-owned stockpile cuts, five hollow
+wire sieves, six falling-grain distributions and four growing piles. Twenty original
+body slots stay empty. Three shared components and stepped ownership prisms preserve
+all prototype cells; every1,645 preceding model hash remains unchanged. Rod passages
+clear rim/fill through all96 frames; independently registered grain depths clear every
+growing pile. Source/native/street and live controls are retained under
+`breadth-sugar-final-*`. Fine source paint/shape and final visual approval remain open.
 
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4

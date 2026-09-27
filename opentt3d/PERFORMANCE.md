@@ -3,6 +3,18 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Sugar-mine cycle and toffee regression observations
+
+The26-control matrix peaks at3,752,169,456 sampled bytes. Two2,400-frame services
+average60.004/60.001fps for OpenGL/Vulkan, with5.714/7.509ms p95 work,12/11 intervals
+above20ms and75.045/89.604ms maximum intervals. Both observe all96 original ordered
+frames and absences on one unchanged tile/industry. Two2,400-frame toffee regressions
+average60.002/60.004fps and retain1/3 intervals above20ms, with20.070/20.111ms maxima.
+Concurrent authoring, native tests, source audits, fallback controls and package checks
+remain part of this environment. Sustained arbitrary-world smoothness and long-duration/
+reload/multiple-viewport memory acceptance remain open. Source:
+`breadth-sugar-final-reconciliation.json`.
+
 ## Toffee-quarry cycle and bubble regression observations
 
 The26-control matrix peaks at3,850,358,792 sampled bytes. Two2,400-frame services

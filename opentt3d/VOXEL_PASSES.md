@@ -68,7 +68,7 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-27; 1,645-volume toffee-quarry checkpoint)
+## Pass 1 coverage checkpoint and queue (2026-09-27; 1,667-volume sugar-mine checkpoint)
 
 These counts describe existing bindings, not automatic Pass 1 acceptance. The detailed
 evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE.md`.
@@ -78,7 +78,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Vehicles | 256/256 engine definitions, including35/35 locomotives,88/88 road,81/81 wagons,11/11 ships and41/41 aircraft with four rotor states and three independently mounted train collector volumes | Flat-body tunnel gauge repaired; slope/curve wheel contact, contextual station/depot/bridge/Cab clearance and all-family source/dimensional work remain; bindings do not establish Pass1 acceptance |
 | Houses | 110/110 definitions with body or ground geometry;109 body definitions and88 ground definitions | Final source/state/variant/join/ground audit and catalogue-wide later fidelity passes; bindings alone do not establish Pass1 acceptance |
 | Trees | 62/62 families,434 lifecycle volumes, including all Arctic snow and nine Toyland families | Source-proportion/branch-shape and per-stage palette corrections, complete actual-state/climate review and the severe wide-view throughput regression remain; bindings do not establish Pass1 acceptance |
-| Industries | 167/175 definitions with body or ground bindings:126 body owners,167 grounds | Definitions0…166 have basic layer bindings, including eight plastic poses, fizzy bubble palettes, four factory children across50 frames, bubble-generator construction/completed children across40 frames and toffee's70-frame cutter/shared redraw; eight primary sugar definitions, distinct climate artwork, remaining procedural children and complete source/state/layout acceptance remain.268 original child-state references are exported; source export alone does not establish voxel coverage |
+| Industries | 175/175 primary definitions with body or ground bindings:129 body owners,175 grounds | Basic layer bindings include eight plastic poses, fizzy bubble palettes, four factory children across50 frames, bubble-generator children across40 frames, toffee's70-frame cutter/shared redraw and sugar's15 children across96 frames with genuine absences. Distinct climate artwork, remaining procedural children and complete source/state/layout acceptance remain.268 original child-state references are exported; source export alone does not establish voxel coverage |
 | Airports | 74/74 primary tile definitions:56 body owners and18 ground-only definitions;74 independent grounds | Elevated heliport44, four-climate taxiway/grass/worn-airfield/small-runway surfaces and radar/windsock grounds are bound; independent Toyland terminal/hangar artwork, exact lamp phases and complete source/street/layout acceptance remain |
 | Depots | 6/6 families,24 directional bindings | Tram body/floor/wire bindings now cover the missing family; all-family source/ground/vehicle clearance and later fidelity review remain |
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |

@@ -16,6 +16,19 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Sugar167…174:**22 provisional volumes reach all175 primary layer bindings while
+  preserving20 empty bodies. Three post cuts, four stockpile grounds, five hollow
+  wire sieves, six solid-grain clouds and four growing piles retain original placement
+  and96-frame ordered absences. Independent Toyland grass reuses its exact source.
+  All59 palettes,33 aliases,192 climate comparisons and1,645 preceding hashes pass.
+  Three compact components preserve the prototype.26 controls pass88 actual construction
+  layers, full/empty cargo, both96-frame services and both70-frame toffee regressions.
+  Missing cloud/post/stockpile and incomplete-cycle controls preserve layer ownership.
+  Static/moving intersections are zero. All497 prototype views agree; eight native
+  composite pixels and5,743 pixels in173 wider views differ across backends. Source
+  post/cap/foot, grille/rim/fill, stockpile/pile geometry and paint, and grain detail
+  remain provisional. Evidence:`build-macos/breadth-sugar-final-*`. Final approvals:0.
+
 - **Toffee164…166:**four provisional volumes preserve the inclined hollow actuator,
   transverse motor, supports, original pile cuts and moving cutter4767. The exact
   parent4764/child4766 redraw uses one physical owner at all four construction stages.
