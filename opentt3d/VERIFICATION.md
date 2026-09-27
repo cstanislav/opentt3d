@@ -1,5 +1,18 @@
 # Implementation verification
 
+## Toy-factory desktop release independently verified
+
+At16:30:52UTC, release`.17`atf1d2d501bf67c7fb22b639eef43537f86a6553ed has eight passing
+hosted jobs. Public audits verify19 attachments,18 checksums,2,068 exact source files,
+six embedded commits and six matching1,636-model catalogues. Three downloaded Mac
+startup/save controls pass alongside architecture/signature/dependency/minimum15.0
+checks. Seven hosted graphical controls pass72 clipping views, and Windows x64/x86
+native load/save passes. ARM/Intel software OpenGL has zero black world pixels and
+nine differing pixels from Vulkan in the reviewed hosted startup scene. Linux's
+900-frame llvmpipe journey observes all six support states and collector contact at
+6.143fps with2,411,839,488 peak sampled bytes. Evidence:
+`build-macos/playable-release17-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Integrated toy-factory original states and supplied cycles
 
 At15:50:21UTC, twelve provisional volumes bring the catalogue to1,636 and primary

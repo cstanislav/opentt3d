@@ -26,7 +26,12 @@ but retain timing outliers; sustained smooth60fps remains open.
 
 ## Downloads
 
-The [verified `.16` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.16)
-is available for Windows, macOS and Linux. This factory preview's executable assets
-appear after its exact-commit package workflow passes. See the
+The [verified `.17` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.17)
+is available for Windows, macOS and Linux, built from
+`f1d2d501bf67c7fb22b639eef43537f86a6553ed`. All eight hosted jobs pass. Independent
+download audits verify19 attachments,18 checksums,2,068 exact source files and six
+matching1,636-model catalogues. Three downloaded Mac startup/save controls pass;
+seven hosted graphical controls pass72 clipping views, and Windows x64/x86 native
+load/save passes. The Linux900-frame llvmpipe support/collector journey passes at
+6.143fps with2,411,839,488 peak sampled bytes. See the
 [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).

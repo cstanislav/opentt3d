@@ -1,5 +1,23 @@
 # Active extended development goal
 
+## Toy-factory desktop release verified — September27,16:30:52UTC
+
+Release`.17`atf1d2d501bf67c7fb22b639eef43537f86a6553ed passes all eight hosted jobs.
+Independent public checks reconcile19 assets,18 checksums,2,068 exact-commit source
+files and six matching1,636-model catalogues. Three downloaded Mac startup/save
+controls and architecture/signature/dependency/minimum15.0 audits pass. Seven hosted
+graphical controls pass72 clipping views; Windows x64/x86 native load/save passes.
+Reviewed ARM/Intel software-OpenGL worlds contain zero black pixels and nine
+differences from the matched Vulkan capture. Linux's900-frame llvmpipe journey
+observes all six support states and collector contact at6.143fps, peaking at
+2,411,839,488 sampled bytes. Public downloads now link to`.17`.
+
+Evidence:`playable-release17-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Bubble runtime/artwork remains outside this release: its construction and40-frame
+isolated observations pass, and its latest five-volume study has zero static/child/
+plunger intersections. Integrated acceptance remains in progress. Continue remaining
+catalogue breadth and later fidelity/performance passes; final visual approvals:0.
+
 ## Toy-factory artwork integrated and verified — September27,15:50:21UTC
 
 Twelve provisional factory volumes reach1,636 and160/175 primary industry definitions:
