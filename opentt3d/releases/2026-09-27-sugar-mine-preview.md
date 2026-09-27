@@ -7,9 +7,8 @@ effects/infrastructure, source fidelity and performance work continue.
 
 ## Play
 
-The [verified `.19` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.19)
-is available for Windows, macOS and Linux. This sugar preview's executable assets
-appear after its exact-commit package workflow passes. See the
+The [verified `.20` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.20)
+includes this sugar preview for Windows, macOS and Linux. See the
 [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
 for platform selection and first launch. Required graphics are bundled.
 
@@ -39,6 +38,13 @@ pass. All497 integrated Vulkan captures match the reviewed prototype.44 native l
 and22 model-origin views agree across backends; eight native composite pixels and
 5,743 pixels in173 wider views differ. Native204, asset136, harness12 and the137-file
 presentation-boundary checks pass.
+
+The exact-commit desktop workflow passes all eight jobs. Independent public downloads
+verify19 attachments,18 checksums,2,071 matching source files and six identical
+1,667-model catalogues. Three downloaded Mac startup/save checks, seven hosted graphical
+controls with72 clipping views and Windows x64/x86 native load/save pass. The first
+Linux journey missed one support state; its unchanged retry captures all six states
+and collector contact. The original failure and exact-package replays remain recorded.
 
 ## Still in progress
 

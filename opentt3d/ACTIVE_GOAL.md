@@ -1,5 +1,24 @@
 # Active extended development goal
 
+## Sugar desktop packages independently verified — September27,20:16:37UTC
+
+Release`.20`at8992e3b1361db3284486a3c35b124e5ea4420d8e passes all eight jobs in
+workflow36343192871 after the unchanged Linux gate retry. Independent public checks
+verify19 attachments,18 checksums,2,071 exact source files and six identical1,667-model
+catalogues. Three downloaded Mac startup/save controls, architecture/signature/dependency/
+minimum15.0 audits, seven hosted graphical controls with72 clipping views and Windows
+x64/x86 native load/save pass. Reviewed ARM/Intel software-OpenGL worlds have zero black
+pixels and nine differences from Vulkan. Linux captures all six support states and
+collector contact at4.509fps, peaking at2,397,560,832 sampled bytes. First-attempt failure
+and exact-package replay evidence remain. Public verified links now use`.20`.
+
+Arctic forest artwork is pushed atb5acb2307; its1,673-model catalogue is newer than`.20`.
+Prepare the exact-commit Arctic preview while continuing the isolated farm study.
+Grounded window reveals and corrected basic tower/annex footprints address its first
+failures; source roofs, grounds, all layouts and live controls still need review.
+Final visual approvals remain0. Evidence:
+`playable-release20-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Arctic forest integrated and source-reviewed — September27,20:09:37UTC
 
 Six provisional volumes reach1,673 while preserving all1,667 preceding model hashes.

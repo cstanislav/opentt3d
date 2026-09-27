@@ -1,5 +1,19 @@
 # Implementation verification
 
+## Sugar`.20`public desktop package audit
+
+At20:16:37UTC, workflow36343192871 passes all eight jobs at exact commit
+8992e3b1361db3284486a3c35b124e5ea4420d8e. The unchanged Linux retry observes all six
+support states and collector contact; the original first-attempt failure is retained.
+Independent downloads verify19 attachments,18 checksum entries,2,071 exact source
+files and six identical1,667-model catalogues. Three downloaded Mac startup/save
+controls, architecture/signature/dependency/minimum15.0 checks, seven hosted graphical
+controls with72 clipping views and Windows x64/x86 native load/save pass. ARM/Intel
+software-OpenGL world captures have zero black pixels and nine differences from Vulkan.
+Linux's900-frame llvmpipe run averages4.509fps and peaks at2,397,560,832 sampled bytes.
+Public verified links now use`.20`; newer Arctic work is a separate increment.
+Evidence:`build-macos/playable-release20-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Arctic forest: explicit layers, supported timber and live regrowth
 
 At20:04:04UTC, all26 frozen controls pass on both native backends:16 actual construction
