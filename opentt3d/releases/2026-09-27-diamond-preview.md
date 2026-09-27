@@ -27,8 +27,15 @@ over20ms, so sustained smooth60fps remains an open goal.
 
 ## Downloads
 
-The [verified `.8` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.8)
-is available for Windows, macOS and Linux, including the hosted-verified software
-OpenGL clipping correction. This diamond preview's executable assets appear after
-its exact-commit package workflow passes. See the
+**Windows, macOS and Linux executables are available under Assets.** All eight
+hosted source, platform and publish jobs pass. Independent download checks verify
+all19 attachments,18 checksum entries,2,060 matching source blobs and six embedded
+package commits. Every package includes the same1,569-model catalogue.
+
+Downloaded Mac architectures, signatures, app-local dependencies and startup/save
+controls pass. All seven hosted graphical controls pass the72-view clipping gate;
+both Mac software-OpenGL crops have zero black world pixels and nine differences
+from matched Vulkan. Windows x64/x86 extracted native load/save controls pass.
+Linux's900-frame electric journey passes every required support/collector observation.
+See the
 [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).

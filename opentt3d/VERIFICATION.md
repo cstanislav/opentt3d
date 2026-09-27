@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Diamond desktop package audit
+
+Release`.9`at3d558589def7c7d8563f151fc74d1fec9d861bf2 passes all eight hosted jobs.
+Independent checks verify19 public attachments,18 checksum entries,2,060 exact
+source blobs and six embedded commits with the same1,569 models. Downloaded Mac
+architectures, signatures, local libraries,15.0 minimum and three startup/save
+controls pass. Windows x64/x86 extracted native load/save controls also pass.
+
+All seven hosted graphical controls pass72 perspective views and21,180 ray-tested
+samples. Both hosted Mac software-OpenGL images have zero black world pixels and
+nine paint/edge differences against the matched Vulkan crop. Linux's900-frame
+electric journey passes every required support/collector observation at3.979fps
+and2,202,640,384 peak sampled bytes. This is package/coverage verification, with
+sustained arbitrary-world performance and final artwork approval still open.
+Evidence:`build-macos/playable-release9-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Diamond mine source ownership and ordinary service
 
 At08:32:38UTC, the corrected diamond91…99 candidate passes24 frozen background

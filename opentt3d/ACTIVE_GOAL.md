@@ -1,5 +1,29 @@
 # Active extended development goal
 
+## Diamond desktop release verified — September 27, 09:10:23 UTC
+
+Release`.9`at3d558589def7c7d8563f151fc74d1fec9d861bf2 passes all eight hosted jobs.
+Independent public checks reconcile19 attachments,18 checksum entries,2,060 tracked
+source blobs and every embedded package commit. All six packages contain the same
+1,569-model catalogue, with only a trailingCRLF difference on Windows. Downloaded
+Mac signatures, architectures, bundled libraries,15.0 minimum and three local
+startup/save controls pass, including Intel Vulkan under Rosetta.
+
+Seven hosted graphical controls pass the72-view ray-based clipping gate. The actual
+ARM and Intel software-OpenGL screenshots are reviewed: zero black world pixels,
+nine paint/edge differences from the matched Vulkan crop. Windows x64/x86 extracted
+load/save controls pass. Linux's900-frame electric journey observes all required
+support and collector states at3.979fps under llvmpipe and2,202,640,384 peak sampled
+bytes. Different hosted timing does not establish sustained performance acceptance.
+Public instructions now link to`.9`. Evidence:
+`playable-release9-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
+Cotton129/130's separate six-volume working candidate is under a frozen26-control
+matrix. Native200, asset131 and harness12 pass, but full-plantation review exposes
+overly broad pale highlights merging adjacent crowns. Preserve its first matrix
+and correct that paint before accepting the increment. Source/body support and all
+16 palettes/18 aliases pass; all1,569 prior model hashes agree.
+
 ## Diamond mine breadth verified — September 27, 08:32:38 UTC
 
 Diamond91…99 adds26 provisional volumes, bringing the catalogue to1,569. Primary
