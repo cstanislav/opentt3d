@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Fizzy desktop release independently verified
+
+At15:15:45UTC, release`.16`at99c058219d9646a151309db0261bc86990844efb has eight passing
+hosted jobs. Public audits verify19 attachments,18 checksums,2,067 exact source files,
+six embedded commits and six matching1,624-model catalogues. Three downloaded Mac
+startup/save controls pass alongside architecture/signature/dependency/minimum15.0
+checks. Seven hosted graphical controls pass72 clipping views, and Windows x64/x86
+native load/save passes. ARM/Intel software OpenGL has zero black world pixels and
+nine differing pixels from Vulkan in the reviewed hosted startup scene.
+
+The unchanged Linux retry observes all six support states and collector contact over
+900 frames at1.718fps, with2,322,087,936 peak sampled bytes. Preserve the first attempt's
+failure and original artifact: its missing ascending observation is not erased by the
+successful retry. Evidence:`build-macos/playable-release16-{download-audit,ci-reconciliation,
+hosted-visual-comparison}.json`. Factory support/artwork is outside this tagged commit.
+
 ## Toy-factory child mechanism and fixed model-origin reviews
 
 At14:56:00UTC, the isolated factory study captures all50 original ordered child

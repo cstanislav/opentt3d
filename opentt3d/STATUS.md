@@ -129,8 +129,9 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Normal launches request3D without developer environment variables. Explicit
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
   desktop-release workflow publishes Windows x64/x86/ARM64, macOS arm64/x86_64 and
-  Linux x86-64 packages in release`.14`. Every hosted job passes. All19 public assets,
-  18 checksum entries,2,065 exact-commit source files and all six embedded package
+  Linux x86-64 packages in release`.16`. Every hosted job passes after the unchanged
+  Linux retry; the first missing-ascending observation remains recorded. All19 public assets,
+  18 checksum entries,2,067 exact-commit source files and all six embedded package
   commits are verified. Mac signatures/dependencies/minimum15.0 and published local
   launches pass. Hosted ARM software OpenGL passes the repaired clipping gate and
   reviewed screenshots; Windows GPU/input and ARM64 native execution remain open.

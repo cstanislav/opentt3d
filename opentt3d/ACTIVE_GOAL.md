@@ -1,5 +1,23 @@
 # Active extended development goal
 
+## Fizzy desktop release verified — September27,15:15:45UTC
+
+Release`.16`at99c058219d9646a151309db0261bc86990844efb passes all eight hosted jobs
+after the unchanged Linux job's retry. Independent public checks reconcile19 assets,
+18 checksums,2,067 exact-commit source files and six matching1,624-model catalogues.
+Three downloaded Mac startup/save controls and architecture/signature/dependency/
+minimum15.0 audits pass. Seven hosted graphical controls pass72 clipping views;
+Windows x64/x86 native load/save passes. Reviewed ARM/Intel software-OpenGL worlds
+contain zero black pixels and nine differences from the matched Vulkan capture.
+
+Linux's900-frame llvmpipe journey now sees all six support states and collector
+contact at1.718fps and2,322,087,936 peak sampled bytes. The first attempt's missing
+ascending state, logs and artifact remain under`playable-release16-failed-ci/`.
+Public downloads and fizzy notes now link to`.16`. Evidence:
+`playable-release16-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+This tagged package excludes the later factory-child support and all factory art.
+Factory artwork integration, remaining breadth and sustained smooth60fps remain open.
+
 ## Toy-factory child mechanism verified in an isolated study — September27,14:56:00UTC
 
 The renderer preserves the original50-frame factory143 child order and255 absences.

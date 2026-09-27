@@ -24,7 +24,11 @@ remains open.
 
 ## Downloads
 
-The [verified `.15` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.15)
-is available for Windows, macOS and Linux. This preview's executable assets appear
-after its exact-commit package workflow passes. See the
+The [verified `.16` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.16)
+is available for Windows, macOS and Linux. All eight hosted jobs pass; independent
+checks reconcile19 public attachments,18 checksums,2,067 exact-commit source files
+and six matching1,624-model catalogues. Three downloaded Mac launch/save controls
+pass, together with seven hosted graphical/clipping controls and Windows x64/x86
+native load/save. The Linux journey passes all support/collector states on retry;
+its first missing-ascending-state observation is retained. See the
 [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
