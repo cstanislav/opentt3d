@@ -1,5 +1,22 @@
 # Implementation verification
 
+## Airport release package audit
+
+Release`.7`at3c263730d1cdec348f0214ae002e072399e99998 passes all eight hosted source,
+platform and publish jobs. Independent checks at07:14:32UTC verify all19 public
+attachments,18 checksum entries,2,058 tracked source blobs and six embedded commits.
+All six packages contain the same1,539 models, with only a trailing WindowsCRLF.
+Downloaded Mac signatures, architectures, local library paths and15.0 minimums pass;
+local Apple-silicon Vulkan/OpenGL and Intel-under-Rosetta Vulkan launches save correctly.
+
+Hosted startup/save controls pass on both Mac architectures, Linux's three video
+selection paths and Windows x64/x86. Linux's900-frame electric journey observes all
+required support/collector states and peaks at2,168,037,376 sampled bytes. Software
+llvmpipe averages6.258fps. The hosted ARM software-OpenGL screenshot still contains
+black triangles, reproduced locally at the same viewport size. Native WindowsARM,
+Windows GPU/input, complete visual correctness and arbitrary-world60fps remain open.
+Evidence:`build-macos/playable-release7-{download-audit,ci-reconciliation}.json`.
+
 ## Arctic/tropical bank and longer public-command cargo routes
 
 At07:00:52UTC, all28 bank controls pass with frozen source/build hashes and matching

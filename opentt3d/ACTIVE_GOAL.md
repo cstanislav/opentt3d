@@ -1,5 +1,23 @@
 # Active extended development goal
 
+## Airport desktop downloads verified — September 27, 07:14:32 UTC
+
+Release`.7`at3c263730d1cdec348f0214ae002e072399e99998 passes all eight hosted jobs.
+Independent downloaded-archive checks reconcile19 public attachments,18 checksum
+entries,2,058 tracked source blobs and all six embedded package commits. All packages
+contain the same1,539-volume catalogue; Windows differs only by a trailingCRLF.
+Downloaded Mac signatures, CPU architectures, app-local libraries and15.0 minimums
+pass, as do local Apple-silicon Vulkan/OpenGL and Intel-under-Rosetta Vulkan launches.
+
+The actual hosted controls pass both Mac default-Vulkan/software-OpenGL startup/save
+paths, Linux default/OpenGL/absent-Vulkan fallback and Windows x64/x86 load/save.
+Linux's900-frame electric journey observes every support and collector state, with
+6.258fps under llvmpipe and2,168,037,376 peak sampled bytes. The different hosted timing
+does not establish a performance improvement. ARM software-OpenGL still has the
+retained black-triangle defect despite successful startup/save. Evidence:
+`playable-release7-{download-audit,ci-reconciliation}.json` and original public archives.
+Public download instructions now point to this independently verified airport preview.
+
 ## Arctic/tropical bank verified — September 27, 07:00:52 UTC
 
 Four provisional bank89/90 volumes raise the catalogue to1,543 and industry coverage

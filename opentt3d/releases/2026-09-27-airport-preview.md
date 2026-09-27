@@ -23,10 +23,18 @@ approvals remain at zero, and sustained smooth60fps is still an open goal.
 
 ## Downloads
 
-The preceding [verified `.6` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.6)
-is available now for Windows, macOS and Linux. All19 attachments and matching source
-were checked. This preview's own executables appear under **Assets** after its
-exact-commit package workflow passes.
+**Windows, macOS and Linux executables are available under Assets.** All eight jobs
+in the [exact-commit package workflow](https://github.com/cstanislav/opentt3d/actions/runs/36300868157)
+passed. Independent download checks verify all19 attachments,18 checksum entries,
+2,058 tracked source files and the embedded commit in all six platform packages.
+Every package contains the same1,539-volume catalogue.
+
+Both hosted Mac architectures pass default Vulkan and explicit software-OpenGL
+startup/save controls; Linux passes default, OpenGL and absent-Vulkan fallback
+launches; Windows x64/x86 pass extracted load/save controls. The900-frame Linux
+electric journey observes every required support and collector contact state.
+Downloaded Mac signatures, architectures and app-local dependencies pass, along
+with local Apple-silicon Vulkan/OpenGL and Intel-under-Rosetta Vulkan launches.
 
 See [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 Required graphics and runtime dependencies are bundled. Windows ARM64 native execution,
