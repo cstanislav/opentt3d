@@ -364,7 +364,20 @@ static GLuint Compile(GLenum type, const char *source)
 static bool Initialize()
 {
 	if (program != 0) return true;
+	/* Apple's CPU rasterizer can drop perspective triangles crossing several clip
+	 * planes (including positive-W triangles). Clip them explicitly before they
+	 * reach that rasterizer; keep the original homogeneous W and interpolants. */
+	bool software_clip = OpenGLBackend::Get()->GetDriverName().find("Apple Software Renderer") != std::string::npos;
+	if (const char *value = std::getenv("OPENTT3D_GL_SOFTWARE_CLIP")) software_clip = std::string_view(value) == "1";
 	const char *vertex_source = R"GLSL(#version 150
+#ifdef SOFTWARE_CLIP
+#define lit_colour clip_lit_colour
+#define uv_page clip_uv_page
+#define alpha clip_alpha
+#define uv_region clip_uv_region
+#define material_surface clip_material_surface
+#define pick_id clip_pick_id
+#endif
 #ifdef GL_ARB_gpu_shader5
 #extension GL_ARB_gpu_shader5 : enable
 #define ROTATION_PRECISE precise
@@ -571,14 +584,87 @@ void main() {
     output_id = pick_id;
 }
 )GLSL";
-	GLuint vertex = Compile(GL_VERTEX_SHADER, vertex_source);
+	const char *geometry_source = R"GLSL(#version 150
+layout(triangles) in;
+layout(triangle_strip, max_vertices = 21) out;
+in vec3 clip_lit_colour[];
+in vec3 clip_uv_page[];
+in float clip_alpha[];
+flat in vec4 clip_uv_region[];
+flat in uint clip_material_surface[];
+flat in uint clip_pick_id[];
+out vec3 lit_colour;
+out vec3 uv_page;
+out float alpha;
+flat out vec4 uv_region;
+flat out uint material_surface;
+flat out uint pick_id;
+struct ClipVertex { vec4 position; vec3 colour; vec3 uv; float opacity; };
+ClipVertex polygon[12];
+ClipVertex temporary[12];
+float plane_distance(vec4 p, int plane) {
+    if (plane == 0) return p.w + p.x;
+    if (plane == 1) return p.w - p.x;
+    if (plane == 2) return p.w + p.y;
+    if (plane == 3) return p.w - p.y;
+    if (plane == 4) return p.w + p.z;
+    return p.w - p.z;
+}
+ClipVertex interpolate(ClipVertex a, ClipVertex b, float t) {
+    return ClipVertex(mix(a.position,b.position,t),mix(a.colour,b.colour,t),mix(a.uv,b.uv,t),mix(a.opacity,b.opacity,t));
+}
+void emit_vertex(int i) {
+    vec4 p = polygon[i].position;
+    // Round an intersection onto its clip plane, rather than outside it.
+    gl_Position = vec4(clamp(p.xyz,vec3(-p.w),vec3(p.w)),p.w);
+    lit_colour = polygon[i].colour;
+    uv_page = polygon[i].uv;
+    alpha = polygon[i].opacity;
+    // Preserve the original provoking vertex, including complete picking IDs.
+    uv_region = clip_uv_region[2];
+    material_surface = clip_material_surface[2];
+    pick_id = clip_pick_id[2];
+    EmitVertex();
+}
+void main() {
+    for (int i=0;i<3;++i) polygon[i] = ClipVertex(gl_in[i].gl_Position,clip_lit_colour[i],clip_uv_page[i],clip_alpha[i]);
+    int count = 3;
+    for (int plane=0;plane<6;++plane) {
+        int size = 0;
+        ClipVertex previous = polygon[count-1];
+        float previous_distance = plane_distance(previous.position,plane);
+        for (int i=0;i<count;++i) {
+            ClipVertex current = polygon[i];
+            float distance = plane_distance(current.position,plane);
+            if ((distance >= 0.0) != (previous_distance >= 0.0)) {
+                temporary[size++] = interpolate(previous,current,previous_distance/(previous_distance-distance));
+            }
+            if (distance >= 0.0) temporary[size++] = current;
+            previous = current;
+            previous_distance = distance;
+        }
+        if (size < 3) return;
+        count = size;
+        for (int i=0;i<count;++i) polygon[i] = temporary[i];
+    }
+    // Six clipping planes can increase a triangle to at most nine vertices.
+    for (int i=1;i<count-1;++i) {
+        emit_vertex(0);emit_vertex(i);emit_vertex(i+1);EndPrimitive();
+    }
+}
+)GLSL";
+	std::string source(vertex_source);
+	if (software_clip) source.insert(source.find('\n')+1,"#define SOFTWARE_CLIP\n");
+	GLuint vertex = Compile(GL_VERTEX_SHADER, source.c_str());
 	GLuint fragment = Compile(GL_FRAGMENT_SHADER, fragment_source);
-	if (!vertex || !fragment) {
-		r_glDeleteShader(vertex); r_glDeleteShader(fragment);
+	GLuint geometry = software_clip ? Compile(GL_GEOMETRY_SHADER,geometry_source) : 0;
+	if (!vertex || !fragment || (software_clip && !geometry)) {
+		r_glDeleteShader(vertex); r_glDeleteShader(fragment); r_glDeleteShader(geometry);
 		return false;
 	}
 	program = r_glCreateProgram();
 	r_glAttachShader(program, vertex); r_glAttachShader(program, fragment);
+	if (geometry != 0) r_glAttachShader(program,geometry);
 	r_glBindAttribLocation(program, 0, "position");
 	r_glBindAttribLocation(program, 1, "normal");
 	r_glBindAttribLocation(program, 2, "colour");
@@ -599,15 +685,16 @@ void main() {
 		Debug(driver, 0, "OpenTT3D program: {}", log);
 		r_glDeleteProgram(program); program = 0;
 		r_glDeleteShader(fragment);
+		r_glDeleteShader(geometry);
 		return false;
 	}
 	if (VoxelPixelCullEnabled()) {
-		std::string source(vertex_source);
 		source.insert(source.find('\n')+1,"#define VOXEL_VISIBLE\n");
 		GLuint visible_vertex = Compile(GL_VERTEX_SHADER,source.c_str());
-		if (!visible_vertex) { r_glDeleteShader(fragment); return false; }
+		if (!visible_vertex) { r_glDeleteShader(fragment); r_glDeleteShader(geometry); return false; }
 		visible_program = r_glCreateProgram();
 		r_glAttachShader(visible_program,visible_vertex); r_glAttachShader(visible_program,fragment);
+		if (geometry != 0) r_glAttachShader(visible_program,geometry);
 		r_glBindFragDataLocation(visible_program,0,"output_colour");
 		r_glBindFragDataLocation(visible_program,1,"output_id");
 		r_glLinkProgram(visible_program); r_glDeleteShader(visible_vertex);
@@ -615,7 +702,7 @@ void main() {
 		if (!success) {
 			char log[2048]{}; r_glGetProgramInfoLog(visible_program,sizeof(log),nullptr,log);
 			Debug(driver,0,"OpenTT3D visible voxel program: {}",log);
-			r_glDeleteShader(fragment); return false;
+			r_glDeleteShader(fragment); r_glDeleteShader(geometry); return false;
 		}
 		r_glGenVertexArrays(1,&visible_vertex_array);
 		r_glGetIntegerv(GL_MAX_TEXTURE_BUFFER_SIZE,&maximum_buffer_texels);
@@ -623,6 +710,8 @@ void main() {
 		Debug(driver,1,"OpenTT3D: OpenGL exact voxel visibility enabled, {} buffer texels / {} subpixel bits",maximum_buffer_texels,subpixel_precision);
 	}
 	r_glDeleteShader(fragment);
+	r_glDeleteShader(geometry);
+	if (software_clip) Debug(driver,1,"OpenTT3D: explicit homogeneous clipping enabled for OpenGL software rasterization");
 	r_glGenVertexArrays(1, &vertex_array);
 	r_glGenBuffers(1, &vertex_buffer);
 	r_glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);

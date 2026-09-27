@@ -2048,6 +2048,95 @@ static void VerifyMeshAllocationOrder()
 	Debug(driver,1,"OpenTT3D: {} allocation-order views preserve coplanar colour, opacity and picking independently of mesh addresses",views);
 }
 
+/** Compare clipped GPU triangles with independent world-space ray intersections.
+ * Strongly unequal positive W, the near plane and an eye-crossing triangle expose
+ * Apple's software clipper failure without relying on a particular title save. */
+void VerifyClipping()
+{
+	Camera camera{{},1,96,80};
+	camera.first_person = true; camera.vertical_fov = 40;
+	const std::array<Vec3,3> shapes[] = {
+		{{{-2,-2,0},{2,-2,0},{0,2,0}}},
+		{{{-16,-16,0},{16,-16,0},{0,2,0}}},
+		{{{-4,-1,0},{2,-1,0},{-2,2,0}}},
+	};
+	const std::array<float,3> depths[] = {{{1,1,1}},{{1,2,4}},{{10,20,400}},{{0.1f,200,400}},{{0.025f,2,4}},{{-1,2,4}}};
+	const Rgb colours[] = {{0.8f,0.15f,0.25f},{0.2f,0.85f,0.1f},{0.1f,0.3f,0.9f}};
+	auto position = [&](float x, float y, float depth) {
+		return Camera::World(Camera::Right()*(x*depth*camera.width/(2*camera.FocalPixels())) +
+			camera.Up()*(y*depth*camera.height/(2*camera.FocalPixels())) - camera.Back()*depth);
+	};
+	auto intersect = [](const Ray &ray, const std::vector<Vertex> &triangle) -> std::optional<std::array<double,4>> {
+		using Vector = std::array<double,3>;
+		auto vector = [](Vec3 p) -> Vector { return {p.x,p.y,p.z}; };
+		auto subtract = [](Vector a, Vector b) -> Vector { return {a[0]-b[0],a[1]-b[1],a[2]-b[2]}; };
+		auto cross = [](Vector a, Vector b) -> Vector { return {a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]}; };
+		auto dot = [](Vector a, Vector b) { return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; };
+		Vector a = vector(triangle[0].position), edge1 = subtract(vector(triangle[1].position),a), edge2 = subtract(vector(triangle[2].position),a);
+		Vector direction = vector(ray.direction), p = cross(direction,edge2), t = subtract(vector(ray.origin),a), q = cross(t,edge1);
+		double determinant = dot(edge1,p);
+		if (std::abs(determinant) < 1e-12) return std::nullopt;
+		double u = dot(t,p)/determinant, v = dot(direction,q)/determinant, distance = dot(edge2,q)/determinant;
+		/* Retain tiny outside barycentrics so an edge sample is excluded below,
+		 * regardless of which side floating-point ray arithmetic rounds onto. */
+		if (u < -0.0001 || v < -0.0001 || u+v > 1.0001 || distance < 0) return std::nullopt;
+		return std::array<double,4>{distance,1-u-v,u,v};
+	};
+	size_t samples = 0, visible = 0, views = 0;
+	for (unsigned shape = 0; shape < std::size(shapes); ++shape) for (unsigned pose = 0; pose < std::size(depths); ++pose) for (bool reverse : {false,true}) {
+		std::array<std::vector<Vertex>,2> triangles;
+		for (unsigned layer = 0; layer < triangles.size(); ++layer) for (unsigned i = 0; i < 3; ++i) {
+			unsigned corner = reverse ? 2-i : i;
+			Vertex vertex;
+			vertex.position = layer == 0 ? position(shapes[shape][corner].x,shapes[shape][corner].y,depths[pose][corner]) :
+				position(shapes[0][corner].x*0.25f,shapes[0][corner].y*0.25f,3);
+			vertex.normal = {0,0,1}; vertex.colour = colours[corner];
+			vertex.object_id = TILE_PICK_ID | (721+layer);
+			vertex.surface = static_cast<SurfaceMode>(SURFACE_UNLIT);
+			triangles[layer].push_back(vertex);
+		}
+		for (bool instanced : {false,true}) {
+			Scene scene;
+			scene.persistent_meshes = false;
+			for (auto &triangle : triangles) {
+				if (instanced) {
+					InstanceData record; record.SetObjectId(triangle[0].object_id);
+					scene.instances.push_back({&triangle,record});
+				} else scene.vertices.insert(scene.vertices.end(),triangle.begin(),triangle.end());
+			}
+			std::vector<uint8_t> pixels; std::vector<uint32_t> ids;
+			if (!RenderScene(scene,camera,pixels,&ids)) throw std::runtime_error("GPU clipping verification render failed");
+			for (int y = 2; y < camera.height; y += 5) for (int x = 2; x < camera.width; x += 5) {
+				Ray ray = camera.ScreenRay(x+0.5f,camera.height-y-0.5f);
+				double nearest = std::numeric_limits<double>::infinity();
+				uint32_t expected = 0; Rgb colour{0,0,0}; bool boundary = false;
+				for (auto &triangle : triangles) if (auto hit = intersect(ray,triangle)) {
+					float depth = camera.Project(ray.At(static_cast<float>((*hit)[0]))).depth;
+					boundary |= std::abs(depth-camera.Near()) < 0.0001f || std::min({(*hit)[1],(*hit)[2],(*hit)[3]}) < 0.0001;
+					if (depth < camera.Near() || (*hit)[0] >= nearest) continue;
+					nearest = (*hit)[0]; expected = triangle[0].object_id; colour = {0,0,0};
+					for (unsigned i = 0; i < 3; ++i) {
+						colour.r += static_cast<float>((*hit)[i+1])*triangle[i].colour.r;
+						colour.g += static_cast<float>((*hit)[i+1])*triangle[i].colour.g;
+						colour.b += static_cast<float>((*hit)[i+1])*triangle[i].colour.b;
+					}
+				}
+				if (boundary) continue;
+				size_t pixel = static_cast<size_t>(y)*camera.width+x;
+				if (ids[pixel] != expected) throw std::runtime_error(fmt::format("GPU clipping lost coverage, depth or picking: shape {} pose {} reverse {} instanced {} pixel {},{} expected {} actual {}",shape,pose,reverse,instanced,x,y,expected,ids[pixel]));
+				if (expected != 0) {
+					if (std::abs(pixels[pixel*4]-colour.r*255) > 1.5f || std::abs(pixels[pixel*4+1]-colour.g*255) > 1.5f || std::abs(pixels[pixel*4+2]-colour.b*255) > 1.5f) throw std::runtime_error(fmt::format("GPU clipping changed perspective interpolation: shape {} pose {} instanced {} pixel {},{} expected {},{},{} actual {},{},{}",shape,pose,instanced,x,y,colour.r*255,colour.g*255,colour.b*255,pixels[pixel*4],pixels[pixel*4+1],pixels[pixel*4+2]));
+					++visible;
+				}
+				++samples;
+			}
+			++views;
+		}
+	}
+	if (visible < 1000) throw std::runtime_error("GPU clipping verification did not observe enough visible samples");
+	Debug(driver,1,"OpenTT3D: {} perspective clipping views preserve ray-tested coverage, depth, colour and picking ({} samples, {} visible)",views,samples,visible);
+}
+
 void VerifyInstanceOrdering()
 {
 	VerifyTextureMipCache();
@@ -2060,6 +2149,7 @@ void VerifyInstanceOrdering()
 
 void VerifyGPUScene(bool vehicle_poses)
 {
+	VerifyClipping();
 	VerifyTextureMipCache();
 	VerifyOrderedChildInstances();
 	VerifyMeshAllocationOrder();

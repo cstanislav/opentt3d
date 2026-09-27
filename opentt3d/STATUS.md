@@ -15,6 +15,14 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Renderer
 
+- [x] Apple's software OpenGL missing-triangle defect is reproduced and repaired
+  locally with explicit homogeneous clipping. Five frozen controls, three package
+  launches and72-view/21,180-sample ray-based checks pass, including ordinary/packed
+  voxel paths, mixed ground and exact draw-order/picking regressions. The new
+  extracted-package gate rejects the deliberately disabled correction. The title
+  capture's88,931 black pixels disappear;10 hardware/software pixels still differ.
+  Current published`.7`predates the fix; hosted confirmation follows in the next release.
+
 - [x] Arctic/tropical bank89/90 adds four provisional volumes, bringing industry
   coverage to120/175 definitions,88 body owners and120 independent grounds. Original
   finished-body construction aliases, separate completed paving, joined columns and
@@ -39,8 +47,8 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Normal launches request3D without developer environment variables. Explicit
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
   desktop-release workflow publishes Windows x64/x86/ARM64, macOS arm64/x86_64 and
-  Linux x86-64 packages in release`.6`. Every hosted job passes. All19 public assets,
-  18 checksum entries,2,057 exact-commit source files and all six embedded package
+  Linux x86-64 packages in release`.7`. Every hosted job passes. All19 public assets,
+  18 checksum entries,2,058 exact-commit source files and all six embedded package
   commits are verified. Mac signatures/dependencies/minimum15.0 and published local
   launches pass. Hosted ARM software OpenGL retains a visible triangular-region
   defect; Windows GPU/input and ARM64 native execution remain open.

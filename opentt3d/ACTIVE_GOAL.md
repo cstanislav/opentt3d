@@ -1,5 +1,41 @@
 # Active extended development goal
 
+## Software OpenGL clipping repaired — September 27, 07:43:54 UTC
+
+The hosted ARM black-triangle defect is reproduced in Apple's local software driver.
+A standalone320-case OpenGL probe retains96 original coverage disagreements, including
+entire missing268,800-pixel triangles with positive vertexW. Explicit homogeneous
+polygon clipping repairs the large losses while retaining original W, perspective
+interpolants, depth, winding and complete picking IDs. The extra geometry stage is
+selected for Apple Software Renderer; its diagnostic override is
+`OPENTT3D_GL_SOFTWARE_CLIP=0/1`. The standalone comparison retains16 extreme-edge
+differences of80 pixels each. Original failures and unsuccessful diagnostic controls
+remain available.
+
+All five frozen background controls pass: software/hardware OpenGL and Vulkan
+ground/voxel/order matrices, the packed-voxel software path and a wider software
+landscape. Each includes72 independent ray-tested clipping views,21,180 checked
+samples and16,104 visible samples. The geometry matrices also pass24 low-angle
+mixed-ground continuity views, exact instance ordering and picking. Three development
+package launches pass the newly mandatory clipping gate; disabling the correction
+fails that gate. Native200, harness12 and the137-file presentation boundary pass.
+All source/build hashes and the development bundle agree; peak sampled memory is
+3,010,547,072bytes. Catalogue/artwork remains at the verified1,543-volume bank checkpoint.
+
+The title-world crop falls from88,931 black pixels to0 and retains10 differing pixels
+against hardware OpenGL. The24 ground captures retain4,264,053 raw pixel differences:
+4,261,984 are the sky's existing one-step green rounding, and2,069 are other edge/paint
+differences. Coverage/picking guards pass; these results grant no final visual approval.
+The wider software landscape is also visually reviewed. Evidence:
+`playable-software-gl-{final-reconciliation,title-comparison,ground-difference-audit}.json`.
+Hosted verification of this new correction is the next release gate.
+
+Bank review imagery compacts losslessly by860,350,367bytes across final/preliminary
+controls. Audited release`.7`duplicates retire741,640,931 extracted bytes and346,585,982
+hosted archive bytes, retaining all original public archives, hashes, logs and captures.
+Diamond source preparation additionally proves the2270/2279 ground image alias and
+records the26-volume worklist; its accepted3,056-tick cargo fixture remains ready.
+
 ## Airport desktop downloads verified — September 27, 07:14:32 UTC
 
 Release`.7`at3c263730d1cdec348f0214ae002e072399e99998 passes all eight hosted jobs.

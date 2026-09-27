@@ -3,6 +3,16 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Software OpenGL clipping correction
+
+Five frozen software/hardware OpenGL/Vulkan correctness controls peak at3,010,547,072
+sampled bytes. A three-frame640×480 package observation reports1.578fps in Apple's
+CPU OpenGL driver,63.519fps on hardware OpenGL and66.001fps in Vulkan. These short
+startup samples establish successful rendering and regression coverage, not sustained
+throughput. The wider software landscape also completes its coverage/picking capture.
+The homogeneous clip stage is enabled for Apple Software Renderer; full arbitrary-
+world60fps and long-duration memory acceptance remain open.
+
 ## Arctic/tropical bank observations
 
 The28-control bank matrix peaks at3,464,744,392 sampled bytes. The two600-frame gold

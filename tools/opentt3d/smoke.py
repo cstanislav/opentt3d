@@ -145,6 +145,7 @@ def main():
     parser.add_argument("--verify-renderer", action="store_true")
     parser.add_argument("--renderer-verification-scope", choices=("full","scene"), default="full", help="Scene scope retains renderer/model checks and delegates complete vehicle pose matrices to separate --verify-voxel-poses runs")
     parser.add_argument("--verify-instance-order", action="store_true", help="Check exact mesh-allocation, child-layer and mixed-opacity colour/picking precedence")
+    parser.add_argument("--verify-clipping", action="store_true", help="Compare clipped perspective triangles with independent ray-tested coverage, depth, colour and picking")
     parser.add_argument("--verify-world-atlas", action="store_true", help="Compare complete current-world RGBA/picking before and after atlas repacking")
     parser.add_argument("--verify-voxel-meshes", metavar="PREFIX", help="Run exact voxel cell/CPU/palette/picking checks for a named model family, including its house bindings and joins")
     parser.add_argument("--verify-voxel-poses", type=int, nargs="+", choices=range(256), help="Run the exact company/crash/cargo/heading matrix for selected voxel vehicle engines")
@@ -481,6 +482,8 @@ server_advertise = false
         commands.append("renderer3d verify" if args.renderer_verification_scope == "full" else "renderer3d verify-scene")
     if args.verify_instance_order:
         commands.append("renderer3d verify-instance-order")
+    if args.verify_clipping:
+        commands.append("renderer3d verify-clipping")
     if args.verify_voxel_meshes is not None:
         commands.append(f"renderer3d verify-voxel-meshes {args.verify_voxel_meshes}")
     if args.verify_voxel_poses is not None:
@@ -658,6 +661,8 @@ server_advertise = false
                 raise RuntimeError("World-anchored text-effect verification did not complete")
             if args.verify_renderer and "unlimited-distance GPU colour/depth/picking and infinite horizon ocean passed" not in text:
                 raise RuntimeError("Unlimited-distance GPU verification did not complete")
+            if (args.verify_clipping or args.verify_renderer) and "perspective clipping views preserve ray-tested coverage, depth, colour and picking" not in text:
+                raise RuntimeError("GPU perspective clipping verification did not complete")
             if (args.verify_renderer or args.verify_instance_order) and "allocation-order views preserve coplanar colour, opacity and picking independently of mesh addresses" not in text:
                 raise RuntimeError("Mesh allocation-order verification did not complete")
             if args.verify_instance_order and ("ordered child-layer views preserve coincident priority" not in text or "mixed-opacity shared-mesh batches preserve exact unpartitioned colour order and picking" not in text):

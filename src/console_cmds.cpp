@@ -3484,6 +3484,11 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 			try { Renderer3D::VerifyTilePicking(); }
 			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
 		});
+	} else if (argv[1] == "verify-clipping") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try { Renderer3D::VerifyClipping(); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
 	} else if (argv[1] == "verify-instance-order") {
 		VideoDriver::GetInstance()->QueueOnMainThread([] {
 			try { Renderer3D::VerifyInstanceOrdering(); }

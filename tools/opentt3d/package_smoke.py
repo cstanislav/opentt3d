@@ -27,7 +27,7 @@ def verify(package, output, driver=None, *, headless=False, without_vulkan_devic
         # A close, small viewport also exercises hosted macOS's software OpenGL.
         # Keep ordinary default renderer selection and the complete title save;
         # this checks package startup/resources, not wide-scene performance.
-        "pause\nscrollto instant 64 64\nrenderer3d zoom -2\nrenderer3d benchmark 3 capture\nsave package-smoke\n")
+        "pause\nscrollto instant 64 64\nrenderer3d zoom -2\nrenderer3d verify-clipping\nrenderer3d benchmark 3 capture\nsave package-smoke\n")
     (output / "openttd.cfg").write_text(
         "[misc]\nlanguage = english.lng\nfullscreen = false\nresolution = 640,480\n"
         "screenshot_format = png\n[gui]\nautosave_interval = 0\nrefresh_rate = 60\n")
@@ -93,6 +93,8 @@ def verify(package, output, driver=None, *, headless=False, without_vulkan_devic
                 raise TimeoutError(f"Packaged game did not render and save: {log_path}")
             if not re.search(r"captured (?:OpenGL|Vulkan) presentation with [1-9]\d* GPU viewport regions", text):
                 raise RuntimeError(f"Default launch did not present a 3D viewport: {log_path}")
+            if "perspective clipping views preserve ray-tested coverage, depth, colour and picking" not in text:
+                raise RuntimeError(f"Packaged perspective clipping verification did not complete: {log_path}")
             if without_vulkan_device and not (
                     "Probing video driver 'sdl-vulkan' failed" in text and
                     "Successfully probed video driver 'sdl-opengl'" in text and
@@ -100,7 +102,7 @@ def verify(package, output, driver=None, *, headless=False, without_vulkan_devic
                 raise RuntimeError(f"Missing Vulkan device did not fall back to working OpenGL: {log_path}")
             if is_mac and "background Cocoa window active=false, key=false, visible=false, policy=2" not in text:
                 raise RuntimeError("Package launch was not hidden and nonactivating")
-            result = {"default_3d": True, "rendered_and_saved": True, "package": str(package),
+            result = {"default_3d": True, "rendered_and_saved": True, "perspective_clipping_verified": True, "package": str(package),
                       "driver_override": driver, "without_vulkan_device": without_vulkan_device, "command": command,
                       "benchmark": json.loads((output / "benchmark.json").read_text())}
             (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")

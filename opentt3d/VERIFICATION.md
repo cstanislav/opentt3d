@@ -1,5 +1,32 @@
 # Implementation verification
 
+## Apple software OpenGL perspective clipping
+
+The retained local640×480 reproduction matches the hosted ARM black triangles.
+The independent raw-GL probe covers320 homogeneous-coordinate cases:96 original
+coverage disagreements include whole missing268,800-pixel triangles. The explicit
+clip stage repairs the large losses, retaining16 extreme-edge cases differing by80
+pixels each. Constant colour, discard, index reuse, depth and culling diagnostics
+and the original captures remain under `build-macos/playable-software-gl-*`.
+
+At07:43:54UTC, five frozen background controls pass software/hardware OpenGL and
+Vulkan geometry/order/ground checks, packed software voxel geometry and a wider
+software landscape. Every control passes72 perspective views and21,180 independent
+ray samples,16,104 visible. These include near/eye-plane crossings, unequal positive
+depths, both windings, overlapping surfaces, instance/expanded paths, perspective
+colour and complete picking IDs. Three package startup/save controls pass the same
+new mandatory check. The correction-disabled control fails at a missing surface.
+Native200, harness12 and the137-file presentation boundary pass. Frozen hashes and
+the development app agree. Peak sampled memory is3,010,547,072bytes.
+
+The title crop improves from88,931 black pixels to0, with10 remaining differing
+hardware/software pixels. All24 low-angle ground views retain complete coverage.
+Their raw comparison has4,264,053 differing pixels:4,261,984 sky pixels differ only
+in green178/179, while2,069 other paint/edge pixels remain. The raw image comparisons,
+diagnostic failures, initial stale-bundle controls and corrected transient-reference
+fixture failures remain retained. No pixel/final-art approval follows from these
+coverage guards. Main evidence:`playable-software-gl-final-reconciliation.json`.
+
 ## Airport release package audit
 
 Release`.7`at3c263730d1cdec348f0214ae002e072399e99998 passes all eight hosted source,
