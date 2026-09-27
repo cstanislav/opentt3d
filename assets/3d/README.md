@@ -541,6 +541,15 @@ rendered vehicle. These checks never set cargo or change the simulation.
 Industry bodies0…3 and separate `industry_ground`0…6 bindings preserve the original
 four-slot construction/animation selection. Source/registered sheets use
 `--industry-source` or `--industry-comparison`, optionally `--industry-ground`.
+Industry body and ground bindings may now declare `climate*16+stage`: Arctic16…19,
+tropical32…35 and Toyland48…51. Shared0…3 bindings keep their original source-climate
+guards; an explicit active-climate state takes precedence. Reserved slots4…15 and
+climates outside0…3 reject. Equal source numbers do not make differently painted
+climates aliases. Body and ground selection stays independent, while connected source
+cuts and original child completeness checks remain linked. Native industry sidecars
+record `climate` and `binding_state`; their filenames still use construction0…3.
+Inventory reports explicit body/ground states separately from shared stages. Actual
+world-capture logs record the selected climate/binding alongside the construction stage.
 The `mound` operation takes the same material/bounds as a box and fills an explicitly
 bounded elliptical cone from its base; every column is supported. It never reads
 source image geometry. `--palette-counts --preview` reports reference colour frequency

@@ -1301,10 +1301,12 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 				unsigned stage = industry ? GetIndustryConstructionStage(tile.tile) : oilrig ? 3 : GetHouseBuildingStage(tile.tile);
 				if (industry && !industry_palette_checks.empty()) ObserveVoxelIndustryPalette(tile.tile,graphics,first,true);
 				if (industry && check_plastic_fountain && stage == 3 && graphics >= GFX_PLASTIC_FOUNTAIN_ANIMATED_1 && graphics <= GFX_PLASTIC_FOUNTAIN_ANIMATED_8) capture->plastic_fountain_grounds[tile.tile] = graphics;
-				static std::set<std::tuple<bool,unsigned,unsigned,unsigned>> reported;
-				if (reported.emplace(house,graphics,stage,variant).second) {
+				unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+				static std::set<std::tuple<bool,unsigned,unsigned,unsigned,unsigned>> reported;
+				if (reported.emplace(house,graphics,stage,variant,climate).second) {
 					Debug(driver,1,"OpenTT3D: live voxel {} ground {} construction stage {} captured at {},{}",house ? "house" : "industry",graphics,stage,TileX(tile.tile),TileY(tile.tile));
 					if (house) Debug(driver,1,"OpenTT3D: live voxel house ground {} construction stage {} variant {} captured",graphics,stage,variant);
+					else if (auto state = VoxelIndustryState(graphics,image,true)) Debug(driver,1,"OpenTT3D: industry voxel climate selection graphics {} stage {} layer ground climate {} binding {}",graphics,stage,climate,*state);
 				}
 			}
 			return;
@@ -1968,8 +1970,12 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 			capture->parent_culled = capture->scene.instances.size() == capture->parent_instance_begin;
 			if (auto state = VoxelIndustryState(GetIndustryGfx(capture->tile->tile),image); !capture->parent_culled && !capture->diagnostic && state) {
 				unsigned graphics = GetIndustryGfx(capture->tile->tile), stage = GetIndustryConstructionStage(capture->tile->tile);
-				static std::set<std::pair<unsigned,unsigned>> reported;
-				if (reported.emplace(graphics,stage).second) Debug(driver,1,"OpenTT3D: live voxel industry {} construction stage {} captured at {},{}",graphics,stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
+				unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+				static std::set<std::tuple<unsigned,unsigned,unsigned>> reported;
+				if (reported.emplace(graphics,stage,climate).second) {
+					Debug(driver,1,"OpenTT3D: live voxel industry {} construction stage {} captured at {},{}",graphics,stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
+					Debug(driver,1,"OpenTT3D: industry voxel climate selection graphics {} stage {} layer body climate {} binding {}",graphics,stage,climate,*state);
+				}
 				ObserveVoxelPlasticFountain(capture->tile->tile,graphics);
 				if (!industry_palette_checks.empty()) ObserveVoxelIndustryPalette(capture->tile->tile,graphics,capture->parent_instance_begin,false);
 				if (check_forest_cycle && (graphics == checked_forest_base || graphics == checked_forest_base+1)) {

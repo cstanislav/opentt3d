@@ -19,8 +19,9 @@ std::optional<unsigned> VoxelHouseState(unsigned house, unsigned stage, unsigned
 bool HasVoxelHouseGround(unsigned house);
 std::optional<unsigned> VoxelHouseGroundState(unsigned house, unsigned stage, unsigned variant);
 bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned variant, SpriteID image, Vec3 origin, PaletteID palette);
-/** Known source-climate restrictions apply to both voxel and legacy profiles.
- * Forest16/17 and farm33..38 currently model temperate artwork only. Industry
+/** Known source-climate restrictions apply to shared voxel and legacy profiles.
+ * Explicit climate voxel states are independently authored. The shared
+ * forest16/17 and farm33..38 volumes model temperate artwork only. Industry
  * ground3924 and oil-well ground2173 also have independently painted climate
  * replacements despite retaining the same source numbers. Toyland additionally
  * replaces bare soil2022, forest2077, rig4061, gold pools2257/2260/2261,
@@ -41,6 +42,15 @@ inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, b
 	if (graphics == 16 || graphics == 17 || (graphics >= 33 && graphics <= 38)) return false;
 	if (ground) return sprite != 3924 && sprite != 2173 && (climate != 3 || (sprite != 2022 && sprite != 2077 && sprite != 4061 && sprite != 2257 && sprite != 2260 && sprite != 2261));
 	return climate != 3 || !((graphics >= 26 && graphics <= 28) || (graphics == 67 && sprite == 2206));
+}
+/** Shared stages0..3 retain their source guard; explicit climate*16+stage wins.
+ * A state's upper bits are never an index into the original four-stage table. */
+inline std::optional<unsigned> SelectVoxelIndustryState(uint64_t states, unsigned stage, unsigned climate, bool shared_source)
+{
+	if (stage >= 4 || climate >= 4) return {};
+	unsigned state = climate*16+stage;
+	if (climate != 0 && (states & (uint64_t{1}<<state)) != 0) return state;
+	return shared_source && (states & (uint64_t{1}<<stage)) != 0 ? std::optional<unsigned>{stage} : std::nullopt;
 }
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground = false);
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette);

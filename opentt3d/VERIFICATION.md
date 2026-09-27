@@ -1,5 +1,20 @@
 # Implementation verification
 
+## Explicit industry climate state and independent-layer verification
+
+At19:26:07UTC, native205, asset136, harness12 and137-file boundary pass. Explicit
+climate states use16-slot groups and retain original shared/source/custom-replacement
+guards. All four climate controls pass. All497 sugar and174 temperate-forest captures
+remain identical; sugar's96-frame and toffee's70-frame live regressions pass. Sixteen
+isolated Arctic layer sidecars select16…19. Both backends capture all four ordinary
+construction stages, full20/20 and empty0/20 engine144 cargo and a9,000-frame forest
+cycle through mature→logs→all regrowth states on one unchanged tile/industry.
+Missing Arctic body/ground controls preserve independent layers at stages0/3 while
+the incomplete harvest observer rejects. Reserved state4 and out-of-range climate4
+bindings reject. Actual logs record selected climate/state. Main artwork remains1,667;
+the six-volume Arctic study is isolated with fidelity work open. Evidence:
+`build-macos/breadth-industry-climate-runtime-reconciliation.json`.
+
 ## Sugar mine: integrated construction, cargo and96-frame matrix
 
 At19:02:44UTC, all26 frozen controls pass on both native backends:88 actual

@@ -1,5 +1,30 @@
 # Active extended development goal
 
+## Explicit industry climate selection verified — September27,19:26:07UTC
+
+Body/ground states now support explicit`climate*16+stage`bindings while retaining
+the shared0…3 source guards. Native/joined galleries, live drawing, original child
+checks and inventory decode the state before consulting the four-stage source table.
+Connected source cuts remain linked; missing independent Arctic layers preserve the
+other layer. Reserved stage4 and climate4 bindings reject. Native metadata and actual
+capture logs record the selected climate/state without changing simulation or RNG.
+
+Four-climate controls, both96-frame sugar and70-frame toffee observations, native205,
+asset136, harness12 and137-file boundary pass. All497 sugar and174 temperate-forest
+views remain identical. The isolated Arctic study captures16 native explicit layers,
+all four construction stages, full20/20 and empty0/20 engine144 cargo, and both9,000-frame
+same-tile mature→logs→all-regrowth cycles. Missing Arctic body/ground controls preserve
+independent layers at stages0/3 and reject the incomplete harvest observer. Main artwork
+remains1,667 models; source-cap/branch/litter/log fidelity is still provisional. The
+initial2,448 unsupported timber cells and cross-tree radial-paint failure are retained;
+the latest isolated quarter-cell timber study has zero unsupported cells.
+
+Evidence:`breadth-industry-climate-runtime-reconciliation.json`and`breadth-snow-forest-timber-audit.json`.
+Sugar artwork is pushed at8992e3b1361db3284486a3c35b124e5ea4420d8e. Release`.20`packages
+that exact commit in workflow36343192871; independent public verification is pending.
+Verified public download links remain`.19`. Continue climate artwork, infrastructure,
+effects and catalogue-wide later passes. Final visual approvals:0.
+
 ## Sugar mine integrated; primary industry bindings complete — September27,19:02:44UTC
 
 Twenty-two provisional volumes reach1,667 and175/175 primary industry definitions:

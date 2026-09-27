@@ -354,6 +354,27 @@ TEST_CASE("Industry source-climate replacements retain independent ground and bo
 	}
 }
 
+TEST_CASE("Industry climate bindings prefer explicit artwork without leaking shared source states", "[renderer3d][voxel]")
+{
+	uint64_t shared = 15, arctic = shared<<16, toyland = shared<<48;
+	for (unsigned stage = 0; stage < 4; ++stage) {
+		CHECK(SelectVoxelIndustryState(shared|arctic,stage,0,true) == stage);
+		CHECK(SelectVoxelIndustryState(shared|arctic,stage,1,false) == 16+stage);
+		CHECK_FALSE(SelectVoxelIndustryState(shared,stage,1,false)); // No temperate forest in Arctic.
+		CHECK_FALSE(SelectVoxelIndustryState(arctic,stage,0,true)); // No snow in temperate.
+		CHECK(SelectVoxelIndustryState(shared,stage,2,true) == stage); // Proven shared source.
+		CHECK_FALSE(SelectVoxelIndustryState(shared|arctic,stage,2,false));
+		CHECK(SelectVoxelIndustryState(shared|toyland,stage,3,true) == 48+stage);
+		CHECK(SelectVoxelIndustryState(shared,stage,3,true) == stage); // Original Toyland-only base.
+		CHECK_FALSE(SelectVoxelIndustryState(shared,stage,0,false));
+		uint64_t missing = (shared|arctic)&~(uint64_t{1}<<(16+stage));
+		CHECK_FALSE(SelectVoxelIndustryState(missing,stage,1,false));
+		CHECK(SelectVoxelIndustryState(missing,stage,1,true) == stage);
+	}
+	for (unsigned stage : {4U,15U,16U,19U,UINT_MAX}) CHECK_FALSE(SelectVoxelIndustryState(UINT64_MAX,stage,1,true));
+	for (unsigned climate : {4U,16U,UINT_MAX}) CHECK_FALSE(SelectVoxelIndustryState(UINT64_MAX,0,climate,true));
+}
+
 TEST_CASE("Toy-factory source children preserve physical press and conveyor motion", "[renderer3d][voxel]")
 {
 	unsigned clay = 0, robots = 0, stamp = 0, holder = 0;

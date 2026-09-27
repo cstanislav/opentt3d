@@ -350,6 +350,26 @@ bool DrawVoxelHouseGround(Scene &scene, unsigned house, unsigned stage, unsigned
 	return DrawVoxelAsset(scene,"house_ground",house,*state,origin,palette,1);
 }
 
+static std::optional<unsigned> IndustryBindingState(unsigned graphics, unsigned stage, bool ground = false)
+{
+	static const auto masks = [] {
+		std::array<std::array<uint64_t,2>,std::size(_industry_draw_tile_data)/4> result{};
+		for (const auto &[binding,name] : Models().bindings) {
+			const auto &[category,id,state] = binding;
+			if (category != "industries" && category != "industry_ground") continue;
+			if (id >= result.size() || state >= 64 || state%16 >= 4) throw std::runtime_error("Invalid voxel industry climate/stage binding");
+			result[id][category == "industry_ground"] |= uint64_t{1}<<state;
+		}
+		return result;
+	}();
+	if (graphics >= masks.size() || stage >= 4) return {};
+	const auto &source = _industry_draw_tile_data[graphics*4+stage];
+	SpriteID image = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
+	if (image == 0) return {};
+	unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+	return SelectVoxelIndustryState(masks[graphics][ground],stage,climate,IndustryModelClimateSupported(graphics,climate,ground,image));
+}
+
 static bool HasVoxelToyFactoryChildren()
 {
 	for (SpriteID image : {SPR_IT_TOY_FACTORY_STAMP_HOLDER,SPR_IT_TOY_FACTORY_STAMP,SPR_IT_TOY_FACTORY_CLAY,SPR_IT_TOY_FACTORY_ROBOT}) {
@@ -401,8 +421,8 @@ static bool HasVoxelToffeeQuarryChildren()
 	 * Require the same physical owner at every stage, not coincident solids. */
 	const auto &alias = Models().bindings.at({"infrastructure",SPR_IT_TOFFEE_QUARRY_TOFFEE,0});
 	for (unsigned stage = 0; stage < 4; ++stage) {
-		auto body = Models().bindings.find({"industries",165,stage});
-		if (body == Models().bindings.end() || body->second != alias) return false;
+		auto state = IndustryBindingState(165,stage);
+		if (!state || Models().bindings.at({"industries",165,*state}) != alias) return false;
 	}
 	return true;
 }
@@ -426,7 +446,7 @@ static bool HasVoxelSugarMineChildren()
 	}
 	/* The central source cut owns returns from both posts and both crossbars. */
 	for (unsigned graphics = 172; graphics <= 174; ++graphics) for (unsigned stage = 0; stage < 4; ++stage) {
-		if (!HasVoxelAsset("industries",graphics,stage)) return false;
+		if (!IndustryBindingState(graphics,stage)) return false;
 	}
 	return true;
 }
@@ -454,12 +474,18 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
 	image &= SPRITE_MASK;
-	if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape),ground,image)) return {};
 	if (image == 0) return {};
 	std::string_view category = ground ? "industry_ground" : "industries";
-	bool bound = false;
-	for (unsigned stage = 0; stage < 4; ++stage) bound |= HasVoxelAsset(category,graphics,stage);
-	if (!bound) return {};
+	std::optional<unsigned> selected;
+	for (unsigned stage = 0; stage < 4; ++stage) {
+		const auto &source = _industry_draw_tile_data[graphics*4+stage];
+		if (((ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK) != image) continue;
+		auto state = IndustryBindingState(graphics,stage,ground);
+		/* Search every original alias before accepting a shared binding. An
+		 * explicit late-stage alias must win over an earlier shared one. */
+		if (state && (!selected || (*selected < 16 && *state >= 16))) selected = state;
+	}
+	if (!selected) return {};
 	/* Keep custom replacements and special drawing procedures on their supplied
 	 * path. A shared original stage sprite may resolve to a shared volume. */
 	unsigned first = graphics <= 1 ? 0 : graphics, last = graphics <= 1 ? 1 : graphics;
@@ -515,7 +541,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* Raised stockpile and its tarp span the four original ground cuts. */
 		first = 167; last = 170;
 		for (unsigned part = first; part <= last; ++part) for (unsigned stage = 0; stage < 4; ++stage) {
-			if (!HasVoxelAsset("industry_ground",part,stage)) return {};
+			if (!IndustryBindingState(part,stage,true)) return {};
 		}
 	} else if (!ground && graphics >= 172 && graphics <= 174) {
 		first = 172; last = 174;
@@ -524,7 +550,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	bool bubble_generator = graphics >= 160 && graphics <= 162 && (ground || HasVoxelBubbleGeneratorChildren());
 	bool toffee_quarry = graphics >= 164 && graphics <= 166 && (ground || HasVoxelToffeeQuarryChildren());
 	bool sugar_mine = graphics >= 172 && graphics <= 174 && (ground || HasVoxelSugarMineChildren());
-	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
+	bool power_sparks = graphics == 10 && IndustryBindingState(10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 		SpriteID spark = SPR_IT_POWER_PLANT_TRANSFORMERS+frame;
 		power_sparks &= IsBaseGraphicsSprite(spark) && HasVoxelAsset("infrastructure",spark,0);
@@ -533,16 +559,15 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
 		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3) && !(toffee_quarry && source.draw_proc == 2) && !(sugar_mine && source.draw_proc == 1)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		/* Connected source cuts cannot mix a new climate with an unauthored
+		 * neighbour. Original empty body slots need no invented binding. */
+		if (*selected >= 16 && first != last && HasVoxelAsset(category,family,stage) && !IndustryBindingState(family,stage,ground)) return {};
 		if (first == 72 && last == 88) {
 			SpriteID other = (ground ? source.building.sprite : source.ground.sprite)&SPRITE_MASK;
 			if (other != 0 && !IsBaseGraphicsSprite(other)) return {};
 		}
 	}
-	for (unsigned stage = 0; stage < 4; ++stage) if (HasVoxelAsset(category,graphics,stage)) {
-		const auto &source = _industry_draw_tile_data[graphics*4+stage];
-		if (((ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK) == image) return stage;
-	}
-	return {};
+	return selected;
 }
 
 bool DrawVoxelIndustryGround(Scene &scene, unsigned graphics, SpriteID image, Vec3 origin, PaletteID palette)
@@ -1102,8 +1127,9 @@ void ExportVoxelReviews(std::string_view prefix)
 				if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
 				bool ground = std::string_view(category) == "industry_ground";
 				const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
-				if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),ground,(ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
-				auto binding = Models().bindings.find({category,part.gfx,stage});
+				auto state = IndustryBindingState(part.gfx,stage,ground);
+				if (!state || !VoxelIndustryState(part.gfx,ground ? source.ground.sprite : source.building.sprite,ground)) continue;
+				auto binding = Models().bindings.find({category,part.gfx,*state});
 				selected |= binding != Models().bindings.end() && binding->second.starts_with(prefix);
 			}
 			if (!selected) continue;
@@ -1117,8 +1143,9 @@ void ExportVoxelReviews(std::string_view prefix)
 					if (part.gfx >= std::size(_industry_draw_tile_data)/4) continue;
 					bool ground = std::string_view(category) == "industry_ground";
 					const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
-					if (!IndustryModelClimateSupported(part.gfx,to_underlying(_settings_game.game_creation.landscape),ground,(ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
-					auto binding = Models().bindings.find({category,part.gfx,stage});
+					auto state = IndustryBindingState(part.gfx,stage,ground);
+					if (!state || !VoxelIndustryState(part.gfx,ground ? source.ground.sprite : source.building.sprite,ground)) continue;
+					auto binding = Models().bindings.find({category,part.gfx,*state});
 					if (binding == Models().bindings.end()) continue;
 					group.push_back(&Models().models.at(binding->second));
 					placements.push_back({static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0});
@@ -1160,7 +1187,8 @@ void ExportVoxelReviews(std::string_view prefix)
 					const auto &source = _industry_draw_tile_data[part.gfx*4+stage];
 					Vec3 origin{static_cast<float>(part.ti.x*TILE_SIZE),static_cast<float>(part.ti.y*TILE_SIZE),0};
 					complete &= DrawVoxelIndustryGround(joined,part.gfx,source.ground.sprite,origin,source.ground.pal);
-					if ((source.building.sprite&SPRITE_MASK) != 0 && !DrawVoxelAsset(joined,"industries",part.gfx,stage,origin,source.building.pal)) {
+					auto body = VoxelIndustryState(part.gfx,source.building.sprite);
+					if ((source.building.sprite&SPRITE_MASK) != 0 && (!body || !DrawVoxelAsset(joined,"industries",part.gfx,*body,origin,source.building.pal))) {
 						/* A nonzero source number can still resolve to genuine absence
 						 * (toy-shop141 construction0). Only actual empty base artwork
 						 * may complete this review without an authored body. */
@@ -1271,7 +1299,7 @@ void ExportVoxelReviews(std::string_view prefix)
 				for (unsigned frame = 0; frame < (stage == 3 ? std::size(_industry_anim_offs_toffee) : 1); ++frame) {
 					Textures().BeginScene();
 					Scene scene;
-					DrawVoxelAsset(scene,"industries",165,stage,{},PAL_NONE);
+					DrawVoxelAsset(scene,"industries",165,*IndustryBindingState(165,stage),{},PAL_NONE);
 					if (!DrawVoxelToffeeShovel(scene,stage,frame,{},PAL_NONE)) throw std::runtime_error("Incomplete toffee-quarry diagnostic children");
 					nlohmann::json children = nlohmann::json::array();
 					auto parts = VoxelToffeeQuarryChildren(stage,frame);
@@ -1300,9 +1328,10 @@ void ExportVoxelReviews(std::string_view prefix)
 				for (unsigned frame = 0; frame < (stage == 3 ? std::size(_draw_industry_spec1) : 1); ++frame) {
 					Textures().BeginScene();
 					Scene scene;
-					DrawVoxelAsset(scene,"industries",174,stage,{},PAL_NONE);
+					unsigned body = *IndustryBindingState(174,stage);
+					DrawVoxelAsset(scene,"industries",174,body,{},PAL_NONE);
 					nlohmann::json children = nlohmann::json::array();
-					std::vector<const VoxelModel *> group{&Models().models.at(Models().bindings.at({"industries",174,stage}))};
+					std::vector<const VoxelModel *> group{&Models().models.at(Models().bindings.at({"industries",174,body}))};
 					std::vector<Vec3> placements{{}};
 					for (const auto &child : VoxelSugarMineChildren(stage,frame)) if (child.image != 0) {
 						if (!DrawVoxelSugarMineChild(scene,child.image,stage,frame,{},PAL_NONE)) throw std::runtime_error("Incomplete sugar-mine diagnostic children");
@@ -1467,8 +1496,10 @@ void ExportVoxelReviews(std::string_view prefix)
 		}
 		if ((category == "industries" || category == "industry_ground") && industry_native_families.contains(base)) {
 			bool ground_layer = category == "industry_ground";
-			const auto &source = _industry_draw_tile_data[base*4+stage];
-			if (!IndustryModelClimateSupported(base,to_underlying(_settings_game.game_creation.landscape),ground_layer,(ground_layer ? source.ground.sprite : source.building.sprite)&SPRITE_MASK)) continue;
+			unsigned construction = stage%16;
+			if (IndustryBindingState(base,construction,ground_layer) != stage) continue;
+			const auto &source = _industry_draw_tile_data[base*4+construction];
+			if (!VoxelIndustryState(base,ground_layer ? source.ground.sprite : source.building.sprite,ground_layer)) continue;
 			Textures().BeginScene();
 			Scene industry;
 			/* Some original body sprites own a complete ground substrate. Keep the
@@ -1490,10 +1521,11 @@ void ExportVoxelReviews(std::string_view prefix)
 				right = std::max(right,static_cast<int>(std::ceil(point.x))+4);
 				bottom = std::max(bottom,static_cast<int>(std::ceil(point.y))+4);
 			}
-			std::string export_name = fmt::format("model-voxel-industry{}-{}-native-{}",ground_layer ? "-ground" : "",base,stage);
+			std::string export_name = fmt::format("model-voxel-industry{}-{}-native-{}",ground_layer ? "-ground" : "",base,construction);
 			capture(industry,camera.Cropped(left,top,right-left,bottom-top),export_name,true);
 			std::ofstream registration(directory/(export_name+".json"));
-			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}}}.dump(2) << '\n';
+			registration << nlohmann::json{{"tile_origin",{8192-left,8192-top}},{"image_size",{right-left,bottom-top}},
+				{"climate",to_underlying(_settings_game.game_creation.landscape)},{"binding_state",stage}}.dump(2) << '\n';
 			if (!registration) throw std::runtime_error("Could not write native industry registration");
 		}
 		if (category == "vehicles" && name.starts_with(prefix) && VoxelVehicleState(base,(stage&1U) != 0) == stage) {
@@ -1566,14 +1598,14 @@ void ExportVoxelReviews(std::string_view prefix)
 		Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
 		capture(buoy,camera.Cropped(8192-32,8192-32,64,80),"model-voxel-buoy-native",true);
 	}
-	if (VoxelIndustryState(10,SPR_IT_POWER_PLANT_TRANSFORMERS)) {
-		const auto &parent_name = Models().bindings.at({"industries",10,3});
+	if (auto state = VoxelIndustryState(10,SPR_IT_POWER_PLANT_TRANSFORMERS)) {
+		const auto &parent_name = Models().bindings.at({"industries",10,*state});
 		for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 			const auto &spark_name = Models().bindings.at({"infrastructure",SPR_IT_POWER_PLANT_TRANSFORMERS+frame,0});
 			if (!parent_name.starts_with(prefix) && !spark_name.starts_with(prefix)) continue;
 			Textures().BeginScene();
 			Scene combined;
-			DrawVoxelAsset(combined,"industries",10,3,{});
+			DrawVoxelAsset(combined,"industries",10,*state,{});
 			DrawVoxelIndustrySpark(combined,SPR_IT_POWER_PLANT_TRANSFORMERS+frame,{});
 			for (auto &instance : combined.instances) instance.data.SetObjectId(1);
 			Camera camera{{},1,16384,16384,0}; camera.vertical_fov = 40;
@@ -1721,20 +1753,23 @@ void VerifyVoxelIndustryModels()
 {
 	unsigned views = 0, ground_views = 0, climate_fallbacks = 0;
 	for (const auto &[binding,name] : Models().bindings) {
-		const auto &[category,graphics,stage] = binding;
+		const auto &[category,graphics,state] = binding;
 		bool ground = category == "industry_ground";
 		if (category != "industries" && !ground) continue;
-		if (graphics >= std::size(_industry_draw_tile_data)/4 || stage >= 4) throw std::runtime_error("Invalid voxel industry binding");
+		if (graphics >= std::size(_industry_draw_tile_data)/4 || state >= 64 || state%16 >= 4) throw std::runtime_error("Invalid voxel industry climate/stage binding");
+		unsigned stage = state%16;
 		const auto &source = _industry_draw_tile_data[graphics*4+stage];
 		const auto &mesh = Models().models.at(name).surface;
 		SpriteID image = ground ? source.ground.sprite : source.building.sprite;
 		PaletteID palette = ground ? source.ground.pal : source.building.pal;
-		if (!IndustryModelClimateSupported(graphics,to_underlying(_settings_game.game_creation.landscape),ground,image&SPRITE_MASK)) {
+		auto active = IndustryBindingState(graphics,stage,ground);
+		if (!active && state < 4) {
 			Scene fallback;
 			if (VoxelIndustryState(graphics,image,ground) || (ground ? DrawVoxelIndustryGround(fallback,graphics,image,{},palette) : HasAuthoredIndustry(graphics,image))) throw std::runtime_error("Unauthored climate selected a different climate's industry body/ground");
 			++climate_fallbacks;
 			continue;
 		}
+		if (active != state) continue; // Inactive explicit climate or overridden shared stage.
 		if (!VoxelIndustryState(graphics,image,ground)) throw std::runtime_error("Industry state binding does not match its original sprite");
 		Textures().BeginScene();
 		const auto &texture = Textures().Get(image,palette,0,false);
@@ -1758,9 +1793,9 @@ void VerifyVoxelIndustryModels()
 	Debug(driver,1,"OpenTT3D: {} voxel industry construction/animation views preserve source selection, exact CPU geometry and transparent tile picking",views);
 	Debug(driver,1,"OpenTT3D: {} of these views verify explicit voxel industry ground/stockpile layers",ground_views);
 	Debug(driver,1,"OpenTT3D: {} industry layer bindings retain their supplied source because the active climate has no matching authored volume",climate_fallbacks);
-	if (VoxelIndustryState(10,SPR_IT_POWER_PLANT_TRANSFORMERS)) {
+	if (auto state = VoxelIndustryState(10,SPR_IT_POWER_PLANT_TRANSFORMERS)) {
 		unsigned spark_views = 0;
-		const auto &parent = Models().models.at(Models().bindings.at({"industries",10,3})).surface;
+		const auto &parent = Models().models.at(Models().bindings.at({"industries",10,*state})).surface;
 		for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 			const auto &spark = Models().models.at(Models().bindings.at({"infrastructure",SPR_IT_POWER_PLANT_TRANSFORMERS+frame,0})).surface;
 			Vec3 low{std::min(parent.low.x,spark.low.x),std::min(parent.low.y,spark.low.y),std::min(parent.low.z,spark.low.z)};
@@ -1768,7 +1803,7 @@ void VerifyVoxelIndustryModels()
 			for (unsigned turn = 0; turn < 4; ++turn) for (bool street : {false,true}) {
 				Textures().BeginScene();
 				Scene actual, reference, isolated;
-				DrawVoxelAsset(actual,"industries",10,3,{});
+				DrawVoxelAsset(actual,"industries",10,*state,{});
 				if (!DrawVoxelIndustrySpark(actual,SPR_IT_POWER_PLANT_TRANSFORMERS+frame,{}) || actual.instances.size() != 2 || actual.instances.back().mesh != &spark.vertices) throw std::runtime_error("Power-station child did not select its exact spark mesh");
 				for (auto &instance : actual.instances) instance.data.SetObjectId(TILE_PICK_ID|81);
 				isolated.instances = {actual.instances.back()};

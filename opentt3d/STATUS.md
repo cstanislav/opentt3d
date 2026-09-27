@@ -9,12 +9,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite204/204, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
+- [x] Current native suite205/205, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
 - [x] Current1,667-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Explicit industry body/ground climate states preserve original shared-source
+  restrictions and independent layers. Galleries, live selection, original child
+  checks and inventory decode climate/state safely; invalid reserved states reject.
+  All497 sugar and174 temperate-forest views remain identical. An isolated Arctic
+  forest study passes four construction stages, full/empty cargo and both actual
+  mature/logs/regrowth cycles; artwork refinement and integration remain pending.
 - [x] Sugar167…174 adds22 provisional volumes and completes175/175 primary industry
   layer bindings:129 body owners and175 grounds. Twenty empty bodies stay absent;
   five sieves, six clouds and four piles preserve all96 original ordered frames and

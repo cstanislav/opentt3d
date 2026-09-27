@@ -97,8 +97,16 @@ def inventory():
         model = industry_models.get(str(industry["graphics"]))
         industry["authored_profile"] = model is not None
         industry["modelled_sprites"] = model.get("sprites", ["completed-table-sprite"]) if model else []
-        industry["voxel_states"] = voxel_states("industries", industry["graphics"])
-        industry["voxel_ground_states"] = voxel_states("industry_ground", industry["graphics"])
+        body_states = voxel_states("industries", industry["graphics"])
+        ground_states = voxel_states("industry_ground", industry["graphics"])
+        if any(state >= 64 or state % 16 >= 4 for state in body_states + ground_states):
+            raise ValueError("Industry climate states must be climate*16+construction stage0..3")
+        industry["voxel_states"] = [state for state in body_states if state < 4]
+        industry["voxel_ground_states"] = [state for state in ground_states if state < 4]
+        for layer,states in (("body",body_states),("ground",ground_states)):
+            industry[f"explicit_{layer}_climate_states"] = {
+                climate:[state%16 for state in states if state//16 == index]
+                for index,climate in enumerate(("temperate","arctic","tropic","toyland")) if index != 0}
         if industry["graphics"] == 143:
             industry["procedural_children"] = [
                 {"name":name,"sprite":sprite,"voxel_states":voxel_states("infrastructure",sprite)}
@@ -123,14 +131,11 @@ def inventory():
                 for family,first,count in (("sieve",4775,5),("cloud",4784,6),("pile",4780,4)) for sprite in range(first,first+count)]
             industry["procedural_source_frames"] = 96
             industry["procedural_source_note"] = "Construction has no children. Completed96-frame motion preserves sieve/cloud/pile order and genuine middle/trailing absences. The sieve moves along the crossbar at constantZ; clouds and piles have independent registered poses. Body172..174 and all15 children are linked;171..174 Toyland3981 grass stays independent."
-        if 33 <= industry["graphics"] <= 38:
-            industry["voxel_climates"] = ["temperate"]
-            industry["missing_voxel_climates"] = ["arctic"]
-            industry["climate_source_note"] = "Arctic replaces these source layers; equal sprite numbers do not permit a temperate alias. Runtime retains supplied artwork."
-        if industry["graphics"] in (16,17):
-            industry["voxel_climates"] = ["temperate"]
-            industry["missing_voxel_climates"] = ["arctic"]
-            industry["climate_source_note"] = "Arctic source replaces both ground and trees with snowy artwork; independent voxel volumes remain missing."
+        if industry["graphics"] in (16,17) or 33 <= industry["graphics"] <= 38:
+            complete = all(state+16 in body_states for state in industry["voxel_states"]) and all(state+16 in ground_states for state in industry["voxel_ground_states"])
+            industry["voxel_climates"] = ["temperate"] + (["arctic"] if complete else [])
+            industry["missing_voxel_climates"] = [] if complete else ["arctic"]
+            industry["climate_source_note"] = "Arctic replaces both source layers; equal sprite numbers do not permit a temperate alias. Only explicit climate states select independently authored artwork; missing layers retain supplied artwork."
         if industry["graphics"] in (129,130):
             industry["voxel_climates"] = ["toyland"]
             industry["climate_source_note"] = "Cotton-candy crowns, bare sticks and checker soil replace forest2072..2077 in Toyland; other climates retain independently supplied artwork."
@@ -236,7 +241,8 @@ def main():
     print(f"Authored vehicle bindings: {sum(v['authored_profile'] for v in data['vehicles'])}; visually reviewed vehicles: {sum(v['reviewed'] for v in data['vehicles'])}")
     print(f"Tree sprite families: {len(data['trees'])}; authored tree profiles: {sum(t['authored_profile'] for t in data['trees'])}; visually reviewed: {sum(t['reviewed'] for t in data['trees'])}")
     print(f"Industry tile definitions: {len(data['industry_tiles'])}; authored: {sum(i['authored_profile'] for i in data['industry_tiles'])}; voxel bodies: {sum(bool(i['voxel_states']) for i in data['industry_tiles'])}; voxel grounds: {sum(bool(i['voxel_ground_states']) for i in data['industry_tiles'])}")
-    print("Forest16/17 and farm33..38 voxel coverage is temperate-only; independent Arctic body/ground artwork remains missing")
+    missing_arctic = [i["graphics"] for i in data["industry_tiles"] if "arctic" in i.get("missing_voxel_climates",[])]
+    print(f"Industry definitions still missing complete explicit Arctic body/ground artwork: {missing_arctic}")
     print("Industry grounds3924/2173 retain supplied source layers outside temperate; unchanged bodies keep independent voxel ownership")
     print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound body or ground-only: {sum(bool(a['bound_voxel_states']) for a in data['airport_tiles'])}; body owners: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
     print(f"Independently bound voxel airport grounds: {sum(bool(a['voxel_ground_states']) for a in data['airport_tiles'])}")
