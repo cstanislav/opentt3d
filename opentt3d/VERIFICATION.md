@@ -1,5 +1,44 @@
 # Implementation verification
 
+## Toyland airport integration and retained clearance failures
+
+The initial1,701-model catalogue passes206 native tests,141 asset tests, all60 frozen
+background controls and seven absent-body/ground/other-climate/invalid-frame checks.
+24 focused body controls observe climate48 and separate grounds. Both renderers
+capture all12+4+12 original radar/flag frames, four actual ground contacts, four Cab
+services,12 rotated layouts and app bundles. The ordinary engine248 saves retain
+1958 city/small availability,2050 international service and256-tick held orders.
+
+All248 prototype views per backend match the initial integration. Native backend
+layers match exactly;33 wider/context Toyland views retain1,989 differing pixels.
+The2,632-view temperate baseline retains2,440 exact views,192 expected corrected-pier/
+discovery-page changes and132 added views. All1,685 preceding models outside four
+intentional pier repairs initially preserve their hashes and source entries.
+
+An independent quarter-cell overlap audit subsequently finds six intersecting engine248
+poses: two city stand supports and four hangar-threshold poses. A new regression fails
+on the first stand before the repair. Revised supported legs and a recessed left jamb
+clear all42 audited poses; pier26 also clears engines248…252 at its original stand.
+The shared timber hangar inherits the entrance.142 asset checks pass. All28 targeted
+integrated rechecks pass on the unchanged binary; the reconciled hash ledger has six
+intentional preceding-model changes and1,683 preserved models. Broader static
+probes still expose large-aircraft hangar/fence and engine251/terminal19 intersections.
+They remain open defects; the test scope does not claim complete aircraft clearance.
+
+The repaired galleries preserve2,657/2,764 temperate and172/248 Toyland views per backend;
+all changed views are repaired bodies or their discovery/mixed context pages.216
+isolated-prototype views per backend match exactly. Native backend layers agree;
+33 Toyland views retain1,989 differing pixels and316 temperate views retain34,819.
+Four additional3,600-frame background Cab replays enable original script logging and
+directly observe`AIRCRAFT_CATALOGUE_HELD_SERVICE_RELEASED`with unchanged matching AI.
+Both historical city/small and international saves release on both renderers. The
+original60/28 controls lacked script logging, so their logs alone did not prove release.
+
+Evidence:`build-macos/breadth-toyland-airport-{final-reconciliation,final-temperate-
+regression,clear-reconciliation,clear-gallery-reconciliation,held-release-validation,
+clearance-audit,clearance-study-all-inset,clearance-inset-248}.json`.
+Source originals, failed candidates, negative controls and failed assertions remain.
+
 ## Public climate-ground release `.23`
 
 Workflow36353928970 passes all eight jobs on its first attempt at exact tagged

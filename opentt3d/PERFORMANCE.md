@@ -3,6 +3,26 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Toyland airport service baseline
+
+The60-control airport matrix peaks at3,449,441,712 sampled bytes. Four1,800-frame
+aircraft Cab services average59.999…60.002fps with0/1/1/19 intervals above20ms;
+their maximum interval is30.338ms. Six3,600-frame original radar/flag observations
+average59.819…60.003fps and retain0…23 intervals above20ms, including a97.329ms
+maximum. Concurrent source reviews, catalogue compilation and isolated native studies
+remain part of this environment. These results do not establish sustained smoothness
+or long-duration/reload/multiple-viewport memory acceptance. Source:
+`build-macos/breadth-toyland-airport-final-reconciliation.json`.
+
+The28 targeted clearance-repair controls peak at3,534,900,848 sampled bytes. Four
+1,800-frame Cab rechecks average60.002…60.006fps with4/5/7/9 intervals above20ms
+and26.405…38.389ms maxima. Source:`breadth-toyland-airport-clear-reconciliation.json`.
+
+Four3,600-frame original held-service-release replays average60.002…60.003fps with
+2…10 intervals above20ms,27.988…98.512ms maxima and3,333,341,184 peak sampled bytes.
+The original AI release is directly observed in all four logs; these short runs
+still leave sustained frame pacing and long-duration memory acceptance open.
+
 ## Climate-ground public-package follow-up
 
 Release`.23`Linux llvmpipe completes900 frames, all six original train support states

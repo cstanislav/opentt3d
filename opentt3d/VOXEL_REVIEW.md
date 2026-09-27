@@ -16,6 +16,17 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Toyland airports19…28/43/47:**twelve provisional bodies reach1,701; explicit
+  climate48 paint preserves independent aprons and the16 source-confirmed shared
+  masks/registrations.41 nonuniform source-colour transitions receive spatial paint,
+  including four separated curved-terminal teeth. Shared piers25…28 gain corrected
+  orientations, mirrored branches and the registered full raised link. Later static
+  checks repair two support positions and the inherited hangar entrance;42 engine248
+  poses and all five Toyland fixed-wing bodies at pier26 clear. Larger hangar/fence
+  and engine251/terminal19 intersections remain unresolved. Initial60 controls/seven
+  negatives and28 repair rechecks pass.142 asset tests pass. Source/street/
+  layout fidelity and full moving clearance remain provisional; approvals:0.
+
 - **Climate industry grounds3924/2173:**four provisional volumes bring the catalogue
   to1,689 while preserving all1,685 preceding hashes. Independent Arctic/tropical
   soil and oil-well paint and eight-panel Toyland blue-grey paving retain full16×16

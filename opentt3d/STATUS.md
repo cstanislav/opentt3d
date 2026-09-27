@@ -15,17 +15,25 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,689-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite140/140 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,701-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Twelve Toyland airport bodies19…28/43/47 retain source-confirmed climate silhouettes
+  with independent spatial paint and separate aprons. Four shared piers receive source-
+  facing branches, a mirrored elbow and full-length raised link. Two support positions
+  and both inherited hangar entrances clear42 static engine248 poses; pier26 clears all
+  five Toyland fixed-wing aircraft at its original stand.60 initial controls, seven
+  negatives and28 targeted repair controls pass.142 asset checks pass;1,683 preceding
+  model hashes and all prior bindings remain. Larger-aircraft hangar/fence and terminal
+  overlaps, full moving clearances and final source fidelity remain unresolved.
 - [x] Airport bodies now select explicit climate*16+frame states with original-source
   guards, separate ground ownership and complete supplied fallback for missing Toyland
   paint. Native206 and asset140 checks, six non-temperate backend controls and seven
   missing/invalid-state checks pass;2,632 temperate airport views remain unchanged.
-  The twelve-volume Toyland study remains isolated while existing boarding-pier
-  orientation/placement/extent defects are corrected. Final approvals remain zero.
+  The subsequent twelve-volume artwork and boarding-pier repairs are integrated above.
+  Final approvals remain zero.
 - [x] Four independent climate-ground volumes add Arctic/tropical soil, separate
   Arctic/tropical recessed oil-well grounds and Toyland blue-grey paving. All1,685
   preceding models remain hash-identical.480 explicit bindings cover336 original

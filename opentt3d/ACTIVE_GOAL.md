@@ -1,5 +1,53 @@
 # Active extended development goal
 
+## Toyland airport artwork and clearance repairs — September27
+
+The working catalogue reaches1,701 with twelve explicit Toyland bodies19…28/43/47,
+127 materials and three registered-branch components. Source masks, dimensions and
+offsets match across all16 original body/fence layers;41 nonuniform source-colour
+transitions require spatial painting. Corrected shared boarding piers retain supported
+quarter-unit branches, the mirrored elbow and full-length raised link. The curved
+terminal now has four separate teeth around its actual perimeter.
+
+The first integrated build passes206 native tests,141 asset checks, all60 background
+controls and seven missing/invalid-state controls. Actual engine248 services retain
+city→small airports in1958 and international→international in2050; all twelve explicit
+bodies, independent grounds,28 original radar/flag frames, contact, Cab, picking,
+clipping and app bundles pass. Prototype pixels agree exactly. These functional checks
+do not establish physical clearance: a separate quarter-cell audit found two boarding
+leg collisions and existing hangar-jamb collisions. Failure evidence remains intact.
+
+The revised supports and recessed entrance preserve all42 audited engine248 terminal/
+exterior-approach poses; pier26 also clears all five Toyland fixed-wing aircraft at its
+original stand.142 asset tests pass, including the initially failing clearance test.
+Two successive isolated repairs pass both renderers and source/street review. All28
+targeted integrated rechecks pass. Six preceding compiled models change intentionally,
+including both inherited hangars;1,683 prior model hashes and every prior binding remain.
+
+Final reconciliation preserves2,657/2,764 temperate and172/248 Toyland views per backend;
+all changes belong to the repaired bodies or their context pages.216 isolated-prototype
+views per backend match exactly. Native layers agree between renderers;33 Toyland views
+retain1,989 differing pixels and316 temperate views retain34,819. Four3,600-frame native
+Cab replays directly log the original held-service release with each save's unchanged AI.
+12,096 successful reviewed captures compact losslessly, saving19,822,036,404bytes;
+2,052 earlier prototype captures save3,335,796,209bytes. Original source art, failures,
+pixel data, PAM metadata and saves remain available.
+
+Broader static probes still find large-aircraft hangar/fence overlaps and engine251's
+terminal19 nose overlap. Resolve these source/placement/clearance defects before final
+airport acceptance; full smoothed paths and all-angle fidelity remain open. Catalogue-
+wide passes and arbitrary-world sustained60fps remain unfinished; final approvals:0.
+Forty vehicle-anchor comparisons now record the five Toyland aircraft's outstanding
+source proportions/registration, supporting the clearance investigation without changing
+original simulation paths or shrinking aircraft to fit.
+
+The next industry source audit proves that all Toyland2257/2260/2261 pool differences
+are exactly upstream's dark-water palette substitution; the existing animated voxel
+indices already support it. Nine2022 bare-soil layers exactly match authored Toyland
+sweets ground. Twelve explicit alias bindings need no new models, but remain isolated
+pending their own native ownership/fallback review. Evidence:`breadth-gold-toyland-
+palette-alias-audit.json`. Verified public downloads remain`.23`.
+
 ## Climate-ground desktop release verified — September27,22:41:40UTC
 
 Release`.23`at exact commit3ecdb3ea83c154d13c83bc8f98b3e9ca397deb99 passes all eight

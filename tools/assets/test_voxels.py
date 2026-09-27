@@ -643,6 +643,117 @@ class VoxelCompilerTests(unittest.TestCase):
         self.assertIn((31,0,2),nw)
         self.assertIn((0,31,2),n)
 
+    def test_toyland_airports_keep_source_palettes_geometry_and_independent_owners(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        graphics = (*range(19,29),43,47)
+        # Resolved original Toyland body/fence layers2650..2664, not the apron.
+        allowed = {
+            19:set(range(1,16)) | set(range(32,37)) | set(range(128,134)) | {169,200,202,204,205},
+            20:set(range(1,16)) | set(range(128,134)) | set(range(198,205)) | {65,169,195,239,240},
+            21:set(range(3,16)) | set(range(32,37)) | set(range(128,136)) | set(range(198,206)) | {1,23,38,39,169,210,255},
+            22:set(range(5,16)) | set(range(32,37)) | set(range(128,134)) | {3,202},
+            23:set(range(5,16)) | set(range(32,37)) | set(range(128,134)) | {3,200,201,202,204},
+            24:set(range(4,13)) | set(range(32,37)) | set(range(128,136)) | set(range(198,203)) | {1,210},
+            25:set(range(32,39)) | {8,202,204},
+            26:set(range(32,38)), 27:set(range(32,38)), 28:set(range(32,38)),
+            43:{1,2,3,4,6,7,53,54} | set(range(104,109)) | set(range(128,132)) | set(range(200,205)),
+            47:set(range(1,16)) | set(range(128,134)) | set(range(198,204)) | {65,169,195,239,240},
+        }
+        names = set()
+        def include(name):
+            if name in names:
+                return
+            names.add(name)
+            if "extends" in source["models"][name]:
+                include(source["models"][name]["extends"])
+        for g in graphics:
+            for category in ("airport_tiles","airport_ground"):
+                for name in source["bindings"][category][str(g)].values():
+                    include(name)
+        source["models"] = {name:model for name,model in source["models"].items() if name in names}
+        source["bindings"] = {category:{g:states for g,states in source["bindings"][category].items() if int(g) in graphics}
+                              for category in ("airport_tiles","airport_ground")}
+        result = compile_catalogue(source)
+        cells = {name:{(x+i,y,z):tuple(result["materials"][material-1]) for x,y,z,n,material in model["runs"] for i in range(n)}
+                 for name,model in result["models"].items()}
+        for g in graphics:
+            bindings = result["bindings"]["airport_tiles"][str(g)]
+            original,painted = (cells[bindings[state]] for state in ("0","48"))
+            self.assertEqual(original.keys(),painted.keys(),"Original climate masks match; paint must not move openings or supports")
+            self.assertNotEqual(original,painted)
+            self.assertTrue({c for faces in painted.values() for c in faces} <= allowed[g])
+            transitions = {}
+            for p,faces in painted.items():
+                transitions.setdefault(original[p],set()).add(faces)
+            self.assertTrue(any(len(v)>1 for v in transitions.values()),"Nonuniform source paint cannot become a global recolour")
+            for key in ("size","cell_size","origin","occupied"):
+                self.assertEqual(result["models"][bindings["0"]][key],result["models"][bindings["48"]][key])
+            reached = {p for p in painted if p[2] == 0}
+            queue = list(reached)
+            for x,y,z in queue:
+                for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if p in painted and p not in reached:
+                        reached.add(p); queue.append(p)
+            self.assertEqual(reached,set(painted),"All facade, roof and boarding-pier cells need real supports")
+            ground = result["bindings"]["airport_ground"][str(g)]
+            floor = result["models"][ground.get("48",ground["0"])]
+            self.assertTrue(all(floor["origin"][2]+(z+1)*floor["cell_size"][2] <= 0 for x,y,z,n,material in floor["runs"]),
+                            "Body paint must not consume the independent opaque apron")
+        stand = result["bindings"]["airport_tiles"]["25"]
+        self.assertEqual({p:f for p,f in cells[stand["0"]].items() if p[2]<3},
+                         {p:f for p,f in cells[stand["48"]].items() if p[2]<3},"Source-identical picket fence keeps its colours")
+        for g,width in ((25,10),(26,9),(27,11)):
+            name = result["bindings"]["airport_tiles"][str(g)]["0"]
+            model = result["models"][name]
+            roof = [(y-x)*model["cell_size"][0] for x,y,z in cells[name] if z >= 10]
+            self.assertGreaterEqual(max(roof)-min(roof),width,"Original source-facing branches must not rotate into a thin end view")
+        link = cells[result["bindings"]["airport_tiles"]["28"]["0"]]
+        self.assertTrue(all((x,y,z) not in link for x in range(4,76) for y in range(8) for z in range(13)),
+                        "The raised boarding link must retain its full clear passage between end legs")
+
+    def test_original_aircraft_stands_and_small_aircraft_hangar_entrances_are_clear(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        names = set()
+        def include(name):
+            names.add(name)
+            if "extends" in source["models"][name]:
+                include(source["models"][name]["extends"])
+        for graphics in (24,25,26,43):
+            for name in source["bindings"]["airport_tiles"][str(graphics)].values():
+                include(name)
+        for engine in range(248,253):
+            include(source["bindings"]["vehicles"][str(engine)]["6"])
+        bindings = source["bindings"]
+        source["models"] = {name:model for name,model in source["models"].items() if name in names}
+        source["bindings"] = {}
+        models = compile_catalogue(source)["models"]
+        def quarter_cells(model):
+            cells = set()
+            for x,y,z,n,material in model["runs"]:
+                low = [round(4*(model["origin"][d]+p*model["cell_size"][d])) for d,p in enumerate((x,y,z))]
+                high = [round(4*(model["origin"][d]+p*model["cell_size"][d])) for d,p in enumerate((x+n,y+1,z+1))]
+                cells.update((a,b,c) for a in range(low[0],high[0]) for b in range(low[1],high[1]) for c in range(low[2],high[2]))
+            return cells
+        volumes = {name:quarter_cells(model) for name,model in models.items()}
+        for state in ("0","48"):
+            def body(graphics):
+                return volumes[bindings["airport_tiles"][str(graphics)][state]]
+            for engine in range(248,253):
+                plane = volumes[bindings["vehicles"][str(engine)]["6"]]
+                # Original city Terminal2: (56,22), DIR_SE, on tile(3,1).
+                placed = {(8*4-y-1,6*4+x,z) for x,y,z in plane}
+                self.assertFalse(body(26) & placed,f"Boarding-pier support intersects parked engine{engine}")
+            plane = volumes[bindings["vehicles"]["248"]["6"]]
+            # Original city Terminal3: (38,8), DIR_SW, on tile(2,0).
+            self.assertFalse(body(25) & {(6*4+x,8*4+y,z) for x,y,z in plane})
+            # Country/city hangar lane X=5; international hangar lanes X=7/4.
+            # These samples test the exterior doorway, retaining the source roof.
+            for graphics in (24,43):
+                for lane in (4,5,7):
+                    for along in range(16,28):
+                        placed = {(lane*4-y-1,along*4+x,z) for x,y,z in plane}
+                        self.assertFalse(body(graphics) & placed,f"Hangar{graphics} entrance blocks engine248 at {lane},{along}")
+
     def test_bank_keeps_joined_owners_completed_body_slots_and_independent_paving(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

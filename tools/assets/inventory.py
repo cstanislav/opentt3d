@@ -257,6 +257,7 @@ def main():
     print(f"Industry grounds3924/2173: {len(climate_grounds)} original layers; missing explicit non-temperate layer states: {sum(len(r['missing_voxel_climates']) for r in climate_grounds)}; independent body ownership retained")
     print(f"Airport tile definitions: {len(data['airport_tiles'])}; voxel-bound body or ground-only: {sum(bool(a['bound_voxel_states']) for a in data['airport_tiles'])}; body owners: {sum(bool(a['voxel_states']) for a in data['airport_tiles'])}")
     print(f"Independently bound voxel airport grounds: {sum(bool(a['voxel_ground_states']) for a in data['airport_tiles'])}")
+    print(f"Distinct Toyland airport body frames: {sum(len(a['explicit_body_climate_states']['toyland']) for a in data['airport_tiles'])} explicit bindings; {sum(len(a.get('missing_toyland_body_frames',[])) for a in data['airport_tiles'])} missing bindings")
     print(f"Depot families: {len(data['depots'])}; voxel directions: {sum(len(d['voxel_directions']) for d in data['depots'])}; full four-direction families: {sum(len(d['voxel_directions']) == 4 for d in data['depots'])}")
     print(f"Ship-depot axes: {sum(d['voxel_parts'] == [0,1] for d in data['ship_depots'])} / 2; both original tile parts required; water remains independent")
     print(f"Dock sections: {sum(d['voxel_states'] == [0,1] for d in data['docks'])} / 6; ordinary/Toyland states required; shore/water remains independent")

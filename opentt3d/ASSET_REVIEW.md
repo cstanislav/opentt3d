@@ -4,6 +4,45 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Toyland airport bodies and shared boarding geometry (September27)
+
+Twelve provisional climate48 bodies cover19…28/43/47, bringing the working catalogue
+to1,701. All16 original body/fence layers retain identical climate masks, sizes and
+registration. Independent spatial paint handles41 nonuniform colour transitions,
+including the rounded terminal's separated teeth, blue glazing, ochre structure,
+dark roofs, timber and source-identical fencing. Geometry is shared only within these
+source-confirmed parent/variant pairs. Aprons retain their independent owners.
+
+Source registration exposed existing rotated-branch, mirrored-elbow and link-span
+errors in25…28. Corrected quarter-unit branches remain supported; the full-length
+raised link retains its passage. A subsequent clearance audit found intersecting
+stand supports and hangar entrance corners. The repaired supports and recessed jamb
+clear42 engine248 original terminal/exterior-approach poses, while pier26 clears all
+five Toyland fixed-wing aircraft at its stand. The first failing regression is retained.
+Larger-aircraft hangar/fence overlaps and engine251/terminal19 remain open defects.
+
+The60-control initial matrix and seven negative controls pass;all28 targeted repair
+rechecks pass. All248 prototype Toyland views per backend agree with the
+initial integrated captures. All native backend views agree;33/248 wider/context
+views retain1,989 differing pixels. The initial temperate regression preserves2,440
+of2,632 views exactly;192 changes are limited to corrected piers and discovery pages,
+with132 added Toyland/discovery views. The repair comparison preserves2,657/2,764
+temperate and172/248 Toyland views exactly per backend; all changes belong to repaired
+bodies and their context pages.216 isolated-prototype views per backend match exactly.
+No native backend differences remain; wider temperate316 views retain34,819 pixels,
+while Toyland33 views retain1,989. The mixed Toyland context contains the repaired
+glass hangar; initial classification/report-path failures remain preserved.
+
+Joined city, small-airfield and international services, street/orbit views and source
+registration remain provisional. Tower/hangar top bounds extend3pixels above source;
+terminal23 starts1pixel lower. Full grounds retain their quarter/half-grid footprints
+despite the ordinary one-pixel raster phase. Fine facade/roof/window/tooth/pier paint,
+source leg placement, terminal joins and complete moving-aircraft clearances remain
+unfinished. No final visual approval is granted. Evidence:`breadth-toyland-airport-
+{final-reconciliation,clear-reconciliation,clear-gallery-reconciliation,clearance-audit,
+clearance-inset-248}.json`.12,096 integrated and2,052 prototype captures compact
+losslessly with complete RGBA/PAM metadata, saving23,157,832,613bytes in total.
+
 ## Sugar167…174: hollow sieve, falling grains and stockpile grounds (September27)
 
 Twenty-two provisional volumes reach1,667: three source-owned post cuts, four
