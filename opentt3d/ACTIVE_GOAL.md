@@ -1,5 +1,39 @@
 # Active extended development goal
 
+## Arctic forest integrated and source-reviewed — September27,20:09:37UTC
+
+Six provisional volumes reach1,673 while preserving all1,667 preceding model hashes.
+Explicit Arctic16…19 body/ground states retain four nine-rooted growth stages, six
+supported timber tiers/four stumps and independent snow/thaw litter. All16 palettes,
+eight ground aliases and four log aliases reconcile.26 frozen controls pass16 actual
+construction-layer selections, full20/20 and empty0/20 engine144 cargo, four climates,
+clipping, picking and bundles. Both9,000-frame services observe the complete harvest/
+regrowth on tile75,52, industry0; both sugar regressions capture all96 original frames.
+Eight climate/fallback negatives and the120-frame incomplete-cycle negative pass.
+Native205, asset137 and137-file boundary checks pass; frozen hashes/bundles reconcile.
+
+All174 prototype views and174 temperate-regression views agree. All30 native backend
+layers/model-origins/layouts agree;96 wider views retain5,238 differing pixels. Growth
+bounds differ by up to2pixels, logs/ground by1pixel. Snow-band/crown regularity, hanging
+branches/needle gaps, lower roots, thaw/litter patterns and log/stump profiles/paint
+remain provisional.1,052 successful reviewed captures compact losslessly, saving
+1,666,367,315bytes. Original images, failures and metadata remain. Final approvals:0.
+The forest services average60.001/60.004fps but retain763/706 intervals above20ms;
+arbitrary-world smooth60fps and long-duration memory acceptance remain unmet.
+
+Climate runtime is pushed atf80afae14. Release`.20`targets the earlier sugar commit
+8992e3b1361db3284486a3c35b124e5ea4420d8e. Its first Linux journey misses only the ascending
+support state; collector contact passes and no wheel-gap error appears. Both exact-tag
+Mac replays of that retained save pass all six states. The unchanged hosted gate is
+rerunning; public verified links remain`.19`. The isolated Arctic farm study has44
+visible source layers/four genuine absences, all three source layouts and an ordinary
+farm→food full/empty/return fixture. Its first gallery reveals unsupported glazing
+and incorrect farmhouse proportions, so further source/geometry work is required.
+Continue climate breadth, procedural children, infrastructure/effects and later passes.
+
+Evidence:`breadth-snow-forest-final-{reconciliation,source-review}.json`and
+`playable-release20-failed-journey-reconciliation.json`.
+
 ## Explicit industry climate selection verified — September27,19:26:07UTC
 
 Body/ground states now support explicit`climate*16+stage`bindings while retaining

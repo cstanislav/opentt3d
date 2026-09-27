@@ -16,6 +16,21 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Arctic forest16/17:**six provisional volumes retain nine separately rooted pines
+  per growth stage, physical snow tiers/drooping tips, six supported timber tiers,
+  four rooted stumps and independent full snow/thaw ground. Explicit16…19 states
+  preserve shared temperate0…3 entries and all1,667 preceding model hashes. All16
+  palettes, eight ground and four log source aliases pass.26 integrated controls
+  verify actual construction, full/empty timber, both harvest/regrowth cycles and
+  both96-frame sugar regressions; missing-layer and incomplete-cycle negatives reject.
+  All174 prototype/174 temperate regression views and30 native backend views agree.
+  Wider backend views retain5,238 differing pixels across96 images. Registered growth
+  bounds differ by up to2pixels; logs by1pixel and ground by1pixel. Regular snow bands,
+  overly solid crowns versus original hanging branches/needle gaps, lower trunk/root
+  extents, regular thaw islands/litter, log end/stump silhouettes and paint remain
+  provisional. Cross-tree brush and unsupported-timber failures remain retained.
+  Evidence:`build-macos/breadth-snow-forest-final-*`. Final visual approvals:0.
+
 - **Sugar167…174:**22 provisional volumes reach all175 primary layer bindings while
   preserving20 empty bodies. Three post cuts, four stockpile grounds, five hollow
   wire sieves, six solid-grain clouds and four growing piles retain original placement

@@ -3,6 +3,24 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Arctic forest cycle and sugar-regression observations
+
+The26-control matrix peaks at3,819,159,552 sampled bytes. Two9,000-frame forest services
+average60.001/60.004fps for OpenGL/Vulkan, with5.270/5.721ms p95 work,763/706 intervals
+above20ms and42.555/41.677ms maximum intervals. Both observe the complete harvest and
+regrowth on one unchanged tile/industry. Two2,400-frame sugar regressions average
+60.009/60.002fps with229/258 intervals above20ms and69.560/72.781ms maxima. Concurrent
+source audits, authoring, tests, fallback controls and package replays remain part of
+this environment. These results leave sustained smooth60fps and long-duration/reload/
+multiple-viewport memory acceptance open. Source:
+`breadth-snow-forest-final-reconciliation.json`.
+
+The first release`.20`Linux llvmpipe journey averages1.533fps and2,408,038,400 peak
+sampled bytes;900 presented frames miss the ascending support state while capturing
+the other five and passing collector contact. Publication remains gated on a complete
+hosted observation. The retained save passes all states in both exact-package Mac
+replays. Source:`playable-release20-failed-journey-reconciliation.json`.
+
 ## Sugar-mine cycle and toffee regression observations
 
 The26-control matrix peaks at3,752,169,456 sampled bytes. Two2,400-frame services

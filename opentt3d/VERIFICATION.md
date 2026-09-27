@@ -1,5 +1,40 @@
 # Implementation verification
 
+## Arctic forest: explicit layers, supported timber and live regrowth
+
+At20:04:04UTC, all26 frozen controls pass on both native backends:16 actual construction
+layer selections, full20/20 and empty0/20 engine144 timber, four climates, picking,
+clipping and bundles. Both9,000-frame services capture mature→logs→seedlings→young→
+half-grown→mature on unchanged tile75,52, industry0. Both2,400-frame sugar regressions
+retain all96 ordered child frames/absences. Eight missing-layer/reserved-state/climate
+negatives preserve independent layers and reject incomplete bindings. A120-frame
+forest observation correctly rejects without claiming a complete harvest cycle.
+
+Source/build hashes match all six new models and all1,667 preceding models. The16 source
+palette layers, eight exact ground aliases and four log aliases reconcile. Nine roots
+per growth stage and every log/stump component remain ground-connected. All174 integrated
+Vulkan views match the prototype;174 temperate regression views remain identical.
+All16 native layers, six model-origin views and eight layouts agree across backends;
+96/144 wider views retain5,238 differing pixels. Native205, asset137 and137-file
+presentation boundary pass. Frozen binary/catalogue/tool hashes and bundle resources
+reconcile. Main artwork reaches1,673 provisional models; finer source fidelity and
+catalogue-wide acceptance remain open. Final visual approvals:0. Successful reviewed
+captures compact1,052 images losslessly, saving1,666,367,315bytes; originals, failures,
+metadata and compaction manifests remain.
+Evidence:`build-macos/breadth-snow-forest-final-{reconciliation,source-review}.json`.
+
+## Sugar`.20`first Linux gate failure and exact-package replay
+
+Workflow36343192871's first attempt passes source, all Windows and both macOS jobs,
+but Linux's900-frame journey captures support mask59: ascending state4 was unobserved.
+Collector contact passes and no wheel-gap failure is reported. The retained llvmpipe
+run averages1.533fps and peaks at2,408,038,400 sampled bytes. Replaying that exact save
+with the successful exact-tag Mac package at8992e3b1361db3284486a3c35b124e5ea4420d8e
+passes all six support states and collector contact on both backends. The unchanged
+hosted gate is rerunning; publication was withheld, and verified links remain`.19`.
+Original failure logs/artifacts remain. Evidence:
+`build-macos/playable-release20-failed-journey-reconciliation.json`.
+
 ## Explicit industry climate state and independent-layer verification
 
 At19:26:07UTC, native205, asset136, harness12 and137-file boundary pass. Explicit

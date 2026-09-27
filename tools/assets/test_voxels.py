@@ -3334,7 +3334,9 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_forest_growth_keeps_nine_rooted_pines_and_independent_original_litter(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items() if name.startswith("forest_")}
-        source["bindings"] = {category:{graphics:states for graphics,states in source["bindings"][category].items() if int(graphics) in (16,17)} for category in ("industries","industry_ground")}
+        source["bindings"] = {category:{graphics:{state:name for state,name in states.items() if int(state) < 4}
+                                      for graphics,states in source["bindings"][category].items() if int(graphics) in (16,17)}
+                              for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         growing = result["bindings"]["industries"]["16"]
         self.assertEqual(set(growing),{"0","1","2","3"})
@@ -3381,6 +3383,63 @@ class VoxelCompilerTests(unittest.TestCase):
         for states in result["bindings"]["industry_ground"].values():
             self.assertEqual(set(states),{"0","1","2","3"})
             self.assertEqual(set(states.values()),{"forest_ground"})
+
+    def test_arctic_forest_has_independent_snow_and_grounded_tree_and_timber_components(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items() if name.startswith("snow_forest_")}
+        source["bindings"] = {category:{graphics:{state:name for state,name in states.items() if 16 <= int(state) < 20}
+                                      for graphics,states in source["bindings"][category].items() if int(graphics) in (16,17)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        self.assertEqual(len(result["models"]),6)
+        growing = result["bindings"]["industries"]["16"]
+        self.assertEqual(set(growing),{"16","17","18","19"})
+        self.assertEqual(len(set(growing.values())),4)
+        self.assertEqual(set(result["bindings"]["industries"]["17"].values()),{"snow_forest_felled"})
+        for states in result["bindings"]["industry_ground"].values():
+            self.assertEqual(set(states),set(growing))
+            self.assertEqual(set(states.values()),{"snow_forest_ground"})
+        tree_palette = {2,80,81,104,106,210,211,212,213}
+        log_palette = {1,2,3,4,5,6,7,16,24,25,26,27,53,54,55,56,60,61,62,63,64,65,70,71,104,105,106,107,108,109,110,111,112,113,122,178}
+        ground_palette = {1,3,4,5,12,14,21,22,23,24,25,26,27,28,33,34,35,36,55,56,57,88,89,90,91,92,93,103,104,109,110,112,134,135,153,160,161,210,211,212}
+        heights = []
+        for name,model in result["models"].items():
+            cells = {(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+            tree = name.startswith("snow_forest_growth_")
+            colours = {colour for material in cells.values() for colour in result["materials"][material-1]}
+            self.assertTrue(colours <= (tree_palette if tree else ground_palette if name.endswith("ground") else log_palette),name)
+            if name.endswith("ground"):
+                self.assertEqual(len(cells),32*32)
+                self.assertEqual(model["origin"][2]+model["cell_size"][2],0)
+                continue
+            self.assertEqual(model["origin"][2],0)
+            pending = set(cells)
+            components = []
+            while pending:
+                points = [pending.pop()]
+                for x,y,z in points:
+                    for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if p in pending:
+                            pending.remove(p); points.append(p)
+                self.assertTrue(any(z == 0 for x,y,z in points),(name,"Unsupported snow, log or stump"))
+                components.append(points)
+            roots = {(x,y) for x,y,z in cells if z == 0}
+            for x,y in roots:
+                self.assertTrue(all(0 < model["origin"][i]+(p+0.5)*model["cell_size"][i] < 16 for i,p in enumerate((x,y))),name)
+            if not tree:
+                continue
+            heights.append(max(z for x,y,z in cells))
+            patches = 0
+            while roots:
+                points = [roots.pop()]; patches += 1
+                for x,y in points:
+                    for p in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+                        if p in roots:
+                            roots.remove(p); points.append(p)
+            self.assertEqual(patches,9,"Snow must not turn nine independent trunks into a raised solid slab")
+            if name == growing["16"]:
+                self.assertEqual(len(components),9,"The sparse original seedling crowns must stay physically separate")
+        self.assertEqual(heights,sorted(set(heights)))
 
     def test_sawmill_construction_roofs_and_timbers_have_grounded_parts_and_source_palettes(self):
         source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())

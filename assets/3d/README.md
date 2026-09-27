@@ -574,6 +574,15 @@ observes mature→logs→all four growth states on one unchanged tile/industry. 
 ordinary forest-to-sawmill fixture's service save; a newly funded construction save
 alone never establishes the dispatched-log state. Observation consumes no simulation RNG.
 
+Six independent `snow_forest_` volumes provide Arctic16…19 states: four nine-rooted
+conifer/snow stages, a face-connected six-tier timber/stump body and full-tile snow/thaw
+ground. Original Arctic2076 aliases all four stages;2077 aliases both definitions and
+all four stages. Source colours and geometry differ from temperate despite equal sprite
+numbers. Per-pine `rotate_z`0 evaluation isolates radial paint from earlier trees.
+The ordinary Arctic forest-to-paper service observes full/empty engine144 timber and
+the same mature→logs→all-growth cycle on both backends. Snow/branch irregularity,
+root extent, thaw/litter patterns and log/stump shape/paint remain provisional.
+
 Nineteen `refinery_` volumes bind graphics18…23, including hollow open vessels, pipe
 and cross-braced process frames, three flare service platforms, the completed flare,
 the raised cooler and an L-shaped office. Original3924 construction soil and1420
