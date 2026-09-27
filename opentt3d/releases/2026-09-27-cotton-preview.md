@@ -26,7 +26,11 @@ remains an open goal.
 
 ## Downloads
 
-The [verified `.9` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.9)
-is available for Windows, macOS and Linux. This cotton preview's executable assets
-appear after its exact-commit package workflow passes. See the
+The [verified `.10` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.10)
+is available for Windows, macOS and Linux. All eight hosted jobs pass. Independent
+audits verify19 public attachments,18 checksums,2,061 exact-commit source files and
+the same1,575 models in every package. Three downloaded Mac launches, seven hosted
+graphical clipping/startup/save controls and Windows x64/x86 native load/save pass.
+The900-frame Linux support/collector journey passes; sustained performance remains open.
+See the
 [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).

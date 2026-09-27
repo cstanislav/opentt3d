@@ -1,5 +1,29 @@
 # Active extended development goal
 
+## Cotton desktop release verified — September 27, 10:10:22 UTC
+
+Release`.10`at1b503e93888363d6af3edf9aec14d01be8fff9b5 passes all eight hosted jobs.
+Independent public audits verify19 attachments,18 checksum entries,2,061 exact-commit
+source files and all six embedded package commits. Every package contains the same
+1,575 models; Windows differs only by one trailingCRLF. Mac architecture/signature/
+dependency/minimum15.0 audits and three extracted local startup/save controls pass.
+
+All seven hosted graphical controls pass the72-view ray-based clipping gate. The
+actual ARM/Intel software-OpenGL images are reviewed: zero black world pixels and
+nine differences against matched Vulkan. Windows x64/x86 extracted native load/save
+passes. Linux's900-frame support/collector journey passes at1.725fps under llvmpipe,
+peaking at2,219,712,512 sampled bytes. These hosted observations do not establish
+sustained performance acceptance. Public instructions now link to`.10`. Evidence:
+`playable-release10-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
+Sweet-factory131…134 remains a separate ten-volume working increment. Its first
+matrix passes20 controls but four cargo-focus checks requested the wrong construction
+stage. The original full/empty saves actually contain134 at stage0/1; preserve those
+snapshots and require their actual stages and17/17 versus0/17 truck cargo. Source
+review also narrows the oversized hall, preserving the roof, door and wrapper.
+The corrected candidate is under a fresh24-control freeze. All1,575 prior model
+hashes,28 palettes,27 aliases and four intentionally empty131 bodies reconcile.
+
 ## Cotton-candy growth and harvest verified — September 27, 09:31:12 UTC
 
 Six provisional cotton129/130 volumes raise the catalogue to1,575 and primary

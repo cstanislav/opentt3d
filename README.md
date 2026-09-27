@@ -10,7 +10,7 @@ commands, the save format and simulation remain the upstream engine's responsibi
 
 ## Download & play
 
-**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.9)**
+**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.10)**
 
 Open a release's **Assets** and choose your platform:
 

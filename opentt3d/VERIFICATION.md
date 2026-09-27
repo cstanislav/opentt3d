@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Cotton desktop package audit
+
+At10:10:22UTC, release`.10`at1b503e93888363d6af3edf9aec14d01be8fff9b5 passes all
+eight hosted jobs and independent public verification. Its19 attachments,18 checksums,
+2,061 exact-commit source files and six embedded package commits agree. All packages
+contain the same1,575-model catalogue, with one trailingCRLF difference on Windows.
+Mac architectures, ad-hoc signatures, local libraries, minimum15.0 and three extracted
+local startup/save controls pass. Windows x64/x86 native load/save controls pass.
+
+All seven hosted graphical controls pass72 clipping views/21,180 ray-based samples.
+Actual ARM/Intel software-OpenGL captures show zero black world pixels and nine
+differences from matched Vulkan. Linux's900-frame electric journey passes support/
+collector observations at1.725fps and2,219,712,512 peak sampled bytes. Hosted timings
+remain observations, with sustained smooth60fps acceptance open. Evidence:
+`build-macos/playable-release10-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Cotton-candy construction, cargo and unchanged-tile production cycle
 
 At09:31:12UTC,24 fresh frozen controls pass both backends: four climates,16 actual
