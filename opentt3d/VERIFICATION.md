@@ -1,5 +1,19 @@
 # Implementation verification
 
+## Toy-shop desktop package audit
+
+At12:39:14UTC, release`.14`atde82feb8c338fba8a3d0c0d1cb301d54841dfffe passes every
+hosted job. Independent public verification reconciles19 attachments,18 checksums,
+2,065 exact-commit source files and six embedded package commits. Every package has
+the same1,601-model catalogue apart from Windows's trailingCRLF. Three downloaded Mac
+startup/save controls and architecture/signature/dependency/minimum15.0 audits pass.
+Seven hosted graphical controls pass72 clipping views; Windows x64/x86 native load/save
+passes. Reviewed ARM/Intel software-OpenGL images contain zero black world pixels and
+nine differences from matched Vulkan. Linux's900-frame support/collector journey
+passes at1.670fps under llvmpipe and2,233,368,576 sampled bytes. Evidence:
+`build-macos/playable-release14-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+These package checks do not establish sustained arbitrary-world performance acceptance.
+
 ## Cola desktop package audit
 
 At11:58:36UTC, release`.13`at4caddec41d82cf13df5ac584098ea2a80827027c passes all

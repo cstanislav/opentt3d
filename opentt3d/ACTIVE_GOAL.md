@@ -1,5 +1,26 @@
 # Active extended development goal
 
+## Toy-shop desktop release verified — September27,12:39:14UTC
+
+Release`.14`atde82feb8c338fba8a3d0c0d1cb301d54841dfffe passes all eight hosted jobs.
+Independent public checks reconcile19 attachments,18 checksums,2,065 exact-commit
+source files and all six embedded package commits. Every catalogue contains1,601
+matching models, apart from Windows's trailingCRLF. Three downloaded Mac startup/save
+controls and architecture/signature/dependency/minimum15.0 audits pass. Seven hosted
+graphical controls pass72 clipping views; Windows x64/x86 native load/save passes.
+ARM/Intel software-OpenGL captures retain zero black world pixels and nine differences
+from matched Vulkan. Linux's900-frame support/collector journey passes at1.670fps under
+llvmpipe and2,233,368,576 peak sampled bytes. Public instructions now link to`.14`.
+Evidence:`playable-release14-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
+Plastic-fountain148…155's sixteen-volume increment is in frozen24-control acceptance.
+Its40 palettes,48 aliases,24 empty construction bodies,192 climate comparisons and
+1,601 prior hashes reconcile. The new read-only observer requires matching ground/body
+poses in one capture on one unchanged tile. Missing bindings and a paused one-pose
+control correctly fail. Native200, asset134, harness12 and the137-file boundary pass.
+Catalogue-wide breadth, procedural/climate coverage, visual fidelity and sustained
+arbitrary-world smooth60fps remain unfinished.
+
 ## Cola desktop release verified — September27,11:58:36UTC
 
 Release`.13`at4caddec41d82cf13df5ac584098ea2a80827027c passes all eight hosted jobs.
