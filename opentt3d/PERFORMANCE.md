@@ -3,6 +3,18 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Arctic farm service and forest-regression observations
+
+The26-control matrix peaks at3,832,201,216 sampled bytes. Two1,800-frame farm services
+average60.005/60.003fps for OpenGL/Vulkan, with5.225/5.633ms p95 work,147/168 intervals
+above20ms and22.901/23.401ms maximum intervals. Both full20/20 and empty0/20 livestock
+snapshots render. Two9,000-frame forest regressions capture complete same-tile harvest/
+regrowth at60.002/60.002fps, retaining820/955 intervals above20ms and43.925/27.856ms
+maxima. Concurrent source/ground studies, ordinary service fixtures, fallback controls
+and package checks remain part of this environment. Sustained arbitrary-world smoothness
+and long-duration/reload/multiple-viewport memory acceptance remain open. Source:
+`breadth-arctic-farm-final-reconciliation.json`.
+
 ## Arctic forest cycle and sugar-regression observations
 
 The26-control matrix peaks at3,819,159,552 sampled bytes. Two9,000-frame forest services
@@ -17,9 +29,10 @@ multiple-viewport memory acceptance open. Source:
 
 The first release`.20`Linux llvmpipe journey averages1.533fps and2,408,038,400 peak
 sampled bytes;900 presented frames miss the ascending support state while capturing
-the other five and passing collector contact. Publication remains gated on a complete
-hosted observation. The retained save passes all states in both exact-package Mac
-replays. Source:`playable-release20-failed-journey-reconciliation.json`.
+the other five and passing collector contact. Its unchanged retry observes all six
+states and collector contact at4.509fps and2,397,560,832 peak sampled bytes. The retained
+save also passes all states in both exact-package Mac replays. Sources:
+`playable-release20-failed-journey-reconciliation.json`and`playable-release20-ci-reconciliation.json`.
 
 ## Sugar-mine cycle and toffee regression observations
 

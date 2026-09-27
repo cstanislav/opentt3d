@@ -1,5 +1,42 @@
 # Implementation verification
 
+## Arctic farm: actual construction, independent layers and source review
+
+At20:52:57UTC, all26 frozen controls pass across both native backends:88 actual
+construction-layer selections, full20/20 and empty0/20 engine141 livestock, four
+climates, clipping, picking and bundles. Farm9→food13 service accepts80 and returns
+after786 ordinary observation ticks. Both9,000-frame forest regressions capture the
+complete harvest/regrowth on unchanged tile75,52, industry0. Ten missing north-body,
+north-ground, hay-body and hay-ground controls preserve linked/independent ownership
+and reject the missing requested layer. The first negative driver expected a later
+harness message; the retained run already rejected explicitly at the focus command.
+
+All12 prototype hashes and1,673 preceding hashes remain unchanged.44 visible layers,
+13 source groups, four exact bare grounds and four genuinely empty bodies reconcile.
+All components are grounded, with zero body/ground and completed-layout intersections.
+408 integrated prototype and408 temperate-regression captures agree. All44 native
+layers,12 model-origin views and24 joined-layout captures agree across backends;
+161/328 wider views retain11,054 differing pixels. Native203 unit plus two upstream
+regression tests, asset138 and137-file presentation boundary pass. Frozen tools,
+binary/catalogue hashes and bundles reconcile. Source roof/stair/window/ground detail
+remains provisional. Final visual approvals:0. Evidence:
+`build-macos/breadth-arctic-farm-final-{reconciliation,source-review}.json`.
+3,272 successful captures compact losslessly, saving4,926,072,092bytes while retaining
+original source images, failures, metadata and the compaction manifest.
+
+## Arctic forest`.21`public desktop package audit
+
+At20:53:28UTC, workflow36347541452 passes all eight jobs on its first attempt at
+fd3c03bd3b919e806eb43e842bd694721a6cbe1e. Independent downloads verify19 attachments,
+18 checksums,2,072 exact source files and six identical1,673-model catalogues. Three
+downloaded Mac startup/save checks, signatures/dependencies/architectures/minimum15.0,
+seven hosted graphical controls with72 clipping views and Windows x64/x86 native
+load/save pass. Reviewed ARM/Intel software-OpenGL worlds have zero black pixels and
+nine differences from Vulkan. Linux's900-frame llvmpipe journey observes all six train
+support states and collector contact at2.894fps and2,601,861,120 peak sampled bytes.
+Verified public links now use`.21`; the twelve Arctic farm models are a later increment.
+Evidence:`build-macos/playable-release21-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Sugar`.20`public desktop package audit
 
 At20:16:37UTC, workflow36343192871 passes all eight jobs at exact commit

@@ -16,6 +16,22 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Arctic farm33…38:**twelve provisional volumes preserve source-structured white/blue
+  farmhouse rooms, external supported landing/stairs, recessed glazing and the north
+  annex; open hay shelters retain the Arctic orientation and independent raised hay.
+  Barn, open silos, low livestock enclosure/three rooted pigs and six full grounds
+  retain original owners.44 palette layers,13 source groups, four matching bare grounds
+  and four empty body slots reconcile.26 controls pass88 live construction layers,
+  full/empty livestock and both forest cycles; ten linked/independent fallback checks pass.
+  Every component is grounded; body/ground and all three completed-layout intersections
+  are zero.408 prototype/408 temperate views and80 native backend views agree;161 wider
+  views retain11,054 differing pixels. Original type9/24 layout captures alias exactly.
+  Farmhouse top roofs remain flatter/wider, blue trim more regular, stairs bulkier and
+  the north annex larger than the source. Tower/room/window profiles, hay roof/grain,
+  barn doors, silo banding/mouths, livestock/pen/straw and soil/shadow/garden paint need
+  later fidelity work. Overall house bounds differ by1pixel; other bodies by up to3
+  and grounds by2. Evidence:`build-macos/breadth-arctic-farm-final-*`. Final approvals:0.
+
 - **Arctic forest16/17:**six provisional volumes retain nine separately rooted pines
   per growth stage, physical snow tiers/drooping tips, six supported timber tiers,
   four rooted stumps and independent full snow/thaw ground. Explicit16…19 states

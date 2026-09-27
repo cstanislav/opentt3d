@@ -871,7 +871,8 @@ class VoxelCompilerTests(unittest.TestCase):
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("farm_") or name in ("mine_ground_bare","mine_ground_site")}
-        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if 33 <= int(key) <= 38}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
+                                      for key,value in source["bindings"][category].items() if 33 <= int(key) <= 38}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
         # Visible palette indices manually reviewed in the pinned original source.
@@ -933,6 +934,45 @@ class VoxelCompilerTests(unittest.TestCase):
         shelters = cells("farm_hay_sheds")
         self.assertNotIn((27,8,5),shelters,"The hay shelters must remain open")
         self.assertIn((8,14,4),cells("farm_hay_ground"),"Raised hay belongs to original ground2110")
+
+    def test_arctic_farm_keeps_supported_glazing_open_silos_and_independent_hay(self):
+        source = json.loads((Path(__file__).resolve().parents[2] / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("arctic_farm_") or name in ("mine_ground_bare","mine_ground_site")}
+        source["bindings"] = {category:{key:{state:name for state,name in value.items() if 16 <= int(state) < 20}
+                                      for key,value in source["bindings"][category].items() if 33 <= int(key) <= 38}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        def cells(name):
+            model = result["models"][name]
+            self.assertEqual(model["cell_size"],[0.5,0.5,1])
+            ox,oy,oz = model["origin"]
+            return {(int(ox*2)+x+i,int(oy*2)+y,int(oz)+z) for x,y,z,length,_ in model["runs"] for i in range(length)}
+        for graphics in range(33,39):
+            bodies = result["bindings"]["industries"][str(graphics)]
+            grounds = result["bindings"]["industry_ground"][str(graphics)]
+            self.assertEqual(set(bodies),{"16","17","18","19"} if graphics < 35 else {"17","18","19"})
+            self.assertEqual(len(set(bodies.values())),1,"Original completed farm bodies repeat without fabricated construction")
+            self.assertEqual(set(grounds),{"16","17","18","19"})
+            body,ground = cells(bodies["19"]),cells(grounds["19"])
+            self.assertFalse(body & ground,"Ground-owned hay must not intersect its shelter")
+            self.assertEqual({(x,y) for x,y,z in ground if z == -1},{(x,y) for x in range(32) for y in range(32)})
+            for name,volume in ((bodies["19"],body),(grounds["19"],ground)):
+                reached = {p for p in volume if p[2] <= 0}
+                queue = list(reached)
+                for x,y,z in queue:
+                    for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if p in volume and p not in reached:
+                            reached.add(p); queue.append(p)
+                self.assertEqual(reached,volume,(name,"Glazing, rails and roof parts must have physical support"))
+            if graphics >= 35:
+                self.assertEqual(grounds["16"],"mine_ground_bare","The exact original bare-earth alias stays independent")
+        silos = cells("arctic_farm_silos")
+        for y in (10,24):
+            self.assertNotIn((7,y,34),silos,"Preserve the source's open dark silo mouths")
+            self.assertIn((7,y,0),silos)
+        self.assertTrue(any(z > 0 for x,y,z in cells("arctic_farm_hay_ground")))
+        self.assertNotIn((14,8,5),cells("arctic_farm_hay_sheds"),"The independently oriented hay shelter must stay open")
 
     def test_oilwell_animation_keeps_source_aliases_rooted_frames_and_fixed_supports(self):
         root = Path(__file__).resolve().parents[2]

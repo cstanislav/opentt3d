@@ -7,9 +7,8 @@ remain unchanged.
 
 ## Play
 
-The [verified `.20` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.20)
-is available for Windows, macOS and Linux. This Arctic preview's executable assets
-appear after its exact-commit package workflow passes. Required graphics are bundled;
+The [verified `.21` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.21)
+includes this Arctic forest preview for Windows, macOS and Linux. Required graphics are bundled;
 see the [installation and first-launch guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 
 ## New artwork and original behavior
@@ -37,6 +36,13 @@ Every tree/log/stump component is grounded.174 integrated prototype views and174
 temperate-regression views agree. All30 native backend views agree;96 wider views
 retain5,238 differing pixels. Native205, asset137 and the137-file presentation boundary
 pass. Successful review captures are compacted losslessly with failures preserved.
+
+The exact-commit desktop workflow passes all eight jobs on its first attempt.
+Independent public downloads verify19 attachments,18 checksums,2,072 matching source
+files and six identical1,673-model catalogues. Three downloaded Mac startup/save
+controls, seven hosted graphical controls with72 clipping views and Windows x64/x86
+native load/save pass. Linux's900-frame journey captures all six support states and
+collector contact; ARM/Intel software-OpenGL worlds have zero black pixels.
 
 ## Still in progress
 

@@ -1,6 +1,6 @@
 # Download and play OpenTT3D
 
-Download a desktop package from the **[verified `.20` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.20)**.
+Download a desktop package from the **[verified `.21` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.21)**.
 Expand **Assets** beneath the release notes. Choose your operating system below;
 GitHub's automatic **Source code** downloads are for building the game yourself.
 

@@ -583,6 +583,17 @@ The ordinary Arctic forest-to-paper service observes full/empty engine144 timber
 the same mature→logs→all-growth cycle on both backends. Snow/branch irregularity,
 root extent, thaw/litter patterns and log/stump shape/paint remain provisional.
 
+Twelve `arctic_farm_` volumes cover33…38 through explicit16…19 states. The white/blue
+farmhouses have independent hipped upper/lower rooms, supported recessed glazing,
+external timber landings/stairs and the north annex. Arctic hay shelters retain their
+own orientation and independent ground-owned hay. Barn/pen roofs, open silo mouths,
+three small livestock bodies and full-tile source grounds remain distinct. Four first
+body slots stay genuinely empty; their four bare grounds alias the exactly checked
+original2022.44 visible palette layers resolve13 distinct original images. Missing
+north house layers retain linked source fallback while their other layers survive;
+missing hay layers preserve the other owner. Roof/trim/porch proportions, window
+placement, fine grain and ground paint remain provisional.
+
 Nineteen `refinery_` volumes bind graphics18…23, including hollow open vessels, pipe
 and cross-braced process frames, three flare service platforms, the completed flare,
 the raised cooler and an L-shaped office. Original3924 construction soil and1420

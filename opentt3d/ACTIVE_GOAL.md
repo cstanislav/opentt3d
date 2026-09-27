@@ -1,5 +1,47 @@
 # Active extended development goal
 
+## Arctic farm integrated; forest packages verified — September27,20:54:38UTC
+
+Twelve provisional farm volumes reach1,685 while preserving all1,673 preceding hashes.
+White/blue source-structured houses, supported glazing/stairs, Arctic-oriented shelters,
+independent hay, barn, open silos, livestock and full grounds bind44 visible layers.
+13 original source groups, four exact bare-ground aliases and four empty bodies pass.
+All26 frozen controls capture88 construction layers, full20/20 and empty0/20 engine141
+livestock, four climates, clipping, picking and bundles. Both9,000-frame forest
+regressions capture the same-tile complete cycle. Ten linked/independent missing-layer
+checks pass. Native203+2, asset138 and137-file boundary pass; frozen hashes reconcile.
+
+All408 prototype/408 temperate views and80 native backend views agree;161 wider views
+retain11,054 differing pixels. Every component is grounded, and all body/ground and
+completed-layout intersections are zero. Flatter/wider roofs, regular trim, bulkier
+stairs/annex, exact window/hay/metal/livestock detail and soil/shadow/garden paint remain
+provisional. Services average60.005/60.003fps with147/168 intervals above20ms. Final
+visual approvals remain0; arbitrary-world smooth60fps and long-duration memory stay open.
+3,272 successful farm captures compact losslessly, saving4,926,072,092bytes. Another
+1,808 successful isolated ground captures save2,272,851,679bytes; failed Toyland captures,
+originals and all metadata remain.
+
+Release`.21`atfd3c03bd3b919e806eb43e842bd694721a6cbe1e passes all eight jobs in
+workflow36347541452 on its first attempt. Public downloads verify19 attachments,
+18 checksums,2,072 exact source files and six identical1,673-model catalogues. Three
+downloaded Mac startup/save controls, signatures/dependencies/minimum15.0 checks,
+seven hosted graphical controls with72 clipping views and Windows x64/x86 native
+load/save pass. Reviewed software-OpenGL worlds have zero black pixels; Linux's900-frame
+journey passes all six support states and collector contact. Verified links use`.21`.
+
+The next independent-ground study audits exact Arctic/tropical3924 and temperate/
+Toyland2173 aliases. Four new soil/paving/oil-ground studies pass source palettes and
+ground connectivity. Incomplete Toyland linked-ground attempts correctly reject;
+existing Toyland soil aliases complete coal/copper/oil links while gold's unauthored
+pool family retains supplied artwork. The isolated coastal fixture candidate uses
+public test commands to find a legal near-edge refinery. Original interior-site and
+unavailable1970-engine failures remain; Arctic/tropical engine132 services now pass
+full21/21, empty0/21, acceptance8 and return. These studies are not yet integrated.
+Continue climate breadth, infrastructure/effects and later catalogue-wide passes.
+
+Evidence:`breadth-arctic-farm-final-{reconciliation,source-review}.json`and
+`playable-release21-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Sugar desktop packages independently verified — September27,20:16:37UTC
 
 Release`.20`at8992e3b1361db3284486a3c35b124e5ea4420d8e passes all eight jobs in
