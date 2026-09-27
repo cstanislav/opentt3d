@@ -1,5 +1,30 @@
 # Implementation verification
 
+## Explicit airport climate selection
+
+At22:22:14UTC, native206 and asset140 checks pass. All2,632 temperate airport views
+remain pixel-identical after runtime selection changes. Six Arctic/tropical/Toyland
+backend controls pass airport/industry verification, clipping and picking. Four isolated
+Toyland paint controls each verify2,712 independent ground/body visibility views;48 native
+sidecars select body48 and the correct separate ground. Seven negative controls reject
+three absent bodies, another climate's body, an unavailable original frame and an invalid
+climate, while a missing ground retains the active Toyland body over supplied ground.
+Without the candidate catalogue,24 Toyland layer bindings retain their original source.
+All frozen hashes agree; peak sampled memory is3,670,802,432bytes.
+
+The twelve-volume artwork study remains isolated pending boarding-pier structure and
+registration corrections exposed by source review. The first merge assumed material
+indices were shared with a full compilation, whose rotated components append extra face
+materials; exact six-face remapping fixes the review-only merge. Earlier invalid negative
+message matching and the merged four-tooth paint block remain retained. Evidence:
+`build-macos/breadth-toyland-airport-runtime-reconciliation.json`.
+
+An origin-aware industry registration audit also restores the original per-body source
+offset in earlier diagnostic measurements. Coal0's reported thirteen-pixel horizontal
+displacement becomes a one-pixel raster phase; every ground measurement is unchanged.
+The earlier reports remain beside the corrected`*-origin-aware-registration-audit.json`
+files. No artwork or simulation change was needed for that diagnostic correction.
+
 ## Climate-ground integration and retained-source aliases
 
 At22:00:04UTC, all62 background controls and eight independent/linked missing-layer

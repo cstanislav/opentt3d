@@ -1,5 +1,24 @@
 # Active extended development goal
 
+## Airport climate selection verified — September27,22:22:14UTC
+
+Airport body/ground selection now reserves16 original frames per climate, prefers
+explicit active-climate bodies and preserves the complete supplied tile when distinct
+Toyland paint is absent. Original-source guards still cover every layer/frame; native
+sidecars and live logs report independent layer states.206 native and140 asset tests
+pass. Six non-temperate backend controls verify airports, industries, clipping and
+picking;2,632 temperate before/after airport views agree exactly. Four isolated candidate
+controls and seven missing-body/ground/other-climate/invalid-frame controls pass.
+
+The tracked catalogue remains1,689. Twelve Toyland volumes remain isolated: registered
+review caught existing boarding-pier25…28 orientation/placement/extent defects. A16-volume
+structural study now explores corrected rotated branches and the full-length link; all
+cells are supported. Correct those source-visible defects before artwork integration.
+The rounded terminal now retains four separated teeth; earlier merged-tooth, material-
+index and negative-message failures remain. Final approvals:0. Runtime evidence:
+`breadth-toyland-airport-runtime-reconciliation.json`. Release`.23`builds ground
+commit3ecdb3ea83c154d13c83bc8f98b3e9ca397deb99 in workflow36353928970; verified links use`.22`.
+
 ## Climate-ground integration verified — September27,22:00:04UTC
 
 The four-volume increment reaches1,689 while preserving all1,685 preceding source

@@ -524,7 +524,7 @@ void BeginVoxelAirportAnimationChecks(std::span<const unsigned> graphics)
 		unsigned frames = GetAirportTileLayouts(graphic).size();
 		if (frames < 2 || frames > 16) throw std::runtime_error("Airport tile has no supported source animation");
 		for (unsigned frame = 0; frame < frames; ++frame) {
-			if (!HasVoxelAsset("airport_tiles",graphic,frame)) throw std::runtime_error("Airport animation has an unbound voxel frame");
+			if (!VoxelAirportState(graphic,frame)) throw std::runtime_error("Airport animation has an unbound active-climate voxel frame");
 		}
 		checks.emplace(graphic,AirportAnimationCheck{UINT32_MAX,frames,0,false});
 	}
@@ -692,8 +692,12 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 	{
 		ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 		if (DrawVoxelAirportGround(capture->scene,graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},GroundSpritePaletteTransform(ground,source.ground.pal,palette))) {
-			static std::set<unsigned> reported;
-			if (!capture->diagnostic && reported.insert(graphics).second) Debug(driver,1,"OpenTT3D: live independent voxel airport ground {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
+			unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+			static std::set<std::tuple<unsigned,unsigned,unsigned>> reported;
+			if (!capture->diagnostic && reported.emplace(graphics,frame,climate).second) {
+				Debug(driver,1,"OpenTT3D: live independent voxel airport ground {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
+				Debug(driver,1,"OpenTT3D: airport voxel climate selection graphics {} frame {} layer ground climate {} binding {}",graphics,frame,climate,*VoxelAirportState(graphics,frame,true));
+			}
 			if (source.GetSequence().empty()) {
 				++capture->voxel_airport_sections;
 				static std::set<unsigned> reported_ground_only;
@@ -706,11 +710,16 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 	if (IsInvisibilitySet(TO_BUILDINGS)) return true;
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
-	DrawVoxelAsset(capture->scene,"airport_tiles",graphics,frame,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},palette,IsTransparencySet(TO_BUILDINGS) ? 0.38f : 1);
+	auto state = VoxelAirportState(graphics,frame);
+	if (state) DrawVoxelAsset(capture->scene,"airport_tiles",graphics,*state,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},palette,IsTransparencySet(TO_BUILDINGS) ? 0.38f : 1);
 	if (capture->scene.instances.size() != first) {
 		++capture->voxel_airport_sections;
-		static std::set<unsigned> reported;
-		if (!capture->diagnostic && reported.insert(graphics).second) Debug(driver,1,"OpenTT3D: live voxel airport tile {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
+		unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+		static std::set<std::tuple<unsigned,unsigned,unsigned>> reported;
+		if (!capture->diagnostic && reported.emplace(graphics,frame,climate).second) {
+			Debug(driver,1,"OpenTT3D: live voxel airport tile {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
+			Debug(driver,1,"OpenTT3D: airport voxel climate selection graphics {} frame {} layer body climate {} binding {}",graphics,frame,climate,*state);
+		}
 		if (check_radio_beacons && graphics == 32 && !capture->diagnostic) {
 			if (checked_radio_tile == INVALID_TILE) {
 				unsigned materials = 0;

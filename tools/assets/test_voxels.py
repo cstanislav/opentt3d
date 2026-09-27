@@ -8,6 +8,16 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_airport_layers_reserve_four_climates_without_crossing_state_bounds(self):
+        source = {"format":1,"materials":{"solid":1},"models":{"sample":{"size":[1,1,1],"ops":[["box","solid",0,0,0,1,1,1]]}}}
+        for category in ("airport_tiles","airport_ground"):
+            source["bindings"] = {category:{"19":{str(state):"sample" for state in (0,16,32,48,63)}}}
+            self.assertEqual(compile_catalogue(source)["bindings"],source["bindings"])
+            for identifier,state in (("19","64"),("74","0")):
+                source["bindings"] = {category:{identifier:{state:"sample"}}}
+                with self.assertRaisesRegex(ValueError,"Airport bindings"):
+                    compile_catalogue(source)
+
     def test_industry_climate_grounds_keep_recessed_mouths_full_footprints_and_source_aliases(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

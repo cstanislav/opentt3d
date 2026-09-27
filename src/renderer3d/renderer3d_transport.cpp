@@ -216,6 +216,28 @@ TEST_CASE("Airport source climate guards preserve distinct Toyland terminal artw
 	}
 }
 
+TEST_CASE("Airport climate bindings select only the active source and animation frame", "[renderer3d][voxel]")
+{
+	for (unsigned frame = 0; frame < 12; ++frame) {
+		uint64_t shared = uint64_t{1}<<frame;
+		for (unsigned climate = 0; climate < 4; ++climate) {
+			unsigned state = climate*16+frame;
+			uint64_t explicit_state = uint64_t{1}<<state;
+			CHECK(SelectVoxelAirportState(shared|explicit_state,frame,climate,false) == state);
+			CHECK(SelectVoxelAirportState(shared|explicit_state,frame,climate,true) == state);
+			CHECK(SelectVoxelAirportState(shared,frame,climate,true) == frame);
+			if (climate != 0) CHECK_FALSE(SelectVoxelAirportState(shared,frame,climate,false));
+			for (unsigned other = 0; other < 4; ++other) if (other != climate) {
+				CHECK_FALSE(SelectVoxelAirportState(explicit_state,frame,other,false));
+			}
+			CHECK_FALSE(SelectVoxelAirportState(explicit_state,(frame+1)%12,climate,true));
+		}
+	}
+	CHECK_FALSE(SelectVoxelAirportState(UINT64_MAX,16,0,true));
+	CHECK_FALSE(SelectVoxelAirportState(UINT64_MAX,0,4,true));
+	CHECK_FALSE(AirportModelClimateSupported(74,0));
+}
+
 TEST_CASE("Tunnel directions connect paired portals without moving the track centre", "[renderer3d]")
 {
 	for (unsigned direction = 0; direction < 4; ++direction) {

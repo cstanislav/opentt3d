@@ -10,8 +10,19 @@ bool HasVoxelAirport(unsigned graphics, unsigned frame);
 /** The Toyland set supplies different terminal/hangar paint under the same IDs. */
 inline bool AirportModelClimateSupported(unsigned graphics, unsigned climate)
 {
-	return climate < 4 && (climate != 3 || !((graphics >= 19 && graphics <= 28) || graphics == 43 || graphics == 47));
+	return graphics < 74 && climate < 4 && (climate != 3 || !((graphics >= 19 && graphics <= 28) || graphics == 43 || graphics == 47));
 }
+/** Each airport climate reserves16 original animation frames. Shared body art
+ * is eligible only when the active source climate actually supplies that art. */
+inline std::optional<unsigned> SelectVoxelAirportState(uint64_t states, unsigned frame, unsigned climate, bool shared_supported)
+{
+	if (frame >= 16 || climate >= 4) return {};
+	unsigned explicit_state = climate*16+frame;
+	if ((states & (uint64_t{1}<<explicit_state)) != 0) return explicit_state;
+	return shared_supported && (states & (uint64_t{1}<<frame)) != 0 ? std::optional<unsigned>{frame} : std::nullopt;
+}
+/** Active layer binding, including original-source and whole-tile fallback checks. */
+std::optional<unsigned> VoxelAirportState(unsigned graphics, unsigned frame, bool ground = false);
 bool DrawVoxelAirportGround(Scene &scene, unsigned graphics, unsigned frame, Vec3 origin, PaletteID palette);
 bool HasVoxelTree(SpriteID image);
 bool UseVoxelTrees();

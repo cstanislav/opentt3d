@@ -23,11 +23,21 @@ Airport binding ownership follows the original tile sequence. Ground-only source
 tiles require an `airport_ground` binding and no fabricated `airport_tiles` body;
 this includes the timber buildings33/34. Tile35 splits the lower office/paving
 from its control cabin/tank body. All grounds remain opaque under building
-transparency/invisibility. Current provisional airport coverage is53/74 definitions,
-47 body owners and35 independent grounds. Source-ID equality alone does not permit
+transparency/invisibility. Current provisional airport coverage is74/74 definitions,
+56 body owners and74 independent grounds. Source-ID equality alone does not permit
 a climate alias: distinct Toyland19…28/43/47 artwork remains supplied until separate
 volumes are authored. OriginalZ=-128 fence children use native screen-space offsets
 in source registration rather than world-space XYZ.
+
+Airport body and ground states encode `climate*16+frame`, with shared0…15 and
+explicit Arctic16…31, tropical32…47 and Toyland48…63. The actual original layout
+limits the permitted frames. An explicit active-climate body takes precedence;
+missing distinct Toyland paint keeps the complete supplied tile. Original-source
+guards still check every ground/body/animation source. Native filenames retain
+the original frame; sidecars add `climate`, `frame`, `body_binding_state` and
+`ground_binding_state`. Empty source bodies remain absent. Live logs record the
+selected climate and each independent layer state. Ordinary aircraft fixtures can
+use `--starting-year 1958` for still-available small airports; the default is2050.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;

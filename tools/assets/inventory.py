@@ -171,7 +171,9 @@ def inventory():
         if restricted_bodies:
             industry["body_climate_restrictions"] = restricted_bodies
     airport_source = (ROOT / "src/table/airporttile_ids.h").read_text().split("enum AirportTiles", 1)[1].split("};", 1)[0]
-    airports = [{"id": i, "name": name, "voxel_states": voxel_states("airport_tiles", i),
+    airports = [{"id": i, "name": name, "voxel_states": [state for state in voxel_states("airport_tiles", i) if state < 16],
+                 "explicit_body_climate_states": {climate:[state%16 for state in voxel_states("airport_tiles",i) if state//16 == index]
+                     for index,climate in enumerate(("temperate","arctic","tropic","toyland"))},
                  "voxel_ground_states": [state for state in voxel_states("airport_ground", i) if state < 16],
                  "explicit_ground_climate_states": {climate:[state%16 for state in voxel_states("airport_ground",i) if state//16 == index]
                      for index,climate in enumerate(("temperate","arctic","tropic","toyland"))}, "reviewed": False}
@@ -191,8 +193,10 @@ def inventory():
         airport["missing_voxel_ground_states"] = sorted(set(range(frames))-set(airport["voxel_ground_states"]))
         airport["all_source_frames_bound"] = not airport["missing_voxel_states"]
         if airport["id"] in (*range(19,29),43,47):
-            airport["missing_voxel_climates"] = ["toyland"]
-            airport["climate_source_note"] = "Toyland replaces the original body paint; the complete supplied tile is retained pending independent artwork."
+            missing = sorted(set(range(frames))-set(airport["explicit_body_climate_states"]["toyland"]))
+            airport["missing_voxel_climates"] = ["toyland"] if missing else []
+            airport["missing_toyland_body_frames"] = missing
+            airport["climate_source_note"] = "Toyland replaces original body paint; explicit climate frames retain source-confirmed geometry with independent spatial paint. Missing frames retain the supplied complete tile."
     depots = [{"kind": kind, "name": name, "voxel_states": voxel_states("depots", kind),
                "voxel_directions": sorted({state%4 for state in voxel_states("depots", kind)}),
                "climate_variant_states": {label: [state%4 for state in voxel_states("depots", kind) if state//4 == variant]
