@@ -9,11 +9,21 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass their LinuxVulkan scene/electric-journey jobs, macOS and Windows; remaining Linux jobs are active/queued. Factory`.16`'s intermittent collector crash remains unresolved despite successful local replays.
-- [x] Current1,402-volume asset/compiler/schema suite127/127 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. Iron-ore`.2`passes LinuxVulkan's scene matrix but repeats the electric-collector crash; other Linux jobs remain active/queued. Both retained collector failures remain unresolved despite successful local crash-save replays.
+- [x] Current1,416-volume asset/compiler/schema suite128/128 and downloader/screenshot/memory harness11/11 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Copper47…51 adds14 provisional bodies with all construction selections and
+  three original wheel poses. Open frame, hollow flues, recessed bays and separated
+  storage rows have support/clearance regressions. Coverage reaches81 industry body
+  owners and101 independent grounds. All24 final background controls pass, including
+  44 actual construction-layer selections, full/empty22-unit cargo captures, both
+  app bundles and live three-pose wheel observations on both backends. All1,402 prior
+  model hashes agree; peak sampled memory is3,060,075,880bytes. The Linux memory
+  sampler now reports zombie/disappeared-process exits without masking the retained
+  game log or fabricating zero-memory samples. The collector crash itself remains open.
 
 - [x] Iron-ore100…115 adds48 provisional ground-owned volumes, including terraced
   workings, boundary posts, raised hopper, open construction frames and joined roofs.

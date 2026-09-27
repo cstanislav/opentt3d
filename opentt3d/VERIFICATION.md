@@ -1,5 +1,63 @@
 # Implementation verification
 
+## Copper47…51 and Linux process-exit diagnostics
+
+Fourteen new bodies bring the catalogue to1,416 volumes,81 industry body owners and
+101 independent grounds. Construction and animated hoist definitions47/48 share only
+original sprite2028; each of2028/2029/2030 has its own wheel pose. Source-identical
+2/3 body slots share models independently of their ground. Existing source-matched
+3924/2022 grounds are reused under the climate guards, and partial custom hoist
+replacement retains supplied artwork across47/48.
+
+- 200 native,128 asset/compiler/schema and11 harness checks pass. Structural
+  regressions require supported wheel/frame/roof/flue geometry, hollow flues, recessed
+  glazing/machine bays, open construction sheds and the clear passage between rows.
+  All40 bound palettes and original aliases agree. All14 new compiled models match
+  their source; all1,402 previous geometry/material hashes remain unchanged.
+- All24 final background controls pass. TemperateGL/Vulkan each verify5,520 industry
+  views (3,232 grounds),336 focused copper mesh/palette views and4,096,000 exact atlas
+  relocation/picking pixels. Arctic/tropic each verify4,144 views (2,080 grounds),
+  while Toyland verifies2,928 views (968 grounds).
+- Eight ordinary construction-save controls capture44 actual layer selections:
+  34 bodies and10 grounds. Tropical3924 construction soil correctly retains its
+  supplied distinct artwork. Both background app-bundle controls pass. The normal
+  MPS162 truck loads22units, delivers to tropical factory23 and returns; all four
+  full/empty cargo captures and selected-engine pose checks pass. The initial
+  unavailable-Uhl163 fixture failure remains preserved.
+- Both6,000-frame live animation controls observe2028,2029 and2030 on the same
+  unchanged tile. The120 climate/layer comparisons find60 identical body layers and
+  44 changed ground layers, already handled independently by the source guards.
+- Peak sampled memory is3,060,075,880bytes. Frozen implementation/artwork/executable
+  hashes and development-bundle links agree. All registered individual/ground/joined
+  views are pixel-identical acrossGL/Vulkan;213 of268 total image pairs are exact.
+  Street comparisons retain up to971 differing pixels near the ground-contact strip.
+  Selected source, individual, both joined layouts, street and world views were
+  inspected. Fine bracing/paint/registration findings remain; zero final approvals.
+
+Evidence:`build-macos/breadth-copper-final-*`, `breadth-copper-source-build-agreement.json`
+and the public copper service fixture. Lossless compaction preserves1,046 initial/final
+review images and recovers1,639,383,448bytes. The02:50:53UTC audit measures4,061,932KiB
+checkout and3,655,688KiB build. Source imagery and defective reviews remain retained.
+The goal inventory still has74 industry definitions and21 airport primary bindings
+missing, plus remaining climate/state/fidelity/performance work.
+
+Printing`.17`, tram`.18`and steel`.1`now pass every CI job. Iron-ore`.2`'s LinuxVulkan
+scene matrix passes, but its electric journey crashes at02:38:56UTC with collector
+mount6.625, top9.375, requested contact6.1552124, shoeX−1.4740938, heading0.2849931,
+grade0 and body base0.5. Run36285952346/artifact10922001645 is retained, checksum
+`6338c7b4a2904aeb64aa2ec5dc6a3df926b6264f308e74844ee65b31dfa18049`, including its exact
+fixture/crash save and log. A paused local Vulkan replay succeeds. The original
+factory`.16`crash and this recurrence remain unresolved.
+
+Linux `/proc` can lose `VmRSS` between the harness's poll and sample while retaining
+a zombie status file. That secondary failure masked the collector exception in CI's
+summary. The sampler now reports explicit zombie/dead/disappeared-process exits,
+preserves the last real sample/peak, and rejects missing memory fields on live
+processes. Crash/error logs are checked before sampling. Two new portable regressions
+and the existing live-allocation guard pass; this diagnostic repair does not fix the
+renderer. Docker's local daemon probe times out, so no fresh local Linux acceptance
+is claimed. Remaining iron-ore Linux jobs are active/queued at this audit.
+
 ## Iron-ore100…115 and collector diagnostics
 
 Forty-eight new volumes bring the catalogue to1,402, with76 industry body owners

@@ -1,6 +1,7 @@
 """Process memory sampling for bounded native renderer smoke runs."""
 
 import ctypes
+import errno
 import json
 from pathlib import Path
 import platform
@@ -52,8 +53,19 @@ class MemoryMonitor:
             values = {"rss_bytes": usage.resident_size, "footprint_bytes": usage.phys_footprint,
                       "cpu_seconds": (usage.user_time + usage.system_time) * self.cpu_seconds_per_tick}
         else:
-            status = dict(line.split(":", 1) for line in Path(f"/proc/{pid}/status").read_text().splitlines())
-            rss = int(status["VmRSS"].split()[0]) * 1024
+            try:
+                status = dict(line.split(":", 1) for line in Path(f"/proc/{pid}/status").read_text().splitlines())
+            except FileNotFoundError as error:
+                raise ProcessLookupError(errno.ESRCH, "Game exited before memory sampling") from error
+            rss_field = status.get("VmRSS")
+            if rss_field is None:
+                # A process can exit after Popen.poll() but before this read.
+                # Linux keeps a zombie's status file without memory fields.
+                state = status.get("State", "").split()
+                if state and state[0] in ("Z", "X"):
+                    raise ProcessLookupError(errno.ESRCH, "Game exited during memory sampling")
+                raise RuntimeError(f"Cannot sample game memory: VmRSS missing for process {pid}")
+            rss = int(rss_field.split()[0]) * 1024
             swap = int(status.get("VmSwap", "0").split()[0]) * 1024
             values = {"rss_bytes": rss, "rss_swap_bytes": rss + swap}
         used = max(value for key, value in values.items() if key.endswith("_bytes"))

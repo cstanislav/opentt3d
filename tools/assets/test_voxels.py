@@ -8,6 +8,56 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_copper_hoist_poses_open_construction_bays_and_flues_keep_source_ownership(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("copper_") or name in ("mine_ground_site","mine_ground_bare","print_site_ground")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(47,52)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",(root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0])
+        for graphics in range(47,52):
+            states = result["bindings"]["industries"][str(graphics)]
+            self.assertEqual(set(states),{"0","1","2","3"})
+            self.assertEqual(states["2"],states["3"])
+            self.assertEqual(rows[graphics*4+2].split(",")[2:],rows[graphics*4+3].split(",")[2:],"The last two slots must reference the same original body, independently of their ground")
+            for stage,name in states.items():
+                ground = result["models"][result["bindings"]["industry_ground"][str(graphics)][stage]]
+                self.assertEqual(ground["origin"][2]+ground["cell_size"][2],0,"Independent ground ends where the building starts")
+                self.assertEqual(result["models"][name]["origin"][2],0)
+        self.assertEqual(result["bindings"]["industries"]["47"]["3"],result["bindings"]["industries"]["48"]["0"])
+        poses = [volumes[f"copper_head_{i:02d}"] for i in range(3)]
+        self.assertEqual(len({frozenset(cells.items()) for cells in poses}),3,"All three original wheel poses need distinct spokes")
+        changed = {p for p in set().union(*poses) if len({cells.get(p) for cells in poses})>1}
+        self.assertTrue(changed)
+        self.assertTrue(all(9 <= x <= 21 and y == 14 and 37 <= z <= 49 for x,y,z in changed),"Animation changes the wheel only, never its supports or ground")
+        for name,cells in volumes.items():
+            if not name.startswith("copper_"): continue
+            reached = {p for p in cells if p[2]==0}
+            pending = list(reached)
+            for x,y,z in pending:
+                for point in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                    if point in cells and point not in reached:
+                        reached.add(point); pending.append(point)
+            self.assertEqual(reached,set(cells),(name,"Wheel rims, stays, chimneys and roof bays need physical support"))
+        for cells in poses:
+            self.assertNotIn((15,9,22),cells,"The winding tower is open between its braced columns")
+            self.assertNotIn((15,15,37),cells,"The wheel face must clear the supporting tower instead of being buried inside it")
+        for point in ((10,6,33),(10,12,31)):
+            self.assertNotIn(point,volumes["copper_engine_finished"],"Both chimney mouths remain open")
+        for name,opening,back in (("copper_machine_finished",(21,15,4),(20,15,4)),
+                                  ("copper_machine_finished",(10,21,11),(10,20,11)),
+                                  ("copper_engine_finished",(11,17,5),(11,16,5))):
+            self.assertNotIn(opening,volumes[name],"Machine bays and glazing are recessed openings")
+            self.assertIn(back,volumes[name])
+        self.assertNotIn((6,10,6),volumes["copper_sheds_partial"],"Construction sheds cannot have solid top caps")
+        self.assertIn((9,10,6),volumes["copper_sheds_partial"])
+        for stage in ("initial","partial","finished"):
+            self.assertFalse(any(10 <= x < 20 for x,y,z in volumes[f"copper_sheds_{stage}"]),"The passage between storage rows stays unbuilt")
+
     def test_iron_ore_layout_keeps_ground_owned_roofs_supported_and_original_bodies_empty(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

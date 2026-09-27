@@ -1,5 +1,60 @@
 # Active extended development goal
 
+## Copper-mine breadth verified — September 27, 02:50:53 UTC
+
+The actual clock is **2026-09-27 02:50:53 UTC**. Fourteen copper bodies cover
+47…51, bringing the catalogue to **1,416 volumes, 81 industry body owners and 101
+independent grounds**. Source registration repairs tower/wheel/stay placement,
+engine-house roof form, machine-bay facing and open construction sheds. All 40 bound
+palettes and original aliases pass; all 1,402 prior geometry/material hashes agree.
+The 200 native, 128 asset and 11 harness checks pass. All 24 final background controls
+pass, with 44 actual construction-layer observations, four full/empty 22-unit cargo
+captures, both app bundles and all three original wheel poses on each backend.
+Peak sampled memory is 3,060,075,880 bytes; source/build/bundle hashes match.
+
+All registered individual and joined views match exactly across backends. Street
+ground-contact differences remain, as do source grain, bracing and small registration
+refinements. Zero final visual approvals remain. Losslessly compacting 1,046 copper
+review images recovers 1,639,383,448 bytes, preserving source imagery and earlier
+defective reviews. The measured checkout/build sizes are 4,061,932/3,655,688 KiB.
+The inventory still lacks 74 industry definitions and 21 airport primary bindings.
+
+Printing, tram and steel CI now pass every job. Iron-ore Linux Vulkan passes its
+scene matrix but repeats the electric-collector crash: requested contact 6.1552124
+is below mount 6.625, at heading 0.2849931 and grade 0. Its exact crash save, logs and
+fixture are retained in `build-macos/breadth-collector-ore-ci/`; a paused local Vulkan
+replay passes. The Linux sampler's secondary `VmRSS` exit race is repaired and tested,
+but the renderer crash remains unresolved. Docker is installed but its daemon did
+not answer the local probe. Publish this verified breadth increment, then continue
+collector diagnosis and the prepared gold-mine family. The complete four-pass and
+smooth-performance goals remain active; this is a progress audit.
+
+## Copper-mine continuation — September27,02:18:42UTC
+
+The actual clock is**2026-09-27 02:18:42UTC**. Iron-ore coverage is published on
+`main`at`7b5faa8f503a32272bbbf694c1c765981f062b91`as`opentt3d-dev-20260927.2`.
+Fourteen copper-mine bodies47…51 are integrated locally with original construction
+and three hoist-wheel poses. First source registration catches misplaced stays and
+footprints, wrong-facing machine bays, solid construction-shed caps and an incorrect
+engine-house roof form. Those are being corrected before final review. The first
+ground-palette audit also replaces the generic site binding with the existing
+source-matched3924 volume. The14 bodies plus40 source-layer bindings pass palette,
+support and original-alias audits; the1,402 preceding model hashes agree.
+
+Printing`.17`and tram`.18`CI now complete successfully across all platforms/jobs.
+Steel has only its final Linux vehicle shard running; ore CI is active/queued, with
+macOS/Windows and the first Vulkan vehicle shard passed. The factory`.16`collector
+exception remains unresolved. No stopping audit or broader completion follows from
+this continuation; retain all source/state/gameplay/performance and four-pass goals.
+
+Gold-mine72…88 sources and ordinary Arctic construction saves are prepared for the
+next breadth family. Its68 source states have54 empty bodies, nine unique visible
+body layers and43 unique grounds (one is existing2022 soil). The408 climate/layer
+comparisons find12 changed Toyland grounds: nine existing2022 soil selections and
+three additional completed water grounds2257/2260/2261. Those need independent
+source handling when authored. The ordinary gold construction fixture has all four
+saved stages; no gold artwork or completed cargo-service coverage is claimed.
+
 ## Iron-ore breadth verified — September27,01:29:42UTC
 
 The actual reconciliation clock is**2026-09-27 01:29:42UTC**. The48 new ground-owned iron-ore

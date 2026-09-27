@@ -363,6 +363,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	/* Keep custom replacements and special drawing procedures on their supplied
 	 * path. A shared original stage sprite may resolve to a shared volume. */
 	unsigned first = graphics <= 1 ? 0 : graphics, last = graphics <= 1 ? 1 : graphics;
+	if (graphics == 47 || graphics == 48) { first = 47; last = 48; } // Copper hoist construction and its three original wheel poses.
 	if (graphics >= GFX_OILRIG_1 && graphics <= GFX_OILRIG_5) {
 		/* These source cuts share physical deck/building components. A partial
 		 * replacement must retain the supplied art across the complete rig. */

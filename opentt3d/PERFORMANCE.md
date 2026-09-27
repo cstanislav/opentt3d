@@ -3,6 +3,22 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Copper checkpoint animation controls
+
+Both background6,000-frame copper scenes capture all three original hoist-wheel
+poses without altering animation state. OpenGL averages59.887fps with5.542ms p95 work;
+Vulkan averages59.946fps with5.526ms p95 work. Their26/17 frame intervals over20ms and
+121.28/125.82ms maximum work remain visible limitations. These bounded observations
+do not establish sustained arbitrary-world60fps. The24-run matrix peaks at
+3,060,075,880 sampled bytes. Evidence:`build-macos/breadth-copper-final-animation-*`.
+
+Iron-ore Linux CI repeats the collector exception during the electric journey after
+passing the full scene matrix. Its requested local contact6.1552124 falls below the
+roof mount6.625; the original crash save is retained and a paused native replay passes.
+The Linux sampler's secondary process-exit race is repaired, but the collector cause
+and the elapsed-time hypothesis remain unresolved. The failed journey's sampled peak
+is2,177,904,640bytes, below its6GiB guard; no completed journey performance is claimed.
+
 ## Iron-ore checkpoint electric-route controls
 
 Both background9,000-frame replays of the actual factory`.16`CI fixture pass

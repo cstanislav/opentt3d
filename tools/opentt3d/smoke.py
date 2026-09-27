@@ -586,17 +586,20 @@ server_advertise = false
                 if process.poll() is not None:
                     raise RuntimeError(f"Game exited with {process.returncode}; see {output / 'run.log'}")
                 current_log = (output / "run.log").read_text()
+                if "Crash encountered" in current_log:
+                    raise RuntimeError(f"Game crashed; see {output / 'run.log'}")
+                if any(error in current_log for error in rendering_errors):
+                    raise RuntimeError(f"Rendering verification failed; see {output / 'run.log'}")
                 if memory is not None:
                     if args.macos_bundle:
                         match = re.search(r"OpenTT3D: Cocoa process (\d+)", current_log)
                         if match:
                             native_pid = int(match[1])
                     if not args.macos_bundle or native_pid is not None:
-                        memory.sample(native_pid or process.pid)
-                if "Crash encountered" in current_log:
-                    raise RuntimeError(f"Game crashed; see {output / 'run.log'}")
-                if any(error in current_log for error in rendering_errors):
-                    raise RuntimeError(f"Rendering verification failed; see {output / 'run.log'}")
+                        try:
+                            memory.sample(native_pid or process.pid)
+                        except ProcessLookupError as error:
+                            raise RuntimeError(f"Game exited during memory sampling (exit code {process.poll()}); see {output / 'run.log'}") from error
                 image_size = completed_png_size(screenshot)
                 if image_size and (not benchmark_frames or (output / "benchmark.json").is_file()):
                     break

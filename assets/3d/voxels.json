@@ -4,6 +4,16 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "copper_site": [1,2,1,3,1,2],
+    "copper_site_grain": [2,1,2,1,2,1],
+    "copper_frame": [2,4,3,6,2,4],
+    "copper_brick": [70,73,71,76,70,74],
+    "copper_brick_light": [71,75,72,76,71,74],
+    "copper_scaffold": 59,
+    "copper_roof": [2,4,3,6,2,4],
+    "copper_roof_rib": [3,5,4,6,3,5],
+    "copper_wheel": [16,18,17,20,16,19],
+    "copper_glass": [130,132,131,133,130,132],
     "ore_soil": [71,73,72,73,71,72],
     "ore_soil_grain": [105,108,105,112,105,108],
     "ore_clay": [105,112,108,113,105,112],
@@ -1347,6 +1357,56 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "copper_tower_frame": [
+      ["repeat",[8,0,0],2,[["repeat",[0,6,0],2,[["box","copper_frame",11,6,0,12,7,36]]]]],
+      ["repeat",[0,0,10],3,[["box","copper_frame",11,6,7,20,7,8],["box","copper_frame",11,12,7,20,13,8],
+        ["box","copper_frame",11,6,7,12,13,8],["box","copper_frame",19,6,7,20,13,8]]],
+      ["box","copper_frame",11,6,35,20,7,36],["box","copper_frame",11,12,35,20,13,36],
+      ["box","copper_frame",11,6,35,12,13,36],["box","copper_frame",19,6,35,20,13,36],
+      ["repeat",[0,0,10],3,[["line","copper_frame",11,6,8,19,6,17],["line","copper_frame",11,12,8,19,12,17]]]
+    ],
+    "copper_head_brick": [
+      ["box","copper_brick",6,4,0,22,20,12],["erase",8,6,1,20,18,12],
+      ["box","copper_brick",12,20,0,18,24,7],["erase",14,22,0,16,24,5],
+      ["scatter_paint","copper_brick_light",7,2027,6,4,0,22,26,12,"copper_brick"]
+    ],
+    "copper_wheel_ring": [
+      ["line","copper_wheel",15,14,37,19,14,39],["line","copper_wheel",19,14,39,21,14,43],
+      ["line","copper_wheel",21,14,43,19,14,47],["line","copper_wheel",19,14,47,15,14,49],
+      ["line","copper_wheel",15,14,49,11,14,47],["line","copper_wheel",11,14,47,9,14,43],
+      ["line","copper_wheel",9,14,43,11,14,39],["line","copper_wheel",11,14,39,15,14,37],
+      ["box","copper_frame",14,6,42,17,15,44]
+    ],
+    "copper_head_finished_structure": [
+      ["use","copper_head_brick"],["use","copper_tower_frame"],
+      ["box","copper_roof",6,4,12,22,20,13],["erase",12,7,12,19,12,13],
+      ["gable","copper_roof",11,19,7,19,25,10,"x"],
+      ["box","copper_frame",11,6,35,12,13,44],["box","copper_frame",19,6,35,20,13,44],
+      ["box","copper_frame",11,6,42,20,7,43],["box","copper_frame",11,12,42,20,13,43],
+      ["line","copper_frame",11,12,43,3,29,0],["line","copper_frame",19,12,43,9,27,0],
+      ["line","copper_frame",11,12,40,11,12,43],["line","copper_frame",19,12,40,19,12,43],
+      ["use","copper_wheel_ring"]
+    ],
+    "copper_engine_shell": [
+      ["box","copper_brick",8,4,0,26,18,12],["box","copper_brick",8,4,12,16,18,22],
+      ["prism","copper_brick",1,4,18,[[16,12],[26,12],[16,16]]],
+      ["erase",10,6,1,24,16,23],
+      ["repeat",[6,0,0],3,[["repeat",[0,0,5],2,[["erase",11,16,4,13,18,8],["box","copper_glass",11,16,4,13,17,8]]]]],
+      ["erase",11,16,15,13,18,19],["box","copper_glass",11,16,15,13,17,19],
+      ["repeat",[0,6,0],2,[["repeat",[0,0,5],2,[["erase",24,6,3,26,8,6],["box","copper_glass",24,6,3,25,8,6]]]]],
+      ["scatter_paint","copper_brick_light",7,2032,8,4,0,26,18,23,"copper_brick"]
+    ],
+    "copper_machine_shell": [
+      ["box","copper_brick",8,8,0,22,22,16],["erase",10,10,1,20,20,16],
+      ["erase",20,11,0,22,19,7],["box","copper_site",20,11,0,21,19,7],
+      ["repeat",[4,0,0],3,[["erase",10,20,9,12,22,14]]],
+      ["scatter_paint","copper_brick_light",7,2035,8,8,0,22,22,16,"copper_brick"]
+    ],
+    "copper_shed_shell": [
+      ["repeat",[16,0,0],2,[["box","copper_brick",4,2,0,10,26,7],["erase",5,3,0,9,25,7],
+        ["repeat",[0,6,0],4,[["erase",8,3,0,10,7,5]]],["erase",6,24,0,8,26,5]]],
+      ["scatter_paint","copper_brick_light",7,2038,4,2,0,26,26,7,"copper_brick"]
+    ],
     "ore_site": [
       ["box","ore_soil",0,0,0,32,32,1],
       ["scatter_paint","ore_soil_grain",6,2293,0,0,0,32,32,1]
@@ -5950,6 +6010,88 @@
     ]
   },
   "models": {
+    "copper_head_initial": {
+      "size":[32,32,64],"cell_size":[0.5,0.5,1],"origin":[1.5,1.5,0],
+      "reference":"Copper47 source2026: narrow open hoist frame with three braced levels; no completed wheel, brick pit house or diagonal stays",
+      "ops":[["box","copper_site",6,4,0,22,20,1],
+        ["scatter_paint","copper_site_grain",3,2026,6,4,0,22,20,1],["use","copper_tower_frame"]]
+    },
+    "copper_head_partial": {
+      "extends":"copper_head_initial","reference":"Copper47 source2027 adds open red-brick shaft housing and a small door wing, before the wheel/stays appear",
+      "ops":[["use","copper_head_brick"],["use","copper_tower_frame"],
+        ["paint","copper_scaffold",6,4,11,22,20,12],["use","copper_tower_frame"]]
+    },
+    "copper_head_00": {
+      "extends":"copper_head_initial","reference":"Copper47/48 source2028: finished narrow red-brick winding tower with an open eight-sided wheel, spokes, diagonal steel stays and separate low door roof",
+      "ops":[["erase",0,0,0,32,32,64],["use","copper_head_finished_structure"],
+        ["line","copper_wheel",15,14,37,15,14,49],["line","copper_wheel",9,14,43,21,14,43]]
+    },
+    "copper_head_01": {
+      "extends":"copper_head_initial","reference":"Copper48 source2029: the second original hoist-wheel pose retains every structural support and changes its spoke angle only",
+      "ops":[["erase",0,0,0,32,32,64],["use","copper_head_finished_structure"],
+        ["line","copper_wheel",11,14,39,19,14,47],["line","copper_wheel",11,14,47,19,14,39]]
+    },
+    "copper_head_02": {
+      "extends":"copper_head_initial","reference":"Copper48 source2030: third original hoist-wheel pose, with original2/3 table aliases and independent ground",
+      "ops":[["erase",0,0,0,32,32,64],["use","copper_head_finished_structure"],
+        ["line","copper_wheel",13,14,38,17,14,48],["line","copper_wheel",10,14,45,20,14,41]]
+    },
+    "copper_engine_initial": {
+      "size":[32,32,64],"origin":[1.5,1.5,0],"cell_size":[0.5,0.5,0.25],
+      "reference":"Copper49 source2031: dark initial engine-house footing only, with no prebuilt walls or chimneys",
+      "ops":[["erase",0,0,0,32,32,64],["box","copper_site",8,4,0,26,18,1],
+        ["scatter_paint","copper_site_grain",3,2031,8,4,0,26,18,1]]
+    },
+    "copper_engine_partial": {
+      "size":[32,32,64],"origin":[1.5,1.5,0],"cell_size":[0.5,0.5,1],
+      "reference":"Copper49 source2032: open stepped brick engine house with tall rear chimney wall and recessed blue windows; its lower front walls rise to a single-pitch roof",
+      "ops":[["use","copper_engine_shell"],["paint","copper_scaffold",8,4,21,16,18,22],
+        ["paint","copper_scaffold",24,4,11,26,18,12]]
+    },
+    "copper_engine_finished": {
+      "extends":"copper_engine_partial","reference":"Copper49 source2033: corrugated engine-house roof and two unequal open red-brick flues; source2/3 bodies are identical",
+      "ops":[["replace_material","copper_scaffold","copper_brick_light"],
+        ["box","copper_roof",8,4,22,16,18,23],
+        ["prism","copper_roof",1,4,18,[[16,16],[26,12],[26,13],[16,17]]],
+        ["repeat",[0,3,0],5,[["scatter_paint","copper_roof_rib",1,2033,8,4,12,26,5,23,"copper_roof"]]],
+        ["box","copper_brick",9,5,22,13,9,34],["erase",10,6,25,12,8,34],
+        ["box","copper_brick",9,11,22,13,15,32],["erase",10,12,25,12,14,32]]
+    },
+    "copper_machine_initial": {
+      "extends":"copper_engine_initial","origin":[3.5,4.5,0],
+      "reference":"Copper50 source2034: small dark machine-house foundation, source-sized and separate from its brown ground",
+      "ops":[["erase",0,0,0,32,32,64],["box","copper_site",8,8,0,22,22,1],
+        ["scatter_paint","copper_site_grain",3,2034,8,8,0,22,22,1]]
+    },
+    "copper_machine_partial": {
+      "size":[32,32,64],"origin":[3.5,4.5,0],"cell_size":[0.5,0.5,1],
+      "reference":"Copper50 source2035: open brick shell with the real lower machine bay and upper empty apertures",
+      "ops":[["use","copper_machine_shell"],["paint","copper_scaffold",8,8,15,22,22,16]]
+    },
+    "copper_machine_finished": {
+      "extends":"copper_machine_partial","reference":"Copper50 source2036: grey pitched roof, recessed blue upper windows and retained deep lower machine bay; source2/3 bodies agree",
+      "ops":[["replace_material","copper_scaffold","copper_brick_light"],
+        ["gable","copper_roof",8,7,16,22,23,22,"x"],
+        ["repeat",[0,3,0],6,[["paint","copper_roof_rib",8,7,16,22,8,22]]],
+        ["repeat",[4,0,0],3,[["box","copper_glass",10,20,9,12,21,14]]]]
+    },
+    "copper_sheds_initial": {
+      "extends":"copper_engine_initial","origin":[1,1,0],
+      "reference":"Copper51 source2037: two long, separate parallel foundation strips rather than an invented full-tile building",
+      "ops":[["erase",0,0,0,32,32,64],["repeat",[16,0,0],2,[["box","copper_site",4,2,0,10,26,1]]],
+        ["scatter_paint","copper_site_grain",3,2037,4,2,0,26,26,1]]
+    },
+    "copper_sheds_partial": {
+      "size":[32,32,64],"origin":[1,1,0],"cell_size":[0.5,0.5,1],
+      "reference":"Copper51 source2038: two open red-brick storage-bay rows with light exposed wall tops and a real central passage",
+      "ops":[["use","copper_shed_shell"],["paint","copper_scaffold",4,2,6,26,26,7]]
+    },
+    "copper_sheds_finished": {
+      "extends":"copper_sheds_partial","reference":"Copper51 source2039: parallel corrugated pitched storage roofs, retained repeated bay openings and unblocked central passage; original2/3 states alias",
+      "ops":[["replace_material","copper_scaffold","copper_brick_light"],
+        ["repeat",[16,0,0],2,[["gable","copper_roof",4,1,7,10,27,11,"x"],
+          ["repeat",[0,3,0],9,[["paint","copper_roof_rib",4,2,7,10,3,11]]]]]]
+    },
     "ore_100_initial": {
       "size":[64,64,64],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
       "reference":"Iron ore100 ground2293: north corner strata heaps, permanent white boundary posts and grass; every body state is empty",
@@ -14596,6 +14738,11 @@
       "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
     },
     "industry_ground": {
+      "47":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"mine_ground_bare"},
+      "48":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
+      "49":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"mine_ground_bare"},
+      "50":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"mine_ground_bare"},
+      "51":{"0":"print_site_ground","1":"print_site_ground","2":"print_site_ground","3":"mine_ground_bare"},
       "100":{"0":"ore_100_initial","1":"ore_100_middle","2":"ore_100_middle","3":"ore_100_finished"},
       "101":{"0":"ore_101_initial","1":"ore_101_middle","2":"ore_101_middle","3":"ore_101_finished"},
       "102":{"0":"ore_102_initial","1":"ore_102_middle","2":"ore_102_middle","3":"ore_102_finished"},
@@ -14694,6 +14841,11 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "47":{"0":"copper_head_initial","1":"copper_head_partial","2":"copper_head_00","3":"copper_head_00"},
+      "48":{"0":"copper_head_00","1":"copper_head_01","2":"copper_head_02","3":"copper_head_02"},
+      "49":{"0":"copper_engine_initial","1":"copper_engine_partial","2":"copper_engine_finished","3":"copper_engine_finished"},
+      "50":{"0":"copper_machine_initial","1":"copper_machine_partial","2":"copper_machine_finished","3":"copper_machine_finished"},
+      "51":{"0":"copper_sheds_initial","1":"copper_sheds_partial","2":"copper_sheds_finished","3":"copper_sheds_finished"},
       "52":{"0":"steel_north_initial","1":"steel_north_partial","2":"steel_north_partial","3":"steel_north_finished"},
       "53":{"0":"steel_casting_initial","1":"steel_casting_partial","2":"steel_casting_partial","3":"steel_casting_finished"},
       "54":{"0":"steel_rolling_initial","1":"steel_rolling_partial","2":"steel_rolling_partial","3":"steel_rolling_finished"},

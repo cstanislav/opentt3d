@@ -7,8 +7,43 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from process_memory import MemoryMonitor
+
+
+class LinuxMemoryExitTests(unittest.TestCase):
+    def test_exit_races_preserve_the_last_valid_sample_and_peak(self):
+        for terminal in ("Name:\tgame\nState:\tZ (zombie)\nThreads:\t1\n",
+                         "Name:\tgame\nState:\tX (dead)\nThreads:\t1\n", FileNotFoundError()):
+            with self.subTest(terminal=terminal), tempfile.TemporaryDirectory() as directory:
+                with patch("process_memory.platform.system", return_value="Linux"):
+                    monitor = MemoryMonitor(directory, 64)
+                try:
+                    with patch.object(Path, "read_text", return_value="State:\tR (running)\nVmRSS:\t1024 kB\nVmSwap:\t256 kB\n"):
+                        monitor.sample(123)
+                    with patch.object(Path, "read_text", **({"side_effect": terminal} if isinstance(terminal, Exception) else {"return_value": terminal})):
+                        with self.assertRaises(ProcessLookupError):
+                            monitor.sample(123)
+                finally:
+                    monitor.close()
+                report = json.loads((Path(directory) / "memory-summary.json").read_text())
+                self.assertEqual(report["samples"], 1, "An exited process must not add a fabricated zero-memory sample")
+                self.assertEqual(report["peak_sampled_bytes"], 1280 * 1024)
+                self.assertFalse(report["limit_exceeded"])
+                self.assertEqual(len((Path(directory) / "memory.jsonl").read_text().splitlines()), 1)
+
+    def test_live_process_without_memory_fields_is_not_accepted_as_an_exit(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch("process_memory.platform.system", return_value="Linux"):
+                monitor = MemoryMonitor(directory, 64)
+            try:
+                with patch.object(Path, "read_text", return_value="State:\tR (running)\nThreads:\t1\n"):
+                    with self.assertRaisesRegex(RuntimeError, "VmRSS missing"):
+                        monitor.sample(123)
+                self.assertEqual(monitor.samples, 0)
+            finally:
+                monitor.close()
 
 
 @unittest.skipUnless(platform.system() in ("Darwin", "Linux"), "native memory sampler")

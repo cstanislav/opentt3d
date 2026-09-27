@@ -16,6 +16,25 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Copper-mine breadth:**14 provisional bodies add47…51,
+  with a narrow winding tower, three distinct open wheel/spoke poses, stepped
+  engine house and two hollow flues, recessed machine bay and paired storage rows.
+  Source registration corrects footprints, stays, the engine-house roof form,
+  machine-bay facing and capped construction sheds. The wheel is moved ahead of
+  its supporting frame so its complete rim remains visible. All40 bound source
+  palettes and original construction/animation aliases pass, while all1,402 prior
+  model hashes agree. The original3924 soil uses the already source-matched printing
+  ground; distinct non-temperate construction grounds retain their supplied artwork.
+  The120 climate/layer comparisons find all60 bodies identical and44 changed ground
+  layers. Registered individual/two-layout and street views remain provisional:
+  upper bearing/frame proportions, bracing, source brick grain, roof corrugation,
+  exact window rhythm and the remaining one/two-pixel registration differences need
+  later catalogue-wide refinement. Zero final visual approvals. Initial defective
+  reviews are retained losslessly. All24 final controls pass, including both6,000-frame
+  original wheel observations and44 actual construction layers. All registered
+  body/ground/joined views match exactly across backends; street ground-contact
+  differences reach971pixels. Evidence:`build-macos/breadth-copper-*`.
+
 - **Iron-ore breadth:**48 volumes cover100…115 through three distinct ground
   states. All original bodies are empty; only identical1/2 middle states share
   geometry. Layered ochre workings, white boundary posts, open construction frames,
