@@ -52,6 +52,9 @@ do not need the original Transport Tycoon game or a separate OpenTTD install.
 The game starts in 3D; choose **New Game** or load an existing OpenTTD save.
 Saves using NewGRFs still need those NewGRFs. Optional sound and music sets can
 be installed from **Check Online Content** in the main menu.
+On first launch, a message may say that only a fallback sound set was found.
+Close it to play silently, or install **OpenSFX** from **Online Content** for sound
+effects. **OpenMSX** provides music.
 
 - Hold the **middle mouse button** on terrain and drag to orbit and tilt.
 - Use the **mouse wheel** to move closer or farther away.

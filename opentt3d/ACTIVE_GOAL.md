@@ -1,5 +1,27 @@
 # Active extended development goal
 
+## Hosted-package verification wait — September27,03:50:14UTC
+
+The actual clock is **2026-09-27 03:50:14 UTC**. The playable-release workflow and
+collector repair are committed/pushed to `main` at
+`aa8c98cd28b79a141df9a16e4b1f1062ba897aa0`, published as development release
+`opentt3d-dev-20260927.4`. Hosted package run36292341479 is still active; public
+downloads are not yet claimed. Its background watcher will report completion.
+
+A further packaged LaunchServices check passes the normal main-menu startup with
+automatic video/sound/music drivers, default3D and a hidden nonactivating Cocoa
+window. The inspected screenshot confirms the menu and its ordinary optional-sound
+content message; installation instructions explain OpenSFX/OpenMSX. The local app
+uses its bundled Vulkan library and starts on Apple M3 Pro. The development bundle
+is refreshed. Current checkout/build sizes are4,451,104/4,043,416KiB after retiring
+superseded oversized package attempts with hash evidence; their failure logs remain.
+
+The active work is waiting for hosted platform-package and Linux collector results.
+On completion, inspect every failing job, repair and rerun as needed, then verify
+actual release attachments and update player-facing status. The catalogue-wide
+artwork, fidelity and sustained-performance goal remains open with zero final
+visual approvals; gold authoring remains the next breadth family afterward.
+
 ## Playable downloads and collector follow-up
 
 The user's latest priority is sharing the repository with players. Inspection
