@@ -36,10 +36,10 @@
 
 namespace Renderer3D {
 
-/** Development opt-in. Activation is intentionally separate from saved game settings. */
+/** Normal launches use 3D; activation remains separate from saved game settings. */
 static bool requested = [] {
 	const char *value = std::getenv("OPENTT3D_RENDERER");
-	return value != nullptr && std::string_view(value) == "1";
+	return value == nullptr || std::string_view(value) == "1";
 }();
 static float rotation = 0;
 
@@ -225,8 +225,11 @@ void BeginFrame()
 	auto now = Profile::Clock::now();
 	float seconds = last_camera_tick == Profile::Clock::time_point{} ? 1.0f / 60 : std::chrono::duration<float>(now - last_camera_tick).count();
 	last_camera_tick = now;
-	BeginCaptureFrame(std::clamp(seconds, 0.0f, 0.1f));
-	if (IsEnabled()) UpdateCameraMotion(std::clamp(seconds, 0.0f, 0.1f));
+	/* The game thread advances while a slow backend presents. Exponential
+	 * smoothing is stable for the full elapsed time: capping it leaves the
+	 * rendered train above an old grade, below its new tunnel wire clearance. */
+	BeginCaptureFrame(seconds);
+	if (IsEnabled()) UpdateCameraMotion(seconds);
 	/* Upstream dirty rectangles are projected for the original camera. Until
 	 * perspective invalidation is implemented, repaint each draw tick. */
 	if (IsEnabled()) MarkWholeScreenDirty();

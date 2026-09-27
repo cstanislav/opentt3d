@@ -1,0 +1,280 @@
+name: OpenTT3D - Playable releases
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing OpenTT3D release tag to package
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opentt3d-release-${{ inputs.tag || github.event.release.tag_name }}
+  cancel-in-progress: false
+
+jobs:
+  source:
+    if: github.repository == 'cstanislav/opentt3d'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+      sha: ${{ steps.release.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.tag || github.event.release.tag_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Resolve the immutable release commit
+        id: release
+        env:
+          RELEASE_TAG: ${{ inputs.tag || github.event.release.tag_name }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os, sys
+          sys.path.insert(0, 'tools/opentt3d')
+          from package_release import metadata
+          info = metadata(os.environ['RELEASE_TAG'])
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f"tag={info['tag']}\nsha={info['commit']}\n")
+          PY
+      - name: Verify source and authoring tools
+        run: |
+          python3 tools/opentt3d/check_boundary.py
+          python3 -m unittest discover -s tools/assets -p 'test_*.py'
+          python3 -m unittest discover -s tools/opentt3d -p 'test_*.py'
+      - name: Archive matching game and graphics sources
+        env:
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: python3 tools/opentt3d/package_release.py source --tag "$RELEASE_TAG" --output dist
+      - uses: actions/upload-artifact@v5
+        with:
+          name: release-source
+          path: dist/*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 5
+
+  linux:
+    needs: source
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      RELEASE_TAG: ${{ needs.source.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.source.outputs.sha }}
+          fetch-depth: 0
+      - name: Build Debian 12 release environment
+        run: docker build -t opentt3d-release -f docker/Dockerfile .
+      - name: Build and test
+        run: |
+          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-release sh -eu -c '
+            cmake -S . -B build-release -DCMAKE_BUILD_TYPE=RelWithDebInfo -DOPTION_USE_ASSERTS=ON -DOPTION_INSTALL_FHS=OFF -DOPTION_PACKAGE_DEPENDENCIES=ON -DCMAKE_DISABLE_FIND_PACKAGE_Grfcodec=ON
+            cmake --build build-release --parallel 4
+            python3 tools/opentt3d/fetch_baseset.py build-release/baseset
+            ctest --test-dir build-release --output-on-failure
+          '
+      - name: Package and test the extracted download on both renderers
+        run: docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -e RELEASE_TAG -v "$PWD:/workspace" -w /workspace opentt3d-release xvfb-run -a python3 tools/opentt3d/package_release.py package --build-dir build-release --output dist --tag "$RELEASE_TAG" --platform linux-x86_64
+      - name: Verify the repaired electric-train journey on Linux
+        run: |
+          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-release python3 tools/opentt3d/fixture_rail.py --build-dir build-release --output build-release/electric-fixture
+          docker run --init --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/workspace" -w /workspace opentt3d-release xvfb-run -a python3 tools/opentt3d/smoke.py --build-dir build-release --output build-release/electric-check --backend vulkan --vulkan-validation --savegame build-release/electric-fixture/save/rail-fixture.sav --ai-dir build-release/electric-fixture/ai --reference-catenary --verify-live-tunnel --verify-rail-details --verify-stations --verify-depots --verify-crossings --verify-road-stops --verify-trees --tree-verification-scope active --verify-train-support 26 --verify-train-collectors 26 --first-person auto --running --benchmark-frames 120 --timeout 900 --memory-limit-mib 6144
+      - uses: actions/upload-artifact@v5
+        with:
+          name: release-linux-x86_64
+          path: dist/*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 5
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: release-linux-checks
+          path: |
+            build-release/Testing/Temporary/
+            build-release/package-smoke-*/
+            build-release/electric-fixture/
+            build-release/electric-check/
+          retention-days: 5
+
+  macos:
+    needs: source
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            arch: arm64
+          - runner: macos-15-intel
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    env:
+      RELEASE_TAG: ${{ needs.source.outputs.tag }}
+      MACOSX_DEPLOYMENT_TARGET: '15.0'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.source.outputs.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install build dependencies
+        run: brew install libpng lzo opusfile
+      - name: Fetch pinned Vulkan runtime
+        run: python3 tools/opentt3d/fetch_vulkan.py build-release/vulkan
+      - name: Build and test
+        env:
+          TARGET_ARCH: ${{ matrix.arch }}
+        run: |
+          cmake -S . -B build-release -DCMAKE_OSX_ARCHITECTURES="$TARGET_ARCH" -DCMAKE_OSX_DEPLOYMENT_TARGET=15.0
+          python3 tools/opentt3d/build.py --build-dir build-release --jobs 3
+      - name: Package, sign and test the extracted app on both renderers
+        env:
+          TARGET_ARCH: ${{ matrix.arch }}
+        run: python3 tools/opentt3d/package_release.py package --build-dir build-release --output dist --tag "$RELEASE_TAG" --platform "macos-$TARGET_ARCH"
+      - uses: actions/upload-artifact@v5
+        with:
+          name: release-macos-${{ matrix.arch }}
+          path: dist/*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 5
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: release-macos-${{ matrix.arch }}-checks
+          path: |
+            build-release/Testing/Temporary/
+            build-release/package-smoke-*/
+          retention-days: 5
+
+  windows:
+    needs: source
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            host: x64
+          - arch: x86
+            host: x86
+          - arch: arm64
+            host: x64_arm64
+    runs-on: windows-2022
+    timeout-minutes: 90
+    env:
+      RELEASE_TAG: ${{ needs.source.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.source.outputs.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: OpenTTD/actions/setup-vcpkg@v6
+        id: vcpkg
+      - name: Install installer compiler
+        run: choco install nsis -y --no-progress
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      - name: Build native code-generation tools
+        shell: bash
+        run: |
+          cmake -S . -B build-host -GNinja -DOPTION_TOOLS_ONLY=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+          cmake --build build-host --target tools --parallel 4
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: ${{ matrix.host }}
+      - name: Build game and fetch graphics
+        shell: bash
+        env:
+          TARGET_ARCH: ${{ matrix.arch }}
+          VCPKG_CMAKE: ${{ steps.vcpkg.outputs.vcpkg-cmake }}
+        run: |
+          cmake -S . -B build-release -GNinja \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo -DOPTION_USE_ASSERTS=ON -DOPTION_USE_NSIS=ON \
+            -DCMAKE_TOOLCHAIN_FILE="$VCPKG_CMAKE" -DVCPKG_TARGET_TRIPLET="$TARGET_ARCH-windows-static" \
+            -DHOST_BINARY_DIR="$GITHUB_WORKSPACE/build-host"
+          cmake --build build-release --target openttd --parallel 4
+          python tools/opentt3d/fetch_baseset.py build-release/baseset
+      - name: Run native tests
+        if: matrix.arch != 'arm64'
+        shell: bash
+        run: |
+          cmake --build build-release --target openttd_test regression_files --parallel 4
+          ctest --test-dir build-release --output-on-failure
+      - name: Package installer and portable archive
+        shell: bash
+        env:
+          TARGET_ARCH: ${{ matrix.arch }}
+        run: python tools/opentt3d/package_release.py package --build-dir build-release --output dist --tag "$RELEASE_TAG" --platform "windows-$TARGET_ARCH"
+      - uses: actions/upload-artifact@v5
+        with:
+          name: release-windows-${{ matrix.arch }}
+          path: dist/*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 5
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: release-windows-${{ matrix.arch }}-checks
+          path: |
+            build-release/Testing/Temporary/
+            build-release/package-smoke-*/
+          retention-days: 5
+
+  publish:
+    needs: [source, linux, macos, windows]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.source.outputs.sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v6
+        with:
+          pattern: release-*
+          path: downloaded
+      - name: Collect only verified distributables
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          output = Path('dist')
+          output.mkdir()
+          for folder in Path('downloaded').iterdir():
+              if folder.name.endswith('-checks'):
+                  continue
+              for path in folder.iterdir():
+                  if not path.is_file() or (output / path.name).exists():
+                      raise SystemExit(f'Unexpected or duplicate release file: {path}')
+                  shutil.copyfile(path, output / path.name)
+          PY
+          python3 tools/opentt3d/package_release.py checksums --output dist
+      - name: Attach downloads to the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ needs.source.outputs.tag }}
+        run: gh release upload "$RELEASE_TAG" dist/* --repo "$GITHUB_REPOSITORY" --clobber

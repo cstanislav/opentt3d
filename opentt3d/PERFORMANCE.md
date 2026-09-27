@@ -3,6 +3,19 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Collector timing repair controls
+
+The formerly capped analytic vehicle/Cab smoothing now receives full elapsed
+presentation time. An injected3,000ms delay reproduces the collector failure before
+the change and passes afterward on both backends; those intentionally delayed runs
+are correctness evidence only. The injection is removed from the clean build.
+
+Two9,000-frame clean electric-route controls average59.957fps (OpenGL) and59.761fps
+(Vulkan), with8.343/8.803ms p95 frame work. They retain52/62 intervals over20ms and
+81.78/271.73ms maximum work. These bounded runs do not establish sustained
+arbitrary-world60fps. The10-control reconciliation peaks at3,169,832,296 sampled
+bytes. Evidence:`build-macos/breadth-collector-repair-reconciliation.json`.
+
 ## Copper checkpoint animation controls
 
 Both background6,000-frame copper scenes capture all three original hoist-wheel

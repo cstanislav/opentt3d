@@ -8,11 +8,28 @@ OpenTT3D is a renderer-focused source port of **OpenTTD 15.3**. It draws the
 game world in 3D using **OpenGFX2 Classic 0.8.1** reference textures. Gameplay
 commands, the save format and simulation remain the upstream engine's responsibility.
 
-Development source previews are published in [GitHub Releases](https://github.com/cstanislav/opentt3d/releases).
-The complete desktop release is still being completed. See the current
+## Download & play
+
+**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases)**
+
+Open a release's **Assets** and choose your platform:
+
+| Platform | Download | Start playing |
+| :--- | :--- | :--- |
+| Windows | `windows-x64.exe` installer or `windows-x64.zip` portable archive | Install, or extract the ZIP, then run **OpenTT3D**. ARM64 and 32-bit builds are also provided. |
+| macOS 15+ | `macos-arm64.dmg` (Apple silicon) or `macos-x86_64.dmg` (Intel) | Drag **OpenTT3D** into **Applications** and open it. |
+| Linux x86-64 | `linux-x86_64.tar.xz` | Extract and run **`./opentt3d.sh`**. Debian 12 / Ubuntu 24.04 or newer recommended. |
+
+The required graphics are included, and the game opens in 3D. No original game
+files or development tools are needed. See **[installation and first-launch
+instructions](opentt3d/PLAYING.md)**, including unsigned-app prompts and optional sound/music.
+
+New releases automatically build desktop downloads; assets appear when the
+[release workflow](https://github.com/cstanislav/opentt3d/actions/workflows/opentt3d-release.yml)
+succeeds. Older source-only previews have no executables. These are **development
+previews**: artwork and performance remain in progress. See the current
 [implementation status](opentt3d/STATUS.md), [verification results](opentt3d/VERIFICATION.md)
-and [asset review notes](opentt3d/ASSET_REVIEW.md). Incomplete geometry and the
-performance/release gates are tracked there.
+and [asset review notes](opentt3d/ASSET_REVIEW.md).
 
 ## Screenshots
 
@@ -57,7 +74,7 @@ With existing macOS build dependencies:
 ```sh
 python3 tools/opentt3d/fetch_vulkan.py build-macos/vulkan
 python3 tools/opentt3d/build.py --build-dir build-macos
-OPENTT3D_RENDERER=1 build-macos/opentt3d \
+build-macos/opentt3d \
   -X -x -c build-macos/opentt3d.cfg \
   -v cocoa-vulkan -b 40bpp-anim -I "OpenGFX2 Classic"
 ```

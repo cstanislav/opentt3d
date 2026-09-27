@@ -112,6 +112,7 @@ bool DriverFactoryBase::SelectDriverImpl(const std::string &name, Driver::Type t
 	if (GetDrivers().empty()) return false;
 
 	if (name.empty()) {
+		bool hardware_probe_failed = false;
 		/* Probe for this driver, but do not fall back to dedicated/null! */
 		for (int priority = 10; priority > 0; priority--) {
 			for (auto &it : GetDrivers()) {
@@ -149,6 +150,11 @@ bool DriverFactoryBase::SelectDriverImpl(const std::string &name, Driver::Type t
 
 				auto err = newd->Start({});
 				if (!err) {
+					if (type == Driver::DT_VIDEO && hardware_probe_failed && !d->UsesHardwareAcceleration()) {
+						_video_hw_accel = false;
+						ErrorMessageData msg(GetEncodedString(STR_VIDEO_DRIVER_ERROR), GetEncodedString(STR_VIDEO_DRIVER_ERROR_NO_HARDWARE_ACCELERATION), true);
+						ScheduleErrorMessage(std::move(msg));
+					}
 					Debug(driver, 1, "Successfully probed {} driver '{}'", GetDriverTypeName(type), d->name);
 					GetActiveDriver(type) = std::move(newd);
 					return true;
@@ -158,9 +164,11 @@ bool DriverFactoryBase::SelectDriverImpl(const std::string &name, Driver::Type t
 				Debug(driver, 1, "Probing {} driver '{}' failed with error: {}", GetDriverTypeName(type), d->name, *err);
 
 				if (type == Driver::DT_VIDEO && _video_hw_accel && d->UsesHardwareAcceleration()) {
-					_video_hw_accel = false;
-					ErrorMessageData msg(GetEncodedString(STR_VIDEO_DRIVER_ERROR), GetEncodedString(STR_VIDEO_DRIVER_ERROR_NO_HARDWARE_ACCELERATION), true);
-					ScheduleErrorMessage(std::move(msg));
+					/* An orderly failure (for example no Vulkan device) is not a
+					 * crash. Allow the next hardware backend, including OpenGL. */
+					hardware_probe_failed = true;
+					auto filename = FioFindFullPath(BASE_DIR, HWACCELERATION_TEST_FILE);
+					if (!filename.empty()) FioRemove(filename);
 				}
 			}
 		}

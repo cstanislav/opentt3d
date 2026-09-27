@@ -1,5 +1,64 @@
 # Implementation verification
 
+## Full-elapsed presentation smoothing and packaged first launches
+
+A3,000ms presentation delay outside the game-state mutex reproduces the retained
+electric-collector crash on the exact iron-ore Linux fixture: requested local
+contact6.2301865 below mount6.625. Slow presentation allows the simulation to advance;
+the old0.1-second cap prevented the analytic exponential filter from catching up.
+Vehicle and Cab smoothing now receive the full elapsed presentation interval.
+Collector exceptions retain engine/vehicle/part/iteration and original/rendered
+world positions for further diagnosis.
+
+- Native200/200 tests pass, including long-interval clearance and wrap-safe yaw.
+- Matched120-frame controls with the same3,000ms injected presentation delay pass
+  actual engine26 support and collector observations on OpenGL and Vulkan.
+- The injection is completely removed; `src/video/video_driver.cpp` matches the
+  preceding published source. All8 clean controls pass: both retained factory/ore
+  crash saves on each backend, both development app bundles, and two9,000-frame
+  engine26 live support/collector, selected-pose, tunnel and picking journeys.
+- The03:27:10UTC reconciliation confirms10 successful background controls, stable
+  clean source/executable/bundle hashes and all1,416 unchanged model hashes. Peak
+  sampled memory is3,169,832,296bytes. Linux acceptance remains pending fresh CI.
+
+Evidence:`build-macos/breadth-collector-present-three-second-before/`,
+`breadth-collector-full-elapsed-delayed-*`, `breadth-collector-clean-*` and
+`breadth-collector-repair-reconciliation.json`. The delayed runs prove correctness
+under the reproduced stall; they are not performance measurements or final visual
+approvals.
+
+The playable-release workflow adds archive-content and pinned-graphics checks,
+dependency relocation, macOS ad-hoc signatures, and extracted-package default-3D
+and OpenGL rendering/save controls. Windows x64/x86 packages load and re-save their
+title world with the extracted executable; ARM64 is cross-compiled. Local macOS
+packaging passes both extracted-app controls: automatic Vulkan and explicit OpenGL
+each render in3D and save without a renderer override or injected game resources.
+The local DMG/ZIP are30,363,345/33,491,188bytes. This host's dependencies require
+macOS26, accurately declared in its private test app; hosted public builds target
+macOS15 and must pass the same per-library minimum-version audit. Public platform
+results remain pending until the release workflow finishes.
+
+First-launch review additionally found that macOS disabled hardware acceleration
+by default and SDL Vulkan's priority11 exceeded the upstream probe's0…10 range.
+Hardware rendering is now the macOS default and SDL Vulkan uses priority10. An
+orderly unsupported-Vulkan result clears its probe marker and tries OpenGL; the
+existing crash-on-a-prior-launch protection is retained. Linux package controls
+explicitly hide every Vulkan ICD and require automatic OpenGL rendering/saving.
+The new boundary entries cover only renderer startup settings and driver probing.
+
+The initial package-smoke timeout was a harness mistake: upstream `-X` excludes
+macOS's bundle Resources, unlike the normal user launch. The package test now uses
+normal bundle lookup with isolated personal data, without injecting graphics or
+enabling3D through the console. That failed run remains retained as
+`build-macos/playable-first-launch-missing-bundle-resources/`.
+
+The source-archive check verifies2,154 entries, game and authored-model source,
+license/build instructions, and the exact pinned OpenGFX2 source payload against its
+recorded digest. The workflow passes actionlint1.7.12. Local native200/200,
+asset128/128 and harness11/11 checks pass; the137-file presentation boundary passes.
+Evidence:`build-macos/playable-package4.log`, `package-smoke-{default,opengl}/`,
+`playable-package-native4.log` and `playable-source-test/`.
+
 ## Copper47…51 and Linux process-exit diagnostics
 
 Fourteen new bodies bring the catalogue to1,416 volumes,81 industry body owners and

@@ -890,6 +890,18 @@ TEST_CASE("Camera interpolation is frame-rate independent and crosses yaw wrap s
 	CHECK(heading > 3.95f);
 	CHECK(heading < 4.05f);
 	CHECK(SmoothValue(2, -3, 16, 0) == 2);
+	/* Presentation may take seconds on software backends while simulation keeps
+	 * running. The analytic filter must catch up without overshoot or losing the
+	 * narrow clearance above an electric train's 6.625-unit roof mount. */
+	for (float seconds : {0.35f,0.75f,3.0f,30.0f}) {
+		float height = SmoothValue(16,0,24,seconds);
+		CHECK(height >= 0);
+		CHECK(height < 7.55f-6.625f);
+		float yaw = SmoothHeading(3.95f,0.05f,12,seconds);
+		CHECK(yaw >= 3.95f);
+		CHECK(yaw <= 4.05f);
+		CHECK(std::abs(yaw-4.05f) < 0.002f);
+	}
 }
 
 TEST_CASE("Perspective GPU matrix and CPU projection agree", "[renderer3d]")

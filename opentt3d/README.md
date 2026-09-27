@@ -7,8 +7,10 @@ Repository: https://github.com/cstanislav/opentt3d
 
 ## Development status
 
-Implementation is in progress. [Development source previews](https://github.com/cstanislav/opentt3d/releases)
-record tested checkpoints; complete artwork and portable desktop packages remain in development.
+Implementation is in progress. [Development releases](https://github.com/cstanislav/opentt3d/releases)
+record tested checkpoints. New releases automatically build desktop packages;
+see [download and play instructions](PLAYING.md). Complete artwork and sustained
+performance remain in development.
 See [the implementation status](STATUS.md) for verified capabilities
 and outstanding work. The upstream README is retained in `docs/UPSTREAM_README.md`.
 
@@ -49,6 +51,26 @@ python3 tools/opentt3d/fetch_baseset.py build-macos/baseset
 
 The build helper does not install host packages. Native release packaging uses
 GitHub-hosted macOS and Windows runners; Linux packaging uses a container.
+
+### Publishing playable downloads
+
+Publishing a GitHub release triggers `.github/workflows/opentt3d-release.yml`.
+It builds the release's exact commit, runs native and extracted-package checks,
+then attaches Windows installers/ZIPs, Apple-silicon/Intel macOS apps, a Linux
+archive, matching game/graphics source and `SHA256SUMS` to that release. Build logs
+remain in Actions; the playable files are public release assets.
+
+To retry packaging a release containing this workflow:
+
+```sh
+gh workflow run opentt3d-release.yml --repo cstanislav/opentt3d \
+  -f tag=opentt3d-dev-20260927.4
+```
+
+`tools/opentt3d/package_release.py` also supports local packaging. Its audits reject
+missing or unpinned graphics, external dependency links and an understated macOS
+minimum version. Local Homebrew libraries may require a newer OS than the hosted
+release runners; use the hosted builds for public distribution.
 
 ### Try the development renderer
 

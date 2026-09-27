@@ -28,7 +28,6 @@ if (NOT EMSCRIPTEN)
     # See CMakeLists.txt in the root.
     install(DIRECTORY
                     ${CMAKE_BINARY_DIR}/lang
-                    ${CMAKE_BINARY_DIR}/baseset
                     ${CMAKE_BINARY_DIR}/ai
                     ${CMAKE_BINARY_DIR}/game
                     ${CMAKE_SOURCE_DIR}/bin/scripts
@@ -36,6 +35,16 @@ if (NOT EMSCRIPTEN)
             COMPONENT language_files
             REGEX "ai/[^\.]+$" EXCLUDE # Ignore subdirs in ai dir
     )
+    # A development build may contain very large diagnostic graphics archives.
+    # Ship generated game data and only the base set pinned in upstream.json.
+    install(DIRECTORY ${CMAKE_BINARY_DIR}/baseset
+            DESTINATION ${DATA_DESTINATION_DIR}
+            COMPONENT language_files
+            PATTERN "*.tar" EXCLUDE)
+    install(FILES ${CMAKE_BINARY_DIR}/baseset/OpenGFX2_Classic-0.8.1.tar
+            DESTINATION ${DATA_DESTINATION_DIR}/baseset
+            COMPONENT language_files
+            OPTIONAL)
 else()
     install(FILES
                 ${CMAKE_BINARY_DIR}/openttd.js
@@ -55,6 +64,40 @@ install(FILES
                 ${CMAKE_SOURCE_DIR}/known-bugs.md
         DESTINATION ${DOCS_DESTINATION_DIR}
         COMPONENT docs)
+
+install(FILES ${CMAKE_SOURCE_DIR}/opentt3d/PLAYING.md
+        DESTINATION ${DOCS_DESTINATION_DIR}
+        COMPONENT docs)
+install(DIRECTORY ${CMAKE_BINARY_DIR}/release-info/
+        DESTINATION ${DOCS_DESTINATION_DIR}/release-info
+        OPTIONAL
+        COMPONENT docs)
+
+if(UNIX AND NOT APPLE AND NOT EMSCRIPTEN AND NOT OPTION_INSTALL_FHS)
+    install(PROGRAMS ${CMAKE_SOURCE_DIR}/os/unix/opentt3d.sh
+            DESTINATION ${BINARY_DESTINATION_DIR}
+            COMPONENT Runtime)
+endif()
+
+# The Vulkan loader can remain a shared library even with a static vcpkg
+# triplet. Install only DLLs actually required by the game, never Windows DLLs.
+if(WIN32)
+    install(CODE [[
+        file(GET_RUNTIME_DEPENDENCIES
+                EXECUTABLES "$<TARGET_FILE:openttd>"
+                DIRECTORIES "$<TARGET_FILE_DIR:openttd>"
+                RESOLVED_DEPENDENCIES_VAR DEPENDENCIES
+                UNRESOLVED_DEPENDENCIES_VAR UNRESOLVED_DEPENDENCIES
+                PRE_EXCLUDE_REGEXES "[Aa][Pp][Ii]-[Mm][Ss]-" "[Ee][Xx][Tt]-[Mm][Ss]-"
+                POST_EXCLUDE_REGEXES ".*[Ww][Ii][Nn][Dd][Oo][Ww][Ss]/.*")
+        if(UNRESOLVED_DEPENDENCIES)
+            message(FATAL_ERROR "Unresolved package dependencies: ${UNRESOLVED_DEPENDENCIES}")
+        endif()
+        if(DEPENDENCIES)
+            file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}" TYPE SHARED_LIBRARY FILES ${DEPENDENCIES})
+        endif()
+    ]] COMPONENT Runtime)
+endif()
 
 install(FILES
                 ${CMAKE_SOURCE_DIR}/docs/admin_network.md

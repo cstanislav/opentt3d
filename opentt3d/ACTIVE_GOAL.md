@@ -1,5 +1,40 @@
 # Active extended development goal
 
+## Playable downloads and collector follow-up
+
+The user's latest priority is sharing the repository with players. Inspection
+confirmed that published previews had no executable assets: CI retained logs only,
+and the inherited upstream release workflow skipped this fork. A dedicated GitHub
+release workflow, packaged-download audits, default-3D first-launch checks, and
+player-facing installation instructions are implemented. Both extracted local
+macOS backend controls pass, with30.4MB DMG/33.5MB ZIP, relocated dependencies and
+no development graphics archive. Source checks and actionlint1.7.12 pass. Hosted
+Linux/Windows/macOS15 packages must still complete before public downloads are
+claimed. Normal launches now
+request 3D; `OPENTT3D_RENDERER=0` still enables the original renderer for comparisons.
+
+Copper is committed and pushed to `main` at
+`b5ccb60a87f971b1918281e02eb8415d376d4d02`, published as
+[`opentt3d-dev-20260927.3`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.3).
+
+A local750ms presentation-delay control passes240 frames. A separate3,000ms
+presentation delay **reproduces** the same collector exception on the exact ore CI
+fixture: mount6.625, top9.375, requested contact6.2301865, heading3.2251508 and grade0.
+The delay is outside the game-state mutex, allowing the original game thread to
+advance. Earlier capture sleeps held that mutex and did not model this condition.
+The retained failure is `build-macos/breadth-collector-present-three-second-before/`.
+
+The repair removes the0.1-second cap from analytic exponential vehicle/Cab camera
+motion so it can catch up to elapsed simulation after a slow presentation. Native
+tests pass200/200, including extended long-interval clearance/yaw checks. Identical
+3,000ms presentation controls pass on both backends. The temporary injection is
+removed and the driver file matches HEAD exactly. A clean rebuild, bundle refresh,
+both retained crash saves on both backends, both app bundles and two9,000-frame
+engine26 support/collector/pose/tunnel/picking journeys all pass. Reconciliation at
+03:27:10UTC confirms all10 controls, matching source/build/bundle and1,416 unchanged
+model hashes; peak sampled memory is3,169,832,296bytes. Fresh Linux acceptance is
+still pending. Delayed correctness controls are not performance acceptance.
+
 ## Copper-mine breadth verified — September 27, 02:50:53 UTC
 
 The actual clock is **2026-09-27 02:50:53 UTC**. Fourteen copper bodies cover

@@ -9,11 +9,17 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. Iron-ore`.2`passes LinuxVulkan's scene matrix but repeats the electric-collector crash; other Linux jobs remain active/queued. Both retained collector failures remain unresolved despite successful local crash-save replays.
+- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is now locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls and8 clean crash-save/bundle/live-route controls pass. Fresh Linux acceptance remains pending.
 - [x] Current1,416-volume asset/compiler/schema suite128/128 and downloader/screenshot/memory harness11/11 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Normal launches request3D without developer environment variables. Explicit
+  `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
+  desktop-release workflow builds bundled graphics/dependencies and matching sources;
+  both extracted macOS default-Vulkan/OpenGL rendering-and-save controls pass locally.
+  Initial hosted public downloads and Linux/Windows package checks are pending CI.
 
 - [x] Copper47…51 adds14 provisional bodies with all construction selections and
   three original wheel poses. Open frame, hollow flues, recessed bays and separated

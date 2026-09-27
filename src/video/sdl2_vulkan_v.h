@@ -21,7 +21,7 @@ protected:
 
 class FVideoDriver_SDL_Vulkan : public DriverFactoryBase {
 public:
-	FVideoDriver_SDL_Vulkan() : DriverFactoryBase(Driver::DT_VIDEO, 11, "sdl-vulkan", "OpenTT3D SDL Vulkan video driver") {}
+	FVideoDriver_SDL_Vulkan() : DriverFactoryBase(Driver::DT_VIDEO, 10, "sdl-vulkan", "OpenTT3D SDL Vulkan video driver") {}
 	std::unique_ptr<Driver> CreateInstance() const override { return std::make_unique<VideoDriver_SDL_Vulkan>(); }
 protected:
 	bool UsesHardwareAcceleration() const override { return true; }

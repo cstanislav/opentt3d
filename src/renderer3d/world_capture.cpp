@@ -1737,7 +1737,12 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 					std::array<float,2> contacts{10,10};
 					unsigned observed_states = 0;
 					for (unsigned part = 0; part < contacts.size(); ++part) for (unsigned iteration = 0; iteration < 3; ++iteration) {
-						auto mount = VoxelTrainCollectorMount(vehicle.engine_type.base(),part,heading,grade,contacts[part]);
+						std::optional<Vec3> mount;
+						try {
+							mount = VoxelTrainCollectorMount(vehicle.engine_type.base(),part,heading,grade,contacts[part]);
+						} catch (const std::invalid_argument &error) {
+							throw std::invalid_argument(fmt::format("{}; engine {} vehicle {} part {} iteration {} original {},{},{} rendered {},{},{} frame_seconds {}",error.what(),vehicle.engine_type.base(),vehicle.index.base(),part,iteration,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,position.x,position.y,position.z,frame_seconds));
+						}
 						if (!mount) continue;
 						if (auto height = TrainTunnelContactHeight(vehicle,position+*mount)) {
 							contacts[part] = *height-position.z;

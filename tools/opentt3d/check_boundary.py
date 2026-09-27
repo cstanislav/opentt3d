@@ -41,6 +41,7 @@ PRESENTATION_FILES = {
     "src/road_cmd.h", "src/road_cmd.cpp",  # Read-only road drawing layouts and presentation adapters.
     "src/water_cmd.cpp",  # Ship-depot body drawing adapter after original water-class ground selection.
     "src/openttd.cpp",  # Default Classic graphics selection / former High Def recommendation migration.
+    "src/driver.cpp", "src/table/settings/misc_settings.ini",  # Hardware-renderer startup defaults and orderly Vulkan/OpenGL fallback.
     "src/texteff.cpp", "src/texteff.hpp",  # World-anchored text-effect presentation only.
     "src/os/macosx/CMakeLists.txt", "src/os/macosx/autorelease_pool.hpp", "src/os/macosx/macos.mm",  # Scoped MoltenVK readback temporary ownership only.
 }
