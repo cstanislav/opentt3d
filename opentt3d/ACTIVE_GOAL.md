@@ -1,5 +1,32 @@
 # Active extended development goal
 
+## Public desktop downloads verified — September 27, 06:23:09 UTC
+
+Release `opentt3d-dev-20260927.6` at `6628fd8df6d0b25677f00538985965590c65f617`
+passes every job in hosted run `36296305317` and publishes 19 assets. All downloaded
+files match GitHub's digests; all 18 entries in `SHA256SUMS` match. The source archive
+matches all 2,057 tracked files at that exact commit and includes the matching
+OpenGFX2 source. All six extracted packages carry that commit, pinned graphics and
+the same 1,468-model catalogue (Windows adds only a trailing CRLF). Both Mac app
+architectures, ad-hoc signatures, bundled dependencies and macOS 15 minimums pass.
+Published Apple-silicon Vulkan/OpenGL and Intel-under-Rosetta Vulkan controls pass
+locally. README and installation instructions now link to the verified downloads.
+
+Hosted macOS Intel and Apple-silicon default Vulkan launches pass, as do both explicit
+software-OpenGL launch/save checks. The ARM software-OpenGL screenshot retains black
+triangular regions; that visual defect remains open despite the startup check passing.
+Linux's default/OpenGL/absent-Vulkan fallback launches pass. Its 900-frame llvmpipe
+journey captures every train support and surface/portal/tunnel collector state without
+the former exception, at 1.704fps and 2,185,838,592 peak sampled bytes. Windows x64/x86
+load/save passes; ARM64 native execution and Windows GPU/input acceptance remain open.
+
+Airport surfaces are pushed to `main` at `fc91d663c`; their accepted and preliminary
+captures compact losslessly by 6,032,425,931 bytes. The 1,539-volume heliport draft,
+ordinary service fixtures and contact diagnostic are in final frozen background
+controls. Source review corrects the lower wing, facade paint, real railing openings
+and helipad orientation; all 1,538 preceding model hashes agree. The complete
+catalogue/fidelity/smooth-performance goal remains active with zero final approvals.
+
 ## Airport surface checkpoint — September 27, 05:36:37 UTC
 
 Seventy new provisional volumes cover the remaining taxiway, grass, worn airfield,

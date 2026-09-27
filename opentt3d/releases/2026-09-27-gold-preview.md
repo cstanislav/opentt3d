@@ -1,5 +1,10 @@
 # Gold-mine breadth and package diagnostics
 
+**Desktop downloads are available below under Assets.** Every hosted package job
+passed, and all19 attachments,18 checksum entries and2,057 exact-commit source files
+were independently checked. Choose Windows x64/x86/ARM64, macOS Apple silicon/Intel,
+or Linux x86-64. Required graphics and runtime dependencies are included.
+
 This checkpoint adds52 provisional voxel volumes for the original gold mine,
 bringing the catalogue to1,468 volumes. Industry coverage reaches118/175 definitions,
 with86 body owners and118 independent grounds. Every family still needs the complete
@@ -29,9 +34,9 @@ under Rosetta. The startup smoke uses a smaller close-up title-world viewport th
 both extracted local renderers can present and save; the Linux journey receives a
 smaller window and more presented frames to capture its brief portal transition.
 Native200 and harness12 checks pass, along with a9,000-frame direct-binding Vulkan
-support/collector replay. Fresh hosted results remain required.
+support/collector replay. The hosted follow-up now passes both Mac startup paths,
+Linux's complete900-frame support/collector journey and all Windows package jobs.
 
-**Executable downloads appear under Assets only after every package job passes.**
 See [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 Required OpenGFX2 graphics, models, languages and runtime dependencies are bundled;
 sound/music are optional Online Content downloads. Windows ARM64 native execution,

@@ -10,7 +10,7 @@ commands, the save format and simulation remain the upstream engine's responsibi
 
 ## Download & play
 
-**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases)**
+**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.6)**
 
 Open a release's **Assets** and choose your platform:
 
@@ -26,9 +26,10 @@ instructions](opentt3d/PLAYING.md)**, including unsigned-app prompts and optiona
 
 New releases automatically build desktop downloads; assets appear when the
 [release workflow](https://github.com/cstanislav/opentt3d/actions/workflows/opentt3d-release.yml)
-succeeds. **The first public packages are still being verified** after hosted
-platform checks exposed startup and live-state sampling failures. Source-only previews have no executables. These are **development
-previews**: artwork and performance remain in progress. See the current
+succeeds. **Desktop packages are available in the verified September 27 `.6` release**,
+including installers, portable archives, matching source and checksums. Earlier
+source-only previews have no executables. These are **development previews**:
+artwork and performance remain in progress. See the current
 [implementation status](opentt3d/STATUS.md), [verification results](opentt3d/VERIFICATION.md)
 and [asset review notes](opentt3d/ASSET_REVIEW.md).
 

@@ -1,5 +1,35 @@
 # Implementation verification
 
+## Public executable attachments verified
+
+Release`.6`run36296305317 passes every source, platform and publish job. At06:23:09UTC,
+all19 downloaded public assets match GitHub's size/digest records and all18 entries
+in `SHA256SUMS` match. The matching source archive agrees with all2,057 tracked blobs
+at6628fd8df6d0b25677f00538985965590c65f617. Its bundled OpenGFX2 source SHA256 is
+`3eb3e0304f1fcea5aea032068b05e84f0a9d856a598d1b17c71bfb2dc0ec9c36`.
+
+Every extracted package embeds that exact commit, tag, pinned graphics and1,468-volume
+catalogue. Windows's compiled JSON adds one final CRLF; parsed contents and all other
+bytes agree. The initial strict byte-hash assertion remains retained, followed by the
+explicit line-ending reconciliation. Both Mac executables have the stated architecture,
+valid ad-hoc signatures, app-local dependencies and minimum macOS15.0. Fresh launches
+of the downloaded Apple-silicon app pass Vulkan/OpenGL; the downloaded Intel app also
+passes Vulkan under Rosetta. These are the hosted packages, not local macOS26 prototypes.
+
+Hosted Mac Intel and Apple-silicon default Vulkan and explicit software-OpenGL startup/
+save controls pass. Inspection of ARM software-OpenGL's screenshot finds black
+triangular regions absent in the corresponding Vulkan/Intel images; startup success
+does not clear that visual defect. Linux default, OpenGL and absent-Vulkan fallback
+controls pass. Its900-frame software-rendered journey now observes every original
+support and surface/portal/tunnel collector state, without the earlier exception.
+Windows x64/x86 native extracted load/save passes; ARM64 remains cross-compiled.
+
+Evidence:`build-macos/playable-release6-{published-assets,final-results,download-audit}.json`,
+`playable-release6-ci/`, `playable-release6-published-*` and both retained download-audit
+logs. Downloads are linked from README and `PLAYING.md`. Foreground input, Windows GPU,
+long-duration/reload/multiple-viewport memory and complete replay/network acceptance
+remain open.
+
 ## Airport surface checkpoint
 
 At05:36:37UTC, the frozen20-control matrix passes on OpenGL and Vulkan. It includes

@@ -9,7 +9,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is now locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls and8 clean crash-save/bundle/live-route controls pass. Fresh Linux acceptance remains pending.
+- [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
 - [x] Current1,538-volume asset/compiler/schema suite130/130 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
@@ -25,16 +25,12 @@ This file records implemented and verified work, not promises of completeness.
 
 - [x] Normal launches request3D without developer environment variables. Explicit
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
-  desktop-release workflow builds bundled graphics/dependencies and matching sources;
-  both extracted macOS default-Vulkan/OpenGL rendering-and-save controls pass locally.
-  Hosted`.5`passes all three Windows package jobs and Linux's extracted automatic,
-  OpenGL and absent-Vulkan-device fallback launches. Apple-silicon Vulkan passes;
-  its software OpenGL scene times out and Intel aborts inside MoltenVK's argument-
-  buffer probe. Linux's short software-rendered journey misses the intermediate
-  portal collector state without repeating the prior exception. No downloads publish;
-  complete hosted acceptance remains open. The next correction selects direct Metal
-  bindings on Intel and uses smaller package scenes/denser Linux journey sampling;
-  native tests, extracted local launches and a direct-binding collector replay pass.
+  desktop-release workflow publishes Windows x64/x86/ARM64, macOS arm64/x86_64 and
+  Linux x86-64 packages in release`.6`. Every hosted job passes. All19 public assets,
+  18 checksum entries,2,057 exact-commit source files and all six embedded package
+  commits are verified. Mac signatures/dependencies/minimum15.0 and published local
+  launches pass. Hosted ARM software OpenGL retains a visible triangular-region
+  defect; Windows GPU/input and ARM64 native execution remain open.
 
 - [x] Gold72…88 adds52 provisional volumes and82 independent body/ground layers,
   preserving54 empty bodies, the three original wheel poses, cross-owner roof/trough
@@ -54,7 +50,7 @@ This file records implemented and verified work, not promises of completeness.
   model hashes agree; peak sampled memory is3,060,075,880bytes. The Linux memory
   sampler now reports zombie/disappeared-process exits without masking the retained
    game log or fabricating zero-memory samples. The later full-elapsed timing repair
-   passes local controls; complete Linux collector observation remains open.
+    passes local controls and the later`.6`Linux collector/support observation.
 
 - [x] Iron-ore100…115 adds48 provisional ground-owned volumes, including terraced
   workings, boundary posts, raised hopper, open construction frames and joined roofs.

@@ -3,6 +3,15 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Hosted release .6 acceptance
+
+The900-frame Linux llvmpipe electric journey passes complete support and collector
+observation at1.704fps,941.46ms p95 work and1,014.62ms maximum work. Peak sampled memory
+is2,185,838,592bytes. This closes the missed portal-state observation in`.5`; software
+rendering is correctness evidence, not desktop-GPU throughput. Both hosted Mac startup
+paths now finish, though ARM's software-OpenGL screenshot has unresolved triangular
+regions. The tiny three-frame package benchmarks do not measure sustained performance.
+
 ## Airport surface observations
 
 The20 airport-surface controls peak at2,928,839,896 sampled bytes. City-animation

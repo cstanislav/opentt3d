@@ -1,8 +1,12 @@
 # Download and play OpenTT3D
 
-Download a desktop package from **[GitHub Releases](https://github.com/cstanislav/opentt3d/releases)**.
+Download a desktop package from the **[verified `.6` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.6)**.
 Expand **Assets** beneath the release notes. Choose your operating system below;
 GitHub's automatic **Source code** downloads are for building the game yourself.
+
+This release provides Windows x64/x86/ARM64, macOS Apple-silicon/Intel and Linux
+x86-64 packages. Newer previews appear on the [release list](https://github.com/cstanislav/opentt3d/releases);
+their executable assets become available after the package workflow passes.
 
 These are playable development previews. Artwork coverage and performance are
 still being developed; see [implementation status](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/STATUS.md).
