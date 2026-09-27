@@ -10,10 +10,21 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,585-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite132/132 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,590-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite132/132 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Battery135/136 adds five provisional bodies and shares cotton's exact Toyland
+  soil, bringing primary industry coverage to137/175 definitions,100 body owners
+  and137 grounds. All28 frozen controls pass, including16 live construction layers,
+  loaded/empty trucks, both unchanged-tile harvest/regrowth cycles and four legacy
+  timber/cotton regressions. All16 palettes,18 aliases,48 climate comparisons,
+  1,585 prior model hashes and20 native backend captures agree. Fine fidelity remains open.
+- [x] Original Toyland procedural export covers268 construction/completed states,
+  108 distinct poses and23 resolved child images. Independent source tables, palette,
+  ordering/offset and absent-state audits pass, preserving596 earlier original images.
+  Child voxel artwork remains required; exported imagery does not establish coverage.
 
 - [x] Sweet-factory131…134 adds ten provisional volumes, bringing primary industry
   coverage to135/175 definitions,98 body owners and135 independent grounds. Four

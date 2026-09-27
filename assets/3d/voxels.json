@@ -549,6 +549,20 @@
     "sweets_soil_purple": 140,
     "sweets_soil_purple_edge": 139,
     "sweets_soil_gold": 66,
+    "battery_plate": [40,41,42,44,40,44],
+    "battery_plate_light": 47,
+    "battery_plate_dark": 40,
+    "battery_socket": 1,
+    "battery_can": [1,2,4,6,1,8],
+    "battery_can_glint": [3,4,6,9,3,11],
+    "battery_can_cool": [2,3,7,102,2,11],
+    "battery_cap": [62,63,64,66,62,66],
+    "battery_terminal": [63,65,67,68,62,69],
+    "battery_contact_glint": 15,
+    "battery_seed": [62,62,63,66,62,67],
+    "battery_socket_wall": [178,180,181,44,178,44],
+    "battery_socket_cutout": 1,
+    "battery_socket_lining": [180,1,178,1,1,44],
     "sawmill_wood": [104,106,107,109,104,108],
     "sawmill_wood_grain": [105,107,108,110,104,109],
     "sawmill_wood_finished_grain": [105,108,109,109,104,109],
@@ -3037,6 +3051,38 @@
     "sweets_trim_132": [["radial_erase",[0,32],0,176,8,225]],
     "sweets_trim_133": [["radial_erase",[31,0],0,176,8,30]],
     "sweets_trim_134": [["radial_erase",[0,32],0,176,8,30],["radial_erase",[31,0],0,176,8,225]],
+    "battery_plate": [
+      ["box","battery_plate",0,0,0,16,16,2],["paint","battery_plate_dark",0,0,1,16,1,2],
+      ["paint","battery_plate_dark",0,0,1,1,16,2],["paint","battery_plate_light",15,2,1,16,16,2]
+    ],
+    "battery_seed_plate": [
+      ["use","battery_plate"],["lathe","battery_seed",[8,8],[[2,3.25,0],[3,2.9,0]]],
+      ["lathe","battery_seed",[8,8],[[3,1.4,0],[4,1.4,0]]],["paint","battery_contact_glint",8,8,3,9,9,4]
+    ],
+    "battery_young_plate": [
+      ["use","battery_plate"],["lathe","battery_can",[8,8],[[2,3.4,0],[3,3.6,0],[9,3.6,0],[11,3.3,0]]],
+      ["paint","battery_can_glint",6,4,3,7,12,9],["paint","battery_can_cool",4,8,3,12,9,9],
+      ["lathe","battery_cap",[8,8],[[10,3.4,0],[12,3.1,0]]],
+      ["lathe","battery_terminal",[8,8],[[12,1.35,0],[14,1.35,0]]],["paint","battery_contact_glint",8,8,13,9,9,14]
+    ],
+    "battery_half_plate": [
+      ["use","battery_plate"],["lathe","battery_can",[8,8],[[2,3.4,0],[3,3.6,0],[15,3.6,0],[17,3.3,0]]],
+      ["paint","battery_can_glint",6,4,3,7,12,15],["paint","battery_can_cool",4,8,3,12,9,15],
+      ["lathe","battery_cap",[8,8],[[16,3.4,0],[18,3.1,0]]],
+      ["lathe","battery_terminal",[8,8],[[18,1.35,0],[20,1.35,0]]],["paint","battery_contact_glint",8,8,19,9,9,20]
+    ],
+    "battery_mature_plate": [
+      ["use","battery_plate"],["lathe","battery_can",[8,8],[[2,3.4,0],[3,3.6,0],[21,3.6,0],[23,3.3,0]]],
+      ["paint","battery_can_glint",6,4,3,7,12,21],["paint","battery_can_cool",4,8,3,12,9,21],
+      ["lathe","battery_cap",[8,8],[[22,3.4,0],[24,3.1,0]]],
+      ["lathe","battery_terminal",[8,8],[[24,1.35,0],[26,1.35,0]]],["paint","battery_contact_glint",8,8,25,9,9,26]
+    ],
+    "battery_harvested_plate": [
+      ["use","battery_plate"],["lathe","battery_socket_cutout",[8,8],[[1,2.8,0],[2,2.8,0]]],["erase_material","battery_socket_cutout"],
+      ["lathe","battery_socket",[8,8],[[0,2.8,0],[1,2.8,0]]],
+      ["lathe","battery_socket_wall",[8,8],[[2,3.3,2.3],[5,3.1,2.3]]],
+      ["lathe_paint_inner","battery_socket_lining",[8,8],[[0,3.75,2.3],[5,3.75,2.3]]]
+    ],
     "forest_tree_young": [
       ["box","forest_bark",7,7,0,9,9,59],
       ["paint","forest_bark_shade",7,7,0,8,9,59],
@@ -11785,6 +11831,31 @@
         ["scatter_paint","sweets_soil_red_edge",4,2222,8,0,0,24,10,1,"sweets_soil_red"],
         ["scatter_paint","sweets_soil_purple_edge",4,2232,20,10,0,32,22,1,"sweets_soil_purple"]]
     },
+    "battery_seed": {
+      "size":[32,32,32],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Battery farm original4686: four distinct red plates with tiny first gold contacts; no invented full-height cans",
+      "ops":[["use","battery_seed_plate",[0,0,0]],["use","battery_seed_plate",[16,0,0]],["use","battery_seed_plate",[0,16,0]],["use","battery_seed_plate",[16,16,0]]]
+    },
+    "battery_young": {
+      "size":[32,32,32],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Battery farm original4687: four short black cylindrical batteries with gold top rims and positive terminals on their separate red plates",
+      "ops":[["use","battery_young_plate",[0,0,0]],["use","battery_young_plate",[16,0,0]],["use","battery_young_plate",[0,16,0]],["use","battery_young_plate",[16,16,0]]]
+    },
+    "battery_half": {
+      "size":[32,32,32],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Battery farm original4688: four taller dark cans with narrow metallic glints, gold cap rims and raised positive contacts",
+      "ops":[["use","battery_half_plate",[0,0,0]],["use","battery_half_plate",[16,0,0]],["use","battery_half_plate",[0,16,0]],["use","battery_half_plate",[16,16,0]]]
+    },
+    "battery_mature": {
+      "size":[32,32,32],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Battery farm original4689: four fully grown black/gold batteries on the original four red plate centres",
+      "ops":[["use","battery_mature_plate",[0,0,0]],["use","battery_mature_plate",[16,0,0]],["use","battery_mature_plate",[0,16,0]],["use","battery_mature_plate",[16,16,0]]]
+    },
+    "battery_harvested": {
+      "size":[32,32,32],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
+      "reference":"Battery farm original4690: source-identical136 slots leave four genuinely recessed dark sockets in the red plates; no remaining batteries",
+      "ops":[["use","battery_harvested_plate",[0,0,0]],["use","battery_harvested_plate",[16,0,0]],["use","battery_harvested_plate",[0,16,0]],["use","battery_harvested_plate",[16,16,0]]]
+    },
     "forest_ground": {
       "size":[32,32,1], "cell_size":[0.5,0.5,0.25], "origin":[0,0,-0.25], "review_status":"work-in-progress",
       "reference":"Forest16/17 original2077 throughout construction: independently owned full-tile brown needle litter, patchy olive/sage moss and dark twigs; no forest-body alias to ordinary tree grounds",
@@ -16121,6 +16192,8 @@
       "132":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
       "133":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
       "134":{"0":"sweets_ground","1":"sweets_ground","2":"sweets_ground","3":"sweets_ground"},
+      "135":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
+      "136":{"0":"cotton_ground","1":"cotton_ground","2":"cotton_ground","3":"cotton_ground"},
       "58":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_north_ground"},
       "59":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"bank_south_ground"},
       "60":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"mine_ground_bare"},
@@ -16225,6 +16298,8 @@
       "132":{"0":"sweets_132_gift","1":"sweets_132_unwrapping","2":"sweets_132_unwrapping","3":"sweets_132_finished"},
       "133":{"0":"sweets_133_gift","1":"sweets_133_unwrapping","2":"sweets_133_unwrapping","3":"sweets_133_finished"},
       "134":{"0":"sweets_134_gift","1":"sweets_134_unwrapping","2":"sweets_134_unwrapping","3":"sweets_134_finished"},
+      "135":{"0":"battery_seed","1":"battery_young","2":"battery_half","3":"battery_mature"},
+      "136":{"0":"battery_harvested","1":"battery_harvested","2":"battery_harvested","3":"battery_harvested"},
       "58":{"0":"bank_north","1":"bank_north","2":"bank_north","3":"bank_north"},
       "59":{"0":"bank_south","1":"bank_south","2":"bank_south","3":"bank_south"},
       "60":{"0":"food_hall_initial","1":"food_hall_partial","2":"food_hall_partial","3":"food_hall"},

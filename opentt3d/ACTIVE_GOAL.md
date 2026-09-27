@@ -1,5 +1,54 @@
 # Active extended development goal
 
+## Battery growth and original procedural sources verified — September27,10:53:37UTC
+
+Five provisional battery135/136 bodies raise the catalogue to1,590 and primary
+industry coverage to137/175:100 body owners and137 independent grounds. Four growth
+states retain separate red plates, round gold contacts, dark cylindrical cans and
+positive terminals. Harvest leaves genuinely recessed, dark-lined sockets. Their
+Toyland2077 ground is byte-identical to cotton soil and shares its existing volume;
+other climates retain independently supplied ground. All16 palettes,18 state aliases,
+48 climate comparisons and1,585 preceding model hashes reconcile.
+
+All28 frozen background controls pass:16 actual construction-layer selections,
+17/17 loaded and0/17 empty trucks, four climates, clipping and bundles. Both9,000-frame
+battery observations capture unchanged tile53,35/industry0 through mature135,
+harvested136 stage3, then135 stages0/1/2/3. Four timber/cotton regressions preserve
+the no-argument observer's landscape defaults. Explicit harvest selection accepts
+16/129/135; three invalid/conflicting configurations are rejected before launch.
+Ordinary battery28→toy-factory31 service retains acceptance64 and returns after740
+observed ticks. Native200, asset132, harness12 and the137-file presentation boundary
+pass. Build/source hashes, linked development bundles and candidate volumes agree.
+
+Original Toyland procedural references now cover268 states:256 completed frames and
+12 construction states,108 distinct child poses and23 resolved images. Independent
+table/dispatch comparisons preserve draw order, offsets, palettes and genuine absent
+intervals, including toy-factory clay/robot sentinels and completed-only sugar children.
+The bubble spring remains in construction1/2; its bubble is completed-only. Toffee's
+sentinel resets only the shovel offset. All596 earlier original images remain exact,
+and both backend exports agree. This source preparation does not count as voxel child
+coverage. Fixed-registration sheets and selected frame comparisons are reviewed.
+
+Battery native/layout/street review retains every prototype. All20 native backend
+captures agree;28 of116 wider captures differ at750 pixels. Plate seams/edge grain,
+can faceting/highlights, socket height/roundness and1–2pixel registration differences
+remain provisional. Final approvals:0. Peak sampled memory is3,240,988,200bytes. The
+battery cycles average60.003/60.002fps but retain607/762 intervals above20ms and
+23.490/25.571ms maxima. Six total9,000-frame observations retain scheduling outliers;
+sustained smooth arbitrary-world60fps and long-duration memory acceptance remain open.
+Evidence:`breadth-battery-final-{audit,reconciliation,backend-comparison}.json` and
+`breadth-toyland-procedural-source-audit.json`. Preliminary battery captures compact
+losslessly by694,746,670bytes; original imagery and failure evidence remain.
+
+Release`.11`at4790c3defbb10008b2ddb828e348565f059f4994 passes six build jobs but Intel
+macOS fails DMG creation with`hdiutil: Resource busy`. The failure is preserved and
+only failed jobs are rerunning at the same tag. Verified public downloads remain`.10`.
+Next cola137 has a reviewed three-body gallery prototype and ordinary17/17 cargo7
+service to33 with acceptance32/return after816 ticks. Toy-shop138…141 has ordinary
+town construction snapshots and a provisional castle gallery. Its141 stage0 sprite
+is nonzero but fully transparent; preserve that genuine absence. Continue remaining
+38 primary definitions, climate artwork, procedural children and later fidelity passes.
+
 ## Sweet-factory construction verified — September 27, 10:16:39 UTC
 
 Sweet-factory131…134 adds ten provisional volumes: nine body states and independently

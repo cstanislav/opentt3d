@@ -16,6 +16,18 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Battery135/136:**five bodies retain four growth stages, red plates on the original
+  four centres, gold caps/positive contacts and dark cylindrical cans. Harvest leaves
+  genuinely hollow dark-lined socket collars. Initial tiny rectangular contacts,
+  undersized plates and square holes are revised; every prototype remains. Source
+  body bounds64×31/64×31/64×34/64×37 compare with64×33/64×33/64×35/64×38;136 is64×31
+  versus64×33. Plate seam/edge paint, socket rim height/roundness and can faceting/
+  metallic shading remain provisional. All16 palettes,18 aliases,48 climate comparisons,
+  1,585 preceding models and20 native backend captures agree. The116-image comparison
+  retains28 differences/750 pixels. All28 live/climate/cargo/cycle/bundle controls pass.
+  Six9,000-frame runs preserve battery, timber and cotton's unchanged-tile cycles.
+  Evidence:`build-macos/breadth-battery-*`. Final visual approvals:0.
+
 - **Sweet-factory131…134:**ten volumes preserve nine distinct body images and native
   Toyland2022 soil. All four131 bodies are genuinely absent. The source-specific
   wrapped-gift construction has crossed ribbons and four open folded loops; stages1/2

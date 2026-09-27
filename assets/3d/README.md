@@ -172,6 +172,13 @@ finite angles stay within−360…360; the brush preserves holes and other heigh
 They do not sample images. All63 actual states and exact palette/lifecycle checks
 are recorded, but wide-view geometry cost is currently a severe performance defect.
 
+Original industry exports also include `industry-procedural.json`: ordered child
+selections and resolved imagery for Toyland143/162/165/174, including construction
+and genuinely absent intervals. `contact_sheet.py <references>
+--industry-procedural-source 143 --stage 3` assembles those original parent/child
+layers at one fixed registration across every frame. Source export does not change
+industry animation or simulation state; it does not establish voxel child coverage.
+
 `water_buoy` is infrastructure693's semantic state0 binding; `water_buoy_toyland` is
 state1's separate solid green/orange/red marker. Classic's world image is resolved
 through `GetCanalSprite(CF_BUOY,tile)`; the GUI/base-table image is different. The

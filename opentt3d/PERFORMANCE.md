@@ -3,6 +3,17 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Battery and harvest-observer regression observations
+
+The28-control matrix peaks at3,240,988,200 sampled bytes. Both9,000-frame battery cycles
+average60.003/60.002fps for OpenGL/Vulkan, with4.622/5.169ms p95 work,607/762 intervals
+above20ms and23.490/25.571ms maxima. Four9,000-frame timber/cotton regressions also pass
+state coverage but retain733/766/916/1,064 intervals above20ms. The longest interval is
+71.811ms in cotton Vulkan. Concurrent background authoring and source checks remain
+part of this observation environment. These cycles establish actual-state coverage;
+isolated sustained arbitrary-world smoothness and long-duration memory remain open.
+Source:`breadth-battery-final-reconciliation.json`.
+
 ## Sweet-factory service observations
 
 The24-control narrow-hall checkpoint peaks at3,290,664,440 sampled bytes. Two600-frame

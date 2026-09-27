@@ -37,7 +37,7 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 void BeginVoxelAirportAnimationChecks(std::span<const unsigned> graphics);
 void BeginVoxelIndustryAnimationChecks(std::span<const unsigned> graphics);
 void BeginVoxelIndustryPaletteCheck(unsigned graphics);
-void BeginVoxelForestCycleCheck();
+void BeginVoxelForestCycleCheck(std::optional<unsigned> graphics = {});
 void BeginVoxelPowerSparkCheck();
 void BeginVoxelVehicleCargoCheck(unsigned engine);
 void BeginVoxelHelicopterRotorCheck(unsigned engine);

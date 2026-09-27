@@ -41,6 +41,7 @@ def main():
     parser.add_argument("--industry-source", type=int, nargs="+", choices=range(175), help="Review all original construction states for selected industry tile definitions")
     parser.add_argument("--industry-effect-source", type=int, choices=(10,), help="Review original power-station sparks at their actual parent-relative positions")
     parser.add_argument("--industry-effect-comparison", type=int, choices=(10,), help="Compare six native voxel gantry/spark composites with their original registered layers")
+    parser.add_argument("--industry-procedural-source", type=int, choices=(143,162,165,174), help="Review ordered original Toyland children and genuine absent intervals; --stage selects construction or completed animation")
     parser.add_argument("--industry-ground", action="store_true", help="Select original industry ground layers for --industry-source or --industry-comparison")
     parser.add_argument("--depot-source", type=int, choices=range(6), help="Assemble the four original depot directions from their actual layer offsets")
     parser.add_argument("--ship-depot-source", action="store_true", help="Assemble both original two-tile ship depots with their actual layer offsets")
@@ -639,6 +640,49 @@ def main():
             sheet.save(output)
             print(output)
             print(json.dumps(entries))
+        return
+    if args.industry_procedural_source is not None:
+        if args.stage not in range(4):
+            parser.error("Procedural industry source needs a construction stage in0..3")
+        entries = sorted((entry for entry in json.loads((args.directory / "industry-procedural.json").read_text())
+                          if entry["graphics"] == args.industry_procedural_source and entry["stage"] == args.stage),
+                         key=lambda entry: entry["frame"])
+        if not entries:
+            parser.error("The requested original procedural states were not exported")
+        images, placements = {}, []
+        for entry in entries:
+            layers = []
+            if entry["parent_image"]:
+                layers.append((entry["parent_image"],0,0))
+            for child in entry["children"]:
+                dx,dy = child["child_offset"]
+                layers.append((child["image"],dx+child["sprite_offset"][0]//4,dy+child["sprite_offset"][1]//4))
+            for filename,_,_ in layers:
+                if filename not in images:
+                    images[filename] = read_pam(args.directory / filename)
+            placements.append(layers)
+        bounds = [(x,y,x+images[name].width,y+images[name].height) for layers in placements for name,x,y in layers]
+        left,top,right,bottom = ((min(b[0] for b in bounds),min(b[1] for b in bounds),
+                                max(b[2] for b in bounds),max(b[3] for b in bounds)) if bounds else (0,0,64,96))
+        width,height = right-left,bottom-top
+        cell_width,cell_height = 384,512
+        scale = max(1,min(3,(cell_width-8)//width,(cell_height-52)//height))
+        columns = min(4,len(entries))
+        sheet = Image.new("RGB",(columns*cell_width,((len(entries)+columns-1)//columns)*cell_height),(40,40,48))
+        draw = ImageDraw.Draw(sheet)
+        for slot,(entry,layers) in enumerate(zip(entries,placements)):
+            panel = Image.new("RGBA",(width,height))
+            for name,x,y in layers:
+                panel.alpha_composite(images[name],(x-left,y-top))
+            x,y = slot%columns*cell_width,slot//columns*cell_height
+            absent = ", ".join(entry["intentionally_absent"]) or "none"
+            draw.text((x+6,y+6),f"original {entry['graphics']} stage {entry['stage']}, frame {entry['frame']}\nabsent: {absent}; {scale}x native",fill="white")
+            panel = panel.resize((width*scale,height*scale),Image.Resampling.NEAREST)
+            sheet.paste(panel,(x+(cell_width-panel.width)//2,y+cell_height-4-panel.height),panel)
+        output = args.directory / f"industry-procedural-{args.industry_procedural_source}-stage-{args.stage}-source.png"
+        sheet.save(output)
+        output.with_suffix(".json").write_text(json.dumps({"parent_relative_bounds":[left,top,right,bottom],"scale":scale,"frames":entries},indent=2)+"\n")
+        print(output)
         return
     if args.industry_effect_source is not None or args.industry_effect_comparison is not None:
         comparison = args.industry_effect_comparison is not None

@@ -584,17 +584,19 @@ void BeginVoxelVehicleCargoCheck(unsigned engine)
 	Debug(driver,1,"OpenTT3D: observing actual empty/full cargo for voxel engine {} without changing vehicle state",engine);
 }
 
-void BeginVoxelForestCycleCheck()
+void BeginVoxelForestCycleCheck(std::optional<unsigned> graphics)
 {
-	checked_forest_base = _settings_game.game_creation.landscape == LandscapeType::Toyland ? 129 : 16;
-	for (unsigned graphics : {checked_forest_base,checked_forest_base+1}) for (unsigned stage = 0; stage < 4; ++stage) {
-		const auto &source = _industry_draw_tile_data[graphics*4+stage];
-		if (!VoxelIndustryState(graphics,source.building.sprite) || !VoxelIndustryState(graphics,source.ground.sprite,true)) {
+	unsigned base = graphics.value_or(_settings_game.game_creation.landscape == LandscapeType::Toyland ? 129 : 16);
+	if (base != 16 && base != 129 && base != 135) throw std::invalid_argument("Harvest cycle needs original timber16, cotton129 or battery135 graphics");
+	for (unsigned graphic : {base,base+1}) for (unsigned stage = 0; stage < 4; ++stage) {
+		const auto &source = _industry_draw_tile_data[graphic*4+stage];
+		if (!VoxelIndustryState(graphic,source.building.sprite) || !VoxelIndustryState(graphic,source.ground.sprite,true)) {
 			throw std::runtime_error("Forest production cycle requires every original body and independent ground binding");
 		}
 	}
+	checked_forest_base = base;
 	forest_cycles.clear(); check_forest_cycle = true;
-	Debug(driver,1,"OpenTT3D: observing actual mature forest graphics {}, harvested {} and all regrowth states without changing industry state",checked_forest_base,checked_forest_base+1);
+	Debug(driver,1,"OpenTT3D: observing actual mature industry graphics {}, harvested {} and all regrowth states without changing industry state",checked_forest_base,checked_forest_base+1);
 }
 
 void BeginVoxelDepotTraversalCheck(unsigned vehicle)
@@ -1903,14 +1905,14 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 					}
 					if (found != forest_cycles.end()) {
 						unsigned &phase = found->second.second;
-						/* Dispatch changes16/129 to completed17/130; the next original
-						 * tile loop restores16/129 and resets its construction. */
+						/* Dispatch changes16/129/135 to completed17/130/136; the next
+						 * original tile loop restores the growing type and construction. */
 						if ((phase == 0 && graphics == checked_forest_base+1 && stage == 3) ||
 							(phase >= 1 && phase <= 4 && graphics == checked_forest_base && stage == phase-1)) {
 							++phase;
 							Debug(driver,1,"OpenTT3D: forest cycle tile {},{} industry {} phase {} graphics {} stage {} captured",TileX(tile),TileY(tile),industry.base(),phase,graphics,stage);
 							if (phase == 5) {
-								Debug(driver,1,"OpenTT3D: voxel forest cycle verification passed: one unchanged industry tile {},{} captured mature/{}/seedling/young/half-grown/mature",TileX(tile),TileY(tile),checked_forest_base == 129 ? "bare-sticks" : "logs");
+								Debug(driver,1,"OpenTT3D: voxel forest cycle verification passed: one unchanged industry tile {},{} captured mature/{}/seedling/young/half-grown/mature",TileX(tile),TileY(tile),checked_forest_base == 135 ? "bare-sockets" : checked_forest_base == 129 ? "bare-sticks" : "logs");
 								check_forest_cycle = false; forest_cycles.clear();
 							}
 						}

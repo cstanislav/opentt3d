@@ -1,5 +1,28 @@
 # Implementation verification
 
+## Battery harvest cycles and complete original Toyland child references
+
+At10:53:37UTC, all28 frozen background controls pass. Sixteen actual construction-layer
+selections, real17/17 and0/17 cargo, four climates, clipping, bundles and six9,000-frame
+cycle controls reconcile. Both battery runs capture the same industry0 tile53,35 through
+mature135, harvested136 stage3 and135 stages0/1/2/3. Both default timber16/17 and cotton
+129/130 regressions pass; explicit16/129/135 selection rejects invalid/conflicting CLI
+configurations before launch. Ordinary28→31 service retains acceptance64/740 ticks/return.
+
+Five volumes reach1,590; all1,585 prior hashes,16 palettes,18 aliases,48 climate comparisons
+and independent shared2077 ground ownership pass. Native200, asset132, harness12 and
+the137-file boundary pass. All20 native backend captures agree;28 of116 wider images
+retain750 differing pixels. Plate/socket/can fidelity and registration remain provisional,
+with final approvals0. Peak sampled memory is3,240,988,200bytes; smooth60fps remains open.
+
+The procedural exporter matches independent original dispatch/tables for268 states,
+108 poses and23 resolved child images, including draw order, offsets, palettes and
+true absences. Twelve construction rows preserve completed-only sugar/bubble children,
+the construction spring and ordinary toffee shovel. All596 earlier source images are
+unchanged, and both backend exports match the separately audited source run. Evidence:
+`build-macos/breadth-battery-final-{audit,reconciliation,backend-comparison}.json` and
+`build-macos/breadth-toyland-procedural-source-audit.json`.
+
 ## Sweet-factory source ownership and real construction/cargo snapshots
 
 At10:16:39UTC,24 accepted background controls pass on OpenGL/Vulkan, including56

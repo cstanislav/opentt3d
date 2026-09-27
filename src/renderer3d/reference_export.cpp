@@ -156,6 +156,97 @@ void ExportHouseModelGallery(unsigned house, bool industry)
 	Debug(driver,1,"OpenTT3D: exported four model-review views for {} {}",industry ? "industry" : "house",house);
 }
 
+/** Export the original ordered screen children, including construction absences. */
+static void ExportIndustryProceduralReferences(const std::filesystem::path &directory)
+{
+	nlohmann::json frames = nlohmann::json::array();
+	std::map<SpriteID,nlohmann::json> parts;
+	for (unsigned graphics : {143U,162U,165U,174U}) for (unsigned stage = 0; stage < 4; ++stage) {
+		const auto &parent = _industry_draw_tile_data[graphics*4+stage];
+		unsigned count = 1;
+		if (stage == 3) {
+			switch (graphics) {
+				case 143: count = std::size(_industry_anim_offs_toys); break;
+				case 162: count = std::size(_industry_anim_offs_bubbles); break;
+				case 165: count = std::size(_industry_anim_offs_toffee); break;
+				case 174: count = std::size(_draw_industry_spec1); break;
+			}
+		}
+		for (unsigned frame = 0; frame < count; ++frame) {
+			nlohmann::json row{{"graphics",graphics},{"stage",stage},{"frame",frame},{"procedure",parent.draw_proc},
+				{"parent_sprite",parent.building.sprite},{"parent_palette",parent.building.pal},
+				{"parent_image",parent.building.sprite != 0 ? fmt::format("industry-{:03}-{}.pam",graphics,stage) : ""},
+				{"parent_origin",{parent.origin.x,parent.origin.y,parent.origin.z}},
+				{"children",nlohmann::json::array()},{"intentionally_absent",nlohmann::json::array()}};
+			if (parent.building.sprite != 0) {
+				const Sprite *sprite = GetSprite(parent.building.sprite&SPRITE_MASK,SpriteType::Normal);
+				row["parent_sprite_offset"] = {sprite->x_offs,sprite->y_offs};
+				row["parent_sprite_size"] = {sprite->width,sprite->height};
+			}
+			std::set<std::string> visible;
+			auto child = [&](std::string name, SpriteID image, int x, int y) {
+				auto found = parts.find(image);
+				if (found == parts.end()) {
+					auto filename = fmt::format("industry-procedural-part-{}.pam",image);
+					std::vector<uint8_t> indices;
+					ExportSpriteReference(image,PAL_NONE,(directory/filename).string(),&indices);
+					const Sprite *sprite = GetSprite(image,SpriteType::Normal);
+					found = parts.emplace(image,nlohmann::json{{"sprite",image},{"palette",PAL_NONE},{"image",filename},
+						{"palette_indices",indices},{"sprite_offset",{sprite->x_offs,sprite->y_offs}},
+						{"sprite_size",{sprite->width,sprite->height}}}).first;
+				}
+				row["children"].push_back(found->second);
+				row["children"].back()["name"] = name;
+				row["children"].back()["child_offset"] = {x,y};
+				visible.insert(std::move(name));
+			};
+			/* Mirror only the original read-only draw selections in industry_cmd.
+			 * Never set an industry frame/completion flag or consume simulation RNG. */
+			switch (parent.draw_proc) {
+				case 1: if (stage == 3) {
+					const auto &d = _draw_industry_spec1[frame];
+					child("sieve",SPR_IT_SUGAR_MINE_SIEVE+d.image_1,d.x,0);
+					if (d.image_2 != 0) child("cloud",SPR_IT_SUGAR_MINE_CLOUDS+d.image_2-1,8,41);
+					if (d.image_3 != 0) {
+						const auto &offset = _drawtile_proc1[d.image_3-1];
+						child("pile",SPR_IT_SUGAR_MINE_PILE+d.image_3-1,offset.x,offset.y);
+					}
+				} break;
+				case 2: {
+					unsigned offset = stage == 3 ? _industry_anim_offs_toffee[frame] : 0;
+					if (offset == 0xFF) offset = 0;
+					child("shovel",SPR_IT_TOFFEE_QUARRY_SHOVEL,22-static_cast<int>(offset),24+offset);
+					child("toffee",SPR_IT_TOFFEE_QUARRY_TOFFEE,6,14);
+					break;
+				}
+				case 3:
+					if (stage == 3) child("bubble",SPR_IT_BUBBLE_GENERATOR_BUBBLE,5,_industry_anim_offs_bubbles[frame]);
+					child("spring",SPR_IT_BUBBLE_GENERATOR_SPRING,3,67);
+					break;
+				case 4: {
+					const auto &d = _industry_anim_offs_toys[frame];
+					if (d.image_1 != 0xFF) child("clay",SPR_IT_TOY_FACTORY_CLAY,d.x,96+d.image_1);
+					if (d.image_2 != 0xFF) child("robot",SPR_IT_TOY_FACTORY_ROBOT,16-d.image_2*2,100+d.image_2);
+					child("stamp",SPR_IT_TOY_FACTORY_STAMP,7,d.image_3);
+					child("holder",SPR_IT_TOY_FACTORY_STAMP_HOLDER,0,42);
+					break;
+				}
+			}
+			std::vector<std::string> expected;
+			switch (graphics) {
+				case 143: expected = {"clay","robot","stamp","holder"}; break;
+				case 162: expected = {"bubble","spring"}; break;
+				case 165: expected = {"shovel","toffee"}; break;
+				case 174: expected = {"sieve","cloud","pile"}; break;
+			}
+			for (const auto &name : expected) if (!visible.contains(name)) row["intentionally_absent"].push_back(name);
+			frames.push_back(std::move(row));
+		}
+	}
+	std::ofstream(directory/"industry-procedural.json") << frames.dump(2) << '\n';
+	Debug(driver,1,"OpenTT3D: exported {} original industry procedural states and {} resolved child images",frames.size(),parts.size());
+}
+
 void ExportIndustryReferences()
 {
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR, BASE_DIR)) / "renderer3d-reference";
@@ -215,6 +306,7 @@ void ExportIndustryReferences()
 			{"parent_sprite_offset",parent_offset}});
 	}
 	std::ofstream(directory / "industry-effects.json") << effects.dump(2) << '\n';
+	ExportIndustryProceduralReferences(directory);
 	Debug(driver, 1, "OpenTT3D: exported {} industry tile-state references", manifest.size());
 	Debug(driver,1,"OpenTT3D: exported {} original power-station spark frames and parent-relative offsets",effects.size());
 }

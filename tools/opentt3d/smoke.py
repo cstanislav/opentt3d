@@ -131,7 +131,9 @@ def main():
     parser.add_argument("--verify-crossing-transitions", action="store_true", help="Require both actual open/barred states during a running viewport benchmark")
     parser.add_argument("--verify-airport-animation", nargs="+", type=int, choices=range(74), metavar="GFX", help="Observe every actual upstream animation frame of the selected voxel airport tiles")
     parser.add_argument("--verify-industry-animation", nargs="+", type=int, choices=range(175), metavar="GFX", help="Observe every distinct original sprite frame of the selected voxel industry animations")
-    parser.add_argument("--verify-forest-cycle", action="store_true", help="Observe one unchanged actual timber/cotton forest tile dispatch cargo and pass through its harvested and every original regrowth state")
+    harvest_cycle = parser.add_mutually_exclusive_group()
+    harvest_cycle.add_argument("--verify-forest-cycle", action="store_true", help="Observe one unchanged actual timber/cotton forest tile dispatch cargo and pass through its harvested and every original regrowth state")
+    harvest_cycle.add_argument("--verify-harvest-cycle", type=int, choices=(16,129,135), metavar="GRAPHICS", help="Explicitly observe original timber16, cotton129 or battery135 on one unchanged harvested/regrowing tile")
     parser.add_argument("--verify-power-sparks", action="store_true", help="Observe all six actual voxel power-station spark children on one unchanged industry tile")
     parser.add_argument("--verify-house-lift", action="store_true", help="Observe at least eight actual positions of one moving voxel office lift")
     parser.add_argument("--verify-radio-beacons", action="store_true", help="Observe both original blinking palette entries on one emitted voxel radio tower")
@@ -196,7 +198,7 @@ def main():
         parser.error("Airport animation checks require --running and --benchmark-frames")
     if args.verify_industry_animation and (not args.running or not args.benchmark_frames):
         parser.error("Industry animation checks require --running and --benchmark-frames")
-    if args.verify_forest_cycle and (not args.running or not args.benchmark_frames):
+    if (args.verify_forest_cycle or args.verify_harvest_cycle is not None) and (not args.running or not args.benchmark_frames):
         parser.error("Forest production/regrowth requires --running and --benchmark-frames")
     if args.verify_power_sparks and (not args.running or not args.benchmark_frames):
         parser.error("Power-station spark checks require --running and --benchmark-frames")
@@ -509,6 +511,8 @@ server_advertise = false
         commands.append("renderer3d verify-industry-animation " + " ".join(map(str,args.verify_industry_animation)))
     if args.verify_forest_cycle:
         commands.append("renderer3d verify-forest-cycle")
+    if args.verify_harvest_cycle is not None:
+        commands.append(f"renderer3d verify-forest-cycle {args.verify_harvest_cycle}")
     if args.verify_power_sparks:
         commands.append("renderer3d verify-power-sparks")
     if args.verify_voxel_cargo is not None:
@@ -811,8 +815,10 @@ server_advertise = false
                     raise RuntimeError(f"Industry {graphic} did not render every distinct original animation frame; inspect run.log")
             if args.verify_power_sparks and "voxel power-station spark verification passed:" not in text:
                 raise RuntimeError("A single actual power-station tile did not render all six original spark children; inspect run.log")
-            if args.verify_forest_cycle and "voxel forest cycle verification passed:" not in text:
+            if (args.verify_forest_cycle or args.verify_harvest_cycle is not None) and "voxel forest cycle verification passed:" not in text:
                 raise RuntimeError("A single unchanged forest tile did not render its harvested and every original regrowth state; inspect run.log")
+            if args.verify_harvest_cycle is not None and f"observing actual mature industry graphics {args.verify_harvest_cycle}, harvested {args.verify_harvest_cycle+1}" not in text:
+                raise RuntimeError("The harvest observer did not select the requested original graphics family; inspect run.log")
             if args.verify_voxel_cargo is not None and f"voxel vehicle cargo verification passed: engine {args.verify_voxel_cargo}," not in text:
                 raise RuntimeError("A single voxel vehicle did not render both actual empty and full-capacity states; inspect run.log")
             if args.verify_train_collectors is not None and f"voxel train collector observation passed: engine {args.verify_train_collectors} " not in text:

@@ -4,6 +4,22 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Battery135/136 and original Toyland procedural children (September27)
+
+- Five battery bodies preserve four distinct growth states and the repeated harvested
+  socket image. Cotton's2077 checker ground is source-identical and remains independently
+  climate-guarded. All16 palettes,18 aliases,48 climate comparisons and1,585 prior hashes
+  pass. Initial plate/contact/socket defects are revised; native/layout/street views
+  retain all earlier evidence. Fine faceting, rim/edge paint and registration remain open.
+- All28 frozen controls pass, including real loaded/empty cargo,16 actual construction
+  layers and six unchanged-tile harvest/regrowth controls. All20 native backend views
+  agree;28 of116 wider captures retain750 differing pixels. Final approvals remain0.
+- Resolved original child imagery now covers268 procedural states/108 poses/23 sprites
+  for toy-factory143, bubble162, toffee165 and sugar174. Draw order, offsets, palettes
+  and genuine absent intervals match independent source tables;596 earlier original
+  images remain unchanged. Fixed-registration source sheets and selected completed
+  frames are reviewed. These references prepare future voxel child work.
+
 ## Sweet-factory131…134: original gift construction and peppermint hall (September27)
 
 - Nine distinct body states preserve the source gift wrapper and folded/open bow,
