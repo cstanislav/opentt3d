@@ -4,6 +4,29 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Diamond mine91…99: source cuts and upright hoist (September27)
+
+- The3×3 mine retains21 empty body slots,10 distinct body volumes and16 new grounds.
+  Ground2270/2279 is byte-identical; stages1/2 and the shared2022 soil aliases are
+  preserved. Native Toyland soil2022 differs and retains its existing source guard.
+- Original91 owns the upper hoist above the shelter drawn entirely in95's ground.
+  A source sprite cut describes projected ownership rather than a vertical world
+  column. The first column-clipped attempt leaned severely in street view; the
+  corrected upright frame and backstays span the original owners without overlaps
+  or detached cells. Both the incorrect revision and all preceding audit failures
+  remain available in `build-macos/breadth-diamond-*`.
+- All four native joined construction stages and four street views are reviewed.
+  The26 new volumes are provisional: rock faceting/grain and per-cut height, office
+  and raised-platform detail, rail height and exact registration need later passes.
+  Original joined192×95 bounds compare with192×97 initial/192×99 later models.
+  The359-image backend audit retains88 differing images/9,796 pixels, including one
+  tile92 paint pixel in an otherwise matching55-view native registration set.
+  Final visual approvals remain zero.
+- The next cotton-candy129/130 source uses four growing pink crowns on cyan stems,
+  four bare standing sticks after harvest and a separate blue/grey checker ground.
+  Its2072…2077 IDs share numbers with the temperate forest but all48 cross-climate
+  layer comparisons differ. The prepared ordinary cargo route succeeds in732 ticks.
+
 ## Shopping-mall source ownership and joined review (September25)
 
 - Houses40…43 use original4406…4417; source-identical0/1 and2/3 states are preserved.

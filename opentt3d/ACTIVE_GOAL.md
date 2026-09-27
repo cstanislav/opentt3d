@@ -1,5 +1,47 @@
 # Active extended development goal
 
+## Diamond mine breadth verified — September 27, 08:32:38 UTC
+
+Diamond91…99 adds26 provisional volumes, bringing the catalogue to1,569. Primary
+industry coverage is129/175 definitions,93 body owners and129 independent grounds.
+All definitions0…128 now have basic body/ground bindings; distinct climate artwork,
+the46 Toyland definitions and later fidelity passes remain open. Every one of the
+preceding1,543 models retains its geometry/paint hash.
+
+The original21 empty body states remain empty. Fifty-one visible layer palettes,
+26 source-identical aliases and216 climate comparisons reconcile;15 Toyland2022
+soil replacements retain independent source fallback. Joined cell audits find no
+overlapping owners or unsupported cells. The mine has connected fractured rock,
+open perimeter rails, a glazed office, near shed, raised shelter and fixed hoist.
+Source91 owns the upper hoist above95's ground-owned shelter. The source's projected
+sprite cuts are not vertical world-tile columns: the first24-control matrix passed
+state checks but its street view exposed a leaning hoist. That revision, earlier
+hidden-platform/low-rail captures, palette failures and detached-vein cells remain
+retained. The corrected upright frame and diagonal backstays pass a fresh matrix.
+
+All24 frozen controls pass both backends: four climates,102 actual construction-layer
+selections, full/empty cargo snapshots, ordinary service and development bundles.
+Native200, asset131 and the137-file presentation boundary pass. Frozen source/build
+hashes and bundle links agree. The diamond route preserves12/12 loading, acceptance16,
+empty delivery and return after3,056 observed ticks. The600-frame OpenGL/Vulkan service
+runs average60.010/60.001fps but retain44/92 intervals over20ms; peak sampled memory
+is3,229,666,784bytes. Sustained smooth arbitrary-world60fps remains unproved.
+
+Native/layout and street sheets are reviewed. Fifty-four of55 registered native views
+agree across backends; one native tile92 paint pixel differs. The full359-image comparison
+retains88 differing images/9,796 pixels. Joined source bounds are192×95 versus model
+192×97 initially and192×99 later, including the two-pixel-high far rail. Per-cut rock
+height/registration, faceting, grain, platform/office detail and exact source fidelity
+remain provisional. Final visual approvals remain zero. Evidence:
+`breadth-diamond-upright-{reconciliation,built-audit,backend-comparison}.json`.
+
+Diamond preliminary and both frozen matrices compact losslessly by3,887,162,568bytes.
+Audited`.8`duplicates retire743,135,193 extracted bytes and346,944,845 archive bytes,
+retaining all public archives and original audit/capture evidence. Next Toyland source
+preparation retains1,472 layer records,1,104 climate comparisons and264 differences.
+The cotton-candy26→27 route already passes17/17 units, acceptance64, empty delivery
+and return after732 ticks. Its six-volume129/130 source worklist is ready.
+
 ## Bank/software-OpenGL desktop release verified — September 27, 08:17:25 UTC
 
 Release`.8`at54c30579ddbf089a9c4f02691febda185c48b55e passes all eight hosted jobs.

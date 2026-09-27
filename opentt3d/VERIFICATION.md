@@ -1,5 +1,33 @@
 # Implementation verification
 
+## Diamond mine source ownership and ordinary service
+
+At08:32:38UTC, the corrected diamond91…99 candidate passes24 frozen background
+controls on OpenGL/Vulkan, including four climates,102 actual construction-layer
+selections, full/empty cargo snapshots, ordinary service and development bundles.
+All51 visible layer palettes,26 source aliases and21 empty body states reconcile.
+The216 climate comparisons retain15 distinct Toyland2022 grounds through the existing
+source guard. All1,543 preceding model hashes agree;26 new volumes bring the total
+to1,569. Native200, asset131 and the137-file presentation-boundary check pass.
+
+Joined occupied-cell audits find no cross-owner overlap or unsupported cells.
+The upper hoist belongs to91 above95's independent ground-owned platform. Treating
+original isometric sprite cuts as vertical tile columns produced an incorrect lean;
+the first24-control state matrix and its failing street review are retained separately.
+The corrected frame is checked again in registered native and four street views.
+
+Fifty-four of55 native registered captures agree across backends; one native tile92
+pixel differs. The full359-image comparison retains88 differences/9,796 pixels.
+Original joined bounds are192×95; models are192×97 initially and192×99 thereafter.
+Per-cut rock height, source grain/facets, office/platform geometry and pixel-level
+registration remain open. No final visual approvals are granted.
+
+The ordinary route loads12/12 diamonds, reaches acceptance16, unloads and returns
+after3,056 observed ticks. Both600-frame service captures pass, with60.010/60.001fps
+and44/92 intervals over20ms. Peak sampled memory is3,229,666,784bytes. Source/build
+freeze and development bundle hashes agree. Evidence:
+`build-macos/breadth-diamond-upright-{reconciliation,built-audit,backend-comparison}.json`.
+
 ## Bank/software-OpenGL release package audit
 
 Release`.8`at54c30579ddbf089a9c4f02691febda185c48b55e passes all eight hosted jobs.

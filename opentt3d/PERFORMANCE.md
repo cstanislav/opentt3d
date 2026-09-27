@@ -3,6 +3,16 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Diamond mine observations
+
+The24-control upright-hoist matrix peaks at3,229,666,784 sampled bytes. Two600-frame
+ordinary diamond-service captures average60.010/60.001fps for OpenGL/Vulkan, with
+5.206/5.562ms p95 work. They retain44/92 intervals over20ms and maxima22.939/23.495ms.
+These short route observations do not establish sustained arbitrary-world smoothness
+or long-duration/reload/multiple-viewport memory acceptance. Evidence:
+`breadth-diamond-upright-reconciliation.json`. The preceding leaning-hoist revision's
+separate measurements remain with its rejected visual review.
+
 ## Software OpenGL clipping correction
 
 Five frozen software/hardware OpenGL/Vulkan correctness controls peak at3,010,547,072
