@@ -76,7 +76,7 @@ This file records implemented and verified work, not promises of completeness.
   voxel paths, mixed ground and exact draw-order/picking regressions. The new
   extracted-package gate rejects the deliberately disabled correction. The title
   capture's88,931 black pixels disappear;10 hardware/software pixels still differ.
-  Published`.12`passes every hosted job and independent attachment audit. Both hosted
+  Published`.13`passes every hosted job and independent attachment audit. Both hosted
   Mac software-OpenGL captures have zero black world pixels and differ from the
   matched Vulkan image at nine pixels. All seven hosted graphical package controls
   pass the72-view ray-based gate.
@@ -105,8 +105,8 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Normal launches request3D without developer environment variables. Explicit
   `OPENTT3D_RENDERER=0` retains the original comparison renderer. The dedicated
   desktop-release workflow publishes Windows x64/x86/ARM64, macOS arm64/x86_64 and
-  Linux x86-64 packages in release`.12`. Every hosted job passes. All19 public assets,
-  18 checksum entries,2,063 exact-commit source files and all six embedded package
+  Linux x86-64 packages in release`.13`. Every hosted job passes. All19 public assets,
+  18 checksum entries,2,064 exact-commit source files and all six embedded package
   commits are verified. Mac signatures/dependencies/minimum15.0 and published local
   launches pass. Hosted ARM software OpenGL passes the repaired clipping gate and
   reviewed screenshots; Windows GPU/input and ARM64 native execution remain open.

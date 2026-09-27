@@ -21,7 +21,10 @@ about60fps but retain89/40 intervals over20ms; sustained smooth60fps remains ope
 
 ## Downloads
 
-The [verified `.11` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.11)
-is available for Windows, macOS and Linux. This preview's executable assets appear
-after its exact-commit package workflow passes. See the
+The [verified `.13` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.13)
+is available for Windows, macOS and Linux. All eight hosted jobs pass. Independent
+audits verify19 attachments,18 checksums,2,064 exact-commit source files and all six
+embedded commits. Every package contains1,593 models. Three downloaded Mac launches,
+seven hosted graphical controls and Windows x64/x86 native load/save pass. Linux's
+900-frame electric support/collector journey passes; smooth60fps remains open. See the
 [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).

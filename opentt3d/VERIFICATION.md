@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Cola desktop package audit
+
+At11:58:36UTC, release`.13`at4caddec41d82cf13df5ac584098ea2a80827027c passes all
+eight hosted jobs. Independent verification reconciles19 public attachments,18
+checksums,2,064 exact-commit source files and six embedded package commits. All
+catalogues contain1,593 identical models apart from trailingWindowsCRLF. Three
+downloaded Mac startup/save controls and architecture/signature/dependency/minimum15.0
+audits pass. Seven hosted graphical controls pass72 clipping views; Windows x64/x86
+native load/save passes. Reviewed ARM/Intel software-OpenGL captures have zero black
+world pixels and nine differences from matched Vulkan. Linux's900-frame electric
+journey passes support/collector coverage at1.695fps and2,223,669,248 sampled bytes.
+An initial missing-hosted-result assertion preceded artifact-download completion;
+its log remains, and resumed reconciliation verifies all ten completed results.
+Evidence:`build-macos/playable-release13-{download-audit,ci-reconciliation,
+hosted-visual-comparison}.json`. Sustained performance acceptance remains open.
+
 ## Toy-shop castle, transparent construction and real supplied production
 
 At11:47:05UTC, all26 frozen background controls pass on both backends:54 actual

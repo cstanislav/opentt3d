@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Cola desktop release verified — September27,11:58:36UTC
+
+Release`.13`at4caddec41d82cf13df5ac584098ea2a80827027c passes all eight hosted jobs.
+Independent public verification reconciles19 attachments,18 checksum entries,
+2,064 exact-commit source files and six embedded package commits. Every catalogue
+contains1,593 identical models apart from Windows's trailingCRLF. Three downloaded
+Mac startup/save controls and architecture/signature/dependency/minimum15.0 audits
+pass. Seven hosted graphical controls pass72 clipping views; Windows x64/x86 native
+load/save passes. ARM/Intel software-OpenGL captures have zero black world pixels
+and nine differences from matched Vulkan. Linux's900-frame electric support/collector
+journey passes at1.695fps under llvmpipe and2,223,669,248 peak sampled bytes.
+
+The first local audit reaches hosted reconciliation before the artifact download
+completes; its missing-result assertion and original log remain. Resuming after the
+download completes reconciles all ten hosted controls without repeating already
+verified package launches. Public instructions now link to`.13`. Evidence:
+`playable-release13-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Toy-shop is committed/pushed asde82feb8c; its exact-tag release`.14`is building.
+Sustained performance and full catalogue/fidelity acceptance remain open.
+
 ## Toy-shop castle and real supplied service verified — September27,11:47:05UTC
 
 Eight provisional toy-shop138…141 bodies bring the catalogue to1,601 models and
