@@ -141,6 +141,7 @@ def main():
     house_palette.add_argument("--verify-stadium-palette", type=int, choices=(20,32), help="Observe all original crowd and applicable scoreboard palette phases on one actually captured voxel stadium")
     house_palette.add_argument("--verify-house-palette", type=int, choices=(20,31,32,39,104,105), help="Observe original crowd, marquee, scoreboard or Toyland shop palette phases on one actually captured voxel house")
     parser.add_argument("--verify-dock-palette", type=int, choices=(4,5), help="Observe original lamp/foam palette phases on one actually captured non-Toyland dock")
+    parser.add_argument("--verify-industry-palette", nargs="+", type=int, choices=range(52,58), metavar="GFX", help="Observe seven original fire-palette phases on each selected actual steel-mill ground")
     parser.add_argument("--verify-renderer", action="store_true")
     parser.add_argument("--renderer-verification-scope", choices=("full","scene"), default="full", help="Scene scope retains renderer/model checks and delegates complete vehicle pose matrices to separate --verify-voxel-poses runs")
     parser.add_argument("--verify-instance-order", action="store_true", help="Check exact mesh-allocation, child-layer and mixed-opacity colour/picking precedence")
@@ -225,6 +226,8 @@ def main():
         parser.error("House palette checks require --running and --benchmark-frames")
     if args.verify_dock_palette is not None and (not args.running or not args.benchmark_frames):
         parser.error("Dock palette checks require --running and --benchmark-frames")
+    if args.verify_industry_palette and (not args.running or not args.benchmark_frames):
+        parser.error("Industry palette checks require --running and --benchmark-frames")
     if args.reference_airport_tile is not None and not args.reference_airport:
         parser.error("--reference-airport-tile requires --reference-airport")
     if args.reference_tree and (args.reference_tree[0] not in range(1576, 2010, 7) or args.reference_tree[1] not in range(7)):
@@ -520,6 +523,8 @@ server_advertise = false
         commands.append(f"renderer3d verify-house-palette {args.verify_house_palette}")
     if args.verify_dock_palette is not None:
         commands.append(f"renderer3d verify-dock-palette {args.verify_dock_palette}")
+    for graphic in args.verify_industry_palette or []:
+        commands.append(f"renderer3d verify-industry-palette {graphic}")
     # Both reference focus (notably joined stadiums) and camera diagnostics can
     # choose a temporary distance. Apply the requested review zoom afterwards;
     # the measured-zoom check below remains exact for palette-only runs too.
@@ -823,6 +828,9 @@ server_advertise = false
                     raise RuntimeError("One actual voxel house did not retain every required original palette phase; inspect run.log")
             if args.verify_dock_palette is not None and f"voxel dock palette observation passed: graphics {args.verify_dock_palette} " not in text:
                 raise RuntimeError("One actual voxel dock did not retain the original lamp/foam palette phases; inspect run.log")
+            for graphic in args.verify_industry_palette or []:
+                if f"voxel industry palette observation passed: graphics {graphic} " not in text:
+                    raise RuntimeError(f"Actual steel-mill ground {graphic} did not retain seven original fire-palette phases; inspect run.log")
             if args.reference_signal and ("focused live signal at" not in text or "signals rendered with state-aware lamps and semaphore geometry" not in text):
                 raise RuntimeError("A live signal model was not captured")
             if args.reference_catenary and ("focused live catenary at" not in text or "catenary parts rendered with contact wires, droppers and masts" not in text):

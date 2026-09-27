@@ -10,11 +10,20 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Release`.13`LinuxGL, all four Vulkan vehicle shards, macOS and Windows pass; its Vulkan scene job passes the main matrix but times out repeating trees in the electric journey. The active-tree scope repair awaits CI.
-- [x] Current1,326-volume asset/compiler/schema suite125/125 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,354-volume asset/compiler/schema suite126/126 and downloader/screenshot/memory harness9/9 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Steel-mill52…57 adds28 provisional volumes for exposed construction frames,
+  glazed roof bays, hollow flues, open furnace mouths and separate ground-owned
+  machinery/molten metal. Only original-identical construction1/2 stages alias;
+  tile55's middle/completed bodies remain empty. Coverage reaches76 industry bodies
+  and80 grounds. The new read-only palette observer checks actual emitted fire
+  materials through their original animation phases. All24 final backend/bundle
+  controls pass, including90 actual construction layer selections,12 live palette
+  observations and the normal iron-ore truck's full/empty delivery states. Peak
+  sampled memory is3,181,382,944bytes; all1,326 previous model hashes are unchanged.
 - [x] Twelve tram-depot volumes add the final depot family: all6 families/24 exit
   bindings now have voxel bodies, with separate oriented floors/embedded rails and
   contact wires. Source-climate comparisons permit exact cross-climate body reuse.

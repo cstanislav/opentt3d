@@ -1,5 +1,61 @@
 # Implementation verification
 
+## Steel-mill52…57
+
+Twenty-eight new volumes bring the catalogue to1,354, with76 industry body
+definitions and80 independent grounds. The original lower halls, furnace bodies,
+casting channels and stock remain ground-owned. Tile55 has only its original
+initial foundation body; no middle/completed body is fabricated. Source-identical
+construction1/2 stages share models. Structural checks require exclusive ground/body
+ownership, full ground coverage, supported frames/roof/flue assemblies, hollow flue
+tops, a recessed furnace mouth and correctly scaled half-unit cells on all axes.
+
+- 200 native,126 asset/compiler/schema and9 harness checks pass. All1,326 previous
+  model geometry/material hashes agree. All28 new steel volumes and45 bound layers
+  match the compiled build, and every bound palette uses its own source colours.
+- The144-pair source-climate audit finds only six changed Toyland initial2022
+  grounds, already covered by the independent source guard.
+- All20 final matrix/construction/palette/bundle controls pass. TemperateGL/Vulkan
+  each check4,688 industry views (2,560 grounds),672 focused steel mesh/palette views
+  and4,096,000 exact world-atlas RGBA/picking pixels. Arctic/tropical each check3,408
+  views (1,504 grounds); Toyland checks2,256 views (456 grounds).
+- Eight actual construction controls capture all90 body/ground selections across
+  four stages and both backends, including all six intentionally empty55 bodies.
+  Both600-frame live palette checks observe seven original fire phases on each of
+  six unchanged steel tiles' emitted ground meshes. Both background LaunchServices
+  bundle controls retain actual selection and tile picking. This20-run matrix peaks
+  at3,181,382,944bytes.
+- The corrected public iron-ore service loads22units in truck147, delivers to the
+  actual accepting steel mill and returns. All four full/empty backend controls and
+  selected-engine pose matrices pass. The delivered-ore save shows the destination
+  at its actual stage2, capturing its independent steel body/ground layers. These
+  bring the final total to24 successful runs with the same3,181,382,944-byte peak.
+  Executable/artwork/implementation hashes and development-bundle links all match.
+- Source-registered individual layers, both joined layouts, four-sided street and
+  actual-world views were inspected. The initial review exposed the inherited
+  one-unit vertical cell default, a boiler-roof axis error, an overly broad casting
+  roof and ground-owned lower columns in a body. Those were corrected before the
+  final matrix. Fine roof cuts/skylights, bracing, furnace paint/curvature and source
+  detail remain later-pass findings, with zero final visual approvals.
+
+Evidence:`build-macos/breadth-steel-final-*`, the public construction fixture and
+`breadth-steel-next-source-audit.json`. The first two palette invocations fail before
+native launch because a loop variable shadows the base-graphics metadata; the
+corrected harness passes. The first cargo-service command incorrectly selected the
+farm(type9), which correctly rejects steel-mill delivery. Its original failure is
+retained; the corrected iron-ore-mine(type18) service fixture and four cargo controls
+pass. Retiring413 successful generated images recovers747,874,529bytes; exact-pixel
+PNG compaction preserves810 earlier review images in7,000,335bytes while recovering
+another1,226,840,147bytes. Source references and selected comparison sheets remain.
+
+The current CI audit finds printing`.17`'s LinuxVulkan scene job successful, including
+the repaired electric journey. Factory`.16`passes the main scene matrix but its
+journey exits with`Invalid voxel collector contact`, an intermittent moving-train
+defect requiring investigation. The compact job log and artifact text are retained
+under`breadth-steel-release16-ci-*`. Lumbermill`.15`finishes with all jobs passing
+except its pre-repair electric timeout. Printing/tram LinuxOpenGL and vehicle shards
+remain running/queued; their macOS and all Windows jobs pass.
+
 ## Tram-depot family5
 
 Twelve volumes raise the catalogue to1,326: four rotated open-bay buildings, four

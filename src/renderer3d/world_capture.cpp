@@ -533,6 +533,47 @@ void BeginVoxelIndustryAnimationChecks(std::span<const unsigned> graphics)
 	Debug(driver,1,"OpenTT3D: observing {} live voxel industry animations without changing game state",industry_animation_checks.size());
 }
 
+struct IndustryPaletteCheck {
+	TileIndex tile = INVALID_TILE;
+	unsigned materials = 0;
+	std::set<std::array<uint32_t,7>> phases;
+	bool passed = false;
+};
+static std::map<unsigned,IndustryPaletteCheck> industry_palette_checks;
+
+void BeginVoxelIndustryPaletteCheck(unsigned graphics)
+{
+	if (graphics < 52 || graphics > 57 || !HasVoxelAsset("industry_ground",graphics,3)) throw std::invalid_argument("Industry fire-palette observation needs an original completed steel-mill ground52..57");
+	industry_palette_checks[graphics] = {};
+	Debug(driver,1,"OpenTT3D: observing original molten-metal palette on voxel industry ground {} without changing game state",graphics);
+}
+
+static void ObserveVoxelIndustryPalette(TileIndex tile, unsigned graphics, size_t first)
+{
+	auto found = industry_palette_checks.find(graphics);
+	if (found == industry_palette_checks.end() || found->second.passed || capture->diagnostic || GetIndustryConstructionStage(tile) != 3) return;
+	auto &check = found->second;
+	if (check.tile == INVALID_TILE) {
+		unsigned emitted = 0;
+		for (size_t i = first; i < capture->scene.instances.size(); ++i) emitted |= VoxelPaletteMask(*capture->scene.instances[i].mesh,232,7);
+		if (std::popcount(emitted) < 2) return;
+		check.tile = tile;
+		check.materials = emitted;
+	}
+	if (tile != check.tile) return;
+	auto palette = SnapshotPalette();
+	std::array<uint32_t,7> phase{};
+	for (unsigned i = 0; i < phase.size(); ++i) if (check.materials & (1U<<i)) {
+		Colour colour = palette.palette[232+i];
+		phase[i] = (static_cast<uint32_t>(colour.r)<<16)|(static_cast<uint32_t>(colour.g)<<8)|colour.b;
+	}
+	check.phases.insert(phase);
+	if (check.phases.size() >= 7) {
+		check.passed = true;
+		Debug(driver,1,"OpenTT3D: voxel industry palette observation passed: graphics {} tile {},{}, {} original fire phases across {} emitted animated materials",graphics,TileX(tile),TileY(tile),check.phases.size(),std::popcount(check.materials));
+	}
+}
+
 void BeginVoxelVehicleCargoCheck(unsigned engine)
 {
 	if (!VoxelVehicleState(engine,false) || !VoxelVehicleState(engine,true)) throw std::runtime_error("Cargo observation requires both original voxel vehicle bindings in the active climate");
@@ -1180,6 +1221,7 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 				[](const auto &instance) { return instance.mesh->empty(); }),capture->scene.instances.end());
 			if (capture->scene.instances.size() > first && !capture->diagnostic) {
 				unsigned stage = industry ? GetIndustryConstructionStage(tile.tile) : oilrig ? 3 : GetHouseBuildingStage(tile.tile);
+				if (industry && !industry_palette_checks.empty()) ObserveVoxelIndustryPalette(tile.tile,graphics,first);
 				static std::set<std::tuple<bool,unsigned,unsigned,unsigned>> reported;
 				if (reported.emplace(house,graphics,stage,variant).second) {
 					Debug(driver,1,"OpenTT3D: live voxel {} ground {} construction stage {} captured at {},{}",house ? "house" : "industry",graphics,stage,TileX(tile.tile),TileY(tile.tile));

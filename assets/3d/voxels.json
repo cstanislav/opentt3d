@@ -4,6 +4,26 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "steel_wall": [72,74,73,76,72,75],
+    "steel_wall_grain": [73,75,74,77,72,76],
+    "steel_frame": [6,8,7,9,6,9],
+    "steel_low_frame": [3,5,4,6,3,6],
+    "steel_metal": [3,5,4,7,3,6],
+    "steel_metal_light": [4,7,5,8,4,7],
+    "steel_roof": [5,8,6,9,5,7],
+    "steel_roof_dark": [1,3,2,4,1,3],
+    "steel_paving": [4,6,5,7,4,6],
+    "steel_paving_grain": [5,7,6,8,4,7],
+    "steel_soil": 112,
+    "steel_service_glass": [130,132,131,133,130,131],
+    "steel_grass": [83,84,83,89,83,84],
+    "steel_blue": [202,203,202,203,202,203],
+    "steel_blue_ground": [200,202,200,202,200,202],
+    "steel_cap": [75,76,75,76,75,76],
+    "steel_work_light": [66,67,66,67,66,67],
+    "steel_hot_rim": 232,
+    "steel_hot_middle": 234,
+    "steel_hot_core": 237,
     "tram_depot_company": [200,199,199,202,199,202],
     "tram_depot_sw_brick": [73,71,71,75,71,73],
     "tram_depot_sw_grain": [74,72,72,76,71,74],
@@ -1303,6 +1323,54 @@
     "rail_depot_toy_grass": 85
   },
   "components": {
+    "steel_yard": [
+      ["box","steel_soil",0,0,0,32,32,1],
+      ["box","steel_paving",1,1,0,31,31,1],
+      ["scatter_paint","steel_paving_grain",5,2118,1,1,0,31,31,1]
+    ],
+    "steel_roof_x": [
+      ["box","steel_wall",0,0,0,32,12,1],
+      ["gable","steel_wall",0,0,1,32,12,6,"y"],
+      ["repeat",[6,0,0],5,[["paint","steel_roof",2,1,1,5,11,6],
+        ["paint","steel_roof_dark",3,1,1,4,11,6]]]
+    ],
+    "steel_roof_y": [
+      ["box","steel_wall",0,0,0,12,32,1],
+      ["gable","steel_wall",0,0,1,12,32,6,"x"],
+      ["repeat",[0,6,0],5,[["paint","steel_roof",1,2,1,11,5,6],
+        ["paint","steel_roof_dark",1,3,1,11,4,6]]]
+    ],
+    "steel_frame_x": [
+      ["repeat",[8,0,0],4,[["box","steel_frame",0,0,0,1,1,28],
+        ["box","steel_frame",0,11,0,1,12,28]]],
+      ["box","steel_frame",31,0,0,32,1,28],["box","steel_frame",31,11,0,32,12,28],
+      ["box","steel_frame",0,0,26,32,1,28],["box","steel_frame",0,11,26,32,12,28]
+    ],
+    "steel_frame_y": [
+      ["repeat",[0,8,0],4,[["box","steel_frame",0,0,0,1,1,28],
+        ["box","steel_frame",11,0,0,12,1,28]]],
+      ["box","steel_frame",0,31,0,1,32,28],["box","steel_frame",11,31,0,12,32,28],
+      ["box","steel_frame",0,0,26,1,32,28],["box","steel_frame",11,0,26,12,32,28]
+    ],
+    "steel_casting_ground": [
+      ["use","steel_yard"],["box","factory_pit",1,1,0,31,31,1],
+      ["repeat",[0,8,0],4,[["box","steel_frame",1,0,1,2,1,21],
+        ["box","steel_frame",11,0,1,12,1,21]]],
+      ["box","steel_wall",1,30,1,3,32,21],["box","steel_wall",10,30,1,12,32,21],
+      ["box","steel_frame",1,0,19,2,32,21],["box","steel_frame",11,0,19,12,32,21],
+      ["box","steel_frame",1,30,19,12,32,21]
+    ],
+    "steel_boiler_ground": [
+      ["use","steel_yard"],
+      ["box","steel_wall",1,1,1,31,3,25],["box","steel_wall",1,29,1,31,31,25],
+      ["box","steel_wall",1,3,1,3,29,25],
+      ["paint","steel_blue_ground",3,29,11,30,31,17],
+      ["lathe","steel_metal",[17,16],[[1,9,0],[15,11,0],[23,9,0],[27,5,0]]],
+      ["lathe","steel_metal_light",[17,16],[[26,5,0],[28,5,0]]],
+      ["erase",25,11,8,32,21,19],
+      ["box","steel_roof_dark",24,11,8,25,21,19],
+      ["box","steel_metal_light",29,1,0,30,31,1]
+    ],
     "tram_depot_body": [
       ["use","road_depot_body"],
       ["replace_material","depot_company","tram_depot_company"],
@@ -5799,6 +5867,226 @@
     ]
   },
   "models": {
+    "steel_north_initial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel52 original2140: dark excavated foundation and the first exposed steel columns, without later roofs or flues",
+      "ops":[["box","factory_pit",2,2,0,30,30,1],
+        ["repeat",[0,8,0],3,[["box","steel_frame",2,3,1,3,4,14],["box","steel_frame",11,3,1,12,4,14]]],
+        ["box","steel_frame",2,3,13,3,20,14],["box","steel_frame",11,3,13,12,20,14],
+        ["repeat",[0,8,0],3,[["box","steel_frame",2,3,13,12,4,14]]]]
+    },
+    "steel_casting_initial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel53 original2141: foundation and one brick-edged steel end frame",
+      "ops":[["box","factory_pit",2,2,0,30,30,1],
+        ["box","steel_wall",2,27,1,4,30,20],
+        ["repeat",[6,0,0],4,[["box","steel_frame",4,28,1,5,29,18]]],
+        ["box","steel_frame",4,28,17,26,29,18]]
+    },
+    "steel_rolling_initial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel54 original2142: two excavated lanes and a low incomplete steel end frame",
+      "ops":[["box","factory_pit",2,2,0,12,30,1],["box","factory_pit",18,2,0,30,30,1],
+        ["repeat",[0,6,0],5,[["box","steel_low_frame",3,2,1,4,3,8]]],
+        ["box","steel_low_frame",3,2,7,4,27,8]]
+    },
+    "steel_stock_initial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel55 original2143: only the short dark initial foundation mark; all later body states are genuinely empty",
+      "ops":[["box","factory_pit",21,2,0,23,14,1]]
+    },
+    "steel_boiler_initial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel56 original2144: first red side walls around the open black boiler foundation",
+      "ops":[["box","factory_pit",2,2,0,30,30,1],
+        ["box","steel_wall",2,2,1,30,4,3],["box","steel_wall",2,28,1,30,30,25],
+        ["scatter_paint","steel_wall_grain",5,2144,2,28,1,30,30,25]]
+    },
+    "steel_service_initial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel57 original2145: the exposed dark service-hall excavation before the tall paired-boiler workshop is completed",
+      "ops":[["box","factory_pit",4,6,0,28,24,1],["scatter_paint","factory_pit_grain",4,2145,4,6,0,28,24,1]]
+    },
+    "steel_north_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel52 original2130: upper red-framed glazed L-roof on open steel supports; source-identical middle1/2 stages, lower roofs remain ground2129-owned",
+      "ops":[["use","steel_frame_x"],["use","steel_frame_y"],
+        ["erase",0,0,0,32,32,12],
+        ["use","steel_roof_x",[0,0,28]],["use","steel_roof_y",[0,0,28]]]
+    },
+    "steel_casting_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel53 original2132: the narrow raised casting-roof corner and its open upper frame; the broad lower works and apron remain2131-owned",
+      "ops":[["repeat",[0,7,0],3,[["box","steel_frame",11,16,20,12,17,48]]],
+        ["box","steel_frame",11,14,46,12,31,48],
+        ["gable","steel_wall",3,14,48,13,31,54,"x"],
+        ["repeat",[0,6,0],3,[["paint","steel_roof",4,15,48,12,18,54],
+          ["paint","steel_roof_dark",4,16,48,12,17,54]]]]
+    },
+    "steel_rolling_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel54 original2134: only the tiny red roof fitting is body-owned in construction; all rolling-shop machinery is independently ground2133-owned",
+      "ops":[["box","steel_cap",23,8,20,25,10,21]]
+    },
+    "steel_boiler_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel56 original2137: high red open-front furnace hall, two roof bays and original blue fittings, above separately owned boiler ground2136",
+      "ops":[["box","steel_wall",1,1,24,31,3,62],["box","steel_wall",1,29,24,31,31,62],
+        ["box","steel_wall",1,3,24,3,29,62],
+        ["repeat",[8,0,0],3,[["erase",6,29,43,9,31,56],
+          ["box","steel_roof_dark",6,29,43,9,30,56],
+          ["box","steel_blue",5,29,31,9,31,35]]],
+        ["box","steel_roof_dark",29,1,53,31,31,62],
+        ["repeat",[0,3,0],10,[["box","steel_frame",30,1,53,31,2,62]]],
+        ["repeat",[14,0,0],2,[["box","steel_roof_dark",1,1,61,16,31,63],
+          ["gable","steel_wall",1,1,63,16,31,76,"x"],
+          ["repeat",[0,6,0],5,[["paint","steel_roof",2,2,63,15,5,76],
+            ["paint","steel_roof_dark",2,3,63,15,4,76]]]]],
+        ["scatter_paint","steel_wall_grain",6,2137,1,1,24,31,31,62,"steel_wall"]]
+    },
+    "steel_service_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel57 original2139: rear red/glazed service roof on its own narrow supports; separate front workshop/paving belong to2138",
+      "ops":[["use","steel_frame_x"],["use","steel_roof_x",[0,0,28]]]
+    },
+    "steel_north_ground_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Steel ground2129: lower glazed roof branches and columns, exposed dark yard and soil, separate from upper2130",
+      "ops":[["use","steel_frame_x",[0,0,1]],["use","steel_frame_y",[0,0,1]],
+        ["erase",0,0,13,32,32,128],
+        ["use","steel_yard"],["box","factory_pit",1,1,0,31,31,1],
+        ["repeat",[0,8,0],3,[["box","steel_frame",13,13,1,14,14,17],["box","steel_frame",23,13,1,24,14,17]]],
+        ["repeat",[8,0,0],3,[["box","steel_frame",13,13,1,14,14,17],["box","steel_frame",13,23,1,14,24,17]]],
+        ["box","steel_wall",12,12,17,24,32,18],["gable","steel_wall",12,12,18,24,32,23,"x"],
+        ["box","steel_wall",24,12,17,32,24,18],["gable","steel_wall",24,12,18,32,24,23,"y"],
+        ["repeat",[0,6,0],3,[["paint","steel_roof",13,14,18,23,17,23],
+          ["paint","steel_roof_dark",13,15,18,23,16,23]]],
+        ["paint","steel_roof",25,13,18,29,23,23],
+        ["paint","steel_roof_dark",26,13,18,27,23,23]]
+    },
+    "steel_casting_ground_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Steel ground2131: original lower casting-hall steelwork, brick piers and cold open casting apron",
+      "ops":[["use","steel_casting_ground"]]
+    },
+    "steel_rolling_ground_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Steel ground2133 owns the entire low rolling shed, blue fascia, cold dark roller bed and paving",
+      "ops":[["use","steel_yard"],
+        ["box","steel_frame",14,1,1,16,21,13],["box","steel_frame",30,1,1,32,21,13],
+        ["repeat",[0,6,0],3,[["erase",14,3,1,16,7,11],["erase",30,3,1,32,7,11]]],
+        ["box","steel_blue_ground",30,1,4,32,21,7],
+        ["gable","steel_wall",14,0,13,32,22,21,"x"],
+        ["repeat",[0,6,0],3,[["paint","steel_roof",15,2,13,31,5,21],
+          ["paint","steel_roof_dark",15,3,13,31,4,21]]],
+        ["box","steel_metal",2,2,1,11,30,5],
+        ["repeat",[0,5,0],5,[["box","steel_metal_light",2,3,5,11,4,8]]]]
+    },
+    "steel_stock_ground_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Steel55 ground2135: bare paved stock apron; the body is intentionally empty at stages1/2",
+      "ops":[["use","steel_yard"]]
+    },
+    "steel_boiler_ground_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Steel ground2136: cold round furnace with a real inset mouth, base walls, blue fascia and paving; upper hall remains body2137",
+      "ops":[["use","steel_boiler_ground"]]
+    },
+    "steel_service_ground_partial": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],
+      "reference":"Steel ground2138: low red workshop with inset dark-purple windows, own glazed roof and soil apron; original upper2139 remains separate",
+      "ops":[["use","steel_yard"],
+        ["box","steel_wall",1,13,1,31,31,17],["erase",3,15,1,29,29,17],
+        ["repeat",[8,0,0],3,[["erase",5,29,3,9,31,14],
+          ["box","steel_service_glass",5,29,3,9,30,14]]],
+        ["gable","steel_wall",0,12,17,32,32,25,"y"],
+        ["repeat",[6,0,0],5,[["paint","steel_roof",2,13,17,5,31,25],
+          ["paint","steel_roof_dark",3,13,17,4,31,25]]]]
+    },
+    "steel_north_finished": {
+      "extends":"steel_north_partial",
+      "reference":"Steel52 original2119 adds three independently hollow red flues with blue collars to the original upper glazed L-roof",
+      "ops":[["repeat",[16,-16,0],2,[["box","steel_wall",4,20,28,8,24,58],
+        ["box","steel_blue",3,19,30,9,25,33],["erase",5,21,33,7,23,58]]],
+        ["box","steel_wall",4,4,28,8,8,48],["box","steel_blue",3,3,30,9,9,33],
+        ["erase",5,5,33,7,7,48]]
+    },
+    "steel_casting_finished": {
+      "extends":"steel_casting_partial",
+      "reference":"Steel53 original2121: original casting-roof continuation and tall single hollow chimney, lower molten steel remains ground2120-owned",
+      "ops":[["box","steel_wall",10,14,48,14,18,92],
+        ["box","steel_blue",9,13,50,15,19,53],["erase",11,15,53,13,17,92]]
+    },
+    "steel_rolling_finished": {
+      "size":[32,32,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],
+      "reference":"Steel54 original2123: short hollow red rolling-shop chimney above the ground-owned lower roof",
+      "ops":[["box","steel_wall",22,7,20,26,11,42],["box","steel_cap",21,6,40,27,12,42],
+        ["erase",23,8,22,25,10,42]]
+    },
+    "steel_boiler_finished": {
+      "extends":"steel_boiler_partial",
+      "reference":"Steel56 original2126: source-identical furnace hall with illuminated work indicators; active furnace/melt belongs to independent2125",
+      "ops":[["paint","steel_work_light",13,29,31,17,31,35],
+        ["paint","steel_work_light",21,29,31,25,31,35]]
+    },
+    "steel_service_finished": {
+      "extends":"steel_service_partial",
+      "reference":"Steel57 original2128: rear glazed service roof with two hollow red flues and blue collars; the lower shop remains ground2127-owned",
+      "ops":[["box","steel_wall",6,4,28,10,8,54],["box","steel_blue",5,3,30,11,9,33],
+        ["erase",7,5,33,9,7,54],
+        ["box","steel_wall",22,4,28,26,8,60],["box","steel_blue",21,3,30,27,9,33],
+        ["erase",23,5,33,25,7,60]]
+    },
+    "steel_north_ground": {
+      "extends":"steel_north_ground_partial",
+      "reference":"Steel ground2118: lower glazed bays, original green edging and small active work lights/metal, independent of upper2119",
+      "ops":[["paint","steel_grass",0,0,0,32,1,1],["paint","steel_grass",0,0,0,1,32,1],
+        ["box","steel_work_light",13,14,8,14,16,10],
+        ["box","steel_hot_rim",27,25,1,31,26,2],["box","steel_hot_core",27,25,1,29,26,2]]
+    },
+    "steel_casting_ground": {
+      "extends":"steel_casting_ground_partial",
+      "reference":"Steel ground2120 owns the molten casting stream/troughs on the apron, original support frames and green perimeter; original fire palette remains animated",
+      "ops":[["paint","steel_grass",0,31,0,32,32,1],
+        ["repeat",[0,8,0],3,[["box","steel_metal",13,5,1,31,9,2],
+          ["box","steel_hot_rim",13,6,2,31,8,3],["box","steel_hot_middle",14,6,2,30,7,3]]],
+        ["line","steel_hot_core",12,7,13,17,7,2],
+        ["box","steel_metal",11,5,1,13,9,13]]
+    },
+    "steel_rolling_ground": {
+      "extends":"steel_rolling_ground_partial",
+      "reference":"Steel ground2122: active rolling bed with original animated hot billets, blue shed fascia and independent green-edged paving",
+      "ops":[["paint","steel_grass",0,0,0,1,32,1],
+        ["box","steel_hot_rim",4,5,8,8,17,9],["box","steel_hot_middle",5,6,8,7,16,9],
+        ["box","steel_hot_core",5,7,8,6,15,9]]
+    },
+    "steel_stock_ground": {
+      "extends":"steel_stock_ground_partial",
+      "reference":"Steel55 original2124 owns the complete hot ingot/stock apron, parallel mould rails and two glowing pans; no body binding is invented",
+      "ops":[["paint","steel_grass",0,31,0,32,32,1],
+        ["repeat",[0,7,0],4,[["box","steel_metal",1,3,1,31,4,2],
+          ["box","steel_metal_light",1,6,1,31,7,2]]],
+        ["repeat",[0,14,0],2,[["box","steel_metal",4,3,1,16,7,5],
+          ["box","steel_hot_rim",5,4,4,15,6,5],
+          ["box","steel_hot_core",6,4,4,14,5,5]]]]
+    },
+    "steel_boiler_ground": {
+      "extends":"steel_boiler_ground_partial",
+      "reference":"Steel ground2125: recessed active furnace mouth and molten outflow, original lower walls/blue trim and green edging; upper2126 remains independently transparent",
+      "ops":[["paint","steel_grass",0,31,0,32,32,1],
+        ["paint","steel_hot_rim",24,11,8,25,21,19],
+        ["box","steel_hot_middle",24,13,10,25,19,17],
+        ["box","steel_hot_core",24,15,11,25,18,15],
+        ["box","steel_hot_rim",27,22,1,32,24,2],
+        ["box","steel_hot_core",28,22,1,31,23,2]]
+    },
+    "steel_service_ground": {
+      "extends":"steel_service_ground_partial",
+      "reference":"Steel ground2127: low red service shop and roof, purple glazing, original green edge and a small active output channel",
+      "ops":[["paint","steel_grass",31,0,0,32,32,1],
+        ["box","steel_metal",1,5,1,24,8,2],["box","steel_hot_rim",3,6,2,22,7,3],
+        ["box","steel_hot_core",5,6,2,19,7,3]]
+    },
     "tram_depot_sw": {
       "size":[32,32,40],"origin":[-0.25,0.25,0],
       "reference":"Tram depot6101/6102 SW: source-sized folded roof, open entrance, recessed lower windows, paired blue insulators and roof transformer; all four climate sources identical",
@@ -14039,6 +14327,12 @@
       "5":{"0":"tram_depot_wire_ne","1":"tram_depot_wire_se","2":"tram_depot_wire_sw","3":"tram_depot_wire_nw"}
     },
     "industry_ground": {
+      "52":{"0":"mine_ground_bare","1":"steel_north_ground_partial","2":"steel_north_ground_partial","3":"steel_north_ground"},
+      "53":{"0":"mine_ground_bare","1":"steel_casting_ground_partial","2":"steel_casting_ground_partial","3":"steel_casting_ground"},
+      "54":{"0":"mine_ground_bare","1":"steel_rolling_ground_partial","2":"steel_rolling_ground_partial","3":"steel_rolling_ground"},
+      "55":{"0":"mine_ground_bare","1":"steel_stock_ground_partial","2":"steel_stock_ground_partial","3":"steel_stock_ground"},
+      "56":{"0":"mine_ground_bare","1":"steel_boiler_ground_partial","2":"steel_boiler_ground_partial","3":"steel_boiler_ground"},
+      "57":{"0":"mine_ground_bare","1":"steel_service_ground_partial","2":"steel_service_ground_partial","3":"steel_service_ground"},
       "121":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_north_ground"},
       "122":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_east_ground"},
       "123":{"0":"mine_ground_bare","1":"mine_ground_bare","2":"mine_ground_bare","3":"factory_west_ground"},
@@ -14115,6 +14409,12 @@
       "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
     },
     "industries": {
+      "52":{"0":"steel_north_initial","1":"steel_north_partial","2":"steel_north_partial","3":"steel_north_finished"},
+      "53":{"0":"steel_casting_initial","1":"steel_casting_partial","2":"steel_casting_partial","3":"steel_casting_finished"},
+      "54":{"0":"steel_rolling_initial","1":"steel_rolling_partial","2":"steel_rolling_partial","3":"steel_rolling_finished"},
+      "55":{"0":"steel_stock_initial"},
+      "56":{"0":"steel_boiler_initial","1":"steel_boiler_partial","2":"steel_boiler_partial","3":"steel_boiler_finished"},
+      "57":{"0":"steel_service_initial","1":"steel_service_partial","2":"steel_service_partial","3":"steel_service_finished"},
       "121":{"0":"factory_north_initial","1":"factory_north_partial","2":"factory_north_partial","3":"factory_north_finished"},
       "122":{"0":"factory_east_initial","1":"factory_east_partial","2":"factory_east_partial","3":"factory_east_finished"},
       "123":{"0":"factory_west_initial","1":"factory_west_partial","2":"factory_west_partial","3":"factory_west_finished"},

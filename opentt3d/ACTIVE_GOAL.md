@@ -1,5 +1,30 @@
 # Active extended development goal
 
+## Steel-mill progress — September27,00:33:04UTC
+
+Tram coverage is pushed to`main`at`8e2b32e47d861c0885975dd1abe4d206bab685ee`and
+published as`opentt3d-dev-20260926.18`. The next28-volume steel-mill52…57 increment
+reaches1,354 volumes,76 industry body definitions and80 independent grounds. It
+passes200 native,126 asset and9 harness checks; all24 final background backend/
+bundle controls pass. Those verify90 actual construction-layer selections, seven
+original fire-palette phases on all six tiles per backend, and the full/empty states
+of a real22-unit iron-ore delivery/return. All1,326 previous model hashes agree.
+Peak sampled memory is3,181,382,944bytes. The actual audit clock is
+**2026-09-27 00:33:04UTC**; source/build/bundle hashes match.
+
+Registered source review corrected vertical cell scale, boiler-roof axis, casting
+roof footprint and lower support ownership. Selected source/street/world views are
+inspected, with zero final approvals. Retiring successful generated images and
+losslessly compacting earlier review evidence recovers1,974,714,676bytes. Preserve
+the first palette harness failure and incorrect farm-to-steel service failure.
+
+Publish steel coverage, then repair the newly discovered intermittent electric-train
+collector-contact crash from factory`.16`Linux CI. Printing`.17`passes that same
+Vulkan scene/journey job, but the original`.16`failure remains actionable. Its
+actual fixture save, compact logs and artifact text are retained. After the repair,
+continue the missing catalogue families. This is a progress checkpoint; full
+catalogue coverage, four-pass fidelity and sustained arbitrary-world60fps remain open.
+
 ## Tram-depot progress — September26,23:57:54UTC
 
 Printing/tropical-factory commit`c46175aaa93f5e0bab368129ca94b61964710caa`is pushed

@@ -87,9 +87,9 @@ Set `OPENTT3D_AUTO_LOD=0` for a full-detail comparison. Trees use the previous
 projected-material3D geometry by default after matched voxel-tree LOD tests remained
 too slow. `OPENTT3D_TREE_STYLE=voxel` selects the retained voxel trees for diagnostics.
 
-The current artwork is a development subset: **1,326 voxel volumes**, covering
+The current artwork is a development subset: **1,354 voxel volumes**, covering
 110 house IDs,62 diagnostic tree sprite families and all256 vanilla vehicle definitions,
-plus70/175 industry body definitions,74 independent industry grounds,53/74 airport
+plus76/175 industry body definitions,80 independent industry grounds,53/74 airport
 definitions and all six depot families. Climate/state
 coverage remains incomplete: Arctic farms/forests and several non-temperate industry
 grounds retain supplied source artwork pending independent volumes. No model has
@@ -130,6 +130,11 @@ The fixture creates a tiny no-graphics NewGRF that enables engine116 on tram tra
 in all climates, then builds four actual depot exits and a working route. Its saved
 orders include an ordinary depot visit. The NewGRF stays local to the fixture and
 its review; the original depot sprites and production vehicle definitions are retained.
+
+Steel-mill fire-palette observations are available through
+`--verify-industry-palette 52 53 54 55 56 57` with a completed steel-mill save,
+`--running --benchmark-frames 600 --blitter 40bpp-anim`. The check requires seven
+original colour phases on each unchanged tile's actually emitted ground geometry.
 
 The full renderer check includes every voxel vehicle climate/cargo/livery/heading
 comparison and can exceed two hours on software Vulkan. CI runs the scene checks

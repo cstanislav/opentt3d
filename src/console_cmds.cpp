@@ -3028,6 +3028,15 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		});
 		return true;
 	}
+	if (argv.size() == 3 && argv[1] == "verify-industry-palette") {
+		auto graphics = ParseType<unsigned>(argv[2]);
+		if (!graphics || *graphics < 52 || *graphics > 57) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([graphics=*graphics] {
+			try { Renderer3D::BeginVoxelIndustryPaletteCheck(graphics); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
 	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "verify-voxel-meshes") {
 		std::string prefix = argv.size() == 3 ? std::string(argv[2]) : std::string{};
 		VideoDriver::GetInstance()->QueueOnMainThread([prefix=std::move(prefix)] {

@@ -16,6 +16,21 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Steel-mill breadth:**28 volumes add52…57, with real open construction frames,
+  independently owned lower works, glazed red roof bays, hollow flues and recessed
+  furnace mouths. Source55 has no body after its initial foundation mark; its paved
+  apron and completed hot stock remain ground-owned. Original middle1/2 sprites and
+  metadata agree, permitting those aliases. All45 bound source-layer palettes pass.
+  The144-pair climate audit finds only six changed Toyland initial2022 grounds,
+  already handled by the source guard. Registered source review catches the inherited
+  one-unit vertical cell default: the steel family now explicitly uses half-unit cells
+  on all three axes. It also narrows/repositions the casting-roof corner, corrects the
+  boiler roof axis and moves lower support columns into their source ground owner.
+  Fine skylight geometry, construction-bracing density, exact roof cuts/gradients,
+  furnace curvature/dark paint, flue placement/detail and source-layer crop fidelity
+  remain later-pass findings. Evidence:`build-macos/breadth-steel-*`; zero final
+  visual approvals.
+
 - **Tram-depot breadth:**12 volumes cover four source exits with open bays,
   recessed lower glazing, folded roofs and supported paired insulators/transformer.
   Four oriented concrete/embedded-rail floors and four contact-wire volumes retain

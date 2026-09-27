@@ -8,6 +8,57 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_steel_mill_layers_keep_open_furnace_flues_roof_joins_and_empty_stock_body(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        source["models"] = {name:model for name,model in source["models"].items()
+                            if name.startswith("steel_") or name in ("mine_ground_site","mine_ground_bare")}
+        source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(52,58)}
+                              for category in ("industries","industry_ground")}
+        result = compile_catalogue(source)
+        for name,model in result["models"].items():
+            if name.startswith("steel_"):
+                self.assertEqual(model["cell_size"],[0.5,0.5,0.5],"The source-sized structures must not inherit the compiler's one-unit vertical default")
+        volumes = {name:{(x+i,y,z):material for x,y,z,length,material in model["runs"] for i in range(length)}
+                   for name,model in result["models"].items()}
+        rows = re.findall(r"\bM\(\s*([^\n]+)\)",(root / "src/table/industry_land.h").read_text().split("_industry_draw_tile_data",1)[1].split("};",1)[0])
+        self.assertEqual(set(result["bindings"]["industries"]["55"]),{"0"},"The stock yard has no body after its initial foundation mark")
+        for graphics in range(52,58):
+            self.assertEqual(rows[graphics*4+1],rows[graphics*4+2],"Only source-identical construction stages may share a model")
+            for category in ("industries","industry_ground"):
+                states = result["bindings"][category][str(graphics)]
+                if "1" in states:
+                    self.assertEqual(states["1"],states["2"])
+                    self.assertEqual(len(set(states.values())),3)
+            for stage in range(4):
+                name = result["bindings"]["industries"][str(graphics)].get(str(stage))
+                body = set(volumes[name]) if name else set()
+                name = result["bindings"]["industry_ground"][str(graphics)][str(stage)]
+                ground = {(x,y,z-1) for x,y,z in volumes[name]}
+                self.assertFalse(body & ground,(graphics,stage,"Ground/body ownership must be exclusive"))
+                self.assertEqual({(x,y) for x,y,z in ground if z == -1},{(x,y) for x in range(32) for y in range(32)})
+                joined = body | ground
+                reached = {p for p in joined if p[2] == -1}
+                pending = list(reached)
+                for x,y,z in pending:
+                    for p in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                        if p in joined and p not in reached:
+                            reached.add(p); pending.append(p)
+                self.assertEqual(reached,joined,(graphics,stage,"Frames, roof bays, chimneys and furnace parts need physical support"))
+                colours = {c for material in volumes[name].values() for c in result["materials"][material-1]}
+                self.assertEqual(bool(colours & set(range(232,241))),stage == 3,"Molten metal uses the original cycling fire palette only in completed grounds")
+        self.assertTrue(all(y >= 13 for x,y,z in volumes["steel_casting_finished"]),
+                        "The small raised casting-roof corner must not cover the open northern apron")
+        self.assertEqual(min(z for x,y,z in volumes["steel_north_partial"]),12,
+                         "The lower support columns belong to the independent ground layer")
+        for name,flues in {"north":((6,22,57),(22,6,57),(6,6,47)),"casting":((12,16,91),),
+                           "rolling":((24,9,41),),"service":((8,6,53),(24,6,59))}.items():
+            for point in flues:
+                self.assertNotIn(point,volumes[f"steel_{name}_finished"],"A completed flue must remain hollow through its top")
+        for name in ("steel_boiler_ground_partial","steel_boiler_ground"):
+            self.assertNotIn((26,16,14),volumes[name],"The furnace mouth must be a real recessed opening")
+            self.assertIn((24,16,14),volumes[name],"The furnace lining remains behind its rim")
+
     def test_tram_depots_keep_open_bays_oriented_rails_and_independent_wires(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
