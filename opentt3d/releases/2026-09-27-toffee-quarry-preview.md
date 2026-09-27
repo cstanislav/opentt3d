@@ -26,7 +26,10 @@ timing outliers; sustained smooth60fps remains open.
 
 ## Downloads
 
-The [verified `.18` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.18)
-is available for Windows, macOS and Linux. This toffee preview's executable assets
-appear after its exact-commit package workflow passes. See the
+The [verified `.19` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.19)
+is available for Windows x64/x86/ARM64, macOS Apple silicon/Intel and Linux x86-64.
+All eight package jobs pass at the exact toffee commit. Independent download audits
+verify19 attachments,18 checksums,2,070 matching source files and six identical
+1,645-model catalogues. Downloaded Mac startup/save checks, seven hosted graphical
+controls and Windows x64/x86 native load/save checks pass. See the
 [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).

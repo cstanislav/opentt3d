@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Toffee desktop downloads independently verified — September27,18:39:15UTC
+
+Release`.19`atb7ebd04dd00b8ba300e42c3f53f2c77174f7ca5c passes all eight jobs in
+workflow36339117089. Independent public checks reconcile19 assets,18 checksums,
+2,070 exact-commit source files and six identical1,645-model catalogues. Three
+downloaded Mac startup/save controls and architecture/signature/dependency/minimum15.0
+audits pass. Seven hosted graphical controls pass72 clipping views; Windows x64/x86
+native load/save passes. Reviewed ARM/Intel software-OpenGL worlds have zero black
+pixels and nine differences from matched Vulkan. Linux's900-frame llvmpipe journey
+passes all six support states and collector contact at1.713fps, peaking at2,435,874,816
+sampled bytes. The first watcher's connection reset did not fail the hosted workflow.
+Public download links now use`.19`.
+
+Evidence:`playable-release19-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Sugar runtime is pushed separately at23411834a. Its22-volume source/native study
+preserves all20 empty bodies,15 child images and independent grounds. The latest
+authored rod passages and staggered grain depths eliminate static/moving intersections;
+fine source paint/shape and the integrated acceptance matrix remain open. Continue
+breadth-first work; final visual approvals:0.
+
 ## Sugar-mine original mechanism verified — September27,18:32:04UTC
 
 Runtime support retains the original96-frame sieve/cloud/pile order, independent

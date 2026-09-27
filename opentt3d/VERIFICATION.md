@@ -1,5 +1,17 @@
 # Implementation verification
 
+## Toffee`.19`public desktop package audit
+
+At18:39:15UTC, workflow36339117089 passes all eight jobs at exact commit
+b7ebd04dd00b8ba300e42c3f53f2c77174f7ca5c. Independent downloads reconcile19 attachments,
+18 checksum entries,2,070 exact source files and six identical1,645-model catalogues.
+Three downloaded Mac startup/save checks and signature/architecture/dependency/minimum
+15.0 audits pass. Seven hosted graphical controls verify72 clipping views, and Windows
+x64/x86 native load/save checks pass. ARM/Intel software-OpenGL worlds have zero black
+pixels and nine differences from matched Vulkan. Linux's900-frame llvmpipe journey
+passes support and collector observations at1.713fps and2,435,874,816 peak sampled bytes.
+Evidence:`build-macos/playable-release19-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
 ## Sugar-mine runtime and original child-absence verification
 
 At18:32:04UTC, native204, asset136, harness12 and the137-file boundary pass. The
