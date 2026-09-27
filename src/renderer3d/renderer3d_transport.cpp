@@ -419,6 +419,36 @@ TEST_CASE("Bubble-generator children preserve construction absence and axial plu
 	CHECK_THROWS_AS(VoxelBubbleGeneratorChildren(3,40),std::invalid_argument);
 }
 
+TEST_CASE("Toffee cutter follows its inclined shaft and never treats sound markers as absence", "[renderer3d][voxel]")
+{
+	std::set<int> positions;
+	for (unsigned frame = 0; frame < 70; ++frame) {
+		auto children = VoxelToffeeQuarryChildren(3,frame);
+		const auto &shovel = children[0], &redraw = children[1];
+		CHECK(shovel.image == 4767); CHECK(redraw.image == 4766);
+		CHECK(redraw.x == 6); CHECK(redraw.y == 14); CHECK(Dot(redraw.offset,redraw.offset) == 0);
+		CHECK(shovel.x >= 12); CHECK(shovel.x <= 22); CHECK(shovel.x+shovel.y == 46);
+		CHECK(shovel.offset.y == 0); CHECK(shovel.offset.z == -shovel.offset.x);
+		CHECK(2*(shovel.offset.y-shovel.offset.x) == shovel.x-22);
+		CHECK(shovel.offset.x+shovel.offset.y-shovel.offset.z == shovel.y-24);
+		if (frame%14 == 0) CHECK(Dot(shovel.offset,shovel.offset) == 0);
+		positions.insert(shovel.x);
+	}
+	CHECK(positions.size() == 11);
+	for (unsigned stage = 0; stage < 3; ++stage) {
+		auto children = VoxelToffeeQuarryChildren(stage,255);
+		CHECK(children[0].image == 4767); CHECK(children[1].image == 4766);
+		CHECK(children[0].x == 22); CHECK(children[0].y == 24);
+		CHECK(Dot(children[0].offset,children[0].offset) == 0);
+	}
+	for (unsigned climate = 0; climate < 4; ++climate) for (unsigned graphics = 164; graphics <= 166; ++graphics) {
+		CHECK(IndustryModelClimateSupported(graphics,climate,false,4763));
+		CHECK(IndustryModelClimateSupported(graphics,climate,true,3981) == (climate == 3));
+	}
+	CHECK_THROWS_AS(VoxelToffeeQuarryChildren(4,0),std::invalid_argument);
+	CHECK_THROWS_AS(VoxelToffeeQuarryChildren(3,70),std::invalid_argument);
+}
+
 TEST_CASE("Tunnel excavation removes intersecting terrain while retaining the shoulders and charts", "[renderer3d]")
 {
 	Scene terrain;

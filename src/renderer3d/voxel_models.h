@@ -36,6 +36,7 @@ inline bool IndustryModelClimateSupported(unsigned graphics, unsigned climate, b
 	if (graphics == 129 || graphics == 130) return climate == 3;
 	if (ground && ((graphics >= 131 && graphics <= 134) || (graphics >= 138 && graphics <= 141)) && sprite == 2022) return climate == 3;
 	if (ground && graphics >= 135 && graphics <= 137 && sprite == 2077) return climate == 3;
+	if (ground && graphics >= 164 && graphics <= 166 && sprite == 3981) return climate == 3;
 	if (climate == 0) return true;
 	if (graphics == 16 || graphics == 17 || (graphics >= 33 && graphics <= 38)) return false;
 	if (ground) return sprite != 3924 && sprite != 2173 && (climate != 3 || (sprite != 2022 && sprite != 2077 && sprite != 4061 && sprite != 2257 && sprite != 2260 && sprite != 2261));
@@ -50,6 +51,9 @@ std::array<VoxelIndustryChild,4> VoxelToyFactoryChildren(unsigned frame);
 bool DrawVoxelToyFactoryChild(Scene &scene, SpriteID image, unsigned frame, Vec3 origin, PaletteID palette = 0, float opacity = 1);
 std::array<VoxelIndustryChild,2> VoxelBubbleGeneratorChildren(unsigned stage, unsigned frame);
 bool DrawVoxelBubbleGeneratorChild(Scene &scene, SpriteID image, unsigned stage, unsigned frame, Vec3 origin, PaletteID palette = 0, float opacity = 1);
+std::array<VoxelIndustryChild,2> VoxelToffeeQuarryChildren(unsigned stage, unsigned frame);
+/** The original4766 redraw aliases parent4764 exactly; emit its shared body once. */
+bool DrawVoxelToffeeShovel(Scene &scene, unsigned stage, unsigned frame, Vec3 origin, PaletteID palette = 0, float opacity = 1);
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0);
 std::optional<Vec3> VoxelTrainCollectorMount(unsigned engine, unsigned part, float heading, float grade = 0, float contact_height = 10);
 unsigned DrawVoxelTrainCollectors(Scene &scene, unsigned engine, Vec3 origin, float heading, PaletteID palette,

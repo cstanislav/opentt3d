@@ -392,6 +392,33 @@ std::array<VoxelIndustryChild,2> VoxelBubbleGeneratorChildren(unsigned stage, un
 	return children;
 }
 
+static bool HasVoxelToffeeQuarryChildren()
+{
+	for (SpriteID image : {SPR_IT_TOFFEE_QUARRY_SHOVEL,SPR_IT_TOFFEE_QUARRY_TOFFEE}) {
+		if (!IsBaseGraphicsSprite(image) || !HasVoxelAsset("infrastructure",image,0)) return false;
+	}
+	/* Classic4766 is a pixel-identical redraw of4764 with net screen offset0.
+	 * Require the same physical owner at every stage, not coincident solids. */
+	const auto &alias = Models().bindings.at({"infrastructure",SPR_IT_TOFFEE_QUARRY_TOFFEE,0});
+	for (unsigned stage = 0; stage < 4; ++stage) {
+		auto body = Models().bindings.find({"industries",165,stage});
+		if (body == Models().bindings.end() || body->second != alias) return false;
+	}
+	return true;
+}
+
+std::array<VoxelIndustryChild,2> VoxelToffeeQuarryChildren(unsigned stage, unsigned frame)
+{
+	if (stage > 3 || (stage == 3 && frame >= std::size(_industry_anim_offs_toffee))) throw std::invalid_argument("Invalid original toffee-quarry stage/frame");
+	unsigned shift = stage == 3 ? _industry_anim_offs_toffee[frame] : 0;
+	if (shift == 0xFF) shift = 0; // Sound/restart marker, never a child absence.
+	float travel = static_cast<float>(shift)*0.5f;
+	/* The inclined actuator projects(+d/2,0,-d/2) to the source(-d,+d).
+	 * Both original children are present at every construction stage. */
+	return {{{SPR_IT_TOFFEE_QUARRY_SHOVEL,22-static_cast<int>(shift),24+static_cast<int>(shift),{travel,0,-travel}},
+		{SPR_IT_TOFFEE_QUARRY_TOFFEE,6,14,{}}}};
+}
+
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground)
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
@@ -449,9 +476,14 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* The blue pipes and copper funnel span all three source cuts. The cylinder's
 		 * two children are checked together; each checker ground stays independent. */
 		first = 160; last = 162;
+	} else if (!ground && graphics >= 164 && graphics <= 166) {
+		/* One inclined cutter crosses the connected casing/pile cuts. Ground
+		 * stays independent, including its distinct Toyland grass replacement. */
+		first = 164; last = 166;
 	}
 	bool toy_factory = graphics >= 142 && graphics <= 146 && (ground || HasVoxelToyFactoryChildren());
 	bool bubble_generator = graphics >= 160 && graphics <= 162 && (ground || HasVoxelBubbleGeneratorChildren());
+	bool toffee_quarry = graphics >= 164 && graphics <= 166 && (ground || HasVoxelToffeeQuarryChildren());
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 		SpriteID spark = SPR_IT_POWER_PLANT_TRANSFORMERS+frame;
@@ -460,7 +492,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	for (unsigned family = first; family <= last; ++family) for (unsigned stage = 0; stage < 4; ++stage) {
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
-		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3) && !(toffee_quarry && source.draw_proc == 2)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
 		if (first == 72 && last == 88) {
 			SpriteID other = (ground ? source.building.sprite : source.ground.sprite)&SPRITE_MASK;
 			if (other != 0 && !IsBaseGraphicsSprite(other)) return {};
@@ -515,6 +547,16 @@ bool DrawVoxelBubbleGeneratorChild(Scene &scene, SpriteID image, unsigned stage,
 		return true;
 	}
 	return false;
+}
+
+bool DrawVoxelToffeeShovel(Scene &scene, unsigned stage, unsigned frame, Vec3 origin, PaletteID palette, float opacity)
+{
+	auto child = VoxelToffeeQuarryChildren(stage,frame)[0];
+	if (!VoxelIndustryState(165,_industry_draw_tile_data[165*4+stage].building.sprite)) return false;
+	size_t before = scene.instances.size();
+	if (!DrawVoxelAsset(scene,"infrastructure",child.image,0,origin+child.offset,palette,opacity)) return false;
+	for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
+	return true;
 }
 
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette)
@@ -1040,6 +1082,12 @@ void ExportVoxelReviews(std::string_view prefix)
 							placements.push_back(origin+child.offset);
 						}
 					}
+					if (!ground && part.gfx == 165 && VoxelIndustryState(165,source.building.sprite)) {
+						Vec3 origin = placements.back();
+						auto child = VoxelToffeeQuarryChildren(stage,0)[0];
+						group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+						placements.push_back(origin+child.offset);
+					}
 				}
 				if (group.empty()) continue;
 				context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
@@ -1064,8 +1112,9 @@ void ExportVoxelReviews(std::string_view prefix)
 					if (part.gfx == 162 && stage != 0) {
 						for (const auto &child : VoxelBubbleGeneratorChildren(stage,0)) if (child.image != 0) complete &= DrawVoxelBubbleGeneratorChild(joined,child.image,stage,0,origin,source.building.pal);
 					}
+					if (part.gfx == 165) complete &= DrawVoxelToffeeShovel(joined,stage,0,origin,source.building.pal);
 					tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
-					if ((part.gfx == 143 && stage == 3) || (part.gfx == 162 && stage != 0)) tiles.back()["procedural_frame"] = 0;
+					if ((part.gfx == 143 && stage == 3) || (part.gfx == 162 && stage != 0) || part.gfx == 165) tiles.back()["procedural_frame"] = 0;
 				}
 				if (!complete) continue;
 				for (auto &instance : joined.instances) instance.data.SetObjectId(1);
@@ -1146,6 +1195,35 @@ void ExportVoxelReviews(std::string_view prefix)
 			}
 			std::ofstream manifest(directory/"voxel-industry-procedural-162.json"); manifest << frames.dump(2) << '\n';
 			if (!manifest) throw std::runtime_error("Could not write bubble-generator diagnostic manifest");
+		}
+	}
+	/* Original4766 restores parent4764 over the cutter. Record both selections,
+	 * but draw the identical physical owner only once in every diagnostic pose. */
+	if (auto state = VoxelIndustryState(165,_industry_draw_tile_data[165*4+3].building.sprite)) {
+		const auto &name = Models().bindings.at({"industries",165,*state});
+		if (name.starts_with(prefix)) {
+			nlohmann::json frames = nlohmann::json::array();
+			for (unsigned stage = 0; stage < 4; ++stage) {
+				for (unsigned frame = 0; frame < (stage == 3 ? std::size(_industry_anim_offs_toffee) : 1); ++frame) {
+					Textures().BeginScene();
+					Scene scene;
+					DrawVoxelAsset(scene,"industries",165,stage,{},PAL_NONE);
+					if (!DrawVoxelToffeeShovel(scene,stage,frame,{},PAL_NONE)) throw std::runtime_error("Incomplete toffee-quarry diagnostic children");
+					nlohmann::json children = nlohmann::json::array();
+					auto parts = VoxelToffeeQuarryChildren(stage,frame);
+					for (const auto &child : parts) children.push_back({{"sprite",child.image},{"child_offset",{child.x,child.y}},
+						{"world_offset",{child.offset.x,child.offset.y,child.offset.z}},{"shared_parent",child.image == SPR_IT_TOFFEE_QUARRY_TOFFEE}});
+					std::string label = stage == 3 ? fmt::format("model-voxel-industry-procedural-165-{}-native",frame) : fmt::format("model-voxel-industry-procedural-165-stage-{}-{}-native",stage,frame);
+					native_model(scene,label);
+					frames.push_back({{"graphics",165},{"stage",stage},{"frame",frame},{"image",label+".pam"},{"children",children}});
+					std::array<const VoxelModel *,2> group{&Models().models.at(name),&Models().models.at(Models().bindings.at({"infrastructure",parts[0].image,0}))};
+					std::array<Vec3,2> placements{{{},parts[0].offset}};
+					if (stage != 3) context(fmt::format("context-industry-procedural-165-stage-{}",stage),group,placements);
+					else if (frame == 0 || frame == 8 || frame == 13 || frame == 69) context(fmt::format("context-industry-procedural-165-{}",frame),group,placements);
+				}
+			}
+			std::ofstream manifest(directory/"voxel-industry-procedural-165.json"); manifest << frames.dump(2) << '\n';
+			if (!manifest) throw std::runtime_error("Could not write toffee-quarry diagnostic manifest");
 		}
 	}
 	std::set<unsigned> selected_houses;

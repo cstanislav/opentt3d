@@ -1,5 +1,28 @@
 # Implementation verification
 
+## Toffee-quarry inclined cutter and shared-parent runtime
+
+The isolated prototype preserves all four construction stages and all70 original
+completed frames on tile51,34, industry0 during2,400 rendered frames. Both child
+selections must occur in order in one actual capture. Diagnostics and construction
+cannot complete the live observer. Child4766 is an exact zero-offset redraw of
+parent4764: source pixels, registration and shared physical binding are checked.
+Cutter4767 moves along its inclined shaft by(+d/2,0,-d/2);255 is zero shift, not absence.
+
+Missing-cutter and wrong-shared-owner controls reject with explicit diagnostics.
+Separate stages0/3 controls retain twelve independent grounds with all connected
+body/child fallback. Incorrect shared-parent gallery metadata rejects. All220
+previous bubble gallery images and the1,800-frame live bubble cycle remain valid.
+Native203, asset136, harness12 and the137-file presentation boundary pass. The
+73-state source study retains36 stage aliases and the distinct Toyland grass guard.
+Main artwork remains1,641 volumes: four toffee prototypes are not yet integrated.
+
+Evidence:`build-macos/breadth-toffee-initial-{observer-controls,negative-controls}.json`,
+`breadth-toffee-runtime-{bubble-gallery-comparison,wrong-alias-manifest/expected-failure}.json`
+and`breadth-toffee-perpendicular-audit.json`. The original stage0 sheet assertion,
+initial22-cell idle collision and registration/shape reservations remain preserved.
+Final visual approvals:0.
+
 ## Integrated bubble-generator construction and original40-frame motion
 
 At16:47:06UTC, five provisional volumes bring the catalogue to1,641 and primary

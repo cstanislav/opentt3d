@@ -58,7 +58,7 @@ def main():
     parser.add_argument("--industry-effect-source", type=int, choices=(10,), help="Review original power-station sparks at their actual parent-relative positions")
     parser.add_argument("--industry-effect-comparison", type=int, choices=(10,), help="Compare six native voxel gantry/spark composites with their original registered layers")
     parser.add_argument("--industry-procedural-source", type=int, choices=(143,162,165,174), help="Review ordered original Toyland children and genuine absent intervals; --stage selects construction or completed animation")
-    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,162), help="Compare every original child combination for the selected stage at its actual parent/tile origin")
+    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,162,165), help="Compare every original child combination for the selected stage at its actual parent/tile origin")
     parser.add_argument("--industry-ground", action="store_true", help="Select original industry ground layers for --industry-source or --industry-comparison")
     parser.add_argument("--depot-source", type=int, choices=range(6), help="Assemble the four original depot directions from their actual layer offsets")
     parser.add_argument("--ship-depot-source", action="store_true", help="Assemble both original two-tile ship depots with their actual layer offsets")
@@ -657,8 +657,8 @@ def main():
             print(json.dumps(entries))
         return
     if args.industry_procedural_comparison is not None:
-        if args.source_directory is None or args.stage not in (1,2,3):
-            parser.error("Procedural comparison requires --source-directory and a visible --stage 1..3")
+        if args.source_directory is None or args.stage not in range(4):
+            parser.error("Procedural comparison requires --source-directory and --stage 0..3")
         graphics = args.industry_procedural_comparison
         originals = {row["frame"]:row for row in json.loads((args.source_directory / "industry-procedural.json").read_text()) if row["graphics"] == graphics and row["stage"] == args.stage}
         models = [row for row in json.loads((args.directory / f"voxel-industry-procedural-{graphics}.json").read_text()) if row["stage"] == args.stage]
@@ -669,6 +669,15 @@ def main():
             original = originals[row["frame"]]
             if [(c["sprite"],c["child_offset"]) for c in row["children"]] != [(c["sprite"],c["child_offset"]) for c in original["children"]]:
                 parser.error("Voxel procedural children differ from the original ordered selections/absences")
+            if graphics == 165:
+                if [c.get("shared_parent") for c in row["children"]] != [False,True]:
+                    parser.error("Toffee comparison requires the original shared-parent redraw after the shovel")
+                redraw = original["children"][1]
+                parent_image = read_pam(args.source_directory / original["parent_image"])
+                child_image = read_pam(args.source_directory / redraw["image"])
+                if (parent_image.size != child_image.size or parent_image.tobytes() != child_image.tobytes() or
+                        any(redraw["child_offset"][i]*4+redraw["sprite_offset"][i] != 0 for i in (0,1))):
+                    parser.error("Toffee shared-parent child differs from the original parent pixels or registration")
             px,py = (v//4 for v in original["parent_sprite_offset"])
             layers = [(read_pam(args.source_directory / original["parent_image"]),px,py)]
             for child in original["children"]:

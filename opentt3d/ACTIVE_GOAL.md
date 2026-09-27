@@ -1,5 +1,37 @@
 # Active extended development goal
 
+## Toffee-quarry original child mechanism verified — September27,17:15:31UTC
+
+Runtime and diagnostic support preserve both original children at all four
+construction stages. Cutter4767 follows the inclined shaft; source screen(-d,+d)
+maps to world(+d/2,0,-d/2). The255 entries map to zero motion, never absence.
+Original4766 is byte-identical to parent4764 and has zero net screen offset; both
+bindings must use the same physical body. Original164…166 body sources and both
+children stay linked, with independently checked Toyland3981 grounds. No simulation,
+animation, tile or RNG writes. Each moving child retains its culling and tile identity.
+
+The isolated first study passes all four real construction stages and all70 actual
+frames during2,400 frames on tile51,34, industry0. Missing cutter and a wrong shared
+owner both reject; separate stages0/3 controls retain twelve independent ground
+selections while all connected bodies/children fall back. Malformed diagnostic alias
+metadata also rejects. The source study verifies73 identical parent redraws,24 visible
+body/ground slots,36 stage aliases and36 identical body/36 differing ground climate
+comparisons. Native203, asset136 and harness12 checks pass; the137-file boundary,
+all220 previous bubble gallery views and a1,800-frame live bubble cycle pass.
+
+Four new provisional toffee volumes remain isolated, outside the1,641-model main
+catalogue. The perpendicular-casing study has zero static body overlaps and zero
+cutter intersections through all70 frames. Its exact paint, casing/cap/support/rock
+proportions and original source-cut registration remain in review. Preserve the
+first-stage0 contact-sheet rejection and its explicit fix; the initial study's22
+idle cutter intersection cells and source/shape failures remain. Evidence:
+`build-macos/breadth-toffee-{initial,perpendicular}-*`and`breadth-toffee-runtime-*`.
+
+Bubble release`.18`targets6ca6130ebd9425ffb6c8c98b3968f402f4c11890; packaging run
+36334728481 remains in progress. Public verified links remain`.17`. Continue toffee
+artwork/integrated acceptance, sugar167…174, climate variants, procedural children,
+infrastructure/effects and later fidelity/performance passes. Final visual approvals:0.
+
 ## Bubble-generator artwork and original travel verified — September27,16:47:06UTC
 
 Five provisional volumes reach1,641 and164/175 primary industry definitions:123

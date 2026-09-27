@@ -111,6 +111,12 @@ def inventory():
                 for name,sprite in (("bubble_plunger",4747),("spring_cylinder",4746))]
             industry["procedural_source_frames"] = 40
             industry["procedural_source_note"] = "Stage0 has no children; stages1/2 draw only4746; completed40-frame motion draws4747 then4746. Plunger travel is only-Z. Body sources160..162 and both children are linked;4675/4676 grounds remain independent. Floating-bubble effects are separate."
+        elif industry["graphics"] == 165:
+            industry["procedural_children"] = [
+                {"name":name,"sprite":sprite,"voxel_states":voxel_states("infrastructure",sprite),"shared_parent":sprite==4766}
+                for name,sprite in (("shovel",4767),("toffee_parent_redraw",4766))]
+            industry["procedural_source_frames"] = 70
+            industry["procedural_source_note"] = "Both children occur at every construction stage. Original4766 exactly redraws4764 and shares its physical body; never duplicate the solid. Completed70-frame cutter travel follows the inclined shaft;255 means zero shift, not absence. Body164..166 and both child sources are linked;Toyland3981 ground stays independent."
         if 33 <= industry["graphics"] <= 38:
             industry["voxel_climates"] = ["temperate"]
             industry["missing_voxel_climates"] = ["arctic"]

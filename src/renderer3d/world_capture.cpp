@@ -33,6 +33,7 @@
 #include "../rail.h"
 #include <map>
 #include <set>
+#include <bitset>
 #include "../tunnelbridge_map.h"
 #include "../landscape.h"
 #include "../tile_map.h"
@@ -140,6 +141,10 @@ static bool check_bubble_generator = false;
 static TileIndex checked_bubble_tile = INVALID_TILE;
 static uint32_t checked_bubble_industry = UINT32_MAX;
 static uint64_t checked_bubble_frames = 0;
+static bool check_toffee_quarry = false;
+static TileIndex checked_toffee_tile = INVALID_TILE;
+static uint32_t checked_toffee_industry = UINT32_MAX;
+static std::bitset<std::size(_industry_anim_offs_toffee)> checked_toffee_frames;
 static unsigned checked_cargo_engine = UINT_MAX;
 static uint32_t checked_cargo_vehicle = UINT32_MAX;
 static unsigned checked_cargo_capacity = 0, checked_cargo_states = 0;
@@ -2074,6 +2079,14 @@ void BeginVoxelBubbleGeneratorCheck()
 	Debug(driver,1,"OpenTT3D: observing all 40 actual bubble-generator frames with ordered plunger and cylinder");
 }
 
+void BeginVoxelToffeeQuarryCheck()
+{
+	if (!VoxelIndustryState(165,_industry_draw_tile_data[165*4+3].building.sprite)) throw std::runtime_error("Toffee quarry needs its original body, voxel shovel and shared parent redraw");
+	check_toffee_quarry = true; checked_toffee_tile = INVALID_TILE;
+	checked_toffee_industry = UINT32_MAX; checked_toffee_frames.reset();
+	Debug(driver,1,"OpenTT3D: observing all 70 actual toffee-quarry frames with ordered shovel and shared parent redraw");
+}
+
 void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transparent, const SubSprite *, bool scale, bool relative)
 {
 	if (!capture || !capture->have_parent) return;
@@ -2089,9 +2102,13 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		GetIndustryGfx(capture->tile->tile) == 162 &&
 		capture->parent_sprite == (_industry_draw_tile_data[162*4+GetIndustryConstructionStage(capture->tile->tile)].building.sprite&SPRITE_MASK) &&
 		VoxelIndustryState(162,capture->parent_sprite).has_value();
+	bool toffee_quarry = capture->tile != nullptr && IsTileType(capture->tile->tile,MP_INDUSTRY) &&
+		GetIndustryGfx(capture->tile->tile) == 165 &&
+		capture->parent_sprite == (_industry_draw_tile_data[165*4+GetIndustryConstructionStage(capture->tile->tile)].building.sprite&SPRITE_MASK) &&
+		VoxelIndustryState(165,capture->parent_sprite).has_value();
 	/* A rising arc has its own bounds above the gantry. Keep its independent
 	 * frustum check even when the solid parent has just left the viewport. */
-	if (capture->parent_culled && !power_spark && !toy_factory && !bubble_generator) return;
+	if (capture->parent_culled && !power_spark && !toy_factory && !bubble_generator && !toffee_quarry) return;
 	ObjectTag tag{capture->scene.vertices.size(), capture->parent_id};
 	if (toy_factory) {
 		TileIndex tile = capture->tile->tile;
@@ -2152,6 +2169,46 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 					if (std::popcount(checked_bubble_frames) == std::size(_industry_anim_offs_bubbles)) {
 						Debug(driver,1,"OpenTT3D: voxel bubble-generator verification passed: 40 original ordered child frames on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
 						check_bubble_generator = false;
+					}
+				}
+			}
+		}
+		return;
+	}
+	if (toffee_quarry) {
+		TileIndex tile = capture->tile->tile;
+		unsigned stage = GetIndustryConstructionStage(tile), frame = GetAnimationFrame(tile);
+		auto children = VoxelToffeeQuarryChildren(stage,frame);
+		auto &next = capture->industry_next_child;
+		if (next >= children.size() || !scale || !relative || children[next].image != (image&SPRITE_MASK) || children[next].x != x || children[next].y != y) {
+			throw std::runtime_error("Toffee-quarry child lost its original construction, order or screen offset");
+		}
+		if (next == 0) {
+			Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
+			size_t before = capture->scene.instances.size();
+			if (!DrawVoxelToffeeShovel(capture->scene,stage,frame,origin,palette,transparent ? 0.38f : 1)) throw std::runtime_error("Missing original toffee-quarry voxel shovel");
+			capture->industry_children_visible &= capture->scene.instances.size() != before;
+		} else {
+			/*4766 exactly redraws4764. Its shared volume was already selected by
+			 * this parent capture; duplicating it would create coincident surfaces. */
+			capture->industry_children_visible &= !capture->parent_culled && capture->parent_instance_end > capture->parent_instance_begin;
+		}
+		if (frame != GetAnimationFrame(tile) || stage != GetIndustryConstructionStage(tile)) throw std::runtime_error("Toffee-quarry rendering changed its original state");
+		if (++next == children.size() && capture->industry_children_visible && !capture->parent_culled && !capture->diagnostic) {
+			static unsigned reported_stages = 0;
+			if ((reported_stages & (1U<<stage)) == 0) {
+				reported_stages |= 1U<<stage;
+				Debug(driver,1,"OpenTT3D: live voxel toffee-quarry stage {} children shovel {} shared-parent {} captured at {},{}",stage,children[0].image,children[1].image,TileX(tile),TileY(tile));
+			}
+			if (stage == 3 && check_toffee_quarry) {
+				uint32_t industry = GetIndustryIndex(tile).base();
+				if (checked_toffee_tile == INVALID_TILE) { checked_toffee_tile = tile; checked_toffee_industry = industry; }
+				if (checked_toffee_tile == tile && checked_toffee_industry == industry) {
+					if (!checked_toffee_frames[frame]) Debug(driver,1,"OpenTT3D: toffee-quarry frame {} captured at {},{} industry {}, shovel {} shared-parent {}",frame,TileX(tile),TileY(tile),industry,children[0].image,children[1].image);
+					checked_toffee_frames.set(frame);
+					if (checked_toffee_frames.all()) {
+						Debug(driver,1,"OpenTT3D: voxel toffee-quarry verification passed: 70 original ordered child frames with shared parent on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
+						check_toffee_quarry = false;
 					}
 				}
 			}

@@ -138,6 +138,7 @@ def main():
     parser.add_argument("--verify-power-sparks", action="store_true", help="Observe all six actual voxel power-station spark children on one unchanged industry tile")
     parser.add_argument("--verify-toy-factory", action="store_true", help="Observe all 50 original toy-factory frames with ordered voxel children and genuine absences on one unchanged tile")
     parser.add_argument("--verify-bubble-generator", action="store_true", help="Observe all 40 original bubble-generator frames with ordered plunger/cylinder children on one unchanged tile")
+    parser.add_argument("--verify-toffee-quarry", action="store_true", help="Observe all 70 original toffee-quarry frames with ordered shovel/shared-parent selections on one unchanged tile")
     parser.add_argument("--verify-house-lift", action="store_true", help="Observe at least eight actual positions of one moving voxel office lift")
     parser.add_argument("--verify-radio-beacons", action="store_true", help="Observe both original blinking palette entries on one emitted voxel radio tower")
     parser.add_argument("--verify-buoy-beacon", action="store_true", help="Observe original239/240 beacon and250..254 foam phases on one actually captured voxel buoy")
@@ -209,6 +210,8 @@ def main():
         parser.error("Toy-factory child checks require --running and --benchmark-frames")
     if args.verify_bubble_generator and (not args.running or not args.benchmark_frames):
         parser.error("Bubble-generator child checks require --running and --benchmark-frames")
+    if args.verify_toffee_quarry and (not args.running or not args.benchmark_frames):
+        parser.error("Toffee-quarry child checks require --running and --benchmark-frames")
     if args.verify_voxel_cargo is not None and (not args.running or not args.benchmark_frames):
         parser.error("Vehicle cargo checks require --running and --benchmark-frames")
     if args.reference_cargo and (args.reference_vehicle is None or args.running):
@@ -528,6 +531,8 @@ server_advertise = false
         commands.append("renderer3d verify-toy-factory")
     if args.verify_bubble_generator:
         commands.append("renderer3d verify-bubble-generator")
+    if args.verify_toffee_quarry:
+        commands.append("renderer3d verify-toffee-quarry")
     if args.verify_voxel_cargo is not None:
         commands.append(f"renderer3d verify-vehicle-cargo {args.verify_voxel_cargo}")
     if args.verify_depot_traversal is not None:
@@ -832,6 +837,8 @@ server_advertise = false
                 raise RuntimeError("One unchanged toy-factory tile did not render all 50 original ordered child frames and absences; inspect run.log")
             if args.verify_bubble_generator and "voxel bubble-generator verification passed:" not in text:
                 raise RuntimeError("One unchanged bubble-generator tile did not render all 40 original ordered child frames; inspect run.log")
+            if args.verify_toffee_quarry and "voxel toffee-quarry verification passed:" not in text:
+                raise RuntimeError("One unchanged toffee-quarry tile did not render all 70 original ordered child frames with shared parent; inspect run.log")
             if args.verify_plastic_fountain and "voxel plastic-fountain verification passed:" not in text:
                 raise RuntimeError("One unchanged plastic-fountain tile did not render all eight matching original ground/body pairs; inspect run.log")
             if (args.verify_forest_cycle or args.verify_harvest_cycle is not None) and "voxel forest cycle verification passed:" not in text:

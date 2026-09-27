@@ -265,6 +265,21 @@ compositions and all40 completed poses; use`--industry-procedural-comparison 162
 with`--stage 1`, `2`or`3`. Ground-only members receive individual native captures even
 when their selected layout reuses an older family's exact soil model.
 
+Toffee164…166 has two original children at **every** construction stage: cutter4767
+then4766. Classic4766 exactly redraws parent4764 at net screen offset0. Bind4766 to
+the same model as all four165 body states; runtime and diagnostic galleries reuse
+that physical owner. A different owner or missing cutter rejects the connected
+body family while each3981 ground remains independently selectable in Toyland.
+The inclined cutter follows world`(+d/2,0,-d/2)`, projecting to the original`(-d,+d)`.
+The original255 entries mean zero displacement, never child absence.
+
+`--verify-toffee-quarry --running --benchmark-frames 2400` requires all70 completed
+frames from actual ordered selections on one unchanged tile/industry. Construction
+ignores the animation byte. Procedural galleries retain73 states, including stages
+0/1/2, and explicitly label the shared-parent child. Use
+`--industry-procedural-comparison 165 --stage 0`through`3`; source comparisons verify
+that the alias's original pixels and net registration really match the parent.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→
