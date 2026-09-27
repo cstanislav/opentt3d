@@ -16,6 +16,7 @@ def main():
     parser.add_argument("--build-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--climate", choices=("temperate", "arctic", "tropic", "toyland"), default="temperate")
+    parser.add_argument("--starting-year", type=int, default=2050, help="Calendar year for ordinary airport and aircraft availability (default:2050)")
     parser.add_argument("--first-engine", type=int, choices=range(215, 256), default=215)
     parser.add_argument("--last-engine", type=int, choices=range(215, 256), default=238)
     parser.add_argument("--service-hold-ticks", type=int, default=0, help="Keep full-load service in the fixture, then release this many ordinary AI ticks after reload (0..4096)")
@@ -30,6 +31,8 @@ def main():
         parser.error("Use a built executable, new output directory and increasing engine range")
     if not 0 <= args.service_hold_ticks <= 4096:
         parser.error("Service hold must be0..4096 ticks")
+    if not 0 <= args.starting_year <= 5000000:
+        parser.error("Starting year must be0..5000000")
     if args.oilrig and (args.climate != "temperate" or args.first_engine < 253 or args.last_engine > 254):
         parser.error("Oil-rig service requires a temperate original helicopter253 or254")
     airport_type = args.airport_type if args.airport_type is not None else 6 if args.oilrig else 7
@@ -52,7 +55,7 @@ autosave_interval = 0
 [game_creation]
 map_x = 7
 map_y = 7
-starting_year = 2050
+starting_year = {args.starting_year}
 generation_seed = 314159
 landscape = {args.climate}
 land_generator = 1
@@ -94,7 +97,7 @@ pause_on_join = false
         port = probe.getsockname()[1]
     command = [str(executable), "-D", f"127.0.0.1:{port}", "-c", str(output / "openttd.cfg"), "-x", "-X",
                "-s", "null", "-m", "null", "-I", graphics["name"], "-S", "NoSound", "-M", "NoMusic",
-               "-d", "script=4,console=1", "-G", "314159", "-t", "2050", "-g"]
+               "-d", "script=4,console=1", "-G", "314159", "-t", str(args.starting_year), "-g"]
     with (output / "run.log").open("w") as log:
         process = subprocess.Popen(command, cwd=build, env=dict(os.environ, OPENTT3D_RENDERER="0"),
                                    stdin=subprocess.PIPE, stdout=log, stderr=subprocess.STDOUT, text=True)
@@ -129,7 +132,7 @@ pause_on_join = false
                 time.sleep(0.2)
             else:
                 raise TimeoutError("Aircraft fixture save timed out")
-            manifest.update(climate=args.climate, starting_year=2050, service_hold_ticks=args.service_hold_ticks, oilrig=args.oilrig, save="save/aircraft-catalogue.sav")
+            manifest.update(climate=args.climate, starting_year=args.starting_year, service_hold_ticks=args.service_hold_ticks, oilrig=args.oilrig, save="save/aircraft-catalogue.sav")
             (output / "fixture.json").write_text(json.dumps(manifest, indent=2) + "\n")
             process.stdin.write("quit\n")
             process.stdin.flush()

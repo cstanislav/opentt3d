@@ -6,9 +6,9 @@ definitions now select independently authored Arctic body/ground states.
 
 ## Play
 
-The [verified `.21` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.21)
-is available for Windows, macOS and Linux. This farm preview's executable assets
-appear after its exact-commit package workflow passes. Required graphics are bundled;
+The [verified `.22` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.22)
+includes this farm artwork for Windows, macOS and Linux. All eight exact-commit
+package jobs pass, and the public downloads are independently checked. Required graphics are bundled;
 see the [installation and first-launch guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 
 ## New artwork and original behavior
@@ -24,6 +24,11 @@ see the [installation and first-launch guide](https://github.com/cstanislav/open
   Gameplay, construction timing, cargo and simulation RNG retain their original behavior.
 
 ## Verification
+
+Public downloads verify19 attachments,18 checksums,2,073 exact source files and six
+identical1,685-model catalogues atfa0d5f90a422733da058bec70352b36d843e5033. Three
+downloaded Mac startup/save controls, seven hosted graphical controls with72 clipping
+views, Windows x64/x86 native load/save and Linux's900-frame support/collector journey pass.
 
 All26 frozen background controls pass across OpenGL and Vulkan:88 actual construction
 layer selections, full20/20 and empty0/20 livestock, accepted delivery/return, four

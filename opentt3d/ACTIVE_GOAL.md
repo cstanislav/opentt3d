@@ -1,5 +1,62 @@
 # Active extended development goal
 
+## Arctic farm packages independently verified — September27,21:42:56UTC
+
+Release`.22`atfa0d5f90a422733da058bec70352b36d843e5033 passes all eight jobs in
+workflow36350226602 on its first attempt. Independent public checks reconcile19
+attachments,18 checksums,2,073 exact source files and six identical1,685-model catalogues.
+Three downloaded Mac startup/save controls, platform/signature/dependency/minimum15.0
+audits, seven hosted graphical controls with72 clipping views and Windows x64/x86
+native load/save pass. Reviewed software-OpenGL worlds have zero black pixels and
+nine differences from Vulkan. Linux's900-frame journey captures all six support states
+and collector contact at1.699fps and2,420,404,224 peak sampled bytes. Verified links use`.22`.
+Audited extracted copies retire873,734,779bytes; public archives and evidence remain.
+
+The1,689-model ground build and all205 native tests pass. Its frozen60-control matrix
+is running; a retained completed-coal focus failure expected graphics0 after ordinary
+animation had selected graphics1. Missing-layer controls and final source reconciliation
+remain pending. The next isolated Toyland airport paint study has twelve volumes with
+unchanged source-confirmed solid geometry, no unsupported cells and source-only palettes;
+the first off-source colour failure is retained. Runtime selection and native source/
+street review remain future work. The aircraft fixture now accepts an original starting
+year: Toyland engine248 services city1→small0 in1958 and international4→4 at the unchanged
+2050 default. The initial2050 small-airport expiry rejection remains retained;12 harness
+checks pass. Final visual approvals:0. Continue the full breadth-first
+catalogue objective. Evidence:`playable-release22-*`and`breadth-toyland-airport-palette-*`.
+
+## Climate-ground integration in progress — September27,21:24:40UTC
+
+Arctic farm commitfa0d5f90a422733da058bec70352b36d843e5033 is pushed. Release`.22`
+builds that exact1,685-model commit in workflow36350226602; verified downloads still
+point to`.21`. Its successful audited extraction copies were retired, saving872,307,469
+bytes while preserving public originals and evidence.
+
+The isolated `panels` candidate adds four ground volumes,32 materials, one component
+and480 explicit climate-layer bindings.336 bindings cover original3924/2173 and144
+reuse the exact Toyland2022 source alias. Source palettes, full playable footprints,
+sealed recessed well bottoms and supported quarter-unit colour cells pass; three
+climate prototype controls and registered coal/power/oil layouts are reviewed. Earlier
+green-panel/top-face errors and incomplete linked-ground failures remain documented.
+Source grain, rim/strip outlines and paving detail remain provisional. Final approvals:0.
+
+The public refinery fixture now searches legal near-edge sites through NoAI test
+commands. Both oil routes pass full21/21, empty0/21, acceptance8 and return; the Arctic
+farm regression also passes. A mistaken tropical bank16 soil-fixture attempt is
+retained; existing verified copper10 checkpoints supply the intended tropical soil
+review. Ground catalogue staging reaches1,689 with all1,685 previous source entries,
+bindings and compiled hashes preserved; asset139 and harness12 checks pass. The
+native build, frozen60-control matrix and eight independent-layer/linked-fallback
+controls remain pending. A category-scoped staging retry preserves the first serializer
+failure without writing the source in that failed attempt.
+
+10,560 successful prototype captures compact losslessly, saving13,142,230,697bytes.
+The next source-only infrastructure audit reconciles579 layers in each of four climates.
+Toyland terminal/hangar sources retain all16 original masks, sizes and offsets but41
+nonuniform colour transitions rule out a simple global recolour. Airport climate
+runtime selection and independent material authoring remain future work. Evidence:
+`breadth-ground-climates-panels-*`,`breadth-infrastructure-climate-source-audit.json`
+and`breadth-toyland-airport-source-{audit,review}.json`.
+
 ## Arctic farm integrated; forest packages verified — September27,20:54:38UTC
 
 Twelve provisional farm volumes reach1,685 while preserving all1,673 preceding hashes.

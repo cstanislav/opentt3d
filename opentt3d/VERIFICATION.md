@@ -1,5 +1,26 @@
 # Implementation verification
 
+## Arctic farm`.22`public desktop package audit
+
+At21:42:28UTC, workflow36350226602 passes all eight jobs on its first attempt at
+fa0d5f90a422733da058bec70352b36d843e5033. Independent public downloads verify19 attachments,
+18 checksums,2,073 exact source files and six identical1,685-model catalogues. Three
+downloaded Mac startup/save controls, signatures/dependencies/architectures/minimum15.0,
+seven hosted graphical controls with72 clipping views and Windows x64/x86 native
+load/save pass. Reviewed ARM/Intel software-OpenGL worlds have zero black pixels and
+nine differences from Vulkan. Linux's900-frame llvmpipe journey observes all six train
+support states and collector contact at1.699fps and2,420,404,224 peak sampled bytes.
+Verified public links now use`.22`. The staged climate-ground increment is undergoing
+its separate integrated matrix. Evidence:
+`build-macos/playable-release22-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+
+The next airport fixture accepts`--starting-year`while retaining the2050 default.
+Original Toyland engine248 services city1→small0 in1958 and international4→4 in2050,
+with peak speed473 and saved held destination service. The first2050 small-airport
+attempt correctly rejects its expired endpoint. No availability override or simulation
+change is used. All12 harness tests pass. Evidence:
+`build-macos/breadth-toyland-airport-{city-small-1958,international}-fixture/fixture.json`.
+
 ## Arctic farm: actual construction, independent layers and source review
 
 At20:52:57UTC, all26 frozen controls pass across both native backends:88 actual
