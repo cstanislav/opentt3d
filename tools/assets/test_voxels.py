@@ -2697,6 +2697,33 @@ class VoxelCompilerTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             cells([["line", "wall", 0,0,0,8,0,0]])
 
+    def test_polylines_keep_translated_closed_bores_connected_and_reversible(self):
+        points = [[0,0,0],[3,0,0],[3,2,0],[3,2,2],[0,2,2],[0,0,0]]
+        def cells(path):
+            source = self.source([["use","rim",[1,1,1]]])
+            source["components"] = {"rim":[["polyline","window",path]]}
+            result = compile_catalogue(source)
+            return {(x+i,y,z):result["materials"][material-1] for x,y,z,length,material in result["models"]["house"]["runs"] for i in range(length)}
+        actual = cells(points)
+        self.assertEqual(actual,cells(list(reversed(points))))
+        for point in points:
+            self.assertEqual(actual[tuple(v+1 for v in point)],[134,135,136,137,134,135])
+        self.assertNotIn((2,2,2),actual,"A closed spatial rim must not fill its bore")
+        reached={(1,1,1)}; pending=list(reached)
+        for x,y,z in pending:
+            for neighbour in ((x-1,y,z),(x+1,y,z),(x,y-1,z),(x,y+1,z),(x,y,z-1),(x,y,z+1)):
+                if neighbour in actual and neighbour not in reached:
+                    reached.add(neighbour); pending.append(neighbour)
+        self.assertEqual(reached,set(actual))
+
+    def test_polylines_reject_unbounded_malformed_and_excessive_paths(self):
+        for points in ([],[[0,0,0]],[[0,0,0],[8,0,0]],[[0,0,0],[1.5,1,1]],
+                       [[0,0,0],[1,True,1]],[[0,0,0],[1,1]],[[0,0,0]]*1026):
+            with self.subTest(points=points[:2]), self.assertRaises(ValueError):
+                compile_catalogue(self.source([["polyline","wall",points]]))
+        with self.assertRaisesRegex(ValueError,"excessive voxel operations"):
+            compile_catalogue(self.source([["repeat",[0,0,0],1024,[["polyline","wall",[[0,0,0]]*1025]]]]))
+
     def test_inheritance_is_independent_and_cycles_are_rejected(self):
         source = self.source([["box", "wall", 0,0,0,8,6,5]])
         source["models"]["shell"] = {"extends": "house", "ops": [["erase", 0,0,2,8,6,5]]}

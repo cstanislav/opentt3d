@@ -3030,7 +3030,7 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 	}
 	if (argv.size() == 3 && argv[1] == "verify-industry-palette") {
 		auto graphics = ParseType<unsigned>(argv[2]);
-		if (!graphics || *graphics < 52 || *graphics > 57) return false;
+		if (!graphics || !((*graphics >= 52 && *graphics <= 57) || (*graphics >= 157 && *graphics <= 159))) return false;
 		VideoDriver::GetInstance()->QueueOnMainThread([graphics=*graphics] {
 			try { Renderer3D::BeginVoxelIndustryPaletteCheck(graphics); }
 			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }

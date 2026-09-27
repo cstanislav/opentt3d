@@ -209,6 +209,21 @@ tile state or simulation RNG. Partial custom replacements retain the supplied pa
 across each layer's eight original source poses. Use a running service save and
 `--gallery-voxel-prefix plastic_` for the independent source/layout review.
 
+Fizzy156…159 adds seven `fizzy_` volumes: six can/glass apparatus bodies and one
+independent4676 soil.156 stays ground-only,157 remains empty before completion, and
+158's construction chain keeps its distinct source ownership. The159 can has a real
+open interior; completed liquid and the leaning hollow straw are separate components.
+Quarter-unit glass rims and reflected edge paths preserve clear spaces in real3D.
+The connected157…159 body source cuts retain linked custom replacement fallback.
+Twenty-eight shared components, polylines and exact prism masks preserve every
+reviewed prototype cell/colour; source registration and fine fidelity remain provisional.
+
+`--verify-industry-palette 157 158 159 --running --benchmark-frames 600` requires all
+five original indices227…231 on each actual completed body, followed by five palette
+phases on one unchanged tile/industry. Diagnostic captures cannot count. The same
+observer retains steel grounds52…57's seven original fire phases and at least two
+emitted animated materials. Missing bindings and a body lacking231 correctly fail.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→
@@ -650,6 +665,11 @@ direction and single-axis cell steps create a reversible face-connected wire or
 brace, including diagonal3D members; out-of-grid endpoints and work-budget excesses
 are rejected. The radio lattice and guy wires use this operation on a quarter-unit
 horizontal grid. No simulation randomness or image-derived geometry is involved.
+`["polyline","glass",[[x0,y0,z0],[x1,y1,z1],...]]` joins two to1,025 explicitly
+authored integer cell points with that same reversible, face-connected traversal.
+Component offsets, endpoint bounds and expanded-operation/work budgets also apply.
+Repeating the first point closes a spatial rim while leaving its bore empty. Fizzy
+glass paths use polylines to retain compact source controls and actual voxel volume.
 `["rotate_z", angle, [pivot_x,pivot_y,pivot_z], operations]` bakes a component into
 axis-aligned cells. Only positive-area XY cell intersections contribute, and nearest
 source cells resolve material overlap deterministically. Cycles, clipping, invalid

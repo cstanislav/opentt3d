@@ -1,5 +1,36 @@
 # Implementation verification
 
+## Fizzy-drink construction and original bubble palette
+
+At14:00:37UTC, all26 frozen background controls pass. Seven provisional models bring
+the catalogue to1,624 and primary industry coverage to154/175. All24 source palettes,
+26 stage aliases, eight genuine absences and96 identical climate comparisons pass.
+Twenty-eight compact components preserve all seven reviewed prototype hashes, every
+one of148 Vulkan prototype captures and all1,617 preceding model hashes. The empty
+can's inner volume stays clear;4676 soil retains a full independent16×16 footprint.
+
+Both backends capture48 construction-layer selections,17/17 loaded and0/17 empty
+engine177/cargo7 trucks, four climates, clipping and app bundles. The real cola29→33
+route retains acceptance32, accepted delivery and return after816 observed ticks.
+Each of157/158/159 emits all indices227…231 and shows five original palette phases
+on one actual unchanged tile/industry. Two steel regressions retain all six grounds'
+seven fire phases. Diagnostic scenes do not count; no tile state or simulation RNG is
+changed. The unbound runtime negative fails for missing completed voxel layers.
+Removing231 from40 cells of157 rejects only that body's palette verification while
+158/159 pass. Evidence:`breadth-fizzy-missing-material-negative.json` and retained logs.
+
+All28 native backend captures agree;64 of120 other views retain1,696 differing pixels.
+Registered bodies match source bounds or differ by one pixel; soil retains[-1,0,-1,+1].
+Completed joined geometry has no overlapping cells. Original construction158 ownership
+retains371 overlapping cells with159; this early cut/depth issue, can/rim/wrapper paint,
+lettering, glass shoulders/junctions and exact grain remain provisional. Final approvals:0.
+Native200, asset136, harness12 and the137-file boundary pass. Prototype captures compact
+losslessly by645,474,271bytes and accepted captures by549,417,510bytes, preserving all
+RGBA/header bytes, original images and failures. The matrix peaks at3,711,930,448 sampled bytes; service
+timing retains41/36 intervals above20ms. Evidence:
+`build-macos/breadth-fizzy-final-{audit,reconciliation,source-review,registration-audit,
+backend-comparison,prototype-comparison}.json`. Sustained smooth60fps remains open.
+
 ## Plastic-fountain desktop package audit
 
 At13:46:37UTC, release`.15`atab1a7788727ca846b42383d5132e72cca026a05d passes all

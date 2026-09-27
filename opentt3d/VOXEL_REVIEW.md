@@ -16,6 +16,18 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Fizzy156…159:**seven provisional volumes retain the hollow can, open glass
+  chambers/circulation tubing, liquid, leaning hollow straw and independent4676 soil.
+  All eight absent body states remain empty. All24 palettes,26 aliases,96 climate
+  comparisons and1,617 preceding hashes pass. Compact polylines/repeats/masks preserve
+  all seven prototype hashes and148 captured views. All26 controls pass48 construction
+  layers, full/empty cola cargo and each completed body's five bubble phases/materials.
+  All28 native backend views agree;64/120 others differ at1,696 pixels. Source bounds
+  match or differ by one pixel. Completed joins have no overlaps; construction1/2
+  retains371 overlap cells at158's distinct source owner. That depth/cut, can/rim/wave/
+  lettering paint, glass shoulders/junctions and exact grain remain provisional.
+  Evidence:`build-macos/breadth-fizzy-*`. Final visual approvals:0.
+
 - **Plastic-fountain148…155:**sixteen volumes retain eight completed rounded-bead/
   tapered-jet poses and eight independently animated recessed basin grounds. All24
   early body states remain empty. All40 palettes,48 aliases,192 climate comparisons

@@ -10,10 +10,20 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite200/200, including source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,617-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite134/134 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,624-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
+
+- [x] Fizzy156…159 adds six hollow-can/glass-apparatus bodies and independent4676 soil,
+  preserving eight empty body slots. Coverage reaches154/175 primary definitions,
+  115 body owners and154 grounds. All26 controls,48 actual construction layers,
+  24 palettes,26 aliases,96 climate comparisons and1,617 preceding hashes pass.
+  Both backends observe five phases across all five emitted bubble indices on each
+  actual157/158/159 body; legacy steel regressions and missing-material negatives pass.
+  All28 native views agree. Construction ownership overlap and fine fidelity remain open.
+- [x] Compact authored polylines reuse the bounded, reversible face-connected line
+  traversal. Translated closed-bore, malformed-path and expanded-budget controls pass.
 
 - [x] Plastic-fountain148…155 adds eight completed splash poses and eight independently
   animated recessed basin grounds; all24 early body slots remain empty. Coverage

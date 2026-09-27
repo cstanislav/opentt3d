@@ -144,7 +144,7 @@ def main():
     house_palette.add_argument("--verify-stadium-palette", type=int, choices=(20,32), help="Observe all original crowd and applicable scoreboard palette phases on one actually captured voxel stadium")
     house_palette.add_argument("--verify-house-palette", type=int, choices=(20,31,32,39,104,105), help="Observe original crowd, marquee, scoreboard or Toyland shop palette phases on one actually captured voxel house")
     parser.add_argument("--verify-dock-palette", type=int, choices=(4,5), help="Observe original lamp/foam palette phases on one actually captured non-Toyland dock")
-    parser.add_argument("--verify-industry-palette", nargs="+", type=int, choices=range(52,58), metavar="GFX", help="Observe seven original fire-palette phases on each selected actual steel-mill ground")
+    parser.add_argument("--verify-industry-palette", nargs="+", type=int, choices=(*range(52,58),157,158,159), metavar="GFX", help="Observe seven original fire-palette phases on steel grounds52..57 or all five original bubble phases/materials on fizzy-drink bodies157..159")
     parser.add_argument("--verify-renderer", action="store_true")
     parser.add_argument("--renderer-verification-scope", choices=("full","scene"), default="full", help="Scene scope retains renderer/model checks and delegates complete vehicle pose matrices to separate --verify-voxel-poses runs")
     parser.add_argument("--verify-instance-order", action="store_true", help="Check exact mesh-allocation, child-layer and mixed-opacity colour/picking precedence")
@@ -852,7 +852,9 @@ server_advertise = false
                 raise RuntimeError("One actual voxel dock did not retain the original lamp/foam palette phases; inspect run.log")
             for graphic in args.verify_industry_palette or []:
                 if f"voxel industry palette observation passed: graphics {graphic} " not in text:
-                    raise RuntimeError(f"Actual steel-mill ground {graphic} did not retain seven original fire-palette phases; inspect run.log")
+                    layer = "steel-mill ground" if graphic < 157 else "fizzy-drink body"
+                    phases = "seven original fire-palette phases" if graphic < 157 else "all five original bubble phases and materials"
+                    raise RuntimeError(f"Actual {layer} {graphic} did not retain {phases}; inspect run.log")
             if args.reference_signal and ("focused live signal at" not in text or "signals rendered with state-aware lamps and semaphore geometry" not in text):
                 raise RuntimeError("A live signal model was not captured")
             if args.reference_catenary and ("focused live catenary at" not in text or "catenary parts rendered with contact wires, droppers and masts" not in text):

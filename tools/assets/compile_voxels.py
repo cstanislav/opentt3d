@@ -406,6 +406,14 @@ def compile_catalogue(data):
                                         if colours != original:
                                             target[index] = face_material(colours)
                     continue
+                if kind == "polyline":
+                    if len(op) != 3 or op[1] not in names or not isinstance(op[2], list) or not 2 <= len(op[2]) <= 1025:
+                        raise ValueError("A voxel polyline needs a material and two to 1025 integer cell points")
+                    points = [vector(point, "polyline point", True) for point in op[2]]
+                    # Reuse the canonical face-connected line traversal, including
+                    # component offsets, bounds and expanded-operation/work budgets.
+                    apply([["line", op[1], *first, *last] for first, last in zip(points, points[1:])], offset, depth+1, target)
+                    continue
                 if kind == "line":
                     if len(op) != 8 or op[1] not in names:
                         raise ValueError("A voxel line needs a material and two cell endpoints")

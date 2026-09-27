@@ -4,6 +4,23 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Fizzy156…159: hollow can and clear apparatus (September27)
+
+Seven provisional volumes reach1,624, preserving eight absent body states and the
+independent4676 soil. Native review restores missing front chambers, corrects tube
+routing and tightens diagonal source ownership. All body bounds now match or differ
+by one pixel; the ground retains[-1,0,-1,+1]. All24 palettes,26 aliases,96 climate
+comparisons and1,617 preceding hashes pass. All26 controls pass48 actual construction
+layers, full/empty cola service and five original bubble phases across all five emitted
+indices on every actual completed body. The missing231 negative rejects only157.
+
+All28 native backend captures agree;64 of120 other views retain1,696 differing pixels.
+Every one of148 integrated Vulkan views matches the reviewed prototype. Completed
+joined geometry has no overlap, while construction1/2 retains371 overlap cells at
+the original158 cut. Can/rim/wrapper paint and lettering, glass shoulders/junctions,
+grain and that early ownership depth remain provisional. Original images, failed
+candidates and negative controls remain. Final visual approvals:0.
+
 ## Plastic-fountain148…155: paired liquid animation (September27)
 
 Sixteen provisional volumes reach1,617: eight completed splashes and eight separate

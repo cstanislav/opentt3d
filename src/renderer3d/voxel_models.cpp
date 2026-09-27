@@ -395,6 +395,10 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* The original animation changes graphics IDs. Keep each independently
 		 * owned layer on one source path throughout all eight liquid poses. */
 		first = GFX_PLASTIC_FOUNTAIN_ANIMATED_1; last = GFX_PLASTIC_FOUNTAIN_ANIMATED_8;
+	} else if (!ground && graphics >= 157 && graphics <= 159) {
+		/* Glass chambers and circulation tubing cross all three source cuts.
+		 * A partial custom replacement retains the connected supplied apparatus. */
+		first = 157; last = 159;
 	}
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {

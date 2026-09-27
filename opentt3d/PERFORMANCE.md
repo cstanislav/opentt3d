@@ -3,6 +3,17 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Fizzy-drink palette and steel-regression observations
+
+The26-control matrix peaks at3,711,930,448 sampled bytes. Two600-frame live services
+average59.997/60.012fps on OpenGL/Vulkan, with4.954/5.017ms p95 work,41/36 intervals
+above20ms and23.845/21.962ms maximum intervals. The two300-frame steel regressions
+average59.975/60.022fps and retain39/49 intervals above20ms. Concurrent tests, authoring
+and the missing-material negative are part of this observation environment. These
+short controls establish original palette/state coverage; sustained arbitrary-world
+smoothness and long-duration/reload/multiple-viewport memory acceptance remain open.
+Source:`breadth-fizzy-final-reconciliation.json`.
+
 ## Plastic-fountain paired-animation observations
 
 The24-control matrix peaks at3,341,127,376 sampled bytes. Two600-frame live services

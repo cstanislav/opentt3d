@@ -580,42 +580,53 @@ static void ObserveVoxelPlasticFountain(TileIndex tile, unsigned graphics)
 
 struct IndustryPaletteCheck {
 	TileIndex tile = INVALID_TILE;
+	uint32_t industry = UINT32_MAX;
+	unsigned first_colour = 232, colour_count = 7;
 	unsigned materials = 0;
 	std::set<std::array<uint32_t,7>> phases;
+	bool ground = true;
 	bool passed = false;
 };
 static std::map<unsigned,IndustryPaletteCheck> industry_palette_checks;
 
 void BeginVoxelIndustryPaletteCheck(unsigned graphics)
 {
-	if (graphics < 52 || graphics > 57 || !HasVoxelAsset("industry_ground",graphics,3)) throw std::invalid_argument("Industry fire-palette observation needs an original completed steel-mill ground52..57");
-	industry_palette_checks[graphics] = {};
-	Debug(driver,1,"OpenTT3D: observing original molten-metal palette on voxel industry ground {} without changing game state",graphics);
+	bool fire = graphics >= 52 && graphics <= 57;
+	bool fizzy = graphics >= 157 && graphics <= 159;
+	if (!fire && !fizzy) throw std::invalid_argument("Industry palette observation needs steel ground52..57 or fizzy-drink body157..159");
+	const auto &source = _industry_draw_tile_data[graphics*4+3];
+	if (!VoxelIndustryState(graphics,fire ? source.ground.sprite : source.building.sprite,fire)) throw std::invalid_argument("Industry palette observation needs the original completed voxel layer");
+	IndustryPaletteCheck check;
+	check.ground = fire;
+	if (fizzy) { check.first_colour = 227; check.colour_count = 5; }
+	industry_palette_checks[graphics] = check;
+	Debug(driver,1,"OpenTT3D: observing original {} palette on voxel industry {} {} without changing game state",fire ? "molten-metal" : "fizzy-drink",fire ? "ground" : "body",graphics);
 }
 
-static void ObserveVoxelIndustryPalette(TileIndex tile, unsigned graphics, size_t first)
+static void ObserveVoxelIndustryPalette(TileIndex tile, unsigned graphics, size_t first, bool ground)
 {
 	auto found = industry_palette_checks.find(graphics);
-	if (found == industry_palette_checks.end() || found->second.passed || capture->diagnostic || GetIndustryConstructionStage(tile) != 3) return;
+	if (found == industry_palette_checks.end() || found->second.passed || found->second.ground != ground || capture->diagnostic || GetIndustryConstructionStage(tile) != 3) return;
 	auto &check = found->second;
 	if (check.tile == INVALID_TILE) {
 		unsigned emitted = 0;
-		for (size_t i = first; i < capture->scene.instances.size(); ++i) emitted |= VoxelPaletteMask(*capture->scene.instances[i].mesh,232,7);
-		if (std::popcount(emitted) < 2) return;
+		for (size_t i = first; i < capture->scene.instances.size(); ++i) emitted |= VoxelPaletteMask(*capture->scene.instances[i].mesh,check.first_colour,check.colour_count);
+		if (std::popcount(emitted) < (check.ground ? 2 : check.colour_count)) return;
 		check.tile = tile;
+		check.industry = GetIndustryIndex(tile).base();
 		check.materials = emitted;
 	}
-	if (tile != check.tile) return;
+	if (tile != check.tile || GetIndustryIndex(tile).base() != check.industry) return;
 	auto palette = SnapshotPalette();
 	std::array<uint32_t,7> phase{};
-	for (unsigned i = 0; i < phase.size(); ++i) if (check.materials & (1U<<i)) {
-		Colour colour = palette.palette[232+i];
+	for (unsigned i = 0; i < check.colour_count; ++i) if (check.materials & (1U<<i)) {
+		Colour colour = palette.palette[check.first_colour+i];
 		phase[i] = (static_cast<uint32_t>(colour.r)<<16)|(static_cast<uint32_t>(colour.g)<<8)|colour.b;
 	}
 	check.phases.insert(phase);
-	if (check.phases.size() >= 7) {
+	if (check.phases.size() >= check.colour_count) {
 		check.passed = true;
-		Debug(driver,1,"OpenTT3D: voxel industry palette observation passed: graphics {} tile {},{}, {} original fire phases across {} emitted animated materials",graphics,TileX(tile),TileY(tile),check.phases.size(),std::popcount(check.materials));
+		Debug(driver,1,"OpenTT3D: voxel industry palette observation passed: graphics {} tile {},{}, {} original {} phases across {} emitted animated materials",graphics,TileX(tile),TileY(tile),check.phases.size(),check.ground ? "fire" : "fizzy-drink",std::popcount(check.materials));
 	}
 }
 
@@ -1269,7 +1280,7 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 				[](const auto &instance) { return instance.mesh->empty(); }),capture->scene.instances.end());
 			if (capture->scene.instances.size() > first && !capture->diagnostic) {
 				unsigned stage = industry ? GetIndustryConstructionStage(tile.tile) : oilrig ? 3 : GetHouseBuildingStage(tile.tile);
-				if (industry && !industry_palette_checks.empty()) ObserveVoxelIndustryPalette(tile.tile,graphics,first);
+				if (industry && !industry_palette_checks.empty()) ObserveVoxelIndustryPalette(tile.tile,graphics,first,true);
 				if (industry && check_plastic_fountain && stage == 3 && graphics >= GFX_PLASTIC_FOUNTAIN_ANIMATED_1 && graphics <= GFX_PLASTIC_FOUNTAIN_ANIMATED_8) capture->plastic_fountain_grounds[tile.tile] = graphics;
 				static std::set<std::tuple<bool,unsigned,unsigned,unsigned>> reported;
 				if (reported.emplace(house,graphics,stage,variant).second) {
@@ -1939,6 +1950,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				static std::set<std::pair<unsigned,unsigned>> reported;
 				if (reported.emplace(graphics,stage).second) Debug(driver,1,"OpenTT3D: live voxel industry {} construction stage {} captured at {},{}",graphics,stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
 				ObserveVoxelPlasticFountain(capture->tile->tile,graphics);
+				if (!industry_palette_checks.empty()) ObserveVoxelIndustryPalette(capture->tile->tile,graphics,capture->parent_instance_begin,false);
 				if (check_forest_cycle && (graphics == checked_forest_base || graphics == checked_forest_base+1)) {
 					TileIndex tile = capture->tile->tile;
 					IndustryID industry = GetIndustryIndex(tile);

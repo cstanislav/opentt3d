@@ -1,5 +1,47 @@
 # Active extended development goal
 
+## Fizzy-drink construction and live bubble palette verified — September27,14:00:37UTC
+
+Seven provisional volumes bring the catalogue to1,624 and primary industry coverage
+to154/175:115 body owners and154 independent grounds. The hollow blue can retains its
+metal lip/interior, construction pipework, completed liquid and leaning hollow straw.
+Clear vessel rims/reflected edges, front chambers and connected circulation paths use
+real quarter-unit volumes;4676 soil remains independent. All eight absent body slots,
+including156's four ground-only states, remain empty. Connected157…159 bodies retain
+linked custom-source fallback. Twenty-eight compact components preserve all seven
+reviewed prototype hashes, and all1,617 preceding model hashes agree.
+
+All26 frozen controls pass:48 actual construction-layer selections,17/17 loaded and
+0/17 empty cola trucks, four climates, clipping, development bundles, both fizzy
+palette observations and both six-ground steel regressions. Each actual completed
+157/158/159 body emits all five animated indices227…231 and shows five original phases
+on one unchanged tile/industry. Missing bindings reject; changing40 cells to remove
+231 from157 rejects that body while158/159 still pass. The real cola29→33 route retains
+acceptance32, full loading, accepted delivery and return after816 observed ticks.
+
+All24 palettes,26 aliases,96 climate comparisons and eight absences reconcile.
+Native200, asset136, harness12 and the137-file presentation boundary pass. Every one
+of148 integrated Vulkan captures matches the reviewed prototype; all28 native views
+agree across backends. The120 other views retain64 differing images/1,696 pixels.
+Body bounds match or differ by one pixel; soil retains[-1,0,-1,+1]. Joined completed
+volumes have no overlaps; construction1/2 retains371 overlap cells at the source's
+distinct158 owner. Can/rim/wrapper paint, lettering, glass shoulders/junctions, bubble
+grain and that early cut/depth placement remain provisional. Final visual approvals:0.
+
+Prototype and accepted captures compact losslessly by645,474,271 and549,417,510bytes.
+Original images, failed attempts and all RGBA/header bytes remain. The26-control matrix peaks
+at3,711,930,448 sampled bytes; two600-frame services average59.997/60.012fps but retain
+41/36 intervals above20ms and23.845/21.962ms maxima. Sustained arbitrary-world smooth60fps
+and long-duration/reload/multiple-viewport memory acceptance remain open. Evidence:
+`breadth-fizzy-final-{audit,reconciliation,source-review,backend-comparison}.json`.
+
+Verified public downloads are plastic`.15`. Toy-factory child source study confirms
+50 completed frames,12 stamp heights,29 clay and19 duck appearances. A separate
+three-child prototype has exact source palettes and passes mesh/gallery checks;
+its fixed holder/wall cuts, main structures and runtime ordered child capture remain
+required. It does not count as integrated coverage. Continue21 primary definitions,
+climate/procedural artwork, infrastructure/effects and later catalogue-wide passes.
+
 ## Plastic-fountain desktop release verified — September27,13:46:37UTC
 
 Release`.15`atab1a7788727ca846b42383d5132e72cca026a05d passes all eight hosted jobs.
