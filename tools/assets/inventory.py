@@ -117,6 +117,12 @@ def inventory():
                 for name,sprite in (("shovel",4767),("toffee_parent_redraw",4766))]
             industry["procedural_source_frames"] = 70
             industry["procedural_source_note"] = "Both children occur at every construction stage. Original4766 exactly redraws4764 and shares its physical body; never duplicate the solid. Completed70-frame cutter travel follows the inclined shaft;255 means zero shift, not absence. Body164..166 and both child sources are linked;Toyland3981 ground stays independent."
+        elif industry["graphics"] == 174:
+            industry["procedural_children"] = [
+                {"name":f"{family}_{sprite-first}","sprite":sprite,"voxel_states":voxel_states("infrastructure",sprite)}
+                for family,first,count in (("sieve",4775,5),("cloud",4784,6),("pile",4780,4)) for sprite in range(first,first+count)]
+            industry["procedural_source_frames"] = 96
+            industry["procedural_source_note"] = "Construction has no children. Completed96-frame motion preserves sieve/cloud/pile order and genuine middle/trailing absences. The sieve moves along the crossbar at constantZ; clouds and piles have independent registered poses. Body172..174 and all15 children are linked;171..174 Toyland3981 grass stays independent."
         if 33 <= industry["graphics"] <= 38:
             industry["voxel_climates"] = ["temperate"]
             industry["missing_voxel_climates"] = ["arctic"]
@@ -138,8 +144,8 @@ def inventory():
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted bare soil; unchanged factory bodies remain bound"})
             elif industry["graphics"] in (135,136,137) and sprite == 2077:
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted forest ground; unchanged battery/cola bodies remain bound"})
-            elif 164 <= industry["graphics"] <= 166 and sprite == 3981:
-                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted grass; unchanged toffee bodies and children remain bound"})
+            elif 164 <= industry["graphics"] <= 174 and sprite == 3981:
+                restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["toyland"],"other_climates":"retain supplied independently painted grass; unchanged toffee/sugar bodies and children remain bound"})
             elif sprite in (3924,2173):
                 restricted_grounds.append({"stage":stage,"sprite":sprite,"voxel_climates":["temperate"],"other_climates":"retain supplied independently painted source ground"})
             elif sprite in (2022,2077,2257,2260,2261,4061):

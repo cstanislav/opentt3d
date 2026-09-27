@@ -145,6 +145,10 @@ static bool check_toffee_quarry = false;
 static TileIndex checked_toffee_tile = INVALID_TILE;
 static uint32_t checked_toffee_industry = UINT32_MAX;
 static std::bitset<std::size(_industry_anim_offs_toffee)> checked_toffee_frames;
+static bool check_sugar_mine = false;
+static TileIndex checked_sugar_tile = INVALID_TILE;
+static uint32_t checked_sugar_industry = UINT32_MAX;
+static std::bitset<std::size(_draw_industry_spec1)> checked_sugar_frames;
 static unsigned checked_cargo_engine = UINT_MAX;
 static uint32_t checked_cargo_vehicle = UINT32_MAX;
 static unsigned checked_cargo_capacity = 0, checked_cargo_states = 0;
@@ -2087,6 +2091,14 @@ void BeginVoxelToffeeQuarryCheck()
 	Debug(driver,1,"OpenTT3D: observing all 70 actual toffee-quarry frames with ordered shovel and shared parent redraw");
 }
 
+void BeginVoxelSugarMineCheck()
+{
+	if (!VoxelIndustryState(174,_industry_draw_tile_data[174*4+3].building.sprite)) throw std::runtime_error("Sugar mine needs its original connected posts and all 15 voxel children");
+	check_sugar_mine = true; checked_sugar_tile = INVALID_TILE;
+	checked_sugar_industry = UINT32_MAX; checked_sugar_frames.reset();
+	Debug(driver,1,"OpenTT3D: observing all 96 actual sugar-mine frames with ordered sieve, cloud, pile and original absences");
+}
+
 void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transparent, const SubSprite *, bool scale, bool relative)
 {
 	if (!capture || !capture->have_parent) return;
@@ -2106,9 +2118,13 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 		GetIndustryGfx(capture->tile->tile) == 165 &&
 		capture->parent_sprite == (_industry_draw_tile_data[165*4+GetIndustryConstructionStage(capture->tile->tile)].building.sprite&SPRITE_MASK) &&
 		VoxelIndustryState(165,capture->parent_sprite).has_value();
+	bool sugar_mine = capture->tile != nullptr && IsTileType(capture->tile->tile,MP_INDUSTRY) &&
+		GetIndustryGfx(capture->tile->tile) == 174 && IsIndustryCompleted(capture->tile->tile) &&
+		capture->parent_sprite == (_industry_draw_tile_data[174*4+3].building.sprite&SPRITE_MASK) &&
+		VoxelIndustryState(174,capture->parent_sprite).has_value();
 	/* A rising arc has its own bounds above the gantry. Keep its independent
 	 * frustum check even when the solid parent has just left the viewport. */
-	if (capture->parent_culled && !power_spark && !toy_factory && !bubble_generator && !toffee_quarry) return;
+	if (capture->parent_culled && !power_spark && !toy_factory && !bubble_generator && !toffee_quarry && !sugar_mine) return;
 	ObjectTag tag{capture->scene.vertices.size(), capture->parent_id};
 	if (toy_factory) {
 		TileIndex tile = capture->tile->tile;
@@ -2210,6 +2226,38 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 						Debug(driver,1,"OpenTT3D: voxel toffee-quarry verification passed: 70 original ordered child frames with shared parent on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
 						check_toffee_quarry = false;
 					}
+				}
+			}
+		}
+		return;
+	}
+	if (sugar_mine) {
+		TileIndex tile = capture->tile->tile;
+		unsigned stage = GetIndustryConstructionStage(tile), frame = GetAnimationFrame(tile);
+		auto children = VoxelSugarMineChildren(stage,frame);
+		auto &next = capture->industry_next_child;
+		while (next < children.size() && children[next].image == 0) ++next;
+		if (next >= children.size() || !scale || !relative || children[next].image != (image&SPRITE_MASK) || children[next].x != x || children[next].y != y) {
+			throw std::runtime_error("Sugar-mine child lost its original construction, order, absence or screen offset");
+		}
+		Vec3 origin{static_cast<float>(capture->tile->x),static_cast<float>(capture->tile->y),TerrainZ(capture->tile->z)};
+		size_t before = capture->scene.instances.size();
+		if (!DrawVoxelSugarMineChild(capture->scene,image,stage,frame,origin,palette,transparent ? 0.38f : 1)) throw std::runtime_error("Missing original sugar-mine voxel child");
+		if (frame != GetAnimationFrame(tile) || stage != GetIndustryConstructionStage(tile)) throw std::runtime_error("Sugar-mine rendering changed its original state");
+		capture->industry_children_visible &= capture->scene.instances.size() != before;
+		/* Some frames end after the sieve/cloud. Trailing absent children must
+		 * finish this capture, while a hidden required child cannot pass it. */
+		++next;
+		while (next < children.size() && children[next].image == 0) ++next;
+		if (next == children.size() && capture->industry_children_visible && !capture->parent_culled && !capture->diagnostic && check_sugar_mine) {
+			uint32_t industry = GetIndustryIndex(tile).base();
+			if (checked_sugar_tile == INVALID_TILE) { checked_sugar_tile = tile; checked_sugar_industry = industry; }
+			if (checked_sugar_tile == tile && checked_sugar_industry == industry) {
+				if (!checked_sugar_frames[frame]) Debug(driver,1,"OpenTT3D: sugar-mine frame {} captured at {},{} industry {}, sieve {} cloud {} pile {}",frame,TileX(tile),TileY(tile),industry,children[0].image,children[1].image,children[2].image);
+				checked_sugar_frames.set(frame);
+				if (checked_sugar_frames.all()) {
+					Debug(driver,1,"OpenTT3D: voxel sugar-mine verification passed: 96 original ordered child frames and absences on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
+					check_sugar_mine = false;
 				}
 			}
 		}

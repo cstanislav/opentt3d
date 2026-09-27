@@ -58,7 +58,7 @@ def main():
     parser.add_argument("--industry-effect-source", type=int, choices=(10,), help="Review original power-station sparks at their actual parent-relative positions")
     parser.add_argument("--industry-effect-comparison", type=int, choices=(10,), help="Compare six native voxel gantry/spark composites with their original registered layers")
     parser.add_argument("--industry-procedural-source", type=int, choices=(143,162,165,174), help="Review ordered original Toyland children and genuine absent intervals; --stage selects construction or completed animation")
-    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,162,165), help="Compare every original child combination for the selected stage at its actual parent/tile origin")
+    parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,162,165,174), help="Compare every original child combination for the selected stage at its actual parent/tile origin")
     parser.add_argument("--industry-ground", action="store_true", help="Select original industry ground layers for --industry-source or --industry-comparison")
     parser.add_argument("--depot-source", type=int, choices=range(6), help="Assemble the four original depot directions from their actual layer offsets")
     parser.add_argument("--ship-depot-source", action="store_true", help="Assemble both original two-tile ship depots with their actual layer offsets")

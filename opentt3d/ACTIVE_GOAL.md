@@ -1,5 +1,33 @@
 # Active extended development goal
 
+## Sugar-mine original mechanism verified — September27,18:32:04UTC
+
+Runtime support retains the original96-frame sieve/cloud/pile order, independent
+poses, constant-height crossbar travel and genuine middle/trailing child absences.
+Construction has no children;99 gallery states retain those three early states.
+Linked172…174 bodies require all15 children,167…170 stockpile grounds have their own
+linked source/binding check, and171…174 grass retains independent Toyland selection.
+The isolated22-volume first study passes44 real construction-layer selections and
+all96 actual frames on tile53,35, industry0. Missing cloud/post controls reject while
+24 grass and16 independent stockpile selections survive; missing-stockpile controls
+retain six independently captured body selections across stages0/3. Unbound main
+correctly rejects the observer. Every249 preceding toffee gallery view stays identical,
+and its2,400-frame live regression observes all70 frames. Native204, asset136, harness12
+and the137-file presentation boundary pass.
+
+Evidence:`breadth-sugar-runtime-reconciliation.json`. Main artwork remains1,645 volumes
+and167/175 primary definitions. Sugar's source stockpile/stand masks,44 visible source
+layers,20 empty body slots and15 child images are retained. Its first prototype has
+6…38-cell sieve/fill/rod intersections and2…38-cell grain/pile intersections, plus
+source shape/paint discrepancies. Subsequent clearance/reflectance studies remain
+isolated. Final visual approvals:0. Continue source/native/street review and integrated
+acceptance before counting sugar coverage.
+
+Toffee artwork is pushed atb7ebd04dd00b8ba300e42c3f53f2c77174f7ca5c. Release`.19`uses
+that exact commit; workflow36339117089 is running. The first watcher lost its GitHub
+connection; the workflow itself had no failed jobs at the18:23 check, and watching
+resumed. Public verified download links remain`.18`until the independent package audit.
+
 ## Toffee-quarry artwork and shared redraw verified — September27,17:58:54UTC
 
 Four provisional volumes reach1,645 and167/175 primary industry definitions:126

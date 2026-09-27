@@ -9,12 +9,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
-- [x] Current native suite203/203, including original factory/bubble/toffee child motion, shared redraw ownership and construction rules, source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
+- [x] Current native suite204/204, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, source-specific Toyland industry restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
 - [x] Current1,645-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite136/136 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Sugar runtime/diagnostics preserve96 completed ordered child frames, original
+  middle/trailing absences and empty construction. The isolated22-volume study passes
+  44 actual construction layers and a same-tile96-frame observation. Missing cloud,
+  post and stockpile controls preserve the separate body/ground groups. Every249
+  toffee gallery view and its70-frame cycle remain intact. Sugar artwork refinement
+  and integration remain pending; authored main stays1,645 volumes and167/175 definitions.
 - [x] Toffee164…166 adds four provisional volumes and independently checked Toyland3981
   grass reuse. Coverage reaches167/175 primary definitions,126 body owners and167
   grounds. Child4766 shares parent4764's physical model;4767 follows the inclined shaft

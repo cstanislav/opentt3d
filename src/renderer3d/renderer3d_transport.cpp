@@ -419,6 +419,48 @@ TEST_CASE("Bubble-generator children preserve construction absence and axial plu
 	CHECK_THROWS_AS(VoxelBubbleGeneratorChildren(3,40),std::invalid_argument);
 }
 
+TEST_CASE("Sugar-mine crossbar motion preserves source fill states and genuine child absences", "[renderer3d][voxel]")
+{
+	std::array<unsigned,15> appearances{};
+	std::array<unsigned,4> child_counts{};
+	std::set<int> positions;
+	for (unsigned frame = 0; frame < 96; ++frame) {
+		auto children = VoxelSugarMineChildren(3,frame);
+		const auto &sieve = children[0];
+		REQUIRE(sieve.image >= 4775); REQUIRE(sieve.image <= 4779);
+		CHECK(sieve.y == 0); CHECK(sieve.offset.z == 0);
+		CHECK(sieve.offset.x+sieve.offset.y == 0);
+		CHECK(2*(sieve.offset.y-sieve.offset.x) == sieve.x-8);
+		positions.insert(sieve.x);
+		unsigned visible = 0;
+		for (const auto &child : children) if (child.image != 0) {
+			REQUIRE(child.image >= 4775); REQUIRE(child.image <= 4789);
+			++appearances[child.image-4775]; ++visible;
+		}
+		++child_counts[visible];
+		if (children[1].image != 0) {
+			CHECK(children[1].image >= 4784); CHECK(children[1].image <= 4789);
+			CHECK(children[1].x == 8); CHECK(children[1].y == 41);
+		}
+		if (children[2].image != 0) {
+			CHECK(children[2].image >= 4780); CHECK(children[2].image <= 4783);
+		}
+	}
+	CHECK(positions == std::set<int>{4,6,8,10,12});
+	CHECK(appearances == std::array<unsigned,15>{15,16,16,16,33,12,11,11,51,11,11,11,11,11,11});
+	CHECK(child_counts == std::array<unsigned,4>{0,1,39,56});
+	CHECK(VoxelSugarMineChildren(3,0)[0].image == 4779);
+	CHECK(VoxelSugarMineChildren(3,95)[2].x == 10);
+	CHECK(VoxelSugarMineChildren(3,95)[2].y == 66);
+	for (unsigned stage = 0; stage < 3; ++stage) for (const auto &child : VoxelSugarMineChildren(stage,255)) CHECK(child.image == 0);
+	for (unsigned climate = 0; climate < 4; ++climate) for (unsigned graphics = 171; graphics <= 174; ++graphics) {
+		CHECK(IndustryModelClimateSupported(graphics,climate,false,4773));
+		CHECK(IndustryModelClimateSupported(graphics,climate,true,3981) == (climate == 3));
+	}
+	CHECK_THROWS_AS(VoxelSugarMineChildren(4,0),std::invalid_argument);
+	CHECK_THROWS_AS(VoxelSugarMineChildren(3,96),std::invalid_argument);
+}
+
 TEST_CASE("Toffee cutter follows its inclined shaft and never treats sound markers as absence", "[renderer3d][voxel]")
 {
 	std::set<int> positions;

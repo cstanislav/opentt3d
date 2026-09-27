@@ -287,6 +287,19 @@ audit and all1,641 preceding-model hashes are retained under`breadth-toffee-fina
 Industry source comparison sheets expand to fit the complete registered source/model
 union, including overhangs. Exact surface paint and fine shape remain in later passes.
 
+Sugar-mine diagnostics preserve all96 original completed frames: sieve4775…4779,
+cloud4784…4789 and pile4780…4783, in that order with genuine middle/trailing absences.
+The sieve moves along its crossbar at constant worldZ; its baseline screenX8 maps
+displacement d to world(-d/4,+d/4,0). Clouds and piles have independently registered
+poses. Construction has no children. Linked172…174 body/source checks require all
+fifteen child bindings; the four167…170 stockpile grounds have a separate linked
+source/binding check.171…174 Toyland3981 grass remains independently selectable.
+`--verify-sugar-mine --running --benchmark-frames 2400` observes all96 actual frames
+on one unchanged tile/industry; galleries and hidden children cannot satisfy it.
+`--industry-procedural-comparison 174 --stage 0`through3 reconciles the original
+ordered selections and99 total diagnostic states. The current22-volume artwork
+study is isolated; runtime support does not establish integrated artwork coverage.
+
 `fixture_industry.py --industry 31 --climate toyland --cargo-service
 --destination-industry 30 --destination-town-site --supply-industry 28 --city-size 4
 --cargo-snapshots --service-observation-ticks 6000` funds a real battery→toy-factory→

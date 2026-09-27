@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Sugar-mine runtime and original child-absence verification
+
+At18:32:04UTC, native204, asset136, harness12 and the137-file boundary pass. The
+isolated22-volume study observes44 actual construction layers and all96 ordered
+sieve/cloud/pile frames on tile53,35, industry0. Early construction has no children.
+The same-capture observer handles trailing absent slots, including frame0's lone
+empty sieve.99 diagnostic states match original order/offset/absence records.
+Missing cloud/post controls reject;24 grass and16 stockpile selections remain
+independent across stages0/3. Missing-stockpile controls retain six body selections.
+Unbound main correctly rejects. All249 toffee gallery views remain identical, and
+its2,400-frame live regression captures70 frames. No simulation/RNG mutation is used.
+
+Evidence:`build-macos/breadth-sugar-runtime-reconciliation.json`and associated logs.
+Source shape/paint and prototype intersections remain under refinement. Integrated
+artwork remains1,645 volumes; runtime-only support does not complete sugar coverage.
+
 ## Toffee-quarry artwork, real construction and70-frame cycle
 
 At17:58:54UTC, all26 frozen controls pass48 actual construction-layer selections,

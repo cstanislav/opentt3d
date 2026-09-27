@@ -419,6 +419,37 @@ std::array<VoxelIndustryChild,2> VoxelToffeeQuarryChildren(unsigned stage, unsig
 		{SPR_IT_TOFFEE_QUARRY_TOFFEE,6,14,{}}}};
 }
 
+static bool HasVoxelSugarMineChildren()
+{
+	for (SpriteID image = SPR_IT_SUGAR_MINE_SIEVE; image < SPR_IT_SUGAR_MINE_CLOUDS+6; ++image) {
+		if (!IsBaseGraphicsSprite(image) || !HasVoxelAsset("infrastructure",image,0)) return false;
+	}
+	/* The central source cut owns returns from both posts and both crossbars. */
+	for (unsigned graphics = 172; graphics <= 174; ++graphics) for (unsigned stage = 0; stage < 4; ++stage) {
+		if (!HasVoxelAsset("industries",graphics,stage)) return false;
+	}
+	return true;
+}
+
+std::array<VoxelIndustryChild,3> VoxelSugarMineChildren(unsigned stage, unsigned frame)
+{
+	if (stage > 3 || (stage == 3 && frame >= std::size(_draw_industry_spec1))) throw std::invalid_argument("Invalid original sugar-mine stage/frame");
+	std::array<VoxelIndustryChild,3> children{};
+	if (stage != 3) return children;
+	const auto &source = _draw_industry_spec1[frame];
+	float travel = (static_cast<float>(source.x)-8)*0.25f;
+	/* The sieve slides along the crossbar joining the posts. Its horizontal
+	 * screen displacement leaves worldZ and projectedY unchanged. Other children
+	 * have independently registered poses, not scaled versions of one volume. */
+	children[0] = {SPR_IT_SUGAR_MINE_SIEVE+source.image_1,source.x,0,{-travel,travel,0}};
+	if (source.image_2 != 0) children[1] = {SPR_IT_SUGAR_MINE_CLOUDS+source.image_2-1,8,41,{}};
+	if (source.image_3 != 0) {
+		const auto &offset = _drawtile_proc1[source.image_3-1];
+		children[2] = {SPR_IT_SUGAR_MINE_PILE+source.image_3-1,offset.x,offset.y,{}};
+	}
+	return children;
+}
+
 std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bool ground)
 {
 	if (graphics >= std::size(_industry_draw_tile_data)/4) return {};
@@ -480,10 +511,19 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		/* One inclined cutter crosses the connected casing/pile cuts. Ground
 		 * stays independent, including its distinct Toyland grass replacement. */
 		first = 164; last = 166;
+	} else if (ground && graphics >= 167 && graphics <= 170) {
+		/* Raised stockpile and its tarp span the four original ground cuts. */
+		first = 167; last = 170;
+		for (unsigned part = first; part <= last; ++part) for (unsigned stage = 0; stage < 4; ++stage) {
+			if (!HasVoxelAsset("industry_ground",part,stage)) return {};
+		}
+	} else if (!ground && graphics >= 172 && graphics <= 174) {
+		first = 172; last = 174;
 	}
 	bool toy_factory = graphics >= 142 && graphics <= 146 && (ground || HasVoxelToyFactoryChildren());
 	bool bubble_generator = graphics >= 160 && graphics <= 162 && (ground || HasVoxelBubbleGeneratorChildren());
 	bool toffee_quarry = graphics >= 164 && graphics <= 166 && (ground || HasVoxelToffeeQuarryChildren());
+	bool sugar_mine = graphics >= 172 && graphics <= 174 && (ground || HasVoxelSugarMineChildren());
 	bool power_sparks = graphics == 10 && HasVoxelAsset("industries",10,3) && IsBaseGraphicsSprite(SPR_IT_POWER_PLANT_TRANSFORMERS);
 	if (power_sparks) for (unsigned frame = 1; frame <= std::size(_coal_plant_sparks); ++frame) {
 		SpriteID spark = SPR_IT_POWER_PLANT_TRANSFORMERS+frame;
@@ -492,7 +532,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 	for (unsigned family = first; family <= last; ++family) for (unsigned stage = 0; stage < 4; ++stage) {
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
-		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3) && !(toffee_quarry && source.draw_proc == 2)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3) && !(toffee_quarry && source.draw_proc == 2) && !(sugar_mine && source.draw_proc == 1)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
 		if (first == 72 && last == 88) {
 			SpriteID other = (ground ? source.building.sprite : source.ground.sprite)&SPRITE_MASK;
 			if (other != 0 && !IsBaseGraphicsSprite(other)) return {};
@@ -557,6 +597,20 @@ bool DrawVoxelToffeeShovel(Scene &scene, unsigned stage, unsigned frame, Vec3 or
 	if (!DrawVoxelAsset(scene,"infrastructure",child.image,0,origin+child.offset,palette,opacity)) return false;
 	for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
 	return true;
+}
+
+bool DrawVoxelSugarMineChild(Scene &scene, SpriteID image, unsigned stage, unsigned frame, Vec3 origin, PaletteID palette, float opacity)
+{
+	auto children = VoxelSugarMineChildren(stage,frame);
+	image &= SPRITE_MASK;
+	if (!VoxelIndustryState(174,_industry_draw_tile_data[174*4+stage].building.sprite)) return false;
+	for (const auto &child : children) if (child.image != 0 && child.image == image) {
+		size_t before = scene.instances.size();
+		if (!DrawVoxelAsset(scene,"infrastructure",image,0,origin+child.offset,palette,opacity)) return false;
+		for (size_t i = before; i < scene.instances.size(); ++i) scene.instances[i].data.SetChildLayer(true);
+		return true;
+	}
+	return false;
 }
 
 bool DrawVoxelHelicopterRotor(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette)
@@ -1088,6 +1142,13 @@ void ExportVoxelReviews(std::string_view prefix)
 						group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
 						placements.push_back(origin+child.offset);
 					}
+					if (!ground && part.gfx == 174 && stage == 3 && VoxelIndustryState(174,source.building.sprite)) {
+						Vec3 origin = placements.back();
+						for (const auto &child : VoxelSugarMineChildren(stage,0)) if (child.image != 0) {
+							group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+							placements.push_back(origin+child.offset);
+						}
+					}
 				}
 				if (group.empty()) continue;
 				context(fmt::format("context-industry-{}-layout-{}-stage-{}",type,layout,stage),group,placements);
@@ -1113,8 +1174,11 @@ void ExportVoxelReviews(std::string_view prefix)
 						for (const auto &child : VoxelBubbleGeneratorChildren(stage,0)) if (child.image != 0) complete &= DrawVoxelBubbleGeneratorChild(joined,child.image,stage,0,origin,source.building.pal);
 					}
 					if (part.gfx == 165) complete &= DrawVoxelToffeeShovel(joined,stage,0,origin,source.building.pal);
+					if (part.gfx == 174 && stage == 3) {
+						for (const auto &child : VoxelSugarMineChildren(stage,0)) if (child.image != 0) complete &= DrawVoxelSugarMineChild(joined,child.image,stage,0,origin,source.building.pal);
+					}
 					tiles.push_back({{"graphics",part.gfx},{"origin",{origin.x,origin.y,origin.z}}});
-					if ((part.gfx == 143 && stage == 3) || (part.gfx == 162 && stage != 0) || part.gfx == 165) tiles.back()["procedural_frame"] = 0;
+					if ((part.gfx == 143 && stage == 3) || (part.gfx == 162 && stage != 0) || part.gfx == 165 || (part.gfx == 174 && stage == 3)) tiles.back()["procedural_frame"] = 0;
 				}
 				if (!complete) continue;
 				for (auto &instance : joined.instances) instance.data.SetObjectId(1);
@@ -1224,6 +1288,37 @@ void ExportVoxelReviews(std::string_view prefix)
 			}
 			std::ofstream manifest(directory/"voxel-industry-procedural-165.json"); manifest << frames.dump(2) << '\n';
 			if (!manifest) throw std::runtime_error("Could not write toffee-quarry diagnostic manifest");
+		}
+	}
+	/* Sugar construction has no children, including its nonempty central body.
+	 * Export all three early states and all96 completed ordered combinations. */
+	if (auto state = VoxelIndustryState(174,_industry_draw_tile_data[174*4+3].building.sprite)) {
+		const auto &name = Models().bindings.at({"industries",174,*state});
+		if (name.starts_with(prefix)) {
+			nlohmann::json frames = nlohmann::json::array();
+			for (unsigned stage = 0; stage < 4; ++stage) {
+				for (unsigned frame = 0; frame < (stage == 3 ? std::size(_draw_industry_spec1) : 1); ++frame) {
+					Textures().BeginScene();
+					Scene scene;
+					DrawVoxelAsset(scene,"industries",174,stage,{},PAL_NONE);
+					nlohmann::json children = nlohmann::json::array();
+					std::vector<const VoxelModel *> group{&Models().models.at(Models().bindings.at({"industries",174,stage}))};
+					std::vector<Vec3> placements{{}};
+					for (const auto &child : VoxelSugarMineChildren(stage,frame)) if (child.image != 0) {
+						if (!DrawVoxelSugarMineChild(scene,child.image,stage,frame,{},PAL_NONE)) throw std::runtime_error("Incomplete sugar-mine diagnostic children");
+						children.push_back({{"sprite",child.image},{"child_offset",{child.x,child.y}},{"world_offset",{child.offset.x,child.offset.y,child.offset.z}}});
+						group.push_back(&Models().models.at(Models().bindings.at({"infrastructure",child.image,0})));
+						placements.push_back(child.offset);
+					}
+					std::string label = stage == 3 ? fmt::format("model-voxel-industry-procedural-174-{}-native",frame) : fmt::format("model-voxel-industry-procedural-174-stage-{}-{}-native",stage,frame);
+					native_model(scene,label);
+					frames.push_back({{"graphics",174},{"stage",stage},{"frame",frame},{"image",label+".pam"},{"children",children}});
+					if (stage != 3) context(fmt::format("context-industry-procedural-174-stage-{}",stage),group,placements);
+					else if (frame == 0 || frame == 16 || frame == 32 || frame == 64 || frame == 95) context(fmt::format("context-industry-procedural-174-{}",frame),group,placements);
+				}
+			}
+			std::ofstream manifest(directory/"voxel-industry-procedural-174.json"); manifest << frames.dump(2) << '\n';
+			if (!manifest) throw std::runtime_error("Could not write sugar-mine diagnostic manifest");
 		}
 	}
 	std::set<unsigned> selected_houses;

@@ -43,6 +43,7 @@ void BeginVoxelPowerSparkCheck();
 void BeginVoxelToyFactoryCheck();
 void BeginVoxelBubbleGeneratorCheck();
 void BeginVoxelToffeeQuarryCheck();
+void BeginVoxelSugarMineCheck();
 void BeginVoxelVehicleCargoCheck(unsigned engine);
 void BeginVoxelHelicopterRotorCheck(unsigned engine);
 void BeginVoxelAircraftContactCheck(unsigned engine);
