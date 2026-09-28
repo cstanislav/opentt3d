@@ -4,6 +4,33 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Six-state electric sparks (September28)
+
+Five source-specific volumes and24 explicit climate bindings reach1,731 models, preserving
+all1,726 earlier models/components/material faces/bindings. Early connected cyan/white
+branches disperse into detached depth-separated fragments. Sprites3088/3089 share exact
+pixels, offsets and palettes across all eight source exports; one volume serves both
+original states, retaining their separate timing. All six source bounds match. Native
+density, contours, directional paint and all-angle breakup remain provisional; final
+visual approvals:0.
+
+12 prototype/20 integrated and two fallback controls pass.600 integration images match;
+648 original exports,168 prior diesel views and48 binding/model pairs remain exact. Each
+75-view backend comparison has nine wider differences/19 pixels and zero native differences.
+Eight lifecycle/close-train controls record803 observations and30 complete presented
+lifetimes, preserving original17/16-phase pool orders, stationary XYZ and smoke settings.
+The first close view missed the emitted sparks; its failure remains alongside the corrected
+view at observed original positions. Prior-diesel paused trace-on/off pairs remain exact;
+they do not cover active paused sparks. Native206, asset143 and harness31 checks pass.
+Both560-frame close captures show the actual locomotive, catenary and sparks; the earlier
+590-frame final images missed their lifetime because of the30-frame benchmark warm-up.
+51 presentable sources remain unbound. Evidence:`breadth-effect-electric-integrated-reconciliation.json`.
+
+The hangar raw-pose comparison retains309/305 contacts versus307/302 at actual smoothed
+poses. Removing interpolation would introduce15/16 new contacts while clearing13; it is
+not a repair. Source-sized aircraft and original paths remain. Evidence:
+`breadth-airport-hangar-raw-pose-study.json`.
+
 ## Six-stage diesel exhaust (September28)
 
 Six source-specific brown exhaust volumes and24 climate bindings reach1,726 models,

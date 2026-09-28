@@ -1,5 +1,37 @@
 # Implementation verification
 
+## Original electric-spark lifetime and source-identical states
+
+Create an ordinary single electric locomotive on its original temperate electric track:
+
+```sh
+python3 tools/opentt3d/fixture_train.py --build-dir build-macos \
+  --output build-macos/new-spark-fixture --climate temperate --rail-type 1 \
+  --locomotive 23 --first-engine 27 --last-engine 27 --low-effect-id
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
+  --output build-macos/new-spark-live --background --backend vulkan \
+  --savegame build-macos/new-spark-fixture/save/train-catalogue.sav \
+  --ai-dir build-macos/new-spark-fixture/ai --reference-vehicle 23 \
+  --trace-effects --running --benchmark-frames 3600
+python3 tools/opentt3d/electric_spark_cycle.py build-macos/new-spark-live/run.log \
+  --output build-macos/new-spark-cycle.json --emitter 1 --require-complete
+```
+
+Read the actual emitter from `fixture.json`. Omitting `--low-effect-id` supplies the
+complementary later-ID effect case, with emitter0. Sparks begin at sprite3084/progress1;
+progress wraps0…2 as the six source sprites advance. Lower-ID lifetimes can present all
+17 phases; higher-ID effects can first present progress2 and retain16 phases. Neither
+case moves its original spawned XYZ. The oracle checks ten-unit local exhaust altitude
+over doubled terrain, opacity and zero picking.
+
+Original sprites3088/3089 are pixel/offset/palette-identical across all eight source
+exports. They share one authored volume but remain separate original animation states.
+The complete-lifetime gate requires both states in order; an unordered set of all six
+sprites does not pass. Removing just3088's binding must leave3089 bound and restore3088's
+supplied source. Reduced/disabled smoke uses the ordinary fixture settings described below.
+Hidden sparks, deletion, spawning probability and between-frame presentation remain outside
+these flat-track observations. Original simulation and RNG stay upstream.
+
 ## Original diesel exhaust and sparse-mesh checks
 
 The first diesel sprite exists only at initialization progress0: the first original tick

@@ -16,6 +16,16 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Six-state electric sparks:**five volumes and24 explicit climate bindings reach1,731
+  models, preserving all1,726 prior models/components/material faces/bindings. All eight
+  source exports prove the final3088/3089 artwork identical; their separate original
+  animation states remain.12 prototype/20 integrated and two fallback controls pass;
+  600 integration images match,648 originals/168 earlier diesel views remain exact and48
+  native bindings equal their models. All six source bounds match. Eight live controls
+  observe803 samples and30 complete17/16-phase lifetimes for both pool orders. Reduced/
+  disabled smoke passes. Native206, asset143 and harness31 checks pass.51 presentable
+  effect sources remain unbound; source/all-angle fidelity and final approval remain open.
+
 - **Six diesel-exhaust frames:**24 explicit climate bindings reach1,726 volumes,
   preserving all1,720 previous models/components/material faces/bindings.12 prototype/20
   integrated and two fallback controls pass;672 integration images match,648 sources

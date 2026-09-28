@@ -3,6 +3,20 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Electric-spark controls
+
+Release`.30`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+1.719fps with2,465,120,256 peak sampled bytes. This remains functional compatibility
+evidence. See`build-macos/playable-release30-ci-reconciliation.json`.
+
+The12 prototype/20 integrated controls peak at3,541,536,320 sampled bytes. Six3,600-frame
+lifecycle controls average60.001…60.004fps but retain7…394 intervals above20ms, reaching
+44.651ms maximum. The two900-frame close-train controls retain86/105 intervals above20ms.
+Original sparse electric sparks and reduced/disabled smoke pass functional checks; these
+short traced controls leave sustained arbitrary-world smooth60fps and long-duration/
+reload/multiple-viewport memory acceptance open. Evidence:
+`build-macos/breadth-effect-electric-integrated-reconciliation.json`.
+
 ## Diesel-exhaust controls and wakeup study
 
 Release`.29`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at

@@ -1,5 +1,61 @@
 # Active extended development goal
 
+## Diesel packages independently verified — September28,05:54:44UTC
+
+Release`.30`at exact commit`31c6f418118856bb23bcef95e2e620d3cf5ea9cd`passes all eight
+jobs in workflow36381055740. Public audits reconcile19 attachments,18 checksums,2,095
+source files and six identical1,726-model catalogues. Three downloaded Mac render/
+clipping/save controls pass with signatures, architectures, dependencies and macOS15.0
+checked. Seven hosted graphical controls pass72 clipping views each; Windows x64/x86
+native load/save and Linux's900-frame support/collector journey pass. Hosted ARM/Intel
+software-OpenGL worlds retain zero black pixels and nine differences from Vulkan.
+Recommended downloads use verified`.30`. Evidence:`playable-release30-download-audit.json`
+and`playable-release30-ci-reconciliation.json`.
+
+## Electric-spark states integrated — September28,05:46:31UTC
+
+Five authored volumes and24 explicit climate bindings represent all six original
+electric-spark sprites3084…3089. The catalogue reaches1,731 models, preserving all1,726
+earlier models/components/material faces/bindings. Source sprites3088/3089 have identical
+pixels, offsets and palettes in all eight climate/backend exports; one volume serves
+both original states while their separate three-tick timing stays upstream.
+
+All12 prototype/20 integrated and two missing-frame/climate controls pass, with206 native,
+143 asset and31 harness checks and the138-file presentation-boundary audit.600 integration
+images match staging;648 original exports and168 prior diesel views remain exact. All48
+native sprite selections equal their model owners and all six source bounds match. Each
+75-view backend comparison retains nine wider differences/19 pixels and no native
+differences. Core/branch contours, source density, directional paint and all-angle breakup
+remain provisional. Final visual approvals:0.
+
+Eight lifecycle/close-train controls record803 samples and30 complete presented lifetimes,
+including both original pool orders. Lower-ID effects present17 ordered phases1…17;
+higher-ID effects can first present2 and retain16 phases. Both source-identical final
+sprites remain required by the oracle. Original electric-locomotive availability stays
+temperate-only; all-climate source states are exercised in galleries. Reduced smoke
+retains complete lifetimes and both1,800-frame disabled-smoke controls emit no captured
+effects. Both prior-diesel paused trace-on/off pairs remain exact; active paused sparks
+are not covered by those comparisons. The first close view contained no spark; moving
+the view ten tiles along the original route to observed spark positions corrects it.
+The failed control remains. Evidence:`breadth-effect-electric-integrated-reconciliation.json`.
+Two additional560-frame captures show the short-lived sparks alongside the actual
+locomotive and catenary. The first590-frame attempt included the30 warm-up frames and
+captured after the sparks expired; its functional trace and empty final images remain.
+Evidence:`breadth-effect-electric-visible-560-validation.json`.
+
+Peak sampled memory is3,541,536,320bytes. Six3,600-frame lifecycle controls average
+60.001…60.004fps but retain7…394 intervals above20ms and44.651ms maximum. Sustained smooth
+60fps and long-duration/reload/multiple-viewport memory acceptance remain open.1,511
+successful generated captures compact losslessly, saving2,253,746,567bytes with zero
+errors. Originals, failed controls and metadata remain.51 presentable effect sources
+remain unbound; a five-state charcoal-smoke study remains provisional and unbound.
+
+The raw-pose hangar comparison retains309/305 intersecting samples versus307/302 with
+actual interpolation. Replacing interpolation introduces15/16 previously clear contacts
+and removes13; it is not a clearance repair. Aircraft dimensions/paths stay unchanged.
+Evidence:`breadth-airport-hangar-raw-pose-study.json`. Essential clearances, catalogue
+breadth and later fidelity passes remain open.
+
 ## Steam packages independently verified — September28,05:10:58UTC
 
 Release`.29`at exact commit`6ed56b49e0964db564e82c3254918cb873cd4489`passes all eight

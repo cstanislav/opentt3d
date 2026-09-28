@@ -1953,7 +1953,11 @@
     "effect_diesel_body": [107,106,107,109,106,110],
     "effect_diesel_light": 110,
     "effect_diesel_hot": 111,
-    "effect_diesel_shade": 106
+    "effect_diesel_shade": 106,
+    "effect_electric_blue": [210,211,210,212,210,213],
+    "effect_electric_cyan": 212,
+    "effect_electric_white": 214,
+    "effect_electric_shadow": 210
   },
   "components": {
     "effect_bulldozer_body": [
@@ -9757,6 +9761,104 @@
     ]
   },
   "models": {
+    "effect_electric_spark_0": {
+      "size":[128,128,96],"cell_size":[0.125,0.125,0.25],"origin":[-8,-8,-12],"review_status":"work-in-progress",
+      "reference":"Original electric spark sprite3084: cyan/white ionized core with connected early branches and depth-separated late fragments. Final sprites3088/3089 have identical source pixels, offsets and palettes in every climate but retain separate original timing. Fixed original anchor, spawning, progress, smoke settings, deletion and RNG remain upstream; contour, directional paint and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_electric_blue",61,61,43,68,70,52], ["paint","effect_electric_white",63,64,47,66,67,51],
+        ["paint","effect_electric_cyan",61,61,43,68,68,46]
+      ]
+    },
+    "effect_electric_spark_1": {
+      "size":[128,128,96],"cell_size":[0.125,0.125,0.25],"origin":[-8,-8,-12],"review_status":"work-in-progress",
+      "reference":"Original electric spark sprite3085: cyan/white ionized core with connected early branches and depth-separated late fragments. Final sprites3088/3089 have identical source pixels, offsets and palettes in every climate but retain separate original timing. Fixed original anchor, spawning, progress, smoke settings, deletion and RNG remain upstream; contour, directional paint and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_electric_blue",61,61,43,68,68,52], ["paint","effect_electric_white",63,64,47,66,67,51],
+        ["paint","effect_electric_cyan",61,61,43,68,68,46], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[63,63,48],[65,61,52],[65,61,62]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,63,48],[66,61,52],[66,61,62]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[64,64,48],[66,62,52],[66,62,62]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,65,48],[66,63,52],[66,63,62]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[65,63,48],[67,61,52],[67,61,62]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[63,63,48],[69,56,47],[71,55,50]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,63,48],[70,56,47],[72,55,50]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[64,64,48],[70,57,47],[72,56,50]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,65,48],[70,58,47],[72,57,50]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[65,63,48],[71,56,47],[73,55,50]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[63,63,48],[58,68,49],[54,72,52]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,63,48],[59,68,49],[55,72,52]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[64,64,48],[59,69,49],[55,73,52]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,65,48],[59,70,49],[55,74,52]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[65,63,48],[60,68,49],[56,72,52]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[63,63,48],[61,65,44],[64,62,34]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,63,48],[62,65,44],[65,62,34]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[64,64,48],[62,66,44],[65,63,34]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[64,65,48],[62,67,44],[65,64,34]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[65,63,48],[63,65,44],[66,62,34]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[67,69,40],[69,68,40]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[68,69,40],[70,68,40]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[68,70,40],[70,69,40]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[68,71,40],[70,70,40]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[69,69,40],[71,68,40]]]]]]]
+      ]
+    },
+    "effect_electric_spark_2": {
+      "size":[128,128,96],"cell_size":[0.125,0.125,0.25],"origin":[-8,-8,-12],"review_status":"work-in-progress",
+      "reference":"Original electric spark sprite3086: cyan/white ionized core with connected early branches and depth-separated late fragments. Final sprites3088/3089 have identical source pixels, offsets and palettes in every climate but retain separate original timing. Fixed original anchor, spawning, progress, smoke settings, deletion and RNG remain upstream; contour, directional paint and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_electric_blue",58,58,43,70,70,52], ["paint","effect_electric_white",63,64,47,66,67,51],
+        ["paint","effect_electric_cyan",58,58,43,70,70,46], ["ellipsoid","effect_electric_blue",54,60,44,64,70,50],
+        ["ellipsoid","effect_electric_cyan",64,54,44,72,62,50], ["paint","effect_electric_white",60,60,47,68,68,51],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[76,51,49],[81,47,49]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[77,51,49],[82,47,49]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[77,52,49],[82,48,49]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[77,53,49],[82,49,49]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[78,51,49],[83,47,49]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[50,73,44],[47,77,44]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[51,73,44],[48,77,44]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[51,74,44],[48,78,44]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[51,75,44],[48,79,44]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[52,73,44],[49,77,44]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[68,56,60],[69,55,60]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[69,56,60],[70,55,60]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[69,57,60],[70,56,60]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[69,58,60],[70,57,60]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[70,56,60],[71,55,60]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[59,66,40],[59,66,35]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[60,66,40],[60,66,35]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[60,67,40],[60,67,35]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[60,68,40],[60,68,35]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[61,66,40],[61,66,35]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[48,75,38],[47,77,38]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[49,75,38],[48,77,38]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[49,76,38],[48,78,38]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[49,77,38],[48,79,38]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[50,75,38],[49,77,38]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[61,72,57],[59,73,57]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[62,72,57],[60,73,57]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[62,73,57],[60,74,57]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[62,74,57],[60,75,57]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[63,72,57],[61,73,57]]]]]]]
+      ]
+    },
+    "effect_electric_spark_3": {
+      "size":[128,128,96],"cell_size":[0.125,0.125,0.25],"origin":[-8,-8,-12],"review_status":"work-in-progress",
+      "reference":"Original electric spark sprite3087: cyan/white ionized core with connected early branches and depth-separated late fragments. Final sprites3088/3089 have identical source pixels, offsets and palettes in every climate but retain separate original timing. Fixed original anchor, spawning, progress, smoke settings, deletion and RNG remain upstream; contour, directional paint and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_electric_blue",60,60,43,69,69,52], ["paint","effect_electric_white",63,64,47,66,67,51],
+        ["paint","effect_electric_cyan",60,60,43,69,69,46], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[84,41,41],[86,40,42]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[85,41,41],[87,40,42]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[85,42,41],[87,41,42]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[85,43,41],[87,42,42]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[86,41,41],[88,40,42]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[43,83,38],[43,83,36]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[44,83,38],[44,83,36]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[44,84,38],[44,84,36]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[44,85,38],[44,85,36]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[45,83,38],[45,83,36]]]]]]], ["box","effect_electric_cyan",49,73,62,52,76,64],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[77,52,57],[77,52,55]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[78,52,57],[78,52,55]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[78,53,57],[78,53,55]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[78,54,57],[78,54,55]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[79,52,57],[79,52,55]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[57,65,21],[57,65,19]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[58,65,21],[58,65,19]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[58,66,21],[58,66,19]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[58,67,21],[58,67,19]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[59,65,21],[59,65,19]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[46,79,52],[45,79,51]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[47,79,52],[46,79,51]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[47,80,52],[46,80,51]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[47,81,52],[46,81,51]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[48,79,52],[47,79,51]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[77,53,42],[77,53,44]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[78,53,42],[78,53,44]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[78,54,42],[78,54,44]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[78,55,42],[78,55,44]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[79,53,42],[79,53,44]]]]]]]
+      ]
+    },
+    "effect_electric_spark_4": {
+      "size":[128,128,96],"cell_size":[0.125,0.125,0.25],"origin":[-8,-8,-12],"review_status":"work-in-progress",
+      "reference":"Original electric spark sprite3088/3089: cyan/white ionized core with connected early branches and depth-separated late fragments. Final sprites3088/3089 have identical source pixels, offsets and palettes in every climate but retain separate original timing. Fixed original anchor, spawning, progress, smoke settings, deletion and RNG remain upstream; contour, directional paint and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_electric_blue",61,61,43,68,68,52], ["paint","effect_electric_white",63,64,47,66,67,51],
+        ["paint","effect_electric_cyan",61,61,43,68,68,46], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[87,39,44],[89,37,42]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[88,39,44],[90,37,42]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[88,40,44],[90,38,42]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[88,41,44],[90,39,42]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[89,39,44],[91,37,42]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[38,88,38],[38,88,35]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[39,88,38],[39,88,35]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[39,89,38],[39,89,35]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[39,90,38],[39,90,35]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[40,88,38],[40,88,35]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[81,47,48],[82,45,47]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[82,47,48],[83,45,47]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[82,48,48],[83,46,47]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[82,49,48],[83,47,47]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[83,47,48],[84,45,47]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[47,79,64],[45,81,66]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[48,79,64],[46,81,66]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[48,80,64],[46,82,66]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[48,81,64],[46,83,66]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[49,79,64],[47,81,66]]]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[67,59,12],[67,59,9]]]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[68,59,12],[68,59,9]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[68,60,12],[68,60,9]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[68,61,12],[68,61,9]]]]], ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[69,59,12],[69,59,9]]]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[40,85,12],[40,85,9]]]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[41,85,12],[41,85,9]]]]],
+        ["repeat",[0,0,1],2,[["polyline","effect_electric_white",[[41,86,12],[41,86,9]]]]], ["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[41,87,12],[41,87,9]]]]],
+        ["repeat",[0,1,0],3,[["repeat",[0,0,1],2,[["polyline","effect_electric_cyan",[[42,85,12],[42,85,9]]]]]]], ["box","effect_electric_cyan",81,46,24,84,49,26]
+      ]
+    },
     "effect_diesel_smoke_0": {
       "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
       "reference":"Original diesel exhaust sprite3073: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
@@ -21786,6 +21888,12 @@
       "3081":{"0":"effect_steam_smoke_2","1":"effect_steam_smoke_2","2":"effect_steam_smoke_2","3":"effect_steam_smoke_2"},
       "3082":{"0":"effect_steam_smoke_3","1":"effect_steam_smoke_3","2":"effect_steam_smoke_3","3":"effect_steam_smoke_3"},
       "3083":{"0":"effect_steam_smoke_4","1":"effect_steam_smoke_4","2":"effect_steam_smoke_4","3":"effect_steam_smoke_4"},
+      "3084":{"0":"effect_electric_spark_0","1":"effect_electric_spark_0","2":"effect_electric_spark_0","3":"effect_electric_spark_0"},
+      "3085":{"0":"effect_electric_spark_1","1":"effect_electric_spark_1","2":"effect_electric_spark_1","3":"effect_electric_spark_1"},
+      "3086":{"0":"effect_electric_spark_2","1":"effect_electric_spark_2","2":"effect_electric_spark_2","3":"effect_electric_spark_2"},
+      "3087":{"0":"effect_electric_spark_3","1":"effect_electric_spark_3","2":"effect_electric_spark_3","3":"effect_electric_spark_3"},
+      "3088":{"0":"effect_electric_spark_4","1":"effect_electric_spark_4","2":"effect_electric_spark_4","3":"effect_electric_spark_4"},
+      "3089":{"0":"effect_electric_spark_4","1":"effect_electric_spark_4","2":"effect_electric_spark_4","3":"effect_electric_spark_4"},
       "3701":{"0":"effect_chimney_smoke_0","1":"effect_chimney_smoke_0","2":"effect_chimney_smoke_0","3":"effect_chimney_smoke_0"},
       "3702":{"0":"effect_chimney_smoke_1","1":"effect_chimney_smoke_1","2":"effect_chimney_smoke_1","3":"effect_chimney_smoke_1"},
       "3703":{"0":"effect_chimney_smoke_2","1":"effect_chimney_smoke_2","2":"effect_chimney_smoke_2","3":"effect_chimney_smoke_2"},

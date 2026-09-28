@@ -74,7 +74,13 @@ Six source-specific brown diesel exhaust volumes bind3073…3078 in every climat
 phases0…40, including the pre-tick first sprite. Higher-ID puffs first present1 and
 therefore display only five source frames. The ordinary low-effect-ID fixture observes
 both orders; `--smoke-amount 0/1/2` selects the original no/reduced/full smoke setting.
-The other57 presentable effect sources still need voxel artwork; source fidelity remains
+Five electric-spark volumes bind all six sprites3084…3089 through24 climate states.
+The final two sprites share exact source pixels, offsets and palettes in all climates;
+their bindings share one model while their original three-tick timing remains distinct.
+`electric_spark_cycle.py --emitter ID` checks stationary XYZ and the original ordered
+17-phase lifetime, or16 presented phases for later pool IDs. Original electric-locomotive
+availability stays temperate; all-climate galleries verify the remaining source states.
+The other51 presentable effect sources still need voxel artwork; source fidelity remains
 provisional for every authored effect family.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
