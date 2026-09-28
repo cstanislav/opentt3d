@@ -1,5 +1,48 @@
 # Implementation verification
 
+## Original diesel exhaust and sparse-mesh checks
+
+The first diesel sprite exists only at initialization progress0: the first original tick
+advances to the second sprite. Use the ordinary lower pool slot so that this brief state
+can actually be presented:
+
+```sh
+python3 tools/opentt3d/fixture_train.py --build-dir build-macos \
+  --output build-macos/new-diesel-fixture --climate temperate --rail-type 0 \
+  --locomotive 13 --first-engine 27 --last-engine 27 --low-effect-id
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
+  --output build-macos/new-diesel-live --background --backend vulkan \
+  --savegame build-macos/new-diesel-fixture/save/train-catalogue.sav \
+  --ai-dir build-macos/new-diesel-fixture/ai --reference-vehicle 13 \
+  --trace-effects --running --benchmark-frames 3600
+python3 tools/opentt3d/diesel_cycle.py build-macos/new-diesel-live/run.log \
+  --output build-macos/new-diesel-cycle.json --emitter 1 --require-complete
+```
+
+Read the actual emitter from `fixture.json`. Arctic/tropical controls use locomotives17/21
+and wagon27; Toyland uses locomotive5/wagon49. `--smoke-amount 0/1/2` creates a fixture
+with the original no/reduced/full smoke setting, reported through `AIGameSettings`.
+Disabled-smoke controls use `--expect-no-effects` on the operating saved route.
+
+Use `--departing` for a paused exhaust comparison: the verified returning train is
+stopped and restarted through ordinary public commands before the fixture saves its
+acceleration. Read `departure_speed` from its manifest. The smoke harness starts its
+benchmark asynchronously and saves immediately; that startup save is not a snapshot of
+the later benchmark screenshot. Both earlier empty-puff paused controls are retained.
+
+The read-only audit checks stationary spawned XY, one-unit rise every four progress
+ticks, source sprite transitions at1/9/17/25/33, local ten-unit exhaust altitude and zero
+picking. `--require-complete` needs one ordered six-frame lifetime covering0…40. A
+complete higher-ID five-frame lifetime plus a separate initialization observation does
+not pass this requirement. Hidden puffs, deletion, spawning probability and between-frame
+presentation remain outside these flat-track controls; original simulation RNG stays upstream.
+
+The sparse final diesel frame exposed a diagnostic-camera cutoff at four world units.
+The isolated mesh verifier now fits extent continuously, retaining its lens and16-pixel
+coverage gate. The unchanged sparse study passes on both backends, and all62 exported
+gallery images remain exact. This changes only the mesh-check camera distance. The
+original failed control remains in `breadth-effect-diesel-volume-vulkan`.
+
 ## Original train steam lifetime checks
 
 Create an ordinary operating steam consist on flat track in its original climate:

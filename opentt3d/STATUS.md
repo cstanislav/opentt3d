@@ -4,29 +4,36 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.28`publishes the1,715-model chimney-effect increment at
-  commita02a304fd. All eight jobs pass; independent checks reconcile19
-  attachments,18 checksums,2,089 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.29`publishes the1,720-model train-steam increment at
+  commit6ed56b49e. All eight jobs pass; independent checks reconcile19
+  attachments,18 checksums,2,092 source files and six identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.28`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.29`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,720-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness25/25 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,726-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness28/28 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Six diesel-exhaust frames and24 explicit climate bindings preserve original
+  spawning, rise, timing and smoke settings.12 prototype/20 integrated and two fallback
+  controls pass;672 integrated images match,648 source exports remain exact and48 native
+  selections equal their models. Eight live controls record10,004 samples and150 complete
+  presented lifetimes, including18 complete six-frame lower-ID lifetimes. Disabled/reduced
+  smoke and both paused trace-on/off comparisons pass. All six source bounds match;
+  fidelity remains provisional.57 presentable effect sources remain unbound.
 - [x] Five train-steam frames and twenty explicit climate bindings preserve original
   spawning, rise, timing and fixed spawned XY.12 prototype/18 integrated and two fallback
   controls pass;592 integration images match,648 source exports remain exact and40 native
   bindings equal their models. Eight lifecycle controls record50,083 samples and376
   complete presented lifetimes, including both original pool-order cases. All five native
-  source bounds match; contour/paint/all-angle fidelity remains provisional.63 presentable
-  effect sources remain unbound; final visual approvals remain zero.
+  source bounds match; contour/paint/all-angle fidelity remains provisional. Further effect
+  coverage is recorded above; final visual approvals remain zero.
 - [x] Eight stationary chimney effect frames and32 explicit climate bindings preserve
   original sprite/countdown, anchor/local altitude, visibility and unclickable ownership.
   18 prototype/14 integrated and two fallback controls pass;832 integration views match,

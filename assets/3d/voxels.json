@@ -1949,7 +1949,11 @@
     "effect_steam_body": [13,8,13,14,8,15],
     "effect_steam_light": 15,
     "effect_steam_grey": 8,
-    "effect_steam_warm": 135
+    "effect_steam_warm": 135,
+    "effect_diesel_body": [107,106,107,109,106,110],
+    "effect_diesel_light": 110,
+    "effect_diesel_hot": 111,
+    "effect_diesel_shade": 106
   },
   "components": {
     "effect_bulldozer_body": [
@@ -9753,6 +9757,61 @@
     ]
   },
   "models": {
+    "effect_diesel_smoke_0": {
+      "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
+      "reference":"Original diesel exhaust sprite3073: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_diesel_body",28,28,26,36,38,38], ["ellipsoid","effect_diesel_body",31,29,30,35,33,36], ["paint","effect_diesel_hot",31,29,30,35,33,36]
+      ]
+    },
+    "effect_diesel_smoke_1": {
+      "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
+      "reference":"Original diesel exhaust sprite3074: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_diesel_body",29,29,34,35,35,42], ["paint","effect_diesel_light",29,29,38,35,35,42], ["ellipsoid","effect_diesel_body",25,31,29,32,38,39],
+        ["ellipsoid","effect_diesel_body",32,25,26,39,32,38], ["ellipsoid","effect_diesel_body",28,28,22,36,36,28]
+      ]
+    },
+    "effect_diesel_smoke_2": {
+      "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
+      "reference":"Original diesel exhaust sprite3075: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_diesel_body",29,29,39,35,35,46], ["paint","effect_diesel_light",29,29,43,35,35,46], ["ellipsoid","effect_diesel_body",23,34,33,30,41,41],
+        ["paint","effect_diesel_light",23,34,37,30,41,41], ["ellipsoid","effect_diesel_body",22,32,24,30,40,34], ["ellipsoid","effect_diesel_body",27,29,18,35,37,25],
+        ["ellipsoid","effect_diesel_body",34,24,24,41,30,32], ["ellipsoid","effect_diesel_body",34,23,34,41,30,42], ["paint","effect_diesel_light",34,23,38,41,30,42],
+        ["ellipsoid","effect_diesel_body",28,25,31,33,30,36]
+      ]
+    },
+    "effect_diesel_smoke_3": {
+      "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
+      "reference":"Original diesel exhaust sprite3076: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_diesel_body",28,32,44,32,35,50], ["paint","effect_diesel_light",27,31,47,33,36,50], ["ellipsoid","effect_diesel_body",24,37,37,27,40,43],
+        ["paint","effect_diesel_light",23,36,40,28,41,43], ["ellipsoid","effect_diesel_body",21,37,28,25,41,34], ["ellipsoid","effect_diesel_body",25,35,19,29,39,24],
+        ["ellipsoid","effect_diesel_body",30,28,14,36,33,20], ["ellipsoid","effect_diesel_body",37,24,20,40,27,26], ["ellipsoid","effect_diesel_body",38,22,30,42,26,35],
+        ["ellipsoid","effect_diesel_body",36,24,40,40,27,45], ["paint","effect_diesel_light",35,23,42,41,28,45], ["ellipsoid","effect_diesel_body",25,26,35,28,30,39],
+        ["paint","effect_diesel_light",24,26,37,29,30,39], ["ellipsoid","effect_diesel_body",35,34,25,38,38,29], ["box","effect_diesel_shade",31,31,32,34,34,35]
+      ]
+    },
+    "effect_diesel_smoke_4": {
+      "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
+      "reference":"Original diesel exhaust sprite3077: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
+      "ops": [
+        ["box","effect_diesel_light",20,42,31,23,45,34], ["box","effect_diesel_body",22,40,41,25,42,43], ["box","effect_diesel_body",28,34,53,31,37,56],
+        ["box","effect_diesel_light",36,26,47,39,28,49], ["box","effect_diesel_body",41,21,37,44,23,39], ["box","effect_diesel_body",41,21,25,44,24,28],
+        ["box","effect_diesel_light",36,26,14,39,28,16], ["box","effect_diesel_body",29,33,9,32,36,12], ["box","effect_diesel_body",23,39,20,26,41,22],
+        ["box","effect_diesel_light",25,25,39,28,27,41], ["box","effect_diesel_body",37,37,23,40,39,25], ["box","effect_diesel_body",33,33,33,36,35,35],
+        ["box","effect_diesel_light",21,28,43,24,30,45], ["box","effect_diesel_body",33,42,37,36,44,39], ["box","effect_diesel_body",33,21,19,36,23,21]
+      ]
+    },
+    "effect_diesel_smoke_5": {
+      "size":[64,64,64],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-8],"review_status":"work-in-progress",
+      "reference":"Original diesel exhaust sprite3078: compact brown plume, expanding perforated billows and detached final flecks with independent depth. Fixed original anchor; spawning probability, local rise, first-tick transition, progress timing, smoke settings, deletion and RNG stay upstream. Source contour, palette distribution and all-angle breakup remain provisional.",
+      "ops": [
+        ["box","effect_diesel_light",31,31,57,34,34,60], ["box","effect_diesel_body",45,27,50,48,30,53], ["box","effect_diesel_body",18,35,42,21,38,45],
+        ["box","effect_diesel_light",44,18,26,47,21,29], ["box","effect_diesel_body",18,44,22,21,47,25], ["box","effect_diesel_body",30,32,5,33,35,8]
+      ]
+    },
     "effect_steam_smoke_0": {
       "size":[64,64,80],"cell_size":[0.125,0.125,0.25],"origin":[-4,-4,-10],"review_status":"work-in-progress",
       "reference":"Original train steam sprite3079: expanding three-dimensional billows, progressive open gaps and detached final flecks. Fixed source anchor; original spawned XY, upward motion, frame/progress timing, visibility, deletion and simulation RNG remain upstream. Billow contour, all-angle breakup and directional paint remain provisional.",
@@ -21716,6 +21775,12 @@
       "1417":{"0":"effect_bulldozer_se","1":"effect_bulldozer_se","2":"effect_bulldozer_se","3":"effect_bulldozer_se"},
       "1418":{"0":"effect_bulldozer_sw","1":"effect_bulldozer_sw","2":"effect_bulldozer_sw","3":"effect_bulldozer_sw"},
       "1419":{"0":"effect_bulldozer_nw","1":"effect_bulldozer_nw","2":"effect_bulldozer_nw","3":"effect_bulldozer_nw"},
+      "3073":{"0":"effect_diesel_smoke_0","1":"effect_diesel_smoke_0","2":"effect_diesel_smoke_0","3":"effect_diesel_smoke_0"},
+      "3074":{"0":"effect_diesel_smoke_1","1":"effect_diesel_smoke_1","2":"effect_diesel_smoke_1","3":"effect_diesel_smoke_1"},
+      "3075":{"0":"effect_diesel_smoke_2","1":"effect_diesel_smoke_2","2":"effect_diesel_smoke_2","3":"effect_diesel_smoke_2"},
+      "3076":{"0":"effect_diesel_smoke_3","1":"effect_diesel_smoke_3","2":"effect_diesel_smoke_3","3":"effect_diesel_smoke_3"},
+      "3077":{"0":"effect_diesel_smoke_4","1":"effect_diesel_smoke_4","2":"effect_diesel_smoke_4","3":"effect_diesel_smoke_4"},
+      "3078":{"0":"effect_diesel_smoke_5","1":"effect_diesel_smoke_5","2":"effect_diesel_smoke_5","3":"effect_diesel_smoke_5"},
       "3079":{"0":"effect_steam_smoke_0","1":"effect_steam_smoke_0","2":"effect_steam_smoke_0","3":"effect_steam_smoke_0"},
       "3080":{"0":"effect_steam_smoke_1","1":"effect_steam_smoke_1","2":"effect_steam_smoke_1","3":"effect_steam_smoke_1"},
       "3081":{"0":"effect_steam_smoke_2","1":"effect_steam_smoke_2","2":"effect_steam_smoke_2","3":"effect_steam_smoke_2"},

@@ -3,6 +3,27 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Diesel-exhaust controls and wakeup study
+
+Release`.29`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+1.711fps with2,642,292,736 peak sampled bytes. This remains functional compatibility
+evidence. See`build-macos/playable-release29-ci-reconciliation.json`.
+
+The12 prototype/20 integrated controls peak at3,532,475,944 sampled bytes. Six3,600-frame
+lifecycle replays average59.999…60.004fps but retain177…482 intervals above20ms, reaching
+65.390ms maximum. Both900-frame close-train controls retain84/108 intervals above20ms.
+These traced functional controls leave ordinary-launch smoothness and long-duration/
+reload/multiple-viewport memory acceptance open. Evidence:
+`build-macos/breadth-effect-diesel-integrated-reconciliation.json`.
+
+Eight standalone360-frame scheduler probes compare standard sleep with`mach_wait_until`,
+inherited/user-interactive QoS and a latency-critical process activity. Every combination
+retains24…82 intervals above20ms; maximum intervals are24.697…25.011ms. These short
+background-harness probes contain no game, simulation or GPU rendering. They reject these
+simple substitutions as a demonstrated fix, without establishing a cause for every game
+stall. No production timing change is integrated. Evidence:
+`build-macos/frame-wakeup-study-reconciliation.json`.
+
 ## Expanding train-steam controls
 
 The12 prototype/18 integrated controls peak at3,546,353,264 sampled bytes. Six3,600-frame

@@ -1,5 +1,61 @@
 # Active extended development goal
 
+## Steam packages independently verified — September28,05:10:58UTC
+
+Release`.29`at exact commit`6ed56b49e0964db564e82c3254918cb873cd4489`passes all eight
+jobs in workflow36377987609. Public audits reconcile19 attachments,18 checksums,2,092
+source files and six identical1,720-model catalogues. Three downloaded Mac render/
+clipping/save controls pass with signatures, architectures, dependencies and macOS15.0
+checked. Seven hosted graphical controls pass72 clipping views each; Windows x64/x86
+native load/save and Linux's900-frame support/collector journey pass. Hosted ARM/Intel
+software-OpenGL worlds retain zero black pixels and nine differences from Vulkan.
+Recommended downloads use verified`.29`. Evidence:`playable-release29-download-audit.json`
+and`playable-release29-ci-reconciliation.json`.
+
+## Six diesel-exhaust frames integrated — September28,05:09:58UTC
+
+The catalogue reaches1,726 volumes with six expanding brown exhaust clouds and24
+explicit sprite3073…3078/climate0…3 bindings. All1,720 prior models, material faces,
+components and bindings remain exact. Original spawning, stationary spawned XY, rise,
+sprite timing, smoke settings, deletion and RNG remain upstream.
+
+All12 prototype,20 integrated and two missing-frame/climate controls pass, together
+with206 native,143 asset and28 harness checks and the138-file presentation-boundary
+audit.672 integration images match staging;648 original exports remain exact and48
+native selections equal their model owners. All six source bounds match. Each84-view
+backend comparison retains four wider differences/35 pixels with zero native differences;
+148 earlier steam views remain exact.1,839 successful generated captures compact losslessly,
+saving2,744,084,734bytes with zero errors; originals, failed controls and metadata remain.
+Source contour, density, paint and all-angle breakup remain provisional. Final visual approvals:0.
+
+Four all-climate3,600-frame replays, two installed-app replays and two close900-frame
+train controls capture10,004 samples and150 complete presented lifetimes. Eighteen of
+these include all41 ordered phases0…40 and all six sprites in one lower-ID puff. The
+original first tick changes the sprite; higher-ID effects can first present1 and show
+five frames. A separate initialization sample cannot complete another puff's lifetime.
+Reduced smoke retains complete lifetimes; both1,800-frame disabled-smoke controls emit
+no captured puffs. Both paused trace-on/off screenshot pairs agree exactly. The original
+route save and an asynchronous benchmark-start save had no captured puff; both failed
+controls remain. An ordinary public-command stop/restart departure fixture provides the
+emitting saved state. Hidden puffs, deletion and between-frame presentation remain outside
+the flat-track oracle. Evidence:`breadth-effect-diesel-integrated-reconciliation.json`.
+
+The original sparse final-frame mesh check failed its coverage gate. Continuously fitting
+the diagnostic camera to model extent fixes its former four-unit cutoff; both backends
+pass the unchanged16-pixel threshold with the original study geometry, and all62 exported
+gallery images remain exact. Interactive camera behavior remains source-preserved.
+
+Peak sampled memory is3,532,475,944bytes. Six3,600-frame lifecycle controls average
+59.999…60.004fps but retain177…482 intervals above20ms and65.390ms maximum. Eight short
+standalone scheduler probes also retain24…82 intervals above20ms per360 frames; neither
+the alternate wait API, higher thread QoS nor a latency-critical activity eliminates the
+jitter. No production timing change is integrated. Evidence:`frame-wakeup-study-reconciliation.json`.
+Sustained arbitrary-world smooth60fps and long-duration/reload/multiple-viewport memory
+acceptance remain open.57 presentable effect sources still need artwork. A five-model,
+six-source electric-spark study is unbound; its final two sources are pixel/offset/palette
+identical, while native registration and all-angle breakup still need work. Continue
+essential aircraft clearances and catalogue breadth. The full objective remains open.
+
 ## Five train-steam frames integrated — September28,04:21:15UTC
 
 The catalogue reaches1,720 volumes with five expanding, perforating steam puffs and

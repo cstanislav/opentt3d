@@ -70,10 +70,11 @@ current quality and participate in the same catalogue-wide audits.
 
 ## Pass 1 coverage checkpoint and queue (2026-09-27; 1,685-volume Arctic-farm checkpoint)
 
-Latest effect-breadth increment reaches1,720 volumes: four roadworks orientations,
-eight chimney frames and five train-steam frames bind17/80 presentable effect sources
-through68 explicit climate bindings. Original lifetime/motion controls and fixed-anchor
-source bounds are recorded in `VOXEL_REVIEW.md`;63 effect sources still need artwork.
+Latest effect-breadth increment reaches1,726 volumes: four roadworks orientations,
+eight chimney frames, five train-steam and six diesel-exhaust frames bind23/80 presentable
+effect sources through92 explicit climate bindings. Original lifetime/motion controls
+and fixed-anchor source bounds are recorded in `VOXEL_REVIEW.md`;57 effect sources still
+need artwork.
 These additions preserve all preceding volumes and do not complete the catalogue-wide
 Pass1 gate or establish final visual approval.
 

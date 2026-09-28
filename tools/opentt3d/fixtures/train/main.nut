@@ -133,14 +133,24 @@ function TrainCatalogue::Start()
 		if (clearance && !(bridge_seen && tunnel_seen)) throw "the consist did not traverse the actual bridge and tunnel";
 		if (curves && !curve_seen) throw "the consist did not traverse the actual curve detour";
 		local held = AIController.GetSetting("review_hold") != 0;
-		if (held) {
+		local departing = AIController.GetSetting("review_departing") != 0, departure_speed = 0;
+		if (held || departing) {
 			this.Require(AIVehicle.StartStopVehicle(train),"hold the verified returning consist");
 			for (local tick = 0; tick < 160 && AIVehicle.GetCurrentSpeed(train) != 0; tick += 2) this.Sleep(2);
 			if (AIVehicle.GetCurrentSpeed(train) != 0 || AIVehicle.GetState(train) != AIVehicle.VS_STOPPED) throw "review train did not finish its ordinary stop";
 		}
+		if (departing) {
+			this.Require(AIVehicle.StartStopVehicle(train),"restart the verified consist for ordinary exhaust review");
+			for (local tick = 0; tick < 256; tick++) {
+				departure_speed = AIVehicle.GetCurrentSpeed(train);
+				if (departure_speed >= 16) break;
+				this.Sleep(1);
+			}
+			if (departure_speed < 16) throw "the verified train did not resume acceleration";
+		}
 		AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+rail_type+
-			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"released_pool_id\":"+spare+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
-			",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"clearance_route\":"+(clearance ? "true" : "false")+
+			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"released_pool_id\":"+spare+",\"smoke_amount\":"+AIGameSettings.GetValue("vehicle.smoke_amount")+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
+			",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"departure_speed\":"+departure_speed+",\"clearance_route\":"+(clearance ? "true" : "false")+
 			",\"curve_route\":"+(curves ? "true" : "false")+",\"curve_seen\":"+(curve_seen ? "true" : "false")+
 			",\"bridge_seen\":"+(clearance && bridge_seen ? "true" : "false")+",\"tunnel_seen\":"+(tunnel_seen ? "true" : "false")+
 			",\"tunnel_first\":"+tunnel_first+",\"tunnel_last\":"+tunnel_last+"}");
@@ -230,7 +240,7 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 		if (AIVehicle.GetCurrentSpeed(train) != 0) throw "cargo train did not stop";
 	}
 	AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+AIController.GetSetting("review_rail_type")+
-		",\"locomotive\":"+AIVehicle.GetEngineType(train)+",\"train\":"+train+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
+		",\"locomotive\":"+AIVehicle.GetEngineType(train)+",\"train\":"+train+",\"smoke_amount\":"+AIGameSettings.GetValue("vehicle.smoke_amount")+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
 		",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"cargo\":"+cargo+",\"capacity\":"+capacity+",\"acceptance\":"+acceptance+
 		",\"source_type\":"+source+",\"destination_type\":"+destination+",\"feeder_type\":"+feeder_type+
 		",\"feeder_delivered\":"+(feeder != null && feeder.delivered ? "true" : "false")+",\"full\":true,\"delivered\":true"+

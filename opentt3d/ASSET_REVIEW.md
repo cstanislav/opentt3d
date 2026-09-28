@@ -4,6 +4,30 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Six-stage diesel exhaust (September28)
+
+Six source-specific brown exhaust volumes and24 climate bindings reach1,726 models,
+preserving all1,720 prior models/components/material faces/bindings. Compact puffs open
+into separate billows and final fragments with authored depth. All six fixed-anchor
+native bounds match. Source density, contour, directional paint and all-angle breakup
+remain provisional. Final visual approvals:0.
+
+12 prototype/20 integrated and two fallback controls pass.672 integration images match
+staging,648 original exports remain exact and48 native selections equal their model
+owners. Each84-view backend comparison retains four wider differences/35 pixels and no
+native differences; both74-view earlier steam comparisons remain exact. Eight lifecycle/
+close-train controls record10,004 samples and150 complete presented lifetimes, including
+18 complete six-frame lower-ID lifetimes. Reduced smoke, disabled smoke and both paused
+trace-on/off comparisons pass. Two empty-puff paused failures remain; an ordinary
+stop/restart departure fixture supplies the corrected emitting save. Native206, asset143
+and harness28 checks pass.57 presentable sources remain unbound. Evidence:
+`breadth-effect-diesel-integrated-reconciliation.json`.
+
+The first sparse final-frame mesh check remains preserved. Continuous extent fitting
+removes the diagnostic camera's four-unit cutoff while retaining its lens and16-pixel
+coverage threshold. Both backends pass with the original study geometry and all62
+exported gallery images remain exact.
+
 ## Expanding train steam (September28)
 
 Five source-specific volumes and twenty explicit climate bindings reach1,720 models,

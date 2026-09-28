@@ -2026,9 +2026,10 @@ void VerifyVoxelMeshes(std::string_view prefix)
 			Vec3 centre = (model.surface.low+model.surface.high)*0.5f;
 			Vec3 extent = model.surface.high-model.surface.low;
 			float longest = std::max({extent.x,extent.y,extent.z*Camera::WORLD_Z_SCALE});
-			/* Small standalone fittings need an isolated close view rather than
-			 * a subpixel orbit probe. Keep the lens and exact coverage threshold. */
-			float scale = longest < 4 ? std::clamp(24.0f/std::max(0.125f,longest),1.4f,8.0f) : 1.4f;
+			/* Small fittings and widely separated effect fragments need an isolated
+			 * close view. Fit their extent continuously: a four-unit cutoff leaves
+			 * sparse expanding effects subpixel. Keep the lens and coverage gate. */
+			float scale = std::clamp(24.0f/std::max(0.125f,longest),1.4f,8.0f);
 			Camera camera{centre,scale,256,256,turn+0.15f};
 			if (street) camera = StreetReviewCamera(model.surface.low,model.surface.high,256,256,turn+0.15f);
 			if (!RenderScene(merged,camera,pixels,&ids) || std::count(ids.begin(),ids.end(),213) < 16) throw std::runtime_error(fmt::format("Voxel {} palette {} turn {} street {} has insufficient review coverage",name,palette,turn,street));

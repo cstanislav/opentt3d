@@ -14,6 +14,11 @@ all earlier models and bindings.
 
 ## Verification
 
+Public packages independently reconcile 19 attachments, 18 checksums, 2,092 source files
+and six identical 1,720-model catalogues at commit `6ed56b49e`. All eight packaging jobs
+pass, together with three downloaded Mac render/save controls, seven hosted graphical
+clipping controls, Windows x64/x86 native load/save and Linux's 900-frame journey.
+
 Twelve prototype, eighteen integrated and two fallback controls pass. The native suite
 passes 206 checks, the asset suite 143 and the harness suite 25. All 592 integration
 images match staging; 648 original source images remain exact. All five source bounds
@@ -26,7 +31,8 @@ pool-order correction.
 
 ## Play
 
-Desktop packages appear after the exact tagged commit passes every packaging job.
+The [verified `.29` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.29)
+is available for Windows, macOS and Linux, with required graphics bundled.
 Use the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
 for the current independently verified download and platform instructions.
 

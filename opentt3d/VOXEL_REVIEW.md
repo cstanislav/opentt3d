@@ -16,6 +16,16 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Six diesel-exhaust frames:**24 explicit climate bindings reach1,726 volumes,
+  preserving all1,720 previous models/components/material faces/bindings.12 prototype/20
+  integrated and two fallback controls pass;672 integration images match,648 sources
+  remain exact and48 native selections equal their models. All six source bounds match;
+  148 previous steam views remain exact. Eight lifecycle/close-train controls observe
+  10,004 samples and150 complete presented lifetimes, including18 ordered six-frame
+  lower-ID puffs. Original reduced/disabled smoke and both exact paused trace-on/off
+  pairs pass. Native206, asset143 and harness28 checks pass.57 presentable effect sources
+  remain unbound; contour/density/paint/all-angle fidelity and final approval remain open.
+
 - **Five train-steam frames:**twenty explicit climate bindings reach1,720 volumes,
   preserving all1,715 prior models/components/material faces/bindings.12 prototype/18
   integrated and two fallback controls pass;592 integration images match,648 sources

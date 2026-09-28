@@ -69,7 +69,12 @@ puff expands into open billows and detached final flecks at its fixed original a
 lifetime on flat track. Its explicit fixture emitter accounts for the original ascending
 pool tick order: newly created higher IDs tick before presentation and first appear at
 progress13, although initialization is12. Spawning, smoke settings and RNG stay upstream.
-The other63 presentable effect sources still need voxel artwork; source fidelity remains
+Six source-specific brown diesel exhaust volumes bind3073…3078 in every climate.
+`diesel_cycle.py --emitter ID --require-complete` requires one puff with all41 ordered
+phases0…40, including the pre-tick first sprite. Higher-ID puffs first present1 and
+therefore display only five source frames. The ordinary low-effect-ID fixture observes
+both orders; `--smoke-amount 0/1/2` selects the original no/reduced/full smoke setting.
+The other57 presentable effect sources still need voxel artwork; source fidelity remains
 provisional for every authored effect family.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
