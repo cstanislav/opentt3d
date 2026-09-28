@@ -16,6 +16,15 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Gold Toyland grounds2022/2257/2260/2261:**one registered underlay reaches1,702;
+  twelve explicit bindings preserve all1,701 prior models and every earlier binding.
+  Source-exact pool differences resolve through animated palette245…249. Source-identical
+  2022 paint retains the gold floor's ownZ=-0.5 contact via aZ=-0.75 underlay; the first
+  direct alias failed all nine intersection checks.16 prototype/six integrated controls,
+  three negatives,206 native checks and142 asset tests pass.2,860 integrated gallery
+  views match staging exactly; native backend layers agree. Original industry availability
+  and independent owners remain. Full source fidelity and final approval remain open.
+
 - **Toyland airports19…28/43/47:**twelve provisional bodies reach1,701; explicit
   climate48 paint preserves independent aprons and the16 source-confirmed shared
   masks/registrations.41 nonuniform source-colour transitions receive spatial paint,

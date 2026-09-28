@@ -1,5 +1,24 @@
 # Implementation verification
 
+## Gold Toyland independent layers
+
+The1,702-model increment preserves all1,701 prior source/compiled model entries and all
+prior bindings. Nine2022 ground states use a derivedZ=-0.75 underlay touching the independent
+body atZ=-0.5; the initial direct sweets-ground alias intersects4,096 quarter-cells per
+body and is retained as failed evidence. Three finished pool aliases preserve original
+animated245…249 indices, which exactly resolve the source climate colour differences.
+The initially failing gold regression now passes with the complete142-test asset suite.
+204 native unit cases and the two original script regressions pass separately.
+
+All16 prototype/six integrated background controls and three partial/wrong-climate
+negative controls pass.24 native sidecars retain explicit climate3 states49…51. All2,860
+staged/integrated gallery images agree exactly. Both Arctic before/after comparisons
+retain618/706 views, with88 discovery-page changes and nine added views. Each715-view
+backend comparison retains171 wider differences/11,609 pixels, with zero native
+differences. App bundles and original Arctic construction fixtures pass; no industry
+availability changes are made. Final approvals:0. Evidence:
+`build-macos/breadth-gold-toyland-integrated-reconciliation.json`.
+
 ## Toyland airport integration and retained clearance failures
 
 The initial1,701-model catalogue passes206 native tests,141 asset tests, all60 frozen

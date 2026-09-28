@@ -15,11 +15,17 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,701-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,702-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Twelve explicit Toyland gold-ground bindings preserve original animated pool
+  colours and independent2022 soil registration. The new underlay clears all nine
+  body-floor intersections while preserving all1,701 previous models and prior bindings.
+  16 prototype/six integrated controls, three negatives,204 unit/two script regressions
+  and142 asset tests pass;2,860 staged/integrated views agree. Original industry
+  availability and final source-fidelity reservations remain.
 - [x] Twelve Toyland airport bodies19…28/43/47 retain source-confirmed climate silhouettes
   with independent spatial paint and separate aprons. Four shared piers receive source-
   facing branches, a mirrored elbow and full-length raised link. Two support positions

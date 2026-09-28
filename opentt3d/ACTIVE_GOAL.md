@@ -1,5 +1,35 @@
 # Active extended development goal
 
+## Gold climate layers verified — September28,00:29:19UTC
+
+The catalogue reaches1,702 with a separately registered Toyland2022 underlay and twelve
+explicit ground bindings. All1,701 preceding source/compiled models and prior bindings
+remain unchanged. Original2257/2260/2261 pool differences resolve exactly through the
+existing245…249 animated palette. Direct reuse of sweets-ground2022 initially intersected
+4,096 quarter-cells in each gold body: the source-identical paint now sits atZ=-0.75,
+meeting the independently owned floor atZ=-0.5 in all nine states without overlap.
+The failed direct-alias candidate and initially failing regression remain preserved.
+
+All16 prototype controls, six integrated controls and three missing/wrong-climate checks
+pass.204 native unit cases plus two script regressions and142 asset tests pass.24 native
+sidecars select the proper explicit climate state. All2,860 staged/integrated gallery
+views agree exactly. Each original-climate backend retains618 of706 prior views;88
+changes affect discovery pages only, with nine added views. Both715-view climate sets
+retain171 wider backend differences/11,609 pixels and zero native differences. Registered
+source/ground, joined-layout and street reviews retain inherited fidelity reservations;
+final approvals stay0. Original industry availability is unchanged. Evidence:
+`breadth-gold-toyland-integrated-reconciliation.json`.
+7,132 successful prototype/integrated captures compact losslessly, saving9,861,138,346
+bytes with zero errors; source originals, failure evidence and PAM metadata remain.
+
+Airport commita43eae69ea3260e95baebbd38cb7b38acff3e1e1 is pushed; preview`.24`builds
+that exact1,701-model commit in workflow36360500122. Public-package verification is
+pending, so verified download links remain`.23`. The next isolated rig/paper study adds
+thirteen source-proven animated-body aliases and independently painted Toyland4061 water;
+its native review is in progress. Large-aircraft airport clearances, remaining forest
+climate work, procedural/infrastructure/effect coverage, later fidelity passes and the
+arbitrary-world sustained60fps target remain open. Continue the full objective.
+
 ## Toyland airport artwork and clearance repairs — September27
 
 The working catalogue reaches1,701 with twelve explicit Toyland bodies19…28/43/47,
@@ -44,8 +74,8 @@ original simulation paths or shrinking aircraft to fit.
 The next industry source audit proves that all Toyland2257/2260/2261 pool differences
 are exactly upstream's dark-water palette substitution; the existing animated voxel
 indices already support it. Nine2022 bare-soil layers exactly match authored Toyland
-sweets ground. Twelve explicit alias bindings need no new models, but remain isolated
-pending their own native ownership/fallback review. Evidence:`breadth-gold-toyland-
+sweets ground. The initial source-only proposal expected twelve alias bindings without
+new models; the subsequent ownership review above requires a lowered underlay. Evidence:`breadth-gold-toyland-
 palette-alias-audit.json`. Verified public downloads remain`.23`.
 
 ## Climate-ground desktop release verified — September27,22:41:40UTC

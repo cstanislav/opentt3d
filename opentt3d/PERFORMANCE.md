@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Gold Toyland layer controls
+
+The16 prototype and six integrated controls peak at3,549,204,536 sampled bytes without
+crossing the6GiB guard. These short source/ownership/construction checks establish neither
+sustained60fps nor long-duration/reload/multiple-viewport memory acceptance. Source:
+`build-macos/breadth-gold-toyland-integrated-reconciliation.json`.
+
 ## Toyland airport service baseline
 
 The60-control airport matrix peaks at3,449,441,712 sampled bytes. Four1,800-frame

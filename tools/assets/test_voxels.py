@@ -57,7 +57,7 @@ class VoxelCompilerTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
         source["models"] = {name:model for name,model in source["models"].items()
-                            if name.startswith("gold_") or name in ("mine_ground_site","mine_ground_bare")}
+                            if name.startswith("gold_") or name in ("mine_ground_site","mine_ground_bare","sweets_ground")}
         source["bindings"] = {category:{key:value for key,value in source["bindings"][category].items() if int(key) in range(72,89)}
                               for category in ("industries","industry_ground")}
         result = compile_catalogue(source)
@@ -83,6 +83,12 @@ class VoxelCompilerTests(unittest.TestCase):
             body = result["models"][f"gold_{graphics}_middle"]
             underlay = result["models"]["gold_bare_underlay"]
             self.assertEqual(underlay["origin"][2]+underlay["cell_size"][2],body["origin"][2],"Independent2022 soil touches the body-owned substrate without coincident top faces")
+            for stage in (1,2,3):
+                name = result["bindings"]["industry_ground"][str(graphics)][str(48+stage)]
+                soil = result["models"][name]
+                self.assertEqual(soil["origin"][2]+soil["cell_size"][2],body["origin"][2],
+                                 "Source-identical Toyland soil must retain gold's own underlay datum")
+                self.assertEqual(volumes[name],volumes["sweets_ground"],"Share the independently verified2022 source colours and cells")
         for stage in range(4):
             joined = set()
             for graphics in range(72,88):
@@ -112,6 +118,8 @@ class VoxelCompilerTests(unittest.TestCase):
             self.assertNotIn(point,volumes["gold_75_finished"],"The defining upper/lower windows face the original visible facade")
             self.assertIn(back,volumes["gold_75_finished"])
         for graphics in (82,85,86):
+            states = result["bindings"]["industry_ground"][str(graphics)]
+            self.assertEqual(states["51"],states["3"],"Original Toyland pool differences resolve through the same animated palette indices")
             for stage in ("initial","middle","finished"):
                 colours = {c for material in volumes[f"gold_{graphics}_{stage}"].values() for c in result["materials"][material-1]}
                 self.assertEqual(bool(colours & set(range(245,250))),stage == "finished","Original animated pool water first appears on completion")

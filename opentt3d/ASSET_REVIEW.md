@@ -4,6 +4,29 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Gold Toyland soil registration and animated pool aliases (September28)
+
+One provisional underlay and twelve explicit ground bindings bring the catalogue to1,702,
+preserving all1,701 preceding source/compiled models and all previous bindings. Three
+original pool layers2257/2260/2261 differ only through the original Toyland dark-water
+palette; retained245…249 indices reproduce that climate mechanism without new pool models.
+Nine2022 layers have the exact sweets-ground source colours, masks and offsets, but their
+independent gold floor begins atZ=-0.5. Directly reusing theZ=-0.25 ground intersects4,096
+quarter-cells in each body. The new derived underlay sits atZ=-0.75 and touches all nine
+body floors without intersections. The failed candidate remains in evidence.
+
+Sixteen prototype/six integrated controls and three fallback negatives pass. All2,860
+staged/integrated views agree. Both original-climate regressions preserve618/706 views;
+88 changed discovery pages and nine added views account for the full difference. Each
+715-view climate/backend comparison retains171 wider differences/11,609 pixels, with
+zero native differences. Registered ground/source and joined street/orbit review preserves
+full16×16 floors rather than shrinking them to64×31 raster bounds. Water contours, grain,
+rock banks, roof joins and final source fidelity retain their earlier reservations.
+Original Arctic-only industry availability remains unchanged; final approvals:0.
+Evidence:`breadth-gold-toyland-{registered-layer-audit,registered-gallery-review,
+integrated-reconciliation}.json`.7,132 reviewed prototype/integrated captures compact
+losslessly, saving9,861,138,346bytes while preserving original art, failures and metadata.
+
 ## Toyland airport bodies and shared boarding geometry (September27)
 
 Twelve provisional climate48 bodies cover19…28/43/47, bringing the working catalogue
