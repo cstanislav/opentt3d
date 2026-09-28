@@ -4,6 +4,31 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Expanding train steam (September28)
+
+Five source-specific volumes and twenty explicit climate bindings reach1,720 models,
+preserving all1,715 prior volumes and their components/material faces/bindings. The
+compact puff expands into open three-dimensional billows and finally detached fragments.
+Fixed-anchor native, orbit, street and close joined train views retain all five original
+source bounds exactly. Contour, directional paint and all-angle breakup remain provisional.
+The earlier closed-shell, billow-density and one-pixel registration studies remain as
+evidence; final approvals:0.
+
+12 prototype/18 integrated and two fallback controls pass.592 integration images match
+staging,648 original exports remain exact and40 native sprite selections equal their
+model owners. Each74-view backend comparison retains19 wider differences/138 pixels and
+no native differences. Eight live controls capture50,083 samples and376 complete presented
+lifetimes, including both original pool-order cases. The read-only oracle preserves
+stationary spawned XY, original one-unit rise/eight ticks, ten-unit exhaust altitude and
+zero picking. Two close joined controls show all five sprites; two paused trace-on/off
+pairs match.63 presentable effect sources remain unbound. Native206, asset143 and harness25
+checks pass. Evidence:`breadth-effect-steam-integrated-reconciliation.json`.
+
+The whole-hangar anchor study rejects all three shifts because each creates5…27 new
+contacts at previously clear poses. It retains281…326 intersecting samples; no aircraft
+dimensions or original paths change. Essential clearances remain open. Evidence:
+`breadth-airport-hangar-anchor-study.json`.
+
 ## Stationary chimney plume (September28)
 
 Eight source-specific wind-bent plumes bring the catalogue to1,715, preserving all1,707

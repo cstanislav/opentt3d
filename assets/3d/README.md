@@ -61,8 +61,16 @@ eddies at the original stationary power-plant anchor. Ordinary temperate/Arctic
 fixtures exercise all eight frames and64 countdown phases; other climate bindings
 do not change original industry availability. `chimney_cycle.py` checks captured
 ordered cycles, anchor/local altitude and unclickable ownership. Original industry
-transparency and invisibility suppress the plume. The other68 presentable effect
-sources still need voxel artwork; roadworks and smoke source fidelity remain provisional.
+transparency and invisibility suppress the plume.
+
+Five source-specific train steam volumes bind3079…3083 in every climate. The compact
+puff expands into open billows and detached final flecks at its fixed original anchor.
+`steam_cycle.py --emitter ID` checks original upward motion and the captured progress
+lifetime on flat track. Its explicit fixture emitter accounts for the original ascending
+pool tick order: newly created higher IDs tick before presentation and first appear at
+progress13, although initialization is12. Spawning, smoke settings and RNG stay upstream.
+The other63 presentable effect sources still need voxel artwork; source fidelity remains
+provisional for every authored effect family.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;

@@ -1,5 +1,56 @@
 # Active extended development goal
 
+## Five train-steam frames integrated — September28,04:21:15UTC
+
+The catalogue reaches1,720 volumes with five expanding, perforating steam puffs and
+twenty explicit sprite3079…3083/climate0…3 bindings. All1,715 prior models, components,
+material faces and bindings remain exact. Original spawning, stationary spawned XY,
+upward motion, progress/sprite timing, smoke settings, deletion and RNG stay upstream.
+
+All12 prototype,18 integrated and two missing-frame/climate controls pass, together
+with206 native,143 asset and25 harness checks and the138-file presentation-boundary
+audit.592 integration images match staging;648 source exports remain exact and40
+native sprite bindings equal their registered models. All five native source bounds
+match. Each74-view backend comparison retains19 wider differences/138 pixels and zero
+native differences. Source contour, directional palette and all-angle breakup remain
+provisional; final visual approvals:0.
+
+Four3,600-frame all-climate replays, two app-bundle replays and two1,800-frame pool-order
+controls capture50,083 samples and376 complete presented lifetimes. The first audit
+incorrectly demanded initialization progress12 from all puffs. Source inspection and
+an ordinary build/sell-spare-locomotive fixture confirm the original ascending pool
+order: higher-ID effects first present13, lower-ID effects can present12. Both complete
+ordered71/72-phase cases pass; the original failed report and corrected same-log report
+remain. Both close joined controls show all five sprites and both paused trace-on/off
+pairs agree exactly. Hidden puffs, deletion and between-frame presentation remain outside
+the flat-track audit. Evidence:`breadth-effect-steam-integrated-reconciliation.json`.
+
+Peak sampled memory is3,546,353,264bytes. The eight lifecycle replays average
+60.001…60.011fps but retain167…578 intervals above20ms and25.696ms maximum. Sustained
+arbitrary-world smooth60fps and long-duration/reload/multiple-viewport memory acceptance
+remain open.1,538 successful study/integrated captures compact losslessly, saving
+2,326,722,297bytes with zero errors. Originals, failed controls, reports and metadata remain.
+63 presentable effect sources still need artwork. The six-frame diesel study is unbound;
+its sparse final frame exposes insufficient diagnostic review coverage.
+
+Three whole-hangar anchor probes are rejected: every shift introduces previously clear
+aircraft contacts (5…27 new poses), retaining281…326 intersecting samples. Aircraft
+dimensions and paths remain original. Evidence:`breadth-airport-hangar-anchor-study.json`.
+Continue essential clearances and remaining effect/infrastructure/object breadth before
+catalogue-wide fidelity. The full objective remains open.
+
+## Chimney packages independently verified — September28,04:26:48UTC
+
+Release`.28`at exact commit`a02a304fdae0371eb4b519df7d877616e1a83904`passes all eight
+jobs in workflow36374932242. Public audits reconcile19 attachments,18 checksums,2,089
+source files and six identical1,715-model catalogues. Three downloaded Mac render/
+clipping/save controls pass with signatures, architectures, dependencies and macOS15.0
+checked. Seven hosted graphical controls pass72 clipping views each; Windows x64/x86
+native load/save and Linux's900-frame support/collector journey pass. Hosted ARM/Intel
+software-OpenGL worlds retain zero black pixels and nine differences from Vulkan.
+Recommended downloads use verified`.28`. Evidence:`playable-release28-download-audit.json`
+and`playable-release28-ci-reconciliation.json`.
+
 ## Roadworks packages independently verified — September28,03:45:18UTC
 
 Release `.27` at exact commit `ac8f3bcd3bd4c02b4cfea54f604ebf50bc5ca435` passes all

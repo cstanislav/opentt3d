@@ -16,6 +16,11 @@ volumes, with continuous lower wisps and detached upper eddies. The catalogue re
 
 ## Verification
 
+Public packages independently reconcile 19 attachments, 18 checksums, 2,089 source files
+and six identical 1,715-model catalogues at commit `a02a304fd`. All eight packaging jobs
+pass, together with three downloaded Mac render/save controls, seven hosted graphical
+clipping controls, Windows x64/x86 native load/save and Linux's 900-frame journey.
+
 Eighteen prototype and fourteen integrated controls pass, plus two missing-frame/climate
 fallback controls. Six live controls—including native app launches—capture 21,855 samples
 and complete ordered cycles. All 832 integration images match staging, 648 original
@@ -27,7 +32,8 @@ excess. Plume contours, breakup and finer painting remain provisional.
 
 ## Play
 
-Desktop packages appear after the exact tagged commit passes every packaging job.
+The [verified `.28` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.28)
+is available for Windows, macOS and Linux, with required graphics bundled.
 Use the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
 for the current independently verified download and platform instructions.
 

@@ -3,6 +3,19 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Expanding train-steam controls
+
+The12 prototype/18 integrated controls peak at3,546,353,264 sampled bytes. Six3,600-frame
+and two1,800-frame lifecycle replays average60.001…60.011fps but retain167…578 intervals
+above20ms, reaching25.696ms maximum. These traced functional controls leave ordinary-launch
+smoothness and long-duration/reload/multiple-viewport memory acceptance open. Evidence:
+`build-macos/breadth-effect-steam-integrated-reconciliation.json`.
+
+Release`.28`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+4.381fps with2,461,618,176 peak sampled bytes. This verifies software-renderer compatibility;
+the sustained arbitrary-world60fps objective remains unmet. Evidence:
+`build-macos/playable-release28-ci-reconciliation.json`.
+
 ## Stationary chimney controls
 
 The18 prototype/14 integrated controls peak at3,523,612,272 sampled bytes. Six3,600-frame

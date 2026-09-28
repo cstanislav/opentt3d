@@ -1,5 +1,46 @@
 # Implementation verification
 
+## Original train steam lifetime checks
+
+Create an ordinary operating steam consist on flat track in its original climate:
+
+```sh
+python3 tools/opentt3d/fixture_train.py --build-dir build-macos \
+  --output build-macos/new-steam-fixture --climate temperate --rail-type 0 \
+  --locomotive 0 --first-engine 27 --last-engine 27
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
+  --output build-macos/new-steam-live --background --backend vulkan \
+  --savegame build-macos/new-steam-fixture/save/train-catalogue.sav \
+  --ai-dir build-macos/new-steam-fixture/ai --reference-vehicle 0 \
+  --trace-effects --running --benchmark-frames 3600
+python3 tools/opentt3d/steam_cycle.py build-macos/new-steam-live/run.log \
+  --output build-macos/new-steam-cycle.json --emitter 0 --require-complete
+```
+
+Read the emitting train's actual pool ID from `fixture.json` for `--emitter`. Arctic
+and tropical controls use locomotive7/wagon27; Toyland uses locomotive2/wagon49. These
+fixtures build through public commands and leave the returning consist operating.
+
+The read-only audit checks all five original sprites, stationary spawned XY, the original
+one-unit rise every eight progress ticks, ten-unit exhaust altitude over doubled terrain,
+opacity and unclickable ownership. Original progress12 initializes the effect. When the
+effect's pool ID follows its emitter, the ascending original vehicle loop ticks it before
+that frame is presented; those lifetimes cover71 phases13…83. Lower-ID effects can first
+present12. The first audit incorrectly demanded12 on locomotive0's higher-ID puffs;
+its failed report and corrected same-log result are retained separately.
+
+For the complementary pool order, use `--low-effect-id` when creating a movement-only
+fixture. This builds an ordinary spare locomotive, assembles the operating consist, then
+sells the spare through the public command. The resulting free lower pool slot can hold
+an effect that first presents12. Read the new emitter ID from `fixture.json`; the option
+does not construct effects or select their states directly.
+
+Reused pool IDs begin separate observed lifetimes. An anchor change across an uncaptured
+gap is recorded as ambiguous, never joined into a complete lifetime. Observing all five
+sprites alone does not count as observing the full ordered progress sequence. Hidden
+puffs, deletion, bridge/tunnel smoke behavior and between-frame presentation remain
+outside this flat-track audit; original spawning, settings and simulation RNG stay upstream.
+
 ## Stationary chimney cycle and visibility checks
 
 The1,715-volume increment preserves all1,707 prior models, components, material faces

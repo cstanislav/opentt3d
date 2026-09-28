@@ -16,6 +16,16 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Five train-steam frames:**twenty explicit climate bindings reach1,720 volumes,
+  preserving all1,715 prior models/components/material faces/bindings.12 prototype/18
+  integrated and two fallback controls pass;592 integration images match,648 sources
+  remain exact and40 native bindings equal their owners. All five source bounds match.
+  Eight live controls observe50,083 samples and376 complete original presented lifetimes,
+  including71/72 phases for both original effect/emitter pool orders. Two close joined
+  controls and two exact trace-on/off pairs pass. Native206, asset143 and harness25 checks
+  pass. Source contour/paint/all-angle breakup remain provisional;63 presentable effect
+  sources still need artwork, with zero final visual approvals.
+
 - **Eight chimney frames:**32 explicit sprite/climate bindings reach1,715 volumes,
   preserving all1,707 previous models/components/bindings.18 prototype/14 integrated
   and two fallback controls pass;832 integration images match,648 source images remain

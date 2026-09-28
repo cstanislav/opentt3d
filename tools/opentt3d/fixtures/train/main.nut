@@ -83,6 +83,11 @@ function TrainCatalogue::Start()
 				this.Require(AIRail.BuildRail(this.Tile(path[i-1][0],path[i-1][1]),this.Tile(path[i][0],path[i][1]),this.Tile(path[i+1][0],path[i+1][1])),"build real connecting curve detour");
 			}
 		}
+		local spare = -1;
+		if (AIController.GetSetting("review_low_effect_id") != 0) {
+			spare = AIVehicle.BuildVehicle(depot,locomotive);
+			this.Require(AIVehicle.IsValidVehicle(spare),"build ordinary spare locomotive for pool-order review");
+		}
 		local train = AIVehicle.BuildVehicle(depot,locomotive);
 		this.Require(AIVehicle.IsValidVehicle(train),"build selected locomotive");
 		local manifest = "", service_wagon = -1;
@@ -97,6 +102,10 @@ function TrainCatalogue::Start()
 			for (local i = 0; i <= count; ++i) if (AIVehicle.GetWagonEngineType(train,i) == engine) position = i;
 			if (position < 0) throw "attached consist does not contain the requested wagon";
 			manifest += (manifest.len() == 0 ? "" : ",")+"{\"engine\":"+engine+",\"vehicle\":"+wagon+",\"position\":"+position+"}";
+		}
+		if (spare >= 0) {
+			if (spare >= train) throw "spare locomotive does not precede the operating train in the original pool";
+			this.Require(AIVehicle.SellVehicle(spare),"sell the spare locomotive through the ordinary command");
 		}
 		if (service) {
 			this.built = true;
@@ -130,7 +139,7 @@ function TrainCatalogue::Start()
 			if (AIVehicle.GetCurrentSpeed(train) != 0 || AIVehicle.GetState(train) != AIVehicle.VS_STOPPED) throw "review train did not finish its ordinary stop";
 		}
 		AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+rail_type+
-			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
+			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"released_pool_id\":"+spare+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
 			",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"clearance_route\":"+(clearance ? "true" : "false")+
 			",\"curve_route\":"+(curves ? "true" : "false")+",\"curve_seen\":"+(curve_seen ? "true" : "false")+
 			",\"bridge_seen\":"+(clearance && bridge_seen ? "true" : "false")+",\"tunnel_seen\":"+(tunnel_seen ? "true" : "false")+
