@@ -3,7 +3,19 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Shared charcoal-smoke controls
+
+The10 prototype/20 integrated controls peak at3,545,255,464 sampled bytes. Four3,600-frame
+and two1,800-frame mine replays average60.000…60.006fps but retain74…406 intervals above
+20ms and25.363ms maximum. The controls verify original smoke behavior; sustained smooth
+60fps and long-duration/reload/multiple-viewport memory acceptance remain open. Evidence:
+`build-macos/breadth-effect-black-smoke-integrated-reconciliation.json`.
+
 ## Electric-spark controls
+
+Release`.31`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+4.546fps with2,613,993,472 peak sampled bytes. This remains functional compatibility
+evidence. See`build-macos/playable-release31-ci-reconciliation.json`.
 
 Release`.30`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
 1.719fps with2,465,120,256 peak sampled bytes. This remains functional compatibility

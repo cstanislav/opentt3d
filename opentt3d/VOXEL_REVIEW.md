@@ -16,6 +16,20 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Five shared charcoal-smoke frames:**twenty explicit climate bindings reach1,736
+  volumes, preserving all1,731 prior models/components/material faces/bindings. Original
+  crash, aircraft-breakdown and copper-mine types keep their independent spawning and
+  altitude rules.10 prototype/20 integrated and two fallback controls pass;592 integration
+  images match,648 originals and150 electric-spark views remain exact.40 native bindings
+  equal their models. All five source bounds match; native occupancies52/91/67/56/32 remain
+  provisional against source49/81/63/47/27. Each74-view backend comparison retains14 wider
+  differences/100 pixels and zero native differences. Six mine controls observe16,167
+  samples and113 complete71-phase lifetimes; original visibility/construction absences
+  pass. Native206, asset143 and harness34 pass. Crash/aircraft emission contexts, cloud
+  contours, directional paint and all-angle breakup remain unreviewed/provisional.
+  46 presentable effect sources remain unbound; final approvals:0. Evidence:
+  `build-macos/breadth-effect-black-smoke-integrated-reconciliation.json`.
+
 - **Six-state electric sparks:**five volumes and24 explicit climate bindings reach1,731
   models, preserving all1,726 prior models/components/material faces/bindings. All eight
   source exports prove the final3088/3089 artwork identical; their separate original

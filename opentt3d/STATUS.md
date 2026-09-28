@@ -4,29 +4,37 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.30`publishes the1,726-model diesel-exhaust increment at
-  commit31c6f4181. All eight jobs pass; independent checks reconcile19
-  attachments,18 checksums,2,095 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.31`publishes the1,731-model electric-spark increment at
+  commitd7e5909f4. All eight jobs pass; independent checks reconcile19
+  attachments,18 checksums,2,098 source files and six identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.30`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.31`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,731-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness31/31 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,736-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness34/34 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Five shared charcoal-smoke volumes bind original crash, aircraft-breakdown and
+  copper-mine sprites2040…2044 through20 climate states. All1,731 earlier models and
+  owners remain.10 prototype/20 integrated and two fallback controls pass, with592
+  exact integration images,648 unchanged originals and150 unchanged electric-spark views.
+  Six live mine controls observe16,167 samples and113 complete71-phase presented lifetimes;
+  original transparency/invisibility/construction absences pass. All five source bounds
+  match.34/80 presentable effect sources now have artwork;46 remain. Crash/aircraft
+  emission contexts, source/all-angle fidelity and final approval remain open.
 - [x] Five electric-spark volumes represent six original sprite states with24 climate
   bindings. Source-identical sprites3088/3089 share artwork while preserving their separate
   timing.12 prototype/20 integrated and two fallback controls pass;600 integration images
   match,648 original exports and168 earlier diesel views remain exact. Eight live controls
   record803 observations and30 complete presented lifetimes covering both pool orders.
-  Reduced/disabled smoke passes; all six native bounds match.51 presentable effect sources
-  remain unbound; source/all-angle fidelity and final approval remain open.
+  Reduced/disabled smoke passes; all six native bounds match. Further effect breadth is
+  recorded above; source/all-angle fidelity and final approval remain open.
 - [x] Six diesel-exhaust frames and24 explicit climate bindings preserve original
   spawning, rise, timing and smoke settings.12 prototype/20 integrated and two fallback
   controls pass;672 integrated images match,648 source exports remain exact and48 native

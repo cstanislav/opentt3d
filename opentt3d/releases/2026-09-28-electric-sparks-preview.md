@@ -26,7 +26,12 @@ their corrected source-registered and joined-view controls.
 
 ## Play
 
-Desktop packages appear after the exact tagged commit passes every packaging job.
+The [verified `.31` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.31)
+builds exact commit `d7e5909f4ee77902d91137b25265d35764a79601`. All eight jobs pass;
+independent checks reconcile19 attachments,18 checksums,2,098 source files and six
+identical1,731-model catalogues. Downloaded Mac render/save/clipping, seven hosted
+graphical controls, Windows x64/x86 load/save and Linux's900-frame support/collector
+journey pass.
 Use the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
 for the current independently verified download and platform instructions.
 

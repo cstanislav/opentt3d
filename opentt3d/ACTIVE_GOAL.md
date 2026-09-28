@@ -1,5 +1,54 @@
 # Active extended development goal
 
+## Shared smoke integrated and electric packages verified — September28
+
+Five charcoal-smoke frames and20 climate bindings reach1,736 models, preserving all
+1,731 prior models/components/material faces/bindings. Original crash, aircraft-breakdown
+and copper-mine types keep their own simulation rules.10 prototype/20 integrated and
+two fallback controls pass, with206 native,143 asset and34 harness checks and the138-file
+presentation boundary.592 integration images match staging,648 source exports and150
+prior electric views remain exact;40 native selections equal their model owners. All
+five source bounds match. Each74-view backend comparison retains14 wider differences/
+100 pixels and no native differences. Contours, density, paint and all-angle breakup
+remain provisional, with zero final approvals.
+
+Six copper-mine controls capture16,167 observations and113 ordered71-phase presented
+lifetimes. The original industry tile loop precedes vehicle ticks; new mine puffs first
+present13, rise every four ticks and retain the43-unit local spawn altitude. Transparent,
+invisible and construction-state absence controls pass. Crash/aircraft emission contexts
+remain unreviewed. Peak sampled memory is3,545,255,464bytes; functional replays average
+60.000…60.006fps but retain74…406 intervals above20ms and25.363ms maximum. Sustained
+performance and long-duration/reload/multiple-viewport memory acceptance remain open.
+1,476 successful generated captures compact losslessly, saving2,226,882,707bytes with
+zero errors. Original source images and failed studies remain. Evidence:
+`breadth-effect-black-smoke-integrated-reconciliation.json`.
+
+Electric release`.31`at`d7e5909f4ee77902d91137b25265d35764a79601`passes all eight jobs in
+workflow36384146048. The06:31:56UTC public audit reconciles19 attachments,18 checksums,
+2,098 source files and six identical1,731-model catalogues. Three downloaded Mac controls,
+seven hosted72-view clipping controls, Windows x64/x86 load/save and Linux's900-frame
+support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain zero
+black pixels and nine differences from Vulkan. Recommended downloads now use verified`.31`.
+
+Remaining effect breadth is46/80 presentable sources. A sixteen-volume large-explosion
+study remains unbound: registration, dominant fire colours, expanding billows and late
+fragment extents need correction. An ordinary opposing-train fixture is being reviewed
+for live crash contexts. Larger-aircraft clearances and the full four-pass catalogue
+objective remain active; these milestones do not complete Pass1.
+
+## Renewed breadth-first continuation — September28,06:01:17UTC
+
+The actual clock for this continuation is2026-09-28,06:01:17UTC. The worktree is clean
+at`2219fb010`; earlier stopping audits are historical. The requested September26,19:00UTC
+minimum is already past at this new clock check. Continue the complete four-pass goal,
+with catalogue-wide basic coverage first, immediate placement/state/clearance repairs,
+quiet native checks and frequent verified commits/releases. Completion remains unproven.
+
+Start with the five shared crash/aircraft-breakdown/copper-mine smoke source states and
+remaining explosion breadth. Preserve the rejected dense studies, original effect timing,
+emitter placement and simulation RNG. Electric preview`.31`public verification awaits
+its exact-commit packaging; recommended downloads remain verified`.30`.
+
 ## Published checkpoint and stopping clock audit — September28,05:59:49UTC
 
 The actual clock is2026-09-28,05:59:49UTC, past the requested September26,19:00UTC

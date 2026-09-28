@@ -1,5 +1,36 @@
 # Implementation verification
 
+## Shared charcoal smoke and original copper-mine lifetimes
+
+Five original source sprites2040…2044 serve crash, aircraft-breakdown and copper-mine
+smoke. Preserve their separate upstream emission/visibility rules. An ordinary funded
+tropical copper mine supplies a repeatable live observation:
+
+```sh
+python3 tools/opentt3d/fixture_industry.py --build-dir build-macos \
+  --output build-macos/new-copper-smoke-fixture --industry 10 --climate tropic
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
+  --output build-macos/new-copper-smoke-live --background --backend vulkan \
+  --savegame build-macos/new-copper-smoke-fixture/save/industry-day-44.sav \
+  --ai-dir build-macos/new-copper-smoke-fixture/ai --reference-industry 49 3 \
+  --trace-effects --running --benchmark-frames 3600
+python3 tools/opentt3d/copper_smoke_cycle.py build-macos/new-copper-smoke-live/run.log \
+  --output build-macos/new-copper-smoke-cycle.json --require-complete
+```
+
+The read-only oracle checks original initialization progress12, five source sprites,
+one-unit rise every four ticks, fixed spawned XY and43-unit local altitude. The original
+industry tile loop precedes vehicle ticks, so complete presented lifetimes require71
+ordered phases13…83 from one puff. Unordered frames or observations combined across
+reused IDs do not pass. Original progress12 may appear in an initialization snapshot,
+but cannot replace a missing phase in another puff's lifetime.
+
+For absence controls, use `--industry-visibility transparent` or `invisible` with
+`--trace-effects --expect-no-effects`; original industry transparency suppresses this
+effect. A paused `industry-day-0.sav` with `--reference-industry-ground 49 0` preserves
+the genuinely empty construction state. Crash and aircraft-breakdown contexts, hidden
+puffs, deletion and between-frame presentation remain outside the copper-mine audit.
+
 ## Original electric-spark lifetime and source-identical states
 
 Create an ordinary single electric locomotive on its original temperate electric track:
