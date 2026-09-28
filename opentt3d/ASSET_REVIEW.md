@@ -31,6 +31,17 @@ poses. Removing interpolation would introduce15/16 new contacts while clearing13
 not a repair. Source-sized aircraft and original paths remain. Evidence:
 `breadth-airport-hangar-raw-pose-study.json`.
 
+Three bounded entrance-recess probes clear42…79 captured poses without creating contacts,
+but retain225…265 intersecting samples. All retain the outer footprint/full roof; no
+candidate is integrated before source/native/street opening review. Evidence:
+`breadth-airport-hangar-opening-study.json`.
+
+The next five-state charcoal-smoke study remains unbound. Two native Vulkan mesh/clipping
+controls pass, but the cavity study's frames2/3 retain111/118 pixels versus63/47 original
+pixels, and frame3 is horizontally misregistered by one pixel. Both studies and source
+comparisons remain. These original source sprites serve crash, aircraft-breakdown and
+copper-mine smoke; those contexts still need live review.
+
 ## Six-stage diesel exhaust (September28)
 
 Six source-specific brown exhaust volumes and24 climate bindings reach1,726 models,

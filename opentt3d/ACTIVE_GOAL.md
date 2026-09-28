@@ -1,5 +1,43 @@
 # Active extended development goal
 
+## Published checkpoint and stopping clock audit — September28,05:59:49UTC
+
+The actual clock is2026-09-28,05:59:49UTC, past the requested September26,19:00UTC
+(1PM fixedCST) minimum. This work window closes on that time check; the full catalogue,
+fidelity, clearance and smooth60fps objective remains unfinished.
+
+Electric-spark work is committed and pushed at
+`d7e5909f4ee77902d91137b25265d35764a79601`. Preview`.31`targets that exact1,731-model
+commit; packaging workflow36384146048 is in progress and its independent public-package
+verification is pending. Recommended downloads remain independently verified`.30`.
+`.30`duplicate retirement verifies and removes891,501,413 extracted bytes and377,893,071
+identical hosted-archive bytes, retaining original public packages and evidence.
+
+Two additional560-frame close captures visibly join the locomotive, catenary and sparks;
+their screenshot/log/benchmark hashes are frozen in`breadth-effect-electric-visible-review.json`.
+The first590-frame attempt captured after the sparks expired and remains preserved.
+
+Three bounded hangar-opening probes remove42…79 of the previously intersecting samples
+without introducing new contacts, but still retain225…265 contacts. Their source-sized
+outer footprint and full roof remain; no candidate is integrated or approved. Source/
+native/street opening review is still required. Evidence:`breadth-airport-hangar-opening-study.json`.
+
+Two five-model charcoal-smoke studies pass native Vulkan mesh/clipping controls but
+remain unbound. Frames2/3 remain substantially too dense and frame3 has a one-pixel
+horizontal registration error. The second study retains111/118 native pixels against
+63/47 original pixels. These five sprites are shared by original crash, aircraft-breakdown
+and copper-mine smoke types; the existing ordinary copper-mine fixture provides a future
+live control without altering original effect creation or simulation RNG. Evidence:
+`breadth-effect-black-smoke-{volume,cavity}-vulkan/renderer3d-reference/`.
+
+Next: independently verify`.31`after all packaging jobs finish; correct the unbound
+charcoal-smoke density/registration, then audit its actual original lifetimes and emitter
+contexts. Continue essential larger-aircraft clearances and remaining catalogue breadth.
+Final visual approvals remain0. Local native reviews have exited.
+The final frozen source/staging/binary audit remains exact.265 successful study captures
+compact losslessly, saving another403,609,422bytes with zero errors; original source
+images and all reports remain. Storage headroom is25GiB at the closing check.
+
 ## Diesel packages independently verified — September28,05:54:44UTC
 
 Release`.30`at exact commit`31c6f418118856bb23bcef95e2e620d3cf5ea9cd`passes all eight
