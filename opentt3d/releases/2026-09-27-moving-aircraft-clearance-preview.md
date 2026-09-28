@@ -6,9 +6,9 @@ cotton-candy artwork and adds read-only tools for the remaining clearance/effect
 
 ## Play
 
-The [verified `.25` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.25)
-is available for Windows, macOS and Linux. This preview's packages appear after its
-exact-commit workflow passes. Required graphics are bundled; see the
+The [verified `.26` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.26)
+is available for Windows, macOS and Linux. All eight exact-commit packaging jobs pass.
+Required graphics are bundled; see the
 [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 
 ## Changes
@@ -23,6 +23,11 @@ exact-commit workflow passes. Required graphics are bundled; see the
   preserve fixed anchors and consume no simulation RNG.
 
 ## Verification
+
+Public packages independently reconcile 19 attachments, 18 checksums, 2,079 source
+files and six identical 1,703-model catalogues at commit `8825ebf69`. Three downloaded
+Mac render/save controls, seven hosted graphical clipping controls, Windows x64/x86
+native load/save and Linux's 900-frame support/collector journey pass.
 
 All 27 pier intersections in the preceding two traces are eliminated. Two fresh
 6,000-frame replays retain the original held-service release and remain clear at that

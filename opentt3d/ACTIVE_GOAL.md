@@ -1,5 +1,31 @@
 # Active extended development goal
 
+## Moving-clearance packages independently verified — September28,03:29:45UTC
+
+Release `.26` at exact commit `8825ebf698ee90eefb9abab4bb41cecc8aa84951` passes all
+eight jobs in workflow36368334641. Public audits reconcile19 attachments,18 checksums,
+2,079 source files and six identical1,703-model catalogues. Three downloaded Mac
+render/clipping/save controls pass with signatures, architectures, dependencies and
+macOS15.0 checked. Seven hosted graphical controls each pass72 clipping views; Windows
+x64/x86 native load/save and Linux's900-frame support/collector journey also pass.
+Hosted ARM/Intel software-OpenGL worlds retain zero black pixels and nine differences
+from Vulkan. Recommended links now use verified `.26`. Evidence:
+`playable-release26-download-audit.json` and `playable-release26-ci-reconciliation.json`.
+
+The roadworks increment is pushed as `ac8f3bcd3bd4c02b4cfea54f604ebf50bc5ca435` and
+preview `.27` targets that exact1,707-model source in workflow36370921819. Its public
+verification remains pending. The next eight-frame chimney increment has18 passing
+prototype controls; full integration and ordered-cycle checks are underway.
+
+Two essential-clearance studies remain excluded. Lowering perimeter fences by0.5
+units removes many contacts but worsens the original silhouette and leaves others.
+Source-measured radio guy-wire anchors improve registration and remove49 old poses per
+backend, but introduce22/23 previously clear contacts. Two fresh6,000-frame replays
+retain35/36 radio intersections. A lower net count does not establish clearance.
+Original failures and source studies are retained; aircraft dimensions/paths remain.
+Evidence:`breadth-airport-fence-subpixel-clearance-study.json` and
+`breadth-airport-radio-guy-anchor-rejection.json`. The full objective remains open.
+
 ## First voxel effects integrated — September28,02:35:59UTC
 
 Four manually authored roadworks orientations bring the catalogue to1,707. Explicit

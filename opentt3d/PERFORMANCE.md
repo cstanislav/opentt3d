@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Public moving-clearance release `.26`
+
+The independently reconciled Linux Mesa/llvmpipe900-frame support/collector journey
+passes its functional checks at1.704fps with2,615,586,816 peak sampled bytes. This
+software-renderer compatibility evidence leaves sustained arbitrary-world60fps open.
+Evidence:`build-macos/playable-release26-ci-reconciliation.json`.
+
 ## Roadworks effect controls
 
 The12 prototype/ten integrated controls peak at3,533,393,472 sampled bytes. Four6,000-frame
