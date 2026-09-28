@@ -28,9 +28,15 @@ wider views retain14 differing images/100 pixels per climate.
 
 ## Play
 
-Packages appear after the exact tagged commit passes every packaging job. The
-[installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
-identifies the current independently verified download.
+The [verified `.32` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.32)
+builds exact commit `ff290d0e9a77caa2179b03379e31b0b279449b6e`. All eight jobs pass;
+independent checks reconcile19 attachments,18 checksums,2,101 source files and six
+identical1,736-model catalogues. Three downloaded Mac render/save/clipping controls,
+seven hosted graphical controls, Windows x64/x86 load/save and Linux's900-frame
+support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain zero
+black pixels and nine differing pixels from Vulkan.
+Use the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
+for the current independently verified download and platform instructions.
 
 ## Still in progress
 

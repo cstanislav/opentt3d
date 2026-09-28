@@ -1,5 +1,27 @@
 # Active extended development goal
 
+## Shared-smoke packages independently verified — September28,07:16:41UTC
+
+Release`.32`at`ff290d0e9a77caa2179b03379e31b0b279449b6e`passes all eight jobs in
+workflow36387269223. Public audits reconcile19 attachments,18 checksums,2,101 source
+files and six identical1,736-model catalogues. Three downloaded Mac controls, seven
+hosted72-view clipping controls, Windows x64/x86 load/save and Linux's900-frame
+support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain zero
+black pixels and nine differences from Vulkan. Recommended downloads now use verified`.32`.
+Evidence:`playable-release32-download-audit.json`,`playable-release32-ci-reconciliation.json`
+and`playable-release32-hosted-visual-comparison.json`. Full catalogue fidelity,
+larger-aircraft clearances, sustained performance and final approvals remain open.
+
+## Renewed continuation — September28,07:08:50UTC
+
+Actual start clock:2026-09-28,07:08:50UTC. Main is clean at`86110aec3`; prior stopping
+audits are historical. The requested September26,19:00UTC minimum has elapsed at this
+new check. Continue the complete breadth-first four-pass objective, with quiet native
+controls, source/state/placement repairs, frequent pushes and noteworthy releases.
+Begin a bounded, exact-geometry CPU restoration experiment and continue original
+explosion coverage. Preview`.32`public verification awaits its outstanding packaging
+watcher. No catalogue-wide or final visual acceptance is established.
+
 ## Committed checkpoint and stopping clock audit — September28,07:06:26UTC
 
 The actual clock is2026-09-28,07:06:26UTC, after the requested September26,19:00UTC

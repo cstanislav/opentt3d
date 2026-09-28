@@ -21,6 +21,10 @@ its own geometry, cache-ownership, memory and sustained-performance evidence. Ev
 
 ## Shared charcoal-smoke controls
 
+Release`.32`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+1.697fps with2,462,801,920 peak sampled bytes. This remains functional compatibility
+evidence. See`build-macos/playable-release32-ci-reconciliation.json`.
+
 The10 prototype/20 integrated controls peak at3,545,255,464 sampled bytes. Four3,600-frame
 and two1,800-frame mine replays average60.000…60.006fps but retain74…406 intervals above
 20ms and25.363ms maximum. The controls verify original smoke behavior; sustained smooth
