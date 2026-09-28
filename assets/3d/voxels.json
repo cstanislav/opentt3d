@@ -1928,9 +1928,48 @@
     "rail_depot_grass": [82,81,81,83,80,83],
     "rail_depot_snow": [15,146,147,15,146,15],
     "rail_depot_desert": [61,59,60,62,58,61],
-    "rail_depot_toy_grass": 85
+    "rail_depot_toy_grass": 85,
+    "dozer_tread": [2,1,2,3,1,3],
+    "dozer_tread_edge": 1,
+    "dozer_yellow": [65,50,64,50,64,51],
+    "dozer_yellow_shade": [64,65,64,65,3,50],
+    "dozer_yellow_light": 51,
+    "dozer_steel": [17,18,17,18,8,18],
+    "dozer_blade": [65,18,17,18,8,18],
+    "dozer_blade_edge": [64,8,8,8,1,18],
+    "dozer_seat": 1,
+    "dozer_driver": [128,129,128,131,3,132],
+    "dozer_head": 193,
+    "dozer_exhaust": 2
   },
   "components": {
+    "effect_bulldozer_body": [
+      ["repeat",[0,13,0],2,[
+        ["prism","dozer_tread",1,4,7,[[3,2],[5,0],[18,0],[20,2],[20,4],[18,6],[5,6],[3,4]]],
+        ["paint","dozer_tread_edge",4,4,1,19,5,5], ["paint","dozer_tread_edge",4,6,1,19,7,5],
+        ["repeat",[4,0,0],4,[["box","dozer_yellow_shade",5,4,2,7,7,4],["box","dozer_yellow",5,4,3,7,7,4]]],
+        ["repeat",[3,0,0],5,[["box","dozer_tread_edge",5,4,5,6,7,6],["paint","dozer_yellow",5,4,4,6,7,5]]]
+      ]],
+      ["box","dozer_yellow_shade",5,7,3,20,17,6],
+      ["box","dozer_yellow",12,8,6,20,16,11], ["box","dozer_yellow_light",13,9,11,19,15,12],
+      ["repeat",[0,2,0],3,[["paint","dozer_tread",19,9,7,20,10,10]]],
+      ["box","dozer_yellow",4,8,6,9,16,9], ["box","dozer_yellow_light",4,8,9,8,16,10],
+      ["box","dozer_yellow_shade",7,8,6,12,16,7],
+      ["box","dozer_seat",7,10,7,10,14,9], ["box","dozer_seat",7,10,9,8,14,12],
+      ["box","dozer_driver",8,10,8,11,14,12], ["box","dozer_head",9,11,12,11,13,14],
+      ["box","dozer_yellow_light",8,10,14,12,14,15],
+      ["box","dozer_steel",11,11,7,12,12,11], ["box","dozer_seat",10,10,11,13,14,12],
+      ["erase",11,11,11,12,13,12],
+      ["box","dozer_exhaust",15,9,11,16,10,22], ["box","dozer_steel",15,9,21,17,10,22],
+      ["box","dozer_yellow_shade",11,6,4,22,7,6], ["box","dozer_yellow_shade",11,17,4,22,18,6],
+      ["prism","dozer_blade",1,3,21,[[21,1],[23,1],[23,2],[22,3],[22,5],[23,7],[22,8],[21,6]]],
+      ["box","dozer_blade_edge",21,3,0,24,21,1],
+      ["box","dozer_yellow_shade",20,6,3,22,7,6], ["box","dozer_yellow_shade",20,17,3,22,18,6],
+      ["box","dozer_yellow",4,7,19,12,17,20], ["paint","dozer_yellow_light",5,8,19,11,16,20],
+      ["repeat",[7,0,0],2,[["repeat",[0,9,0],2,[["box","dozer_yellow",4,7,8,5,8,19]]]]],
+      ["box","dozer_driver",5,8,9,6,16,19], ["box","dozer_driver",5,8,9,11,9,19],
+      ["box","dozer_driver",5,15,9,11,16,19]
+    ],
     "airport_pier_stand_registered_branches": [
       ["box","pier_wall",37,72,10,67,78,15],
       ["box","pier_wall",50,58,10,54,72,15],
@@ -9705,6 +9744,26 @@
     ]
   },
   "models": {
+    "effect_bulldozer_ne": {
+      "size":[24,24,24],"cell_size":[0.25,0.25,0.3125],"origin":[-1.5,-1.5,0],"review_status":"work-in-progress",
+      "reference":"Original roadworks sprite1416: continuous dark tracks and rollers, warm-yellow engine housing and supported recessed cab, seated operator, exhaust, open underbody and curved grey-front/yellow-back blade. Fixed original sprite anchor; image direction remains independent of reverse travel. Source registration and finer paint remain provisional.",
+      "ops":[["rotate_z",180,[12,12,0],[["use","effect_bulldozer_body"]]]]
+    },
+    "effect_bulldozer_se": {
+      "size":[24,24,24],"cell_size":[0.25,0.25,0.3125],"origin":[-2,-2,0],"review_status":"work-in-progress",
+      "reference":"Original roadworks sprite1417: continuous dark tracks and rollers, warm-yellow engine housing and supported recessed cab, seated operator, exhaust, open underbody and curved grey-front/yellow-back blade. Fixed original sprite anchor; image direction remains independent of reverse travel. Source registration and finer paint remain provisional.",
+      "ops":[["rotate_z",90,[12,12,0],[["use","effect_bulldozer_body"]]]]
+    },
+    "effect_bulldozer_sw": {
+      "size":[24,24,24],"cell_size":[0.25,0.25,0.3125],"origin":[-2.5,-1.5,0],"review_status":"work-in-progress",
+      "reference":"Original roadworks sprite1418: continuous dark tracks and rollers, warm-yellow engine housing and supported recessed cab, seated operator, exhaust, open underbody and curved grey-front/yellow-back blade. Fixed original sprite anchor; image direction remains independent of reverse travel. Source registration and finer paint remain provisional.",
+      "ops":[["rotate_z",0,[12,12,0],[["use","effect_bulldozer_body"]]]]
+    },
+    "effect_bulldozer_nw": {
+      "size":[24,24,24],"cell_size":[0.25,0.25,0.3125],"origin":[-2,-1,0],"review_status":"work-in-progress",
+      "reference":"Original roadworks sprite1419: continuous dark tracks and rollers, warm-yellow engine housing and supported recessed cab, seated operator, exhaust, open underbody and curved grey-front/yellow-back blade. Fixed original sprite anchor; image direction remains independent of reverse travel. Source registration and finer paint remain provisional.",
+      "ops":[["rotate_z",270,[12,12,0],[["use","effect_bulldozer_body"]]]]
+    },
     "airport_toyland_terminal_a": {
       "extends": "airport_terminal_a",
       "review_status": "work-in-progress",
@@ -21402,6 +21461,12 @@
     }
   },
   "bindings": {
+    "effects": {
+      "1416":{"0":"effect_bulldozer_ne","1":"effect_bulldozer_ne","2":"effect_bulldozer_ne","3":"effect_bulldozer_ne"},
+      "1417":{"0":"effect_bulldozer_se","1":"effect_bulldozer_se","2":"effect_bulldozer_se","3":"effect_bulldozer_se"},
+      "1418":{"0":"effect_bulldozer_sw","1":"effect_bulldozer_sw","2":"effect_bulldozer_sw","3":"effect_bulldozer_sw"},
+      "1419":{"0":"effect_bulldozer_nw","1":"effect_bulldozer_nw","2":"effect_bulldozer_nw","3":"effect_bulldozer_nw"}
+    },
     "docks": {
       "0":{"0":"water_dock_slope_ne","1":"water_dock_toy_slope_ne"},
       "1":{"0":"water_dock_slope_se","1":"water_dock_toy_slope_se"},

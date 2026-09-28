@@ -8,6 +8,21 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_effect_bindings_exclude_unpresented_transition_and_other_climates(self):
+        root = Path(__file__).resolve().parents[2]
+        constants = {name:int(value) for name,value in re.findall(r"static const SpriteID (SPR_\w+) = (\d+);",(root / "src/table/sprites.h").read_text())}
+        families = re.findall(r'\{"[a-z-]+",(SPR_\w+),(SPR_\w+)\}',(root / "src/renderer3d/effect_sources.hpp").read_text())
+        sprites = {sprite for first,last in families for sprite in range(constants[first],constants[last]+1)} - {constants["SPR_BUBBLE_GENERATE_3"]}
+        self.assertEqual(len(families),10)
+        self.assertEqual(len(sprites),80)
+        source = {"format":1,"materials":{"solid":1},"models":{"sample":{"size":[1,1,1],"ops":[["box","solid",0,0,0,1,1,1]]}},
+                  "bindings":{"effects":{str(sprite):{str(climate):"sample" for climate in range(4)} for sprite in sprites}}}
+        self.assertEqual(compile_catalogue(source)["bindings"],source["bindings"])
+        for sprite,climate in ((1415,0),(1420,0),(2045,0),(3072,0),(3090,0),(3700,0),(3741,0),(4754,0),(4763,0),(1416,4)):
+            source["bindings"] = {"effects":{str(sprite):{str(climate):"sample"}}}
+            with self.assertRaisesRegex(ValueError,"presentable original source sprites"):
+                compile_catalogue(source)
+
     def test_airport_layers_reserve_four_climates_without_crossing_state_bounds(self):
         source = {"format":1,"materials":{"solid":1},"models":{"sample":{"size":[1,1,1],"ops":[["box","solid",0,0,0,1,1,1]]}}}
         for category in ("airport_tiles","airport_ground"):

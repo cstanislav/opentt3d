@@ -5,6 +5,7 @@
 #include "voxel_geometry.hpp"
 #include "voxel_mesh_cache.hpp"
 #include "authored_geometry.h"
+#include "effect_sources.hpp"
 #include "sprite_textures.hpp"
 #include "gl_backend.hpp"
 #include "depot_capture.h"
@@ -115,6 +116,7 @@ const Catalogue &Models()
 			std::string model = name.get<std::string>();
 			if (!result.models.contains(model)) throw std::runtime_error("Voxel binding references a missing model");
 			if (category == "vehicles" && (std::stoul(id) >= 256 || std::stoul(state) >= 8)) throw std::runtime_error("Invalid voxel vehicle engine/climate state");
+			if (category == "effects" && (!IsPresentableEffectSource(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid voxel effect source/climate state");
 			if ((category == "airport_tiles" || category == "airport_ground") && (std::stoul(id) >= 74 || std::stoul(state) >= 64 || std::stoul(state)%16 >= GetAirportTileLayouts(std::stoul(id)).size())) throw std::runtime_error("Invalid voxel airport climate/frame state");
 			result.bindings.emplace(std::tuple{category,static_cast<unsigned>(std::stoul(id)),static_cast<unsigned>(std::stoul(state))},model);
 			if (category == "trees") {
@@ -200,6 +202,15 @@ uint32_t VoxelPaletteMask(std::span<const Vertex> vertices, unsigned first, unsi
 bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state)
 {
 	return Models().bindings.contains({std::string(category),identifier,state});
+}
+
+bool DrawVoxelEffect(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette, float opacity)
+{
+	image &= SPRITE_MASK;
+	if (!IsPresentableEffectSource(image) || !IsBaseGraphicsSprite(image)) return false;
+	/* The current original sprite owns the pose, including reverse bulldozer
+	 * motion. Do not derive an effect heading or age from a vehicle direction. */
+	return DrawVoxelAsset(scene,"effects",image,to_underlying(_settings_game.game_creation.landscape),origin,palette,opacity);
 }
 
 bool HasVoxelTree(SpriteID image)
@@ -1039,6 +1050,19 @@ void ExportVoxelReviews(std::string_view prefix)
 		}
 	};
 	std::vector<const VoxelModel *> mixed;
+	nlohmann::json effects = nlohmann::json::array();
+	unsigned effect_climate = to_underlying(_settings_game.game_creation.landscape);
+	for (const auto &[binding,name] : Models().bindings) {
+		const auto &[category,sprite,climate] = binding;
+		if (category != "effects" || climate != effect_climate || !name.starts_with(prefix)) continue;
+		Textures().BeginScene();
+		Scene scene;
+		if (!DrawVoxelEffect(scene,sprite,{})) continue;
+		auto label = fmt::format("model-voxel-effect-{}-{}-native",sprite,climate);
+		native_model(scene,label);
+		effects.push_back({{"sprite",sprite},{"climate",climate},{"model",name},{"image",label+".pam"}});
+	}
+	if (!effects.empty()) std::ofstream(directory/"voxel-effects.json") << effects.dump(2) << '\n';
 	for (const auto &[name,model] : Models().models) if (name.starts_with(prefix) && mixed.size() < 4) mixed.push_back(&model);
 	context("context",mixed);
 	/* Every bound volume appears in a category context, including later pages.
@@ -1895,6 +1919,37 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		if (scene.VertexCount() != vertices || !RenderScene(scene,camera,pixels,&ids) || pixels != expected || ids != expected_ids) throw std::runtime_error("Restored CPU voxel geometry changed exact colour, transparency or picking");
 	}
 	Debug(driver,1,"OpenTT3D: 4 CPU voxel retirement/rebuild views preserve scene pins, stable GPU keys, exact colour, transparency and picking");
+	unsigned effect_views = 0;
+	unsigned effect_fallbacks = 0;
+	unsigned effect_climate = to_underlying(_settings_game.game_creation.landscape);
+	for (const auto &family : EFFECT_SOURCE_FAMILIES) for (SpriteID sprite = family.first; sprite <= family.last; ++sprite) {
+		auto binding = catalogue.bindings.find({"effects",sprite,effect_climate});
+		if (binding == catalogue.bindings.end()) {
+			Scene fallback;
+			if (DrawVoxelEffect(fallback,sprite,{}) || !fallback.instances.empty()) throw std::runtime_error("Missing effect frame/climate selected unrelated geometry");
+			if (IsPresentableEffectSource(sprite)) ++effect_fallbacks;
+			continue;
+		}
+		if (!binding->second.starts_with(prefix)) continue;
+		const auto &model = catalogue.models.at(binding->second).surface;
+		for (unsigned turn = 0; turn < 4; ++turn) for (bool transparent : {false,true}) {
+			Textures().BeginScene();
+			Scene actual, reference;
+			Vec3 origin{3.5f,2.25f,17};
+			float opacity = transparent ? 0.38f : 1;
+			if (!DrawVoxelEffect(actual,sprite,origin,PAL_NONE,opacity) || actual.instances.size() != 1 || actual.instances.front().mesh != &model.vertices) throw std::runtime_error("Effect lost its original source sprite/climate binding");
+			const auto &data = actual.instances.front().data;
+			if (data.origin_opacity != std::array<float,4>{origin.x,origin.y,origin.z,opacity} || data.mirror_layer_heading[3] != 0) throw std::runtime_error("Effect lost its original altitude, opacity or sprite-owned orientation");
+			reference.vertices = actual.ExpandedVertices(true);
+			Camera camera = StreetReviewCamera(model.low+origin,model.high+origin,256,256,turn+0.15f);
+			if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids || std::ranges::any_of(ids,[](uint32_t id) { return id != 0; })) throw std::runtime_error("Voxel effect colour/transparency differs from its geometry or intercepts picking");
+			++effect_views;
+		}
+	}
+	Scene absent_effect;
+	if (DrawVoxelEffect(absent_effect,SPR_BUBBLE_GENERATE_3,{}) || !absent_effect.instances.empty()) throw std::runtime_error("Unpresented bubble threshold selected a voxel effect");
+	Debug(driver,1,"OpenTT3D: {} voxel effect views preserve original sprite/climate selection, altitude, opacity, fixed orientation and unclickable ownership",effect_views);
+	Debug(driver,1,"OpenTT3D: {} unauthored effect sources preserve their original fallback in climate {}",effect_fallbacks,effect_climate);
 	unsigned views = 0;
 	unsigned bindings = 0;
 	unsigned ground_bindings = 0;

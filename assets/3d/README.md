@@ -39,6 +39,25 @@ the original frame; sidecars add `climate`, `frame`, `body_binding_state` and
 selected climate and each independent layer state. Ordinary aircraft fixtures can
 use `--starting-year 1958` for still-available small airports; the default is2050.
 
+Effect bindings use the original sprite ID and an explicit climate state `0…3`.
+The first four bound sources, roadworks1416…1419, use one manually authored tracked
+machine in four registered orientations. Their sixteen explicit climate bindings follow
+exact comparisons of source pixels, palettes, sizes and offsets across all climates.
+The runtime selects the original displayed sprite, including a bulldozer reversing
+without changing its image direction. Effect origins retain their original local
+altitude over doubled terrain; upstream transparency/invisibility and unclickable
+ownership remain authoritative. Missing frames/climates and replaced sources retain
+their supplied rendering. The unpresented bubble threshold4754 cannot have a binding.
+
+`--export-effects` retains all81 original source images;80 are presentable. Native
+voxel galleries add`voxel-effects.json`, linking actual sprite/climate selections to
+their registered models. `smoke.py --trace-effects --background` records actual
+original states/transforms. `fixture_roadworks.py` funds ordinary road rebuilding
+through NoAI; `bulldozer_motion.py` audits the captured116-waypoint original path,
+including reversing and zero picking ownership, without calling simulation ticks.
+The other76 presentable effect sources still need voxel artwork; all four roadworks
+models retain provisional source registration and finer painting.
+
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;
 source recolouring still applies. Use explicit states for different layouts, as with

@@ -3,6 +3,14 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Roadworks effect controls
+
+The12 prototype/ten integrated controls peak at3,533,393,472 sampled bytes. Four6,000-frame
+driver5 replays and two3,600-frame app-bundle controls average59.919…60.004fps, retain12…48
+intervals above20ms and reach169.250ms maximum. These traced functional controls leave
+ordinary-launch smoothness and long-duration/reload/multiple-viewport memory acceptance
+open. Evidence:`build-macos/breadth-effect-bulldozer-integrated-reconciliation.json`.
+
 ## NW boarding-pier correction
 
 The16 short/gallery/Cab controls peak at3,499,249,240 sampled bytes. Two fresh6,000-frame

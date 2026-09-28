@@ -1,5 +1,40 @@
 # Implementation verification
 
+## Roadworks effect source and movement checks
+
+The1,707-model increment preserves all1,703 earlier volumes/bindings.12 prototype/ten
+integrated controls and three missing-frame/climate/invalid-source controls pass. Native
+206, asset143 and harness19 checks pass.448 integration images match,648 source exports
+remain exact and32 actual native bindings equal their registered models. Per climate,
+three wider backend views differ by42 pixels; all native views agree. Six live controls
+record50,470 samples and28 complete116-waypoint paths. Evidence:
+`build-macos/breadth-effect-bulldozer-integrated-reconciliation.json`.
+
+Create an ordinary roadworks fixture with public town commands:
+
+```sh
+python3 tools/opentt3d/fixture_roadworks.py --build-dir build-macos \
+  --output build-macos/new-roadworks-fixture --climate temperate
+```
+
+The fixture manifest records its town centre. Use those coordinates with
+`smoke.py --center X Y --savegame .../save/roadworks.sav --ai-dir .../ai
+--trace-effects --background --running --benchmark-frames 6000`. Audit the completed
+log with a fresh report path:
+
+```sh
+python3 tools/opentt3d/bulldozer_motion.py path/to/run.log \
+  --output path/to/roadworks-motion.json --require-complete
+```
+
+The read-only oracle uses the original twenty movement states and116 presented
+waypoints. Reverse travel must preserve the upstream sprite selection; every captured
+position retains its original ground-relative altitude and zero picking ownership.
+The fixed-view audit covers observed flat roadworks; hidden effects and between-frame
+presentation remain unverified. Source sprites and the transient unpresented bubble
+threshold remain independently inventoried. Effect spawning, ticks, deletion, saves
+and simulation RNG are still upstream-owned.
+
 ## NW boarding-pier actual-turn regression
 
 The two climate pier27 models recess one support from[26,39]to[31,39]. All upper cells/

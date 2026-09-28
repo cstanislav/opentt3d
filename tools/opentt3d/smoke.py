@@ -84,6 +84,7 @@ def main():
     parser.add_argument("--reference-ground-detail", nargs=2, type=int, metavar=("KIND", "VARIANT"))
     parser.add_argument("--export-references", action="store_true")
     parser.add_argument("--export-effects", action="store_true", help="Export original effect sprites and their source offsets, including the unpresented bubble threshold")
+    parser.add_argument("--trace-effects", action="store_true", help="Record actual voxel effect sprites, original animation states, transforms and unclickable ownership")
     parser.add_argument("--gallery-house", type=int, nargs="+", help="Export one or more house/tree model turntables")
     parser.add_argument("--gallery-voxels", action="store_true", help="Export all authored voxel turntables, street and neighbour-context views")
     parser.add_argument("--gallery-voxel-prefix", help="Export only voxel models with this name prefix")
@@ -199,6 +200,8 @@ def main():
         parser.error("--vulkan-validation requires --backend vulkan")
     if args.trace_aircraft_clearance and args.renderer != "3d":
         parser.error("--trace-aircraft-clearance requires --renderer 3d")
+    if args.trace_effects and args.renderer != "3d":
+        parser.error("--trace-effects requires --renderer 3d")
     if args.readback_presentation and (args.backend != "opengl" or args.renderer != "3d" or args.executable or args.macos_bundle):
         parser.error("--readback-presentation requires the direct-launch OpenGL 3D build")
     if args.verify_crossing_transitions and (not args.running or not args.benchmark_frames):
@@ -583,7 +586,7 @@ server_advertise = false
     elif not benchmark_frames:
         commands.append(f"screenshot {'presented' if gpu_presentation else 'viewport'} smoke")
     (scripts / ("autoexec.scr" if args.menu else "game_start.scr")).write_text("\n".join(commands) + "\n")
-    debug = "driver=5,console=1,script=4" if args.trace_aircraft_clearance else "driver=2,console=1"
+    debug = "driver=5,console=1,script=4" if args.trace_aircraft_clearance or args.trace_effects else "driver=2,console=1"
     command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", "-X",
                "-v", driver, "-b", args.blitter, "-s", "null", "-m", "null",
                *([] if args.graphics_from_config else ["-I", graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", debug, "-G", "314159", "-t", str(args.year), "-g"]
@@ -934,6 +937,8 @@ server_advertise = false
                 raise RuntimeError(f"Screenshot dimensions differ: requested {args.screenshot_size}, got {image_size}")
             if args.trace_aircraft_clearance and not all(marker in text for marker in ("clearance aircraft frame ","clearance airport frame ")):
                 raise RuntimeError("The clearance trace needs both emitted aircraft and airport bodies; inspect run.log")
+            if args.trace_effects and "voxel effect frame " not in text:
+                raise RuntimeError("No original voxel effect was captured; inspect run.log")
             if args.export_effects and "exported 81 original effect source sprites in 10 families (80 presentable, 1 unpresented bubble threshold)" not in text:
                 raise RuntimeError("The complete original effect source catalogue was not exported; inspect run.log")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
@@ -941,6 +946,8 @@ server_advertise = false
                       "background": args.background}
             if args.trace_aircraft_clearance:
                 result["aircraft_clearance_trace"] = True
+            if args.trace_effects:
+                result["effect_trace"] = True
             if benchmark_frames:
                 result["benchmark"] = json.loads((output / "benchmark.json").read_text())
                 if args.fullscreen and not result["benchmark"]["fullscreen"]:

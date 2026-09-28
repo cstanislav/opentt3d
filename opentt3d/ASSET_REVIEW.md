@@ -4,6 +4,23 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Roadworks bulldozer effect (September28)
+
+Four source-facing tracked bodies and sixteen explicit sprite/climate bindings reach
+1,707 volumes. All1,703 earlier volumes and all earlier materials/components/bindings
+remain. Source-native, orbit and street reviews retain rollers/tracks, supported recessed
+cab, operator, exhaust, open underbody and a curved grey-front/yellow-back blade. Remaining
+bounds errors are at most one horizontal/two vertical pixels; cab/hood proportions, blade
+contour and directional paint remain provisional. Final approvals remain0.
+
+12 prototype/ten integrated controls, three fallback/rejection controls,206 native checks,
+143 asset tests and19 harness tests pass.448 integration views match staging;648 original
+sources remain exact and32 native sprite bindings match the registered model. Each climate
+retains three wider backend differences/42 pixels and zero native differences. Six live
+controls record28 complete116-waypoint paths, preserving original reverse travel, source
+sprite orientation and unclickable ownership.76 other presentable effect sources remain
+unbound. Evidence:`breadth-effect-bulldozer-integrated-reconciliation.json`.
+
 ## NW boarding-pier moving-clearance correction (September28)
 
 Recessing one pier27 support by1.25 units beneath the original beam clears the two

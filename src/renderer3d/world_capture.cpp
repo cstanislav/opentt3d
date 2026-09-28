@@ -42,6 +42,7 @@
 #include "../engine_base.h"
 #include "../train.h"
 #include "../aircraft.h"
+#include "../effectvehicle_base.h"
 #include "../house.h"
 #include "../industry_map.h"
 #include "../tree_map.h"
@@ -1795,6 +1796,17 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				}
 				return;
 			}
+		}
+		if (vehicle.type == VEH_EFFECT && sub == nullptr && DrawVoxelEffect(capture->scene,image,origin,palette,transparent ? 0.38f : 1)) {
+			capture->parent_instance_end = capture->scene.instances.size();
+			capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
+			if (!capture->diagnostic && !capture->parent_culled) {
+				const auto &effect = *EffectVehicle::From(&vehicle);
+				Debug(driver,5,"OpenTT3D: voxel effect frame {} vehicle {} type {} sprite {} climate {} animation {},{} progress {} raw {},{},{} origin {:.9g},{:.9g},{:.9g} opacity {:.9g} pick {}",
+					capture_frame,vehicle.index.base(),vehicle.subtype,image&SPRITE_MASK,to_underlying(_settings_game.game_creation.landscape),effect.animation_state,effect.animation_substate,vehicle.progress,
+					vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,origin.x,origin.y,origin.z,transparent ? 0.38f : 1,tag.id);
+			}
+			return;
 		}
 		if (shadow || rotor || vehicle.type == VEH_EFFECT) {
 			SpriteTexture texture = Textures().Get(image, palette, TextureZoom(origin));

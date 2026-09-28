@@ -572,7 +572,7 @@ def compile_catalogue(data):
         compile_model(name)
     bindings = data.get("bindings", {})
     for category, identifiers in bindings.items():
-        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks") or not isinstance(identifiers, dict):
+        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects") or not isinstance(identifiers, dict):
             raise ValueError(f"Unknown voxel binding category {category}")
         for identifier, states in identifiers.items():
             if not identifier.isascii() or not identifier.isdecimal() or int(identifier) > 65535 or not isinstance(states, dict) or not states:
@@ -591,6 +591,9 @@ def compile_catalogue(data):
                     pair = {str(climate*2),str(climate*2+1)}
                     if pair & states.keys() and not pair <= states.keys():
                         raise ValueError("Vehicle climate bindings need both original empty/loaded states")
+            if category == "effects" and (any(int(state) >= 4 for state in states) or int(identifier) == 4754 or
+                                           not any(first <= int(identifier) <= last for first,last in ((1416,1419),(2040,2044),(3073,3089),(3701,3740),(4748,4762)))):
+                raise ValueError("Effect bindings use presentable original source sprites and explicit climate states0..3")
     return {"format": 1, "reference": data.get("reference"), "cell_size": [0.5, 0.5, 1],
             "materials": materials, "models": compiled, "bindings": bindings}
 

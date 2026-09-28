@@ -1,5 +1,44 @@
 # Active extended development goal
 
+## First voxel effects integrated — September28,02:35:59UTC
+
+Four manually authored roadworks orientations bring the catalogue to1,707. Explicit
+sprite1416…1419/climate0…3 bindings preserve all1,703 previous volumes, components,
+material faces and earlier bindings. The tracked body has separate rollers, a supported
+recessed cab/operator, exhaust, an open underbody and a curved two-sided blade. Original
+sprite selection owns its orientation, including reversing without changing the image.
+Creation, movement, deletion, transparency/invisibility and simulation RNG stay upstream.
+
+All12 prototype and ten integrated controls pass, together with missing-frame/climate
+fallbacks and rejection of unpresented bubble4754.206 native checks,143 asset tests and
+19 harness tests pass.448 integration images match staging,648 source exports retain
+exact pixels/metadata and32 native bindings match their fixed-anchor models. Each
+climate's56-view backend comparison has three wider differences/42 pixels and zero
+native differences. Four ordinary NoAI-funded roadworks fixtures cover all climates.
+
+Four6,000-frame live controls and two3,600-frame app-bundle controls observe50,470
+voxel-effect samples and28 complete original116-waypoint paths. The read-only oracle
+checks all twenty source movement states, reversing, doubled terrain-relative placement
+and zero picking ownership. Its deliberate wrong-sprite/displacement/altitude/picking
+tests reject corruption. Hidden effects and between-frame presentation remain unverified.
+
+Native source bounds retain at most one horizontal/two vertical pixels of error; cab/hood
+proportions, blade contour and fine paint remain provisional. Peak sampled memory is
+3,533,393,472bytes; traced live controls average59.919…60.004fps with12…48 intervals
+above20ms and169.250ms maximum. Sustained arbitrary-world60fps and long-duration memory
+acceptance remain open.76 presentable effect sources still need artwork; approvals:0.
+Evidence:`breadth-effect-bulldozer-integrated-reconciliation.json`. The initial fixture's
+two piped console lines failed to save; the retained failure led to a single script
+invocation, which passes all four fixtures. Prior isolated art studies remain preserved.
+
+1,003 successful reviewed captures compact losslessly, saving1,492,521,051bytes with
+zero errors; original sources, failed controls, metadata and audit reports remain.
+
+Pier27 commit8825ebf698ee90eefb9abab4bb41cecc8aa84951 is pushed and preview`.26`
+targets that exact source in workflow36368334641. Verify public artifacts before replacing
+the currently recommended`.25`downloads. Continue essential aircraft clearances and the
+remaining effect/infrastructure/object catalogue, then catalogue-wide fidelity/performance.
+
 ## Moving pier27 clearance repaired — September28,01:56:17UTC
 
 The first NW boarding-pier support moves from authored[26,39]to[31,39], beneath its

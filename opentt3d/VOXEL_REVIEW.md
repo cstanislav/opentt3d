@@ -16,6 +16,14 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **First voxel effects:**four roadworks orientations/sixteen explicit climate bindings
+  reach1,707 volumes, preserving all1,703 previous models and earlier bindings. Original
+  sprites own the heading during forward/reverse travel.12 prototype/ten integrated
+  controls and three fallback/rejection controls pass;448 integrated images match and
+  648 source images remain exact. Six live controls capture28 complete116-waypoint paths.
+  Native206, asset143 and harness19 checks pass. Registration, cab/blade proportions and
+  fine paint remain provisional;76 presentable effect sources still need voxel artwork.
+
 - **NW pier27 moving clearance:**one support recess[26,39]→[31,39] preserves the original
   upper beams, other feet, source bounds and aircraft dimensions.1,701 other models and
   all bindings remain. Both original traces lose their27 pier intersections; two fresh
