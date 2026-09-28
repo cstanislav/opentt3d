@@ -1,5 +1,31 @@
 # Implementation verification
 
+## Actual smoothed aircraft clearance traces
+
+`smoke.py --trace-aircraft-clearance` enables read-only driver5 aircraft/airport transform
+records and original script release logging. Audit a completed trace with:
+
+```sh
+python3 tools/opentt3d/aircraft_clearance.py path/to/run.log \
+  --catalogue build-macos/baseset/opentt3d-voxels.json \
+  --output path/to/new-clearance-report.json
+```
+
+Use the exact compiled catalogue that produced the log. The report hashes both inputs
+and checks full-resolution yawed voxel runs against simultaneously captured airport
+bodies. Contact alone is excluded. Missing airport frames are recorded; hidden/uncaptured
+geometry, draw-time LODs and between-frame motion remain unverified.
+
+The independent42-waypoint quarter-cell oracle agrees exactly, retaining22 known engine251
+intersections.206 native unit/script checks and16 harness tests pass. Four paused controls
+retain exact trace-on/off screenshot pixels and pass aircraft contact and72 clipping views.
+Two6,000-frame background replays log the original five-engine held-service release.
+OpenGL/Vulkan evaluate19,489/19,498 samples, including3,952/3,956 fractional headings, and
+report1,527/1,522 intersecting samples. Engines251/252 intersect perimeter/runway fences,
+glass hangar24, boarding pier27 and radar/radio fences. All five engines248…252 are observed;
+absence of intersections in a captured subset does not establish complete clearance.
+Evidence:`build-macos/breadth-aircraft-clearance-trace-reconciliation.json`.
+
 ## Toyland forest source-identity aliases
 
 Sixteen independently selected forest16/17 layers reuse exact original cotton129/130

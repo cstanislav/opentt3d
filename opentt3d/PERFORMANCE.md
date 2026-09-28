@@ -3,6 +3,14 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Read-only moving-aircraft diagnostics
+
+Two6,000-frame driver5 Cab traces average59.934…59.936fps, retain202/782 intervals above
+20ms and reach133.256ms maximum. Sampled memory peaks at3,105,394,072bytes. Per-frame
+transform/script logging adds diagnostic overhead; these are clearance observations,
+not ordinary-launch performance acceptance. Paused trace-on/off screenshots agree exactly.
+Evidence:`build-macos/breadth-aircraft-clearance-trace-reconciliation.json`.
+
 ## Toyland forest alias controls
 
 Eleven prototype, four integrated and three independent fallback controls peak at

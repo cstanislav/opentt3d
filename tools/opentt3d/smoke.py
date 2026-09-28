@@ -160,6 +160,7 @@ def main():
     parser.add_argument("--verify-voxel-cargo", type=int, choices=range(256), help="Observe one actual voxel vehicle at both zero cargo and full capacity with the corresponding original bindings")
     parser.add_argument("--verify-helicopter-rotor", type=int, choices=(253,254,255), help="Observe all four original rotor states on an actual moving voxel helicopter")
     parser.add_argument("--verify-aircraft-contact", type=int, choices=range(215,256), help="Observe authored wheels/skids on an actual stopped aircraft meeting the airport ground surface")
+    parser.add_argument("--trace-aircraft-clearance", action="store_true", help="Record emitted aircraft/airport transforms at driver=5 for the offline aircraft_clearance.py volume audit")
     parser.add_argument("--verify-train-collectors", type=int, choices=range(23,27), help="Observe original electric roof collectors following surface, portal and tunnel wires")
     parser.add_argument("--verify-train-support", type=int, choices=range(116), help="Observe one original train on station, flat, ascending, descending, bridge and tunnel running surfaces")
     parser.add_argument("--verify-train-corners", action="store_true", help="Require --verify-train-support to also observe all four actual original corner tracks")
@@ -195,6 +196,8 @@ def main():
         parser.error("--macos-bundle requires the native macOS development build")
     if args.vulkan_validation and args.backend != "vulkan":
         parser.error("--vulkan-validation requires --backend vulkan")
+    if args.trace_aircraft_clearance and args.renderer != "3d":
+        parser.error("--trace-aircraft-clearance requires --renderer 3d")
     if args.readback_presentation and (args.backend != "opengl" or args.renderer != "3d" or args.executable or args.macos_bundle):
         parser.error("--readback-presentation requires the direct-launch OpenGL 3D build")
     if args.verify_crossing_transitions and (not args.running or not args.benchmark_frames):
@@ -577,9 +580,10 @@ server_advertise = false
     elif not benchmark_frames:
         commands.append(f"screenshot {'presented' if gpu_presentation else 'viewport'} smoke")
     (scripts / ("autoexec.scr" if args.menu else "game_start.scr")).write_text("\n".join(commands) + "\n")
+    debug = "driver=5,console=1,script=4" if args.trace_aircraft_clearance else "driver=2,console=1"
     command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", "-X",
                "-v", driver, "-b", args.blitter, "-s", "null", "-m", "null",
-               *([] if args.graphics_from_config else ["-I", graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", "driver=2,console=1", "-G", "314159", "-t", str(args.year), "-g"]
+               *([] if args.graphics_from_config else ["-I", graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", debug, "-G", "314159", "-t", str(args.year), "-g"]
     if args.menu:
         command.pop()  # No -g: use the original title-game/menu startup path.
     if args.savegame:
@@ -925,9 +929,13 @@ server_advertise = false
                 raise RuntimeError("Industry gallery did not complete")
             if args.screenshot_size and tuple(args.screenshot_size) != image_size:
                 raise RuntimeError(f"Screenshot dimensions differ: requested {args.screenshot_size}, got {image_size}")
+            if args.trace_aircraft_clearance and not all(marker in text for marker in ("clearance aircraft frame ","clearance airport frame ")):
+                raise RuntimeError("The clearance trace needs both emitted aircraft and airport bodies; inspect run.log")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
                       "screenshot": str(screenshot), "image_size": image_size, "command": command, "pid": native_pid or process.pid,
                       "background": args.background}
+            if args.trace_aircraft_clearance:
+                result["aircraft_clearance_trace"] = True
             if benchmark_frames:
                 result["benchmark"] = json.loads((output / "benchmark.json").read_text())
                 if args.fullscreen and not result["benchmark"]["fullscreen"]:

@@ -1,5 +1,27 @@
 # Active extended development goal
 
+## Actual moving-aircraft clearance evidence — September28,01:26:59UTC
+
+Read-only driver5 traces record the emitted aircraft origins/headings and simultaneous
+airport body owners. The offline separating-axis audit handles fractional turns, excludes
+mere contact and agrees with all42 independent quarter-cell waypoint results, including
+their22 known engine251 intersections.206 native unit/script checks and16 harness tests
+pass. Four paused contact/clipping controls pass with exact trace-on/off rendered pixels.
+
+Both6,000-frame background Cab replays explicitly release the original held five-engine
+service. OpenGL evaluates19,489 aircraft samples with1,527 intersections; Vulkan evaluates
+19,498 with1,522.3,952/3,956 samples have fractional headings. Observed intersections are
+on engines251/252: runway/perimeter fences, glass hangar24, pier27, radar fence31/51 and
+radio-tower fence32. The traces observe all five engines248…252; their captured samples
+do not establish unseen or between-frame clearance. Original dimensions and paths remain.
+The isolated pier27 support study now uses these actual smoothed poses.
+
+The full-resolution audit excludes draw-time LODs, hidden depot states and uncaptured
+scenery. Tracing adds overhead: these runs average59.934…59.936fps with202/782 intervals
+above20ms and133.256ms maximum; peak sampled memory is3,105,394,072bytes. They establish
+neither ordinary-launch performance nor smooth60fps. Final visual approvals remain0.
+Evidence:`breadth-aircraft-clearance-trace-reconciliation.json` and per-backend audit/logs.
+
 ## Toyland forest source aliases verified — September28,01:10:43UTC
 
 Sixteen explicit body/ground bindings cover forest16/17's Toyland2072…2077 sources.

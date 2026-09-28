@@ -20,6 +20,11 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Renderer
 
+- [x] Read-only emitted aircraft/airport traces and a fractional-heading voxel-intersection
+  audit agree with42 independent static waypoint controls.206 native checks,16 harness
+  tests and four exact trace-on/off paused controls pass. Two6,000-frame live replays
+  observe all five Toyland fixed-wing engines and confirm larger-aircraft intersections;
+  complete moving clearance remains open.
 - [x] Sixteen Toyland forest body/ground aliases reuse source-identical cotton artwork,
   preserving all1,703 model entries and prior bindings.11 prototype/four integrated
   controls, three independent fallback controls and142 asset tests pass;788 integration

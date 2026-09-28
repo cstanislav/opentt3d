@@ -720,6 +720,10 @@ bool CaptureVoxelAirport(const TileInfo &tile, unsigned graphics, const DrawTile
 			Debug(driver,1,"OpenTT3D: live voxel airport tile {} captured at {},{}",graphics,TileX(tile.tile),TileY(tile.tile));
 			Debug(driver,1,"OpenTT3D: airport voxel climate selection graphics {} frame {} layer body climate {} binding {}",graphics,frame,climate,*state);
 		}
+		/* Optional read-only trace for full-resolution volume clearance audits.
+		 * Nine significant digits round-trip each emitted float transform. */
+		if (!capture->diagnostic) Debug(driver,5,"OpenTT3D: clearance airport frame {} tile {} graphics {} state {} origin {:.9g},{:.9g},{:.9g}",
+			capture_frame,tile.tile.base(),graphics,*state,static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z));
 		if (check_radio_beacons && graphics == 32 && !capture->diagnostic) {
 			if (checked_radio_tile == INVALID_TILE) {
 				unsigned materials = 0;
@@ -1883,6 +1887,10 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 					}
 				}
 				if (auto state = VoxelVehicleState(vehicle.engine_type.base(),loaded); !capture->parent_culled && !capture->diagnostic && state) {
+					/* Record the emitted smoothed pose, not just the simulation's axial
+					 * waypoint. This never advances aircraft state or animation. */
+					if (vehicle.type == VEH_AIRCRAFT) Debug(driver,5,"OpenTT3D: clearance aircraft frame {} vehicle {} engine {} state {} raw {},{},{} direction {} pose {:.9g},{:.9g},{:.9g},{:.9g}",
+						capture_frame,vehicle.index.base(),vehicle.engine_type.base(),*state,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,to_underlying(vehicle.direction),position.x,position.y,position.z,heading);
 					if (checked_aircraft_contact == vehicle.engine_type.base() && vehicle.cur_speed == 0 && IsValidTile(vehicle.tile)) {
 						const auto *airport = Station::GetIfValid(Aircraft::From(&vehicle)->targetairport);
 						bool oilrig = airport != nullptr && airport->airport.type == AT_OILRIG;
