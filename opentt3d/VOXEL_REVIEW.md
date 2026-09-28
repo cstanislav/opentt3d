@@ -16,6 +16,15 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Rig/paper Toyland owners:**one independent4061 water volume reaches1,703. Twenty
+  ground bindings add source-specific static157 flecks; thirteen source-proven animated
+  body aliases retain the existing253 palette mechanism. All1,702 prior models/bindings
+  remain.18 prototype/two baseline/six integrated controls and three negatives pass;
+  all964 staged/integrated views agree. Individual native layers agree across backends;
+  the one-pixel initial paper-layout difference predates this change. Both engine253
+  controls retain elevated plane54. Source fidelity, exact water paint and approvals
+  remain open; current asset suite:142 passing checks.
+
 - **Gold Toyland grounds2022/2257/2260/2261:**one registered underlay reaches1,702;
   twelve explicit bindings preserve all1,701 prior models and every earlier binding.
   Source-exact pool differences resolve through animated palette245…249. Source-identical

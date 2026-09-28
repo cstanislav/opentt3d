@@ -167,7 +167,9 @@ def inventory():
         for stage in industry["voxel_states"]:
             sprite = int(industry_rows[industry["graphics"]*4+stage].split(",")[2].split("|",1)[0].strip(),0)
             if industry["graphics"] in (26,27,28) or (industry["graphics"] == 67 and sprite == 2206):
-                restricted_bodies.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":["toyland"]})
+                explicit = 48+stage in body_states
+                restricted_bodies.append({"stage":stage,"sprite":sprite,"missing_voxel_climates":[] if explicit else ["toyland"],
+                                          "toyland_source":"explicit source-audited animated-palette alias" if explicit else "retain supplied Toyland source body"})
         if restricted_bodies:
             industry["body_climate_restrictions"] = restricted_bodies
     airport_source = (ROOT / "src/table/airporttile_ids.h").read_text().split("enum AirportTiles", 1)[1].split("};", 1)[0]

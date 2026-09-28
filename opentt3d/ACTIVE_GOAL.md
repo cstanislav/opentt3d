@@ -1,5 +1,38 @@
 # Active extended development goal
 
+## Rig/paper Toyland layers verified — September28,00:49:23UTC
+
+The catalogue reaches1,703 with independently painted Toyland4061 rig water, twenty
+explicit ground bindings and thirteen source-proven rig/paper body aliases. The original
+body differences resolve exactly through animated index253; the water additionally needs
+static157 teal flecks. All1,702 preceding source/compiled model entries and prior bindings
+remain unchanged. The full water footprint andZ=-1 datum preserve independent deck/body
+ownership; both original engine253 service controls retain the elevated support plane54.
+
+All18 prototype controls, two original Toyland-paper baseline controls, six integrated
+controls and three missing/wrong-climate negatives pass.142 asset tests pass.66 native
+sidecars confirm the explicit active-climate owners; all964 staged/integrated images agree.
+Both ordinary-paper regressions retain265/265 views, while ordinary rig retains200/208
+with eight discovery-page changes and nine added views. Toyland paper retains255/263,
+with eight completed-layout changes and two added native layers. Backend differences
+remain48 rig views/1,779 pixels and60 paper views/10,628 pixels. Individual native layers
+agree; the one-pixel initial joined-paper difference is reproduced before the increment.
+The failed paper-stage invocation and first overstrict gallery assertion remain preserved.
+
+4,364 successful prototype/integrated captures compact losslessly, saving5,720,145,406
+bytes with zero errors. Source originals, failures and metadata remain. Water fleck
+distribution,64×33 versus64×31 native registration and inherited rig/paper source fidelity
+remain provisional. Peak sampled memory is3,686,731,760bytes; this short matrix does not
+establish sustained60fps or long-duration memory acceptance. Final approvals remain0.
+Evidence:`breadth-rig-paper-toyland-integrated-reconciliation.json`.
+
+Release`.24`remains the independently verified public baseline. Publish the combined
+gold/rig/paper increment from its exact committed source. Continue source-audited forest
+climate coverage, essential aircraft clearances, procedural/infrastructure/effect breadth
+and subsequent catalogue-wide fidelity/performance passes. The isolated raised-canopy
+study still intersects engine251. A separate aircraft-height source study improves39/40
+anchor bounds but retains clearance and shape defects; neither study is integrated.
+
 ## Toyland airport packages independently verified — September28,00:39:21UTC
 
 Release`.24`at exact commita43eae69ea3260e95baebbd38cb7b38acff3e1e1 passes all eight

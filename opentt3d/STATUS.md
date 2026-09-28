@@ -15,11 +15,16 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,702-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,703-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Toyland rig4061 receives independently painted water with twenty explicit ground
+  bindings; thirteen source-proven rig/paper body aliases retain original palette animation.
+  All1,702 earlier models and bindings remain.18 prototype/two baseline/six integrated
+  controls, three negatives and142 asset tests pass;964 staged/integrated views agree.
+  Native layers agree across backends and both original elevated helicopter contacts pass.
 - [x] Twelve explicit Toyland gold-ground bindings preserve original animated pool
   colours and independent2022 soil registration. The new underlay clears all nine
   body-floor intersections while preserving all1,701 previous models and prior bindings.

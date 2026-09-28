@@ -973,6 +973,9 @@ class VoxelCompilerTests(unittest.TestCase):
     def test_paper_mill_keeps_original_state_aliases_empty_bodies_and_supported_machinery(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
+        ventilation = source["bindings"]["industries"]["67"]
+        self.assertEqual(ventilation["51"],ventilation["3"],"Original2206 climate differences use the same animated fan indices")
+        self.assertEqual(set(ventilation),{"3","51"},"The earlier ventilation bodies are genuinely absent in both climates")
         source["models"] = {name:model for name,model in source["models"].items()
                             if name.startswith("paper_") or name in ("mine_ground_bare","mine_ground_site")}
         source["bindings"] = {category:{key:{state:name for state,name in value.items() if int(state) < 4}
@@ -1200,11 +1203,11 @@ class VoxelCompilerTests(unittest.TestCase):
             for stage, name in states.items():
                 if graphics == "25":
                     allowed = {1,4,7,9,73,76,118,151,152,153,187,188,189} | set(range(232,239))
-                elif stage == "0":
+                elif int(stage)%16 == 0:
                     allowed = set(range(70,80)) | {250,251,252,253,254}
                 else:
                     allowed = set(range(2,16)) | set(range(70,80)) | set(range(114,122)) | set(range(128,135)) | {250,251,252,253,254}
-                    if graphics == "26" and stage == "3":
+                    if graphics == "26" and int(stage)%16 == 3:
                         allowed |= {169,241,242,243,244,255}
                 colours = {colour for *_,material in result["models"][name]["runs"] for colour in result["materials"][material-1]}
                 self.assertTrue(colours <= allowed,(graphics,stage,sorted(colours-allowed)))
@@ -1214,6 +1217,8 @@ class VoxelCompilerTests(unittest.TestCase):
             states = result["bindings"]["industries"][str(graphics)]
             self.assertEqual(states["1"],states["2"])
             self.assertEqual(len(set(states.values())),3)
+            for stage in range(4):
+                self.assertEqual(states[str(48+stage)],states[str(stage)],"Original rig body climate changes use the same animated foam indices")
         for stage in range(4):
             joined = set()
             for x,y,graphics in ((0,2,25),(1,0,26),(1,1,27),(1,2,28)):
@@ -1249,6 +1254,16 @@ class VoxelCompilerTests(unittest.TestCase):
         ground = result["models"]["oilrig_water_ground"]
         self.assertEqual(ground["origin"],[0,0,-1])
         self.assertEqual(ground["occupied"],32*32)
+        water = result["models"]["oilrig_toyland_water_ground"]
+        self.assertEqual(water["origin"],ground["origin"])
+        self.assertEqual(water["cell_size"],ground["cell_size"])
+        self.assertEqual({(x+i,y,z) for x,y,z,n,m in water["runs"] for i in range(n)},
+                         {(x,y,0) for x in range(32) for y in range(32)},"Independent rig water retains its complete footprint and contact datum")
+        colours = {colour for *_,m in water["runs"] for colour in result["materials"][m-1]}
+        self.assertTrue({157,245,246,247,248,249,250} <= colours,"Retain both static Toyland flecks and live original palette water")
+        for graphics in range(24,29):
+            self.assertEqual({result["bindings"]["industry_ground"][str(graphics)][str(48+stage)] for stage in range(4)},
+                             {"oilrig_toyland_water_ground"})
 
     def test_authored_prisms_keep_concavities_winding_axes_and_component_offsets(self):
         outline = [[0,0],[4,0],[4,1],[1,1],[1,4],[0,4]]

@@ -814,6 +814,7 @@
     "oilrig_water_low": 246,
     "oilrig_water_high": 249,
     "oilrig_water_wave": 250,
+    "oilrig_toyland_fleck": 157,
     "oilrig_flare_arm": [73,76,73,76,73,118],
     "oilrig_flare_tip": [4,7,7,9,4,9],
     "oilrig_flame": [232,234,233,236,232,237],
@@ -14027,6 +14028,11 @@
       ["scatter_paint","oilrig_water_high",7,887,0,0,0,32,32,1],
       ["repeat",[5,7,0],4,[["paint","oilrig_water_wave",2,2,0,5,3,1]]]
     ]},
+    "oilrig_toyland_water_ground": {
+      "extends":"oilrig_water_ground","review_status":"work-in-progress",
+      "reference":"Toyland4061 retains the original full water-tile silhouette and animated245..254 family, with independent sparse static157 teal flecks. Keep the original submerged Z=-1 datum and all rig body/deck ownership separate.",
+      "ops":[["scatter_paint","oilrig_toyland_fleck",16,4061,0,0,0,32,32,1]]
+    },
     "oilrig_helipad_initial": {"size":[80,96,140],"origin":[-16,0,0],"ops":[["use","oilrig_initial_structure"],["erase",0,0,0,32,96,140],["erase",0,32,0,80,96,140]]},
     "oilrig_derrick_initial": {"size":[80,96,140],"origin":[-16,-16,0],"ops":[["use","oilrig_initial_structure"],["erase",32,0,0,80,32,140],["erase",0,48,0,80,96,140]]},
     "oilrig_office_initial": {"size":[80,96,140],"origin":[-16,-32,0],"ops":[["use","oilrig_initial_structure"],["erase",0,0,0,80,48,140]]},
@@ -21689,11 +21695,11 @@
       "21":{"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground","16":"industry_climate_soil","17":"industry_climate_soil","18":"industry_climate_soil","32":"industry_climate_soil","33":"industry_climate_soil","34":"industry_climate_soil","48":"industry_climate_toyland_paving","49":"industry_climate_toyland_paving","50":"industry_climate_toyland_paving"},
       "22":{"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground","16":"industry_climate_soil","17":"industry_climate_soil","18":"industry_climate_soil","32":"industry_climate_soil","33":"industry_climate_soil","34":"industry_climate_soil","48":"industry_climate_toyland_paving","49":"industry_climate_toyland_paving","50":"industry_climate_toyland_paving"},
       "23":{"0":"mine_ground_site","1":"mine_ground_site","2":"mine_ground_site","3":"refinery_paved_ground","16":"industry_climate_soil","17":"industry_climate_soil","18":"industry_climate_soil","32":"industry_climate_soil","33":"industry_climate_soil","34":"industry_climate_soil","48":"industry_climate_toyland_paving","49":"industry_climate_toyland_paving","50":"industry_climate_toyland_paving"},
-      "24": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
-      "25": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
-      "26": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
-      "27": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"},
-      "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground"}
+      "24": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground","48":"oilrig_toyland_water_ground","49":"oilrig_toyland_water_ground","50":"oilrig_toyland_water_ground","51":"oilrig_toyland_water_ground"},
+      "25": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground","48":"oilrig_toyland_water_ground","49":"oilrig_toyland_water_ground","50":"oilrig_toyland_water_ground","51":"oilrig_toyland_water_ground"},
+      "26": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground","48":"oilrig_toyland_water_ground","49":"oilrig_toyland_water_ground","50":"oilrig_toyland_water_ground","51":"oilrig_toyland_water_ground"},
+      "27": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground","48":"oilrig_toyland_water_ground","49":"oilrig_toyland_water_ground","50":"oilrig_toyland_water_ground","51":"oilrig_toyland_water_ground"},
+      "28": {"0":"oilrig_water_ground","1":"oilrig_water_ground","2":"oilrig_water_ground","3":"oilrig_water_ground","48":"oilrig_toyland_water_ground","49":"oilrig_toyland_water_ground","50":"oilrig_toyland_water_ground","51":"oilrig_toyland_water_ground"}
     },
     "industries": {
       "172":{"0":"sugar_172_body","1":"sugar_172_body","2":"sugar_172_body","3":"sugar_172_body"},
@@ -21781,7 +21787,7 @@
       "64":{"0":"paper_office_initial","1":"paper_office_partial","2":"paper_office_partial","3":"paper_office"},
       "65":{"3":"paper_loading_shelter"},
       "66":{"0":"paper_process_initial","1":"paper_process_partial","2":"paper_process_partial","3":"paper_process"},
-      "67":{"3":"paper_ventilation"},
+      "67":{"3":"paper_ventilation","51":"paper_ventilation"},
       "68":{"1":"paper_boiler_partial","2":"paper_boiler","3":"paper_boiler"},
       "69":{"1":"paper_boiler_partial","2":"paper_boiler","3":"paper_boiler_stocked"},
       "70":{"1":"paper_yard_initial","2":"paper_yard_partial","3":"paper_yard"},
@@ -21818,9 +21824,9 @@
       "22": {"0":"refinery_cooler_site","1":"refinery_cooler_build","2":"refinery_cooler","3":"refinery_cooler"},
       "23": {"0":"refinery_office_site","1":"refinery_office_build","2":"refinery_office","3":"refinery_office"},
       "25": {"3":"oilrig_flare"},
-      "26": {"0":"oilrig_helipad_initial","1":"oilrig_helipad_partial","2":"oilrig_helipad_partial","3":"oilrig_helipad"},
-      "27": {"0":"oilrig_derrick_initial","1":"oilrig_derrick_partial","2":"oilrig_derrick_partial","3":"oilrig_derrick"},
-      "28": {"0":"oilrig_office_initial","1":"oilrig_office_partial","2":"oilrig_office_partial","3":"oilrig_office"}
+      "26": {"0":"oilrig_helipad_initial","1":"oilrig_helipad_partial","2":"oilrig_helipad_partial","3":"oilrig_helipad","48":"oilrig_helipad_initial","49":"oilrig_helipad_partial","50":"oilrig_helipad_partial","51":"oilrig_helipad"},
+      "27": {"0":"oilrig_derrick_initial","1":"oilrig_derrick_partial","2":"oilrig_derrick_partial","3":"oilrig_derrick","48":"oilrig_derrick_initial","49":"oilrig_derrick_partial","50":"oilrig_derrick_partial","51":"oilrig_derrick"},
+      "28": {"0":"oilrig_office_initial","1":"oilrig_office_partial","2":"oilrig_office_partial","3":"oilrig_office","48":"oilrig_office_initial","49":"oilrig_office_partial","50":"oilrig_office_partial","51":"oilrig_office"}
     },
     "trees": {
       "1884":{"0":"tree_tropical_bottle_00","1":"tree_tropical_bottle_01","2":"tree_tropical_bottle_02","3":"tree_tropical_bottle_03","4":"tree_tropical_bottle_04","5":"tree_tropical_bottle_05","6":"tree_tropical_bottle_06"},

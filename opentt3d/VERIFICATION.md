@@ -1,5 +1,25 @@
 # Implementation verification
 
+## Rig/paper Toyland owner integration
+
+The1,703-model catalogue adds one ground and33 explicit bindings, preserving all1,702
+preceding source/compiled models and earlier bindings. Thirteen rig/paper body aliases
+follow exact original animated-palette differences; twenty4061 ground bindings select
+the independent static157-flecked water. The full footprint and submerged datum remain.
+142 asset tests,18 prototype controls, two original Toyland baselines, six integrated
+controls and three missing/wrong-climate negatives pass.66 native sidecars retain the
+correct active owners. Two ordinary engine253 controls confirm elevated support plane54.
+The native implementation is unchanged from the passing204 unit/two script checks.
+
+All964 staged/integrated images match exactly. Ordinary paper preserves265/265 views
+per backend; ordinary rig preserves200/208, with eight discovery-page changes and nine
+additions. Toyland paper preserves255/263, with eight completed-layout changes and two
+added native layers. Rig/paper backend differences remain48/60 views and1,779/10,628 pixels;
+individual native layers agree. The one-pixel initial joined-paper difference also occurs
+in the unchanged baseline. The omitted-stage invocation and initial strict comparison
+failure remain preserved. Final visual approvals:0. Evidence:
+`build-macos/breadth-rig-paper-toyland-integrated-reconciliation.json`.
+
 ## Public Toyland airport release `.24`
 
 Workflow36360500122 passes all eight jobs on its first attempt at

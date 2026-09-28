@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Rig/paper Toyland layer controls
+
+The18 prototype, two baseline and six integrated controls peak at3,686,731,760 sampled
+bytes without crossing the6GiB guard. Short catalogue/clipping/contact checks do not
+establish sustained60fps, long-duration memory, reload or multiple-viewport acceptance.
+Evidence:`build-macos/breadth-rig-paper-toyland-integrated-reconciliation.json`.
+
 ## Toyland airport public-package follow-up
 
 Release`.24`Linux llvmpipe completes900 support/collector frames at1.704fps with

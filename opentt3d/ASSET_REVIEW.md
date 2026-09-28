@@ -4,6 +4,29 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Toyland rig water and original animated body aliases (September28)
+
+One independent4061 water volume reaches1,703 models. Its complete16×16 footprint and
+Z=-1 datum retain the original submerged layer, adding static157 teal flecks alongside
+the inherited animated245…254 family. Thirteen body layers across rig26…28 and completed
+paper67 are source-exact after the original253 palette substitution; they reuse their
+existing volumes through explicit climate48…51 bindings. All1,702 prior models and all
+prior bindings remain. Ground and body selection stay independent.
+
+18 prototype/two baseline/six integrated controls and three fallback negatives pass;
+66 native layer sidecars select the active climate. All964 staged/integrated views agree.
+Ordinary paper remains265/265 exact per backend; ordinary rig retains200/208, with eight
+discovery-page changes and nine additions. Toyland paper retains255/263, eight changes
+are completed joined layouts and two added layers supply the newly selected body.
+Backend differences are48 rig views/1,779 pixels and60 paper views/10,628 pixels. Native
+layers agree; the initial joined-paper one-pixel difference predates these aliases.
+
+Registered source, orbit and street reviews retain water sparkle-distribution/registration,
+rig steelwork/panel and paper ventilation-shape reservations. Both real engine253 controls
+retain support plane54. Industry availability stays original; final approvals:0.
+4,364 reviewed captures compact losslessly, saving5,720,145,406bytes. Evidence:
+`breadth-rig-paper-toyland-{gallery-review,integrated-reconciliation}.json`.
+
 ## Gold Toyland soil registration and animated pool aliases (September28)
 
 One provisional underlay and twelve explicit ground bindings bring the catalogue to1,702,
