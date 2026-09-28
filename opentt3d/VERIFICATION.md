@@ -1,5 +1,22 @@
 # Implementation verification
 
+## NW boarding-pier actual-turn regression
+
+The two climate pier27 models recess one support from[26,39]to[31,39]. All upper cells/
+faces, other feet,1,701 prior models, bindings, materials and aircraft dimensions remain.
+Ten prototype/baseline and six integrated controls pass; all136 integration images match.
+The original27 captured pier intersections disappear on exact replay, with every other
+intersection unchanged. Two fresh6,000-frame held-service replays evaluate19,417/19,405
+samples and have no pier27 intersections.210 original static waypoint results remain
+exact. The meaningful regression fails on both adverse original poses before the repair,
+then passes normal/Toyland bodies.142 asset and17 harness tests pass. Individual native
+layers agree across backends; each climate retains three wider differences/141 pixels.
+
+Larger-aircraft fences, hangars and terminal19 remain unresolved; traces do not establish
+hidden/uncaptured geometry, selected-LOD or between-frame clearance. The rejected CLI
+invocation, material-index assertion and initially wrong sidecar filename remain preserved.
+Evidence:`build-macos/breadth-airport-nw-moving-leg-integrated-reconciliation.json`.
+
 ## Public industry-layer release `.25`
 
 Workflow36364111123 passes all eight jobs at exact commitec3be77982a2dd7d63a1eab974e864861f738b25.

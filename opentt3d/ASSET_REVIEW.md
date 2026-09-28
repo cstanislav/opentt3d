@@ -4,6 +4,22 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## NW boarding-pier moving-clearance correction (September28)
+
+Recessing one pier27 support by1.25 units beneath the original beam clears the two
+larger Toyland aircraft's observed turns. Both climate bodies retain all upper cells/
+material faces, two other feet, native bounds and independent grounds.1,701 other models
+and all prior bindings remain unchanged. Source/street reviews retain existing one-pixel
+registration and inherited beam/paint reservations; final approvals remain0.
+
+Ten prototype/baseline and six integrated controls pass;136 integration views match
+staging. The2,483-local-pose study and both preceding full traces eliminate all27 known
+pier27 intersections. Both fresh6,000-frame replays have zero pier27 intersections, while
+other airport defects remain. All210 original waypoint results are unchanged. Each
+34-view backend comparison retains three wider differences/141 pixels and no native
+differences.142 asset checks and17 harness tests pass. Evidence:
+`breadth-airport-nw-moving-leg-integrated-reconciliation.json`.
+
 ## Original effect source/state inventory (September28)
 
 81 nonempty original images cover ten sprite families and twelve effect types.80 are

@@ -1,7 +1,9 @@
 import math
+import json
+from pathlib import Path
 import unittest
 
-from aircraft_clearance import box_overlap, parse_trace
+from aircraft_clearance import audit, box_overlap, parse_trace
 
 
 class AircraftClearanceTests(unittest.TestCase):
@@ -34,6 +36,37 @@ class AircraftClearanceTests(unittest.TestCase):
         self.assertEqual(len(bodies[4]),1)
         with self.assertRaisesRegex(ValueError,'inconsistent aircraft'):
             parse_trace('\n'.join((airport,aircraft,aircraft.replace('37.75','38'))))
+
+    def test_source_pier_clears_captured_juggerplane_and_wizzer_turns(self):
+        from tools.assets.compile_voxels import compile_catalogue
+        source = json.loads((Path(__file__).resolve().parents[2] / 'assets/3d/voxels.json').read_text())
+        names = set()
+        def include(name):
+            names.add(name)
+            if 'extends' in source['models'][name]:
+                include(source['models'][name]['extends'])
+        for state in ('0','48'):
+            include(source['bindings']['airport_tiles']['27'][state])
+        for engine in (251,252):
+            include(source['bindings']['vehicles'][str(engine)]['6'])
+        bindings = source['bindings']
+        source['models'] = {name:model for name,model in source['models'].items() if name in names}
+        source['bindings'] = {}
+        catalogue = compile_catalogue(source)
+        catalogue['bindings'] = bindings
+        # Actual emitted poses at city pier27, translated to its tile origin.
+        # The previous outer support intersects both turns. Aircraft dimensions,
+        # beam extent and original motion cannot be changed to hide the defect.
+        poses = ((251,'4.183029,19.182983,0.0000019,7.0685792'),
+                 (252,'5.479645,20.479675,0,7.06858206'))
+        for state in (0,48):
+            lines = []
+            for frame,(engine,pose) in enumerate(poses,1):
+                lines.append(f'clearance airport frame {frame} tile 0 graphics 27 state {state} origin 0,0,0')
+                lines.append(f'clearance aircraft frame {frame} vehicle {engine} engine {engine} state 6 raw 5,20,1 direction 0 pose {pose}')
+            result = audit(catalogue,'\n'.join(lines))
+            self.assertEqual(result['evaluated_samples'],2)
+            self.assertEqual(result['intersecting_samples'],0,result['samples'])
 
 
 if __name__ == '__main__':

@@ -1,5 +1,33 @@
 # Active extended development goal
 
+## Moving pier27 clearance repaired — September28,01:56:17UTC
+
+The first NW boarding-pier support moves from authored[26,39]to[31,39], beneath its
+unchanged beam. Normal and Toyland bodies inherit the1.25-unit recess; all upper beam
+cells/faces, the other two feet,1,701 other models, materials and bindings are preserved.
+Aircraft dimensions and original motion remain unchanged. The2,483-pose study and full
+re-evaluation of both preceding traces eliminate all27 pier27 intersections with every
+other intersection result unchanged.210 original terminal/entrance samples across all
+five Toyland fixed-wing engines also remain exact, including the known other defects.
+
+Ten prototype/baseline and six integrated controls pass. Both fresh6,000-frame replays
+release the original held service and have zero pier27 intersections in19,417/19,405
+evaluated aircraft samples. Other defects remain in1,498/1,502 samples. The new regression
+first reproduced both captured adverse turns, then passed both climate bodies.142 asset
+checks and17 harness tests pass; all136 integrated images match staging. Each34-view
+baseline changes33 affected body/context views and preserves one. Each climate/backend
+comparison retains three differing wider views/141 pixels with zero native differences.
+
+Source-registered and street reviews retain supported branches and unchanged native
+bounds, with inherited one-pixel registration and beam/paint reservations. Peak sampled
+memory is3,499,249,240bytes. Traced replays average59.864…59.916fps with15/48 intervals
+above20ms and175.254ms maximum; diagnostic overhead precludes ordinary-performance claims.
+Other fences, hangars, terminal19, hidden/uncaptured geometry, draw-time LODs and between-
+frame motion remain open. Final visual approvals:0. Evidence:
+`breadth-airport-nw-moving-leg-integrated-reconciliation.json`.
+440 successful reviewed captures compact losslessly, saving1,076,915,398bytes with
+zero errors. Original sources, failed controls, metadata and audit reports remain.
+
 ## Industry-layer packages independently verified — September28,01:44:11UTC
 
 Release`.25`at exact commitec3be77982a2dd7d63a1eab974e864861f738b25 passes all eight

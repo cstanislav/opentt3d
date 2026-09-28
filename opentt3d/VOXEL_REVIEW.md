@@ -16,6 +16,13 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **NW pier27 moving clearance:**one support recess[26,39]→[31,39] preserves the original
+  upper beams, other feet, source bounds and aircraft dimensions.1,701 other models and
+  all bindings remain. Both original traces lose their27 pier intersections; two fresh
+  6,000-frame runs remain clear there.210 static waypoints are unchanged. Ten prototype/
+  baseline and six integrated controls pass;136 integrated views agree. Other airport
+  defects and inherited source fidelity remain open;142 asset/17 harness tests pass.
+
 - **Toyland forest16/17 source slots:**sixteen explicit aliases use cotton129/130's
   identical2072…2077 source layers, retaining1,703 unchanged volumes and independent
   ground ownership.11 prototype/four integrated controls, three fallback controls and

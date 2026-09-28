@@ -3,6 +3,14 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## NW boarding-pier correction
+
+The16 short/gallery/Cab controls peak at3,499,249,240 sampled bytes. Two fresh6,000-frame
+driver5 replays average59.864…59.916fps, retain15/48 intervals above20ms and reach175.254ms
+maximum. Tracing adds diagnostic overhead; these clearance controls do not establish
+ordinary-launch smoothness or long-duration memory acceptance. Evidence:
+`build-macos/breadth-airport-nw-moving-leg-integrated-reconciliation.json`.
+
 ## Public industry-layer release `.25`
 
 The independently reconciled Linux Mesa/llvmpipe900-frame support/collector journey

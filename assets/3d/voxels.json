@@ -1994,7 +1994,7 @@
       ["box","pier_light",53,50,9,58,51,15],
       ["box","pier_light",53,53,9,58,54,15],
       ["box","pier_light",53,56,9,58,57,15],
-      ["box","pier_dark",26,39,0,27,40,9],
+      ["box","pier_dark",31,39,0,32,40,9],
       ["box","pier_dark",56,39,0,57,40,9],
       ["box","pier_dark",56,56,0,57,57,9]
     ],
@@ -20405,7 +20405,7 @@
       "ops": [
         ["rotate_z",135,[42,48,0],[["use","airport_pier_elbow_nw_registered_branches"]]]
       ],
-      "reference": "Original airport27 boarding structure: corrected source-facing branches, independent supported legs and registered full extent; normal/Toyland originals share alpha, size and offset. Original sorting bounds remain simulation-owned."
+      "reference": "Original airport27 boarding structure: corrected source-facing branches, independent supported legs and registered full extent; normal/Toyland originals share alpha, size and offset. Original sorting bounds remain simulation-owned. The first support is recessed beneath its original beam to clear actual larger-aircraft smoothed turns; beam extent, two other feet, original aircraft dimensions and paths remain."
     },
     "airport_pier_link": {
       "size": [80,8,20],

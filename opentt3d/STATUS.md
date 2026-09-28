@@ -15,11 +15,16 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,703-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and download/screenshot/memory/clearance harness16/16 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,703-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and download/screenshot/memory/clearance harness17/17 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] NW pier27's source-contained support recess clears its27 intersections from both
+  original larger-aircraft traces and remains clear in two fresh6,000-frame replays.
+  All210 original waypoint results and1,701 other models remain. Ten prototype/baseline
+  and six integrated controls,136 exact integration views and a before/after regression
+  pass. Other airport clearances and final source fidelity remain open.
 - [x] Read-only effect-source export/inventory records81 original sprites,80 presentable
   and one unpresented bubble transition. Eight four-climate/backend controls reconcile
   324 exact image pairs;206 native checks and16 harness tests pass. Effect voxel
