@@ -70,14 +70,17 @@ current quality and participate in the same catalogue-wide audits.
 
 ## Pass 1 coverage checkpoint and queue (2026-09-27; 1,685-volume Arctic-farm checkpoint)
 
-Latest effect-breadth increment reaches1,736 volumes: four roadworks orientations,
+Latest effect-breadth increment reaches1,752 volumes: four roadworks orientations,
 eight chimney, five train-steam, six diesel-exhaust, six electric-spark and five shared
-charcoal-smoke states bind34/80 presentable effect sources through136 climate bindings.
+charcoal-smoke states plus sixteen large-explosion states bind50/80 presentable effect
+sources through200 climate bindings.
 Five spark volumes
 preserve a source-proven identical final pair with separate original timing. Original
 lifetime/motion controls and fixed-anchor source bounds are recorded in `VOXEL_REVIEW.md`;
-46 effect sources still need artwork. The sixteen-state large-explosion study remains
-unbound pending dimension/registration/palette corrections and actual crash review.
+30 effect sources still need integrated artwork. Large explosions now retain their
+source-sized ignition, visible fork/crown openings and detached late fragments. The
+twelve small-explosion states match source bounds in staging; actual small lifetimes
+remain unobserved in the current ordinary train fixtures.
 These additions preserve all preceding volumes and do not complete the catalogue-wide
 Pass1 gate or establish final visual approval.
 

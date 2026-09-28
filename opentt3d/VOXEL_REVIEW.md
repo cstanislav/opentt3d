@@ -16,6 +16,24 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Sixteen large-explosion frames:**64 explicit climate bindings reach1,752 volumes,
+  preserving all1,736 preceding models/components/material faces/bindings. All sixteen
+  original native bounds match. Frames8/9 replace an occluding annular stem with two
+  full-depth branches that retain the source's visible fork opening. Late fragments
+  have independently authored source-sized volumes and distinct depths. Ignition, crown,
+  fork and breakup geometry has native/orbit/street review; rounded billow contours,
+  directional paint and material detail remain provisional. Original flat-track crash
+  timing and source/state selection are checked independently of artwork fidelity.
+  Thirty presentable effect sources remain outside production; final approvals:0.
+
+- **Separate small-explosion staging:**twelve independent volumes match12/12 original
+  bounds, preserve the filled frame3 centre before the halo opens and restore the late
+  fragment extents. All eight current crash replays observe no small-explosion records;
+  their lifetime gates correctly fail and remain preserved. The separate read-only
+  oracle has synthetic corruption/continuity checks but no positive native lifetime.
+  Source/all-angle refinement and an ordinary positively observed emitter remain open.
+  This family is not counted in the production coverage above.
+
 - **Five shared charcoal-smoke frames:**twenty explicit climate bindings reach1,736
   volumes, preserving all1,731 prior models/components/material faces/bindings. Original
   crash, aircraft-breakdown and copper-mine types keep their independent spawning and

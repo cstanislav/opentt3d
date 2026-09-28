@@ -3,6 +3,20 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Integrated large-explosion controls
+
+Ten900-frame original crash replays with the1,752-model catalogue record2,035 observations
+and16 complete63-phase lifetimes. Both cold Vulkan/OpenGL controls pass. The gallery-preloaded
+temperate/Arctic OpenGL runs each miss phases and fail complete-lifetime acceptance;
+their original logs and captures remain preserved. No passing lifetime combines partial runs.
+
+The fourteen graphical/regression/fallback executions peak at3,464,465,936 sampled bytes.
+Crash runs average60.000…60.014fps but retain30…101 intervals above20ms, with35.068ms
+maximum. Two550-frame positive captures also show original explosions in the main and
+ordinary news viewports; they do not establish long-duration multiple-viewport acceptance.
+Evidence:`build-macos/breadth-effect-large-explosion-integrated-reconciliation.json`and
+`build-macos/breadth-effect-large-explosion-visible-validation.json`.
+
 ## Cold explosion-surface restoration study
 
 Exact chunked restoration now retains a compact CPU triangle stream before eligible

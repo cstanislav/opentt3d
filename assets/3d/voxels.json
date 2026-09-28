@@ -4,6 +4,20 @@
   "reference": "OpenGFX2 Classic 0.8.1, manually inspected native house, airport, vehicle and tree sprites",
   "authoring": "Explicit integer cell volumes. Material faces are -X,+X,-Y,+Y,-Z,+Z palette indices. No image-derived geometry.",
   "materials": {
+    "effect_fire_178": 178,
+    "effect_fire_179": 179,
+    "effect_fire_180": 180,
+    "effect_fire_181": 181,
+    "effect_fire_182": 182,
+    "effect_fire_183": 183,
+    "effect_fire_184": 184,
+    "effect_fire_185": 185,
+    "effect_fire_186": 186,
+    "effect_fire_187": 187,
+    "effect_fire_188": 188,
+    "effect_fire_189": 189,
+    "effect_fire_190": 190,
+    "effect_fire_191": 191,
     "air_toy_19_roof_patch": 7,
     "air_toy_19_upper_band": [12,10,11,14,5,15],
     "air_toy_19_air_wall": [34,32,33,35,32,36],
@@ -9765,6 +9779,226 @@
     ]
   },
   "models": {
+    "effect_explosion_large_0": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3709: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_190",52,52,21,76,76,27], ["ellipsoid","effect_fire_191",54,58,23,70,74,29],
+        ["polyline","effect_fire_191",[[69,59,28],[74,54,34],[74,54,36]]], ["polyline","effect_fire_191",[[61,67,30],[57,71,34],[55,73,42]]],
+        ["polyline","effect_fire_191",[[66,62,28],[66,62,36]]], ["polyline","effect_fire_191",[[68,60,20],[73,55,14]]],
+        ["polyline","effect_fire_191",[[58,70,22],[55,73,18],[54,74,14]]], ["ellipsoid","effect_fire_191",72,52,33,76,56,35],
+        ["ellipsoid","effect_fire_191",52,72,14,56,76,16]
+      ]
+    },
+    "effect_explosion_large_1": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3710: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_189",48,48,22,80,80,26], ["ellipsoid","effect_fire_190",51,55,24,73,77,28],
+        ["polyline","effect_fire_191",[[66,62,38],[68,60,48],[75,53,64]]], ["polyline","effect_fire_191",[[56,72,42],[51,77,52],[39,89,64]]],
+        ["polyline","effect_fire_191",[[76,52,36],[82,46,40],[91,37,42]]], ["ellipsoid","effect_fire_188",74,52,10,76,54,11],
+        ["ellipsoid","effect_fire_188",52,74,10,54,76,11]
+      ]
+    },
+    "effect_explosion_large_2": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3711: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_189",40,40,24,88,88,32], ["ellipsoid","effect_fire_190",45,49,27,79,83,35],
+        ["ellipsoid","effect_fire_189",75,49,62,79,53,70], ["ellipsoid","effect_fire_189",35,89,62,39,93,66],
+        ["ellipsoid","effect_fire_189",89,35,37,93,39,39]
+      ]
+    },
+    "effect_explosion_large_3": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3712: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_186",39,39,26,89,89,38], ["ellipsoid","effect_fire_186",34,51,27,73,90,39],
+        ["ellipsoid_paint","effect_fire_188",35,54,28,70,89,40], ["ellipsoid_paint","effect_fire_189",37,59,33,65,87,42],
+        ["ellipsoid","effect_fire_186",56,38,26,94,76,38], ["ellipsoid_paint","effect_fire_188",57,41,27,91,75,39],
+        ["ellipsoid_paint","effect_fire_189",59,46,31,86,73,41], ["ellipsoid","effect_fire_186",36,36,28,73,73,40],
+        ["ellipsoid_paint","effect_fire_188",37,39,29,70,72,41], ["ellipsoid_paint","effect_fire_189",39,44,33,65,70,43],
+        ["ellipsoid","effect_fire_186",53,56,26,91,94,38], ["ellipsoid_paint","effect_fire_188",54,59,27,88,92,39],
+        ["ellipsoid_paint","effect_fire_189",56,64,31,83,91,41], ["ellipsoid","effect_fire_187",78,48,69,80,50,70],
+        ["ellipsoid","effect_fire_187",35,91,63,37,93,64], ["ellipsoid","effect_fire_187",91,35,35,93,37,36]
+      ]
+    },
+    "effect_explosion_large_4": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3713: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_185",36,36,32,92,92,48], ["ellipsoid","effect_fire_185",31,50,34,74,93,50],
+        ["ellipsoid_paint","effect_fire_187",32,53,35,70,92,51], ["ellipsoid_paint","effect_fire_189",34,59,41,65,89,54],
+        ["ellipsoid","effect_fire_185",56,36,32,97,78,48], ["ellipsoid_paint","effect_fire_187",57,39,33,94,76,49],
+        ["ellipsoid_paint","effect_fire_189",59,44,39,88,74,52], ["ellipsoid","effect_fire_185",33,33,34,74,74,50],
+        ["ellipsoid_paint","effect_fire_187",34,36,35,71,72,51], ["ellipsoid_paint","effect_fire_189",36,42,42,66,70,54],
+        ["ellipsoid","effect_fire_185",52,56,32,93,97,48], ["ellipsoid_paint","effect_fire_187",53,58,33,90,95,49],
+        ["ellipsoid_paint","effect_fire_189",56,64,39,85,94,52], ["lathe","effect_fire_182",[64,64],[[10,1,0],[15,7,0],[37,8,0],[41,2,0]]]
+      ]
+    },
+    "effect_explosion_large_5": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3714: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_185",33,33,44,95,95,64], ["ellipsoid","effect_fire_185",27,48,46,75,96,66],
+        ["ellipsoid_paint","effect_fire_187",29,51,47,71,95,67], ["ellipsoid_paint","effect_fire_189",31,58,55,65,92,71],
+        ["ellipsoid","effect_fire_185",55,32,44,101,78,64], ["ellipsoid_paint","effect_fire_187",57,34,45,98,77,65],
+        ["ellipsoid_paint","effect_fire_189",59,41,53,93,74,69], ["ellipsoid","effect_fire_185",30,30,47,75,75,67],
+        ["ellipsoid_paint","effect_fire_187",31,33,48,72,74,68], ["ellipsoid_paint","effect_fire_189",33,39,56,66,71,72],
+        ["ellipsoid","effect_fire_185",50,54,44,97,100,64], ["ellipsoid_paint","effect_fire_187",52,58,44,94,99,64],
+        ["ellipsoid_paint","effect_fire_189",54,63,52,87,96,68], ["lathe","effect_fire_182",[64,64],[[12,1,0],[17,7,0],[51,8,0],[55,2,0]]]
+      ]
+    },
+    "effect_explosion_large_6": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3715: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_183",35,35,58,93,93,78], ["ellipsoid","effect_fire_183",28,49,60,74,96,80],
+        ["ellipsoid_paint","effect_fire_186",29,52,61,71,93,81], ["ellipsoid_paint","effect_fire_188",32,58,69,65,91,85],
+        ["ellipsoid","effect_fire_183",56,33,58,100,78,78], ["ellipsoid_paint","effect_fire_186",57,36,59,98,76,79],
+        ["ellipsoid_paint","effect_fire_188",59,41,67,91,73,83], ["ellipsoid","effect_fire_183",30,30,61,74,74,81],
+        ["ellipsoid_paint","effect_fire_186",32,34,62,71,73,82], ["ellipsoid_paint","effect_fire_188",35,40,70,66,71,86],
+        ["ellipsoid","effect_fire_183",50,55,58,96,99,78], ["ellipsoid_paint","effect_fire_186",52,58,58,92,98,78],
+        ["ellipsoid_paint","effect_fire_188",55,63,66,87,96,82], ["lathe","effect_fire_181",[64,64],[[14,1,0],[19,7,0],[67,8,0],[71,2,0]]]
+      ]
+    },
+    "effect_explosion_large_7": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3716: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_183",30,32,76,96,98,96], ["ellipsoid","effect_fire_183",23,48,78,74,99,98],
+        ["ellipsoid_paint","effect_fire_186",26,51,79,71,97,99], ["ellipsoid_paint","effect_fire_188",29,58,87,65,94,103],
+        ["ellipsoid","effect_fire_183",54,31,76,102,80,96], ["ellipsoid_paint","effect_fire_186",55,34,77,99,79,97],
+        ["ellipsoid_paint","effect_fire_188",58,40,85,93,75,101], ["ellipsoid","effect_fire_183",27,29,79,74,76,99],
+        ["ellipsoid_paint","effect_fire_186",29,32,80,71,75,100], ["ellipsoid_paint","effect_fire_188",31,38,88,65,72,104],
+        ["ellipsoid","effect_fire_183",48,55,76,97,103,96], ["ellipsoid_paint","effect_fire_186",51,58,76,94,101,96],
+        ["ellipsoid_paint","effect_fire_188",53,64,84,88,99,100], ["lathe","effect_fire_181",[64,64],[[14,1,0],[19,7,0],[83,8,0],[87,2,0]]]
+      ]
+    },
+    "effect_explosion_large_8": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3717: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_181",30,32,88,96,98,108], ["ellipsoid","effect_fire_181",25,47,90,76,98,110],
+        ["ellipsoid_paint","effect_fire_185",26,50,91,72,97,111], ["ellipsoid_paint","effect_fire_188",29,57,99,66,93,115],
+        ["ellipsoid","effect_fire_181",53,31,88,102,81,108], ["ellipsoid_paint","effect_fire_185",55,36,89,98,79,109],
+        ["ellipsoid_paint","effect_fire_188",57,41,97,92,77,113], ["ellipsoid","effect_fire_181",26,28,91,75,77,111],
+        ["ellipsoid_paint","effect_fire_185",28,32,92,71,75,112], ["ellipsoid_paint","effect_fire_188",30,38,100,65,72,116],
+        ["ellipsoid","effect_fire_181",48,55,88,98,104,108], ["ellipsoid_paint","effect_fire_185",50,58,88,95,102,108],
+        ["ellipsoid_paint","effect_fire_188",53,64,96,88,99,112], ["lathe","effect_fire_180",[64,64],[[22,1,0],[34,5,0]]],
+        ["lathe","effect_fire_180",[64,64],[[34,2.5,0,1,-1],[44,2.7,0,4,-4],[60,2.8,0,6,-6],[87,3,0,7,-7],[99,3.5,0,5,-5]]], ["lathe","effect_fire_180",[64,64],[[34,2.5,0,-1,1],[44,2.7,0,-4,4],[60,2.8,0,-6,6],[87,3,0,-7,7],[99,3.5,0,-5,5]]]
+      ]
+    },
+    "effect_explosion_large_9": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3718: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["lathe","effect_fire_180",[63.5,64.5],[[108,35.5,19],[113,41.5,16],[123,40.5,17],[128,34.5,20]]], ["lathe","effect_fire_184",[63.5,64.5],[[109,34.5,20],[114,40.5,17],[124,39.5,18],[129,33.5,21]]],
+        ["lathe","effect_fire_186",[63.5,64.5],[[110,32.5,22],[115,38.5,19],[125,37.5,20],[130,31.5,23]]], ["ellipsoid_paint","effect_fire_183",87,54,111,108,76,125],
+        ["ellipsoid_paint","effect_fire_186",89,58,114,104,74,126], ["ellipsoid_paint","effect_fire_183",75,81,113,97,103,127],
+        ["ellipsoid_paint","effect_fire_186",77,86,116,93,101,128], ["ellipsoid_paint","effect_fire_183",41,86,111,62,107,125],
+        ["ellipsoid_paint","effect_fire_186",43,90,114,58,105,126], ["ellipsoid_paint","effect_fire_183",18,63,110,40,85,124],
+        ["ellipsoid_paint","effect_fire_186",20,68,112,35,83,126], ["ellipsoid_paint","effect_fire_183",27,29,112,49,51,126],
+        ["ellipsoid_paint","effect_fire_186",29,33,114,44,48,128], ["ellipsoid_paint","effect_fire_183",58,21,111,80,43,125],
+        ["ellipsoid_paint","effect_fire_186",60,25,114,75,40,126], ["ellipsoid_paint","effect_fire_183",82,37,112,104,59,126],
+        ["ellipsoid_paint","effect_fire_186",84,41,114,99,56,128], ["lathe","effect_fire_180",[64,64],[[34,1,0],[46,5,0]]],
+        ["lathe","effect_fire_180",[64,64],[[46,2.5,0,1,-1],[56,2.7,0,4,-4],[72,2.8,0,6,-6],[109,3,0,7,-7],[121,3.5,0,5,-5]]], ["lathe","effect_fire_180",[64,64],[[46,2.5,0,-1,1],[56,2.7,0,-4,4],[72,2.8,0,-6,6],[109,3,0,-7,7],[121,3.5,0,-5,5]]]
+      ]
+    },
+    "effect_explosion_large_10": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3719: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["lathe","effect_fire_179",[63,65],[[124,37,25],[129,43,22],[139,42,23],[144,36,26]]], ["lathe","effect_fire_183",[63,65],[[125,36,26],[130,42,23],[140,41,24],[145,35,27]]],
+        ["lathe","effect_fire_186",[63,65],[[126,34,28],[131,40,25],[141,39,26],[146,33,29]]], ["ellipsoid_paint","effect_fire_182",87,54,127,110,76,141],
+        ["ellipsoid_paint","effect_fire_185",90,58,130,105,74,142], ["ellipsoid_paint","effect_fire_182",75,82,129,98,104,143],
+        ["ellipsoid_paint","effect_fire_185",78,86,132,93,102,144], ["ellipsoid_paint","effect_fire_182",40,86,127,62,109,141],
+        ["ellipsoid_paint","effect_fire_185",42,91,130,58,106,142], ["ellipsoid_paint","effect_fire_182",17,63,126,39,86,140],
+        ["ellipsoid_paint","effect_fire_185",19,68,128,35,83,142], ["ellipsoid_paint","effect_fire_182",26,28,128,48,50,142],
+        ["ellipsoid_paint","effect_fire_185",28,32,130,44,48,144], ["ellipsoid_paint","effect_fire_182",58,20,127,80,42,141],
+        ["ellipsoid_paint","effect_fire_185",60,24,130,76,40,142], ["ellipsoid_paint","effect_fire_182",82,36,128,105,59,142],
+        ["ellipsoid_paint","effect_fire_185",85,41,130,100,56,144], ["ellipsoid","effect_fire_179",59,65,100,63,69,124],
+        ["ellipsoid","effect_fire_179",65,59,100,69,63,124], ["ellipsoid","effect_fire_178",62,62,42,66,66,46]
+      ]
+    },
+    "effect_explosion_large_11": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3720: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["lathe","effect_fire_178",[63,65],[[134,35,28],[138,41,25],[146,40,26],[150,34,29]]], ["lathe","effect_fire_182",[63,65],[[135,34,29],[139,40,26],[147,39,27],[151,33,30]]],
+        ["lathe","effect_fire_185",[63,65],[[136,32,31],[140,38,28],[148,37,29],[152,31,30]]], ["ellipsoid_paint","effect_fire_181",86,54,136,107,76,148],
+        ["ellipsoid_paint","effect_fire_185",88,59,139,103,73,149], ["ellipsoid_paint","effect_fire_181",75,81,138,96,102,150],
+        ["ellipsoid_paint","effect_fire_185",77,85,141,92,100,151], ["ellipsoid_paint","effect_fire_181",41,85,136,62,106,148],
+        ["ellipsoid_paint","effect_fire_185",43,89,139,58,104,149], ["ellipsoid_paint","effect_fire_181",19,63,135,41,84,147],
+        ["ellipsoid_paint","effect_fire_185",22,68,138,36,82,148], ["ellipsoid_paint","effect_fire_181",28,30,137,49,51,149],
+        ["ellipsoid_paint","effect_fire_185",30,34,140,45,49,150], ["ellipsoid_paint","effect_fire_181",58,22,136,79,43,148],
+        ["ellipsoid_paint","effect_fire_185",60,27,139,75,41,149], ["ellipsoid_paint","effect_fire_181",81,38,137,103,59,149],
+        ["ellipsoid_paint","effect_fire_185",84,42,140,98,57,150], ["ellipsoid","effect_fire_179",59,65,113,63,69,127],
+        ["ellipsoid","effect_fire_179",65,59,113,69,63,127], ["ellipsoid","effect_fire_178",62,62,54,66,66,58]
+      ]
+    },
+    "effect_explosion_large_12": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3721: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_178",63,14,108,73,24,141], ["ellipsoid_paint","effect_fire_181",63,15,111,72,24,139],
+        ["ellipsoid","effect_fire_178",46,13,139,59,26,150], ["ellipsoid_paint","effect_fire_181",46,14,141,57,25,150],
+        ["ellipsoid","effect_fire_178",33,17,140,47,31,150], ["ellipsoid_paint","effect_fire_181",34,18,142,46,31,150],
+        ["ellipsoid","effect_fire_178",13,46,137,26,59,148], ["ellipsoid_paint","effect_fire_181",13,47,139,24,58,148],
+        ["ellipsoid","effect_fire_178",11,57,134,25,71,147], ["ellipsoid_paint","effect_fire_181",11,58,136,23,70,147],
+        ["ellipsoid","effect_fire_178",50,103,157,63,116,179], ["ellipsoid_paint","effect_fire_181",51,105,159,62,116,179],
+        ["ellipsoid","effect_fire_178",45,104,141,52,111,158], ["ellipsoid_paint","effect_fire_181",45,105,143,52,111,157],
+        ["ellipsoid","effect_fire_178",100,74,146,114,88,156], ["ellipsoid_paint","effect_fire_181",101,75,148,113,88,156],
+        ["ellipsoid","effect_fire_178",93,83,153,110,100,155], ["ellipsoid_paint","effect_fire_181",94,84,154,108,99,156],
+        ["ellipsoid","effect_fire_178",82,92,153,101,111,155], ["ellipsoid_paint","effect_fire_181",83,94,154,99,110,156],
+        ["ellipsoid","effect_fire_178",70,100,145,86,116,154], ["ellipsoid_paint","effect_fire_181",71,102,146,85,115,154],
+        ["ellipsoid","effect_fire_178",64,106,139,72,114,152], ["ellipsoid_paint","effect_fire_181",64,107,140,72,114,151],
+        ["ellipsoid","effect_fire_178",98,86,131,106,94,154], ["ellipsoid_paint","effect_fire_181",98,87,133,106,94,153],
+        ["ellipsoid","effect_fire_178",84,101,134,91,108,143], ["ellipsoid_paint","effect_fire_181",84,101,136,90,108,143],
+        ["ellipsoid","effect_fire_178",61,60,59,68,67,69], ["ellipsoid_paint","effect_fire_181",61,61,60,67,67,69]
+      ]
+    },
+    "effect_explosion_large_13": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3722: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_178",47,15,142,56,24,153], ["ellipsoid_paint","effect_fire_180",47,16,143,55,23,152],
+        ["ellipsoid","effect_fire_178",41,17,146,50,26,157], ["ellipsoid_paint","effect_fire_180",41,18,148,49,26,157],
+        ["ellipsoid","effect_fire_178",14,50,149,23,59,160], ["ellipsoid_paint","effect_fire_180",14,51,151,22,59,160],
+        ["ellipsoid","effect_fire_178",13,59,146,22,68,157], ["ellipsoid_paint","effect_fire_180",13,60,148,21,68,157],
+        ["ellipsoid","effect_fire_178",48,103,171,58,113,185], ["ellipsoid_paint","effect_fire_180",48,104,173,57,113,185],
+        ["ellipsoid","effect_fire_178",67,15,118,76,24,139], ["ellipsoid_paint","effect_fire_180",67,16,120,75,23,138],
+        ["ellipsoid","effect_fire_178",98,85,153,108,95,163], ["ellipsoid_paint","effect_fire_180",98,86,155,107,94,163],
+        ["ellipsoid","effect_fire_178",93,90,154,103,100,164], ["ellipsoid_paint","effect_fire_180",94,91,155,102,100,164],
+        ["ellipsoid","effect_fire_178",75,102,155,85,112,165], ["ellipsoid_paint","effect_fire_180",76,103,156,84,112,165],
+        ["ellipsoid","effect_fire_178",68,105,150,78,115,160], ["ellipsoid_paint","effect_fire_180",68,106,152,77,114,160],
+        ["ellipsoid","effect_fire_178",97,88,139,105,96,148], ["ellipsoid_paint","effect_fire_180",97,89,140,104,96,148],
+        ["ellipsoid","effect_fire_178",60,60,67,68,68,77], ["ellipsoid_paint","effect_fire_180",60,61,68,67,68,77]
+      ]
+    },
+    "effect_explosion_large_14": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3723: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_178",73,16,130,80,23,149], ["ellipsoid_paint","effect_fire_179",73,17,132,79,23,149],
+        ["ellipsoid","effect_fire_178",49,15,149,57,23,159], ["ellipsoid_paint","effect_fire_179",49,16,150,56,23,159],
+        ["ellipsoid","effect_fire_178",14,49,153,24,59,163], ["ellipsoid_paint","effect_fire_179",14,50,155,23,59,163],
+        ["ellipsoid","effect_fire_178",15,57,151,21,63,162], ["ellipsoid_paint","effect_fire_179",15,58,153,20,63,162],
+        ["ellipsoid","effect_fire_178",45,104,171,52,111,190], ["ellipsoid_paint","effect_fire_179",45,105,173,52,111,189],
+        ["ellipsoid","effect_fire_178",97,86,162,107,96,169], ["ellipsoid_paint","effect_fire_179",97,87,163,106,96,169],
+        ["ellipsoid","effect_fire_178",74,105,160,81,112,166], ["ellipsoid_paint","effect_fire_179",74,106,161,80,112,166]
+      ]
+    },
+    "effect_explosion_large_15": {
+      "size":[128,128,208],"cell_size":[0.25,0.25,0.5],"origin":[-16,-16,-12],"review_status":"work-in-progress",
+      "reference":"Original large-explosion sprite3724: independently authored full-depth ignition/fire lobes, genuine cooling-crown openings and detached ember volumes. Original source anchor, sprite progression, local spawn altitude, visibility and simulation RNG stay upstream. Native bounds reviewed; detailed contours, painted shading, material breakup and all-angle refinement remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_fire_178",70,15,145,77,22,153], ["ellipsoid_paint","effect_fire_179",70,16,146,76,22,153],
+        ["ellipsoid","effect_fire_178",99,86,167,106,93,175], ["ellipsoid_paint","effect_fire_179",99,87,168,105,93,175],
+        ["ellipsoid","effect_fire_178",42,103,181,49,110,189], ["ellipsoid_paint","effect_fire_179",42,104,182,48,110,189],
+        ["ellipsoid","effect_fire_178",15,59,162,20,64,169], ["ellipsoid_paint","effect_fire_179",15,60,163,20,65,169]
+      ]
+    },
     "effect_black_smoke_0": {
       "size":[80,80,80],"cell_size":[0.125,0.125,0.25],"origin":[-5,-5,-10],"review_status":"work-in-progress",
       "reference":"Original shared charcoal-smoke sprite2040: compact dark billow opens into irregular hollow clouds and detached three-dimensional grey/charcoal fragments. Used by original crash, aircraft-breakdown and copper-mine effects with their own unchanged spawning, altitude, rise, timing, visibility and RNG. Fixed original source anchor; native density, contour and all-angle breakup remain provisional.",
@@ -21936,6 +22170,22 @@
   },
   "bindings": {
     "effects": {
+      "3709":{"0":"effect_explosion_large_0","1":"effect_explosion_large_0","2":"effect_explosion_large_0","3":"effect_explosion_large_0"},
+      "3710":{"0":"effect_explosion_large_1","1":"effect_explosion_large_1","2":"effect_explosion_large_1","3":"effect_explosion_large_1"},
+      "3711":{"0":"effect_explosion_large_2","1":"effect_explosion_large_2","2":"effect_explosion_large_2","3":"effect_explosion_large_2"},
+      "3712":{"0":"effect_explosion_large_3","1":"effect_explosion_large_3","2":"effect_explosion_large_3","3":"effect_explosion_large_3"},
+      "3713":{"0":"effect_explosion_large_4","1":"effect_explosion_large_4","2":"effect_explosion_large_4","3":"effect_explosion_large_4"},
+      "3714":{"0":"effect_explosion_large_5","1":"effect_explosion_large_5","2":"effect_explosion_large_5","3":"effect_explosion_large_5"},
+      "3715":{"0":"effect_explosion_large_6","1":"effect_explosion_large_6","2":"effect_explosion_large_6","3":"effect_explosion_large_6"},
+      "3716":{"0":"effect_explosion_large_7","1":"effect_explosion_large_7","2":"effect_explosion_large_7","3":"effect_explosion_large_7"},
+      "3717":{"0":"effect_explosion_large_8","1":"effect_explosion_large_8","2":"effect_explosion_large_8","3":"effect_explosion_large_8"},
+      "3718":{"0":"effect_explosion_large_9","1":"effect_explosion_large_9","2":"effect_explosion_large_9","3":"effect_explosion_large_9"},
+      "3719":{"0":"effect_explosion_large_10","1":"effect_explosion_large_10","2":"effect_explosion_large_10","3":"effect_explosion_large_10"},
+      "3720":{"0":"effect_explosion_large_11","1":"effect_explosion_large_11","2":"effect_explosion_large_11","3":"effect_explosion_large_11"},
+      "3721":{"0":"effect_explosion_large_12","1":"effect_explosion_large_12","2":"effect_explosion_large_12","3":"effect_explosion_large_12"},
+      "3722":{"0":"effect_explosion_large_13","1":"effect_explosion_large_13","2":"effect_explosion_large_13","3":"effect_explosion_large_13"},
+      "3723":{"0":"effect_explosion_large_14","1":"effect_explosion_large_14","2":"effect_explosion_large_14","3":"effect_explosion_large_14"},
+      "3724":{"0":"effect_explosion_large_15","1":"effect_explosion_large_15","2":"effect_explosion_large_15","3":"effect_explosion_large_15"},
       "2040":{"0":"effect_black_smoke_0","1":"effect_black_smoke_0","2":"effect_black_smoke_0","3":"effect_black_smoke_0"},
       "2041":{"0":"effect_black_smoke_1","1":"effect_black_smoke_1","2":"effect_black_smoke_1","3":"effect_black_smoke_1"},
       "2042":{"0":"effect_black_smoke_2","1":"effect_black_smoke_2","2":"effect_black_smoke_2","3":"effect_black_smoke_2"},

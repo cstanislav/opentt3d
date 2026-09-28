@@ -1,5 +1,43 @@
 # Active extended development goal
 
+## Large-explosion breadth integrated and reconciled — September28,08:27:54UTC
+
+Sixteen large-explosion volumes and64 explicit climate bindings reach1,752 models,
+50/80 presentable effect sources and200 climate bindings. Every earlier model,
+component, material face and binding is preserved. All sixteen source bounds match;
+frames8/9 retain real fork openings, and late fragments have source-sized volumes.
+Fourteen integrated graphical/regression/fallback executions pass, with143 asset checks,
+40 harness checks and the earlier207 native cache checks.1,280 integration captures,
+648 original exports and100 earlier charcoal views match exactly;128 native bindings
+equal their model owners. Each144-view backend comparison retains39 wider differences/
+340 pixels and zero native differences. Final visual approvals remain0.
+
+Ten900-frame original crash replays record2,035 observations and16 complete63-phase
+lifetimes. Both cold controls pass. Temperate/Arctic OpenGL gallery-preloaded replays
+each miss progress phases and fail complete-lifetime acceptance; these failures remain
+preserved. Every source sprite is observed, but no passing lifetime is spliced across
+missing phases. Peak sampled memory is3,464,465,936bytes and maximum frame interval
+is35.068ms. The broader smooth60fps and memory goals remain open. Two550-frame captures
+visibly join active explosions to crashed locomotives and the ordinary news viewport.
+Evidence:`breadth-effect-large-explosion-integrated-reconciliation.json`and
+`breadth-effect-large-explosion-visible-validation.json`.
+
+The separate twelve-state small-explosion study matches12/12 source bounds and restores
+the filled early centre and late fragments. Eight four-climate/backend train replays
+observe no small explosions; the new read-only random-offset/lifetime oracle correctly
+rejects all eight, so no positive native small-lifetime evidence is claimed. Models remain
+staged. Ordinary single-tile clear-area commands offer a deterministic original emitter
+for a separate2-unit-altitude/order audit; train/aircraft/disaster contexts remain open.
+
+Bounded-restoration preview`.33`targets`5cd9284e4de7ab101a65f0cea15d8c9ddf8fecc5`.
+All eight jobs in workflow36393545951 pass; independent public-package verification is
+under way. Recommended downloads remain verified`.32`.1,516 successful restoration/study
+captures compact losslessly, saving2,211,800,398bytes with zero errors; all failed
+lifetimes remain excluded. Next: publish/reconcile the large-explosion increment,
+complete positive small-effect contexts and remaining30 effect sources, resume source-valid
+essential larger-aircraft clearance repairs, and continue all remaining catalogue breadth
+before later fidelity passes. The complete four-pass goal persists across continuations.
+
 ## Bounded exact CPU restoration verified — September28,07:44:24UTC
 
 Eight sequential background controls and207 native checks pass. Exact independently

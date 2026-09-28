@@ -32,8 +32,8 @@ python3 tools/opentt3d/fixture_crash.py --build-dir build-macos \
 Read the original locomotive IDs, plateau coordinates and departure speeds from
 `fixture.json`. The route lies at`y+4`, and its middle is near`x+21`. Use the saved
 `save/opposing-trains.sav` and matching`ai/`directory in a background smoke replay.
-The current production catalogue keeps the original explosion fallback; the following
-read-only audit applies when a diagnostic catalogue supplies all16 large-explosion states:
+The catalogue supplies all16 large-explosion states. Use the following read-only audit
+to check actual original timing and flat-track placement:
 
 ```sh
 python3 tools/opentt3d/explosion_cycle.py path/to/native-trace/run.log \
@@ -46,6 +46,28 @@ are insufficient if progress phases were missed. Reused IDs, uncaptured frame ga
 conflicting observations cannot splice a passing lifetime. This fixture requires effect
 pool IDs after both locomotives; lower-ID effects and other explosion emitters remain
 outside its oracle. Successful staged controls do not establish artwork acceptance.
+
+### Small crash-explosion oracle and missing observations
+
+`small_explosion_cycle.py` separately checks original48-phase/twelve-sprite small
+explosions. Higher-ID effects in the two-locomotive fixture require47 ordered presented
+phases1…47. Observed large-explosion anchors locate the stopped locomotives independently;
+small effects must keep original XY offsets2…9, local altitude5…12, stationary XYZ,
+opacity1 and unclickable ownership. The oracle never creates effects or draws RNG.
+
+```sh
+python3 tools/opentt3d/small_explosion_cycle.py path/to/staged-small-crash/run.log \
+  --emitters 0 1 --output build-macos/new-small-crash-lifetime.json --require-complete
+```
+
+Three synthetic rejection/continuity checks pass, but all eight current900-frame
+four-climate/backend replays observe no small explosions and correctly reject positive
+lifetime acceptance. Their failure logs remain. The original train selector uses
+`(r * 10 >> 16)`after`Chance16R`; no selection or RNG behavior is changed to force a
+sample. A deterministic ordinary single-tile clear-area command is another original
+small-explosion emitter, with its own2-unit altitude and command/tick-order oracle still
+needed. The twelve small models remain staged. This does not establish actual random
+spawn frequency, aircraft/disaster contexts or a positively observed small lifetime.
 
 ## Shared charcoal smoke and original copper-mine lifetimes
 
