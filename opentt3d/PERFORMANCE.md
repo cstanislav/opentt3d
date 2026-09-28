@@ -19,6 +19,10 @@ Evidence:`build-macos/breadth-effect-large-explosion-integrated-reconciliation.j
 
 ## Cold explosion-surface restoration study
 
+Release`.33`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+1.699fps with2,507,796,480 peak sampled bytes. This remains functional compatibility
+evidence. See`build-macos/playable-release33-ci-reconciliation.json`.
+
 Exact chunked restoration now retains a compact CPU triangle stream before eligible
 surfaces retire. It uses at most one quarter of the current CPU target, capped at256MiB,
 **inside the existing1GiB soft budget**. Stable surface identities, copied-scene leases,

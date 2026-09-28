@@ -4,11 +4,11 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.32`publishes the1,736-model shared-smoke increment at
-  commitff290d0e9. All eight jobs pass; independent checks reconcile19
-  attachments,18 checksums,2,101 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.33`publishes bounded CPU mesh restoration and the1,736-model
+  catalogue at commit5cd9284e4. All eight jobs pass; independent checks reconcile19
+  attachments,18 checksums,2,107 source files and six identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.32`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.33`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).

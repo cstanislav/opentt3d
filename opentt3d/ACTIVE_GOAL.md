@@ -1,5 +1,20 @@
 # Active extended development goal
 
+## Bounded-restoration packages independently verified — September28,08:31:03UTC
+
+Release`.33`at`5cd9284e4de7ab101a65f0cea15d8c9ddf8fecc5`passes all eight jobs in
+workflow36393545951. Public audits reconcile19 attachments,18 checksums,2,107 source
+files and six identical1,736-model catalogues. Three downloaded Mac render/save/clipping
+controls, seven hosted72-view graphical controls, Windows x64/x86 load/save and Linux's
+900-frame support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain
+zero black pixels and nine differences from Vulkan. Verified download links now use`.33`.
+Linux's functional llvmpipe journey averages1.699fps with2,507,796,480 peak sampled bytes;
+this does not establish performance acceptance. Evidence:`playable-release33-download-audit.json`,
+`playable-release33-ci-reconciliation.json`,`playable-release33-hosted-visual-comparison.json`.
+
+Large-explosion artwork is committed/pushed at`fcd5b38d046f6f68a98275dae07228c3b3de72d9`;
+preview`.34`targets that exact1,752-model commit. Its independent verification is next.
+
 ## Large-explosion breadth integrated and reconciled — September28,08:27:54UTC
 
 Sixteen large-explosion volumes and64 explicit climate bindings reach1,752 models,

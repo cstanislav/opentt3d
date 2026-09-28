@@ -26,7 +26,13 @@ to expose the stall remain staged artwork outside this release.
 
 ## Play
 
-Desktop packages appear after the exact tagged commit passes all packaging jobs.
+The [verified `.33` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.33)
+builds exact commit `5cd9284e4de7ab101a65f0cea15d8c9ddf8fecc5`. All eight jobs pass;
+independent checks reconcile19 attachments,18 checksums,2,107 source files and six
+identical1,736-model catalogues. Three downloaded Mac render/save/clipping controls,
+seven hosted graphical controls, Windows x64/x86 load/save and Linux's900-frame
+support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain zero
+black pixels and nine differing pixels from Vulkan.
 Use the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
 for the current independently verified download.
 
