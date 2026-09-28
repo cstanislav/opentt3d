@@ -1,5 +1,32 @@
 # Active extended development goal
 
+## Toyland forest source aliases verified — September28,01:10:43UTC
+
+Sixteen explicit body/ground bindings cover forest16/17's Toyland2072…2077 sources.
+Every pixel, palette, dimension, source offset, origin and extent is identical to its
+existing cotton129/130 owner. All1,703 volumes, materials, components and preceding
+bindings remain unchanged. This closes the audited Toyland2077 ground gap through
+the separately painted cotton checker soil; ordinary industry availability is unchanged.
+
+All11 prototype/four integrated controls and three independent missing/other-climate
+fallback controls pass. Both ordinary cotton full17/17 and empty0/17 snapshots pass.
+142 asset tests pass.32 native alias captures equal their cotton owners; both306-view
+baselines remain exact, with88 added forest views per backend. All788 integrated views
+match staging.195/394 backend views differ by17,301 pixels; individual native layers
+agree. Four joined native differences are one pixel each and duplicate the two existing
+cotton-layout differences. Source crown/stem proportions, directional paint, checker
+grain and final registration remain provisional; approvals stay0. Peak sampled memory
+is3,551,498,176bytes. Evidence:`breadth-forest-toyland-alias-integrated-reconciliation.json`.
+2,188 successful reviewed captures compact losslessly, saving3,186,628,345bytes with
+zero errors; source originals, negative controls and metadata remain.
+
+Rig/paper commitec3be77982a2dd7d63a1eab974e864861f738b25 is pushed. Preview`.25`
+packages that exact commit in workflow36364111123; `.24`remains the verified public
+download. The first release request used an abbreviated target rejected by GitHub;
+the successful request uses the full commit. The next read-only aircraft diagnostic
+records actual emitted smoothed transforms for moving-path clearance analysis.
+Large-aircraft airport defects and the full catalogue/fidelity/60fps objective stay open.
+
 ## Rig/paper Toyland layers verified — September28,00:49:23UTC
 
 The catalogue reaches1,703 with independently painted Toyland4061 rig water, twenty

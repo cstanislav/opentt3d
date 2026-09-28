@@ -16,6 +16,13 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Toyland forest16/17 source slots:**sixteen explicit aliases use cotton129/130's
+  identical2072…2077 source layers, retaining1,703 unchanged volumes and independent
+  ground ownership.11 prototype/four integrated controls, three fallback controls and
+  142 asset checks pass.32 native aliases match their owners;788 integrated views match
+  staging. Both306-view baselines remain exact. Inherited source fidelity and final
+  approvals remain open; original industry availability stays authoritative.
+
 - **Rig/paper Toyland owners:**one independent4061 water volume reaches1,703. Twenty
   ground bindings add source-specific static157 flecks; thirteen source-proven animated
   body aliases retain the existing253 palette mechanism. All1,702 prior models/bindings

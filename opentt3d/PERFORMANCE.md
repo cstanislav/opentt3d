@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Toyland forest alias controls
+
+Eleven prototype, four integrated and three independent fallback controls peak at
+3,551,498,176 sampled bytes without crossing the6GiB guard. The static source/cargo
+matrix does not establish sustained60fps or long-duration memory acceptance. Evidence:
+`build-macos/breadth-forest-toyland-alias-integrated-reconciliation.json`.
+
 ## Rig/paper Toyland layer controls
 
 The18 prototype, two baseline and six integrated controls peak at3,686,731,760 sampled

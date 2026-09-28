@@ -4,6 +4,21 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Toyland forest/cotton source identity (September28)
+
+All16 forest16/17 Toyland body/ground layers match cotton129/130 exactly in source
+pixels, palette, size, offset, origin and extent. Explicit48…51 aliases preserve the
+separate rooted crowns/sticks and full checker ground, with all1,703 model entries,
+materials, components and previous bindings unchanged. Ordinary availability stays original.
+11 prototype/four integrated controls and three independent fallback controls pass;
+32 native alias captures match the cotton owners. Both306-view baselines remain exact,
+with88 additions; all788 staged/integrated views agree. Four joined native one-pixel
+backend differences reproduce the two existing cotton-layout differences. Individual
+layers agree. Crown/stem proportions, paint, soil grain and final registration remain
+provisional; final approvals:0. Evidence:
+`breadth-forest-toyland-alias-{staging,gallery-review,integrated-reconciliation}.json`.
+2,188 successful reviewed captures compact losslessly, saving3,186,628,345bytes.
+
 ## Toyland rig water and original animated body aliases (September28)
 
 One independent4061 water volume reaches1,703 models. Its complete16×16 footprint and

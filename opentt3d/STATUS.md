@@ -20,6 +20,10 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Renderer
 
+- [x] Sixteen Toyland forest body/ground aliases reuse source-identical cotton artwork,
+  preserving all1,703 model entries and prior bindings.11 prototype/four integrated
+  controls, three independent fallback controls and142 asset tests pass;788 integration
+  views agree exactly. Original industry availability and fidelity reservations remain.
 - [x] Toyland rig4061 receives independently painted water with twenty explicit ground
   bindings; thirteen source-proven rig/paper body aliases retain original palette animation.
   All1,702 earlier models and bindings remain.18 prototype/two baseline/six integrated

@@ -1,5 +1,18 @@
 # Implementation verification
 
+## Toyland forest source-identity aliases
+
+Sixteen independently selected forest16/17 layers reuse exact original cotton129/130
+sources. All1,703 volumes/materials/components and earlier bindings remain unchanged.
+11 prototype/four integrated controls, three missing-owner/other-climate fallback
+controls and142 asset tests pass. Both actual cotton full17/17 and empty0/17 snapshots
+pass.32 native alias captures match their cotton owners; both306-view baselines are
+unchanged and88 views are added. All788 staged/integrated views match exactly.
+The394-view backend comparison retains195 differing views/17,301 pixels. Individual
+native layers agree; four one-pixel joined differences exactly reproduce the two
+original cotton-layout differences. Original availability and source guards remain.
+Evidence:`build-macos/breadth-forest-toyland-alias-integrated-reconciliation.json`.
+
 ## Rig/paper Toyland owner integration
 
 The1,703-model catalogue adds one ground and33 explicit bindings, preserving all1,702

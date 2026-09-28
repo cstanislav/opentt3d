@@ -136,6 +136,11 @@ def inventory():
             industry["voxel_climates"] = ["temperate"] + (["arctic"] if complete else [])
             industry["missing_voxel_climates"] = [] if complete else ["arctic"]
             industry["climate_source_note"] = "Arctic replaces both source layers; equal sprite numbers do not permit a temperate alias. Only explicit climate states select independently authored artwork; missing layers retain supplied artwork."
+            if industry["graphics"] in (16,17):
+                toyland = all(state+48 in body_states for state in range(4)) and all(state+48 in ground_states for state in range(4))
+                industry["voxel_climates"] += ["toyland"] if toyland else []
+                industry["missing_voxel_climates"] += [] if toyland else ["toyland"]
+                industry["climate_source_note"] += " Toyland2072..2077 exactly match the cotton129/130 source pixels, palette, dimensions, origins and offsets; explicit aliases preserve separate body/ground ownership. Original industry availability remains authoritative."
         if industry["graphics"] in (129,130):
             industry["voxel_climates"] = ["toyland"]
             industry["climate_source_note"] = "Cotton-candy crowns, bare sticks and checker soil replace forest2072..2077 in Toyland; other climates retain independently supplied artwork."
