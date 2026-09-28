@@ -1,5 +1,22 @@
 # Active extended development goal
 
+## Roadworks packages independently verified — September28,03:45:18UTC
+
+Release `.27` at exact commit `ac8f3bcd3bd4c02b4cfea54f604ebf50bc5ca435` passes all
+eight jobs in workflow36370921819. Public audits reconcile19 attachments,18 checksums,
+2,086 source files and six identical1,707-model catalogues. Three downloaded Mac
+render/clipping/save controls pass with signatures, architectures, dependencies and
+macOS15.0 checked. Seven hosted graphical controls retain72 clipping views each;
+Windows x64/x86 native load/save and Linux's900-frame support/collector journey pass.
+Hosted ARM/Intel software-OpenGL worlds retain zero black pixels and nine differences
+from Vulkan. Recommended links use verified `.27`. Evidence:
+`playable-release27-download-audit.json` and `playable-release27-ci-reconciliation.json`.
+
+The eight-frame chimney increment is pushed as
+`a02a304fdae0371eb4b519df7d877616e1a83904`. Preview `.28` targets that exact1,715-model
+source in workflow36374932242; packaging/public verification remain pending. Continue
+source-registered steam breadth and essential clearance work. The full objective remains open.
+
 ## Eight chimney frames integrated — September28,03:41:25UTC
 
 The catalogue reaches1,715 volumes with eight explicitly authored wind-bent chimney

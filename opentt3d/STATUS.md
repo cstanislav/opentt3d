@@ -4,11 +4,11 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.26`publishes the1,703-model moving-pier/forest-alias increment at
-  commit8825ebf69. All eight jobs pass; independent checks reconcile19
-  attachments,18 checksums,2,079 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.27`publishes the1,707-model roadworks-effect increment at
+  commitac8f3bcd3. All eight jobs pass; independent checks reconcile19
+  attachments,18 checksums,2,086 source files and six identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.26`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.27`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).

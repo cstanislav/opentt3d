@@ -13,6 +13,10 @@ remain open. Evidence:`build-macos/breadth-effect-chimney-integrated-reconciliat
 
 ## Public moving-clearance release `.26`
 
+Release `.27`'s independently reconciled900-frame Linux Mesa/llvmpipe journey also passes,
+at3.129fps and2,596,810,752 peak sampled bytes. Evidence:
+`build-macos/playable-release27-ci-reconciliation.json`.
+
 The independently reconciled Linux Mesa/llvmpipe900-frame support/collector journey
 passes its functional checks at1.704fps with2,615,586,816 peak sampled bytes. This
 software-renderer compatibility evidence leaves sustained arbitrary-world60fps open.
