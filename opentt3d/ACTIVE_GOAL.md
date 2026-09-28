@@ -1,5 +1,37 @@
 # Active extended development goal
 
+## Committed checkpoint and stopping clock audit — September28,07:06:26UTC
+
+The actual clock is2026-09-28,07:06:26UTC, after the requested September26,19:00UTC
+(1PM fixedCST) minimum. This work window ends at a committed, verified checkpoint;
+the complete catalogue/fidelity/clearance/smooth60fps objective remains unfinished.
+Main is pushed through`b6218cd5b`, following shared-smoke artwork`ff290d0e9`.
+
+Recommended release`.31`is independently verified. Shared-smoke preview`.32`targets
+`ff290d0e9a77caa2179b03379e31b0b279449b6e`; workflow36387269223 remains the outstanding
+external work. Its background watcher is active; no local native review process remains.
+After success, collect final metadata and independently reconcile public packages/source,
+the1,736-model catalogues and hosted evidence before changing recommended downloads.
+
+Two additional1,470-frame charcoal-smoke captures visibly join the puffs to the original
+mine chimneys on both backends; their logs/benchmarks/screenshots are frozen in
+`breadth-effect-black-smoke-visible-validation.json`. The earlier1,800-frame final images
+contained no remaining puff and remain preserved with their valid lifetime observations.
+
+The large-explosion registered study matches5/16 native source bounds; its other bounds,
+late-fragment density, fire-crown shape and all-angle structure still need correction.
+The separate small-explosion study passes native mesh/clipping checks but matches0/12
+source bounds, opens frame3's centre prematurely and disperses its late embers too
+sparsely. Both remain outside production. Detailed source statistics and candidate/report
+hashes are in`breadth-effect-explosion-source-studies.json`.
+
+2,225 additional successful generated study/lifecycle captures compact losslessly,
+saving3,216,602,837bytes with zero errors. Failed cold-phase controls, original sources,
+all candidates and provenance remain. Storage headroom is23GiB. Next: finish`.32`public
+verification, continue source-registered explosion coverage and other missing families,
+address bounded CPU mesh restoration and essential larger-aircraft clearances. Final
+visual approvals remain0; the entire four-pass goal stays active across continuations.
+
 ## Original collision lifecycle controls and further breadth studies — September28
 
 The shared-smoke increment is committed/pushed to main at
