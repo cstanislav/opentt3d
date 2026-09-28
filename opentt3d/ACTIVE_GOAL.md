@@ -1,5 +1,45 @@
 # Active extended development goal
 
+## Eight chimney frames integrated — September28,03:41:25UTC
+
+The catalogue reaches1,715 volumes with eight explicitly authored wind-bent chimney
+plumes and32 sprite3701…3708/climate0…3 bindings. All1,707 prior models, prior material
+faces, components and bindings remain exact. Continuous lower wisps and detached
+upper eddies retain the original fixed effect anchor and local altitude. Original
+spawning, countdown, deletion, availability, industry visibility and RNG stay upstream.
+
+All18 prototype,14 integrated and two missing-frame/climate controls pass. Native206,
+asset143 and harness22 checks pass, together with the138-file presentation-boundary
+audit.832 integration images match staging;648 source exports remain exact and64
+native sprite bindings equal their registered models. Each104-view backend comparison
+retains50 wider differences/1,389 pixels and zero native differences. Seven source
+bounds match exactly; frame6 retains a one-pixel right-edge excess. Billow contours,
+breakup and fine directional paint remain provisional. Final visual approvals:0.
+
+Four3,600-frame ordinary temperate/Arctic replays and two native app-bundle replays
+capture21,855 samples. Every observed chimney retains all64 original sprite/countdown
+phases and a complete ordered cycle; longest uninterrupted phase runs are654…2,009.
+The read-only oracle rejects corrupted anchors, altitude, opacity, picking and conflicting
+same-frame states; an unordered full state set does not count as an ordered cycle.
+Four transparency/invisibility controls and two original stage0 controls retain no
+plume. Both paused trace-on/off screenshots agree exactly. Hidden effects, destruction
+and between-frame presentation remain outside this fixed-view audit.
+
+The first invisible-fixture check incorrectly required a visible body; the corrected
+harness requires absence there. The first stage0 focus likewise asked for its genuinely
+absent chimney body; the corrected check locates its independent ground. Both original
+failures remain.1,863 successful captures compact losslessly, saving2,703,990,463bytes
+with zero errors. Peak sampled memory is3,523,612,272bytes; traced replays average
+59.999…60.006fps with207…437 intervals above20ms and85.241ms maximum. Smooth60fps and
+long-duration/reload/multiple-viewport memory acceptance remain open. Evidence:
+`breadth-effect-chimney-integrated-reconciliation.json`.
+
+Release `.27` has passed all eight jobs; independent public-package verification is
+underway.68 presentable effect sources still need voxel artwork. Two isolated steam
+studies retain source-density/registration defects and are unbound. Continue essential
+aircraft clearances, remaining effects/infrastructure/object coverage, then catalogue-wide
+fidelity and performance. The full objective remains open.
+
 ## Moving-clearance packages independently verified — September28,03:29:45UTC
 
 Release `.26` at exact commit `8825ebf698ee90eefb9abab4bb41cecc8aa84951` passes all

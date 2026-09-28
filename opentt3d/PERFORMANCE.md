@@ -3,6 +3,14 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Stationary chimney controls
+
+The18 prototype/14 integrated controls peak at3,523,612,272 sampled bytes. Six3,600-frame
+traced replays average59.999…60.006fps but retain207…437 intervals above20ms and reach
+85.241ms maximum. These diagnostic controls establish original smoke-cycle behavior;
+ordinary-launch smoothness and long-duration/reload/multiple-viewport memory acceptance
+remain open. Evidence:`build-macos/breadth-effect-chimney-integrated-reconciliation.json`.
+
 ## Public moving-clearance release `.26`
 
 The independently reconciled Linux Mesa/llvmpipe900-frame support/collector journey

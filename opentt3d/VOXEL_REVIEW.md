@@ -16,6 +16,14 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Eight chimney frames:**32 explicit sprite/climate bindings reach1,715 volumes,
+  preserving all1,707 previous models/components/bindings.18 prototype/14 integrated
+  and two fallback controls pass;832 integration images match,648 source images remain
+  exact and64 native bindings equal their owners. Six live controls observe21,855
+  samples and complete ordered64-phase cycles. Original visibility/construction absences
+  and two exact trace-on/off pairs pass. Source contours/paint remain provisional;
+  68 presentable effect sources still need artwork. Native206, asset143, harness22 pass.
+
 - **First voxel effects:**four roadworks orientations/sixteen explicit climate bindings
   reach1,707 volumes, preserving all1,703 previous models and earlier bindings. Original
   sprites own the heading during forward/reverse travel.12 prototype/ten integrated

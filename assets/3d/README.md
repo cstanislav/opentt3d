@@ -55,8 +55,14 @@ their registered models. `smoke.py --trace-effects --background` records actual
 original states/transforms. `fixture_roadworks.py` funds ordinary road rebuilding
 through NoAI; `bulldozer_motion.py` audits the captured116-waypoint original path,
 including reversing and zero picking ownership, without calling simulation ticks.
-The other76 presentable effect sources still need voxel artwork; all four roadworks
-models retain provisional source registration and finer painting.
+Eight wind-bent chimney volumes now bind3701…3708 in all four climates, after exact
+source-image comparisons. Each retains continuous lower wisps and detached upper
+eddies at the original stationary power-plant anchor. Ordinary temperate/Arctic
+fixtures exercise all eight frames and64 countdown phases; other climate bindings
+do not change original industry availability. `chimney_cycle.py` checks captured
+ordered cycles, anchor/local altitude and unclickable ownership. Original industry
+transparency and invisibility suppress the plume. The other68 presentable effect
+sources still need voxel artwork; roadworks and smoke source fidelity remain provisional.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;

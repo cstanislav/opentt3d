@@ -1,5 +1,44 @@
 # Implementation verification
 
+## Stationary chimney cycle and visibility checks
+
+The1,715-volume increment preserves all1,707 prior models, components, material faces
+and bindings.18 prototype/14 integrated controls and two missing-frame/climate controls
+pass.832 integration images match,648 source exports remain exact and64 native bindings
+equal their registered models. Six live controls observe21,855 samples and complete
+ordered64-phase cycles. Four visibility/two stage0 absence controls and both paused
+trace-on/off pairs pass. Native206, asset143, harness22 and138-file presentation-boundary
+checks pass. Evidence:`build-macos/breadth-effect-chimney-integrated-reconciliation.json`.
+
+Fund a normal power plant and let upstream construction produce its chimney effect:
+
+```sh
+python3 tools/opentt3d/fixture_industry.py --build-dir build-macos \
+  --output build-macos/new-chimney-fixture --industry 1 --climate temperate
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
+  --output build-macos/new-chimney-live --background --backend vulkan \
+  --savegame build-macos/new-chimney-fixture/save/industry-day-44.sav \
+  --ai-dir build-macos/new-chimney-fixture/ai --reference-industry 8 3 \
+  --trace-effects --running --benchmark-frames 3600
+python3 tools/opentt3d/chimney_cycle.py build-macos/new-chimney-live/run.log \
+  --output build-macos/new-chimney-cycle.json --require-complete
+```
+
+The read-only oracle checks original sprites3701…3708 and all64 countdown phases,
+including an ordered full-cycle wrap rather than only an unordered state set. Repeated
+viewport observations deduplicate only when their states agree. The stationary flat
+fixture retains its original local altitude59 over doubled ground, original tile-relative
+XY and zero picking ownership. Missing presentation ticks are recorded as phase gaps.
+The audit does not establish hidden effects, destruction or between-frame presentation.
+
+Use `--industry-visibility transparent` or `--industry-visibility invisible` with
+`--trace-effects --expect-no-effects` on the same completed save to check original smoke
+suppression. Invisible industry checks require successful location and an absent body;
+normal/transparent checks require a captured body. The day0/stage0 save also requires
+no effect; locate it with `--reference-industry-ground 8 0`, because its original body
+is intentionally absent. Upstream owns spawning, countdown, deletion, transparency
+settings and RNG.
+
 ## Roadworks effect source and movement checks
 
 The1,707-model increment preserves all1,703 earlier volumes/bindings.12 prototype/ten

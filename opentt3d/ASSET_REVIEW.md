@@ -4,6 +4,24 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Stationary chimney plume (September28)
+
+Eight source-specific wind-bent plumes bring the catalogue to1,715, preserving all1,707
+earlier volumes and prior components/material faces/bindings. Source-native, orbit,
+street and actual power-plant reviews retain a fixed emission anchor, continuous lower
+wisps and detached upper eddies. Seven native source bounds agree exactly; frame6 has
+one extra right-edge pixel. Billow contour, breakup and directional paint remain
+provisional. Final approvals remain0.
+
+18 prototype/14 integrated and two fallback controls pass.832 integration views match
+staging;648 original source exports remain exact and64 actual sprite bindings match
+their registered models. Each climate's104-view backend comparison retains50 wider
+differences/1,389 pixels with no native differences. Six live controls capture21,855
+samples, complete ordered64-phase cycles and original stationary placement. Original
+transparent/invisible industries and stage0 construction emit no plume.68 other
+presentable sources remain unbound. Native206, asset143 and harness22 checks pass.
+Evidence:`breadth-effect-chimney-integrated-reconciliation.json`.
+
 ## Roadworks bulldozer effect (September28)
 
 Four source-facing tracked bodies and sixteen explicit sprite/climate bindings reach

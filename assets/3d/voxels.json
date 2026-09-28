@@ -1940,7 +1940,12 @@
     "dozer_seat": 1,
     "dozer_driver": [128,129,128,131,3,132],
     "dozer_head": 193,
-    "dozer_exhaust": 2
+    "dozer_exhaust": 2,
+    "effect_smoke_body": [12,11,12,13,11,14],
+    "effect_smoke_light": 14,
+    "effect_smoke_white": 15,
+    "effect_smoke_mid": 13,
+    "effect_smoke_shadow": 11
   },
   "components": {
     "effect_bulldozer_body": [
@@ -9744,6 +9749,185 @@
     ]
   },
   "models": {
+    "effect_chimney_smoke_0": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3701: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,16], ["ellipsoid","effect_smoke_body",55,19,12,61,25,28],
+        ["ellipsoid","effect_smoke_body",50,23,23,57,30,43], ["ellipsoid","effect_smoke_body",43,27,37,53,37,57],
+        ["ellipsoid","effect_smoke_body",41,30,52,50,39,66], ["ellipsoid","effect_smoke_body",38,32,62,48,42,78],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,3701,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,711,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,20], ["ellipsoid_paint","effect_smoke_light",58,18,14,64,24,20], ["scatter_paint","effect_smoke_mid",5,3702,56,16,8,64,24,20], ["scatter_paint","effect_smoke_white",7,712,56,16,8,64,24,20],
+        ["ellipsoid","effect_smoke_body",51,19,18,61,29,34], ["ellipsoid_paint","effect_smoke_light",53,21,26,61,29,34], ["scatter_paint","effect_smoke_mid",5,3703,51,19,18,61,29,34], ["scatter_paint","effect_smoke_white",7,713,51,19,18,61,29,34],
+        ["ellipsoid","effect_smoke_body",45,23,32,57,35,48], ["ellipsoid_paint","effect_smoke_light",47,25,40,57,35,48], ["scatter_paint","effect_smoke_mid",5,3704,45,23,32,57,35,48], ["scatter_paint","effect_smoke_white",7,714,45,23,32,57,35,48],
+        ["ellipsoid","effect_smoke_body",38,28,46,52,42,62], ["ellipsoid_paint","effect_smoke_light",41,31,54,52,42,62], ["scatter_paint","effect_smoke_mid",5,3705,38,28,46,52,42,62], ["scatter_paint","effect_smoke_white",7,715,38,28,46,52,42,62],
+        ["ellipsoid","effect_smoke_body",40,28,56,52,40,72], ["ellipsoid_paint","effect_smoke_light",42,30,64,52,40,72], ["scatter_paint","effect_smoke_mid",5,3706,40,28,56,52,40,72], ["scatter_paint","effect_smoke_white",7,716,40,28,56,52,40,72],
+        ["ellipsoid","effect_smoke_body",32,32,66,48,48,86], ["ellipsoid_paint","effect_smoke_light",35,35,76,48,48,86], ["scatter_paint","effect_smoke_mid",5,3707,32,32,66,48,48,86], ["scatter_paint","effect_smoke_white",7,717,32,32,66,48,48,86],
+        ["ellipsoid","effect_smoke_body",31,35,80,45,49,96], ["ellipsoid_paint","effect_smoke_light",34,38,88,45,49,96], ["scatter_paint","effect_smoke_mid",5,3708,31,35,80,45,49,96], ["scatter_paint","effect_smoke_white",7,718,31,35,80,45,49,96],
+        ["ellipsoid","effect_smoke_body",21,39,88,41,59,108], ["ellipsoid_paint","effect_smoke_light",25,43,98,41,59,108], ["scatter_paint","effect_smoke_mid",5,3709,21,39,88,41,59,108], ["scatter_paint","effect_smoke_white",7,719,21,39,88,41,59,108],
+        ["ellipsoid","effect_smoke_body",22,42,100,38,58,116], ["ellipsoid_paint","effect_smoke_light",25,45,108,38,58,116], ["scatter_paint","effect_smoke_mid",5,3710,22,42,100,38,58,116], ["scatter_paint","effect_smoke_white",7,720,22,42,100,38,58,116],
+        ["ellipsoid","effect_smoke_body",17,51,102,29,63,114], ["ellipsoid_paint","effect_smoke_light",19,53,108,29,63,114], ["scatter_paint","effect_smoke_mid",5,3711,17,51,102,29,63,114], ["scatter_paint","effect_smoke_white",7,721,17,51,102,29,63,114],
+        ["ellipsoid","effect_smoke_body",49,25,63,55,31,69], ["ellipsoid_paint","effect_smoke_light",50,26,66,55,31,69], ["scatter_paint","effect_smoke_mid",5,3712,49,25,63,55,31,69], ["scatter_paint","effect_smoke_white",7,722,49,25,63,55,31,69],
+        ["ellipsoid","effect_smoke_body",41,33,103,47,39,109], ["ellipsoid_paint","effect_smoke_light",42,34,106,47,39,109], ["scatter_paint","effect_smoke_mid",5,3713,41,33,103,47,39,109], ["scatter_paint","effect_smoke_white",7,723,41,33,103,47,39,109],
+        ["ellipsoid","effect_smoke_body",30,44,61,36,50,67], ["ellipsoid_paint","effect_smoke_light",31,45,64,36,50,67], ["scatter_paint","effect_smoke_mid",5,3714,30,44,61,36,50,67], ["scatter_paint","effect_smoke_white",7,724,30,44,61,36,50,67]
+      ]
+    },
+    "effect_chimney_smoke_1": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3702: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,16], ["ellipsoid","effect_smoke_body",56,19,12,61,24,28],
+        ["ellipsoid","effect_smoke_body",52,21,23,59,28,43], ["ellipsoid","effect_smoke_body",48,24,37,56,32,57],
+        ["ellipsoid","effect_smoke_body",45,27,51,53,35,71], ["ellipsoid","effect_smoke_body",41,30,65,50,39,85],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,3798,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,748,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,20], ["ellipsoid_paint","effect_smoke_light",58,18,14,64,24,20], ["scatter_paint","effect_smoke_mid",5,3799,56,16,8,64,24,20], ["scatter_paint","effect_smoke_white",7,749,56,16,8,64,24,20],
+        ["ellipsoid","effect_smoke_body",53,19,18,61,27,34], ["ellipsoid_paint","effect_smoke_light",55,21,26,61,27,34], ["scatter_paint","effect_smoke_mid",5,3800,53,19,18,61,27,34], ["scatter_paint","effect_smoke_white",7,750,53,19,18,61,27,34],
+        ["ellipsoid","effect_smoke_body",49,21,30,59,31,50], ["ellipsoid_paint","effect_smoke_light",51,23,40,59,31,50], ["scatter_paint","effect_smoke_mid",5,3801,49,21,30,59,31,50], ["scatter_paint","effect_smoke_white",7,751,49,21,30,59,31,50],
+        ["ellipsoid","effect_smoke_body",44,24,46,56,36,62], ["ellipsoid_paint","effect_smoke_light",46,26,54,56,36,62], ["scatter_paint","effect_smoke_mid",5,3802,44,24,46,56,36,62], ["scatter_paint","effect_smoke_white",7,752,44,24,46,56,36,62],
+        ["ellipsoid","effect_smoke_body",42,26,60,54,38,76], ["ellipsoid_paint","effect_smoke_light",44,28,68,54,38,76], ["scatter_paint","effect_smoke_mid",5,3803,42,26,60,54,38,76], ["scatter_paint","effect_smoke_white",7,753,42,26,60,54,38,76],
+        ["ellipsoid","effect_smoke_body",35,29,74,51,45,90], ["ellipsoid_paint","effect_smoke_light",38,32,82,51,45,90], ["scatter_paint","effect_smoke_mid",5,3804,35,29,74,51,45,90], ["scatter_paint","effect_smoke_white",7,754,35,29,74,51,45,90],
+        ["ellipsoid","effect_smoke_body",26,36,88,44,54,108], ["ellipsoid_paint","effect_smoke_light",30,40,98,44,54,108], ["scatter_paint","effect_smoke_mid",5,3805,26,36,88,44,54,108], ["scatter_paint","effect_smoke_white",7,755,26,36,88,44,54,108],
+        ["ellipsoid","effect_smoke_body",21,43,98,37,59,118], ["ellipsoid_paint","effect_smoke_light",24,46,108,37,59,118], ["scatter_paint","effect_smoke_mid",5,3806,21,43,98,37,59,118], ["scatter_paint","effect_smoke_white",7,756,21,43,98,37,59,118],
+        ["ellipsoid","effect_smoke_body",22,46,90,34,58,106], ["ellipsoid_paint","effect_smoke_light",24,48,98,34,58,106], ["scatter_paint","effect_smoke_mid",5,3807,22,46,90,34,58,106], ["scatter_paint","effect_smoke_white",7,757,22,46,90,34,58,106],
+        ["ellipsoid","effect_smoke_body",43,31,57,49,37,63], ["ellipsoid_paint","effect_smoke_light",44,32,60,49,37,63], ["scatter_paint","effect_smoke_mid",5,3808,43,31,57,49,37,63], ["scatter_paint","effect_smoke_white",7,758,43,31,57,49,37,63],
+        ["ellipsoid","effect_smoke_body",44,30,99,50,36,105], ["ellipsoid_paint","effect_smoke_light",45,31,102,50,36,105], ["scatter_paint","effect_smoke_mid",5,3809,44,30,99,50,36,105], ["scatter_paint","effect_smoke_white",7,759,44,30,99,50,36,105],
+        ["ellipsoid","effect_smoke_body",51,25,69,55,29,75], ["ellipsoid_paint","effect_smoke_light",52,26,72,55,29,75], ["scatter_paint","effect_smoke_mid",5,3810,51,25,69,55,29,75], ["scatter_paint","effect_smoke_white",7,760,51,25,69,55,29,75],
+        ["ellipsoid","effect_smoke_body",27,47,69,33,53,75], ["ellipsoid_paint","effect_smoke_light",28,48,72,33,53,75], ["scatter_paint","effect_smoke_mid",5,3811,27,47,69,33,53,75], ["scatter_paint","effect_smoke_white",7,761,27,47,69,33,53,75]
+      ]
+    },
+    "effect_chimney_smoke_2": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3703: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,16], ["ellipsoid","effect_smoke_body",55,19,12,61,25,28],
+        ["ellipsoid","effect_smoke_body",52,22,24,58,28,40], ["ellipsoid","effect_smoke_body",47,25,35,55,33,55],
+        ["ellipsoid","effect_smoke_body",42,29,50,51,38,66], ["ellipsoid","effect_smoke_body",39,33,61,47,41,81],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,3895,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,785,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,20], ["ellipsoid_paint","effect_smoke_light",58,18,14,64,24,20], ["scatter_paint","effect_smoke_mid",5,3896,56,16,8,64,24,20], ["scatter_paint","effect_smoke_white",7,786,56,16,8,64,24,20],
+        ["ellipsoid","effect_smoke_body",52,20,20,60,28,32], ["ellipsoid_paint","effect_smoke_light",54,22,26,60,28,32], ["scatter_paint","effect_smoke_mid",5,3897,52,20,20,60,28,32], ["scatter_paint","effect_smoke_white",7,787,52,20,20,60,28,32],
+        ["ellipsoid","effect_smoke_body",49,21,30,59,31,46], ["ellipsoid_paint","effect_smoke_light",51,23,38,59,31,46], ["scatter_paint","effect_smoke_mid",5,3898,49,21,30,59,31,46], ["scatter_paint","effect_smoke_white",7,788,49,21,30,59,31,46],
+        ["ellipsoid","effect_smoke_body",42,26,44,54,38,60], ["ellipsoid_paint","effect_smoke_light",44,28,52,54,38,60], ["scatter_paint","effect_smoke_mid",5,3899,42,26,44,54,38,60], ["scatter_paint","effect_smoke_white",7,789,42,26,44,54,38,60],
+        ["ellipsoid","effect_smoke_body",39,29,56,51,41,72], ["ellipsoid_paint","effect_smoke_light",41,31,64,51,41,72], ["scatter_paint","effect_smoke_mid",5,3900,39,29,56,51,41,72], ["scatter_paint","effect_smoke_white",7,790,39,29,56,51,41,72],
+        ["ellipsoid","effect_smoke_body",35,33,70,47,45,86], ["ellipsoid_paint","effect_smoke_light",37,35,78,47,45,86], ["scatter_paint","effect_smoke_mid",5,3901,35,33,70,47,45,86], ["scatter_paint","effect_smoke_white",7,791,35,33,70,47,45,86],
+        ["ellipsoid","effect_smoke_body",26,38,80,42,54,96], ["ellipsoid_paint","effect_smoke_light",29,41,88,42,54,96], ["scatter_paint","effect_smoke_mid",5,3902,26,38,80,42,54,96], ["scatter_paint","effect_smoke_white",7,792,26,38,80,42,54,96],
+        ["ellipsoid","effect_smoke_body",20,40,92,40,60,112], ["ellipsoid_paint","effect_smoke_light",24,44,102,40,60,112], ["scatter_paint","effect_smoke_mid",5,3903,20,40,92,40,60,112], ["scatter_paint","effect_smoke_white",7,793,20,40,92,40,60,112],
+        ["ellipsoid","effect_smoke_body",24,40,104,40,56,116], ["ellipsoid_paint","effect_smoke_light",27,43,110,40,56,116], ["scatter_paint","effect_smoke_mid",5,3904,24,40,104,40,56,116], ["scatter_paint","effect_smoke_white",7,794,24,40,104,40,56,116],
+        ["ellipsoid","effect_smoke_body",18,50,102,30,62,114], ["ellipsoid_paint","effect_smoke_light",20,52,108,30,62,114], ["scatter_paint","effect_smoke_mid",5,3905,18,50,102,30,62,114], ["scatter_paint","effect_smoke_white",7,795,18,50,102,30,62,114],
+        ["ellipsoid","effect_smoke_body",46,28,67,52,34,73], ["ellipsoid_paint","effect_smoke_light",47,29,70,52,34,73], ["scatter_paint","effect_smoke_mid",5,3906,46,28,67,52,34,73], ["scatter_paint","effect_smoke_white",7,796,46,28,67,52,34,73],
+        ["ellipsoid","effect_smoke_body",40,34,85,46,40,91], ["ellipsoid_paint","effect_smoke_light",41,35,88,46,40,91], ["scatter_paint","effect_smoke_mid",5,3907,40,34,85,46,40,91], ["scatter_paint","effect_smoke_white",7,797,40,34,85,46,40,91],
+        ["ellipsoid","effect_smoke_body",30,44,59,36,50,65], ["ellipsoid_paint","effect_smoke_light",31,45,62,36,50,65], ["scatter_paint","effect_smoke_mid",5,3908,30,44,59,36,50,65], ["scatter_paint","effect_smoke_white",7,798,30,44,59,36,50,65]
+      ]
+    },
+    "effect_chimney_smoke_3": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3704: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,15,2,65,20,16], ["ellipsoid","effect_smoke_body",56,18,12,62,24,28],
+        ["ellipsoid","effect_smoke_body",51,22,23,58,29,45], ["ellipsoid","effect_smoke_body",46,27,39,53,34,61],
+        ["ellipsoid","effect_smoke_body",40,31,55,49,40,75], ["ellipsoid","effect_smoke_body",33,36,70,44,47,86],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,3992,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,822,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",57,15,8,65,23,20], ["ellipsoid_paint","effect_smoke_light",59,17,14,65,23,20], ["scatter_paint","effect_smoke_mid",5,3993,57,15,8,65,23,20], ["scatter_paint","effect_smoke_white",7,823,57,15,8,65,23,20],
+        ["ellipsoid","effect_smoke_body",53,19,18,61,27,34], ["ellipsoid_paint","effect_smoke_light",55,21,26,61,27,34], ["scatter_paint","effect_smoke_mid",5,3994,53,19,18,61,27,34], ["scatter_paint","effect_smoke_white",7,824,53,19,18,61,27,34],
+        ["ellipsoid","effect_smoke_body",47,23,32,57,33,52], ["ellipsoid_paint","effect_smoke_light",49,25,42,57,33,52], ["scatter_paint","effect_smoke_mid",5,3995,47,23,32,57,33,52], ["scatter_paint","effect_smoke_white",7,825,47,23,32,57,33,52],
+        ["ellipsoid","effect_smoke_body",42,28,50,52,38,66], ["ellipsoid_paint","effect_smoke_light",44,30,58,52,38,66], ["scatter_paint","effect_smoke_mid",5,3996,42,28,50,52,38,66], ["scatter_paint","effect_smoke_white",7,826,42,28,50,52,38,66],
+        ["ellipsoid","effect_smoke_body",35,31,64,49,45,80], ["ellipsoid_paint","effect_smoke_light",38,34,72,49,45,80], ["scatter_paint","effect_smoke_mid",5,3997,35,31,64,49,45,80], ["scatter_paint","effect_smoke_white",7,827,35,31,64,49,45,80],
+        ["ellipsoid","effect_smoke_body",27,37,74,43,53,94], ["ellipsoid_paint","effect_smoke_light",30,40,84,43,53,94], ["scatter_paint","effect_smoke_mid",5,3998,27,37,74,43,53,94], ["scatter_paint","effect_smoke_white",7,828,27,37,74,43,53,94],
+        ["ellipsoid","effect_smoke_body",22,40,86,40,58,106], ["ellipsoid_paint","effect_smoke_light",26,44,96,40,58,106], ["scatter_paint","effect_smoke_mid",5,3999,22,40,86,40,58,106], ["scatter_paint","effect_smoke_white",7,829,22,40,86,40,58,106],
+        ["ellipsoid","effect_smoke_body",16,46,102,34,64,118], ["ellipsoid_paint","effect_smoke_light",20,50,110,34,64,118], ["scatter_paint","effect_smoke_mid",5,4000,16,46,102,34,64,118], ["scatter_paint","effect_smoke_white",7,830,16,46,102,34,64,118],
+        ["ellipsoid","effect_smoke_body",42,32,75,48,38,81], ["ellipsoid_paint","effect_smoke_light",43,33,78,48,38,81], ["scatter_paint","effect_smoke_mid",5,4001,42,32,75,48,38,81], ["scatter_paint","effect_smoke_white",7,831,42,32,75,48,38,81],
+        ["ellipsoid","effect_smoke_body",40,34,91,46,40,97], ["ellipsoid_paint","effect_smoke_light",41,35,94,46,40,97], ["scatter_paint","effect_smoke_mid",5,4002,40,34,91,46,40,97], ["scatter_paint","effect_smoke_white",7,832,40,34,91,46,40,97],
+        ["ellipsoid","effect_smoke_body",30,44,63,36,50,69], ["ellipsoid_paint","effect_smoke_light",31,45,66,36,50,69], ["scatter_paint","effect_smoke_mid",5,4003,30,44,63,36,50,69], ["scatter_paint","effect_smoke_white",7,833,30,44,63,36,50,69],
+        ["ellipsoid","effect_smoke_body",53,23,12,57,27,16], ["ellipsoid_paint","effect_smoke_light",54,24,14,57,27,16], ["scatter_paint","effect_smoke_mid",5,4004,53,23,12,57,27,16], ["scatter_paint","effect_smoke_white",7,834,53,23,12,57,27,16]
+      ]
+    },
+    "effect_chimney_smoke_4": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3705: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,16], ["ellipsoid","effect_smoke_body",54,19,12,61,26,28],
+        ["ellipsoid","effect_smoke_body",48,24,23,56,32,45], ["ellipsoid","effect_smoke_body",43,29,39,51,37,59],
+        ["ellipsoid","effect_smoke_body",37,33,53,47,43,75], ["ellipsoid","effect_smoke_body",31,38,69,42,49,89],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,4089,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,859,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,20], ["ellipsoid_paint","effect_smoke_light",58,18,14,64,24,20], ["scatter_paint","effect_smoke_mid",5,4090,56,16,8,64,24,20], ["scatter_paint","effect_smoke_white",7,860,56,16,8,64,24,20],
+        ["ellipsoid","effect_smoke_body",50,20,18,60,30,34], ["ellipsoid_paint","effect_smoke_light",52,22,26,60,30,34], ["scatter_paint","effect_smoke_mid",5,4091,50,20,18,60,30,34], ["scatter_paint","effect_smoke_white",7,861,50,20,18,60,30,34],
+        ["ellipsoid","effect_smoke_body",43,25,34,55,37,50], ["ellipsoid_paint","effect_smoke_light",45,27,42,55,37,50], ["scatter_paint","effect_smoke_mid",5,4092,43,25,34,55,37,50], ["scatter_paint","effect_smoke_white",7,862,43,25,34,55,37,50],
+        ["ellipsoid","effect_smoke_body",39,29,46,51,41,66], ["ellipsoid_paint","effect_smoke_light",41,31,56,51,41,66], ["scatter_paint","effect_smoke_mid",5,4093,39,29,46,51,41,66], ["scatter_paint","effect_smoke_white",7,863,39,29,46,51,41,66],
+        ["ellipsoid","effect_smoke_body",32,34,64,46,48,80], ["ellipsoid_paint","effect_smoke_light",35,37,72,46,48,80], ["scatter_paint","effect_smoke_mid",5,4094,32,34,64,46,48,80], ["scatter_paint","effect_smoke_white",7,864,32,34,64,46,48,80],
+        ["ellipsoid","effect_smoke_body",24,36,76,44,56,96], ["ellipsoid_paint","effect_smoke_light",28,40,86,44,56,96], ["scatter_paint","effect_smoke_mid",5,4095,24,36,76,44,56,96], ["scatter_paint","effect_smoke_white",7,865,24,36,76,44,56,96],
+        ["ellipsoid","effect_smoke_body",21,41,90,39,59,110], ["ellipsoid_paint","effect_smoke_light",25,45,100,39,59,110], ["scatter_paint","effect_smoke_mid",5,4096,21,41,90,39,59,110], ["scatter_paint","effect_smoke_white",7,866,21,41,90,39,59,110],
+        ["ellipsoid","effect_smoke_body",21,43,102,37,59,118], ["ellipsoid_paint","effect_smoke_light",24,46,110,37,59,118], ["scatter_paint","effect_smoke_mid",5,4097,21,43,102,37,59,118], ["scatter_paint","effect_smoke_white",7,867,21,43,102,37,59,118],
+        ["ellipsoid","effect_smoke_body",40,32,84,48,40,92], ["ellipsoid_paint","effect_smoke_light",42,34,88,48,40,92], ["scatter_paint","effect_smoke_mid",5,4098,40,32,84,48,40,92], ["scatter_paint","effect_smoke_white",7,868,40,32,84,48,40,92],
+        ["ellipsoid","effect_smoke_body",17,55,106,25,63,114], ["ellipsoid_paint","effect_smoke_light",19,57,110,25,63,114], ["scatter_paint","effect_smoke_mid",5,4099,17,55,106,25,63,114], ["scatter_paint","effect_smoke_white",7,869,17,55,106,25,63,114],
+        ["ellipsoid","effect_smoke_body",32,42,59,38,48,65], ["ellipsoid_paint","effect_smoke_light",33,43,62,38,48,65], ["scatter_paint","effect_smoke_mid",5,4100,32,42,59,38,48,65], ["scatter_paint","effect_smoke_white",7,870,32,42,59,38,48,65],
+        ["ellipsoid","effect_smoke_body",54,22,26,58,26,30], ["ellipsoid_paint","effect_smoke_light",55,23,28,58,26,30], ["scatter_paint","effect_smoke_mid",5,4101,54,22,26,58,26,30], ["scatter_paint","effect_smoke_white",7,871,54,22,26,58,26,30]
+      ]
+    },
+    "effect_chimney_smoke_5": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3706: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,18], ["ellipsoid","effect_smoke_body",55,19,13,61,25,33],
+        ["ellipsoid","effect_smoke_body",50,23,27,57,30,49], ["ellipsoid","effect_smoke_body",44,27,43,53,36,65],
+        ["ellipsoid","effect_smoke_body",38,31,59,49,42,79], ["ellipsoid","effect_smoke_body",33,36,73,44,47,93],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,4186,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,896,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,24], ["ellipsoid_paint","effect_smoke_light",58,18,16,64,24,24], ["scatter_paint","effect_smoke_mid",5,4187,56,16,8,64,24,24], ["scatter_paint","effect_smoke_white",7,897,56,16,8,64,24,24],
+        ["ellipsoid","effect_smoke_body",51,19,22,61,29,38], ["ellipsoid_paint","effect_smoke_light",53,21,30,61,29,38], ["scatter_paint","effect_smoke_mid",5,4188,51,19,22,61,29,38], ["scatter_paint","effect_smoke_white",7,898,51,19,22,61,29,38],
+        ["ellipsoid","effect_smoke_body",45,23,36,57,35,56], ["ellipsoid_paint","effect_smoke_light",47,25,46,57,35,56], ["scatter_paint","effect_smoke_mid",5,4189,45,23,36,57,35,56], ["scatter_paint","effect_smoke_white",7,899,45,23,36,57,35,56],
+        ["ellipsoid","effect_smoke_body",39,27,54,53,41,70], ["ellipsoid_paint","effect_smoke_light",42,30,62,53,41,70], ["scatter_paint","effect_smoke_mid",5,4190,39,27,54,53,41,70], ["scatter_paint","effect_smoke_white",7,900,39,27,54,53,41,70],
+        ["ellipsoid","effect_smoke_body",33,31,68,49,47,84], ["ellipsoid_paint","effect_smoke_light",36,34,76,49,47,84], ["scatter_paint","effect_smoke_mid",5,4191,33,31,68,49,47,84], ["scatter_paint","effect_smoke_white",7,901,33,31,68,49,47,84],
+        ["ellipsoid","effect_smoke_body",28,36,80,44,52,100], ["ellipsoid_paint","effect_smoke_light",31,39,90,44,52,100], ["scatter_paint","effect_smoke_mid",5,4192,28,36,80,44,52,100], ["scatter_paint","effect_smoke_white",7,902,28,36,80,44,52,100],
+        ["ellipsoid","effect_smoke_body",21,43,94,37,59,114], ["ellipsoid_paint","effect_smoke_light",24,46,104,37,59,114], ["scatter_paint","effect_smoke_mid",5,4193,21,43,94,37,59,114], ["scatter_paint","effect_smoke_white",7,903,21,43,94,37,59,114],
+        ["ellipsoid","effect_smoke_body",17,51,106,29,63,118], ["ellipsoid_paint","effect_smoke_light",19,53,112,29,63,118], ["scatter_paint","effect_smoke_mid",5,4194,17,51,106,29,63,118], ["scatter_paint","effect_smoke_white",7,904,17,51,106,29,63,118],
+        ["ellipsoid","effect_smoke_body",36,36,102,44,44,118], ["ellipsoid_paint","effect_smoke_light",38,38,110,44,44,118], ["scatter_paint","effect_smoke_mid",5,4195,36,36,102,44,44,118], ["scatter_paint","effect_smoke_white",7,905,36,36,102,44,44,118],
+        ["ellipsoid","effect_smoke_body",26,48,69,32,54,75], ["ellipsoid_paint","effect_smoke_light",27,49,72,32,54,75], ["scatter_paint","effect_smoke_mid",5,4196,26,48,69,32,54,75], ["scatter_paint","effect_smoke_white",7,906,26,48,69,32,54,75],
+        ["ellipsoid","effect_smoke_body",43,31,52,49,37,60], ["ellipsoid_paint","effect_smoke_light",44,32,56,49,37,60], ["scatter_paint","effect_smoke_mid",5,4197,43,31,52,49,37,60], ["scatter_paint","effect_smoke_white",7,907,43,31,52,49,37,60],
+        ["ellipsoid","effect_smoke_body",56,20,16,60,24,20], ["ellipsoid_paint","effect_smoke_light",57,21,18,60,24,20], ["scatter_paint","effect_smoke_mid",5,4198,56,20,16,60,24,20], ["scatter_paint","effect_smoke_white",7,908,56,20,16,60,24,20]
+      ]
+    },
+    "effect_chimney_smoke_6": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3707: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,16], ["ellipsoid","effect_smoke_body",55,19,11,61,25,31],
+        ["ellipsoid","effect_smoke_body",50,23,25,57,30,45], ["ellipsoid","effect_smoke_body",45,26,39,54,35,59],
+        ["ellipsoid","effect_smoke_body",41,29,53,51,39,73], ["ellipsoid","effect_smoke_body",35,34,67,46,45,87],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,4283,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,933,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,20], ["ellipsoid_paint","effect_smoke_light",58,18,14,64,24,20], ["scatter_paint","effect_smoke_mid",5,4284,56,16,8,64,24,20], ["scatter_paint","effect_smoke_white",7,934,56,16,8,64,24,20],
+        ["ellipsoid","effect_smoke_body",51,19,20,61,29,36], ["ellipsoid_paint","effect_smoke_light",53,21,28,61,29,36], ["scatter_paint","effect_smoke_mid",5,4285,51,19,20,61,29,36], ["scatter_paint","effect_smoke_white",7,935,51,19,20,61,29,36],
+        ["ellipsoid","effect_smoke_body",45,23,34,57,35,50], ["ellipsoid_paint","effect_smoke_light",47,25,42,57,35,50], ["scatter_paint","effect_smoke_mid",5,4286,45,23,34,57,35,50], ["scatter_paint","effect_smoke_white",7,936,45,23,34,57,35,50],
+        ["ellipsoid","effect_smoke_body",41,25,48,55,39,64], ["ellipsoid_paint","effect_smoke_light",44,28,56,55,39,64], ["scatter_paint","effect_smoke_mid",5,4287,41,25,48,55,39,64], ["scatter_paint","effect_smoke_white",7,937,41,25,48,55,39,64],
+        ["ellipsoid","effect_smoke_body",36,28,62,52,44,78], ["ellipsoid_paint","effect_smoke_light",39,31,70,52,44,78], ["scatter_paint","effect_smoke_mid",5,4288,36,28,62,52,44,78], ["scatter_paint","effect_smoke_white",7,938,36,28,62,52,44,78],
+        ["ellipsoid","effect_smoke_body",29,35,74,45,51,94], ["ellipsoid_paint","effect_smoke_light",32,38,84,45,51,94], ["scatter_paint","effect_smoke_mid",5,4289,29,35,74,45,51,94], ["scatter_paint","effect_smoke_white",7,939,29,35,74,45,51,94],
+        ["ellipsoid","effect_smoke_body",20,42,88,38,60,108], ["ellipsoid_paint","effect_smoke_light",24,46,98,38,60,108], ["scatter_paint","effect_smoke_mid",5,4290,20,42,88,38,60,108], ["scatter_paint","effect_smoke_white",7,940,20,42,88,38,60,108],
+        ["ellipsoid","effect_smoke_body",16,44,98,36,64,114], ["ellipsoid_paint","effect_smoke_light",20,48,106,36,64,114], ["scatter_paint","effect_smoke_mid",5,4291,16,44,98,36,64,114], ["scatter_paint","effect_smoke_white",7,941,16,44,98,36,64,114],
+        ["ellipsoid","effect_smoke_body",27,39,98,41,53,114], ["ellipsoid_paint","effect_smoke_light",30,42,106,41,53,114], ["scatter_paint","effect_smoke_mid",5,4292,27,39,98,41,53,114], ["scatter_paint","effect_smoke_white",7,942,27,39,98,41,53,114],
+        ["ellipsoid","effect_smoke_body",17,55,94,25,63,102], ["ellipsoid_paint","effect_smoke_light",19,57,98,25,63,102], ["scatter_paint","effect_smoke_mid",5,4293,17,55,94,25,63,102], ["scatter_paint","effect_smoke_white",7,943,17,55,94,25,63,102],
+        ["ellipsoid","effect_smoke_body",38,36,63,44,42,69], ["ellipsoid_paint","effect_smoke_light",39,37,66,44,42,69], ["scatter_paint","effect_smoke_mid",5,4294,38,36,63,44,42,69], ["scatter_paint","effect_smoke_white",7,944,38,36,63,44,42,69],
+        ["ellipsoid","effect_smoke_body",45,29,75,51,35,81], ["ellipsoid_paint","effect_smoke_light",46,30,78,51,35,81], ["scatter_paint","effect_smoke_mid",5,4295,45,29,75,51,35,81], ["scatter_paint","effect_smoke_white",7,945,45,29,75,51,35,81]
+      ]
+    },
+    "effect_chimney_smoke_7": {
+      "size":[80,80,128],"cell_size":[0.25,0.25,0.5],"origin":[-16,-4,0],"review_status":"work-in-progress",
+      "reference":"Original stationary power-plant plume sprite3708: manually sculpted wind-bent billows, continuous lower wisps and detached upper eddies. Original effect anchor, displayed frame, lifetime, local altitude and industry visibility remain simulation-owned. Billow contour, breakup and directional paint remain provisional.",
+      "ops": [
+        ["ellipsoid","effect_smoke_body",60,16,2,64,20,16], ["ellipsoid","effect_smoke_body",56,19,12,61,24,28],
+        ["ellipsoid","effect_smoke_body",52,20,23,60,28,45], ["ellipsoid","effect_smoke_body",47,24,39,56,33,59],
+        ["ellipsoid","effect_smoke_body",41,31,53,49,39,73], ["ellipsoid","effect_smoke_body",35,35,68,45,45,84],
+        ["ellipsoid","effect_smoke_body",61,13,0,67,19,8], ["ellipsoid_paint","effect_smoke_light",62,14,4,67,19,8], ["scatter_paint","effect_smoke_mid",5,4380,61,13,0,67,19,8], ["scatter_paint","effect_smoke_white",7,970,61,13,0,67,19,8],
+        ["ellipsoid","effect_smoke_body",56,16,8,64,24,20], ["ellipsoid_paint","effect_smoke_light",58,18,14,64,24,20], ["scatter_paint","effect_smoke_mid",5,4381,56,16,8,64,24,20], ["scatter_paint","effect_smoke_white",7,971,56,16,8,64,24,20],
+        ["ellipsoid","effect_smoke_body",53,19,18,61,27,34], ["ellipsoid_paint","effect_smoke_light",55,21,26,61,27,34], ["scatter_paint","effect_smoke_mid",5,4382,53,19,18,61,27,34], ["scatter_paint","effect_smoke_white",7,972,53,19,18,61,27,34],
+        ["ellipsoid","effect_smoke_body",48,18,34,62,32,50], ["ellipsoid_paint","effect_smoke_light",51,21,42,62,32,50], ["scatter_paint","effect_smoke_mid",5,4383,48,18,34,62,32,50], ["scatter_paint","effect_smoke_white",7,973,48,18,34,62,32,50],
+        ["ellipsoid","effect_smoke_body",42,26,48,54,38,64], ["ellipsoid_paint","effect_smoke_light",44,28,56,54,38,64], ["scatter_paint","effect_smoke_mid",5,4384,42,26,48,54,38,64], ["scatter_paint","effect_smoke_white",7,974,42,26,48,54,38,64],
+        ["ellipsoid","effect_smoke_body",36,32,62,48,44,78], ["ellipsoid_paint","effect_smoke_light",38,34,70,48,44,78], ["scatter_paint","effect_smoke_mid",5,4385,36,32,62,48,44,78], ["scatter_paint","effect_smoke_white",7,975,36,32,62,48,44,78],
+        ["ellipsoid","effect_smoke_body",31,35,74,45,49,90], ["ellipsoid_paint","effect_smoke_light",34,38,82,45,49,90], ["scatter_paint","effect_smoke_mid",5,4386,31,35,74,45,49,90], ["scatter_paint","effect_smoke_white",7,976,31,35,74,45,49,90],
+        ["ellipsoid","effect_smoke_body",28,36,84,44,52,104], ["ellipsoid_paint","effect_smoke_light",31,39,94,44,52,104], ["scatter_paint","effect_smoke_mid",5,4387,28,36,84,44,52,104], ["scatter_paint","effect_smoke_white",7,977,28,36,84,44,52,104],
+        ["ellipsoid","effect_smoke_body",23,41,98,39,57,114], ["ellipsoid_paint","effect_smoke_light",26,44,106,39,57,114], ["scatter_paint","effect_smoke_mid",5,4388,23,41,98,39,57,114], ["scatter_paint","effect_smoke_white",7,978,23,41,98,39,57,114],
+        ["ellipsoid","effect_smoke_body",16,52,104,28,64,116], ["ellipsoid_paint","effect_smoke_light",18,54,110,28,64,116], ["scatter_paint","effect_smoke_mid",5,4389,16,52,104,28,64,116], ["scatter_paint","effect_smoke_white",7,979,16,52,104,28,64,116],
+        ["ellipsoid","effect_smoke_body",17,55,82,25,63,94], ["ellipsoid_paint","effect_smoke_light",19,57,88,25,63,94], ["scatter_paint","effect_smoke_mid",5,4390,17,55,82,25,63,94], ["scatter_paint","effect_smoke_white",7,980,17,55,82,25,63,94],
+        ["ellipsoid","effect_smoke_body",30,44,51,36,50,57], ["ellipsoid_paint","effect_smoke_light",31,45,54,36,50,57], ["scatter_paint","effect_smoke_mid",5,4391,30,44,51,36,50,57], ["scatter_paint","effect_smoke_white",7,981,30,44,51,36,50,57],
+        ["ellipsoid","effect_smoke_body",45,29,35,51,35,41], ["ellipsoid_paint","effect_smoke_light",46,30,38,51,35,41], ["scatter_paint","effect_smoke_mid",5,4392,45,29,35,51,35,41], ["scatter_paint","effect_smoke_white",7,982,45,29,35,51,35,41]
+      ]
+    },
     "effect_bulldozer_ne": {
       "size":[24,24,24],"cell_size":[0.25,0.25,0.3125],"origin":[-1.5,-1.5,0],"review_status":"work-in-progress",
       "reference":"Original roadworks sprite1416: continuous dark tracks and rollers, warm-yellow engine housing and supported recessed cab, seated operator, exhaust, open underbody and curved grey-front/yellow-back blade. Fixed original sprite anchor; image direction remains independent of reverse travel. Source registration and finer paint remain provisional.",
@@ -21465,7 +21649,15 @@
       "1416":{"0":"effect_bulldozer_ne","1":"effect_bulldozer_ne","2":"effect_bulldozer_ne","3":"effect_bulldozer_ne"},
       "1417":{"0":"effect_bulldozer_se","1":"effect_bulldozer_se","2":"effect_bulldozer_se","3":"effect_bulldozer_se"},
       "1418":{"0":"effect_bulldozer_sw","1":"effect_bulldozer_sw","2":"effect_bulldozer_sw","3":"effect_bulldozer_sw"},
-      "1419":{"0":"effect_bulldozer_nw","1":"effect_bulldozer_nw","2":"effect_bulldozer_nw","3":"effect_bulldozer_nw"}
+      "1419":{"0":"effect_bulldozer_nw","1":"effect_bulldozer_nw","2":"effect_bulldozer_nw","3":"effect_bulldozer_nw"},
+      "3701":{"0":"effect_chimney_smoke_0","1":"effect_chimney_smoke_0","2":"effect_chimney_smoke_0","3":"effect_chimney_smoke_0"},
+      "3702":{"0":"effect_chimney_smoke_1","1":"effect_chimney_smoke_1","2":"effect_chimney_smoke_1","3":"effect_chimney_smoke_1"},
+      "3703":{"0":"effect_chimney_smoke_2","1":"effect_chimney_smoke_2","2":"effect_chimney_smoke_2","3":"effect_chimney_smoke_2"},
+      "3704":{"0":"effect_chimney_smoke_3","1":"effect_chimney_smoke_3","2":"effect_chimney_smoke_3","3":"effect_chimney_smoke_3"},
+      "3705":{"0":"effect_chimney_smoke_4","1":"effect_chimney_smoke_4","2":"effect_chimney_smoke_4","3":"effect_chimney_smoke_4"},
+      "3706":{"0":"effect_chimney_smoke_5","1":"effect_chimney_smoke_5","2":"effect_chimney_smoke_5","3":"effect_chimney_smoke_5"},
+      "3707":{"0":"effect_chimney_smoke_6","1":"effect_chimney_smoke_6","2":"effect_chimney_smoke_6","3":"effect_chimney_smoke_6"},
+      "3708":{"0":"effect_chimney_smoke_7","1":"effect_chimney_smoke_7","2":"effect_chimney_smoke_7","3":"effect_chimney_smoke_7"}
     },
     "docks": {
       "0":{"0":"water_dock_slope_ne","1":"water_dock_toy_slope_ne"},

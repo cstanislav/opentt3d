@@ -85,6 +85,8 @@ def main():
     parser.add_argument("--export-references", action="store_true")
     parser.add_argument("--export-effects", action="store_true", help="Export original effect sprites and their source offsets, including the unpresented bubble threshold")
     parser.add_argument("--trace-effects", action="store_true", help="Record actual voxel effect sprites, original animation states, transforms and unclickable ownership")
+    parser.add_argument("--expect-no-effects", action="store_true", help="Negative control: require --trace-effects to emit no voxel effects in the captured viewport")
+    parser.add_argument("--industry-visibility", choices=("normal","transparent","invisible"), default="normal", help="Use the original industry transparency/invisibility settings, including their original effect suppression")
     parser.add_argument("--gallery-house", type=int, nargs="+", help="Export one or more house/tree model turntables")
     parser.add_argument("--gallery-voxels", action="store_true", help="Export all authored voxel turntables, street and neighbour-context views")
     parser.add_argument("--gallery-voxel-prefix", help="Export only voxel models with this name prefix")
@@ -202,6 +204,8 @@ def main():
         parser.error("--trace-aircraft-clearance requires --renderer 3d")
     if args.trace_effects and args.renderer != "3d":
         parser.error("--trace-effects requires --renderer 3d")
+    if args.expect_no_effects and not args.trace_effects:
+        parser.error("--expect-no-effects requires --trace-effects")
     if args.readback_presentation and (args.backend != "opengl" or args.renderer != "3d" or args.executable or args.macos_bundle):
         parser.error("--readback-presentation requires the direct-launch OpenGL 3D build")
     if args.verify_crossing_transitions and (not args.running or not args.benchmark_frames):
@@ -333,6 +337,8 @@ display_opt = SHOW_TOWN_NAMES|SHOW_STATION_NAMES|SHOW_SIGNS|FULL_ANIMATION|FULL_
 fullscreen = false
 resolution = {args.resolution[0]},{args.resolution[1]}
 screenshot_format = png
+transparency_options = {0 if args.industry_visibility == "normal" else 8}
+invisibility_options = {8 if args.industry_visibility == "invisible" else 0}
 
 [gui]
 autosave_interval = 0
@@ -827,8 +833,11 @@ server_advertise = false
                     raise RuntimeError("The requested actual empty/full cargo state was not located and captured")
             if args.reference_industry:
                 graphics, stage = args.reference_industry
-                if f"focused voxel industry {graphics} construction stage {stage} at" not in text or f"live voxel industry {graphics} construction stage {stage} captured at" not in text:
-                    raise RuntimeError("The requested actual voxel industry construction stage was not located and captured")
+                if f"focused voxel industry {graphics} construction stage {stage} at" not in text:
+                    raise RuntimeError("The requested actual voxel industry construction stage was not located")
+                captured_industry = f"live voxel industry {graphics} construction stage {stage} captured at" in text
+                if captured_industry == (args.industry_visibility == "invisible"):
+                    raise RuntimeError("The requested voxel industry body did not match its original visibility setting")
             if args.reference_industry_ground:
                 graphics, stage = args.reference_industry_ground
                 if f"focused voxel industry ground {graphics} construction stage {stage} at" not in text or f"live voxel industry ground {graphics} construction stage {stage} captured at" not in text:
@@ -937,8 +946,10 @@ server_advertise = false
                 raise RuntimeError(f"Screenshot dimensions differ: requested {args.screenshot_size}, got {image_size}")
             if args.trace_aircraft_clearance and not all(marker in text for marker in ("clearance aircraft frame ","clearance airport frame ")):
                 raise RuntimeError("The clearance trace needs both emitted aircraft and airport bodies; inspect run.log")
-            if args.trace_effects and "voxel effect frame " not in text:
-                raise RuntimeError("No original voxel effect was captured; inspect run.log")
+            if args.trace_effects:
+                captured_effects = "voxel effect frame " in text
+                if captured_effects == args.expect_no_effects:
+                    raise RuntimeError("Expected no emitted voxel effects" if args.expect_no_effects else "No original voxel effect was captured; inspect run.log")
             if args.export_effects and "exported 81 original effect source sprites in 10 families (80 presentable, 1 unpresented bubble threshold)" not in text:
                 raise RuntimeError("The complete original effect source catalogue was not exported; inspect run.log")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
@@ -948,6 +959,8 @@ server_advertise = false
                 result["aircraft_clearance_trace"] = True
             if args.trace_effects:
                 result["effect_trace"] = True
+                result["expected_no_effects"] = args.expect_no_effects
+                result["industry_visibility"] = args.industry_visibility
             if benchmark_frames:
                 result["benchmark"] = json.loads((output / "benchmark.json").read_text())
                 if args.fullscreen and not result["benchmark"]["fullscreen"]:

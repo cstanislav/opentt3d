@@ -15,17 +15,24 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,707-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness19/19 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,715-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness22/22 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Eight stationary chimney effect frames and32 explicit climate bindings preserve
+  original sprite/countdown, anchor/local altitude, visibility and unclickable ownership.
+  18 prototype/14 integrated and two fallback controls pass;832 integration views match,
+  648 source exports remain exact and64 native bindings match their models. Six live
+  controls capture21,855 samples and complete ordered64-phase cycles. Original visibility
+  and construction absences pass.68 presentable effect sources remain unbound; source
+  fidelity and final approvals remain open.
 - [x] Four voxel roadworks effect orientations and sixteen explicit climate bindings
   preserve original sprite-owned heading, reverse motion, altitude and unclickable
   ownership.12 prototype/ten integrated and three fallback/rejection controls pass;
   448 integration views match staging and648 source exports remain exact. Six live
-  controls record28 complete original116-waypoint paths.76 presentable effect sources
-  remain unbound; cab/blade/source fidelity and final approvals remain open.
+  controls record28 complete original116-waypoint paths. Cab/blade/source fidelity and
+  final approvals remain open; further effect coverage is recorded above.
 - [x] NW pier27's source-contained support recess clears its27 intersections from both
   original larger-aircraft traces and remains clear in two fresh6,000-frame replays.
   All210 original waypoint results and1,701 other models remain. Ten prototype/baseline
