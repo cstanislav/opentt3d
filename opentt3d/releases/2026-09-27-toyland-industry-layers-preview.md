@@ -6,9 +6,9 @@ source-audited climate bindings for animated pools and rig/paper bodies.
 
 ## Play
 
-The [verified `.24` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.24)
-is available for Windows, macOS and Linux. This preview's executable packages appear
-after its exact-commit release workflow passes. Required graphics are bundled; see
+The [verified `.25` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.25)
+is available for Windows, macOS and Linux. All eight packaging jobs passed at exact
+commit `ec3be77982a2dd7d63a1eab974e864861f738b25`. Required graphics are bundled; see
 the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 
 ## Artwork and ownership
@@ -21,6 +21,11 @@ the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt
   construction, animation, helicopter service, commands and saves remain authoritative.
 
 ## Verification
+
+Public-package audits verify 19 attachments, 18 checksums, 2,076 matching source files
+and six identical 1,703-model catalogues. Three downloaded Mac startup/clipping/save
+controls pass; seven hosted graphical controls each pass 72 clipping views. Windows
+x64/x86 native load/save and Linux's 900-frame train-support/collector journey pass.
 
 The gold increment passes 16 prototype and six integrated controls, three negative
 controls, 204 native unit cases, two script regressions and 142 asset tests. All 2,860

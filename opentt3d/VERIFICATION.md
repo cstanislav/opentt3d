@@ -1,5 +1,17 @@
 # Implementation verification
 
+## Public industry-layer release `.25`
+
+Workflow36364111123 passes all eight jobs at exact commitec3be77982a2dd7d63a1eab974e864861f738b25.
+Independent audits verify19 public attachments,18 checksums,2,076 matching source files
+and six identical1,703-model catalogues. Downloaded Mac architecture/signature/dependency/
+minimum15.0 checks and three render/clipping/save controls pass. Seven hosted graphical
+controls each pass72 perspective clipping views; Windows x64/x86 load/save and Linux's
+900-frame train-support/collector journey pass. ARM/Intel software-OpenGL world screenshots
+retain zero black pixels and nine differences from Vulkan. Evidence:
+`build-macos/playable-release25-{download-audit,ci-reconciliation,hosted-visual-comparison}.json`.
+Windows ARM64 native/GPU execution and broader input/network acceptance remain open.
+
 ## Read-only original effect references
 
 `renderer3d effect-references` or `smoke.py --export-effects` writes81 original sources

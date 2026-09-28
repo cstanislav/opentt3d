@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Public industry-layer release `.25`
+
+The independently reconciled Linux Mesa/llvmpipe900-frame support/collector journey
+passes its functional checks at1.713fps with2,586,689,536 peak sampled bytes. This is
+software-renderer compatibility evidence; arbitrary-world smooth60fps remains unmet.
+Evidence:`build-macos/playable-release25-ci-reconciliation.json`.
+
 ## Read-only moving-aircraft diagnostics
 
 Two6,000-frame driver5 Cab traces average59.934…59.936fps, retain202/782 intervals above

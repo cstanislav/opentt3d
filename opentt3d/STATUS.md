@@ -4,18 +4,18 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.24`publishes the1,701-model airport increment at
-  commita43eae69e. All eight jobs pass first attempt; independent checks reconcile19
-  attachments,18 checksums,2,075 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.25`publishes the1,703-model industry-layer increment at
+  commitec3be7798. All eight jobs pass; independent checks reconcile19
+  attachments,18 checksums,2,076 source files and six identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.24`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.25`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,703-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and downloader/screenshot/memory harness12/12 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,703-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite142/142 and download/screenshot/memory/clearance harness16/16 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer

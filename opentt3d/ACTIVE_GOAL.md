@@ -1,5 +1,26 @@
 # Active extended development goal
 
+## Industry-layer packages independently verified — September28,01:44:11UTC
+
+Release`.25`at exact commitec3be77982a2dd7d63a1eab974e864861f738b25 passes all eight
+jobs in workflow36364111123. Independent public audits reconcile19 attachments,18
+checksums,2,076 source files and six identical1,703-model catalogues. Three downloaded
+Mac render/clipping/save controls pass with signatures, architectures, dependencies and
+minimum macOS15.0 checked. Seven hosted graphical controls each retain72 clipping views;
+Windows x64/x86 native load/save and Linux's900-frame support/collector journey pass.
+Reviewed ARM/Intel software-OpenGL worlds retain zero black pixels and nine differences
+from Vulkan. Recommended download links and published notes now point to verified`.25`.
+
+Main additionally contains the verified forest aliases, read-only moving-clearance audit
+and effect-source catalogue. Pier27's isolated support recess clears all27 intersections
+from both preceding traces without changing any other full-body intersection result;
+native gallery/live replays are underway. The initial support staging compared material
+indices rather than face tuples; the preserved failed assertion precedes the corrected
+semantic check. A mistyped nonexistent`--verify-airports`flag was rejected before launch;
+the corrected matrix retains mesh, picking, atlas and clipping checks. The first isolated
+bulldozer still needs its source cabin height/shape and palette corrected. Neither study
+is integrated; large-aircraft defects, breadth/fidelity and sustained60fps remain open.
+
 ## Original effect source catalogue — September28,01:36:34UTC
 
 A read-only effect exporter and fixed-anchor source sheets cover81 original sprites in
