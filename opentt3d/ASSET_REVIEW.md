@@ -4,6 +4,16 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## Original effect source/state inventory (September28)
+
+81 nonempty original images cover ten sprite families and twelve effect types.80 are
+presentable; bubble4754 is retained as an unpresented transition. Fixed-anchor sheets
+preserve original expansion/rise and generation/burst/absorption offsets. Four climates
+have identical source metadata/pixels, and324 climate/backend pairs agree exactly.
+Eight native export/clipping controls pass. Source-only evidence establishes no effect
+voxel coverage: all81 sources remain unbound and final visual approvals stay0. Evidence:
+`breadth-effects-source-reconciliation.json`; current catalogue:1,703 unchanged volumes.
+
 ## Toyland forest/cotton source identity (September28)
 
 All16 forest16/17 Toyland body/ground layers match cotton129/130 exactly in source

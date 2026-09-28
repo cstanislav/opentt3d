@@ -1,5 +1,24 @@
 # Active extended development goal
 
+## Original effect source catalogue — September28,01:36:34UTC
+
+A read-only effect exporter and fixed-anchor source sheets cover81 original sprites in
+ten families used by twelve effect types.80 sprites are presentable; bubble4754 is an
+unpresented transition replaced inside the original tick before viewport update. All
+81 sources are nonempty. Their pixels, dimensions, offsets and palette indices agree
+across all four climates; all324 climate/backend pairs agree exactly. Eight background
+export/clipping controls,206 native checks and16 harness tests pass. The inventory now
+records these sources separately: zero effect sprites have voxel bindings and the
+catalogue remains1,703. Original effect ticks, state and simulation RNG are untouched.
+Peak sampled memory is3,555,692,096bytes. Evidence:`breadth-effects-source-reconciliation.json`.
+
+The source review preserves expanding/perforating steam, separate spark poses, rising
+explosion rings, independent bubble generation/burst/absorption offsets and four actual
+bulldozer image directions. A manually authored bulldozer study is isolated and unbound.
+The pier27 support study finds a source-contained1.25-unit recess that clears2,483
+observed local poses across both earlier Cab traces; full-body and native review follow.
+Other airport clearance defects, effect authoring, source fidelity and smooth60fps remain.
+
 ## Actual moving-aircraft clearance evidence — September28,01:26:59UTC
 
 Read-only driver5 traces record the emitted aircraft origins/headings and simultaneous

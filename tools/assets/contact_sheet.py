@@ -56,6 +56,7 @@ def main():
     parser.add_argument("--house-comparison", type=int, choices=range(110), help="Compare four voxel house stages with their original ground/body layers")
     parser.add_argument("--industry-source", type=int, nargs="+", choices=range(175), help="Review all original construction states for selected industry tile definitions")
     parser.add_argument("--industry-effect-source", type=int, choices=(10,), help="Review original power-station sparks at their actual parent-relative positions")
+    parser.add_argument("--effect-source", choices=("chimney","steam","diesel","electric-spark","smoke","explosion-large","breakdown","explosion-small","bulldozer","bubble"), help="Review original effect frames at a fixed shared vehicle anchor, retaining unpresented transition sources")
     parser.add_argument("--industry-effect-comparison", type=int, choices=(10,), help="Compare six native voxel gantry/spark composites with their original registered layers")
     parser.add_argument("--industry-procedural-source", type=int, choices=(143,162,165,174), help="Review ordered original Toyland children and genuine absent intervals; --stage selects construction or completed animation")
     parser.add_argument("--industry-procedural-comparison", type=int, choices=(143,162,165,174), help="Compare every original child combination for the selected stage at its actual parent/tile origin")
@@ -751,6 +752,38 @@ def main():
         output = args.directory / f"industry-procedural-{args.industry_procedural_source}-stage-{args.stage}-source.png"
         sheet.save(output)
         output.with_suffix(".json").write_text(json.dumps({"parent_relative_bounds":[left,top,right,bottom],"scale":scale,"frames":entries},indent=2)+"\n")
+        print(output)
+        return
+    if args.effect_source is not None:
+        entries = sorted((entry for entry in json.loads((args.directory / "effects.json").read_text())
+                          if entry["family"] == args.effect_source), key=lambda entry: entry["frame"])
+        if not entries or [entry["frame"] for entry in entries] != list(range(len(entries))):
+            parser.error("Effect review needs every original family frame")
+        images = [read_pam(args.directory / entry["image"]) for entry in entries]
+        offsets = [(entry["offset"][0]//4,entry["offset"][1]//4) for entry in entries]
+        left,top = min(0,*(x for x,y in offsets)),min(0,*(y for x,y in offsets))
+        right = max(1,*(x+image.width for image,(x,y) in zip(images,offsets)))
+        bottom = max(1,*(y+image.height for image,(x,y) in zip(images,offsets)))
+        width,height = right-left,bottom-top
+        scale = max(1,min(5,248//width,196//height))
+        columns = min(4,len(entries))
+        sheet = Image.new("RGB",(columns*256,((len(entries)+columns-1)//columns)*256),(40,40,48))
+        draw = ImageDraw.Draw(sheet)
+        for slot,(entry,image,(dx,dy)) in enumerate(zip(entries,images,offsets)):
+            panel = Image.new("RGBA",(width,height))
+            panel.alpha_composite(image,(dx-left,dy-top))
+            x,y = slot%columns*256,slot//columns*256
+            status = "presentable" if entry["presentable"] else "unpresented transition"
+            draw.text((x+6,y+6),f"{entry['family']} frame {entry['frame']}, sprite {entry['sprite']}\n{status}; {scale}x fixed vehicle anchor\noffset {dx},{dy}",fill="white")
+            panel = panel.resize((width*scale,height*scale),Image.Resampling.NEAREST)
+            px,py = x+(256-panel.width)//2,y+252-panel.height
+            sheet.paste(panel,(px,py),panel)
+            ax,ay = px-left*scale,py-top*scale
+            draw.line((ax-2,ay,ax+2,ay),fill=(255,120,100))
+            draw.line((ax,ay-2,ax,ay+2),fill=(255,120,100))
+        output = args.directory / f"effects-{args.effect_source}-source.png"
+        sheet.save(output)
+        output.with_suffix(".json").write_text(json.dumps({"vehicle_relative_bounds":[left,top,right,bottom],"scale":scale,"source_only":True,"frames":entries},indent=2)+"\n")
         print(output)
         return
     if args.industry_effect_source is not None or args.industry_effect_comparison is not None:

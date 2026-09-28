@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Read-only original effect references
+
+`renderer3d effect-references` or `smoke.py --export-effects` writes81 original sources
+and their palette/dimension/offset metadata to`renderer3d-reference/effects.json`.
+`tools/assets/contact_sheet.py <directory> --effect-source <family>` retains a common
+vehicle anchor across a whole family. The original twelve effect types use ten sprite
+families;80 sprites are presentable and bubble4754 remains an explicitly unpresented
+transition source. The exporter does not create/tick vehicles or consume simulation RNG.
+
+Eight background native exports/clipping controls cover both backends and all climates.
+All324 climate/backend image pairs are exact; all climates also preserve identical source
+metadata/pixels. No source is empty.206 native checks and16 harness tests pass. Inventory
+records81 sources and zero voxel-bound effect sources; the1,703-model catalogue is
+unchanged. Source exports do not establish voxel artwork or live effect-state coverage.
+Evidence:`build-macos/breadth-effects-source-reconciliation.json`.
+
 ## Actual smoothed aircraft clearance traces
 
 `smoke.py --trace-aircraft-clearance` enables read-only driver5 aircraft/airport transform

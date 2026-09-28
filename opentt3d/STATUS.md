@@ -20,6 +20,10 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Renderer
 
+- [x] Read-only effect-source export/inventory records81 original sprites,80 presentable
+  and one unpresented bubble transition. Eight four-climate/backend controls reconcile
+  324 exact image pairs;206 native checks and16 harness tests pass. Effect voxel
+  authoring remains open, with zero effect-source bindings.
 - [x] Read-only emitted aircraft/airport traces and a fractional-heading voxel-intersection
   audit agree with42 independent static waypoint controls.206 native checks,16 harness
   tests and four exact trace-on/off paused controls pass. Two6,000-frame live replays

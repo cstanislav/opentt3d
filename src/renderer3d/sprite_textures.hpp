@@ -107,6 +107,7 @@ void ExportTerrainReferences();
 void ExportStationReferences();
 void ExportRailDetailReferences();
 void ExportInfrastructureReferences();
+void ExportEffectReferences();
 void ExportFenceGallery(unsigned style, unsigned slope, std::optional<unsigned> layout = {});
 void VerifyFenceModels();
 void ExportFoundationGallery(unsigned slope, unsigned foundation);

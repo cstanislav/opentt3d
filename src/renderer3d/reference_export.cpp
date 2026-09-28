@@ -247,6 +247,42 @@ static void ExportIndustryProceduralReferences(const std::filesystem::path &dire
 	Debug(driver,1,"OpenTT3D: exported {} original industry procedural states and {} resolved child images",frames.size(),parts.size());
 }
 
+/** Export resolved source artwork only: constructing/ticking an effect would
+ * consume simulation RNG and can create/delete entities or animate industries. */
+void ExportEffectReferences()
+{
+	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR)) / "renderer3d-reference";
+	std::filesystem::create_directories(directory);
+	struct Family { const char *name; SpriteID first, last; };
+	static constexpr Family families[] = {
+		{"chimney",SPR_CHIMNEY_SMOKE_0,SPR_CHIMNEY_SMOKE_7},
+		{"steam",SPR_STEAM_SMOKE_0,SPR_STEAM_SMOKE_4},
+		{"diesel",SPR_DIESEL_SMOKE_0,SPR_DIESEL_SMOKE_5},
+		{"electric-spark",SPR_ELECTRIC_SPARK_0,SPR_ELECTRIC_SPARK_5},
+		{"smoke",SPR_SMOKE_0,SPR_SMOKE_4},
+		{"explosion-large",SPR_EXPLOSION_LARGE_0,SPR_EXPLOSION_LARGE_F},
+		{"breakdown",SPR_BREAKDOWN_SMOKE_0,SPR_BREAKDOWN_SMOKE_3},
+		{"explosion-small",SPR_EXPLOSION_SMALL_0,SPR_EXPLOSION_SMALL_B},
+		{"bulldozer",SPR_BULLDOZER_NE,SPR_BULLDOZER_NW},
+		{"bubble",SPR_BUBBLE_0,SPR_BUBBLE_ABSORB_4},
+	};
+	nlohmann::json manifest = nlohmann::json::array();
+	for (const auto &family : families) for (SpriteID sprite = family.first; sprite <= family.last; ++sprite) {
+		auto filename = fmt::format("effect-{}-{}.pam",family.name,sprite-family.first);
+		std::vector<uint8_t> palette_indices;
+		ExportSpriteReference(sprite,PAL_NONE,(directory/filename).string(),&palette_indices);
+		const Sprite *source = GetSprite(sprite,SpriteType::Normal);
+		/* BubbleTick advances through GENERATE_3 directly into its movement
+		 * table before UpdatePositionAndViewport; retain that unpresented source. */
+		manifest.push_back({{"family",family.name},{"frame",sprite-family.first},{"sprite",sprite},{"palette",PAL_NONE},
+			{"image",filename},{"size",{source->width,source->height}},{"offset",{source->x_offs,source->y_offs}},
+			{"palette_indices",palette_indices},{"climate",to_underlying(_settings_game.game_creation.landscape)},
+			{"presentable",sprite != SPR_BUBBLE_GENERATE_3},{"source_only",true}});
+	}
+	std::ofstream(directory/"effects.json") << manifest.dump(2) << '\n';
+	Debug(driver,1,"OpenTT3D: exported {} original effect source sprites in {} families (80 presentable, 1 unpresented bubble threshold)",manifest.size(),std::size(families));
+}
+
 void ExportIndustryReferences()
 {
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR, BASE_DIR)) / "renderer3d-reference";

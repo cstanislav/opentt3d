@@ -83,6 +83,7 @@ def main():
     parser.add_argument("--reference-road-stop", action="store_true")
     parser.add_argument("--reference-ground-detail", nargs=2, type=int, metavar=("KIND", "VARIANT"))
     parser.add_argument("--export-references", action="store_true")
+    parser.add_argument("--export-effects", action="store_true", help="Export original effect sprites and their source offsets, including the unpresented bubble threshold")
     parser.add_argument("--gallery-house", type=int, nargs="+", help="Export one or more house/tree model turntables")
     parser.add_argument("--gallery-voxels", action="store_true", help="Export all authored voxel turntables, street and neighbour-context views")
     parser.add_argument("--gallery-voxel-prefix", help="Export only voxel models with this name prefix")
@@ -437,6 +438,8 @@ server_advertise = false
         commands.append("renderer3d rail-detail-references")
     if args.export_infrastructure:
         commands.append("renderer3d infrastructure-references")
+    if args.export_effects:
+        commands.append("renderer3d effect-references")
     if args.verify_vehicles:
         commands.append("renderer3d verify-vehicles")
     if args.verify_industries:
@@ -931,6 +934,8 @@ server_advertise = false
                 raise RuntimeError(f"Screenshot dimensions differ: requested {args.screenshot_size}, got {image_size}")
             if args.trace_aircraft_clearance and not all(marker in text for marker in ("clearance aircraft frame ","clearance airport frame ")):
                 raise RuntimeError("The clearance trace needs both emitted aircraft and airport bodies; inspect run.log")
+            if args.export_effects and "exported 81 original effect source sprites in 10 families (80 presentable, 1 unpresented bubble threshold)" not in text:
+                raise RuntimeError("The complete original effect source catalogue was not exported; inspect run.log")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
                       "screenshot": str(screenshot), "image_size": image_size, "command": command, "pid": native_pid or process.pid,
                       "background": args.background}

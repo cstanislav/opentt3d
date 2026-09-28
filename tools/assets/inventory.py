@@ -215,6 +215,26 @@ def inventory():
     docks = [{"graphics":graphics,"voxel_states":voxel_states("docks",graphics),"reviewed":False,
               "climate_states":{"0":"temperate_arctic_tropic","1":"toyland"},
               "ground":"Independent original sloped shore or water-class surface"} for graphics in range(6)]
+    sprite_ids = {name:int(value) for name,value in re.findall(r"static const SpriteID (SPR_\w+) = (\d+);",(ROOT / "src/table/sprites.h").read_text())}
+    effect_families = (
+        ("chimney","SPR_CHIMNEY_SMOKE_0","SPR_CHIMNEY_SMOKE_7","ChimneySmokeInit"),
+        ("steam","SPR_STEAM_SMOKE_0","SPR_STEAM_SMOKE_4","SteamSmokeInit"),
+        ("diesel","SPR_DIESEL_SMOKE_0","SPR_DIESEL_SMOKE_5","DieselSmokeInit"),
+        ("electric-spark","SPR_ELECTRIC_SPARK_0","SPR_ELECTRIC_SPARK_5","ElectricSparkInit"),
+        ("smoke","SPR_SMOKE_0","SPR_SMOKE_4","SmokeInit"),
+        ("explosion-large","SPR_EXPLOSION_LARGE_0","SPR_EXPLOSION_LARGE_F","ExplosionLargeInit"),
+        ("breakdown","SPR_BREAKDOWN_SMOKE_0","SPR_BREAKDOWN_SMOKE_3","BreakdownSmokeInit"),
+        ("explosion-small","SPR_EXPLOSION_SMALL_0","SPR_EXPLOSION_SMALL_B","ExplosionSmallInit"),
+        ("bulldozer","SPR_BULLDOZER_NE","SPR_BULLDOZER_NW","BulldozerInit"),
+        ("bubble","SPR_BUBBLE_0","SPR_BUBBLE_ABSORB_4","BubbleInit"),
+    )
+    effect_frames = [{"family":family,"frame":sprite-sprite_ids[first],"sprite":sprite,
+                      "presentable":sprite != sprite_ids["SPR_BUBBLE_GENERATE_3"],
+                      "voxel_states":voxel_states("effects",sprite),"reviewed":False}
+                     for family,first,last,init in effect_families for sprite in range(sprite_ids[first],sprite_ids[last]+1)]
+    effect_init_families = {init:family for family,first,last,init in effect_families}
+    effect_types = [{"type":name,"init":init,"tick":tick,"transparency":transparency,"source_family":effect_init_families[init]}
+                    for init,tick,transparency,name in re.findall(r"\{\s*(\w+Init),\s*(\w+Tick),\s*(TO_\w+)\s*\},\s*//\s*(EV_\w+)",(ROOT / "src/effectvehicle.cpp").read_text())]
     # Procedural C++ volumes are tracked separately from the JSON model count.
     # This is an implementation catalogue, not automatic source/fidelity approval.
     fences = [{"id": identifier, "name": name, "runtime_layouts": 16 if identifier == 6 else 4,
@@ -238,6 +258,8 @@ def inventory():
               "vehicles":vehicles,"vehicle_source_families":list(vehicle_families.values()),
               "houses":houses,"trees":trees,"industry_tiles":industries,
                "airport_tiles": airports, "depots": depots, "ship_depots": ship_depots, "docks": docks,
+               "effect_types":effect_types,"effect_source_frames":effect_frames,
+               "effect_source_note":"Source export alone is not voxel coverage. Bubble generation threshold4754 is immediately replaced before viewport presentation; retain its original source without inventing a runtime frame. Movement, lifetimes, transparency and unclickable ownership remain original.",
               "voxel_models": {name: {"occupied_cells": model["occupied"], "cell_size": model["cell_size"], "review_status": model["review_status"], **placement(model)}
                               for name, model in voxels["models"].items()},
              "voxel_bindings": voxels["bindings"],
@@ -274,6 +296,8 @@ def main():
     print(f"Independently bound voxel house bodies: {sum(bool(h['voxel_states']) for h in data['houses'])}; ground-only source definitions remain separate")
     print(f"Independently bound voxel house grounds: {sum(bool(h['voxel_ground_states']) for h in data['houses'])}")
     print(f"Voxel-bound vehicles: {sum(bool(v['voxel_states']) for v in data['vehicles'])} / {len(data['vehicles'])}; tree families: {sum(bool(t['voxel_states']) for t in data['trees'])} / {len(data['trees'])}")
+    effects = data["effect_source_frames"]
+    print(f"Original effect types: {len(data['effect_types'])}; source sprites: {len(effects)}; presentable: {sum(e['presentable'] for e in effects)}; voxel-bound presentable sprites: {sum(e['presentable'] and bool(e['voxel_states']) for e in effects)}; source export is not artwork approval")
     if args.vehicle_families:
         for family in data["vehicle_source_families"]:
             if family["kind"] == args.vehicle_families:

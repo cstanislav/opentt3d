@@ -3417,6 +3417,8 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		Renderer3D::ExportRailDetailReferences();
 	} else if (argv[1] == "infrastructure-references") {
 		Renderer3D::ExportInfrastructureReferences();
+	} else if (argv[1] == "effect-references") {
+		Renderer3D::ExportEffectReferences();
 	} else if (argv[1] == "verify-fences") {
 		VideoDriver::GetInstance()->QueueOnMainThread([] {
 			try { Renderer3D::VerifyFenceModels(); }
