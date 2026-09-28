@@ -3,6 +3,13 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Toyland airport public-package follow-up
+
+Release`.24`Linux llvmpipe completes900 support/collector frames at1.704fps with
+2,449,625,088 peak sampled bytes. These functional packaged-software controls leave
+the arbitrary-world smooth60fps and long-duration memory objectives open. Source:
+`build-macos/playable-release24-ci-reconciliation.json`.
+
 ## Gold Toyland layer controls
 
 The16 prototype and six integrated controls peak at3,549,204,536 sampled bytes without

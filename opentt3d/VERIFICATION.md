@@ -1,5 +1,19 @@
 # Implementation verification
 
+## Public Toyland airport release `.24`
+
+Workflow36360500122 passes all eight jobs on its first attempt at
+`a43eae69ea3260e95baebbd38cb7b38acff3e1e1`. The independent00:39:21UTC audit verifies
+19 attachments,18 checksum entries,2,075 exact source files and six identical1,701-model
+catalogues. Downloaded Mac default Vulkan/explicit OpenGL/Intel controls render, save
+and pass72 clipping views each; ad-hoc signatures, dependency closure, architectures
+and minimum macOS15.0 agree. Hosted evidence verifies seven graphical controls, Windows
+x64/x86 native load/save and900 Linux support/collector frames. Reviewed ARM/Intel
+software-OpenGL worlds have zero black pixels and nine differences from Vulkan.
+Linux llvmpipe averages1.704fps with2,449,625,088 peak sampled bytes. Public links use`.24`.
+Evidence:`build-macos/playable-release24-{download-audit,ci-reconciliation,
+hosted-visual-comparison}.json`.
+
 ## Gold Toyland independent layers
 
 The1,702-model increment preserves all1,701 prior source/compiled model entries and all

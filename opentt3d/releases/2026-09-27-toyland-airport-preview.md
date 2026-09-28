@@ -6,9 +6,9 @@ paint while aprons retain independent ownership.
 
 ## Play
 
-The **[verified `.23` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.23)**
-is available for Windows, macOS and Linux. This airport preview's packages appear
-after its exact-commit workflow passes. Required graphics are bundled; see the
+The **[verified `.24` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.24)**
+is available for Windows x64/x86/ARM64, macOS Apple silicon/Intel and Linux x86-64.
+Required graphics are bundled; see the
 [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
 
 ## Artwork and behavior
@@ -23,6 +23,13 @@ after its exact-commit workflow passes. Required graphics are bundled; see the
   simulation remain authoritative. Historical small-airport service uses 1958.
 
 ## Verification
+
+All eight release jobs pass on their first attempt at exact commit
+`a43eae69ea3260e95baebbd38cb7b38acff3e1e1`. Independent downloaded-package checks
+verify 19 attachments, 18 checksums, 2,075 matching source files and six identical
+1,701-model catalogues. Three downloaded Mac render/save controls and seven hosted
+graphical controls each pass 72 perspective-clipping views. Windows x64/x86 native
+load/save and the 900-frame Linux train-support/collector journey also pass.
 
 The initial integration passes 60 background controls and seven missing/invalid-state
 checks across OpenGL and Vulkan. It exercises all twelve live Toyland body selections,

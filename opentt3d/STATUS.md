@@ -4,11 +4,11 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.23`publishes the1,689-model ground increment at
-  commit3ecdb3ea8. All eight jobs pass first attempt; independent checks reconcile19
-  attachments,18 checksums,2,074 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.24`publishes the1,701-model airport increment at
+  commita43eae69e. All eight jobs pass first attempt; independent checks reconcile19
+  attachments,18 checksums,2,075 source files and six identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.23`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.24`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).

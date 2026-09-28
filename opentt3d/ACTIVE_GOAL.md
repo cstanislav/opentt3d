@@ -1,5 +1,22 @@
 # Active extended development goal
 
+## Toyland airport packages independently verified — September28,00:39:21UTC
+
+Release`.24`at exact commita43eae69ea3260e95baebbd38cb7b38acff3e1e1 passes all eight
+jobs on the first attempt in workflow36360500122. Independent audits reconcile19
+public attachments,18 checksums,2,075 source files and six identical1,701-model
+catalogues. Three downloaded Mac render/clipping/save controls pass with signatures,
+architectures, dependencies and minimum macOS15.0 verified. Seven hosted graphical
+controls each pass72 clipping views; Windows x64/x86 native load/save and Linux's
+900-frame support/collector journey pass. Reviewed ARM/Intel software-OpenGL worlds
+retain zero black pixels and nine differences from Vulkan. Verified links now use`.24`.
+
+Gold commit3f6b90e53 is pushed. The rig/paper study passes18 prototype controls plus
+two baseline controls and three missing/wrong-climate negatives. Its initial paper
+focus omitted the stage argument; the preserved failure is followed by a corrected
+stage3 control. A one-pixel joined initial-paper backend difference is independently
+reproduced before this increment. Source-alias integration/build checks are underway.
+
 ## Gold climate layers verified — September28,00:29:19UTC
 
 The catalogue reaches1,702 with a separately registered Toyland2022 underlay and twelve
