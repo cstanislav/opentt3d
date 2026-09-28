@@ -126,7 +126,7 @@ const Catalogue &Models()
 		}
 		Debug(driver,1,"OpenTT3D: loaded {} authored voxel models, {} occupied cells, {} exposed cell faces merged to {} conforming rectangles / {} triangles",result.models.size(),occupied,faces,quads,triangles);
 		Debug(driver,1,"OpenTT3D: retained lossless voxel sources use {} bytes instead of {} dense cell bytes, with one shared palette",source_bytes,dense_bytes);
-		Debug(driver,1,"OpenTT3D: CPU voxel surfaces retain {} bytes under a scene-pinned soft budget",result.surfaces.ResidentBytes());
+		Debug(driver,1,"OpenTT3D: CPU voxel surfaces retain {} bytes under a scene-pinned soft budget, including {} exact restoration bytes",result.surfaces.ResidentBytes(),result.surfaces.RestorationBytes());
 		if (PackedVoxelMeshesEnabled()) Debug(driver,1,"OpenTT3D: {} voxel meshes support lossless packed vertex streams",PackedVoxelMeshRegistry().size());
 		return result;
 	}();

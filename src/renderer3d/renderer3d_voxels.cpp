@@ -49,6 +49,49 @@ TEST_CASE("Automatic voxel LODs retain bounds thin parts palette and determinist
 	CHECK_THROWS_AS(grid.ReducedMesh(3),std::invalid_argument);
 }
 
+TEST_CASE("Bounded compressed restoration keeps exact vertex words and source fallback", "[renderer3d][voxel]")
+{
+	const std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{3,4,5,6,7,8}}};
+	VoxelGrid grid({80,72,88},materials,{-9,17,0.5f},{0.25f,0.5f,1});
+	grid.Fill({2,3,1},{78,69,5},1);
+	for (int x = 3; x < 77; x += 3) grid.Fill({x,6,4},{x+1,66,85},2);
+	auto original = grid.Mesh();
+	const auto expected = original.vertices;
+	CHECK(AutoPackVoxelMesh(expected) == nullptr); // Whole-surface coordinate bits do not fit.
+	const uint64_t budget = expected.capacity()*sizeof(Vertex)/2;
+	std::array<VoxelCachedSurface,3> models;
+	VoxelMeshCache cache(budget);
+	for (auto &model : models) {
+		model.source = std::make_unique<VoxelSource>(grid);
+		model.surface = original;
+		cache.Register(model);
+		CHECK(model.surface.vertices.empty());
+		CHECK(cache.ResidentBytes() <= budget);
+		CHECK(cache.RestorationBytes() <= budget/4);
+	}
+	REQUIRE(cache.RestorationBytes() > 0);
+	const auto *stable = &models.back().surface.vertices;
+	{
+		auto lease = cache.Pin(models.back(),materials);
+		CHECK(cache.PackedRebuilds() == 1);
+		CHECK(&models.back().surface.vertices == stable);
+		REQUIRE(stable->size() == expected.size());
+		CHECK(std::memcmp(stable->data(),expected.data(),expected.size()*sizeof(Vertex)) == 0);
+		cache.Trim(0);
+		CHECK(cache.RestorationBytes() == 0);
+		CHECK(cache.ResidentBytes() == stable->capacity()*sizeof(Vertex));
+	}
+	cache.Trim(0);
+	CHECK(cache.ResidentBytes() == 0);
+	/* Forced eviction removes both encodings; the unchanged authoring source
+	 * remains a valid fallback, including directional materials and holes. */
+	auto lease = cache.Pin(models.back(),materials);
+	CHECK(cache.PackedRebuilds() == 1);
+	CHECK(cache.Rebuilds() == 2);
+	REQUIRE(stable->size() == expected.size());
+	CHECK(std::memcmp(stable->data(),expected.data(),expected.size()*sizeof(Vertex)) == 0);
+}
+
 TEST_CASE("CPU voxel retirement pins scene copies and restores exact meshes at stable addresses", "[renderer3d][voxel]")
 {
 	std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{3,4,5,6,7,8}}};

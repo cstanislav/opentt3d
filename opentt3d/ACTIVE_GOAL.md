@@ -1,5 +1,28 @@
 # Active extended development goal
 
+## Bounded exact CPU restoration verified — September28,07:44:24UTC
+
+Eight sequential background controls and207 native checks pass. Exact independently
+packed triangle spans fit tall/disconnected voxel surfaces that exceed a single packed
+coordinate word. Compressed storage is capped at one quarter/256MiB inside the existing
+1GiB CPU budget. Stable identities, leases, automatic LODs and retained-source fallback
+remain active; forced eviction releases compressed copies as well as eligible expanded
+buffers. Earlier whole-stream and64MiB-cache failures remain preserved.
+
+Both cold900-frame crash controls preserve two complete63-phase lifetimes with zero gaps,
+13.702/14.239ms maximum capture and3.224/3.262GB peak sampled memory.378 model captures
+and162 original exports match controls. Two installed mine replays retain26 complete
+lifetimes each. Uneven pacing persists, including a53.373ms interval in the Vulkan mine
+run; sustained60fps and long-duration/reload/multiple-viewport memory remain open.
+Evidence:`bounded-mesh-restoration-reconciliation.json`. Recommended release`.32`is
+independently verified; main release work should now package this renderer milestone.
+
+The separate large-explosion basic study now matches16/16 source bounds, including
+source-sized detached late fragments. All-angle review and state integration are next.
+The small-explosion correction and its separate original-offset/lifetime oracle are
+under review. Production remains1,736 models; the complete catalogue/fidelity/clearance
+objective and zero final visual approvals persist.
+
 ## Shared-smoke packages independently verified — September28,07:16:41UTC
 
 Release`.32`at`ff290d0e9a77caa2179b03379e31b0b279449b6e`passes all eight jobs in

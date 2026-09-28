@@ -5,6 +5,31 @@ zoom level. This target is **not yet met**.
 
 ## Cold explosion-surface restoration study
 
+Exact chunked restoration now retains a compact CPU triangle stream before eligible
+surfaces retire. It uses at most one quarter of the current CPU target, capped at256MiB,
+**inside the existing1GiB soft budget**. Stable surface identities, copied-scene leases,
+forced retirement and retained authoring-source reconstruction remain covered by native
+checks. Automatic LOD selection and production GPU residency remain enabled.
+
+All eight sequential background controls pass. Both cold900-frame crash controls now
+preserve two complete63-phase lifetimes with zero gaps: Vulkan/OpenGL scene capture peaks
+at13.702/14.239ms, sampled memory at3,224,014,280/3,262,041,592bytes, and frame intervals at
+23.138/23.406ms. These retain90/83 intervals above20ms. Two3,600-frame installed mine
+controls each preserve26 complete smoke lifetimes, with one phase gap elsewhere; the
+Vulkan mine run retains a53.373ms maximum interval. Smooth60fps is still unmet.
+
+The full1,752-model diagnostic-catalogue probe restores all16 explosion states from
+compact streams in0.016…4.048ms, against1.944…30.839ms meshing. It retains177,217,320
+compressed bytes within1,070,922,600 total resident buffer bytes.378 model captures and
+162 original exports match their controls. Peak sampled memory across all eight runs
+is3,510,652,480bytes. Native207 and the138-file presentation boundary pass. Earlier
+whole-stream and64MiB compressed-cache candidates retain missed phases; their failures
+and binaries remain preserved. Long-duration/reload/multiple-viewport and arbitrary-world
+performance/memory acceptance remain open. Evidence:
+`build-macos/bounded-mesh-restoration-reconciliation.json`.
+
+### Original cold-cache controls
+
 The staged, unshipped sixteen-frame explosion family exposes another presentation stall.
 In a cold900-frame Vulkan replay, default CPU retirement records four missed lifetime
 phases,38.147ms maximum scene capture and46.911ms maximum frame interval. Disabling
@@ -13,10 +38,9 @@ Disabling CPU retirement instead preserves both complete lifetimes and lowers ma
 capture to12.558ms, but peak sampled memory rises from3,350,072,872 to6,004,856,832bytes.
 The latter still retains73 frame intervals above20ms and29.310ms maximum.
 
-These three single-run controls implicate cold CPU surface restoration in this fixture;
-they do not establish a solution for every stall. Production automatic LODs and1GiB CPU
-retirement remain enabled. A bounded restoration/prefetch or meshing improvement needs
-its own geometry, cache-ownership, memory and sustained-performance evidence. Evidence:
+These three single-run controls implicated cold CPU surface restoration in this fixture;
+they did not establish a solution for every stall. The bounded replacement above addresses
+this observed gap without establishing sustained-performance acceptance. Evidence:
 `build-macos/breadth-effect-explosion-cold-cache-reconciliation.json`.
 
 ## Shared charcoal-smoke controls

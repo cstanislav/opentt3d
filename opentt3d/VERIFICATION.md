@@ -1,5 +1,21 @@
 # Implementation verification
 
+## Bounded exact CPU mesh restoration
+
+Retired small/medium surfaces can retain independently encoded triangle spans, with a
+full vertex-word roundtrip required before acceptance. Compact buffers count toward the
+same1GiB CPU soft budget and consume at most its quarter/256MiB sub-budget. Unsupported
+coordinates or oversized streams retain source reconstruction. Active scenes pin expanded
+buffers;`Trim(0)`also removes compressed copies while preserving active scene ownership.
+
+The native directional-material/holed-volume control deliberately exceeds whole-surface
+packing bits, then verifies exact chunked restoration, stable addresses, pressure-driven
+retirement, active pinning, forced compressed eviction and source fallback.207 native
+checks pass. Eight sequential background Vulkan/OpenGL controls include cold crash
+lifetimes, mesh/clipping galleries and ordinary mine smoke.378 model captures and162
+original exports match their controls. Performance and remaining acceptance limits are
+recorded in`PERFORMANCE.md`and`build-macos/bounded-mesh-restoration-reconciliation.json`.
+
 ## Ordinary opposing-train collision fixture
 
 `fixture_crash.py` uses public NoAI construction/orders/departure commands and removes
