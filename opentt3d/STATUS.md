@@ -15,11 +15,17 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite206/206, including original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,736-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness34/34 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,736-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness37/37 pass. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Ordinary opposing-train crash fixtures and a read-only large-explosion oracle
+  capture1,633 observations and16 complete63-phase presented lifetimes across four
+  climates and both backends.128 native source bindings equal their staged model owners.
+  The first cold capture fails the complete-phase gate; gallery-preloaded controls pass.
+  Three sixteen-model large-explosion studies and a twelve-model small-explosion study
+  remain outside the production catalogue pending source dimensions/colour/shape review.
 - [x] Five shared charcoal-smoke volumes bind original crash, aircraft-breakdown and
   copper-mine sprites2040…2044 through20 climate states. All1,731 earlier models and
   owners remain.10 prototype/20 integrated and two fallback controls pass, with592

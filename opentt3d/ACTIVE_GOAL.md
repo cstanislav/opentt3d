@@ -1,5 +1,38 @@
 # Active extended development goal
 
+## Original collision lifecycle controls and further breadth studies — September28
+
+The shared-smoke increment is committed/pushed to main at
+`ff290d0e9a77caa2179b03379e31b0b279449b6e`. Preview`.32`targets that exact1,736-model
+commit in workflow36387269223; independent package verification is pending. Recommended
+downloads remain verified`.31`. Its audited extracted copies retire891,630,701 duplicate
+bytes while retaining every original public archive and all review evidence.
+
+An ordinary opposing-train fixture builds two original locomotives, lets both depart
+under block signals, then removes the signals through public commands before saving.
+The resulting collision follows upstream simulation. Four-climate/backend staged controls
+observe1,633 samples, all16 large-explosion sprites and16 complete63-phase presented
+lifetimes.128 native binding/model equalities pass;37 harness tests and the138-file
+presentation-boundary check pass. The first cold replay has missing progress phases and
+remains a failed complete-lifetime control; gallery-preloaded controls pass. An initially
+hidden/depot fixture and a genuinely already-flat plateau failure also remain preserved.
+Source effects, crash state and RNG are never assigned by the fixture or oracle. Evidence:
+`breadth-effect-explosion-crash-reconciliation.json`.
+
+Three independent sixteen-model large-explosion studies preserve the current catalogue.
+The latest corrects the early ignition/radiant registration and hot crown colours but
+retains several one/two-pixel bound errors, sparse late fragments and provisional billow
+contours. A separate twelve-model small-explosion study follows its own source structures;
+it is not a scaled large explosion. Both families remain unbound in production and count
+among the46 unfinished presentable effect sources. No final visual approvals are granted.
+
+Three cold-cache controls retain phase gaps with default settings and automatic LOD off.
+CPU retirement off preserves both complete lifetimes but raises sampled memory to
+6,004,856,832bytes and still misses smooth frame pacing. These diagnostic choices are not
+integrated. Bounded restoration/meshing and sustained arbitrary-world60fps remain active
+work, alongside full source fidelity, catalogue breadth and essential larger-aircraft
+clearances. See`breadth-effect-explosion-cold-cache-reconciliation.json`.
+
 ## Shared smoke integrated and electric packages verified — September28
 
 Five charcoal-smoke frames and20 climate bindings reach1,736 models, preserving all

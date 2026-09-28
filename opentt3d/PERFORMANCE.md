@@ -3,6 +3,22 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Cold explosion-surface restoration study
+
+The staged, unshipped sixteen-frame explosion family exposes another presentation stall.
+In a cold900-frame Vulkan replay, default CPU retirement records four missed lifetime
+phases,38.147ms maximum scene capture and46.911ms maximum frame interval. Disabling
+automatic LOD retains six phase gaps,35.012ms maximum capture and44.274ms maximum interval.
+Disabling CPU retirement instead preserves both complete lifetimes and lowers maximum
+capture to12.558ms, but peak sampled memory rises from3,350,072,872 to6,004,856,832bytes.
+The latter still retains73 frame intervals above20ms and29.310ms maximum.
+
+These three single-run controls implicate cold CPU surface restoration in this fixture;
+they do not establish a solution for every stall. Production automatic LODs and1GiB CPU
+retirement remain enabled. A bounded restoration/prefetch or meshing improvement needs
+its own geometry, cache-ownership, memory and sustained-performance evidence. Evidence:
+`build-macos/breadth-effect-explosion-cold-cache-reconciliation.json`.
+
 ## Shared charcoal-smoke controls
 
 The10 prototype/20 integrated controls peak at3,545,255,464 sampled bytes. Four3,600-frame

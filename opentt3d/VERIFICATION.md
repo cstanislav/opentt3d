@@ -1,5 +1,36 @@
 # Implementation verification
 
+## Ordinary opposing-train collision fixture
+
+`fixture_crash.py` uses public NoAI construction/orders/departure commands and removes
+two ordinary block signals after both locomotives are moving. The saved opposing trains
+then collide through the original simulation. An already-flat plateau is a valid no-op;
+every route tile is checked against the same original flat terrain datum. No effect or
+crash state is assigned by the fixture or lifecycle oracle.
+
+```sh
+python3 tools/opentt3d/fixture_crash.py --build-dir build-macos \
+  --output build-macos/new-crash-fixture --climate temperate
+```
+
+Read the original locomotive IDs, plateau coordinates and departure speeds from
+`fixture.json`. The route lies at`y+4`, and its middle is near`x+21`. Use the saved
+`save/opposing-trains.sav` and matching`ai/`directory in a background smoke replay.
+The current production catalogue keeps the original explosion fallback; the following
+read-only audit applies when a diagnostic catalogue supplies all16 large-explosion states:
+
+```sh
+python3 tools/opentt3d/explosion_cycle.py path/to/native-trace/run.log \
+  --emitters 0 1 --output build-macos/new-explosion-lifetime.json --require-complete
+```
+
+The gate requires all63 ordered presented phases1…63 within one continuously observed
+effect, at the original stationary XYZ/eight-unit local altitude. All16 sprites together
+are insufficient if progress phases were missed. Reused IDs, uncaptured frame gaps and
+conflicting observations cannot splice a passing lifetime. This fixture requires effect
+pool IDs after both locomotives; lower-ID effects and other explosion emitters remain
+outside its oracle. Successful staged controls do not establish artwork acceptance.
+
 ## Shared charcoal smoke and original copper-mine lifetimes
 
 Five original source sprites2040…2044 serve crash, aircraft-breakdown and copper-mine
