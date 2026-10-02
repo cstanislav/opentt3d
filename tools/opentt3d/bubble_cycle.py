@@ -54,11 +54,13 @@ def source_tables(effect, industry, game, vehicle):
     spawn = industry.split("static void TileLoopIndustry_BubbleGenerator(",1)[1].split("static void TileLoop_Industry(",1)[0]
     spawn_table = [[int(n) for n in re.findall(r"-?\d+",row)] for row in re.findall(r"\{([^{}]+)\}",spawn.split("_bubble_spawn_location[3][4] = {",1)[1].split("};",1)[0])]
     above = effect.split("EffectVehicle *CreateEffectVehicleAbove(",1)[1].split("EffectVehicle *CreateEffectVehicleRel(",1)[0]
+    normal_loop = game.split("AnimateAnimatedTiles();",1)[1].split("CallLandscapeTick();",1)[0]
+    vehicle_loop = vehicle.split("void CallVehicleTicks()",1)[1].split("Backup<CompanyID> cur_company",1)[0]
     if (not all(part in init for part in ("Set(SPR_BUBBLE_GENERATE_0)", "v->spritenum = 0;", "v->progress = 0;")) or
             not all(part in tick for part in needed) or spawn_table != [[11,0,-4,-14],[-4,-10,-4,1],[49,59,60,65]] or
             "int dir = Random() & 3;" not in spawn or "EV_BUBBLE" not in spawn or "v->animation_substate = dir;" not in spawn or
-            "GetSlopePixelZ(safe_x, safe_y) + z" not in above or "RunTileLoop();\n\t\tCallVehicleTicks();" not in game or
-            "for (Vehicle *v : Vehicle::Iterate())" not in vehicle or "if (!v->Tick())" not in vehicle):
+            "GetSlopePixelZ(safe_x, safe_y) + z" not in above or "RunTileLoop();\n\t\tCallVehicleTicks();" not in normal_loop or
+            "for (Vehicle *v : Vehicle::Iterate())" not in vehicle_loop or "if (!v->Tick())" not in vehicle_loop):
         raise ValueError("Original bubble timing, spawn, random branch or first-tick ordering changed; review the oracle")
     return tables, spawn_table
 

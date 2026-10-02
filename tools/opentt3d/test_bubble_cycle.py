@@ -115,6 +115,14 @@ class BubbleCycleTests(unittest.TestCase):
         edges = successors((2,3,4750,800,540,181),28,1,self.tables)
         self.assertEqual(edges,{(5,0,4750,800,540,182)})
 
+    def test_editor_tick_order_cannot_mask_changed_normal_game_first_tick(self):
+        changed = self.sources.copy()
+        before, normal = changed[2].split("AnimateAnimatedTiles();",1)
+        normal = normal.replace("RunTileLoop();\n\t\tCallVehicleTicks();","CallVehicleTicks();\n\t\tRunTileLoop();",1)
+        changed[2] = before+"AnimateAnimatedTiles();"+normal
+        with self.assertRaisesRegex(ValueError,"first-tick ordering"):
+            audit("".join(self.path()),*changed)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -30,6 +30,15 @@ full terrain/source-raster fidelity and final approval remain separate.
   or final approval is integrated. Evidence:
   `build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
 
+  A later rounded, denser-depth candidate matches14/14 native source bounds, corrects
+  burst XY/frame13 registration and removes the earlier visible cell discontinuities.
+  Its independently authored annular rims have real empty bores and its eight rupture
+  knots have actual XYZ depth/gaps. This supports registration, not faithful bubble-wall,
+  fragment silhouette or wider-view paint approval. All1,768 preceding models/owners
+  remain exact;27 climate/backend/state/regression/fallback controls are underway.
+  It remains outside production. Source/native evidence:
+  `build-macos/breadth-effect-bubble-registered-probe-vulkan/renderer3d-reference/effect-bubble-source-registration.json`.
+
 - **Four integrated breakdown-smoke states:**16 explicit climate bindings
   reach a1,768-volume catalogue, preserving all1,764 preceding models/components/material
   faces/bindings. Native source bounds match4/4. Independently authored charcoal/grey

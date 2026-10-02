@@ -34,7 +34,7 @@ support-observation failures. This successor retains every support/collector gat
 extends the bounded software-renderer journey to1,800 frames. It does not change
 simulation cadence, vehicle behavior or contact tolerances, and is not a60fps repair.
 Both local backend controls pass with the unchanged original Linux fixture; hosted
-package acceptance and independent public audits remain pending.
+package acceptance and independent public audits now pass as recorded below.
 
 Source contours, painted breakup, nonflat terrain and road/ship/aircraft contexts remain
 provisional. Sustained smooth60fps, long-duration memory, larger-aircraft airport
@@ -42,5 +42,21 @@ clearance and catalogue-wide fidelity remain open. **Final visual approvals:0.**
 
 The existing desktop-release pipeline packages the exact tagged commit with bundled
 OpenGFX2 Classic. Windows/macOS/Linux downloads and matching source/checksums are
-attached only after all eight jobs pass. Keep the independently audited `.34` download
-recommendation until a successor's public packages are separately verified.
+attached only after all eight jobs pass.
+
+## Independently verified desktop downloads
+
+**[Download the verified `.36` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.36)**;
+see [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+All eight jobs in [workflow36960610102](https://github.com/cstanislav/opentt3d/actions/runs/36960610102)
+pass at exact commit`bb4639f2b73677838e51f9931839ea9e29a1004b`.
+
+Independent downloads reconcile19 attachments,18 checksums,2,117 tagged source files
+and six identical1,768-model catalogues. Three downloaded Mac render/save/clipping
+controls and seven hosted72-view graphical controls pass. Windows x64/x86 native
+load/save passes; Windows ARM64 execution and Windows GPU acceptance remain unverified.
+The1,800-frame Linux review observes every original station/flat/ascending/descending/
+bridge/tunnel support and surface/portal/tunnel collector context without changing
+geometry or contact tolerances. Its llvmpipe result is1.687fps, not a performance pass.
+The failed`.35`tag remains unchanged with both rejected attempts and no desktop packages.
+Later bubble studies are not included in this immutable release.

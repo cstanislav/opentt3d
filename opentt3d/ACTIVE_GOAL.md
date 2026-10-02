@@ -1,5 +1,65 @@
 # Active extended development goal
 
+## `.36` independently verified and recommended — October 2, 05:07:56 UTC
+
+The exact immutable tag`opentt3d-dev-20261002.36`and all eight successful jobs in
+workflow36960610102 resolve to`bb4639f2b73677838e51f9931839ea9e29a1004b`.
+Independent public audits reconcile19 attachments,18 checksums,2,117 matching source
+files and six identical1,768-model catalogues. Three downloaded Mac render/save/clipping
+controls, seven hosted72-view graphical controls and Windows x64/x86 native load/save
+pass. Linux's1,800-frame journey retains all six original support contexts and all
+three collector contexts with unchanged geometry/tolerances; llvmpipe1.687fps and
+2,551,439,360 sampled bytes are not smooth60fps acceptance. Hosted software-OpenGL
+worlds have zero black pixels and nine differences from Vulkan. Recommended README/
+installation links now use`.36`. Failed`.35`stays at its exact original SHA with both
+attempts rejected and no desktop packages. Evidence:
+`build-macos/playable-release36-independent-reconciliation.json`.
+
+The later rounded bubble candidate remains staged and outside that release. All27
+graphical/regression/fallback executions pass;648 original exports and740 preceding
+effect views remain exact, and112 native bindings equal their owners. All14 source
+bounds match. Each126-view backend comparison retains22 wider differences/157 pixels
+and zero native differences. State controls retain12,002 observations and eight complete
+independent lifetimes (seven bursts/one absorption). Cold OpenGL has three complete
+bursts but no complete absorption and fails its outcome gate; it cannot borrow a
+lifetime from Vulkan or the earlier candidate. Both paused controls retain three
+original effects unchanged; both preconstruction absences and renderer-off Classic
+pass. Peak sampled memory3,569,274,528bytes and maximum interval236.256ms are not
+smooth60fps/long-duration memory acceptance. Curved wall shaping, fragment contours,
+paint and final visual quality remain provisional. Production stays1,768 models/66
+effect sources; the staged candidate is1,782/80. All earlier rejected artwork/captures
+remain intact. Main harness70 and normal-game source ordering pass. Final approvals:0.
+Evidence:`build-macos/breadth-effect-bubble-registered-reconciliation.json`.
+
+## Public `.36` source checkpoint and rounded bubble registration — October 2, 04:33:16 UTC
+
+All eight jobs pass for immutable`bb4639f2b73677838e51f9931839ea9e29a1004b`in workflow
+36960610102. Public`.36`publishes19 attachments; independent checks reconcile18 checksums,
+all2,117 tagged source files, pinned graphics source and six platform metadata records.
+Hosted ARM/Intel software-OpenGL worlds retain zero black pixels and nine differences
+from Vulkan. Downloaded Mac controls, six embedded catalogues and complete hosted
+support/presentation reconciliation still must pass before replacing recommended`.34`.
+The earlier`.35`tag and both failed Linux attempts remain intact.
+
+The new rounded bubble candidate matches all14 native source bounds, correcting
+burst XY placement and the elongated frame13 anchor. Independently authored curved
+full-depth annular rims have actual empty bores; eight separate rupture knots have
+genuine XYZ depth and empty gaps. A denser, shorter rounded depth profile removes the
+previously visible cell discontinuities. All1,768 production models, components and
+owners remain exact; the candidate stages1,782 models/80 sources but is not integrated.
+Wider-angle contour/paint, bubble-wall shaping and small fragment silhouette fidelity
+remain provisional. Its27 climate/backend/original-lifetime/paused/absence/Classic/
+prior-effect/fallback controls are running. All rejected candidates and their original
+captures remain preserved. Final visual approvals:0.
+
+The oracle's first-tick check is now scoped to the actual normal game and vehicle
+functions, rather than permitting the editor loop to mask future normal-game source
+drift. Harness70 passes; re-reading the same captured bytes retains all seven earlier
+completed lifetimes. The prior69-test oracle and all reports stay intact. Evidence:
+`build-macos/playable-release36-public-source-checkpoint.json`,
+`build-macos/breadth-effect-bubble-registered-probe-vulkan/renderer3d-reference/effect-bubble-source-registration.json`and
+`build-macos/breadth-effect-bubble-normal-game-source-validation.json`.
+
 ## Original bubble paths and preserved artwork studies — October 2, 04:10:12 UTC
 
 Preview`.36`targets exact`bb4639f2b73677838e51f9931839ea9e29a1004b`in workflow36960610102.

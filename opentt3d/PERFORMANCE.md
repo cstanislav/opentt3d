@@ -3,6 +3,16 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Verified `.36` bounded Linux release review
+
+The exact tagged1,768-model release passes every original station/flat/ascending/
+descending/bridge/tunnel support and surface/portal/tunnel collector gate in1,800
+frames. Geometry, contact tolerances and simulation are unchanged. Hosted llvmpipe
+measures1.687fps and2,551,439,360 sampled bytes: this establishes captured contexts,
+not smooth60fps or long-duration memory acceptance. Both failed900-frame`.35`attempts
+remain frozen and package-less. Independent public packages are now recommended as`.36`.
+Evidence:`build-macos/playable-release36-independent-reconciliation.json`.
+
 ## Original bubble-path controls
 
 Six original Toyland/state/negative/Classic controls retain11,179 observations and

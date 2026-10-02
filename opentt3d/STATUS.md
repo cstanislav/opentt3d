@@ -4,19 +4,20 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.34`publishes source-sized large explosions, bounded CPU
-  restoration and the1,752-model catalogue at commitfcd5b38d0. All eight jobs pass;
-  independent checks reconcile19 attachments,18 checksums,2,110 source files and six
-  identical catalogues. Downloaded
-  Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.34`.
+- [x] Verified desktop release`.36`publishes grounded small explosions, original breakdown
+  smoke, bounded CPU restoration and the1,768-model catalogue at commitbb4639f2b. All
+  eight jobs pass; independent checks reconcile19 attachments,18 checksums,2,117 source
+  files and six identical catalogues. Downloaded Mac render/save/clipping, seven hosted
+  graphical controls, Windows x64/x86 native load/save and Linux's1,800-frame full
+  support/collector journey pass. Verified download links use`.36`. Failed`.35`remains
+  immutable with both rejected attempts and no desktop packages.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,768-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite145/145 and download/screenshot/memory/clearance/effect-motion harness69/69 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,768-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite145/145 and download/screenshot/memory/clearance/effect-motion harness70/70 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -37,8 +38,9 @@ This file records implemented and verified work, not promises of completeness.
 - [x] The successor's bounded1,800-frame Linux review keeps all original geometry/
   support/collector gates after two independent900-frame`.35`captures miss opposite
   full-grade contexts. Both extended local backend controls pass using the original
-  Linux fixture. Hosted acceptance remains pending;`.35`has no desktop attachments
-  and`.34`remains recommended. This changes diagnostic sampling, not gameplay.
+  Linux fixture. Hosted`.36`passes every original context and independent public audits;
+  `.35`has no desktop attachments and`.36`is now recommended. This changes diagnostic
+  sampling, not gameplay or contact tolerances; llvmpipe1.687fps is not a60fps pass.
 - [x] Six read-only original bubble/state/negative/Classic controls record11,179
   observations and seven complete ordinary lifetimes (five bursts/two absorptions).
   Both running replays observe all14 presentable sources. Six original movement modes,

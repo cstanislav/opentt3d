@@ -1,5 +1,27 @@
 # Implementation verification
 
+## Independently reconciled breakdown-smoke desktop release
+
+Release`.36`targets exact commit`bb4639f2b73677838e51f9931839ea9e29a1004b`; all eight
+jobs in workflow36960610102 pass. Public audits reconcile19 attachments,18 checksums,
+2,117 matching source files and six identical1,768-model compiled catalogues. Three
+downloaded Mac render/save/clipping controls and seven hosted72-view graphical controls
+pass. Windows x64/x86 native load/save and Linux's1,800-frame full support/collector
+journey pass. All six original support contexts and three collector contexts retain
+their geometry, tolerances and ownership checks. Hosted ARM/Intel software-OpenGL
+worlds have zero black pixels and nine differences from Vulkan.
+
+The immutable`.35`commit remains unchanged, package-less and rejected in both attempts.
+The extended successor is a larger bounded observation window, not a performance
+repair: hosted Linux llvmpipe measures1.687fps and2,551,439,360 sampled bytes. Windows
+ARM64 execution, Windows GPU/foreground input, arbitrary-world performance, long-duration
+memory, larger-aircraft clearances and final visual fidelity remain unverified.
+Later bubble studies/normal-game oracle guards are not part of the tagged catalogue.
+Recommended desktop downloads now use`.36`. Evidence:
+`build-macos/playable-release36-independent-reconciliation.json`,
+`build-macos/playable-release36-download-audit.json`and
+`build-macos/playable-release36-ci-reconciliation.json`.
+
 ## Read-only original bubble lifecycle oracle
 
 `bubble_cycle.py`reads the six original movement tables and85 absorption entries,
@@ -19,6 +41,12 @@ bowed-rim studies retain depth, contour/discontinuity and registration failures.
 No bubble artwork or final approval enters production. Hidden emitter ownership,
 frequency, other contexts, between-frame presentation and sustained60fps remain open.
 Evidence:`build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
+
+The normal-game/vehicle-function-specific source ordering guard passes harness70.
+An editor-loop match cannot mask a changed normal-game first tick. Re-auditing unchanged
+captured bytes preserves the same seven complete lifetimes; the earlier oracle and
+reports remain intact. Evidence:
+`build-macos/breadth-effect-bubble-normal-game-source-validation.json`.
 
 ## Bounded exact CPU mesh restoration
 
