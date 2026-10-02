@@ -68,16 +68,17 @@ include representative complex assets early to expose integration/tooling defect
 Reuse genuinely shared source structures. Existing detailed models retain their
 current quality and participate in the same catalogue-wide audits.
 
-## Pass 1 coverage checkpoint and queue (2026-09-27; 1,685-volume Arctic-farm checkpoint)
+## Pass 1 coverage checkpoint and queue (2026-10-02; 1,782-volume effect-breadth checkpoint)
 
-Latest effect-breadth increment reaches1,768 volumes: four roadworks orientations,
+Latest effect-breadth increment reaches1,782 volumes: four roadworks orientations,
 eight chimney, five train-steam, six diesel-exhaust, six electric-spark and five shared
 charcoal-smoke states plus sixteen large-, twelve small-explosion and four breakdown-smoke
-states bind66/80 presentable effect sources through264 climate bindings.
+states plus fourteen bubble states bind80/80 presentable effect sources through320
+climate bindings. Bubble threshold4754 stays unbound; it is never presented upstream.
 Five spark volumes
 preserve a source-proven identical final pair with separate original timing. Original
 lifetime/motion controls and fixed-anchor source bounds are recorded in `VOXEL_REVIEW.md`;
-14 bubble sources still need integrated artwork. Large explosions now retain their
+Fourteen source-specific bubble rims/fragments now have integrated artwork. Large explosions retain their
 source-sized ignition, visible fork/crown openings and detached late fragments. The
 twelve small-explosion states match source bounds, retain the filled early core and
 genuine later opening, and clear the original two-unit flat-ground emission datum.
@@ -93,7 +94,13 @@ eight-bit progress wraps and both pool orders. Three missing-phase failures rema
 preserved; four paused/disabled absences pass. Twenty-seven integrated graphical/regression/
 fallback executions pass, with7,983 observations and nine independently complete lifetimes.
 Both integrated Toyland replays and higher-pool OpenGL miss phases and remain failures.
-All preceding models/material faces/owners and earlier source/model captures remain exact.
+Fourteen bubble states match all native source bounds and retain connected rounded
+XYZ rims with genuine bores, separate reflections and eight free volumetric rupture
+knots. All27 integrated graphical/regression/fallback executions pass; both fresh
+backends retain complete independent burst/absorption lifetimes.12,046 observations
+and eight complete lifetimes (six bursts/two absorptions) are recorded. The earlier
+cold-OpenGL staging absorption misses nine phases and stays failed. All preceding
+models/material faces/owners and earlier source/model captures remain exact.
 These additions preserve all preceding volumes and do not complete the catalogue-wide
 Pass1 gate or establish final visual approval.
 
@@ -111,7 +118,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
 | Other transport | Both ship-depot axes/four voxel sections; six dock sections/twelve ordinary-Toyland volumes; separate source-resolved ordinary/Toyland buoys | Roads/trams/stops, locks/aqueducts and remaining infrastructure; full water-class/ship/bridge fidelity and clearance review |
 | Terrain | Seven fences,13 foundations | All remaining ground/detail/water/climate/seasonal surfaces and transitions |
-| Objects/effects | Six power-station spark poses, four original helicopter rotor states and66/80 presentable effect sources through264 climate bindings | Fourteen bubble sources, headquarters, landmarks, wakes and remaining procedural objects/states; source/all-angle/emission-context fidelity remains open |
+| Objects/effects | Six power-station spark poses, four original helicopter rotor states and80/80 presentable effect sources through320 climate bindings | Headquarters, landmarks, wakes and remaining procedural objects/states; source/all-angle/emission-context fidelity remains open. The original-object source inventory records24 tile layouts/five HQ sizes and11 HQ ground-only slots but does not assert voxel coverage |
 
 The1,092-volume catalogue adds four bus bodies, eighteen closed road-cargo bodies,
 twelve rail-depot bodies/four floors/one wire, and28 cactus/palm lifecycle volumes

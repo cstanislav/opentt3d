@@ -3,6 +3,18 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Integrated original bubble breadth
+
+All27 integrated graphical/regression/fallback executions pass with1,782 models.
+Source-valid state controls retain12,046 observations, six complete bursts and two
+complete absorptions; both fresh backends pass both original outcome gates. Maximum
+interval52.131ms and peak sampled memory3,425,013,144bytes are not sustained smooth60fps
+or long-duration/reload/multiple-viewport memory acceptance. Earlier staging slow frames,
+missing absorption phases and rejected artwork remain preserved. A lower maximum in
+this replay does not establish a causal pacing repair. Original source clocks, movement,
+spawn altitude and simulation RNG remain untouched. Evidence:
+`build-macos/breadth-effect-bubble-integrated-reconciliation.json`.
+
 ## Verified `.36` bounded Linux release review
 
 The exact tagged1,768-model release passes every original station/flat/ascending/

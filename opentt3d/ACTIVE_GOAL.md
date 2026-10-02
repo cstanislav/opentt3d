@@ -1,5 +1,56 @@
 # Active extended development goal
 
+## Preserved reviewed build and lossless bubble-review compaction — October 2, 05:49:54 UTC
+
+The tested1,782-model binary, compiled catalogue and authored source are separately
+frozen before further compilation. Exact post-compaction checks retain1,120 staging
+comparisons,648 original exports,740 prior effect views and112 native binding equalities.
+All5,678 explicitly successful generated model captures reconstruct their exact original
+PAM headers and RGBA bytes with zero errors, saving8,247,254,194bytes. All3,760 protected
+original/reference/metadata/log/screenshot/save/source/candidate/oracle files and the
+three frozen build files remain exact. The three earlier rejected geometry galleries
+and failed cold-OpenGL staging absorption remain raw and excluded. Available storage
+is27GiB; source originals and rejected work are not discarded. Final approvals:0.
+Evidence:`build-macos/breadth-effect-bubble-preserved-compaction-audit.json`and
+`build-macos/breadth-effect-bubble-post-compaction-comparison.json`.
+
+## All presentable original effect sources bound — October 2, 05:35:45 UTC
+
+Fourteen separately authored bubble volumes and56 climate bindings reach1,782 models,
+80/80 presentable effect sources and320 explicit climate states. The complete authoring
+candidate transfers exactly; compact source formatting adds1.18MB without reformatting
+earlier models. Full compilation preserves all1,768 preceding volumes/components/material
+faces/bindings. Connected rounded XYZ rims have genuine bore openings and separate
+volumetric reflections; eight independent rupture knots have real XYZ depth/gaps.
+All14 fixed-anchor source bounds match. The cell/source/native/orbit/street/world audit
+supports basic geometry and registration, not faithful spherical-wall/fragment contour/
+paint approval. Threshold4754 stays unbound, and all earlier rejected studies remain intact.
+
+All27 integrated graphical/regression/fallback executions pass.1,120 staging images,
+648 original exports and740 prior effect views remain exact;112 native selections equal
+their models. Each126-view backend comparison retains22 wider differences/157 pixels
+and zero native differences. State controls record12,046 observations and eight complete
+independent lifetimes: six bursts/two absorptions. Both fresh backends pass both outcome
+gates; both paused controls retain three original effects unchanged, both preconstruction
+absences and renderer-off Classic pass. Minimum captured flat-ground clearance is36.5
+at the unchanged spawn/movement altitude. Earlier cold-OpenGL staging absorption misses
+224/231/232/233/235/236/250/258/296 and stays failed; no gaps or other lifetimes fill it.
+Native207, asset/compiler152 (including six new object tests), harness70 and138-file
+boundary pass. Peak3,425,013,144 sampled bytes and maximum52.131ms
+interval do not establish smooth60fps, long-duration memory or a causal pacing repair.
+Evidence:`build-macos/breadth-effect-bubble-integrated-reconciliation.json`.
+
+Recommended desktop download remains independently audited`.36`. The bubble successor
+still needs a committed exact tag, all eight package jobs and independent public audits.
+The full breadth-first four-pass objective remains active. Headquarters/landmarks,
+procedural infrastructure/ground states, other effect-emitter contexts, larger-aircraft
+clearances and sustained performance/memory work remain. A read-only original-object
+inventory now records five types/24 tile layouts and all five four-tile HQ sizes, including
+11 slots with no separate body; ground sprites can still contain raised artwork. Original
+layers, flags/climates, company colour and sorting extents remain authoritative. No object
+geometry, rating/map changes or RNG are inferred. Evidence:
+`build-macos/breadth-original-object-source-layer-catalogue.json`. Final approvals:0.
+
 ## `.36` independently verified and recommended — October 2, 05:07:56 UTC
 
 The exact immutable tag`opentt3d-dev-20261002.36`and all eight successful jobs in

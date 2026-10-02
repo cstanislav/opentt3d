@@ -16,7 +16,32 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
-- **Fourteen bubble studies (not integrated):** independent floating/forming/burst/
+- **Fourteen integrated original bubble states:**56 explicit climate bindings reach
+  1,782 models and80/80 presentable effect sources through320 climate states. The exact
+  candidate transfer/full compilation preserves all1,768 prior models/components/material
+  faces/owners. All14 fixed-anchor source bounds match. Rounded, connected annular rims
+  have genuine empty bores, bowed XYZ walls and separate volumetric reflections; eight
+  independent rupture knots have real XYZ depth and gaps. Each floating/forming/
+  elongating/ruptured state is authored separately, not a shared stretched placeholder.
+  Full cell topology and native/orbit/street/world review support basic geometry and
+  registration, not faithful spherical-wall shaping, fragment contour or paint approval.
+  All27 integrated graphical/regression/fallback executions pass.1,120 staging views,
+  648 original exports and740 earlier effect views remain exact;112 native bindings
+  equal their owners. Each126-view backend comparison retains22 wider differences/
+  157 pixels and zero native differences. Original state controls retain12,046 observations
+  and eight independent complete lifetimes (six bursts/two absorptions); both fresh
+  backends pass burst/absorption gates. Both paused controls preserve three original
+  effects; two preconstruction absences, renderer-off Classic and both missing-binding
+  fallbacks pass. Minimum captured flat-ground clearance is36.5 at the unchanged original
+  spawn/movement altitude. Earlier cold-OpenGL staging absorption misses224/231/232/233/
+  235/236/250/258/296 and stays failed; earlier geometry rejections remain intact.
+  Threshold4754 stays unbound. Hidden emitter ownership, random frequency, nonflat/other
+  contexts, detailed source/all-angle fidelity, sustained60fps and long-duration memory
+  remain open. Final approvals:0. Evidence:
+  `build-macos/breadth-effect-bubble-integrated-reconciliation.json`and
+  `build-macos/breadth-effect-bubble-registered-volume-audit.json`.
+
+- **Earlier bubble studies (preserved):** independent floating/forming/burst/
   absorbing shapes stage1,782 models and80/80 presentable effect sources while keeping
   all1,768 production models exact. Thin rims fail side-depth review; the straight-bore
   candidate matches10/14 native bounds but resembles cut pipe. A bowed full-depth study
@@ -26,8 +51,8 @@ full terrain/source-raster fidelity and final approval remain separate.
   and two complete absorptions. Three paused puffs remain exact; two preconstruction
   absences and renderer-off Classic pass. The read-only six-table oracle never creates/
   ticks effects or consumes RNG. Rounded rim/fragment correction, source registration
-  and all-angle/world quality remain active. Threshold4754 is unbound. No bubble artwork
-  or final approval is integrated. Evidence:
+  and all-angle/world quality remain active. Threshold4754 is unbound. At this earlier
+  source-path checkpoint, no bubble artwork or final approval was integrated. Evidence:
   `build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
 
   A later rounded, denser-depth candidate matches14/14 native source bounds, corrects
@@ -35,8 +60,10 @@ full terrain/source-raster fidelity and final approval remain separate.
   Its independently authored annular rims have real empty bores and its eight rupture
   knots have actual XYZ depth/gaps. This supports registration, not faithful bubble-wall,
   fragment silhouette or wider-view paint approval. All1,768 preceding models/owners
-  remain exact;27 climate/backend/state/regression/fallback controls are underway.
-  It remains outside production. Source/native evidence:
+  remain exact. Its27 staging executions pass, but the cold-OpenGL absorption gate
+  fails and remains preserved. This rounded successor is now integrated above after
+  a separate full-compiler/native/state review; the first three studies stay rejected.
+  Source/native evidence:
   `build-macos/breadth-effect-bubble-registered-probe-vulkan/renderer3d-reference/effect-bubble-source-registration.json`.
 
 - **Four integrated breakdown-smoke states:**16 explicit climate bindings
@@ -61,7 +88,7 @@ full terrain/source-raster fidelity and final approval remain separate.
   OpenGL48/399/400/402/404/405/407/408/410/411, and higher-pool OpenGL105. Four paused/
   disabled absences pass. No partial lifetime is spliced; all prior failures remain.
   Native207, asset145, harness59 and the138-file presentation boundary pass.
-  14 bubble sources remain outside production. Evidence:
+  The subsequent14-state bubble integration is recorded above. Evidence:
   `build-macos/breadth-effect-breakdown-source-valid-reconciliation.json`and
   `build-macos/breadth-effect-breakdown-integrated-reconciliation.json`.
 

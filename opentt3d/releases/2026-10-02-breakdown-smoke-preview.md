@@ -1,5 +1,18 @@
 # Original voxel train-breakdown smoke
 
+## Download & play
+
+| Your computer | Verified download | Start playing |
+| --- | --- | --- |
+| Windows, most PCs | [x64 installer](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.36/opentt3d-dev-20261002.36-windows-x64.exe) | Install, then open **OpenTT3D**. |
+| Mac, Apple silicon | [ARM64 DMG](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.36/opentt3d-dev-20261002.36-macos-arm64.dmg) | Drag **OpenTT3D** into **Applications**. Requires macOS15+. |
+| Mac, Intel | [Intel DMG](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.36/opentt3d-dev-20261002.36-macos-x86_64.dmg) | Drag **OpenTT3D** into **Applications**. Requires macOS15+. |
+| Linux, x86-64 | [Linux archive](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.36/opentt3d-dev-20261002.36-linux-x86_64.tar.xz) | Extract, then run **`./opentt3d.sh`**. |
+
+Graphics are included; no development tools or original game files are needed.
+For unsigned-app prompts, Linux requirements, portable ZIPs and other Windows
+architectures, see [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+
 Four independently authored smoke states retain the original charcoal/grey puff chain,
 gaps, detached upper knots and small blue/warm motes. The original breakdown countdown,
 stationary spawn, five-unit local altitude, servicing and simulation RNG are unchanged.

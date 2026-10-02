@@ -102,9 +102,27 @@ spawn anchor after the stopped parent recovers. Each capture gap/ID reuse is a n
 partial lifetimes cannot combine to pass. Original XY+4/+4 and five-unit local altitude,
 servicing, reliability, source timing and simulation RNG remain upstream.
 
-The remaining14 presentable effect sources are the three floating, three forming, three
-bursting and five absorbing bubble states. Threshold4754 remains unbound. Catalogue-wide
-coverage, source fidelity and final approval remain open for every authored effect family.
+Fourteen bubble volumes now bind the three floating, three forming, three bursting and
+five absorbing states through56 explicit climate owners. Rounded connected annular rims
+have genuine empty bores, bowed XYZ depth and independent reflected-light knots. The
+eight detached rupture knots each have solid XYZ occupancy. All14 native source bounds
+match; the original Toyland generator/catcher fixture provides complete independent
+burst and absorption lifetimes on both backends. `bubble_cycle.py` reads original
+movement tables, four-tick updates, spawn offsets, progress wraps and legal branches
+without creating/ticking effects or consuming RNG. Earlier thin/straight-bore/bowed
+studies and a missing-phase staging absorption remain preserved.
+
+The1,782-model catalogue binds80/80 presentable effect sources through320 climate states;
+threshold4754 remains unbound. These are binding/registration checkpoints, not complete
+catalogue Pass1 or fidelity approval. Bubble-wall shaping, contours/paint, other emission
+contexts, nonflat terrain and final approval remain open for all authored effect families.
+
+`original_objects.py`inventories the five original object types and24 source tile layouts,
+including all five four-tile HQ sizes. Eleven HQ slots have no separate sortable body;
+their ground sprites can still contain raised artwork. The inventory preserves original
+layers, company-colour modifiers, climates, flags and sorting extents without creating
+objects or changing company ratings. It does not assert voxel coverage or infer object
+dimensions from sorting boxes. Landmarks/headquarters remain part of the breadth queue.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;

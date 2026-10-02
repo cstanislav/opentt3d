@@ -8,6 +8,67 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_bubbles_keep_open_volumetric_rims_eight_free_fragments_and_all_original_climates(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        frames = list(range(6))+list(range(7,15))
+        names = {f"effect_bubble_{frame}" for frame in frames}
+        self.assertNotIn("4754",source["bindings"]["effects"],"The forming threshold is replaced before presentation")
+        self.assertEqual(len(source["bindings"]["effects"]),80)
+        self.assertTrue(all(set(states)=={"0","1","2","3"} for states in source["bindings"]["effects"].values()))
+        source["models"] = {name:source["models"][name] for name in names}
+        source["bindings"] = {"effects":{str(4748+frame):source["bindings"]["effects"][str(4748+frame)] for frame in frames}}
+        catalogue = compile_catalogue(source)
+        self.assertEqual(len({json.dumps(model["runs"]) for model in catalogue["models"].values()}),14)
+        centres = {0:(-.375,.375,-1.5),1:(-.375,.375,-1),2:(-.5,.5,-1.5),3:(-.375,.375,-10.7),4:(-.375,.375,-10.7),5:(-.375,.375,-10.7),
+                   10:(-.375,.375,-2),11:(-.375,.375,-4),12:(-.375,.375,-7.5),13:(-.375,.375,-15.5),14:(-.375,.375,-25.5)}
+        heights = {}
+        for frame in frames:
+            name = f"effect_bubble_{frame}"
+            self.assertEqual(catalogue["bindings"]["effects"][str(4748+frame)],{str(climate):name for climate in range(4)})
+            self.assertNotIn("extends",source["models"][name],"Do not stretch one generic model across distinct original shapes")
+            self.assertNotEqual(source["models"][name].get("review_status"),"approved")
+            model = catalogue["models"][name]
+            self.assertEqual(model["origin"],[-8,-8,-48])
+            self.assertEqual(model["cell_size"],[0.125,0.125,0.25])
+            cells = {(x+i,y,z) for x,y,z,length,material in model["runs"] for i in range(length)}
+            colours = {colour for *_,material in model["runs"] for colour in catalogue["materials"][material-1]}
+            self.assertTrue(colours <= set(range(147,154))|{15})
+            self.assertIn(153,colours,"Keep original blue reflected-light knots")
+            remaining, components = set(cells), []
+            while remaining:
+                pending, component = [remaining.pop()], set()
+                while pending:
+                    cell = pending.pop()
+                    component.add(cell)
+                    for axis in range(3):
+                        for step in (-1,1):
+                            other = list(cell)
+                            other[axis] += step
+                            other = tuple(other)
+                            if other in remaining:
+                                remaining.remove(other)
+                                pending.append(other)
+                components.append(component)
+            if frame in (7,8,9):
+                self.assertEqual(len(components),8,"Eight detached solid rupture knots have genuine empty gaps")
+                self.assertTrue(all(max(cell[a] for cell in part)-min(cell[a] for cell in part)>=2 for part in components for a in range(3)),
+                                "Every burst knot has true XYZ depth, not a flat star sprite")
+                self.assertEqual(15 in colours,frame==9,"The late white glint retains its original source state")
+            else:
+                self.assertIn(len(components),(2,3),"Keep one continuous rim and separate volumetric reflections")
+                rim = max(components,key=len)
+                self.assertGreater(len(rim),len(cells)*0.9,"The rim must not break into disconnected cells")
+                self.assertTrue(all(max(cell[a] for cell in rim)-min(cell[a] for cell in rim)>=12 for a in range(3)))
+                anchor = [(centres[frame][a]-model["origin"][a])/model["cell_size"][a] for a in range(3)]
+                self.assertFalse(any(max(x-anchor[0],y-anchor[1],z-anchor[2])<min(x+length-anchor[0],y+1-anchor[1],z+1-anchor[2])
+                                     for x,y,z,length,material in model["runs"]),"The unchanged native bore ray stays genuinely open")
+                heights[frame] = max(cell[2] for cell in rim)-min(cell[2] for cell in rim)
+            if frame in (3,4,5):
+                self.assertGreaterEqual(min(z for x,y,z in cells)*0.25-48+49,36.5,"Forming rims clear the original lowest generator spawn datum")
+        self.assertEqual([heights[frame] for frame in (10,11,12,13,14)],sorted(heights[frame] for frame in (10,11,12,13,14)))
+        self.assertEqual(len({heights[frame] for frame in (10,11,12,13,14)}),5,"All five absorption silhouettes elongate independently")
+
     def test_breakdown_smoke_keeps_detached_volumetric_knots_palette_and_original_climates(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

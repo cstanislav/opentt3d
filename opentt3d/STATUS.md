@@ -17,11 +17,34 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,768-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite145/145 and download/screenshot/memory/clearance/effect-motion harness70/70 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,782-volume catalogue passes exact candidate/full-compiler and prior-model
+  audits; all1,768 preceding models/components/material faces/bindings remain intact.
+  Asset/compiler/schema152, including six new original-object inventory tests, passes.
+  Native207, harness70 and the138-file presentation
+  boundary pass. Small explosions have positive original clear-area lifetimes; the
+  separate random train-crash oracle still has no positive native sample. New artwork
+  stays under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Fourteen integrated original bubble states and56 explicit climate bindings reach
+  1,782 models and80/80 presentable effect sources through320 climate states. All14
+  source bounds match; connected rounded XYZ rims retain genuine empty bores and
+  independent reflections, and eight detached rupture knots have actual XYZ depth/gaps.
+  All27 graphical/regression/fallback executions and both fresh burst/absorption outcome
+  gates pass.1,120 staging images,648 originals and740 prior-effect views stay exact;
+  112 native selections equal their owners. State controls retain12,046 observations
+  and eight independent complete lifetimes (six bursts/two absorptions). Paused states,
+  preconstruction absences and renderer-off Classic pass. The earlier cold-OpenGL
+  staging absorption misses nine phases and stays failed; no cross-run splicing.
+  Threshold4754 stays unbound. Source/paint/wall shaping, hidden emitter ownership,
+  nonflat/other contexts, smooth60fps, memory and catalogue-wide acceptance remain open.
+- [x] Read-only original-object inventory records five types and24 source tile layouts,
+  including all five four-tile HQ sizes and their11 separate-body absences. Original
+  layer ownership, colour modifiers, climates, flags and sorting extents are retained.
+  Six tests pass; no geometry, object creation, company-rating change or RNG is inferred.
+  Landmarks/headquarters remain uncovered breadth work.
 - [x] Ordinary train-breakdown review selects the original difficulty setting and
   reads public NoAI state/speed without assigning failures/effects or changing RNG.
   Captured original stopped emitters support exact XY+4/+4, five-unit local altitude,

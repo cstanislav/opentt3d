@@ -1,5 +1,47 @@
 # Implementation verification
 
+## Integrated original bubble breadth and preserved object source layers
+
+Fourteen separately authored floating/forming/ruptured/absorbing volumes reach1,782
+models and80/80 presentable effect sources through320 explicit climate states. Exact
+candidate transfer and full compilation preserve all1,768 previous models/components/
+material faces/bindings. Every native source bound matches. Full-resolution cell audits
+require connected rounded XYZ rims, genuine bore openings, independent reflections
+and eight detached XYZ rupture knots, retaining the original blue/white palette.
+
+All27 integrated graphical/regression/fallback executions pass.1,120 staging captures,
+648 original exports and740 prior effect views remain exact;112 native selections equal
+their owners. Each126-view backend comparison retains22 wider differences/157 pixels
+and zero native differences. Source-valid state controls retain12,046 observations and
+eight complete independent lifetimes (six bursts/two absorptions), with both fresh
+backends passing both outcome gates. Both paused controls preserve three original
+effects unchanged; both preconstruction absences, renderer-off Classic and missing-
+frame/climate fallbacks pass. Captured flat-ground clearance is at least36.5 without
+moving the original spawn, changing state clocks or consuming RNG. The earlier staging
+cold-OpenGL fresh absorption misses224/231/232/233/235/236/250/258/296 and remains failed;
+later results do not erase it or borrow its missing phases. Threshold4754 remains unbound.
+
+Native207, asset/compiler152, harness70,138-file boundary and whitespace checks pass.
+The six new object tests are included in that asset suite. The object
+inventory records five types/24 source layouts, all five HQ sizes and11 separate-body
+absences. Ground-only source sprites may still contain raised artwork. Source sorting
+boxes are not inferred model dimensions; no objects, ratings, map or RNG are changed.
+No landmark/HQ geometry or runtime capture is asserted. Detailed bubble-wall/fragment
+contour/paint, hidden emitter ownership, nonflat/other contexts, sustained60fps, memory
+and catalogue-wide acceptance remain open. Final approvals:0. Evidence:
+`build-macos/breadth-effect-bubble-integrated-reconciliation.json`,
+`build-macos/breadth-effect-bubble-integrated-preflight.json`and
+`build-macos/breadth-original-object-source-layer-catalogue.json`.
+
+The reviewed binary/catalogue/authored source are separately frozen. All5,678 successful
+generated model captures losslessly roundtrip their original PAM header/RGBA bytes,
+saving8,247,254,194bytes with zero errors. All3,760 protected files and three frozen build
+files remain exact; rejected artwork and the failed staging absorption stay raw. A fresh
+post-compaction comparison retains all1,120 staging,648 original and740 prior-effect
+images and112 native binding equalities. Evidence:
+`build-macos/breadth-effect-bubble-preserved-compaction-audit.json`and
+`build-macos/breadth-effect-bubble-post-compaction-comparison.json`.
+
 ## Independently reconciled breakdown-smoke desktop release
 
 Release`.36`targets exact commit`bb4639f2b73677838e51f9931839ea9e29a1004b`; all eight
