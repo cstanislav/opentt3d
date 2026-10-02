@@ -23,6 +23,8 @@ def main():
     parser.add_argument("--hold", action="store_true", help="Stop the verified returning consist through a normal public command")
     parser.add_argument("--low-effect-id", action="store_true", help="Build and sell a spare locomotive to leave an ordinary free pool slot before the operating train, exposing original pre-tick effect states")
     parser.add_argument("--smoke-amount", type=int, choices=range(3), help="Use the original no/reduced/full vehicle smoke setting for this new fixture")
+    parser.add_argument("--vehicle-breakdowns", type=int, choices=range(3), default=0, help="Original none/reduced/normal breakdown setting; existing fixtures default to none")
+    parser.add_argument("--wait-breakdown", action="store_true", help="After the verified journey, observe an ordinary scheduled breakdown through NoAI and save before the train stops")
     parser.add_argument("--departing", action="store_true", help="Stop and restart the verified returning train through public commands, then save its ordinary acceleration for exhaust review")
     parser.add_argument("--clearance-route", action="store_true", help="Operate the consist across a real bridge with ramps and a tunnel built through a raised hill")
     parser.add_argument("--curve-route", action="store_true", help="Add a four-corner detour between the bridge and tunnel for real heading/rail-join observations")
@@ -50,6 +52,8 @@ def main():
         parser.error("--low-effect-id requires a movement-only train fixture")
     if args.departing and (args.hold or args.cargo_source is not None):
         parser.error("--departing requires a movement-only fixture without --hold")
+    if args.wait_breakdown and (args.vehicle_breakdowns == 0 or args.hold or args.departing or args.cargo_source is not None):
+        parser.error("--wait-breakdown requires enabled original breakdowns and a moving, non-cargo fixture")
     root = Path(__file__).resolve().parents[2]
     graphics = json.loads((root / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "train", output / "ai/train-catalogue")
@@ -76,7 +80,7 @@ number_towns = 4
 industry_density = 0
 max_loan = 50000000
 town_council_tolerance = 0
-vehicle_breakdowns = 0
+vehicle_breakdowns = {args.vehicle_breakdowns}
 [construction]
 raw_industry_construction = 1
 terraform_per_64k_frames = 1000000
@@ -99,7 +103,7 @@ pause_on_join = false
     source = args.cargo_source if args.cargo_source is not None else -1
     destination = -1 if args.cargo_town else args.cargo_destination if args.cargo_destination is not None else 1
     feeder = args.cargo_feeder if args.cargo_feeder is not None else -1
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_low_effect_id={int(args.low_effect_id)},review_departing={int(args.departing)},review_clearance={int(args.clearance_route)},review_curves={int(args.curve_route)},review_source={source},review_destination={destination},review_feeder={feeder}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Train Catalogue" "review_rail_type={args.rail_type},review_engine={engine},review_first={args.first_engine},review_last={args.last_engine},review_hold={int(args.hold)},review_low_effect_id={int(args.low_effect_id)},review_departing={int(args.departing)},review_clearance={int(args.clearance_route)},review_curves={int(args.curve_route)},review_source={source},review_destination={destination},review_feeder={feeder},review_wait_breakdown={int(args.wait_breakdown)}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave train-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     for state in ("empty", "full"):
@@ -159,6 +163,10 @@ pause_on_join = false
                         raise RuntimeError("The spare locomotive did not release an original pool slot before the operating train")
                     if args.smoke_amount is not None and manifest.get("smoke_amount") != args.smoke_amount:
                         raise RuntimeError("The fixture did not retain the requested original vehicle smoke setting")
+                    if manifest.get("vehicle_breakdowns") != args.vehicle_breakdowns:
+                        raise RuntimeError("The fixture did not retain the requested original breakdown setting")
+                    if args.wait_breakdown and (not manifest.get("scheduled_breakdown") or manifest.get("breakdown_observed_speed",0) <= 0):
+                        raise RuntimeError("The fixture did not observe an original scheduled breakdown on a moving train")
                     if args.departing and manifest.get("departure_speed",0) < 16:
                         raise RuntimeError("The returning train did not resume ordinary acceleration")
                     if args.curve_route and (not manifest.get("curve_route") or not manifest.get("curve_seen") or

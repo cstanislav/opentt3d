@@ -148,8 +148,21 @@ function TrainCatalogue::Start()
 			}
 			if (departure_speed < 16) throw "the verified train did not resume acceleration";
 		}
+		local scheduled_breakdown = false, breakdown_observed_speed = 0;
+		if (AIController.GetSetting("review_wait_breakdown") != 0) {
+			/* Only observe the original failure countdown. This does not assign a
+			 * breakdown/effect state, alter reliability, change servicing or draw RNG. */
+			for (local tick = 0; tick < 16000 && !scheduled_breakdown; ++tick) {
+				if (!AIVehicle.IsValidVehicle(train) || AIVehicle.GetState(train) == AIVehicle.VS_CRASHED) throw "breakdown review train was lost";
+				breakdown_observed_speed = AIVehicle.GetCurrentSpeed(train);
+				scheduled_breakdown = AIVehicle.GetState(train) == AIVehicle.VS_BROKEN && breakdown_observed_speed > 0;
+				if (!scheduled_breakdown) this.Sleep(1);
+			}
+			if (!scheduled_breakdown) throw "no original scheduled breakdown observed within the bounded journey";
+		}
 		AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+rail_type+
 			",\"locomotive\":"+locomotive+",\"train\":"+train+",\"released_pool_id\":"+spare+",\"smoke_amount\":"+AIGameSettings.GetValue("vehicle.smoke_amount")+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
+			",\"vehicle_breakdowns\":"+AIGameSettings.GetValue("difficulty.vehicle_breakdowns")+",\"scheduled_breakdown\":"+(scheduled_breakdown ? "true" : "false")+",\"breakdown_observed_speed\":"+breakdown_observed_speed+
 			",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"departure_speed\":"+departure_speed+",\"clearance_route\":"+(clearance ? "true" : "false")+
 			",\"curve_route\":"+(curves ? "true" : "false")+",\"curve_seen\":"+(curve_seen ? "true" : "false")+
 			",\"bridge_seen\":"+(clearance && bridge_seen ? "true" : "false")+",\"tunnel_seen\":"+(tunnel_seen ? "true" : "false")+
@@ -241,6 +254,7 @@ function TrainCatalogue::CargoService(train, wagon, engine, manifest, west, east
 	}
 	AILog.Info("TRAIN_CATALOGUE_READY {\"x\":"+this.x+",\"y\":"+this.y+",\"rail_type\":"+AIController.GetSetting("review_rail_type")+
 		",\"locomotive\":"+AIVehicle.GetEngineType(train)+",\"train\":"+train+",\"smoke_amount\":"+AIGameSettings.GetValue("vehicle.smoke_amount")+",\"wagons\":["+manifest+"],\"peak_speed\":"+peak_speed+
+		",\"vehicle_breakdowns\":"+AIGameSettings.GetValue("difficulty.vehicle_breakdowns")+
 		",\"returned\":true,\"held\":"+(held ? "true" : "false")+",\"cargo\":"+cargo+",\"capacity\":"+capacity+",\"acceptance\":"+acceptance+
 		",\"source_type\":"+source+",\"destination_type\":"+destination+",\"feeder_type\":"+feeder_type+
 		",\"feeder_delivered\":"+(feeder != null && feeder.delivered ? "true" : "false")+",\"full\":true,\"delivered\":true"+

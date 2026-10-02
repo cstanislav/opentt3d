@@ -1,5 +1,14 @@
 # Original wagon consist fixture
 
+For an ordinary train-breakdown emitter, add`--vehicle-breakdowns 2 --wait-breakdown`
+to a moving, non-cargo fixture. After the verified return journey, NoAI only observes
+the original scheduled failure while the train is still moving and saves that state.
+It never assigns breakdowns/effects, changes reliability or servicing, or draws RNG.
+Difficulty0 remains the default for all existing fixtures. Keep the matching`ai/`
+directory with the save. Use`--low-effect-id`for a normal released pool slot before the
+train; read the actual emitter from`fixture.json`and audit captured countdowns with
+`tools/opentt3d/breakdown_smoke_cycle.py`. The smoke artwork may still be staged.
+
 From the repository root, with the built game and pinned Classic base set:
 
 ```sh

@@ -1,5 +1,32 @@
 # Active extended development goal
 
+## Small-explosion release and original breakdown emitter — October2,02:10:55UTC
+
+Main integrates the1,764-model small family at`fe114215a871f904af153aa63a61102fca4ad219`.
+Published preview`opentt3d-dev-20261002.35`builds that exact SHA in workflow36952865295;
+packaging/public reconciliation is pending, so verified download recommendations remain`.34`.
+Lossless compaction of2,967 successful corrected-small/integrated model captures saves
+4,286,557,644bytes with zero errors. Four failed lifetime runs were explicitly excluded;
+sources, original exports, saves, world captures, logs, candidates and all failures remain.
+The earlier tested binary/catalogue are separately frozen before new diagnostics compile.
+
+The normal train fixture now accepts the original breakdown difficulty setting and can
+observe a scheduled failure through public NoAI after its verified journey. It never
+assigns a failure/effect state, changes reliability/servicing or draws simulation RNG.
+A read-only captured stopped-emitter trace supports exact raw XY+4/+4 and local Z+5
+checks. The countdown oracle requires every original phase through1, validates the
+four eight-tick sources and treats255→0 progress as a wrap, not pool-ID reuse. Missing
+capture/countdown phases and reused IDs cannot splice complete-lifetime acceptance.
+
+One1,200-frame temperate Vulkan control records541 smoke and541 stopped-emitter
+observations and a complete334-tick lifetime, including progress0 and a full wrap.
+Native207, harness57, the138-file presentation boundary and whitespace checks pass.
+Four independently authored breakdown-smoke models remain staged outside production.
+The first basic candidate misses all four native bounds; the registered correction
+matches3/4, with frame2 retaining one extra right column. Its separate bound correction
+is running four-climate/backend/cold/paused/higher-pool/world reviews. Earlier candidates
+and evidence stay intact; no new artwork/final visual approval is claimed yet.
+
 ## Grounded small-explosion breadth integrated — October2,01:39:15UTC
 
 Twelve independent small-explosion states and48 climate bindings reach1,764 models,

@@ -16,11 +16,18 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,764-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite144/144 and download/screenshot/memory/clearance/effect-motion harness47/47 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,764-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite144/144 and download/screenshot/memory/clearance/effect-motion harness57/57 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Ordinary train-breakdown review selects the original difficulty setting and
+  reads public NoAI state/speed without assigning failures/effects or changing RNG.
+  Captured original stopped emitters support exact XY+4/+4, five-unit local altitude,
+  countdown, progress-wrap, opacity and picking checks. One temperate Vulkan staged
+  control retains541 effect/emitter observations and a complete334-tick lifetime.
+  Four breakdown-smoke states stay outside production pending catalogue-wide climate/
+  backend/all-angle/source/world review. Current native207 and harness57 pass.
 - [x] Twelve grounded small-explosion states and48 climate bindings reach1,764 models
   and62/80 presentable effect sources, preserving all1,752 earlier models and owners.
   All12 native source bounds match. The filled early core, genuine later opening,

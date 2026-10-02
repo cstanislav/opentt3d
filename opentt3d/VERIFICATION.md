@@ -157,6 +157,45 @@ Evidence:`build-macos/playable-release34-download-audit.json`,
 `build-macos/playable-release34-ci-reconciliation.json`and
 `build-macos/playable-release34-hosted-visual-comparison.json`.
 
+## Original train-breakdown smoke countdowns
+
+The train fixture can select ordinary reduced/normal breakdowns and observe the original
+scheduled failure after its verified return journey. Existing fixtures retain difficulty0.
+The optional wait reads public NoAI state/speed; it does not change reliability, service
+intervals, effects, failure countdowns or simulation RNG.
+
+```sh
+python3 tools/opentt3d/fixture_train.py --build-dir build-macos \
+  --output build-macos/new-breakdown-fixture --climate temperate --rail-type 0 \
+  --locomotive 13 --first-engine 27 --last-engine 27 --low-effect-id \
+  --vehicle-breakdowns 2 --wait-breakdown
+python3 tools/opentt3d/smoke.py --build-dir path/to/staged-breakdown-build \
+  --output build-macos/new-breakdown-live --background --backend vulkan \
+  --savegame build-macos/new-breakdown-fixture/save/train-catalogue.sav \
+  --ai-dir build-macos/new-breakdown-fixture/ai --reference-vehicle 13 \
+  --trace-effects --running --benchmark-frames 1200
+python3 tools/opentt3d/breakdown_smoke_cycle.py build-macos/new-breakdown-live/run.log \
+  --emitter 1 --engine 13 --output build-macos/new-breakdown-cycle.json --require-complete
+```
+
+Read the actual emitter ID from`fixture.json`. Original smoke duration is twice the
+randomly selected breakdown delay: an even256…510 ticks. Its eight-bit progress wraps
+255→0 while the independent16-bit remaining countdown keeps decreasing. Every original
+presented countdown phase through1 must belong to one continuously captured effect.
+Lower-ID smoke first presents progress0; higher-ID smoke first presents1. A full set of
+the four source sprites alone is insufficient. Missing phases/frames, reused IDs,
+conflicting views, moved anchors or a changed original source cannot splice acceptance.
+
+The renderer only logs the original stopped train and effect; the oracle requires the
+same captured-frame emitter raw XY+4/+4 and Z+5, stationary effect XYZ, doubled flat
+terrain datum, opacity1 and zero picking. A1,200-frame staged temperate Vulkan control
+records541 observations of each and one complete334-tick lifetime including its wrap.
+Native207, harness57 and the138-file presentation boundary pass. Artwork remains staged;
+native-registration/all-angle/state review is separate. Road/ship/aircraft emitters,
+random breakdown frequency, nonflat terrain, hidden effects and between-frame behavior
+remain outside this oracle. Evidence:
+`build-macos/breadth-effect-breakdown-registered-temperate-vulkan-cycle.json`.
+
 ## Shared charcoal smoke and original copper-mine lifetimes
 
 Five original source sprites2040…2044 serve crash, aircraft-breakdown and copper-mine

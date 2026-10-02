@@ -1899,6 +1899,10 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 					}
 				}
 				if (auto state = VoxelVehicleState(vehicle.engine_type.base(),loaded); !capture->parent_culled && !capture->diagnostic && state) {
+					/* Read the original stopped breakdown emitter alongside its effect.
+					 * This never assigns reliability, countdowns, effects or RNG state. */
+					if (vehicle.type == VEH_TRAIN && vehicle.breakdown_ctr == 1) Debug(driver,5,"OpenTT3D: breakdown train frame {} vehicle {} engine {} delay {} raw {},{},{} origin {:.9g},{:.9g},{:.9g}",
+						capture_frame,vehicle.index.base(),vehicle.engine_type.base(),vehicle.breakdown_delay,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,position.x,position.y,position.z);
 					/* Record the emitted smoothed pose, not just the simulation's axial
 					 * waypoint. This never advances aircraft state or animation. */
 					if (vehicle.type == VEH_AIRCRAFT) Debug(driver,5,"OpenTT3D: clearance aircraft frame {} vehicle {} engine {} state {} raw {},{},{} direction {} pose {:.9g},{:.9g},{:.9g},{:.9g}",
