@@ -8,6 +8,45 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_breakdown_smoke_keeps_detached_volumetric_knots_palette_and_original_climates(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        names = {f"effect_breakdown_smoke_{frame}" for frame in range(4)}
+        source["models"] = {name:source["models"][name] for name in names}
+        source["bindings"] = {"effects":{str(sprite):source["bindings"]["effects"][str(sprite)] for sprite in range(3737,3741)}}
+        catalogue = compile_catalogue(source)
+        self.assertEqual(len({json.dumps(m["runs"]) for m in catalogue["models"].values()}),4)
+        for frame in range(4):
+            name = f"effect_breakdown_smoke_{frame}"
+            self.assertEqual(catalogue["bindings"]["effects"][str(3737+frame)],{str(climate):name for climate in range(4)})
+            model = catalogue["models"][name]
+            self.assertEqual(model["cell_size"],[0.25,0.25,0.5])
+            self.assertEqual(model["origin"],[-16,-12,-4])
+            cells = {(x+i,y,z):catalogue["materials"][material-1] for x,y,z,length,material in model["runs"] for i in range(length)}
+            self.assertGreaterEqual(min(z for x,y,z in cells)*0.5-4+5,6.5,"The original five-unit local spawn altitude stays unchanged")
+            faces = {tuple(material) for material in cells.values()}
+            self.assertTrue({colour for material in faces for colour in material} <= {1,2,3,4,88,104,146})
+            self.assertIn((146,)*6,faces,"Original blue motes must remain independent solid voxels")
+            self.assertIn((2,1,2,3,1,4),faces,"Charcoal knots retain six-direction material faces")
+            remaining, components = set(cells), []
+            while remaining:
+                pending, component = [remaining.pop()], set()
+                while pending:
+                    cell = pending.pop()
+                    component.add(cell)
+                    for axis in range(3):
+                        for step in (-1,1):
+                            neighbor = list(cell)
+                            neighbor[axis] += step
+                            neighbor = tuple(neighbor)
+                            if neighbor in remaining:
+                                remaining.remove(neighbor)
+                                pending.append(neighbor)
+                components.append(component)
+            self.assertGreaterEqual(sum(len(component)>16 for component in components),4,"Keep genuine gaps between independent smoke knots")
+            self.assertTrue(all(max(cell[axis] for cell in max(components,key=len))-min(cell[axis] for cell in max(components,key=len))>=4 for axis in range(3)),"Smoke is volumetric, not a camera-facing sheet")
+            self.assertNotEqual(source["models"][name].get("review_status"),"approved")
+
     def test_small_explosions_keep_ground_clearance_filled_core_and_explicit_climates(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())

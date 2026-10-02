@@ -3,6 +3,49 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Integrated breakdown-smoke controls
+
+Twenty-seven graphical/regression/fallback executions with the1,768-model catalogue
+peak at3,442,806,240 sampled bytes. Twelve1,200-frame original train-breakdown replays
+record7,983 observations and nine complete independent countdown lifetimes. Both Toyland
+runs and higher-pool OpenGL miss phases; their evidence and every previous failure stay
+intact. Four paused/disabled absences and original spawn ownership pass. The maximum
+frame interval is232.349ms: smooth60fps and long-duration/reload/multiple-viewport memory
+acceptance remain open. Evidence:
+`build-macos/breadth-effect-breakdown-integrated-reconciliation.json`.
+
+Release`.35`withholds desktop attachments after two900-frame Linux gate failures.
+Attempt1 misses descending support; attempt2 misses ascending. Collectors pass without
+wheel-gap exceptions, but these independent failures cannot combine their states to pass.
+Attempt2 reaches1.531fps and2,516,787,200 sampled bytes. The successor doubles only the
+bounded software-renderer observation window while keeping all geometry/support/collector
+gates intact. This is not a simulation-cadence or performance repair.
+
+## Original breakdown-smoke staging controls
+
+Twenty-one successful graphical/lifecycle/negative/fallback executions peak at
+3,158,887,856 sampled bytes. Twelve1,200-frame original breakdown replays record8,000
+effect observations and nine complete independent countdown lifetimes. Temperate
+OpenGL misses remaining315, tropical OpenGL173 and Toyland Vulkan437/438. Four paused/
+disabled absences pass. No complete lifetime combines partial captures.
+
+The maximum frame interval is120.203ms. Successful basic artwork, unchanged simulation
+and source-valid countdowns do not establish smooth60fps or long-duration/reload/
+multiple-viewport memory acceptance. Earlier CLI/oracle rejection evidence stays intact;
+the corrected oracle recognizes that an independently stationary puff can outlive its
+stopped train by a few ticks. Evidence:
+`build-macos/breadth-effect-breakdown-source-valid-reconciliation.json`.
+
+Read-only slow-frame inspection finds different costs: the largest temperate OpenGL
+work sample is44.202ms (21.534ms backend,1.512ms capture); tropical OpenGL is49.096ms
+with44.561ms capture. Toyland Vulkan reaches81.319ms work but only8.914ms inclusive
+window drawing, leaving its dominant cost unlocalized by these sections. Arctic
+Vulkan's120.182ms work occurs after a successfully complete smoke lifetime. Inclusive
+sections overlap; they cannot be added, and benchmark indices do not establish exact
+countdown-phase causality. This does not justify blaming every gap on smoke meshing,
+changing simulation cadence or disabling automatic LODs/cache retirement. Evidence:
+`build-macos/breadth-effect-breakdown-retained-slow-frame-investigation.json`.
+
 ## Integrated grounded small-explosion controls
 
 Twenty graphical/regression/fallback executions with the1,764-model catalogue peak at

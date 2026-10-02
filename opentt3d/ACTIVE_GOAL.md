@@ -1,5 +1,58 @@
 # Active extended development goal
 
+## Breakdown-smoke breadth integrated — October 2, 03:19:02 UTC
+
+Four independently authored original smoke states and16 climate bindings reach1,768
+models,66/80 presentable effect sources and264 climate bindings. The complete authoring
+candidate transfers exactly; full compilation preserves all1,764 previous models,
+components, six-face material tuples and bindings. A manually doubled frame2 knot shift
+was caught before native review; its mismatched compiled catalogue and preflight failure
+remain intact. A fresh compilation matches the reviewed stage exactly. All four native
+source bounds match; genuine puff gaps, full-depth upper knots and blue/warm motes retain
+the original fixed spawn and five-unit local altitude. Minimum flat-ground clearance is6.5.
+
+All27 integrated graphical/regression/fallback executions pass.320 staging comparisons,
+648 original exports,320 preceding large-explosion,240 small-explosion and100 charcoal
+views remain exact;32 native binding selections equal their owners. Each36-view backend
+comparison retains13 wider differences/194 pixels and zero native differences. Twelve
+1,200-frame ordinary breakdown replays record7,983 observations and nine complete
+independent countdown lifetimes, including progress wrap and both pool orders. Toyland
+Vulkan misses remaining271; Toyland OpenGL misses48/399/400/402/404/405/407/408/410/411;
+higher-pool OpenGL misses105. All these and previous staging failures remain intact.
+Four paused/disabled absences, two visible original smoke captures and a renderer-off
+Classic comparison pass. Native207, asset145, harness59, the138-file presentation
+boundary and whitespace checks pass. Peak sampled memory3,442,806,240bytes and
+maximum interval232.349ms are not sustained60fps acceptance.
+
+Release `.35` keeps its immutable tag and no desktop attachments. Attempt2 captures the
+descending context but misses ascending state4, whereas attempt1 misses descending8.
+Both collectors pass with no wheel-gap exception. The second900-frame llvmpipe review
+reaches1.531fps and2,516,787,200 sampled bytes. Neither attempt can borrow the other's
+missing state. There is no blind third rerun. The successor retains every original
+support/collector gate and extends only the bounded Linux capture from900 to1,800 frames
+(2,400-second review timeout); this is diagnostic sampling, not a gameplay/performance
+repair. Matching local Vulkan/OpenGL1,800-frame reviews pass using the unchanged original
+Linux fixture, preserving all six support contexts and collector contacts. They reach
+60.003/59.777fps with3,281,554,912/3,295,710,760 sampled bytes; hosted success remains unproven.
+Verified download recommendations stay `.34` until a successor's public audits pass.
+
+The remaining14 presentable bubble sources have120 exact eight-way climate/backend source
+comparisons and an ordinary original Toyland generator/catcher cargo-service fixture.
+Three floating, three forming, three bursting and five absorbing states still need
+authored genuine volumetric openings/rims/glints/fragments; unpresented threshold4754
+stays unbound. No bubble geometry or new visual approval is claimed. Contours/paint,
+nonflat terrain, other emitters, larger-aircraft clearance and catalogue-wide quality/
+performance acceptance remain open. Final visual approvals:0. Evidence:
+`build-macos/breadth-effect-breakdown-integrated-reconciliation.json`,
+`build-macos/playable-release35-attempt2-failure-audit.json`and
+`build-macos/breadth-effect-bubble-source-climate-state-audit.json`.
+
+Storage audit at03:28:42UTC losslessly compacts1,458 successful generated model captures,
+saving2,142,975,215bytes with zero errors and exact header/RGBA roundtrips. All13 earlier
+failed/rejected runs remain uncompacted; original exports, world screenshots, saves,
+logs, candidates, old oracle bytes and both failed Linux attempts stay intact. Available
+storage is33GiB. Evidence:`build-macos/breadth-effect-breakdown-preserved-compaction-audit.json`.
+
 ## Preserved failures and source-valid breakdown timing — October 2, 02:42:05 UTC
 
 Release `.35` attempt 1 built the exact `fe114215a871f904af153aa63a61102fca4ad219`

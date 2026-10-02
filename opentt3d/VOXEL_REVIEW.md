@@ -16,6 +16,32 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Four integrated breakdown-smoke states:**16 explicit climate bindings
+  reach a1,768-volume catalogue, preserving all1,764 preceding models/components/material
+  faces/bindings. Native source bounds match4/4. Independently authored charcoal/grey
+  puff chains have genuine gaps, full-depth detached upper knots and original blue/warm
+  motes. They clear the unchanged five-unit flat-ground spawn altitude by at least6.5.
+  The initial basic candidate misses all four bounds; a registered correction misses
+  frame2's final right column; both remain preserved. Native/orbit/street/world review
+  supports basic placement and registration, not final contour/billow/paint approval.
+  The source-valid staging audit retains21 successful executions,648 unchanged originals,
+  32 exact native bindings,8,000 effect observations, nine complete countdown lifetimes
+  and four expected paused/disabled absences. Each36-view backend comparison retains13
+  wider differences/194 pixels with zero native differences. Temperate OpenGL misses
+  remaining315, tropical OpenGL173 and Toyland Vulkan437/438; none are spliced to pass.
+  Earlier stopped-parent oracle and CLI-contract rejections remain intact. The puff has
+  an independent countdown and can outlive the stopped train at its original fixed
+  anchor. All27 integrated graphical/regression/fallback executions pass.320 staging
+  images,648 original exports,320 large-,240 small-explosion and100 charcoal views remain
+  exact;32 native bindings equal their models. Twelve original replays retain7,983
+  observations and nine complete lifetimes. Toyland Vulkan misses remaining271, Toyland
+  OpenGL48/399/400/402/404/405/407/408/410/411, and higher-pool OpenGL105. Four paused/
+  disabled absences pass. No partial lifetime is spliced; all prior failures remain.
+  Native207, asset145, harness59 and the138-file presentation boundary pass.
+  14 bubble sources remain outside production. Evidence:
+  `build-macos/breadth-effect-breakdown-source-valid-reconciliation.json`and
+  `build-macos/breadth-effect-breakdown-integrated-reconciliation.json`.
+
 - **Twelve grounded small-explosion frames:**48 climate bindings reach1,764 volumes
   and62/80 presentable effect sources, preserving all1,752 prior models/components/
   material faces/bindings. Every native source bound matches. The early core remains

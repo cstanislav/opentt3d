@@ -193,11 +193,22 @@ retain the verified stationary spawn anchor, not follow the recovered parent. A 
 gap cannot extend that ownership. The doubled flat terrain datum, opacity1 and zero
 picking stay exact. A1,200-frame staged temperate Vulkan control
 records541 observations of each and one complete334-tick lifetime including its wrap.
-Native207, harness58 and the138-file presentation boundary pass. Artwork remains staged;
-native-registration/all-angle/state review is separate. Road/ship/aircraft emitters,
+Native207, harness58 and the138-file presentation boundary pass at that checkpoint.
+The four later integrated models match all native bounds and retain genuine full-depth
+puff chains/gaps and original blue/warm motes. All1,764 preceding models/components/
+material faces/bindings remain unchanged. Twenty-seven integrated executions pass;
+320 staging images,648 original exports,320 large-,240 small-explosion and100 charcoal
+views stay exact.32 native bindings equal their owners; all native backend views agree.
+Each36-view comparison retains13 wider differences/194 pixels. Twelve original replays
+record7,983 observations and nine complete countdown lifetimes. Toyland Vulkan misses
+remaining271; Toyland OpenGL48/399/400/402/404/405/407/408/410/411; higher-pool OpenGL105.
+Four paused/disabled absences pass. No failure is spliced or overwritten. Native207,
+asset145, harness59 and the138-file presentation boundary pass; detailed artwork and
+final visual approval remain separate. Road/ship/aircraft emitters,
 random breakdown frequency, nonflat terrain, hidden effects and between-frame behavior
 remain outside this oracle. Evidence:
 `build-macos/breadth-effect-breakdown-registered-temperate-vulkan-cycle.json`.
+Integrated evidence:`build-macos/breadth-effect-breakdown-integrated-reconciliation.json`.
 
 ## Shared charcoal smoke and original copper-mine lifetimes
 

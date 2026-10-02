@@ -70,14 +70,14 @@ current quality and participate in the same catalogue-wide audits.
 
 ## Pass 1 coverage checkpoint and queue (2026-09-27; 1,685-volume Arctic-farm checkpoint)
 
-Latest effect-breadth increment reaches1,764 volumes: four roadworks orientations,
+Latest effect-breadth increment reaches1,768 volumes: four roadworks orientations,
 eight chimney, five train-steam, six diesel-exhaust, six electric-spark and five shared
-charcoal-smoke states plus sixteen large- and twelve small-explosion states bind62/80
-presentable effect sources through248 climate bindings.
+charcoal-smoke states plus sixteen large-, twelve small-explosion and four breakdown-smoke
+states bind66/80 presentable effect sources through264 climate bindings.
 Five spark volumes
 preserve a source-proven identical final pair with separate original timing. Original
 lifetime/motion controls and fixed-anchor source bounds are recorded in `VOXEL_REVIEW.md`;
-18 effect sources still need integrated artwork. Large explosions now retain their
+14 bubble sources still need integrated artwork. Large explosions now retain their
 source-sized ignition, visible fork/crown openings and detached late fragments. The
 twelve small-explosion states match source bounds, retain the filled early core and
 genuine later opening, and clear the original two-unit flat-ground emission datum.
@@ -85,6 +85,15 @@ Ordinary single-tile clear-area commands supply complete48-phase small lifetimes
 the random train-crash context remains unobserved. Twenty integrated graphical/regression/
 fallback executions pass; the cold Vulkan replay misses one phase and remains a failed
 complete-lifetime control. Nine complete lifetimes are accepted individually.
+Four breakdown-smoke states match source bounds and retain separate genuine volumetric
+puff chains, gaps, detached knots and blue/warm motes. The original five-unit emission
+altitude, stationary spawn and random failure countdown remain unchanged. Their staging
+audit retains nine complete original countdown lifetimes from twelve replays, including
+eight-bit progress wraps and both pool orders. Three missing-phase failures remain
+preserved; four paused/disabled absences pass. Twenty-seven integrated graphical/regression/
+fallback executions pass, with7,983 observations and nine independently complete lifetimes.
+Both integrated Toyland replays and higher-pool OpenGL miss phases and remain failures.
+All preceding models/material faces/owners and earlier source/model captures remain exact.
 These additions preserve all preceding volumes and do not complete the catalogue-wide
 Pass1 gate or establish final visual approval.
 
@@ -102,7 +111,7 @@ evidence/defects remain in `VOXEL_REVIEW.md`, `VERIFICATION.md` and `PERFORMANCE
 | Rail systems | Four running assemblies | Remaining signals/catenary, station structures, bridge/tunnel systems and state integration |
 | Other transport | Both ship-depot axes/four voxel sections; six dock sections/twelve ordinary-Toyland volumes; separate source-resolved ordinary/Toyland buoys | Roads/trams/stops, locks/aqueducts and remaining infrastructure; full water-class/ship/bridge fidelity and clearance review |
 | Terrain | Seven fences,13 foundations | All remaining ground/detail/water/climate/seasonal surfaces and transitions |
-| Objects/effects | Six power-station spark poses and four original helicopter rotor states | Headquarters, landmarks, smoke/wakes/explosions and remaining effects |
+| Objects/effects | Six power-station spark poses, four original helicopter rotor states and66/80 presentable effect sources through264 climate bindings | Fourteen bubble sources, headquarters, landmarks, wakes and remaining procedural objects/states; source/all-angle/emission-context fidelity remains open |
 
 The1,092-volume catalogue adds four bus bodies, eighteen closed road-cargo bodies,
 twelve rail-depot bodies/four floors/one wire, and28 cactus/palm lifecycle volumes

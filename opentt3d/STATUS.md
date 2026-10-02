@@ -16,7 +16,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,764-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite144/144 and download/screenshot/memory/clearance/effect-motion harness58/58 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,768-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite145/145 and download/screenshot/memory/clearance/effect-motion harness59/59 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -26,10 +26,19 @@ This file records implemented and verified work, not promises of completeness.
   Captured original stopped emitters support exact XY+4/+4, five-unit local altitude,
   countdown, progress-wrap, opacity and picking checks. The independently stationary
   puff can outlive its stopped parent; each boundary requires the original captured
-  emitter and cannot splice gaps. One temperate Vulkan staged
-  control retains541 effect/emitter observations and a complete334-tick lifetime.
-  Four breakdown-smoke states stay outside production pending catalogue-wide climate/
-  backend/all-angle/source/world review. Current native207 and harness58 pass.
+  emitter and cannot splice gaps. Four integrated smoke states and16 climate bindings
+  reach1,768 models and66/80 presentable effect sources. All four source bounds match;
+  all1,764 preceding models and owners remain exact. Twenty-seven executions pass;
+  320 staging images,648 originals,320 large-,240 small-explosion and100 charcoal
+  views remain exact.32 native bindings equal their models. Twelve original replays
+  retain7,983 observations and nine complete lifetimes. Both Toyland runs and higher-pool
+  OpenGL miss phases and remain failures; four paused/disabled absences pass. Native207
+  and asset145 pass. Source/paint/other-emitter, memory and smooth60fps acceptance remain open.
+- [x] The successor's bounded1,800-frame Linux review keeps all original geometry/
+  support/collector gates after two independent900-frame`.35`captures miss opposite
+  full-grade contexts. Both extended local backend controls pass using the original
+  Linux fixture. Hosted acceptance remains pending;`.35`has no desktop attachments
+  and`.34`remains recommended. This changes diagnostic sampling, not gameplay.
 - [x] Twelve grounded small-explosion states and48 climate bindings reach1,764 models
   and62/80 presentable effect sources, preserving all1,752 earlier models and owners.
   All12 native source bounds match. The filled early core, genuine later opening,

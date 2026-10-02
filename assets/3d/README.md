@@ -86,8 +86,25 @@ selection and emission rules. `copper_smoke_cycle.py` observes the original mine
 43-unit local altitude, four-tick rise and71-phase presented lifetime; industry tile
 processing precedes vehicle ticks, so those puffs first present progress13. Actual crash
 and aircraft emission contexts remain separate review work.
-The other46 presentable effect sources still need voxel artwork; source fidelity remains
-provisional for every authored effect family.
+Sixteen large-explosion volumes bind3709…3724; twelve small-explosion volumes bind
+3725…3736. Their early cores, later openings and detached fragments are genuine cell
+geometry. Small effects retain at least0.25 flat-ground clearance at the original
+two-unit emission datum without moving the effect origin. Original clear-area commands
+provide complete48-phase small lifetimes; random train/aircraft/disaster contexts remain
+separate acceptance work.
+
+Four independently authored breakdown-smoke volumes bind3737…3740 through16 explicit
+climate owners. Their charcoal/grey puff chains have actual gaps, full-depth upper knots
+and small blue/warm motes. The normal train fixture can observe an original scheduled
+breakdown without assigning one. `breakdown_smoke_cycle.py` requires every original
+countdown phase, handles the eight-bit255→0 progress wrap, and retains the captured fixed
+spawn anchor after the stopped parent recovers. Each capture gap/ID reuse is a new boundary;
+partial lifetimes cannot combine to pass. Original XY+4/+4 and five-unit local altitude,
+servicing, reliability, source timing and simulation RNG remain upstream.
+
+The remaining14 presentable effect sources are the three floating, three forming, three
+bursting and five absorbing bubble states. Threshold4754 remains unbound. Catalogue-wide
+coverage, source fidelity and final approval remain open for every authored effect family.
 
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;
