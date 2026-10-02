@@ -14,6 +14,9 @@
 #include "company_type.h"
 #include "object_type.h"
 
+struct DrawTileSprites;
+const DrawTileSprites *GetOriginalObjectTileLayout(ObjectType type, uint8_t hq_size = 0, uint8_t part = 0);
+
 void UpdateCompanyHQ(TileIndex tile, uint score);
 
 void BuildObject(ObjectType type, TileIndex tile, CompanyID owner = OWNER_NONE, struct Town *town = nullptr, uint8_t view = 0);

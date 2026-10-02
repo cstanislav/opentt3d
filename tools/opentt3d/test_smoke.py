@@ -96,6 +96,14 @@ class ExplicitClearCommandTests(unittest.TestCase):
                 launch.assert_called_once()
                 return (output / "scripts/game_start.scr").read_text().splitlines(), launch.call_args.kwargs["env"]
 
+    def test_original_object_export_does_not_create_objects_change_ratings_or_start_simulation(self):
+        commands, env = self.generated_script("--export-objects", "--background")
+        self.assertIn("renderer3d object-references", commands)
+        self.assertEqual(commands.count("renderer3d object-references"), 1)
+        self.assertNotIn("unpause", commands)
+        self.assertFalse(any("build_object" in command or "rating" in command for command in commands))
+        self.assertEqual(env["OPENTT3D_BACKGROUND"], "1")
+
     def test_original_command_runs_after_gallery_with_explicit_draw_delay(self):
         commands, env = self.generated_script("--clear-tile", "64", "65", "--running", "--benchmark-frames", "240", "--gallery-voxel-prefix", "effect_explosion_small_")
         clear = "renderer3d clear-tile 64 65 60"

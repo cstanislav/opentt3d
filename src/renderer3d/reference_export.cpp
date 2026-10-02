@@ -49,6 +49,7 @@
 #include "../station_map.h"
 #include "../newgrf_canal.h"
 #include "../vehicle_base.h"
+#include "../object.h"
 #include <set>
 #include <filesystem>
 #include <fstream>
@@ -441,6 +442,46 @@ void ExportRailDetailReferences()
 	for (unsigned wire = 0; wire < 28; ++wire) image("wire",0,wire,SPR_WIRE_BASE+wire);
 	std::ofstream(directory/"rail-details.json") << manifest.dump(2) << '\n';
 	Debug(driver,1,"OpenTT3D: exported {} rail-detail references",manifest.size());
+}
+
+/** Export every original object ground/body slot, including all five HQ sizes. */
+void ExportObjectReferences()
+{
+	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR, BASE_DIR)) / "renderer3d-reference";
+	std::filesystem::create_directories(directory);
+	nlohmann::json manifest = nlohmann::json::array();
+	unsigned bodies = 0;
+	auto layer = [&](SpriteID image, PaletteID palette, const std::string &filename) {
+		SpriteID sprite_id = image & SPRITE_MASK;
+		std::vector<uint8_t> indices;
+		ExportSpriteReference(sprite_id, palette, (directory / filename).string(), &indices);
+		const Sprite *sprite = GetSprite(sprite_id, SpriteType::Normal);
+		return nlohmann::json{{"sprite", sprite_id}, {"sprite_flags", image & ~SPRITE_MASK}, {"palette", palette},
+			{"company_colour", (image & (1U << PALETTE_MODIFIER_COLOUR)) != 0}, {"palette_indices", indices},
+			{"image", filename}, {"sprite_offset", {sprite->x_offs, sprite->y_offs}}, {"sprite_size", {sprite->width, sprite->height}}};
+	};
+	for (ObjectType type = OBJECT_TRANSMITTER; type <= OBJECT_HQ; ++type) {
+		for (unsigned stage = 0; stage < (type == OBJECT_HQ ? 5U : 1U); ++stage) {
+			for (unsigned part = 0; part < (type == OBJECT_HQ ? 4U : 1U); ++part) {
+				const DrawTileSprites *drawing = GetOriginalObjectTileLayout(type, stage, part);
+				if (drawing == nullptr) throw std::runtime_error("Original object reference layout is missing");
+				auto prefix = fmt::format("object-{}-{}-{}", type, stage, part);
+				nlohmann::json entry{{"object_id", type}, {"size_stage", type == OBJECT_HQ ? nlohmann::json(stage) : nlohmann::json(nullptr)},
+					{"part", part}, {"tile_offset", {part % 2, part / 2}},
+					{"ground", layer(drawing->ground.sprite, drawing->ground.pal, prefix + "-ground.pam")}, {"body", nlohmann::json::array()}};
+				for (const DrawTileSeqStruct &piece : drawing->GetSequence()) {
+					auto body = layer(piece.image.sprite, piece.image.pal, fmt::format("{}-body-{}.pam", prefix, entry["body"].size()));
+					body["origin"] = {piece.origin.x, piece.origin.y, piece.origin.z};
+					body["sort_extent"] = {piece.extent.x, piece.extent.y, piece.extent.z};
+					entry["body"].push_back(std::move(body));
+					++bodies;
+				}
+				manifest.push_back(std::move(entry));
+			}
+		}
+	}
+	std::ofstream(directory / "objects.json") << manifest.dump(2) << '\n';
+	Debug(driver, 1, "OpenTT3D: exported {} original object layouts with {} separate body layers and 11 ground-only HQ slots (five HQ sizes)", manifest.size(), bodies);
 }
 
 void ExportInfrastructureReferences()

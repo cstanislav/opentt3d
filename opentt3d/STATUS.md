@@ -49,6 +49,17 @@ This file records implemented and verified work, not promises of completeness.
   layer ownership, colour modifiers, climates, flags and sorting extents are retained.
   Six tests pass; no geometry, object creation, company-rating change or RNG is inferred.
   Landmarks/headquarters remain uncovered breadth work.
+- [x] Native original-object reference export preserves all24 layouts/37 ground-body
+  layers, including11 true separate-body absences and raised ground artwork. Eleven
+  source/regression/Classic controls pass:216 layout/333 layer equalities,148 same-climate
+  backend and37 Classic source-image equalities,648 unchanged original effect exports
+  and280 unchanged bubble views. Arctic/Tropic differ from temperate in15 layers each;
+  Toyland differs in33, including13 source offset/size changes. Original HQ selector,
+  score thresholds, monotonic upgrades and ground/body ownership are audited read-only.
+  Native207, asset157, harness71 and boundary140 pass. Strict explicit-null/type guards
+  preserve the same216 layout/333 layer checks on unchanged exports; older oracle bytes
+  and all1,169 protected source/evidence files stay intact. No object/HQ voxel coverage,
+  placement, palette animation, company recolour or final artwork approval is inferred.
 - [x] Ordinary train-breakdown review selects the original difficulty setting and
   reads public NoAI state/speed without assigning failures/effects or changing RNG.
   Captured original stopped emitters support exact XY+4/+4, five-unit local altitude,

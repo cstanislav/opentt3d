@@ -15,18 +15,25 @@ import re
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "src/table/object_land.h"
 SPRITES = ROOT / "src/table/sprites.h"
+DRAWING = ROOT / "src/object_cmd.cpp"
 KINDS = ("transmitter", "lighthouse", "statue", "owned_land", "headquarters")
 CLIMATES = {"T":"temperate", "A":"arctic", "S":"tropic", "Y":"toyland"}
 
 
 def layers(source, sprite_source):
     constants = {name:int(value,0) for name,value in re.findall(r"static const SpriteID (SPR_\w+)\s*=\s*(0x[\da-fA-F]+|\d+)\s*;",sprite_source)}
+    recolour = re.search(r"static constexpr uint8_t RECOLOUR_BIT\s*=\s*(\d+)\s*;",sprite_source)
+    palette = re.search(r"static const PaletteID PAL_NONE\s*=\s*(\d+)\s*;",sprite_source)
+    if not recolour or not palette or not 0 <= int(recolour[1]) < 32:
+        raise ValueError("Original object palette constants changed; review the source flags")
 
     def sprite(expression, company=False):
         match = re.fullmatch(r"\s*(SPR_\w+)(\s*\|\s*\(1\s*<<\s*PALETTE_MODIFIER_COLOUR\))?\s*",expression)
         if not match or match[1] not in constants:
             raise ValueError("Unknown original object sprite expression")
-        return {"sprite":constants[match[1]],"sprite_name":match[1],"company_colour":company or bool(match[2]),"palette":"PAL_NONE"}
+        company = company or bool(match[2])
+        return {"sprite":constants[match[1]],"sprite_name":match[1],"company_colour":company,
+                "sprite_flags":(1 << int(recolour[1])) if company else 0,"palette":"PAL_NONE","palette_id":int(palette[1])}
 
     sequences = {}
     for name,body in re.findall(r"static const DrawTileSeqStruct (_object_\w+_seq|_object_hq_\w+)\[\] = \{(.*?)\};",source,re.S):
@@ -79,10 +86,76 @@ def layers(source, sprite_source):
             "scope":"Original static object source catalogue only: five types, four non-HQ layouts and all twenty HQ tiles/five score-dependent sizes. Preserve separate ground/body ownership, original palette modifiers, climates, flags and source sorting extents. Ground-only sprites can include raised artwork. No source pixels are inspected here, no voxel geometry or runtime capture is asserted, and no company rating, map, object, source clock or RNG changes. Source-image/world/footprint/clearance/fidelity review remains required.","final_visual_approvals":0}
 
 
+def runtime_selection(source):
+    """Check the original layer/size selectors, never evaluating game state or scores."""
+    draw = source.split("static void DrawTile_Object(TileInfo *ti)",1)[1].split("static int GetSlopePixelZ_Object",1)[0]
+    update = source.split("void UpdateCompanyHQ(TileIndex tile, uint score)",1)[1].split("void UpdateObjectColours",1)[0]
+    size = source.split("static uint8_t GetCompanyHQSize(TileIndex tile)",1)[1].split("void UpdateCompanyHQ",1)[0]
+    increase = source.split("static void IncreaseCompanyHQSize(TileIndex tile)",1)[1].split("static uint8_t GetCompanyHQSize",1)[0]
+    if ("return GetAnimationFrame(tile);" not in size or
+            "GetCompanyHQSize(ti->tile) << 2 | TileY(diff) << 1 | TileX(diff)" not in draw or
+            "ti->tile - Object::GetByTile(ti->tile)->location.tile" not in draw or
+            "to == OWNER_NONE ? PAL_NONE : GetCompanyPalette(to)" not in draw or
+            "while (GetCompanyHQSize(tile) < val)" not in update or
+            [int(value) for value in re.findall(r"if \(score >= (\d+)\) val\+\+;",update)] != [170,350,520,720] or
+            "for (TileIndex t : ta)" not in increase or "SetAnimationFrame(t, GetAnimationFrame(t) + 1);" not in increase or
+            "if (spec->flags.Test(ObjectFlag::HasNoFoundation))" not in draw or
+            "case SPR_FLAT_BARE_LAND:          DrawClearLandTile(ti, 0); break;" not in draw or
+            "if (!IsInvisibilitySet(TO_STRUCTURES))" not in draw or
+            "AddSortableSpriteToDraw(dtss.image.sprite, palette, *ti, dtss, IsTransparencySet(TO_STRUCTURES))" not in draw):
+        raise ValueError("Original object runtime selection changed; review source ordering, ownership and state semantics")
+    return {"headquarters_score_thresholds":[170,350,520,720],"headquarters_size_storage":"tile animation frame",
+            "headquarters_upgrades_only":True,"headquarters_layout_index":"size*4+tile_y*2+tile_x",
+            "headquarters_tile_order":["north","west","east","south"],
+            "company_palette":"owner palette, or PAL_NONE for OWNER_NONE",
+            "owned_land_ground":"original slope-following bare-land selection, not forced flat ground",
+            "structure_visibility":"original invisibility omits body sequence; transparency applies to bodies"}
+
+
+def validate_export(exported, expected=None):
+    """Match the native exporter to every independently parsed source layer."""
+    def same_value(actual, original):
+        if type(actual) is not type(original):
+            return False
+        if isinstance(original,list):
+            return len(actual)==len(original) and all(same_value(a,b) for a,b in zip(actual,original))
+        return actual == original
+
+    expected = catalogue()["tiles"] if expected is None else expected
+    if not isinstance(exported,list) or len(exported) != len(expected):
+        raise ValueError("Original object exported layout count differs")
+    for actual, source in zip(exported,expected):
+        if not isinstance(actual,dict) or any(key not in actual or not same_value(actual[key],source[key]) for key in ("object_id","size_stage","part","tile_offset")):
+            raise ValueError("Original object exported source order/registration differs")
+        if not isinstance(actual.get("body"),list) or len(actual["body"]) != len(source["body"]):
+            raise ValueError("Original object exported body ownership differs")
+        for role, originals, images in (("ground",[source["ground"]],[actual.get("ground")]),("body",source["body"],actual["body"])):
+            for index,(original,image) in enumerate(zip(originals,images)):
+                if (not isinstance(image,dict) or any(key not in image or not same_value(image[key],original[key]) for key in ("sprite","sprite_flags","company_colour")) or
+                        not same_value(image.get("palette"),original["palette_id"]) or
+                        (role == "body" and any(key not in image or not same_value(image[key],original[key]) for key in ("origin","sort_extent")))):
+                    raise ValueError("Original object exported layer metadata differs")
+                stage = source["size_stage"] if source["size_stage"] is not None else 0
+                filename = f"object-{source['object_id']}-{stage}-{source['part']}-{role}"+(f"-{index}" if role == "body" else "")+".pam"
+                if image.get("image") != filename:
+                    raise ValueError("Original object exported image ownership differs")
+                for key in ("sprite_offset","sprite_size"):
+                    values = image.get(key)
+                    if not isinstance(values,list) or len(values) != 2 or any(type(value) is not int or (key == "sprite_size" and value <= 0) for value in values):
+                        raise ValueError("Original object exported pixel registration is invalid")
+                colours = image.get("palette_indices")
+                if not isinstance(colours,list) or any(type(value) is not int or not 1 <= value <= 255 for value in colours) or colours != sorted(set(colours)):
+                    raise ValueError("Original object exported source palette is invalid")
+    return {"source_equivalent_layouts":len(expected),"ground_layers":len(expected),
+            "separate_body_layers":sum(len(row["body"]) for row in expected),
+            "ground_only_headquarters_slots":sum(row["object_id"]==4 and not row["body"] for row in expected)}
+
+
 def catalogue():
-    source, sprites = SOURCE.read_bytes(), SPRITES.read_bytes()
+    source, sprites, drawing = SOURCE.read_bytes(), SPRITES.read_bytes(), DRAWING.read_bytes()
     result = layers(source.decode(),sprites.decode())
-    result["source_sha256"] = {str(path.relative_to(ROOT)):hashlib.sha256(data).hexdigest() for path,data in ((SOURCE,source),(SPRITES,sprites))}
+    result["runtime_selection"] = runtime_selection(drawing.decode())
+    result["source_sha256"] = {str(path.relative_to(ROOT)):hashlib.sha256(data).hexdigest() for path,data in ((SOURCE,source),(SPRITES,sprites),(DRAWING,drawing))}
     return result
 
 

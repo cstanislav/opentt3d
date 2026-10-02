@@ -124,6 +124,18 @@ layers, company-colour modifiers, climates, flags and sorting extents without cr
 objects or changing company ratings. It does not assert voxel coverage or infer object
 dimensions from sorting boxes. Landmarks/headquarters remain part of the breadth queue.
 
+`smoke.py --export-objects`now exports all24 source tile layouts directly from the
+original drawing tables through a read-only accessor. `object_reference_sheet.py`joins
+their ground/body layers at unchanged native tile/sprite offsets. Nine source/export
+controls, two unchanged bubble regressions and source-layer checks pass. Arctic/Tropic
+each differ from temperate in15 source layers; Toyland differs in33, including13 source
+registration changes. These supplied graphics must not be replaced by shared guessed
+boxes. The11 separate-body absences retain their original raised ground artwork. No
+objects are constructed and no ratings/state/RNG are changed by the exporter. Original
+source/command mutation code stays byte-exact apart from the read-only accessor;
+geometry, world placement, company recolour, palette animation and final approval are
+not established by source exports.
+
 House binding states encode `variant*4+stage`. A generic0…3 stage binding can cover
 another variant only when its original building sprite exactly matches variant0;
 source recolouring still applies. Use explicit states for different layouts, as with

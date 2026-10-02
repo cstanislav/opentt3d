@@ -16,6 +16,21 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Original object/HQ sources, not new voxel coverage:** direct original drawing-table
+  exports retain24 tile layouts/37 ground-body layers across all five HQ sizes. All11
+  separate-body absences keep their source ground sprites, including raised structures.
+  Eleven native source/regression/Classic controls pass, preserving216 layout/333 layer
+  selections,148 same-climate backend/37 Classic source equalities,648 original effect
+  images and280 earlier bubble views. Supplied Arctic/Tropic paint differs in15 layers
+  each; Toyland changes33 layers and13 source registrations. Source sheets retain full
+  native layer/tile anchors. The earlier shared-climate equality assumption fails at
+  Arctic and remains intact. Sorting extents do not justify guessed object dimensions;
+  no boxes, billboards or empty-tile shortcuts are accepted as new coverage. Objects/HQ,
+  company recolour, lighthouse palette animation, nonflat/world/clearance and final
+  fidelity review remain open. Source/API/exporter reads do not create objects, upgrade
+  companies or consume RNG; state/command mutator code stays exact. Evidence:
+  `build-macos/breadth-original-object-reference-climate-reconciliation.json`.
+
 - **Fourteen integrated original bubble states:**56 explicit climate bindings reach
   1,782 models and80/80 presentable effect sources through320 climate states. The exact
   candidate transfer/full compilation preserves all1,768 prior models/components/material

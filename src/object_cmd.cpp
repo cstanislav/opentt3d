@@ -47,6 +47,17 @@ ObjectPool _object_pool("Object");
 INSTANTIATE_POOL_METHODS(Object)
 /* static */ std::array<uint16_t, NUM_OBJECTS> Object::counts;
 
+/** Read the original drawing layers without creating objects or changing HQ state. */
+const DrawTileSprites *GetOriginalObjectTileLayout(ObjectType type, uint8_t hq_size, uint8_t part)
+{
+	if (type == OBJECT_HQ) {
+		if (hq_size >= std::size(_object_hq) / 4 || part >= 4) return nullptr;
+		return &_object_hq[hq_size * 4 + part];
+	}
+	if (type >= std::size(_objects) || hq_size != 0 || part != 0) return nullptr;
+	return &_objects[type];
+}
+
 /**
  * Get the object associated with a tile.
  * @param tile The tile to fetch the object for.

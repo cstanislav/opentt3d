@@ -84,6 +84,7 @@ def main():
     parser.add_argument("--reference-ground-detail", nargs=2, type=int, metavar=("KIND", "VARIANT"))
     parser.add_argument("--export-references", action="store_true")
     parser.add_argument("--export-effects", action="store_true", help="Export original effect sprites and their source offsets, including the unpresented bubble threshold")
+    parser.add_argument("--export-objects", action="store_true", help="Export original object ground/body layers and all five HQ sizes without creating objects or changing company ratings")
     parser.add_argument("--trace-effects", action="store_true", help="Record actual voxel effect sprites, original animation states, transforms and unclickable ownership")
     parser.add_argument("--expect-no-effects", action="store_true", help="Negative control: require --trace-effects to emit no voxel effects in the captured viewport")
     parser.add_argument("--clear-tile", nargs=2, type=int, metavar=("X", "Y"), help="Explicitly issue the original single-tile bulldozer command after galleries; observe its original explosion or paused suppression")
@@ -460,6 +461,8 @@ server_advertise = false
         commands.append("renderer3d infrastructure-references")
     if args.export_effects:
         commands.append("renderer3d effect-references")
+    if args.export_objects:
+        commands.append("renderer3d object-references")
     if args.verify_vehicles:
         commands.append("renderer3d verify-vehicles")
     if args.verify_industries:
@@ -967,6 +970,8 @@ server_advertise = false
                 raise RuntimeError("The requested original single-tile clear-area command did not complete")
             if args.export_effects and "exported 81 original effect source sprites in 10 families (80 presentable, 1 unpresented bubble threshold)" not in text:
                 raise RuntimeError("The complete original effect source catalogue was not exported; inspect run.log")
+            if args.export_objects and "exported 24 original object layouts with 13 separate body layers and 11 ground-only HQ slots (five HQ sizes)" not in text:
+                raise RuntimeError("The complete original object layer catalogue was not exported; inspect run.log")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
                       "screenshot": str(screenshot), "image_size": image_size, "command": command, "pid": native_pid or process.pid,
                       "background": args.background}

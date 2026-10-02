@@ -1,5 +1,48 @@
 # Active extended development goal
 
+## Stricter object-source guards on unchanged evidence — October 2, 06:42:14 UTC
+
+The same nine native/Classic object export payloads pass strict explicit-null HQ-size
+metadata and exact integer/boolean/list type guards:216 layout/333 layer equalities.
+Eleven source-oracle tests are included in157 passing asset tests. Native207/harness71/
+boundary140 remain passing. All1,169 protected evidence files and eight frozen build/tool
+files stay exact, including the earlier source oracle and rejected shared-climate audit.
+The diagnostic source-export binary/catalogue/tools are separately frozen; the prior
+immutable`.37`bubble binary remains untouched. No source payload was changed to satisfy
+a gate, no original source/reference or failure is discarded, and object/HQ geometry
+or final approval is not inferred. Evidence:
+`build-macos/breadth-original-object-reference-strict-schema-audit.json`and
+`build-macos/breadth-original-object-reference-preservation.json`. Final approvals:0.
+
+## Renewed original object-source breadth work — October 2, 06:28:52 UTC
+
+Renewed work begins with the actual06:12:13UTC clock check; the prior minimum remains
+elapsed and the full objective open. While the immutable`.37`release watch continues,
+a read-only original drawing-table accessor exports24 object layouts/37 ground-body
+layers and all five four-tile HQ sizes. Original command/state mutation code stays exact
+after removing only that accessor. The source guard retains original thresholds,
+upward-only size updates, tile order, company palette, slope-following owned ground and
+ground/body visibility without constructing objects, evaluating scores or consuming RNG.
+
+All11 source/regression/Classic controls pass:216 layout/333 layer checks,148 same-climate
+backend/37 Classic source-image equalities,648 exact original effects and280 exact bubble
+views. The1,782-model authored/compiled catalogue remains byte-exact to the frozen`.37`
+review. Native207/asset156/harness71/boundary140 and whitespace pass. Four native source
+sheets retain all layer/tile anchors and are inspected. The earlier cross-climate equality
+assumption actually fails at Arctic and stays preserved. Source-scoped checks retain
+15 Arctic/Tropic changed layers each and33 Toyland changed layers, including13 Toyland
+source offsets/sizes. Eleven separate-body absences retain visible raised ground artwork;
+they are not empty tiles. Source sorting boxes are not inferred model dimensions.
+
+No new object/HQ geometry, placement/upgrades, company recolour, lighthouse palette
+animation, nonflat clearance, climate-generation acceptance,60fps or final approval is
+claimed. Next breadth work must independently author those original climate/layer/size
+states, including raised ground ownership. The read-only export diagnostics are later
+than the immutable`.37`tag and are not included in that release. Recommended download
+stays independently verified`.36`until `.37`passes all eight jobs and separate public
+audits. Evidence:`build-macos/breadth-original-object-reference-climate-reconciliation.json`.
+Final visual approvals:0.
+
 ## Published bubble checkpoint and stopping clock audit — October 2, 06:03:44 UTC
 
 Bubble artwork, original-object source inventory and reviewed evidence are committed/

@@ -1,5 +1,42 @@
 # Implementation verification
 
+## Original object/HQ native source export — October 2
+
+A read-only drawing-table accessor exports all24 original object tile layouts and37
+ground/body layers, including five four-tile HQ sizes and11 separate-body absences.
+All source commands/state mutators stay byte-exact after removing only that accessor.
+The source oracle verifies original thresholds170/350/520/720, tile animation-frame
+size storage, upward-only upgrades, north/west/east/south ordering, company palette and
+independent ground/body visibility. It neither constructs objects nor evaluates scores.
+
+Eleven native climate/backend/Classic/regression controls pass.216 layout and333 layer
+checks preserve source IDs/flags/palettes/offsets/sorting extents.148 same-climate backend
+and37 Classic source RGBA equalities pass. All648 preceding original effect exports and
+280 integrated bubble views stay exact; the authored/compiled1,782-model catalogue is
+byte-exact to the separately frozen`.37`review. Native207, asset157, harness71 and the
+140-file presentation boundary pass.
+
+The initial assumption of cross-climate object-image equality fails at Arctic and is
+preserved with its script/log. Correct source-scoped review retains genuine climate
+differences:15 layers each for Arctic/Tropic and33 for Toyland, with13 Toyland source
+offset/size changes. Four registered original-source sheets are inspected; they join
+layers, never infer/extrude geometry. Ground-only HQ slots contain visible raised artwork
+and cannot count as empty tiles. Source sorting boxes are not model dimensions. Actual
+object/HQ voxel artwork, runtime placement/upgrades, company recolour, lighthouse palette
+animation, climate generation restrictions, nonflat terrain/clearances and final fidelity
+remain open. No capture/source failure or older artwork is discarded. Final approvals:0.
+Evidence:`build-macos/breadth-original-object-reference-climate-reconciliation.json`,
+`build-macos/breadth-original-object-reference-preflight.json`and
+`build-macos/breadth-original-object-source-{native,arctic-native,tropic-native,toyland-native}-sheet.{png,json}`.
+
+The same native exports also pass strict mandatory explicit-null HQ-size and exact
+integer/boolean/list schema guards. Eleven source-oracle tests are included in the157
+asset tests. Earlier oracle bytes, all1,169 protected evidence files and eight frozen
+build/tool files remain exact; the source/object diagnostic binary is frozen separately
+from the immutable`.37`bubble binary. Evidence:
+`build-macos/breadth-original-object-reference-strict-schema-audit.json`and
+`build-macos/breadth-original-object-reference-preservation.json`.
+
 ## Integrated original bubble breadth and preserved object source layers
 
 Fourteen separately authored floating/forming/ruptured/absorbing volumes reach1,782
