@@ -16,6 +16,20 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Fourteen bubble studies (not integrated):** independent floating/forming/burst/
+  absorbing shapes stage1,782 models and80/80 presentable effect sources while keeping
+  all1,768 production models exact. Thin rims fail side-depth review; the straight-bore
+  candidate matches10/14 native bounds but resembles cut pipe. A bowed full-depth study
+  corrects elongated frame13 while retaining thick rims, cell discontinuities and
+  incorrect burst XY placement. All candidates/captures stay intact. Six original
+  Toyland/state/negative/Classic controls retain11,179 observations, five complete bursts
+  and two complete absorptions. Three paused puffs remain exact; two preconstruction
+  absences and renderer-off Classic pass. The read-only six-table oracle never creates/
+  ticks effects or consumes RNG. Rounded rim/fragment correction, source registration
+  and all-angle/world quality remain active. Threshold4754 is unbound. No bubble artwork
+  or final approval is integrated. Evidence:
+  `build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
+
 - **Four integrated breakdown-smoke states:**16 explicit climate bindings
   reach a1,768-volume catalogue, preserving all1,764 preceding models/components/material
   faces/bindings. Native source bounds match4/4. Independently authored charcoal/grey

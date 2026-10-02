@@ -1,5 +1,25 @@
 # Implementation verification
 
+## Read-only original bubble lifecycle oracle
+
+`bubble_cycle.py`reads the six original movement tables and85 absorption entries,
+source selection, fixed spawn direction, offsets/altitude, tile-loop/first-tick order
+and legal random branch outcomes. It never creates/ticks effects or draws RNG. The
+renderer only logs actual captured movement modes and current terrain datum. Each
+independent complete lifetime includes all original presented phases1…terminal hold;
+capture gaps, missing phases and pool-ID reuse cannot splice acceptance. Progress wraps
+255→0; the absorption sentinel and source4754 are never presented.
+
+Six quiet Toyland/state/negative/Classic controls retain11,179 observations and seven
+independent complete lifetimes: five bursts and two absorptions. Both running replays
+observe all14 presented sprites. Three paused puffs retain exact state/progress/transform;
+two preconstruction absences and renderer-off Classic pass. Native207, harness69 and
+the138-file presentation boundary pass. Artwork stays staged: thin, straight-bore and
+bowed-rim studies retain depth, contour/discontinuity and registration failures.
+No bubble artwork or final approval enters production. Hidden emitter ownership,
+frequency, other contexts, between-frame presentation and sustained60fps remain open.
+Evidence:`build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
+
 ## Bounded exact CPU mesh restoration
 
 Retired small/medium surfaces can retain independently encoded triangle spans, with a

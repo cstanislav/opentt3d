@@ -3,6 +3,15 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Original bubble-path controls
+
+Six original Toyland/state/negative/Classic controls retain11,179 observations and
+seven complete independent lifetimes (five bursts/two absorptions). Peak sampled memory
+is3,274,690,040bytes and maximum interval75.822ms. The14-model bubble studies stay outside
+production; passing source movement/ownership/lifetime checks does not approve artwork
+or establish smooth60fps. Evidence:
+`build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
+
 ## Integrated breakdown-smoke controls
 
 Twenty-seven graphical/regression/fallback executions with the1,768-model catalogue

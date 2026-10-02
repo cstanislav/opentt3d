@@ -43,6 +43,7 @@
 #include "../train.h"
 #include "../aircraft.h"
 #include "../effectvehicle_base.h"
+#include "../effectvehicle_func.h"
 #include "../house.h"
 #include "../industry_map.h"
 #include "../tree_map.h"
@@ -1805,6 +1806,10 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				Debug(driver,5,"OpenTT3D: voxel effect frame {} vehicle {} type {} sprite {} climate {} animation {},{} progress {} raw {},{},{} origin {:.9g},{:.9g},{:.9g} opacity {:.9g} pick {}",
 					capture_frame,vehicle.index.base(),vehicle.subtype,image&SPRITE_MASK,to_underlying(_settings_game.game_creation.landscape),effect.animation_state,effect.animation_substate,vehicle.progress,
 					vehicle.x_pos,vehicle.y_pos,vehicle.z_pos,origin.x,origin.y,origin.z,transparent ? 0.38f : 1,tag.id);
+				/* Read-only movement-table selection: bubble state indices alone are
+				 * ambiguous between the four floating paths, burst and absorption. */
+				if (vehicle.subtype == EV_BUBBLE) Debug(driver,5,"OpenTT3D: bubble mode frame {} vehicle {} mode {} ground {}",
+					capture_frame,vehicle.index.base(),vehicle.spritenum,RenderVehicleZ(vehicle)-vehicle.z_pos);
 			}
 			return;
 		}

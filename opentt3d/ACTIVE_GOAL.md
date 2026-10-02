@@ -1,5 +1,40 @@
 # Active extended development goal
 
+## Original bubble paths and preserved artwork studies — October 2, 04:10:12 UTC
+
+Preview`.36`targets exact`bb4639f2b73677838e51f9931839ea9e29a1004b`in workflow36960610102.
+The eight-job package/public audit is pending;`.34`remains recommended and`.35`keeps both
+failed900-frame Linux attempts with no desktop attachments. Current bubble diagnostics
+are later work, not part of that immutable release. The tested1,768-model binary and
+catalogue are separately frozen before compiling new read-only tracing.
+
+Six quiet original Toyland/state/negative/Classic controls retain11,179 voxel bubble
+observations and seven complete independent lifetimes: five bursts and two absorptions.
+Both running replays observe all14 presentable sources. Three original paused puffs
+retain exact state/progress/transforms; two preconstruction absences and renderer-off
+Classic pass. The source-table oracle reads six modes, all85 absorption entries,
+four-tick updates, spawn offsets and normal tile-loop-before-vehicle first tick.
+It handles8-bit progress wraps, skips the original absorption sentinel and keeps
+unpresented threshold4754 unbound. No effects are created/ticked by the oracle; it
+does not assign a mode, reproduce a random draw or consume simulation RNG. Each capture
+gap/ID reuse is a separate boundary; complete lifetimes require every originally
+presented phase from1 through the terminal hold. Actual hidden emitter ownership,
+random frequency, other contexts and between-frame presentation remain separate.
+Native207, harness69 and the138-file presentation boundary pass. Controls peak at
+3,274,690,040 sampled bytes and75.822ms maximum interval: not smooth60fps acceptance.
+
+Fourteen authored studies stage1,782 models and80/80 presentable effect sources, but
+production remains1,768 models/66 sources. The first thin rim fails side-depth review.
+Its straight-bore successor matches10/14 native bounds but still resembles cut pipe;
+burst frames7/8/9 and elongated frame13 remain misregistered. Both candidates/captures
+are preserved, not integrated. A separate bowed full-depth annular study corrects
+frame13 but has over-thick rims, cell discontinuities and incorrect fragment XY placement;
+it also remains staged. Original source sheets, voxel volumes, failed build/registration
+evidence and every earlier approval limit remain intact. Rounded physical rim/fragment
+corrections and fresh source/all-angle review remain active. Final approvals:0.
+Evidence:`build-macos/breadth-effect-bubble-depth-probe-reconciliation.json`and
+`build-macos/breadth-effect-bubble-original-path-reconciliation.json`.
+
 ## Breakdown-smoke breadth integrated — October 2, 03:19:02 UTC
 
 Four independently authored original smoke states and16 climate bindings reach1,768

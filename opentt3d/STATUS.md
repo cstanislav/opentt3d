@@ -16,7 +16,7 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,768-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite145/145 and download/screenshot/memory/clearance/effect-motion harness59/59 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,768-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite145/145 and download/screenshot/memory/clearance/effect-motion harness69/69 pass. Small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
@@ -39,6 +39,14 @@ This file records implemented and verified work, not promises of completeness.
   full-grade contexts. Both extended local backend controls pass using the original
   Linux fixture. Hosted acceptance remains pending;`.35`has no desktop attachments
   and`.34`remains recommended. This changes diagnostic sampling, not gameplay.
+- [x] Six read-only original bubble/state/negative/Classic controls record11,179
+  observations and seven complete ordinary lifetimes (five bursts/two absorptions).
+  Both running replays observe all14 presentable sources. Six original movement modes,
+  spawn/tick ordering, legal random branches, progress wrap, altitude and picking are
+  checked without creating/ticking effects or drawing RNG. Three paused puffs remain
+  exact; two preconstruction absences and renderer-off Classic pass. Native207/harness69/
+  boundary138 pass. Fourteen artwork studies stay outside production with preserved
+  depth/contour/registration failures. Source4754 is unbound; final visual approvals0.
 - [x] Twelve grounded small-explosion states and48 climate bindings reach1,764 models
   and62/80 presentable effect sources, preserving all1,752 earlier models and owners.
   All12 native source bounds match. The filled early core, genuine later opening,
