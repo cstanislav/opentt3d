@@ -46,3 +46,8 @@ jobs pass. Keep the independently verified
 **[`.36` download](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.36)**
 recommended until this successor's public packages are separately audited.
 See [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+
+Preview **[`.37`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.37)**
+targets exact commit`24e78cbb08d5e7341d5deb63a65301c2bc82637e`in
+[workflow36971240157](https://github.com/cstanislav/opentt3d/actions/runs/36971240157).
+Packaging and independent public audits are pending; `.36`remains recommended.

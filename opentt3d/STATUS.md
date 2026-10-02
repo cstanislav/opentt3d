@@ -11,6 +11,10 @@ This file records implemented and verified work, not promises of completeness.
   graphical controls, Windows x64/x86 native load/save and Linux's1,800-frame full
   support/collector journey pass. Verified download links use`.36`. Failed`.35`remains
   immutable with both rejected attempts and no desktop packages.
+- [ ] Bubble desktop preview`.37`targets exact`24e78cbb08d5e7341d5deb63a65301c2bc82637e`
+  in workflow36971240157. Its eight-job packaging/public audit is pending; tagged source
+  has2,122 files and the catalogue has1,782 models. Do not recommend it until public
+  attachment/source/catalogue/hosted/downloaded-Mac checks pass. `.36`stays recommended.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).

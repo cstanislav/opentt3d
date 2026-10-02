@@ -1,5 +1,38 @@
 # Active extended development goal
 
+## Published bubble checkpoint and stopping clock audit — October 2, 06:03:44 UTC
+
+Bubble artwork, original-object source inventory and reviewed evidence are committed/
+pushed at`24e78cbb08d5e7341d5deb63a65301c2bc82637e`. Immutable preview
+`opentt3d-dev-20261002.37`targets that exact SHA in workflow36971240157:
+https://github.com/cstanislav/opentt3d/actions/runs/36971240157.
+The dispatch snapshot is`in_progress`, with no executable attachments yet; all eight
+jobs and independent public audits remain pending. The only remaining launched process
+is its background CI watch. Do not move its tag or borrow acceptance from earlier runs.
+Recommended download remains verified`.36`; failed`.35`and its two attempts stay intact.
+Evidence:`build-macos/playable-release37-dispatched-run.json`.
+
+When that watch finishes, freeze authoritative CI metadata/logs/artifacts. If it fails,
+preserve and diagnose the failure without relaxing gates. If it passes, independently
+audit public attachments/source/six catalogues/hosted evidence/downloaded Mac controls
+using explicit`--tag opentt3d-dev-20261002.37 --version 37 --linux-frames 1800
+--commit 24e78cbb08d5e7341d5deb63a65301c2bc82637e --volumes 1782`.
+Its matching tagged source has2,122 files. Keep`.36`recommended until all checks pass.
+The tested1,782-model binary/catalogue/source and compacted review proof are frozen;
+subsequent compilation must not overwrite those controls.
+
+**Actual stopping clock check:2026-10-02 06:03:44 UTC.** The latest specified minimum
+ended2026-09-26 19:00:00UTC/1PM fixedCST; that clock endpoint has elapsed. This work
+window ends on that elapsed-clock condition, not because catalogue-wide work is
+complete or blocked. The full breadth-first four-pass objective remains active:
+headquarters/landmarks and procedural infrastructure/ground/state coverage, other
+effect-emitter contexts, original-source/all-angle fidelity, larger-aircraft clearances,
+sustained smooth60fps and long-duration/reload/multiple-viewport memory acceptance
+remain unfinished. Foreground input, Windows GPU/ARM64 execution and replay/network
+acceptance remain unverified. Native207/asset152/harness70/boundary138 pass;
+all1,768 earlier models stay exact within1,782 volumes/80 presentable effect bindings.
+The prior capture/geometry failures remain preserved. Final visual approvals:0.
+
 ## Preserved reviewed build and lossless bubble-review compaction — October 2, 05:49:54 UTC
 
 The tested1,782-model binary, compiled catalogue and authored source are separately
