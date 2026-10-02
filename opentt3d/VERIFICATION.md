@@ -65,7 +65,7 @@ four-climate/backend replays observe no small explosions and correctly reject po
 lifetime acceptance. Their failure logs remain. The original train selector uses
 `(r * 10 >> 16)`after`Chance16R`; no selection or RNG behavior is changed to force a
 sample. The single-tile command audit below supplies a separate original emitter.
-The twelve small models remain staged. This does not establish actual random
+The later grounded small models are integrated below. This does not establish actual random
 spawn frequency, aircraft/disaster contexts or a positively observed small train-crash lifetime.
 
 ### Original single-tile clear-area effects
@@ -77,7 +77,7 @@ state or advances animation. The optional delay only queues that user-like actio
 startup/gallery warm-up; it does not alter simulation time or RNG.
 
 ```sh
-python3 tools/opentt3d/smoke.py --build-dir build-macos/path-to-staged-build \
+python3 tools/opentt3d/smoke.py --build-dir build-macos \
   --output build-macos/new-clear-effect --background --backend vulkan \
   --center 64 64 --clear-tile 64 64 --running --trace-effects --benchmark-frames 240
 python3 tools/opentt3d/demolition_explosion_cycle.py build-macos/new-clear-effect/run.log \
@@ -109,6 +109,38 @@ non-instrumented capture path. A Classic/voxel pair revealed the staged small ha
 lower arc buried below the ground, so that candidate remains rejected for integration.
 Three additional script/option checks cover delayed gallery ordering, explicit paused
 permission, Classic renderer-off capture and invalid controls. Current harness47 passes.
+
+### Integrated grounded small-explosion breadth
+
+Twelve independently authored states and48 climate owners reach1,764 models and62/80
+presentable effect sources. All1,752 preceding models/components/material faces/bindings
+remain exact. All12 native source bounds match; the core is filled through frame3,
+later halos have a real opening and detached fragments retain their source extents.
+Native/orbit/street and positive world review correct thin side profiles and the buried
+lower/front arc. Authored depth clears the original two-unit flat-ground emission datum
+by at least0.25 world units without changing effect origins, simulation or RNG.
+
+Twenty integrated graphical/regression/fallback executions pass.960 integration images
+match staging;648 original exports,320 large-explosion and100 charcoal views remain exact.
+All96 native bindings equal their model owners. Each108-view backend comparison retains
+24 wider differences/153 pixels, with zero native differences. Deliberately missing one
+temperate frame or all Toyland bindings preserves the original source fallback.
+
+Ten240-frame original clear-area replays record770 observations and nine complete48-phase
+lifetimes. All eight gallery-preloaded climate/backend controls pass. Cold OpenGL passes;
+cold Vulkan misses phase21 and fails complete-lifetime acceptance. Two paused absences
+retain original suppression. Two75-frame in-world images show the full unburied ring.
+The first contact probe misses39/40; corrected staging misses temperate Vulkan3,
+Toyland OpenGL4 and cold Vulkan1. Every failed capture remains intact; no partial
+lifetime is combined with another run to pass. Native207, asset/compiler144, harness47,
+the138-file presentation boundary and whitespace checks pass.
+
+Detailed contours, billow shaping, directional paint, nonflat terrain, random train/
+aircraft/disaster contexts, long-duration memory and sustained60fps remain open.
+Peak integrated sampled memory is3,390,606,816bytes; maximum interval33.875ms is not
+smooth60fps acceptance. Final visual approvals:0. Evidence:
+`build-macos/breadth-effect-small-explosion-integrated-reconciliation.json`and
+`build-macos/breadth-effect-small-explosion-contact-review-reconciliation.json`.
 
 ### Independently reconciled large-explosion desktop release
 

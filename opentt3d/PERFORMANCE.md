@@ -3,6 +3,22 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Integrated grounded small-explosion controls
+
+Twenty graphical/regression/fallback executions with the1,764-model catalogue peak at
+3,390,606,816 sampled bytes. Ten240-frame original clear-area replays record770 observations
+and nine complete48-phase lifetimes. All eight gallery-preloaded climate/backend runs pass;
+cold OpenGL passes while cold Vulkan misses phase21 and fails complete-lifetime acceptance.
+Two paused controls preserve original suppression. Two75-frame captures show an active
+unburied ring but do not establish long-duration multiple-viewport acceptance.
+
+The cold Vulkan capture peaks at19.824ms and frame intervals at33.875ms, retaining57
+intervals above20ms. Cold OpenGL capture peaks at17.579ms and intervals at27.316ms.
+Other original clearing controls retain16…43 intervals above20ms. Earlier staging controls
+and their larger missed-phase spikes remain preserved. This is verified basic artwork
+and source/state behavior, not a gameplay pacing repair or sustained60fps acceptance.
+Evidence:`build-macos/breadth-effect-small-explosion-integrated-reconciliation.json`.
+
 ## Verified large-explosion release packages
 
 Release`.34`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at

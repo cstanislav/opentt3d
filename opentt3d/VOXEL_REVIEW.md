@@ -16,6 +16,30 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Twelve grounded small-explosion frames:**48 climate bindings reach1,764 volumes
+  and62/80 presentable effect sources, preserving all1,752 prior models/components/
+  material faces/bindings. Every native source bound matches. The early core remains
+  filled through frame3; later states retain a real halo opening and independent
+  source-sized fragments. A thin side-profile candidate and a full-depth candidate
+  that buried the lower arc remain rejected. Authored native-ray depth placements
+  clear the original two-unit flat-ground emission datum by at least0.25 without
+  changing effect origins or dimensions. Frame6's one-row grounding mismatch is fixed.
+  Native/orbit/street/world views show genuine volumetric knots and the full lower arc.
+  Contours, billow shaping, directional paint, nonflat terrain and other emitters remain
+  provisional. Fifteen staging controls retain770 observations, seven complete48-phase
+  lifetimes and two correct paused absences. Temperate Vulkan, Toyland OpenGL and cold
+  Vulkan miss phases and remain failed complete-lifetime controls.648 original exports
+  remain exact;96 native bindings equal their models. Each108-view backend comparison
+  retains24 wider differences/153 pixels and zero native differences. Twenty integrated
+  graphical/regression/fallback executions pass.960 integration images,648 original
+  exports,320 earlier large-explosion and100 charcoal views remain exact;96 native
+  bindings equal their models. Ten integrated clearing replays retain770 observations
+  and nine complete48-phase lifetimes, with cold Vulkan missing21 and remaining a failure.
+  Two paused absences and two visible unburied-ring captures pass. Native207, asset144 and
+  harness47 pass. Eighteen presentable effect sources remain; final approvals:0. Evidence:
+  `build-macos/breadth-effect-small-explosion-contact-review-reconciliation.json`and
+  `build-macos/breadth-effect-small-explosion-integrated-reconciliation.json`.
+
 - **Sixteen large-explosion frames:**64 explicit climate bindings reach1,752 volumes,
   preserving all1,736 preceding models/components/material faces/bindings. All sixteen
   original native bounds match. Frames8/9 replace an occluding annular stem with two
@@ -26,13 +50,13 @@ full terrain/source-raster fidelity and final approval remain separate.
   timing and source/state selection are checked independently of artwork fidelity.
   Thirty presentable effect sources remain outside production; final approvals:0.
 
-- **Separate small-explosion staging:**twelve independent volumes match12/12 original
+- **Earlier separate small-explosion staging:**twelve independent volumes match12/12 original
   bounds, preserve the filled frame3 centre before the halo opens and restore the late
   fragment extents. All eight current crash replays observe no small-explosion records;
-  their lifetime gates correctly fail and remain preserved. The separate read-only
-  oracle has synthetic corruption/continuity checks but no positive native lifetime.
-  Source/all-angle refinement and an ordinary positively observed emitter remain open.
-  This family is not counted in the production coverage above.
+  their lifetime gates correctly fail and remain preserved. The separate random-offset
+  crash oracle has synthetic corruption/continuity checks but no positive native train
+  lifetime. Later public clear-area commands provide a separate positive emitter above;
+  all earlier studies/failures remain preserved. Final visual approval remains open.
 
 - **Five shared charcoal-smoke frames:**twenty explicit climate bindings reach1,736
   volumes, preserving all1,731 prior models/components/material faces/bindings. Original

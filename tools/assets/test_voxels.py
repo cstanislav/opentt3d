@@ -8,6 +8,31 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_small_explosions_keep_ground_clearance_filled_core_and_explicit_climates(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        names = {f"effect_explosion_small_{frame}" for frame in range(12)}
+        source["models"] = {name:source["models"][name] for name in names}
+        source["bindings"] = {"effects":{str(sprite):source["bindings"]["effects"][str(sprite)] for sprite in range(3725,3737)}}
+        catalogue = compile_catalogue(source)
+        for frame in range(12):
+            name = f"effect_explosion_small_{frame}"
+            self.assertEqual(catalogue["bindings"]["effects"][str(3725+frame)],{str(climate):name for climate in range(4)})
+            model = catalogue["models"][name]
+            self.assertEqual(model["cell_size"],[0.125,0.125,0.25])
+            self.assertEqual(model["origin"],[-8,-8,-24])
+            self.assertGreater(model["occupied"],0)
+            self.assertGreaterEqual(min(z for x,y,z,length,material in model["runs"])*model["cell_size"][2]+model["origin"][2]+2,0.25,
+                                    "The full lower/front arc must clear the original flat-ground emission datum")
+            # In dyadic cell units, the unchanged native-view ray (t,t,2t)
+            # intersects a run only when all three open intervals overlap.
+            core = any(max(x-64,y-64,z-96) < min(x+length-64,y+1-64,z+1-96)
+                       for x,y,z,length,material in model["runs"])
+            self.assertEqual(core,frame < 4,"The early core stays filled through frame3; the later halo has a genuine opening")
+            colours = {colour for *_,material in model["runs"] for colour in catalogue["materials"][material-1]}
+            self.assertTrue(colours <= set(range(178,192)),"Keep original animated fire palette indices")
+            self.assertNotEqual(source["models"][name].get("review_status"),"approved")
+
     def test_effect_bindings_exclude_unpresented_transition_and_other_climates(self):
         root = Path(__file__).resolve().parents[2]
         constants = {name:int(value) for name,value in re.findall(r"static const SpriteID (SPR_\w+) = (\d+);",(root / "src/table/sprites.h").read_text())}

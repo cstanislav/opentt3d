@@ -1,5 +1,40 @@
 # Active extended development goal
 
+## Grounded small-explosion breadth integrated — October2,01:39:15UTC
+
+Twelve independent small-explosion states and48 climate bindings reach1,764 models,
+62/80 presentable effect sources and248 climate bindings. All1,752 preceding models,
+components, material faces and bindings remain unchanged. All12 source bounds match;
+the filled core persists through frame3, later halos have real openings, and full-depth
+fragments retain their source extents. Authored lower/front depth clears the original
+two-unit flat-ground emission datum by at least0.25 without changing effect transforms.
+Native/orbit/street/world review fixes the thin side profile and buried lower arc;
+contours, billow shaping, directional paint, nonflat terrain and other emitters stay provisional.
+
+Twenty integrated graphical/regression/fallback executions pass.960 integration images
+match staging;648 original exports,320 earlier large-explosion and100 charcoal views
+remain exact.96 native binding selections equal their models. Each108-view backend
+comparison retains24 wider differences/153 pixels and zero native differences. Ten
+240-frame original clear-area replays record770 observations and nine complete48-phase
+lifetimes. All eight gallery-preloaded climate/backend controls pass. Cold OpenGL passes;
+cold Vulkan misses phase21 and fails complete-lifetime acceptance. Two paused controls
+retain original suppression, and two75-frame images show the full unburied ring.
+
+Native207, asset/compiler144, harness47 and the138-file presentation boundary pass.
+Integrated peak sampled memory is3,390,606,816bytes and maximum interval33.875ms;
+sustained smooth60fps and long-duration/reload/multiple-viewport memory remain open.
+The first new contact probe misses39/40; three preceding corrected-staging controls and
+all earlier demolition/crash failures remain preserved. No partial run is spliced into
+acceptance. Evidence:`breadth-effect-small-explosion-integrated-reconciliation.json`and
+`breadth-effect-small-explosion-contact-review-reconciliation.json`. Final approvals:0.
+
+Recommended downloads remain independently verified`.34`. Next: commit/push/package
+this noteworthy small-explosion increment, independently reconcile its public packages,
+then continue four breakdown-smoke and14 presentable bubble sources, remaining catalogue
+breadth, source-valid larger-aircraft clearances and bounded performance/memory work.
+Unclipped source sheets and exact hashes cover those18 remaining effects; no new geometry
+or visual approval is claimed for them. The full four-pass objective remains active.
+
 ## Large-explosion packages independently verified — October2,01:09:00UTC
 
 Release`.34`at`fcd5b38d046f6f68a98275dae07228c3b3de72d9`passes all eight jobs in
