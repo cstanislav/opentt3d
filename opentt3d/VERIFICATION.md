@@ -186,11 +186,14 @@ Lower-ID smoke first presents progress0; higher-ID smoke first presents1. A full
 the four source sprites alone is insufficient. Missing phases/frames, reused IDs,
 conflicting views, moved anchors or a changed original source cannot splice acceptance.
 
-The renderer only logs the original stopped train and effect; the oracle requires the
-same captured-frame emitter raw XY+4/+4 and Z+5, stationary effect XYZ, doubled flat
-terrain datum, opacity1 and zero picking. A1,200-frame staged temperate Vulkan control
+The renderer only logs the original stopped train and effect. Each lifetime boundary
+requires its captured original emitter raw XY+4/+4 and Z+5. The puff has an independent
+countdown and can outlive the stopped train by a few ticks; later observations must
+retain the verified stationary spawn anchor, not follow the recovered parent. A frame
+gap cannot extend that ownership. The doubled flat terrain datum, opacity1 and zero
+picking stay exact. A1,200-frame staged temperate Vulkan control
 records541 observations of each and one complete334-tick lifetime including its wrap.
-Native207, harness57 and the138-file presentation boundary pass. Artwork remains staged;
+Native207, harness58 and the138-file presentation boundary pass. Artwork remains staged;
 native-registration/all-angle/state review is separate. Road/ship/aircraft emitters,
 random breakdown frequency, nonflat terrain, hidden effects and between-frame behavior
 remain outside this oracle. Evidence:

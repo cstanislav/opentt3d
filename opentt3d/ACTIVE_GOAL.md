@@ -1,5 +1,34 @@
 # Active extended development goal
 
+## Preserved failures and source-valid breakdown timing — October 2, 02:42:05 UTC
+
+Release `.35` attempt 1 built the exact `fe114215a871f904af153aa63a61102fca4ad219`
+commit but withheld packages: Linux missed the descending-ramp support observation
+(state 8); states 1/2/4/16/32 and the collector passed. No wheel-gap exception was
+reported. The failed 900-frame Mesa/llvmpipe run reached 1.689fps and 2,544,967,680
+sampled bytes. Its CI metadata, fixture, screenshot, logs and measurements remain in
+`build-macos/playable-release35-attempt1-failure-audit.json`. One fresh failed-job retry
+uses the unchanged commit with all original gates intact. `.34` remains recommended.
+
+The staged breakdown study exposed an incorrect oracle assumption, not a simulation
+defect: an independently stationary smoke puff can outlive its stopped train by a few
+ticks. The source-valid oracle requires the captured stopped emitter at each lifetime
+boundary and retains that fixed spawn anchor after the parent recovers. It still rejects
+missing countdown/capture phases, moved anchors and reused pool IDs. The old oracle
+bytes and every earlier rejection remain intact; corrected reports read the same logs.
+Twelve original replays retain nine complete lifetimes. Temperate OpenGL misses remaining
+315, tropical OpenGL 173, and Toyland Vulkan 437/438; these remain genuine capture failures.
+Three CLI-contract mistakes (two paused positives and a Classic voxel focus) remain
+preserved. Corrected paused/disabled controls, a renderer-off Classic comparison and
+two deliberately missing-binding fallbacks pass. The staging reconciliation records
+21 successful executions, 8,000 effect observations, nine complete lifetimes and four
+expected absences. All 648 original exports remain exact; 32 native bindings equal their
+models. Each 36-view backend comparison retains 13 wider differences/194 pixels and
+zero native differences. Peak sampled memory is 3,158,887,856bytes and maximum interval
+120.203ms: not sustained60fps acceptance. Harness 58 passes. Four smoke models remain
+outside the committed production catalogue, with 4/4 matching native bounds. Evidence:
+`build-macos/breadth-effect-breakdown-source-valid-reconciliation.json`.
+
 ## Small-explosion release and original breakdown emitter — October2,02:10:55UTC
 
 Main integrates the1,764-model small family at`fe114215a871f904af153aa63a61102fca4ad219`.

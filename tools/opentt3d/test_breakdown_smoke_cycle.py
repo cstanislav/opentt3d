@@ -40,6 +40,16 @@ class BreakdownSmokeCycleTests(unittest.TestCase):
         text = "".join(self.line(p,p) for p in range(90))+"".join(self.line(p+90,p) for p in range(1,334))
         self.assertEqual(audit(text,*self.sources,1,13)["complete_presented_lifetimes"],0)
 
+    def test_stationary_puff_can_outlive_its_stopped_emitter(self):
+        lines = [self.line(p,p) if p<332 else self.line(p,p).split("\n",1)[1] for p in range(334)]
+        result = audit("".join(lines),*self.sources,1,13)
+        self.assertEqual(result["complete_presented_lifetimes"],1)
+        self.assertEqual(result["lifetimes"][0]["anchored_without_stopped_emitter"],2)
+        with self.assertRaisesRegex(ValueError,"stationary anchor"):
+            audit("".join(lines[:-1])+lines[-1].replace("1109,460","1110,460"),*self.sources,1,13)
+        with self.assertRaisesRegex(ValueError,"lifetime boundary"):
+            audit(lines[0].split("\n",1)[1]+"".join(lines[1:]),*self.sources,1,13)
+
     def test_emitter_offsets_altitude_palette_owner_and_countdown_corruption_rejected(self):
         text = self.line(0,0)
         cases = (text.replace("sprite 3737","sprite 3738"),text.replace("raw 1109,460,21","raw 1110,460,21"),

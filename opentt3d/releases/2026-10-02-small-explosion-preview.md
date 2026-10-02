@@ -1,5 +1,10 @@
 # Grounded small voxel explosions
 
+**Package status:** the first build attempt withheld desktop attachments because its
+Linux review missed a descending-ramp support observation. That failed evidence is
+retained. An unchanged-commit retry keeps every original gate; `.34` remains the
+recommended download until all jobs and independent package audits pass.
+
 Twelve independently authored small-explosion states retain the original ignition,
 filled early core, opening fire halo and detached embers. The lower/front arc now
 occupies genuine ground-clearing depth instead of disappearing beneath the terrain.
