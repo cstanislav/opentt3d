@@ -1,5 +1,58 @@
 # Active extended development goal
 
+## Verified-download publication and stopping clock audit — October 2, 07:09:34 UTC
+
+Recommended README/installation links and public`.37`notes now expose the independently
+audited Windows/macOS/Linux downloads directly. The live release page shows all four
+primary links and installation guidance. Its updated public notes match the local file;
+the exact tag/SHA,19 attachment names/sizes/digests and frozen independent evidence remain
+unchanged. Public receipt:`build-macos/playable-release37-recommended-public-receipt.json`.
+Native207/asset157/harness71/boundary140 and whitespace checks pass. Object/source diagnostics
+are pushed at`60ee169e7`; the immutable packages still contain the exact earlier bubble
+commit`24e78cbb08d5e7341d5deb63a65301c2bc82637e`. No release/source/capture failure is erased.
+All launched build/review/download/audit/CI-watch commands have completed; none remain
+running. Available storage is25GiB with originals, rejected studies and justified evidence
+retained. Both the1,782-model bubble build and later source-export build are separately frozen.
+
+**Actual stopping clock check:2026-10-02 07:09:34 UTC.** The September26 19:00UTC/1PM
+fixedCST minimum has elapsed. This renewed window ends on that elapsed-clock condition
+after the verified release/source-export checkpoint, not because the full goal is
+complete or blocked. The breadth-first four-pass objective remains active: object/HQ/
+landmark and procedural state artwork, additional original emitter contexts, wall/
+contour/paint/all-angle fidelity, larger-aircraft clearances, sustained smooth60fps,
+long-duration/reload/multiple-viewport memory and Windows ARM64/GPU/foreground/replay/
+network acceptance remain unfinished. Final visual approvals:0.
+
+## `.37` independently verified and recommended — October 2, 06:55:41 UTC
+
+The immutable tag`opentt3d-dev-20261002.37`and all eight successful jobs in workflow
+36971240157 resolve to`24e78cbb08d5e7341d5deb63a65301c2bc82637e`. Independent public
+downloads reconcile19 attachment sizes/digests,18 checksums,2,122 exact tagged source
+files and six matching1,782-model catalogues. Their80/80 presentable effect sources/
+320 explicit climate bindings match the frozen local catalogue; all1,768 previous model/
+material-face definitions and owner bindings stay exact. Threshold4754 remains unbound.
+Three downloaded Mac render/save/72-view clipping controls, seven hosted graphical
+controls and Windows x64/x86 native load/save pass. Hosted Mac worlds match verified`.36`
+exactly; software OpenGL has zero black pixels and nine differences from Vulkan.
+
+Linux's1,800 frames retain every original station/flat/ascending/descending/bridge/tunnel
+support and surface/portal/tunnel collector context with unchanged geometry/tolerances/
+ownership. llvmpipe1.671fps and2,552,246,272 sampled bytes are not smooth60fps or long-duration
+memory acceptance. Recommended README/installation links now use`.37`; direct installer/
+DMG/archive links are added to its release notes. Failed`.35`stays at its exact original
+commit, with both rejected attempts and no executable attachments. Evidence:
+`build-macos/playable-release37-independent-reconciliation.json`.
+
+The later read-only object exports/source guards are committed/pushed at`60ee169e7`but
+are not part of the immutable`.37`package. They preserve24 source layouts/37 ground-body
+layers, legitimate climate differences and raised ground in11 separate-body absences;
+they do not provide object/HQ voxel artwork or change source commands/state mutations.
+The tested diagnostic binary and the earlier bubble binary/source/catalogue/tools remain
+separately frozen. Native207/asset157/harness71/boundary140 pass. Headquarter/landmark and
+procedural state breadth, other emitter contexts, wall/contour/paint/all-angle fidelity,
+larger-aircraft clearance, sustained pacing/memory, Windows ARM64/GPU/foreground input
+and replay/network acceptance remain open. Final visual approvals:0.
+
 ## Stricter object-source guards on unchanged evidence — October 2, 06:42:14 UTC
 
 The same nine native/Classic object export payloads pass strict explicit-null HQ-size

@@ -1,5 +1,31 @@
 # Implementation verification
 
+## Independently verified original-bubble desktop release
+
+Release`.37`and workflow36971240157 target exact`24e78cbb08d5e7341d5deb63a65301c2bc82637e`.
+All eight jobs pass. Independent public downloads verify19 attachment sizes/digests,
+18 checksums,2,122 exact tagged source files, pinned graphics source and six matching
+1,782-model catalogues. Their80/80 presentable effect sources/320 climate bindings equal
+the frozen local catalogue; all1,768 previous model/material-face definitions and owner
+bindings remain exact. Bubble threshold4754 stays unbound.
+
+Three downloaded Mac render/save/72-view clipping controls, seven hosted graphical
+controls and Windows x64/x86 native load/save pass. Hosted ARM/Intel software-OpenGL
+worlds retain zero black pixels and nine differences from Vulkan. All three reviewed
+hosted world regions match verified`.36`exactly. Linux's1,800 frames retain every original
+station/flat/ascending/descending/bridge/tunnel support and surface/portal/tunnel collector
+context with unchanged geometry, tolerances and ownership. Its llvmpipe1.671fps and
+2,552,246,272 sampled bytes are not smooth60fps or long-duration memory acceptance.
+
+Recommended README/installation links now use`.37`. Failed`.35`remains at its exact
+original SHA, with two rejected attempts and no executable attachments. The later
+object reference exports are outside this immutable tag; no new object/HQ geometry,
+Windows ARM64/GPU/foreground input, source/emitter/all-angle fidelity, larger-aircraft,
+replay/network or final visual acceptance is asserted. Final approvals:0. Evidence:
+`build-macos/playable-release37-independent-reconciliation.json`,
+`build-macos/playable-release37-download-audit.json`and
+`build-macos/playable-release37-ci-reconciliation.json`.
+
 ## Original object/HQ native source export — October 2
 
 A read-only drawing-table accessor exports all24 original object tile layouts and37

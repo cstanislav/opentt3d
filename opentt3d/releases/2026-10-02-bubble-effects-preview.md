@@ -1,9 +1,18 @@
 # Original voxel bubble states
 
-For an independently verified executable now, use the
-**[`.36` desktop download](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.36)**
-and [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
-This successor's executable attachments appear only after all eight package jobs pass.
+## Download & play
+
+| Your computer | Verified download | Start playing |
+| --- | --- | --- |
+| Windows, most PCs | [x64 installer](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.37/opentt3d-dev-20261002.37-windows-x64.exe) | Install, then open **OpenTT3D**. |
+| Mac, Apple silicon | [ARM64 DMG](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.37/opentt3d-dev-20261002.37-macos-arm64.dmg) | Drag **OpenTT3D** into **Applications**. Requires macOS 15+. |
+| Mac, Intel | [Intel DMG](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.37/opentt3d-dev-20261002.37-macos-x86_64.dmg) | Drag **OpenTT3D** into **Applications**. Requires macOS 15+. |
+| Linux, x86-64 | [Linux archive](https://github.com/cstanislav/opentt3d/releases/download/opentt3d-dev-20261002.37/opentt3d-dev-20261002.37-linux-x86_64.tar.xz) | Extract, then run **`./opentt3d.sh`**. |
+
+Graphics are included; no development tools or original game files are needed.
+For unsigned-app prompts, Linux requirements, portable ZIPs and other Windows
+architectures, see [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+This is a playable development preview: artwork and performance remain unfinished.
 
 Fourteen separately authored volumes preserve the original floating, forming,
 bursting and absorbing bubble states. Connected rounded rims have genuine empty
@@ -39,15 +48,25 @@ no lifetimes are joined across capture gaps or runs. Earlier thin/straight-bore/
 geometry studies and original evidence remain intact. Bubble-wall shaping, source/
 fragment contours, paint, hidden emitter ownership, nonflat/other contexts, larger-aircraft
 clearances, sustained smooth60fps and long-duration memory remain open.
-**Final visual approvals:0.**80/80 effect bindings do not complete the whole catalogue Pass1.
+**Final visual approvals: 0.** The 80/80 effect bindings do not complete catalogue-wide Pass 1.
 
-Desktop packages, matching sources and checksums appear only after all eight exact-tag
-jobs pass. Keep the independently verified
-**[`.36` download](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.36)**
-recommended until this successor's public packages are separately audited.
-See [installation instructions](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md).
+## Independently verified desktop release
 
-Preview **[`.37`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.37)**
-targets exact commit`24e78cbb08d5e7341d5deb63a65301c2bc82637e`in
-[workflow36971240157](https://github.com/cstanislav/opentt3d/actions/runs/36971240157).
-Packaging and independent public audits are pending; `.36`remains recommended.
+**[`.37`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.37)**
+targets exact commit `24e78cbb08d5e7341d5deb63a65301c2bc82637e`.
+All eight jobs in [workflow 36971240157](https://github.com/cstanislav/opentt3d/actions/runs/36971240157)
+pass, and `.37` is now the recommended download.
+
+Independent public downloads reconcile 19 attachments, 18 checksums, 2,122 tagged source
+files and six matching 1,782-model catalogues. All 1,768 previous models, material faces
+and owner bindings remain exact. Three downloaded Mac render/save/clipping controls,
+seven hosted graphical controls and Windows x64/x86 native load/save pass. Hosted Mac
+worlds match verified `.36` exactly; software OpenGL retains zero black pixels and nine
+differences from Vulkan. Windows ARM64 execution and Windows GPU acceptance remain unverified.
+
+Linux's 1,800-frame journey passes all original station/flat/ascending/descending/bridge/
+tunnel support and surface/portal/tunnel collector gates with unchanged geometry and
+contact tolerances. Its llvmpipe result is 1.671fps with 2,552,246,272 sampled bytes,
+not a sustained smooth60fps or long-duration memory pass. Failed `.35` remains immutable,
+with both rejected attempts and no desktop packages. Later read-only object reference
+exports are not part of this tagged release and do not add object/HQ voxel coverage.

@@ -4,17 +4,18 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.36`publishes grounded small explosions, original breakdown
-  smoke, bounded CPU restoration and the1,768-model catalogue at commitbb4639f2b. All
-  eight jobs pass; independent checks reconcile19 attachments,18 checksums,2,117 source
-  files and six identical catalogues. Downloaded Mac render/save/clipping, seven hosted
+- [x] Verified desktop release`.37`publishes original bubble states, grounded explosions,
+  breakdown smoke, bounded CPU restoration and1,782 models at commit24e78cbb0. All
+  eight jobs pass; independent checks reconcile19 attachments,18 checksums,2,122 source
+  files and six matching catalogues. Downloaded Mac render/save/clipping, seven hosted
   graphical controls, Windows x64/x86 native load/save and Linux's1,800-frame full
-  support/collector journey pass. Verified download links use`.36`. Failed`.35`remains
+  support/collector journey pass. Verified download links use`.37`. Failed`.35`remains
   immutable with both rejected attempts and no desktop packages.
-- [ ] Bubble desktop preview`.37`targets exact`24e78cbb08d5e7341d5deb63a65301c2bc82637e`
-  in workflow36971240157. Its eight-job packaging/public audit is pending; tagged source
-  has2,122 files and the catalogue has1,782 models. Do not recommend it until public
-  attachment/source/catalogue/hosted/downloaded-Mac checks pass. `.36`stays recommended.
+- [x] Bubble desktop preview`.37`targets exact`24e78cbb08d5e7341d5deb63a65301c2bc82637e`
+  in workflow36971240157. Its public catalogues preserve all1,768 earlier model/material
+  faces and owner bindings; hosted Mac worlds match verified`.36`exactly.80/80 effect
+  sources/320 climate bindings are breadth checkpoints, not final visual approval.
+  Linux llvmpipe1.671fps/2,552,246,272 sampled bytes are not smooth60fps acceptance.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
@@ -23,8 +24,8 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
 - [x] Current1,782-volume catalogue passes exact candidate/full-compiler and prior-model
   audits; all1,768 preceding models/components/material faces/bindings remain intact.
-  Asset/compiler/schema152, including six new original-object inventory tests, passes.
-  Native207, harness70 and the138-file presentation
+  Current asset/compiler/schema157, including eleven original-object source tests, passes.
+  Native207, harness71 and the140-file presentation
   boundary pass. Small explosions have positive original clear-area lifetimes; the
   separate random train-crash oracle still has no positive native sample. New artwork
   stays under source/state/street review with zero final approvals.
@@ -47,7 +48,8 @@ This file records implemented and verified work, not promises of completeness.
 - [x] Read-only original-object inventory records five types and24 source tile layouts,
   including all five four-tile HQ sizes and their11 separate-body absences. Original
   layer ownership, colour modifiers, climates, flags and sorting extents are retained.
-  Six tests pass; no geometry, object creation, company-rating change or RNG is inferred.
+  The initial six tests pass; later source guards/export controls are recorded below.
+  No geometry, object creation, company-rating change or RNG is inferred.
   Landmarks/headquarters remain uncovered breadth work.
 - [x] Native original-object reference export preserves all24 layouts/37 ground-body
   layers, including11 true separate-body absences and raised ground artwork. Eleven
@@ -77,7 +79,7 @@ This file records implemented and verified work, not promises of completeness.
   support/collector gates after two independent900-frame`.35`captures miss opposite
   full-grade contexts. Both extended local backend controls pass using the original
   Linux fixture. Hosted`.36`passes every original context and independent public audits;
-  `.35`has no desktop attachments and`.36`is now recommended. This changes diagnostic
+  `.35`has no desktop attachments; verified`.37`is now recommended. This changes diagnostic
   sampling, not gameplay or contact tolerances; llvmpipe1.687fps is not a60fps pass.
 - [x] Six read-only original bubble/state/negative/Classic controls record11,179
   observations and seven complete ordinary lifetimes (five bursts/two absorptions).
@@ -85,7 +87,8 @@ This file records implemented and verified work, not promises of completeness.
   spawn/tick ordering, legal random branches, progress wrap, altitude and picking are
   checked without creating/ticking effects or drawing RNG. Three paused puffs remain
   exact; two preconstruction absences and renderer-off Classic pass. Native207/harness69/
-  boundary138 pass. Fourteen artwork studies stay outside production with preserved
+  boundary138 pass. At that earlier source checkpoint, fourteen artwork studies stayed
+  outside production with preserved
   depth/contour/registration failures. Source4754 is unbound; final visual approvals0.
 - [x] Twelve grounded small-explosion states and48 climate bindings reach1,764 models
   and62/80 presentable effect sources, preserving all1,752 earlier models and owners.

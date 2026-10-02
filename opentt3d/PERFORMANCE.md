@@ -3,6 +3,18 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Verified `.37` original-bubble release review
+
+The exact tagged1,782-model release passes all original support/collector contexts in
+1,800 hosted Linux frames. Geometry, contact tolerances and simulation stay unchanged.
+llvmpipe measures1.671fps and2,552,246,272 sampled bytes; this is capture/geometry evidence,
+not sustained smooth60fps or long-duration/reload/multiple-viewport memory acceptance.
+Downloaded Mac and hosted graphical checks retain default3D render/save/clipping without
+claiming arbitrary-world pacing. All previous1,768 model/material-face definitions stay
+exact, and reviewed hosted Mac worlds match verified`.36`. Failed`.35`stays immutable and
+package-less. Independently verified`.37`is now recommended. Evidence:
+`build-macos/playable-release37-independent-reconciliation.json`.
+
 ## Integrated original bubble breadth
 
 All27 integrated graphical/regression/fallback executions pass with1,782 models.
