@@ -1,5 +1,60 @@
 # Active extended development goal
 
+## Large-explosion packages independently verified — October2,01:09:00UTC
+
+Release`.34`at`fcd5b38d046f6f68a98275dae07228c3b3de72d9`passes all eight jobs in
+workflow36397773950. Independent audits reconcile19 attachments,18 checksums,2,110 source
+files and six identical1,752-model catalogues. Three downloaded Mac render/save/clipping
+controls, seven hosted72-view clipping controls, Windows x64/x86 load/save and Linux's
+900-frame support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain
+zero black pixels and nine differences from Vulkan. Recommended downloads now use`.34`.
+Linux's functional llvmpipe journey averages1.716fps with2,526,892,032 peak sampled bytes;
+that is compatibility, not performance acceptance. Evidence:`playable-release34-download-audit.json`,
+`playable-release34-ci-reconciliation.json`,`playable-release34-hosted-visual-comparison.json`.
+
+The small command/oracle harness now passes47 checks, including explicit permission,
+gallery/draw-delay ordering, Classic renderer-off capture and invalid-option rejection.
+All12 grounded small-effect source bounds match after frame6's contact correction; the
+new Vulkan probe misses phases39/40 and remains a failed lifetime control. The corrected
+family stays staged while four-climate/backend/cold/paused/world reviews run. No final
+visual approvals or sustained-performance acceptance is claimed.
+
+## Renewed continuation — October2,01:05:23UTC
+
+Actual clock on resumption:2026-10-02,01:05:23UTC. Main is pushed through`ce82ad0ce`;
+the original clear-area review command, its read-only oracle and accompanying ledgers
+remain uncommitted from the prior work window. The requested minimum is satisfied;
+the full breadth-first four-pass objective remains active and incomplete.
+
+Release`.34`'s watcher has completed. Collect authoritative public metadata and compare
+its exact tagged1,752-model source/packages before changing the recommended`.33`download.
+Resume the grounded small-explosion candidate: it fixes the buried lower arc without
+altering the original effect transform, but frame6 retains a one-row native mismatch.
+The separate contact correction stays staged until native/all-angle/world/state checks
+pass. Keep all rejected candidates and missing-phase captures; final approvals remain0.
+
+## Original small-explosion command/lifetime controls — September28
+
+The explicit`renderer3d clear-tile`review action posts the ordinary public bulldozer
+command after an optional draw-tick delay. Original code retains permission, cost,
+terrain clearing, effect creation, paused suppression and simulation RNG. A separate
+read-only oracle requires all48 presented phases0…47 at the tile centre, two-unit
+local altitude, doubled ground datum, opacity1 and unclickable ownership.
+
+Twelve sequential four-climate/backend/cold/paused controls record776 observations,
+seven complete lifetimes and two correct paused absences. Tropical Vulkan misses phase37;
+both Toyland runs miss26. These failures, plus the immediate-start probe missing1/2,
+remain preserved. Both cold controls pass. Native207, harness44 and the138-file boundary
+pass. Peak sampled memory is3,619,344,032bytes and maximum interval51.175ms; the sustained
+performance goal remains open. Evidence:`breadth-effect-small-demolition-reconciliation.json`.
+
+The twelve small states still remain outside production. The native12/12 bounds match
+does not address the thin side profile exposed by all-angle review or near-ground
+presentation. A separate full-depth knot study is staged for source/orbit/street/world
+review. Production remains1,752 models and50/80 presentable effect sources, with no
+final visual approvals. Recommended packages remain independently verified`.33`;
+large-explosion preview`.34`is packaging exact commit`fcd5b38d046f6f68a98275dae07228c3b3de72d9`.
+
 ## Bounded-restoration packages independently verified — September28,08:31:03UTC
 
 Release`.33`at`5cd9284e4de7ab101a65f0cea15d8c9ddf8fecc5`passes all eight jobs in

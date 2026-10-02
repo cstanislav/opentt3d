@@ -1,7 +1,9 @@
 """Regression tests for accepting only completely written game screenshots."""
 
 from pathlib import Path
+import contextlib
 import errno
+import io
 import random
 import struct
 import subprocess
@@ -77,6 +79,52 @@ class ScreenshotCompletionTests(unittest.TestCase):
             image = png_fixture()
             path.write_bytes(image[:-1] + bytes([image[-1] ^ 1]))
             self.assertIsNone(completed_png_size(path))
+
+
+class ExplicitClearCommandTests(unittest.TestCase):
+    def generated_script(self, *flags):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            build = root / "build"
+            build.mkdir()
+            (build / ("opentt3d.exe" if sys.platform == "win32" else "opentt3d")).touch()
+            output = root / "review"
+            argv = ["smoke.py", "--build-dir", str(build), "--output", str(output), *flags]
+            with mock.patch.object(sys, "argv", argv), mock.patch("smoke.subprocess.Popen", side_effect=RuntimeError("stop before launch")) as launch:
+                with self.assertRaisesRegex(RuntimeError, "stop before launch"):
+                    smoke.main()
+                launch.assert_called_once()
+                return (output / "scripts/game_start.scr").read_text().splitlines(), launch.call_args.kwargs["env"]
+
+    def test_original_command_runs_after_gallery_with_explicit_draw_delay(self):
+        commands, env = self.generated_script("--clear-tile", "64", "65", "--running", "--benchmark-frames", "240", "--gallery-voxel-prefix", "effect_explosion_small_")
+        clear = "renderer3d clear-tile 64 65 60"
+        self.assertLess(commands.index("renderer3d voxel-gallery effect_explosion_small_"), commands.index(clear))
+        self.assertLess(commands.index(clear), commands.index("renderer3d benchmark 240 capture"))
+        self.assertNotIn("setting construction.command_pause_level 3", commands)
+        self.assertEqual(env["OPENTT3D_RENDERER"], "1")
+
+    def test_paused_permission_is_explicit_and_classic_capture_keeps_renderer_off(self):
+        commands, env = self.generated_script("--renderer", "classic", "--clear-tile", "64", "64", "--clear-tile-delay", "10", "--benchmark-frames", "75", "--allow-paused-clearing")
+        self.assertEqual(commands[0], "pause")
+        self.assertLess(commands.index("setting construction.command_pause_level 3"), commands.index("renderer3d clear-tile 64 64 10"))
+        self.assertNotIn("renderer3d on", commands)
+        self.assertNotIn("renderer3d zoom 1", commands)
+        self.assertEqual(env["OPENTT3D_RENDERER"], "0")
+
+    def test_invalid_clear_controls_fail_before_launch(self):
+        cases = (("--clear-tile", "-1", "64"),
+                 ("--clear-tile", "64", "64", "--menu"),
+                 ("--clear-tile", "64", "64", "--benchmark-frames", "60"),
+                 ("--clear-tile", "64", "64", "--clear-tile-delay", "3601"),
+                 ("--clear-tile", "64", "64", "--benchmark-frames", "240", "--allow-paused-clearing", "--running"),
+                 ("--clear-tile", "64", "64", "--executable", "external-openttd"))
+        for flags in cases:
+            with self.subTest(flags=flags), mock.patch.object(sys, "argv", ["smoke.py", "--build-dir", "missing", "--output", "unused", *flags]), mock.patch("smoke.subprocess.Popen") as launch, contextlib.redirect_stderr(io.StringIO()):
+                with self.assertRaises(SystemExit) as raised:
+                    smoke.main()
+                self.assertEqual(raised.exception.code, 2)
+                launch.assert_not_called()
 
 
 if __name__ == "__main__":

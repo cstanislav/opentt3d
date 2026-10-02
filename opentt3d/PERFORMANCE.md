@@ -3,6 +3,26 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Verified large-explosion release packages
+
+Release`.34`'s independently reconciled900-frame Linux Mesa/llvmpipe journey passes at
+1.716fps with2,526,892,032 peak sampled bytes. This is functional compatibility, not
+smooth60fps acceptance. See`build-macos/playable-release34-ci-reconciliation.json`.
+
+## Staged small-explosion command controls
+
+Twelve240-frame clear-area controls peak at3,619,344,032 sampled bytes. Ten running
+captures record776 observations and seven complete48-phase lifetimes. Tropical Vulkan
+misses progress37; both Toyland controls miss progress26. Both cold controls preserve
+the full lifetime. Two paused controls preserve original suppression. The longest frame
+interval is51.175ms; successful source/state controls are not sustained60fps acceptance.
+Evidence:`build-macos/breadth-effect-small-demolition-reconciliation.json`.
+
+The immediate-start probe misses progress1/2 after gallery/startup work. Delaying the
+explicit public bulldozer command by60 draw ticks captures its original progress0 after
+warm-up without changing simulation cadence or RNG. This diagnostic scheduling is not
+a gameplay frame-pacing repair. Small-explosion artwork remains staged.
+
 ## Integrated large-explosion controls
 
 Ten900-frame original crash replays with the1,752-model catalogue record2,035 observations

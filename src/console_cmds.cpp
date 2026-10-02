@@ -13,6 +13,7 @@
 #include "debug.h"
 #include "engine_func.h"
 #include "landscape.h"
+#include "landscape_cmd.h"
 #include "saveload/saveload.h"
 #include "network/core/network_game_info.h"
 #include "network/network.h"
@@ -2893,8 +2894,39 @@ static bool ConDumpInfo(std::span<std::string_view> argv)
  * console command registration
  *******************************/
 
+/** Defer an explicit review command past startup/gallery warm-up, without ticking
+ * effects or changing simulation timing. Requeued work runs on the next draw tick. */
+static void QueueReviewClearTile(uint x, uint y, unsigned draws)
+{
+	VideoDriver::GetInstance()->QueueOnMainThread([x,y,draws] {
+		if (draws != 0) { QueueReviewClearTile(x,y,draws-1); return; }
+		if (_game_mode != GM_NORMAL || x >= Map::MaxX() || y >= Map::MaxY()) {
+			Debug(driver,0,"OpenTT3D: renderer verification failed: clear-area review lost its game/map");
+			return;
+		}
+		/* This explicit review action uses the same public command as the bulldozer
+		 * tool. Original command code owns cost, permission, effect creation and
+		 * paused suppression; the renderer never creates or advances an effect. */
+		TileIndex tile = TileXY(x,y);
+		bool paused = _pause_mode.Any();
+		if (!Command<CMD_CLEAR_AREA>::Post(tile,tile,false)) {
+			Debug(driver,0,"OpenTT3D: renderer verification failed: original clear-area command rejected tile {},{}",x,y);
+			return;
+		}
+		int px = x*TILE_SIZE+TILE_SIZE/2, py = y*TILE_SIZE+TILE_SIZE/2;
+		Debug(driver,1,"OpenTT3D: original clear-area command tile {},{} centre {},{} ground {} paused {}",x,y,px,py,GetSlopePixelZ(px,py),paused ? 1 : 0);
+	});
+}
+
 static bool ConRenderer3D(std::span<std::string_view> argv)
 {
+	if ((argv.size() == 4 || argv.size() == 5) && argv[1] == "clear-tile") {
+		auto x = ParseInteger<uint>(argv[2]), y = ParseInteger<uint>(argv[3]);
+		auto delay = argv.size() == 5 ? ParseInteger<unsigned>(argv[4]) : std::optional<unsigned>{0};
+		if (!x || !y || !delay || *delay > 3600 || *x >= Map::MaxX() || *y >= Map::MaxY() || _game_mode != GM_NORMAL) return false;
+		QueueReviewClearTile(*x,*y,*delay);
+		return true;
+	}
 	if (argv.size() == 3 && argv[1] == "cab") {
 		VehicleID id = VehicleID::Invalid();
 		if (argv[2] == "auto") {

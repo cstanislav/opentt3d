@@ -4,22 +4,29 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
-- [x] Verified desktop release`.33`publishes bounded CPU mesh restoration and the1,736-model
-  catalogue at commit5cd9284e4. All eight jobs pass; independent checks reconcile19
-  attachments,18 checksums,2,107 source files and six identical catalogues. Downloaded
+- [x] Verified desktop release`.34`publishes source-sized large explosions, bounded CPU
+  restoration and the1,752-model catalogue at commitfcd5b38d0. All eight jobs pass;
+  independent checks reconcile19 attachments,18 checksums,2,110 source files and six
+  identical catalogues. Downloaded
   Mac render/save, seven hosted graphical controls, Windows x64/x86 native load/save
-  and Linux's900-frame support/collector journey pass. Verified download links use`.33`.
+  and Linux's900-frame support/collector journey pass. Verified download links use`.34`.
 - [x] Public fork with original history: `cstanislav/opentt3d`.
 - [x] OpenTTD 15.3 and OpenGFX2 Classic 0.8.1 pinned by full commit and archive checksum; Classic supplies both UI and model textures.
 - [x] Container build and upstream tests verified (97 tests, Linux ARM64).
 - [x] Native macOS baseline built; 96 upstream tests passed.
 - [x] Native macOS mesh-renderer launch and framebuffer captures verified on Apple M3 Pro.
 - [x] Current native suite207/207, including exact chunked CPU restoration, original factory/bubble/toffee/sugar child motion, shared redraw ownership and construction/absence rules, explicit industry/airport climate selection and shared-source restrictions, automatic LOD reduction/residency, doubled rendered slopes, train physical pitch/contact, retained-source reconstruction and copied-scene/active-worker residency. Printing`.17`, tram`.18`and steel`.1`pass every CI job. The electric-collector crash is locally reproduced with3,000ms presentation stalls and repaired by full-elapsed analytic smoothing: both delayed controls,8 clean local controls and release`.6`'s900-frame Linux support/collector journey pass.
-- [x] Current1,752-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness40/40 pass. The new small-explosion oracle has synthetic checks but no positive native small lifetime. New source-authored artwork remains under source/state/street review with zero final approvals.
+- [x] Current1,752-volume catalogue passes its source/build and prior-model audits; asset/compiler/schema suite143/143 and download/screenshot/memory/clearance/effect-motion harness47/47 pass. Staged small explosions have positive original clear-area lifetimes; the separate random train-crash oracle still has no positive native sample. New source-authored artwork remains under source/state/street review with zero final approvals.
 - [x] Linux Mesa/llvmpipe mesh-renderer smoke test inside Docker/Xvfb.
 
 ## Renderer
 
+- [x] Original single-tile bulldozer review commands and a read-only small-explosion
+  oracle capture776 observations, seven complete48-phase lifetimes and two paused
+  absences in twelve sequential controls. Three missing-phase controls remain failures.
+  Both cold controls pass. Native207/harness44 pass; all original permissions, cost,
+  effect creation, altitude and RNG behavior remain in the public command/simulation.
+  Small artwork remains staged pending side-profile and ground-presentation corrections.
 - [x] Sixteen large-explosion volumes and64 explicit climate bindings reach1,752 models
   and50/80 presentable effect sources. All1,736 prior models/components/material faces/
   bindings remain. Every source bound matches; frames8/9 retain genuine fork openings.

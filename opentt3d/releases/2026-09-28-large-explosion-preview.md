@@ -28,15 +28,22 @@ captures visibly join active explosions to the original crashed locomotives and 
 
 ## Play
 
-Desktop packages appear after the exact tagged commit passes every packaging job.
+The [verified `.34` desktop release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20260927.34)
+builds exact commit `fcd5b38d046f6f68a98275dae07228c3b3de72d9`. All eight jobs pass;
+independent checks reconcile19 attachments,18 checksums,2,110 source files and six
+identical1,752-model catalogues. Three downloaded Mac render/save/clipping controls,
+seven hosted graphical controls, Windows x64/x86 load/save and Linux's900-frame
+support/collector journey pass. Hosted ARM/Intel software-OpenGL worlds retain zero
+black pixels and nine differing pixels from Vulkan.
 Use the [installation guide](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/PLAYING.md)
 for the current independently verified download.
 
 ## Still in progress
 
 Contours, billow shaping, paint and all-angle refinement remain provisional. The separate
-twelve-state small-explosion family remains staged pending a positively observed original
-lifetime. Thirty presentable effect sources and further catalogue coverage remain open.
+twelve-state small-explosion family remains staged in this release; later original
+clear-area controls supply positive lifetimes while grounded/all-angle artwork corrections
+remain under review. Thirty presentable effect sources and further catalogue coverage remain open.
 Crash controls retain uneven pacing up to35.068ms and peak at3.464GB sampled memory;
 sustained smooth60fps, long-duration memory and larger-aircraft clearances remain open.
 No model has final visual approval.

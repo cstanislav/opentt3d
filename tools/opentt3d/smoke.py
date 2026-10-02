@@ -86,6 +86,9 @@ def main():
     parser.add_argument("--export-effects", action="store_true", help="Export original effect sprites and their source offsets, including the unpresented bubble threshold")
     parser.add_argument("--trace-effects", action="store_true", help="Record actual voxel effect sprites, original animation states, transforms and unclickable ownership")
     parser.add_argument("--expect-no-effects", action="store_true", help="Negative control: require --trace-effects to emit no voxel effects in the captured viewport")
+    parser.add_argument("--clear-tile", nargs=2, type=int, metavar=("X", "Y"), help="Explicitly issue the original single-tile bulldozer command after galleries; observe its original explosion or paused suppression")
+    parser.add_argument("--clear-tile-delay", type=int, default=60, help="Draw ticks before the explicit --clear-tile command (default60, after startup warm-up)")
+    parser.add_argument("--allow-paused-clearing", action="store_true", help="For a paused --clear-tile control, use the original construction permission setting to test original explosion suppression")
     parser.add_argument("--industry-visibility", choices=("normal","transparent","invisible"), default="normal", help="Use the original industry transparency/invisibility settings, including their original effect suppression")
     parser.add_argument("--gallery-house", type=int, nargs="+", help="Export one or more house/tree model turntables")
     parser.add_argument("--gallery-voxels", action="store_true", help="Export all authored voxel turntables, street and neighbour-context views")
@@ -206,6 +209,12 @@ def main():
         parser.error("--trace-effects requires --renderer 3d")
     if args.expect_no_effects and not args.trace_effects:
         parser.error("--expect-no-effects requires --trace-effects")
+    if args.clear_tile is not None and (args.menu or args.executable or min(args.clear_tile) < 0):
+        parser.error("--clear-tile requires nonnegative map coordinates in an instrumented fork game")
+    if not 0 <= args.clear_tile_delay <= 3600 or (args.clear_tile is not None and args.benchmark_frames <= args.clear_tile_delay):
+        parser.error("--clear-tile-delay requires 0…3600 draw ticks and a longer --benchmark-frames capture")
+    if args.allow_paused_clearing and (args.clear_tile is None or args.running):
+        parser.error("--allow-paused-clearing requires --clear-tile in a paused review")
     if args.readback_presentation and (args.backend != "opengl" or args.renderer != "3d" or args.executable or args.macos_bundle):
         parser.error("--readback-presentation requires the direct-launch OpenGL 3D build")
     if args.verify_crossing_transitions and (not args.running or not args.benchmark_frames):
@@ -292,8 +301,8 @@ def main():
         parser.error("Menu capture cannot be combined with loaded-world options")
     if args.screenshot_size and (args.benchmark_frames or args.fullscreen):
         parser.error("Use a separate run for large world screenshots and viewport benchmarks")
-    if args.renderer == "classic" and args.benchmark_frames:
-        parser.error("Renderer benchmarking requires the 3D build")
+    if args.renderer == "classic" and args.benchmark_frames and args.executable:
+        parser.error("Classic frame capture requires the instrumented fork build, not an external comparison executable")
     # A generated world's start script can run before its progress window closes.
     # The capture benchmark's normal 30 warm-up frames let the first viewport/UI
     # finish presenting, while the ordinary paused-world setting remains in force.
@@ -373,6 +382,8 @@ server_advertise = false
         config = output / "openttd.cfg"
         config.write_text(config.read_text() + f"\n[graphicsset]\nname = {args.graphics_from_config}\n")
     commands = [] if args.menu else ["unpause" if args.running else "pause", f"scrollto instant {args.center[0]} {args.center[1]}"]
+    if args.allow_paused_clearing:
+        commands.append("setting construction.command_pause_level 3")
     if args.renderer == "3d":
         commands.append("renderer3d on")
         commands.extend(["renderer3d right"] * args.rotation)
@@ -582,6 +593,8 @@ server_advertise = false
         commands.append(f"renderer3d cab {args.first_person}")
     if args.orbit_drag:
         commands.append(f"renderer3d orbit {args.orbit_drag[0]} {args.orbit_drag[1]}")
+    if args.clear_tile is not None:
+        commands.append(f"renderer3d clear-tile {args.clear_tile[0]} {args.clear_tile[1]} {args.clear_tile_delay}")
     if benchmark_frames:
         commands.append(f"renderer3d benchmark {benchmark_frames} capture" + (" fullscreen" if args.fullscreen else ""))
     if not args.menu:
@@ -950,6 +963,8 @@ server_advertise = false
                 captured_effects = "voxel effect frame " in text
                 if captured_effects == args.expect_no_effects:
                     raise RuntimeError("Expected no emitted voxel effects" if args.expect_no_effects else "No original voxel effect was captured; inspect run.log")
+            if args.clear_tile is not None and f"original clear-area command tile {args.clear_tile[0]},{args.clear_tile[1]} centre " not in text:
+                raise RuntimeError("The requested original single-tile clear-area command did not complete")
             if args.export_effects and "exported 81 original effect source sprites in 10 families (80 presentable, 1 unpresented bubble threshold)" not in text:
                 raise RuntimeError("The complete original effect source catalogue was not exported; inspect run.log")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
@@ -961,13 +976,17 @@ server_advertise = false
                 result["effect_trace"] = True
                 result["expected_no_effects"] = args.expect_no_effects
                 result["industry_visibility"] = args.industry_visibility
+            if args.clear_tile is not None:
+                result["original_clear_tile"] = args.clear_tile
             if benchmark_frames:
                 result["benchmark"] = json.loads((output / "benchmark.json").read_text())
+                if result["benchmark"]["renderer_enabled"] != (args.renderer == "3d"):
+                    raise RuntimeError("The measured renderer differs from the requested presentation mode")
                 if args.fullscreen and not result["benchmark"]["fullscreen"]:
                     raise RuntimeError("The fullscreen benchmark did not run in fullscreen mode")
-                if not args.menu and not args.first_person and abs(result["benchmark"]["effective_zoom"] - args.zoom) > 0.001:
+                if args.renderer == "3d" and not args.menu and not args.first_person and abs(result["benchmark"]["effective_zoom"] - args.zoom) > 0.001:
                     raise RuntimeError(f"Requested zoom {args.zoom}, measured {result['benchmark']['effective_zoom']}")
-                if args.benchmark_frames and not (args.menu or args.first_person or args.orbit_drag or args.verify_native_input):
+                if args.renderer == "3d" and args.benchmark_frames and not (args.menu or args.first_person or args.orbit_drag or args.verify_native_input):
                     yaw_error = (result["benchmark"]["rotation"]-args.rotation+2)%4-2
                     pitch = result["benchmark"]["pitch_degrees"]
                     if abs(yaw_error) > 0.001 or abs(pitch-30) > 0.001:

@@ -60,14 +60,70 @@ python3 tools/opentt3d/small_explosion_cycle.py path/to/staged-small-crash/run.l
   --emitters 0 1 --output build-macos/new-small-crash-lifetime.json --require-complete
 ```
 
-Three synthetic rejection/continuity checks pass, but all eight current900-frame
+Three synthetic rejection/continuity checks pass, but all eight900-frame
 four-climate/backend replays observe no small explosions and correctly reject positive
 lifetime acceptance. Their failure logs remain. The original train selector uses
 `(r * 10 >> 16)`after`Chance16R`; no selection or RNG behavior is changed to force a
-sample. A deterministic ordinary single-tile clear-area command is another original
-small-explosion emitter, with its own2-unit altitude and command/tick-order oracle still
-needed. The twelve small models remain staged. This does not establish actual random
-spawn frequency, aircraft/disaster contexts or a positively observed small lifetime.
+sample. The single-tile command audit below supplies a separate original emitter.
+The twelve small models remain staged. This does not establish actual random
+spawn frequency, aircraft/disaster contexts or a positively observed small train-crash lifetime.
+
+### Original single-tile clear-area effects
+
+The explicit diagnostic action`renderer3d clear-tile X Y [draw-delay]`posts the same
+`CMD_CLEAR_AREA`as the bulldozer tool. Original command code retains permissions, costs,
+terrain changes, effect creation and paused suppression. It never assigns an effect
+state or advances animation. The optional delay only queues that user-like action after
+startup/gallery warm-up; it does not alter simulation time or RNG.
+
+```sh
+python3 tools/opentt3d/smoke.py --build-dir build-macos/path-to-staged-build \
+  --output build-macos/new-clear-effect --background --backend vulkan \
+  --center 64 64 --clear-tile 64 64 --running --trace-effects --benchmark-frames 240
+python3 tools/opentt3d/demolition_explosion_cycle.py build-macos/new-clear-effect/run.log \
+  --output build-macos/new-clear-lifetime.json --require-complete
+```
+
+`--clear-tile-delay`defaults to60 draw ticks. The command executes with the original
+game-state lock held before capture, so the oracle requires all48 ordered phases0…47,
+twelve sprites, stationary tile-centre XYZ, two-unit local altitude, doubled terrain
+datum, opacity1 and unclickable ownership. Duplicate/conflicting observations, pool reuse,
+missing frames/phases, altered source timing and moved anchors cannot splice acceptance.
+
+Twelve sequential four-climate/backend/cold/paused controls record776 observations,
+seven complete lifetimes and two correct paused absences. Three captures miss individual
+progress phases and fail the complete-lifetime gate; all remain preserved. Both cold
+controls pass. Paused controls use`--allow-paused-clearing`to select original construction
+permission3, plus original industry invisibility to suppress unrelated chimney effects.
+Use`--expect-paused`in the oracle for these negative controls. The first immediate-start
+control misses progress1/2 and remains a failure.207 native/44 harness checks pass.
+
+Evidence:`build-macos/breadth-effect-small-demolition-reconciliation.json`. These controls
+exercise staged geometry. Thin side profiles and ground presentation remain under review;
+source-sized isolated images and complete timing do not establish artwork acceptance.
+
+The fork's`--renderer classic --benchmark-frames N`path can also take a delayed source
+comparison capture. Its report must confirm`renderer_enabled=false`;3D zoom/orbit checks
+apply only to3D captures. External upstream comparison executables retain the existing
+non-instrumented capture path. A Classic/voxel pair revealed the staged small halo's
+lower arc buried below the ground, so that candidate remains rejected for integration.
+Three additional script/option checks cover delayed gallery ordering, explicit paused
+permission, Classic renderer-off capture and invalid controls. Current harness47 passes.
+
+### Independently reconciled large-explosion desktop release
+
+Release`.34`targets exact commit`fcd5b38d046f6f68a98275dae07228c3b3de72d9`; all eight
+jobs in workflow36397773950 pass. Public audits check19 attachments against18 published
+checksums,2,110 matching source files and six identical1,752-model compiled catalogues.
+Three downloaded Mac render/save/clipping controls and seven hosted72-view graphical
+controls pass. Windows x64/x86 native load/save and Linux's900-frame electric support/
+collector journey pass. Hosted ARM/Intel software-OpenGL images retain zero black world
+pixels and nine differences from Vulkan. Windows ARM64 native execution, Windows GPU
+and arbitrary-world performance acceptance remain unverified.
+
+Evidence:`build-macos/playable-release34-download-audit.json`,
+`build-macos/playable-release34-ci-reconciliation.json`and
+`build-macos/playable-release34-hosted-visual-comparison.json`.
 
 ## Shared charcoal smoke and original copper-mine lifetimes
 
