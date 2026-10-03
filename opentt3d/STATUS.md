@@ -2,6 +2,36 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — all river slopes/climates observed on natural higher terrain
+
+Five public read-only NoAI surveys retain normally generated worlds and acknowledged
+original saves. Forty quiet native controls render every surveyed river tile using
+immutable `.42` artwork in Classic/OpenGFX and both backends: 1,466 ground/2,783 bank
+owner states per base set, with exact slope/anchor/heights/source bytes. All20 river
+ground slope/climate combinations and80 bank-input/climate combinations occur at
+original source heights0…56 (map levels0…7). Twenty same-backend tracing-on/off worlds
+match exactly; this does not claim cross-backend world equality, all theoretical
+heights/neighbourhoods/custom families, zero-bank absence, phases/ships or 3D relief.
+Eight wider-camera controls on existing lock worlds preserve1,353 shared owners and
+add1,614 states. Eight registered full-source sheets display200 feature/input states.
+
+The retained framebuffer-origin diagnostic resolves all432 paired lock gallery images
+without changing any mesh, object dimension, camera or registration. It fails wider
+acceptance: seven world pixels change and19 cross-backend world pixels still disagree
+(22 before). The committed renderer is restored byte-exactly, so the canonical eight
+lock street silhouettes remain unresolved. The full-suite timeout, unsupported CLI,
+wrong4x cache/native-size comparison and integer-vs-JSON-key audit failure are retained
+beside corrected controls; no failed run is presented as completed or approved.
+
+Restored native213, harness104 and boundary checks pass. Canonical/rejected-HQ/rejected-
+HQ-plus-lock quality reports stay word-exact at2,866/2,950/2,998 entries and57/141/189
+individual records, zero approvals/four gaps. No artwork/binding/ratings promotion or
+rejected HQ compiler/tests enters this increment. Source originals, saves, failures
+and models remain untouched during reversible lossless capture compaction. Evidence:
+`reviews/20261003/river-natural-selector-breadth/`. Immutable recommended`.42` remains
+unchanged; full source-faithful geometry, every-model8/10 and performance/platform/
+input/replay/network work remain incomplete.
+
 ## October 3 — river feature callbacks observed; geometry still pending
 
 Original draw-site observations now retain actual river feature/base/flags and

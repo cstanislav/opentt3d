@@ -1,0 +1,66 @@
+{
+  "audited_utc": "2026-10-03T22:06:10.818340+00:00",
+  "comparisons": [
+    {
+      "mode": "gl-default-prior",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-gl-default-prior-strict.json",
+      "report_sha256": "61674f74e97900bbd3896a0e80c83363100d5cd9d1e042b496f5402d9d200765",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "mode": "vk-default-prior",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-vk-default-prior-strict.json",
+      "report_sha256": "c29513e44577f46c785220465c30d19b619860cf784c72661b652f0304cae91c",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "mode": "paired-original-convention",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-paired-original-convention-strict.json",
+      "report_sha256": "5b49f20bd1d08c08093169d831f040c9c4e4a6d9bc4ccb89415ed40878280344",
+      "exit_code": 1,
+      "different_images": 8,
+      "different_pixels": 8
+    },
+    {
+      "mode": "paired-y-down",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-paired-y-down-strict.json",
+      "report_sha256": "87a0c4d4cd193e9496415c62121a27b129b6d08af78a4abe09e61ee0746c20c0",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    }
+  ],
+  "world_comparisons": [
+    {
+      "mode": "gl-default-prior",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-world-gl-default-prior.json",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "mode": "vk-default-prior",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-world-vk-default-prior.json",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "mode": "gl-y-down-default",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-world-gl-y-down-default.json",
+      "exit_code": 1,
+      "different_images": 1,
+      "different_pixels": 7
+    }
+  ],
+  "earlier_full_suite_timeout_retained": true,
+  "native_tests": 213,
+  "native_tests_pass": true,
+  "y_down_lock_gallery_strict_exact": true,
+  "geometry_approvals": 0,
+  "scope": "Default-off read-only raster-coordinate diagnostic on unchanged48 front-profile lock volumes and all released1831 models/bindings. OpenGL can invert its internal clip Y/front-face convention while restoring complete colour/ID readback rows, GPU presentation source mapping and point-picking coordinates. No model coordinates, mesh, camera, palette, epsilon, quantization, masks or comparison tolerance changed. Pixel-equality hypothesis only, not a full renderer repair, release, new artwork/geometry or quality approval."
+}

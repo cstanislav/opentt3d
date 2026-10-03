@@ -1,0 +1,18 @@
+[
+  {
+    "command": "unpause",
+    "acknowledgement": "Game is already unpaused"
+  },
+  {
+    "command": "start_ai \"OpenTT3D Original River Survey\"",
+    "acknowledgement": "RIVER_SURVEY_READY {\"map_width\":128,\"map_height\":128,\"river_tiles\":399,\"read_only_tile_queries\":true}"
+  },
+  {
+    "command": "pause",
+    "acknowledgement": "Game paused"
+  },
+  {
+    "command": "save river-survey",
+    "acknowledgement": "Map successfully saved to 'river-survey.sav'."
+  }
+]

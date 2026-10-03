@@ -1,0 +1,1513 @@
+[2026-10-03 16:51:10] dbg: [driver:1] Successfully loaded blitter '32bpp-optimized'
+[2026-10-03 16:51:10] dbg: [driver:1] OpenTT3D: Cocoa process 41346
+[2026-10-03 16:51:10] dbg: [driver:1] OpenGL driver: Apple - Apple M3 Pro (4.1 Metal - 90.5)
+[2026-10-03 16:51:10] dbg: [driver:2] OpenGL shading language version: 4.10, texture units = 80
+[2026-10-03 16:51:10] dbg: [driver:1] Successfully loaded video driver 'cocoa-opengl'
+[2026-10-03 16:51:10] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-10-03 16:51:10] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-10-03 16:51:10] dbg: [driver:1] OpenTT3D: background Cocoa window active=false, key=false, visible=false, policy=2
+[2026-10-03 16:51:10] dbg: [driver:1] using thread for game-loop
+[2026-10-03 16:51:22] dbg: [driver:1] OpenTT3D: loaded 1879 authored voxel models, 18030563 occupied cells, 12403326 exposed cell faces merged to 2689442 conforming rectangles / 20866636 triangles
+[2026-10-03 16:51:22] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 37688448 bytes instead of 1735400628 dense cell bytes, with one shared palette
+[2026-10-03 16:51:22] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1073323808 bytes under a scene-pinned soft budget, including 192511808 exact restoration bytes
+[2026-10-03 16:51:22] dbg: [driver:2] OpenTT3D: pre-existing OpenGL error before mesh pass (1286)
+[2026-10-03 16:51:22] dbg: [driver:1] OpenTT3D: depth-tested mesh renderer initialized
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: exported voxel turntables, street-level views and neighbouring-building context (prefix 'lock_study_')
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: 72 perspective clipping views preserve ray-tested coverage, depth, colour and picking (21180 samples, 16104 visible)
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: 60 cached mip/padding variants match direct upstream pixels and framing
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: model materials use OpenGFX2 Classic at native resolution or coarser
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: palette lookup survives atlas-page eviction and source-node reuse
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: 24 ordered child-layer views preserve coincident priority, ordinary depth, opacity and complete picking IDs
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: 32 allocation-order views preserve coplanar colour, opacity and picking independently of mesh addresses
+[2026-10-03 16:51:23] dbg: [driver:1] OpenTT3D: 4 CPU voxel retirement/rebuild views preserve scene pins, stable GPU keys, exact colour, transparency and picking
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 640 voxel effect views preserve original sprite/climate selection, altitude, opacity, fixed orientation and unclickable ownership
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 0 unauthored effect sources preserve their original fallback in climate 0
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 3 incomplete/custom/unavailable original object families retain every source ground/body layer in climate 0
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 128 original HQ ground views preserve independent opaque source ownership, all16 company palettes and intentional body absences
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 40 independent HQ owner LOD views preserve exact occupied/air boundaries, automatic factors1/2/4/8/16, source transforms, opacity and tile picking
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 40 independent HQ owner LOD rebuild views preserve copied-scene pins, stable mesh identities and exact vertex words/RGBA/picking
+[2026-10-03 16:51:26] dbg: [driver:1] OpenTT3D: 24 joined original HQ views preserve four source anchors, ground/body visibility and independent tile picking
+[2026-10-03 16:51:27] dbg: [driver:1] OpenTT3D: 128 original object views preserve source layout/climate, anchors, all16 company palettes and transparent picking
+[2026-10-03 16:51:30] dbg: [driver:1] OpenTT3D: 1584 house variant/construction bindings select their explicit geometry and original palettes
+[2026-10-03 16:51:32] dbg: [driver:1] OpenTT3D: 1332 voxel house-ground bindings preserve source palettes, empty body stages and opaque floor ownership
+[2026-10-03 16:51:34] dbg: [driver:2] OpenTT3D: retired 1376744 cold OpenGL mesh bytes; 535643880 resident bytes / 511 meshes
+[2026-10-03 16:51:34] dbg: [driver:2] OpenTT3D: retired 1523396 cold OpenGL mesh bytes; 536214920 resident bytes / 516 meshes
+[2026-10-03 16:51:35] dbg: [driver:2] OpenTT3D: retired 1297688 cold OpenGL mesh bytes; 535752832 resident bytes / 517 meshes
+[2026-10-03 16:51:35] dbg: [driver:2] OpenTT3D: retired 1440964 cold OpenGL mesh bytes; 535975300 resident bytes / 518 meshes
+[2026-10-03 16:51:35] dbg: [driver:2] OpenTT3D: retired 1376744 cold OpenGL mesh bytes; 535713536 resident bytes / 518 meshes
+[2026-10-03 16:51:36] dbg: [driver:2] OpenTT3D: retired 1523396 cold OpenGL mesh bytes; 535528436 resident bytes / 520 meshes
+[2026-10-03 16:51:37] dbg: [driver:2] OpenTT3D: retired 1297688 cold OpenGL mesh bytes; 535725404 resident bytes / 522 meshes
+[2026-10-03 16:51:37] dbg: [driver:2] OpenTT3D: retired 1440964 cold OpenGL mesh bytes; 535534992 resident bytes / 524 meshes
+[2026-10-03 16:51:37] dbg: [driver:2] OpenTT3D: retired 1388604 cold OpenGL mesh bytes; 535564404 resident bytes / 526 meshes
+[2026-10-03 16:51:37] dbg: [driver:2] OpenTT3D: retired 1535256 cold OpenGL mesh bytes; 535367356 resident bytes / 528 meshes
+[2026-10-03 16:51:38] dbg: [driver:2] OpenTT3D: retired 1296568 cold OpenGL mesh bytes; 535893212 resident bytes / 531 meshes
+[2026-10-03 16:51:38] dbg: [driver:2] OpenTT3D: retired 1439844 cold OpenGL mesh bytes; 535894264 resident bytes / 533 meshes
+[2026-10-03 16:51:38] dbg: [driver:2] OpenTT3D: retired 1045832 cold OpenGL mesh bytes; 536215664 resident bytes / 535 meshes
+[2026-10-03 16:51:39] dbg: [driver:2] OpenTT3D: retired 1045832 cold OpenGL mesh bytes; 536080456 resident bytes / 536 meshes
+[2026-10-03 16:51:39] dbg: [driver:2] OpenTT3D: retired 968404 cold OpenGL mesh bytes; 536064436 resident bytes / 537 meshes
+[2026-10-03 16:51:39] dbg: [driver:2] OpenTT3D: retired 968404 cold OpenGL mesh bytes; 535999872 resident bytes / 538 meshes
+[2026-10-03 16:51:40] dbg: [driver:2] OpenTT3D: retired 1055844 cold OpenGL mesh bytes; 535901532 resident bytes / 539 meshes
+[2026-10-03 16:51:40] dbg: [driver:2] OpenTT3D: retired 1055844 cold OpenGL mesh bytes; 536269464 resident bytes / 541 meshes
+[2026-10-03 16:51:40] dbg: [driver:2] OpenTT3D: retired 982792 cold OpenGL mesh bytes; 536374784 resident bytes / 543 meshes
+[2026-10-03 16:51:40] dbg: [driver:2] OpenTT3D: retired 982792 cold OpenGL mesh bytes; 535896024 resident bytes / 543 meshes
+[2026-10-03 16:51:40] dbg: [driver:2] OpenTT3D: retired 1069480 cold OpenGL mesh bytes; 536045464 resident bytes / 545 meshes
+[2026-10-03 16:51:41] dbg: [driver:2] OpenTT3D: retired 1069480 cold OpenGL mesh bytes; 535887648 resident bytes / 546 meshes
+[2026-10-03 16:51:41] dbg: [driver:2] OpenTT3D: retired 993664 cold OpenGL mesh bytes; 536321280 resident bytes / 548 meshes
+[2026-10-03 16:51:41] dbg: [driver:2] OpenTT3D: retired 993664 cold OpenGL mesh bytes; 536235440 resident bytes / 549 meshes
+[2026-10-03 16:51:41] dbg: [driver:2] OpenTT3D: retired 1069516 cold OpenGL mesh bytes; 536128068 resident bytes / 550 meshes
+[2026-10-03 16:51:41] dbg: [driver:2] OpenTT3D: retired 1069516 cold OpenGL mesh bytes; 535949800 resident bytes / 551 meshes
+[2026-10-03 16:51:41] dbg: [driver:2] OpenTT3D: retired 990440 cold OpenGL mesh bytes; 536003264 resident bytes / 552 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 990440 cold OpenGL mesh bytes; 536347824 resident bytes / 554 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 507652 cold OpenGL mesh bytes; 536681236 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 507652 cold OpenGL mesh bytes; 536648816 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 439056 cold OpenGL mesh bytes; 536741312 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 439056 cold OpenGL mesh bytes; 536817328 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 509000 cold OpenGL mesh bytes; 536637520 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 509000 cold OpenGL mesh bytes; 536603752 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 442648 cold OpenGL mesh bytes; 536696496 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 442648 cold OpenGL mesh bytes; 536768920 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 509000 cold OpenGL mesh bytes; 536578128 resident bytes / 555 meshes
+[2026-10-03 16:51:42] dbg: [driver:2] OpenTT3D: retired 509000 cold OpenGL mesh bytes; 536542920 resident bytes / 555 meshes
+[2026-10-03 16:51:43] dbg: [driver:2] OpenTT3D: retired 1392948 cold OpenGL mesh bytes; 536870600 resident bytes / 557 meshes
+[2026-10-03 16:51:43] dbg: [driver:2] OpenTT3D: retired 4217588 cold OpenGL mesh bytes; 536493348 resident bytes / 553 meshes
+[2026-10-03 16:51:43] dbg: [driver:2] OpenTT3D: retired 1388604 cold OpenGL mesh bytes; 535803976 resident bytes / 553 meshes
+[2026-10-03 16:51:43] dbg: [driver:2] OpenTT3D: retired 1439844 cold OpenGL mesh bytes; 535616584 resident bytes / 555 meshes
+[2026-10-03 16:51:44] dbg: [driver:2] OpenTT3D: retired 313632 cold OpenGL mesh bytes; 536700452 resident bytes / 558 meshes
+[2026-10-03 16:51:44] dbg: [driver:2] OpenTT3D: retired 2201520 cold OpenGL mesh bytes; 534939524 resident bytes / 552 meshes
+[2026-10-03 16:51:44] dbg: [driver:2] OpenTT3D: retired 1980508 cold OpenGL mesh bytes; 535094232 resident bytes / 558 meshes
+[2026-10-03 16:51:45] dbg: [driver:2] OpenTT3D: retired 1997840 cold OpenGL mesh bytes; 534885336 resident bytes / 563 meshes
+[2026-10-03 16:51:45] dbg: [driver:2] OpenTT3D: retired 2002908 cold OpenGL mesh bytes; 534987324 resident bytes / 569 meshes
+[2026-10-03 16:51:45] dbg: [driver:2] OpenTT3D: retired 2133424 cold OpenGL mesh bytes; 535217828 resident bytes / 573 meshes
+[2026-10-03 16:51:46] dbg: [driver:2] OpenTT3D: retired 2060536 cold OpenGL mesh bytes; 535604792 resident bytes / 575 meshes
+[2026-10-03 16:51:46] dbg: [driver:2] OpenTT3D: retired 2149208 cold OpenGL mesh bytes; 535052384 resident bytes / 576 meshes
+[2026-10-03 16:51:46] dbg: [driver:2] OpenTT3D: retired 2055452 cold OpenGL mesh bytes; 535027960 resident bytes / 584 meshes
+[2026-10-03 16:51:47] dbg: [driver:2] OpenTT3D: retired 467968 cold OpenGL mesh bytes; 536656408 resident bytes / 591 meshes
+[2026-10-03 16:51:47] dbg: [driver:2] OpenTT3D: retired 779676 cold OpenGL mesh bytes; 536158636 resident bytes / 591 meshes
+[2026-10-03 16:51:47] dbg: [driver:2] OpenTT3D: retired 813280 cold OpenGL mesh bytes; 536203224 resident bytes / 593 meshes
+[2026-10-03 16:51:47] dbg: [driver:2] OpenTT3D: retired 978288 cold OpenGL mesh bytes; 536811884 resident bytes / 593 meshes
+[2026-10-03 16:51:47] dbg: [driver:2] OpenTT3D: retired 1148404 cold OpenGL mesh bytes; 536688856 resident bytes / 587 meshes
+[2026-10-03 16:51:47] dbg: [driver:2] OpenTT3D: retired 1144752 cold OpenGL mesh bytes; 536388164 resident bytes / 584 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 1335688 cold OpenGL mesh bytes; 536138408 resident bytes / 584 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 655000 cold OpenGL mesh bytes; 536611188 resident bytes / 584 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 1458744 cold OpenGL mesh bytes; 536564292 resident bytes / 581 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 859564 cold OpenGL mesh bytes; 536398840 resident bytes / 581 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 1411440 cold OpenGL mesh bytes; 535700520 resident bytes / 582 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 2092432 cold OpenGL mesh bytes; 535852944 resident bytes / 584 meshes
+[2026-10-03 16:51:48] dbg: [driver:2] OpenTT3D: retired 2811364 cold OpenGL mesh bytes; 534068304 resident bytes / 584 meshes
+[2026-10-03 16:51:49] dbg: [driver:2] OpenTT3D: retired 2899616 cold OpenGL mesh bytes; 534282144 resident bytes / 588 meshes
+[2026-10-03 16:51:49] dbg: [driver:2] OpenTT3D: retired 3240976 cold OpenGL mesh bytes; 533645892 resident bytes / 593 meshes
+[2026-10-03 16:51:50] dbg: [driver:2] OpenTT3D: retired 3208048 cold OpenGL mesh bytes; 535045912 resident bytes / 598 meshes
+[2026-10-03 16:51:50] dbg: [driver:2] OpenTT3D: retired 4298156 cold OpenGL mesh bytes; 533784728 resident bytes / 601 meshes
+[2026-10-03 16:51:51] dbg: [driver:2] OpenTT3D: retired 4014080 cold OpenGL mesh bytes; 535170468 resident bytes / 607 meshes
+[2026-10-03 16:51:52] dbg: [driver:2] OpenTT3D: retired 24439968 cold OpenGL mesh bytes; 532557124 resident bytes / 594 meshes
+[2026-10-03 16:51:53] dbg: [driver:2] OpenTT3D: retired 6161880 cold OpenGL mesh bytes; 532452716 resident bytes / 594 meshes
+[2026-10-03 16:51:55] dbg: [driver:2] OpenTT3D: retired 4399436 cold OpenGL mesh bytes; 534343108 resident bytes / 608 meshes
+[2026-10-03 16:51:55] dbg: [driver:2] OpenTT3D: retired 7099508 cold OpenGL mesh bytes; 535797120 resident bytes / 606 meshes
+[2026-10-03 16:51:56] dbg: [driver:2] OpenTT3D: retired 11139508 cold OpenGL mesh bytes; 534222940 resident bytes / 598 meshes
+[2026-10-03 16:51:57] dbg: [driver:2] OpenTT3D: retired 1251608 cold OpenGL mesh bytes; 536169080 resident bytes / 603 meshes
+[2026-10-03 16:51:57] dbg: [driver:2] OpenTT3D: retired 1551520 cold OpenGL mesh bytes; 535439156 resident bytes / 604 meshes
+[2026-10-03 16:51:58] dbg: [driver:2] OpenTT3D: retired 1992280 cold OpenGL mesh bytes; 535031456 resident bytes / 609 meshes
+[2026-10-03 16:51:58] dbg: [driver:2] OpenTT3D: retired 3084208 cold OpenGL mesh bytes; 534879808 resident bytes / 607 meshes
+[2026-10-03 16:51:58] dbg: [driver:2] OpenTT3D: retired 3110096 cold OpenGL mesh bytes; 535248700 resident bytes / 608 meshes
+[2026-10-03 16:51:58] dbg: [driver:2] OpenTT3D: retired 3134796 cold OpenGL mesh bytes; 534958808 resident bytes / 609 meshes
+[2026-10-03 16:51:59] dbg: [driver:2] OpenTT3D: retired 3554096 cold OpenGL mesh bytes; 533854064 resident bytes / 610 meshes
+[2026-10-03 16:51:59] dbg: [driver:2] OpenTT3D: retired 4290728 cold OpenGL mesh bytes; 532957088 resident bytes / 613 meshes
+[2026-10-03 16:52:00] dbg: [driver:2] OpenTT3D: retired 1438984 cold OpenGL mesh bytes; 536633220 resident bytes / 615 meshes
+[2026-10-03 16:52:00] dbg: [driver:2] OpenTT3D: retired 1347048 cold OpenGL mesh bytes; 536737120 resident bytes / 610 meshes
+[2026-10-03 16:52:00] dbg: [driver:2] OpenTT3D: retired 819748 cold OpenGL mesh bytes; 536577156 resident bytes / 607 meshes
+[2026-10-03 16:52:00] dbg: [driver:2] OpenTT3D: retired 1706532 cold OpenGL mesh bytes; 536308032 resident bytes / 603 meshes
+[2026-10-03 16:52:01] dbg: [driver:2] OpenTT3D: retired 501920 cold OpenGL mesh bytes; 536502116 resident bytes / 603 meshes
+[2026-10-03 16:52:01] dbg: [driver:2] OpenTT3D: retired 1050876 cold OpenGL mesh bytes; 536417148 resident bytes / 602 meshes
+[2026-10-03 16:52:01] dbg: [driver:2] OpenTT3D: retired 477004 cold OpenGL mesh bytes; 536635348 resident bytes / 602 meshes
+[2026-10-03 16:52:01] dbg: [driver:2] OpenTT3D: retired 1163320 cold OpenGL mesh bytes; 536701172 resident bytes / 600 meshes
+[2026-10-03 16:52:02] dbg: [driver:2] OpenTT3D: retired 1208588 cold OpenGL mesh bytes; 536738552 resident bytes / 597 meshes
+[2026-10-03 16:52:02] dbg: [driver:2] OpenTT3D: retired 1149668 cold OpenGL mesh bytes; 536486504 resident bytes / 594 meshes
+[2026-10-03 16:52:03] dbg: [driver:2] OpenTT3D: retired 1112160 cold OpenGL mesh bytes; 536667896 resident bytes / 593 meshes
+[2026-10-03 16:52:03] dbg: [driver:2] OpenTT3D: retired 1392572 cold OpenGL mesh bytes; 536580092 resident bytes / 591 meshes
+[2026-10-03 16:52:03] dbg: [driver:2] OpenTT3D: retired 1467560 cold OpenGL mesh bytes; 536242508 resident bytes / 590 meshes
+[2026-10-03 16:52:03] dbg: [driver:2] OpenTT3D: retired 1171904 cold OpenGL mesh bytes; 536207136 resident bytes / 590 meshes
+[2026-10-03 16:52:03] dbg: [driver:2] OpenTT3D: retired 2111500 cold OpenGL mesh bytes; 535269136 resident bytes / 590 meshes
+[2026-10-03 16:52:04] dbg: [driver:2] OpenTT3D: retired 2625296 cold OpenGL mesh bytes; 535385316 resident bytes / 590 meshes
+[2026-10-03 16:52:04] dbg: [driver:2] OpenTT3D: retired 2906672 cold OpenGL mesh bytes; 534775136 resident bytes / 592 meshes
+[2026-10-03 16:52:05] dbg: [driver:2] OpenTT3D: retired 1256516 cold OpenGL mesh bytes; 536098724 resident bytes / 594 meshes
+[2026-10-03 16:52:06] dbg: [driver:2] OpenTT3D: retired 3050604 cold OpenGL mesh bytes; 535725040 resident bytes / 592 meshes
+[2026-10-03 16:52:06] dbg: [driver:2] OpenTT3D: retired 2011304 cold OpenGL mesh bytes; 536545576 resident bytes / 592 meshes
+[2026-10-03 16:52:06] dbg: [driver:2] OpenTT3D: retired 3216484 cold OpenGL mesh bytes; 536006300 resident bytes / 591 meshes
+[2026-10-03 16:52:06] dbg: [driver:2] OpenTT3D: retired 2437484 cold OpenGL mesh bytes; 536678912 resident bytes / 589 meshes
+[2026-10-03 16:52:07] dbg: [driver:2] OpenTT3D: retired 3951188 cold OpenGL mesh bytes; 535862520 resident bytes / 583 meshes
+[2026-10-03 16:52:07] dbg: [driver:2] OpenTT3D: retired 2728868 cold OpenGL mesh bytes; 536687748 resident bytes / 581 meshes
+[2026-10-03 16:52:07] dbg: [driver:2] OpenTT3D: retired 5218632 cold OpenGL mesh bytes; 535759844 resident bytes / 577 meshes
+[2026-10-03 16:52:08] dbg: [driver:2] OpenTT3D: retired 1813288 cold OpenGL mesh bytes; 536794788 resident bytes / 574 meshes
+[2026-10-03 16:52:09] dbg: [driver:2] OpenTT3D: retired 2551388 cold OpenGL mesh bytes; 535495008 resident bytes / 573 meshes
+[2026-10-03 16:52:09] dbg: [driver:2] OpenTT3D: retired 535500 cold OpenGL mesh bytes; 536511028 resident bytes / 573 meshes
+[2026-10-03 16:52:09] dbg: [driver:2] OpenTT3D: retired 2012420 cold OpenGL mesh bytes; 536490888 resident bytes / 572 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 72136 cold OpenGL mesh bytes; 536825752 resident bytes / 574 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 591668 cold OpenGL mesh bytes; 536607932 resident bytes / 574 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 652252 cold OpenGL mesh bytes; 536325976 resident bytes / 574 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 1128104 cold OpenGL mesh bytes; 535938496 resident bytes / 574 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 1544184 cold OpenGL mesh bytes; 536593840 resident bytes / 574 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 2049904 cold OpenGL mesh bytes; 536524444 resident bytes / 567 meshes
+[2026-10-03 16:52:10] dbg: [driver:2] OpenTT3D: retired 1855360 cold OpenGL mesh bytes; 536666924 resident bytes / 564 meshes
+[2026-10-03 16:52:11] dbg: [driver:2] OpenTT3D: retired 2406656 cold OpenGL mesh bytes; 536263176 resident bytes / 561 meshes
+[2026-10-03 16:52:11] dbg: [driver:2] OpenTT3D: retired 2847716 cold OpenGL mesh bytes; 535548884 resident bytes / 560 meshes
+[2026-10-03 16:52:11] dbg: [driver:2] OpenTT3D: retired 3397728 cold OpenGL mesh bytes; 534211692 resident bytes / 560 meshes
+[2026-10-03 16:52:11] dbg: [driver:2] OpenTT3D: retired 3922360 cold OpenGL mesh bytes; 534493992 resident bytes / 560 meshes
+[2026-10-03 16:52:12] dbg: [driver:2] OpenTT3D: retired 3428000 cold OpenGL mesh bytes; 533688108 resident bytes / 572 meshes
+[2026-10-03 16:52:12] dbg: [driver:2] OpenTT3D: retired 2530412 cold OpenGL mesh bytes; 535171776 resident bytes / 572 meshes
+[2026-10-03 16:52:13] dbg: [driver:2] OpenTT3D: retired 2236452 cold OpenGL mesh bytes; 536345928 resident bytes / 572 meshes
+[2026-10-03 16:52:13] dbg: [driver:2] OpenTT3D: retired 3129816 cold OpenGL mesh bytes; 535255740 resident bytes / 571 meshes
+[2026-10-03 16:52:13] dbg: [driver:2] OpenTT3D: retired 2434220 cold OpenGL mesh bytes; 534539228 resident bytes / 572 meshes
+[2026-10-03 16:52:13] dbg: [driver:2] OpenTT3D: retired 1251728 cold OpenGL mesh bytes; 535757336 resident bytes / 574 meshes
+[2026-10-03 16:52:14] dbg: [driver:2] OpenTT3D: retired 1126044 cold OpenGL mesh bytes; 536723724 resident bytes / 572 meshes
+[2026-10-03 16:52:14] dbg: [driver:2] OpenTT3D: retired 2815760 cold OpenGL mesh bytes; 536719328 resident bytes / 563 meshes
+[2026-10-03 16:52:14] dbg: [driver:2] OpenTT3D: retired 2881356 cold OpenGL mesh bytes; 536737588 resident bytes / 558 meshes
+[2026-10-03 16:52:14] dbg: [driver:2] OpenTT3D: retired 5912364 cold OpenGL mesh bytes; 534066200 resident bytes / 551 meshes
+[2026-10-03 16:52:15] dbg: [driver:2] OpenTT3D: retired 678512 cold OpenGL mesh bytes; 536595736 resident bytes / 550 meshes
+[2026-10-03 16:52:15] dbg: [driver:2] OpenTT3D: retired 4305188 cold OpenGL mesh bytes; 536588704 resident bytes / 539 meshes
+[2026-10-03 16:52:15] dbg: [driver:2] OpenTT3D: retired 1128288 cold OpenGL mesh bytes; 536114828 resident bytes / 537 meshes
+[2026-10-03 16:52:15] dbg: [driver:2] OpenTT3D: retired 1118720 cold OpenGL mesh bytes; 536528372 resident bytes / 535 meshes
+[2026-10-03 16:52:15] dbg: [driver:2] OpenTT3D: retired 1123012 cold OpenGL mesh bytes; 536301452 resident bytes / 534 meshes
+[2026-10-03 16:52:16] dbg: [driver:2] OpenTT3D: retired 2422816 cold OpenGL mesh bytes; 536838496 resident bytes / 532 meshes
+[2026-10-03 16:52:16] dbg: [driver:2] OpenTT3D: retired 3414164 cold OpenGL mesh bytes; 536758540 resident bytes / 522 meshes
+[2026-10-03 16:52:16] dbg: [driver:2] OpenTT3D: retired 6918688 cold OpenGL mesh bytes; 535290036 resident bytes / 518 meshes
+[2026-10-03 16:52:17] dbg: [driver:2] OpenTT3D: retired 6207560 cold OpenGL mesh bytes; 535244356 resident bytes / 515 meshes
+[2026-10-03 16:52:17] dbg: [driver:2] OpenTT3D: retired 3065632 cold OpenGL mesh bytes; 536578160 resident bytes / 514 meshes
+[2026-10-03 16:52:17] dbg: [driver:2] OpenTT3D: retired 3340876 cold OpenGL mesh bytes; 536185856 resident bytes / 514 meshes
+[2026-10-03 16:52:18] dbg: [driver:2] OpenTT3D: retired 2844488 cold OpenGL mesh bytes; 536168428 resident bytes / 513 meshes
+[2026-10-03 16:52:18] dbg: [driver:2] OpenTT3D: retired 3346156 cold OpenGL mesh bytes; 534146148 resident bytes / 513 meshes
+[2026-10-03 16:52:18] dbg: [driver:2] OpenTT3D: retired 117012 cold OpenGL mesh bytes; 536794644 resident bytes / 516 meshes
+[2026-10-03 16:52:18] dbg: [driver:2] OpenTT3D: retired 251312 cold OpenGL mesh bytes; 536720156 resident bytes / 516 meshes
+[2026-10-03 16:52:18] dbg: [driver:2] OpenTT3D: retired 617836 cold OpenGL mesh bytes; 536862348 resident bytes / 514 meshes
+[2026-10-03 16:52:18] dbg: [driver:2] OpenTT3D: retired 926308 cold OpenGL mesh bytes; 536756792 resident bytes / 512 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 332504 cold OpenGL mesh bytes; 536701904 resident bytes / 511 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 535136 cold OpenGL mesh bytes; 536754628 resident bytes / 510 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 1802848 cold OpenGL mesh bytes; 536486460 resident bytes / 509 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 655216 cold OpenGL mesh bytes; 536661668 resident bytes / 508 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 140928 cold OpenGL mesh bytes; 536788664 resident bytes / 508 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 1391824 cold OpenGL mesh bytes; 535940404 resident bytes / 508 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 1570400 cold OpenGL mesh bytes; 535303608 resident bytes / 508 meshes
+[2026-10-03 16:52:19] dbg: [driver:2] OpenTT3D: retired 1623996 cold OpenGL mesh bytes; 535765060 resident bytes / 510 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 1572560 cold OpenGL mesh bytes; 535511764 resident bytes / 512 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 586148 cold OpenGL mesh bytes; 536751916 resident bytes / 514 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 469552 cold OpenGL mesh bytes; 536551972 resident bytes / 513 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 606548 cold OpenGL mesh bytes; 536367932 resident bytes / 513 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 606548 cold OpenGL mesh bytes; 536388920 resident bytes / 514 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 303520 cold OpenGL mesh bytes; 536655552 resident bytes / 514 meshes
+[2026-10-03 16:52:20] dbg: [driver:2] OpenTT3D: retired 3276112 cold OpenGL mesh bytes; 533760920 resident bytes / 514 meshes
+[2026-10-03 16:52:21] dbg: [driver:2] OpenTT3D: retired 3276112 cold OpenGL mesh bytes; 535693104 resident bytes / 516 meshes
+[2026-10-03 16:52:21] dbg: [driver:2] OpenTT3D: retired 1628432 cold OpenGL mesh bytes; 536060616 resident bytes / 516 meshes
+[2026-10-03 16:52:21] dbg: [driver:2] OpenTT3D: retired 27152148 cold OpenGL mesh bytes; 536162156 resident bytes / 494 meshes
+[2026-10-03 16:52:24] dbg: [driver:2] OpenTT3D: retired 35083868 cold OpenGL mesh bytes; 536692216 resident bytes / 465 meshes
+[2026-10-03 16:52:28] dbg: [driver:2] OpenTT3D: retired 31008808 cold OpenGL mesh bytes; 536445192 resident bytes / 449 meshes
+[2026-10-03 16:52:33] dbg: [driver:2] OpenTT3D: retired 1745196 cold OpenGL mesh bytes; 536090916 resident bytes / 449 meshes
+[2026-10-03 16:52:33] dbg: [driver:2] OpenTT3D: retired 3019980 cold OpenGL mesh bytes; 534465672 resident bytes / 449 meshes
+[2026-10-03 16:52:33] dbg: [driver:2] OpenTT3D: retired 2197004 cold OpenGL mesh bytes; 535261484 resident bytes / 451 meshes
+[2026-10-03 16:52:34] dbg: [driver:2] OpenTT3D: retired 1175596 cold OpenGL mesh bytes; 536501116 resident bytes / 453 meshes
+[2026-10-03 16:52:34] dbg: [driver:2] OpenTT3D: retired 1253348 cold OpenGL mesh bytes; 536576524 resident bytes / 454 meshes
+[2026-10-03 16:52:35] dbg: [driver:2] OpenTT3D: retired 900468 cold OpenGL mesh bytes; 536172124 resident bytes / 454 meshes
+[2026-10-03 16:52:35] dbg: [driver:2] OpenTT3D: retired 1529524 cold OpenGL mesh bytes; 535398748 resident bytes / 455 meshes
+[2026-10-03 16:52:36] dbg: [driver:2] OpenTT3D: retired 5607060 cold OpenGL mesh bytes; 536001320 resident bytes / 455 meshes
+[2026-10-03 16:52:36] dbg: [driver:2] OpenTT3D: retired 6554676 cold OpenGL mesh bytes; 535651252 resident bytes / 452 meshes
+[2026-10-03 16:52:36] dbg: [driver:2] OpenTT3D: retired 1847816 cold OpenGL mesh bytes; 535149100 resident bytes / 452 meshes
+[2026-10-03 16:52:37] dbg: [driver:2] OpenTT3D: retired 2114888 cold OpenGL mesh bytes; 536196840 resident bytes / 451 meshes
+[2026-10-03 16:52:37] dbg: [driver:2] OpenTT3D: retired 734688 cold OpenGL mesh bytes; 536497712 resident bytes / 451 meshes
+[2026-10-03 16:52:37] dbg: [driver:2] OpenTT3D: retired 1642668 cold OpenGL mesh bytes; 535281348 resident bytes / 451 meshes
+[2026-10-03 16:52:37] dbg: [driver:2] OpenTT3D: retired 4469724 cold OpenGL mesh bytes; 532736760 resident bytes / 452 meshes
+[2026-10-03 16:52:38] dbg: [driver:2] OpenTT3D: retired 3842916 cold OpenGL mesh bytes; 533847320 resident bytes / 457 meshes
+[2026-10-03 16:52:38] dbg: [driver:2] OpenTT3D: retired 1337656 cold OpenGL mesh bytes; 535984636 resident bytes / 461 meshes
+[2026-10-03 16:52:39] dbg: [driver:2] OpenTT3D: retired 2758792 cold OpenGL mesh bytes; 534183396 resident bytes / 462 meshes
+[2026-10-03 16:52:39] dbg: [driver:2] OpenTT3D: retired 2403968 cold OpenGL mesh bytes; 534768396 resident bytes / 468 meshes
+[2026-10-03 16:52:39] dbg: [driver:2] OpenTT3D: retired 1302524 cold OpenGL mesh bytes; 535582024 resident bytes / 470 meshes
+[2026-10-03 16:52:40] dbg: [driver:2] OpenTT3D: retired 1142740 cold OpenGL mesh bytes; 535753364 resident bytes / 472 meshes
+[2026-10-03 16:52:40] dbg: [driver:2] OpenTT3D: retired 787916 cold OpenGL mesh bytes; 536210812 resident bytes / 476 meshes
+[2026-10-03 16:52:40] dbg: [driver:2] OpenTT3D: retired 1591044 cold OpenGL mesh bytes; 535313668 resident bytes / 477 meshes
+[2026-10-03 16:52:40] dbg: [driver:2] OpenTT3D: retired 3552180 cold OpenGL mesh bytes; 533531432 resident bytes / 481 meshes
+[2026-10-03 16:52:41] dbg: [driver:2] OpenTT3D: retired 2980844 cold OpenGL mesh bytes; 534256892 resident bytes / 488 meshes
+[2026-10-03 16:52:41] dbg: [driver:2] OpenTT3D: retired 1142196 cold OpenGL mesh bytes; 536329940 resident bytes / 491 meshes
+[2026-10-03 16:52:41] dbg: [driver:2] OpenTT3D: retired 2477340 cold OpenGL mesh bytes; 535452832 resident bytes / 489 meshes
+[2026-10-03 16:52:42] dbg: [driver:2] OpenTT3D: retired 2740264 cold OpenGL mesh bytes; 535452360 resident bytes / 491 meshes
+[2026-10-03 16:52:42] dbg: [driver:2] OpenTT3D: retired 2112192 cold OpenGL mesh bytes; 535090156 resident bytes / 492 meshes
+[2026-10-03 16:52:42] dbg: [driver:2] OpenTT3D: retired 1529524 cold OpenGL mesh bytes; 535364440 resident bytes / 494 meshes
+[2026-10-03 16:52:43] dbg: [driver:2] OpenTT3D: retired 2835656 cold OpenGL mesh bytes; 534101344 resident bytes / 494 meshes
+[2026-10-03 16:52:43] dbg: [driver:2] OpenTT3D: retired 2097080 cold OpenGL mesh bytes; 536122128 resident bytes / 495 meshes
+[2026-10-03 16:52:43] dbg: [driver:2] OpenTT3D: retired 4541488 cold OpenGL mesh bytes; 534067140 resident bytes / 496 meshes
+[2026-10-03 16:52:44] dbg: [driver:2] OpenTT3D: retired 2196004 cold OpenGL mesh bytes; 534948968 resident bytes / 497 meshes
+[2026-10-03 16:52:44] dbg: [driver:2] OpenTT3D: retired 2179780 cold OpenGL mesh bytes; 535706500 resident bytes / 499 meshes
+[2026-10-03 16:52:44] dbg: [driver:2] OpenTT3D: retired 1649568 cold OpenGL mesh bytes; 535685364 resident bytes / 499 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 1576088 cold OpenGL mesh bytes; 536849820 resident bytes / 500 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 2030904 cold OpenGL mesh bytes; 536440804 resident bytes / 496 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 456420 cold OpenGL mesh bytes; 536595344 resident bytes / 496 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 936360 cold OpenGL mesh bytes; 535951688 resident bytes / 496 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 1095760 cold OpenGL mesh bytes; 536472628 resident bytes / 496 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 2957640 cold OpenGL mesh bytes; 536791100 resident bytes / 492 meshes
+[2026-10-03 16:52:45] dbg: [driver:2] OpenTT3D: retired 4571548 cold OpenGL mesh bytes; 535495664 resident bytes / 488 meshes
+[2026-10-03 16:52:46] dbg: [driver:2] OpenTT3D: retired 1732268 cold OpenGL mesh bytes; 535180224 resident bytes / 490 meshes
+[2026-10-03 16:52:47] dbg: [driver:2] OpenTT3D: retired 836632 cold OpenGL mesh bytes; 536216952 resident bytes / 493 meshes
+[2026-10-03 16:52:47] dbg: [driver:2] OpenTT3D: retired 1526700 cold OpenGL mesh bytes; 536215384 resident bytes / 494 meshes
+[2026-10-03 16:52:48] dbg: [driver:2] OpenTT3D: retired 1006828 cold OpenGL mesh bytes; 536259124 resident bytes / 496 meshes
+[2026-10-03 16:52:48] dbg: [driver:2] OpenTT3D: retired 1215996 cold OpenGL mesh bytes; 536068832 resident bytes / 498 meshes
+[2026-10-03 16:52:49] dbg: [driver:2] OpenTT3D: retired 353012 cold OpenGL mesh bytes; 536749936 resident bytes / 499 meshes
+[2026-10-03 16:52:49] dbg: [driver:2] OpenTT3D: retired 190732 cold OpenGL mesh bytes; 536815916 resident bytes / 499 meshes
+[2026-10-03 16:52:49] dbg: [driver:2] OpenTT3D: retired 616576 cold OpenGL mesh bytes; 536742252 resident bytes / 499 meshes
+[2026-10-03 16:52:49] dbg: [driver:2] OpenTT3D: retired 2360016 cold OpenGL mesh bytes; 536654640 resident bytes / 496 meshes
+[2026-10-03 16:52:49] dbg: [driver:2] OpenTT3D: retired 2188112 cold OpenGL mesh bytes; 536002232 resident bytes / 495 meshes
+[2026-10-03 16:52:49] dbg: [driver:2] OpenTT3D: retired 2334040 cold OpenGL mesh bytes; 536396612 resident bytes / 493 meshes
+[2026-10-03 16:52:50] dbg: [driver:2] OpenTT3D: retired 1262232 cold OpenGL mesh bytes; 536661404 resident bytes / 491 meshes
+[2026-10-03 16:52:50] dbg: [driver:2] OpenTT3D: retired 487232 cold OpenGL mesh bytes; 536618268 resident bytes / 491 meshes
+[2026-10-03 16:52:50] dbg: [driver:2] OpenTT3D: retired 485472 cold OpenGL mesh bytes; 536484844 resident bytes / 492 meshes
+[2026-10-03 16:52:50] dbg: [driver:2] OpenTT3D: retired 1463136 cold OpenGL mesh bytes; 536413532 resident bytes / 490 meshes
+[2026-10-03 16:52:50] dbg: [driver:2] OpenTT3D: retired 2630040 cold OpenGL mesh bytes; 536781224 resident bytes / 485 meshes
+[2026-10-03 16:52:50] dbg: [driver:2] OpenTT3D: retired 2808128 cold OpenGL mesh bytes; 536846080 resident bytes / 480 meshes
+[2026-10-03 16:52:51] dbg: [driver:2] OpenTT3D: retired 471232 cold OpenGL mesh bytes; 536515816 resident bytes / 480 meshes
+[2026-10-03 16:52:51] dbg: [driver:2] OpenTT3D: retired 3253120 cold OpenGL mesh bytes; 536410516 resident bytes / 475 meshes
+[2026-10-03 16:52:51] dbg: [driver:2] OpenTT3D: retired 3015920 cold OpenGL mesh bytes; 536735472 resident bytes / 469 meshes
+[2026-10-03 16:52:51] dbg: [driver:2] OpenTT3D: retired 2602136 cold OpenGL mesh bytes; 536756888 resident bytes / 464 meshes
+[2026-10-03 16:52:52] dbg: [driver:2] OpenTT3D: retired 478912 cold OpenGL mesh bytes; 536394988 resident bytes / 464 meshes
+[2026-10-03 16:52:52] dbg: [driver:2] OpenTT3D: retired 3238048 cold OpenGL mesh bytes; 536724032 resident bytes / 459 meshes
+[2026-10-03 16:52:52] dbg: [driver:2] OpenTT3D: retired 2378904 cold OpenGL mesh bytes; 536348868 resident bytes / 455 meshes
+[2026-10-03 16:52:52] dbg: [driver:2] OpenTT3D: retired 1316296 cold OpenGL mesh bytes; 536602704 resident bytes / 453 meshes
+[2026-10-03 16:52:52] dbg: [driver:2] OpenTT3D: retired 531552 cold OpenGL mesh bytes; 536475520 resident bytes / 454 meshes
+[2026-10-03 16:52:52] dbg: [driver:2] OpenTT3D: retired 1854888 cold OpenGL mesh bytes; 536624372 resident bytes / 451 meshes
+[2026-10-03 16:52:53] dbg: [driver:2] OpenTT3D: retired 3027700 cold OpenGL mesh bytes; 535493336 resident bytes / 444 meshes
+[2026-10-03 16:52:53] dbg: [driver:2] OpenTT3D: retired 3840336 cold OpenGL mesh bytes; 533173556 resident bytes / 444 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 699232 cold OpenGL mesh bytes; 536294960 resident bytes / 452 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 358204 cold OpenGL mesh bytes; 536755052 resident bytes / 454 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 475508 cold OpenGL mesh bytes; 536555368 resident bytes / 454 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 934344 cold OpenGL mesh bytes; 536732756 resident bytes / 454 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 380496 cold OpenGL mesh bytes; 536500200 resident bytes / 454 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 2180144 cold OpenGL mesh bytes; 536556508 resident bytes / 449 meshes
+[2026-10-03 16:52:54] dbg: [driver:2] OpenTT3D: retired 2340456 cold OpenGL mesh bytes; 536650272 resident bytes / 442 meshes
+[2026-10-03 16:52:55] dbg: [driver:2] OpenTT3D: retired 2450448 cold OpenGL mesh bytes; 536795000 resident bytes / 435 meshes
+[2026-10-03 16:52:55] dbg: [driver:2] OpenTT3D: retired 577128 cold OpenGL mesh bytes; 536752512 resident bytes / 434 meshes
+[2026-10-03 16:52:55] dbg: [driver:2] OpenTT3D: retired 3428668 cold OpenGL mesh bytes; 536721572 resident bytes / 430 meshes
+[2026-10-03 16:52:55] dbg: [driver:2] OpenTT3D: retired 2402432 cold OpenGL mesh bytes; 536818808 resident bytes / 428 meshes
+[2026-10-03 16:52:56] dbg: [driver:2] OpenTT3D: retired 372844 cold OpenGL mesh bytes; 536794012 resident bytes / 427 meshes
+[2026-10-03 16:52:56] dbg: [driver:2] OpenTT3D: retired 2729632 cold OpenGL mesh bytes; 536594792 resident bytes / 416 meshes
+[2026-10-03 16:52:56] dbg: [driver:2] OpenTT3D: retired 3751688 cold OpenGL mesh bytes; 536271104 resident bytes / 407 meshes
+[2026-10-03 16:52:56] dbg: [driver:2] OpenTT3D: retired 2955368 cold OpenGL mesh bytes; 536641832 resident bytes / 405 meshes
+[2026-10-03 16:52:56] dbg: [driver:2] OpenTT3D: retired 1127780 cold OpenGL mesh bytes; 536110316 resident bytes / 405 meshes
+[2026-10-03 16:52:57] dbg: [driver:2] OpenTT3D: retired 1411848 cold OpenGL mesh bytes; 535950196 resident bytes / 405 meshes
+[2026-10-03 16:52:57] dbg: [driver:2] OpenTT3D: retired 694112 cold OpenGL mesh bytes; 536224320 resident bytes / 405 meshes
+[2026-10-03 16:52:57] dbg: [driver:2] OpenTT3D: retired 1244056 cold OpenGL mesh bytes; 536418684 resident bytes / 405 meshes
+[2026-10-03 16:52:57] dbg: [driver:2] OpenTT3D: retired 1713920 cold OpenGL mesh bytes; 535806268 resident bytes / 405 meshes
+[2026-10-03 16:52:57] dbg: [driver:2] OpenTT3D: retired 1026724 cold OpenGL mesh bytes; 535913312 resident bytes / 406 meshes
+[2026-10-03 16:52:57] dbg: [driver:2] OpenTT3D: retired 1021432 cold OpenGL mesh bytes; 536016728 resident bytes / 408 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 843844 cold OpenGL mesh bytes; 536293252 resident bytes / 410 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 771188 cold OpenGL mesh bytes; 536733876 resident bytes / 411 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 476992 cold OpenGL mesh bytes; 536531072 resident bytes / 411 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 1132604 cold OpenGL mesh bytes; 536780168 resident bytes / 410 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 1150392 cold OpenGL mesh bytes; 536799464 resident bytes / 408 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 791176 cold OpenGL mesh bytes; 536549592 resident bytes / 407 meshes
+[2026-10-03 16:52:58] dbg: [driver:2] OpenTT3D: retired 926176 cold OpenGL mesh bytes; 536862916 resident bytes / 406 meshes
+[2026-10-03 16:52:59] dbg: [driver:2] OpenTT3D: retired 1596288 cold OpenGL mesh bytes; 536039548 resident bytes / 406 meshes
+[2026-10-03 16:52:59] dbg: [driver:2] OpenTT3D: retired 206700 cold OpenGL mesh bytes; 536674356 resident bytes / 407 meshes
+[2026-10-03 16:52:59] dbg: [driver:2] OpenTT3D: retired 1409456 cold OpenGL mesh bytes; 535570908 resident bytes / 407 meshes
+[2026-10-03 16:52:59] dbg: [driver:2] OpenTT3D: retired 3036972 cold OpenGL mesh bytes; 536869444 resident bytes / 406 meshes
+[2026-10-03 16:52:59] dbg: [driver:2] OpenTT3D: retired 380296 cold OpenGL mesh bytes; 536865724 resident bytes / 406 meshes
+[2026-10-03 16:52:59] dbg: [driver:2] OpenTT3D: retired 557092 cold OpenGL mesh bytes; 536549516 resident bytes / 406 meshes
+[2026-10-03 16:53:00] dbg: [driver:2] OpenTT3D: retired 363636 cold OpenGL mesh bytes; 536700620 resident bytes / 407 meshes
+[2026-10-03 16:53:00] dbg: [driver:2] OpenTT3D: retired 673828 cold OpenGL mesh bytes; 536314072 resident bytes / 407 meshes
+[2026-10-03 16:53:00] dbg: [driver:2] OpenTT3D: retired 219428 cold OpenGL mesh bytes; 536680324 resident bytes / 408 meshes
+[2026-10-03 16:53:00] dbg: [driver:2] OpenTT3D: retired 440356 cold OpenGL mesh bytes; 536462020 resident bytes / 408 meshes
+[2026-10-03 16:53:00] dbg: [driver:2] OpenTT3D: retired 438324 cold OpenGL mesh bytes; 536465020 resident bytes / 410 meshes
+[2026-10-03 16:53:00] dbg: [driver:2] OpenTT3D: retired 3393484 cold OpenGL mesh bytes; 534970092 resident bytes / 409 meshes
+[2026-10-03 16:53:01] dbg: [driver:2] OpenTT3D: retired 21826624 cold OpenGL mesh bytes; 515515492 resident bytes / 412 meshes
+[2026-10-03 16:53:03] dbg: [driver:2] OpenTT3D: retired 6057472 cold OpenGL mesh bytes; 531380748 resident bytes / 436 meshes
+[2026-10-03 16:53:04] dbg: [driver:2] OpenTT3D: retired 2740696 cold OpenGL mesh bytes; 535314920 resident bytes / 437 meshes
+[2026-10-03 16:53:06] dbg: [driver:2] OpenTT3D: retired 4245060 cold OpenGL mesh bytes; 533836500 resident bytes / 424 meshes
+[2026-10-03 16:53:07] dbg: [driver:2] OpenTT3D: retired 8553520 cold OpenGL mesh bytes; 529369528 resident bytes / 426 meshes
+[2026-10-03 16:53:09] dbg: [driver:2] OpenTT3D: retired 9565328 cold OpenGL mesh bytes; 528344608 resident bytes / 431 meshes
+[2026-10-03 16:53:10] dbg: [driver:2] OpenTT3D: retired 815800 cold OpenGL mesh bytes; 536528052 resident bytes / 435 meshes
+[2026-10-03 16:53:12] dbg: [driver:2] OpenTT3D: retired 1284216 cold OpenGL mesh bytes; 535819540 resident bytes / 436 meshes
+[2026-10-03 16:53:12] dbg: [driver:2] OpenTT3D: retired 771004 cold OpenGL mesh bytes; 536790868 resident bytes / 435 meshes
+[2026-10-03 16:53:12] dbg: [driver:2] OpenTT3D: retired 1102016 cold OpenGL mesh bytes; 536589320 resident bytes / 434 meshes
+[2026-10-03 16:53:12] dbg: [driver:2] OpenTT3D: retired 1470528 cold OpenGL mesh bytes; 536372140 resident bytes / 433 meshes
+[2026-10-03 16:53:13] dbg: [driver:2] OpenTT3D: retired 821596 cold OpenGL mesh bytes; 536425952 resident bytes / 432 meshes
+[2026-10-03 16:53:13] dbg: [driver:2] OpenTT3D: retired 1935068 cold OpenGL mesh bytes; 536686888 resident bytes / 426 meshes
+[2026-10-03 16:53:13] dbg: [driver:2] OpenTT3D: retired 2757864 cold OpenGL mesh bytes; 536827068 resident bytes / 425 meshes
+[2026-10-03 16:53:13] dbg: [driver:2] OpenTT3D: retired 3303196 cold OpenGL mesh bytes; 535720876 resident bytes / 425 meshes
+[2026-10-03 16:53:14] dbg: [driver:2] OpenTT3D: retired 2844904 cold OpenGL mesh bytes; 535895952 resident bytes / 424 meshes
+[2026-10-03 16:53:15] dbg: [driver:2] OpenTT3D: retired 1528420 cold OpenGL mesh bytes; 536479724 resident bytes / 421 meshes
+[2026-10-03 16:53:15] dbg: [driver:2] OpenTT3D: retired 3079332 cold OpenGL mesh bytes; 536140656 resident bytes / 419 meshes
+[2026-10-03 16:53:16] dbg: [driver:2] OpenTT3D: retired 1171792 cold OpenGL mesh bytes; 536161836 resident bytes / 419 meshes
+[2026-10-03 16:53:16] dbg: [driver:2] OpenTT3D: retired 1457708 cold OpenGL mesh bytes; 536275932 resident bytes / 418 meshes
+[2026-10-03 16:53:16] dbg: [driver:2] OpenTT3D: retired 705692 cold OpenGL mesh bytes; 536852600 resident bytes / 418 meshes
+[2026-10-03 16:53:16] dbg: [driver:2] OpenTT3D: retired 2052596 cold OpenGL mesh bytes; 536449572 resident bytes / 417 meshes
+[2026-10-03 16:53:17] dbg: [driver:2] OpenTT3D: retired 1672828 cold OpenGL mesh bytes; 535758144 resident bytes / 417 meshes
+[2026-10-03 16:53:17] dbg: [driver:2] OpenTT3D: retired 3548140 cold OpenGL mesh bytes; 536249040 resident bytes / 417 meshes
+[2026-10-03 16:53:17] dbg: [driver:2] OpenTT3D: retired 3586260 cold OpenGL mesh bytes; 536214960 resident bytes / 414 meshes
+[2026-10-03 16:53:18] dbg: [driver:2] OpenTT3D: retired 3437140 cold OpenGL mesh bytes; 536620736 resident bytes / 412 meshes
+[2026-10-03 16:53:18] dbg: [driver:2] OpenTT3D: retired 4744776 cold OpenGL mesh bytes; 536345684 resident bytes / 409 meshes
+[2026-10-03 16:53:18] dbg: [driver:2] OpenTT3D: retired 1405788 cold OpenGL mesh bytes; 536811336 resident bytes / 408 meshes
+[2026-10-03 16:53:19] dbg: [driver:2] OpenTT3D: retired 4501680 cold OpenGL mesh bytes; 536602028 resident bytes / 403 meshes
+[2026-10-03 16:53:19] dbg: [driver:2] OpenTT3D: retired 4387524 cold OpenGL mesh bytes; 535776532 resident bytes / 401 meshes
+[2026-10-03 16:53:19] dbg: [driver:2] OpenTT3D: retired 5509048 cold OpenGL mesh bytes; 534254276 resident bytes / 401 meshes
+[2026-10-03 16:53:20] dbg: [driver:2] OpenTT3D: retired 3110096 cold OpenGL mesh bytes; 534233700 resident bytes / 401 meshes
+[2026-10-03 16:53:20] dbg: [driver:2] OpenTT3D: retired 3134796 cold OpenGL mesh bytes; 535407836 resident bytes / 402 meshes
+[2026-10-03 16:53:20] dbg: [driver:2] OpenTT3D: retired 3554096 cold OpenGL mesh bytes; 535911088 resident bytes / 402 meshes
+[2026-10-03 16:53:21] dbg: [driver:2] OpenTT3D: retired 4290728 cold OpenGL mesh bytes; 534706940 resident bytes / 403 meshes
+[2026-10-03 16:53:21] dbg: [driver:2] OpenTT3D: retired 2848232 cold OpenGL mesh bytes; 534268028 resident bytes / 403 meshes
+[2026-10-03 16:53:21] dbg: [driver:2] OpenTT3D: retired 1251608 cold OpenGL mesh bytes; 535736480 resident bytes / 405 meshes
+[2026-10-03 16:53:22] dbg: [driver:2] OpenTT3D: retired 3543800 cold OpenGL mesh bytes; 535076788 resident bytes / 405 meshes
+[2026-10-03 16:53:22] dbg: [driver:2] OpenTT3D: retired 780848 cold OpenGL mesh bytes; 536706788 resident bytes / 402 meshes
+[2026-10-03 16:53:22] dbg: [driver:2] OpenTT3D: retired 3310448 cold OpenGL mesh bytes; 536497952 resident bytes / 400 meshes
+[2026-10-03 16:53:22] dbg: [driver:2] OpenTT3D: retired 1980508 cold OpenGL mesh bytes; 535501552 resident bytes / 400 meshes
+[2026-10-03 16:53:23] dbg: [driver:2] OpenTT3D: retired 1997840 cold OpenGL mesh bytes; 536215760 resident bytes / 401 meshes
+[2026-10-03 16:53:23] dbg: [driver:2] OpenTT3D: retired 2002908 cold OpenGL mesh bytes; 535148728 resident bytes / 401 meshes
+[2026-10-03 16:53:23] dbg: [driver:2] OpenTT3D: retired 2133424 cold OpenGL mesh bytes; 534987964 resident bytes / 403 meshes
+[2026-10-03 16:53:23] dbg: [driver:2] OpenTT3D: retired 2060536 cold OpenGL mesh bytes; 535641556 resident bytes / 405 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 2149208 cold OpenGL mesh bytes; 535007912 resident bytes / 407 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 2055452 cold OpenGL mesh bytes; 535545960 resident bytes / 409 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 632772 cold OpenGL mesh bytes; 536617872 resident bytes / 410 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 294768 cold OpenGL mesh bytes; 536819300 resident bytes / 409 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 754264 cold OpenGL mesh bytes; 536736440 resident bytes / 405 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 507020 cold OpenGL mesh bytes; 536724912 resident bytes / 404 meshes
+[2026-10-03 16:53:24] dbg: [driver:2] OpenTT3D: retired 4447372 cold OpenGL mesh bytes; 533076576 resident bytes / 403 meshes
+[2026-10-03 16:53:25] dbg: [driver:2] OpenTT3D: retired 3410604 cold OpenGL mesh bytes; 534203304 resident bytes / 410 meshes
+[2026-10-03 16:53:26] dbg: [driver:2] OpenTT3D: retired 2039628 cold OpenGL mesh bytes; 534853920 resident bytes / 414 meshes
+[2026-10-03 16:53:26] dbg: [driver:2] OpenTT3D: retired 1168808 cold OpenGL mesh bytes; 536021220 resident bytes / 418 meshes
+[2026-10-03 16:53:26] dbg: [driver:2] OpenTT3D: retired 548900 cold OpenGL mesh bytes; 536367972 resident bytes / 420 meshes
+[2026-10-03 16:53:26] dbg: [driver:2] OpenTT3D: retired 198832 cold OpenGL mesh bytes; 536769884 resident bytes / 421 meshes
+[2026-10-03 16:53:26] dbg: [driver:2] OpenTT3D: retired 859564 cold OpenGL mesh bytes; 536609564 resident bytes / 421 meshes
+[2026-10-03 16:53:26] dbg: [driver:2] OpenTT3D: retired 1411440 cold OpenGL mesh bytes; 535606048 resident bytes / 421 meshes
+[2026-10-03 16:53:27] dbg: [driver:2] OpenTT3D: retired 2092432 cold OpenGL mesh bytes; 535025028 resident bytes / 422 meshes
+[2026-10-03 16:53:27] dbg: [driver:2] OpenTT3D: retired 2811364 cold OpenGL mesh bytes; 534146560 resident bytes / 422 meshes
+[2026-10-03 16:53:27] dbg: [driver:2] OpenTT3D: retired 2899616 cold OpenGL mesh bytes; 535732672 resident bytes / 424 meshes
+[2026-10-03 16:53:27] dbg: [driver:2] OpenTT3D: retired 3240976 cold OpenGL mesh bytes; 535459860 resident bytes / 424 meshes
+[2026-10-03 16:53:28] dbg: [driver:2] OpenTT3D: retired 3208048 cold OpenGL mesh bytes; 534519116 resident bytes / 425 meshes
+[2026-10-03 16:53:28] dbg: [driver:2] OpenTT3D: retired 4298156 cold OpenGL mesh bytes; 533144820 resident bytes / 426 meshes
+[2026-10-03 16:53:28] dbg: [driver:2] OpenTT3D: retired 654412 cold OpenGL mesh bytes; 536603564 resident bytes / 428 meshes
+[2026-10-03 16:53:28] dbg: [driver:2] OpenTT3D: retired 1532264 cold OpenGL mesh bytes; 536594696 resident bytes / 428 meshes
+[2026-10-03 16:53:29] dbg: [driver:2] OpenTT3D: retired 1297748 cold OpenGL mesh bytes; 536594636 resident bytes / 427 meshes
+[2026-10-03 16:53:29] dbg: [driver:2] OpenTT3D: retired 2558204 cold OpenGL mesh bytes; 535477396 resident bytes / 427 meshes
+[2026-10-03 16:53:29] dbg: [driver:2] OpenTT3D: retired 3334208 cold OpenGL mesh bytes; 535043328 resident bytes / 428 meshes
+[2026-10-03 16:53:29] dbg: [driver:2] OpenTT3D: retired 5450184 cold OpenGL mesh bytes; 532331796 resident bytes / 429 meshes
+[2026-10-03 16:53:30] dbg: [driver:2] OpenTT3D: retired 6161880 cold OpenGL mesh bytes; 531830188 resident bytes / 432 meshes
+[2026-10-03 16:53:30] dbg: [driver:2] OpenTT3D: retired 4399436 cold OpenGL mesh bytes; 532515068 resident bytes / 436 meshes
+[2026-10-03 16:53:31] dbg: [driver:2] OpenTT3D: retired 2948572 cold OpenGL mesh bytes; 534726884 resident bytes / 440 meshes
+[2026-10-03 16:53:31] dbg: [driver:2] OpenTT3D: retired 2827060 cold OpenGL mesh bytes; 534956668 resident bytes / 442 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 1323876 cold OpenGL mesh bytes; 535692748 resident bytes / 443 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 467968 cold OpenGL mesh bytes; 536722872 resident bytes / 444 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 779676 cold OpenGL mesh bytes; 536450848 resident bytes / 444 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 813280 cold OpenGL mesh bytes; 536076624 resident bytes / 444 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 704584 cold OpenGL mesh bytes; 536320096 resident bytes / 445 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 936852 cold OpenGL mesh bytes; 536334892 resident bytes / 445 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 820752 cold OpenGL mesh bytes; 536465788 resident bytes / 446 meshes
+[2026-10-03 16:53:32] dbg: [driver:2] OpenTT3D: retired 277616 cold OpenGL mesh bytes; 536697172 resident bytes / 446 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 587860 cold OpenGL mesh bytes; 536551960 resident bytes / 446 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 1534680 cold OpenGL mesh bytes; 535459928 resident bytes / 446 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 830424 cold OpenGL mesh bytes; 536083864 resident bytes / 448 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 1745092 cold OpenGL mesh bytes; 536267872 resident bytes / 447 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 311824 cold OpenGL mesh bytes; 536630328 resident bytes / 448 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 1084636 cold OpenGL mesh bytes; 536290504 resident bytes / 447 meshes
+[2026-10-03 16:53:33] dbg: [driver:2] OpenTT3D: retired 688988 cold OpenGL mesh bytes; 536328588 resident bytes / 448 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 819220 cold OpenGL mesh bytes; 536449164 resident bytes / 447 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 500044 cold OpenGL mesh bytes; 536611912 resident bytes / 448 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 783576 cold OpenGL mesh bytes; 536676968 resident bytes / 447 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 513168 cold OpenGL mesh bytes; 536520516 resident bytes / 447 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 529556 cold OpenGL mesh bytes; 536368092 resident bytes / 447 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 269608 cold OpenGL mesh bytes; 536802996 resident bytes / 447 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 1050044 cold OpenGL mesh bytes; 536695728 resident bytes / 445 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 570152 cold OpenGL mesh bytes; 536751208 resident bytes / 445 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 926176 cold OpenGL mesh bytes; 536355464 resident bytes / 444 meshes
+[2026-10-03 16:53:34] dbg: [driver:2] OpenTT3D: retired 2427452 cold OpenGL mesh bytes; 534947228 resident bytes / 444 meshes
+[2026-10-03 16:53:35] dbg: [driver:2] OpenTT3D: retired 2236148 cold OpenGL mesh bytes; 534799484 resident bytes / 445 meshes
+[2026-10-03 16:53:35] dbg: [driver:2] OpenTT3D: retired 1995944 cold OpenGL mesh bytes; 535639880 resident bytes / 448 meshes
+[2026-10-03 16:53:35] dbg: [driver:2] OpenTT3D: retired 27253688 cold OpenGL mesh bytes; 509765640 resident bytes / 450 meshes
+[2026-10-03 16:53:38] dbg: [driver:2] OpenTT3D: retired 35613928 cold OpenGL mesh bytes; 501899488 resident bytes / 478 meshes
+[2026-10-03 16:53:43] dbg: [driver:2] OpenTT3D: retired 30761784 cold OpenGL mesh bytes; 506369644 resident bytes / 530 meshes
+[2026-10-03 16:53:49] dbg: [driver:2] OpenTT3D: retired 2785656 cold OpenGL mesh bytes; 536279184 resident bytes / 548 meshes
+[2026-10-03 16:53:50] dbg: [driver:2] OpenTT3D: retired 2992816 cold OpenGL mesh bytes; 536742040 resident bytes / 546 meshes
+[2026-10-03 16:53:50] dbg: [driver:2] OpenTT3D: retired 2415228 cold OpenGL mesh bytes; 536050556 resident bytes / 544 meshes
+[2026-10-03 16:53:50] dbg: [driver:2] OpenTT3D: retired 1328756 cold OpenGL mesh bytes; 536231760 resident bytes / 543 meshes
+[2026-10-03 16:53:50] dbg: [driver:2] OpenTT3D: retired 849244 cold OpenGL mesh bytes; 536851408 resident bytes / 542 meshes
+[2026-10-03 16:53:51] dbg: [driver:2] OpenTT3D: retired 1576908 cold OpenGL mesh bytes; 536770564 resident bytes / 540 meshes
+[2026-10-03 16:53:51] dbg: [driver:2] OpenTT3D: retired 5035696 cold OpenGL mesh bytes; 533284324 resident bytes / 540 meshes
+[2026-10-03 16:53:52] dbg: [driver:2] OpenTT3D: retired 6204608 cold OpenGL mesh bytes; 532370468 resident bytes / 542 meshes
+[2026-10-03 16:53:53] dbg: [driver:2] OpenTT3D: retired 1345664 cold OpenGL mesh bytes; 536321712 resident bytes / 546 meshes
+[2026-10-03 16:53:54] dbg: [driver:2] OpenTT3D: retired 3162628 cold OpenGL mesh bytes; 533910608 resident bytes / 547 meshes
+[2026-10-03 16:53:54] dbg: [driver:2] OpenTT3D: retired 1461864 cold OpenGL mesh bytes; 536490144 resident bytes / 552 meshes
+[2026-10-03 16:53:54] dbg: [driver:2] OpenTT3D: retired 998076 cold OpenGL mesh bytes; 536556304 resident bytes / 552 meshes
+[2026-10-03 16:53:55] dbg: [driver:2] OpenTT3D: retired 927060 cold OpenGL mesh bytes; 536714420 resident bytes / 553 meshes
+[2026-10-03 16:53:55] dbg: [driver:2] OpenTT3D: retired 2532232 cold OpenGL mesh bytes; 536455544 resident bytes / 551 meshes
+[2026-10-03 16:53:55] dbg: [driver:2] OpenTT3D: retired 1592088 cold OpenGL mesh bytes; 536072456 resident bytes / 551 meshes
+[2026-10-03 16:53:55] dbg: [driver:2] OpenTT3D: retired 829156 cold OpenGL mesh bytes; 536074292 resident bytes / 552 meshes
+[2026-10-03 16:53:55] dbg: [driver:2] OpenTT3D: retired 1894084 cold OpenGL mesh bytes; 536423628 resident bytes / 552 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 1580888 cold OpenGL mesh bytes; 536021380 resident bytes / 552 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 584752 cold OpenGL mesh bytes; 536597676 resident bytes / 556 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 372800 cold OpenGL mesh bytes; 536706544 resident bytes / 556 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 574252 cold OpenGL mesh bytes; 536612280 resident bytes / 556 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 599540 cold OpenGL mesh bytes; 536290644 resident bytes / 557 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 261620 cold OpenGL mesh bytes; 536729196 resident bytes / 559 meshes
+[2026-10-03 16:53:56] dbg: [driver:2] OpenTT3D: retired 585788 cold OpenGL mesh bytes; 536568748 resident bytes / 559 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 333832 cold OpenGL mesh bytes; 536660016 resident bytes / 559 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 311368 cold OpenGL mesh bytes; 536770916 resident bytes / 559 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 1029792 cold OpenGL mesh bytes; 536214920 resident bytes / 558 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 703784 cold OpenGL mesh bytes; 536468660 resident bytes / 559 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 705144 cold OpenGL mesh bytes; 536237312 resident bytes / 559 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 510404 cold OpenGL mesh bytes; 536465904 resident bytes / 560 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 346092 cold OpenGL mesh bytes; 536589636 resident bytes / 560 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 457584 cold OpenGL mesh bytes; 536610640 resident bytes / 560 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 246872 cold OpenGL mesh bytes; 536846492 resident bytes / 560 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 473148 cold OpenGL mesh bytes; 536802340 resident bytes / 559 meshes
+[2026-10-03 16:53:57] dbg: [driver:2] OpenTT3D: retired 525344 cold OpenGL mesh bytes; 536767276 resident bytes / 558 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 693900 cold OpenGL mesh bytes; 536538480 resident bytes / 557 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 421428 cold OpenGL mesh bytes; 536719372 resident bytes / 557 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 425268 cold OpenGL mesh bytes; 536800328 resident bytes / 557 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 622864 cold OpenGL mesh bytes; 536671192 resident bytes / 556 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 776748 cold OpenGL mesh bytes; 536443004 resident bytes / 555 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 215192 cold OpenGL mesh bytes; 536755064 resident bytes / 555 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 371880 cold OpenGL mesh bytes; 536852560 resident bytes / 555 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 844688 cold OpenGL mesh bytes; 536761200 resident bytes / 554 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 434960 cold OpenGL mesh bytes; 536776832 resident bytes / 554 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 530432 cold OpenGL mesh bytes; 536695168 resident bytes / 554 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 832788 cold OpenGL mesh bytes; 536638604 resident bytes / 554 meshes
+[2026-10-03 16:53:58] dbg: [driver:2] OpenTT3D: retired 843540 cold OpenGL mesh bytes; 536297664 resident bytes / 554 meshes
+[2026-10-03 16:53:59] dbg: [driver:2] OpenTT3D: retired 842756 cold OpenGL mesh bytes; 536182612 resident bytes / 554 meshes
+[2026-10-03 16:53:59] dbg: [driver:2] OpenTT3D: retired 393240 cold OpenGL mesh bytes; 536724552 resident bytes / 555 meshes
+[2026-10-03 16:53:59] dbg: [driver:2] OpenTT3D: retired 1135708 cold OpenGL mesh bytes; 536068004 resident bytes / 555 meshes
+[2026-10-03 16:53:59] dbg: [driver:2] OpenTT3D: retired 1600232 cold OpenGL mesh bytes; 535480984 resident bytes / 556 meshes
+[2026-10-03 16:53:59] dbg: [driver:2] OpenTT3D: retired 1221000 cold OpenGL mesh bytes; 536288728 resident bytes / 557 meshes
+[2026-10-03 16:53:59] dbg: [driver:2] OpenTT3D: retired 1518792 cold OpenGL mesh bytes; 535724644 resident bytes / 558 meshes
+[2026-10-03 16:54:00] dbg: [driver:2] OpenTT3D: retired 1749988 cold OpenGL mesh bytes; 535422624 resident bytes / 559 meshes
+[2026-10-03 16:54:00] dbg: [driver:2] OpenTT3D: retired 1313868 cold OpenGL mesh bytes; 535567504 resident bytes / 561 meshes
+[2026-10-03 16:54:00] dbg: [driver:2] OpenTT3D: retired 489940 cold OpenGL mesh bytes; 536827460 resident bytes / 562 meshes
+[2026-10-03 16:54:00] dbg: [driver:2] OpenTT3D: retired 1572560 cold OpenGL mesh bytes; 535704808 resident bytes / 562 meshes
+[2026-10-03 16:54:00] dbg: [driver:2] OpenTT3D: retired 2172280 cold OpenGL mesh bytes; 536338852 resident bytes / 563 meshes
+[2026-10-03 16:54:01] dbg: [driver:2] OpenTT3D: retired 1945584 cold OpenGL mesh bytes; 535468464 resident bytes / 564 meshes
+[2026-10-03 16:54:01] dbg: [driver:2] OpenTT3D: retired 2486500 cold OpenGL mesh bytes; 534787892 resident bytes / 564 meshes
+[2026-10-03 16:54:01] dbg: [driver:2] OpenTT3D: retired 2363184 cold OpenGL mesh bytes; 534659148 resident bytes / 566 meshes
+[2026-10-03 16:54:01] dbg: [driver:2] OpenTT3D: retired 714648 cold OpenGL mesh bytes; 536206120 resident bytes / 571 meshes
+[2026-10-03 16:54:02] dbg: [driver:2] OpenTT3D: retired 2937312 cold OpenGL mesh bytes; 534506456 resident bytes / 568 meshes
+[2026-10-03 16:54:02] dbg: [driver:2] OpenTT3D: retired 1628432 cold OpenGL mesh bytes; 536270588 resident bytes / 570 meshes
+[2026-10-03 16:54:02] dbg: [driver:2] OpenTT3D: retired 824568 cold OpenGL mesh bytes; 536477508 resident bytes / 570 meshes
+[2026-10-03 16:54:02] dbg: [driver:2] OpenTT3D: retired 1915976 cold OpenGL mesh bytes; 535426432 resident bytes / 570 meshes
+[2026-10-03 16:54:02] dbg: [driver:2] OpenTT3D: retired 1621888 cold OpenGL mesh bytes; 535484264 resident bytes / 572 meshes
+[2026-10-03 16:54:03] dbg: [driver:2] OpenTT3D: retired 610960 cold OpenGL mesh bytes; 536479096 resident bytes / 574 meshes
+[2026-10-03 16:54:03] dbg: [driver:2] OpenTT3D: retired 292704 cold OpenGL mesh bytes; 536735528 resident bytes / 574 meshes
+[2026-10-03 16:54:03] dbg: [driver:2] OpenTT3D: retired 1616700 cold OpenGL mesh bytes; 535657868 resident bytes / 574 meshes
+[2026-10-03 16:54:03] dbg: [driver:2] OpenTT3D: retired 3276112 cold OpenGL mesh bytes; 534007324 resident bytes / 576 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 3276112 cold OpenGL mesh bytes; 533792212 resident bytes / 580 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 606548 cold OpenGL mesh bytes; 536598224 resident bytes / 585 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 403944 cold OpenGL mesh bytes; 536820616 resident bytes / 585 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 709856 cold OpenGL mesh bytes; 536651488 resident bytes / 584 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 672156 cold OpenGL mesh bytes; 536678808 resident bytes / 583 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 897684 cold OpenGL mesh bytes; 536318836 resident bytes / 583 meshes
+[2026-10-03 16:54:04] dbg: [driver:2] OpenTT3D: retired 565696 cold OpenGL mesh bytes; 536449600 resident bytes / 583 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 959436 cold OpenGL mesh bytes; 536025020 resident bytes / 582 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 1050568 cold OpenGL mesh bytes; 536259844 resident bytes / 581 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 1025704 cold OpenGL mesh bytes; 536357016 resident bytes / 580 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 506196 cold OpenGL mesh bytes; 536381908 resident bytes / 580 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 261444 cold OpenGL mesh bytes; 536706380 resident bytes / 580 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 523188 cold OpenGL mesh bytes; 536711424 resident bytes / 579 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 542912 cold OpenGL mesh bytes; 536780112 resident bytes / 578 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 2272404 cold OpenGL mesh bytes; 535116292 resident bytes / 578 meshes
+[2026-10-03 16:54:05] dbg: [driver:2] OpenTT3D: retired 1535704 cold OpenGL mesh bytes; 535462432 resident bytes / 580 meshes
+[2026-10-03 16:54:06] dbg: [driver:2] OpenTT3D: retired 2728420 cold OpenGL mesh bytes; 534573452 resident bytes / 579 meshes
+[2026-10-03 16:54:06] dbg: [driver:2] OpenTT3D: retired 1527024 cold OpenGL mesh bytes; 535660308 resident bytes / 581 meshes
+[2026-10-03 16:54:06] dbg: [driver:2] OpenTT3D: retired 585024 cold OpenGL mesh bytes; 536769636 resident bytes / 581 meshes
+[2026-10-03 16:54:06] dbg: [driver:2] OpenTT3D: retired 1602944 cold OpenGL mesh bytes; 535672412 resident bytes / 580 meshes
+[2026-10-03 16:54:07] dbg: [driver:2] OpenTT3D: retired 2997732 cold OpenGL mesh bytes; 534238304 resident bytes / 582 meshes
+[2026-10-03 16:54:07] dbg: [driver:2] OpenTT3D: retired 2872984 cold OpenGL mesh bytes; 534469816 resident bytes / 587 meshes
+[2026-10-03 16:54:07] dbg: [driver:2] OpenTT3D: retired 364124 cold OpenGL mesh bytes; 536808292 resident bytes / 590 meshes
+[2026-10-03 16:54:07] dbg: [driver:2] OpenTT3D: retired 2924664 cold OpenGL mesh bytes; 534422156 resident bytes / 590 meshes
+[2026-10-03 16:54:08] dbg: [driver:2] OpenTT3D: retired 3340876 cold OpenGL mesh bytes; 533598352 resident bytes / 594 meshes
+[2026-10-03 16:54:08] dbg: [driver:2] OpenTT3D: retired 2623552 cold OpenGL mesh bytes; 534845392 resident bytes / 600 meshes
+[2026-10-03 16:54:09] dbg: [driver:2] OpenTT3D: retired 337948 cold OpenGL mesh bytes; 536726556 resident bytes / 602 meshes
+[2026-10-03 16:54:09] dbg: [driver:2] OpenTT3D: retired 3346156 cold OpenGL mesh bytes; 534021368 resident bytes / 602 meshes
+[2026-10-03 16:54:09] dbg: [driver:2] OpenTT3D: retired 2003740 cold OpenGL mesh bytes; 535276784 resident bytes / 606 meshes
+[2026-10-03 16:54:10] dbg: [driver:2] OpenTT3D: retired 1570132 cold OpenGL mesh bytes; 535348892 resident bytes / 608 meshes
+[2026-10-03 16:54:10] dbg: [driver:2] OpenTT3D: retired 228800 cold OpenGL mesh bytes; 536741004 resident bytes / 610 meshes
+[2026-10-03 16:54:10] dbg: [driver:2] OpenTT3D: retired 2179308 cold OpenGL mesh bytes; 535113632 resident bytes / 609 meshes
+[2026-10-03 16:54:10] dbg: [driver:2] OpenTT3D: retired 1896664 cold OpenGL mesh bytes; 535287628 resident bytes / 612 meshes
+[2026-10-03 16:54:11] dbg: [driver:2] OpenTT3D: retired 1520556 cold OpenGL mesh bytes; 535475160 resident bytes / 614 meshes
+[2026-10-03 16:54:11] dbg: [driver:2] OpenTT3D: retired 2290132 cold OpenGL mesh bytes; 535046028 resident bytes / 614 meshes
+[2026-10-03 16:54:13] dbg: [driver:2] OpenTT3D: retired 627996 cold OpenGL mesh bytes; 536700312 resident bytes / 616 meshes
+[2026-10-03 16:54:13] dbg: [driver:2] OpenTT3D: retired 514636 cold OpenGL mesh bytes; 536741564 resident bytes / 615 meshes
+[2026-10-03 16:54:13] dbg: [driver:2] OpenTT3D: retired 659360 cold OpenGL mesh bytes; 536603108 resident bytes / 613 meshes
+[2026-10-03 16:54:13] dbg: [driver:2] OpenTT3D: retired 546808 cold OpenGL mesh bytes; 536643212 resident bytes / 612 meshes
+[2026-10-03 16:54:14] dbg: [driver:2] OpenTT3D: retired 3771948 cold OpenGL mesh bytes; 534785376 resident bytes / 607 meshes
+[2026-10-03 16:54:14] dbg: [driver:2] OpenTT3D: retired 2434220 cold OpenGL mesh bytes; 534718128 resident bytes / 608 meshes
+[2026-10-03 16:54:14] dbg: [driver:2] OpenTT3D: retired 2595176 cold OpenGL mesh bytes; 535268588 resident bytes / 611 meshes
+[2026-10-03 16:54:15] dbg: [driver:2] OpenTT3D: retired 3932368 cold OpenGL mesh bytes; 533587176 resident bytes / 612 meshes
+[2026-10-03 16:54:15] dbg: [driver:2] OpenTT3D: retired 2499668 cold OpenGL mesh bytes; 534654868 resident bytes / 614 meshes
+[2026-10-03 16:54:15] dbg: [driver:2] OpenTT3D: retired 348048 cold OpenGL mesh bytes; 536781092 resident bytes / 615 meshes
+[2026-10-03 16:54:16] dbg: [driver:2] OpenTT3D: retired 2530412 cold OpenGL mesh bytes; 535942880 resident bytes / 615 meshes
+[2026-10-03 16:54:16] dbg: [driver:2] OpenTT3D: retired 3428000 cold OpenGL mesh bytes; 534036180 resident bytes / 615 meshes
+[2026-10-03 16:54:16] dbg: [driver:2] OpenTT3D: retired 5174088 cold OpenGL mesh bytes; 535814500 resident bytes / 616 meshes
+[2026-10-03 16:54:17] dbg: [driver:2] OpenTT3D: retired 968236 cold OpenGL mesh bytes; 536756232 resident bytes / 617 meshes
+[2026-10-03 16:54:17] dbg: [driver:2] OpenTT3D: retired 3492616 cold OpenGL mesh bytes; 536228160 resident bytes / 612 meshes
+[2026-10-03 16:54:17] dbg: [driver:2] OpenTT3D: retired 5293992 cold OpenGL mesh bytes; 535849832 resident bytes / 601 meshes
+[2026-10-03 16:54:18] dbg: [driver:2] OpenTT3D: retired 5258640 cold OpenGL mesh bytes; 536824408 resident bytes / 594 meshes
+[2026-10-03 16:54:18] dbg: [driver:2] OpenTT3D: retired 387712 cold OpenGL mesh bytes; 536844480 resident bytes / 594 meshes
+[2026-10-03 16:54:18] dbg: [driver:2] OpenTT3D: retired 3560084 cold OpenGL mesh bytes; 533685140 resident bytes / 594 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 376576 cold OpenGL mesh bytes; 536612100 resident bytes / 601 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 240884 cold OpenGL mesh bytes; 536737524 resident bytes / 601 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 514740 cold OpenGL mesh bytes; 536592052 resident bytes / 600 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 287280 cold OpenGL mesh bytes; 536592440 resident bytes / 600 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 290800 cold OpenGL mesh bytes; 536770748 resident bytes / 600 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 294880 cold OpenGL mesh bytes; 536579632 resident bytes / 600 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 222052 cold OpenGL mesh bytes; 536674124 resident bytes / 600 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 2339880 cold OpenGL mesh bytes; 536032524 resident bytes / 596 meshes
+[2026-10-03 16:54:19] dbg: [driver:2] OpenTT3D: retired 1015904 cold OpenGL mesh bytes; 536645196 resident bytes / 597 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 112200 cold OpenGL mesh bytes; 536839936 resident bytes / 597 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 1976040 cold OpenGL mesh bytes; 536562176 resident bytes / 594 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 543352 cold OpenGL mesh bytes; 536779864 resident bytes / 595 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 861220 cold OpenGL mesh bytes; 536248056 resident bytes / 593 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 1063616 cold OpenGL mesh bytes; 536308840 resident bytes / 594 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 461080 cold OpenGL mesh bytes; 536509176 resident bytes / 594 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 603260 cold OpenGL mesh bytes; 536558812 resident bytes / 593 meshes
+[2026-10-03 16:54:20] dbg: [driver:2] OpenTT3D: retired 843440 cold OpenGL mesh bytes; 536487732 resident bytes / 592 meshes
+[2026-10-03 16:54:21] dbg: [driver:2] OpenTT3D: retired 1626044 cold OpenGL mesh bytes; 535630048 resident bytes / 591 meshes
+[2026-10-03 16:54:21] dbg: [driver:2] OpenTT3D: retired 1337656 cold OpenGL mesh bytes; 535649552 resident bytes / 594 meshes
+[2026-10-03 16:54:21] dbg: [driver:2] OpenTT3D: retired 787916 cold OpenGL mesh bytes; 536410332 resident bytes / 595 meshes
+[2026-10-03 16:54:21] dbg: [driver:2] OpenTT3D: retired 1142740 cold OpenGL mesh bytes; 535801664 resident bytes / 596 meshes
+[2026-10-03 16:54:21] dbg: [driver:2] OpenTT3D: retired 5162760 cold OpenGL mesh bytes; 534481120 resident bytes / 598 meshes
+[2026-10-03 16:54:22] dbg: [driver:2] OpenTT3D: retired 2097080 cold OpenGL mesh bytes; 536113144 resident bytes / 599 meshes
+[2026-10-03 16:54:22] dbg: [driver:2] OpenTT3D: retired 2835656 cold OpenGL mesh bytes; 535086400 resident bytes / 599 meshes
+[2026-10-03 16:54:22] dbg: [driver:2] OpenTT3D: retired 1824788 cold OpenGL mesh bytes; 536313476 resident bytes / 600 meshes
+[2026-10-03 16:54:23] dbg: [driver:2] OpenTT3D: retired 2456300 cold OpenGL mesh bytes; 534721580 resident bytes / 600 meshes
+[2026-10-03 16:54:23] dbg: [driver:2] OpenTT3D: retired 1847816 cold OpenGL mesh bytes; 535305868 resident bytes / 605 meshes
+[2026-10-03 16:54:24] dbg: [driver:2] OpenTT3D: retired 2370752 cold OpenGL mesh bytes; 536280220 resident bytes / 607 meshes
+[2026-10-03 16:54:24] dbg: [driver:2] OpenTT3D: retired 2766640 cold OpenGL mesh bytes; 536809628 resident bytes / 606 meshes
+[2026-10-03 16:54:24] dbg: [driver:2] OpenTT3D: retired 7035220 cold OpenGL mesh bytes; 536294968 resident bytes / 602 meshes
+[2026-10-03 16:54:24] dbg: [driver:2] OpenTT3D: retired 5591736 cold OpenGL mesh bytes; 535948052 resident bytes / 599 meshes
+[2026-10-03 16:54:25] dbg: [driver:2] OpenTT3D: retired 4591340 cold OpenGL mesh bytes; 535748728 resident bytes / 597 meshes
+[2026-10-03 16:54:25] dbg: [driver:2] OpenTT3D: retired 4407904 cold OpenGL mesh bytes; 534927116 resident bytes / 596 meshes
+[2026-10-03 16:54:25] dbg: [driver:2] OpenTT3D: retired 1310392 cold OpenGL mesh bytes; 536793232 resident bytes / 594 meshes
+[2026-10-03 16:54:26] dbg: [driver:2] OpenTT3D: retired 1908112 cold OpenGL mesh bytes; 536252152 resident bytes / 593 meshes
+[2026-10-03 16:54:26] dbg: [driver:2] OpenTT3D: retired 1253348 cold OpenGL mesh bytes; 536204580 resident bytes / 593 meshes
+[2026-10-03 16:54:26] dbg: [driver:2] OpenTT3D: retired 875408 cold OpenGL mesh bytes; 536627608 resident bytes / 593 meshes
+[2026-10-03 16:54:26] dbg: [driver:2] OpenTT3D: retired 2196004 cold OpenGL mesh bytes; 535798476 resident bytes / 593 meshes
+[2026-10-03 16:54:26] dbg: [driver:2] OpenTT3D: retired 2898044 cold OpenGL mesh bytes; 534520876 resident bytes / 593 meshes
+[2026-10-03 16:54:27] dbg: [driver:2] OpenTT3D: retired 7329176 cold OpenGL mesh bytes; 535520120 resident bytes / 592 meshes
+[2026-10-03 16:54:27] dbg: [driver:2] OpenTT3D: retired 3933236 cold OpenGL mesh bytes; 536608616 resident bytes / 591 meshes
+[2026-10-03 16:54:28] dbg: [driver:2] OpenTT3D: retired 5863484 cold OpenGL mesh bytes; 536859500 resident bytes / 587 meshes
+[2026-10-03 16:54:28] dbg: [driver:2] OpenTT3D: retired 679840 cold OpenGL mesh bytes; 536572900 resident bytes / 587 meshes
+[2026-10-03 16:54:28] dbg: [driver:2] OpenTT3D: retired 2980844 cold OpenGL mesh bytes; 534848572 resident bytes / 587 meshes
+[2026-10-03 16:54:28] dbg: [driver:2] OpenTT3D: retired 3552180 cold OpenGL mesh bytes; 533856776 resident bytes / 587 meshes
+[2026-10-03 16:54:29] dbg: [driver:2] OpenTT3D: retired 3842916 cold OpenGL mesh bytes; 534410952 resident bytes / 589 meshes
+[2026-10-03 16:54:29] dbg: [driver:2] OpenTT3D: retired 6341164 cold OpenGL mesh bytes; 535456804 resident bytes / 588 meshes
+[2026-10-03 16:54:30] dbg: [driver:2] OpenTT3D: retired 4292372 cold OpenGL mesh bytes; 534472772 resident bytes / 588 meshes
+[2026-10-03 16:54:30] dbg: [driver:2] OpenTT3D: retired 3562028 cold OpenGL mesh bytes; 536089844 resident bytes / 595 meshes
+[2026-10-03 16:54:31] dbg: [driver:2] OpenTT3D: retired 3986792 cold OpenGL mesh bytes; 535827180 resident bytes / 594 meshes
+[2026-10-03 16:54:31] dbg: [driver:2] OpenTT3D: retired 7398452 cold OpenGL mesh bytes; 533610056 resident bytes / 592 meshes
+[2026-10-03 16:54:34] dbg: [driver:2] OpenTT3D: retired 7143928 cold OpenGL mesh bytes; 534758048 resident bytes / 590 meshes
+[2026-10-03 16:54:35] dbg: [driver:2] OpenTT3D: retired 4193436 cold OpenGL mesh bytes; 535296748 resident bytes / 588 meshes
+[2026-10-03 16:54:37] dbg: [driver:2] OpenTT3D: retired 6230900 cold OpenGL mesh bytes; 536290328 resident bytes / 585 meshes
+[2026-10-03 16:54:39] dbg: [driver:2] OpenTT3D: retired 3101612 cold OpenGL mesh bytes; 534243548 resident bytes / 585 meshes
+[2026-10-03 16:54:39] dbg: [driver:2] OpenTT3D: retired 3696156 cold OpenGL mesh bytes; 535503544 resident bytes / 584 meshes
+[2026-10-03 16:54:40] dbg: [driver:2] OpenTT3D: retired 2908536 cold OpenGL mesh bytes; 536626168 resident bytes / 582 meshes
+[2026-10-03 16:54:40] dbg: [driver:2] OpenTT3D: retired 1741580 cold OpenGL mesh bytes; 536213432 resident bytes / 581 meshes
+[2026-10-03 16:54:41] dbg: [driver:2] OpenTT3D: retired 972548 cold OpenGL mesh bytes; 536013952 resident bytes / 581 meshes
+[2026-10-03 16:54:41] dbg: [driver:2] OpenTT3D: retired 689408 cold OpenGL mesh bytes; 536314984 resident bytes / 580 meshes
+[2026-10-03 16:54:41] dbg: [driver:2] OpenTT3D: retired 826156 cold OpenGL mesh bytes; 536820576 resident bytes / 580 meshes
+[2026-10-03 16:54:42] dbg: [driver:2] OpenTT3D: retired 993912 cold OpenGL mesh bytes; 536569868 resident bytes / 580 meshes
+[2026-10-03 16:54:42] dbg: [driver:2] OpenTT3D: retired 1599588 cold OpenGL mesh bytes; 536005956 resident bytes / 579 meshes
+[2026-10-03 16:54:42] dbg: [driver:2] OpenTT3D: retired 2872284 cold OpenGL mesh bytes; 536497884 resident bytes / 574 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 2454768 cold OpenGL mesh bytes; 536415032 resident bytes / 571 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 417428 cold OpenGL mesh bytes; 536802408 resident bytes / 571 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 822436 cold OpenGL mesh bytes; 536781136 resident bytes / 571 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 842060 cold OpenGL mesh bytes; 536740020 resident bytes / 570 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 1295168 cold OpenGL mesh bytes; 536248432 resident bytes / 569 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 1165360 cold OpenGL mesh bytes; 536234396 resident bytes / 568 meshes
+[2026-10-03 16:54:43] dbg: [driver:2] OpenTT3D: retired 1115040 cold OpenGL mesh bytes; 536273940 resident bytes / 567 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 820576 cold OpenGL mesh bytes; 536605592 resident bytes / 566 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 1112160 cold OpenGL mesh bytes; 536648656 resident bytes / 565 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 405364 cold OpenGL mesh bytes; 536471228 resident bytes / 566 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 407852 cold OpenGL mesh bytes; 536513840 resident bytes / 568 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 195364 cold OpenGL mesh bytes; 536818964 resident bytes / 568 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 887476 cold OpenGL mesh bytes; 536714052 resident bytes / 566 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 1112800 cold OpenGL mesh bytes; 536779264 resident bytes / 565 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 1919336 cold OpenGL mesh bytes; 536277440 resident bytes / 563 meshes
+[2026-10-03 16:54:44] dbg: [driver:2] OpenTT3D: retired 1932896 cold OpenGL mesh bytes; 534957480 resident bytes / 563 meshes
+[2026-10-03 16:54:45] dbg: [driver:2] OpenTT3D: retired 1373424 cold OpenGL mesh bytes; 536621428 resident bytes / 566 meshes
+[2026-10-03 16:54:45] dbg: [driver:2] OpenTT3D: retired 3112304 cold OpenGL mesh bytes; 535018944 resident bytes / 565 meshes
+[2026-10-03 16:54:45] dbg: [driver:2] OpenTT3D: retired 2968164 cold OpenGL mesh bytes; 534077948 resident bytes / 566 meshes
+[2026-10-03 16:54:46] dbg: [driver:2] OpenTT3D: retired 2267304 cold OpenGL mesh bytes; 535246816 resident bytes / 568 meshes
+[2026-10-03 16:54:46] dbg: [driver:2] OpenTT3D: retired 1388604 cold OpenGL mesh bytes; 535699724 resident bytes / 568 meshes
+[2026-10-03 16:54:46] dbg: [driver:2] OpenTT3D: retired 1535256 cold OpenGL mesh bytes; 535897568 resident bytes / 568 meshes
+[2026-10-03 16:54:46] dbg: [driver:2] OpenTT3D: retired 1296568 cold OpenGL mesh bytes; 535889908 resident bytes / 571 meshes
+[2026-10-03 16:54:46] dbg: [driver:2] OpenTT3D: retired 1439844 cold OpenGL mesh bytes; 536613476 resident bytes / 572 meshes
+[2026-10-03 16:54:46] dbg: [driver:2] OpenTT3D: retired 1376744 cold OpenGL mesh bytes; 536753308 resident bytes / 572 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1523396 cold OpenGL mesh bytes; 535959968 resident bytes / 572 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1297688 cold OpenGL mesh bytes; 535653180 resident bytes / 574 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1440964 cold OpenGL mesh bytes; 536189896 resident bytes / 575 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1376744 cold OpenGL mesh bytes; 536182976 resident bytes / 575 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1523396 cold OpenGL mesh bytes; 535501816 resident bytes / 575 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1297688 cold OpenGL mesh bytes; 535593028 resident bytes / 577 meshes
+[2026-10-03 16:54:47] dbg: [driver:2] OpenTT3D: retired 1440964 cold OpenGL mesh bytes; 535822864 resident bytes / 577 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 1388604 cold OpenGL mesh bytes; 536352172 resident bytes / 577 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 1535256 cold OpenGL mesh bytes; 536686996 resident bytes / 577 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 1296568 cold OpenGL mesh bytes; 535902276 resident bytes / 577 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 1439844 cold OpenGL mesh bytes; 536165692 resident bytes / 580 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 1045832 cold OpenGL mesh bytes; 536212896 resident bytes / 580 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 1045832 cold OpenGL mesh bytes; 536431728 resident bytes / 580 meshes
+[2026-10-03 16:54:48] dbg: [driver:2] OpenTT3D: retired 968404 cold OpenGL mesh bytes; 536071416 resident bytes / 580 meshes
+[2026-10-03 16:54:49] dbg: [driver:2] OpenTT3D: retired 968404 cold OpenGL mesh bytes; 536652736 resident bytes / 582 meshes
+[2026-10-03 16:54:49] dbg: [driver:2] OpenTT3D: retired 2111688 cold OpenGL mesh bytes; 535940148 resident bytes / 581 meshes
+[2026-10-03 16:54:49] dbg: [driver:2] OpenTT3D: retired 982792 cold OpenGL mesh bytes; 536418704 resident bytes / 581 meshes
+[2026-10-03 16:54:49] dbg: [driver:2] OpenTT3D: retired 2052272 cold OpenGL mesh bytes; 535805292 resident bytes / 580 meshes
+[2026-10-03 16:54:49] dbg: [driver:2] OpenTT3D: retired 1069480 cold OpenGL mesh bytes; 536010780 resident bytes / 582 meshes
+[2026-10-03 16:54:49] dbg: [driver:2] OpenTT3D: retired 993664 cold OpenGL mesh bytes; 535987156 resident bytes / 582 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 993664 cold OpenGL mesh bytes; 536559268 resident bytes / 582 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 2139032 cold OpenGL mesh bytes; 536190788 resident bytes / 581 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 990440 cold OpenGL mesh bytes; 536851548 resident bytes / 581 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 990440 cold OpenGL mesh bytes; 536215324 resident bytes / 581 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 507652 cold OpenGL mesh bytes; 536595836 resident bytes / 583 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 946708 cold OpenGL mesh bytes; 536565924 resident bytes / 582 meshes
+[2026-10-03 16:54:50] dbg: [driver:2] OpenTT3D: retired 948056 cold OpenGL mesh bytes; 536799896 resident bytes / 581 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 1394296 cold OpenGL mesh bytes; 536815884 resident bytes / 579 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 1018000 cold OpenGL mesh bytes; 536525540 resident bytes / 578 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 442648 cold OpenGL mesh bytes; 536568624 resident bytes / 579 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 442648 cold OpenGL mesh bytes; 536536680 resident bytes / 579 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 507652 cold OpenGL mesh bytes; 536765232 resident bytes / 579 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 946708 cold OpenGL mesh bytes; 536815140 resident bytes / 578 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 1929100 cold OpenGL mesh bytes; 536095008 resident bytes / 577 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 674280 cold OpenGL mesh bytes; 536443972 resident bytes / 577 meshes
+[2026-10-03 16:54:51] dbg: [driver:2] OpenTT3D: retired 744812 cold OpenGL mesh bytes; 536684760 resident bytes / 578 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 1666868 cold OpenGL mesh bytes; 536444372 resident bytes / 576 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 1511424 cold OpenGL mesh bytes; 536578780 resident bytes / 574 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 1438360 cold OpenGL mesh bytes; 536760596 resident bytes / 572 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 942776 cold OpenGL mesh bytes; 536274628 resident bytes / 572 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 625632 cold OpenGL mesh bytes; 536507132 resident bytes / 573 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 1549648 cold OpenGL mesh bytes; 535925508 resident bytes / 572 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 1084596 cold OpenGL mesh bytes; 536117896 resident bytes / 572 meshes
+[2026-10-03 16:54:52] dbg: [driver:2] OpenTT3D: retired 1003808 cold OpenGL mesh bytes; 536616408 resident bytes / 572 meshes
+[2026-10-03 16:54:53] dbg: [driver:2] OpenTT3D: retired 1286140 cold OpenGL mesh bytes; 536640644 resident bytes / 571 meshes
+[2026-10-03 16:54:53] dbg: [driver:2] OpenTT3D: retired 777660 cold OpenGL mesh bytes; 536315480 resident bytes / 571 meshes
+[2026-10-03 16:54:53] dbg: [driver:2] OpenTT3D: retired 772540 cold OpenGL mesh bytes; 536156844 resident bytes / 572 meshes
+[2026-10-03 16:54:53] dbg: [driver:2] OpenTT3D: retired 1379448 cold OpenGL mesh bytes; 536273048 resident bytes / 571 meshes
+[2026-10-03 16:54:53] dbg: [driver:2] OpenTT3D: retired 900920 cold OpenGL mesh bytes; 536859720 resident bytes / 570 meshes
+[2026-10-03 16:54:53] dbg: [driver:2] OpenTT3D: retired 9017232 cold OpenGL mesh bytes; 529312312 resident bytes / 570 meshes
+[2026-10-03 16:54:56] dbg: [driver:2] OpenTT3D: retired 852600 cold OpenGL mesh bytes; 536223256 resident bytes / 579 meshes
+[2026-10-03 16:54:56] dbg: [driver:2] OpenTT3D: retired 2111500 cold OpenGL mesh bytes; 535691432 resident bytes / 580 meshes
+[2026-10-03 16:54:56] dbg: [driver:2] OpenTT3D: retired 1241548 cold OpenGL mesh bytes; 536020208 resident bytes / 579 meshes
+[2026-10-03 16:54:56] dbg: [driver:2] OpenTT3D: retired 1316800 cold OpenGL mesh bytes; 536257544 resident bytes / 578 meshes
+[2026-10-03 16:54:57] dbg: [driver:2] OpenTT3D: retired 229692 cold OpenGL mesh bytes; 536683812 resident bytes / 579 meshes
+[2026-10-03 16:54:57] dbg: [driver:2] OpenTT3D: retired 878248 cold OpenGL mesh bytes; 536061380 resident bytes / 582 meshes
+[2026-10-03 16:54:57] dbg: [driver:2] OpenTT3D: retired 298492 cold OpenGL mesh bytes; 536589576 resident bytes / 586 meshes
+[2026-10-03 16:54:57] dbg: [driver:2] OpenTT3D: retired 1413352 cold OpenGL mesh bytes; 535840396 resident bytes / 586 meshes
+[2026-10-03 16:54:57] dbg: [driver:2] OpenTT3D: retired 1643284 cold OpenGL mesh bytes; 536190168 resident bytes / 586 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 1420216 cold OpenGL mesh bytes; 535631524 resident bytes / 588 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 1792220 cold OpenGL mesh bytes; 536017868 resident bytes / 589 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 425632 cold OpenGL mesh bytes; 536642440 resident bytes / 589 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 795128 cold OpenGL mesh bytes; 536553440 resident bytes / 588 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 309504 cold OpenGL mesh bytes; 536583600 resident bytes / 589 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 299656 cold OpenGL mesh bytes; 536769144 resident bytes / 589 meshes
+[2026-10-03 16:54:58] dbg: [driver:2] OpenTT3D: retired 877896 cold OpenGL mesh bytes; 536865392 resident bytes / 587 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 1923856 cold OpenGL mesh bytes; 536215512 resident bytes / 585 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 817688 cold OpenGL mesh bytes; 536501360 resident bytes / 585 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 848840 cold OpenGL mesh bytes; 536340304 resident bytes / 585 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 818128 cold OpenGL mesh bytes; 536147216 resident bytes / 586 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 839160 cold OpenGL mesh bytes; 536620504 resident bytes / 587 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 1511968 cold OpenGL mesh bytes; 536198360 resident bytes / 586 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 753456 cold OpenGL mesh bytes; 536422480 resident bytes / 586 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 516720 cold OpenGL mesh bytes; 536593092 resident bytes / 586 meshes
+[2026-10-03 16:54:59] dbg: [driver:2] OpenTT3D: retired 504728 cold OpenGL mesh bytes; 536492300 resident bytes / 586 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 512800 cold OpenGL mesh bytes; 536613772 resident bytes / 589 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 850952 cold OpenGL mesh bytes; 536140404 resident bytes / 590 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 846840 cold OpenGL mesh bytes; 536524088 resident bytes / 593 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 839420 cold OpenGL mesh bytes; 536546444 resident bytes / 593 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 699184 cold OpenGL mesh bytes; 536742020 resident bytes / 593 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 692968 cold OpenGL mesh bytes; 536563796 resident bytes / 593 meshes
+[2026-10-03 16:55:00] dbg: [driver:2] OpenTT3D: retired 687344 cold OpenGL mesh bytes; 536586516 resident bytes / 595 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 873680 cold OpenGL mesh bytes; 536488012 resident bytes / 595 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 1020220 cold OpenGL mesh bytes; 536475136 resident bytes / 594 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 785008 cold OpenGL mesh bytes; 536520904 resident bytes / 594 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 608392 cold OpenGL mesh bytes; 536466792 resident bytes / 594 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 710616 cold OpenGL mesh bytes; 536641056 resident bytes / 596 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 739064 cold OpenGL mesh bytes; 536856292 resident bytes / 596 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 1455564 cold OpenGL mesh bytes; 536794652 resident bytes / 595 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 1742804 cold OpenGL mesh bytes; 536576600 resident bytes / 593 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 624944 cold OpenGL mesh bytes; 536715872 resident bytes / 593 meshes
+[2026-10-03 16:55:01] dbg: [driver:2] OpenTT3D: retired 442784 cold OpenGL mesh bytes; 536497912 resident bytes / 593 meshes
+[2026-10-03 16:55:02] dbg: [driver:2] OpenTT3D: retired 533232 cold OpenGL mesh bytes; 536542256 resident bytes / 593 meshes
+[2026-10-03 16:55:02] dbg: [driver:2] OpenTT3D: retired 1930132 cold OpenGL mesh bytes; 536562100 resident bytes / 590 meshes
+[2026-10-03 16:55:02] dbg: [driver:2] OpenTT3D: retired 3810276 cold OpenGL mesh bytes; 536211328 resident bytes / 586 meshes
+[2026-10-03 16:55:02] dbg: [driver:2] OpenTT3D: retired 3661664 cold OpenGL mesh bytes; 536370992 resident bytes / 580 meshes
+[2026-10-03 16:55:02] dbg: [driver:2] OpenTT3D: retired 3548348 cold OpenGL mesh bytes; 536184724 resident bytes / 577 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 262488 cold OpenGL mesh bytes; 536797876 resident bytes / 577 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 742528 cold OpenGL mesh bytes; 536493116 resident bytes / 577 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 687576 cold OpenGL mesh bytes; 536246132 resident bytes / 577 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 499972 cold OpenGL mesh bytes; 536691176 resident bytes / 576 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 1519200 cold OpenGL mesh bytes; 536762364 resident bytes / 574 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 2066904 cold OpenGL mesh bytes; 536870004 resident bytes / 572 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 2469244 cold OpenGL mesh bytes; 536809908 resident bytes / 570 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 1229448 cold OpenGL mesh bytes; 536690100 resident bytes / 570 meshes
+[2026-10-03 16:55:03] dbg: [driver:2] OpenTT3D: retired 3471856 cold OpenGL mesh bytes; 533544772 resident bytes / 570 meshes
+[2026-10-03 16:55:04] dbg: [driver:2] OpenTT3D: retired 3470576 cold OpenGL mesh bytes; 534458876 resident bytes / 573 meshes
+[2026-10-03 16:55:04] dbg: [driver:2] OpenTT3D: retired 3457728 cold OpenGL mesh bytes; 534246824 resident bytes / 574 meshes
+[2026-10-03 16:55:05] dbg: [driver:2] OpenTT3D: retired 3458220 cold OpenGL mesh bytes; 534842664 resident bytes / 577 meshes
+[2026-10-03 16:55:05] dbg: [driver:2] OpenTT3D: retired 3461124 cold OpenGL mesh bytes; 534085068 resident bytes / 577 meshes
+[2026-10-03 16:55:05] dbg: [driver:2] OpenTT3D: retired 3448956 cold OpenGL mesh bytes; 533668488 resident bytes / 577 meshes
+[2026-10-03 16:55:05] dbg: [driver:2] OpenTT3D: retired 3454392 cold OpenGL mesh bytes; 534582064 resident bytes / 581 meshes
+[2026-10-03 16:55:06] dbg: [driver:2] OpenTT3D: retired 3455672 cold OpenGL mesh bytes; 535268368 resident bytes / 582 meshes
+[2026-10-03 16:55:06] dbg: [driver:2] OpenTT3D: retired 1723744 cold OpenGL mesh bytes; 535809788 resident bytes / 585 meshes
+[2026-10-03 16:55:06] dbg: [driver:2] OpenTT3D: retired 1509960 cold OpenGL mesh bytes; 535423772 resident bytes / 585 meshes
+[2026-10-03 16:55:06] dbg: [driver:2] OpenTT3D: retired 1468892 cold OpenGL mesh bytes; 535493192 resident bytes / 585 meshes
+[2026-10-03 16:55:06] dbg: [driver:2] OpenTT3D: retired 1496064 cold OpenGL mesh bytes; 535638856 resident bytes / 585 meshes
+[2026-10-03 16:55:07] dbg: [driver:2] OpenTT3D: retired 1549456 cold OpenGL mesh bytes; 535622212 resident bytes / 587 meshes
+[2026-10-03 16:55:07] dbg: [driver:2] OpenTT3D: retired 1680956 cold OpenGL mesh bytes; 536706312 resident bytes / 588 meshes
+[2026-10-03 16:55:07] dbg: [driver:2] OpenTT3D: retired 3609796 cold OpenGL mesh bytes; 535472224 resident bytes / 587 meshes
+[2026-10-03 16:55:07] dbg: [driver:2] OpenTT3D: retired 1998172 cold OpenGL mesh bytes; 536243876 resident bytes / 586 meshes
+[2026-10-03 16:55:07] dbg: [driver:2] OpenTT3D: retired 1374000 cold OpenGL mesh bytes; 536207952 resident bytes / 585 meshes
+[2026-10-03 16:55:08] dbg: [driver:2] OpenTT3D: retired 1924736 cold OpenGL mesh bytes; 535679960 resident bytes / 587 meshes
+[2026-10-03 16:55:08] dbg: [driver:2] OpenTT3D: retired 251284 cold OpenGL mesh bytes; 536723932 resident bytes / 587 meshes
+[2026-10-03 16:55:08] dbg: [driver:2] OpenTT3D: retired 2116768 cold OpenGL mesh bytes; 536360976 resident bytes / 583 meshes
+[2026-10-03 16:55:08] dbg: [driver:2] OpenTT3D: retired 2424872 cold OpenGL mesh bytes; 535877280 resident bytes / 581 meshes
+[2026-10-03 16:55:08] dbg: [driver:2] OpenTT3D: retired 1064236 cold OpenGL mesh bytes; 535943716 resident bytes / 581 meshes
+[2026-10-03 16:55:08] dbg: [driver:2] OpenTT3D: retired 1085176 cold OpenGL mesh bytes; 536376540 resident bytes / 582 meshes
+[2026-10-03 16:55:09] dbg: [driver:2] OpenTT3D: retired 2273356 cold OpenGL mesh bytes; 535510508 resident bytes / 582 meshes
+[2026-10-03 16:55:09] dbg: [driver:2] OpenTT3D: retired 1209000 cold OpenGL mesh bytes; 536294996 resident bytes / 581 meshes
+[2026-10-03 16:55:09] dbg: [driver:2] OpenTT3D: retired 3074412 cold OpenGL mesh bytes; 535464300 resident bytes / 577 meshes
+[2026-10-03 16:55:09] dbg: [driver:2] OpenTT3D: retired 1178640 cold OpenGL mesh bytes; 535995572 resident bytes / 578 meshes
+[2026-10-03 16:55:09] dbg: [driver:2] OpenTT3D: retired 1161048 cold OpenGL mesh bytes; 536735448 resident bytes / 575 meshes
+[2026-10-03 16:55:09] dbg: [driver:2] OpenTT3D: retired 1939732 cold OpenGL mesh bytes; 536475040 resident bytes / 569 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 1746504 cold OpenGL mesh bytes; 536682048 resident bytes / 566 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 957524 cold OpenGL mesh bytes; 536725580 resident bytes / 565 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 473796 cold OpenGL mesh bytes; 536513544 resident bytes / 565 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 738996 cold OpenGL mesh bytes; 536583488 resident bytes / 564 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 1431136 cold OpenGL mesh bytes; 536640640 resident bytes / 562 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 2492924 cold OpenGL mesh bytes; 536531340 resident bytes / 558 meshes
+[2026-10-03 16:55:10] dbg: [driver:2] OpenTT3D: retired 3242836 cold OpenGL mesh bytes; 536715744 resident bytes / 553 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 3869636 cold OpenGL mesh bytes; 536569224 resident bytes / 547 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 1480456 cold OpenGL mesh bytes; 536637500 resident bytes / 545 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 816000 cold OpenGL mesh bytes; 536214996 resident bytes / 545 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 745500 cold OpenGL mesh bytes; 536277576 resident bytes / 545 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 1447744 cold OpenGL mesh bytes; 536479080 resident bytes / 543 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 2887488 cold OpenGL mesh bytes; 536462720 resident bytes / 538 meshes
+[2026-10-03 16:55:11] dbg: [driver:2] OpenTT3D: retired 4532320 cold OpenGL mesh bytes; 535833060 resident bytes / 534 meshes
+[2026-10-03 16:55:12] dbg: [driver:2] OpenTT3D: retired 3589008 cold OpenGL mesh bytes; 536776208 resident bytes / 529 meshes
+[2026-10-03 16:55:12] dbg: [driver:2] OpenTT3D: retired 2634480 cold OpenGL mesh bytes; 535891716 resident bytes / 527 meshes
+[2026-10-03 16:55:12] dbg: [driver:2] OpenTT3D: retired 1153696 cold OpenGL mesh bytes; 536854240 resident bytes / 525 meshes
+[2026-10-03 16:55:12] dbg: [driver:2] OpenTT3D: retired 2316792 cold OpenGL mesh bytes; 536329384 resident bytes / 524 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 2313420 cold OpenGL mesh bytes; 536353672 resident bytes / 523 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 2496692 cold OpenGL mesh bytes; 536508936 resident bytes / 520 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 1079416 cold OpenGL mesh bytes; 536706040 resident bytes / 519 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 545312 cold OpenGL mesh bytes; 536479760 resident bytes / 519 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 1060480 cold OpenGL mesh bytes; 536418480 resident bytes / 519 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 1088176 cold OpenGL mesh bytes; 536476336 resident bytes / 518 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 1625568 cold OpenGL mesh bytes; 536485560 resident bytes / 516 meshes
+[2026-10-03 16:55:13] dbg: [driver:2] OpenTT3D: retired 1840608 cold OpenGL mesh bytes; 536393280 resident bytes / 514 meshes
+[2026-10-03 16:55:14] dbg: [driver:2] OpenTT3D: retired 1220392 cold OpenGL mesh bytes; 536292624 resident bytes / 513 meshes
+[2026-10-03 16:55:14] dbg: [driver:2] OpenTT3D: retired 605096 cold OpenGL mesh bytes; 536562664 resident bytes / 514 meshes
+[2026-10-03 16:55:14] dbg: [driver:2] OpenTT3D: retired 1151016 cold OpenGL mesh bytes; 536425408 resident bytes / 513 meshes
+[2026-10-03 16:55:14] dbg: [driver:2] OpenTT3D: retired 1656448 cold OpenGL mesh bytes; 536472992 resident bytes / 511 meshes
+[2026-10-03 16:55:14] dbg: [driver:2] OpenTT3D: retired 2404252 cold OpenGL mesh bytes; 536400224 resident bytes / 508 meshes
+[2026-10-03 16:55:14] dbg: [driver:2] OpenTT3D: retired 1924920 cold OpenGL mesh bytes; 536806788 resident bytes / 506 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 2245752 cold OpenGL mesh bytes; 536685020 resident bytes / 503 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 585916 cold OpenGL mesh bytes; 536328300 resident bytes / 503 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 528232 cold OpenGL mesh bytes; 536857976 resident bytes / 503 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 1220184 cold OpenGL mesh bytes; 536837240 resident bytes / 502 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 1881844 cold OpenGL mesh bytes; 536278684 resident bytes / 500 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 919960 cold OpenGL mesh bytes; 536447336 resident bytes / 500 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 919480 cold OpenGL mesh bytes; 536610316 resident bytes / 500 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 918704 cold OpenGL mesh bytes; 536558876 resident bytes / 500 meshes
+[2026-10-03 16:55:15] dbg: [driver:2] OpenTT3D: retired 845428 cold OpenGL mesh bytes; 536637224 resident bytes / 500 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 849748 cold OpenGL mesh bytes; 536408096 resident bytes / 501 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 845596 cold OpenGL mesh bytes; 536531812 resident bytes / 501 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 1354476 cold OpenGL mesh bytes; 536751316 resident bytes / 500 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 1563624 cold OpenGL mesh bytes; 536759112 resident bytes / 498 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 1041248 cold OpenGL mesh bytes; 536852892 resident bytes / 497 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 502704 cold OpenGL mesh bytes; 536497428 resident bytes / 497 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 532512 cold OpenGL mesh bytes; 536587700 resident bytes / 498 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 499112 cold OpenGL mesh bytes; 536800584 resident bytes / 498 meshes
+[2026-10-03 16:55:16] dbg: [driver:2] OpenTT3D: retired 1615712 cold OpenGL mesh bytes; 536409136 resident bytes / 496 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 1080760 cold OpenGL mesh bytes; 536489364 resident bytes / 495 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 535048 cold OpenGL mesh bytes; 536775936 resident bytes / 495 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 538528 cold OpenGL mesh bytes; 536637332 resident bytes / 495 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 1070304 cold OpenGL mesh bytes; 536210884 resident bytes / 495 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 385352 cold OpenGL mesh bytes; 536768304 resident bytes / 495 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 1737480 cold OpenGL mesh bytes; 536619284 resident bytes / 493 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 1512560 cold OpenGL mesh bytes; 536695184 resident bytes / 491 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 1681968 cold OpenGL mesh bytes; 536523188 resident bytes / 489 meshes
+[2026-10-03 16:55:17] dbg: [driver:2] OpenTT3D: retired 1208552 cold OpenGL mesh bytes; 536495432 resident bytes / 488 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 599912 cold OpenGL mesh bytes; 536693528 resident bytes / 489 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 1051616 cold OpenGL mesh bytes; 536597184 resident bytes / 488 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 1481332 cold OpenGL mesh bytes; 536781180 resident bytes / 487 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 1777824 cold OpenGL mesh bytes; 536645068 resident bytes / 485 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 1642240 cold OpenGL mesh bytes; 536644540 resident bytes / 483 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 410648 cold OpenGL mesh bytes; 536548812 resident bytes / 483 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 688980 cold OpenGL mesh bytes; 536193048 resident bytes / 483 meshes
+[2026-10-03 16:55:18] dbg: [driver:2] OpenTT3D: retired 1546736 cold OpenGL mesh bytes; 536436380 resident bytes / 482 meshes
+[2026-10-03 16:55:19] dbg: [driver:2] OpenTT3D: retired 2145592 cold OpenGL mesh bytes; 536434896 resident bytes / 479 meshes
+[2026-10-03 16:55:19] dbg: [driver:2] OpenTT3D: retired 1734120 cold OpenGL mesh bytes; 536844884 resident bytes / 477 meshes
+[2026-10-03 16:55:19] dbg: [driver:2] OpenTT3D: retired 2475976 cold OpenGL mesh bytes; 536513016 resident bytes / 474 meshes
+[2026-10-03 16:55:19] dbg: [driver:2] OpenTT3D: retired 1648712 cold OpenGL mesh bytes; 536564360 resident bytes / 472 meshes
+[2026-10-03 16:55:19] dbg: [driver:2] OpenTT3D: retired 1107816 cold OpenGL mesh bytes; 536562712 resident bytes / 472 meshes
+[2026-10-03 16:55:19] dbg: [driver:2] OpenTT3D: retired 1914112 cold OpenGL mesh bytes; 536039040 resident bytes / 472 meshes
+[2026-10-03 16:55:20] dbg: [driver:2] OpenTT3D: retired 2366972 cold OpenGL mesh bytes; 535378156 resident bytes / 471 meshes
+[2026-10-03 16:55:20] dbg: [driver:2] OpenTT3D: retired 803324 cold OpenGL mesh bytes; 536280920 resident bytes / 470 meshes
+[2026-10-03 16:55:20] dbg: [driver:2] OpenTT3D: retired 967636 cold OpenGL mesh bytes; 536342084 resident bytes / 470 meshes
+[2026-10-03 16:55:20] dbg: [driver:2] OpenTT3D: retired 1374676 cold OpenGL mesh bytes; 535498056 resident bytes / 470 meshes
+[2026-10-03 16:55:20] dbg: [driver:2] OpenTT3D: retired 757008 cold OpenGL mesh bytes; 536446240 resident bytes / 470 meshes
+[2026-10-03 16:55:20] dbg: [driver:2] OpenTT3D: retired 1493948 cold OpenGL mesh bytes; 536663484 resident bytes / 470 meshes
+[2026-10-03 16:55:21] dbg: [driver:2] OpenTT3D: retired 3567360 cold OpenGL mesh bytes; 535524980 resident bytes / 468 meshes
+[2026-10-03 16:55:21] dbg: [driver:2] OpenTT3D: retired 1385528 cold OpenGL mesh bytes; 536086732 resident bytes / 468 meshes
+[2026-10-03 16:55:21] dbg: [driver:2] OpenTT3D: retired 1088744 cold OpenGL mesh bytes; 536464172 resident bytes / 468 meshes
+[2026-10-03 16:55:21] dbg: [driver:2] OpenTT3D: retired 1692200 cold OpenGL mesh bytes; 535220572 resident bytes / 468 meshes
+[2026-10-03 16:55:21] dbg: [driver:2] OpenTT3D: retired 1521300 cold OpenGL mesh bytes; 536189512 resident bytes / 470 meshes
+[2026-10-03 16:55:21] dbg: [driver:2] OpenTT3D: retired 1423312 cold OpenGL mesh bytes; 536636448 resident bytes / 470 meshes
+[2026-10-03 16:55:22] dbg: [driver:2] OpenTT3D: retired 5529096 cold OpenGL mesh bytes; 533132912 resident bytes / 468 meshes
+[2026-10-03 16:55:22] dbg: [driver:2] OpenTT3D: retired 416592 cold OpenGL mesh bytes; 536600872 resident bytes / 472 meshes
+[2026-10-03 16:55:22] dbg: [driver:2] OpenTT3D: retired 1493376 cold OpenGL mesh bytes; 536730580 resident bytes / 472 meshes
+[2026-10-03 16:55:22] dbg: [driver:2] OpenTT3D: retired 2964544 cold OpenGL mesh bytes; 535185888 resident bytes / 472 meshes
+[2026-10-03 16:55:23] dbg: [driver:2] OpenTT3D: retired 4915664 cold OpenGL mesh bytes; 532109912 resident bytes / 474 meshes
+[2026-10-03 16:55:23] dbg: [driver:2] OpenTT3D: retired 6233216 cold OpenGL mesh bytes; 532559656 resident bytes / 477 meshes
+[2026-10-03 16:55:24] dbg: [driver:2] OpenTT3D: retired 1620096 cold OpenGL mesh bytes; 536857380 resident bytes / 479 meshes
+[2026-10-03 16:55:24] dbg: [driver:2] OpenTT3D: retired 2122700 cold OpenGL mesh bytes; 536738284 resident bytes / 475 meshes
+[2026-10-03 16:55:24] dbg: [driver:2] OpenTT3D: retired 1392512 cold OpenGL mesh bytes; 536595340 resident bytes / 472 meshes
+[2026-10-03 16:55:24] dbg: [driver:2] OpenTT3D: retired 469108 cold OpenGL mesh bytes; 536451156 resident bytes / 472 meshes
+[2026-10-03 16:55:24] dbg: [driver:2] OpenTT3D: retired 420308 cold OpenGL mesh bytes; 536728424 resident bytes / 474 meshes
+[2026-10-03 16:55:24] dbg: [driver:2] OpenTT3D: retired 1698280 cold OpenGL mesh bytes; 535329208 resident bytes / 474 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 821188 cold OpenGL mesh bytes; 536066820 resident bytes / 477 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 807388 cold OpenGL mesh bytes; 536759112 resident bytes / 477 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 2005220 cold OpenGL mesh bytes; 536696392 resident bytes / 476 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 2214852 cold OpenGL mesh bytes; 536789588 resident bytes / 471 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 1314312 cold OpenGL mesh bytes; 536576200 resident bytes / 470 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 161692 cold OpenGL mesh bytes; 536844656 resident bytes / 471 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 610668 cold OpenGL mesh bytes; 536630720 resident bytes / 471 meshes
+[2026-10-03 16:55:25] dbg: [driver:2] OpenTT3D: retired 768360 cold OpenGL mesh bytes; 536740448 resident bytes / 470 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 1357160 cold OpenGL mesh bytes; 536466384 resident bytes / 467 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 785992 cold OpenGL mesh bytes; 536716136 resident bytes / 467 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 762704 cold OpenGL mesh bytes; 536716544 resident bytes / 467 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 534072 cold OpenGL mesh bytes; 536568836 resident bytes / 466 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 565328 cold OpenGL mesh bytes; 536731764 resident bytes / 466 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 3276888 cold OpenGL mesh bytes; 534553536 resident bytes / 465 meshes
+[2026-10-03 16:55:26] dbg: [driver:2] OpenTT3D: retired 1936572 cold OpenGL mesh bytes; 535328460 resident bytes / 466 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 1792532 cold OpenGL mesh bytes; 535229600 resident bytes / 468 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 1808912 cold OpenGL mesh bytes; 535421936 resident bytes / 469 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 1510868 cold OpenGL mesh bytes; 535708244 resident bytes / 469 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 1540996 cold OpenGL mesh bytes; 536236404 resident bytes / 469 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 864404 cold OpenGL mesh bytes; 536624340 resident bytes / 469 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 408072 cold OpenGL mesh bytes; 536541192 resident bytes / 469 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 404680 cold OpenGL mesh bytes; 536613784 resident bytes / 471 meshes
+[2026-10-03 16:55:27] dbg: [driver:2] OpenTT3D: retired 399928 cold OpenGL mesh bytes; 536579824 resident bytes / 471 meshes
+[2026-10-03 16:55:28] dbg: [driver:2] OpenTT3D: retired 405368 cold OpenGL mesh bytes; 536538896 resident bytes / 471 meshes
+[2026-10-03 16:55:28] dbg: [driver:2] OpenTT3D: retired 410040 cold OpenGL mesh bytes; 536538712 resident bytes / 473 meshes
+[2026-10-03 16:55:28] dbg: [driver:2] OpenTT3D: retired 404016 cold OpenGL mesh bytes; 536601136 resident bytes / 473 meshes
+[2026-10-03 16:55:28] dbg: [driver:2] OpenTT3D: retired 1439456 cold OpenGL mesh bytes; 536129848 resident bytes / 472 meshes
+[2026-10-03 16:55:28] dbg: [driver:2] OpenTT3D: retired 1905648 cold OpenGL mesh bytes; 535486456 resident bytes / 472 meshes
+[2026-10-03 16:55:28] dbg: [driver:2] OpenTT3D: retired 3296048 cold OpenGL mesh bytes; 534116968 resident bytes / 473 meshes
+[2026-10-03 16:55:29] dbg: [driver:2] OpenTT3D: retired 6520560 cold OpenGL mesh bytes; 531392400 resident bytes / 477 meshes
+[2026-10-03 16:55:29] dbg: [driver:2] OpenTT3D: retired 5244820 cold OpenGL mesh bytes; 531666064 resident bytes / 482 meshes
+[2026-10-03 16:55:30] dbg: [driver:2] OpenTT3D: retired 4392016 cold OpenGL mesh bytes; 533014036 resident bytes / 484 meshes
+[2026-10-03 16:55:30] dbg: [driver:2] OpenTT3D: retired 3586292 cold OpenGL mesh bytes; 533950072 resident bytes / 489 meshes
+[2026-10-03 16:55:31] dbg: [driver:2] OpenTT3D: retired 3176508 cold OpenGL mesh bytes; 533746656 resident bytes / 492 meshes
+[2026-10-03 16:55:31] dbg: [driver:2] OpenTT3D: retired 1367032 cold OpenGL mesh bytes; 535690664 resident bytes / 495 meshes
+[2026-10-03 16:55:31] dbg: [driver:2] OpenTT3D: retired 1205776 cold OpenGL mesh bytes; 536100936 resident bytes / 496 meshes
+[2026-10-03 16:55:31] dbg: [driver:2] OpenTT3D: retired 1298436 cold OpenGL mesh bytes; 535645068 resident bytes / 496 meshes
+[2026-10-03 16:55:31] dbg: [driver:2] OpenTT3D: retired 1366872 cold OpenGL mesh bytes; 535916364 resident bytes / 497 meshes
+[2026-10-03 16:55:32] dbg: [driver:2] OpenTT3D: retired 1620444 cold OpenGL mesh bytes; 535931704 resident bytes / 498 meshes
+[2026-10-03 16:55:32] dbg: [driver:2] OpenTT3D: retired 1291788 cold OpenGL mesh bytes; 536291124 resident bytes / 499 meshes
+[2026-10-03 16:55:32] dbg: [driver:2] OpenTT3D: retired 7036632 cold OpenGL mesh bytes; 530064076 resident bytes / 499 meshes
+[2026-10-03 16:55:33] dbg: [driver:2] OpenTT3D: retired 5021732 cold OpenGL mesh bytes; 532417560 resident bytes / 508 meshes
+[2026-10-03 16:55:34] dbg: [driver:2] OpenTT3D: retired 6114368 cold OpenGL mesh bytes; 531449560 resident bytes / 513 meshes
+[2026-10-03 16:55:34] dbg: [driver:2] OpenTT3D: retired 393240 cold OpenGL mesh bytes; 536569776 resident bytes / 522 meshes
+[2026-10-03 16:55:35] dbg: [driver:2] OpenTT3D: retired 1256516 cold OpenGL mesh bytes; 536038060 resident bytes / 522 meshes
+[2026-10-03 16:55:35] dbg: [driver:2] OpenTT3D: retired 2560384 cold OpenGL mesh bytes; 534805684 resident bytes / 523 meshes
+[2026-10-03 16:55:35] dbg: [driver:2] OpenTT3D: retired 2049340 cold OpenGL mesh bytes; 535216368 resident bytes / 525 meshes
+[2026-10-03 16:55:35] dbg: [driver:2] OpenTT3D: retired 2347752 cold OpenGL mesh bytes; 534830288 resident bytes / 527 meshes
+[2026-10-03 16:55:36] dbg: [driver:2] OpenTT3D: retired 7387016 cold OpenGL mesh bytes; 530176560 resident bytes / 530 meshes
+[2026-10-03 16:55:37] dbg: [driver:2] OpenTT3D: retired 3308340 cold OpenGL mesh bytes; 533972716 resident bytes / 540 meshes
+[2026-10-03 16:55:37] dbg: [driver:2] OpenTT3D: retired 473112 cold OpenGL mesh bytes; 536530556 resident bytes / 544 meshes
+[2026-10-03 16:55:37] dbg: [driver:2] OpenTT3D: retired 318780 cold OpenGL mesh bytes; 536587764 resident bytes / 544 meshes
+[2026-10-03 16:55:37] dbg: [driver:2] OpenTT3D: retired 705956 cold OpenGL mesh bytes; 536581728 resident bytes / 542 meshes
+[2026-10-03 16:55:37] dbg: [driver:2] OpenTT3D: retired 3681252 cold OpenGL mesh bytes; 533626028 resident bytes / 540 meshes
+[2026-10-03 16:55:38] dbg: [driver:2] OpenTT3D: retired 3724128 cold OpenGL mesh bytes; 533702832 resident bytes / 545 meshes
+[2026-10-03 16:55:38] dbg: [driver:2] OpenTT3D: retired 5181328 cold OpenGL mesh bytes; 531954076 resident bytes / 549 meshes
+[2026-10-03 16:55:39] dbg: [driver:2] OpenTT3D: retired 8291920 cold OpenGL mesh bytes; 529443416 resident bytes / 558 meshes
+[2026-10-03 16:55:40] dbg: [driver:2] OpenTT3D: retired 4732136 cold OpenGL mesh bytes; 532386024 resident bytes / 564 meshes
+[2026-10-03 16:55:41] dbg: [driver:2] OpenTT3D: retired 7224480 cold OpenGL mesh bytes; 529738224 resident bytes / 569 meshes
+[2026-10-03 16:55:42] dbg: [driver:2] OpenTT3D: retired 2504664 cold OpenGL mesh bytes; 535822764 resident bytes / 578 meshes
+[2026-10-03 16:55:42] dbg: [driver:1] OpenTT3D: 45096 authored voxel views match unmerged geometry, CPU instances, palette recolouring and transparent picking; exact palette relocation passed
+[2026-10-03 16:55:42] dbg: [driver:2] OpenTT3D: retired 3506320 cold OpenGL mesh bytes; 535819608 resident bytes / 582 meshes
+[2026-10-03 16:55:42] dbg: [driver:2] OpenTT3D: retired 4031160 cold OpenGL mesh bytes; 533954644 resident bytes / 582 meshes
+[2026-10-03 16:55:42] dbg: [driver:2] OpenTT3D: retired 2101912 cold OpenGL mesh bytes; 536121064 resident bytes / 592 meshes
+[2026-10-03 16:55:42] dbg: [driver:2] OpenTT3D: retired 2322188 cold OpenGL mesh bytes; 535555268 resident bytes / 594 meshes
+[2026-10-03 16:55:43] dbg: [driver:2] OpenTT3D: retired 5143092 cold OpenGL mesh bytes; 535277160 resident bytes / 603 meshes
+[2026-10-03 16:55:43] dbg: [driver:2] OpenTT3D: retired 2371916 cold OpenGL mesh bytes; 535439840 resident bytes / 607 meshes
+[2026-10-03 16:55:43] dbg: [driver:2] OpenTT3D: retired 2406912 cold OpenGL mesh bytes; 536283248 resident bytes / 606 meshes
+[2026-10-03 16:55:43] dbg: [driver:2] OpenTT3D: retired 3109488 cold OpenGL mesh bytes; 536413384 resident bytes / 605 meshes
+[2026-10-03 16:55:44] dbg: [driver:2] OpenTT3D: retired 1152228 cold OpenGL mesh bytes; 536058992 resident bytes / 608 meshes
+[2026-10-03 16:55:44] dbg: [driver:2] OpenTT3D: retired 2334112 cold OpenGL mesh bytes; 536815568 resident bytes / 603 meshes
+[2026-10-03 16:55:44] dbg: [driver:2] OpenTT3D: retired 3991024 cold OpenGL mesh bytes; 536724948 resident bytes / 601 meshes
+[2026-10-03 16:55:44] dbg: [driver:2] OpenTT3D: retired 4547192 cold OpenGL mesh bytes; 536078160 resident bytes / 598 meshes
+[2026-10-03 16:55:44] dbg: [driver:2] OpenTT3D: retired 1502332 cold OpenGL mesh bytes; 535431284 resident bytes / 599 meshes
+[2026-10-03 16:55:44] dbg: [driver:2] OpenTT3D: retired 524836 cold OpenGL mesh bytes; 536826432 resident bytes / 600 meshes
+[2026-10-03 16:55:45] dbg: [driver:2] OpenTT3D: retired 5277684 cold OpenGL mesh bytes; 536761828 resident bytes / 597 meshes
+[2026-10-03 16:55:45] dbg: [driver:2] OpenTT3D: retired 3946176 cold OpenGL mesh bytes; 536031536 resident bytes / 595 meshes
+[2026-10-03 16:55:45] dbg: [driver:2] OpenTT3D: retired 3485876 cold OpenGL mesh bytes; 536447192 resident bytes / 594 meshes
+[2026-10-03 16:55:45] dbg: [driver:2] OpenTT3D: retired 2968580 cold OpenGL mesh bytes; 536670496 resident bytes / 591 meshes
+[2026-10-03 16:55:45] dbg: [driver:1] OpenTT3D: 320 joined multi-tile house views preserve exact cell references and independent tile picking
+[2026-10-03 16:55:45] dbg: [driver:2] OpenTT3D: retired 1369824 cold OpenGL mesh bytes; 535532612 resident bytes / 591 meshes
+[2026-10-03 16:55:45] dbg: [driver:2] OpenTT3D: retired 842236 cold OpenGL mesh bytes; 536254396 resident bytes / 595 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 721348 cold OpenGL mesh bytes; 536484632 resident bytes / 595 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 667552 cold OpenGL mesh bytes; 536296632 resident bytes / 595 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 1670800 cold OpenGL mesh bytes; 535615496 resident bytes / 596 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 1917912 cold OpenGL mesh bytes; 535104776 resident bytes / 599 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 1870080 cold OpenGL mesh bytes; 535387764 resident bytes / 603 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 511848 cold OpenGL mesh bytes; 536494928 resident bytes / 604 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 929224 cold OpenGL mesh bytes; 536409764 resident bytes / 602 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 774036 cold OpenGL mesh bytes; 536334960 resident bytes / 602 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 1093036 cold OpenGL mesh bytes; 536267300 resident bytes / 602 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 1264664 cold OpenGL mesh bytes; 536419524 resident bytes / 602 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 608092 cold OpenGL mesh bytes; 536535688 resident bytes / 603 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 220956 cold OpenGL mesh bytes; 536695228 resident bytes / 603 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 374456 cold OpenGL mesh bytes; 536822172 resident bytes / 603 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 954312 cold OpenGL mesh bytes; 536008764 resident bytes / 603 meshes
+[2026-10-03 16:55:46] dbg: [driver:2] OpenTT3D: retired 1399100 cold OpenGL mesh bytes; 535501784 resident bytes / 605 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 1461348 cold OpenGL mesh bytes; 535598764 resident bytes / 609 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 1438860 cold OpenGL mesh bytes; 536523832 resident bytes / 613 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 502124 cold OpenGL mesh bytes; 536827340 resident bytes / 613 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 1742884 cold OpenGL mesh bytes; 535940704 resident bytes / 611 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 1565776 cold OpenGL mesh bytes; 535492764 resident bytes / 612 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 1770552 cold OpenGL mesh bytes; 535266628 resident bytes / 614 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 1651200 cold OpenGL mesh bytes; 535393504 resident bytes / 620 meshes
+[2026-10-03 16:55:47] dbg: [driver:2] OpenTT3D: retired 354216 cold OpenGL mesh bytes; 536782144 resident bytes / 621 meshes
+[2026-10-03 16:55:48] dbg: [driver:2] OpenTT3D: retired 4397272 cold OpenGL mesh bytes; 536225208 resident bytes / 616 meshes
+[2026-10-03 16:55:48] dbg: [driver:2] OpenTT3D: retired 727656 cold OpenGL mesh bytes; 536570684 resident bytes / 616 meshes
+[2026-10-03 16:55:48] dbg: [driver:2] OpenTT3D: retired 285360 cold OpenGL mesh bytes; 536630876 resident bytes / 616 meshes
+[2026-10-03 16:55:48] dbg: [driver:2] OpenTT3D: retired 200372 cold OpenGL mesh bytes; 536745496 resident bytes / 616 meshes
+[2026-10-03 16:55:48] dbg: [driver:2] OpenTT3D: retired 410704 cold OpenGL mesh bytes; 536566368 resident bytes / 616 meshes
+[2026-10-03 16:55:48] dbg: [driver:2] OpenTT3D: retired 736204 cold OpenGL mesh bytes; 536176196 resident bytes / 616 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 996616 cold OpenGL mesh bytes; 536076644 resident bytes / 618 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 1208968 cold OpenGL mesh bytes; 535760036 resident bytes / 620 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 763112 cold OpenGL mesh bytes; 536143524 resident bytes / 623 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 260132 cold OpenGL mesh bytes; 536870720 resident bytes / 626 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 398848 cold OpenGL mesh bytes; 536744384 resident bytes / 626 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 586752 cold OpenGL mesh bytes; 536431048 resident bytes / 626 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 1426480 cold OpenGL mesh bytes; 536141416 resident bytes / 628 meshes
+[2026-10-03 16:55:49] dbg: [driver:2] OpenTT3D: retired 1645832 cold OpenGL mesh bytes; 535519044 resident bytes / 630 meshes
+[2026-10-03 16:55:50] dbg: [driver:1] OpenTT3D: 2712 voxel airport ground/body views preserve independent opaque ground, exact CPU colour and visible/transparent/hidden picking
+[2026-10-03 16:55:50] dbg: [driver:1] OpenTT3D: 0 airport layer bindings retain their supplied source because the active climate has no matching authored volume
+[2026-10-03 16:55:50] dbg: [driver:1] OpenTT3D: voxel mesh selection '' passed exact geometry, palettes and picking
+[2026-10-03 16:55:50] dbg: [driver:1] OpenTT3D: scene-only voxel verification delegates complete vehicle pose matrices to explicit engine shards
+[2026-10-03 16:55:50] dbg: [driver:2] OpenTT3D: retired 2076984 cold OpenGL mesh bytes; 536546768 resident bytes / 634 meshes
+[2026-10-03 16:55:50] dbg: [driver:1] OpenTT3D: 148 office lift poses preserve all 37 upstream positions, facade clearance and exact instance/picking agreement
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 203328 cold OpenGL mesh bytes; 536797888 resident bytes / 634 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 654808 cold OpenGL mesh bytes; 536810632 resident bytes / 634 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 2245008 cold OpenGL mesh bytes; 536236424 resident bytes / 633 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 1502320 cold OpenGL mesh bytes; 536652016 resident bytes / 633 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 1762872 cold OpenGL mesh bytes; 536759224 resident bytes / 632 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 613904 cold OpenGL mesh bytes; 536657168 resident bytes / 631 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 534448 cold OpenGL mesh bytes; 536602148 resident bytes / 632 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 961204 cold OpenGL mesh bytes; 536154184 resident bytes / 632 meshes
+[2026-10-03 16:55:58] dbg: [driver:2] OpenTT3D: retired 1487592 cold OpenGL mesh bytes; 535590760 resident bytes / 632 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1906544 cold OpenGL mesh bytes; 536440036 resident bytes / 632 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 887280 cold OpenGL mesh bytes; 536282812 resident bytes / 631 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1021304 cold OpenGL mesh bytes; 536269884 resident bytes / 633 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1347064 cold OpenGL mesh bytes; 535705384 resident bytes / 633 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1586640 cold OpenGL mesh bytes; 535296756 resident bytes / 633 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1381896 cold OpenGL mesh bytes; 535945308 resident bytes / 634 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1102640 cold OpenGL mesh bytes; 536779380 resident bytes / 634 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1579676 cold OpenGL mesh bytes; 536546768 resident bytes / 633 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1570324 cold OpenGL mesh bytes; 536563084 resident bytes / 633 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 1554136 cold OpenGL mesh bytes; 536390844 resident bytes / 633 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 459488 cold OpenGL mesh bytes; 536640244 resident bytes / 634 meshes
+[2026-10-03 16:55:59] dbg: [driver:2] OpenTT3D: retired 196472 cold OpenGL mesh bytes; 536837524 resident bytes / 634 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 665216 cold OpenGL mesh bytes; 536734356 resident bytes / 627 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1459344 cold OpenGL mesh bytes; 536292640 resident bytes / 626 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1273976 cold OpenGL mesh bytes; 536588988 resident bytes / 626 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1791320 cold OpenGL mesh bytes; 536351804 resident bytes / 625 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 465600 cold OpenGL mesh bytes; 536542164 resident bytes / 626 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 159440 cold OpenGL mesh bytes; 536770620 resident bytes / 626 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1312448 cold OpenGL mesh bytes; 536442404 resident bytes / 625 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1089824 cold OpenGL mesh bytes; 536793224 resident bytes / 625 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1664908 cold OpenGL mesh bytes; 536638136 resident bytes / 624 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1273032 cold OpenGL mesh bytes; 536867436 resident bytes / 619 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 868776 cold OpenGL mesh bytes; 536523496 resident bytes / 617 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1013760 cold OpenGL mesh bytes; 536316812 resident bytes / 618 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 1704032 cold OpenGL mesh bytes; 535620740 resident bytes / 618 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 2331484 cold OpenGL mesh bytes; 534910392 resident bytes / 618 meshes
+[2026-10-03 16:56:00] dbg: [driver:2] OpenTT3D: retired 2331484 cold OpenGL mesh bytes; 536153520 resident bytes / 619 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 2123984 cold OpenGL mesh bytes; 534770260 resident bytes / 621 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1287104 cold OpenGL mesh bytes; 535931380 resident bytes / 622 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1199448 cold OpenGL mesh bytes; 536101756 resident bytes / 622 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1323288 cold OpenGL mesh bytes; 535620704 resident bytes / 622 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1088612 cold OpenGL mesh bytes; 535784592 resident bytes / 624 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1082460 cold OpenGL mesh bytes; 536128612 resident bytes / 624 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1791040 cold OpenGL mesh bytes; 535983404 resident bytes / 623 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1589932 cold OpenGL mesh bytes; 536013648 resident bytes / 621 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1573980 cold OpenGL mesh bytes; 535367572 resident bytes / 623 meshes
+[2026-10-03 16:56:01] dbg: [driver:2] OpenTT3D: retired 1571420 cold OpenGL mesh bytes; 536400340 resident bytes / 625 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1135028 cold OpenGL mesh bytes; 536675596 resident bytes / 625 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 770024 cold OpenGL mesh bytes; 536633228 resident bytes / 623 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 711996 cold OpenGL mesh bytes; 536206592 resident bytes / 623 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1224264 cold OpenGL mesh bytes; 535702064 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1160988 cold OpenGL mesh bytes; 536408148 resident bytes / 625 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 821620 cold OpenGL mesh bytes; 536851192 resident bytes / 625 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 590952 cold OpenGL mesh bytes; 536868332 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 452828 cold OpenGL mesh bytes; 536636460 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 942772 cold OpenGL mesh bytes; 536348496 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1588460 cold OpenGL mesh bytes; 535728060 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1588460 cold OpenGL mesh bytes; 535416584 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1509972 cold OpenGL mesh bytes; 535408932 resident bytes / 624 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 1180796 cold OpenGL mesh bytes; 535991008 resident bytes / 625 meshes
+[2026-10-03 16:56:02] dbg: [driver:2] OpenTT3D: retired 798008 cold OpenGL mesh bytes; 536341352 resident bytes / 626 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 955272 cold OpenGL mesh bytes; 536347284 resident bytes / 626 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1665328 cold OpenGL mesh bytes; 536169548 resident bytes / 626 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1641712 cold OpenGL mesh bytes; 535997660 resident bytes / 626 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1641712 cold OpenGL mesh bytes; 535363596 resident bytes / 628 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1197448 cold OpenGL mesh bytes; 536519560 resident bytes / 627 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1240756 cold OpenGL mesh bytes; 536740152 resident bytes / 627 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 2144108 cold OpenGL mesh bytes; 536034904 resident bytes / 627 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 2144108 cold OpenGL mesh bytes; 535165764 resident bytes / 629 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 2144108 cold OpenGL mesh bytes; 535557472 resident bytes / 630 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1700056 cold OpenGL mesh bytes; 535627968 resident bytes / 630 meshes
+[2026-10-03 16:56:03] dbg: [driver:2] OpenTT3D: retired 1106168 cold OpenGL mesh bytes; 536173000 resident bytes / 629 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1390440 cold OpenGL mesh bytes; 535862884 resident bytes / 632 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1706088 cold OpenGL mesh bytes; 535889616 resident bytes / 633 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1706088 cold OpenGL mesh bytes; 535392496 resident bytes / 633 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1028800 cold OpenGL mesh bytes; 536050652 resident bytes / 636 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 530648 cold OpenGL mesh bytes; 536494148 resident bytes / 636 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1705192 cold OpenGL mesh bytes; 536062932 resident bytes / 635 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1711192 cold OpenGL mesh bytes; 535455276 resident bytes / 635 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 2428856 cold OpenGL mesh bytes; 534752284 resident bytes / 638 meshes
+[2026-10-03 16:56:04] dbg: [driver:2] OpenTT3D: retired 1947280 cold OpenGL mesh bytes; 535771812 resident bytes / 640 meshes
+[2026-10-03 16:56:09] dbg: [driver:2] OpenTT3D: retired 1466184 cold OpenGL mesh bytes; 535447680 resident bytes / 642 meshes
+[2026-10-03 16:56:09] dbg: [driver:2] OpenTT3D: retired 448600 cold OpenGL mesh bytes; 536450268 resident bytes / 652 meshes
+[2026-10-03 16:56:10] dbg: [driver:2] OpenTT3D: retired 838728 cold OpenGL mesh bytes; 536334144 resident bytes / 654 meshes
+[2026-10-03 16:56:11] dbg: [driver:2] OpenTT3D: retired 817224 cold OpenGL mesh bytes; 536530680 resident bytes / 654 meshes
+[2026-10-03 16:56:12] dbg: [driver:2] OpenTT3D: retired 1634352 cold OpenGL mesh bytes; 536600360 resident bytes / 653 meshes
+[2026-10-03 16:56:12] dbg: [driver:2] OpenTT3D: retired 2485056 cold OpenGL mesh bytes; 536446788 resident bytes / 651 meshes
+[2026-10-03 16:56:13] dbg: [driver:2] OpenTT3D: retired 2495264 cold OpenGL mesh bytes; 536283008 resident bytes / 649 meshes
+[2026-10-03 16:56:14] dbg: [driver:2] OpenTT3D: retired 1636792 cold OpenGL mesh bytes; 536770200 resident bytes / 648 meshes
+[2026-10-03 16:56:15] dbg: [driver:2] OpenTT3D: retired 792144 cold OpenGL mesh bytes; 536207252 resident bytes / 648 meshes
+[2026-10-03 16:56:17] dbg: [driver:2] OpenTT3D: retired 842632 cold OpenGL mesh bytes; 536699400 resident bytes / 650 meshes
+[2026-10-03 16:56:18] dbg: [driver:2] OpenTT3D: retired 1618160 cold OpenGL mesh bytes; 536305504 resident bytes / 649 meshes
+[2026-10-03 16:56:18] dbg: [driver:2] OpenTT3D: retired 833608 cold OpenGL mesh bytes; 536632884 resident bytes / 649 meshes
+[2026-10-03 16:56:19] dbg: [driver:2] OpenTT3D: retired 812104 cold OpenGL mesh bytes; 536642400 resident bytes / 649 meshes
+[2026-10-03 16:56:20] dbg: [driver:2] OpenTT3D: retired 813016 cold OpenGL mesh bytes; 536229308 resident bytes / 649 meshes
+[2026-10-03 16:56:21] dbg: [driver:2] OpenTT3D: retired 811096 cold OpenGL mesh bytes; 536216220 resident bytes / 650 meshes
+[2026-10-03 16:56:21] dbg: [driver:2] OpenTT3D: retired 811096 cold OpenGL mesh bytes; 536360396 resident bytes / 650 meshes
+[2026-10-03 16:56:22] dbg: [driver:2] OpenTT3D: retired 1211384 cold OpenGL mesh bytes; 536814340 resident bytes / 649 meshes
+[2026-10-03 16:56:22] dbg: [driver:2] OpenTT3D: retired 2082912 cold OpenGL mesh bytes; 536373140 resident bytes / 647 meshes
+[2026-10-03 16:56:23] dbg: [driver:2] OpenTT3D: retired 1741712 cold OpenGL mesh bytes; 536273140 resident bytes / 646 meshes
+[2026-10-03 16:56:25] dbg: [driver:2] OpenTT3D: retired 869392 cold OpenGL mesh bytes; 536776576 resident bytes / 647 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 1728288 cold OpenGL mesh bytes; 536247736 resident bytes / 646 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 806976 cold OpenGL mesh bytes; 536764048 resident bytes / 646 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 1469928 cold OpenGL mesh bytes; 536382732 resident bytes / 644 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 1001452 cold OpenGL mesh bytes; 536463740 resident bytes / 643 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 498892 cold OpenGL mesh bytes; 536832112 resident bytes / 643 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 997008 cold OpenGL mesh bytes; 536758880 resident bytes / 642 meshes
+[2026-10-03 16:56:26] dbg: [driver:2] OpenTT3D: retired 770736 cold OpenGL mesh bytes; 536526872 resident bytes / 642 meshes
+[2026-10-03 16:56:27] dbg: [driver:2] OpenTT3D: retired 1500240 cold OpenGL mesh bytes; 536193096 resident bytes / 641 meshes
+[2026-10-03 16:56:28] dbg: [driver:2] OpenTT3D: retired 1328008 cold OpenGL mesh bytes; 536576280 resident bytes / 640 meshes
+[2026-10-03 16:56:28] dbg: [driver:2] OpenTT3D: retired 2460024 cold OpenGL mesh bytes; 536545112 resident bytes / 637 meshes
+[2026-10-03 16:56:29] dbg: [driver:2] OpenTT3D: retired 1961672 cold OpenGL mesh bytes; 536530720 resident bytes / 635 meshes
+[2026-10-03 16:56:30] dbg: [driver:2] OpenTT3D: retired 1262472 cold OpenGL mesh bytes; 536734432 resident bytes / 634 meshes
+[2026-10-03 16:56:31] dbg: [driver:2] OpenTT3D: retired 730656 cold OpenGL mesh bytes; 536452376 resident bytes / 634 meshes
+[2026-10-03 16:56:31] dbg: [driver:2] OpenTT3D: retired 740160 cold OpenGL mesh bytes; 536356072 resident bytes / 635 meshes
+[2026-10-03 16:56:32] dbg: [driver:2] OpenTT3D: retired 702600 cold OpenGL mesh bytes; 536596244 resident bytes / 635 meshes
+[2026-10-03 16:56:33] dbg: [driver:2] OpenTT3D: retired 1908344 cold OpenGL mesh bytes; 536276360 resident bytes / 633 meshes
+[2026-10-03 16:56:34] dbg: [driver:2] OpenTT3D: retired 1004940 cold OpenGL mesh bytes; 536859880 resident bytes / 633 meshes
+[2026-10-03 16:56:36] dbg: [driver:2] OpenTT3D: retired 1548224 cold OpenGL mesh bytes; 536821628 resident bytes / 632 meshes
+[2026-10-03 16:56:37] dbg: [driver:2] OpenTT3D: retired 1940388 cold OpenGL mesh bytes; 536062036 resident bytes / 629 meshes
+[2026-10-03 16:56:38] dbg: [driver:2] OpenTT3D: retired 817476 cold OpenGL mesh bytes; 536127088 resident bytes / 630 meshes
+[2026-10-03 16:56:39] dbg: [driver:2] OpenTT3D: retired 633036 cold OpenGL mesh bytes; 536734808 resident bytes / 630 meshes
+[2026-10-03 16:56:40] dbg: [driver:2] OpenTT3D: retired 2656348 cold OpenGL mesh bytes; 536222568 resident bytes / 626 meshes
+[2026-10-03 16:56:40] dbg: [driver:2] OpenTT3D: retired 1787700 cold OpenGL mesh bytes; 536578976 resident bytes / 624 meshes
+[2026-10-03 16:56:41] dbg: [driver:2] OpenTT3D: retired 2738784 cold OpenGL mesh bytes; 535984300 resident bytes / 621 meshes
+[2026-10-03 16:56:42] dbg: [driver:2] OpenTT3D: retired 1605508 cold OpenGL mesh bytes; 536078848 resident bytes / 620 meshes
+[2026-10-03 16:56:44] dbg: [driver:2] OpenTT3D: retired 1509880 cold OpenGL mesh bytes; 536158900 resident bytes / 621 meshes
+[2026-10-03 16:56:45] dbg: [driver:2] OpenTT3D: retired 1005960 cold OpenGL mesh bytes; 536726920 resident bytes / 620 meshes
+[2026-10-03 16:56:46] dbg: [driver:2] OpenTT3D: retired 1641972 cold OpenGL mesh bytes; 536656368 resident bytes / 618 meshes
+[2026-10-03 16:56:47] dbg: [driver:2] OpenTT3D: retired 1076872 cold OpenGL mesh bytes; 536714524 resident bytes / 617 meshes
+[2026-10-03 16:56:48] dbg: [driver:2] OpenTT3D: retired 669600 cold OpenGL mesh bytes; 536406604 resident bytes / 618 meshes
+[2026-10-03 16:56:48] dbg: [driver:2] OpenTT3D: retired 1704040 cold OpenGL mesh bytes; 535594292 resident bytes / 616 meshes
+[2026-10-03 16:56:49] dbg: [driver:2] OpenTT3D: retired 1334224 cold OpenGL mesh bytes; 535650508 resident bytes / 616 meshes
+[2026-10-03 16:56:50] dbg: [driver:2] OpenTT3D: retired 1329984 cold OpenGL mesh bytes; 536026612 resident bytes / 616 meshes
+[2026-10-03 16:56:53] dbg: [driver:2] OpenTT3D: retired 1331984 cold OpenGL mesh bytes; 536400716 resident bytes / 616 meshes
+[2026-10-03 16:56:54] dbg: [driver:2] OpenTT3D: retired 1240032 cold OpenGL mesh bytes; 536189484 resident bytes / 616 meshes
+[2026-10-03 16:56:55] dbg: [driver:1] OpenTT3D: 24528 voxel tree lifecycle/palette/scale views preserve exact bindings, CPU geometry and transparent tile picking
+[2026-10-03 16:57:43] dbg: [driver:1] OpenTT3D: 20832 distant voxel tree views retain exact original triangles, coincident parent/child instance order and picking at ordinary/large origins (430872 visible pixels)
+[2026-10-03 16:57:43] dbg: [driver:1] OpenTT3D: 5 edited voxel visibility streams preserve 1025-instance insertion, removal, ordering and live palette/picking records
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1243016 cold OpenGL mesh bytes; 535717468 resident bytes / 617 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 597672 cold OpenGL mesh bytes; 536367268 resident bytes / 618 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 597832 cold OpenGL mesh bytes; 536547096 resident bytes / 618 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 558808 cold OpenGL mesh bytes; 536760828 resident bytes / 618 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 557368 cold OpenGL mesh bytes; 536829092 resident bytes / 618 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1133392 cold OpenGL mesh bytes; 536400212 resident bytes / 618 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1133688 cold OpenGL mesh bytes; 536209300 resident bytes / 618 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 596632 cold OpenGL mesh bytes; 536388160 resident bytes / 619 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 596792 cold OpenGL mesh bytes; 536581248 resident bytes / 619 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 560520 cold OpenGL mesh bytes; 536377992 resident bytes / 619 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 559320 cold OpenGL mesh bytes; 536835408 resident bytes / 619 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 2399032 cold OpenGL mesh bytes; 536361112 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 396032 cold OpenGL mesh bytes; 536869272 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 2615928 cold OpenGL mesh bytes; 535347324 resident bytes / 614 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 2058372 cold OpenGL mesh bytes; 535812340 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 193628 cold OpenGL mesh bytes; 536707340 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1790744 cold OpenGL mesh bytes; 536291272 resident bytes / 614 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1518792 cold OpenGL mesh bytes; 535579792 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1135708 cold OpenGL mesh bytes; 536115620 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 1030488 cold OpenGL mesh bytes; 535882048 resident bytes / 616 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 572872 cold OpenGL mesh bytes; 536803124 resident bytes / 615 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 682852 cold OpenGL mesh bytes; 536811720 resident bytes / 614 meshes
+[2026-10-03 16:57:43] dbg: [driver:2] OpenTT3D: retired 2083984 cold OpenGL mesh bytes; 536641848 resident bytes / 609 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 1209272 cold OpenGL mesh bytes; 536778240 resident bytes / 607 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 3602404 cold OpenGL mesh bytes; 536338464 resident bytes / 597 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 5988644 cold OpenGL mesh bytes; 535385516 resident bytes / 592 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 5260908 cold OpenGL mesh bytes; 536329216 resident bytes / 587 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 2003740 cold OpenGL mesh bytes; 534944340 resident bytes / 587 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 1896664 cold OpenGL mesh bytes; 535806232 resident bytes / 589 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 164768 cold OpenGL mesh bytes; 536835788 resident bytes / 590 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 1696124 cold OpenGL mesh bytes; 536639628 resident bytes / 589 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 1570132 cold OpenGL mesh bytes; 535803972 resident bytes / 590 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 2125364 cold OpenGL mesh bytes; 535438932 resident bytes / 590 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 2232540 cold OpenGL mesh bytes; 535523184 resident bytes / 590 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 855456 cold OpenGL mesh bytes; 536438824 resident bytes / 591 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 935876 cold OpenGL mesh bytes; 536192980 resident bytes / 593 meshes
+[2026-10-03 16:57:44] dbg: [driver:2] OpenTT3D: retired 1497420 cold OpenGL mesh bytes; 536637336 resident bytes / 594 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 2264488 cold OpenGL mesh bytes; 535786200 resident bytes / 594 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 2948592 cold OpenGL mesh bytes; 533945548 resident bytes / 595 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 1302524 cold OpenGL mesh bytes; 535735308 resident bytes / 597 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 1337656 cold OpenGL mesh bytes; 535817868 resident bytes / 597 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 2758792 cold OpenGL mesh bytes; 534246548 resident bytes / 600 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 1142740 cold OpenGL mesh bytes; 536217060 resident bytes / 606 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 787916 cold OpenGL mesh bytes; 536267220 resident bytes / 607 meshes
+[2026-10-03 16:57:45] dbg: [driver:2] OpenTT3D: retired 2403968 cold OpenGL mesh bytes; 535941496 resident bytes / 608 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 1072696 cold OpenGL mesh bytes; 536494304 resident bytes / 608 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 493472 cold OpenGL mesh bytes; 536820052 resident bytes / 609 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 951584 cold OpenGL mesh bytes; 536479384 resident bytes / 608 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 479552 cold OpenGL mesh bytes; 536785376 resident bytes / 609 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 487392 cold OpenGL mesh bytes; 536557492 resident bytes / 609 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 987744 cold OpenGL mesh bytes; 536519240 resident bytes / 608 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 2368880 cold OpenGL mesh bytes; 536423716 resident bytes / 604 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 1114980 cold OpenGL mesh bytes; 536393912 resident bytes / 605 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 844060 cold OpenGL mesh bytes; 536614088 resident bytes / 605 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 1724608 cold OpenGL mesh bytes; 536068120 resident bytes / 605 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 1416888 cold OpenGL mesh bytes; 536322996 resident bytes / 605 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 440592 cold OpenGL mesh bytes; 536454060 resident bytes / 606 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 283664 cold OpenGL mesh bytes; 536833388 resident bytes / 607 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 672244 cold OpenGL mesh bytes; 536647108 resident bytes / 606 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 1737168 cold OpenGL mesh bytes; 535642516 resident bytes / 605 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 805632 cold OpenGL mesh bytes; 536307412 resident bytes / 606 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 856248 cold OpenGL mesh bytes; 536445808 resident bytes / 608 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 377284 cold OpenGL mesh bytes; 536777520 resident bytes / 610 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 740552 cold OpenGL mesh bytes; 536169800 resident bytes / 610 meshes
+[2026-10-03 16:57:46] dbg: [driver:2] OpenTT3D: retired 140904 cold OpenGL mesh bytes; 536771648 resident bytes / 611 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 512512 cold OpenGL mesh bytes; 536420828 resident bytes / 611 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 516832 cold OpenGL mesh bytes; 536514664 resident bytes / 611 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 515072 cold OpenGL mesh bytes; 536775908 resident bytes / 611 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 515072 cold OpenGL mesh bytes; 536410904 resident bytes / 611 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 482432 cold OpenGL mesh bytes; 536433120 resident bytes / 612 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 476832 cold OpenGL mesh bytes; 536478264 resident bytes / 616 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 1742856 cold OpenGL mesh bytes; 536433688 resident bytes / 615 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 3840336 cold OpenGL mesh bytes; 534291632 resident bytes / 615 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 1073132 cold OpenGL mesh bytes; 536752184 resident bytes / 619 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 281808 cold OpenGL mesh bytes; 536823928 resident bytes / 618 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 1507976 cold OpenGL mesh bytes; 536535696 resident bytes / 614 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 1443872 cold OpenGL mesh bytes; 536814508 resident bytes / 610 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 345552 cold OpenGL mesh bytes; 536837008 resident bytes / 610 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 896584 cold OpenGL mesh bytes; 536842504 resident bytes / 608 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 1443632 cold OpenGL mesh bytes; 536793608 resident bytes / 604 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 346032 cold OpenGL mesh bytes; 536806992 resident bytes / 604 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 1123936 cold OpenGL mesh bytes; 536652396 resident bytes / 601 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 915024 cold OpenGL mesh bytes; 536579304 resident bytes / 599 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 156880 cold OpenGL mesh bytes; 536775600 resident bytes / 599 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 555224 cold OpenGL mesh bytes; 536623348 resident bytes / 598 meshes
+[2026-10-03 16:57:47] dbg: [driver:2] OpenTT3D: retired 272512 cold OpenGL mesh bytes; 536846904 resident bytes / 598 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 295180 cold OpenGL mesh bytes; 536814212 resident bytes / 598 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 704624 cold OpenGL mesh bytes; 536852116 resident bytes / 597 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1338416 cold OpenGL mesh bytes; 536818060 resident bytes / 594 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 470400 cold OpenGL mesh bytes; 536739548 resident bytes / 593 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 590144 cold OpenGL mesh bytes; 536649376 resident bytes / 593 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 563304 cold OpenGL mesh bytes; 536773648 resident bytes / 592 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 643064 cold OpenGL mesh bytes; 536831176 resident bytes / 589 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 2667584 cold OpenGL mesh bytes; 534957120 resident bytes / 586 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 239264 cold OpenGL mesh bytes; 536737296 resident bytes / 586 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 500488 cold OpenGL mesh bytes; 536591136 resident bytes / 586 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 782564 cold OpenGL mesh bytes; 536116668 resident bytes / 586 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1178012 cold OpenGL mesh bytes; 535963224 resident bytes / 587 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1417512 cold OpenGL mesh bytes; 535543788 resident bytes / 587 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 837536 cold OpenGL mesh bytes; 536673812 resident bytes / 587 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1372128 cold OpenGL mesh bytes; 536234644 resident bytes / 586 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1440644 cold OpenGL mesh bytes; 535537036 resident bytes / 586 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1509820 cold OpenGL mesh bytes; 535689160 resident bytes / 587 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 1502332 cold OpenGL mesh bytes; 535873124 resident bytes / 588 meshes
+[2026-10-03 16:57:48] dbg: [driver:2] OpenTT3D: retired 654336 cold OpenGL mesh bytes; 536815076 resident bytes / 587 meshes
+[2026-10-03 16:57:49] dbg: [driver:2] OpenTT3D: retired 1685536 cold OpenGL mesh bytes; 536538996 resident bytes / 586 meshes
+[2026-10-03 16:57:49] dbg: [driver:2] OpenTT3D: retired 1621136 cold OpenGL mesh bytes; 535736132 resident bytes / 586 meshes
+[2026-10-03 16:57:49] dbg: [driver:2] OpenTT3D: retired 1841512 cold OpenGL mesh bytes; 535525700 resident bytes / 586 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 1733100 cold OpenGL mesh bytes; 535926688 resident bytes / 587 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 505728 cold OpenGL mesh bytes; 536810652 resident bytes / 587 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 1707348 cold OpenGL mesh bytes; 536776132 resident bytes / 585 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 2755820 cold OpenGL mesh bytes; 535693140 resident bytes / 584 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 730056 cold OpenGL mesh bytes; 536192228 resident bytes / 584 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 990900 cold OpenGL mesh bytes; 536447296 resident bytes / 582 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 844480 cold OpenGL mesh bytes; 536470832 resident bytes / 582 meshes
+[2026-10-03 16:57:50] dbg: [driver:2] OpenTT3D: retired 1133200 cold OpenGL mesh bytes; 536567080 resident bytes / 582 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 1369824 cold OpenGL mesh bytes; 535593288 resident bytes / 582 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 842236 cold OpenGL mesh bytes; 536220472 resident bytes / 583 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 721348 cold OpenGL mesh bytes; 536604292 resident bytes / 584 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 667552 cold OpenGL mesh bytes; 536500388 resident bytes / 584 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 1670800 cold OpenGL mesh bytes; 536324312 resident bytes / 584 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 1917912 cold OpenGL mesh bytes; 536388580 resident bytes / 584 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 1870080 cold OpenGL mesh bytes; 535252348 resident bytes / 585 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 1441072 cold OpenGL mesh bytes; 536824232 resident bytes / 585 meshes
+[2026-10-03 16:57:51] dbg: [driver:2] OpenTT3D: retired 774036 cold OpenGL mesh bytes; 536300748 resident bytes / 585 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 1093036 cold OpenGL mesh bytes; 536429044 resident bytes / 586 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 1264664 cold OpenGL mesh bytes; 535827172 resident bytes / 587 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 1203504 cold OpenGL mesh bytes; 536769240 resident bytes / 586 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 2353412 cold OpenGL mesh bytes; 535714264 resident bytes / 585 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 1461348 cold OpenGL mesh bytes; 535619948 resident bytes / 585 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 1438860 cold OpenGL mesh bytes; 535801532 resident bytes / 585 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 502124 cold OpenGL mesh bytes; 536591196 resident bytes / 585 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 1742884 cold OpenGL mesh bytes; 536215184 resident bytes / 583 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 4987528 cold OpenGL mesh bytes; 536249388 resident bytes / 581 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 5764504 cold OpenGL mesh bytes; 536599252 resident bytes / 573 meshes
+[2026-10-03 16:57:52] dbg: [driver:2] OpenTT3D: retired 6988188 cold OpenGL mesh bytes; 536647696 resident bytes / 564 meshes
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: source texture 4686 mip family request 2 decode 2.674 ms, preparation 0.022 ms
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: source texture 4687 mip family request 2 decode 10.993 ms, preparation 0.059 ms
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: retired 1645832 cold OpenGL mesh bytes; 535661648 resident bytes / 565 meshes
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: source texture 4688 mip family request 2 decode 2.511 ms, preparation 0.083 ms
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: retired 1620176 cold OpenGL mesh bytes; 535272392 resident bytes / 566 meshes
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: retired 2282968 cold OpenGL mesh bytes; 536388928 resident bytes / 564 meshes
+[2026-10-03 16:57:53] dbg: [driver:2] OpenTT3D: source texture 4692 mip family request 2 decode 2.186 ms, preparation 0.002 ms
+[2026-10-03 16:57:54] dbg: [driver:2] OpenTT3D: retired 8139324 cold OpenGL mesh bytes; 536803124 resident bytes / 556 meshes
+[2026-10-03 16:57:54] dbg: [driver:2] OpenTT3D: retired 9795416 cold OpenGL mesh bytes; 536573036 resident bytes / 545 meshes
+[2026-10-03 16:57:54] dbg: [driver:2] OpenTT3D: retired 1017628 cold OpenGL mesh bytes; 536328476 resident bytes / 545 meshes
+[2026-10-03 16:57:54] dbg: [driver:2] OpenTT3D: retired 1570324 cold OpenGL mesh bytes; 535748592 resident bytes / 545 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 1554136 cold OpenGL mesh bytes; 535523300 resident bytes / 545 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 459488 cold OpenGL mesh bytes; 536842692 resident bytes / 546 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 1943148 cold OpenGL mesh bytes; 536231292 resident bytes / 536 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: source texture 4704 mip family request 2 decode 1.122 ms, preparation 0.002 ms
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 1924032 cold OpenGL mesh bytes; 536679176 resident bytes / 533 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 3228768 cold OpenGL mesh bytes; 536814620 resident bytes / 530 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 3779112 cold OpenGL mesh bytes; 536298260 resident bytes / 525 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 3728808 cold OpenGL mesh bytes; 536293580 resident bytes / 520 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 4811696 cold OpenGL mesh bytes; 536663212 resident bytes / 508 meshes
+[2026-10-03 16:57:55] dbg: [driver:2] OpenTT3D: retired 8577452 cold OpenGL mesh bytes; 536377680 resident bytes / 494 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 4485292 cold OpenGL mesh bytes; 536624524 resident bytes / 490 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 9230808 cold OpenGL mesh bytes; 534618196 resident bytes / 488 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 3362080 cold OpenGL mesh bytes; 533544140 resident bytes / 489 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 1313408 cold OpenGL mesh bytes; 536705648 resident bytes / 490 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 1385608 cold OpenGL mesh bytes; 536869496 resident bytes / 489 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 3764932 cold OpenGL mesh bytes; 534785520 resident bytes / 488 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 2409148 cold OpenGL mesh bytes; 535986168 resident bytes / 489 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 1813720 cold OpenGL mesh bytes; 536599900 resident bytes / 487 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 2090636 cold OpenGL mesh bytes; 536505208 resident bytes / 486 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 1916492 cold OpenGL mesh bytes; 536824864 resident bytes / 486 meshes
+[2026-10-03 16:57:56] dbg: [driver:2] OpenTT3D: retired 28114732 cold OpenGL mesh bytes; 535963820 resident bytes / 465 meshes
+[2026-10-03 16:57:57] dbg: [driver:2] OpenTT3D: retired 30751824 cold OpenGL mesh bytes; 535973780 resident bytes / 439 meshes
+[2026-10-03 16:57:58] dbg: [driver:2] OpenTT3D: retired 36411180 cold OpenGL mesh bytes; 535176528 resident bytes / 420 meshes
+[2026-10-03 16:57:59] dbg: [driver:2] OpenTT3D: retired 2337708 cold OpenGL mesh bytes; 535604004 resident bytes / 420 meshes
+[2026-10-03 16:57:59] dbg: [driver:2] OpenTT3D: retired 21275476 cold OpenGL mesh bytes; 536155152 resident bytes / 405 meshes
+[2026-10-03 16:58:00] dbg: [driver:2] OpenTT3D: retired 5980912 cold OpenGL mesh bytes; 536231712 resident bytes / 400 meshes
+[2026-10-03 16:58:00] dbg: [driver:2] OpenTT3D: retired 1791040 cold OpenGL mesh bytes; 536788424 resident bytes / 399 meshes
+[2026-10-03 16:58:00] dbg: [driver:2] OpenTT3D: source texture 4764 mip family request 2 decode 2.240 ms, preparation 0.010 ms
+[2026-10-03 16:58:00] dbg: [driver:2] OpenTT3D: retired 7352380 cold OpenGL mesh bytes; 536823060 resident bytes / 390 meshes
+[2026-10-03 16:58:00] dbg: [driver:2] OpenTT3D: retired 3606796 cold OpenGL mesh bytes; 536524604 resident bytes / 387 meshes
+[2026-10-03 16:58:01] dbg: [driver:2] OpenTT3D: retired 1586628 cold OpenGL mesh bytes; 536448844 resident bytes / 385 meshes
+[2026-10-03 16:58:01] dbg: [driver:2] OpenTT3D: retired 1588460 cold OpenGL mesh bytes; 536401380 resident bytes / 385 meshes
+[2026-10-03 16:58:01] dbg: [driver:2] OpenTT3D: retired 1588460 cold OpenGL mesh bytes; 535677324 resident bytes / 385 meshes
+[2026-10-03 16:58:01] dbg: [driver:2] OpenTT3D: retired 1509972 cold OpenGL mesh bytes; 536214904 resident bytes / 387 meshes
+[2026-10-03 16:58:01] dbg: [driver:2] OpenTT3D: retired 1180796 cold OpenGL mesh bytes; 536053324 resident bytes / 387 meshes
+[2026-10-03 16:58:01] dbg: [driver:2] OpenTT3D: retired 798008 cold OpenGL mesh bytes; 536339912 resident bytes / 386 meshes
+[2026-10-03 16:58:02] dbg: [driver:2] OpenTT3D: retired 955272 cold OpenGL mesh bytes; 535939712 resident bytes / 386 meshes
+[2026-10-03 16:58:03] dbg: [driver:2] OpenTT3D: retired 1665328 cold OpenGL mesh bytes; 535446776 resident bytes / 388 meshes
+[2026-10-03 16:58:04] dbg: [driver:2] OpenTT3D: retired 1641712 cold OpenGL mesh bytes; 535545536 resident bytes / 392 meshes
+[2026-10-03 16:58:04] dbg: [driver:2] OpenTT3D: retired 1641712 cold OpenGL mesh bytes; 535876728 resident bytes / 394 meshes
+[2026-10-03 16:58:04] dbg: [driver:2] OpenTT3D: retired 648136 cold OpenGL mesh bytes; 536851184 resident bytes / 394 meshes
+[2026-10-03 16:58:04] dbg: [driver:2] OpenTT3D: retired 549312 cold OpenGL mesh bytes; 536805504 resident bytes / 394 meshes
+[2026-10-03 16:58:05] dbg: [driver:2] OpenTT3D: retired 1240756 cold OpenGL mesh bytes; 536217644 resident bytes / 394 meshes
+[2026-10-03 16:58:05] dbg: [driver:2] OpenTT3D: retired 2144108 cold OpenGL mesh bytes; 534734952 resident bytes / 394 meshes
+[2026-10-03 16:58:05] dbg: [driver:2] OpenTT3D: retired 2144108 cold OpenGL mesh bytes; 534742256 resident bytes / 397 meshes
+[2026-10-03 16:58:05] dbg: [driver:2] OpenTT3D: retired 2144108 cold OpenGL mesh bytes; 534792052 resident bytes / 400 meshes
+[2026-10-03 16:58:05] dbg: [driver:2] OpenTT3D: source texture 2127 mip family request 2 decode 1.347 ms, preparation 0.293 ms
+[2026-10-03 16:58:05] dbg: [driver:2] OpenTT3D: retired 1700056 cold OpenGL mesh bytes; 535401764 resident bytes / 403 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 214440 cold OpenGL mesh bytes; 536818192 resident bytes / 405 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 891728 cold OpenGL mesh bytes; 536851604 resident bytes / 405 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 1390440 cold OpenGL mesh bytes; 536388224 resident bytes / 405 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 1706088 cold OpenGL mesh bytes; 535342224 resident bytes / 405 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 1706088 cold OpenGL mesh bytes; 535446392 resident bytes / 407 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 1028800 cold OpenGL mesh bytes; 536286324 resident bytes / 409 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 530648 cold OpenGL mesh bytes; 536340428 resident bytes / 409 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 538728 cold OpenGL mesh bytes; 536649108 resident bytes / 410 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 1166464 cold OpenGL mesh bytes; 536082184 resident bytes / 410 meshes
+[2026-10-03 16:58:06] dbg: [driver:2] OpenTT3D: retired 1711192 cold OpenGL mesh bytes; 535338760 resident bytes / 412 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 2428856 cold OpenGL mesh bytes; 535026056 resident bytes / 414 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 1947280 cold OpenGL mesh bytes; 535112876 resident bytes / 419 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 1466184 cold OpenGL mesh bytes; 535712632 resident bytes / 424 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 448600 cold OpenGL mesh bytes; 536774352 resident bytes / 428 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 1147324 cold OpenGL mesh bytes; 536103392 resident bytes / 427 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 1342916 cold OpenGL mesh bytes; 536040124 resident bytes / 429 meshes
+[2026-10-03 16:58:07] dbg: [driver:2] OpenTT3D: retired 1870248 cold OpenGL mesh bytes; 535074280 resident bytes / 431 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 2025560 cold OpenGL mesh bytes; 535653144 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1442416 cold OpenGL mesh bytes; 535648136 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 360364 cold OpenGL mesh bytes; 536642760 resident bytes / 434 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 861632 cold OpenGL mesh bytes; 536477132 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1220140 cold OpenGL mesh bytes; 536222900 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1623084 cold OpenGL mesh bytes; 535497436 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1419852 cold OpenGL mesh bytes; 536501112 resident bytes / 434 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1410220 cold OpenGL mesh bytes; 536395660 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 429468 cold OpenGL mesh bytes; 536822988 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 2388224 cold OpenGL mesh bytes; 535571296 resident bytes / 432 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1952808 cold OpenGL mesh bytes; 535587340 resident bytes / 433 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 2341928 cold OpenGL mesh bytes; 534887908 resident bytes / 434 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1483592 cold OpenGL mesh bytes; 535910444 resident bytes / 436 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 708948 cold OpenGL mesh bytes; 536709776 resident bytes / 436 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 737256 cold OpenGL mesh bytes; 536729664 resident bytes / 436 meshes
+[2026-10-03 16:58:08] dbg: [driver:2] OpenTT3D: retired 1258904 cold OpenGL mesh bytes; 535975488 resident bytes / 436 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1729120 cold OpenGL mesh bytes; 535275888 resident bytes / 437 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 2003604 cold OpenGL mesh bytes; 534958544 resident bytes / 438 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1249568 cold OpenGL mesh bytes; 535940240 resident bytes / 440 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 324924 cold OpenGL mesh bytes; 536648084 resident bytes / 441 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 697576 cold OpenGL mesh bytes; 536637144 resident bytes / 438 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 965792 cold OpenGL mesh bytes; 536545032 resident bytes / 435 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 892072 cold OpenGL mesh bytes; 536261352 resident bytes / 435 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1499680 cold OpenGL mesh bytes; 535472288 resident bytes / 435 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1942500 cold OpenGL mesh bytes; 535045788 resident bytes / 436 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 2308048 cold OpenGL mesh bytes; 534651844 resident bytes / 438 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1100924 cold OpenGL mesh bytes; 535819272 resident bytes / 441 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 430148 cold OpenGL mesh bytes; 536796324 resident bytes / 442 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1274820 cold OpenGL mesh bytes; 536037812 resident bytes / 441 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1083096 cold OpenGL mesh bytes; 536172560 resident bytes / 442 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 1035744 cold OpenGL mesh bytes; 536466448 resident bytes / 443 meshes
+[2026-10-03 16:58:09] dbg: [driver:2] OpenTT3D: retired 763112 cold OpenGL mesh bytes; 536588040 resident bytes / 443 meshes
+[2026-10-03 16:58:10] dbg: [driver:2] OpenTT3D: retired 1114620 cold OpenGL mesh bytes; 536483084 resident bytes / 441 meshes
+[2026-10-03 16:58:10] dbg: [driver:2] OpenTT3D: retired 1098660 cold OpenGL mesh bytes; 535801004 resident bytes / 441 meshes
+[2026-10-03 16:58:10] dbg: [driver:2] OpenTT3D: retired 1409668 cold OpenGL mesh bytes; 535715648 resident bytes / 442 meshes
+[2026-10-03 16:58:10] dbg: [driver:2] OpenTT3D: retired 1301828 cold OpenGL mesh bytes; 535737372 resident bytes / 445 meshes
+[2026-10-03 16:58:11] dbg: [driver:2] OpenTT3D: retired 861712 cold OpenGL mesh bytes; 536783684 resident bytes / 446 meshes
+[2026-10-03 16:58:11] dbg: [driver:2] OpenTT3D: retired 4630384 cold OpenGL mesh bytes; 535625156 resident bytes / 442 meshes
+[2026-10-03 16:58:12] dbg: [driver:2] OpenTT3D: retired 3321496 cold OpenGL mesh bytes; 535774236 resident bytes / 441 meshes
+[2026-10-03 16:58:12] dbg: [driver:2] OpenTT3D: retired 2408900 cold OpenGL mesh bytes; 536823064 resident bytes / 432 meshes
+[2026-10-03 16:58:12] dbg: [driver:2] OpenTT3D: retired 4156984 cold OpenGL mesh bytes; 536124300 resident bytes / 429 meshes
+[2026-10-03 16:58:12] dbg: [driver:2] OpenTT3D: retired 3795992 cold OpenGL mesh bytes; 535789432 resident bytes / 425 meshes
+[2026-10-03 16:58:12] dbg: [driver:2] OpenTT3D: retired 2524488 cold OpenGL mesh bytes; 536713900 resident bytes / 424 meshes
+[2026-10-03 16:58:13] dbg: [driver:2] OpenTT3D: retired 4970200 cold OpenGL mesh bytes; 535198092 resident bytes / 420 meshes
+[2026-10-03 16:58:13] dbg: [driver:2] OpenTT3D: retired 2322244 cold OpenGL mesh bytes; 536331520 resident bytes / 420 meshes
+[2026-10-03 16:58:13] dbg: [driver:2] OpenTT3D: retired 1441540 cold OpenGL mesh bytes; 536280900 resident bytes / 420 meshes
+[2026-10-03 16:58:14] dbg: [driver:2] OpenTT3D: retired 3323244 cold OpenGL mesh bytes; 536222272 resident bytes / 416 meshes
+[2026-10-03 16:58:14] dbg: [driver:2] OpenTT3D: retired 2079364 cold OpenGL mesh bytes; 536079480 resident bytes / 415 meshes
+[2026-10-03 16:58:14] dbg: [driver:2] OpenTT3D: retired 1367456 cold OpenGL mesh bytes; 536504556 resident bytes / 414 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 1487824 cold OpenGL mesh bytes; 536825644 resident bytes / 412 meshes
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 8296 voxel industry construction/animation views preserve source selection, exact CPU geometry and transparent tile picking
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 4960 of these views verify explicit voxel industry ground/stockpile layers
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 88 industry layer bindings retain their supplied source because the active climate has no matching authored volume
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 777660 cold OpenGL mesh bytes; 536298112 resident bytes / 412 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 772540 cold OpenGL mesh bytes; 536333476 resident bytes / 413 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 625632 cold OpenGL mesh bytes; 536266340 resident bytes / 413 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 704512 cold OpenGL mesh bytes; 536214836 resident bytes / 414 meshes
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 48 voxel power-station spark poses preserve exact child geometry, parent ownership and transparent picking
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: tiled GPU rendering matches the full framebuffer
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: GPU depth, object picking and transparency verification passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: GPU model instances match expanded geometry and object IDs
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 8 large-world subpixel-focus GPU views match local-coordinate colour and picking exactly
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 9645208 cold OpenGL mesh bytes; 536115400 resident bytes / 407 meshes
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: GPU multi-mesh storage, large uploads and reuse preserve colour and picking
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 8 transient mesh payloads preserve exact instancing and address reuse without persistent cache growth
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 536115400 cold OpenGL mesh bytes; 0 resident bytes / 0 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 9545440 cold OpenGL mesh bytes; 0 resident bytes / 0 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 9545440 cold OpenGL mesh bytes; 0 resident bytes / 0 meshes
+[2026-10-03 16:58:15] dbg: [driver:2] OpenTT3D: retired 9545440 cold OpenGL mesh bytes; 0 resident bytes / 0 meshes
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 4 cold mesh retirement/reupload views preserve exact geometry, colour, transparency and picking
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: mixed-opacity shared-mesh batches preserve exact unpartitioned colour order and picking across the 0.99 boundary
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: full 24-bit map indices and independent vehicle picking IDs passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: atlas relocation preserves textured terrain pixels and picking
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: fragment-repeated component material charts preserve CPU/GPU colour and picking
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: explicit vehicle UVs and non-pickable shadow materials passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: unlimited-distance GPU colour/depth/picking and infinite horizon ocean passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: GPU-resident viewport resize, single-pixel picking and retirement passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 3 GPU viewport regions
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 3 GPU viewport regions
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: OpenGL resident composition matches 154300 exact CPU RGBA pixels across clipped/overlapping viewports, UI masks and resized targets
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 12 OpenGL frame-slot palette snapshots preserve changing and returning animation colours without game-palette writes
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: OpenGL frame-slot instance uploads retain bounded storage and fresh offsets across 1/513/2049/17/4097/1 records
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 48 loading/income text anchors follow orbit, dolly, Cab and secondary viewports; registry reuse passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 144 terrain zoom/drag anchor checks passed across all rotations
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: extended zoom and persistent continuous orbit checks passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: clicked-point yaw/tilt, release persistence and tilted screenshots passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: fixed FOV, legacy-zoom independence and street-level recovery after orbit passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 0 live vehicle-follow and screenshot camera checks passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: first-person terrain capture, picking and labels beyond 4096 world units passed
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: loaded 62 profiles from opentt3d-trees.json
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1674 stage 6 captured at 41,36
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1576 stage 3 captured at 43,38
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1639 stage 3 captured at 43,38
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1604 stage 3 captured at 43,38
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1688 stage 3 captured at 45,38
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 captured at 46,38
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 51 ground-detail tiles rendered with raised crops, hay, rocks or turf
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 18 unmodelled reference sprites in this view (release coverage is incomplete)
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 captured at 43,40
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 variant 3 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 20 construction stage 3 captured at 45,41
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 20 construction stage 3 variant 1 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 20 construction stage 3 captured at 45,41
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 20 construction stage 3 variant 1 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 22 construction stage 3 captured at 46,41
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 22 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 22 construction stage 3 captured at 46,41
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 22 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 21 construction stage 3 captured at 45,42
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 21 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 21 construction stage 3 captured at 45,42
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 21 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 23 construction stage 3 captured at 46,42
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 23 construction stage 3 variant 1 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 23 construction stage 3 captured at 46,42
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 23 construction stage 3 variant 1 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 captured at 43,43
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 variant 0 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 2 captured at 45,43
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 2 variant 3 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 2 captured at 45,43
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 2 variant 3 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 11 construction stage 3 captured at 46,43
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 11 construction stage 3 variant 0 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 3 captured at 44,45
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 3 variant 3 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 3 captured at 46,45
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 3 variant 1 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 3 captured at 46,45
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 3 variant 1 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 15 construction stage 3 captured at 47,45
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 15 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: 2 slope foundations rendered with complete retaining walls
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 26 construction stage 0 captured at 50,39
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house ground 26 construction stage 0 variant 0 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1632 stage 3 captured at 51,39
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1625 stage 1 captured at 51,39
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1653 stage 3 captured at 51,39
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 2 captured at 48,41
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 2 variant 3 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 captured at 49,41
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 variant 2 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 captured at 48,42
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 variant 0 captured
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live projected tree 1583 stage 3 captured at 49,42
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 27 construction stage 3 captured at 49,43
+[2026-10-03 16:58:15] dbg: [driver:1] OpenTT3D: live voxel house 27 construction stage 3 variant 0 captured
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 captured at 48,43
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 variant 1 captured
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live voxel house 14 construction stage 3 captured at 49,44
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live voxel house 14 construction stage 3 variant 2 captured
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 captured at 43,45
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 variant 1 captured
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1688 stage 5 captured at 53,38
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1674 stage 3 captured at 53,39
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1618 stage 2 captured at 52,40
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1618 stage 5 captured at 52,43
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1695 stage 3 captured at 51,33
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1702 stage 3 captured at 51,33
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1611 stage 6 captured at 51,34
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: 81 roof/wall pixels select their owning tile across four rotations, with independent vehicle picking
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1688 stage 6 captured at 79,1
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1653 stage 1 captured at 83,1
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1611 stage 3 captured at 90,1
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1625 stage 3 captured at 94,2
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1632 stage 5 captured at 94,2
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1653 stage 2 captured at 89,3
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1667 stage 4 captured at 86,4
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1660 stage 1 captured at 90,6
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1576 stage 6 captured at 99,7
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1590 stage 4 captured at 102,8
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: live projected tree 1618 stage 6 captured at 103,9
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: whole-world atlas relocation preserves 1228800 exact RGBA/picking pixels across repack, clear and forced row relocation
+[2026-10-03 16:58:16] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 1 GPU viewport regions

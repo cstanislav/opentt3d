@@ -1,0 +1,594 @@
+{
+  "map_width": 128,
+  "map_height": 128,
+  "river_tiles": 77,
+  "read_only_tile_queries": true,
+  "tiles": [
+    {
+      "tile": 8389,
+      "x": 69,
+      "y": 65,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 8517,
+      "x": 69,
+      "y": 66,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 8645,
+      "x": 69,
+      "y": 67,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 8773,
+      "x": 69,
+      "y": 68,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 8901,
+      "x": 69,
+      "y": 69,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 9029,
+      "x": 69,
+      "y": 70,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 9157,
+      "x": 69,
+      "y": 71,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 9285,
+      "x": 69,
+      "y": 72,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 9413,
+      "x": 69,
+      "y": 73,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 9541,
+      "x": 69,
+      "y": 74,
+      "slope": 0,
+      "min_height_levels": 2
+    },
+    {
+      "tile": 9669,
+      "x": 69,
+      "y": 75,
+      "slope": 9,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 9797,
+      "x": 69,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 9925,
+      "x": 69,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10053,
+      "x": 69,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10181,
+      "x": 69,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10306,
+      "x": 66,
+      "y": 80,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10307,
+      "x": 67,
+      "y": 80,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10308,
+      "x": 68,
+      "y": 80,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10309,
+      "x": 69,
+      "y": 80,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10428,
+      "x": 60,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10429,
+      "x": 61,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10430,
+      "x": 62,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10431,
+      "x": 63,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10432,
+      "x": 64,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10433,
+      "x": 65,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10434,
+      "x": 66,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10538,
+      "x": 42,
+      "y": 82,
+      "slope": 3,
+      "min_height_levels": 0
+    },
+    {
+      "tile": 10539,
+      "x": 43,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10540,
+      "x": 44,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10541,
+      "x": 45,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10542,
+      "x": 46,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10551,
+      "x": 55,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10552,
+      "x": 56,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10553,
+      "x": 57,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10554,
+      "x": 58,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10555,
+      "x": 59,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10556,
+      "x": 60,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10557,
+      "x": 61,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10558,
+      "x": 62,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10559,
+      "x": 63,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10560,
+      "x": 64,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10561,
+      "x": 65,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10666,
+      "x": 42,
+      "y": 83,
+      "slope": 3,
+      "min_height_levels": 0
+    },
+    {
+      "tile": 10667,
+      "x": 43,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10668,
+      "x": 44,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10669,
+      "x": 45,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10670,
+      "x": 46,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10671,
+      "x": 47,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10672,
+      "x": 48,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10673,
+      "x": 49,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10674,
+      "x": 50,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10675,
+      "x": 51,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10676,
+      "x": 52,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10677,
+      "x": 53,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10678,
+      "x": 54,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10679,
+      "x": 55,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10680,
+      "x": 56,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10681,
+      "x": 57,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10682,
+      "x": 58,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10683,
+      "x": 59,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10684,
+      "x": 60,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10685,
+      "x": 61,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10794,
+      "x": 42,
+      "y": 84,
+      "slope": 3,
+      "min_height_levels": 0
+    },
+    {
+      "tile": 10795,
+      "x": 43,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10796,
+      "x": 44,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10797,
+      "x": 45,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10798,
+      "x": 46,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10799,
+      "x": 47,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10800,
+      "x": 48,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10801,
+      "x": 49,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10802,
+      "x": 50,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10803,
+      "x": 51,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10804,
+      "x": 52,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10805,
+      "x": 53,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10806,
+      "x": 54,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10807,
+      "x": 55,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    },
+    {
+      "tile": 10808,
+      "x": 56,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1
+    }
+  ],
+  "observed_slopes": [
+    0,
+    3,
+    9
+  ],
+  "observed_min_height_levels": [
+    0,
+    1,
+    2
+  ],
+  "complete_river_family_verified": false,
+  "geometry_or_quality_approved": false,
+  "climate": "tropic",
+  "seed": 271828,
+  "save": "save/river-survey.sav",
+  "save_sha256": "4f203ed7e83a067a348fdbd11eb47a898e951294b72d98980308284f98321b8e",
+  "source": "Original public AITile.IsRiverTile/GetSlope/GetMinHeight queries on a normally generated map.",
+  "source_height_units": "Original map height levels; each level is eight source-height units, not doubled rendered terrain.",
+  "simulation_mutations": "Original start_ai/pause/save commands and ordinary simulation only; no construction, terraform or forced selectors/RNG.",
+  "graphics_or_bank_absence_verified": false,
+  "ship_traversal_verified": false,
+  "command": [
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-selector1831-frozen-build/opentt3d",
+    "-D",
+    "127.0.0.1:57633",
+    "-c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-tropic/openttd.cfg",
+    "-x",
+    "-X",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-d",
+    "script=4,console=1,net=3",
+    "-G",
+    "271828",
+    "-t",
+    "1950",
+    "-g"
+  ]
+}

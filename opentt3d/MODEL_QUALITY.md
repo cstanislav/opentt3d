@@ -12,6 +12,30 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Natural slope/height breadth does not approve raised-water geometry
+
+`reviews/20261003/river-natural-selector-breadth/` retains five normally generated,
+public read-only surveyed worlds and40 quiet native controls. All20 flat/NE/SE/SW/NW
+ground slope/climate combinations and80 bank-input/climate combinations per Classic/
+OpenGFX base set are observed, at original heights0…56. Every surveyed tile matches
+its actual rendered original source state;1,466 ground/2,783 bank states per base set
+are exact across backends, and20 tracing-on/off worlds are strict. Eight registered
+sheets show200 complete source/input states without hiding rocks/Toyland islands in
+ground artwork. Absence, full custom families, remaining heights/neighbourhoods,
+independent phases/draw order, relief/water ownership, models and ships stay open.
+
+The raster-origin study makes432 lock images exact but changes seven world pixels
+and leaves19 cross-backend differences; it is retained, not accepted or shipped.
+Original runtime source is restored byte-exactly, retaining the canonical eight
+lock street mismatches. Neither this technical study nor213 native/104 harness tests
+establishes individual source/orbit/street/world/state/consistency acceptance.
+
+All three quality reports—including scores, fingerprints, defects, checks, evidence
+and bindings—remain word-exact:2,866/2,950/2,998 rows,57/141/189 current individual
+records, zero8/10 approvals/four gaps and failing required-eight gates. The candidate
+CSV, rejected larger HQ/lock artwork and compiler remain outside validated increments;
+recommended`.42` and canonical reviews remain unchanged.
+
 ## Actual river feature identity is evidence, not structural approval
 
 `reviews/20261003/river-live-feature-selectors/` retains draw-site feature/flags/

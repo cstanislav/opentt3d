@@ -1,0 +1,30 @@
+{
+  "scopes": [
+    {
+      "scope": "canonical",
+      "ledger_entries": 2866,
+      "individual_records": 57,
+      "quality_report_word_exact": true,
+      "required_eight_still_fails": true,
+      "approvals": 0
+    },
+    {
+      "scope": "rejected-hq",
+      "ledger_entries": 2950,
+      "individual_records": 141,
+      "quality_report_word_exact": true,
+      "required_eight_still_fails": true,
+      "approvals": 0
+    },
+    {
+      "scope": "rejected-hq-lock",
+      "ledger_entries": 2998,
+      "individual_records": 189,
+      "quality_report_word_exact": true,
+      "required_eight_still_fails": true,
+      "approvals": 0
+    }
+  ],
+  "src_delta_empty": true,
+  "working_candidate_csv_untouched": true
+}

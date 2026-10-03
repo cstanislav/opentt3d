@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "model": "lock_study_middle_ne_front_sea",
+      "view": 4,
+      "pixel": [
+        57,
+        185
+      ],
+      "candidate_triangle": 11046,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.720253418914581e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_ne_front_elevated",
+      "view": 4,
+      "pixel": [
+        57,
+        185
+      ],
+      "candidate_triangle": 11046,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.720253418914581e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_nw_front_sea",
+      "view": 5,
+      "pixel": [
+        198,
+        185
+      ],
+      "candidate_triangle": 11231,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.716263933505647e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_nw_front_elevated",
+      "view": 5,
+      "pixel": [
+        198,
+        185
+      ],
+      "candidate_triangle": 11231,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.716263933505647e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_ne_rear_sea",
+      "view": 4,
+      "pixel": [
+        57,
+        185
+      ],
+      "candidate_triangle": 10604,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.720253418914581e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_ne_rear_elevated",
+      "view": 4,
+      "pixel": [
+        57,
+        185
+      ],
+      "candidate_triangle": 10604,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.720253418914581e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_nw_rear_sea",
+      "view": 5,
+      "pixel": [
+        198,
+        185
+      ],
+      "candidate_triangle": 10825,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.716263933505647e-05,
+      "repair_accepted": false
+    },
+    {
+      "model": "lock_study_middle_nw_rear_elevated",
+      "view": 5,
+      "pixel": [
+        198,
+        185
+      ],
+      "candidate_triangle": 10825,
+      "palette": 1,
+      "candidate_has_one_outside_edge_before_rounding": true,
+      "snapped_edge_is_exact_horizontal_tie": true,
+      "unrounded_signed_edge_distance_pixels": -8.716263933505647e-05,
+      "repair_accepted": false
+    }
+  ],
+  "unchanged_model_catalogue_sha256": "689b38cd8356ae932cca02ef08dd0020d5ebc135f242c056c38b350dc30af5f9",
+  "rejected_strict_report_sha256": "e583f39e376b34bbf1a5b85cd36b01243ff443fc5c25f371a7f9465009f53e40",
+  "mesh_and_camera_source_sha256": {
+    "src/renderer3d/voxel_geometry.hpp": "f2a71901af6427184bb9441c4f9bec171df23e250068680b887fc9f5fcdd5385",
+    "src/renderer3d/camera.hpp": "6bf37be626a408652bd89d7ead744471aa918a97bad38989fed9dcfe4e8eef4b",
+    "src/renderer3d/geometry.hpp": "1b833ad6583ecfc63aecdbeaa973cd78eefec84007e3a1f33e3aba042f871f19"
+  },
+  "diagnostic_source_sha256": "3dad1f7304008408e24bd8390586c9a713861a4f677041fe51823d21e98d5098",
+  "diagnostic_binary_sha256": "9656a27032a5788a5a23cb35ff75b3d27b91417ac177b65b3bb7d7b32d663c06",
+  "raw_report_sha256": "b88de7b8fdbe751aac900fc598b02cf964184e077ab7be886d58a53ae808c2f0",
+  "build_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "masks": false,
+  "tolerance": 0,
+  "geometry_approvals": 0,
+  "scope": "Eight existing rejected pixel differences localize to one palette1 bottom-face triangle per direction/owner, sampled just outside an unsnapped horizontal edge. Hypothetical fixed subpixel grids make that edge an exact sample tie, consistent with differing fill-origin conventions; actual GPU clip outputs/fill rules remain a hypothesis until independent render tests. The0.02pixel search radius only locates candidates and is never a rendered/comparison tolerance, acceptance mask or coordinate adjustment. All immutable cells/mesh coordinates/cameras remain unchanged."
+}

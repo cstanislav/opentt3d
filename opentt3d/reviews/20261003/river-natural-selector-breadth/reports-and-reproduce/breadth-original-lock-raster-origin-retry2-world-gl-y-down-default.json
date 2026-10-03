@@ -1,0 +1,156 @@
+{
+  "reference": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-opengl-default/screenshot/smoke.png",
+  "actual": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-raster-origin-retry2-opengl-y-down/screenshot/smoke.png",
+  "images": 1,
+  "pixels": 1228800,
+  "differences": [
+    {
+      "name": "image",
+      "changed_pixels": 7,
+      "first_pixel": [
+        1138,
+        66
+      ],
+      "reference_rgba": [
+        87,
+        136,
+        21,
+        255
+      ],
+      "actual_rgba": [
+        68,
+        70,
+        68,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            1138,
+            66
+          ],
+          "reference": [
+            87,
+            136,
+            21,
+            255
+          ],
+          "actual": [
+            68,
+            70,
+            68,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            1204,
+            155
+          ],
+          "reference": [
+            117,
+            68,
+            46,
+            255
+          ],
+          "actual": [
+            68,
+            37,
+            17,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            910,
+            195
+          ],
+          "reference": [
+            109,
+            109,
+            58,
+            255
+          ],
+          "actual": [
+            112,
+            112,
+            60,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            755,
+            403
+          ],
+          "reference": [
+            34,
+            68,
+            3,
+            255
+          ],
+          "actual": [
+            36,
+            72,
+            3,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            839,
+            649
+          ],
+          "reference": [
+            41,
+            67,
+            29,
+            255
+          ],
+          "actual": [
+            59,
+            96,
+            41,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            920,
+            686
+          ],
+          "reference": [
+            83,
+            60,
+            33,
+            255
+          ],
+          "actual": [
+            59,
+            37,
+            9,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            237,
+            867
+          ],
+          "reference": [
+            36,
+            72,
+            116,
+            255
+          ],
+          "actual": [
+            40,
+            76,
+            120,
+            255
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3787 @@
+{
+  "format": 1,
+  "geometry_approved": false,
+  "observations": [
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        528,
+        8
+      ],
+      "image": 9961,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9961-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 9961,
+      "texture_generation": 3,
+      "tile": 4315,
+      "tile_xy": [
+        91,
+        33
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        528,
+        8
+      ],
+      "image": 10019,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 9,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10019-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10019,
+      "texture_generation": 3,
+      "tile": 4315,
+      "tile_xy": [
+        91,
+        33
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        528,
+        8
+      ],
+      "image": 10023,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 9,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10023-0-generation3.pam",
+      "source_offset": [
+        4,
+        -52
+      ],
+      "source_size": [
+        152,
+        120
+      ],
+      "sprite": 10023,
+      "texture_generation": 3,
+      "tile": 4315,
+      "tile_xy": [
+        91,
+        33
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        544,
+        8
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 4443,
+      "tile_xy": [
+        91,
+        34
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        544,
+        8
+      ],
+      "image": 10027,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10027-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10027,
+      "texture_generation": 3,
+      "tile": 4443,
+      "tile_xy": [
+        91,
+        34
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        544,
+        8
+      ],
+      "image": 10031,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10031-0-generation3.pam",
+      "source_offset": [
+        4,
+        -52
+      ],
+      "source_size": [
+        152,
+        120
+      ],
+      "sprite": 10031,
+      "texture_generation": 3,
+      "tile": 4443,
+      "tile_xy": [
+        91,
+        34
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        512,
+        16
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 4187,
+      "tile_xy": [
+        91,
+        32
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        512,
+        16
+      ],
+      "image": 10035,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10035-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10035,
+      "texture_generation": 3,
+      "tile": 4187,
+      "tile_xy": [
+        91,
+        32
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        1456,
+        512,
+        16
+      ],
+      "image": 10039,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10039-0-generation3.pam",
+      "source_offset": [
+        4,
+        -28
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10039,
+      "texture_generation": 3,
+      "tile": 4187,
+      "tile_xy": [
+        91,
+        32
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        48,
+        0
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 433,
+      "tile_xy": [
+        49,
+        3
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        48,
+        0
+      ],
+      "image": 10000,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10000-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -88
+      ],
+      "source_size": [
+        152,
+        164
+      ],
+      "sprite": 10000,
+      "texture_generation": 3,
+      "tile": 433,
+      "tile_xy": [
+        49,
+        3
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        48,
+        0
+      ],
+      "image": 10004,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10004-0-generation3.pam",
+      "source_offset": [
+        4,
+        -96
+      ],
+      "source_size": [
+        152,
+        164
+      ],
+      "sprite": 10004,
+      "texture_generation": 3,
+      "tile": 433,
+      "tile_xy": [
+        49,
+        3
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        64,
+        0
+      ],
+      "image": 9953,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9953-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "sprite": 9953,
+      "texture_generation": 3,
+      "tile": 561,
+      "tile_xy": [
+        49,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        64,
+        0
+      ],
+      "image": 9992,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 6,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9992-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 9992,
+      "texture_generation": 3,
+      "tile": 561,
+      "tile_xy": [
+        49,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        64,
+        0
+      ],
+      "image": 9996,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 6,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9996-0-generation3.pam",
+      "source_offset": [
+        4,
+        -52
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 9996,
+      "texture_generation": 3,
+      "tile": 561,
+      "tile_xy": [
+        49,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1600,
+        64,
+        8
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 612,
+      "tile_xy": [
+        100,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1600,
+        64,
+        8
+      ],
+      "image": 10009,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10009-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10009,
+      "texture_generation": 3,
+      "tile": 612,
+      "tile_xy": [
+        100,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1600,
+        64,
+        8
+      ],
+      "image": 10013,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10013-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -28
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10013,
+      "texture_generation": 3,
+      "tile": 612,
+      "tile_xy": [
+        100,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1616,
+        64,
+        0
+      ],
+      "image": 9954,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9954-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 9954,
+      "texture_generation": 3,
+      "tile": 613,
+      "tile_xy": [
+        101,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1616,
+        64,
+        0
+      ],
+      "image": 9993,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 12,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9993-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 9993,
+      "texture_generation": 3,
+      "tile": 613,
+      "tile_xy": [
+        101,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1616,
+        64,
+        0
+      ],
+      "image": 9997,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 12,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9997-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -52
+      ],
+      "source_size": [
+        152,
+        120
+      ],
+      "sprite": 9997,
+      "texture_generation": 3,
+      "tile": 613,
+      "tile_xy": [
+        101,
+        4
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1632,
+        64,
+        0
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 614,
+      "tile_xy": [
+        102,
+        4
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1632,
+        64,
+        0
+      ],
+      "image": 10001,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10001-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        136
+      ],
+      "sprite": 10001,
+      "texture_generation": 3,
+      "tile": 614,
+      "tile_xy": [
+        102,
+        4
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1632,
+        64,
+        0
+      ],
+      "image": 10005,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10005-0-generation3.pam",
+      "source_offset": [
+        -156,
+        -52
+      ],
+      "source_size": [
+        160,
+        120
+      ],
+      "sprite": 10005,
+      "texture_generation": 3,
+      "tile": 614,
+      "tile_xy": [
+        102,
+        4
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        80,
+        8
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 689,
+      "tile_xy": [
+        49,
+        5
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        80,
+        8
+      ],
+      "image": 10008,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10008-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10008,
+      "texture_generation": 3,
+      "tile": 689,
+      "tile_xy": [
+        49,
+        5
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        784,
+        80,
+        8
+      ],
+      "image": 10012,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10012-0-generation3.pam",
+      "source_offset": [
+        4,
+        -20
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 10012,
+      "texture_generation": 3,
+      "tile": 689,
+      "tile_xy": [
+        49,
+        5
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1712,
+        128,
+        0
+      ],
+      "image": 11265,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-11265-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "sprite": 11265,
+      "texture_generation": 3,
+      "tile": 1131,
+      "tile_xy": [
+        107,
+        8
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1712,
+        128,
+        0
+      ],
+      "image": 10496,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10496-0-generation3.pam",
+      "source_offset": [
+        -16,
+        0
+      ],
+      "source_size": [
+        148,
+        40
+      ],
+      "sprite": 10496,
+      "texture_generation": 3,
+      "tile": 1131,
+      "tile_xy": [
+        107,
+        8
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1728,
+        128,
+        0
+      ],
+      "image": 11265,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-11265-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "sprite": 11265,
+      "texture_generation": 3,
+      "tile": 1132,
+      "tile_xy": [
+        108,
+        8
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1728,
+        128,
+        0
+      ],
+      "image": 10498,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10498-0-generation3.pam",
+      "source_offset": [
+        -124,
+        24
+      ],
+      "source_size": [
+        144,
+        68
+      ],
+      "sprite": 10498,
+      "texture_generation": 3,
+      "tile": 1132,
+      "tile_xy": [
+        108,
+        8
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        608,
+        192,
+        0
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 1574,
+      "tile_xy": [
+        38,
+        12
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        608,
+        192,
+        0
+      ],
+      "image": 10002,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10002-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -88
+      ],
+      "source_size": [
+        152,
+        164
+      ],
+      "sprite": 10002,
+      "texture_generation": 3,
+      "tile": 1574,
+      "tile_xy": [
+        38,
+        12
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        608,
+        192,
+        0
+      ],
+      "image": 10006,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10006-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -96
+      ],
+      "source_size": [
+        152,
+        164
+      ],
+      "sprite": 10006,
+      "texture_generation": 3,
+      "tile": 1574,
+      "tile_xy": [
+        38,
+        12
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        624,
+        192,
+        0
+      ],
+      "image": 9955,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9955-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "sprite": 9955,
+      "texture_generation": 3,
+      "tile": 1575,
+      "tile_xy": [
+        39,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        624,
+        192,
+        0
+      ],
+      "image": 9994,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 3,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9994-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 9994,
+      "texture_generation": 3,
+      "tile": 1575,
+      "tile_xy": [
+        39,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        624,
+        192,
+        0
+      ],
+      "image": 9998,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 3,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9998-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -52
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 9998,
+      "texture_generation": 3,
+      "tile": 1575,
+      "tile_xy": [
+        39,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        640,
+        192,
+        8
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 1576,
+      "tile_xy": [
+        40,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        640,
+        192,
+        8
+      ],
+      "image": 10010,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10010-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10010,
+      "texture_generation": 3,
+      "tile": 1576,
+      "tile_xy": [
+        40,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        640,
+        192,
+        8
+      ],
+      "image": 10014,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10014-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -20
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 10014,
+      "texture_generation": 3,
+      "tile": 1576,
+      "tile_xy": [
+        40,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        192,
+        8
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 1598,
+      "tile_xy": [
+        62,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        192,
+        8
+      ],
+      "image": 10024,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10024-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10024,
+      "texture_generation": 3,
+      "tile": 1598,
+      "tile_xy": [
+        62,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        192,
+        8
+      ],
+      "image": 10028,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10028-0-generation3.pam",
+      "source_offset": [
+        4,
+        -60
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10028,
+      "texture_generation": 3,
+      "tile": 1598,
+      "tile_xy": [
+        62,
+        12
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        208,
+        8
+      ],
+      "image": 9958,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9958-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "sprite": 9958,
+      "texture_generation": 3,
+      "tile": 1726,
+      "tile_xy": [
+        62,
+        13
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        208,
+        8
+      ],
+      "image": 10016,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 6,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10016-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10016,
+      "texture_generation": 3,
+      "tile": 1726,
+      "tile_xy": [
+        62,
+        13
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        208,
+        8
+      ],
+      "image": 10020,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 6,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10020-0-generation3.pam",
+      "source_offset": [
+        4,
+        -52
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 10020,
+      "texture_generation": 3,
+      "tile": 1726,
+      "tile_xy": [
+        62,
+        13
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        224,
+        16
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 1854,
+      "tile_xy": [
+        62,
+        14
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        224,
+        16
+      ],
+      "image": 10032,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10032-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10032,
+      "texture_generation": 3,
+      "tile": 1854,
+      "tile_xy": [
+        62,
+        14
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 1,
+      "draw_origin": [
+        992,
+        224,
+        16
+      ],
+      "image": 10036,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10036-0-generation3.pam",
+      "source_offset": [
+        4,
+        -20
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 10036,
+      "texture_generation": 3,
+      "tile": 1854,
+      "tile_xy": [
+        62,
+        14
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        928,
+        256,
+        8
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 2106,
+      "tile_xy": [
+        58,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        928,
+        256,
+        8
+      ],
+      "image": 10026,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10026-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10026,
+      "texture_generation": 3,
+      "tile": 2106,
+      "tile_xy": [
+        58,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        928,
+        256,
+        8
+      ],
+      "image": 10030,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10030-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -60
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10030,
+      "texture_generation": 3,
+      "tile": 2106,
+      "tile_xy": [
+        58,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        944,
+        256,
+        8
+      ],
+      "image": 9960,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9960-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "sprite": 9960,
+      "texture_generation": 3,
+      "tile": 2107,
+      "tile_xy": [
+        59,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        944,
+        256,
+        8
+      ],
+      "image": 10018,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 3,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10018-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10018,
+      "texture_generation": 3,
+      "tile": 2107,
+      "tile_xy": [
+        59,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        944,
+        256,
+        8
+      ],
+      "image": 10022,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 3,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10022-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -52
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 10022,
+      "texture_generation": 3,
+      "tile": 2107,
+      "tile_xy": [
+        59,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        960,
+        256,
+        16
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 2108,
+      "tile_xy": [
+        60,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        960,
+        256,
+        16
+      ],
+      "image": 10034,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10034-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10034,
+      "texture_generation": 3,
+      "tile": 2108,
+      "tile_xy": [
+        60,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 2,
+      "draw_origin": [
+        960,
+        256,
+        16
+      ],
+      "image": 10038,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10038-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -20
+      ],
+      "source_size": [
+        152,
+        88
+      ],
+      "sprite": 10038,
+      "texture_generation": 3,
+      "tile": 2108,
+      "tile_xy": [
+        60,
+        16
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1104,
+        272,
+        16
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 2245,
+      "tile_xy": [
+        69,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1104,
+        272,
+        16
+      ],
+      "image": 10033,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10033-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10033,
+      "texture_generation": 3,
+      "tile": 2245,
+      "tile_xy": [
+        69,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1104,
+        272,
+        16
+      ],
+      "image": 10037,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "water-live-source-10037-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -28
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10037,
+      "texture_generation": 3,
+      "tile": 2245,
+      "tile_xy": [
+        69,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1120,
+        272,
+        8
+      ],
+      "image": 9959,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9959-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 9959,
+      "texture_generation": 3,
+      "tile": 2246,
+      "tile_xy": [
+        70,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1120,
+        272,
+        8
+      ],
+      "image": 10017,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 12,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10017-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10017,
+      "texture_generation": 3,
+      "tile": 2246,
+      "tile_xy": [
+        70,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1120,
+        272,
+        8
+      ],
+      "image": 10021,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 12,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10021-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -52
+      ],
+      "source_size": [
+        152,
+        120
+      ],
+      "sprite": 10021,
+      "texture_generation": 3,
+      "tile": 2246,
+      "tile_xy": [
+        70,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1136,
+        272,
+        8
+      ],
+      "image": 9957,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9957-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9957,
+      "texture_generation": 3,
+      "tile": 2247,
+      "tile_xy": [
+        71,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1136,
+        272,
+        8
+      ],
+      "image": 10025,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10025-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 10025,
+      "texture_generation": 3,
+      "tile": 2247,
+      "tile_xy": [
+        71,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 0,
+      "draw_origin": [
+        1136,
+        272,
+        8
+      ],
+      "image": 10029,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        15,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        16,
+        1,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10029-0-generation3.pam",
+      "source_offset": [
+        -148,
+        -52
+      ],
+      "source_size": [
+        152,
+        120
+      ],
+      "sprite": 10029,
+      "texture_generation": 3,
+      "tile": 2247,
+      "tile_xy": [
+        71,
+        17
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        624,
+        8
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 5000,
+      "tile_xy": [
+        8,
+        39
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        624,
+        8
+      ],
+      "image": 10011,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10011-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -20
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10011,
+      "texture_generation": 3,
+      "tile": 5000,
+      "tile_xy": [
+        8,
+        39
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        624,
+        8
+      ],
+      "image": 10015,
+      "kind": "lock",
+      "palette": 0,
+      "part": 2,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "water-live-source-10015-0-generation3.pam",
+      "source_offset": [
+        4,
+        -28
+      ],
+      "source_size": [
+        152,
+        96
+      ],
+      "sprite": 10015,
+      "texture_generation": 3,
+      "tile": 5000,
+      "tile_xy": [
+        8,
+        39
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        640,
+        0
+      ],
+      "image": 9956,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9956-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 9956,
+      "texture_generation": 3,
+      "tile": 5128,
+      "tile_xy": [
+        8,
+        40
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        640,
+        0
+      ],
+      "image": 9995,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 9,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9995-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        128
+      ],
+      "sprite": 9995,
+      "texture_generation": 3,
+      "tile": 5128,
+      "tile_xy": [
+        8,
+        40
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        640,
+        0
+      ],
+      "image": 9999,
+      "kind": "lock",
+      "palette": 0,
+      "part": 0,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 9,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9999-0-generation3.pam",
+      "source_offset": [
+        4,
+        -52
+      ],
+      "source_size": [
+        152,
+        120
+      ],
+      "sprite": 9999,
+      "texture_generation": 3,
+      "tile": 5128,
+      "tile_xy": [
+        8,
+        40
+      ],
+      "transparent": false,
+      "water_class": 1
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        656,
+        0
+      ],
+      "image": 9952,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "ground",
+      "slope": 0,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-9952-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        124
+      ],
+      "sprite": 9952,
+      "texture_generation": 3,
+      "tile": 5256,
+      "tile_xy": [
+        8,
+        41
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        656,
+        0
+      ],
+      "image": 10003,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        0,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        6
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10003-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -52
+      ],
+      "source_size": [
+        152,
+        132
+      ],
+      "sprite": 10003,
+      "texture_generation": 3,
+      "tile": 5256,
+      "tile_xy": [
+        8,
+        41
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "direction": 3,
+      "draw_origin": [
+        128,
+        656,
+        0
+      ],
+      "image": 10007,
+      "kind": "lock",
+      "palette": 0,
+      "part": 1,
+      "role": "body",
+      "sequence_offset": [
+        0,
+        0,
+        0
+      ],
+      "sequence_origin": [
+        15,
+        0,
+        0
+      ],
+      "slope": 0,
+      "sort_extent": [
+        1,
+        16,
+        10
+      ],
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10007-0-generation3.pam",
+      "source_offset": [
+        4,
+        -52
+      ],
+      "source_size": [
+        164,
+        120
+      ],
+      "sprite": 10007,
+      "texture_generation": 3,
+      "tile": 5256,
+      "tile_xy": [
+        8,
+        41
+      ],
+      "transparent": false,
+      "water_class": 0
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1296,
+        1840,
+        0
+      ],
+      "image": 11268,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-11268-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 11268,
+      "texture_generation": 3,
+      "tile": 14801,
+      "tile_xy": [
+        81,
+        115
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1296,
+        1840,
+        0
+      ],
+      "image": 10532,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10532-0-generation3.pam",
+      "source_offset": [
+        -20,
+        -32
+      ],
+      "source_size": [
+        152,
+        104
+      ],
+      "sprite": 10532,
+      "texture_generation": 3,
+      "tile": 14801,
+      "tile_xy": [
+        81,
+        115
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1312,
+        1840,
+        0
+      ],
+      "image": 11268,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-11268-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 11268,
+      "texture_generation": 3,
+      "tile": 14802,
+      "tile_xy": [
+        82,
+        115
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1328,
+        1840,
+        0
+      ],
+      "image": 11268,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-11268-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "sprite": 11268,
+      "texture_generation": 3,
+      "tile": 14803,
+      "tile_xy": [
+        83,
+        115
+      ],
+      "transparent": false,
+      "water_class": 2
+    },
+    {
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "climate": 2,
+      "cropped": false,
+      "draw_origin": [
+        1328,
+        1840,
+        0
+      ],
+      "image": 10534,
+      "kind": "sloped-river",
+      "palette": 0,
+      "role": "ground",
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "water-live-source-10534-0-generation3.pam",
+      "source_offset": [
+        -124,
+        20
+      ],
+      "source_size": [
+        152,
+        104
+      ],
+      "sprite": 10534,
+      "texture_generation": 3,
+      "tile": 14803,
+      "tile_xy": [
+        83,
+        115
+      ],
+      "transparent": false,
+      "water_class": 2
+    }
+  ],
+  "scope": "Actual original lock/sloped-river callbacks, before any 3D substitution. Source height/registration/owners and selected complete sprite bytes only; no model, full state/world, custom-family or clearance approval."
+}

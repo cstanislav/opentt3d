@@ -1,0 +1,11 @@
+pause
+scrollto instant 101 4
+renderer3d on
+renderer3d zoom 1
+renderer3d voxel-overview lock_study_
+renderer3d verify
+renderer3d verify-tile-picking
+renderer3d verify-world-atlas
+renderer3d zoom 1
+save smoke-state
+screenshot presented smoke

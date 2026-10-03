@@ -1,0 +1,2103 @@
+{
+  "matrix": [
+    {
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 353,
+      "bank_owner_states": 734,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 5,
+      "bank_owner_states": 6,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        16
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 8,
+      "bank_owner_states": 12,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 4,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 10,
+      "bank_owner_states": 20,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 356,
+      "bank_owner_states": 673,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 24,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 2,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        32
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 3,
+      "bank_owner_states": 6,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        16,
+        24,
+        32
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 9,
+      "bank_owner_states": 14,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24,
+        32
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 6,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 29,
+      "bank_owner_states": 42,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 6,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 276,
+      "bank_owner_states": 448,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 2,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        24,
+        40
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 25,
+      "bank_owner_states": 36,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 3,
+      "bank_owner_states": 2,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 1,
+      "bank_owner_states": 2,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 353,
+      "bank_owner_states": 734,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 5,
+      "bank_owner_states": 6,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        16
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 8,
+      "bank_owner_states": 12,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 4,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 10,
+      "bank_owner_states": 20,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "temperate",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 353,
+      "bank_owner_states": 734,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 16,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "temperate",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 5,
+      "bank_owner_states": 6,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        16
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 4,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "temperate",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 8,
+      "bank_owner_states": 12,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 6,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "temperate",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 4,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 4,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "temperate",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 10,
+      "bank_owner_states": 20,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 9,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "arctic",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 356,
+      "bank_owner_states": 673,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 16,
+      "selected_bank_sources": 52,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "arctic",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 2,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        32
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "arctic",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 3,
+      "bank_owner_states": 6,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        16,
+        24,
+        32
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 6,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "arctic",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 9,
+      "bank_owner_states": 14,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24,
+        32
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 8,
+      "selected_bank_sources": 10,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "arctic",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 29,
+      "bank_owner_states": 42,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 14,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "tropic",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 276,
+      "bank_owner_states": 448,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 16,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "tropic",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 2,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        24,
+        40
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "tropic",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 25,
+      "bank_owner_states": 36,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 12,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "tropic",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 3,
+      "bank_owner_states": 2,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 2,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "tropic",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 1,
+      "bank_owner_states": 2,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 1,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "toyland",
+      "slope_name": "SLOPE_FLAT",
+      "slope_value": 0,
+      "ground_owner_states": 353,
+      "bank_owner_states": 734,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "bank_callback_inputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bank_callback_input_output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "selected_ground_sources": 16,
+      "selected_bank_sources": 12,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "toyland",
+      "slope_name": "SLOPE_NE",
+      "slope_value": 12,
+      "ground_owner_states": 5,
+      "bank_owner_states": 6,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        16
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "bank_callback_inputs": [
+        25,
+        27
+      ],
+      "bank_callback_input_output": [
+        [
+          25,
+          25
+        ],
+        [
+          27,
+          27
+        ]
+      ],
+      "selected_ground_sources": 4,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "toyland",
+      "slope_name": "SLOPE_SE",
+      "slope_value": 6,
+      "ground_owner_states": 8,
+      "bank_owner_states": 12,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_callback_inputs": [
+        12,
+        14
+      ],
+      "bank_callback_input_output": [
+        [
+          12,
+          12
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "selected_ground_sources": 6,
+      "selected_bank_sources": 4,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "toyland",
+      "slope_name": "SLOPE_SW",
+      "slope_value": 3,
+      "ground_owner_states": 4,
+      "bank_owner_states": 4,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        0
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "bank_callback_inputs": [
+        37,
+        39
+      ],
+      "bank_callback_input_output": [
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "selected_ground_sources": 4,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    },
+    {
+      "base_set_family": "opengfx",
+      "climate": "toyland",
+      "slope_name": "SLOPE_NW",
+      "slope_value": 9,
+      "ground_owner_states": 10,
+      "bank_owner_states": 20,
+      "ground_selector_observed": true,
+      "original_source_heights": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "ground_feature_flag_input_output": [
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "bank_callback_inputs": [
+        48,
+        50
+      ],
+      "bank_callback_input_output": [
+        [
+          48,
+          48
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "selected_ground_sources": 9,
+      "selected_bank_sources": 2,
+      "actual_absent_edge_features": 0,
+      "all_heights_ground_variants_or_custom_families_verified": false,
+      "raised_animated_water_ownership_verified": false,
+      "geometry_or_quality_approved": false
+    }
+  ],
+  "public_surveys": 5,
+  "quiet_native_controls": 40,
+  "ground_selector_climates_observed_per_base_set": 20,
+  "bank_input_selector_climates_observed_per_base_set": {
+    "classic": 80,
+    "opengfx": 80
+  },
+  "original_source_heights_observed": [
+    0,
+    8,
+    16,
+    24,
+    32,
+    40,
+    48,
+    56
+  ],
+  "actual_absent_edge_features": 0,
+  "full_bank_inputs_or_heights_verified": false,
+  "strict_world_changed_pixels": 0,
+  "approved_models": 0,
+  "selected_source_report_sha256": "8768af42197ef56e263e6f2b89772c112e9ef2a38ecf11e7f1d42b916451cf2a",
+  "scope": "Normally generated hill/many-river worlds retain five public read-only NoAI surveys, every surveyed tile rendered by original callbacks, exact original slope/anchor/height (eight source units per map level), selected source bytes and independent feature/input/output provenance across both backends and Classic/OpenGFX8.0. Only tracing-on/off world comparisons are exact; no cross-backend world equality is inferred. No authored object inflation, forced terrain/feature/selector/absence/RNG, duplicate callback, new geometry/binding or complete custom-family/relief/water ownership/animation/ships/performance/8+ approval. Entire catalogue goal remains open."
+}

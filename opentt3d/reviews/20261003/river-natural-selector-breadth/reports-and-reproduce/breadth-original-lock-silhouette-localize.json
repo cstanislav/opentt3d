@@ -1,0 +1,487 @@
+{
+  "approvals": 0,
+  "observed_model_camera_mesh_cases": [
+    {
+      "bounds": [
+        [
+          0.0,
+          -2.5,
+          0.25
+        ],
+        [
+          16.0,
+          0.0,
+          13.0
+        ]
+      ],
+      "camera_focus": [
+        8.0,
+        -33.25,
+        6.25
+      ],
+      "matrix_float_words": [
+        2.7474770545959473,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        -0.477094441652298,
+        -0.9848077297210693,
+        0.9848077297210693,
+        0.0,
+        1.1046124696731567,
+        -0.07089158147573471,
+        0.07089158147573471,
+        0.0,
+        0.0,
+        0.10000000149011612,
+        0.0
+      ],
+      "model": "lock_study_middle_ne_front_sea",
+      "nearby_front_triangles": [
+        {
+          "area": -0.0941595209388396,
+          "palette": 1,
+          "projected_unrounded_vertices": [
+            [
+              56.73739023887241,
+              185.46529523521662,
+              32.07714279741049
+            ],
+            [
+              57.28018654847017,
+              185.4999127974658,
+              32.323344729840755
+            ],
+            [
+              60.00017937352901,
+              185.4999127974658,
+              32.323344729840755
+            ]
+          ],
+          "signed_inside_edge_distances_pixels": [
+            0.013903448092737077,
+            -8.720253418914581e-05,
+            0.026612124782406828
+          ],
+          "snapping_hypotheses": [
+            {
+              "bits": 4,
+              "edge_functions": [
+                -0.015625,
+                0.0,
+                -0.15625
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 8,
+              "edge_functions": [
+                -0.0076904296875,
+                0.0,
+                -0.087890625
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 12,
+              "edge_functions": [
+                -0.007617473602294922,
+                0.0,
+                -0.0866783857345581
+              ],
+              "strictly_inside": false
+            }
+          ],
+          "strictly_inside_unrounded": false,
+          "triangle": 11046,
+          "world_vertices": [
+            [
+              1.5,
+              -0.75,
+              7.25
+            ],
+            [
+              1.5,
+              -0.5,
+              7.25
+            ],
+            [
+              1.75,
+              -0.5,
+              7.25
+            ]
+          ]
+        }
+      ],
+      "pixel_centre": [
+        57.5,
+        185.5
+      ],
+      "triangles": 13012,
+      "view": 4
+    },
+    {
+      "bounds": [
+        [
+          -2.5,
+          0.0,
+          0.25
+        ],
+        [
+          0.0,
+          16.0,
+          13.0
+        ]
+      ],
+      "camera_focus": [
+        -33.25,
+        8.000004768371582,
+        6.25
+      ],
+      "matrix_float_words": [
+        -4.09406027301884e-07,
+        -0.477094441652298,
+        -0.9848077297210693,
+        0.9848077297210693,
+        -2.7474772930145264,
+        8.188120403929133e-08,
+        1.7881393432617188e-07,
+        -1.7881393432617188e-07,
+        0.0,
+        1.1046124696731567,
+        -0.07089158147573471,
+        0.07089158147573471,
+        0.0,
+        0.0,
+        0.10000000149011612,
+        0.0
+      ],
+      "model": "lock_study_middle_nw_front_sea",
+      "nearby_front_triangles": [
+        {
+          "area": -0.09415951905658458,
+          "palette": 1,
+          "projected_unrounded_vertices": [
+            [
+              199.26261254611126,
+              185.46529527679735,
+              32.077143959701914
+            ],
+            [
+              195.99982296026639,
+              185.49991283594585,
+              32.3233458474287
+            ],
+            [
+              198.7198158295082,
+              185.49991283748506,
+              32.32334589213218
+            ]
+          ],
+          "signed_inside_edge_distances_pixels": [
+            0.026612055501714044,
+            -8.716263933505647e-05,
+            0.013903628305217514
+          ],
+          "snapping_hypotheses": [
+            {
+              "bits": 4,
+              "edge_functions": [
+                -0.15625,
+                0.0,
+                -0.015625
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 8,
+              "edge_functions": [
+                -0.087890625,
+                0.0,
+                -0.0076904296875
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 12,
+              "edge_functions": [
+                -0.0866783857345581,
+                0.0,
+                -0.007617473602294922
+              ],
+              "strictly_inside": false
+            }
+          ],
+          "strictly_inside_unrounded": false,
+          "triangle": 11231,
+          "world_vertices": [
+            [
+              -0.75,
+              1.5,
+              7.25
+            ],
+            [
+              -0.5,
+              1.75,
+              7.25
+            ],
+            [
+              -0.5,
+              1.5,
+              7.25
+            ]
+          ]
+        }
+      ],
+      "pixel_centre": [
+        198.5,
+        185.5
+      ],
+      "triangles": 13174,
+      "view": 5
+    },
+    {
+      "bounds": [
+        [
+          0.0,
+          0.5,
+          0.25
+        ],
+        [
+          16.0,
+          3.0,
+          13.0
+        ]
+      ],
+      "camera_focus": [
+        8.0,
+        -30.249998092651367,
+        6.25
+      ],
+      "matrix_float_words": [
+        2.7474770545959473,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        -0.477094441652298,
+        -0.9848077297210693,
+        0.9848077297210693,
+        0.0,
+        1.1046124696731567,
+        -0.07089158147573471,
+        0.07089158147573471,
+        0.0,
+        0.0,
+        0.10000000149011612,
+        0.0
+      ],
+      "model": "lock_study_middle_ne_rear_sea",
+      "nearby_front_triangles": [
+        {
+          "area": -0.0941595209388396,
+          "palette": 1,
+          "projected_unrounded_vertices": [
+            [
+              56.73739023887241,
+              185.46529523521662,
+              32.07714279741049
+            ],
+            [
+              57.28018654847017,
+              185.4999127974658,
+              32.323344729840755
+            ],
+            [
+              60.00017937352901,
+              185.4999127974658,
+              32.323344729840755
+            ]
+          ],
+          "signed_inside_edge_distances_pixels": [
+            0.013903448092737077,
+            -8.720253418914581e-05,
+            0.026612124782406828
+          ],
+          "snapping_hypotheses": [
+            {
+              "bits": 4,
+              "edge_functions": [
+                -0.015625,
+                0.0,
+                -0.15625
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 8,
+              "edge_functions": [
+                -0.0076904296875,
+                0.0,
+                -0.087890625
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 12,
+              "edge_functions": [
+                -0.007617473602294922,
+                0.0,
+                -0.0866783857345581
+              ],
+              "strictly_inside": false
+            }
+          ],
+          "strictly_inside_unrounded": false,
+          "triangle": 10604,
+          "world_vertices": [
+            [
+              1.5,
+              2.25,
+              7.25
+            ],
+            [
+              1.5,
+              2.5,
+              7.25
+            ],
+            [
+              1.75,
+              2.5,
+              7.25
+            ]
+          ]
+        }
+      ],
+      "pixel_centre": [
+        57.5,
+        185.5
+      ],
+      "triangles": 12494,
+      "view": 4
+    },
+    {
+      "bounds": [
+        [
+          0.5,
+          0.0,
+          0.25
+        ],
+        [
+          3.0,
+          16.0,
+          13.0
+        ]
+      ],
+      "camera_focus": [
+        -30.25,
+        8.000004768371582,
+        6.25
+      ],
+      "matrix_float_words": [
+        -4.09406027301884e-07,
+        -0.477094441652298,
+        -0.9848077297210693,
+        0.9848077297210693,
+        -2.7474772930145264,
+        8.188120403929133e-08,
+        1.7881393432617188e-07,
+        -1.7881393432617188e-07,
+        0.0,
+        1.1046124696731567,
+        -0.07089158147573471,
+        0.07089158147573471,
+        0.0,
+        0.0,
+        0.10000000149011612,
+        0.0
+      ],
+      "model": "lock_study_middle_nw_rear_sea",
+      "nearby_front_triangles": [
+        {
+          "area": -0.09415951905658458,
+          "palette": 1,
+          "projected_unrounded_vertices": [
+            [
+              199.26261254611126,
+              185.46529527679735,
+              32.077143959701914
+            ],
+            [
+              195.99982296026639,
+              185.49991283594585,
+              32.3233458474287
+            ],
+            [
+              198.7198158295082,
+              185.49991283748506,
+              32.32334589213218
+            ]
+          ],
+          "signed_inside_edge_distances_pixels": [
+            0.026612055501714044,
+            -8.716263933505647e-05,
+            0.013903628305217514
+          ],
+          "snapping_hypotheses": [
+            {
+              "bits": 4,
+              "edge_functions": [
+                -0.15625,
+                0.0,
+                -0.015625
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 8,
+              "edge_functions": [
+                -0.087890625,
+                0.0,
+                -0.0076904296875
+              ],
+              "strictly_inside": false
+            },
+            {
+              "bits": 12,
+              "edge_functions": [
+                -0.0866783857345581,
+                0.0,
+                -0.007617473602294922
+              ],
+              "strictly_inside": false
+            }
+          ],
+          "strictly_inside_unrounded": false,
+          "triangle": 10825,
+          "world_vertices": [
+            [
+              2.25,
+              1.5,
+              7.25
+            ],
+            [
+              2.5,
+              1.75,
+              7.25
+            ],
+            [
+              2.5,
+              1.5,
+              7.25
+            ]
+          ]
+        }
+      ],
+      "pixel_centre": [
+        198.5,
+        185.5
+      ],
+      "triangles": 12812,
+      "view": 5
+    }
+  ],
+  "runtime_source_or_artwork_changed": false,
+  "scope": "Read-only reconstruction using exact original runtime mesher and fixed review camera. Double evaluation of the stored float matrix and hypothetical fixed-point snapping locate sample-edge candidates; they are not measured GPU vertex output or an accepted renderer repair. No artwork, positions, cameras, masks or comparison tolerance changed."
+}

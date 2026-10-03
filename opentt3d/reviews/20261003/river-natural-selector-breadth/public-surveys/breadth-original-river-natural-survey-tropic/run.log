@@ -1,0 +1,120 @@
+[2026-10-03 16:52:39] dbg: [net:3] Starting dedicated server, version 20261003-main-mff74b6eaa7
+[2026-10-03 16:52:39] dbg: [net:3] Starting network
+[2026-10-03 16:52:39] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 16:52:39] dbg: [net:3] Network online, multiplayer available
+[2026-10-03 16:52:39] dbg: [net:3] Detected broadcast addresses:
+[2026-10-03 16:52:39] dbg: [net:3]   0) 192.168.1.255
+[2026-10-03 16:52:39] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-10-03 16:52:39] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - 20261003-main-mff74b6eaa7
+------------------------------------
+use "help" for more information.
+
+[2026-10-03 16:52:39] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-10-03 16:52:39] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-10-03 16:52:39] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 16:52:39] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 16:52:39] dbg: [net:3] Listening on 127.0.0.1:57633 (IPv4)
+[2026-10-03 16:52:39] dbg: [net:3] Listening on 127.0.0.1:57633 (IPv4)
+[2026-10-03 16:52:39] dbg: [net:3] Network revision name: 20261003-main-mff74b6eaa7
+[2026-10-03 16:52:39] dbg: [net:3] [crypto] Creating a new random key
+[2026-10-03 16:52:39] dbg: [net:3] Generating map, please wait...
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 5
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 10
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 15
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 20
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 60
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 65
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 70
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 75
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 80
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 85
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 90
+[2026-10-03 16:52:39] dbg: [net:3] Map generation percentage complete: 99
+[2026-10-03 16:52:39] dbg: [net:3] Map generated, starting game
+Game is already unpaused.
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":8389,"x":69,"y":65,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":8517,"x":69,"y":66,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":8645,"x":69,"y":67,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":8773,"x":69,"y":68,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":8901,"x":69,"y":69,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9029,"x":69,"y":70,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9157,"x":69,"y":71,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:40] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9285,"x":69,"y":72,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9413,"x":69,"y":73,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9541,"x":69,"y":74,"slope":0,"min_height_levels":2}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9669,"x":69,"y":75,"slope":9,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9797,"x":69,"y":76,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":9925,"x":69,"y":77,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10053,"x":69,"y":78,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10181,"x":69,"y":79,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10306,"x":66,"y":80,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10307,"x":67,"y":80,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10308,"x":68,"y":80,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10309,"x":69,"y":80,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10428,"x":60,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10429,"x":61,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10430,"x":62,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10431,"x":63,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10432,"x":64,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10433,"x":65,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10434,"x":66,"y":81,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10538,"x":42,"y":82,"slope":3,"min_height_levels":0}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10539,"x":43,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10540,"x":44,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10541,"x":45,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10542,"x":46,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10551,"x":55,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10552,"x":56,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10553,"x":57,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10554,"x":58,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10555,"x":59,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10556,"x":60,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10557,"x":61,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10558,"x":62,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10559,"x":63,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10560,"x":64,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10561,"x":65,"y":82,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10666,"x":42,"y":83,"slope":3,"min_height_levels":0}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10667,"x":43,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10668,"x":44,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10669,"x":45,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10670,"x":46,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10671,"x":47,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10672,"x":48,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10673,"x":49,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10674,"x":50,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10675,"x":51,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10676,"x":52,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10677,"x":53,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10678,"x":54,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10679,"x":55,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10680,"x":56,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10681,"x":57,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10682,"x":58,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10683,"x":59,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10684,"x":60,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10685,"x":61,"y":83,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10794,"x":42,"y":84,"slope":3,"min_height_levels":0}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10795,"x":43,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10796,"x":44,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10797,"x":45,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10798,"x":46,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10799,"x":47,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10800,"x":48,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10801,"x":49,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10802,"x":50,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10803,"x":51,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10804,"x":52,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10805,"x":53,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10806,"x":54,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10807,"x":55,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:41] dbg: [script:4] [0] [I] RIVER_SURVEY_TILE {"tile":10808,"x":56,"y":84,"slope":0,"min_height_levels":1}
+[2026-10-03 16:52:42] dbg: [script:4] [0] [I] RIVER_SURVEY_READY {"map_width":128,"map_height":128,"river_tiles":77,"read_only_tile_queries":true}
+‎*** Game paused (manual)
+Saving map...
+[2026-10-03 16:52:42] dbg: [script:3] [0] [W] Save function is not implemented
+[2026-10-03 16:52:42] dbg: [script:3] [0] [W] Save function is not implemented
+Map successfully saved to 'river-survey.sav'.
+[2026-10-03 16:52:42] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 16:52:42] dbg: [net:3] Shutting down network

@@ -1,5 +1,40 @@
 # Active extended development goal
 
+## Natural river slope/climate breadth established; origin repair rejected — October 3
+
+Five normally generated maps are surveyed through read-only public NoAI queries and
+acknowledged saves, without building/terraforming rivers or forcing features/RNG.
+Forty quiet native Classic/OpenGFX controls retain all 20 flat/NE/SE/SW/NW slope/
+climate selections and 80 bank-input/climate combinations per base set. Every surveyed
+river tile is rendered with its exact original slope/anchor/source height: 1,466
+ground/2,783 bank owner states per base set, across original heights 0…56. Twenty
+strict same-backend tracing-on/off worlds have zero changed pixels. Eight additional
+wider-camera controls preserve all 1,353 earlier common owners and add 1,614 states.
+Eight registered sheets retain 200 complete source/input states. No absent-bank
+execution or full height/neighbourhood/custom-family/phase/ship coverage is established.
+
+The eight lock silhouette pixels localize to palette-1 underside/sample-edge ties.
+Reversing OpenGL's internal framebuffer origin makes all 432 paired lock views exact,
+but changes seven world pixels and leaves 19 cross-backend differences (previously22).
+The diagnostic is not an accepted runtime repair; its source/controls/strict failures
+remain retained and the committed renderer is restored byte-exactly. Canonical runtime
+still has the eight rejected street differences. Timeout/CLI/cache-size/JSON-key audit
+failures are separate from corrected passing controls, not silently overwritten.
+
+Restored native 213, harness 104 and boundary checks pass. All three quality reports
+are word-exact: 2,866/2,950/2,998 rows, 57/141/189 current individual records, no score/
+check/defect/fingerprint/evidence/binding promotion and zero approvals/four gaps. Art,
+HQ compiler/tests and the candidate CSV remain excluded. Evidence:
+`reviews/20261003/river-natural-selector-breadth/`. Recommended `.42` is unchanged.
+
+Continue independent raised-rock/island/bank/terrain/animated-water ownership and
+source-faithful volumes with complete-family fallback and doubled terrain but original
+object dimensions. Repair the broader renderer differences without masks/tolerance,
+then recheck every changed lock/HQ owner and all natural larger HQ stages/climates.
+All catalogue families/states, fleets/emitter clearance, genuine individual 8/10,
+smooth 60fps and platforms/input/replay/network remain required. This evidence entry
+does not itself record a stopping clock or claim completion.
+
 ## Actual river feature/offset selections retained — October 3
 
 The default-off observer now records values at original river draw sites, without

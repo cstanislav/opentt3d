@@ -1,0 +1,7 @@
+{
+  "failure": "Read-only audit compared native PAM dimensions against 4x sprite-cache dimensions and rejected the sheet before any image was written.",
+  "source_images_or_metadata_changed": false,
+  "partial_directory": "build-macos/breadth-original-river-natural-source-sheets",
+  "correct_rule": "ExportSpriteReference normalizes through 1U<<ZOOM_LVL_NORMAL == 4, preserving complete source pixels and exact original offsets. Use the existing registered source-sheet convention, not a resized/cropped source or relaxed comparison.",
+  "earlier_quality_audit_failure": "Direct in-memory audit equality used integer score_counts keys versus JSON string keys. Normalize the in-memory report through JSON before comparison; do not change any model, score, fingerprint or evidence."
+}
