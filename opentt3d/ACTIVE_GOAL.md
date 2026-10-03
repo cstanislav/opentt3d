@@ -1,5 +1,34 @@
 # Active extended development goal
 
+## `.40` independently audited and public — October 3, 10:37:55 UTC
+
+The five-object increment at immutable`8f54421fcd24082c684acc83ada1af6ed37b8b25`
+passes all eight jobs in37113712281. Independent downloads reconcile19 attachments,
+18 checksums,2,179 exact tagged source files and six matching1,799-model catalogues.
+All1,794 earlier models and owner bindings remain exact. Three downloaded Mac
+render/save/clipping controls, seven hosted graphical controls, Windows x64/x86
+native load/save and the1,800-frame Linux support/collector contexts pass. The
+three hosted Mac title-world regions match`.39`exactly; llvmpipe1.692fps and
+2,540,978,176 sampled bytes do not grant smooth60fps/memory acceptance.
+
+Guarded publication37116897323 changes only the draft flag and preserves all19
+attachment IDs/sizes/digests, with no release-event rebuild. Recommended download
+is now audited`.40`; source/capture/package checks do not approve the full quality
+objective. Its ledger still has25 individual6–7 reviews and no8/10 approval.
+Evidence:`build-macos/playable-release40-independent-reconciliation.json`and
+`build-macos/playable-release40-recommended-public-receipt.json`.
+
+Work continues separately on the two ground-only HQ sizes. The initial32 candidates
+are preserved and rejected for oversized/reversed ordinary buildings, a squat
+Toyland turret and a one-colour checker lawn. Corrected registered sources and
+all eight climate/backend geometry/atlas/picking/save controls pass, but ground
+grain, glazing, roof shape, natural upgraded-world states and individual reviews
+remain unfinished. Three larger HQ sizes and their ground/body ownership remain
+uncovered; no complete HQ coverage is claimed. These candidates are not in`.40`.
+Locks, rivers/disasters, all-fleet clearance, emitters and full catalogue-wide
+individual review/performance work stay active. This is an in-progress checkpoint,
+not the actual stopping clock or a completed goal.
+
 ## Original object increment sealed; full quality goal remains open — October 3
 
 Five genuine object volumes add transmitter, lighthouse, owned-land sign, normal

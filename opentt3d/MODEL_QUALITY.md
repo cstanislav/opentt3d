@@ -86,5 +86,7 @@ defects remain explicit. Every supported beacon/lamp control observes all four
 unmodified original palette phases from one object; fallback controls preserve
 complete source families. These technical gates do not grant8/10 acceptance.
 
-The desktop release`.39`is independently audited and recommended. Its1,794-model
-catalogue includes the road/canal/bank increment, not the later object candidates.
+The desktop release`.40`is independently audited and recommended. Its1,799-model
+catalogue includes the road/canal/bank increment and five original object volumes,
+but not the newer two-stage HQ candidates. Publication does not change the25
+individual sub-eight reviews or grant complete artwork/state/performance approval.

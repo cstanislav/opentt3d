@@ -1,5 +1,29 @@
 # Implementation verification
 
+## Independently audited original-object desktop release — October 3
+
+Published`.40`targets exact`8f54421fcd24082c684acc83ada1af6ed37b8b25`in successful
+eight-job packaging37113712281. Independent audits reconcile19 attachments,
+18 checksums,2,179 exact tagged source files, pinned graphics and six matching
+1,799-model catalogues. All1,794 prior models and bindings stay exact; five object
+volumes add13 original climate bindings. The new HQ candidates are not included.
+Catalogue LF SHA-256:
+`d933abe306e88436af9236e4ae8158886e21270e96519ea29a02f9ea8c5d6ce1`.
+
+Three independently downloaded Mac render/save/72-view clipping controls, seven
+hosted graphical controls and Windows x64/x86 native load/save pass. Three hosted
+Mac title-world regions match`.39`exactly. Linux's1,800-frame support/collector
+journey retains every context/tolerance; llvmpipe1.692fps/2,540,978,176 sampled bytes
+are not arbitrary-world smooth60fps/long-duration-memory acceptance. Windows ARM64
+execution, Windows GPU/foreground input and replay/network behavior stay unverified.
+
+Guarded publication37116897323 preserves all19 audited attachment IDs/sizes/digests
+without a release-event rebuild. Recommended download is public`.40`. SHA256SUMS
+SHA-256:`efd2ebcc14b9fdcffd2c83fcc5545a747280d37d003151e656e4792d7f44a549`.
+Evidence:`build-macos/playable-release40-independent-reconciliation.json`and
+`build-macos/playable-release40-recommended-public-receipt.json`. No new individual
+8/10, original-art or complete breadth approval follows from release success.
+
 ## Original landmark/owned-land voxel candidates — October 3
 
 Five independently volumetric objects add13 supported-climate bindings, reaching

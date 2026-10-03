@@ -2,6 +2,28 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — `.40` independently audited and published
+
+Recommended downloads use`.40`at exact
+`8f54421fcd24082c684acc83ada1af6ed37b8b25`. All eight jobs in37113712281 pass;
+independent audits reconcile19 attachments,18 checksums,2,179 exact tagged source
+files and six matching1,799-model catalogues. Five original object volumes add13
+climate bindings; all1,794 preceding models/bindings stay exact. Three downloaded
+Mac controls, seven hosted graphical controls and Windows x64/x86 native load/save
+pass. Three hosted Mac title-world regions match`.39`exactly. Linux's1,800-frame
+support/collector journey retains every context/tolerance;1.692fps/2,540,978,176
+sampled bytes do not grant sustained60fps/memory acceptance.
+
+Guarded publication37116897323 preserves all19 attachment IDs/sizes/digests and
+triggers no release-event rebuild. The2,462-entry published ledger has25 individual
+6–7/10 reviews and zero8/10 approvals. Complete source/orbit/street capture
+availability is not catalogue-wide individual aesthetic inspection. Strict wider
+backend object differences and full HQ/lock/river/disaster/emitter/fleet/performance
+gaps remain open. New two-stage HQ candidates are separate working-tree studies,
+not in this immutable release. Evidence:
+`build-macos/playable-release40-independent-reconciliation.json`and
+`build-macos/playable-release40-recommended-public-receipt.json`.
+
 ## October 3 — `.39` independently verified and published
 
 Recommended downloads now use `.39` at exact commit

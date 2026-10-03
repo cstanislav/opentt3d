@@ -117,14 +117,16 @@ Set `OPENTT3D_AUTO_LOD=0` for a full-detail comparison. Trees use the previous
 projected-material3D geometry by default after matched voxel-tree LOD tests remained
 too slow. `OPENTT3D_TREE_STYLE=voxel` selects the retained voxel trees for diagnostics.
 
-The current artwork is a development subset: **1,354 voxel volumes**, covering
-110 house IDs,62 diagnostic tree sprite families and all256 vanilla vehicle definitions,
-plus76/175 industry body definitions,80 independent industry grounds,53/74 airport
-definitions and all six depot families. Climate/state
-coverage remains incomplete: Arctic farms/forests and several non-temperate industry
-grounds retain supplied source artwork pending independent volumes. No model has
-final visual approval. Remaining industry and
-infrastructure objects use reference sprite planes counted as missing geometry.
+The independently audited`.40`release contains **1,799 voxel volumes**, including
+five original objects across13 climate bindings and the earlier house, vehicle,
+industry, airport, depot, effect and canal families. Catalogue counts include
+retained diagnostic voxel trees; the permitted projected-material trees remain
+the normal runtime path. Twenty-five individual reviews score6–7/10, with explicit
+defects; no model has final visual approval. Complete HQ/lock/river/disaster breadth,
+all-angle source fidelity, fleet/emitter contexts and sustained smooth60fps remain
+unfinished. Newer working-tree HQ studies are not part of this immutable release.
+Original sprite fallbacks and placeholders are still counted as missing geometry,
+never as completed3D coverage.
 See [status](STATUS.md) and [verified results](VERIFICATION.md).
 
 Run the GPU and loaded-world navigation checks with an isolated fixture:
