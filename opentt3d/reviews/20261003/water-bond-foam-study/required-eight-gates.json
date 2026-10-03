@@ -1,0 +1,65 @@
+[
+  {
+    "scope": "canonical",
+    "exit_code": 1,
+    "rows": 2866,
+    "approvals": 0,
+    "coverage_gaps": 4,
+    "report_exact": true,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources/baseset/opentt3d-voxels.json",
+      "--reviews",
+      "/Users/stanislav/Projects/opentt3d/assets/3d/quality_reviews.json",
+      "--inventory",
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261003/water-bond-foam-study/canonical-inventory.json",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-lock-detail-eight-gates/canonical-quality.json",
+      "--require-eight"
+    ]
+  },
+  {
+    "scope": "rejected-hq",
+    "exit_code": 1,
+    "rows": 2950,
+    "approvals": 0,
+    "coverage_gaps": 4,
+    "report_exact": true,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-large-brick-corner-frozen-build/baseset/opentt3d-voxels.json",
+      "--reviews",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-lock-detail-eight-gates/hq-reviews.json",
+      "--inventory",
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261003/water-bond-foam-study/rejected-hq-inventory.json",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-lock-detail-eight-gates/rejected-hq-quality.json",
+      "--require-eight"
+    ]
+  },
+  {
+    "scope": "rejected-hq-lock",
+    "exit_code": 1,
+    "rows": 2998,
+    "approvals": 0,
+    "coverage_gaps": 4,
+    "report_exact": true,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-lock-detail-eight-gates/mixed-catalogue.json",
+      "--reviews",
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261003/water-bond-foam-study/combined-quality-reviews.json",
+      "--inventory",
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261003/water-bond-foam-study/rejected-hq-lock-inventory.json",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-lock-detail-eight-gates/rejected-hq-lock-quality.json",
+      "--require-eight"
+    ]
+  }
+]

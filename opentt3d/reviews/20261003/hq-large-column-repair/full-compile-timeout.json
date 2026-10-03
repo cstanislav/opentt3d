@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/assets/compile_voxels.py",
+    "assets/3d/voxels.json",
+    "--output",
+    "build-macos/breadth-original-hq-large-column-catalogue.json"
+  ],
+  "timeout_seconds": 120,
+  "compiled_catalogue_written": false,
+  "scope": "First foreground full compiler timeout; not a passing build or artwork rejection. A longer immutable-input compile follows separately."
+}

@@ -1,0 +1,2868 @@
+{
+  "reference": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-large-brick-corner-temperate-vulkan/renderer3d-reference",
+  "actual": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-large-brick-corner-temperate-opengl/renderer3d-reference",
+  "images": 1329,
+  "pixels": 179020301,
+  "differences": [
+    {
+      "name": "model-voxel-context-0",
+      "changed_pixels": 1,
+      "first_pixel": [
+        316,
+        271
+      ],
+      "reference_rgba": [
+        28,
+        68,
+        140,
+        255
+      ],
+      "actual_rgba": [
+        40,
+        92,
+        164,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        509,
+        292
+      ],
+      "reference_rgba": [
+        48,
+        52,
+        84,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        72,
+        56,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-5",
+      "changed_pixels": 757,
+      "first_pixel": [
+        0,
+        492
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-0-2",
+      "changed_pixels": 1,
+      "first_pixel": [
+        397,
+        328
+      ],
+      "reference_rgba": [
+        32,
+        80,
+        4,
+        255
+      ],
+      "actual_rgba": [
+        40,
+        92,
+        164,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-0-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        407,
+        386
+      ],
+      "reference_rgba": [
+        56,
+        120,
+        188,
+        255
+      ],
+      "actual_rgba": [
+        40,
+        92,
+        164,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-0-6",
+      "changed_pixels": 27,
+      "first_pixel": [
+        112,
+        400
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        149,
+        148,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-10-4",
+      "changed_pixels": 19,
+      "first_pixel": [
+        408,
+        434
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-10-6",
+      "changed_pixels": 6,
+      "first_pixel": [
+        420,
+        460
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-11-4",
+      "changed_pixels": 204,
+      "first_pixel": [
+        212,
+        457
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-11-5",
+      "changed_pixels": 204,
+      "first_pixel": [
+        406,
+        457
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        481,
+        276
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        72,
+        56,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-2",
+      "changed_pixels": 3,
+      "first_pixel": [
+        350,
+        185
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-3",
+      "changed_pixels": 2,
+      "first_pixel": [
+        519,
+        372
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-4",
+      "changed_pixels": 389,
+      "first_pixel": [
+        63,
+        479
+      ],
+      "reference_rgba": [
+        168,
+        168,
+        168,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-5",
+      "changed_pixels": 164,
+      "first_pixel": [
+        258,
+        479
+      ],
+      "reference_rgba": [
+        216,
+        216,
+        216,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-6",
+      "changed_pixels": 40,
+      "first_pixel": [
+        433,
+        311
+      ],
+      "reference_rgba": [
+        64,
+        64,
+        100,
+        255
+      ],
+      "actual_rgba": [
+        84,
+        28,
+        16,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-12-7",
+      "changed_pixels": 11,
+      "first_pixel": [
+        294,
+        468
+      ],
+      "reference_rgba": [
+        184,
+        108,
+        88,
+        255
+      ],
+      "actual_rgba": [
+        196,
+        128,
+        108,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-13-4",
+      "changed_pixels": 6,
+      "first_pixel": [
+        416,
+        456
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-13-6",
+      "changed_pixels": 6,
+      "first_pixel": [
+        383,
+        461
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-14-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        473,
+        371
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-14-5",
+      "changed_pixels": 30,
+      "first_pixel": [
+        173,
+        460
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-14-7",
+      "changed_pixels": 6,
+      "first_pixel": [
+        389,
+        456
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-15-2",
+      "changed_pixels": 1,
+      "first_pixel": [
+        438,
+        432
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-15-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        438,
+        432
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-15-4",
+      "changed_pixels": 61,
+      "first_pixel": [
+        257,
+        457
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-15-5",
+      "changed_pixels": 102,
+      "first_pixel": [
+        406,
+        457
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-16-2",
+      "changed_pixels": 1,
+      "first_pixel": [
+        519,
+        372
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-16-3",
+      "changed_pixels": 2,
+      "first_pixel": [
+        569,
+        359
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-16-4",
+      "changed_pixels": 6,
+      "first_pixel": [
+        367,
+        438
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        36,
+        40,
+        68,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-16-6",
+      "changed_pixels": 114,
+      "first_pixel": [
+        244,
+        293
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-16-7",
+      "changed_pixels": 31,
+      "first_pixel": [
+        532,
+        293
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-17-4",
+      "changed_pixels": 6,
+      "first_pixel": [
+        416,
+        456
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        64,
+        112,
+        12,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-17-6",
+      "changed_pixels": 16,
+      "first_pixel": [
+        411,
+        456
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-18-5",
+      "changed_pixels": 15,
+      "first_pixel": [
+        173,
+        460
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-18-7",
+      "changed_pixels": 11,
+      "first_pixel": [
+        384,
+        456
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-19-2",
+      "changed_pixels": 1,
+      "first_pixel": [
+        438,
+        432
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-19-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        438,
+        432
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-19-4",
+      "changed_pixels": 72,
+      "first_pixel": [
+        322,
+        457
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-19-5",
+      "changed_pixels": 152,
+      "first_pixel": [
+        406,
+        457
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-19-7",
+      "changed_pixels": 1,
+      "first_pixel": [
+        393,
+        462
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-2-5",
+      "changed_pixels": 30,
+      "first_pixel": [
+        378,
+        475
+      ],
+      "reference_rgba": [
+        168,
+        168,
+        168,
+        255
+      ],
+      "actual_rgba": [
+        32,
+        80,
+        4,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-4-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        377,
+        235
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-4-4",
+      "changed_pixels": 182,
+      "first_pixel": [
+        130,
+        479
+      ],
+      "reference_rgba": [
+        60,
+        88,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        80,
+        104,
+        60,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-4-6",
+      "changed_pixels": 37,
+      "first_pixel": [
+        265,
+        479
+      ],
+      "reference_rgba": [
+        92,
+        156,
+        52,
+        255
+      ],
+      "actual_rgba": [
+        32,
+        80,
+        4,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-4-7",
+      "changed_pixels": 6,
+      "first_pixel": [
+        227,
+        457
+      ],
+      "reference_rgba": [
+        12,
+        36,
+        104,
+        255
+      ],
+      "actual_rgba": [
+        56,
+        120,
+        188,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-5-4",
+      "changed_pixels": 330,
+      "first_pixel": [
+        368,
+        456
+      ],
+      "reference_rgba": [
+        56,
+        120,
+        188,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-5-5",
+      "changed_pixels": 21,
+      "first_pixel": [
+        192,
+        464
+      ],
+      "reference_rgba": [
+        133,
+        178,
+        219,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-6-0",
+      "changed_pixels": 1,
+      "first_pixel": [
+        483,
+        236
+      ],
+      "reference_rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-6-2",
+      "changed_pixels": 1,
+      "first_pixel": [
+        204,
+        344
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-6-4",
+      "changed_pixels": 14,
+      "first_pixel": [
+        177,
+        460
+      ],
+      "reference_rgba": [
+        56,
+        120,
+        188,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-7-0",
+      "changed_pixels": 1,
+      "first_pixel": [
+        409,
+        302
+      ],
+      "reference_rgba": [
+        108,
+        44,
+        28,
+        255
+      ],
+      "actual_rgba": [
+        64,
+        20,
+        8,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-7-2",
+      "changed_pixels": 2,
+      "first_pixel": [
+        353,
+        282
+      ],
+      "reference_rgba": [
+        32,
+        80,
+        4,
+        255
+      ],
+      "actual_rgba": [
+        64,
+        112,
+        12,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-7-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        409,
+        302
+      ],
+      "reference_rgba": [
+        80,
+        104,
+        60,
+        255
+      ],
+      "actual_rgba": [
+        60,
+        88,
+        48,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-8-0",
+      "changed_pixels": 1,
+      "first_pixel": [
+        437,
+        345
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-8-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        497,
+        343
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-9-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        415,
+        293
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-9-4",
+      "changed_pixels": 98,
+      "first_pixel": [
+        405,
+        465
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-9-5",
+      "changed_pixels": 899,
+      "first_pixel": [
+        198,
+        479
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-9-6",
+      "changed_pixels": 95,
+      "first_pixel": [
+        142,
+        419
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        48,
+        48,
+        48,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-object_ground-9-7",
+      "changed_pixels": 20,
+      "first_pixel": [
+        358,
+        479
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-0-0",
+      "changed_pixels": 1,
+      "first_pixel": [
+        420,
+        317
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        149,
+        148,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-0-6",
+      "changed_pixels": 176,
+      "first_pixel": [
+        128,
+        334
+      ],
+      "reference_rgba": [
+        32,
+        32,
+        32,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-1-6",
+      "changed_pixels": 746,
+      "first_pixel": [
+        0,
+        492
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-3-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        348,
+        460
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-3-3",
+      "changed_pixels": 1,
+      "first_pixel": [
+        420,
+        361
+      ],
+      "reference_rgba": [
+        28,
+        68,
+        140,
+        255
+      ],
+      "actual_rgba": [
+        40,
+        92,
+        164,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-3-5",
+      "changed_pixels": 42,
+      "first_pixel": [
+        156,
+        306
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-3-6",
+      "changed_pixels": 83,
+      "first_pixel": [
+        242,
+        300
+      ],
+      "reference_rgba": [
+        32,
+        32,
+        32,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-3-7",
+      "changed_pixels": 65,
+      "first_pixel": [
+        188,
+        468
+      ],
+      "reference_rgba": [
+        128,
+        56,
+        40,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-6-2",
+      "changed_pixels": 3,
+      "first_pixel": [
+        562,
+        238
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        72,
+        56,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-6-3",
+      "changed_pixels": 2,
+      "first_pixel": [
+        395,
+        239
+      ],
+      "reference_rgba": [
+        64,
+        64,
+        100,
+        255
+      ],
+      "actual_rgba": [
+        252,
+        252,
+        252,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-6-4",
+      "changed_pixels": 11,
+      "first_pixel": [
+        407,
+        379
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        92,
+        76,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-6-6",
+      "changed_pixels": 87,
+      "first_pixel": [
+        269,
+        151
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-6-7",
+      "changed_pixels": 33,
+      "first_pixel": [
+        283,
+        325
+      ],
+      "reference_rgba": [
+        108,
+        44,
+        28,
+        255
+      ],
+      "actual_rgba": [
+        36,
+        40,
+        68,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-7-5",
+      "changed_pixels": 45,
+      "first_pixel": [
+        215,
+        229
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-7-6",
+      "changed_pixels": 99,
+      "first_pixel": [
+        165,
+        438
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-context-objects-7-7",
+      "changed_pixels": 12,
+      "first_pixel": [
+        534,
+        285
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_arctic_north-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        208,
+        90
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_arctic_north-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        68,
+        176
+      ],
+      "reference_rgba": [
+        84,
+        28,
+        16,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_arctic_west-6",
+      "changed_pixels": 7,
+      "first_pixel": [
+        115,
+        168
+      ],
+      "reference_rgba": [
+        84,
+        28,
+        16,
+        255
+      ],
+      "actual_rgba": [
+        212,
+        148,
+        128,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_temperate_north-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        208,
+        90
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_temperate_north-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        68,
+        176
+      ],
+      "reference_rgba": [
+        84,
+        28,
+        16,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_temperate_west-6",
+      "changed_pixels": 7,
+      "first_pixel": [
+        115,
+        168
+      ],
+      "reference_rgba": [
+        84,
+        28,
+        16,
+        255
+      ],
+      "actual_rgba": [
+        212,
+        148,
+        128,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_toyland_north-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        70,
+        181
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_toyland_north-5",
+      "changed_pixels": 14,
+      "first_pixel": [
+        109,
+        86
+      ],
+      "reference_rgba": [
+        56,
+        120,
+        188,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_tropic_north-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        208,
+        90
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        200,
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_tropic_north-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        68,
+        176
+      ],
+      "reference_rgba": [
+        84,
+        28,
+        16,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_huge_tropic_west-6",
+      "changed_pixels": 7,
+      "first_pixel": [
+        115,
+        168
+      ],
+      "reference_rgba": [
+        84,
+        28,
+        16,
+        255
+      ],
+      "actual_rgba": [
+        212,
+        148,
+        128,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_arctic_north-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        202,
+        86
+      ],
+      "reference_rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "actual_rgba": [
+        28,
+        68,
+        140,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_temperate_north-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        202,
+        86
+      ],
+      "reference_rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "actual_rgba": [
+        28,
+        68,
+        140,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_toyland_north-4",
+      "changed_pixels": 68,
+      "first_pixel": [
+        29,
+        177
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_toyland_north-5",
+      "changed_pixels": 67,
+      "first_pixel": [
+        94,
+        177
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_toyland_north-6",
+      "changed_pixels": 27,
+      "first_pixel": [
+        114,
+        131
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_toyland_north-7",
+      "changed_pixels": 4,
+      "first_pixel": [
+        151,
+        116
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_large_tropic_north-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        202,
+        86
+      ],
+      "reference_rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "actual_rgba": [
+        28,
+        68,
+        140,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_medium_toyland_north-4",
+      "changed_pixels": 14,
+      "first_pixel": [
+        128,
+        151
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        98,
+        101,
+        98,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_body_medium_toyland_north-7",
+      "changed_pixels": 159,
+      "first_pixel": [
+        165,
+        107
+      ],
+      "reference_rgba": [
+        32,
+        32,
+        32,
+        255
+      ],
+      "actual_rgba": [
+        48,
+        48,
+        48,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_arctic_north-6",
+      "changed_pixels": 4,
+      "first_pixel": [
+        82,
+        188
+      ],
+      "reference_rgba": [
+        36,
+        40,
+        68,
+        255
+      ],
+      "actual_rgba": [
+        64,
+        64,
+        100,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_arctic_north-7",
+      "changed_pixels": 6,
+      "first_pixel": [
+        51,
+        203
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_arctic_west-4",
+      "changed_pixels": 6,
+      "first_pixel": [
+        44,
+        207
+      ],
+      "reference_rgba": [
+        168,
+        92,
+        76,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_temperate_north-6",
+      "changed_pixels": 4,
+      "first_pixel": [
+        82,
+        188
+      ],
+      "reference_rgba": [
+        36,
+        40,
+        68,
+        255
+      ],
+      "actual_rgba": [
+        64,
+        64,
+        100,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_temperate_north-7",
+      "changed_pixels": 6,
+      "first_pixel": [
+        51,
+        203
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_temperate_west-4",
+      "changed_pixels": 6,
+      "first_pixel": [
+        44,
+        207
+      ],
+      "reference_rgba": [
+        168,
+        92,
+        76,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_east-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        54,
+        185
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_east-7",
+      "changed_pixels": 4,
+      "first_pixel": [
+        157,
+        136
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_north-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        249,
+        114
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        48,
+        48,
+        48,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_north-4",
+      "changed_pixels": 3,
+      "first_pixel": [
+        190,
+        159
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_north-6",
+      "changed_pixels": 13,
+      "first_pixel": [
+        154,
+        203
+      ],
+      "reference_rgba": [
+        128,
+        168,
+        44,
+        255
+      ],
+      "actual_rgba": [
+        84,
+        132,
+        20,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_north-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        63,
+        203
+      ],
+      "reference_rgba": [
+        84,
+        132,
+        20,
+        255
+      ],
+      "actual_rgba": [
+        128,
+        168,
+        44,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_west-5",
+      "changed_pixels": 2,
+      "first_pixel": [
+        200,
+        185
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_toyland_west-6",
+      "changed_pixels": 4,
+      "first_pixel": [
+        95,
+        136
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_tropic_north-6",
+      "changed_pixels": 4,
+      "first_pixel": [
+        82,
+        188
+      ],
+      "reference_rgba": [
+        36,
+        40,
+        68,
+        255
+      ],
+      "actual_rgba": [
+        64,
+        64,
+        100,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_tropic_north-7",
+      "changed_pixels": 6,
+      "first_pixel": [
+        51,
+        203
+      ],
+      "reference_rgba": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        184,
+        184,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_huge_tropic_west-4",
+      "changed_pixels": 6,
+      "first_pixel": [
+        44,
+        207
+      ],
+      "reference_rgba": [
+        168,
+        92,
+        76,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_arctic_north-4",
+      "changed_pixels": 29,
+      "first_pixel": [
+        105,
+        169
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        92,
+        76,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_arctic_north-7",
+      "changed_pixels": 9,
+      "first_pixel": [
+        231,
+        136
+      ],
+      "reference_rgba": [
+        128,
+        56,
+        40,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_temperate_north-4",
+      "changed_pixels": 29,
+      "first_pixel": [
+        105,
+        169
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        92,
+        76,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_temperate_north-7",
+      "changed_pixels": 9,
+      "first_pixel": [
+        231,
+        136
+      ],
+      "reference_rgba": [
+        128,
+        56,
+        40,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_east-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        54,
+        185
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_east-7",
+      "changed_pixels": 4,
+      "first_pixel": [
+        157,
+        136
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_north-1",
+      "changed_pixels": 1,
+      "first_pixel": [
+        249,
+        114
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        48,
+        48,
+        48,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_north-4",
+      "changed_pixels": 3,
+      "first_pixel": [
+        190,
+        159
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_north-5",
+      "changed_pixels": 3,
+      "first_pixel": [
+        63,
+        159
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_north-6",
+      "changed_pixels": 13,
+      "first_pixel": [
+        154,
+        203
+      ],
+      "reference_rgba": [
+        128,
+        168,
+        44,
+        255
+      ],
+      "actual_rgba": [
+        84,
+        132,
+        20,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_north-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        63,
+        203
+      ],
+      "reference_rgba": [
+        84,
+        132,
+        20,
+        255
+      ],
+      "actual_rgba": [
+        128,
+        168,
+        44,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_west-5",
+      "changed_pixels": 2,
+      "first_pixel": [
+        200,
+        185
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_toyland_west-6",
+      "changed_pixels": 4,
+      "first_pixel": [
+        95,
+        136
+      ],
+      "reference_rgba": [
+        184,
+        184,
+        184,
+        255
+      ],
+      "actual_rgba": [
+        82,
+        80,
+        82,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_tropic_north-4",
+      "changed_pixels": 29,
+      "first_pixel": [
+        105,
+        169
+      ],
+      "reference_rgba": [
+        148,
+        72,
+        56,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        92,
+        76,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_large_tropic_north-7",
+      "changed_pixels": 9,
+      "first_pixel": [
+        231,
+        136
+      ],
+      "reference_rgba": [
+        128,
+        56,
+        40,
+        255
+      ],
+      "actual_rgba": [
+        108,
+        44,
+        28,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_medium_toyland_north-4",
+      "changed_pixels": 4,
+      "first_pixel": [
+        208,
+        115
+      ],
+      "reference_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_medium_toyland_west-4",
+      "changed_pixels": 8,
+      "first_pixel": [
+        62,
+        192
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        133,
+        178,
+        219,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_arctic_west-5",
+      "changed_pixels": 78,
+      "first_pixel": [
+        89,
+        192
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        168,
+        168,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_arctic_west-7",
+      "changed_pixels": 10,
+      "first_pixel": [
+        113,
+        192
+      ],
+      "reference_rgba": [
+        168,
+        168,
+        168,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_temperate_west-5",
+      "changed_pixels": 78,
+      "first_pixel": [
+        89,
+        192
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        168,
+        168,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_temperate_west-7",
+      "changed_pixels": 10,
+      "first_pixel": [
+        113,
+        192
+      ],
+      "reference_rgba": [
+        168,
+        168,
+        168,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_toyland_north-6",
+      "changed_pixels": 6,
+      "first_pixel": [
+        70,
+        133
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_tropic_west-5",
+      "changed_pixels": 78,
+      "first_pixel": [
+        89,
+        192
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        168,
+        168,
+        168,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-hq_ground_small_tropic_west-7",
+      "changed_pixels": 10,
+      "first_pixel": [
+        113,
+        192
+      ],
+      "reference_rgba": [
+        168,
+        168,
+        168,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-object-4-0-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        131,
+        197
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-object-4-1-6",
+      "changed_pixels": 30,
+      "first_pixel": [
+        53,
+        192
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-object-4-1-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        131,
+        197
+      ],
+      "reference_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "actual_rgba": [
+        115,
+        117,
+        115,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-object-4-2-6",
+      "changed_pixels": 36,
+      "first_pixel": [
+        44,
+        192
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-object-4-3-5",
+      "changed_pixels": 3,
+      "first_pixel": [
+        66,
+        155
+      ],
+      "reference_rgba": [
+        133,
+        178,
+        219,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-object-4-4-5",
+      "changed_pixels": 12,
+      "first_pixel": [
+        148,
+        152
+      ],
+      "reference_rgba": [
+        196,
+        128,
+        108,
+        255
+      ],
+      "actual_rgba": [
+        184,
+        108,
+        88,
+        255
+      ]
+    }
+  ]
+}

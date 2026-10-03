@@ -1,5 +1,38 @@
 # Active extended development goal
 
+## HQ brick-column repair and lock surface detail re-reviewed — October 3
+
+The resumed modelling pass repairs body2621's floating corner with an explicit
+forty-cell north-to-east transfer in three ordinary climates. A wider seam study
+also moved foreign white facade paint and is retained/rejected; the final transfer
+keeps the mullion north-owned and every joined cell/six-face colour, size, origin
+and binding exact. Six changed owners have fresh individual provisional6/10 reviews.
+Remaining thickness/native paint/roof-window/perimeter-flag defects are explicit;
+Toyland ownership and natural larger-stage/all-climate worlds remain open.
+
+All48 unbound lock owners have authored face-only staggered stone courses/coping
+joints and shaded open lanterns. Nonfoam cells/openings/heights/registration stay
+exact. Front foam is on its own outer waterline/lamp-end return; rear NE/NW foam is
+end-only and SW/SE rear foam is absent. All48 have fresh individual6/10 defects:
+foam remains too thin/dark, masonry/guard/lantern detail remains coarse. No runtime
+lock/water substitution or complete source/state/terrain/custom/ship acceptance.
+
+Ten final quiet native controls preserve7,920 unchanged independent HQ views and
+ten prior same-backend saved worlds. HQ121 native views per climate and all48 lock
+native pairs match, but complete HQ galleries still fail143/143/143/144 images and
+6,615/6,615/6,615/6,559 pixels; the lock study fails13 views/25 pixels. No masks or
+tolerance. Working asset268, native213, harness104, five local lock tests and the
+boundary pass. Portable evidence retains1,296 complete lossless native images,
+original sources, failures and all three conservative scopes2,866/2,950/2,998 rows,
+57/141/189 individual records, zero approvals/four gaps. Artwork/compiler/tests/CSV
+remain quarantined; runtime source and recommended`.42` are unchanged. Evidence:
+`reviews/20261003/hq-large-column-repair/` and `water-bond-foam-study/`.
+
+This supersedes the earlier pause as ongoing work, not completion or a fresh
+stopping-clock claim. Continue source-faithful geometry/ownership, strict wider
+renderer repairs, all natural HQ stages/climates and the full catalogue/state/
+performance/platform/input/replay/network objective below.
+
 ## Execution stopping-clock audit — October 3, 22:35:34 UTC
 
 **Actual stopping clock check: 2026-10-03 22:35:34 UTC.** Modelling/native review

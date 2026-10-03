@@ -1,0 +1,1590 @@
+{
+  "format": 1,
+  "models": {
+    "lock_study_middle_ne_rear_sea": {
+      "score": 6,
+      "fingerprint": "f5c99643c0c5532ff27be3ce57d3097b6690366ca88c4970547dfb9caa621be1",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_rear_sea.png": "f419e250afa8352f62c6c62aa18228d1cc0f7e9b1bb5d02e4ab04f34184cd9ff"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Added stone courses have real face detail, but the NE source's dark end and mottled walkway remain a lighter, too regular grid in the native/street views.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Added stone courses have real face detail, but the NE source's dark end and mottled walkway remain a lighter, too regular grid in the native/street views.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_ne_front_sea": {
+      "score": 6,
+      "fingerprint": "87189306a02e456f8d1421087a1ae3522ab5cd05bfbd5128950e74d481740ec1",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_front_sea.png": "17c778c3e4de0c6ec7280c0c27de6dfabae646630318c3d77fc265075a2b8a0c"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Slender NE front has more bonded face detail, but cap/post brightness, pier contrast and the compact end return still differ from its original source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Slender NE front has more bonded face detail, but cap/post brightness, pier contrast and the compact end return still differ from its original source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_se_rear_sea": {
+      "score": 6,
+      "fingerprint": "bf6adc59161be546819f05d1a4a1a9df4207d0ead35f272650f42d09ec83e599",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_rear_sea.png": "2236195bd663801d88849761b8824e9271153205b30e826cf299238997c4786f"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SE source's strongly shaded buttress recesses and irregular paving remain too pale/regular despite the new stone courses; the rear guard is overly bright.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SE source's strongly shaded buttress recesses and irregular paving remain too pale/regular despite the new stone courses; the rear guard is overly bright.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_se_front_sea": {
+      "score": 6,
+      "fingerprint": "6057d50e37a3e6d804e9aa2f64a3891346370b951fbefc3ad1435e86b197c934",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_front_sea.png": "b16d6836a4f474e0f692d7ad434854f074279b9a471cb5e6dcd899fb3df12394"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "The SE front retains real rail air and dark masonry, but its block grid, pale coping and small terminal guard are still more regular/bright than the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "The SE front retains real rail air and dark masonry, but its block grid, pale coping and small terminal guard are still more regular/bright than the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_sw_rear_sea": {
+      "score": 6,
+      "fingerprint": "ab95a3492cce65d2525724f79cd220a7c254623240737a8f061ecc7f9ad67ad3",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_rear_sea.png": "31fc3429a7248372dc72163f8bf9fb94431a918f26d47a7511688885cf8d696e"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SW bonded stone now articulates the side, but its source-native support contrast and dark end face are flattened by light regular courses/paving.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SW bonded stone now articulates the side, but its source-native support contrast and dark end face are flattened by light regular courses/paving.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_sw_front_sea": {
+      "score": 6,
+      "fingerprint": "e414119d44b440357a3f94a5b3e08606b432cb4bd46ce406510ce073437edeff",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_front_sea.png": "e5c0866ab3710e2733e0c9ebdefce9e1857d3d5332ed57db4badeecee4dad232"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SW front's coping and rail openings remain physical; block/course spacing, near-end stone tone and bright upper bars still lack the source's fine irregularity.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SW front's coping and rail openings remain physical; block/course spacing, near-end stone tone and bright upper bars still lack the source's fine irregularity.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_nw_rear_sea": {
+      "score": 6,
+      "fingerprint": "5a13b93ff50d584a5e261576538c3975b69767eb45cc5914cdf9e265f160e80d",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_rear_sea.png": "05bae98162a7a765ec2b531784625350d68ccd9c7ebea89c6b9e6121ed17a65c"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "The transposed NW wedge retains its grade and face detail, but the original dark exposed end and mottled coping are too uniform/light.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "The transposed NW wedge retains its grade and face detail, but the original dark exposed end and mottled coping are too uniform/light.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_nw_front_sea": {
+      "score": 6,
+      "fingerprint": "e9479b2cd02f8879a7480d612797c9a26f9b89cc78c15b1ce4c8ed1cabacb480",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_front_sea.png": "d973336c589c49a75a3892e169d18f8aed294c30808a394e4744abd04267ae09"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NW dark front remains slender, but its pale regular cap, grid-like bonded stone and the guard return are not source-faithful.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NW dark front remains slender, but its pale regular cap, grid-like bonded stone and the guard return are not source-faithful.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_ne_rear_elevated": {
+      "score": 6,
+      "fingerprint": "f5c99643c0c5532ff27be3ce57d3097b6690366ca88c4970547dfb9caa621be1",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_rear_elevated.png": "8334b27ba036394dd8c55c72e526f97b7af9e71476be1a9127123bd9948017ef"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Independently inspected elevated NE rear keeps its wedge, but the source's dark end/recess texture and irregular walkway remain too light and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Independently inspected elevated NE rear keeps its wedge, but the source's dark end/recess texture and irregular walkway remain too light and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_ne_front_elevated": {
+      "score": 6,
+      "fingerprint": "87189306a02e456f8d1421087a1ae3522ab5cd05bfbd5128950e74d481740ec1",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_ne_front_elevated.png": "51f696fa9598bdf62ad410fc0d112bde2266f6231537550621700d4f945fd7fb"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NE front keeps its own narrow coping and rail air; coarse end-guard proportions and bright cap/post contrast remain source mismatches.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NE front keeps its own narrow coping and rail air; coarse end-guard proportions and bright cap/post contrast remain source mismatches.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_se_rear_elevated": {
+      "score": 6,
+      "fingerprint": "bf6adc59161be546819f05d1a4a1a9df4207d0ead35f272650f42d09ec83e599",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_rear_elevated.png": "fdeceeb7717eef8e195efcf3d7e160a94cf8e45fd3e77104ca22480adf45a45f"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SE rear is volumetric and bonded, but native pier shadows, paving grain and guard brightness still diverge from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SE rear is volumetric and bonded, but native pier shadows, paving grain and guard brightness still diverge from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_se_front_elevated": {
+      "score": 6,
+      "fingerprint": "6057d50e37a3e6d804e9aa2f64a3891346370b951fbefc3ad1435e86b197c934",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_se_front_elevated.png": "462f84a0033c251f798d9627fb0aaa361c183300bfb4e0c7a05b3387a295a095"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Separately inspected elevated SE front retains its dark/narrow profile, but the repetitive courses and light rail/cap/end return remain oversimplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Separately inspected elevated SE front retains its dark/narrow profile, but the repetitive courses and light rail/cap/end return remain oversimplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_sw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "ab95a3492cce65d2525724f79cd220a7c254623240737a8f061ecc7f9ad67ad3",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_rear_elevated.png": "77cf3ad86a97ef744df1d30bc754847f415eb48d68d9cbb983bee03e733a8b32"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SW rear retains grade and new surface bonds; the source's shaded support face and mottled walkway are still represented by a light regular grid.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SW rear retains grade and new surface bonds; the source's shaded support face and mottled walkway are still represented by a light regular grid.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_sw_front_elevated": {
+      "score": 6,
+      "fingerprint": "e414119d44b440357a3f94a5b3e08606b432cb4bd46ce406510ce073437edeff",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_sw_front_elevated.png": "90f88e9420d2c08ef36dfb5250677d8028777b3835d3b9c5c1199b868f7b7cd7"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SW front keeps physically open bars, but native coping contrast, near-end grain and regular course pattern remain insufficiently source-faithful.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SW front keeps physically open bars, but native coping contrast, near-end grain and regular course pattern remain insufficiently source-faithful.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_nw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "5a13b93ff50d584a5e261576538c3975b69767eb45cc5914cdf9e265f160e80d",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_rear_elevated.png": "6d495fa2f37ceed9b9e3d13ea97944272e3d78789e88ad89264b970e6a9fa5be"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NW transposed rear retains real support relief; dark source end-face contrast and fine coping/guard finish still need repair.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NW transposed rear retains real support relief; dark source end-face contrast and fine coping/guard finish still need repair.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_middle_nw_front_elevated": {
+      "score": 6,
+      "fingerprint": "e9479b2cd02f8879a7480d612797c9a26f9b89cc78c15b1ce4c8ed1cabacb480",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_middle_nw_front_elevated.png": "5a76aa44c5ac9aa19c46c60e131a8ed135685e2458ecdbf0b2ebd450acdd3a99"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NW dark front retains its slender footprint, but repeated stone blocks, pale cap and compact return guard differ from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NW dark front retains its slender footprint, but repeated stone blocks, pale cap and compact return guard differ from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_ne_rear_sea": {
+      "score": 6,
+      "fingerprint": "1e566c4f851fc9cd279af6cb6d1df272644ef930da2d49ee02724b16dd1c1a3e",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_rear_sea.png": "a33916072fc67679e595d46c2dd31d6e339efdbeb81faa55d607f1d76ecd649e"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NE rear no longer invents a full longitudinal foam stripe and its lamp housing is shaded, but the source's short end foam is much brighter/wider than the candidate's tiny blue mark; stone/guard tones remain too regular/light.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NE rear no longer invents a full longitudinal foam stripe and its lamp housing is shaded, but the source's short end foam is much brighter/wider than the candidate's tiny blue mark; stone/guard tones remain too regular/light.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_ne_front_sea": {
+      "score": 6,
+      "fingerprint": "a8be8cfc6a7bb2f347745aaa3e24a90ca8b6dae5027b3113578b445013a36a40",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_front_sea.png": "abe623d203f799ad76a82efcdcff31c77338e2a142c24556a32f179db0ae1693"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NE front foam is now on its own visible outer waterline, but its thin dark-blue dotted stroke does not match the original broad pale foam/return; lantern cap, pier contrast and regular bonds remain coarse.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NE front foam is now on its own visible outer waterline, but its thin dark-blue dotted stroke does not match the original broad pale foam/return; lantern cap, pier contrast and regular bonds remain coarse.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_se_rear_sea": {
+      "score": 6,
+      "fingerprint": "bf288b8a7844bad671bccebc9f03d96daca3fbcf20535791f2b8f578773a92ce",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_rear_sea.png": "2f2a2aee6c6c76f0e11db807782a3601b37bd3417ad3a8522a576d2be539976b"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Unjustified SE rear foam is removed and the pane stays open, but the original stone/end/walkway shadows and finer lantern shape remain too generic and pale.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Unjustified SE rear foam is removed and the pane stays open, but the original stone/end/walkway shadows and finer lantern shape remain too generic and pale.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_se_front_sea": {
+      "score": 6,
+      "fingerprint": "110530383fa880d14f438b357a6948c9536bf1c342c0c00068d318cc2a73e06a",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_front_sea.png": "bc48b6b70bf8448c0a543cffe6a9d67349e55eb64e1a6b0a5d5cc7c9d3872b6b"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SE front now has separate waterline and lamp-end foam ownership, but its narrow dark stroke is unlike the original bright broad line; cap/guard/lantern proportions and masonry contrast remain unaccepted.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SE front now has separate waterline and lamp-end foam ownership, but its narrow dark stroke is unlike the original bright broad line; cap/guard/lantern proportions and masonry contrast remain unaccepted.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_sw_rear_sea": {
+      "score": 6,
+      "fingerprint": "a8484cf78f8ac44f60a813c438bf0f99a9c6ba24eefaeb2eb4637de5a1fc50e3",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_rear_sea.png": "b1b0deb5c78514756bacd9abfb0df9b4121f0e464afa549ead72805073c9ac5d"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SW rear correctly omits the unjustified full foam stripe, but source pier/end shadow, mottled coping and lantern frame/pole treatment remain coarser and lighter than the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SW rear correctly omits the unjustified full foam stripe, but source pier/end shadow, mottled coping and lantern frame/pole treatment remain coarser and lighter than the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_sw_front_sea": {
+      "score": 6,
+      "fingerprint": "be3859c8866d3225550c43f33d268e00e76627911159d7f1ea32fd7d33e29d5b",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_front_sea.png": "c944f729de913a2340ae188b3e1ebc1df5b206b642637f035a31242576a1050e"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SW front waterline foam is visible on the correct side, but its blue dotted thickness and lamp-end return are not the source's bright continuous foam; lamp/coping finish and stone bond remain too regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SW front waterline foam is visible on the correct side, but its blue dotted thickness and lamp-end return are not the source's bright continuous foam; lamp/coping finish and stone bond remain too regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_nw_rear_sea": {
+      "score": 6,
+      "fingerprint": "8b927335c6dcfb836c191e1fe3b5d06925327cb7da7126e91ba306d4032357ff",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_rear_sea.png": "c3ce44f035c2075a9ec2dae06570115d6b1f08ce24b8acc2989c7e715e35bbf7"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NW rear uses only the source's lamp-end foam region, but the tiny dark mark still misses the broad pale return; shaded housing helps while stone/end/guard detail remains too light and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NW rear uses only the source's lamp-end foam region, but the tiny dark mark still misses the broad pale return; shaded housing helps while stone/end/guard detail remains too light and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_nw_front_sea": {
+      "score": 6,
+      "fingerprint": "1c0160351c61250766e2c176a45722a9cfaa8d1cd86ebb65a1244dc803d62770",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_front_sea.png": "d7601184d522d5f179782444f865e2a33b33601755e5211b57d49a8afbb4140b"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NW front foam is no longer hidden behind the wall, but its thin dark line/return is unlike the source's bright two-tone stroke; lantern silhouette, pier shadows and coping grain remain coarse.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NW front foam is no longer hidden behind the wall, but its thin dark line/return is unlike the source's bright two-tone stroke; lantern silhouette, pier shadows and coping grain remain coarse.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_ne_rear_elevated": {
+      "score": 6,
+      "fingerprint": "c8f9e90fd2cd57ead2abf41c38cd782a3554186de4c60eeba17a8c60cdd3d8f8",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_rear_elevated.png": "09fd718642e78329fde8c52cb9dd9a7d85ee77bd02398e6452199cdc2030fed8"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NE rear preserves real lamp/foam absences, but its bonded masonry and walkway remain too pale/regular and lack the source's dark end and grain.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NE rear preserves real lamp/foam absences, but its bonded masonry and walkway remain too pale/regular and lack the source's dark end and grain.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_ne_front_elevated": {
+      "score": 6,
+      "fingerprint": "c5a444d081b05a389f8bde5b7c11ac37377df6e2c9775cec50ad2d968be35021",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_ne_front_elevated.png": "446354a33b74f7c6074380f9209e504919aa42ba46e609dd97b0da7198c65127"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NE front has no invented sea accessories and keeps a narrow coping; the source's dark pier faces and fine cap/end return are still simplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NE front has no invented sea accessories and keeps a narrow coping; the source's dark pier faces and fine cap/end return are still simplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_se_rear_elevated": {
+      "score": 6,
+      "fingerprint": "0b774d08755d18f06f42691d7b452a9679a1b6d2855cf81cc571dbab9aff1f43",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_rear_elevated.png": "783bb261e7e4dd4f0d6cf5a87c56a4576e80147ea20f0bbdafeaad8e4c1bb392"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Separately inspected elevated SE rear preserves absent lamp/foam, but pier recess contrast, mottled top and bright regular guard differ from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Separately inspected elevated SE rear preserves absent lamp/foam, but pier recess contrast, mottled top and bright regular guard differ from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_se_front_elevated": {
+      "score": 6,
+      "fingerprint": "35687ab09f7cc615ed8cf6a8da466601c245f80d1fb927714a63914889b93e1f",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_se_front_elevated.png": "1efec32c5f742fa677c25bdebf6830278c6e05d08e9bd6cf34d0ca8a36784752"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SE front retains the intended accessory absences and rail air; its grid-like stone bond, light coping and small return guard remain coarse.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SE front retains the intended accessory absences and rail air; its grid-like stone bond, light coping and small return guard remain coarse.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_sw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "c8f9e90fd2cd57ead2abf41c38cd782a3554186de4c60eeba17a8c60cdd3d8f8",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_rear_elevated.png": "e8080ce644cd144a655c8ef550be3c2f653326bc7101995d00135e71218e0252"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SW rear remains independently volumetric with no sea lamp/foam, but the original shaded end and irregular stone/paving detail are too light and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SW rear remains independently volumetric with no sea lamp/foam, but the original shaded end and irregular stone/paving detail are too light and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_sw_front_elevated": {
+      "score": 6,
+      "fingerprint": "c5a444d081b05a389f8bde5b7c11ac37377df6e2c9775cec50ad2d968be35021",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_sw_front_elevated.png": "e5cf0228c971de54ddcdf9dd55ae2aea0c28ce83b5b7867fab78956258a1bbac"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SW dark front preserves all real absences and openings, but near-end stone contrast and cap/guard brightness/detail remain source mismatches.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SW dark front preserves all real absences and openings, but near-end stone contrast and cap/guard brightness/detail remain source mismatches.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_nw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "0b774d08755d18f06f42691d7b452a9679a1b6d2855cf81cc571dbab9aff1f43",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_rear_elevated.png": "8014dd8e08d9fef90e6c489e176db2a2504451487a726279011d65c0c52aa9da"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NW rear retains its own anchors and no sea accessories; transposed end shading, coping mottling and repetitive stone courses still lack source fidelity.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NW rear retains its own anchors and no sea accessories; transposed end shading, coping mottling and repetitive stone courses still lack source fidelity.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_lower_nw_front_elevated": {
+      "score": 6,
+      "fingerprint": "35687ab09f7cc615ed8cf6a8da466601c245f80d1fb927714a63914889b93e1f",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_lower_nw_front_elevated.png": "b009b2b5cbc6ffb8777d6eb73426d3a63be0eafe9b1e1befabf9f1effe369cb4"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NW narrow front stays physically open and accessory-free, but pale regular coping/rails and coarse stone/end returns do not match its source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NW narrow front stays physically open and accessory-free, but pale regular coping/rails and coarse stone/end returns do not match its source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_ne_rear_sea": {
+      "score": 6,
+      "fingerprint": "8f6a0fa1aa3e4d6bc96314df8a999a8dd6a963106accab4380cc7e637bb62693",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_rear_sea.png": "c0eaf068117136c9093ed837d11ac48bb40f30bbcb7523ffbe8c00a7cd1d9f58"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NE upper rear's shallow volume and top joints are retained, but its smooth light walkway and regular guard lack the source's mottled stone/coping contrast.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NE upper rear's shallow volume and top joints are retained, but its smooth light walkway and regular guard lack the source's mottled stone/coping contrast.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_ne_front_sea": {
+      "score": 6,
+      "fingerprint": "c59ae410d045a5f63bac335e419b70eb2aeaed7ddda3978526d8d45cf7ab883a",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_front_sea.png": "5e54018233fafd8fd3e0158d7d1e25f20e8b504df193d214d61862d26e61ce4a"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NE upper front retains a true narrow cap and open end guard, but native coping/rail brightness and overly regular tiny joint pattern differ from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NE upper front retains a true narrow cap and open end guard, but native coping/rail brightness and overly regular tiny joint pattern differ from the source.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_se_rear_sea": {
+      "score": 6,
+      "fingerprint": "1b0efdedca1f2dbd18e3c2b16accc3578e79decc467071528c0a7b6b92a624b4",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_rear_sea.png": "f0f4f6409e9913cfe3107643e3bb561d6b1ea9755d067bab94f8bbadc6b484fb"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SE upper rear retains a shallow independent slab, but its original darker side edge and irregular walkway are replaced by pale regular cap/joint paint.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SE upper rear retains a shallow independent slab, but its original darker side edge and irregular walkway are replaced by pale regular cap/joint paint.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_se_front_sea": {
+      "score": 6,
+      "fingerprint": "495085d8c969323d883b2398f8d90eeff5b9577435d0ef51fb539d1d77a4f1cc",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_front_sea.png": "2f9dd5aeda5780e7cebcd62789f2d1951a6f969acd30f0c9f11c8feeabfd6cdf"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SE upper front's low narrow platform is physical, but source side grain, mottled coping and compact guard/terminal scale remain coarse and bright.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SE upper front's low narrow platform is physical, but source side grain, mottled coping and compact guard/terminal scale remain coarse and bright.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_sw_rear_sea": {
+      "score": 6,
+      "fingerprint": "8f6a0fa1aa3e4d6bc96314df8a999a8dd6a963106accab4380cc7e637bb62693",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_rear_sea.png": "4cf4bf0cda1df23d78cb4fbfa3a9689f29cc4f9bff8cf7438a3c4e2db6450768"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SW upper rear has explicit shallow stone/top joints, but its source-native end/side shade and mottled walkway still look too uniformly light.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SW upper rear has explicit shallow stone/top joints, but its source-native end/side shade and mottled walkway still look too uniformly light.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_sw_front_sea": {
+      "score": 6,
+      "fingerprint": "c59ae410d045a5f63bac335e419b70eb2aeaed7ddda3978526d8d45cf7ab883a",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_front_sea.png": "ccd08572f35c20ac837446b56f33efc8e8f22a12031515fe94844a3c4e28d39d"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "SW upper front keeps its narrow cap and air between bars, but source edge shadow, coping grain and small end-return proportions remain oversimplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "SW upper front keeps its narrow cap and air between bars, but source edge shadow, coping grain and small end-return proportions remain oversimplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_nw_rear_sea": {
+      "score": 6,
+      "fingerprint": "1b0efdedca1f2dbd18e3c2b16accc3578e79decc467071528c0a7b6b92a624b4",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_rear_sea.png": "8bbef47fd652927a662e2166f19093b9b71746cb6643d0605233359cc0ad9693"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NW upper rear's transposed low slab retains depth, but its light repetitive cap/rail treatment does not reproduce the original rough top and dark side edge.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NW upper rear's transposed low slab retains depth, but its light repetitive cap/rail treatment does not reproduce the original rough top and dark side edge.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_nw_front_sea": {
+      "score": 6,
+      "fingerprint": "495085d8c969323d883b2398f8d90eeff5b9577435d0ef51fb539d1d77a4f1cc",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_front_sea.png": "94044b757002aef6774afe7d7cd61f4f070164bed69885b5d48080ffbc9ab7de"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "NW upper front remains physically slender with a return guard, but the source's compact end shaping, cap/rail contrast and mottled top are still simplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "NW upper front remains physically slender with a return guard, but the source's compact end shaping, cap/rail contrast and mottled top are still simplified.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_ne_rear_elevated": {
+      "score": 6,
+      "fingerprint": "8f6a0fa1aa3e4d6bc96314df8a999a8dd6a963106accab4380cc7e637bb62693",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_rear_elevated.png": "9df78dafb6a7b8038622e2021a9ae82a89c3ea435671e288e31dceae81f4c127"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NE upper rear is separately volumetric, but source end-edge shade and rough walkway grain are still too light and uniform despite top joints.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NE upper rear is separately volumetric, but source end-edge shade and rough walkway grain are still too light and uniform despite top joints.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_ne_front_elevated": {
+      "score": 6,
+      "fingerprint": "c59ae410d045a5f63bac335e419b70eb2aeaed7ddda3978526d8d45cf7ab883a",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_ne_front_elevated.png": "ed9c8b2f47d301f2fd47402efac80841924674cf01373803e0a0e8eb8fe22b3e"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NE upper front keeps its original low/narrow profile and rail air; bright cap/guard and regular fine joints still fail source fidelity.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NE upper front keeps its original low/narrow profile and rail air; bright cap/guard and regular fine joints still fail source fidelity.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_se_rear_elevated": {
+      "score": 6,
+      "fingerprint": "1b0efdedca1f2dbd18e3c2b16accc3578e79decc467071528c0a7b6b92a624b4",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_rear_elevated.png": "a763c155b4fca2cb2bfc50ca1d061333449cb8f303a1080937d5d08fff55ee40"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SE upper rear retains independent registration and shallow depth, but dark source side/end paint and irregular paving are missing from the pale regular finish.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SE upper rear retains independent registration and shallow depth, but dark source side/end paint and irregular paving are missing from the pale regular finish.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_se_front_elevated": {
+      "score": 6,
+      "fingerprint": "495085d8c969323d883b2398f8d90eeff5b9577435d0ef51fb539d1d77a4f1cc",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_se_front_elevated.png": "bd5c55ea66668398da97c99ad100afef3f31f08d4751d5dd7a6dcc81aaac190d"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SE upper front is separately slender and open, but coarse compact-end geometry, pale rails/coping and regular top paint remain source mismatches.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SE upper front is separately slender and open, but coarse compact-end geometry, pale rails/coping and regular top paint remain source mismatches.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_sw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "8f6a0fa1aa3e4d6bc96314df8a999a8dd6a963106accab4380cc7e637bb62693",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_rear_elevated.png": "786e84a86ffe65012f754512aea09fc077e42c06d9940c6cd2f166e57cf87596"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SW upper rear retains a physical shallow bearing, but its source's dark edge, top mottling and guard proportions remain too uniform and bright.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SW upper rear retains a physical shallow bearing, but its source's dark edge, top mottling and guard proportions remain too uniform and bright.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_sw_front_elevated": {
+      "score": 6,
+      "fingerprint": "c59ae410d045a5f63bac335e419b70eb2aeaed7ddda3978526d8d45cf7ab883a",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_sw_front_elevated.png": "615b87289c9186a3b86b19dd11f1e0282a2b94677d9e30833ec8ed4c8a221686"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated SW upper front keeps its own low narrow cap; source end-return detail, side shadow and coping/rail brightness still need repair.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated SW upper front keeps its own low narrow cap; source end-return detail, side shadow and coping/rail brightness still need repair.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_nw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "1b0efdedca1f2dbd18e3c2b16accc3578e79decc467071528c0a7b6b92a624b4",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_rear_elevated.png": "2e4448399927ada9bac7220385fc976fdb61a6221e1cbcaf4dcefdac0a5f55ab"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NW upper rear has its own transposed shallow slab, but source rough top/side shading and compact guard finish remain overly pale and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NW upper rear has its own transposed shallow slab, but source rough top/side shading and compact guard finish remain overly pale and regular.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    },
+    "lock_study_upper_nw_front_elevated": {
+      "score": 6,
+      "fingerprint": "495085d8c969323d883b2398f8d90eeff5b9577435d0ef51fb539d1d77a4f1cc",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "inspection_completed": [
+        "own-source",
+        "registered-native",
+        "orbit0..3",
+        "street0..3"
+      ],
+      "evidence": [
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-bond-foam-study/owners/lock_study_upper_nw_front_elevated.png": "a200931b1e670e739ba111949bcf996f6527bc676edd2d28864612d543b88b74"
+      },
+      "notes": [
+        "Individually inspected candidate only; not runtime artwork or 8/10 approval.",
+        "Elevated NW upper front preserves narrow depth and real guard air, but its light cap/rails, regular joints and compact source-end details remain unaccepted.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ],
+      "defects": [
+        "Elevated NW upper front preserves narrow depth and real guard air, but its light cap/rails, regular joints and compact source-end details remain unaccepted.",
+        "Strict wider renderer acceptance remains rejected; no natural larger-HQ world or runtime lock/terrain/phases/custom/ship acceptance is established for this study."
+      ]
+    }
+  },
+  "scope": "Explicit individual provisional/negative decisions for unbound models only; all acceptance checks are false."
+}

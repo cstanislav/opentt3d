@@ -1,0 +1,59 @@
+{
+  "sealed_utc": "2026-10-03T23:38:55.290965+00:00",
+  "native_controls": 10,
+  "changed_hq_owners": 6,
+  "changed_unbound_lock_owners": 48,
+  "portable_lossless_native_images": 1296,
+  "unchanged_hq_full_views_exact": 7920,
+  "quality_scopes": [
+    {
+      "scope": "canonical",
+      "rows": 2866,
+      "individual_records": 57,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "scores": {
+        "1": 536,
+        "3": 183,
+        "4": 271,
+        "5": 1819,
+        "6": 40,
+        "7": 17
+      }
+    },
+    {
+      "scope": "rejected-hq",
+      "rows": 2950,
+      "individual_records": 141,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "scores": {
+        "1": 452,
+        "3": 183,
+        "4": 271,
+        "5": 1911,
+        "6": 116,
+        "7": 17
+      }
+    },
+    {
+      "scope": "rejected-hq-lock",
+      "rows": 2998,
+      "individual_records": 189,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "scores": {
+        "1": 452,
+        "3": 183,
+        "4": 271,
+        "5": 1911,
+        "6": 164,
+        "7": 17
+      }
+    }
+  ],
+  "runtime_source_changed": false,
+  "released_artwork_changed": false,
+  "approvals": 0,
+  "scope": "Source-guided candidate geometry/paint progress only. All54 changed owners are individually reviewed with retained defects. Strict renderer/source/world/state/consistency and the complete catalogue-wide8/10/performance/platform goal remain unmet. Recommended.42 remains unchanged."
+}

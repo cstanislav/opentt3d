@@ -12,6 +12,29 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Changed HQ and lock owners receive fresh provisional reviews
+
+`reviews/20261003/hq-large-column-repair/` transfers forty existing brick-column
+cells north-to-east in three ordinary climates without transferring the white
+mullion or altering any joined cell/paint/dimension/registration. All six changed
+owners remain individually reviewed6/10, with source thickness/paint/detail and
+foreign perimeter/flag fragments still defective. The wide-seam failure is retained.
+`reviews/20261003/water-bond-foam-study/` adds authored face-only stone bonds/coping
+joints, shaded open lamps and directional lower-sea foam. All48 changed unbound
+owners receive fresh6/10 reviews; thin/dark foam and coarse stone/guard/lantern
+detail remain explicit. None pass the six acceptance gates or establish runtime coverage.
+
+Ten quiet controls retain7,920 unchanged independent HQ views and ten exact prior
+same-backend saved worlds. Native HQ121/climate and lock48 pairs match; complete
+galleries still fail143/143/143/144 HQ images and13 lock images/25 pixels. Strict
+renderer equality is not weakened. Full lossless evidence reconstructs1,296 PAMs.
+Working asset268/native213/harness104/five local lock tests/boundary pass. Separate
+canonical/rejected-HQ/rejected-HQ-plus-lock scopes remain2,866/2,950/2,998 rows and
+57/141/189 individual records, zero approvals/four gaps. Changed fingerprints and
+defects replace only those candidates' prior reviews. Canonical reviews, recommended
+`.42` and runtime source remain unchanged; the working CSV/art/compiler stay quarantined.
+Historical sections below retain their original counts and artwork scope.
+
 ## Natural slope/height breadth does not approve raised-water geometry
 
 `reviews/20261003/river-natural-selector-breadth/` retains five normally generated,

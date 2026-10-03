@@ -1,0 +1,145 @@
+[2026-10-03 18:26:33] dbg: [driver:1] Successfully loaded blitter '32bpp-optimized'
+[2026-10-03 18:26:33] dbg: [driver:1] OpenTT3D: Cocoa process 56781
+[2026-10-03 18:26:33] dbg: [driver:1] OpenGL driver: Apple - Apple M3 Pro (4.1 Metal - 90.5)
+[2026-10-03 18:26:33] dbg: [driver:2] OpenGL shading language version: 4.10, texture units = 80
+[2026-10-03 18:26:33] dbg: [driver:1] Successfully loaded video driver 'cocoa-opengl'
+[2026-10-03 18:26:33] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-10-03 18:26:33] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-10-03 18:26:33] dbg: [driver:1] OpenTT3D: background Cocoa window active=false, key=false, visible=false, policy=2
+[2026-10-03 18:26:33] dbg: [driver:1] using thread for game-loop
+[2026-10-03 18:26:33] dbg: [driver:1] OpenTT3D: exported 24 original object layouts with 13 separate body layers and 11 ground-only HQ slots (five HQ sizes)
+[2026-10-03 18:26:50] dbg: [driver:1] OpenTT3D: loaded 1915 authored voxel models, 17785862 occupied cells, 12516896 exposed cell faces merged to 2723798 conforming rectangles / 21053432 triangles
+[2026-10-03 18:26:50] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 37617680 bytes instead of 1794874548 dense cell bytes, with one shared palette
+[2026-10-03 18:26:50] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1068767120 bytes under a scene-pinned soft budget, including 195155120 exact restoration bytes
+[2026-10-03 18:26:51] dbg: [driver:1] OpenTT3D: focused voxel object 4 size 0 at 45,8
+[2026-10-03 18:26:51] dbg: [driver:2] OpenTT3D: pre-existing OpenGL error before mesh pass (1286)
+[2026-10-03 18:26:51] dbg: [driver:1] OpenTT3D: depth-tested mesh renderer initialized
+[2026-10-03 18:26:57] dbg: [driver:1] OpenTT3D: exported voxel turntables, street-level views and neighbouring-building context (prefix 'hq_')
+[2026-10-03 18:26:57] dbg: [driver:1] OpenTT3D: 4 CPU voxel retirement/rebuild views preserve scene pins, stable GPU keys, exact colour, transparency and picking
+[2026-10-03 18:26:57] dbg: [driver:1] OpenTT3D: 0 voxel effect views preserve original sprite/climate selection, altitude, opacity, fixed orientation and unclickable ownership
+[2026-10-03 18:26:57] dbg: [driver:1] OpenTT3D: 0 unauthored effect sources preserve their original fallback in climate 1
+[2026-10-03 18:26:57] dbg: [driver:1] OpenTT3D: 0 incomplete/custom/unavailable original object families retain every source ground/body layer in climate 1
+[2026-10-03 18:26:58] dbg: [driver:1] OpenTT3D: 320 original HQ ground views preserve independent opaque source ownership, all16 company palettes and intentional body absences
+[2026-10-03 18:27:00] dbg: [driver:1] OpenTT3D: 145 independent HQ owner LOD views preserve exact occupied/air boundaries, automatic factors1/2/4/8/16, source transforms, opacity and tile picking
+[2026-10-03 18:27:00] dbg: [driver:1] OpenTT3D: 145 independent HQ owner LOD rebuild views preserve copied-scene pins, stable mesh identities and exact vertex words/RGBA/picking
+[2026-10-03 18:27:01] dbg: [driver:1] OpenTT3D: 60 joined original HQ views preserve four source anchors, ground/body visibility and independent tile picking
+[2026-10-03 18:27:01] dbg: [driver:1] OpenTT3D: 288 original object views preserve source layout/climate, anchors, all16 company palettes and transparent picking
+[2026-10-03 18:27:01] dbg: [driver:1] OpenTT3D: 0 house variant/construction bindings select their explicit geometry and original palettes
+[2026-10-03 18:27:01] dbg: [driver:1] OpenTT3D: 0 voxel house-ground bindings preserve source palettes, empty body stages and opaque floor ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 2784 authored voxel views match unmerged geometry, CPU instances, palette recolouring and transparent picking; exact palette relocation passed
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 0 joined multi-tile house views preserve exact cell references and independent tile picking
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 0 voxel airport ground/body views preserve independent opaque ground, exact CPU colour and visible/transparent/hidden picking
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 0 airport layer bindings retain their supplied source because the active climate has no matching authored volume
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: voxel mesh selection 'hq_' passed exact geometry, palettes and picking
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: loaded 62 profiles from opentt3d-trees.json
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1730 stage 3 captured at 93,4
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1730 stage 5 captured at 93,4
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1737 stage 5 captured at 94,6
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1730 stage 0 captured at 95,7
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1744 stage 3 captured at 95,7
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1723 stage 3 captured at 95,7
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1758 stage 3 captured at 95,7
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1751 stage 3 captured at 98,8
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1751 stage 5 captured at 89,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 captured at 97,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 captured at 97,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 62 construction stage 3 captured at 98,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 62 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 62 construction stage 3 captured at 98,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 62 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 48 construction stage 3 captured at 99,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 48 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 2 ground-detail tiles rendered with raised crops, hay, rocks or turf
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 1 unmodelled reference sprites in this view (release coverage is incomplete)
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 37 construction stage 3 captured at 95,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 37 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 37 construction stage 3 captured at 95,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 37 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 captured at 96,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 captured at 96,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 captured at 97,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 captured at 97,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 58 construction stage 3 captured at 98,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 58 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 58 construction stage 3 captured at 98,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 58 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1730 stage 1 captured at 92,12
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1751 stage 1 captured at 93,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 64 construction stage 3 captured at 97,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 64 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 64 construction stage 3 captured at 97,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 64 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 64 construction stage 1 captured at 98,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 64 construction stage 1 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 64 construction stage 1 captured at 98,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 64 construction stage 1 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1758 stage 1 captured at 91,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 captured at 94,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 captured at 94,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 37 construction stage 3 captured at 95,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 37 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 37 construction stage 3 captured at 95,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 37 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 62 construction stage 3 captured at 97,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 62 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 62 construction stage 3 captured at 97,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 62 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 48 construction stage 3 captured at 99,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 48 construction stage 3 variant 0 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 captured at 101,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 56 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 captured at 101,9
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 56 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 44 construction stage 3 captured at 99,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 44 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 44 construction stage 3 captured at 99,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 44 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 captured at 101,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 captured at 101,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 62 construction stage 3 captured at 102,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 62 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 62 construction stage 3 captured at 102,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 62 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 captured at 103,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 captured at 103,11
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 48 construction stage 2 captured at 99,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 48 construction stage 2 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 48 construction stage 2 captured at 99,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 48 construction stage 2 variant 3 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 60 construction stage 3 captured at 100,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 60 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 60 construction stage 3 captured at 100,13
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 60 construction stage 3 variant 1 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1737 stage 6 captured at 101,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 captured at 102,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house ground 46 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 captured at 102,14
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel house 46 construction stage 3 variant 2 captured
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1709 stage 5 captured at 102,15
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: 49 roof/wall pixels select their owning tile across four rotations, with independent vehicle picking
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1709 stage 3 captured at 48,6
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1709 stage 0 captured at 48,6
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1730 stage 2 captured at 45,7
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1737 stage 0 captured at 47,7
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel object 3 size 0 part 0 body climate 1 source 4790 captured at 43,8 with original body ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel object 4 size 0 part 0 ground climate 1 source 2603 captured at 45,8 with original ground ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel object 4 size 0 part 1 ground climate 1 source 2605 captured at 46,8 with original ground ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel object 3 size 0 part 0 body climate 1 source 4790 captured at 47,8 with original body ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel object 4 size 0 part 2 ground climate 1 source 2604 captured at 45,9 with original ground ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live voxel object 4 size 0 part 3 ground climate 1 source 2606 captured at 46,9 with original ground ownership
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1709 stage 2 captured at 45,10
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: live projected tree 1744 stage 1 captured at 49,10
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: whole-world atlas relocation preserves 1228800 exact RGBA/picking pixels across repack, clear and forced row relocation
+[2026-10-03 18:27:17] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 1 GPU viewport regions

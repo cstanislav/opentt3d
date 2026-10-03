@@ -1,0 +1,371 @@
+[
+  {
+    "climate": 3,
+    "layers": [
+      {
+        "category": "object_ground",
+        "layout": 4,
+        "model": "hq_ground_tiny_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "object_ground",
+        "layout": 5,
+        "model": "hq_ground_tiny_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "object_ground",
+        "layout": 6,
+        "model": "hq_ground_tiny_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "object_ground",
+        "layout": 7,
+        "model": "hq_ground_tiny_toyland_south",
+        "origin": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "part": 3
+      }
+    ],
+    "native": "model-voxel-object-4-0-native.pam",
+    "object": 4,
+    "ordinary_ground": "original independent terrain texture",
+    "parts": 4,
+    "size": 0
+  },
+  {
+    "climate": 3,
+    "layers": [
+      {
+        "category": "object_ground",
+        "layout": 8,
+        "model": "hq_ground_small_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "object_ground",
+        "layout": 9,
+        "model": "hq_ground_small_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "object_ground",
+        "layout": 10,
+        "model": "hq_ground_small_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "object_ground",
+        "layout": 11,
+        "model": "hq_ground_small_toyland_south",
+        "origin": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "part": 3
+      }
+    ],
+    "native": "model-voxel-object-4-1-native.pam",
+    "object": 4,
+    "ordinary_ground": "original independent terrain texture",
+    "parts": 4,
+    "size": 1
+  },
+  {
+    "climate": 3,
+    "layers": [
+      {
+        "category": "object_ground",
+        "layout": 12,
+        "model": "hq_ground_medium_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "objects",
+        "layout": 12,
+        "model": "hq_body_medium_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "object_ground",
+        "layout": 13,
+        "model": "hq_ground_medium_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "objects",
+        "layout": 13,
+        "model": "hq_body_medium_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "object_ground",
+        "layout": 14,
+        "model": "hq_ground_medium_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "objects",
+        "layout": 14,
+        "model": "hq_body_medium_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "object_ground",
+        "layout": 15,
+        "model": "hq_ground_medium_toyland_south",
+        "origin": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "part": 3
+      }
+    ],
+    "native": "model-voxel-object-4-2-native.pam",
+    "object": 4,
+    "ordinary_ground": "original independent terrain texture",
+    "parts": 4,
+    "size": 2
+  },
+  {
+    "climate": 3,
+    "layers": [
+      {
+        "category": "object_ground",
+        "layout": 16,
+        "model": "hq_ground_large_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "objects",
+        "layout": 16,
+        "model": "hq_body_large_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "object_ground",
+        "layout": 17,
+        "model": "hq_ground_large_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "objects",
+        "layout": 17,
+        "model": "hq_body_large_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "object_ground",
+        "layout": 18,
+        "model": "hq_ground_large_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "objects",
+        "layout": 18,
+        "model": "hq_body_large_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "object_ground",
+        "layout": 19,
+        "model": "hq_ground_large_toyland_south",
+        "origin": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "part": 3
+      }
+    ],
+    "native": "model-voxel-object-4-3-native.pam",
+    "object": 4,
+    "ordinary_ground": "original independent terrain texture",
+    "parts": 4,
+    "size": 3
+  },
+  {
+    "climate": 3,
+    "layers": [
+      {
+        "category": "object_ground",
+        "layout": 20,
+        "model": "hq_ground_huge_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "objects",
+        "layout": 20,
+        "model": "hq_body_huge_toyland_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "object_ground",
+        "layout": 21,
+        "model": "hq_ground_huge_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "objects",
+        "layout": 21,
+        "model": "hq_body_huge_toyland_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "object_ground",
+        "layout": 22,
+        "model": "hq_ground_huge_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "objects",
+        "layout": 22,
+        "model": "hq_body_huge_toyland_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "object_ground",
+        "layout": 23,
+        "model": "hq_ground_huge_toyland_south",
+        "origin": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "part": 3
+      }
+    ],
+    "native": "model-voxel-object-4-4-native.pam",
+    "object": 4,
+    "ordinary_ground": "original independent terrain texture",
+    "parts": 4,
+    "size": 4
+  }
+]

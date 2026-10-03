@@ -2,6 +2,24 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — HQ brick ownership and unbound lock detail improved provisionally
+
+The large ordinary-climate HQ candidate retains body2621's connected upper brick
+column through an explicit forty-cell owner transfer; the neighbouring white mullion
+stays north-owned. Joined cells/paint/dimensions/registration remain exact. Six changed
+owners remain6/10 with source/ownership defects. All48 unbound lock studies gain
+face-only stone bonds/coping joints, shaded open lamps and directional sea foam;
+nonfoam occupancy/openings/height remain exact. Foam is still too thin/dark and
+stone/guard/lantern fidelity is unaccepted; all48 have fresh individual6/10 reviews.
+
+Ten quiet controls pass technical checks, preserve7,920 unchanged HQ views and ten
+prior same-backend worlds. Native pairs match, but broader HQ galleries and13 lock
+views/25 pixels still differ. Working asset268/native213/harness104 and boundary pass.
+Evidence retains1,296 complete lossless native images and all failures in
+`reviews/20261003/hq-large-column-repair/` and `water-bond-foam-study/`.
+Zero8/10 approvals/four gaps; no runtime source, canonical artwork or immutable`.42`
+change. Full catalogue/state/60fps/platform/input/replay/network work continues.
+
 ## October 3 — all river slopes/climates observed on natural higher terrain
 
 Five public read-only NoAI surveys retain normally generated worlds and acknowledged
