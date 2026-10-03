@@ -1,0 +1,278 @@
+{
+  "sealed_utc": "2026-10-03T12:01:32.537395+00:00",
+  "models": 1831,
+  "previous_models_definitions_components_material_faces_bindings_exact": 1799,
+  "catalogue_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+  "hq_ground_climate_bindings": 32,
+  "hq_sizes": [
+    0,
+    1
+  ],
+  "native_tests": 211,
+  "asset_tests": 204,
+  "harness_tests": 94,
+  "presentation_boundary_files": 140,
+  "final_binary_live_controls": 10,
+  "source_owner_candidate_fallback_controls": 4,
+  "matched_source_layer_equalities": 74,
+  "matched_whole_screenshot_equalities": 2,
+  "quality_ledger_entries": 2494,
+  "scores": {
+    "5": 1819,
+    "7": 17,
+    "6": 40,
+    "3": 183,
+    "4": 159,
+    "1": 276
+  },
+  "individual_reviews": 57,
+  "individual_hq_reviews": 32,
+  "portable_hq_sheets": 40,
+  "portable_natural_size0_worlds": 8,
+  "final_visual_approvals": 0,
+  "meets_objective": false,
+  "scope": "Actual four-owner size0 world and two isolated source layouts only. Natural size1/five-size HQ, independent LOD, native source detail, strict wider backend equality, complete family breadth/fleet/emitter/sixtyfps/memory/platform acceptance remain open. No simulation/score/state/RNG override.",
+  "old_freezes_preserved": [
+    {
+      "path": "build-macos/breadth-original-hq-two-stage-initial-frozen-build",
+      "files_preserved": 5,
+      "manifest_sha256": "3cd4872ace9c5fde143d6757bb623284ac17b2dfd19edc9aae0c3247b131a9e5"
+    },
+    {
+      "path": "build-macos/breadth-original-hq-two-stage-corrected-frozen-build",
+      "files_preserved": 5,
+      "manifest_sha256": "7518552637f982e5586fddfe0c09a02fb30e9a73aa68f242ce5b0d4ac412f1ba"
+    },
+    {
+      "path": "build-macos/breadth-original-hq-two-stage-final-palette-frozen-build",
+      "files_preserved": 5,
+      "manifest_sha256": "5d7ebfbd982e221327ad09d2e9d9f92e5e815c535814148612b7c8857e1d8fe4"
+    },
+    {
+      "path": "build-macos/breadth-original-hq-two-stage-owner-corrected-frozen-build",
+      "files_preserved": 7,
+      "manifest_sha256": "f948dcb61837d19d55751803b936d96db7aee658209fdd0920af58c46d6fa8f1"
+    },
+    {
+      "path": "build-macos/breadth-original-hq-source-owner-planes-frozen-build",
+      "files_preserved": 9,
+      "manifest_sha256": "cb7a229e45793aeaa5ff9a4eccb8b9b28be6d4572afc58139abe164a6bac4c53"
+    },
+    {
+      "path": "build-macos/breadth-original-object-final-reviewed-frozen-build",
+      "files_preserved": 134,
+      "manifest_sha256": "baac6b7d2564b7d8ba7b8c4f8883869209bb72f92b3abd7c29548771a95fbbca"
+    }
+  ],
+  "final_freeze": "build-macos/breadth-original-hq-final-reviewed-frozen-build/manifest.json",
+  "final_freeze_sha256": "3755f0652782359e17ac30389bd9a4b6b9011af21a3e0e20008f93f39c6bf832",
+  "strict_backend_comparisons": [
+    {
+      "climate": "temperate",
+      "kind": "galleries",
+      "report": "build-macos/breadth-original-hq-source-owner-final-temperate-strict-galleries.json",
+      "images": 378,
+      "different_images": 31,
+      "changed_pixels": 1001,
+      "exit_code": 1
+    },
+    {
+      "climate": "temperate",
+      "kind": "native",
+      "report": "build-macos/breadth-original-hq-source-owner-final-temperate-strict-native.json",
+      "images": 34,
+      "different_images": 0,
+      "changed_pixels": 0,
+      "exit_code": 0
+    },
+    {
+      "climate": "temperate",
+      "kind": "world",
+      "report": "build-macos/breadth-original-hq-source-owner-final-temperate-strict-world.json",
+      "images": 1,
+      "different_images": 1,
+      "changed_pixels": 10,
+      "exit_code": 1
+    },
+    {
+      "climate": "arctic",
+      "kind": "galleries",
+      "report": "build-macos/breadth-original-hq-source-owner-final-arctic-strict-galleries.json",
+      "images": 378,
+      "different_images": 31,
+      "changed_pixels": 1001,
+      "exit_code": 1
+    },
+    {
+      "climate": "arctic",
+      "kind": "native",
+      "report": "build-macos/breadth-original-hq-source-owner-final-arctic-strict-native.json",
+      "images": 34,
+      "different_images": 0,
+      "changed_pixels": 0,
+      "exit_code": 0
+    },
+    {
+      "climate": "arctic",
+      "kind": "world",
+      "report": "build-macos/breadth-original-hq-source-owner-final-arctic-strict-world.json",
+      "images": 1,
+      "different_images": 1,
+      "changed_pixels": 9,
+      "exit_code": 1
+    },
+    {
+      "climate": "tropic",
+      "kind": "galleries",
+      "report": "build-macos/breadth-original-hq-source-owner-final-tropic-strict-galleries.json",
+      "images": 378,
+      "different_images": 31,
+      "changed_pixels": 1001,
+      "exit_code": 1
+    },
+    {
+      "climate": "tropic",
+      "kind": "native",
+      "report": "build-macos/breadth-original-hq-source-owner-final-tropic-strict-native.json",
+      "images": 34,
+      "different_images": 0,
+      "changed_pixels": 0,
+      "exit_code": 0
+    },
+    {
+      "climate": "tropic",
+      "kind": "world",
+      "report": "build-macos/breadth-original-hq-source-owner-final-tropic-strict-world.json",
+      "images": 1,
+      "different_images": 1,
+      "changed_pixels": 12,
+      "exit_code": 1
+    },
+    {
+      "climate": "toyland",
+      "kind": "galleries",
+      "report": "build-macos/breadth-original-hq-source-owner-final-toyland-strict-galleries.json",
+      "images": 378,
+      "different_images": 28,
+      "changed_pixels": 965,
+      "exit_code": 1
+    },
+    {
+      "climate": "toyland",
+      "kind": "native",
+      "report": "build-macos/breadth-original-hq-source-owner-final-toyland-strict-native.json",
+      "images": 34,
+      "different_images": 0,
+      "changed_pixels": 0,
+      "exit_code": 0
+    },
+    {
+      "climate": "toyland",
+      "kind": "world",
+      "report": "build-macos/breadth-original-hq-source-owner-final-toyland-strict-world.json",
+      "images": 1,
+      "different_images": 1,
+      "changed_pixels": 8,
+      "exit_code": 1
+    }
+  ],
+  "reconciliation_path": "build-macos/breadth-original-hq-final-reviewed-reconciliation.json",
+  "reconciliation_sha256": "6e914e9ad3ef4c195605c735442d20264a85ce662ccdee26b25963d5bd4cee02",
+  "reversible_compaction": {
+    "captures": 3088,
+    "saved_bytes": 1964038888,
+    "manifest": "build-macos/review-compaction-20261003T115429220987Z.json"
+  },
+  "short_pacing_controls": [
+    {
+      "backend": "vulkan",
+      "path": "build-macos/breadth-original-hq-source-owner-final-vulkan-600/benchmark.json",
+      "sha256": "b097a7f06c0188170a3f76b8b374c85d76fbcd7c9b2402c22fb6991f7b0e11f6",
+      "measured_fps": 59.99171739351742,
+      "frame_work_ms": {
+        "max": 11.288542,
+        "mean": 1.9126484033333353,
+        "p50": 1.45325,
+        "p95": 4.377458,
+        "p99": 5.211667
+      },
+      "intervals_over_20_ms": 103,
+      "acceptance": "Technical short control only; pacing stalls remain unaccepted, no sustained arbitrary-world60fps/memory approval."
+    },
+    {
+      "backend": "opengl",
+      "path": "build-macos/breadth-original-hq-source-owner-final-opengl-600/benchmark.json",
+      "sha256": "7ff06eca27d455c59796d99805cc7eef0e95fb183c63b7dd38eb9a6a93f2257f",
+      "measured_fps": 59.15151659744116,
+      "frame_work_ms": {
+        "max": 144.98075,
+        "mean": 1.780512163333333,
+        "p50": 1.084334,
+        "p95": 2.747042,
+        "p99": 14.157208
+      },
+      "intervals_over_20_ms": 92,
+      "acceptance": "Technical short control only; pacing stalls remain unaccepted, no sustained arbitrary-world60fps/memory approval."
+    }
+  ],
+  "portable_evidence_sha256": {
+    "README.md": "3e69e372ff3ab784ed479acf1631441b4c9851efbaebff1f55ceac2d21941d46",
+    "arctic/index.json": "3fe78d7700e65c38b33e8a037d12d4e932284fb18730f358d19fe63bb98145d4",
+    "arctic/object-4-size-0.png": "2b497016ae4e5562e3abc7a4b69ebd8f684a0f2d5f0decad4c90135083594a59",
+    "arctic/object-4-size-1.png": "f776d083a8802b66b75e7862d96a3baad301602aae1b4ec5bc35c11c43b570dc",
+    "arctic/owners/hq_ground_small_arctic_east.png": "829ecaa2b75f6ac920fdd5db1bf41ce81709ba7fe00aed3813c97d8e530e8238",
+    "arctic/owners/hq_ground_small_arctic_north.png": "1c5dd48af4196f75063436206d61a9636f52fa5e82d244a371b95ceaabf66d7b",
+    "arctic/owners/hq_ground_small_arctic_south.png": "c36217e8071f818203700138988901037a7ae061174efbba66dc4dd614dd5496",
+    "arctic/owners/hq_ground_small_arctic_west.png": "73e444ad8d4ac863998b31ea32474f96500519df3fecd91d09ccd1fa626f0cd4",
+    "arctic/owners/hq_ground_tiny_arctic_east.png": "5cb1cd87c4318eff9fbf7d3ec674cfbb45c9fa9206c04063d20575f0bef1e2bf",
+    "arctic/owners/hq_ground_tiny_arctic_north.png": "652e0c9124be275b2870d1fc8f3e40b46701375eba47a99204451b56b7931800",
+    "arctic/owners/hq_ground_tiny_arctic_south.png": "eee01fd608ea9fb72793e8d69c49434a282c1432c88780a5dff5b028b7b4ceee",
+    "arctic/owners/hq_ground_tiny_arctic_west.png": "3c89102ad306886f80ebab2ecf91428c1b60ff33c517fed6a70608ef419ef0f2",
+    "arctic/owners/index.json": "9bd931bc0ddfa96bb2695d2a336ad38d0f0e34220351f9086a6c7f6b3c4ce8aa",
+    "arctic/world-size0-opengl.png": "31e90e6a679a168b1010d10185777ed67d52c92b182667816cfd9140f04d0621",
+    "arctic/world-size0-vulkan.png": "84f735071be21002c758e85016e3429905647f77676fe995fd57f3ec533a072f",
+    "temperate/index.json": "1dfa8835f79ea5ca1e9af78ba12512fa2dbee30fc0c1eba541cb1c19cf7ceabc",
+    "temperate/object-4-size-0.png": "f01074d558ddf1a2115dee4e04ad2f464f6388db4cef497c4eee620b09f6757b",
+    "temperate/object-4-size-1.png": "7b270f43a477cc90dce7e75e3cfe34ee4bb6b7ff823590e9e5624ae3481e1a41",
+    "temperate/owners/hq_ground_small_temperate_east.png": "0ae6bdd3289ed6fa04adf5ccab65ab568c2002d9e2707ac30770fe84ee45d182",
+    "temperate/owners/hq_ground_small_temperate_north.png": "4361ee541bed065b58628bed1611a25ab7ccfcff83102d510a455a3c053f9a57",
+    "temperate/owners/hq_ground_small_temperate_south.png": "9b91dc58f0e35fab4ea5b287487fabe5c5c9c2bc72418c5064d5efab5aa116f6",
+    "temperate/owners/hq_ground_small_temperate_west.png": "7c328392b2dfaf3d0ac4bb3fc94b4c2a909e80ecd161b804acf4725c168c345f",
+    "temperate/owners/hq_ground_tiny_temperate_east.png": "6257ed5449d58bca757526f118b7bd45d4a9a17881d5b0d3686ace4b73545635",
+    "temperate/owners/hq_ground_tiny_temperate_north.png": "33e9f8534ea785ced5b54f86327fc418cbc683399c47de75877c9341c02b0ae1",
+    "temperate/owners/hq_ground_tiny_temperate_south.png": "fa06945155f5ec48def71a446c5473284fb971db96801c3ced1300bbdfca1f5d",
+    "temperate/owners/hq_ground_tiny_temperate_west.png": "55811469b99f2e07f10d315d9f687dde43e95bbba9f2b6072dca378cb3779ae5",
+    "temperate/owners/index.json": "e2f7e9d2ee3468380a57aed687c0aad752c62f5efc31f48d39718d3c3e4e1391",
+    "temperate/world-size0-opengl.png": "e23cfe9ff140a26c3f36ecd86d0bd7554a2ad44a1a12eef194c4475dd4962afc",
+    "temperate/world-size0-vulkan.png": "0124d6a0016373fcfed5e92e720f2f52cf7a61caeedb00f769c2e6b68ca3d105",
+    "toyland/index.json": "7bdf932de718eeaed223d532ec7c473fc4743796b47dfefbeac127c3ef98beb0",
+    "toyland/object-4-size-0.png": "b928f0bd152c79ffd97a32bbfabd495dd249d060883675beb950ca3a4e9ce186",
+    "toyland/object-4-size-1.png": "fb2eb390f179ca59e84ad754e5fb7e8d83715db82207e2450835bd6d6ba9624d",
+    "toyland/owners/hq_ground_small_toyland_east.png": "ca5bad0b7762d03e5eda958562ad8049910f7a00881edce78051bfa90d526051",
+    "toyland/owners/hq_ground_small_toyland_north.png": "301f5cc5774d4a2c5e83940c791d016a6a9637c949c23e1a0db979dba88a44fa",
+    "toyland/owners/hq_ground_small_toyland_south.png": "0adc93e99f00b360e793fdee98a9fa5468cfad112a49541d43d7160613ec8591",
+    "toyland/owners/hq_ground_small_toyland_west.png": "22cc6d961f5d013ba9ddcd4d99de0074a622204061623e731dd4369499380f9e",
+    "toyland/owners/hq_ground_tiny_toyland_east.png": "75bf0b3cced24c51cdd7b25e1c49d4ae0f82edd1fa61b3943dc0828c05408fbf",
+    "toyland/owners/hq_ground_tiny_toyland_north.png": "3c656ef4aec60c02e9695abd40f6760ce0f17a666a6486e9849018c5003fee0c",
+    "toyland/owners/hq_ground_tiny_toyland_south.png": "d87aa8cd47d95bc6691bfeb8fbe7a7a01163462429e92d8828c3fdaddc5caf78",
+    "toyland/owners/hq_ground_tiny_toyland_west.png": "e4455c318fe2e859417ef69d4e82cb3c8e96cc52179e450d4b41f87665f3b1e3",
+    "toyland/owners/index.json": "8ac2ffd1023880fbaeb0c6c8a89905ce6523923ed8b4a25afe201447e1d54207",
+    "toyland/world-size0-opengl.png": "0fdb829ec090d300d6137aff4ca8a92c0ca7f0f54e17ca436f18ff0196584155",
+    "toyland/world-size0-vulkan.png": "0ba13ee861ee3e1ecc44c581ab269f91c4e5fd7784eb6f0cc72501223db5d493",
+    "tropic/index.json": "2ca49605ec44a81760ed6d307900ce96fd791365b7b96aac8baccb3aac5535f1",
+    "tropic/object-4-size-0.png": "74ae1b81f947a0c9741285185a8a9164c0223f59588b4998b8f99effc0783b48",
+    "tropic/object-4-size-1.png": "71b8304ef316c7fa331a3923b738588189173b24b1386b1e4619ec9f9ae64d7b",
+    "tropic/owners/hq_ground_small_tropic_east.png": "489fd7a553300024d8a982283399e00001fbdb0c37fa09ebe8cdb98b39c6aa36",
+    "tropic/owners/hq_ground_small_tropic_north.png": "01cbdd8119c01ad9b6e2da797ac93fad4f68aa14d7f5935f8451d75b0c431dae",
+    "tropic/owners/hq_ground_small_tropic_south.png": "4b11f9f241a1b6a2f27b28d45726cf50311e2a0271d9a01d29e9bacfb8482c79",
+    "tropic/owners/hq_ground_small_tropic_west.png": "75648c24e7927324f12998b40b75ba28e19641497dc9872028743a7b8e4769b9",
+    "tropic/owners/hq_ground_tiny_tropic_east.png": "c0a3fc3da833424023f1ae4bfa78f4a18e027bfb1b8d0b6f8d6b13fec0802857",
+    "tropic/owners/hq_ground_tiny_tropic_north.png": "83f8a5bc1f4e7fac3e894c1214df779d0d1caf2691af353fd12719bc5674e53f",
+    "tropic/owners/hq_ground_tiny_tropic_south.png": "26eb4fd7df80cadde31176263595feca5dcb6598c81efed70dd6509142123b50",
+    "tropic/owners/hq_ground_tiny_tropic_west.png": "537d0c4c68fb753b1bf023d1cae7369a750de67488f6943c6b711abcc40ea115",
+    "tropic/owners/index.json": "826b66af1b883922736fec7596395e8e3071c1b36900f8d887302cc5caf3e0ea",
+    "tropic/world-size0-opengl.png": "ad76700ce63ec97a2ef8da9185b6439d53f5e0967287aa320c3e47f591bf6175",
+    "tropic/world-size0-vulkan.png": "d79c58c512d35337487aa3229f3e640157561756b4ed3c90e3a72b9982b99488"
+  },
+  "retained_receipt_attempt_failure": "The first portable summary attempt requested work_ms instead of the established frame_work_ms aggregate key and stopped before writing a file. Individual slow-frame work_ms fields do not replace the aggregate; original benchmark evidence remains unchanged."
+}

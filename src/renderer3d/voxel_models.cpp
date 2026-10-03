@@ -1074,7 +1074,7 @@ void ExportVoxelReviews(std::string_view prefix, bool overview)
 		if (group.empty()) return;
 		if ((!placements.empty() && placements.size() != group.size()) || (!headings.empty() && headings.size() != group.size()) || (!children.empty() && children.size() != group.size())) throw std::runtime_error("Invalid voxel review placements");
 		bool has_ground = std::ranges::any_of(Models().bindings,[&](const auto &entry) {
-			return (std::get<0>(entry.first) == "industry_ground" || std::get<0>(entry.first) == "house_ground" || std::get<0>(entry.first) == "airport_ground" || std::get<0>(entry.first) == "depot_floors") && std::ranges::find(group,&Models().models.at(entry.second)) != group.end();
+			return (std::get<0>(entry.first) == "industry_ground" || std::get<0>(entry.first) == "house_ground" || std::get<0>(entry.first) == "airport_ground" || std::get<0>(entry.first) == "depot_floors" || std::get<0>(entry.first) == "object_ground") && std::ranges::find(group,&Models().models.at(entry.second)) != group.end();
 		});
 		auto place = [&](unsigned slot) { return placements.empty() ? Vec3{static_cast<float>(slot%2)*16,static_cast<float>(slot/2)*16,0} : placements[slot]; };
 		Vec3 low{INFINITY,INFINITY,INFINITY}, high{-INFINITY,-INFINITY,-INFINITY};
@@ -2097,6 +2097,72 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		++object_fallbacks;
 	}
 	Debug(driver,1,"OpenTT3D: {} incomplete/custom/unavailable original object families retain every source ground/body layer in climate {}",object_fallbacks,effect_climate);
+	unsigned object_ground_views = 0;
+	for (const auto &[binding,name] : catalogue.bindings) {
+		const auto &[category,layout,climate] = binding;
+		if (category != "object_ground" || climate != effect_climate || !name.starts_with(prefix)) continue;
+		unsigned size = (layout-4)/4, part = (layout-4)%4;
+		if (!HasVoxelObjectLayout(4,size,climate)) continue;
+		const auto *source = GetOriginalObjectTileLayout(4,size,part);
+		const auto &model = catalogue.models.at(name).surface;
+		Vec3 origin{3.5f,2.25f,17};
+		Scene wrong_source;
+		if (DrawVoxelObjectGround(wrong_source,4,size,part,(source->ground.sprite&SPRITE_MASK)+1,origin,PAL_NONE) || !wrong_source.instances.empty()) throw std::runtime_error("Original HQ ground selected unrelated source-sprite geometry");
+		for (unsigned company = 0; company < 16; ++company) {
+			Textures().BeginScene();
+			Scene actual, reference;
+			PaletteID palette = PALETTE_RECOLOUR_START+company;
+			if (!DrawVoxelObjectGround(actual,4,size,part,source->ground.sprite,origin,palette) || actual.instances.size() != 1 || actual.instances.front().mesh != &model.vertices) throw std::runtime_error("Original HQ ground lost its original layout/climate binding");
+			if (actual.instances.front().data.origin_opacity != std::array<float,4>{origin.x,origin.y,origin.z,1}) throw std::runtime_error("Original HQ ground changed its source anchor, altitude or opaque ownership");
+			actual.instances.front().data.SetObjectId(TILE_PICK_ID|83);
+			auto material = Material(origin,palette,1); material.SetObjectId(TILE_PICK_ID|83);
+			reference.instances.push_back({&model.vertices,material});
+			Camera camera = StreetReviewCamera(model.low+origin,model.high+origin,256,256,company%4+0.15f);
+			if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids || std::count(ids.begin(),ids.end(),TILE_PICK_ID|83) < 16) throw std::runtime_error("Original HQ ground changed company colours or opaque tile picking");
+			if (source->GetSequence().empty() && DrawVoxelObjectBody(actual,4,size,part,source->ground.sprite,origin,palette)) throw std::runtime_error("Original ground-only HQ slot gained a separate sortable body");
+			++object_ground_views;
+		}
+	}
+	Debug(driver,1,"OpenTT3D: {} original HQ ground views preserve independent opaque source ownership, all16 company palettes and intentional body absences",object_ground_views);
+	unsigned object_joined_views = 0;
+	for (unsigned size = 0; size < 5; ++size) {
+		if (!HasVoxelObjectLayout(4,size,effect_climate)) continue;
+		bool selected = false;
+		for (unsigned part = 0; part < 4; ++part) for (std::string_view category : {"object_ground","objects"}) {
+			auto binding = catalogue.bindings.find({std::string(category),4+size*4+part,effect_climate});
+			selected |= binding != catalogue.bindings.end() && binding->second.starts_with(prefix);
+		}
+		if (!selected) continue;
+		for (unsigned turn = 0; turn < 4; ++turn) for (unsigned visibility = 0; visibility < 3; ++visibility) {
+			Textures().BeginScene();
+			Scene actual, reference;
+			Vec3 low{0,0,17}, high{32,32,17};
+			for (unsigned part = 0; part < 4; ++part) {
+				const auto *source = GetOriginalObjectTileLayout(4,size,part);
+				Vec3 origin{static_cast<float>(part%2)*16,static_cast<float>(part/2)*16,17};
+				size_t first = actual.instances.size();
+				if (!DrawVoxelObjectGround(actual,4,size,part,source->ground.sprite,origin,PALETTE_RECOLOUR_START)) throw std::runtime_error("Joined original HQ lost one independent ground owner");
+				if (visibility != 2) for (const auto &piece : source->GetSequence()) {
+					Vec3 anchor = origin+Vec3{static_cast<float>(piece.origin.x),static_cast<float>(piece.origin.y),static_cast<float>(piece.origin.z)};
+					if (!DrawVoxelObjectBody(actual,4,size,part,piece.image.sprite,anchor,PALETTE_RECOLOUR_START,visibility == 1 ? 0.38f : 1)) throw std::runtime_error("Joined original HQ lost a separate body owner");
+				}
+				for (size_t i = first; i < actual.instances.size(); ++i) {
+					auto &instance = actual.instances[i];
+					instance.data.SetObjectId(TILE_PICK_ID|(83+part));
+					std::string category = i == first ? "object_ground" : "objects";
+					const auto &surface = catalogue.models.at(catalogue.bindings.at({category,4+size*4+part,effect_climate})).surface;
+					Vec3 anchor{instance.data.origin_opacity[0],instance.data.origin_opacity[1],instance.data.origin_opacity[2]};
+					low = {std::min(low.x,anchor.x+surface.low.x),std::min(low.y,anchor.y+surface.low.y),std::min(low.z,anchor.z+surface.low.z)};
+					high = {std::max(high.x,anchor.x+surface.high.x),std::max(high.y,anchor.y+surface.high.y),std::max(high.z,anchor.z+surface.high.z)};
+				}
+			}
+			reference.vertices = actual.ExpandedVertices(true);
+			Camera camera = StreetReviewCamera(low,high,320,240,turn+0.15f);
+			if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) throw std::runtime_error("Joined original HQ changed ground/body visibility, seams or independent tile picking");
+			++object_joined_views;
+		}
+	}
+	Debug(driver,1,"OpenTT3D: {} joined original HQ views preserve four source anchors, ground/body visibility and independent tile picking",object_joined_views);
 	unsigned object_views = 0;
 	for (const auto &[binding,name] : catalogue.bindings) {
 		const auto &[category,layout,climate] = binding;

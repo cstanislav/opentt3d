@@ -1,5 +1,58 @@
 # Active extended development goal
 
+## First two HQ sizes individually reviewed — October 3, 11:53:21 UTC checkpoint
+
+The scoped increment is sealed at **12:01:32 UTC**, preserving634 exact evidence/
+source/binary files in a separate final freeze. The first evidence-copy attempt
+rejected an absolute path with `SameFileError`; its log and incomplete freeze stay
+preserved, and the corrected seal normalizes paths without overwriting originals.
+Reversible lossless compaction of3,088 successful captures saves1,964,038,888bytes;
+source-owner originals and rejected studies remain intact. Two600-frame technical
+controls pass, but retain103/92 intervals over20ms and an OpenGL144.98075ms work
+stall, so no sustained smooth60fps approval is recorded. Portable verification:
+`reviews/20261003/hq-source-owner-planes/verification.json`; full reconciliation:
+`build-macos/breadth-original-hq-final-reviewed-reconciliation.json`.
+
+Thirty-two new independent ground owners cover original HQ sizes0/1 in all four
+climates, reaching1,831 authored models. All1,799 prior model cells/six-face paint,
+dimensions, origins, authored definitions, components, materials and bindings
+remain unchanged. Eight original ground-only layouts retain separate ownership
+without inventing sortable bodies or changing company scores/upgrades/commands/RNG.
+Explicit authored ownership planes keep the full north cottage/turret/flag while
+preserving the exact disjoint joined compound and original four-tile contact.
+
+Individual own-source/eight-view inspection rejects the former XY-column cuts and
+the subsequent cottage-shrink attempt. Initial, corrected, palette, column/shrink,
+CLI and owner-exporter failures remain preserved. The inset small fence now retains
+an open physical path. A coplanar grey diagnostic-floor defect is repaired without
+changing artwork or runtime selection: strict gallery differences fall from
+81/81/81/78 images and31,657/31,657/31,657/31,621 pixels to31/31/31/28 images and
+1,001/1,001/1,001/965 pixels. All34 native studies match exactly, but wider views
+and world differences of10/9/12/8 pixels remain failed, not accepted tolerances.
+
+Native211, asset204, harness94 and presentation-boundary140 pass. Eight final
+climate/backend geometry/atlas/picking/synchronous-save controls pass. Missing one
+owner retains the entire original family: both backend pairs preserve37 source
+layers and the whole screenshot exactly. Thirty-two individually inspected HQ
+models score6/10 with explicit remaining source/detail/world/state/LOD defects;
+the2,494-entry ledger has57 individual reviews, scores1×276,3×183,4×159,5×1,819,
+6×40 and7×17, and no8/10 approval. Original-state instances do not inherit model
+ratings. Forty portable source/eight-view sheets and eight size0 world captures
+are retained under`reviews/20261003/hq-source-owner-planes/`.
+
+Natural size1 upgrade-world evidence, larger HQ sizes2…4 and their ground/body
+owners, locks/river/disaster breadth and the entire-catalogue fidelity goal remain
+open. A separate ordinary operating-company observer is investigating unforced
+quarterly upgrades; no positive upgraded-world result is inferred. Full fleet/
+emitter, strict wider rendering, sustained smooth60fps/memory and platform/input/
+replay/network acceptance remain unfinished. Audited`.40`is still the recommended
+immutable release and contains none of this newer HQ increment. This is an ongoing
+checkpoint, not a stopping-clock audit or completion claim.
+
+Evidence:`build-macos/breadth-original-hq-source-owner-final-frozen-build/manifest.json`,
+`build-macos/breadth-original-hq-source-owner-final-strict-backend-index.json`and
+`build-macos/breadth-original-hq-source-owner-final-model-quality.json`.
+
 ## `.40` independently audited and public — October 3, 10:37:55 UTC
 
 The five-object increment at immutable`8f54421fcd24082c684acc83ada1af6ed37b8b25`

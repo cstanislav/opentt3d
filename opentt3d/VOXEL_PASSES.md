@@ -1,5 +1,24 @@
 # Breadth-first voxel development passes
 
+## October 3 HQ ground-owner increment
+
+Original HQ sizes0/1 add32 independently owned climate/tile volumes, preserving
+all1,799 prior models and bindings in the1,831-model catalogue. Separate source-
+owner/eight-view inspection rejects column-sliced turrets and a shrinking workaround;
+explicit authored planes retain the full disjoint compound and original absent
+bodies. Forty portable owner/joined sheets and eight natural size0 worlds are
+registered. Every new model scores6/10 with remaining source/detail/state/LOD and
+wider-backend defects; no8/10 or five-size HQ completion is inferred.
+
+Native211/asset204/harness94/boundary140, eight final climate/backend controls and
+two600-frame technical controls pass. Missing-owner/backend pairs preserve every
+original source layer and whole screenshot exactly. The review-only support-floor
+repair reduces coplanar diagnostic differences without changing artwork; residual
+wider/world equality and pacing remain failed. Evidence is sealed at12:01:32UTC;
+634 files and all rejected freezes are preserved. Larger HQ sizes2…4, natural
+upgrades, locks/rivers/disasters, complete catalogue inspection and full performance
+acceptance remain next breadth work. Audited`.40`is still the recommended release.
+
 ## September 26 rendering-priority update
 
 The follow-up instruction supersedes the earlier strict voxel requirement for

@@ -16,6 +16,20 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **First two HQ sizes:**32 independent ground owners across four climates retain
+  source anchors, complete four-tile contact and intentionally absent bodies.
+  Explicit authored planes keep the coherent north cottage/turret/flag without
+  resizing or duplicating the compound. Source-owner/eight-view sheets rejected
+  vertical-column cuts and a later shrink attempt; all studies remain preserved.
+  The inset small fence retains an open path. Eight final hidden climate/backend
+  controls and native211/asset204/harness94/boundary140 pass. Missing-owner controls
+  preserve every original source layer and whole screenshot exactly. Each new
+  owner scores6/10; source/detail/natural size1/world/backend/LOD acceptance remains
+  open. A coplanar diagnostic support floor is repaired, but wider comparisons
+  still fail at31/31/31/28 images and1,001/1,001/1,001/965 pixels plus10/9/12/8 world
+  pixels. The1,831-model catalogue preserves all1,799 earlier models and bindings;
+  the2,494-entry ledger has57 individual reviews and no8/10 approval. Larger HQ
+  sizes2…4, lock/river/disaster breadth and the complete objective remain active.
 - **Five original object candidates:** transmitter/lighthouse/normal statue/Toyland
   gnome/owned-land sign add13 original climate bindings and reach1,799 volumes.
   The transmitter retains open lattice/guy wires/dishes/paired animated paint;

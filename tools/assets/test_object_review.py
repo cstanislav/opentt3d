@@ -2,7 +2,7 @@
 from pathlib import Path
 import unittest
 
-from object_review import source_evidence_paths, source_layer_registrations
+from object_review import owner_native_offset, source_evidence_paths, source_layer_registrations, source_owner_registrations
 
 
 class ObjectReviewRegistrationTests(unittest.TestCase):
@@ -32,6 +32,28 @@ class ObjectReviewRegistrationTests(unittest.TestCase):
                 row["ground"]["sprite_offset"] = bad
                 with self.assertRaisesRegex(ValueError,"native sprite scale"):
                     source_layer_registrations([row])
+
+    def test_owner_sheet_does_not_include_another_layer_or_apply_the_tile_root_twice(self):
+        row = self.row(1,[1,0])
+        self.assertEqual(source_owner_registrations(row,"ground"),[("ground1.pam",-32,0)])
+        self.assertEqual(source_owner_registrations(row,"body"),[("body1.pam",-26,-66)])
+        self.assertEqual(owner_native_offset(row,{"origin":[23,7,0]}),(0,14))
+        self.assertEqual(owner_native_offset(row,{"origin":[16,0,0]}),(0,0))
+        self.assertEqual(row["tile_offset"],[1,0],"Display framing must not mutate source metadata")
+
+    def test_owner_sheet_keeps_absence_and_sequence_height(self):
+        row = self.row(3,[1,1]); row["body"] = []
+        self.assertEqual(source_owner_registrations(row,"body"),[])
+        self.assertEqual(owner_native_offset(row,{"origin":[18,19,5]}),(2,0))
+        with self.assertRaisesRegex(ValueError,"source owner"):
+            source_owner_registrations(row,"joined")
+
+    def test_exported_integral_float_anchors_do_not_round_fractional_positions(self):
+        row = self.row(1,[1,0])
+        self.assertEqual(owner_native_offset(row,{"origin":[16.0,0.0,0.0]}),(0,0))
+        self.assertTrue(all(type(value) is int for value in owner_native_offset(row,{"origin":[16.0,0.0,0.0]})))
+        with self.assertRaisesRegex(ValueError,"native sprite scale"):
+            owner_native_offset(row,{"origin":[16.25,0.0,0.0]})
 
 
 if __name__ == "__main__":

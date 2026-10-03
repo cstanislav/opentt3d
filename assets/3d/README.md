@@ -6,6 +6,13 @@ The current goal requires **every world asset** to be recreated as voxels. Edita
 cell volumes and six-face Classic palette materials are in `voxels.json`.
 `compile_voxels.py` validates/compiles boxes, paint, cuts, repeats, stepped roofs and hollow barrels
 to cell runs; the renderer builds shared, hidden-face-free conforming surfaces.
+Explicit integer `clip_plane` operations partition already-authored occupied cells
+by original source owner; they infer no geometry or paint from source images.
+The first two four-tile HQ sizes use complementary planes to retain coherent
+north-owned cottage/turret relief without shrinking the disjoint compound or
+inventing absent sortable bodies. All32 climate/owner candidates are individually
+reviewed at6/10, not approved. Larger HQ sizes and natural upgraded-world/LOD/source
+fidelity remain separate outstanding work.
 Compact triangulation keeps actual colour/crease edge samples and shared rectangle
 cuts. Thin rectangles and unit strips beside colour changes or occupied/empty silhouette edges retain reference
 cell diagonals; larger interiors use ears without skipping boundary vertices. Reference/contact

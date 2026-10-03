@@ -2,6 +2,27 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — two ground-only HQ sizes, still below8/10
+
+The current1,831-model working catalogue adds32 original HQ ground owners for
+sizes0/1 across four climates, preserving all1,799 preceding models and bindings.
+Original company logic, commands/RNG, tile registration and absent bodies remain
+unchanged. Explicit authored ownership planes correct fragmented north-owned
+cottage/turret artwork without shrinking or duplicating the joined compound.
+Individual source-owner reviews also correct the inset fence/open entrance and a
+coplanar review-only floor; every rejected candidate remains preserved.
+
+Native211/asset204/harness94/boundary140 and eight final climate/backend geometry,
+atlas/picking/synchronous-save controls pass. Partial-family controls retain all37
+source layers and whole screenshots exactly in both backends. All34 native studies
+match across backends; wider comparisons still fail at31/31/31/28 images and
+1,001/1,001/1,001/965 pixels, plus10/9/12/8 world pixels. Thirty-two HQ models are
+individually rated6/10, reaching57 sub-eight reviews in the2,494-entry ledger.
+Forty registered source/eight-view sheets and eight natural size0 world captures
+are portable; no natural size1/full-HQ/LOD/8/10 or sustained60fps approval follows.
+Larger HQ sizes, locks/rivers/disasters and catalogue-wide fidelity remain active.
+Audited`.40`remains the recommended release; these newer assets are not in it.
+
 ## October 3 — `.40` independently audited and published
 
 Recommended downloads use`.40`at exact

@@ -36,6 +36,262 @@
     "opentt3d/reviews/20261003/objects/toyland-object-3-size-0.png": "4438bfb5479363d5b7420f031afda095dd3189c8e5985fc939a58b6c053a281e"
   },
   "models": {
+    "hq_ground_tiny_temperate_north": {
+      "score":6,"fingerprint":"e34f8108b38bc655b8b45e89294e2463b3e680b0c2ae42150720feb9c163823c",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_north.png":"33e9f8534ea785ced5b54f86327fc418cbc683399c47de75877c9341c02b0ae1"},
+      "notes":["Individually inspected registered source and eight views: the complete north-owned cottage has a sloped company roof, recessed glazing, real interior and independent opaque soil."],
+      "defects":["Roof ridge/overhang, brick/glazing detail and coarse soil/turf grain remain unlike the source; strict world/backend and owner LOD acceptance are incomplete."]
+    },
+    "hq_ground_tiny_temperate_west": {
+      "score":6,"fingerprint":"e852ebc6130754b161545e33287ee334ef6e22e85ac1f7a896f97739db2ceb61",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_west.png":"55811469b99f2e07f10d315d9f687dde43e95bbba9f2b6072dca378cb3779ae5"},
+      "notes":["West source owner is independently inspected at native registration and all eight views; its thin true soil volume retains exact contact and no invented body."],
+      "defects":["Soil flecks are too coarse and the turf margin too uniform; source paint, joined-world/backend and automatic LOD transitions remain unaccepted."]
+    },
+    "hq_ground_tiny_temperate_east": {
+      "score":6,"fingerprint":"b2ef6bba9a8826d8b7f217956a0e969bf89d7861888177a43fbd5a2981ff3b3f",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_east.png":"6257ed5449d58bca757526f118b7bd45d4a9a17881d5b0d3686ace4b73545635"},
+      "notes":["East owner preserves its independently anchored path and soil, with raised source-edge cells instead of a duplicated cottage facade; eight views were opened."],
+      "defects":["Path width/edge paint and roof-overhang ownership need finer source refinement; ground grain, strict world/backend and LOD acceptance remain open."]
+    },
+    "hq_ground_tiny_temperate_south": {
+      "score":6,"fingerprint":"59aa843ce66c165c522271cedc86231f6eb27a1e5f44969ad32afab06c835f71",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_tiny_temperate_south.png":"fa06945155f5ec48def71a446c5473284fb971db96801c3ced1300bbdfca1f5d"},
+      "notes":["Separate south soil/turf volume is inspected against its own source and eight views; four-owner compound tests retain every cell exactly once."],
+      "defects":["Sparse large soil/turf flecks and a hard perimeter simplify the native painted transition; wider world/backend and independent-owner LOD review are incomplete."]
+    },
+    "hq_ground_tiny_arctic_north": {
+      "score":6,"fingerprint":"39a7fb690951f90c1a708e6907ca4888c2ed3e2275bbf4944a422b0b30b2b315",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_north.png":"652e0c9124be275b2870d1fc8f3e40b46701375eba47a99204451b56b7931800"},
+      "notes":["Arctic north source/eight-view inspection retains a coherent cottage, company-coloured roof, real window recesses and separate yellow-brown original climate ground."],
+      "defects":["Ridge, masonry/glazing and Arctic ground grain remain coarse; natural climate/snow-world variants, strict backend and owner LOD review remain unfinished."]
+    },
+    "hq_ground_tiny_arctic_west": {
+      "score":6,"fingerprint":"f4c49637718c1fa9b7bbceb8d82cc6b596fca07060ef6ed351184029c7e902c3",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_west.png":"3c89102ad306886f80ebab2ecf91428c1b60ff33c517fed6a70608ef419ef0f2"},
+      "notes":["West Arctic owner keeps its own soil layer, ochre margin and original absence of a body; registered native/orbit/street views were individually inspected."],
+      "defects":["Ochre speckles and turf-to-soil transitions are broader than the original; full climate-world, strict backend and LOD consistency remain unaccepted."]
+    },
+    "hq_ground_tiny_arctic_east": {
+      "score":6,"fingerprint":"140c06615b265a1cac68d8c4ae34f314a5fa32ac301030d1c08a6c42af807fe7",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_east.png":"5cb1cd87c4318eff9fbf7d3ec674cfbb45c9fa9206c04063d20575f0bef1e2bf"},
+      "notes":["East Arctic source owner is inspected independently, with its pale entrance path, yellow soil flecks and correctly registered true ground relief."],
+      "defects":["Path and source-edge roof paint are simplified; original climate-ground grain, world/backend and owner LOD transitions are not approved."]
+    },
+    "hq_ground_tiny_arctic_south": {
+      "score":6,"fingerprint":"86a0cae6e865208d58ad22f6b33cae78bd3e47f08a1daf23321a49eb967dd4f0",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_tiny_arctic_south.png":"eee01fd608ea9fb72793e8d69c49434a282c1432c88780a5dff5b028b7b4ceee"},
+      "notes":["South Arctic soil owner has exact separate contact and no invented building; own-source and all-eight-view inspection retains its distinct climate palette."],
+      "defects":["Large sparse ground flecks and a hard ochre margin differ from native grain; full climate-world/backend and LOD consistency remain open."]
+    },
+    "hq_ground_tiny_tropic_north": {
+      "score":6,"fingerprint":"6b193ccf7d330cb8b2753a4c380c1421d449ca464b772270dac575a9ce1ba618",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_north.png":"83f8a5bc1f4e7fac3e894c1214df779d0d1caf2691af353fd12719bc5674e53f"},
+      "notes":["Tropical north owner retains its cottage, inset windows and genuine sloped roof above its own pale-green climate ground; eight views are individually inspected."],
+      "defects":["Roof/brick/glazing paint and pale ground grain are coarse; desert/world variants, strict backend equality and independent-owner LOD acceptance are unfinished."]
+    },
+    "hq_ground_tiny_tropic_west": {
+      "score":6,"fingerprint":"70664fde169d2f25e6007d14d7806c2491b6cf8e60e2a48d9cdaada31a6c9b7e",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_west.png":"537d0c4c68fb753b1bf023d1cae7369a750de67488f6943c6b711abcc40ea115"},
+      "notes":["West tropical ground remains a separately registered thin volume with its own source palette and no body; native, orbit and street views were inspected."],
+      "defects":["Pale speckles/perimeter simplify original fine grain; desert/world material context, strict backend and automatic owner LOD review remain open."]
+    },
+    "hq_ground_tiny_tropic_east": {
+      "score":6,"fingerprint":"68a24861c7f9cbf882676cfce07dd3d4c8da726fea8e6cc597cb2e31346f0d59",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_east.png":"c0a3fc3da833424023f1ae4bfa78f4a18e027bfb1b8d0b6f8d6b13fec0802857"},
+      "notes":["East tropical owner preserves the entrance path, separate original ground and raised source-edge relief without an extra cottage facade; all eight views are inspected."],
+      "defects":["Paving width, source-edge roof paint and fine pale-green soil grain need refinement; strict world/backend and owner LOD approval remain absent."]
+    },
+    "hq_ground_tiny_tropic_south": {
+      "score":6,"fingerprint":"bb9c5d3e4a32118eab0950912b6d437213034ab692bdf83893d633f7db54fa68",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_tiny_tropic_south.png":"26eb4fd7df80cadde31176263595feca5dcb6598c81efed70dd6509142123b50"},
+      "notes":["South tropical source/eight-view inspection shows exact separate soil contact and a distinct pale-green margin; no absent body is filled."],
+      "defects":["Soil/turf flecks are oversized and the perimeter too uniform; climate/desert-world, strict backend and independent-owner LOD consistency remain incomplete."]
+    },
+    "hq_ground_tiny_toyland_north": {
+      "score":6,"fingerprint":"f25b83cbc37feaf33306bc52bdea94b0c762a021d18eb9d5d2243b36a9579bcd",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_north.png":"3c656ef4aec60c02e9695abd40f6760ce0f17a666a6486e9849018c5003fee0c"},
+      "notes":["The original north-owned tall turret/flag is coherent real hollow XYZ geometry, not four column slices or a recoloured cottage; registered source/eight-view inspection is retained."],
+      "defects":["Turret profile, parapet/flag pose, masonry and checker-lawn grain remain simplified; strict world/backend, complete state and owner LOD approval remain open."]
+    },
+    "hq_ground_tiny_toyland_west": {
+      "score":6,"fingerprint":"0fd5ee5f088506b9e0a4a7198bc38a8d0c13d4e0e51dc407c6e627551181b773",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_west.png":"e4455c318fe2e859417ef69d4e82cb3c8e96cc52179e450d4b41f87665f3b1e3"},
+      "notes":["West Toyland owner is independently inspected with genuine checker ground and its low turret-base fragment; the complete tower/flag remains with the original north owner."],
+      "defects":["Dark/light lawn patches form coarse rings instead of the original textured checks; base-fragment paint, joined-world/backend and owner LOD approval are unfinished."]
+    },
+    "hq_ground_tiny_toyland_east": {
+      "score":6,"fingerprint":"f909167cc137699f6cbd7d1673ad25c50a810ed3b68f5ad9b3cabce84e25b0e2",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_east.png":"75bf0b3cced24c51cdd7b25e1c49d4ae0f82edd1fa61b3943dc0828c05408fbf"},
+      "notes":["East checker-ground and door/base fragment retain their own source registration and real depth; all four orbit and four street views were inspected."],
+      "defects":["Checker paint is too dark/coarse and entrance-base detail simplified; original owner-edge paint, strict world/backend and LOD transitions remain unaccepted."]
+    },
+    "hq_ground_tiny_toyland_south": {
+      "score":6,"fingerprint":"2c3d3b7f23dbfeaabd03ba389967917f20d78a003f3ee38a00fa2cd3c3920fa0",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_tiny_toyland_south.png":"d87aa8cd47d95bc6691bfeb8fbe7a7a01163462429e92d8828c3fdaddc5caf78"},
+      "notes":["Separate south Toyland checker ground is inspected against its own original and all eight views; its small turret-base corner does not duplicate the upper tower or flag."],
+      "defects":["Native lawn checks are replaced by coarse green rings and base-corner paint is approximate; world/backend and independent-owner LOD acceptance remain open."]
+    },
+    "hq_ground_small_temperate_north": {
+      "score":6,"fingerprint":"fe3a4f575b0425e9bf0b2e76b1eecca68279c92b4221042ed9654ed15b01dfdf",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_north.png":"4361ee541bed065b58628bed1611a25ab7ccfcff83102d510a455a3c053f9a57"},
+      "notes":["Individually inspected small north owner retains the cottage plus inset company-coloured pickets/rails and separately owned soil; openings and source absence remain real."],
+      "defects":["Roof, masonry/glazing, fence paint and soil grain remain coarse; natural size1 upgrade-world evidence and strict backend/LOD acceptance are missing."]
+    },
+    "hq_ground_small_temperate_west": {
+      "score":6,"fingerprint":"a00fe04be6f054f8f7a7ae3780f185ba77fe57b7876b21c691f7f9d86ba4da8e",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_west.png":"7c328392b2dfaf3d0ac4bb3fc94b4c2a909e80ecd161b804acf4725c168c345f"},
+      "notes":["Small west source/eight-view inspection retains a hollow independent shed with corrugated roof and inset blue fence; neither building dimensions nor original body absence are substituted."],
+      "defects":["Shed walls/roof/corrugation and soil paint are simplified; shed street-edge backend differences, natural size1 world and owner LOD acceptance remain unresolved."]
+    },
+    "hq_ground_small_temperate_east": {
+      "score":6,"fingerprint":"22d60ba7562994469e55858b25d5616f0ba03497855f2702756f232a87f3467a",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_east.png":"0ae6bdd3289ed6fa04adf5ccab65ab568c2002d9e2707ac30770fe84ee45d182"},
+      "notes":["Small east owner is inspected separately with an open physical entrance path and real inset fence posts/rails; source-anchored ground remains opaque and body-free."],
+      "defects":["Fence/path/source-edge roof paint and soil texture remain provisional; no natural size1 world, strict backend or independent-owner LOD approval exists."]
+    },
+    "hq_ground_small_temperate_south": {
+      "score":6,"fingerprint":"842b7b86696934580a6d9a863c6457bd9de828a8509f0a13dc084d7efbb232f7",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/temperate/owners/hq_ground_small_temperate_south.png":"9b91dc58f0e35fab4ea5b287487fabe5c5c9c2bc72418c5064d5efab5aa116f6"},
+      "notes":["Small south source and eight views show a true inset fence around separately owned soil, with correct contact and no added sortable body."],
+      "defects":["Picket/rail detail and turf/soil grain simplify the native artwork; natural size1 upgrade, world/backend and automatic owner LOD acceptance remain open."]
+    },
+    "hq_ground_small_arctic_north": {
+      "score":6,"fingerprint":"2add67434e792d7b7b7dc6d81cbb1cd3d8e4f4da0aebb0aed7e3ac4e20cbf2af",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_north.png":"1c5dd48af4196f75063436206d61a9636f52fa5e82d244a371b95ceaabf66d7b"},
+      "notes":["Small Arctic north owner is individually inspected with the complete cottage, recessed windows, sloped roof and inset company fence above distinct ochre climate ground."],
+      "defects":["Roof/glazing/masonry and ochre soil flecks are coarse; natural size1/snow-world, strict backend and independent-owner LOD acceptance are unfinished."]
+    },
+    "hq_ground_small_arctic_west": {
+      "score":6,"fingerprint":"8d6f370b3a6712a07e0b72674d48ce0ee568c1c3d8a745757c94fadf36752aa2",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_west.png":"73e444ad8d4ac863998b31ea32474f96500519df3fecd91d09ccd1fa626f0cd4"},
+      "notes":["Arctic small west source/eight-view study retains the independent hollow shed, corrugated roof, inset company fence and separately owned climate soil."],
+      "defects":["Shed wall/roof/corrugation and ground grain are approximate; street-edge backend differences, natural upgraded/snow-world and LOD review remain unresolved."]
+    },
+    "hq_ground_small_arctic_east": {
+      "score":6,"fingerprint":"7832b539bbc791f2821e92c96e4482cad9351d491768ae88c91533c3f3594729",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_east.png":"829ecaa2b75f6ac920fdd5db1bf41ce81709ba7fe00aed3813c97d8e530e8238"},
+      "notes":["Small east Arctic owner keeps its open path, real fence posts/rails and yellow-brown soil volume at the original anchor; its own source and eight views are inspected."],
+      "defects":["Fence/path/source-edge roof detail and Arctic soil paint remain coarse; natural size1/snow-world, strict backend and owner LOD acceptance are missing."]
+    },
+    "hq_ground_small_arctic_south": {
+      "score":6,"fingerprint":"7d4ba3c0bc2fe43a5a904d19cc619ba5b8cca84b5a9896772838ec3c453c0591",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/arctic/owners/hq_ground_small_arctic_south.png":"c36217e8071f818203700138988901037a7ae061174efbba66dc4dd614dd5496"},
+      "notes":["South Arctic small ground is independently inspected with its true inset fence, ochre perimeter and original body absence; exact compound cells are not duplicated."],
+      "defects":["Fence trim and turf-to-soil grain are simplified; natural size1/snow-world evidence, strict backend and automatic owner LOD approval remain absent."]
+    },
+    "hq_ground_small_tropic_north": {
+      "score":6,"fingerprint":"1e4fbb65ac56b1d92ce766b0bb3503daa1ea277f9df642b4cbe2aa56f2712809",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_north.png":"01cbdd8119c01ad9b6e2da797ac93fad4f68aa14d7f5935f8451d75b0c431dae"},
+      "notes":["Small tropical north source/eight-view inspection retains the cottage, sloped roof, recessed glazing and inset company fence on distinct pale climate soil."],
+      "defects":["Roof/glazing/masonry and pale soil grain remain coarse; natural size1/desert-world, strict backend and independent-owner LOD acceptance remain incomplete."]
+    },
+    "hq_ground_small_tropic_west": {
+      "score":6,"fingerprint":"95f6a533d7800b0627cda85c201d8aacdd684b300e49541db5320cb88dc0dddd",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_west.png":"75648c24e7927324f12998b40b75ba28e19641497dc9872028743a7b8e4769b9"},
+      "notes":["The tropical small west owner retains a hollow shed, corrugated roof and real inset fence with separately registered pale soil; native/orbit/street views are inspected."],
+      "defects":["Shed wall/roof/corrugation and fine climate grain are simplified; shed street-edge backend differences, natural upgraded/desert-world and LOD acceptance remain open."]
+    },
+    "hq_ground_small_tropic_east": {
+      "score":6,"fingerprint":"977e4642bf66cb9cee543938e1c03c19a970a2d1a54c3212241c6986e2b90245",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_east.png":"489fd7a553300024d8a982283399e00001fbdb0c37fa09ebe8cdb98b39c6aa36"},
+      "notes":["Small east tropical owner is individually inspected with the open real entrance path, inset fence and original soil/raised-edge source ownership."],
+      "defects":["Paving/fence/source-edge roof detail and fine soil grain remain provisional; natural size1/desert-world, strict backend and owner LOD approval are missing."]
+    },
+    "hq_ground_small_tropic_south": {
+      "score":6,"fingerprint":"536dcc3eeee8377e26058a33f8d2fcf07952bb7df287c6a2d974f6d20546efcf",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/tropic/owners/hq_ground_small_tropic_south.png":"4b11f9f241a1b6a2f27b28d45726cf50311e2a0271d9a01d29e9bacfb8482c79"},
+      "notes":["South tropical small source/eight-view inspection preserves a real inset company fence, separately owned pale ground and intentional absence of a body."],
+      "defects":["Picket/rail detail and source soil transitions remain coarse; natural size1/desert-world, strict backend and automatic owner LOD acceptance are incomplete."]
+    },
+    "hq_ground_small_toyland_north": {
+      "score":6,"fingerprint":"ea5aab6e17aae462170c419878bf83f3c6b97933d0c935f75eec4768eef89f0e",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_north.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_north.png":"301f5cc5774d4a2c5e83940c791d016a6a9637c949c23e1a0db979dba88a44fa"},
+      "notes":["Small Toyland north source/eight-view inspection retains the coherent hollow turret/flag plus real castellated curtain walls with air gaps, not a recoloured ordinary HQ."],
+      "defects":["Turret/parapet shape, battlement and masonry/checker detail remain coarse; residual street/backend differences, natural size1 world and owner LOD acceptance remain unresolved."]
+    },
+    "hq_ground_small_toyland_west": {
+      "score":6,"fingerprint":"2b2a00dbefe7aa86f7df031bd3bfed7b71e4dac0230f93a8e4489e021c0b2100",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_west.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_west.png":"22cc6d961f5d013ba9ddcd4d99de0074a622204061623e731dd4369499380f9e"},
+      "notes":["West Toyland small owner is individually inspected with real thick curtain-wall relief, crenellation air gaps and checker courtyard; original source anchor remains distinct."],
+      "defects":["Wall courses/battlement profiles and checker grain simplify the source; precise owner-edge paint, natural size1 world, strict backend and LOD approval remain open."]
+    },
+    "hq_ground_small_toyland_east": {
+      "score":6,"fingerprint":"093ccc47259820c2fc5cf844db8c742eac0fe17b2776792834f39805fe1beaa1",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_east.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_east.png":"ca5bad0b7762d03e5eda958562ad8049910f7a00881edce78051bfa90d526051"},
+      "notes":["Small Toyland east source/eight-view study retains true castellated wall relief, an open entrance gap and separate checker ground rather than a flat facade."],
+      "defects":["Entrance/path paint, wall/battlement detail and checker grain remain approximate; natural size1 world, strict backend and owner LOD transitions are unaccepted."]
+    },
+    "hq_ground_small_toyland_south": {
+      "score":6,"fingerprint":"7d21422179cf79c779017c3d56da3c12002fc9aa24ccb2cda7d7c5e3b9b9620b",
+      "checks":{"source":false,"orbit":true,"street":true,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_south.png"],
+      "evidence_sha256":{"opentt3d/reviews/20261003/hq-source-owner-planes/toyland/owners/hq_ground_small_toyland_south.png":"0adc93e99f00b360e793fdee98a9fa5468cfad112a49541d43d7160613ec8591"},
+      "notes":["South Toyland small owner is inspected independently with volumetric curtain walls, physical crenellation gaps and checker-ground registration; no absent body is invented."],
+      "defects":["Wall/battlement shape, corner paint and checker texture remain coarse; natural size1 world, strict backend and independent-owner LOD acceptance remain incomplete."]
+    },
     "object_transmitter": {
       "score":6,"fingerprint":"0242f3d41e8e2cd7c7741037e4d297208f3211af0852a30ff589d7f999faed5c",
       "checks":{"source":false,"orbit":true,"street":true,"world":true,"states":false,"consistency":false},

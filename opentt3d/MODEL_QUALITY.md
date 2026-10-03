@@ -26,6 +26,25 @@ dimensions and all six palette faces are fingerprinted independently of material
 ID renumbering. Edited models or overwritten evidence invalidate prior ratings.
 Quick-pass ratings do not confer final original-art visual approval.
 
+## October 3 HQ owner review
+
+The current1,831-model catalogue adds32 individually inspected original ground
+owners for HQ sizes0/1/four climates. Each has its own registered source/native,
+four orbit and four street views, exact cell/six-face fingerprint and immutable
+portable-sheet hash. All score6/10: coarse source grain/roof/masonry/checker detail,
+natural upgraded-world evidence, wider backend differences and owner LOD review
+remain explicit defects. The north cottage/turret/flag now retain their source
+owner without shrinking the disjoint joined compound; absent bodies stay absent.
+
+The2,494-entry ledger retains57 individual reviews:40 at6/10 and17 at7/10.
+Other scores are1×276,3×183,4×159 and5×1,819, including32 newly bound source-state
+instances that do not inherit their model's score. All1,799 preceding authored
+models/material faces/bindings stay exact. Forty owner/joined sheets and eight
+natural size0 world captures are retained in`reviews/20261003/hq-source-owner-planes/`.
+Native-source and state/world consistency are not approved;`--require-eight`
+still fails. The historical25-review/1,799-model figures below describe the prior
+increment and the immutable recommended`.40`, not this newer working catalogue.
+
 ## Reproduce against the exact reviewed build
 
 ```sh

@@ -1,5 +1,47 @@
 # Implementation verification
 
+## Independent ground-owned HQ sizes0/1 — October 3
+
+Scoped evidence is sealed at12:01:32UTC with634 exact preserved files:
+`build-macos/breadth-original-hq-final-reviewed-reconciliation.json`and portable
+`reviews/20261003/hq-source-owner-planes/verification.json`. An absolute-path copy
+failure and incomplete freeze remain preserved; the corrected seal changes only
+evidence destinations. Lossless compaction roundtrips3,088 successful captures,
+saving1,964,038,888bytes without discarding original pixels/headers or failed studies.
+Both600-frame technical controls pass but retain103/92 intervals over20ms and an
+OpenGL144.98075ms work stall; sustained60fps acceptance remains open.
+
+Thirty-two original climate/tile owners bring the working catalogue to1,831;
+all1,799 prior authored/compiled models, material faces/components and bindings
+remain exact. Catalogue SHA-256:
+`6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d`.
+Original ground contact/anchors, absent bodies, company colours, commands,
+simulation scores/upgrades and RNG are unchanged. Explicit cell-space ownership
+planes preserve the exact compound without duplicating columns or shrinking it.
+
+Native211/asset204/harness94/boundary140 pass. Eight final hidden climate/backend
+controls verify independent opaque ground, sixteen company palettes, joined
+visibility/picking, geometry/atlas and synchronous saves. Actual worlds select
+size0 only; isolated original size1 layouts are not natural upgrade evidence.
+Two final missing-owner/backend pairs preserve37 source layers and whole screenshots
+exactly. All34 native studies match across backends. A diagnostic coplanar support
+floor is repaired; unchanged individual/ joined studies and37 source layers remain
+pixel-exact before/after. Residual wider differences are31/31/31/28 images and
+1,001/1,001/1,001/965 pixels; world differences are10/9/12/8 pixels. Strict comparisons
+remain failed; no tolerance is weakened.
+
+Thirty-two new individual6/10 reviews are cell/paint and evidence-hash bound;
+40 owner/joined sheets plus eight natural size0 worlds are portable. The2,494-entry
+ledger retains57 individual reviews and zero8/10 approvals; required-eight fails.
+Source paint/shaping, naturally upgraded states, larger HQ sizes, independent LOD
+transitions, full breadth and sustained performance remain open. All initial,
+corrected, palette, column/shrink, CLI/exporter and coplanar-floor failures remain
+preserved. Audited`.40`remains recommended and does not include this increment.
+Evidence:`build-macos/breadth-original-hq-source-owner-final-frozen-build/manifest.json`,
+`build-macos/breadth-original-hq-source-owner-final-native-owner-source-preservation.json`,
+`build-macos/breadth-original-hq-source-owner-planes-fallback-strict-index.json`and
+`build-macos/breadth-original-hq-source-owner-final-model-quality.json`.
+
 ## Independently audited original-object desktop release — October 3
 
 Published`.40`targets exact`8f54421fcd24082c684acc83ada1af6ed37b8b25`in successful

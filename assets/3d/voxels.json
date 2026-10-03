@@ -1513,6 +1513,37 @@
     "radio_beacon_a": 239,
     "radio_beacon_b": 240,
     "radio_fence_post": 8,
+    "hq_grass_temperate": [89,88,88,91,82,90],
+    "hq_grass_temperate_grain": [90,88,89,91,82,91],
+    "hq_grass_arctic": [57,54,55,58,53,56],
+    "hq_grass_arctic_grain": [58,55,56,60,53,58],
+    "hq_grass_tropic": [92,90,90,94,89,93],
+    "hq_grass_tropic_grain": [93,91,92,94,89,95],
+    "hq_grass_toyland": [84,82,83,85,82,82],
+    "hq_grass_toyland_light": [86,84,85,86,82,206],
+    "hq_grass_toyland_grain": [85,83,84,86,82,84],
+    "hq_soil": [74,71,72,76,71,71],
+    "hq_soil_grain": [75,72,74,78,72,73],
+    "hq_paving": [9,7,8,10,6,10],
+    "hq_paving_grain": [10,8,9,10,7,9],
+    "hq_brick": [77,73,75,79,72,78],
+    "hq_brick_grain": [78,74,76,79,73,77],
+    "hq_company_roof": [201,199,200,203,198,202],
+    "hq_company_roof_grain": [202,200,201,203,199,201],
+    "hq_company_fence": [201,199,200,203,199,203],
+    "hq_glass": [131,130,130,131,130,131],
+    "hq_glass_frame": [10,7,8,10,7,9],
+    "hq_shed_roof": [6,3,4,8,2,7],
+    "hq_shed_roof_rib": [9,6,7,10,4,10],
+    "hq_castle_stone": [7,4,5,8,3,7],
+    "hq_castle_stone_grain": [8,3,6,9,2,8],
+    "hq_castle_shadow": [5,2,3,7,2,4],
+    "hq_castle_roof": [6,3,4,9,2,7],
+    "hq_castle_window": [10,8,9,11,5,10],
+    "hq_castle_flag": [203,200,200,203,200,202],
+    "hq_castle_door": [56,54,54,58,28,58],
+    "hq_castle_path": [58,54,56,58,54,58],
+    "hq_flag_pole": [56,54,54,58,28,58],
     "object_white": [11,9,10,12,8,14],
     "object_white_grain": [12,10,11,13,9,15],
     "object_brick": [76,73,74,77,73,78],
@@ -9835,9 +9866,259 @@
     ],
     "airport_flag_base": [
       ["use","airport_picket_ne"], ["box","flag_pole",0,24,0,1,25,19]
+    ],
+    "hq_source_owner_north": [["clip_plane",[2,0,-1],64,"less"],["clip_plane",[0,2,-1],64,"less"]],
+    "hq_source_owner_west": [["clip_plane",[2,0,-1],64,"greater_equal"],["clip_plane",[0,2,-1],64,"less"]],
+    "hq_source_owner_east": [["clip_plane",[2,0,-1],64,"less"],["clip_plane",[0,2,-1],64,"greater_equal"]],
+    "hq_source_owner_south": [["clip_plane",[2,0,-1],64,"greater_equal"],["clip_plane",[0,2,-1],64,"greater_equal"]],
+    "hq_tiny_yard": [
+      ["box","hq_soil",0,0,0,64,64,1],
+      ["scatter_paint","hq_soil_grain",3,2603,4,4,0,60,60,1,"hq_soil",[1,1,1]],
+      ["box","hq_paving",18,32,0,23,64,1],
+      ["scatter_paint","hq_paving_grain",4,2604,18,32,0,23,64,1,"hq_paving",[1,1,1]]
+    ],
+    "hq_turf_temperate": [
+      ["paint","hq_grass_temperate",0,0,0,64,4,1], ["paint","hq_grass_temperate",0,60,0,64,64,1],
+      ["paint","hq_grass_temperate",0,0,0,4,64,1], ["paint","hq_grass_temperate",60,0,0,64,64,1],
+      ["scatter_paint","hq_grass_temperate",4,2603,4,4,0,60,60,1,"hq_soil",[1,1,1]],
+      ["scatter_paint","hq_grass_temperate_grain",3,2605,0,0,0,64,64,1,"hq_grass_temperate",[1,1,1]]
+    ],
+    "hq_turf_arctic": [
+      ["paint","hq_grass_arctic",0,0,0,64,4,1], ["paint","hq_grass_arctic",0,60,0,64,64,1],
+      ["paint","hq_grass_arctic",0,0,0,4,64,1], ["paint","hq_grass_arctic",60,0,0,64,64,1],
+      ["scatter_paint","hq_grass_arctic",4,2603,4,4,0,60,60,1,"hq_soil",[1,1,1]],
+      ["scatter_paint","hq_grass_arctic_grain",3,2605,0,0,0,64,64,1,"hq_grass_arctic",[1,1,1]]
+    ],
+    "hq_turf_tropic": [
+      ["paint","hq_grass_tropic",0,0,0,64,4,1], ["paint","hq_grass_tropic",0,60,0,64,64,1],
+      ["paint","hq_grass_tropic",0,0,0,4,64,1], ["paint","hq_grass_tropic",60,0,0,64,64,1],
+      ["scatter_paint","hq_grass_tropic",4,2603,4,4,0,60,60,1,"hq_soil",[1,1,1]],
+      ["scatter_paint","hq_grass_tropic_grain",3,2605,0,0,0,64,64,1,"hq_grass_tropic",[1,1,1]]
+    ],
+    "hq_tiny_cottage": [
+      ["box","hq_paving",10,23,1,32,35,2],
+      ["box","hq_brick",11,25,2,30,33,14], ["erase",13,27,2,28,31,14],
+      ["gable","hq_company_roof",10,24,13,31,35,20,"y"],
+      ["scatter_paint","hq_company_roof_grain",6,2603,10,24,13,31,35,20,"hq_company_roof",[1,1,1]],
+      ["scatter_paint","hq_brick_grain",7,2605,11,25,2,30,33,14,"hq_brick",[2,2,2]],
+      ["erase",12,31,6,16,34,11], ["box","hq_glass",12,31,6,16,32,11],
+      ["box","hq_glass_frame",11,32,5,17,34,6],
+      ["erase",26,31,6,29,34,11], ["box","hq_glass",26,31,6,29,32,11],
+      ["box","hq_glass_frame",25,32,5,30,34,6],
+      ["erase",18,31,2,23,34,12], ["box","hq_company_fence",18,31,2,23,32,12],
+      ["box","hq_paving",17,33,1,24,38,2],
+      ["box","hq_glass_frame",18,32,2,19,33,12], ["box","hq_glass_frame",22,32,2,23,33,12],
+      ["erase",28,27,6,31,30,10], ["box","hq_glass",28,27,6,29,30,10]
+    ],
+    "hq_small_fence_and_shed": [
+      ["repeat",[4,0,0],14,[["box","hq_company_fence",6,6,1,7,7,7]]],
+      ["repeat",[4,0,0],3,[["box","hq_company_fence",6,58,1,7,59,7]]],
+      ["repeat",[4,0,0],9,[["box","hq_company_fence",26,58,1,27,59,7]]],
+      ["repeat",[0,4,0],12,[["box","hq_company_fence",6,10,1,7,11,7]]],
+      ["repeat",[0,4,0],12,[["box","hq_company_fence",58,10,1,59,11,7]]],
+      ["box","hq_company_fence",7,6,3,58,7,4], ["box","hq_company_fence",7,58,3,18,59,4],
+      ["box","hq_company_fence",24,58,3,58,59,4],
+      ["box","hq_company_fence",6,7,3,7,58,4], ["box","hq_company_fence",58,7,3,59,58,4],
+      ["box","hq_brick",43,16,1,56,23,10], ["erase",45,18,1,54,21,10],
+      ["gable","hq_shed_roof",42,14,9,57,25,15,"y"],
+      ["repeat",[3,0,0],5,[["paint","hq_shed_roof_rib",42,14,9,43,25,15]]],
+      ["erase",46,21,1,53,24,8], ["box","hq_castle_shadow",46,21,1,53,22,8],
+      ["box","hq_paving",45,23,0,54,27,1]
+    ],
+    "hq_castle_checker_field": [
+      ["box","hq_grass_toyland",0,0,0,64,64,1],
+      ["repeat",[16,0,0],4,[["repeat",[0,16,0],4,[["ellipsoid_paint","hq_grass_toyland_light",1,1,0,8,8,1],["ellipsoid_paint","hq_grass_toyland_light",9,9,0,16,16,1]]]]],
+      ["scatter_paint","hq_grass_toyland_grain",5,2603,0,0,0,64,64,1,"hq_grass_toyland_light",[1,1,1]]
+    ],
+    "hq_castle_tiny_tower": [
+      ["box","hq_castle_stone",28,28,1,36,36,41],
+      ["erase",30,30,2,34,34,41],
+      ["box","hq_castle_shadow",28,28,40,36,36,42],
+      ["hip","hq_castle_roof",28,28,42,36,36,56,3],
+      ["scatter_paint","hq_castle_stone_grain",8,2603,28,28,1,36,36,41,"hq_castle_stone",[1,1,3]],
+      ["erase",33,34,15,35,37,34], ["box","hq_castle_window",33,34,15,35,35,34],
+      ["erase",34,29,15,37,31,34], ["box","hq_castle_window",34,29,15,35,31,34],
+      ["erase",29,34,1,32,37,12], ["box","hq_castle_door",29,34,1,32,35,12],
+      ["box","hq_flag_pole",32,32,54,33,33,65],
+      ["box","hq_castle_flag",33,32,61,40,33,65],
+      ["erase",37,32,64,40,33,65], ["erase",38,32,61,40,33,62]
+    ],
+    "hq_castle_small_walls": [
+      ["box","hq_paving",0,0,0,64,3,1], ["box","hq_paving",0,61,0,64,64,1],
+      ["box","hq_paving",0,0,0,3,64,1], ["box","hq_paving",61,0,0,64,64,1],
+      ["box","hq_castle_stone",3,3,1,61,6,14], ["box","hq_castle_stone",3,58,1,28,61,14],
+      ["box","hq_castle_stone",36,58,1,61,61,14],
+      ["box","hq_castle_stone",3,3,1,6,61,14], ["box","hq_castle_stone",58,3,1,61,61,14],
+      ["repeat",[8,0,0],7,[["box","hq_castle_stone",4,3,14,7,6,18]]],
+      ["repeat",[8,0,0],3,[["box","hq_castle_stone",4,58,14,7,61,18]]],
+      ["repeat",[8,0,0],3,[["box","hq_castle_stone",38,58,14,41,61,18]]],
+      ["repeat",[0,8,0],7,[["box","hq_castle_stone",3,4,14,6,7,18]]],
+      ["repeat",[0,8,0],7,[["box","hq_castle_stone",58,4,14,61,7,18]]],
+      ["scatter_paint","hq_castle_stone_grain",9,2607,3,3,1,61,61,18,"hq_castle_stone",[2,2,3]],
+      ["box","hq_castle_path",28,56,0,36,64,1]
     ]
   },
   "models": {
+    "hq_ground_tiny_temperate_north": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size0 north ground2603 owns the raised cottage; no separate body exists. Explicit32x32 joined site clipped to the northern16x16 owner, not a sprite extrusion. Source/street/world fidelity remains provisional.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_tiny_temperate_west": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size0 west ground2605: independently rooted soil/grass piece and cottage seam; no sortable body is invented.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_tiny_temperate_east": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size0 east ground2604 retains the cottage end and separately grounded footpath, with correct2x2 tile origin.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_tiny_temperate_south": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size0 south ground2606 remains independent yard terrain; absent body is preserved, not replaced by a placeholder.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_tiny_arctic_north": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size0 north ground2603 has its own dry turf palette, retaining the same cottage structure and company paint. No independent body is present.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_tiny_arctic_west": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size0 west ground2605, independent dry-climate soil/turf owner with unforced size selection.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_tiny_arctic_east": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size0 east ground2604: dry yard, cottage end and source-aligned path; no absent body is filled.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_tiny_arctic_south": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size0 south ground2606, independently partitioned complete dry yard footprint.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_tiny_tropic_north": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size0 north ground2603 retains the cottage and independently painted tropical turf; body absence and score selector are unchanged.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_tiny_tropic_west": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size0 west ground2605, separate soil/grass owner at the source west tile.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_tiny_tropic_east": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size0 east ground2604 owns the cottage end/footpath and climate-specific yard, retaining genuine XYZ relief.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_tiny_tropic_south": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size0 south ground2606 remains yard rather than an invented separate body.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_tiny_toyland_north": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size0 north ground2603 is a true square stone tower with pointed roof, recessed slits, tan door and company flag on checker grass; never a recoloured ordinary cottage.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_tiny_toyland_west": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size0 west ground2605, source-owned checker field/tower seam with original empty body preserved.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_tiny_toyland_east": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size0 east ground2604 retains independently partitioned checker grass and the small tower's genuine wall/door depth.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_tiny_toyland_south": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size0 south ground2606 stays independently owned checker terrain, never a fabricated body layer.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_small_temperate_north": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size1 north ground2607 adds a company fence and corrugated shed to the tiny cottage compound; all raised artwork stays ground-owned. Original170 score threshold is never forced.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_small_temperate_west": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size1 west ground2609 owns the independent ribbed shed and fence section, not a separate sortable body.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_small_temperate_east": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size1 east ground2608 retains cottage/path/fence relief at its original tile anchor, with no body invented.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_small_temperate_south": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original HQ size1 south ground2610 owns the actual company-coloured boundary posts/rails and yard; source state remains ground-only.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_temperate"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_small_arctic_north": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size1 north ground2607 retains its own dry turf and independently ground-owned cottage/fence/shed compound.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_small_arctic_west": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size1 west ground2609 owns the ribbed shed and boundary fence on dry-climate soil.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_small_arctic_east": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size1 east ground2608 independently retains cottage/path and company boundary pieces; its body remains absent.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_small_arctic_south": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic HQ size1 south ground2610, true boundary-post/rail relief on independently rooted dry yard.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_arctic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_small_tropic_north": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size1 north ground2607 owns the cottage and company fence on its separately painted tropical yard.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_small_tropic_west": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size1 west ground2609 independently owns its ribbed shed and fence, preserving unforced stage/climate selection.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_small_tropic_east": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size1 east ground2608 contains the path/cottage end and true fence pieces; no independent body is added.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_small_tropic_south": {
+      "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical HQ size1 south ground2610 independently owns its yard and company boundary, with no sortable-body placeholder.",
+      "ops":[["use","hq_tiny_yard"],["use","hq_turf_tropic"],["use","hq_tiny_cottage"],["use","hq_small_fence_and_shed"],["use","hq_source_owner_south"]]
+    },
+    "hq_ground_small_toyland_north": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size1 north ground2607 adds a real crenellated stone enclosure around its separate pointed turret; stage is selected only by the original score logic.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_castle_small_walls"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_small_toyland_west": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size1 west ground2609 independently owns the full-depth side crenellations and checker garth; body remains absent.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_castle_small_walls"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_small_toyland_east": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size1 east ground2608 retains its stone wall/gate edge, tan path and true central turret seam on the original tile.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_castle_small_walls"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_small_toyland_south": {
+      "size":[64,64,72],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland HQ size1 south ground2610 owns the opposite gate/crenellation half. The gate opening stays real air and its original body is absent.",
+      "ops":[["use","hq_castle_checker_field"],["use","hq_castle_tiny_tower"],["use","hq_castle_small_walls"],["use","hq_source_owner_south"]]
+    },
     "object_transmitter": {
       "extends": "airport_radio_tower", "origin": [-7,-7,0],
       "review_status": "work-in-progress",
@@ -42217,6 +42498,16 @@
       "1":{"0":"object_lighthouse","1":"object_lighthouse"},
       "2":{"0":"object_company_statue","1":"object_company_statue","2":"object_company_statue","3":"object_company_gnome"},
       "3":{"0":"object_owned_land_sign","1":"object_owned_land_sign","2":"object_owned_land_sign","3":"object_owned_land_sign"}
+    },
+    "object_ground": {
+      "4":{"0":"hq_ground_tiny_temperate_north","1":"hq_ground_tiny_arctic_north","2":"hq_ground_tiny_tropic_north","3":"hq_ground_tiny_toyland_north"},
+      "5":{"0":"hq_ground_tiny_temperate_west","1":"hq_ground_tiny_arctic_west","2":"hq_ground_tiny_tropic_west","3":"hq_ground_tiny_toyland_west"},
+      "6":{"0":"hq_ground_tiny_temperate_east","1":"hq_ground_tiny_arctic_east","2":"hq_ground_tiny_tropic_east","3":"hq_ground_tiny_toyland_east"},
+      "7":{"0":"hq_ground_tiny_temperate_south","1":"hq_ground_tiny_arctic_south","2":"hq_ground_tiny_tropic_south","3":"hq_ground_tiny_toyland_south"},
+      "8":{"0":"hq_ground_small_temperate_north","1":"hq_ground_small_arctic_north","2":"hq_ground_small_tropic_north","3":"hq_ground_small_toyland_north"},
+      "9":{"0":"hq_ground_small_temperate_west","1":"hq_ground_small_arctic_west","2":"hq_ground_small_tropic_west","3":"hq_ground_small_toyland_west"},
+      "10":{"0":"hq_ground_small_temperate_east","1":"hq_ground_small_arctic_east","2":"hq_ground_small_tropic_east","3":"hq_ground_small_toyland_east"},
+      "11":{"0":"hq_ground_small_temperate_south","1":"hq_ground_small_arctic_south","2":"hq_ground_small_tropic_south","3":"hq_ground_small_toyland_south"}
     },
     "effects": {
       "4748":{"0":"effect_bubble_0","1":"effect_bubble_0","2":"effect_bubble_0","3":"effect_bubble_0"},

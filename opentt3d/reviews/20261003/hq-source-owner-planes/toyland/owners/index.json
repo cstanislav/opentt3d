@@ -1,0 +1,370 @@
+[
+  {
+    "model": "hq_ground_tiny_toyland_north",
+    "object": 4,
+    "size": 0,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 4,
+    "part": 0,
+    "sheet": "hq_ground_tiny_toyland_north.png",
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      0,
+      32,
+      33
+    ],
+    "shared_bounds": [
+      -32,
+      0,
+      33,
+      33
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-native.json": "6ada06d8d7e333d252ae63f98bee7d12812fec79f5a7f9314bd186fe2f5119c1",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-native.pam": "93309c36c455709cd773ebfd1eb6478a8f041db1a1ae2d008033bce94931b3f4",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-0-0-ground.pam": "3505c166fe54dc39a63daa283547a50a5e97910eb46fc8a7ecbacf02abaa9577",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-0.pam": "21fdfdee08b2c9e40a6a3c39ec5bd8954155e68e3a56ad7ea16a3f0c29eaba5a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-1.pam": "38fe53d628f73469fee9eddcbb79cd6942c155763d1a0b083eb5ef6283430bab",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-2.pam": "9ea623dca0f65a493ff72f76fe92d7eb37aef7b50c897e5d24b88e1639116f5d",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-3.pam": "3b5bfa5f1abdc7515f64119c0bc098ab529ab1c360f8951670f29804a3d5c55c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-4.pam": "8eddcc5445178cf3a7e7361cbac5e14627df62c6c53619fee097ec332e870343",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-5.pam": "5055e50a0590ed2c0ddc780df3483fd274a1f7b985f11c5f8bf074cece8f759c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-6.pam": "945fc19760a5650822b8e51ef1fa9f5912bf164de980a95700bf6507fde1c77a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-7.pam": "df5c336ed05cea7a9cd2dd9bcd7915ab778beb8a0b9fb8007f25f40616d00d6e"
+    },
+    "sheet_sha256": "3c656ef4aec60c02e9695abd40f6760ce0f17a666a6486e9849018c5003fee0c",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_tiny_toyland_west",
+    "object": 4,
+    "size": 0,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 5,
+    "part": 1,
+    "sheet": "hq_ground_tiny_toyland_west.png",
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      0,
+      32,
+      32
+    ],
+    "shared_bounds": [
+      -32,
+      0,
+      33,
+      32
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-native.json": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-native.pam": "116a270712e42795eb4bd11eb5a20b8803ceff9382926af010d52bea60646552",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-0-1-ground.pam": "888d756cd8ccc9b996acdb3ea3daccffdc65d462377281421231548dccea332d",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-0.pam": "1a951db52cb4ca74845d5d960224a5235422754f11c8ba1e6de7ab405e514362",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-1.pam": "1e51542da265c69a30932b3116b08915ea1a3cd0ac3f434cb4fbd168293bbf59",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-2.pam": "be18f08199a1ff5f9fc0a17e7fbc3b86b8633b5e2183ae9930b029e8f34f402c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-3.pam": "fb2a7f7847b852ffa5f3296ae91eff3b37254fd54e3a666b92bb5fbb521f4762",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-4.pam": "4826c437e9ddbfa10683b125a06f7b61175b5a4cdc5500f566d77d9c3cea697c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-5.pam": "dc44a5dc9b83e4167bbfb322a2f092b4de8a5c57686fba21c20ba1654ebbf36b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-6.pam": "927ce5f97714da5eb1a1e8d5d54afbf48299e019dabe24f18dadaf0b33ed11e3",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-7.pam": "9dc2215a965e8fbc079ae104fcb903699afafe27d5356e19c5152791e496c7f0"
+    },
+    "sheet_sha256": "e4455c318fe2e859417ef69d4e82cb3c8e96cc52179e450d4b41f87665f3b1e3",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_tiny_toyland_east",
+    "object": 4,
+    "size": 0,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 6,
+    "part": 2,
+    "sheet": "hq_ground_tiny_toyland_east.png",
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      0,
+      32,
+      32
+    ],
+    "shared_bounds": [
+      -32,
+      0,
+      33,
+      32
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-native.json": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-native.pam": "3a565af166a1ca7c4431478878b9fff52b7ae0360474b0d8ff6a279cc6dbaa6c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-0-2-ground.pam": "0add7e147571aefe21bf81fb746eaa4fae2580a74645f9adb009f0cddfa3ca72",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-0.pam": "857167ad3b41ac4080277cae995d27e192458b920509998ec12724cafb02589a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-1.pam": "a1956426be51f8e7e7f1455d3ce2a421c443bf2f01183e38650b9f67c2e4af4b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-2.pam": "1694e92833012079656b9d78090a9e4a6741d3fa94726ca7c2b577e7eb8d5cf1",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-3.pam": "655e931029e07458e263462602e3b57c2f7fad036e3fb7c7645dc538514c14d3",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-4.pam": "55ba41cce5360bdc4cc4ce35644441507dc820142ff57f26a1a9c0658512100d",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-5.pam": "ed889b7dab1459f94fe891612ac759e1da401bb4bda7ae8a12a9c755cc64bdbe",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-6.pam": "ac93a0eab36db722b13d52371fc01dd8e66b7458006dfdbab47199b6bc18e78e",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-7.pam": "60a4a7b6e5e6c08480f309fd7ad1a7b8bd68d40c6a7956ee68893a314aa82a2f"
+    },
+    "sheet_sha256": "75bf0b3cced24c51cdd7b25e1c49d4ae0f82edd1fa61b3943dc0828c05408fbf",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_tiny_toyland_south",
+    "object": 4,
+    "size": 0,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 7,
+    "part": 3,
+    "sheet": "hq_ground_tiny_toyland_south.png",
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      0,
+      32,
+      32
+    ],
+    "shared_bounds": [
+      -32,
+      0,
+      33,
+      32
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-native.json": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-native.pam": "b7ddb66192915d29b54a9357760cdedd271d7549ca69651bc125085e18a8de1d",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-0-3-ground.pam": "88ee0020528f3ddce66134bf4a452fa14764e8f3f06ac79f487f914d476637a7",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-0.pam": "ec0456f03edae5da3cf27208f50659b3243dc6b19ea8938ab98ba8625d876625",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-1.pam": "9219021e39957ca11922e9e9579117c46c7567e49c0f5e7cde4d96d48b075dba",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-2.pam": "a169ea7286b3399afda9808705ec1023c1407aa4de3f6362c9f28f759bb7c164",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-3.pam": "ae2db1b266118818d814b116df15e5ba4a44bbc662887960c3c5dc98db386a47",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-4.pam": "4f01656e2be211e0fadc807c381fc6359a5f910fc5f8bc8c8961964500efa61a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-5.pam": "11fc5b17f4d2fecf6487eda57ffbc4cd7720aed012c17cbb07c66f6a2be22956",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-6.pam": "b96ce2b20e178723ca6a11671f96319976277b910ba64096e85421c00b0b4adf",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-7.pam": "869955c6c9c38dc053fa4b16b7b4918dd174695d4bc9a4169e3fad62a761a609"
+    },
+    "sheet_sha256": "d87aa8cd47d95bc6691bfeb8fbe7a7a01163462429e92d8828c3fdaddc5caf78",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_small_toyland_north",
+    "object": 4,
+    "size": 1,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 8,
+    "part": 0,
+    "sheet": "hq_ground_small_toyland_north.png",
+    "source_bounds": [
+      -31,
+      -5,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -36,
+      -5,
+      36,
+      33
+    ],
+    "shared_bounds": [
+      -36,
+      -5,
+      36,
+      33
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-native.json": "7f0ee2e97985149aa1f1c1b55062b956c14cc741511790f092526f6b9b604f0c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-native.pam": "985c2e350071baefb95d67d9f1b2a2bca5f6296bec6a13c90f6d44b52245be37",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-1-0-ground.pam": "90e136ea6972a16673021e6d06ecddb1778289eb60163a74cef495a462f045ce",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-0.pam": "3ea4dae3ce6ed44c54d3da27e7d98e4cd3109c380cb788497300128b2d78e01f",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-1.pam": "a96e6991dc1cfa23e7db7105779e0bc51b444914066eb2c3863368fa0db13a73",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-2.pam": "50af4fd9d01c1e8376c42d571d551d8144d122d78e9823b04565b1e01be58c08",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-3.pam": "bc8e0c552393fff80637b07a6c0b7f9d205dcf84f932a363f0058095557fec39",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-4.pam": "944b2e27881c63f6b68d6ce21252ad406e08c7a4f87110ba2ff8ecba2888ad6d",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-5.pam": "ad8a9a4c2b61ee4395c27b57784f40efa457df051a6fd38c4db285ff5eb082fa",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-6.pam": "cf72ced3b800c3113edd64efe40ee18cbe2a002a665eb233eae299b30ac4f889",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_north-7.pam": "0d8338802447ecb6f22c0f4ce83b84b4ada2397ac7b255e817f9f9f28f425291"
+    },
+    "sheet_sha256": "301f5cc5774d4a2c5e83940c791d016a6a9637c949c23e1a0db979dba88a44fa",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_small_toyland_west",
+    "object": 4,
+    "size": 1,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 9,
+    "part": 1,
+    "sheet": "hq_ground_small_toyland_west.png",
+    "source_bounds": [
+      -31,
+      -5,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      -1,
+      32,
+      32
+    ],
+    "shared_bounds": [
+      -32,
+      -5,
+      33,
+      32
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-native.json": "bb703de0139f5811584d631848f0f0ff3042905266a3ff37bbefd12c41aa0555",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-native.pam": "492bea5fccad37f58c99e719b66d00cbaef85ab7b53c5a61c11117917b0627f0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-1-1-ground.pam": "b02a505d136bc8fb94b8e027d5d1ce876cd200248826182af828a14f50c4f992",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-0.pam": "d3699d770d4fa697aff62834ba8bada22eae985fb94501fc671c6dfd2cf5ad41",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-1.pam": "25ce6c6e4c48d867cc6ccd29774303a05bed2a50be9fc2049c2ec75d19c6b6ff",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-2.pam": "b19fd1ded9f99d4f342bcf7dfc41343aa8f4cba0b01e54d3d4ef71be457f1171",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-3.pam": "8b12715a85e1039308fe8e3a16cc072349c3034e354493724e5e2f38da294fc3",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-4.pam": "e6836c781909ab0edad3294bf366985148be925c10b6f1ed35f741758ff526fd",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-5.pam": "0444c234139ca853fe9b5114e548d669ab12420d34e2bdbe3acd9431acfac8c6",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-6.pam": "d08a411314ea487dab89072bb533db4b3a57c0204d1e814d7794630c67054d0a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_west-7.pam": "44cd9f6b2cec1189b08a7257d28f624008f670889cb578118cbd1b0c3c5d42fc"
+    },
+    "sheet_sha256": "22cc6d961f5d013ba9ddcd4d99de0074a622204061623e731dd4369499380f9e",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_small_toyland_east",
+    "object": 4,
+    "size": 1,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 10,
+    "part": 2,
+    "sheet": "hq_ground_small_toyland_east.png",
+    "source_bounds": [
+      -31,
+      -5,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      -1,
+      32,
+      32
+    ],
+    "shared_bounds": [
+      -32,
+      -5,
+      33,
+      32
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-native.json": "bb703de0139f5811584d631848f0f0ff3042905266a3ff37bbefd12c41aa0555",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-native.pam": "70eeec760410a5dd786bdb534b9e7b3edd6d2d78486476362d61932fa7f3af27",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-1-2-ground.pam": "a624de61f796b8c35e8252f8c0129e79c9d9a3f2640bd4dc6d93fde35d40ec50",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-0.pam": "0bbac9596f305fbc8ef0423127d39901c59ecf27041309557c12d38827266028",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-1.pam": "ed1e5f4006504c08e0ee4a26b9512957e7145313c2efd5ad07ec2a67a04f509e",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-2.pam": "7bc76794bcecda9a25e2819665069edb163b9a7fdf4f840d3e5bc1a000b6bc8f",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-3.pam": "1d4957d2b93fe0710332a64ab4dc403dd54fbee77831eb6fb673caa3b94e9e19",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-4.pam": "22a0317f0988a69427ad8b39c88c3c704089da6c5e8888c3f0d326ec452dfad8",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-5.pam": "a63be44f056771a07df90a7e48df99456b0fb02c62039964400a9453ff940b6a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-6.pam": "11e78dcca63d6b5e86524500d41fdcdf8107dddc4941c2913b418a3cbc431186",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_east-7.pam": "413c187fc1e08dc9f5b6d8a52484a38fc3887747dddad06a1c1cd0fb08add528"
+    },
+    "sheet_sha256": "ca5bad0b7762d03e5eda958562ad8049910f7a00881edce78051bfa90d526051",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  },
+  {
+    "model": "hq_ground_small_toyland_south",
+    "object": 4,
+    "size": 1,
+    "climate": 3,
+    "category": "object_ground",
+    "layout": 11,
+    "part": 3,
+    "sheet": "hq_ground_small_toyland_south.png",
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -32,
+      0,
+      32,
+      32
+    ],
+    "shared_bounds": [
+      -32,
+      0,
+      33,
+      32
+    ],
+    "evidence_sha256": {
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/objects.json": "363af7dd9647906417dcd51aa05d9c2d42008ae5d6de085ba06b5fcc6bc8f9b0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/voxel-object-layouts.json": "c9b8d9ca1cb0315815544f1caff73312f13a3c8f50c7fa9f8d8985f9df53652b",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-native.json": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-native.pam": "98d8a281fd3d271d42489c695b62c931f36ce2124d86f6ff8053fdacb0b61134",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/object-4-1-3-ground.pam": "3aec64eec70b29ecb3ca4d682ce8148ff12377e6021d840cb301e7918e4d8f5a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-0.pam": "daad8715963ab06265c26fa923bf053c73248dc91487a3bf9e763f6164ad00d8",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-1.pam": "42ec7f0a891b74e2a0886bac611bf4b44bfe390a8700a5ac72ee27a0f757f5f2",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-2.pam": "a774b8febcd8024ba2bacaae6debfc8c239c22eee82fee9089e8999fcfda3a74",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-3.pam": "b8ea0d7d5346cfd193824dbd259af71187bad2ea120062d66d78cdec1f38ad7a",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-4.pam": "30c003467371975f00c191e2a6a9fed7f9c15731dc23f919d9ae80a405a197cf",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-5.pam": "d3a3a4906a75571c20a8a3e013094c928773bca2c8399916a9d9580f944deee4",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-6.pam": "c1b570d30e223517b50cc87a0be322ae5f788b99eb33db4948f8843939bee4d0",
+      "build-macos/breadth-original-hq-source-owner-planes-toyland-vulkan/renderer3d-reference/model-voxel-hq_ground_small_toyland_south-7.pam": "84d1b637f12473eb2308f728df57df43a7577abe3ec57f7a398fb5ea55300ca9"
+    },
+    "sheet_sha256": "0adc93e99f00b360e793fdee98a9fa5468cfad112a49541d43d7160613ec8591",
+    "approval": false,
+    "note": "Original owner/sequence registration is retained. Full joined-world/state/fidelity acceptance is separate."
+  }
+]
