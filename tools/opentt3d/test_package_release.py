@@ -11,6 +11,22 @@ from package_release import extract_generated_tar
 
 
 class PackageArchiveTests(unittest.TestCase):
+    def test_draft_lookup_has_scoped_access_without_early_publication(self):
+        root = Path(__file__).resolve().parents[2]
+        workflow = (root / ".github/workflows/opentt3d-release.yml").read_text()
+        self.assertIn("permissions:\n  contents: read\n",workflow)
+        source = workflow.split("  source:\n",1)[1].split("\n  linux:\n",1)[0]
+        self.assertIn("    permissions:\n      contents: write\n",source)
+        self.assertIn('gh release view "$RELEASE_TAG"',source)
+        self.assertIn("ref: ${{ inputs.tag || github.event.release.tag_name }}",source)
+        for job, following in (("linux","macos"),("macos","windows"),("windows","publish")):
+            block = workflow.split(f"\n  {job}:\n",1)[1].split(f"\n  {following}:\n",1)[0]
+            self.assertNotIn("contents: write",block)
+            self.assertIn("ref: ${{ needs.source.outputs.sha }}",block)
+        self.assertNotIn("gh release edit",workflow)
+        self.assertNotIn("--draft=false",workflow)
+        self.assertIn("needs: [source, linux, macos, windows]",workflow)
+
     def test_extended_linux_review_keeps_all_original_contact_gates_and_immutable_source(self):
         root = Path(__file__).resolve().parents[2]
         workflow = (root / ".github/workflows/opentt3d-release.yml").read_text()

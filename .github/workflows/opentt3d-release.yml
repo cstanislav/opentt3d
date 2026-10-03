@@ -22,6 +22,11 @@ jobs:
     if: github.repository == 'cstanislav/opentt3d'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    # GitHub hides draft releases from contents:read tokens. Keep this permission
+    # local to the release lookup; platform build jobs stay read-only. A draft
+    # must not be published merely to let its immutable-tag packages build.
+    permissions:
+      contents: write
     outputs:
       tag: ${{ steps.release.outputs.tag }}
       sha: ${{ steps.release.outputs.sha }}

@@ -1,5 +1,23 @@
 # Active extended development goal
 
+## Immutable `.38` draft-release access repair — October 3, 06:43:14 UTC
+
+The road-stop/canal/bank increment is committed and pushed at
+`18c3ae698f8e4d77e7b1fe9eb0746927a0085f4c`, with immutable tag
+`opentt3d-dev-20261003.38`. Initial workflow37103567392 failed before source tests
+or compilation: its contents-read token could not see the private draft release.
+The failed run/logs and authenticated empty-attachment draft receipt are retained
+in `build-macos/playable-release38-{failed-run.json,failed-jobs.log,draft-access-receipt.json}`.
+Only the source release-lookup job now receives contents-write access; platform
+builds stay read-only, all gates remain and no workflow publishes the draft.
+Harness75 passes, including scoped-permission/immutable-source/no-early-publication
+guards. A fresh workflow must still pass all eight jobs and independent audits;
+the `.38` tag is not moved and `.37` remains the recommended download.
+
+This is an in-progress clock, not a stopping clock. Catalogue-wide quality and
+missing original object/HQ, lock/river and disaster breadth remain active; no
+additional model or 8/10 acceptance is implied by this release plumbing repair.
+
 ## Model-quality and live canal consistency checkpoint — October 3, 06:12:19 UTC
 
 The renewed quality goal covers every model and runtime/state/climate family,

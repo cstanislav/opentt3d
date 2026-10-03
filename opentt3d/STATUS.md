@@ -2,6 +2,16 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — `.38` draft release remains gated
+
+Consistency fixes are pushed at `18c3ae698` and immutable tag
+`opentt3d-dev-20261003.38`. Initial workflow37103567392 failed before compilation
+because a contents-read token could not access the draft release; failure evidence
+is retained. Draft lookup receives job-scoped contents-write permission while
+platform jobs remain read-only and all package gates stay unchanged. Harness75
+passes. No packages are published or recommended until a fresh eight-job run and
+independent audits pass; `.37` remains the verified download.
+
 ## Baseline
 
 - [x] October3 consistency increment: road stops sample the original full-tile
