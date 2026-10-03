@@ -1,5 +1,35 @@
 # Active extended development goal
 
+## `.42` public; complete catalogue-wide goal remains active — October 3
+
+Recommended development packages are now immutable`.42`at
+`1247c88d5e180ac6fbd88bdf9b71bfafd468f7a5`. Eight packaging jobs,19 attachment
+identities/digests/sizes,18 checksums,2,262 exact tagged source files and six matching
+1,831-model catalogues pass independent audits. The independently downloaded rebuilt
+app passes two package and twelve quiet native controls, including3,024 prior gallery
+images/296 source layers/eight world equalities and actual saved size1/tunnel worlds.
+Guarded publication37136166083 changes only the draft flag; the annotated tag and
+every package/title/note stay exact, with no packaging rebuild observed. `.41` remains
+immutable and withheld. Portable evidence:`reviews/20261003/hq-runtime-release42/`.
+The rebuilt download resolves the scoped source-isolation gate, not the provenance
+of the earlier mixed-working-source local binary.
+
+The larger84-owner working prototype remains separate. Explicit medium ownership
+repairs preserve every joined cell/six-face colour and all1,831 earlier models;
+asset220 and eight technical climate/backend controls pass. Individual sources still
+reject larger/Toyland architectural ownership/detail. Wider strict comparisons fail
+143/143/143/144 gallery images and6,629/6,629/6,629/6,573 pixels, plus10/9/12/8 world
+pixels. Native121-per-climate equality is not a substitute. The public second-town
+study finds no legal additional route; affordable loan repayment does not improve
+the observed maximum180 or establish a larger naturally rendered HQ.
+
+Continue all original families/climates/states/intentional absences, individually
+hash-bound source/orbit/street/world/state/consistency ratings, all-climate natural
+upgrades, lock/river/disaster breadth, fleet/emitter, strict backend and sustained
+performance/platform/input/replay/network work. No8/10 approval or narrowed completion
+target follows from publication. Record the actual UTC/reason when work stops;
+release, reconciliation and evidence timestamps are not stopping timestamps.
+
 ## HQ runtime repair sealed; full catalogue goal unchanged — October 3
 
 At14:59:54UTC the runtime-only repair retains all1,831 committed model definitions,

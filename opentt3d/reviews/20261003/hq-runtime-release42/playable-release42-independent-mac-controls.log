@@ -1,0 +1,12 @@
+Packaged default 3D launch, GPU presentation and save passed: /Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app
+Packaged default 3D launch, GPU presentation and save passed: /Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py", line 11, in <module>
+    runpy.run_path('tools/opentt3d/smoke.py',run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "tools/opentt3d/smoke.py", line 19, in <module>
+    from fetch_baseset import fetch
+ModuleNotFoundError: No module named 'fetch_baseset'

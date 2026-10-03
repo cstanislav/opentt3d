@@ -1,5 +1,41 @@
 # Implementation verification
 
+## Exact-source rebuilt `.42` and guarded publication — October 3
+
+Immutable tag `opentt3d-dev-20261003.42` peels to
+`1247c88d5e180ac6fbd88bdf9b71bfafd468f7a5`. Eight packaging jobs in37132182765
+pass; every local distributable equals its release attachment's digest and size,
+and the independently downloaded checksum manifest covers all18 distributables.
+The source archive matches2,262 tagged blobs plus only its release metadata and
+pinned graphics archive. All six platform catalogues retain1,831 models and LF hash
+`6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d`.
+Larger prototype artwork/compiler/tests and generated screening ratings are absent.
+
+The independently downloaded Apple-silicon ZIP has SHA-256
+`80b2644d2e1c5b54681148086468c8f6c3dc1cc11d0c8e2881e845150a6010f9`;
+its signature-verified rebuilt binary is
+`9947915f13e84c7308f86a5af41bf2da71fea1fda96e9421a48036074111be22`.
+Two default/OpenGL package launch/clipping/save controls and twelve quiet native
+controls pass. Eight climate/backend comparisons preserve378 prior gallery images,
+37 original source layers and the whole world each:3,024/296/eight exact equalities.
+The real saved size1 HQ and public raised-ground tunnel HQ pass both backends,
+with40 independent owner rebuild views per run, atlas/picking and acknowledged
+synchronous saves. Hosted evidence retains ten controls, seven graphical. Windows
+ARM64 execution and Windows GPU/foreground input remain unverified.
+
+The initial draft metadata and diagnostic-wrapper import failures stay preserved;
+the corrected diagnostic runs use the unchanged downloaded app and unchanged smoke
+assertions. The exact-tag rebuild resolves the release-source isolation gate without
+relabeling the earlier mixed-working-source binary as an exact-tag build.
+Publication37136166083 preserves all19 attachment IDs/sizes/digests, title/notes
+and tag; only`draft=false`changes, with no release-event package rebuild observed.
+`.41` remains untouched and withheld. SHA256SUMS SHA-256:
+`f6715c438f6ba142032b02da859e831e5d06fff961ec0f578954fc7a2eaf0803`.
+Recommended development download is now`.42`; full source fidelity, wider backend
+equality, naturally selected larger/all-climate HQ worlds, sustained smooth60fps/
+memory and the complete eight-point objective remain unaccepted.
+Portable evidence:`reviews/20261003/hq-runtime-release42/`.
+
 ## Independent HQ runtime LOD/tunnel repair — October 3
 
 The14:59:54UTC seal binds the unchanged1,831-model catalogue

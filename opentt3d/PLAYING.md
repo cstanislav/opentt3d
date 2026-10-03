@@ -1,6 +1,6 @@
 # Download and play OpenTT3D
 
-Download a desktop package from the **[verified `.40` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.40)**.
+Download a desktop package from the **[verified `.42` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)**.
 Expand **Assets** beneath the release notes. Choose your operating system below;
 GitHub's automatic **Source code** downloads are for building the game yourself.
 
@@ -10,6 +10,9 @@ their executable assets become available after the package workflow passes.
 
 These are playable development previews. Artwork coverage and performance are
 still being developed; see [implementation status](https://github.com/cstanislav/opentt3d/blob/main/opentt3d/STATUS.md).
+`.42` retains the 1,831-model catalogue and repairs independent HQ LOD/cache and
+tunnel-ground rendering. Larger HQ prototypes are not included. The defective
+`.41` remains withheld; publication is not an 8/10 artwork or sustained-60fps claim.
 
 ## Windows
 

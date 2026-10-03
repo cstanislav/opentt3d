@@ -1,0 +1,248 @@
+{
+  "audited_utc": "2026-10-03T15:57:34.225743+00:00",
+  "tag": "opentt3d-dev-20261003.42",
+  "commit": "1247c88d5e180ac6fbd88bdf9b71bfafd468f7a5",
+  "draft_release_id": 402562414,
+  "jobs": 8,
+  "assets": [
+    {
+      "name": "opentt3d-dev-20261003.42-linux-x86_64.json",
+      "id": "RA_kwDOUh67x84kPosj",
+      "size": 1837,
+      "sha256": "a808123c7415fd81192a312e3bdb3e059a2fa18621916cbf22fe713a3173dc53",
+      "local_bytes": "build-macos/playable-release42-ci/release-linux-x86_64/opentt3d-dev-20261003.42-linux-x86_64.json"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-linux-x86_64.tar.xz",
+      "id": "RA_kwDOUh67x84kPosi",
+      "size": 43908756,
+      "sha256": "6092d0965d26c4ae1ff431cb54e02f60bb6278a6ba7e281fe78c25be83f62e61",
+      "local_bytes": "build-macos/playable-release42-ci/release-linux-x86_64/opentt3d-dev-20261003.42-linux-x86_64.tar.xz"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-macos-arm64.dmg",
+      "id": "RA_kwDOUh67x84kPosf",
+      "size": 34795165,
+      "sha256": "15ef53659e3e3899e576b1b8d89cb0db896745d90d9ad305e6a7e790accae186",
+      "local_bytes": "build-macos/playable-release42-ci/release-macos-arm64/opentt3d-dev-20261003.42-macos-arm64.dmg"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-macos-arm64.json",
+      "id": "RA_kwDOUh67x84kPosk",
+      "size": 1832,
+      "sha256": "bff5792fa846acd75d57331e69ec1c2b6e857cc022c0c085f9de67c9cb9a87ca",
+      "local_bytes": "build-macos/playable-release42-ci/release-macos-arm64/opentt3d-dev-20261003.42-macos-arm64.json"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-macos-arm64.zip",
+      "id": "RA_kwDOUh67x84kPosv",
+      "size": 38833906,
+      "sha256": "80b2644d2e1c5b54681148086468c8f6c3dc1cc11d0c8e2881e845150a6010f9",
+      "local_bytes": "build-macos/playable-release42-ci/release-macos-arm64/opentt3d-dev-20261003.42-macos-arm64.zip"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-macos-x86_64.dmg",
+      "id": "RA_kwDOUh67x84kPosx",
+      "size": 35220550,
+      "sha256": "0d721aa9f31ff04b94b4bc988fd9d48295a25cd1afd436ae796e4fbd1b8632c7",
+      "local_bytes": "build-macos/playable-release42-ci/release-macos-x86_64/opentt3d-dev-20261003.42-macos-x86_64.dmg"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-macos-x86_64.json",
+      "id": "RA_kwDOUh67x84kPosw",
+      "size": 1834,
+      "sha256": "23c19361d93979f2f5cde578cc7f8a9eb2db67d03a906f0dcd67c93dfe9673ee",
+      "local_bytes": "build-macos/playable-release42-ci/release-macos-x86_64/opentt3d-dev-20261003.42-macos-x86_64.json"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-macos-x86_64.zip",
+      "id": "RA_kwDOUh67x84kPotA",
+      "size": 39534489,
+      "sha256": "468b74c98efbebe97842f4b7562686d1d04ef8ce894a9a3de10b5b2034d092dd",
+      "local_bytes": "build-macos/playable-release42-ci/release-macos-x86_64/opentt3d-dev-20261003.42-macos-x86_64.zip"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-source.tar.xz",
+      "id": "RA_kwDOUh67x84kPott",
+      "size": 30985000,
+      "sha256": "5b27dc1361140e071b1c0d76663e6ca04616a2278d0671ff03951791270b5c2a",
+      "local_bytes": "build-macos/playable-release42-ci/release-source/opentt3d-dev-20261003.42-source.tar.xz"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-arm64.exe",
+      "id": "RA_kwDOUh67x84kPotu",
+      "size": 22225918,
+      "sha256": "6c6e811ff2598cb0e3f092802821766150dfce9686a040e3f03e36c95b344447",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-arm64/opentt3d-dev-20261003.42-windows-arm64.exe"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-arm64.json",
+      "id": "RA_kwDOUh67x84kPouJ",
+      "size": 1873,
+      "sha256": "bcbf93ea69dfc0f27a419c648a8b8c52565ebc79ec797285bfa8d8e3db2a4cc6",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-arm64/opentt3d-dev-20261003.42-windows-arm64.json"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-arm64.zip",
+      "id": "RA_kwDOUh67x84kPouW",
+      "size": 37367706,
+      "sha256": "e6b6af5e51f5a4ddb355644d8ef04999a3e4021662ac66690ed355c3845f10fd",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-arm64/opentt3d-dev-20261003.42-windows-arm64.zip"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-x64.exe",
+      "id": "RA_kwDOUh67x84kPoud",
+      "size": 23168287,
+      "sha256": "9306a067217b2f057ebfc021e0c335f5b9a90c7d0a07e7737a7ef67358b6c40e",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-x64/opentt3d-dev-20261003.42-windows-x64.exe"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-x64.json",
+      "id": "RA_kwDOUh67x84kPoug",
+      "size": 1867,
+      "sha256": "cf7f09c832ebb421374b3af171ae4b473af20239338fc78fdba0f84f91dc0556",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-x64/opentt3d-dev-20261003.42-windows-x64.json"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-x64.zip",
+      "id": "RA_kwDOUh67x84kPouv",
+      "size": 38079244,
+      "sha256": "85b5e7eb8eac13fe20bffe100ac2d85d9ebce5b9d32a537bf9bf947da5775fa9",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-x64/opentt3d-dev-20261003.42-windows-x64.zip"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-x86.exe",
+      "id": "RA_kwDOUh67x84kPou8",
+      "size": 22405799,
+      "sha256": "cb8fdffc0941936e7ec3fe9b42fe573473551fe4f85c9c098e6142d5a6344203",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-x86/opentt3d-dev-20261003.42-windows-x86.exe"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-x86.json",
+      "id": "RA_kwDOUh67x84kPovA",
+      "size": 1867,
+      "sha256": "7fb27a12050cb033ada89d6ee9c34d476e4c664add299b41b5914f11229fe745",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-x86/opentt3d-dev-20261003.42-windows-x86.json"
+    },
+    {
+      "name": "opentt3d-dev-20261003.42-windows-x86.zip",
+      "id": "RA_kwDOUh67x84kPovW",
+      "size": 36882072,
+      "sha256": "fffe5ec282b064d87bc065eeb461e25d98a8e5ab75f24ac22c47a87deaa4bdc1",
+      "local_bytes": "build-macos/playable-release42-ci/release-windows-x86/opentt3d-dev-20261003.42-windows-x86.zip"
+    },
+    {
+      "name": "SHA256SUMS",
+      "id": "RA_kwDOUh67x84kPosg",
+      "size": 1944,
+      "sha256": "f6715c438f6ba142032b02da859e831e5d06fff961ec0f578954fc7a2eaf0803",
+      "local_bytes": "build-macos/playable-release42-checksum-download/SHA256SUMS"
+    }
+  ],
+  "checksums": 18,
+  "manifest_sha256": "f6715c438f6ba142032b02da859e831e5d06fff961ec0f578954fc7a2eaf0803",
+  "source_files": 2262,
+  "packages": [
+    {
+      "platform": "macos-arm64",
+      "models": 1831,
+      "catalogue_lf_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "raw_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d"
+    },
+    {
+      "platform": "macos-x86_64",
+      "models": 1831,
+      "catalogue_lf_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "raw_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d"
+    },
+    {
+      "platform": "windows-x64",
+      "models": 1831,
+      "catalogue_lf_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "raw_sha256": "c5502bde044a8ffbab00e33378e0cf996d8b50135d99610f3e1ad30701a10663"
+    },
+    {
+      "platform": "windows-x86",
+      "models": 1831,
+      "catalogue_lf_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "raw_sha256": "c5502bde044a8ffbab00e33378e0cf996d8b50135d99610f3e1ad30701a10663"
+    },
+    {
+      "platform": "windows-arm64",
+      "models": 1831,
+      "catalogue_lf_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "raw_sha256": "c5502bde044a8ffbab00e33378e0cf996d8b50135d99610f3e1ad30701a10663"
+    },
+    {
+      "platform": "linux-x86_64",
+      "models": 1831,
+      "catalogue_lf_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "raw_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d"
+    }
+  ],
+  "hosted_controls": [
+    {
+      "path": "build-macos/playable-release42-ci/release-linux-checks/electric-check/result.json",
+      "rendered_and_saved": null,
+      "native_load_save": null,
+      "perspective_clipping_verified": null
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-linux-checks/package-smoke-opentt3d-dev-20261003.42-linux-x86_64/default/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-linux-checks/package-smoke-opentt3d-dev-20261003.42-linux-x86_64/fallback/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-linux-checks/package-smoke-opentt3d-dev-20261003.42-linux-x86_64/opengl/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-macos-arm64-checks/package-smoke-opentt3d-dev-20261003.42-macos-arm64/default/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-macos-arm64-checks/package-smoke-opentt3d-dev-20261003.42-macos-arm64/opengl/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-macos-x86_64-checks/package-smoke-opentt3d-dev-20261003.42-macos-x86_64/default/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-macos-x86_64-checks/package-smoke-opentt3d-dev-20261003.42-macos-x86_64/opengl/result.json",
+      "rendered_and_saved": true,
+      "native_load_save": null,
+      "perspective_clipping_verified": true
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-windows-x64-checks/package-smoke-opentt3d-dev-20261003.42-windows-x64/headless/result.json",
+      "rendered_and_saved": null,
+      "native_load_save": true,
+      "perspective_clipping_verified": null
+    },
+    {
+      "path": "build-macos/playable-release42-ci/release-windows-x86-checks/package-smoke-opentt3d-dev-20261003.42-windows-x86/headless/result.json",
+      "rendered_and_saved": null,
+      "native_load_save": true,
+      "perspective_clipping_verified": null
+    }
+  ],
+  "accepted_exact_artifacts": true,
+  "accepted_publication": false,
+  "scope": "Every local CI distributable equals the remote attachment digest/size and independently downloaded checksum manifest. Downloaded source is exact at the peeled immutable tag, excluding all84 prototype models and experimental compiler/tests. Independent downloaded runtime controls remain required before publication. No every-model-eight, strict-wide-backend, arbitrary-world smooth60fps/memory, Windows ARM64 execution/GPU/input or replay/network acceptance."
+}

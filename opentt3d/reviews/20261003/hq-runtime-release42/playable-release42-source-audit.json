@@ -1,0 +1,17 @@
+{
+  "audited_utc": "2026-10-03T15:32:03.440807+00:00",
+  "tag": "opentt3d-dev-20261003.42",
+  "commit": "1247c88d5e180ac6fbd88bdf9b71bfafd468f7a5",
+  "archive_sha256": "5b27dc1361140e071b1c0d76663e6ca04616a2278d0671ff03951791270b5c2a",
+  "source_files": 2262,
+  "source_models": 1831,
+  "tracked_blobs_exact": true,
+  "extra_files": [
+    "opentt3d-dev-20261003.42/external/OpenGFX2-013cbc9e700c796af001a381a2d93592d49146ac.tar.gz",
+    "opentt3d-dev-20261003.42/release-source.json"
+  ],
+  "annotated_tag_resolves_exact_commit": true,
+  "unapproved_larger_models_compiler_and_tests_excluded": true,
+  "accepted_exact_source": true,
+  "scope": "Downloaded source artifact only. Packaging completion, attachment/checksum equality and independently downloaded runtime remain separate gates; no visual/performance/full-objective approval."
+}

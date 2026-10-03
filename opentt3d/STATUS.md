@@ -2,6 +2,40 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — independently rebuilt `.42` published and recommended
+
+The recommended development download is [`.42`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)
+at immutable `1247c88d5e180ac6fbd88bdf9b71bfafd468f7a5`. All eight packaging jobs
+in 37132182765 pass. Independent audits reconcile 19 attachments, 18 checksums,
+2,262 exact tagged source files and six matching 1,831-model catalogues. The
+annotated tag peels to the exact commit; the larger84-owner prototypes, experimental
+compiler/tests and updated screening ledger are excluded.
+
+The independently downloaded, signature-verified Mac app passes default/OpenGL
+package launch/clipping/save and twelve quiet native controls: eight climate/backend
+HQ galleries plus the real saved size1 and raised-tunnel HQ worlds. All3,024 prior
+gallery images,296 original source layers and eight prior whole worlds remain exact.
+Owner LOD rebuild, atlas/picking, live tunnel retention and synchronous saves pass.
+This exact-tag rebuilt app resolves the scoped release-source gate; it does not
+retroactively certify the earlier mixed-working-source local binary.
+
+Guarded publication37136166083 changes only the draft flag. All19 attachment
+identities/sizes/digests, notes/title and the annotated tag remain exact; no packaging
+rebuild is observed. `.41` stays unchanged, draft and unrecommended. Portable audits:
+`reviews/20261003/hq-runtime-release42/`.
+
+The separate1,915-model working candidate now retains the full medium-east wall,
+single north trim and complete original office/shed/flag ground ownership. Asset220
+and eight climate/backend technical controls pass, preserving the preceding1,831
+models and all four joined medium compounds exactly. Individual larger-stage source
+defects remain. All121 native views match per climate, but strict wider comparisons
+still reject143/143/143/144 images and6,629/6,629/6,629/6,573 pixels, plus10/9/12/8
+world pixels. A public-command expansion study reaches no larger upgrade; its maximum
+observed rating is180 and its rejected route/loan evidence remains retained.
+Zero8/10 approvals exist. Complete breadth/fidelity, all-climate natural upgrades,
+locks/rivers/disasters, fleet/emitter clearance, smooth60fps/memory and platform/input/
+replay/network acceptance remain unfinished. Publication is not a stopping clock.
+
 ## October 3 — unchanged HQ artwork, repaired runtime ownership
 
 The runtime-only increment retains the exact1,831-model catalogue and original
