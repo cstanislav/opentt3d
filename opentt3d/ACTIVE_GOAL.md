@@ -1,5 +1,27 @@
 # Active extended development goal
 
+## First lock volumes inspected, still unbound and unapproved — October 3
+
+All 48 original rear/front/part/direction/elevation wall studies now have separate
+source/native/four-orbit/four-street defect records: 28 structural rejections at 5/10
+and twenty provisional 6/10, with six false acceptance checks each. Sea-level lower
+lamps/foam and elevated absences remain separate. Source review rejects broad/light
+rear-style front profiles and obscured yellow lamp panes. Opening the lamps changes
+eight models and correctly invalidates their previous reviews.
+
+Two quiet native controls per freeze preserve the original 1,831 models/bindings.
+All 48 registered native pairs match, but eight street silhouettes differ by one
+pixel each; strict wider-backend acceptance remains rejected. The separate rejected
+HQ + lock study scope has 1,963 models/2,978 ledger entries, not shipped assets.
+The first freeze retains 189 individual records; the lamp-opening candidate has
+181 current records/eight stale reviews. Zero approvals; required-eight still fails.
+Evidence: `reviews/20261003/lock-studies-rejected/`. `.42` is unchanged.
+
+Continue original wall ownership/detail, rendering defects, doubled-terrain support
+without object inflation, actual complete-family fallback, independent animated
+water and ship traversal/clearance; retain the entire catalogue-wide goal below.
+This checkpoint does not establish runtime lock coverage or a stopping time.
+
 ## Actual lock source states observed; 3D geometry continues — October 3
 
 Four unchanged exact-tag public-command worlds retain 32 natural locks, acknowledged

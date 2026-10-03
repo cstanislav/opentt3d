@@ -1,0 +1,41 @@
+{
+  "reviewed_utc": "2026-10-03T19:09:21.686054+00:00",
+  "individual_first_study_records": 48,
+  "scores": {
+    "6": 20,
+    "5": 28
+  },
+  "all_acceptance_checks": false,
+  "approvals": 0,
+  "native_pairs_exact": 48,
+  "strict_wider_differences": 8,
+  "strict_wider_pixels": 8,
+  "quality_scopes": [
+    {
+      "scope": "first-rejected",
+      "models": 1963,
+      "runtime_bindings_unchanged": true,
+      "ledger_entries": 2978,
+      "individual_records": 189,
+      "stale_changed_lamps": 0,
+      "require_eight_exit": 1,
+      "approvals": 0,
+      "catalogue_sha256": "4520fe0676ab1a6c0387c6d8815f834efe8689b1df0ddd8e553d1a942fe72097",
+      "quality_sha256": "435204036cbdc981c23f3a8f564b7a982ae66d4b018f629aba5a3cb015af6f81"
+    },
+    {
+      "scope": "lamp-open-unapproved",
+      "models": 1963,
+      "runtime_bindings_unchanged": true,
+      "ledger_entries": 2978,
+      "individual_records": 181,
+      "stale_changed_lamps": 8,
+      "require_eight_exit": 1,
+      "approvals": 0,
+      "catalogue_sha256": "11c41c79646d398aef769cb2f10ec96a2fdf52e2fcf571fe2546c6a40f3dd24a",
+      "quality_sha256": "a319d154b216c733089c7f3206ec763f07c7b5865f3de533e55594ed1bfed72a"
+    }
+  ],
+  "released1831_models_and_bindings_unchanged": true,
+  "scope": "Individually inspected first frozen unbound48-model lock studies only; negative/provisional scores, no runtime coverage or acceptance. Native equality is not wider-backend acceptance; changed lamp artwork invalidates its prior individual decision."
+}

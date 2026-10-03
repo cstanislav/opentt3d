@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-rejection-ledger.py", line 92, in <module>
+    assert len(merged["models"]) == 1979 and merged["bindings"] == baseline["bindings"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

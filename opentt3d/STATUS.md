@@ -2,6 +2,25 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — first 48 lock wall volumes individually rejected/provisional
+
+The unbound source-guided study has real stone depth, recessed buttresses, paving,
+rail air gaps and distinct original rear/front/part/direction/elevation anchors.
+Its 48 individual source/native/orbit/street reviews retain 28 structural 5/10
+rejections and twenty provisional 6/10 decisions, with zero accepted review checks
+or approvals. Broad/light rear-style front profiles and opaque lantern frames are
+rejected. Opening the sea-level lamp panes changes eight models; their reviews
+correctly become stale rather than following the revised artwork.
+
+Both freezes pass two quiet native atlas/picking/save controls with all prior 1,831
+models and bindings unchanged. Their 48 native pairs are exact, but eight street
+views differ by one silhouette pixel each across renderers. Strict acceptance is
+rejected without tolerances. The independent rejected HQ + lock scope is 1,963
+models/2,978 ledger entries, not a release payload; required-eight still fails.
+Portable individual evidence and retained failures are in
+`reviews/20261003/lock-studies-rejected/`. `.42` remains immutable and recommended;
+runtime lock coverage, terrain grade, water phases, fallback and ships remain open.
+
 ## October 3 — actual public lock selectors verified; volumes still open
 
 The unchanged downloaded `.42` app builds 32 legal locks on existing slopes in

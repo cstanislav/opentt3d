@@ -12,6 +12,20 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Individual unbound lock study rejections
+
+`reviews/20261003/lock-studies-rejected/` retains all 48 original wall-owner studies
+separately: 28 structural rejections at 5/10, twenty provisional 6/10, zero approvals
+and six false acceptance checks per model. Front architectural profiles and obscured
+lamp panes are explicit defects. The lamp-opening candidate invalidates eight prior
+reviews. All 48 native pairs match, but eight street views fail strict renderer
+equality by one pixel each; native equality cannot replace the wider rejection.
+
+The unbound lock + rejected HQ scope has 1,963 models/2,978 ledger entries, with
+189 individual records in the first freeze or 181 current/eight stale records after
+the lamp edit. It remains separate from canonical 1,831-model assets and `.42`.
+Required-eight still fails; no runtime lock substitution or inherited approval.
+
 ## Original water states remain in both quality scopes
 
 `reviews/20261003/water-quality-scope/` retains 544 separate original wall/water/
