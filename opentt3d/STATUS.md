@@ -2,6 +2,25 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — `.39` independently verified and published
+
+Recommended downloads now use `.39` at exact commit
+`383e895fd65cbce706245b09bc7f89c19d2c72e2`. All eight packaging jobs pass;
+independent audits reconcile19 attachments,18 checksums,2,154 tagged source files,
+pinned graphics and six matching1,794-model catalogues. Three downloaded Mac
+controls, seven hosted graphical controls and Windows x64/x86 native load/save
+pass. The1,800-frame Linux support/collector journey retains every context and
+tolerance; llvmpipe1.505fps/2,545,934,336 sampled bytes are not60fps/memory acceptance.
+Guarded publication37109011247 changes only the draft flag; all19 attachment IDs,
+sizes and digests remain exact and no packaging rerun is triggered. The tag is
+never moved. Rejected`.38`and both failed attempts stay intact and package-less.
+Evidence:`build-macos/playable-release39-independent-draft-reconciliation.json`
+and`build-macos/playable-release39-publication/publication-receipt.json`.
+
+The later five object candidates/13 climate bindings are outside these immutable
+packages and remain under source/all-angle/world/fallback review. The full
+catalogue-wide8/10 and sustained smooth60fps objectives are still open.
+
 ## October 3 — `.38` draft release remains gated
 
 Consistency fixes are pushed at `18c3ae698` and immutable tag
@@ -49,7 +68,7 @@ claimed from host-name emulation.
   Lossless compaction of31,817 successful generated captures saves20,459,852,523
   bytes, verifying every RGBA byte/header and retaining sources, rejected studies,
   failed controls and the exact compaction ledger. Last audited desktop release
-  remains`.37`; the model-quality objective and sustained smooth60fps remain open.
+  is now`.39`; the model-quality objective and sustained smooth60fps remain open.
 
 - [x] Verified desktop release`.37`publishes original bubble states, grounded explosions,
   breakdown smoke, bounded CPU restoration and1,782 models at commit24e78cbb0. All

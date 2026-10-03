@@ -1,5 +1,33 @@
 # Active extended development goal
 
+## `.39` independently audited and published — October 3, 08:14:58 UTC
+
+All eight packaging jobs in37104385626 pass at immutable
+`383e895fd65cbce706245b09bc7f89c19d2c72e2`. Independent downloaded/source/resource/
+checksum/runtime audits reconcile19 attachments,18 checksums,2,154 tagged source
+files and six matching1,794-model catalogues. Three downloaded Mac controls, seven
+hosted graphical controls and Windows x64/x86 native load/save pass; hosted Mac
+world regions match`.37`exactly. Linux's1,800-frame support/collector journey retains
+every original context and tolerance, without inferring60fps/memory approval from
+llvmpipe1.505fps/2,545,934,336 sampled bytes.
+
+Publication guards are pushed at`7567450b6`. Workflow37109011247 changes only the
+draft flag through`GITHUB_TOKEN`, preserving all19 audited attachment IDs/sizes/
+digests and avoiding a release-event rebuild. The draft-tag endpoint404 is preserved
+and repaired by authenticated paginated exact-tag lookup; six publication tests and
+native-host harness86 pass. Rejected`.38`and both attempts remain immutable with no
+packages. Recommended download is now verified`.39`; its packages do not contain
+the later1,799-model object candidate or any object visual approval.
+
+Work continues on all families, not a selected showcase. The object candidate has
+native211/asset187/harness86/boundary140 controls, eight matched climate/backend
+registered galleries,16 flat/sloped owned-land controls and eight close statue plus
+ten landmark controls. The initial sign orientation/gnome colours are repaired,
+but source shape/material detail, animation/fallback and strict backend pixel
+differences still require review. The isolated concurrent Cocoa startup-policy
+failure is retained; serial controls pass without relaxing the hidden-window gate.
+No8/10 approval or actual stopping-clock claim is made at this in-progress checkpoint.
+
 ## `.38` source-test rejection; portable `.39` successor — October 3, 06:49:00 UTC
 
 Fresh workflow37104029160 resolves the unchanged `.38` draft/tag correctly and

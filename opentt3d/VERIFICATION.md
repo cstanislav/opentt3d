@@ -1,5 +1,34 @@
 # Implementation verification
 
+## Independently verified road/canal/bank desktop release — October 3
+
+Release`.39`targets exact`383e895fd65cbce706245b09bc7f89c19d2c72e2`in successful
+eight-job workflow37104385626. Independent downloads reconcile19 attachments,
+18 checksums,2,154 exact tagged source files, pinned graphics and six matching
+1,794-model catalogues. All1,778 preceding non-bank models and earlier bindings
+remain exact; four bank bodies intentionally change and twelve dikes add48 climate
+bindings. Source-model ownership remains independent. No newer object candidates
+are included. Catalogue LF SHA-256:
+`fa86a6caa264a2068dd1244a044d717d7dfb8a150a01db2d549bddb6d9a5c5d8`.
+
+Three downloaded Mac render/save/72-view clipping controls, seven hosted graphical
+controls and Windows x64/x86 native load/save pass. Three hosted Mac world regions
+match verified`.37`exactly; software OpenGL has zero black pixels and nine
+differences from Vulkan. Linux's1,800 frames retain every station/flat/ascending/
+descending/bridge/tunnel support and surface/portal/tunnel collector context with
+unchanged geometry, tolerances and ownership. llvmpipe1.505fps and2,545,934,336
+sampled bytes do not establish smooth60fps or long-duration memory acceptance.
+
+Publication37109011247 uses a separately tested scoped`GITHUB_TOKEN`guard to change
+only`draft=false`, preserving all19 attachment IDs/sizes/digests and the exact tag
+without triggering another build. The earlier read-only draft-tag endpoint404 and
+both`.38`CI failures remain retained. Authenticated paginated exact-tag lookup now
+has regression coverage; no personal-token publication or tag movement occurs.
+Recommended README/installation links use`.39`. Final visual approvals:0.
+Evidence:`build-macos/playable-release39-independent-draft-reconciliation.json`,
+`build-macos/playable-release39-public-assets-receipt.json`and
+`build-macos/playable-release39-publication/publication-receipt.json`.
+
 ## Independently verified original-bubble desktop release
 
 Release`.37`and workflow36971240157 target exact`24e78cbb08d5e7341d5deb63a65301c2bc82637e`.

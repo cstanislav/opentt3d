@@ -8,7 +8,7 @@ Repository: https://github.com/cstanislav/opentt3d
 ## Development status
 
 Implementation is in progress. [Development releases](https://github.com/cstanislav/opentt3d/releases)
-record tested checkpoints. New releases automatically build desktop packages;
+record tested checkpoints. Recommended desktop packages are independently audited;
 see [download and play instructions](PLAYING.md). Complete artwork and sustained
 performance remain in development.
 See [the implementation status](STATUS.md) for verified capabilities
@@ -53,6 +53,14 @@ The build helper does not install host packages. Native release packaging uses
 GitHub-hosted macOS and Windows runners; Linux packaging uses a container.
 
 ### Publishing playable downloads
+
+For independently reviewed releases, create a draft with an immutable tag, dispatch
+`.github/workflows/opentt3d-release.yml`, and retain all eight successful jobs and
+independent source/package/runtime/checksum audits. Then dispatch
+`.github/workflows/opentt3d-publish-reviewed.yml` with the exact tag, commit, packaging
+run and audited `SHA256SUMS` hash. It uses `GITHUB_TOKEN` to change only `draft=false`,
+so the publication event does not rebuild or replace audited packages. The guard's
+default local command is read-only; public/rejected tags are never moved.
 
 Publishing a GitHub release triggers `.github/workflows/opentt3d-release.yml`.
 It builds the release's exact commit, runs native and extracted-package checks,

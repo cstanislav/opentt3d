@@ -1,6 +1,6 @@
 # Download and play OpenTT3D
 
-Download a desktop package from the **[verified `.37` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.37)**.
+Download a desktop package from the **[verified `.39` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.39)**.
 Expand **Assets** beneath the release notes. Choose your operating system below;
 GitHub's automatic **Source code** downloads are for building the game yourself.
 
@@ -75,9 +75,10 @@ For troubleshooting, OpenGL can be selected with `-v win32-opengl` on Windows,
 
 ## Release contents
 
-Every new release starts the desktop-package workflow. Assets appear when its
-builds and package checks pass; source-only previews before this workflow was introduced do not
-have executables. A failed build is visible in
+The recommended release's desktop packages are built and independently audited
+before its draft is published. Publication preserves those exact packages without
+rebuilding them. Older source-only previews do not have executables. Failed builds
+remain visible in
 [Actions](https://github.com/cstanislav/opentt3d/actions/workflows/opentt3d-release.yml).
 
 Each published package includes the game, languages, authored models, pinned base

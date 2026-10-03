@@ -10,7 +10,7 @@ commands, the save format and simulation remain the upstream engine's responsibi
 
 ## Download & play
 
-**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261002.37)**
+**[Download OpenTT3D for Windows, macOS, or Linux →](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.39)**
 
 Open a release's **Assets** and choose your platform:
 
@@ -24,9 +24,10 @@ The required graphics are included, and the game opens in 3D. No original game
 files or development tools are needed. See **[installation and first-launch
 instructions](opentt3d/PLAYING.md)**, including unsigned-app prompts and optional sound/music.
 
-New releases automatically build desktop downloads; assets appear when the
+Desktop downloads are built and independently audited before recommendation. The
 [release workflow](https://github.com/cstanislav/opentt3d/actions/workflows/opentt3d-release.yml)
-succeeds. **Desktop packages are available in the verified `.34` large-explosion release**,
+and separate publication guard preserve the exact reviewed packages.
+**Desktop packages are available in the verified `.39` road/canal/bank consistency release**,
 including installers, portable archives, matching source and checksums. Earlier
 source-only previews have no executables. These are **development previews**:
 artwork and performance remain in progress. See the current
