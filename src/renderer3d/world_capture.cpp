@@ -49,6 +49,9 @@
 #include "../tree_map.h"
 #include "../town_map.h"
 #include "../town.h"
+#include "../object.h"
+#include "../object_base.h"
+#include "../newgrf_object.h"
 #include "../palette_func.h"
 #include "../debug.h"
 #include "../settings_type.h"
@@ -609,6 +612,50 @@ struct IndustryPaletteCheck {
 	bool passed = false;
 };
 static std::map<unsigned,IndustryPaletteCheck> industry_palette_checks;
+
+struct ObjectPaletteCheck {
+	unsigned type = UINT_MAX;
+	TileIndex tile = INVALID_TILE;
+	uint32_t object = UINT32_MAX;
+	std::set<unsigned> material_masks;
+	std::set<std::array<uint32_t,3>> phases;
+};
+static ObjectPaletteCheck object_palette_check;
+
+void BeginVoxelObjectPaletteCheck(unsigned type)
+{
+	if (type >= 2 || !HasVoxelObjectLayout(type,0,to_underlying(_settings_game.game_creation.landscape))) throw std::invalid_argument("Object palette observation needs an original voxel transmitter or lighthouse in its supported climate");
+	object_palette_check = {}; object_palette_check.type = type;
+	Debug(driver,1,"OpenTT3D: observing original voxel object {} palette without changing game state",type);
+}
+
+static void ObserveVoxelObjectPalette(TileIndex tile, unsigned type, size_t first)
+{
+	auto &check = object_palette_check;
+	if (check.type != type || capture->diagnostic || capture->parent_culled) return;
+	unsigned colour_count = type == OBJECT_TRANSMITTER ? 2 : 3, first_colour = type == OBJECT_TRANSMITTER ? 239 : 242;
+	unsigned emitted = 0;
+	for (size_t i = first; i < capture->scene.instances.size(); ++i) emitted |= VoxelPaletteMask(*capture->scene.instances[i].mesh,first_colour,colour_count);
+	if (check.material_masks.insert(emitted).second) Debug(driver,1,"OpenTT3D: object palette material mask type {} tile {},{}: {} of {}",type,TileX(tile),TileY(tile),emitted,(1U<<colour_count)-1);
+	if (emitted != (1U<<colour_count)-1) return;
+	uint32_t object = Object::GetByTile(tile)->index.base();
+	if (check.tile == INVALID_TILE) { check.tile = tile; check.object = object; }
+	if (check.tile != tile || check.object != object) return;
+	auto palette = SnapshotPalette();
+	std::array<uint32_t,3> phase{};
+	for (unsigned i = 0; i < colour_count; ++i) {
+		Colour colour = palette.palette[first_colour+i];
+		phase[i] = (static_cast<uint32_t>(colour.r)<<16)|(static_cast<uint32_t>(colour.g)<<8)|colour.b;
+	}
+	if (check.phases.insert(phase).second) Debug(driver,1,"OpenTT3D: object palette phase type {} tile {},{}: {} paired/triple colours {:06x}/{:06x}/{:06x}",type,TileX(tile),TileY(tile),check.phases.size(),phase[0],phase[1],phase[2]);
+	/* The unmodified +8 palette counter yields four distinct beacon pairs and
+	 * four lighthouse triples (including the all-dark phase). Do not accept a
+	 * frozen palette or splice phase samples from other objects. */
+	if (check.phases.size() >= 4) {
+		Debug(driver,1,"OpenTT3D: voxel object palette observation passed: type {} tile {},{}, {} original phases across {} emitted animated materials",type,TileX(tile),TileY(tile),check.phases.size(),colour_count);
+		check.type = UINT_MAX;
+	}
+}
 
 void BeginVoxelIndustryPaletteCheck(unsigned graphics)
 {
@@ -1289,11 +1336,43 @@ static std::optional<SpriteID> FlatTerrainMaterial(SpriteID image, Slope slope)
 	return std::nullopt;
 }
 
-void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const TileInfo &tile, const SubSprite *, int offset_x, int offset_y, unsigned fine_edges)
+/** Read the original selected size/part; never construct an object or update scores. */
+static std::optional<std::array<unsigned,3>> OriginalObjectCaptureLayout(const TileInfo &tile)
+{
+	if (!IsTileType(tile.tile,MP_OBJECT)) return {};
+	const Object *object = Object::GetByTile(tile.tile);
+	if (object->type >= NEW_OBJECT_OFFSET || !ObjectSpec::Get(object->type)->IsEnabled()) return {};
+	unsigned size = object->type == OBJECT_HQ ? GetAnimationFrame(tile.tile) : 0;
+	unsigned x = TileX(tile.tile)-TileX(object->location.tile), y = TileY(tile.tile)-TileY(object->location.tile);
+	if (object->type == OBJECT_HQ && (x >= 2 || y >= 2)) return {};
+	unsigned part = object->type == OBJECT_HQ ? y*2+x : 0;
+	if (!OriginalObjectLayoutIdentifier(object->type,size,part)) return {};
+	return std::array<unsigned,3>{object->type,size,part};
+}
+
+void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const TileInfo &tile, const SubSprite *sub, int offset_x, int offset_y, unsigned fine_edges)
 {
 	if (!capture || tile.tile == INVALID_TILE || !IsValidTile(tile.tile)) return;
 	Vec3 origin{static_cast<float>(x), static_cast<float>(y), TerrainZ(z)};
 	SpriteID sprite = image&SPRITE_MASK;
+	if (tile.tileh == SLOPE_FLAT && sub == nullptr && offset_x == 0 && offset_y == 0) if (auto object = OriginalObjectCaptureLayout(tile)) {
+		size_t first = capture->scene.instances.size();
+		if (DrawVoxelObjectGround(capture->scene,(*object)[0],(*object)[1],(*object)[2],image,origin,palette)) {
+			++capture->tile_layers;
+			for (size_t i = first; i < capture->scene.instances.size(); ++i) {
+				capture->scene.instances[i].mesh = ClippedGroundMesh(capture->scene.instances[i].mesh,tile);
+				capture->scene.instances[i].data.SetObjectId(TILE_PICK_ID|tile.tile.base());
+			}
+			capture->scene.instances.erase(std::remove_if(capture->scene.instances.begin()+first,capture->scene.instances.end(),
+				[](const auto &instance) { return instance.mesh->empty(); }),capture->scene.instances.end());
+			if (!capture->diagnostic && capture->scene.instances.size() > first) {
+				static std::set<std::array<unsigned,5>> reported;
+				unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+				if (reported.insert({(*object)[0],(*object)[1],(*object)[2],climate,tile.tile.base()}).second) Debug(driver,1,"OpenTT3D: live voxel object {} size {} part {} ground climate {} source {} captured at {},{} with original ground ownership",(*object)[0],(*object)[1],(*object)[2],climate,sprite,TileX(tile.tile),TileY(tile.tile));
+			}
+			return;
+		}
+	}
 	bool canal_soil = false;
 	if (sprite >= SPR_CANAL_DIKES_BASE && HasTileWaterClass(tile.tile) && GetWaterClass(tile.tile) == WaterClass::Canal && tile.tileh == SLOPE_FLAT && offset_x == 0 && offset_y == 0) {
 		/* DrawWaterEdges still selects every original side/convex/concave sprite
@@ -1746,6 +1825,24 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 	capture->parent_left = capture->parent_top = 0;
 	capture->parent_offsets_pending = false;
 	if ((image & SPRITE_MASK) == SPR_EMPTY_BOUNDING_BOX) return;
+	if (capture->tile != nullptr && sub == nullptr) if (auto object = OriginalObjectCaptureLayout(*capture->tile)) {
+		Vec3 mounted = origin;
+		/* Owned land has no foundation. Root only its sign on the actual doubled
+		 * slope; keep the separately selected bare-land chart and object size. */
+		if ((*object)[0] == OBJECT_OWNED_LAND) mounted.z += MakeTileSurface(capture->tile->tileh).Height(origin.x-capture->tile->x,origin.y-capture->tile->y);
+		if (DrawVoxelObjectBody(capture->scene,(*object)[0],(*object)[1],(*object)[2],image,mounted,palette,transparent ? 0.38f : 1)) {
+			capture->parent_instance_end = capture->scene.instances.size();
+			capture->parent_culled = capture->parent_instance_begin == capture->parent_instance_end;
+			capture->parent_offsets_pending = true; capture->parent_palette = palette;
+			if (!capture->diagnostic && !capture->parent_culled) {
+				static std::set<std::array<unsigned,5>> reported;
+				unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+				if (reported.insert({(*object)[0],(*object)[1],(*object)[2],climate,capture->tile->tile.base()}).second) Debug(driver,1,"OpenTT3D: live voxel object {} size {} part {} body climate {} source {} captured at {},{} with original body ownership",(*object)[0],(*object)[1],(*object)[2],climate,image&SPRITE_MASK,TileX(capture->tile->tile),TileY(capture->tile->tile));
+				ObserveVoxelObjectPalette(capture->tile->tile,(*object)[0],capture->parent_instance_begin);
+			}
+			return;
+		}
+	}
 	if (capture->tile != nullptr && IsBuoyTile(capture->tile->tile) && (image&SPRITE_MASK) == GetCanalSprite(CF_BUOY,capture->tile->tile) && sub == nullptr && IsBaseGraphicsSprite(image) && HasVoxelAsset("infrastructure",SPR_IMG_BUOY,_settings_game.game_creation.landscape == LandscapeType::Toyland ? 1 : 0)) {
 		const TileInfo &tile = *capture->tile;
 		unsigned state = _settings_game.game_creation.landscape == LandscapeType::Toyland ? 1 : 0;

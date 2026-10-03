@@ -572,7 +572,7 @@ def compile_catalogue(data):
         compile_model(name)
     bindings = data.get("bindings", {})
     for category, identifiers in bindings.items():
-        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects") or not isinstance(identifiers, dict):
+        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects", "objects", "object_ground") or not isinstance(identifiers, dict):
             raise ValueError(f"Unknown voxel binding category {category}")
         for identifier, states in identifiers.items():
             if not identifier.isascii() or not identifier.isdecimal() or int(identifier) > 65535 or not isinstance(states, dict) or not states:
@@ -584,6 +584,12 @@ def compile_catalogue(data):
                 raise ValueError("Original electric locomotives need their complete independently mounted collectors")
             if category in ("airport_tiles", "airport_ground") and (int(identifier) >= 74 or any(int(state) >= 64 for state in states)):
                 raise ValueError("Airport bindings use original tile IDs and climate*16+frame states0..63 for each independent layer")
+            if category in ("objects", "object_ground"):
+                layout = int(identifier)
+                if layout >= 24 or any(int(state) >= 4 or (layout == 0 and int(state) == 3) or (layout == 1 and int(state) >= 2) for state in states):
+                    raise ValueError("Object bindings use four original layouts/five four-tile HQ sizes and the original climate restrictions")
+                if (category == "objects" and layout in (4,5,6,7,8,9,10,11,15,19,23)) or (category == "object_ground" and layout < 4):
+                    raise ValueError("Object bindings preserve absent HQ bodies and independently owned ordinary terrain ground")
             if category == "vehicles":
                 if int(identifier) >= 256 or any(int(state) >= 8 for state in states):
                     raise ValueError("Vehicle bindings use original engine IDs and climate*2+cargo states0..7")

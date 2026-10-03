@@ -6,6 +6,22 @@
 
 namespace Renderer3D {
 bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state);
+/** Four ordinary layouts followed by the original five north/west/east/south HQs. */
+inline std::optional<unsigned> OriginalObjectLayoutIdentifier(unsigned type, unsigned size, unsigned part)
+{
+	if (type < 4 && size == 0 && part == 0) return type;
+	if (type == 4 && size < 5 && part < 4) return 4+size*4+part;
+	return {};
+}
+inline bool OriginalObjectModelClimateSupported(unsigned type, unsigned climate)
+{
+	return type < 5 && climate < 4 && (type != 0 || climate < 3) && (type != 1 || climate < 2);
+}
+/** A partial/custom family keeps every original layer, not a half-replaced HQ. */
+bool HasVoxelObjectLayout(unsigned type, unsigned size, unsigned climate);
+bool DrawVoxelObjectBody(Scene &scene, unsigned type, unsigned size, unsigned part, SpriteID image, Vec3 origin, PaletteID palette, float opacity = 1);
+bool DrawVoxelObjectGround(Scene &scene, unsigned type, unsigned size, unsigned part, SpriteID image, Vec3 origin, PaletteID palette);
+bool FocusVoxelObject(unsigned type, unsigned x = UINT_MAX, unsigned y = UINT_MAX);
 bool DrawVoxelEffect(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette = 0, float opacity = 1);
 bool HasVoxelAirport(unsigned graphics, unsigned frame);
 /** The Toyland set supplies different terminal/hangar paint under the same IDs. */

@@ -34,12 +34,47 @@ def completed_png_size(path):
         return None
 
 
+def require_synchronous_fixture_save(path):
+    """GUI console text is not stdout; verify the original save file after sync IO."""
+    if not path.is_file() or path.stat().st_size < 100:
+        raise RuntimeError("The requested synchronous original fixture save did not complete")
+    with path.open("rb") as source:
+        if source.read(4) not in (b"OTTD",b"OTTN",b"OTTZ",b"OTTX"):
+            raise RuntimeError("The synchronous fixture save lacks an original OpenTTD format header")
+
+
 def require_live_canal_dikes(text, variants):
     """An isolated voxel gallery must never stand in for live source selection."""
     seen = {int(match[1]) for match in re.finditer(r"live voxel canal dike (\d+) climate \d+ source \d+ captured at \d+,\d+ with original ground ownership",text)}
     missing = set(variants)-seen
     if missing:
         raise RuntimeError(f"Actual canal dike variants were not captured: {sorted(missing)}")
+
+
+def require_live_voxel_object(text, kind):
+    """Require the focused original object's own source layers and tile anchors."""
+    focus = re.search(rf"focused voxel object {kind} size (\d+) at (\d+),(\d+)",text)
+    if not focus:
+        raise RuntimeError("The requested original voxel object was not located")
+    size,x,y = map(int,focus.groups())
+    roles = {"body":range(3) if size >= 2 else () ,"ground":range(4)} if kind == 4 else {"body":(0,)}
+    for role,parts in roles.items():
+        for part in parts:
+            tile = (x+part%2,y+part//2) if kind == 4 else (x,y)
+            if not re.search(rf"live voxel object {kind} size {size} part {part} {role} climate \d+ source \d+ captured at {tile[0]},{tile[1]} with original {role} ownership",text):
+                raise RuntimeError(f"The focused original object {kind} did not emit {role} part{part} at {tile}")
+
+
+def require_object_palette(text, kind):
+    """Never splice phases from a different object, tile, or absent animated paint."""
+    require_live_voxel_object(text,kind)
+    focus = re.search(rf"focused voxel object {kind} size 0 at (\d+),(\d+)",text)
+    if kind not in (0,1) or not focus:
+        raise RuntimeError("Object palette observation requires one focused original landmark")
+    x,y = map(int,focus.groups())
+    phases = re.search(rf"voxel object palette observation passed: type {kind} tile {x},{y}, (\d+) original phases across (\d+) emitted animated materials",text)
+    if not phases or int(phases[1]) != 4 or int(phases[2]) != (2 if kind == 0 else 3):
+        raise RuntimeError("Original object palette observation incomplete for the focused tile; inspect run.log")
 
 
 def main():
@@ -61,7 +96,9 @@ def main():
     parser.add_argument("--ai-dir", type=Path, help="Stage a fixture's local AI scripts alongside the isolated save")
     parser.add_argument("--newgrf-dir", type=Path, help="Stage the NewGRF files required by a fixture save")
     parser.add_argument("--executable", type=Path, help="Override game executable, for official upstream interoperability checks")
-    parser.add_argument("--graphics-from-config", choices=("OpenGFX2 Classic", "OpenGFX2 High Def", "OpenGFX"), help="Exercise saved base-set selection/migration or alternate-set fallback without a command-line graphics override")
+    base_graphics = parser.add_mutually_exclusive_group()
+    base_graphics.add_argument("--graphics-from-config", choices=("OpenGFX2 Classic", "OpenGFX2 High Def", "OpenGFX"), help="Exercise saved base-set selection/migration or alternate-set fallback without a command-line graphics override")
+    base_graphics.add_argument("--graphics", choices=("OpenGFX2 Classic", "OpenGFX2 High Def", "OpenGFX"), help="Explicit original base-set selection; unlike saved High Def settings this bypasses the intentional Classic migration")
     parser.add_argument("--reference-model", action="store_true")
     parser.add_argument("--reference-vehicle", type=int, choices=range(256), help="Locate an actual visible vehicle with an authored voxel binding")
     parser.add_argument("--reference-vehicle-binding", type=int, choices=range(8), help="Require an exact climate/cargo binding with --reference-vehicle")
@@ -69,6 +106,9 @@ def main():
     parser.add_argument("--reference-industry", nargs=2, type=int, metavar=("GRAPHICS", "STAGE"), help="Locate an actual voxel industry tile in its original construction state")
     parser.add_argument("--reference-industry-ground", nargs=2, type=int, metavar=("GRAPHICS", "STAGE"), help="Locate an actual voxel industry ground/stockpile layer in its original construction state")
     parser.add_argument("--reference-tree", nargs=2, type=int, metavar=("BASE_SPRITE", "STAGE"), help="Locate an actual projected or voxel tree in one of its seven original lifecycle stages")
+    parser.add_argument("--reference-object", type=int, choices=range(5), help="Locate and require actual emitted geometry for one original object family")
+    parser.add_argument("--reference-object-tile", nargs=2, type=int, metavar=("X","Y"), help="Select an existing original object at its exact north tile, without forcing its climate/size/slope state")
+    parser.add_argument("--verify-object-palette", type=int, choices=(0,1), help="Observe original palette phases on the focused transmitter/lighthouse, without changing its clock or paint")
     parser.add_argument("--reference-house-stage", type=int, choices=range(4), help="Find an actual voxel-bound house at this upstream construction stage")
     parser.add_argument("--reference-house-id", type=int, choices=range(110), help="Restrict --reference-house-stage to one house type")
     parser.add_argument("--reference-house-variant", type=int, choices=range(4), help="Select an actual source-art variant of the requested house/stage")
@@ -197,11 +237,18 @@ def main():
     parser.add_argument("--menu", action="store_true", help="Capture the branded main menu instead of loading/generating a game")
     parser.add_argument("--screenshot-size", nargs=2, type=int, metavar=("WIDTH", "HEIGHT"), help="Exercise tiled large-image rendering at the requested size")
     parser.add_argument("--blitter", choices=("32bpp-optimized", "40bpp-anim"), default="32bpp-optimized")
+    parser.add_argument("--synchronous-save", action="store_true", help="Use the original non-threaded fixture save setting so exact screenshots do not race the transient Saving game UI; normal application behavior is unchanged")
     parser.add_argument("--timeout", type=int, default=90)
     parser.add_argument("--memory-limit-mib", type=int, help="Sample game RSS/footprint and abort above this MiB limit (macOS/Linux); retain memory.jsonl")
     parser.add_argument("--keep-open", action="store_true")
     parser.add_argument("--brief", action="store_true", help="Print a short result; retain the complete artifact reports")
     args = parser.parse_args()
+    if args.synchronous_save and args.menu:
+        parser.error("--synchronous-save requires a game fixture, not --menu")
+    if args.reference_object_tile is not None and (args.reference_object is None or any(coordinate < 0 for coordinate in args.reference_object_tile)):
+        parser.error("--reference-object-tile requires --reference-object and nonnegative X,Y")
+    if args.verify_object_palette is not None and (args.renderer != "3d" or args.reference_object != args.verify_object_palette or not args.running or not args.benchmark_frames or args.blitter != "40bpp-anim"):
+        parser.error("--verify-object-palette requires the matching --reference-object, --renderer 3d, --running, --benchmark-frames and --blitter 40bpp-anim (the optimized blitter freezes the original palette)")
     if not (640 <= args.resolution[0] <= 8192 and 480 <= args.resolution[1] <= 8192):
         parser.error("--resolution requires width 640…8192 and height 480…8192")
     if args.background and (platform.system() != "Darwin" or args.verify_native_input or args.fullscreen):
@@ -364,6 +411,7 @@ invisibility_options = {8 if args.industry_visibility == "invisible" else 0}
 autosave_interval = 0
 show_finances = false
 refresh_rate = 60
+threaded_saves = {str(not args.synchronous_save).lower()}
 
 [game_creation]
 map_x = {args.map_bits}
@@ -441,6 +489,9 @@ server_advertise = false
         commands.append(f"renderer3d ship-depot-locate {args.reference_ship_depot}")
     if args.reference_dock is not None:
         commands.append(f"renderer3d dock-locate {args.reference_dock}")
+    if args.reference_object is not None:
+        tile = f" {args.reference_object_tile[0]} {args.reference_object_tile[1]}" if args.reference_object_tile is not None else ""
+        commands.append(f"renderer3d object-locate {args.reference_object}{tile}")
     if args.reference_buoy:
         commands.append("renderer3d buoy-locate")
     if not args.menu:
@@ -585,6 +636,8 @@ server_advertise = false
         commands.append("renderer3d verify-house-lift")
     if args.verify_radio_beacons:
         commands.append("renderer3d verify-radio-beacons")
+    if args.verify_object_palette is not None:
+        commands.append(f"renderer3d verify-object-palette {args.verify_object_palette}")
     if args.verify_buoy_beacon:
         commands.append("renderer3d verify-buoy-beacon")
     if args.verify_voxel_water is not None:
@@ -621,7 +674,7 @@ server_advertise = false
     debug = "driver=5,console=1,script=4" if args.trace_aircraft_clearance or args.trace_effects else "driver=2,console=1"
     command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", "-X",
                "-v", driver, "-b", args.blitter, "-s", "null", "-m", "null",
-               *([] if args.graphics_from_config else ["-I", graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", debug, "-G", "314159", "-t", str(args.year), "-g"]
+               *([] if args.graphics_from_config else ["-I", args.graphics or graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", debug, "-G", "314159", "-t", str(args.year), "-g"]
     if args.menu:
         command.pop()  # No -g: use the original title-game/menu startup path.
     if args.savegame:
@@ -843,6 +896,10 @@ server_advertise = false
                 raise RuntimeError("The requested actual voxel vehicle was not located and captured")
             if args.reference_buoy and ("focused voxel buoy at" not in text or "live voxel buoy captured at" not in text):
                 raise RuntimeError("An actual original voxel buoy was not located and captured")
+            if args.reference_object is not None:
+                require_live_voxel_object(text,args.reference_object)
+            if args.verify_object_palette is not None:
+                require_object_palette(text,args.verify_object_palette)
             if args.verify_buoy_beacon and "voxel buoy beacon observation passed" not in text:
                 raise RuntimeError("The actual voxel buoy did not retain both original beacon phases")
             if args.reference_vehicle_binding is not None:
@@ -984,9 +1041,15 @@ server_advertise = false
                 raise RuntimeError("The complete original effect source catalogue was not exported; inspect run.log")
             if args.export_objects and "exported 24 original object layouts with 13 separate body layers and 11 ground-only HQ slots (five HQ sizes)" not in text:
                 raise RuntimeError("The complete original object layer catalogue was not exported; inspect run.log")
+            if args.synchronous_save:
+                require_synchronous_fixture_save(output / "save" / "smoke-state.sav")
             result = {"renderer": args.renderer, "rotation": args.rotation, "platform": platform.platform(),
                       "screenshot": str(screenshot), "image_size": image_size, "command": command, "pid": native_pid or process.pid,
                       "background": args.background}
+            if args.synchronous_save:
+                result["synchronous_original_save_verified"] = True
+            if args.verify_object_palette is not None:
+                result["object_palette_verified"] = args.verify_object_palette
             if args.trace_aircraft_clearance:
                 result["aircraft_clearance_trace"] = True
             if args.trace_effects:

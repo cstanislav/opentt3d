@@ -1,5 +1,51 @@
 # Active extended development goal
 
+## Original object increment sealed; full quality goal remains open — October 3
+
+Five genuine object volumes add transmitter, lighthouse, owned-land sign, normal
+statue and Toyland gnome through13 original climate bindings. The1,799-model
+catalogue preserves every preceding1,794 model/component/material-face definition
+and binding. The source-owned ordinary terrain, all original commands/company
+scores, climate restrictions and11 intentional HQ-body absences remain unchanged.
+Incomplete/custom/alternate-base-set families retain all original ground/body
+layers rather than mixing a partial voxel family with its source artwork.
+
+Ten supported-climate/backend landmark controls each observe all four original
+paired/triple palette phases from one unchanged object and tile. Both initial
+non-animating-blitter failures remain retained; the animation gate now requires
+the original`40bpp-anim`path. Twenty fallback controls cover missing bindings,
+partial HQ ground, the test-only concrete-ground replacement, OpenGFX and explicitly
+selected High Def. Ten matched comparisons preserve all37 source layers and the
+whole screenshot exactly. The three earlier screenshot mismatches, the saved
+High Def migration assertion and the overly strict GUI-console save assertion
+remain preserved. Matched/synchronous fixture controls repair the test setup,
+not simulation or application behavior.
+
+All five additions are individually inspected with13 portable registered
+source/eight-view sheets: transmitter/lighthouse/statue/gnome6/10, owned-land sign7/10.
+The2,462-entry ledger has25 individual reviews, with explicit remaining defects;
+all other ratings remain conservative screens or missing-coverage entries.
+No entry reaches8/10. The required-eight gate deliberately fails. Full capture
+breadth is1,799 registered native studies and14,392 orbit/street views in57 sheets;
+unchanged prior captures are reused only after exact geometry/paint fingerprints.
+Capture availability and sheet triage are not complete individual inspection.
+
+Strict backend equality still fails: temperate37 views/1,685pixels, Arctic37/1,365,
+tropical34/1,480 and Toyland34/2,029, all with zero native differences. Shape/pose,
+source paint and joined-world consistency are provisional. Native211, asset187,
+harness94 and presentation-boundary140 pass; no smooth60fps/long-duration-memory
+acceptance follows from the short controls. Lossless compaction of818 successful
+captures saves1,694,187,569bytes with exact RGBA/header preservation. Earlier
+sources, failed studies and both prior object freezes remain unchanged.
+
+The independently audited`.39`remains recommended and does not include these
+objects. Next: publish only an independently audited immutable successor, then
+continue HQ ground/body, lock/river/disaster breadth and catalogue-wide individual
+review alongside the retained fleet/emitter/performance defects. This checkpoint
+is not a stopping-clock audit or a claim that the complete objective is met.
+Evidence:`build-macos/breadth-original-object-final-reviewed-reconciliation.json`
+and`build-macos/breadth-original-object-final-reviewed-frozen-build/manifest.json`.
+
 ## `.39` independently audited and published — October 3, 08:14:58 UTC
 
 All eight packaging jobs in37104385626 pass at immutable

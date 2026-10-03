@@ -67,15 +67,24 @@ and both backends, while actual ships still complete both dock calls. This does
 not establish full fleet-volume clearance or source/artwork approval. Lock walls
 remain uncovered; detailed all-angle/native canal fidelity remains under review.
 
-The first **20 individual reviews** are retained with portable image evidence in
-`reviews/20261003/`: sixteen at7/10 and four concave corners at6/10. The current
-2,457-entry ledger also has1,774 voxel screening scores, retained profiles,
-procedural families and334 explicitly missing original source layers. No entry
-has been promoted to8. Full catalogue capture coverage is1,794 native studies and
-14,352 orbit/street views, plus joined contexts; capture coverage is not approval.
+The first **25 individual reviews** are retained with portable image evidence in
+`reviews/20261003/`: seventeen at7/10 and eight at6/10. Five corrected object
+candidates add13 supported-climate bindings, without claiming HQ coverage or
+promoting their original source-state instances. The current2,462-entry ledger
+has scores1×308,3×183,4×159,5×1,787,6×8 and7×17. Scores below6 are conservative
+screening/missing-coverage entries, not individual aesthetic inspection. No entry
+has been promoted to8. Full catalogue capture coverage is1,799 native studies and
+14,392 orbit/street views in57 sheets, plus joined contexts. Exact prior model/face
+fingerprints allow reuse of preserved captures; availability is not approval.
 Strict bank backend comparisons retain24 differing wider views/3,152 pixels in
 each200-view climate set and zero native differences. Those failed exact-equality
 reports remain evidence, not hidden tolerances or passed quality checks.
 
-The desktop release `.37` remains the last independently audited package; these
-working-tree improvements are not represented as a published successor.
+Four source sheets/climate sets and the flat/sloped, real-town-action and landmark
+worlds support the five object reviews. Shape/pose/source-paint and wider backend
+defects remain explicit. Every supported beacon/lamp control observes all four
+unmodified original palette phases from one object; fallback controls preserve
+complete source families. These technical gates do not grant8/10 acceptance.
+
+The desktop release`.39`is independently audited and recommended. Its1,794-model
+catalogue includes the road/canal/bank increment, not the later object candidates.

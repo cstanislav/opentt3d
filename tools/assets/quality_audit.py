@@ -36,6 +36,34 @@ def definition_fingerprint(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(",", ":")).encode()).hexdigest()
 
 
+def original_object_layer_model(catalogue, objects, tile, role, index, climate):
+    """Only a complete original family selects volume; a partial HQ stays original.
+
+    This reports binding availability, not source, world or aesthetic acceptance.
+    Independently projected ordinary terrain is not a raised HQ artwork binding.
+    """
+    kind,stage = tile["object_id"],tile["size_stage"] or 0
+    if not 0 <= kind < 5 or not 0 <= climate < 4 or (kind == 0 and climate == 3) or (kind == 1 and climate >= 2):
+        return None
+    family = [row for row in objects["tiles"] if row["object_id"] == kind and (row["size_stage"] or 0) == stage]
+    if len(family) != (4 if kind == 4 else 1) or {row["part"] for row in family} != (set(range(4)) if kind == 4 else {0}):
+        return None
+    bindings = catalogue["bindings"]
+    def bound(category, layout):
+        name = bindings.get(category,{}).get(str(layout),{}).get(str(climate))
+        return name if name in catalogue["models"] else None
+    for row in family:
+        layout = kind if kind < 4 else 4+stage*4+row["part"]
+        if len(row["body"]) > 1 or (row["body"] and not bound("objects",layout)):
+            return None
+        if kind == 4 and not bound("object_ground",layout):
+            return None
+    if index != 0 or (role == "ground" and kind < 4):
+        return None
+    layout = kind if kind < 4 else 4+stage*4+tile["part"]
+    return bound("objects" if role == "body" else "object_ground",layout)
+
+
 def apply_review(row, entry, root, evidence_sha256=None):
     if entry is None:
         return
@@ -158,10 +186,29 @@ def audit(catalogue, reviews, root=ROOT, scope=None):
                 for role,index,layer in layers:
                     stage = tile["size_stage"] if tile["size_stage"] is not None else 0
                     name = f"missing/object/{tile['object_id']}/{stage}/{tile['part']}/{role}{index}/climate{climate}"
+                    bound_model = original_object_layer_model(catalogue,scope["original_objects"],tile,role,index,climate)
+                    if bound_model:
+                        layout = tile["object_id"] if tile["object_id"] < 4 else 4+stage*4+tile["part"]
+                        category = "objects" if role == "body" else "object_ground"
+                        rows.append({"model":name.replace("missing/","original/",1),"score":5,"status":"structural-screen-only",
+                                     "representation":"authored-voxel-instance","required_runtime_review":True,
+                                     "owners":[f"{category}/{layout}/{climate}"],"checks":{},"evidence":[],
+                                     "fingerprint":definition_fingerprint({"source":layer,"layout":tile,"climate":climate,
+                                         "model":bound_model,"voxel":fingerprint(catalogue["models"][bound_model],catalogue["materials"])}),
+                                     "notes":[f"Original {tile['kind']} {role} layer sprite{layer['sprite']} selects {bound_model} in its complete original family. Binding availability is not individual source/world/state acceptance; its instance does not inherit a model's visual score."]})
+                        continue
+                    if tile["object_id"] < 4 and role == "ground":
+                        rows.append({"model":name.replace("missing/","original/",1),"score":4,"status":"individual-visual-review-pending",
+                                     "representation":"native-terrain-layer","required_runtime_review":True,"owners":[],"checks":{},"evidence":[],
+                                     "fingerprint":definition_fingerprint({"source":layer,"layout":tile,"climate":climate,"renderer":renderer_sources}),
+                                     "notes":[f"Original {tile['kind']} flat ground sprite{layer['sprite']} remains an independently projected terrain surface, not an invented solid. Original climate/slope/registration/palette/ownership reviews remain required; no raised HQ artwork is covered by this path."]})
+                        continue
                     rows.append({"model":name,"score":1,"status":"missing-voxel-coverage","representation":"original-source-layer",
                                  "fingerprint":definition_fingerprint({"source":layer,"layout":tile,"climate":climate}),
                                  "required_runtime_review":True,"owners":[],"checks":{},"evidence":[],
-                                 "notes":[f"Original {tile['kind']} {role} layer, sprite{layer['sprite']}. Raised ground artwork still needs its own volume; source exports are not coverage."]})
+                                  "notes":[f"Original {tile['kind']} {role} layer, sprite{layer['sprite']}. Raised ground artwork still needs its own volume; source exports are not coverage."]})
+        missing_objects = sum(row["model"].startswith("missing/object/") for row in rows)
+        gaps[0]["notes"] = f"24 original layouts/37 layers retain every climate/owner/absence. {missing_objects} available source-layer instances still lack complete-family volumes; ordinary flat terrain remains native and independently review-pending. Binding availability never establishes visual approval."
         #48 original rear/front lock sprites include the two elevation selections.
         #Water planes remain separately owned and are not counted as missing bodies.
         for elevation in range(2):

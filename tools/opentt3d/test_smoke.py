@@ -31,6 +31,21 @@ def png_fixture():
 
 
 class ScreenshotCompletionTests(unittest.TestCase):
+    def test_synchronous_save_checks_original_file_not_dedicated_server_console_stdout(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/"fixture.sav"
+            with self.assertRaisesRegex(RuntimeError,"did not complete"):
+                smoke.require_synchronous_fixture_save(path)
+            path.write_bytes(b"OTTX")
+            with self.assertRaisesRegex(RuntimeError,"did not complete"):
+                smoke.require_synchronous_fixture_save(path)
+            for tag in (b"OTTD",b"OTTN",b"OTTZ",b"OTTX"):
+                path.write_bytes(tag+bytes(100))
+                smoke.require_synchronous_fixture_save(path)
+            path.write_bytes(b"nope"+bytes(100))
+            with self.assertRaisesRegex(RuntimeError,"format header"):
+                smoke.require_synchronous_fixture_save(path)
+
     def test_failed_memory_report_still_reaps_the_live_child(self):
         child = subprocess.Popen([sys.executable,"-c","import time; time.sleep(30)"])
         try:
@@ -82,6 +97,39 @@ class ScreenshotCompletionTests(unittest.TestCase):
 
 
 class ExplicitClearCommandTests(unittest.TestCase):
+    def test_object_palette_gate_never_splices_tiles_or_accepts_missing_phases(self):
+        for kind,materials in ((0,2),(1,3)):
+            text = f"focused voxel object {kind} size 0 at 44,28\nlive voxel object {kind} size 0 part 0 body climate 0 source 2600 captured at 44,28 with original body ownership\n"
+            marker = f"voxel object palette observation passed: type {kind} tile 44,28, 4 original phases across {materials} emitted animated materials"
+            smoke.require_object_palette(text+marker,kind)
+            for invalid in ("",marker.replace("tile 44,28","tile 45,28"),marker.replace("4 original phases","3 original phases"),marker.replace(f"{materials} emitted","1 emitted")):
+                with self.subTest(kind=kind,marker=invalid), self.assertRaisesRegex(RuntimeError,"palette observation incomplete"):
+                    smoke.require_object_palette(text+invalid,kind)
+
+    def test_object_gate_rejects_gallery_only_wrong_tile_and_wrong_layer_ownership(self):
+        focus = "focused voxel object 2 size 0 at 44,28"
+        body = "live voxel object 2 size 0 part 0 body climate 3 source 2632 captured at 44,28 with original body ownership"
+        with self.assertRaisesRegex(RuntimeError,"not located"):
+            smoke.require_live_voxel_object("voxel gallery object_company_gnome",2)
+        for invalid in (focus,focus+body.replace("44,28","45,28"),focus+body.replace("original body ownership","original ground ownership")):
+            with self.assertRaisesRegex(RuntimeError,"did not emit"):
+                smoke.require_live_voxel_object(invalid,2)
+        smoke.require_live_voxel_object(focus+body,2)
+
+    def test_object_gate_retains_all_hq_tile_owners_and_intentional_body_absences(self):
+        for size in range(5):
+            text = f"focused voxel object 4 size {size} at 44,28\n"
+            for part in range(4):
+                text += f"live voxel object 4 size {size} part {part} ground climate 0 source 1000 captured at {44+part%2},{28+part//2} with original ground ownership\n"
+            if size >= 2:
+                with self.assertRaisesRegex(RuntimeError,"body"):
+                    smoke.require_live_voxel_object(text,4)
+                for part in range(3):
+                    text += f"live voxel object 4 size {size} part {part} body climate 0 source 2000 captured at {44+part%2},{28+part//2} with original body ownership\n"
+            smoke.require_live_voxel_object(text,4)
+            with self.assertRaisesRegex(RuntimeError,"ground"):
+                smoke.require_live_voxel_object(text.replace("part 3 ground","part 2 ground"),4)
+
     def test_canal_gate_rejects_gallery_only_and_partial_live_evidence(self):
         gallery = "voxel mesh selection 'canal_dike' passed exact geometry, palettes and picking"
         with self.assertRaisesRegex(RuntimeError,"not captured"):
@@ -105,6 +153,8 @@ class ExplicitClearCommandTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, "stop before launch"):
                     smoke.main()
                 launch.assert_called_once()
+                self.launched_command = launch.call_args.args[0]
+                self.generated_config = (output / "openttd.cfg").read_text()
                 return (output / "scripts/game_start.scr").read_text().splitlines(), launch.call_args.kwargs["env"]
 
     def test_original_object_export_does_not_create_objects_change_ratings_or_start_simulation(self):
@@ -117,6 +167,53 @@ class ExplicitClearCommandTests(unittest.TestCase):
                 self.assertNotIn("unpause", commands)
                 self.assertFalse(any("build_object" in command or "rating" in command for command in commands))
                 if host == "Darwin": self.assertEqual(env["OPENTT3D_BACKGROUND"], "1")
+
+    def test_explicit_alternate_graphics_does_not_test_saved_setting_migration(self):
+        self.generated_script("--graphics","OpenGFX2 High Def","--export-objects")
+        index = self.launched_command.index("-I")
+        self.assertEqual(self.launched_command[index+1],"OpenGFX2 High Def")
+        self.generated_script("--graphics-from-config","OpenGFX2 High Def","--export-objects")
+        self.assertNotIn("-I",self.launched_command)
+
+    def test_explicit_and_saved_graphics_selection_are_mutually_exclusive(self):
+        arguments = ["smoke.py","--build-dir","unused","--output","unused","--graphics","OpenGFX2 High Def","--graphics-from-config","OpenGFX2 Classic"]
+        with mock.patch.object(sys,"argv",arguments), contextlib.redirect_stderr(io.StringIO()) as error, self.assertRaises(SystemExit) as stopped:
+            smoke.main()
+        self.assertEqual(stopped.exception.code,2)
+        self.assertIn("not allowed with argument",error.getvalue())
+
+    def test_exact_fixture_saving_uses_original_io_setting_not_simulation_changes(self):
+        commands,env = self.generated_script("--synchronous-save")
+        self.assertIn("threaded_saves = false",self.generated_config)
+        self.assertIn("save smoke-state",commands)
+        self.assertNotIn("unpause",commands)
+        self.generated_script()
+        self.assertIn("threaded_saves = true",self.generated_config)
+
+    def test_live_object_reference_is_a_read_only_focus_not_object_construction(self):
+        commands,env = self.generated_script("--reference-object","2","--background",host="Darwin")
+        self.assertIn("renderer3d object-locate 2",commands)
+        self.assertEqual(commands.count("renderer3d object-locate 2"),1)
+        self.assertNotIn("unpause",commands)
+        self.assertFalse(any("build_object" in command or "rating" in command for command in commands))
+        self.assertEqual(env["OPENTT3D_BACKGROUND"],"1")
+        commands,env = self.generated_script("--reference-object","3","--reference-object-tile","45","8")
+        self.assertIn("renderer3d object-locate 3 45 8",commands)
+        self.assertNotIn("unpause",commands)
+
+    def test_landmark_palette_script_observes_real_simulation_without_forcing_clock_or_paint(self):
+        for kind in (0,1):
+            commands,env = self.generated_script("--reference-object",str(kind),"--verify-object-palette",str(kind),"--running","--benchmark-frames","240","--blitter","40bpp-anim")
+            self.assertLess(commands.index(f"renderer3d object-locate {kind}"),commands.index(f"renderer3d verify-object-palette {kind}"))
+            self.assertIn("unpause",commands)
+            self.assertFalse(any("build_object" in command or "rating" in command or "set_palette" in command for command in commands))
+
+    def test_landmark_palette_rejects_the_non_animating_blitter_before_starting(self):
+        arguments = ["smoke.py","--build-dir","unused","--output","unused","--reference-object","0","--verify-object-palette","0","--running","--benchmark-frames","240"]
+        with mock.patch.object(sys,"argv",arguments), contextlib.redirect_stderr(io.StringIO()) as error, self.assertRaises(SystemExit) as stopped:
+            smoke.main()
+        self.assertEqual(stopped.exception.code,2)
+        self.assertIn("--blitter 40bpp-anim",error.getvalue())
 
     def test_catalogue_overview_is_read_only_and_retains_optional_prefix(self):
         for host in ("Darwin","Linux","Windows"):

@@ -24,6 +24,22 @@
 using namespace Renderer3D;
 using Catch::Detail::Approx;
 
+TEST_CASE("Original objects retain source climate restrictions and all five four-tile HQ selectors", "[renderer3d][voxel]")
+{
+	for (unsigned type = 0; type < 4; ++type) {
+		CHECK(OriginalObjectLayoutIdentifier(type,0,0) == type);
+		CHECK_FALSE(OriginalObjectLayoutIdentifier(type,1,0));
+		CHECK_FALSE(OriginalObjectLayoutIdentifier(type,0,1));
+	}
+	for (unsigned size = 0; size < 5; ++size) for (unsigned part = 0; part < 4; ++part) CHECK(OriginalObjectLayoutIdentifier(4,size,part) == 4+size*4+part);
+	CHECK_FALSE(OriginalObjectLayoutIdentifier(4,5,0));
+	CHECK_FALSE(OriginalObjectLayoutIdentifier(4,0,4));
+	CHECK_FALSE(OriginalObjectLayoutIdentifier(5,0,0));
+	for (unsigned type = 0; type < 5; ++type) for (unsigned climate = 0; climate < 4; ++climate) CHECK(OriginalObjectModelClimateSupported(type,climate) == (type == 0 ? climate < 3 : type == 1 ? climate < 2 : true));
+	CHECK_FALSE(OriginalObjectModelClimateSupported(5,0));
+	CHECK_FALSE(OriginalObjectModelClimateSupported(2,4));
+}
+
 static std::optional<float> TriangleHit(const Ray &ray, Vec3 a, Vec3 b, Vec3 c)
 {
 	auto cross = [](Vec3 u, Vec3 v) { return Vec3{u.y*v.z-u.z*v.y,u.z*v.x-u.x*v.z,u.x*v.y-u.y*v.x}; };

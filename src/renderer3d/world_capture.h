@@ -44,6 +44,7 @@ void BeginVoxelAirportAnimationChecks(std::span<const unsigned> graphics);
 void BeginVoxelIndustryAnimationChecks(std::span<const unsigned> graphics);
 void BeginVoxelPlasticFountainCheck();
 void BeginVoxelIndustryPaletteCheck(unsigned graphics);
+void BeginVoxelObjectPaletteCheck(unsigned type);
 void BeginVoxelForestCycleCheck(std::optional<unsigned> graphics = {});
 void BeginVoxelPowerSparkCheck();
 void BeginVoxelToyFactoryCheck();

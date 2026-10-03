@@ -16,6 +16,18 @@ full terrain/source-raster fidelity and final approval remain separate.
 
 ## Authoring and rendering
 
+- **Five original object candidates:** transmitter/lighthouse/normal statue/Toyland
+  gnome/owned-land sign add13 original climate bindings and reach1,799 volumes.
+  The transmitter retains open lattice/guy wires/dishes/paired animated paint;
+  lighthouse has a tapered masonry shaft/open lantern cage/conical roof; statues
+  retain real XYZ sculpture, pedestal and eight boundary bollards; the thin sign
+  has half-unit depth, relief lettering and naturally sloped post contact. Thirteen
+  registered source/eight-view sheets and actual worlds are individually inspected.
+  Four models score6/10 and the sign7/10, with explicit remaining shape/pose/paint
+  and wider backend defects. No8/10 approval is granted. Four original palette
+  phases and complete missing/custom/partial/alternate-family fallbacks are checked
+  without changing simulation. HQ ground/body states remain missing; eleven absent
+  bodies stay absent and their raised ground artwork still needs geometry.
 - **Original object/HQ sources, not new voxel coverage:** direct original drawing-table
   exports retain24 tile layouts/37 ground-body layers across all five HQ sizes. All11
   separate-body absences keep their source ground sprites, including raised structures.

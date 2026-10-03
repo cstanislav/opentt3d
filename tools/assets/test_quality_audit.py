@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from quality_audit import audit, fingerprint, write_ratings_csv, REVIEW_CHECKS
+from quality_audit import audit, fingerprint, original_object_layer_model, write_ratings_csv, REVIEW_CHECKS
 
 
 class QualityAuditTests(unittest.TestCase):
@@ -153,6 +153,39 @@ class QualityAuditTests(unittest.TestCase):
         scope["voxel_bindings"] = {}
         with self.assertRaisesRegex(ValueError,"exact reviewed catalogue"):
             audit(self.catalogue,self.reviews,self.root,scope)
+
+    def test_ordinary_object_bindings_never_promote_source_instances_or_replace_flat_ground(self):
+        tile = {"object_id":2,"kind":"statue","size_stage":None,"part":0,"ground":{"sprite":1420},"body":[{"sprite":2632}]}
+        self.catalogue["bindings"] = {"objects":{"2":{"0":"sample"}}}
+        scope = {key:[] for key in ("vehicles","houses","trees","industry_tiles","airport_tiles","depots","ship_depots","docks","effect_types","effect_source_frames")}
+        scope.update(voxel_bindings=self.catalogue["bindings"],original_objects={"tiles":[tile],"types":[{"id":2,"climates":["temperate"]}]})
+        self.review(8)
+        report = audit(self.catalogue,self.reviews,self.root,scope)
+        rows = {row["model"]:row for row in report["models"]}
+        self.assertEqual(rows["sample"]["score"],8)
+        body = rows["original/object/2/0/0/body0/climate0"]
+        self.assertEqual(body["score"],5,"Model approval cannot establish an instance's original source/owner/state fidelity")
+        self.assertEqual(body["owners"],["objects/2/0"])
+        self.assertEqual(rows["original/object/2/0/0/ground0/climate0"]["score"],4)
+        self.assertFalse(report["meets_objective"])
+        self.catalogue["models"]["sample"]["origin"] = [1,0,0]
+        updated = audit(self.catalogue,self.reviews,self.root,scope)
+        self.assertNotEqual(body["fingerprint"],next(row for row in updated["models"] if row["model"] == body["model"])["fingerprint"])
+
+    def test_partial_hq_never_counts_one_body_or_ground_as_complete_coverage(self):
+        tiles = [{"object_id":4,"kind":"headquarters","size_stage":2,"part":part,"ground":{"sprite":2600+part},
+                  "body":[{"sprite":2610+part}] if part < 3 else []} for part in range(4)]
+        objects = {"tiles":tiles}
+        self.catalogue["bindings"] = {"objects":{str(12+part):{"0":"sample"} for part in range(3)},
+                                      "object_ground":{str(12+part):{"0":"sample"} for part in range(3)}}
+        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,0))
+        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"ground",0,0))
+        self.catalogue["bindings"]["object_ground"]["15"] = {"0":"sample"}
+        self.assertEqual(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,0),"sample")
+        self.assertEqual(original_object_layer_model(self.catalogue,objects,tiles[3],"ground",0,0),"sample")
+        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,1))
+        del self.catalogue["bindings"]["objects"]["14"]
+        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"ground",0,0))
 
 
 if __name__ == "__main__":

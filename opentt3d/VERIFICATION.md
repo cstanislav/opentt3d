@@ -1,5 +1,48 @@
 # Implementation verification
 
+## Original landmark/owned-land voxel candidates — October 3
+
+Five independently volumetric objects add13 supported-climate bindings, reaching
+1,799 models. The final catalogue SHA-256 is
+`d933abe306e88436af9236e4ae8158886e21270e96519ea29a02f9ea8c5d6ce1`.
+All1,794 prior compiled/authored models, components, materials and owner bindings
+remain exact. Original source IDs, anchors, company palette, climate restrictions,
+HQ size selectors, intentional body absences and independent ordinary terrain
+ownership remain unchanged; no command, RNG, score or state-clock override occurs.
+
+Eight registered climate/backend geometry/atlas/picking controls,16 public-command
+flat/sloped sign controls, eight actual town-action statue controls and ten close
+landmark controls pass. Ten additional landmark animation controls each require
+four original paired/triple phases on one object/tile and emitted239/240 or242…244
+materials. The original non-animating-blitter attempts fail and remain preserved;
+the harness rejects that incompatible setting before launch. All16 company palettes,
+transparent ownership and unavailable-climate/body selections are checked natively.
+
+Twenty fallback controls plus six matched synchronous reruns retain all original
+layers for missing bindings, partial HQ ground, one test-only concrete chart
+replacement, OpenGFX and explicitly selected High Def. Final ten matched source
+comparisons each preserve37 layers and the whole screenshot exactly. Earlier
+partial-HQ comparisons also disabled neighbouring signs; one custom-ground image
+caught transient save UI. Those three failed comparisons remain retained. The
+saved High Def setting intentionally migrates to Classic, so its failed outer
+assertion is retained and not counted as High Def fallback. Explicit selection
+tests the actual alternate set. Synchronous fixture saving uses the existing
+non-threaded IO setting; its header/file gate is tested without depending on GUI
+console text being written to stdout.
+
+Five individual reviews retain13 immutable portable source/eight-view sheets:
+four6/10 and the sign7/10. Strict wider backend comparisons still fail on
+37/37/34/34 views and1,685/1,365/1,480/2,029 pixels by climate; native views match.
+No source-scale pose/material/all-angle/consistency acceptance is inferred.
+The2,462-entry required-eight audit fails as expected. Catalogue capture breadth
+is1,799 native studies/14,392 orbit-street images, not full individual review.
+Lossless compaction roundtrips818 captures and saves1,694,187,569bytes. Initial,
+corrected-before-observer and final reviewed builds remain separately frozen.
+Native211/asset187/harness94/boundary140 pass. Final approvals:0.
+Evidence:`build-macos/breadth-original-object-final-reviewed-reconciliation.json`,
+`build-macos/breadth-original-object-matched-synchronous2-source-fallback-strict-comparison-index.json`
+and`build-macos/breadth-original-object-final-reviewed-frozen-build/manifest.json`.
+
 ## Independently verified road/canal/bank desktop release — October 3
 
 Release`.39`targets exact`383e895fd65cbce706245b09bc7f89c19d2c72e2`in successful

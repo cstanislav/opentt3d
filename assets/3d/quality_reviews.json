@@ -20,9 +20,57 @@
     "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
     "opentt3d/reviews/20261003/canal-temperate-world.png": "ebf8a2ad8305a05f3d7aba65920f362d326b190c1a927f2ef780fe8f108ba3db",
     "opentt3d/reviews/20261003/canal-toyland-world.png": "7b555f0c09661a3e106a7c1d6a434f818fa875b2178d85ab59a3b8acad9d5456",
-    "opentt3d/reviews/20261003/canal-tropic-world.png": "45c3f054d0de2ccf64a14833e6460918aad43b02a8a6adec91e6aba75faa55bb"
+    "opentt3d/reviews/20261003/canal-tropic-world.png": "45c3f054d0de2ccf64a14833e6460918aad43b02a8a6adec91e6aba75faa55bb",
+    "opentt3d/reviews/20261003/objects/temperate-object-0-size-0.png": "72afc3be66d2b9cdaf170b2bed17b1f477577e6440584936635c5f105a734bbd",
+    "opentt3d/reviews/20261003/objects/temperate-object-1-size-0.png": "541bd8d539ed82160ffeab6b441cfda6fcc921a6903becb0c3b0a479863f4750",
+    "opentt3d/reviews/20261003/objects/temperate-object-2-size-0.png": "9563f4ca638d1a5b0c251dfbd88cc0c0fbccf939ba8ea664d22c4889ed461f2a",
+    "opentt3d/reviews/20261003/objects/temperate-object-3-size-0.png": "57a89ff30249bf6e451a9c8dab1c6ac3be05e19192177fae6a8be14873f59043",
+    "opentt3d/reviews/20261003/objects/arctic-object-0-size-0.png": "da8dd6f116338e3a6979f94fae0690cd2aa119dc522a863c4a24de8e5926ccfa",
+    "opentt3d/reviews/20261003/objects/arctic-object-1-size-0.png": "bd9ced8486fff443991c1122e295595a54c680b6ec9a70ec0de817808aee1da0",
+    "opentt3d/reviews/20261003/objects/arctic-object-2-size-0.png": "8a75d3d7e092b162146465f4650c916601e17b1707885cdf282c9a76512a558b",
+    "opentt3d/reviews/20261003/objects/arctic-object-3-size-0.png": "bb873e9a9384a3f35f038f24bf71b4623da4b85a6121f8a1a084d65f7dfb5a7f",
+    "opentt3d/reviews/20261003/objects/tropic-object-0-size-0.png": "34e573e1b44902aef7214a25357c12b7c7938993d4123e838aea89773a357b0b",
+    "opentt3d/reviews/20261003/objects/tropic-object-2-size-0.png": "cc9acf83928028d1fd3f0c7f5e4594129da8ad3f1df904c6ef5d91554c00caaf",
+    "opentt3d/reviews/20261003/objects/tropic-object-3-size-0.png": "df9150b8eea9c3f7257bbfdaeb335a56b10ce347d82d76796b96d07aa0e2ad28",
+    "opentt3d/reviews/20261003/objects/toyland-object-2-size-0.png": "315cf8ca52a5dbb9e85f5627cedda7109dc3a917967ee679cd29f1eaa88fe436",
+    "opentt3d/reviews/20261003/objects/toyland-object-3-size-0.png": "4438bfb5479363d5b7420f031afda095dd3189c8e5985fc939a58b6c053a281e"
   },
   "models": {
+    "object_transmitter": {
+      "score":6,"fingerprint":"0242f3d41e8e2cd7c7741037e4d297208f3211af0852a30ff589d7f999faed5c",
+      "checks":{"source":false,"orbit":true,"street":true,"world":true,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/objects/temperate-object-0-size-0.png","opentt3d/reviews/20261003/objects/arctic-object-0-size-0.png","opentt3d/reviews/20261003/objects/tropic-object-0-size-0.png"],
+      "notes":["Individually inspected in the three supported-climate registered source/eight-view sheets and close generated worlds. The mast retains real lattice openings, guy wires, dishes and paired palette beacons, with the independently airport-owned fence removed; original anchor7,7 remains unchanged."],
+      "defects":["The source mast/dish silhouette and individual steel/beacon paint still require finer source-scale matching.","Strict backend equality fails in street and registered/context views; native equality and four actual beacon-palette phases are technical controls, not final fidelity/consistency approval."]
+    },
+    "object_lighthouse": {
+      "score":6,"fingerprint":"b2cfc4ae204a1de6a738384e5ea9c3d2e4b76606920d10f229e0bf9aa708135d",
+      "checks":{"source":false,"orbit":true,"street":true,"world":true,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/objects/temperate-object-1-size-0.png","opentt3d/reviews/20261003/objects/arctic-object-1-size-0.png"],
+      "notes":["The two supported-climate source/eight-view sheets and natural coastal worlds show a tapered rounded masonry shaft, recessed openings, genuine open lantern cage and independently supported conical roof. The original4,4 body anchor, separate terrain and lamp paint are retained; all four original lamp triples are observed without forcing the palette clock."],
+      "defects":["Masonry grain is too coarse/noisy and roof/coping contours remain more angular than the original source.","Window/door relief and lamp/cage proportions need further source-scale refinement; strict wider backend comparisons remain failed."]
+    },
+    "object_owned_land_sign": {
+      "score":7,"fingerprint":"0d6e4a7226a9aea73a4fbc167e9f36ce6a186bfa7a1b2baf8857a594c1f4e419",
+      "checks":{"source":false,"orbit":true,"street":true,"world":true,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/objects/temperate-object-3-size-0.png","opentt3d/reviews/20261003/objects/arctic-object-3-size-0.png","opentt3d/reviews/20261003/objects/tropic-object-3-size-0.png","opentt3d/reviews/20261003/objects/toyland-object-3-size-0.png"],
+      "notes":["Individually inspected in all four source/eight-view sheets and flat/naturally sloped public-command worlds. The corrected +X board has real half-unit thickness, independent company paint/letter relief and a post rooted at the actual doubled slope; the original bare-land chart is not replaced or flattened."],
+      "defects":["Letter strokes, board-edge shading and native source paint remain simplified rather than pixel-faithful.","Passing16 climate/backend/slope controls and all16 company palette/transparent-picking checks does not complete joined-world material/clearance consistency acceptance."]
+    },
+    "object_company_statue": {
+      "score":6,"fingerprint":"a55fe44459e93d110523819cb1074d2df34ec798640287ac868dcd3920772981",
+      "checks":{"source":false,"orbit":true,"street":true,"world":true,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/objects/temperate-object-2-size-0.png","opentt3d/reviews/20261003/objects/arctic-object-2-size-0.png","opentt3d/reviews/20261003/objects/tropic-object-2-size-0.png"],
+      "notes":["The three normal-climate source/eight-view sheets and actual town-action statues retain a full-depth human sculpture, stepped pedestal and eight independently company-coloured edge bollards around an open walkway. The concrete source ground and actual town-action/company ownership remain separate."],
+      "defects":["The blocky head, torso/arm pose and stone relief are still substantially less articulated than the source sculpture.","Native source registration is retained, but individual silhouette/proportion and strict wider backend consistency acceptance remain unfinished."]
+    },
+    "object_company_gnome": {
+      "score":6,"fingerprint":"2fd37c8102405ec26b8cadcac29825b42398178fbefe42c444ecacf3527cb6f6",
+      "checks":{"source":false,"orbit":false,"street":false,"world":true,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/objects/toyland-object-2-size-0.png"],
+      "notes":["The Toyland source/eight-view sheet and actual town-action world show an independently sculpted full-depth gnome rather than a resized normal statue. The corrected green coat and pink hand/nose paint stay on their proper body parts; original Toyland selection and company-coloured boundary fixtures are retained."],
+      "defects":["Hat bend, face/beard/nose articulation and arm/hand pose differ substantially from the supplied gnome silhouette.","Rear/side sculptural shaping and surface detail remain too generic; all four unmounted street views and registered Toyland street views fail exact backend equality."]
+    },
     "bank_north": {
       "score": 7, "fingerprint": "42178d4a3b99fa02b6bfcc3752df6930bf99b75ad9a1d8be475d9df659ed684a",
       "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},

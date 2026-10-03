@@ -2,6 +2,7 @@
 /** @file voxel_models.cpp Read-only authored voxel catalogue and shared palette materials. */
 #include "../stdafx.h"
 #include "voxel_models.h"
+#include "world_capture.h"
 #include "voxel_geometry.hpp"
 #include "voxel_mesh_cache.hpp"
 #include "authored_geometry.h"
@@ -29,6 +30,11 @@
 #include "../industry.h"
 #include "../industry_map.h"
 #include "../industrytype.h"
+#include "../object.h"
+#include "../object_base.h"
+#include "../landscape.h"
+#include "../tile_map.h"
+#include "../base_media_graphics.h"
 #include "../table/sprites.h"
 #include "../table/tree_land.h"
 #include "../table/industry_land.h"
@@ -117,6 +123,10 @@ const Catalogue &Models()
 			if (!result.models.contains(model)) throw std::runtime_error("Voxel binding references a missing model");
 			if (category == "vehicles" && (std::stoul(id) >= 256 || std::stoul(state) >= 8)) throw std::runtime_error("Invalid voxel vehicle engine/climate state");
 			if (category == "effects" && (!IsPresentableEffectSource(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid voxel effect source/climate state");
+			if ((category == "objects" || category == "object_ground") && (std::stoul(id) >= 24 || std::stoul(state) >= 4 ||
+					!OriginalObjectModelClimateSupported(std::stoul(id) < 4 ? std::stoul(id) : 4,std::stoul(state)) ||
+					(category == "objects" && std::stoul(id) >= 4 && (std::stoul(id) < 12 || (std::stoul(id)-4)%4 == 3)) ||
+					(category == "object_ground" && std::stoul(id) < 4))) throw std::runtime_error("Invalid original object layer/climate binding");
 			if ((category == "airport_tiles" || category == "airport_ground") && (std::stoul(id) >= 74 || std::stoul(state) >= 64 || std::stoul(state)%16 >= GetAirportTileLayouts(std::stoul(id)).size())) throw std::runtime_error("Invalid voxel airport climate/frame state");
 			result.bindings.emplace(std::tuple{category,static_cast<unsigned>(std::stoul(id)),static_cast<unsigned>(std::stoul(state))},model);
 			if (category == "trees") {
@@ -202,6 +212,65 @@ uint32_t VoxelPaletteMask(std::span<const Vertex> vertices, unsigned first, unsi
 bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state)
 {
 	return Models().bindings.contains({std::string(category),identifier,state});
+}
+
+bool HasVoxelObjectLayout(unsigned type, unsigned size, unsigned climate)
+{
+	if (!OriginalObjectLayoutIdentifier(type,size,0) || !OriginalObjectModelClimateSupported(type,climate)) return false;
+	const GraphicsSet *set = BaseGraphics::GetUsedSet();
+	if (set == nullptr || set->name != "OpenGFX2 Classic") return false;
+	static std::map<std::tuple<unsigned,unsigned,unsigned>,bool> families;
+	static uint64_t generation = UINT64_MAX;
+	if (generation != TextureGeneration()) { families.clear(); generation = TextureGeneration(); }
+	auto [family,inserted] = families.try_emplace(std::tuple{type,size,climate},true);
+	if (inserted) for (unsigned part = 0; part < (type == 4 ? 4U : 1U); ++part) {
+		const DrawTileSprites *source = GetOriginalObjectTileLayout(type,size,part);
+		if (source == nullptr) { family->second = false; break; }
+		unsigned layout = *OriginalObjectLayoutIdentifier(type,size,part);
+		family->second &= IsBaseGraphicsSprite(source->ground.sprite);
+		if (type == 4) family->second &= HasVoxelAsset("object_ground",layout,climate);
+		/* The current source has zero or one separate body per layout. Do not
+		 * hide a new source sequence behind a previous single-body binding. */
+		if (source->GetSequence().size() > 1) family->second = false;
+		for (const DrawTileSeqStruct &piece : source->GetSequence()) {
+			family->second &= IsBaseGraphicsSprite(piece.image.sprite) && HasVoxelAsset("objects",layout,climate);
+		}
+	}
+	return family->second;
+}
+
+bool DrawVoxelObjectBody(Scene &scene, unsigned type, unsigned size, unsigned part, SpriteID image, Vec3 origin, PaletteID palette, float opacity)
+{
+	unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+	auto layout = OriginalObjectLayoutIdentifier(type,size,part);
+	if (!layout || !HasVoxelObjectLayout(type,size,climate)) return false;
+	const auto sequence = GetOriginalObjectTileLayout(type,size,part)->GetSequence();
+	return sequence.size() == 1 && (sequence.front().image.sprite&SPRITE_MASK) == (image&SPRITE_MASK) && IsBaseGraphicsSprite(image) &&
+		DrawVoxelAsset(scene,"objects",*layout,climate,origin,palette,opacity);
+}
+
+bool DrawVoxelObjectGround(Scene &scene, unsigned type, unsigned size, unsigned part, SpriteID image, Vec3 origin, PaletteID palette)
+{
+	unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+	auto layout = OriginalObjectLayoutIdentifier(type,size,part);
+	return type == 4 && layout && HasVoxelObjectLayout(type,size,climate) &&
+		(GetOriginalObjectTileLayout(type,size,part)->ground.sprite&SPRITE_MASK) == (image&SPRITE_MASK) && IsBaseGraphicsSprite(image) &&
+		DrawVoxelAsset(scene,"object_ground",*layout,climate,origin,palette);
+}
+
+bool FocusVoxelObject(unsigned type, unsigned x, unsigned y)
+{
+	for (const Object *object : Object::Iterate()) {
+		if (object->type != type) continue;
+		TileIndex tile = object->location.tile;
+		if (x != UINT_MAX && (TileX(tile) != x || TileY(tile) != y)) continue;
+		unsigned size = type == OBJECT_HQ ? GetAnimationFrame(tile) : 0;
+		if (!HasVoxelObjectLayout(type,size,to_underlying(_settings_game.game_creation.landscape))) continue;
+		ScrollMainWindowToTile(tile,true);
+		Debug(driver,1,"OpenTT3D: focused voxel object {} size {} at {},{}",type,size,TileX(tile),TileY(tile));
+		return true;
+	}
+	return false;
 }
 
 bool DrawVoxelEffect(Scene &scene, SpriteID image, Vec3 origin, PaletteID palette, float opacity)
@@ -955,7 +1024,7 @@ void ExportVoxelReviews(std::string_view prefix, bool overview)
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR))/"renderer3d-reference";
 	std::filesystem::create_directories(directory);
 	int side = overview ? 256 : 640;
-		auto capture = [&](const Scene &scene, const Camera &camera, const std::string &name, bool object_alpha = false) {
+	auto capture = [&](const Scene &scene, const Camera &camera, const std::string &name, bool object_alpha = false) {
 		std::vector<uint8_t> pixels;
 		std::vector<uint32_t> ids;
 		if (!RenderScene(scene,camera,pixels,object_alpha ? &ids : nullptr)) throw std::runtime_error("Voxel review capture failed");
@@ -1451,6 +1520,67 @@ void ExportVoxelReviews(std::string_view prefix, bool overview)
 	/* A family's construction floor can share a differently named soil model.
 	 * Export all native ground/body states of each selected industry definition
 	 * so the registered source sheet retains its complete ownership history. */
+	nlohmann::json object_layouts = nlohmann::json::array();
+	unsigned object_climate = to_underlying(_settings_game.game_creation.landscape);
+	for (unsigned type = 0; type < 5; ++type) for (unsigned size = 0; size < (type == 4 ? 5U : 1U); ++size) {
+		if (!HasVoxelObjectLayout(type,size,object_climate)) continue;
+		unsigned parts = type == 4 ? 4 : 1;
+		bool selected = false;
+		Vec3 low{}, high{type == 4 ? 32.0f : 16.0f,type == 4 ? 32.0f : 16.0f,0};
+		nlohmann::json layers = nlohmann::json::array();
+		for (unsigned part = 0; part < parts; ++part) {
+			unsigned layout = *OriginalObjectLayoutIdentifier(type,size,part);
+			const DrawTileSprites *source = GetOriginalObjectTileLayout(type,size,part);
+			Vec3 root{static_cast<float>(part%2)*16,static_cast<float>(part/2)*16,0};
+			for (std::string category : {"object_ground","objects"}) {
+				auto binding = Models().bindings.find({category,layout,object_climate});
+				if (binding == Models().bindings.end()) continue;
+				selected |= binding->second.starts_with(prefix);
+				Vec3 origin = root;
+				if (category == "objects") {
+					const auto &piece = source->GetSequence().front();
+					origin = origin+Vec3{static_cast<float>(piece.origin.x),static_cast<float>(piece.origin.y),static_cast<float>(piece.origin.z)};
+				}
+				const auto &model = Models().models.at(binding->second).surface;
+				low = {std::min(low.x,origin.x+model.low.x),std::min(low.y,origin.y+model.low.y),std::min(low.z,origin.z+model.low.z)};
+				high = {std::max(high.x,origin.x+model.high.x),std::max(high.y,origin.y+model.high.y),std::max(high.z,origin.z+model.high.z)};
+				layers.push_back({{"part",part},{"layout",layout},{"category",category},{"model",binding->second},{"origin",{origin.x,origin.y,origin.z}}});
+			}
+		}
+		if (!selected) continue;
+		auto object_scene = [&](const Camera &camera) {
+			Textures().BeginScene();
+			BeginCapture(camera,true);
+			for (unsigned part = 0; part < parts; ++part) {
+				const DrawTileSprites *source = GetOriginalObjectTileLayout(type,size,part);
+				TileInfo tile{}; tile.tile = TileXY(1,1); tile.tileh = SLOPE_FLAT; tile.x = part%2*16; tile.y = part/2*16;
+				/* Ordinary object ground stays on the native source terrain path.
+				 * HQ ground is an independently bound raised-artwork owner. */
+				if (type != 4) CaptureGround(source->ground.sprite,source->ground.pal,tile.x,tile.y,0,tile,nullptr,0,0);
+			}
+			Scene scene = FinishCapture();
+			for (unsigned part = 0; part < parts; ++part) {
+				const DrawTileSprites *source = GetOriginalObjectTileLayout(type,size,part);
+				Vec3 root{static_cast<float>(part%2)*16,static_cast<float>(part/2)*16,0};
+				if (type == 4 && !DrawVoxelObjectGround(scene,type,size,part,source->ground.sprite,root,source->ground.pal)) throw std::runtime_error("Original object review lost its independent ground binding");
+				for (const auto &piece : source->GetSequence()) if (!DrawVoxelObjectBody(scene,type,size,part,piece.image.sprite,
+						root+Vec3{static_cast<float>(piece.origin.x),static_cast<float>(piece.origin.y),static_cast<float>(piece.origin.z)},piece.image.pal)) throw std::runtime_error("Original object review lost its body source selection");
+			}
+			for (auto &instance : scene.instances) instance.data.SetObjectId(1);
+			return scene;
+		};
+		std::string label = fmt::format("model-voxel-object-{}-{}",type,size);
+		Camera native{{},1,16384,16384,0}; native.vertical_fov = 40;
+		native_model(object_scene(native),label+"-native");
+		for (unsigned view = 0; view < 8; ++view) {
+			Camera camera{(low+high)*0.5f,2,side,side,static_cast<float>(view)}; camera.vertical_fov = 40;
+			if (view >= 4) camera = StreetReviewCamera(low,high,side,side,view-4+1.5f);
+			capture(object_scene(camera),camera,fmt::format("{}-{}",label,view));
+		}
+		object_layouts.push_back({{"object",type},{"size",size},{"climate",object_climate},{"parts",parts},{"layers",layers},
+			{"ordinary_ground","original independent terrain texture"},{"native",label+"-native.pam"}});
+	}
+	std::ofstream(directory/"voxel-object-layouts.json") << object_layouts.dump(2) << '\n';
 	for (const auto &[binding,name] : Models().bindings) {
 		const auto &[category,base,stage] = binding;
 		if ((category == "industries" || category == "industry_ground") && name.starts_with(prefix)) industry_native_families.insert(base);
@@ -1954,6 +2084,47 @@ void VerifyVoxelMeshes(std::string_view prefix)
 	if (DrawVoxelEffect(absent_effect,SPR_BUBBLE_GENERATE_3,{}) || !absent_effect.instances.empty()) throw std::runtime_error("Unpresented bubble threshold selected a voxel effect");
 	Debug(driver,1,"OpenTT3D: {} voxel effect views preserve original sprite/climate selection, altitude, opacity, fixed orientation and unclickable ownership",effect_views);
 	Debug(driver,1,"OpenTT3D: {} unauthored effect sources preserve their original fallback in climate {}",effect_fallbacks,effect_climate);
+	unsigned object_fallbacks = 0;
+	for (unsigned type = 0; type < 5; ++type) for (unsigned size = 0; size < (type == 4 ? 5U : 1U); ++size) {
+		if (HasVoxelObjectLayout(type,size,effect_climate)) continue;
+		Scene original;
+		for (unsigned part = 0; part < (type == 4 ? 4U : 1U); ++part) {
+			const auto *source = GetOriginalObjectTileLayout(type,size,part);
+			if (DrawVoxelObjectGround(original,type,size,part,source->ground.sprite,{},source->ground.pal)) throw std::runtime_error("A partial/custom/unavailable original object family replaced its ground");
+			for (const auto &piece : source->GetSequence()) if (DrawVoxelObjectBody(original,type,size,part,piece.image.sprite,{},piece.image.pal)) throw std::runtime_error("A partial/custom/unavailable original object family replaced its body");
+		}
+		if (!original.instances.empty() || !original.vertices.empty()) throw std::runtime_error("Original object fallback emitted partial voxel geometry");
+		++object_fallbacks;
+	}
+	Debug(driver,1,"OpenTT3D: {} incomplete/custom/unavailable original object families retain every source ground/body layer in climate {}",object_fallbacks,effect_climate);
+	unsigned object_views = 0;
+	for (const auto &[binding,name] : catalogue.bindings) {
+		const auto &[category,layout,climate] = binding;
+		if (category != "objects" || climate != effect_climate || !name.starts_with(prefix)) continue;
+		unsigned type = layout < 4 ? layout : 4, size = layout < 4 ? 0 : (layout-4)/4, part = layout < 4 ? 0 : (layout-4)%4;
+		if (!HasVoxelObjectLayout(type,size,climate)) continue; // Original custom/partial-family fallback is not volume evidence.
+		const auto &piece = GetOriginalObjectTileLayout(type,size,part)->GetSequence().front();
+		const auto &model = catalogue.models.at(name).surface;
+		Vec3 origin{3.5f+piece.origin.x,2.25f+piece.origin.y,17.0f+piece.origin.z};
+		Scene wrong_source;
+		if (DrawVoxelObjectBody(wrong_source,type,size,part,(piece.image.sprite&SPRITE_MASK)+1,origin,PAL_NONE) || !wrong_source.instances.empty()) throw std::runtime_error("Original object selected unrelated source-sprite geometry");
+		for (unsigned company = 0; company < 16; ++company) for (bool transparent : {false,true}) {
+			Textures().BeginScene();
+			Scene actual, reference;
+			PaletteID palette = PALETTE_RECOLOUR_START+company;
+			float opacity = transparent ? 0.38f : 1;
+			if (!DrawVoxelObjectBody(actual,type,size,part,piece.image.sprite,origin,palette,opacity) || actual.instances.size() != 1 || actual.instances.front().mesh != &model.vertices) throw std::runtime_error("Original object lost its source layout/climate body binding");
+			if (actual.instances.front().data.origin_opacity != std::array<float,4>{origin.x,origin.y,origin.z,opacity}) throw std::runtime_error("Original object changed its source anchor, altitude or opacity");
+			actual.instances.front().data.SetObjectId(TILE_PICK_ID|83);
+			auto material = Material(origin,palette,opacity); material.SetObjectId(TILE_PICK_ID|83);
+			reference.instances.push_back({&model.vertices,material});
+			Camera camera = StreetReviewCamera(model.low+origin,model.high+origin,256,256,company%4+0.15f);
+			if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids ||
+					(transparent ? std::count(ids.begin(),ids.end(),TILE_PICK_ID|83) != 0 : std::count(ids.begin(),ids.end(),TILE_PICK_ID|83) < 16)) throw std::runtime_error("Original object changed company recolouring, transparency or tile ownership");
+			++object_views;
+		}
+	}
+	Debug(driver,1,"OpenTT3D: {} original object views preserve source layout/climate, anchors, all16 company palettes and transparent picking",object_views);
 	unsigned views = 0;
 	unsigned bindings = 0;
 	unsigned ground_bindings = 0;

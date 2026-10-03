@@ -2996,6 +2996,26 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		});
 		return true;
 	}
+	if ((argv.size() == 3 || argv.size() == 5) && argv[1] == "object-locate") {
+		auto type = ParseType<unsigned>(argv[2]);
+		auto x = argv.size() == 5 ? ParseType<unsigned>(argv[3]) : std::optional<unsigned>{UINT_MAX};
+		auto y = argv.size() == 5 ? ParseType<unsigned>(argv[4]) : std::optional<unsigned>{UINT_MAX};
+		if (!type || *type >= 5) return false;
+		if (!x || !y || (argv.size() == 5 && (*x >= Map::MaxX() || *y >= Map::MaxY()))) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([type=*type,x=*x,y=*y] {
+			if (!Renderer3D::FocusVoxelObject(type,x,y)) Debug(driver,0,"OpenTT3D: renderer verification failed: no matching original voxel object {} in this map",type);
+		});
+		return true;
+	}
+	if (argv.size() == 3 && argv[1] == "verify-object-palette") {
+		auto type = ParseType<unsigned>(argv[2]);
+		if (!type || *type >= 2) return false;
+		VideoDriver::GetInstance()->QueueOnMainThread([type=*type] {
+			try { Renderer3D::BeginVoxelObjectPaletteCheck(type); }
+			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
+		});
+		return true;
+	}
 	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "airport-locate") {
 		auto graphics = argv.size() == 3 ? ParseType<unsigned>(argv[2]) : std::optional<unsigned>{UINT_MAX};
 		if (!graphics || (argv.size() == 3 && *graphics >= 74)) return false;
