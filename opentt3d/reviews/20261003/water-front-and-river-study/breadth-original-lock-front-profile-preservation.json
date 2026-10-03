@@ -1,0 +1,258 @@
+{
+  "audited_utc": "2026-10-03T19:41:17.360865+00:00",
+  "changed_models": [
+    "lock_study_lower_ne_front_elevated",
+    "lock_study_lower_ne_front_sea",
+    "lock_study_lower_ne_rear_sea",
+    "lock_study_lower_nw_front_elevated",
+    "lock_study_lower_nw_front_sea",
+    "lock_study_lower_nw_rear_sea",
+    "lock_study_lower_se_front_elevated",
+    "lock_study_lower_se_front_sea",
+    "lock_study_lower_se_rear_sea",
+    "lock_study_lower_sw_front_elevated",
+    "lock_study_lower_sw_front_sea",
+    "lock_study_lower_sw_rear_sea",
+    "lock_study_middle_ne_front_elevated",
+    "lock_study_middle_ne_front_sea",
+    "lock_study_middle_nw_front_elevated",
+    "lock_study_middle_nw_front_sea",
+    "lock_study_middle_se_front_elevated",
+    "lock_study_middle_se_front_sea",
+    "lock_study_middle_sw_front_elevated",
+    "lock_study_middle_sw_front_sea",
+    "lock_study_upper_ne_front_elevated",
+    "lock_study_upper_ne_front_sea",
+    "lock_study_upper_nw_front_elevated",
+    "lock_study_upper_nw_front_sea",
+    "lock_study_upper_se_front_elevated",
+    "lock_study_upper_se_front_sea",
+    "lock_study_upper_sw_front_elevated",
+    "lock_study_upper_sw_front_sea"
+  ],
+  "retained_prior_studies": 20,
+  "comparisons": [
+    {
+      "backend": "vulkan",
+      "unchanged_studies": [
+        {
+          "model": "lock_study_lower_ne_rear_elevated",
+          "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_lower_nw_rear_elevated",
+          "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_lower_se_rear_elevated",
+          "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_lower_sw_rear_elevated",
+          "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_ne_rear_elevated",
+          "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_ne_rear_sea",
+          "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_nw_rear_elevated",
+          "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_nw_rear_sea",
+          "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_se_rear_elevated",
+          "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_se_rear_sea",
+          "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_sw_rear_elevated",
+          "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_sw_rear_sea",
+          "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_ne_rear_elevated",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_ne_rear_sea",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_nw_rear_elevated",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_nw_rear_sea",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_se_rear_elevated",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_se_rear_sea",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_sw_rear_elevated",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_sw_rear_sea",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        }
+      ],
+      "images_exact": 180,
+      "world_pixels": 1228800,
+      "world_different_pixels": 0,
+      "reference_sha256": "3af87f296897786d3805057e035876a0958d29f178bf8c797f0356c5aa9aae40",
+      "actual_sha256": "3af87f296897786d3805057e035876a0958d29f178bf8c797f0356c5aa9aae40"
+    },
+    {
+      "backend": "opengl",
+      "unchanged_studies": [
+        {
+          "model": "lock_study_lower_ne_rear_elevated",
+          "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_lower_nw_rear_elevated",
+          "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_lower_se_rear_elevated",
+          "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_lower_sw_rear_elevated",
+          "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_ne_rear_elevated",
+          "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_ne_rear_sea",
+          "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_nw_rear_elevated",
+          "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_nw_rear_sea",
+          "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_se_rear_elevated",
+          "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_se_rear_sea",
+          "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_sw_rear_elevated",
+          "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_middle_sw_rear_sea",
+          "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_ne_rear_elevated",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_ne_rear_sea",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_nw_rear_elevated",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_nw_rear_sea",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_se_rear_elevated",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_se_rear_sea",
+          "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_sw_rear_elevated",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        },
+        {
+          "model": "lock_study_upper_sw_rear_sea",
+          "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+          "exact_source_native_orbit_street_images": 9
+        }
+      ],
+      "images_exact": 180,
+      "world_pixels": 1228800,
+      "world_different_pixels": 0,
+      "reference_sha256": "967ce19067d2ea7f5ecffd64debc2684a4d0407a3868b23a8a0c7aa355af1ddd",
+      "actual_sha256": "967ce19067d2ea7f5ecffd64debc2684a4d0407a3868b23a8a0c7aa355af1ddd"
+    }
+  ],
+  "approvals": 0,
+  "scope": "Twenty unchanged defect-bearing first-study models retain all180 source-scale/native/orbit/street bytes per renderer; both temperate saved worlds remain pixel-exact. This proves preservation only, not acceptance of28 changed owners or additional climates/terrain/animation/custom fallback/ships."
+}

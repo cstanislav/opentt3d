@@ -1,0 +1,32 @@
+{
+  "sealed_utc": "2026-10-03T19:52:10.192897+00:00",
+  "changed_studies_reinspected": 28,
+  "unchanged_original_decisions_and_views_exact": 20,
+  "lock_studies": 48,
+  "scores": {
+    "6": 48
+  },
+  "approvals": 0,
+  "all_acceptance_checks": false,
+  "strict_wider_different_images": 8,
+  "strict_wider_different_pixels": 8,
+  "temperate_worlds_strict_exact": 2,
+  "incidental_river_source_states_exact": 19,
+  "incidental_river_tiles": 9,
+  "river_feature_offsets_or_absences_resolved": false,
+  "runtime_cpp_sources_restored_exact": true,
+  "runtime_build_binary_sha256": "4ddb566ccbeaf108a5e711133bb3d66ccacf35f930dd8ddf870bbf7f13a6ac98",
+  "runtime_working_catalogue_sha256": "7a4979f3fa7ecf27981867a785d358391d60c6446d13c4d7efb848dec0b0936e",
+  "runtime_build_is_exact_tag_or_approved_artwork": false,
+  "native_tests": 213,
+  "working_asset_tests": 252,
+  "isolated_committed_artwork_tests": 236,
+  "harness_tests": 99,
+  "candidate_models": 1963,
+  "candidate_ledger_entries": 2978,
+  "individual_records": 189,
+  "required_eight_exit": 1,
+  "candidate_catalogue_uncompressed_sha256": "a18a37c22d86adb001c2c4f22b71de94c9fcf194f53e38e56da37520b7901f46",
+  "recommended_release_unchanged": "opentt3d-dev-20261003.42",
+  "scope": "Defect-bearing unbound lock repair studies only;28 explicit re-inspections and20 unchanged original conservative decisions with exact images. No inherited acceptance or runtime coverage."
+}

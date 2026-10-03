@@ -1,0 +1,63 @@
+[  0%] Built target script_window
+[  1%] Built target renderer3d_asset_files
+[  2%] Built target strgen
+[  3%] Built target settingsgen
+[  5%] Built target baseset_files
+[  5%] Built target renderer3d_models
+[  5%] Generating ../../generated/renderer3d_vulkan_shaders.hpp
+-- Version string: 20261003-main-m130d9f10ce
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_world.vert
+[  5%] Built target find_version
+[ 13%] Built target script_ai
+[ 21%] Built target script_game
+[ 22%] Built target ai_compat_files
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_world.vert
+[ 25%] Built target gs_compat_files
+[ 33%] Built target script_template
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_world.vert
+[ 40%] Built target language_files
+[ 41%] Built target table_strings
+[ 41%] Built target table_settings
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_world.vert
+[ 41%] Built target script_ai_includes
+[ 41%] Built target script_game_includes
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_world.vert
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_world.frag
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_voxel.frag
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_voxel_slice.frag
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_composite.vert
+/Users/stanislav/Projects/opentt3d/src/renderer3d/shaders/vk_composite.frag
+[ 41%] Built target renderer3d_shaders
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/gl_backend.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/vulkan_backend.cpp.o
+[100%] Built target openttd_lib
+[100%] Linking CXX executable opentt3d
+[100%] Built target openttd
+[  0%] Built target script_window
+[  1%] Built target strgen
+[  1%] Built target renderer3d_models
+[  2%] Built target settingsgen
+[  2%] Built target renderer3d_shaders
+[ 10%] Built target script_ai
+[ 19%] Built target script_game
+[ 27%] Built target script_template
+[ 35%] Built target language_files
+[ 36%] Built target table_strings
+-- Version string: 20261003-main-m130d9f10ce
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 36%] Built target table_settings
+[ 36%] Built target find_version
+[ 36%] Built target script_ai_includes
+[ 36%] Built target script_game_includes
+[ 96%] Built target openttd_lib
+[ 96%] Linking CXX executable openttd_test
+[100%] Built target openttd_test

@@ -1,5 +1,31 @@
 # Active extended development goal
 
+## Front profiles repaired provisionally; raised river ground kept in scope — October 3
+
+The unbound lock candidate separates slender/dark front coping from wider rear
+walkways and opens yellow lamp panes. All 28 changed owners have fresh individual
+source/native/four-orbit/four-street defect records; twenty unchanged owners retain
+360 exact prior views across both renderers. All 48 candidate scores are provisional
+6/10 with six false checks; stone/rail/lantern detail and directional foam ownership
+remain rejected. Both temperate worlds stay exact, but eight street silhouette pixels
+still disagree. Forced GL clipping and explicit projection arithmetic do not repair
+them; failed studies are retained and shader sources are restored byte-exactly.
+
+The existing 64 live controls also retain nineteen actual sloped-river ground source
+states on nine saved tiles, exact across renderers. Ground artwork includes apparent
+rocks and Toyland island relief, not just water. Twenty additional unresolved
+flat/sloped river-ground/climate selectors now prevent the quality audit from hiding
+such raised features behind the ground draw role. This does not classify dynamic
+source IDs or prove relief dimensions, full selectors, animation, absence or ships.
+Evidence: `reviews/20261003/water-front-and-river-study/` and
+`reviews/20261003/river-ground-quality-scope/`. Canonical artwork and `.42` are unchanged.
+
+Continue source-faithful wall/water/raised-ground ownership, complete-family fallback,
+doubled-terrain support without object inflation and strict renderer repairs, then
+all-climate natural HQ upgrades, full catalogue fidelity/state breadth, ship/aircraft/
+emitter clearance, smooth 60fps, platforms/input/replay/network. No stopping time or
+completion follows from this checkpoint.
+
 ## First lock volumes inspected, still unbound and unapproved — October 3
 
 All 48 original rear/front/part/direction/elevation wall studies now have separate

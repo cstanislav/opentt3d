@@ -1,0 +1,32 @@
+{
+  "audited_utc": "2026-10-03T19:19:19.731258+00:00",
+  "comparisons": [
+    {
+      "mode": "paired",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-canonical-projection-paired-strict.json",
+      "sha256": "af9a8d26b09393bc0b348d7f65240658bbf287f8fc33dcb55c55f8aaf4151e67",
+      "exit_code": 1,
+      "different_images": 8,
+      "different_pixels": 8
+    },
+    {
+      "mode": "vulkan-prior",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-canonical-projection-vulkan-prior-strict.json",
+      "sha256": "74f2262758947f5732160d85d0e2167b5fcb41f48d51e0057d1029fb5efb78e4",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "mode": "opengl-prior",
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-canonical-projection-opengl-prior-strict.json",
+      "sha256": "dfd4a497033774645d7699bbc9376f5f9083c45e157c174ea0645471926bb8de",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0
+    }
+  ],
+  "paired_strict_exact": false,
+  "scope": "Local unaccepted explicit-column projection arithmetic diagnostic on the unchanged first48 lock studies and unchanged1831 released models/bindings. No camera/geometry/precision tolerance/mask changed. Source original/rejected views remain retained. This is not .42 or a runtime lock replacement.",
+  "approvals": 0
+}

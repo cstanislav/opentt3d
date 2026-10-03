@@ -1,0 +1,3950 @@
+{
+  "format": 1,
+  "models": {
+    "lock_study_lower_ne_front_elevated": {
+      "score": 6,
+      "fingerprint": "73d56e1741573b8e5c2cdca797517800a5de907217a166d720b6765ec568bd73",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_front_elevated.png": "d40ba7abe2218081a030c796211f5a5d2cb68e2ccfd3016bd9cd075328b16324"
+      },
+      "defects": [
+        "No invented elevated lamp/foam; the darker narrower front cap is closer, but rough stone and guard returns remain too regular/bright.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction0 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "No invented elevated lamp/foam; the darker narrower front cap is closer, but rough stone and guard returns remain too regular/bright.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1312,
+          224,
+          8
+        ],
+        "image": 10029,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -148,
+          -52
+        ],
+        "source_size": [
+          152,
+          120
+        ],
+        "sprite": 10029,
+        "tile": 1874,
+        "tile_xy": [
+          82,
+          14
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "1a3884630d8f61f32c3bd692144a0613a94715b2871336023249b4f71e8bb77d"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_ne_front_sea": {
+      "score": 6,
+      "fingerprint": "7cdf6992d00c5c3218e321c569e9bd3146bb1249ee580789534a37cd8bde2218",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_front_sea.png": "004efefc5137fd70fae2043487f67e1e37a08322794acf9d54c633d399e69a8f"
+      },
+      "defects": [
+        "Dark narrow front and yellow pane improve the source profile, but the original visible waterline foam stroke is missing in the registered native view; lantern/stone/end-guard detail remains generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction0 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Dark narrow front and yellow pane improve the source profile, but the original visible waterline foam stroke is missing in the registered native view; lantern/stone/end-guard detail remains generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1632,
+          64,
+          0
+        ],
+        "image": 10005,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -156,
+          -52
+        ],
+        "source_size": [
+          160,
+          120
+        ],
+        "sprite": 10005,
+        "tile": 614,
+        "tile_xy": [
+          102,
+          4
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "be8046e436ce213236dae396940664b613a154b19391717f6b78e448eea0c48d"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_ne_rear_elevated": {
+      "score": 6,
+      "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_rear_elevated.png": "1d2e3e02500913ea8df44a6c5cdd1ca1c2298ae8413f32c864e6aa514c1438ee"
+      },
+      "defects": [
+        "Correct original lamp/foam absence is retained, but masonry face contrast, broad paving texture and end coping remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction0 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Correct original lamp/foam absence is retained, but masonry face contrast, broad paving texture and end coping remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1312,
+          224,
+          8
+        ],
+        "image": 10025,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10025,
+        "tile": 1874,
+        "tile_xy": [
+          82,
+          14
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "285fa77d4d58ffeb7f35fd502927ee7a78c6579ba7882e0a44f1048319c0c2f9"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_lower_ne_rear_sea": {
+      "score": 6,
+      "fingerprint": "de7c46f02e9fcabe400bcba8753103dab68311e81f0ad47c9a35bc273742799b",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_ne_rear_sea.png": "f22d4e270a1afe6c45f3cbdcfcca9c8658f69e5d476ee622d9ac62363ca3adef"
+      },
+      "defects": [
+        "Yellow pane is now visible, but its white housing is too uniform/bright; rough stone contrast, cap grain and source's short end-only foam ownership remain unfaithful.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction0 rear elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Yellow pane is now visible, but its white housing is too uniform/bright; rough stone contrast, cap grain and source's short end-only foam ownership remain unfaithful.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1632,
+          64,
+          0
+        ],
+        "image": 10001,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          136
+        ],
+        "sprite": 10001,
+        "tile": 614,
+        "tile_xy": [
+          102,
+          4
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "153887f8bd2b7a6d75073e478d8a2672a724651d5797ded11594d5be7ffe3d31"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_nw_front_elevated": {
+      "score": 6,
+      "fingerprint": "4535fab4334e4dd138f158df812f4408167050d67e99bd2f4077d52773120d9e",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_front_elevated.png": "52518f931f5bc7907539f642e5d520dfb8268d7d11654652c08e89895abc7fb6"
+      },
+      "defects": [
+        "The elevated dark front is no longer a broad rear platform, but source end-face contrast and fine rail/coping finish remain too generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction3 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "The elevated dark front is no longer a broad rear platform, but source end-face contrast and fine rail/coping finish remain too generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          1504,
+          720,
+          8
+        ],
+        "image": 10031,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          4,
+          -52
+        ],
+        "source_size": [
+          152,
+          120
+        ],
+        "sprite": 10031,
+        "tile": 5854,
+        "tile_xy": [
+          94,
+          45
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "b34d7253d50c6effa18751dc25e7c3362ab7d013bc1a1524139dbc812734c8d7"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_nw_front_sea": {
+      "score": 6,
+      "fingerprint": "1a67af9f8d1b14189d7d444c54e70981799303657ec9dda9ce90c243fc37836b",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_front_sea.png": "8436887a875f294fcc80dde64bfdcf52948a24a0a5f96b06df6dcdbf463e1550"
+      },
+      "defects": [
+        "Dark front footprint and yellow glass improve ownership, but native foam stroke and its short end return are missing; lantern/frame/cap finish remains overly bright and regular.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction3 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Dark front footprint and yellow glass improve ownership, but native foam stroke and its short end return are missing; lantern/frame/cap finish remains overly bright and regular.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          128,
+          656,
+          0
+        ],
+        "image": 10007,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          4,
+          -52
+        ],
+        "source_size": [
+          164,
+          120
+        ],
+        "sprite": 10007,
+        "tile": 5256,
+        "tile_xy": [
+          8,
+          41
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "7ac4a0b25cdfb8db533f05a0961440516a29e2be4e2e5f0cfa3e26197e77b6dc"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_nw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_rear_elevated.png": "662be3c02afa26226a778e4f1c7aad12bbc533753ffb2593e94837895dbad136"
+      },
+      "defects": [
+        "Lamp and foam remain absent as original, but gray recess/coping/rail finish is substantially less detailed than its own source.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction3 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Lamp and foam remain absent as original, but gray recess/coping/rail finish is substantially less detailed than its own source.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          1504,
+          720,
+          8
+        ],
+        "image": 10027,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10027,
+        "tile": 5854,
+        "tile_xy": [
+          94,
+          45
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "f88ab7259625603df9ad8edc74020b2aff88aab03aa98af7d88232c5d84ee883"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_lower_nw_rear_sea": {
+      "score": 6,
+      "fingerprint": "d5a5514085237f1d8fecd64ac05c9d2258ae018419a00bb535132c19be2ba806",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_nw_rear_sea.png": "f3ae7381959a5f8204edabea12f8b3c62cd7905c2a5fd1511d3bc8a4effb5f25"
+      },
+      "defects": [
+        "Yellow pane is no longer occluded; lantern frame detail and dark side stone remain coarse, and original short end foam is not faithfully assigned.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction3 rear elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Yellow pane is no longer occluded; lantern frame detail and dark side stone remain coarse, and original short end foam is not faithfully assigned.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          128,
+          656,
+          0
+        ],
+        "image": 10003,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          132
+        ],
+        "sprite": 10003,
+        "tile": 5256,
+        "tile_xy": [
+          8,
+          41
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "8a805c23267fd1cab07079902d3995d193da4ff18510990af82d4f055039384a"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_se_front_elevated": {
+      "score": 6,
+      "fingerprint": "4535fab4334e4dd138f158df812f4408167050d67e99bd2f4077d52773120d9e",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_front_elevated.png": "77a15f59a742680bead23929cdfaf8111421010ddbe42e5d91ce44b386563c17"
+      },
+      "defects": [
+        "Original elevated absences and dark/slender front are retained; original side masonry grain, coping mottling and small guard proportions remain insufficient.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction1 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Original elevated absences and dark/slender front are retained; original side masonry grain, coping mottling and small guard proportions remain insufficient.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          1024,
+          112,
+          8
+        ],
+        "image": 10028,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          4,
+          -60
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10028,
+        "tile": 960,
+        "tile_xy": [
+          64,
+          7
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "b32f4b2b8127ec0b65eb9cd36825e9421638ea414a76d8115c01a06cc67300ad"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_se_front_sea": {
+      "score": 6,
+      "fingerprint": "8676af20869eb87cebbc1b23c9bf9c67e77a5bdcbf8041f57cc7d27343ba3376",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_front_sea.png": "2a7b023850d2d0be090766e2e1b0de54cc0d73c59b0846c90df8675634ce1202"
+      },
+      "defects": [
+        "Front coping and masonry are closer, but the own-source waterline foam is not retained in the native view and the bright lantern/guard finish is too simple.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction1 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Front coping and masonry are closer, but the own-source waterline foam is not retained in the native view and the bright lantern/guard finish is too simple.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          784,
+          48,
+          0
+        ],
+        "image": 10004,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          4,
+          -96
+        ],
+        "source_size": [
+          152,
+          164
+        ],
+        "sprite": 10004,
+        "tile": 433,
+        "tile_xy": [
+          49,
+          3
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "725deaa7657c8ab31cca9c44b38aeb31ea1051dae46bdc3a0f29ac1312383fab"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_se_rear_elevated": {
+      "score": 6,
+      "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_rear_elevated.png": "5a97f9b015a450579c3f1ca99fea33ba527dd1933c626b28769d08e22b2b4fe5"
+      },
+      "defects": [
+        "No invented lamp/foam, but source side-shadow, bonded stone grain and coping returns remain oversimplified.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction1 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "No invented lamp/foam, but source side-shadow, bonded stone grain and coping returns remain oversimplified.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          1024,
+          112,
+          8
+        ],
+        "image": 10024,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10024,
+        "tile": 960,
+        "tile_xy": [
+          64,
+          7
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "32270cf7f04d2cf64b0bd7f41f191a6be3a0d44270722ddcf6e6ab2422afd493"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_lower_se_rear_sea": {
+      "score": 6,
+      "fingerprint": "ef545cc96a1618614d08d992d88ee27bd219c0738991e4ed9481007e63155c6a",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_se_rear_sea.png": "dd265697d22dec83dec0668f54639fce9e9ca29b223cbe31a7cc90a112a7bea1"
+      },
+      "defects": [
+        "Yellow lamp visibility is repaired, but its simple white cap and light masonry remain coarse; full longitudinal foam in other views is not established by this rear source.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction1 rear elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Yellow lamp visibility is repaired, but its simple white cap and light masonry remain coarse; full longitudinal foam in other views is not established by this rear source.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          784,
+          48,
+          0
+        ],
+        "image": 10000,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -20,
+          -88
+        ],
+        "source_size": [
+          152,
+          164
+        ],
+        "sprite": 10000,
+        "tile": 433,
+        "tile_xy": [
+          49,
+          3
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "2945afc0c0587c531d1753bbeecd9b2d9b49f4a4f8c63f6666cad34680c3bb14"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_sw_front_elevated": {
+      "score": 6,
+      "fingerprint": "73d56e1741573b8e5c2cdca797517800a5de907217a166d720b6765ec568bd73",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_front_elevated.png": "e260739e5881ad55b935153817894a2b4c8c791711253f151882cf62a77c7b9f"
+      },
+      "defects": [
+        "Correct elevated absences and distinct front profile do not yet reproduce source pier grain, coping texture and fine end-guard treatment.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction2 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Correct elevated absences and distinct front profile do not yet reproduce source pier grain, coping texture and fine end-guard treatment.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          816,
+          256,
+          8
+        ],
+        "image": 10030,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -148,
+          -60
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10030,
+        "tile": 2099,
+        "tile_xy": [
+          51,
+          16
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "22cd71cdc0ba601cd37a06ac8b9b3b9164ff3ca73bfae541d1fb77813e50a096"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_sw_front_sea": {
+      "score": 6,
+      "fingerprint": "9eebbfca950e427e199c9d365521550aa47559c8a4dfe4cc674a650731627c47",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_front_sea.png": "4fd4856f69f27229f29a52a937c22803a4f724d7d41ae6bbb4505ed59fc6a38b"
+      },
+      "defects": [
+        "Slender dark front and open lamp are present; source-native foam remains hidden/misplaced and masonry/coping/lamp-frame proportions remain coarse.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction2 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Slender dark front and open lamp are present; source-native foam remains hidden/misplaced and masonry/coping/lamp-frame proportions remain coarse.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          608,
+          192,
+          0
+        ],
+        "image": 10006,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -148,
+          -96
+        ],
+        "source_size": [
+          152,
+          164
+        ],
+        "sprite": 10006,
+        "tile": 1574,
+        "tile_xy": [
+          38,
+          12
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "b985b805ea13a4b43d5b3605d5967d68edd1c91fd416fa39130f75eb0d6bf681"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_lower_sw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_rear_elevated.png": "8dde5329575d5dea72fe44ef20790841a48af8da3d719d078af9a8332145f8c2"
+      },
+      "defects": [
+        "Original elevated absences are respected; stone contrast and small end-rail/paving detail are not individually acceptable.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction2 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Original elevated absences are respected; stone contrast and small end-rail/paving detail are not individually acceptable.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          816,
+          256,
+          8
+        ],
+        "image": 10026,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10026,
+        "tile": 2099,
+        "tile_xy": [
+          51,
+          16
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "9283a810ec26b840bb67f9eab9478584731d98218f86b191cf5829e0e02d3429"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_lower_sw_rear_sea": {
+      "score": 6,
+      "fingerprint": "1f0e9dd5a72a65ae1c19f99ab413daa68a31343f38f9f762df5c65b2a8fed9d7",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_lower_sw_rear_sea.png": "ec30ff8de3213ff561b69a5015992fdf50f7cfb4efc1eefa408716e228276fce"
+      },
+      "defects": [
+        "Open yellow lamp improves fidelity, but white frame/paving contrast and end grain remain generic; original rear source does not justify the full foam stripe visible in other views.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part1 direction2 rear elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Open yellow lamp improves fidelity, but white frame/paving contrast and end grain remain generic; original rear source does not justify the full foam stripe visible in other views.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          608,
+          192,
+          0
+        ],
+        "image": 10002,
+        "kind": "lock",
+        "palette": 0,
+        "part": 1,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -124,
+          -88
+        ],
+        "source_size": [
+          152,
+          164
+        ],
+        "sprite": 10002,
+        "tile": 1574,
+        "tile_xy": [
+          38,
+          12
+        ],
+        "transparent": false,
+        "water_class": 0,
+        "source_image_sha256": "c384ab56a97772e3896b082dc011c1b98eb964418152174b2f875b7802e8ec16"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_ne_front_elevated": {
+      "score": 6,
+      "fingerprint": "5753c3945573c3d6ad2fa3641d623004495e1139f4de81e35f4a4d6ad640b596",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_front_elevated.png": "a34e265cfd945515de342138049112f2f0397a843453eeab9f74046789bb9f45"
+      },
+      "defects": [
+        "Separately inspected elevated front retains its dark/narrow profile, but stone-pier contrast and bright cap/end-guard silhouette still lack source fidelity.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "notes": [
+        "Original part0 direction0 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Separately inspected elevated front retains its dark/narrow profile, but stone-pier contrast and bright cap/end-guard silhouette still lack source fidelity.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1296,
+          224,
+          8
+        ],
+        "image": 10021,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 12,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -148,
+          -52
+        ],
+        "source_size": [
+          152,
+          120
+        ],
+        "sprite": 10021,
+        "tile": 1873,
+        "tile_xy": [
+          81,
+          14
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "d1eb8c1b65a2a387f7e28678a9ce515e2c4a8258f0fe46d7fc6e3533195e3dfa"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_ne_front_sea": {
+      "score": 6,
+      "fingerprint": "5753c3945573c3d6ad2fa3641d623004495e1139f4de81e35f4a4d6ad640b596",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_front_sea.png": "f753678ca101b6f55366cbceb759ceb4092260f736fd1e512a334d59138eebf5"
+      },
+      "defects": [
+        "Narrower coping and darker front masonry are closer to the source, but pier/end-face tones, grain and guard returns remain coarse; the source-scale rail/cap silhouette is still too bright.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "notes": [
+        "Original part0 direction0 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Narrower coping and darker front masonry are closer to the source, but pier/end-face tones, grain and guard returns remain coarse; the source-scale rail/cap silhouette is still too bright.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1616,
+          64,
+          0
+        ],
+        "image": 9997,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 12,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -148,
+          -52
+        ],
+        "source_size": [
+          152,
+          120
+        ],
+        "sprite": 9997,
+        "tile": 613,
+        "tile_xy": [
+          101,
+          4
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "da465155d104d6a8da88fe4876678bfd1dda4b616066b2625c9c7ac6dd92918f"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_ne_rear_elevated": {
+      "score": 6,
+      "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_rear_elevated.png": "b813b99d81c476abd675e34bd294fd9661f5aca2fcabaf7c1fa9f88db8e89754"
+      },
+      "defects": [
+        "The separately inspected elevated source retains the same graded wall, but masonry tone, paving granularity and end guard remain too generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "notes": [
+        "Original part0 direction0 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "The separately inspected elevated source retains the same graded wall, but masonry tone, paving granularity and end guard remain too generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1296,
+          224,
+          8
+        ],
+        "image": 10017,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 12,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10017,
+        "tile": 1873,
+        "tile_xy": [
+          81,
+          14
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "5b590c56cf7303e5f14daf86910f584a01a7f78c886acaa3e4cff1d85c8d21ca"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_ne_rear_sea": {
+      "score": 6,
+      "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_ne_rear_sea.png": "d9f851deb2747b960ddfd97225a7dadb437e7d84a556df70979a87a0b215808b"
+      },
+      "defects": [
+        "Stone/paving are too bright and uniform; source masonry recesses and short end-rail details remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "notes": [
+        "Original part0 direction0 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Stone/paving are too bright and uniform; source masonry recesses and short end-rail details remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1616,
+          64,
+          0
+        ],
+        "image": 9993,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 12,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 9993,
+        "tile": 613,
+        "tile_xy": [
+          101,
+          4
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "2e82879b6b79f7ce6efc08ffc114d03bdf477c1e93f9e474f39b9f8f80e8c9e8"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_nw_front_elevated": {
+      "score": 6,
+      "fingerprint": "c1f8030fdfb580bce0358cd76af525167caafd6f2e2e14644f7fccc18b6985c8",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_front_elevated.png": "b1509a3adaf35957fe38d7f30e72756842e880d61ad2d27e557120b259e55834"
+      },
+      "defects": [
+        "Dark elevated front and narrow coping are closer to their own source; end support grain and guard-return proportions remain insufficient.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "notes": [
+        "Original part0 direction3 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Dark elevated front and narrow coping are closer to their own source; end support grain and guard-return proportions remain insufficient.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          1504,
+          704,
+          8
+        ],
+        "image": 10023,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 9,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          4,
+          -52
+        ],
+        "source_size": [
+          152,
+          120
+        ],
+        "sprite": 10023,
+        "tile": 5726,
+        "tile_xy": [
+          94,
+          44
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "901f38331faab5b6d14803d010c4dbd2690d12b92a915bbfd9c625919ff84bca"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_nw_front_sea": {
+      "score": 6,
+      "fingerprint": "c1f8030fdfb580bce0358cd76af525167caafd6f2e2e14644f7fccc18b6985c8",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_front_sea.png": "6e7d28474087384b0b9c3f32ef5f72e62604e98ddc97a343e5cafa54f7da8a1c"
+      },
+      "defects": [
+        "The source's dark slender profile is closer, but the transposed end piers, cap grain and small guard return remain too generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "notes": [
+        "Original part0 direction3 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "The source's dark slender profile is closer, but the transposed end piers, cap grain and small guard return remain too generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved.",
+        "Its street silhouette still differs by one pixel across backends; strict acceptance remains rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          128,
+          640,
+          0
+        ],
+        "image": 9999,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 9,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          4,
+          -52
+        ],
+        "source_size": [
+          152,
+          120
+        ],
+        "sprite": 9999,
+        "tile": 5128,
+        "tile_xy": [
+          8,
+          40
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "c3334afc99e7e52a67e0dee4a9c2cd96c46697321f5bd7c54f32540a69bbc515"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_nw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_rear_elevated.png": "f44faa677f28774a8a0cc8f3284637ae8caddd266f85cd975e91c1893e4310ee"
+      },
+      "defects": [
+        "Transposed elevated wall retains grade direction but remains too bright, with generic recess/paving/guard treatment.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "notes": [
+        "Original part0 direction3 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Transposed elevated wall retains grade direction but remains too bright, with generic recess/paving/guard treatment.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          1504,
+          704,
+          8
+        ],
+        "image": 10019,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 9,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 10019,
+        "tile": 5726,
+        "tile_xy": [
+          94,
+          44
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "5c269621ec0cd9618ffe9ed0f130bdd8a702c167d326d0ccb048ff5b6d175935"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_nw_rear_sea": {
+      "score": 6,
+      "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_nw_rear_sea.png": "d842aca132ebbcca3ea9d829b1f240657e75c862c4472643adaecbacc49301f6"
+      },
+      "defects": [
+        "Transposed rising/falling support profile has real depth, but source recess contrast, cap texture and end guard geometry remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "notes": [
+        "Original part0 direction3 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Transposed rising/falling support profile has real depth, but source recess contrast, cap texture and end guard geometry remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved.",
+        "Its street silhouette differs by one pixel across backends; strict renderer equality is rejected."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          128,
+          640,
+          0
+        ],
+        "image": 9995,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 9,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          128
+        ],
+        "sprite": 9995,
+        "tile": 5128,
+        "tile_xy": [
+          8,
+          40
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "5026c0f0036c2c5361408685dde198be32919aa93931601c9d75cb8847ac9a42"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_se_front_elevated": {
+      "score": 6,
+      "fingerprint": "d19f7dcd6d02415c7e16a91389fcf37ab413d7ac9c3f899c18de6ab9d82b5b84",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_front_elevated.png": "fc2630ec66069007b811c7587c6e6955caf974c0265851394fa7c58fc3b05ab4"
+      },
+      "defects": [
+        "Elevated dark front ownership improves, but side-face masonry bond and mottled coping/rail-return detail remain coarse.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction1 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Elevated dark front ownership improves, but side-face masonry bond and mottled coping/rail-return detail remain coarse.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          1024,
+          128,
+          8
+        ],
+        "image": 10020,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 6,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          4,
+          -52
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 10020,
+        "tile": 1088,
+        "tile_xy": [
+          64,
+          8
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "8661a11c0b742a8b668d7ed88870a0a96b8b51f64a02b68362ee94a5a0cb38a8"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_se_front_sea": {
+      "score": 6,
+      "fingerprint": "d19f7dcd6d02415c7e16a91389fcf37ab413d7ac9c3f899c18de6ab9d82b5b84",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_front_sea.png": "9997e321f0499a20e8bc4a06f9e7017df6fb294ada3d87e9ad6c027fbbcb0299"
+      },
+      "defects": [
+        "The narrow dark front profile is restored, but original bonded stone contrast, mottled coping and fine end-guard shape remain oversimplified.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction1 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "The narrow dark front profile is restored, but original bonded stone contrast, mottled coping and fine end-guard shape remain oversimplified.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          784,
+          64,
+          0
+        ],
+        "image": 9996,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 6,
+        "sort_extent": [
+          1,
+          16,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          4,
+          -52
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 9996,
+        "tile": 561,
+        "tile_xy": [
+          49,
+          4
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "bef9e2f4fc55cacbb187bdb42b2b48537c610282f0e0f0ee06dcb226ec638260"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_se_rear_elevated": {
+      "score": 6,
+      "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_rear_elevated.png": "deb25a02088500ec6f8e217ff6551abdfbc2ccdbddcba9359be0cca58f53256e"
+      },
+      "defects": [
+        "Original elevated side-shadow contrast and bonded stone detail are not faithfully reproduced by the light patterned panels.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction1 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Original elevated side-shadow contrast and bonded stone detail are not faithfully reproduced by the light patterned panels.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          1024,
+          128,
+          8
+        ],
+        "image": 10016,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 6,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10016,
+        "tile": 1088,
+        "tile_xy": [
+          64,
+          8
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "e72524f12fb2a1831971642731d4ef4c2203a0287b1e9f8df6f9938114429bd1"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_se_rear_sea": {
+      "score": 6,
+      "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_se_rear_sea.png": "188cb8787a0d13c3fd12cb23a06e980a1e8befc9f76408a465c2ea3f6b639bb2"
+      },
+      "defects": [
+        "The dark side elevation, coping breaks and masonry bond are too light/coarse despite the correct longitudinal grade direction.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction1 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "The dark side elevation, coping breaks and masonry bond are too light/coarse despite the correct longitudinal grade direction.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          784,
+          64,
+          0
+        ],
+        "image": 9992,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 6,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -20,
+          -52
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 9992,
+        "tile": 561,
+        "tile_xy": [
+          49,
+          4
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "06e6ec505202665993298248807ed845d0df7df0a708fc12e09cdb3a91a365db"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_sw_front_elevated": {
+      "score": 6,
+      "fingerprint": "d5da422fa8c9be0f8a2eb069b67e659342a740aa40f5858adaedd094d9fc073c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_front_elevated.png": "5201229ea0288faa57666db92f69726511801eb3a70c63a2166b87647360056c"
+      },
+      "defects": [
+        "Slender elevated front cap is present, but lower end stone, cap texture and oversimplified bright guard details remain unaccepted.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction2 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Slender elevated front cap is present, but lower end stone, cap texture and oversimplified bright guard details remain unaccepted.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          832,
+          256,
+          8
+        ],
+        "image": 10022,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 3,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -148,
+          -52
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 10022,
+        "tile": 2100,
+        "tile_xy": [
+          52,
+          16
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "139b524b49b025e96f5f847283bd7ac39512f132c108dc6b2fd990013635edd2"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_sw_front_sea": {
+      "score": 6,
+      "fingerprint": "d5da422fa8c9be0f8a2eb069b67e659342a740aa40f5858adaedd094d9fc073c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_front_sea.png": "431f40cd5fdd6c97c45196f96041ec7d50819ac90bdf182502a18c5bf3c6ece3"
+      },
+      "defects": [
+        "Dark front face and slender cap improve ownership, but support-end texture, coping breaks and original rail proportions remain too regular/bright.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction2 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Dark front face and slender cap improve ownership, but support-end texture, coping breaks and original rail proportions remain too regular/bright.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          624,
+          192,
+          0
+        ],
+        "image": 9998,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 3,
+        "sort_extent": [
+          16,
+          1,
+          10
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -148,
+          -52
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 9998,
+        "tile": 1575,
+        "tile_xy": [
+          39,
+          12
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "8b82f4919e0049ee60489f6924755d74a486d17f235e3836e46981ea0496ee52"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_middle_sw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_rear_elevated.png": "f495dbeb3969bb0edd04d93a7a9054c6a7ab359eab2bf58f065862f4f6fd92b9"
+      },
+      "defects": [
+        "Support grade and depth are present, but source low-end masonry, paving variation and small rail returns still lack fidelity.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction2 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Support grade and depth are present, but source low-end masonry, paving variation and small rail returns still lack fidelity.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          832,
+          256,
+          8
+        ],
+        "image": 10018,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 3,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10018,
+        "tile": 2100,
+        "tile_xy": [
+          52,
+          16
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "93f53170c70a68e290229aae4694b2b97b06f3cec34ec605107fd2d6465a8fe2"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_middle_sw_rear_sea": {
+      "score": 6,
+      "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_middle_sw_rear_sea.png": "6b7dcf53858a9c59855f4339c495e6d51f13b8698b60390a4c7d2b1de7cccb1b"
+      },
+      "defects": [
+        "The low end face and stepped supports are present, but stone contrast, paving grain and railing end profile remain oversimplified.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part0 direction2 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "The low end face and stepped supports are present, but stone contrast, paving grain and railing end profile remain oversimplified.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          624,
+          192,
+          0
+        ],
+        "image": 9994,
+        "kind": "lock",
+        "palette": 0,
+        "part": 0,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 3,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 0,
+        "source_offset": [
+          -124,
+          -52
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 9994,
+        "tile": 1575,
+        "tile_xy": [
+          39,
+          12
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "b2824ffad68721bcdf97a354340147d84d8e63e3d6e4820c049a729ccd26e574"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_ne_front_elevated": {
+      "score": 6,
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_front_elevated.png": "fefff1217f7eb53683f20f0b2543a8ed2a8c61da9a53d24cdec3346a0769683a"
+      },
+      "defects": [
+        "Separately inspected elevated shallow front is closer, but source stone edge, mottled cap and bright guard bars still lack detail/proportion fidelity.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction0 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Separately inspected elevated shallow front is closer, but source stone edge, mottled cap and bright guard bars still lack detail/proportion fidelity.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1280,
+          224,
+          16
+        ],
+        "image": 10037,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          -148,
+          -28
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10037,
+        "tile": 1872,
+        "tile_xy": [
+          80,
+          14
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "23feb167982fab37ec7c0dfa563b5878594b14013b684ea7cc7b5bda082ee597"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_ne_front_sea": {
+      "score": 6,
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_front_sea.png": "8e788c0be117d8b87738d84e59515c1d169190c57fd7af82eb1e564cc7c7e52b"
+      },
+      "defects": [
+        "Shallow slender front coping is closer to the source, but stone/paving mottling, bright rail bars and compact end guard remain coarse.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction0 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Shallow slender front coping is closer to the source, but stone/paving mottling, bright rail bars and compact end guard remain coarse.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1600,
+          64,
+          8
+        ],
+        "image": 10013,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -148,
+          -28
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10013,
+        "tile": 612,
+        "tile_xy": [
+          100,
+          4
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "ee98ee5858e4731cdd516e9de0490a78135de97d68ced3e4a1ba9ce475d09742"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_ne_rear_elevated": {
+      "score": 6,
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_rear_elevated.png": "edd570e4d49786f3b3071f6eba376538dd07f3183db192c921b29326bf55b5c3"
+      },
+      "defects": [
+        "Separately inspected elevated upper rear retains low height, but paving/cap grain and end guard are too light/generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction0 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Separately inspected elevated upper rear retains low height, but paving/cap grain and end guard are too light/generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1280,
+          224,
+          16
+        ],
+        "image": 10033,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          -124,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10033,
+        "tile": 1872,
+        "tile_xy": [
+          80,
+          14
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "7d9acf5970c4de3c8da814d222a064396cc002d908c741a78977b893be22bddd"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_ne_rear_sea": {
+      "score": 6,
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_ne_rear_sea.png": "0a28984fb69e7b4173323cf46a1a9bbdd7e5814d47a0d33718e9d5c4a7d48564"
+      },
+      "defects": [
+        "Short raised platform has genuine depth, but mottled paving/cap, outer stone edge and original end guard return are too generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction0 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Short raised platform has genuine depth, but mottled paving/cap, outer stone edge and original end guard return are too generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 0,
+        "draw_origin": [
+          1600,
+          64,
+          8
+        ],
+        "image": 10009,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -124,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10009,
+        "tile": 612,
+        "tile_xy": [
+          100,
+          4
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "fcbc60f5406e484e99e361c72dae9fbba85312fddbd58eafdc28661ead55f5cb"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_nw_front_elevated": {
+      "score": 6,
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_front_elevated.png": "429687e90f06e2282419a4d97a79108c102d7b6e72c5acdc7ef357109da36433"
+      },
+      "defects": [
+        "The elevated front no longer reuses the wide rear platform; mottled coping, end stone and short guard-return proportions still need repair.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction3 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "The elevated front no longer reuses the wide rear platform; mottled coping, end stone and short guard-return proportions still need repair.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          1504,
+          688,
+          16
+        ],
+        "image": 10039,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          4,
+          -28
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10039,
+        "tile": 5598,
+        "tile_xy": [
+          94,
+          43
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "eeaf2da6040a1021a16a517a3f8a5bd4c4010e88edaa82e4afe3f9aae876daf1"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_nw_front_sea": {
+      "score": 6,
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_front_sea.png": "ae682c2849d3aa2d9980296ba90bc722e294920d4dcebb61048e46ba856ca397"
+      },
+      "defects": [
+        "The compact upper front has genuine depth and narrower coping, but source's end detail and mottled cap/rail profile remain too uniform.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction3 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "The compact upper front has genuine depth and narrower coping, but source's end detail and mottled cap/rail profile remain too uniform.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          128,
+          624,
+          8
+        ],
+        "image": 10015,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          4,
+          -28
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10015,
+        "tile": 5000,
+        "tile_xy": [
+          8,
+          39
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "d62e0fe04f0d9d6cebf2c81051875158c0c5c5f1527d0cf6414b367e3ebc9541"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_nw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_rear_elevated.png": "a54a781cfebf62d20d144ec9c9473828bb27f895fa0999ce546d8c97507489be"
+      },
+      "defects": [
+        "Real shallow platform and rail depth are present, but source paving/edge grain and short end guard detail still need repair.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction3 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Real shallow platform and rail depth are present, but source paving/edge grain and short end guard detail still need repair.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          1504,
+          688,
+          16
+        ],
+        "image": 10035,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          -20,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10035,
+        "tile": 5598,
+        "tile_xy": [
+          94,
+          43
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "35f354a60f978d2ef7b0284f69ff2aad2a0f38f69f119b35940465ad369e1649"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_nw_rear_sea": {
+      "score": 6,
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_nw_rear_sea.png": "753c4b62ddc14c759646a0da61ea3cf69258181427749a4c25c0312c837ac46c"
+      },
+      "defects": [
+        "Transposed shallow platform retains depth and rail gaps, but original mottled paving and side/end guard detail remain oversimplified.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction3 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Transposed shallow platform retains depth and rail gaps, but original mottled paving and side/end guard detail remain oversimplified.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 3,
+        "draw_origin": [
+          128,
+          624,
+          8
+        ],
+        "image": 10011,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -20,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10011,
+        "tile": 5000,
+        "tile_xy": [
+          8,
+          39
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "8f00ef426443514cfb98073bb1fb3cda3184f4c67c35bcd705b83316f15ae2e5"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_se_front_elevated": {
+      "score": 6,
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_front_elevated.png": "ed7509972835358ca18e660071697e888006684042f37678302a889c48e195ef"
+      },
+      "defects": [
+        "Elevated narrow dark edge is restored; original side-face texture, cap paint variation and fine guard ends remain too generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction1 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Elevated narrow dark edge is restored; original side-face texture, cap paint variation and fine guard ends remain too generic.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          1024,
+          144,
+          16
+        ],
+        "image": 10036,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          4,
+          -20
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 10036,
+        "tile": 1216,
+        "tile_xy": [
+          64,
+          9
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "13b496ef3af302fa5629be8b9f74fe81c55264a5f812ad997306c1308e7b9337"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_se_front_sea": {
+      "score": 6,
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_front_sea.png": "9c041359e51c6d02b80ae9a33603241d9cb4e4315a20393c09e349e7cb768e52"
+      },
+      "defects": [
+        "Narrow dark upper front edge improves ownership, but original side contrast, cap grain and end-guard scale are still oversimplified.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction1 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Narrow dark upper front edge improves ownership, but original side contrast, cap grain and end-guard scale are still oversimplified.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          784,
+          80,
+          8
+        ],
+        "image": 10012,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          15,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          4,
+          -20
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 10012,
+        "tile": 689,
+        "tile_xy": [
+          49,
+          5
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "fd769857ed09fab5c8ff054d4c4a422c6dfd0865b7418e7a4a21fe5ef67ca981"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_se_rear_elevated": {
+      "score": 6,
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_rear_elevated.png": "d69f0e35ac8c49cfb87cb693dec230285edf1fceb225a4c503060f86f4dc8ea9"
+      },
+      "defects": [
+        "Elevated upper rear's dark side, textured cap and small guard returns remain too bright/coarse despite real geometry.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction1 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Elevated upper rear's dark side, textured cap and small guard returns remain too bright/coarse despite real geometry.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          1024,
+          144,
+          16
+        ],
+        "image": 10032,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          -20,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10032,
+        "tile": 1216,
+        "tile_xy": [
+          64,
+          9
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "a1f9db5632112560e34ebc0f6cce3a69e12a7b2b5fa229885df5bd80411d1e29"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_se_rear_sea": {
+      "score": 6,
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_se_rear_sea.png": "353a43b885ef3448dd52f5b62a4f3392480406303575e5af4438614fc04b8b80"
+      },
+      "defects": [
+        "Original dark upper side edge, textured paving and short guard end are not faithfully reproduced by the light slab/rail study.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction1 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Original dark upper side edge, textured paving and short guard end are not faithfully reproduced by the light slab/rail study.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 1,
+        "draw_origin": [
+          784,
+          80,
+          8
+        ],
+        "image": 10008,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          1,
+          16,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -20,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10008,
+        "tile": 689,
+        "tile_xy": [
+          49,
+          5
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "951541c85ee1dcadab6b19ab912481c792a73eba3fe5746c166cd85c74396540"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_sw_front_elevated": {
+      "score": 6,
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_front_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_front_elevated.png": "4dc1bd38f4a35ab3f228e6df5866f2db1ab63cfbb1346ae5302b879188de4450"
+      },
+      "defects": [
+        "Original elevated low cap and rail air remain present, but its rough edge paint and compact end guard are insufficiently reproduced.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction2 front elevation1: explicitly re-inspected after repair; unbound, not approved.",
+        "Original elevated low cap and rail air remain present, but its rough edge paint and compact end guard are insufficiently reproduced.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          848,
+          256,
+          16
+        ],
+        "image": 10038,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          -148,
+          -20
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 10038,
+        "tile": 2101,
+        "tile_xy": [
+          53,
+          16
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "f0599a2c70b50e21612b19b6230400895b6de3099c4ded93d3da659db68bb09d"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_sw_front_sea": {
+      "score": 6,
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_front_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_front_sea.png": "a8a483aa08e218b90d88b54d781588198c77e328e15ce6bb19cc22d2f3cedd69"
+      },
+      "defects": [
+        "Original low front cap is no longer the broad rear slab; rough edge texture, coping colour variation and small guard returns remain unaccepted.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction2 front elevation0: explicitly re-inspected after repair; unbound, not approved.",
+        "Original low front cap is no longer the broad rear slab; rough edge texture, coping colour variation and small guard returns remain unaccepted.",
+        "Unbound study: actual joined wall/terrain support, complete original fallback, independent animated water phases and real ship passage/clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          640,
+          192,
+          8
+        ],
+        "image": 10014,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          15,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -148,
+          -20
+        ],
+        "source_size": [
+          152,
+          88
+        ],
+        "sprite": 10014,
+        "tile": 1576,
+        "tile_xy": [
+          40,
+          12
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "c1d5eae458193de886e5b87adc94e28109e1985f01229d4bf33d0a7c13495215"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": true
+    },
+    "lock_study_upper_sw_rear_elevated": {
+      "score": 6,
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_rear_elevated.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_rear_elevated.png": "b057e557bef6c6d763db232be0df9c36cc1402a9fe3ccbee886d7b412f3d30e7"
+      },
+      "defects": [
+        "Low platform height and open guard are retained, but original masonry/paving contrast and end shapes remain generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction2 rear elevation1: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Low platform height and open guard are retained, but original masonry/paving contrast and end shapes remain generic.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          848,
+          256,
+          16
+        ],
+        "image": 10034,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 16,
+        "source_offset": [
+          -124,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10034,
+        "tile": 2101,
+        "tile_xy": [
+          53,
+          16
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "3f842045bed1fac956e48f7f68482d874248b8130348db0992711d5b64192476"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    },
+    "lock_study_upper_sw_rear_sea": {
+      "score": 6,
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_rear_sea.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261003/water-front-and-river-study/owners/lock_study_upper_sw_rear_sea.png": "27002dea78856013938323076e64f1caef059d5ef16a4a89d20f15eba9f5dc82"
+      },
+      "defects": [
+        "Upper platform retains its low height and real railing air, but stone surface grain, side contrast and end return remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "notes": [
+        "Original part2 direction2 rear elevation0: unchanged conservative review and exact nine-view evidence; unbound, not approved.",
+        "Upper platform retains its low height and real railing air, but stone surface grain, side contrast and end return remain coarse.",
+        "No runtime lock binding or actual joined saved/rendered wall family establishes this unbound study's original ownership.",
+        "Doubled-terrain support without object inflation, source-continuous independent water phases, complete custom fallback and real ship clearance remain unproved."
+      ],
+      "original_owner": {
+        "base_graphics": true,
+        "base_set": "OpenGFX2 Classic",
+        "climate": 0,
+        "cropped": false,
+        "direction": 2,
+        "draw_origin": [
+          640,
+          192,
+          8
+        ],
+        "image": 10010,
+        "kind": "lock",
+        "palette": 0,
+        "part": 2,
+        "role": "body",
+        "sequence_offset": [
+          0,
+          0,
+          0
+        ],
+        "sequence_origin": [
+          0,
+          0,
+          0
+        ],
+        "slope": 0,
+        "sort_extent": [
+          16,
+          1,
+          6
+        ],
+        "source_file": "ogfx2e_extra_8",
+        "source_height": 8,
+        "source_offset": [
+          -124,
+          -20
+        ],
+        "source_size": [
+          152,
+          96
+        ],
+        "sprite": 10010,
+        "tile": 1576,
+        "tile_xy": [
+          40,
+          12
+        ],
+        "transparent": false,
+        "water_class": 1,
+        "source_image_sha256": "21b65845b92707209e144daf4fd576db33e827cca482a4687cfd290fb2c7ef0c"
+      },
+      "runtime_bound": false,
+      "new_source_native_orbit_street_inspection": false
+    }
+  },
+  "scope": "Defect-bearing unbound lock repair studies only;28 explicit re-inspections and20 unchanged original conservative decisions with exact images. No inherited acceptance or runtime coverage."
+}

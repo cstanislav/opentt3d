@@ -12,6 +12,29 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Raised artwork in river ground is not hidden by a water-surface label
+
+Actual complete sloped-river sources in
+`reviews/20261003/water-front-and-river-study/river-source-sheets/` include apparent
+rocks and Toyland island relief as well as water. Nineteen source states on nine
+saved tiles match across renderers, but the ground role/IDs/image dimensions do not
+prove feature offsets, relief dimensions, independent ownership or harmless flat
+water. Twenty explicit flat/sloped river-ground/climate selectors are now unresolved
+at 1/10 in `reviews/20261003/river-ground-quality-scope/`; source capture alone cannot
+promote them to structural 8/10 or license invented relief in undecorated originals.
+All 544 previous water rows/fingerprints remain, making 564 original owner/selector
+entries. Canonical 1,831-model scope is 2,866 rows/57 individual reviews; rejected
+1,915-model HQ is 2,950/141, and the separate 1,963-model HQ + lock front candidate
+is 2,998/189. Zero approvals; all required-eight checks still fail with four gaps.
+
+The front candidate's 28 changed owners have fresh conservative 6/10 decisions,
+with twenty unchanged 6/10 owners and six false acceptance checks each. Source
+stonework, guard/lantern detail, foam ownership and eight strict street-pixel
+mismatches remain rejected. No runtime lock substitution or `.42` changes. The
+working CSV records the separate rejected HQ + lock scope, not the release catalogue;
+portable canonical and candidate CSVs remain separately identified. Historical
+counts below retain their original scope and evidence rather than being rewritten.
+
 ## Individual unbound lock study rejections
 
 `reviews/20261003/lock-studies-rejected/` retains all 48 original wall-owner studies

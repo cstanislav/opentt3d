@@ -1,0 +1,448 @@
+{
+  "frozen_utc": "2026-10-03T19:21:11.169910+00:00",
+  "models": 1879,
+  "unbound_lock_studies": 48,
+  "prior_1831_models_and_bindings_exact": true,
+  "no_experimental_hq_models": true,
+  "binary_sha256": "a0d839f679976de4121710850241208819f4470f6e66de061c18f0aa232272d7",
+  "catalogue_sha256": "689b38cd8356ae932cca02ef08dd0020d5ebc135f242c056c38b350dc30af5f9",
+  "source_sha256": "4bb5d15739f24bda88e4959810f1b39d3b5d166f88dc35623f74f8e400df41e8",
+  "compiler_sha256": "a4a77555faa7eaae9c7750995233a2b525d4f82e6ff6577a0d7daad8579acaa9",
+  "structural_models": [
+    {
+      "model": "lock_study_middle_ne_rear_sea",
+      "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+      "occupied": 12643,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_ne_front_sea",
+      "fingerprint": "5753c3945573c3d6ad2fa3641d623004495e1139f4de81e35f4a4d6ad640b596",
+      "occupied": 11731,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_sw_rear_sea",
+      "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+      "occupied": 12852,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_sw_front_sea",
+      "fingerprint": "d5da422fa8c9be0f8a2eb069b67e659342a740aa40f5858adaedd094d9fc073c",
+      "occupied": 11940,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_nw_rear_sea",
+      "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+      "occupied": 12643,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_nw_front_sea",
+      "fingerprint": "c1f8030fdfb580bce0358cd76af525167caafd6f2e2e14644f7fccc18b6985c8",
+      "occupied": 11731,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_se_rear_sea",
+      "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+      "occupied": 12852,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_se_front_sea",
+      "fingerprint": "d19f7dcd6d02415c7e16a91389fcf37ab413d7ac9c3f899c18de6ab9d82b5b84",
+      "occupied": 11940,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_ne_rear_elevated",
+      "fingerprint": "d76438aea3c6336a8c44b7bb361faee5f1795a04b8cbc21634d3fef8dc243652",
+      "occupied": 12643,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_ne_front_elevated",
+      "fingerprint": "5753c3945573c3d6ad2fa3641d623004495e1139f4de81e35f4a4d6ad640b596",
+      "occupied": 11731,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_sw_rear_elevated",
+      "fingerprint": "05f0c653d078e14fc004ede3fc1a24c7e26a653432571287feed1d66a0b23931",
+      "occupied": 12852,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_sw_front_elevated",
+      "fingerprint": "d5da422fa8c9be0f8a2eb069b67e659342a740aa40f5858adaedd094d9fc073c",
+      "occupied": 11940,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_nw_rear_elevated",
+      "fingerprint": "c4194b5f03086441f4075a4f16b89fcb0f4e5f93e04c7aea69035da44900ffca",
+      "occupied": 12643,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_nw_front_elevated",
+      "fingerprint": "c1f8030fdfb580bce0358cd76af525167caafd6f2e2e14644f7fccc18b6985c8",
+      "occupied": 11731,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_se_rear_elevated",
+      "fingerprint": "bea248994a0b9b85f58432e87e2975e0232f51af62164fedd70eda0bb6269b57",
+      "occupied": 12852,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_middle_se_front_elevated",
+      "fingerprint": "d19f7dcd6d02415c7e16a91389fcf37ab413d7ac9c3f899c18de6ab9d82b5b84",
+      "occupied": 11940,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_ne_rear_sea",
+      "fingerprint": "de7c46f02e9fcabe400bcba8753103dab68311e81f0ad47c9a35bc273742799b",
+      "occupied": 21401,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_ne_front_sea",
+      "fingerprint": "7cdf6992d00c5c3218e321c569e9bd3146bb1249ee580789534a37cd8bde2218",
+      "occupied": 20489,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_sw_rear_sea",
+      "fingerprint": "1f0e9dd5a72a65ae1c19f99ab413daa68a31343f38f9f762df5c65b2a8fed9d7",
+      "occupied": 21401,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_sw_front_sea",
+      "fingerprint": "9eebbfca950e427e199c9d365521550aa47559c8a4dfe4cc674a650731627c47",
+      "occupied": 20489,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_nw_rear_sea",
+      "fingerprint": "d5a5514085237f1d8fecd64ac05c9d2258ae018419a00bb535132c19be2ba806",
+      "occupied": 21401,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_nw_front_sea",
+      "fingerprint": "1a67af9f8d1b14189d7d444c54e70981799303657ec9dda9ce90c243fc37836b",
+      "occupied": 20489,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_se_rear_sea",
+      "fingerprint": "ef545cc96a1618614d08d992d88ee27bd219c0738991e4ed9481007e63155c6a",
+      "occupied": 21401,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_se_front_sea",
+      "fingerprint": "8676af20869eb87cebbc1b23c9bf9c67e77a5bdcbf8041f57cc7d27343ba3376",
+      "occupied": 20489,
+      "height": 21.0,
+      "lamp_and_foam": true,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_ne_rear_elevated",
+      "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+      "occupied": 20905,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_ne_front_elevated",
+      "fingerprint": "73d56e1741573b8e5c2cdca797517800a5de907217a166d720b6765ec568bd73",
+      "occupied": 19993,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_sw_rear_elevated",
+      "fingerprint": "d9e1fd4d4508c0cf3ad5cdb208d6ef69e430ffb6ef178773d873091c61f9fcac",
+      "occupied": 20905,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_sw_front_elevated",
+      "fingerprint": "73d56e1741573b8e5c2cdca797517800a5de907217a166d720b6765ec568bd73",
+      "occupied": 19993,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_nw_rear_elevated",
+      "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+      "occupied": 20905,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_nw_front_elevated",
+      "fingerprint": "4535fab4334e4dd138f158df812f4408167050d67e99bd2f4077d52773120d9e",
+      "occupied": 19993,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_se_rear_elevated",
+      "fingerprint": "84070e6b5f073d85e65854f1f998a1bb508f7b6487918298105219fa449f79da",
+      "occupied": 20905,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_lower_se_front_elevated",
+      "fingerprint": "4535fab4334e4dd138f158df812f4408167050d67e99bd2f4077d52773120d9e",
+      "occupied": 19993,
+      "height": 13.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_ne_rear_sea",
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_ne_front_sea",
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_sw_rear_sea",
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_sw_front_sea",
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_nw_rear_sea",
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_nw_front_sea",
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_se_rear_sea",
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_se_front_sea",
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_ne_rear_elevated",
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_ne_front_elevated",
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_sw_rear_elevated",
+      "fingerprint": "f43b4f33ac97ef49f23bf026c774d0a143873f40dade73fbff49d87593c43af6",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_sw_front_elevated",
+      "fingerprint": "5366b26054fa12d6b42f950a47314cbb2b0379e446674529d52d56661031554c",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_nw_rear_elevated",
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_nw_front_elevated",
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_se_rear_elevated",
+      "fingerprint": "160647363cc1dd43ad4a6ad04a684d300b6e9fb8ae96b9ce062f777592f9d5ac",
+      "occupied": 5393,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    },
+    {
+      "model": "lock_study_upper_se_front_elevated",
+      "fingerprint": "6bd689ff0637ba769476e2841270812e4c05e78c48adc8f0a5b46febdc6ef8c2",
+      "occupied": 4921,
+      "height": 5.0,
+      "lamp_and_foam": false,
+      "structural_screen_passed": true,
+      "approved": false
+    }
+  ],
+  "geometry_approvals": 0,
+  "exact_tag_binary": false,
+  "scope": "Hand-authored unbound48-model lock studies, with no runtime binding/capture/geometry/simulation changes, added to the unchanged released1831 models. Local diagnostic observer binary and experimental compiler are explicitly not an exact-tag app or accepted runtime asset increment. Original wall sources inform manual dimensions/details; no geometry is inferred from image pixels or sorting extents. World terrain grade, ships, original ownership/fidelity and every acceptance check remain unproved."
+}

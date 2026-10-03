@@ -2,6 +2,29 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — provisional front repair and real river ground artwork
+
+Twenty-eight changed unbound lock owners have new individual defect records after
+dark/slender front coping and open lamp panes; twenty untouched owners preserve
+360 earlier native/orbit/street images across both backends. All 48 are provisional
+6/10 in this candidate, with all six checks false. Source grain, guard/lantern detail
+and direction-specific foam remain rejected. Two quiet native controls retain exact
+temperate worlds and original 1,831-model bindings, but eight street pixels still
+differ. Forced GL clipping and explicit projection arithmetic do not fix them;
+retained failures and exact restored shader sources prevent an ineffective repair
+from entering runtime source or `.42`.
+
+Read-only reinspection of the earlier 64 controls finds nineteen real sloped-river
+ground source states on nine saved tiles, exact across renderers, not nineteen new
+native executions. Complete ground artwork contains apparent rocks/islands as well
+as water; neither dynamic IDs nor the ground role establish surface-only coverage.
+The new quality scope adds twenty unresolved river-ground/climate selectors while
+retaining every previous fingerprint, rating, binding and conservative review.
+Flat-state selection, all slopes/climates, actual feature offsets/absences, animated
+phases, raised volumes, custom-family completeness and ships remain unaccepted.
+Portable evidence: `reviews/20261003/water-front-and-river-study/` and
+`reviews/20261003/river-ground-quality-scope/`. No prototype is shipped.
+
 ## October 3 — first 48 lock wall volumes individually rejected/provisional
 
 The unbound source-guided study has real stone depth, recessed buttresses, paving,

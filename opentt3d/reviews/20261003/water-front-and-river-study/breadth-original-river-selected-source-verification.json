@@ -1,0 +1,954 @@
+{
+  "audited_utc": "2026-10-03T19:37:18.256517+00:00",
+  "selected_sources": {
+    "temperate": {
+      "selected_ground_sources": [
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 0,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            496,
+            0
+          ],
+          "image": 10343,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            148,
+            40
+          ],
+          "sprite": 10343,
+          "tile": 4002,
+          "tile_xy": [
+            34,
+            31
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 0,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            496,
+            0
+          ],
+          "image": 11267,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11267,
+          "tile": 4002,
+          "tile_xy": [
+            34,
+            31
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 0,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            512,
+            0
+          ],
+          "image": 10341,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -16,
+            24
+          ],
+          "source_size": [
+            148,
+            68
+          ],
+          "sprite": 10341,
+          "tile": 4130,
+          "tile_xy": [
+            34,
+            32
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 0,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            512,
+            0
+          ],
+          "image": 11267,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11267,
+          "tile": 4130,
+          "tile_xy": [
+            34,
+            32
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8"
+        }
+      ],
+      "observed_tiles": 2,
+      "observed_slopes": [
+        3
+      ],
+      "feature_offsets_resolved": false,
+      "conditional_absences_verified": false,
+      "layer_order_or_animation_verified": false,
+      "complete_river_family_verified": false,
+      "geometry_or_quality_approved": false,
+      "scope": "Actual selected sloped-river ground source bytes/provenance/anchors only. Water and bank owners are not classified from IDs or dimensions. Feature offsets, flat rivers, conditional absence, repeated draw order, animated phases, other climates/slopes/custom families, structural volumes and ships remain unverified."
+    },
+    "arctic": {
+      "selected_ground_sources": [
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            1664,
+            112,
+            0
+          ],
+          "image": 10376,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -16,
+            0
+          ],
+          "source_size": [
+            148,
+            40
+          ],
+          "sprite": 10376,
+          "tile": 1000,
+          "tile_xy": [
+            104,
+            7
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            1664,
+            112,
+            0
+          ],
+          "image": 11265,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11265,
+          "tile": 1000,
+          "tile_xy": [
+            104,
+            7
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            1680,
+            112,
+            0
+          ],
+          "image": 10378,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            24
+          ],
+          "source_size": [
+            144,
+            68
+          ],
+          "sprite": 10378,
+          "tile": 1001,
+          "tile_xy": [
+            105,
+            7
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            1680,
+            112,
+            0
+          ],
+          "image": 11265,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11265,
+          "tile": 1001,
+          "tile_xy": [
+            105,
+            7
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            512,
+            528,
+            0
+          ],
+          "image": 10376,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -16,
+            0
+          ],
+          "source_size": [
+            148,
+            40
+          ],
+          "sprite": 10376,
+          "tile": 4256,
+          "tile_xy": [
+            32,
+            33
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            512,
+            528,
+            0
+          ],
+          "image": 10378,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            24
+          ],
+          "source_size": [
+            144,
+            68
+          ],
+          "sprite": 10378,
+          "tile": 4256,
+          "tile_xy": [
+            32,
+            33
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 1,
+          "cropped": false,
+          "draw_origin": [
+            512,
+            528,
+            0
+          ],
+          "image": 11265,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11265,
+          "tile": 4256,
+          "tile_xy": [
+            32,
+            33
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d"
+        }
+      ],
+      "observed_tiles": 3,
+      "observed_slopes": [
+        6
+      ],
+      "feature_offsets_resolved": false,
+      "conditional_absences_verified": false,
+      "layer_order_or_animation_verified": false,
+      "complete_river_family_verified": false,
+      "geometry_or_quality_approved": false,
+      "scope": "Actual selected sloped-river ground source bytes/provenance/anchors only. Water and bank owners are not classified from IDs or dimensions. Feature offsets, flat rivers, conditional absence, repeated draw order, animated phases, other climates/slopes/custom families, structural volumes and ships remain unverified."
+    },
+    "tropic": {
+      "selected_ground_sources": [
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 2,
+          "cropped": false,
+          "draw_origin": [
+            1712,
+            128,
+            0
+          ],
+          "image": 10496,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -16,
+            0
+          ],
+          "source_size": [
+            148,
+            40
+          ],
+          "sprite": 10496,
+          "tile": 1131,
+          "tile_xy": [
+            107,
+            8
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "afee9e8fc7fedcf95b52569c1c4d43879e509ac21f19dc040e87bd3ee4a0fadd"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 2,
+          "cropped": false,
+          "draw_origin": [
+            1712,
+            128,
+            0
+          ],
+          "image": 11265,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11265,
+          "tile": 1131,
+          "tile_xy": [
+            107,
+            8
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 2,
+          "cropped": false,
+          "draw_origin": [
+            1728,
+            128,
+            0
+          ],
+          "image": 10498,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            24
+          ],
+          "source_size": [
+            144,
+            68
+          ],
+          "sprite": 10498,
+          "tile": 1132,
+          "tile_xy": [
+            108,
+            8
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "c038c26a9398680a5757d27c3583b08ca5415b47919d1473cb438df7223a6e24"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 2,
+          "cropped": false,
+          "draw_origin": [
+            1728,
+            128,
+            0
+          ],
+          "image": 11265,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 6,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11265,
+          "tile": 1132,
+          "tile_xy": [
+            108,
+            8
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d"
+        }
+      ],
+      "observed_tiles": 2,
+      "observed_slopes": [
+        6
+      ],
+      "feature_offsets_resolved": false,
+      "conditional_absences_verified": false,
+      "layer_order_or_animation_verified": false,
+      "complete_river_family_verified": false,
+      "geometry_or_quality_approved": false,
+      "scope": "Actual selected sloped-river ground source bytes/provenance/anchors only. Water and bank owners are not classified from IDs or dimensions. Feature offsets, flat rivers, conditional absence, repeated draw order, animated phases, other climates/slopes/custom families, structural volumes and ships remain unverified."
+    },
+    "toyland": {
+      "selected_ground_sources": [
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 3,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            496,
+            0
+          ],
+          "image": 10583,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            148,
+            40
+          ],
+          "sprite": 10583,
+          "tile": 4002,
+          "tile_xy": [
+            34,
+            31
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 3,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            496,
+            0
+          ],
+          "image": 11287,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11287,
+          "tile": 4002,
+          "tile_xy": [
+            34,
+            31
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 3,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            512,
+            0
+          ],
+          "image": 10581,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -16,
+            24
+          ],
+          "source_size": [
+            148,
+            68
+          ],
+          "sprite": 10581,
+          "tile": 4130,
+          "tile_xy": [
+            34,
+            32
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3"
+        },
+        {
+          "base_graphics": true,
+          "base_set": "OpenGFX2 Classic",
+          "climate": 3,
+          "cropped": false,
+          "draw_origin": [
+            544,
+            512,
+            0
+          ],
+          "image": 11287,
+          "kind": "sloped-river",
+          "palette": 0,
+          "role": "ground",
+          "slope": 3,
+          "source_file": "ogfx2e_extra_8",
+          "source_height": 0,
+          "source_offset": [
+            -124,
+            0
+          ],
+          "source_size": [
+            256,
+            92
+          ],
+          "sprite": 11287,
+          "tile": 4130,
+          "tile_xy": [
+            34,
+            32
+          ],
+          "transparent": false,
+          "water_class": 2,
+          "source_image_sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468"
+        }
+      ],
+      "observed_tiles": 2,
+      "observed_slopes": [
+        3
+      ],
+      "feature_offsets_resolved": false,
+      "conditional_absences_verified": false,
+      "layer_order_or_animation_verified": false,
+      "complete_river_family_verified": false,
+      "geometry_or_quality_approved": false,
+      "scope": "Actual selected sloped-river ground source bytes/provenance/anchors only. Water and bank owners are not classified from IDs or dimensions. Feature offsets, flat rivers, conditional absence, repeated draw order, animated phases, other climates/slopes/custom families, structural volumes and ships remain unverified."
+    }
+  },
+  "callback_source_states_exact": 19,
+  "observed_tiles": 9,
+  "reused_successful_original_controls": 64,
+  "new_native_controls": 0,
+  "run_manifest_sha256": "871b2e74f50e2f0d5334fc0889f749074c709c15ba8b354902faff0ca38c8151",
+  "validator_sha256": "2570a69a401559c09bd17546edc33c391bcc216c0deadf5361882c3e0e2cda90",
+  "tests_sha256": "99842264e650bdacdf24a785d5556ed88d4a82d50c56cd15477906c1491391a5",
+  "original_evidence_sha256": {
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-vulkan/renderer3d-reference/water-live.json": "49db645b5482a015745d51c3b32814c8d37e0070b82b9b4d508e947dd38c666e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-vulkan/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-vulkan/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-vulkan/renderer3d-reference/water-live.json": "79b906dc2579ef6f0cb515741a8b3d370e3d20e602f4485fb63a1901a3ac3043",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-vulkan/renderer3d-reference/water-live.json": "ba7b93dea710a5b28d029c28384b377caa4bd7cde1cafd2613002f3ae1ff4d58",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-vulkan/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-vulkan/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-vulkan/renderer3d-reference/water-live.json": "b8eccee0bcef95e885f30227b61b9700b36a3beee93a06e7ed71e1b134448c8a",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-vulkan/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-vulkan/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-vulkan/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-opengl/renderer3d-reference/water-live.json": "49db645b5482a015745d51c3b32814c8d37e0070b82b9b4d508e947dd38c666e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-opengl/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-1-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-opengl/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-2-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-opengl/renderer3d-reference/water-live.json": "79b906dc2579ef6f0cb515741a8b3d370e3d20e602f4485fb63a1901a3ac3043",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-3-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-opengl/renderer3d-reference/water-live.json": "ba7b93dea710a5b28d029c28384b377caa4bd7cde1cafd2613002f3ae1ff4d58",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-0-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-opengl/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-1-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-opengl/renderer3d-reference/water-live.json": "0b52958cff2ea8475bc82d4888b7414bbb39057bad58fd096bceb40b432dc93c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-2-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-opengl/renderer3d-reference/water-live.json": "b8eccee0bcef95e885f30227b61b9700b36a3beee93a06e7ed71e1b134448c8a",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-opengl/renderer3d-reference/water-live-source-11267-0-generation3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-opengl/renderer3d-reference/water-live-source-10343-0-generation3.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-1-3-opengl/renderer3d-reference/water-live-source-10341-0-generation3.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-vulkan/renderer3d-reference/water-live.json": "a4dd058e10ae384bf4e2a2109fdb77ee7246ebb3e0b4c38cc6439a9d1a9e534b",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-vulkan/renderer3d-reference/water-live.json": "964e513df1e7b7dd74a7279740e0bed91c76e14076087ec721e50fe0fbee5229",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-vulkan/renderer3d-reference/water-live.json": "964e513df1e7b7dd74a7279740e0bed91c76e14076087ec721e50fe0fbee5229",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-vulkan/renderer3d-reference/water-live.json": "d3bd465aeeb5d768da06f003feaf0f50324a2b7a1b19f7b09c9a0eb8802e1fab",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-vulkan/renderer3d-reference/water-live.json": "ce02812a4ab6067f7c3b799bcb6cc58cde11d323e43e0d5e56caf4dbb8a142bb",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-vulkan/renderer3d-reference/water-live.json": "2ce7e29984c89c1172c4b85dfe0cd10c14ce30d028455127a5920387b9e8869d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-vulkan/renderer3d-reference/water-live.json": "cbf064a87ab84d8537c8e2efacbcc1ad5903713fc5a8ee96ab5b52110bb11b2c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-vulkan/renderer3d-reference/water-live.json": "ed895deb985b67464056645a3769eb01fa86c29a229ecd55200d73ecb8c6bd52",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-vulkan/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-vulkan/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-opengl/renderer3d-reference/water-live.json": "a4dd058e10ae384bf4e2a2109fdb77ee7246ebb3e0b4c38cc6439a9d1a9e534b",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-opengl/renderer3d-reference/water-live.json": "964e513df1e7b7dd74a7279740e0bed91c76e14076087ec721e50fe0fbee5229",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-1-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-opengl/renderer3d-reference/water-live.json": "964e513df1e7b7dd74a7279740e0bed91c76e14076087ec721e50fe0fbee5229",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-2-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-opengl/renderer3d-reference/water-live.json": "d3bd465aeeb5d768da06f003feaf0f50324a2b7a1b19f7b09c9a0eb8802e1fab",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-3-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-opengl/renderer3d-reference/water-live.json": "ce02812a4ab6067f7c3b799bcb6cc58cde11d323e43e0d5e56caf4dbb8a142bb",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-0-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-opengl/renderer3d-reference/water-live.json": "2ce7e29984c89c1172c4b85dfe0cd10c14ce30d028455127a5920387b9e8869d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-1-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-opengl/renderer3d-reference/water-live.json": "cbf064a87ab84d8537c8e2efacbcc1ad5903713fc5a8ee96ab5b52110bb11b2c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-2-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-opengl/renderer3d-reference/water-live.json": "ed895deb985b67464056645a3769eb01fa86c29a229ecd55200d73ecb8c6bd52",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-opengl/renderer3d-reference/water-live-source-10376-0-generation3.pam": "2e11435a3e310f3093617db8f1acc4f520c81cd1a8f1e1bfa3a9dd5a0976b2d3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-1-3-opengl/renderer3d-reference/water-live-source-10378-0-generation3.pam": "77a84d508a26d19abb4f38e7c4789a20f2f911a34c7970baf6ca4e856ccc458e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-vulkan/renderer3d-reference/water-live.json": "087dd09cb8332202a800553022d2a39307223cd292a3a99d7ac03027f7fb3bd8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-vulkan/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-vulkan/renderer3d-reference/water-live-source-10496-0-generation3.pam": "afee9e8fc7fedcf95b52569c1c4d43879e509ac21f19dc040e87bd3ee4a0fadd",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-vulkan/renderer3d-reference/water-live-source-10498-0-generation3.pam": "c038c26a9398680a5757d27c3583b08ca5415b47919d1473cb438df7223a6e24",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-1-vulkan/renderer3d-reference/water-live.json": "279455df8ad81e0276958da10a83d022ea54be0eb0a8abbaa5a09165853c9c29",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-2-vulkan/renderer3d-reference/water-live.json": "a8f9cc1742c26ab5e5d9b65b9443a46659d252e687637e9b93d4c1d9cc96db40",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-3-vulkan/renderer3d-reference/water-live.json": "98756d3f1e44734721017d44f8d6ead059275030a6354a9b297c37e859213983",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-0-vulkan/renderer3d-reference/water-live.json": "9d08e9b02663be503fe5686584d5fe7afc3123681200dfc506f2ba71eee9f60c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-1-vulkan/renderer3d-reference/water-live.json": "9d08e9b02663be503fe5686584d5fe7afc3123681200dfc506f2ba71eee9f60c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-2-vulkan/renderer3d-reference/water-live.json": "9d08e9b02663be503fe5686584d5fe7afc3123681200dfc506f2ba71eee9f60c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-3-vulkan/renderer3d-reference/water-live.json": "181220b4641512a67ec8156c4d6013eb538991031930f09764073ff42cb0ead2",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-opengl/renderer3d-reference/water-live.json": "087dd09cb8332202a800553022d2a39307223cd292a3a99d7ac03027f7fb3bd8",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-opengl/renderer3d-reference/water-live-source-11265-0-generation3.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-opengl/renderer3d-reference/water-live-source-10496-0-generation3.pam": "afee9e8fc7fedcf95b52569c1c4d43879e509ac21f19dc040e87bd3ee4a0fadd",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-opengl/renderer3d-reference/water-live-source-10498-0-generation3.pam": "c038c26a9398680a5757d27c3583b08ca5415b47919d1473cb438df7223a6e24",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-1-opengl/renderer3d-reference/water-live.json": "279455df8ad81e0276958da10a83d022ea54be0eb0a8abbaa5a09165853c9c29",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-2-opengl/renderer3d-reference/water-live.json": "a8f9cc1742c26ab5e5d9b65b9443a46659d252e687637e9b93d4c1d9cc96db40",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-3-opengl/renderer3d-reference/water-live.json": "98756d3f1e44734721017d44f8d6ead059275030a6354a9b297c37e859213983",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-0-opengl/renderer3d-reference/water-live.json": "9d08e9b02663be503fe5686584d5fe7afc3123681200dfc506f2ba71eee9f60c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-1-opengl/renderer3d-reference/water-live.json": "9d08e9b02663be503fe5686584d5fe7afc3123681200dfc506f2ba71eee9f60c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-2-opengl/renderer3d-reference/water-live.json": "9d08e9b02663be503fe5686584d5fe7afc3123681200dfc506f2ba71eee9f60c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-1-3-opengl/renderer3d-reference/water-live.json": "181220b4641512a67ec8156c4d6013eb538991031930f09764073ff42cb0ead2",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-vulkan/renderer3d-reference/water-live.json": "d7dec8cfb4cfd139701dd900c22b5c9048d0653ebcb6edc4448faec31747695e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-vulkan/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-vulkan/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-vulkan/renderer3d-reference/water-live.json": "e864b441b209991ef70cb856b209fa598cc6c59c7f6f2f86b84e28c859fce908",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-vulkan/renderer3d-reference/water-live.json": "28cb5e11014cace37f4728e56997cf9ade5ea1fc4236edb004931176a4a2f788",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-vulkan/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-vulkan/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-vulkan/renderer3d-reference/water-live.json": "f96a0b3ef8f65fe2d2b1ae74b4b4dd763557b017337ace9d377afece032c14e6",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-vulkan/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-vulkan/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-vulkan/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-opengl/renderer3d-reference/water-live.json": "d7dec8cfb4cfd139701dd900c22b5c9048d0653ebcb6edc4448faec31747695e",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-opengl/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-1-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-opengl/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-2-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-opengl/renderer3d-reference/water-live.json": "e864b441b209991ef70cb856b209fa598cc6c59c7f6f2f86b84e28c859fce908",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-3-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-opengl/renderer3d-reference/water-live.json": "28cb5e11014cace37f4728e56997cf9ade5ea1fc4236edb004931176a4a2f788",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-0-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-opengl/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-1-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-opengl/renderer3d-reference/water-live.json": "81552593ba9ee9db16d787a85b79313fb2393499e4fe245248c66affd32a5416",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-2-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-opengl/renderer3d-reference/water-live.json": "f96a0b3ef8f65fe2d2b1ae74b4b4dd763557b017337ace9d377afece032c14e6",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-opengl/renderer3d-reference/water-live-source-11287-0-generation3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-opengl/renderer3d-reference/water-live-source-10583-0-generation3.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-1-3-opengl/renderer3d-reference/water-live-source-10581-0-generation3.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3"
+  },
+  "geometry_approvals": 0,
+  "feature_offsets_resolved": false,
+  "conditional_absences_verified": false,
+  "complete_river_family_verified": false,
+  "scope": "Read-only reconciliation of incidental actual sloped-river callbacks already present in the 64 frozen observer controls. Nineteen selected ground source states on nine saved tiles match exact bytes/metadata/provenance across backends. Only original SW/SE slopes are observed, in different climates. Ground records cannot identify bank vs water features/offsets, repeated layer order, flat-state absence, animated phases, ship passage, full custom-family coverage, volumes or quality. No new native execution or source selection was forced."
+}

@@ -1,0 +1,48 @@
+{
+  "reference": "build-macos/breadth-original-lock-authored-study-vulkan/renderer3d-reference",
+  "actual": "build-macos/breadth-original-lock-raster-software-clip-opengl/renderer3d-reference",
+  "images": 18,
+  "pixels": 1052336,
+  "differences": [
+    {
+      "name": "model-voxel-lock_study_middle_ne_rear_elevated-4",
+      "changed_pixels": 1,
+      "first_pixel": [
+        57,
+        185
+      ],
+      "reference_rgba": [
+        133,
+        178,
+        219,
+        255
+      ],
+      "actual_rgba": [
+        16,
+        16,
+        16,
+        255
+      ]
+    },
+    {
+      "name": "model-voxel-lock_study_middle_ne_rear_sea-4",
+      "changed_pixels": 1,
+      "first_pixel": [
+        57,
+        185
+      ],
+      "reference_rgba": [
+        133,
+        178,
+        219,
+        255
+      ],
+      "actual_rgba": [
+        16,
+        16,
+        16,
+        255
+      ]
+    }
+  ]
+}

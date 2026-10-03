@@ -1,0 +1,16 @@
+{
+  "commit": "130d9f10ce011499c1b225c780db77b6d3506af5",
+  "asset_tests": 241,
+  "experimental_hq_compiler_artwork_tests_present": false,
+  "overlaid_read_only_tools": {
+    "tools/assets/live_water.py": "2570a69a401559c09bd17546edc33c391bcc216c0deadf5361882c3e0e2cda90",
+    "tools/assets/test_live_river.py": "99842264e650bdacdf24a785d5556ed88d4a82d50c56cd15477906c1491391a5",
+    "tools/assets/original_water.py": "ab650cc8dba3b063e2b02f78446037156686ec60702e3a6eb939012433f01cdb",
+    "tools/assets/test_original_water.py": "c5aa7eadb1bb3a7f7a886a24884630e896336e2b9714a729bd7df4793577f228",
+    "tools/assets/inventory.py": "1863b45ff9f31357d6cbdf4cdd5424bc5b8503ffdbeef516a3fdf2046169c6a1",
+    "tools/assets/quality_audit.py": "e839b40f0812ae3b17978bdcf10060637ae6a8a4041463ad8bec3fc51b2229a8",
+    "tools/assets/test_quality_audit.py": "43e666918b4bd4f6a71084858316c1ac53f553f639acbc2756f83c97875d7801"
+  },
+  "test_log_sha256": "e4dbd19b77f0622140c3b0013c535f1a2d55bcb18de9a3d2d07c40c2c1be946b",
+  "scope": "Committed1831-model artwork/compiler/reviews with the read-only river source validator and five-selector ground-scope extension; no experimental renderer/artwork or runtime approval."
+}
