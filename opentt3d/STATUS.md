@@ -4,6 +4,14 @@ This file records implemented and verified work, not promises of completeness.
 
 ## October 3 — HQ brick ownership and unbound lock detail improved provisionally
 
+The later unbound foam study corrects six owners to original animated palette250
+and manually authored half-unit widths. Source-baseline colour is now pale/continuous;
+nonfoam cells/paint/dimensions/registration remain exact. Forty-two other owners retain
+756 exact full views; six changed owners receive fresh6/10 defects, not approvals.
+Two quiet controls preserve48 native pairs/two prior worlds and retain108 new lossless
+images, but nine wider backend pixels remain rejected. Four local and250 isolated
+committed asset tests pass. Evidence:`reviews/20261003/water-foam-palette-study/`.
+
 The large ordinary-climate HQ candidate retains body2621's connected upper brick
 column through an explicit forty-cell owner transfer; the neighbouring white mullion
 stays north-owned. Joined cells/paint/dimensions/registration remain exact. Six changed

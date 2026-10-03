@@ -14,6 +14,18 @@ Uncatalogued disasters and river variants remain explicit coverage gaps.
 
 ## Changed HQ and lock owners receive fresh provisional reviews
 
+The subsequent `reviews/20261003/water-foam-palette-study/` corrects six lower-sea
+foam owners to animated palette250 and manually authored half-unit widths. The
+baseline source colour matches the original glitter entry, without static RGB
+substitution. Nonfoam geometry/paint/registration and42 other models remain exact;
+756 unchanged full views and108 new complete lossless images are retained. All six
+changed owners have fresh6/10 defects: irregular two-tone foam/end shaping and
+stone/guard/lantern detail remain unaccepted. All48 native pairs match, but nine
+wider gallery pixels still fail; no renderer fix or full phase/world/state/custom/
+ship approval is inferred. Four local/250 isolated committed asset tests pass.
+The2,998-row/189-record candidate gate still fails with zero approvals/four gaps;
+canonical/HQ scopes and recommended`.42` remain unchanged.
+
 `reviews/20261003/hq-large-column-repair/` transfers forty existing brick-column
 cells north-to-east in three ordinary climates without transferring the white
 mullion or altering any joined cell/paint/dimension/registration. All six changed

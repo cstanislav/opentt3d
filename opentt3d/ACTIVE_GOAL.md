@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Original foam palette/width repaired provisionally — October 3
+
+Six lower-sea owners now use original animated glitter palette250 rather than its
+dark252 entry, and manually authored half-unit waterline/return widths. Original
+observed216/244/252 RGB at the nonanimated baseline matches250; no static white
+material freezes the original cycle. Nonfoam cells/six-face paint, object height,
+openings/origins remain exact. Forty-two other owners retain756 exact full views and
+their earlier defect-bearing reviews. Six changed owners are freshly inspected6/10;
+irregular two-tone foam/end shaping and masonry/guard/lantern fidelity remain open.
+
+Two more quiet controls retain108 complete lossless native images, all48 native
+pair equalities and two prior saved-world equalities. Full lock galleries still
+fail nine views/nine pixels, not the preceding13/25; runtime C++ is unchanged and
+this is not a renderer repair. Four local tests and250 isolated exact committed
+asset tests pass. Mixed2,998-row/189-review scope still has zero approvals/four gaps
+and fails required-eight; other canonical/HQ scopes and immutable`.42` are unchanged.
+Evidence:`reviews/20261003/water-foam-palette-study/`. Original water phases/ownership,
+terrain/custom/ship/source/world/state acceptance and the entire catalogue-wide
+geometry/fidelity/60fps/platform/input/replay/network goal remain active.
+
 ## HQ brick-column repair and lock surface detail re-reviewed — October 3
 
 The resumed modelling pass repairs body2621's floating corner with an explicit
