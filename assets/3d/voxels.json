@@ -675,6 +675,10 @@
     "bank_planter": [104,105,104,106,104,105],
     "bank_hedge": [82,83,82,84,82,83],
     "bank_hedge_dark": [24,25,24,25,24,25],
+    "canal_stone": [3,7,5,9,2,11],
+    "canal_stone_grain": [4,8,6,10,2,12],
+    "canal_coping": [5,9,7,11,3,12],
+    "canal_coping_grain": [6,10,8,12,3,9],
     "food_brick": [71,74,72,76,70,75],
     "food_brick_grain": [72,75,73,77,70,76],
     "food_brick_shadow": [70,71,70,72,70,71],
@@ -4649,16 +4653,11 @@
       ["scatter_paint","bank2_brick_light",6,3186,10,0,1,52,23,52,"bank2_brick",[1,1,2]]
     ],
     "bank2_rooftop_dome": [
-      ["lathe","bank2_frame",[28,8],[[54,6.5,0],[56,6.5,0]]],
-      ["lathe","bank2_gold",[28,8],[[56,6.5,5],[59,6.5,5],[69,5,3.5],[77,2.5,1],[80,1,0]]],
-      ["line","bank2_gold_rib",21,8,56,23,8,70],["line","bank2_gold_rib",23,8,70,27,8,79],
-      ["line","bank2_gold_rib",34,8,56,32,8,70],["line","bank2_gold_rib",32,8,70,28,8,79],
-      ["line","bank2_gold_rib",28,1,56,28,3,70],["line","bank2_gold_rib",28,3,70,28,7,79],
-      ["line","bank2_gold_rib",28,14,56,28,12,70],["line","bank2_gold_rib",28,12,70,28,8,79],
-      ["line","bank2_gold_rib",23,3,56,26,6,77],["line","bank2_gold_rib",32,3,56,29,6,77],
-      ["line","bank2_gold_rib",23,12,56,26,9,77],["line","bank2_gold_rib",32,12,56,29,9,77],
-      ["box","bank2_gold_rib",27,7,79,29,9,84],
-      ["box","bank2_finial",28,8,83,29,9,88]
+      ["lathe","bank2_frame",[31,11.5],[[54,6.5,0],[56,6.5,0]]],
+      ["lathe","bank2_gold",[31,11.5],[[56,6.5,5],[59,6.5,5],[69,5,3.5],[77,2.5,1],[80,1,0]]],
+      ["radial_paint","bank2_gold_rib",[31,11.5],56,80,32,286331153],
+      ["lathe","bank2_gold_rib",[31,11.5],[[79,1.1,0],[84,1.1,0]]],
+      ["lathe","bank2_finial",[31,11.5],[[83,0.75,0],[88,0.75,0]]]
     ],
     "bank2_finished_front_paving": [
       ["box","bank2_ground_shadow",0,0,0,32,32,1],
@@ -5346,20 +5345,40 @@
       ["box","bank_recess",28,20,1,36,21,17],
       ["box","bank_marble",26,22,0,28,26,20], ["box","bank_marble",36,22,0,38,26,20],
       ["prism","bank_marble_cap",1,24,26,[[26,17],[26,21],[28,23],[36,23],[38,21],[38,17],[36,17],[36,20],[34,21],[30,21],[28,20],[28,17]]],
-      ["lathe","bank_marble",[25,9],[[1,6,0],[22,6,0]]],
-      ["repeat",[3,0,0],4,[["paint","bank_drum_shadow",20,3,17,21,15,22]]],
-      ["lathe","bank_roof",[25,9],[[22,6,0],[26,5.5,0],[32,4,0],[36,2,0],[39,1,0]]],
-      ["line","bank_roof_rib",25,9,38,30,9,23], ["line","bank_roof_rib",25,9,38,19,9,23],
-      ["line","bank_roof_rib",25,9,38,25,14,23], ["line","bank_roof_rib",25,9,38,25,3,23],
-      ["box","bank_marble_cap",25,9,38,26,10,44],
+      ["use","bank_centered_cupola"],
       ["scatter_paint","bank_stone_light",9,2180,2,3,0,62,25,18,"bank_stone",[1,1,2]],
       ["scatter_paint","bank_roof_shadow",7,3180,2,3,19,62,25,38,"bank_roof",[2,2,1]]
+    ],
+    "bank_centered_cupola": [
+      ["lathe","bank_marble",[32,14],[[1,6,0],[22,6,0]]],
+      ["repeat",[3,0,0],4,[["paint","bank_drum_shadow",27,8,17,28,20,22]]],
+      ["lathe","bank_roof",[32,14],[[22,6,0],[26,5.5,0],[32,4,0],[36,2,0],[39,1,0]]],
+      ["radial_paint","bank_roof_rib",[32,14],22,39,32,286331153],
+      ["lathe","bank_marble_cap",[32,14],[[38,0.8,0],[44,0.8,0]]]
     ],
     "bank_finished_paving": [
       ["box","bank_paving",0,0,0,32,32,1],
       ["scatter_paint","bank_paving_grain",4,2182,0,0,0,32,32,1,"bank_paving"],
       ["repeat",[8,0,0],4,[["paint","bank_paving_seam",0,0,0,1,32,1]]],
       ["repeat",[0,8,0],4,[["paint","bank_paving_seam",0,0,0,32,1,1]]]
+    ],
+    "canal_dike_side": [
+      ["prism","canal_stone",1,0,32,[[0,0],[4,0],[4,1],[2,1],[2,4],[0,4]]],
+      ["paint","canal_coping",0,0,3,2,32,4]
+    ],
+    "canal_dike_outer_corner": [
+      ["prism","canal_stone",2,0,1,[[0,26],[2,26],[6,30],[6,32],[0,32]]],
+      ["prism","canal_stone",2,1,4,[[0,28],[2,28],[4,30],[4,32],[0,32]]],
+      ["paint","canal_coping",0,28,3,4,32,4]
+    ],
+    "canal_dike_inner_corner": [
+      ["prism","canal_stone",2,0,1,[[0,28],[4,32],[0,32]]],
+      ["prism","canal_stone",2,1,4,[[0,30],[2,32],[0,32]]],
+      ["paint","canal_coping",0,30,3,2,32,4]
+    ],
+    "canal_dike_finish": [
+      ["scatter_paint","canal_stone_grain",4,5380,0,0,0,32,32,3,"canal_stone"],
+      ["scatter_paint","canal_coping_grain",5,5381,0,0,3,32,32,4,"canal_coping"]
     ],
     "food_soil_slab": [
       ["box","food_soil",0,0,0,32,32,1],
@@ -32710,13 +32729,13 @@
     },
     "bank2_north": {
       "size":[64,32,90],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
-      "reference":"Original Arctic/tropical bank89 body2186 is finished in every construction slot. Joined red two-storey brick office, recessed colonnade glazing, flat olive roof and white cornice; this original owner alone retains the hollow golden ribbed dome and fine finial",
-      "ops":[["use","bank2_joined_shell"],["erase",32,0,0,64,32,90],["use","bank2_rooftop_dome"]]
+      "reference":"Original Arctic/tropical bank89 body2186 is finished in every construction slot. Joined red two-storey brick office, recessed colonnade glazing, flat olive roof and white cornice. Golden dome is centered on the roof at cell31,11.5 and partitioned at the original tile seam, never duplicated or truncated",
+      "ops":[["use","bank2_joined_shell"],["use","bank2_rooftop_dome"],["erase",32,0,0,64,32,90]]
     },
     "bank2_south": {
       "size":[64,32,90],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,0],"review_status":"work-in-progress",
       "reference":"Original bank90 body2187: independent near wing of the same joined office, with two rows of end windows, continuous white bands, open colonnade bays and white entry steps. Original stages0/1/2/3 share identical finished body artwork",
-      "ops":[["use","bank2_joined_shell"],["erase",0,0,0,32,32,90]]
+      "ops":[["use","bank2_joined_shell"],["use","bank2_rooftop_dome"],["erase",0,0,0,32,32,90]]
     },
     "bank2_north_ground": {
       "size":[32,32,3],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
@@ -34077,7 +34096,7 @@
     },
     "bank_north": {
       "size":[64,32,46],"origin":[0,0,0],"review_status":"work-in-progress",
-      "reference":"Original58/2180 is already finished in every construction slot. Explicit north half of the shared32x16 bank: beige/white colonnade, olive ribbed roof, striped cupola drum, faceted dome and fine white finial",
+      "reference":"Original58/2180 is already finished in every construction slot. Explicit north half of the shared32x16 bank: beige/white colonnade, olive ribbed roof, striped cupola drum, faceted dome and fine white finial. Cupola is centered at cell32,14 on the joined roof and partitioned across both original tile owners",
       "ops":[["use","bank_joined_body"],["erase",32,0,0,64,32,46]]
     },
     "bank_south": {
@@ -36330,6 +36349,66 @@
         ["paint","buoy_beacon_other",12,10,21,14,14,22],
         ["paint","buoy_beacon",10,12,23,14,14,24]
       ]
+    },
+    "canal_dike_0": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original canal edge5380, dry -X neighbour: stepped stone toe, vertical retaining courses and bright solid coping; independently authored XYZ masonry, not extruded source pixels. Original water/adjacency/picking remain separate",
+      "ops":[["use","canal_dike_side"],["use","canal_dike_finish"]]
+    },
+    "canal_dike_1": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5381 +Y canal bank; original edge-selection order retained",
+      "ops":[["rotate_z",-90,[16,16,0],[["use","canal_dike_side"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_2": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5382 +X canal bank; physical toe/retaining wall/coping, fixed world-facing material lighting",
+      "ops":[["rotate_z",180,[16,16,0],[["use","canal_dike_side"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_3": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5383 -Y canal bank; remains on original ground ownership when buildings are hidden",
+      "ops":[["rotate_z",90,[16,16,0],[["use","canal_dike_side"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_4": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5384 convex -X/+Y corner: chamfered solid masonry fills the junction of two dry sides; original selection still owns this corner",
+      "ops":[["use","canal_dike_outer_corner"],["use","canal_dike_finish"]]
+    },
+    "canal_dike_5": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5385 convex +X/+Y canal corner; symmetric footprint with world-directed six-face stone paint",
+      "ops":[["rotate_z",-90,[16,16,0],[["use","canal_dike_outer_corner"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_6": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5386 convex +X/-Y canal corner; no road, shore or water plane is part of the masonry model",
+      "ops":[["rotate_z",180,[16,16,0],[["use","canal_dike_outer_corner"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_7": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5387 convex -X/-Y canal corner; separate native origin retained",
+      "ops":[["rotate_z",90,[16,16,0],[["use","canal_dike_outer_corner"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_8": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5388 concave -X/+Y diagonal corner; only selected when both cardinal neighbours are watered and the original diagonal is dry",
+      "ops":[["use","canal_dike_inner_corner"],["use","canal_dike_finish"]]
+    },
+    "canal_dike_9": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5389 concave +X/+Y diagonal corner; small genuine stepped retaining/coping volume with an open ship channel",
+      "ops":[["rotate_z",-90,[16,16,0],[["use","canal_dike_inner_corner"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_10": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5390 concave +X/-Y diagonal corner; no invented wall across either adjoining wet tile",
+      "ops":[["rotate_z",180,[16,16,0],[["use","canal_dike_inner_corner"]]],["use","canal_dike_finish"]]
+    },
+    "canal_dike_11": {
+      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original5391 concave -X/-Y diagonal corner; original sprite ID/state continues to determine presentation only",
+      "ops":[["rotate_z",90,[16,16,0],[["use","canal_dike_inner_corner"]]],["use","canal_dike_finish"]]
     },
     "water_buoy": {
       "size":[24,24,40],"cell_size":[0.25,0.25,0.5],"origin":[5,5,-0.5],"review_status":"work-in-progress",
@@ -42554,6 +42633,18 @@
       "1919": {"0":"tree_column_cactus_00","1":"tree_column_cactus_01","2":"tree_column_cactus_02","3":"tree_column_cactus_03","4":"tree_column_cactus_04","5":"tree_column_cactus_05","6":"tree_column_cactus_06"}
     },
     "infrastructure": {
+      "5380":{"0":"canal_dike_0","1":"canal_dike_0","2":"canal_dike_0","3":"canal_dike_0"},
+      "5381":{"0":"canal_dike_1","1":"canal_dike_1","2":"canal_dike_1","3":"canal_dike_1"},
+      "5382":{"0":"canal_dike_2","1":"canal_dike_2","2":"canal_dike_2","3":"canal_dike_2"},
+      "5383":{"0":"canal_dike_3","1":"canal_dike_3","2":"canal_dike_3","3":"canal_dike_3"},
+      "5384":{"0":"canal_dike_4","1":"canal_dike_4","2":"canal_dike_4","3":"canal_dike_4"},
+      "5385":{"0":"canal_dike_5","1":"canal_dike_5","2":"canal_dike_5","3":"canal_dike_5"},
+      "5386":{"0":"canal_dike_6","1":"canal_dike_6","2":"canal_dike_6","3":"canal_dike_6"},
+      "5387":{"0":"canal_dike_7","1":"canal_dike_7","2":"canal_dike_7","3":"canal_dike_7"},
+      "5388":{"0":"canal_dike_8","1":"canal_dike_8","2":"canal_dike_8","3":"canal_dike_8"},
+      "5389":{"0":"canal_dike_9","1":"canal_dike_9","2":"canal_dike_9","3":"canal_dike_9"},
+      "5390":{"0":"canal_dike_10","1":"canal_dike_10","2":"canal_dike_10","3":"canal_dike_10"},
+      "5391":{"0":"canal_dike_11","1":"canal_dike_11","2":"canal_dike_11","3":"canal_dike_11"},
       "4775":{"0":"sugar_sieve_0"},
       "4776":{"0":"sugar_sieve_1"},
       "4777":{"0":"sugar_sieve_2"},

@@ -13,10 +13,12 @@
 #include "bridge_geometry.hpp"
 #include "world_capture.h"
 #include "voxel_models.h"
+#include "sprite_textures.hpp"
 #include "../landscape.h"
 #include "../rail.h"
 #include "../slope_func.h"
 #include "../track_func.h"
+#include "../table/sprites.h"
 #include <set>
 
 using namespace Renderer3D;
@@ -1001,5 +1003,48 @@ TEST_CASE("Road-stop shelters have real roofs and leave both vehicle lanes open"
 		}
 		Vec3 roof = truck && layout < 4 ? Vec3{1.5f,9,14} : Vec3{8,1.5f,14};
 		CHECK(FirstHit(whole,ray(roof,roof-Vec3{0,0,1})) < 6);
+	}
+}
+
+TEST_CASE("Road-stop ground samples the adjoining full tile without microtexture repetition", "[renderer3d]")
+{
+	for (bool truck : {false,true}) for (unsigned layout = 0; layout < 6; ++layout) for (bool detail : {false,true}) {
+		auto stop = MakeRoadStopAssembly(truck,layout,false,detail);
+		CHECK(stop.parts[static_cast<unsigned>(RoadStopMaterial::Markings)].empty());
+		for (RoadStopMaterial material : {RoadStopMaterial::Road,RoadStopMaterial::Paving}) {
+			const auto &mesh = stop.parts[static_cast<unsigned>(material)];
+			REQUIRE_FALSE(mesh.empty());
+			for (const auto &vertex : mesh) {
+				CHECK(vertex.texture.x == vertex.position.x);
+				CHECK(vertex.texture.y == vertex.position.y);
+				CHECK(vertex.texture.z == 0);
+				CHECK((static_cast<uint32_t>(vertex.surface)&SURFACE_SHADED) == 0);
+			}
+			/* A curb needs only its physical faces, not thousands of clipped
+			 * triangles from repeating an eight-source-pixel road crop. */
+			CHECK(mesh.size() <= 3*36);
+		}
+	}
+}
+
+TEST_CASE("Canal dikes preserve original runtime selection for static and resolved base-set IDs", "[renderer3d]")
+{
+	for (SpriteID base : {SPR_CANAL_DIKES_BASE,SpriteID{9808}}) {
+		for (unsigned variant = 0; variant < 12; ++variant) {
+			CHECK(SelectCanalDikeVariant(base+variant,base,true,true) == variant);
+			CHECK_FALSE(SelectCanalDikeVariant(base+variant,base,false,true));
+			CHECK_FALSE(SelectCanalDikeVariant(base+variant,base,true,false));
+		}
+		CHECK_FALSE(SelectCanalDikeVariant(base-1,base,true,true));
+		CHECK_FALSE(SelectCanalDikeVariant(base+12,base,true,true));
+	}
+}
+
+TEST_CASE("Canal soil masks preserve climate paint without a second flat masonry wall", "[renderer3d]")
+{
+	CHECK(SupportsCanalDikeGround("OpenGFX2 Classic"));
+	for (std::string_view name : {"OpenGFX2 High Def","OpenGFX","original_windows","custom",""}) CHECK_FALSE(SupportsCanalDikeGround(name));
+	for (unsigned index = 0; index < 256; ++index) {
+		CHECK(KeepCanalDikeGround(index) == (index >= 24));
 	}
 }

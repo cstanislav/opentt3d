@@ -1195,7 +1195,8 @@ def main():
             print(name)
         return
     if args.gallery:
-        prefix = f"model-{args.gallery_kind}-*" if args.gallery_kind else "model-*"
+        kind = "roadstop" if args.gallery_kind == "road-stop" else args.gallery_kind
+        prefix = f"model-{kind}-*" if kind else "model-*"
         if args.gallery_model is not None:
             prefix = f"model-{args.gallery_model:03}-*"
         if args.voxel_model:

@@ -18,6 +18,12 @@ namespace Renderer3D {
 struct TileSurface;
 TileSurface MakeTileSurface(Slope slope);
 bool IsCapturing();
+/** Original base-set canal artwork can resolve to dynamic NewGRF sprite IDs. */
+inline std::optional<unsigned> SelectCanalDikeVariant(SpriteID image, SpriteID base, bool original_source, bool complete_family)
+{
+	if (!original_source || !complete_family || image < base || image-base >= 12) return {};
+	return image-base;
+}
 void BeginCaptureFrame(float seconds);
 void BeginCapture(const Camera &camera, bool diagnostic = false, std::optional<bool> tunnel_scenery_cull = {});
 Scene FinishCapture();

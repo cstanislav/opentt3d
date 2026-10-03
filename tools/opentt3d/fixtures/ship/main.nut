@@ -57,11 +57,14 @@ function ShipCatalogue::Start()
 		 * a flat canal bed and the two genuine sloped dock banks. */
 		this.Require(AITile.LowerTile(this.Tile(4,4),AITile.SLOPE_N),"lower harbour reference corner");
 		this.Require(AITile.LevelTiles(this.Tile(4,4),this.Tile(38,12)),"level canal bed");
+		local dike_island=AIController.GetSetting("dike_island")!=0 ? this.Tile(16,8) : -1;
 		for (local dy=4; dy<12; dy++) for (local dx=4; dx<38; dx++) {
 			local tile=this.Tile(dx,dy);
 			this.Require(AITile.GetSlope(tile)==AITile.SLOPE_FLAT,"flat canal bed "+dx+","+dy);
+			if (tile==dike_island) continue;
 			this.Require(AIMarine.BuildCanal(tile),"build canal "+dx+","+dy);
 		}
+		if (dike_island>=0) this.Require(!AITile.IsWaterTile(dike_island),"original dry canal island remains land");
 		local west=this.Tile(3,7), east=this.Tile(38,8), depot=this.Tile(20,7);
 		AILog.Info("SHIP_CATALOGUE_BANKS west="+AITile.GetSlope(west)+" east="+AITile.GetSlope(east));
 		this.Require(AIMarine.BuildDock(west,AIStation.STATION_NEW),"west dock");
@@ -125,7 +128,7 @@ function ShipCatalogue::Start()
 		}
 		if (!ready) throw "not every ship moved and entered loading state at both docks";
 		local extras=extra_docks.len()==0 ? "[]" : "["+extra_docks[0]+","+extra_docks[1]+"]";
-		local result="{\"x\":"+this.x+",\"y\":"+this.y+",\"water_height\":"+(height-1)+",\"depot\":"+depot+",\"depot_axis\":"+axis+",\"depot_service\":"+(service ? "true" : "false")+",\"depot_hold_ticks\":"+hold+",\"dock_hold\":"+(dock_hold ? "true" : "false")+",\"buoy\":"+buoy+",\"docks\":["+west+","+east+"],\"extra_docks\":"+extras+",\"vehicles\":[";
+		local result="{\"x\":"+this.x+",\"y\":"+this.y+",\"water_height\":"+(height-1)+",\"depot\":"+depot+",\"depot_axis\":"+axis+",\"depot_service\":"+(service ? "true" : "false")+",\"depot_hold_ticks\":"+hold+",\"dock_hold\":"+(dock_hold ? "true" : "false")+",\"buoy\":"+buoy+",\"dike_island\":"+dike_island+",\"docks\":["+west+","+east+"],\"extra_docks\":"+extras+",\"vehicles\":[";
 		foreach (index,entry in fleet) {
 			if (index!=0) result+=",";
 			result+="{\"engine\":"+entry.engine+",\"vehicle\":"+entry.vehicle+",\"peak_speed\":"+entry.peak+",\"docks_visited\":"+entry.visits+",\"buoy_visited\":"+(entry.buoy_seen ? "true" : "false")+"}";

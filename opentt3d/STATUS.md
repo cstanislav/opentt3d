@@ -4,6 +4,35 @@ This file records implemented and verified work, not promises of completeness.
 
 ## Baseline
 
+- [x] October3 consistency increment: road stops sample the original full-tile
+  ground/palette at the same native chart scale as adjoining roads; duplicate
+  procedural markings and repeated microcrops are removed. Both bank cupolas are
+  centred and partitioned across their original two tile owners without lost or
+  duplicated seam cells. Twelve real stepped canal dikes retain all original
+  side/convex/concave selection, exact climate-soil ground paint and animated water.
+  The dynamic Classic base-set IDs are recognised; partial/custom families keep
+  the complete original rendering path. Locks and river slopes remain uncovered.
+- [x] Four ordinary dry-island harbour fixtures retain all12 live dike variants in
+  four climates and both backends:96 explicit emitted selections. Ships complete
+  both original dock calls; this is not full fleet-volume clearance approval.
+  Eight climate-soil, eight island and six bank graphical controls pass their
+  native geometry/atlas/picking gates. Strict bank backend equality still fails
+  at24 wider views/3,152 pixels per200-view climate set, with zero native differences.
+- [x] Catalogue-wide review index retains1,794 registered native studies and14,352
+  orbit/street views plus joined contexts.1,778 preceding models remain exact in
+  cells/six-face paint/dimensions/origins; only four bank bodies intentionally change,
+  with all previous bindings unchanged. The2,457-entry ledger records20 individual
+  6–7/10 reviews with portable images,1,774 screening-only voxel ratings and334
+  missing original source layers. No8/10 or final visual approval is claimed.
+- [x] Native210/asset174/harness74 and the140-file presentation boundary pass.
+  Four final Classic/alternate-OpenGFX backend controls confirm the reviewed soil
+  partition is never applied to an unreviewed base-set palette. All20 individual
+  ratings now retain immutable source/orbit/street/world evidence hashes.
+  Lossless compaction of31,817 successful generated captures saves20,459,852,523
+  bytes, verifying every RGBA byte/header and retaining sources, rejected studies,
+  failed controls and the exact compaction ledger. Last audited desktop release
+  remains`.37`; the model-quality objective and sustained smooth60fps remain open.
+
 - [x] Verified desktop release`.37`publishes original bubble states, grounded explosions,
   breakdown smoke, bounded CPU restoration and1,782 models at commit24e78cbb0. All
   eight jobs pass; independent checks reconcile19 attachments,18 checksums,2,122 source

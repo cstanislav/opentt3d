@@ -82,6 +82,16 @@ class ScreenshotCompletionTests(unittest.TestCase):
 
 
 class ExplicitClearCommandTests(unittest.TestCase):
+    def test_canal_gate_rejects_gallery_only_and_partial_live_evidence(self):
+        gallery = "voxel mesh selection 'canal_dike' passed exact geometry, palettes and picking"
+        with self.assertRaisesRegex(RuntimeError,"not captured"):
+            smoke.require_live_canal_dikes(gallery,[0,3])
+        first = "live voxel canal dike 0 climate 0 source 9808 captured at 44,28 with original ground ownership"
+        with self.assertRaisesRegex(RuntimeError,r"\[3\]"):
+            smoke.require_live_canal_dikes(gallery+first,[0,3])
+        second = "live voxel canal dike 3 climate 0 source 9811 captured at 44,28 with original ground ownership"
+        smoke.require_live_canal_dikes(first+"\n"+second,[0,3])
+
     def generated_script(self, *flags):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -103,6 +113,14 @@ class ExplicitClearCommandTests(unittest.TestCase):
         self.assertNotIn("unpause", commands)
         self.assertFalse(any("build_object" in command or "rating" in command for command in commands))
         self.assertEqual(env["OPENTT3D_BACKGROUND"], "1")
+
+    def test_catalogue_overview_is_read_only_and_retains_optional_prefix(self):
+        for flags,command in (((),"renderer3d voxel-overview"),(("--gallery-voxel-prefix","bank"),"renderer3d voxel-overview bank")):
+            commands,env = self.generated_script("--gallery-voxel-overview","--background",*flags)
+            self.assertIn(command,commands)
+            self.assertEqual(commands.count(command),1)
+            self.assertNotIn("unpause",commands)
+            self.assertEqual(env["OPENTT3D_BACKGROUND"],"1")
 
     def test_original_command_runs_after_gallery_with_explicit_draw_delay(self):
         commands, env = self.generated_script("--clear-tile", "64", "65", "--running", "--benchmark-frames", "240", "--gallery-voxel-prefix", "effect_explosion_small_")

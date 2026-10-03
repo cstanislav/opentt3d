@@ -29,11 +29,8 @@ inline RoadStopAssembly MakeRoadStopAssembly(bool truck, unsigned layout, bool t
 	box(RoadStopMaterial::Road,{drive_through ? 0.0f : 3.0f,3,0.01f},{16,13,0.08f});
 	for (float y : {0.0f,13.0f}) box(RoadStopMaterial::Paving,{0,y,0},{16,y+3,0.35f});
 	if (!drive_through) box(RoadStopMaterial::Paving,{0,3,0},{3,13,0.35f});
-	if (drive_through) {
-		for (float x : {0.5f,6.5f,12.5f}) box(RoadStopMaterial::Markings,{x,7.83f,0.081f},{x+2.5f,8.17f,0.10f},pale);
-	} else {
-		for (float y : {5.5f,10.5f}) box(RoadStopMaterial::Markings,{4,y,0.081f},{13.7f,y+0.17f,0.10f},pale);
-	}
+	/* Road markings belong to the original full-tile ground chart, just as on
+	 * the adjoining road. Do not paint a second, differently spaced set here. */
 	/* Components are authored at side Y=0. The transform places the same
 	 * structural assembly at the far curb or along the back of a bay stop. */
 	auto placed = [&](unsigned side, const auto &build) {
@@ -141,14 +138,18 @@ inline RoadStopAssembly MakeRoadStopAssembly(bool truck, unsigned layout, bool t
 			for (size_t j = i; j < i+3; ++j) vertices[j].normal = normal;
 		}
 		RoadStopMaterial material = static_cast<RoadStopMaterial>(part);
-		if (material == RoadStopMaterial::Road || material == RoadStopMaterial::Paving || material == RoadStopMaterial::Company || material == RoadStopMaterial::Masonry) {
-			TextureRegion crop = material == RoadStopMaterial::Road ? TextureRegion{136.0f/256,72.0f/127,144.0f/256,76.0f/127} :
-				material == RoadStopMaterial::Paving ? TextureRegion{112.0f/256,50.0f/127,144.0f/256,66.0f/127} :
-				material == RoadStopMaterial::Company ? TextureRegion{43.4f/108,30.4f/87,43.6f/108,30.6f/87} : TextureRegion{26.0f/88,45.0f/81,34.0f/88,53.0f/81};
-			float repeat = material == RoadStopMaterial::Road ? 0.5f : material == RoadStopMaterial::Paving ? 4 : 2;
-			vertices = ApplyMaterialChart(vertices,{{crop,crop,crop},{repeat,repeat},true});
+		if (material == RoadStopMaterial::Company || material == RoadStopMaterial::Masonry) {
+			TextureRegion crop = material == RoadStopMaterial::Company ? TextureRegion{43.4f/108,30.4f/87,43.6f/108,30.6f/87} : TextureRegion{26.0f/88,45.0f/81,34.0f/88,53.0f/81};
+			vertices = ApplyMaterialChart(vertices,{{crop,crop,crop},{2,2},true});
 		}
-		for (auto &vertex : vertices) vertex.position = RoadStopPoint(layout,vertex.position);
+		for (auto &vertex : vertices) {
+			vertex.position = RoadStopPoint(layout,vertex.position);
+			if (material == RoadStopMaterial::Road || material == RoadStopMaterial::Paving) {
+				/* Sample at terrain height, not the raised kerb/slab height. The
+				 * chart uses final tile coordinates, including both DT axes. */
+				vertex.texture = {vertex.position.x,vertex.position.y,0};
+			}
+		}
 		for (size_t i = 0; i < vertices.size(); i += 3) {
 			if (layout == 5) std::swap(vertices[i+1],vertices[i+2]);
 			Vec3 normal = Normal(vertices[i].position,vertices[i+1].position,vertices[i+2].position);

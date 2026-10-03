@@ -31,8 +31,9 @@ def placement(model):
             "ground_contact_area": len(contact)*cell[0]*cell[1], "footprint_reviewed": False}
 
 
-def inventory():
-    voxels = compile_voxel_catalogue(json.loads((ROOT / "assets/3d/voxels.json").read_text()))
+def inventory(voxels=None):
+    if voxels is None:
+        voxels = compile_voxel_catalogue(json.loads((ROOT / "assets/3d/voxels.json").read_text()))
     def voxel_states(category, identifier):
         return sorted(map(int, voxels["bindings"].get(category, {}).get(str(identifier), {})))
     engines=(ROOT/"src/table/engines.h").read_text().split("_orig_engine_info[] = {",1)[1].split("\n};",1)[0]
@@ -273,11 +274,12 @@ def inventory():
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output",type=Path)
+    parser.add_argument("--catalogue",type=Path,help="Use an already compiled voxel catalogue from the exact reviewed build")
     parser.add_argument("--require-complete",action="store_true")
     parser.add_argument("--footprints",action="store_true",help="List static ground-contact bounds; outside-tile contacts require explicit source/layout review")
     parser.add_argument("--vehicle-families",choices=("train","road","ship","aircraft"),help="List exact sprite/cargo/climate families for breadth-first authoring; not automatic geometry approval")
     args=parser.parse_args()
-    data=inventory()
+    data=inventory(json.loads(args.catalogue.read_text()) if args.catalogue else None)
     print(f"Vehicles: {len(data['vehicles'])}; houses: {len(data['houses'])}; authored house profiles: {sum(h['authored_profile'] for h in data['houses'])}")
     print(f"Authored vehicle bindings: {sum(v['authored_profile'] for v in data['vehicles'])}; visually reviewed vehicles: {sum(v['reviewed'] for v in data['vehicles'])}")
     print(f"Tree sprite families: {len(data['trees'])}; authored tree profiles: {sum(t['authored_profile'] for t in data['trees'])}; visually reviewed: {sum(t['reviewed'] for t in data['trees'])}")

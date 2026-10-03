@@ -1,5 +1,44 @@
 # Active extended development goal
 
+## Model-quality and live canal consistency checkpoint — October 3, 06:12:19 UTC
+
+The renewed quality goal covers every model and runtime/state/climate family,
+not a selected showcase. The current2,457-entry ledger retains334 missing original
+object/lock layers, procedural/profile entries and all1,794 authored voxels.
+Twenty individually inspected entries score6–7 with explicit remaining defects;
+1,774 voxel entries retain conservative screening scores. No automatic8/10
+promotion or final original-art approval is recorded. The complete catalogue
+has1,794 registered native studies and14,352 orbit/street views plus joined contexts;
+the capture index is evidence availability, not individual inspection of every view.
+
+Reported defects are being repaired: road-stop ground now samples the actual original
+full-tile chart/palette at native texture scale; both bank cupolas are centred and
+partitioned across their two original owners; twelve volumetric canal dikes now
+reach the live world through Classic's resolved base-set IDs. The original dynamic
+climate-soil strip remains exact beneath real masonry. All12 variants are observed
+in four climate dry-island fixtures on both backends, with ordinary ships completing
+both dock visits. Eight soil, eight island and six bank graphical controls pass their
+native geometry/atlas/picking gates. Exact bank backend comparisons still fail on
+24 wider views/3,152 pixels per200-view climate set, retaining zero native differences.
+Earlier unselected canal and mis-scaled road captures/failures are preserved.
+
+The catalogue preserves1,778 earlier model cell/face/dimension/origin definitions and
+every old binding. Four intentional bank body edits and twelve new dike models are
+the only artwork changes. Native210/asset174/harness74/boundary140 pass. Four final
+Classic/alternate-OpenGFX backend controls preserve the complete alternate artwork;
+the soil palette mask is never inferred from generic base-set provenance. All20
+individual ratings retain immutable portable evidence hashes. Lossless
+compaction of31,817 explicitly successful generated captures saves20,459,852,523
+bytes without discarding original sources, rejected studies, failures or exact RGBA
+evidence. The indexed compacted captures remain readable by the same review tools.
+
+This is an in-progress clock check, **not** a new stopping clock or an8/10-complete
+claim. Remaining work includes individual catalogue-wide ratings/refinement,
+object/HQ/landmark and lock/river/disaster breadth, source/all-angle material detail,
+custom/partial-family and nonflat controls, full ship/aircraft clearance, unresolved
+emitter contexts, sustained60fps and long-duration/reload/multi-viewport memory.
+`.37` remains the last independently audited public package.
+
 ## Verified-download publication and stopping clock audit — October 2, 07:09:34 UTC
 
 Recommended README/installation links and public`.37`notes now expose the independently

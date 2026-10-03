@@ -4,6 +4,29 @@ Current reference: **OpenGFX2 Classic 0.8.1**, pinned in `upstream.json`, for UI
 every model category. The September 21 follow-up replaces the earlier HighDef
 baseline; older review captures retain their original provenance.
 
+## October3 model consistency and conservative ratings
+
+Road-stop ground chart/palette/native scale, centred two-owner bank cupolas and
+twelve genuine canal dikes are repaired without changing simulation or original
+water/ground ownership. Canal climate soil stays on its exact original texture
+partition; masonry uses real stepped XYZ cells. The first gallery-only canal
+control did not emit live dikes and remains a rejected integration study.
+
+The new [quality ledger](MODEL_QUALITY.md) covers2,457 model/profile/procedural/
+missing-source entries. Twenty actual individual reviews remain at6–7, with their
+open checks and portable [native/orbit/street evidence](reviews/20261003/).
+No8/10 rating or final source-art visual approval is granted. Catalogue captures
+include1,794 registered native studies and14,352 orbit/street views; every view
+still requires individual inspection rather than bulk acceptance.
+
+Four climate island fixtures expose all12 original side/convex/concave states in
+both backends, and ordinary ships visit both docks. Exact bank backend comparisons
+retain24 wider differences/3,152 pixels per200-view set with zero native differences.
+Lock walls, river slopes, full fleet clearance, custom/nonflat cases and native
+paint/contour fidelity remain open. All1,778 preceding non-bank models and every old
+binding remain exact. Only four bank bodies are intentionally edited; twelve new
+dike models reach1,794 volumes. Detailed existing artwork is not replaced by boxes.
+
 ## Six-state electric sparks (September28)
 
 Five source-specific volumes and24 explicit climate bindings reach1,731 models, preserving

@@ -2988,10 +2988,10 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		VideoDriver::GetInstance()->QueueOnMainThread([count = *frames, fullscreen, capture] { Renderer3D::Profile::StartBenchmark(count, fullscreen, capture); });
 		return true;
 	}
-	if ((argv.size() == 2 || argv.size() == 3) && argv[1] == "voxel-gallery") {
+	if ((argv.size() == 2 || argv.size() == 3) && (argv[1] == "voxel-gallery" || argv[1] == "voxel-overview")) {
 		std::string prefix = argv.size() == 3 ? std::string(argv[2]) : std::string{};
-		VideoDriver::GetInstance()->QueueOnMainThread([prefix=std::move(prefix)] {
-			try { Renderer3D::ExportVoxelReviews(prefix); }
+		VideoDriver::GetInstance()->QueueOnMainThread([prefix=std::move(prefix),overview=argv[1] == "voxel-overview"] {
+			try { Renderer3D::ExportVoxelReviews(prefix,overview); }
 			catch (const std::exception &error) { Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what()); }
 		});
 		return true;

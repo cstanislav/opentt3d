@@ -123,7 +123,7 @@ void VerifyVoxelMeshes(std::string_view prefix = {});
 void VerifyVoxelVehicleModels(unsigned only_engine = UINT_MAX);
 void VerifyVoxelTreeModels();
 void VerifyVoxelIndustryModels();
-void ExportVoxelReviews(std::string_view prefix = {});
+void ExportVoxelReviews(std::string_view prefix = {}, bool overview = false);
 bool FocusVoxelAirport(unsigned graphics = UINT_MAX);
 bool FocusVoxelHouseStage(unsigned stage, unsigned house = UINT_MAX, unsigned variant = UINT_MAX);
 bool FocusVoxelTree(unsigned base, unsigned stage);

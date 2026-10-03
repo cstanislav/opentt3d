@@ -75,6 +75,17 @@ struct AtlasPage {
 	void Dirty(int x, int y, int width, int height);
 };
 
+enum class SpriteTextureLayer : uint8_t { Complete, CanalDikeGround };
+
+/** Classic canal masonry uses neutral indices1..21; its independently painted
+ * climate soil uses indices24+. Test source indices before palette recolouring. */
+inline bool KeepCanalDikeGround(uint8_t index) { return index >= 24; }
+
+/** The neutral-masonry/climate-soil partition was reviewed for this palette.
+ * Other base sets, including RGB sprites without remap indices, stay intact. */
+inline bool SupportsCanalDikeGround(std::string_view base_set) { return base_set == "OpenGFX2 Classic"; }
+bool IsClassicCanalDikeSprite(SpriteID image);
+
 class SpriteTextures {
 	std::unordered_map<uint64_t, SpriteTexture> entries;
 	SpriteTexture *recent_palette = nullptr; ///< Node-stable lookup only; cleared before atlas retirement.
@@ -89,7 +100,7 @@ public:
 	void Invalidate() { invalid = true; }
 	void Clear();
 	void Repack();
-	const SpriteTexture &Get(SpriteID image, PaletteID palette, unsigned zoom = 0, bool opaque_surface = false);
+	const SpriteTexture &Get(SpriteID image, PaletteID palette, unsigned zoom = 0, bool opaque_surface = false, SpriteTextureLayer layer = SpriteTextureLayer::Complete);
 	const SpriteTexture &GetPalette(PaletteID palette = 0);
 	void MarkAllDirty();
 };
@@ -119,6 +130,7 @@ void VerifyGPUScene(bool vehicle_poses = true);
 void VerifyInstanceOrdering();
 void VerifyClipping();
 void VerifyTextureMipCache();
+void VerifyCanalDikeGroundTexture(SpriteID image);
 
 } // namespace Renderer3D
 #endif

@@ -24,6 +24,7 @@ def main():
     parser.add_argument("--all-dock-directions", action="store_true", help="Add two ordinary docks on the other banks for all-direction artwork review")
     parser.add_argument("--dock-hold", action="store_true", help="Keep the observed final full-load dock order for a paused actual mooring review")
     parser.add_argument("--buoy-waypoint", action="store_true", help="Build an original buoy and require the ships to navigate its ordinary waypoint order")
+    parser.add_argument("--dike-island", action="store_true", help="Retain one ordinary dry tile inside the harbour to expose all four concave dikes, while requiring the actual ship route to complete")
     parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
@@ -77,7 +78,7 @@ server_advertise = false
 min_active_clients = 0
 pause_on_join = false
 """)
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Ship Catalogue" "review_first={args.first_engine},review_last={args.last_engine},depot_axis={args.depot_axis},depot_service={int(args.depot_service)},depot_hold_ticks={args.depot_hold_ticks},all_docks={int(args.all_dock_directions)},dock_hold={int(args.dock_hold)},buoy_waypoint={int(args.buoy_waypoint)}"\n')
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Ship Catalogue" "review_first={args.first_engine},review_last={args.last_engine},depot_axis={args.depot_axis},depot_service={int(args.depot_service)},depot_hold_ticks={args.depot_hold_ticks},all_docks={int(args.all_dock_directions)},dock_hold={int(args.dock_hold)},buoy_waypoint={int(args.buoy_waypoint)},dike_island={int(args.dike_island)}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave ship-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     with socket.socket() as probe:
@@ -103,6 +104,8 @@ pause_on_join = false
                         raise RuntimeError("Ship fixture did not verify the selected fleet at both docks")
                     if args.buoy_waypoint and (manifest.get("buoy",-1) < 0 or any(not vehicle.get("buoy_visited") for vehicle in manifest["vehicles"])):
                         raise RuntimeError("Ship fixture did not observe navigation through the actual buoy tile")
+                    if args.dike_island and manifest.get("dike_island",-1) < 0:
+                        raise RuntimeError("Ship fixture did not retain the actual dry canal island")
                     process.stdin.write("exec scripts/save_fixture.scr\n"); process.stdin.flush()
                     break
                 time.sleep(0.2)

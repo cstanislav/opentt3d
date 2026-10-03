@@ -1048,7 +1048,7 @@ bool CaptureRoadStop(const TileInfo &tile, unsigned layout, const DrawTileSprite
 	SpriteID paving = GetRoadDepotDrawData(DIAGDIR_NE).ground.sprite;
 	if (!IsBaseGraphicsSprite(source.ground.sprite & SPRITE_MASK) || !IsBaseGraphicsSprite(paving) ||
 		!IsBaseGraphicsSprite(SPR_ROAD_X) || !IsBaseGraphicsSprite(SPR_BUS_STOP_DT_X_W) || (truck && !IsBaseGraphicsSprite(SPR_TRUCK_STOP_DT_X_W))) return false;
-	CaptureGround(paving,PAL_NONE,tile.x,tile.y,tile.z,tile,nullptr,0,0);
+	CaptureGround(source.ground.sprite,GroundSpritePaletteTransform(source.ground.sprite,source.ground.pal,palette),tile.x,tile.y,tile.z,tile,nullptr,0,0);
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
 	float height = IsBridgeAbove(tile.tile) ? std::max(1.0f,TerrainZ(GetBridgePixelHeight(GetNorthernBridgeEnd(tile.tile))-tile.z)-1) : 12;
@@ -1293,7 +1293,37 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 {
 	if (!capture || tile.tile == INVALID_TILE || !IsValidTile(tile.tile)) return;
 	Vec3 origin{static_cast<float>(x), static_cast<float>(y), TerrainZ(z)};
-	if (tile.tileh == SLOPE_FLAT && offset_x == 0 && offset_y == 0) {
+	SpriteID sprite = image&SPRITE_MASK;
+	bool canal_soil = false;
+	if (sprite >= SPR_CANAL_DIKES_BASE && HasTileWaterClass(tile.tile) && GetWaterClass(tile.tile) == WaterClass::Canal && tile.tileh == SLOPE_FLAT && offset_x == 0 && offset_y == 0) {
+		/* DrawWaterEdges still selects every original side/convex/concave sprite
+		 * using IsWateredTile. Replace that exact presentation layer, never the
+		 * adjacency calculation or the independently animated water underneath.
+		 * A partial family or custom source stays on the complete original path. */
+		unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+		SpriteID base = GetCanalSprite(CF_DIKES,tile.tile);
+		if (base == 0) base = SPR_CANAL_DIKES_BASE;
+		static uint64_t generation = UINT64_MAX;
+		static std::map<std::pair<SpriteID,unsigned>,bool> families;
+		if (generation != TextureGeneration()) { families.clear(); generation = TextureGeneration(); }
+		auto [family,inserted] = families.try_emplace({base,climate},true);
+		if (inserted) for (unsigned variant = 0; variant < 12; ++variant) family->second &= IsClassicCanalDikeSprite(base+variant) && HasVoxelAsset("infrastructure",SPR_CANAL_DIKES_BASE+variant,climate);
+		if (auto variant = SelectCanalDikeVariant(sprite,base,IsClassicCanalDikeSprite(sprite),family->second)) {
+			size_t first = capture->scene.instances.size();
+			if (DrawVoxelAsset(capture->scene,"infrastructure",SPR_CANAL_DIKES_BASE+*variant,climate,origin,palette)) {
+				++capture->tile_layers;
+				for (size_t i = first; i < capture->scene.instances.size(); ++i) capture->scene.instances[i].data.SetObjectId(TILE_PICK_ID|tile.tile.base());
+				if (!capture->diagnostic && capture->scene.instances.size() > first) {
+					static std::set<std::pair<unsigned,unsigned>> reported;
+					if (reported.emplace(*variant,climate).second) Debug(driver,1,"OpenTT3D: live voxel canal dike {} climate {} source {} captured at {},{} with original ground ownership",*variant,climate,sprite,TileX(tile.tile),TileY(tile.tile));
+				}
+				/* The same resolved sprite also owns the climate-specific soil
+				 * margin. Keep only that exact ground paint below the XYZ wall. */
+				canal_soil = true;
+			}
+		}
+	}
+	if (!canal_soil && tile.tileh == SLOPE_FLAT && offset_x == 0 && offset_y == 0) {
 		size_t first = capture->scene.instances.size();
 		bool industry = IsTileType(tile.tile,MP_INDUSTRY);
 		bool oilrig = IsTileType(tile.tile,MP_STATION) && IsOilRig(tile.tile);
@@ -1333,7 +1363,7 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 	 * map height. Only subsequent overlays need a small depth-order offset. */
 	float layer = (capture->tile_layers++) * 0.015f;
 	if (!capture->scene.visibility->Intersects({tile.x - 1.0f, tile.y - 1.0f, TerrainZ(tile.z) - 1.0f}, {tile.x + 17.0f, tile.y + 17.0f, TerrainZ(tile.z + 32) + 1})) return;
-	SpriteTexture texture = Textures().Get(flat_material.value_or(image), palette, TextureZoom(origin), opaque);
+	SpriteTexture texture = Textures().Get(flat_material.value_or(image), palette, TextureZoom(origin), opaque,canal_soil ? SpriteTextureLayer::CanalDikeGround : SpriteTextureLayer::Complete);
 	Vec3 root{static_cast<float>(tile.x), static_cast<float>(tile.y), TerrainZ(tile.z)};
 	Vec3 material_root = root;
 	if (flat_material) material_root.z = origin.z;

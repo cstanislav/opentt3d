@@ -512,6 +512,8 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		first = 33; last = 34; // The two source cuts form one connected farmhouse.
 	} else if (graphics == 58 || graphics == 59) {
 		first = 58; last = 59; // One bank's roof, colonnade and arch cross this seam.
+	} else if (graphics == 89 || graphics == 90) {
+		first = 89; last = 90; // The centered gold cupola belongs to both original tile cuts.
 	} else if (graphics >= 72 && graphics <= 88) {
 		/* Gold's troughs cross body/ground ownership,74 owns part of75's roof,
 		 * and86/87 share a workshop. Keep partial custom replacements together. */
@@ -571,6 +573,7 @@ std::optional<unsigned> VoxelIndustryState(unsigned graphics, SpriteID image, bo
 		const auto &source = _industry_draw_tile_data[family*4+stage];
 		SpriteID sprite = (ground ? source.ground.sprite : source.building.sprite)&SPRITE_MASK;
 		if ((source.draw_proc != 0 && !(power_sparks && source.draw_proc == 5) && !(toy_factory && source.draw_proc == 4) && !(bubble_generator && source.draw_proc == 3) && !(toffee_quarry && source.draw_proc == 2) && !(sugar_mine && source.draw_proc == 1)) || (sprite != 0 && !IsBaseGraphicsSprite(sprite))) return {};
+		if (!ground && (first == 58 || first == 89) && sprite != 0 && !IndustryBindingState(family,stage,false)) return {};
 		/* Connected source cuts cannot mix a new climate with an unauthored
 		 * neighbour. Original empty body slots need no invented binding. */
 		if (*selected >= 16 && first != last && HasVoxelAsset(category,family,stage) && !IndustryBindingState(family,stage,ground)) return {};
@@ -946,11 +949,12 @@ bool DrawVoxelHouseLift(Scene &scene, Vec3 origin, unsigned position, PaletteID 
 	return DrawVoxelAsset(scene,"infrastructure",SPR_LIFT,0,origin+Vec3{14.5f,8,3.5f+position},palette,opacity);
 }
 
-void ExportVoxelReviews(std::string_view prefix)
+void ExportVoxelReviews(std::string_view prefix, bool overview)
 {
 	if (std::ranges::none_of(Models().models,[&](const auto &entry) { return entry.first.starts_with(prefix); })) throw std::runtime_error("No voxel models match the review prefix");
 	std::filesystem::path directory = std::filesystem::path(FioGetDirectory(SP_WORKING_DIR,BASE_DIR))/"renderer3d-reference";
 	std::filesystem::create_directories(directory);
+	int side = overview ? 256 : 640;
 		auto capture = [&](const Scene &scene, const Camera &camera, const std::string &name, bool object_alpha = false) {
 		std::vector<uint8_t> pixels;
 		std::vector<uint32_t> ids;
@@ -984,8 +988,8 @@ void ExportVoxelReviews(std::string_view prefix)
 		Scene scene;
 		AddVoxelInstance(scene,model,Material({},PAL_NONE,1));
 		Vec3 centre = (model.surface.low+model.surface.high)*0.5f;
-		Camera camera{centre,3,640,640,static_cast<float>(view)};
-		if (view >= 4) camera = StreetReviewCamera(model.surface.low,model.surface.high,640,640,view-4+1.5f);
+		Camera camera{centre,3,side,side,static_cast<float>(view)};
+		if (view >= 4) camera = StreetReviewCamera(model.surface.low,model.surface.high,side,side,view-4+1.5f);
 		capture(scene,camera,fmt::format("model-voxel-{}-{}",name,view));
 		if (view == 0) native_model(scene,fmt::format("model-voxel-{}-native",name));
 	}

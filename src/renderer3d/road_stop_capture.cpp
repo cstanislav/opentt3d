@@ -4,6 +4,7 @@
 #include "sprite_textures.hpp"
 #include "../road_cmd.h"
 #include "../station_map.h"
+#include "../station_func.h"
 #include "../viewport_func.h"
 #include "../debug.h"
 #include <map>
@@ -26,13 +27,20 @@ void DrawRoadStop(Scene &scene, const Camera &camera, Vec3 origin, bool truck, u
 		InstanceData data;
 		data.origin_opacity = {origin.x,origin.y,origin.z,transparent && !ground ? 0.38f : 1};
 		if (!ground) data.scale_center[1] = std::clamp(height_limit/12,0.1f,1.0f);
-		data.identity = {0,static_cast<float>(static_cast<uint32_t>(SurfaceMode::Opaque) | SURFACE_SHADED),1,2};
-		SpriteID image = material == RoadStopMaterial::Road ? SPR_ROAD_X : material == RoadStopMaterial::Paving ? GetRoadDepotDrawData(DIAGDIR_NE).ground.sprite :
+		bool substrate = material == RoadStopMaterial::Road || material == RoadStopMaterial::Paving;
+		data.identity = {0,static_cast<float>(static_cast<uint32_t>(SurfaceMode::Opaque) | (substrate ? 0 : SURFACE_SHADED)),1,2};
+		const auto &source = *GetStationTileLayout(truck ? StationType::Truck : StationType::Bus,layout);
+		SpriteID image = substrate ? source.ground.sprite & SPRITE_MASK :
 			material == RoadStopMaterial::Company ? SPR_BUS_STOP_DT_X_W : material == RoadStopMaterial::Masonry ? SPR_TRUCK_STOP_DT_X_W : 0;
 		if (image != 0) {
-			const auto &texture = Textures().Get(image,material == RoadStopMaterial::Company ? palette : PAL_NONE,0,true);
+			PaletteID material_palette = substrate ? GroundSpritePaletteTransform(source.ground.sprite,source.ground.pal,palette) : material == RoadStopMaterial::Company ? palette : PAL_NONE;
+			const auto &texture = Textures().Get(image,material_palette,0,true);
 			data.uv_transform[3] = static_cast<float>(texture.page);
 			data.region = texture.Region();
+			if (substrate) {
+				Vec3 uv = texture.UV(-texture.x_offset,-texture.y_offset);
+				data.uv_transform = {uv.x,uv.y,ZOOM_BASE/(static_cast<float>(1U<<texture.zoom)*ATLAS_SIZE),uv.z};
+			}
 		}
 		scene.instances.push_back({&mesh,data});
 	}

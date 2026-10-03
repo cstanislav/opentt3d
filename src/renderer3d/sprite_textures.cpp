@@ -55,6 +55,12 @@ bool IsBaseGraphicsSprite(SpriteID image)
 	return base_graphics;
 }
 
+bool IsClassicCanalDikeSprite(SpriteID image)
+{
+	const GraphicsSet *set = BaseGraphics::GetUsedSet();
+	return set != nullptr && SupportsCanalDikeGround(set->name) && IsBaseGraphicsSprite(image);
+}
+
 class TextureDecoder final : public SpriteEncoder {
 public:
 	using Family = std::array<std::unique_ptr<TextureDecoder>,to_underlying(ZoomLevel::Max)+1>;
@@ -385,14 +391,15 @@ void VerifyTextureMipCache()
 	Debug(driver,1,"OpenTT3D: palette lookup survives atlas-page eviction and source-node reuse");
 }
 
-const SpriteTexture &SpriteTextures::Get(SpriteID image, PaletteID palette, unsigned zoom, bool opaque_surface)
+const SpriteTexture &SpriteTextures::Get(SpriteID image, PaletteID palette, unsigned zoom, bool opaque_surface, SpriteTextureLayer layer)
 {
 	image &= SPRITE_MASK;
 	palette &= PALETTE_MASK;
+	if (layer != SpriteTextureLayer::Complete && (layer != SpriteTextureLayer::CanalDikeGround || opaque_surface)) throw std::invalid_argument("Masked canal soil must retain source cutout ownership");
 	/* Classic's native pixel grid is normal zoom. Upscaled loader levels contain
 	 * duplicated texels, waste atlas space and must not imply extra model detail. */
 	zoom = std::clamp(zoom, static_cast<unsigned>(to_underlying(ZoomLevel::Normal)), static_cast<unsigned>(to_underlying(ZoomLevel::Max)));
-	uint64_t key = image | (static_cast<uint64_t>(palette) << 24) | (static_cast<uint64_t>(zoom) << 56) | (static_cast<uint64_t>(opaque_surface) << 63);
+	uint64_t key = image | (static_cast<uint64_t>(palette) << 24) | (static_cast<uint64_t>(zoom) << 56) | (static_cast<uint64_t>(layer) << 62) | (static_cast<uint64_t>(opaque_surface) << 63);
 	if (auto found = entries.find(key); found != entries.end()) {
 		found->second.last_used = epoch;
 		pages[found->second.page].last_used = epoch;
@@ -405,6 +412,7 @@ const SpriteTexture &SpriteTextures::Get(SpriteID image, PaletteID palette, unsi
 	for (int y = 0; y < decoder.height; ++y) {
 		for (int x = 0; x < decoder.width; ++x) {
 			auto pixel = decoder.pixels[static_cast<size_t>(y) * decoder.width + x];
+			if (layer == SpriteTextureLayer::CanalDikeGround && !KeepCanalDikeGround(pixel.m)) pixel.a = 0;
 			uint8_t index = pixel.m != 0 && mapping != nullptr ? mapping[pixel.m] : pixel.m;
 			if (pixel.m != 0 && index == 0) pixel.a = 0;
 			size_t target = static_cast<size_t>(location.y + y) * ATLAS_SIZE + location.x + x;
@@ -424,6 +432,31 @@ const SpriteTexture &SpriteTextures::Get(SpriteID image, PaletteID palette, unsi
 	texture.palette = palette;
 	texture.last_used = epoch;
 	return entries.emplace(key, texture).first->second;
+}
+
+void VerifyCanalDikeGroundTexture(SpriteID image)
+{
+	TextureDecoder source(to_underlying(ZoomLevel::Normal));
+	UniquePtrSpriteAllocator allocator;
+	GetRawSprite(image,SpriteType::Normal,&allocator,&source);
+	const auto original = Textures().Get(image,PAL_NONE);
+	const auto soil = Textures().Get(image,PAL_NONE,0,false,SpriteTextureLayer::CanalDikeGround);
+	if (soil.width != source.width || soil.height != source.height || soil.zoom != source.zoom ||
+		soil.source_width != source.source_width || soil.source_height != source.source_height ||
+		soil.x_offset != source.x_offset || soil.y_offset != source.y_offset || soil.opaque_surface ||
+		(original.page == soil.page && original.x == soil.x && original.y == soil.y)) throw std::runtime_error("Canal soil changed source registration or shared the complete-source atlas key");
+	for (int y = 0; y < source.height; ++y) for (int x = 0; x < source.width; ++x) {
+		const auto &pixel = source.pixels[static_cast<size_t>(y)*source.width+x];
+		const auto &page = Textures().pages[soil.page];
+		size_t target = static_cast<size_t>(soil.y+y)*ATLAS_SIZE+soil.x+x;
+		/* Independent original palette partition: neutral masonry disappears;
+		 * every climate-soil texel retains exact colour, opacity and animation. */
+		uint8_t alpha = pixel.m < 24 ? 0 : pixel.a;
+		uint8_t brightness = std::max({pixel.r,pixel.g,pixel.b});
+		if (page.rgba[target*4] != pixel.r || page.rgba[target*4+1] != pixel.g || page.rgba[target*4+2] != pixel.b ||
+			page.rgba[target*4+3] != alpha || page.remap[target*2] != pixel.m ||
+			page.remap[target*2+1] != (brightness == 0 ? DEFAULT_BRIGHTNESS : brightness)) throw std::runtime_error("Canal soil differs from its independently decoded original source");
+	}
 }
 
 /** Palette-only voxel materials retain original recolouring and animation.

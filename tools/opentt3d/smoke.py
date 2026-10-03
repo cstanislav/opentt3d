@@ -34,6 +34,14 @@ def completed_png_size(path):
         return None
 
 
+def require_live_canal_dikes(text, variants):
+    """An isolated voxel gallery must never stand in for live source selection."""
+    seen = {int(match[1]) for match in re.finditer(r"live voxel canal dike (\d+) climate \d+ source \d+ captured at \d+,\d+ with original ground ownership",text)}
+    missing = set(variants)-seen
+    if missing:
+        raise RuntimeError(f"Actual canal dike variants were not captured: {sorted(missing)}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--build-dir", type=Path, required=True)
@@ -53,7 +61,7 @@ def main():
     parser.add_argument("--ai-dir", type=Path, help="Stage a fixture's local AI scripts alongside the isolated save")
     parser.add_argument("--newgrf-dir", type=Path, help="Stage the NewGRF files required by a fixture save")
     parser.add_argument("--executable", type=Path, help="Override game executable, for official upstream interoperability checks")
-    parser.add_argument("--graphics-from-config", choices=("OpenGFX2 Classic", "OpenGFX2 High Def"), help="Exercise saved base-set selection/migration without a command-line graphics override")
+    parser.add_argument("--graphics-from-config", choices=("OpenGFX2 Classic", "OpenGFX2 High Def", "OpenGFX"), help="Exercise saved base-set selection/migration or alternate-set fallback without a command-line graphics override")
     parser.add_argument("--reference-model", action="store_true")
     parser.add_argument("--reference-vehicle", type=int, choices=range(256), help="Locate an actual visible vehicle with an authored voxel binding")
     parser.add_argument("--reference-vehicle-binding", type=int, choices=range(8), help="Require an exact climate/cargo binding with --reference-vehicle")
@@ -94,6 +102,8 @@ def main():
     parser.add_argument("--gallery-house", type=int, nargs="+", help="Export one or more house/tree model turntables")
     parser.add_argument("--gallery-voxels", action="store_true", help="Export all authored voxel turntables, street and neighbour-context views")
     parser.add_argument("--gallery-voxel-prefix", help="Export only voxel models with this name prefix")
+    parser.add_argument("--gallery-voxel-overview", action="store_true", help="Use 256px orbit/street previews for catalogue breadth; retain exact registered native studies and full joined context")
+    parser.add_argument("--expect-canal-dikes",type=int,nargs="+",choices=range(12),help="Require these original dike variants to be emitted in the live world, not only in a gallery")
     parser.add_argument("--gallery-industry", type=int, choices=range(175))
     parser.add_argument("--gallery-vehicle", type=int, choices=range(256))
     parser.add_argument("--gallery-bridge", type=int, choices=range(13))
@@ -439,10 +449,10 @@ server_advertise = false
         commands.append("renderer3d references")
     if args.gallery_house is not None:
         commands.extend(f"renderer3d gallery {identifier}" for identifier in args.gallery_house)
-    if args.gallery_voxels or args.gallery_voxel_prefix:
+    if args.gallery_voxels or args.gallery_voxel_prefix or args.gallery_voxel_overview:
         if args.gallery_voxel_prefix and not re.fullmatch(r"[a-z0-9_]+", args.gallery_voxel_prefix):
             parser.error("Voxel review prefixes use lowercase letters, digits and underscores")
-        commands.append("renderer3d voxel-gallery" + (" " + args.gallery_voxel_prefix if args.gallery_voxel_prefix else ""))
+        commands.append("renderer3d " + ("voxel-overview" if args.gallery_voxel_overview else "voxel-gallery") + (" " + args.gallery_voxel_prefix if args.gallery_voxel_prefix else ""))
     if args.gallery_industry is not None:
         commands.append(f"renderer3d industry-gallery {args.gallery_industry}")
     if args.export_vehicles:
@@ -702,7 +712,7 @@ server_advertise = false
                               "scene-only voxel verification delegates complete vehicle pose matrices to explicit engine shards")
                 if completion not in text:
                     raise RuntimeError("The requested full/scene renderer verification scope did not complete")
-            if (args.gallery_voxels or args.gallery_voxel_prefix) and "exported voxel turntables, street-level views and neighbouring-building context" not in text:
+            if (args.gallery_voxels or args.gallery_voxel_prefix or args.gallery_voxel_overview) and "exported voxel turntables, street-level views and neighbouring-building context" not in text:
                 raise RuntimeError("Voxel review export did not complete")
             if args.verify_tile_picking and "roof/wall pixels select their owning tile across four rotations, with independent vehicle picking" not in text:
                 raise RuntimeError("Geometry-aware tile picking did not complete")
@@ -950,6 +960,8 @@ server_advertise = false
                 raise RuntimeError("Road-stop gallery did not complete")
             if args.verify_road_stops and "road-stop layout/tram views, company materials and transparent shelters passed" not in text:
                 raise RuntimeError("Road-stop verification did not complete")
+            if args.expect_canal_dikes:
+                require_live_canal_dikes(text,args.expect_canal_dikes)
             if args.verify_crossing_transitions and not re.search(r"live crossing \d+,\d+ changed from (open to barred|barred to open)", text):
                 raise RuntimeError("A live crossing did not change state during capture")
             if args.reference_ground_detail and (f"focused live ground detail {args.reference_ground_detail[0]} variant {args.reference_ground_detail[1]} at" not in text or "ground-detail tiles rendered with raised crops, hay, rocks or turf" not in text):

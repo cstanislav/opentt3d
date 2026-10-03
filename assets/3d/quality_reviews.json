@@ -1,0 +1,168 @@
+{
+  "format": 1,
+  "evidence_sha256": {
+    "opentt3d/reviews/20261003/bank-arctic-orbit.png": "21e6b74a6bb5499c3f2dfb64033eab5c7aa19ee6c71d016c8d8e654358f692d7",
+    "opentt3d/reviews/20261003/bank-arctic-source.png": "9e4c1405300ffdc14e96a75c669d85a4bdaf49d50f91638cbc45481a8f5953bb",
+    "opentt3d/reviews/20261003/bank-arctic-street.png": "55735c6a565a4e435971310e84e9819d89ce8192d0be4d06fa79cf9ad58e4be4",
+    "opentt3d/reviews/20261003/bank-arctic-world-opengl.png": "bb080e90c158005a7a20beeccdb6111350f138fc982419015eb03e0186833c4a",
+    "opentt3d/reviews/20261003/bank-arctic-world-vulkan.png": "be020ec03489eaaf5ee83a10aafbe7a16edac457a9b8f635497277735645c4b7",
+    "opentt3d/reviews/20261003/bank-temperate-orbit.png": "874bee6abd03ca7047cb9079bd2554edefe9d43795301185ba8410a359c422c2",
+    "opentt3d/reviews/20261003/bank-temperate-source.png": "9e6270d886bcf760d7aaa58bfe42981a7923808bef0498ed3fb0fbb37bdd264b",
+    "opentt3d/reviews/20261003/bank-temperate-street.png": "d5972da7a30c0c82ba073cb07c837a74d717dcc15da577914492bc591992708a",
+    "opentt3d/reviews/20261003/bank-temperate-world-opengl.png": "a6743004486c0ac29a2ddd177c5510b05a8fb56460168cce5bc0a3b468336477",
+    "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png": "ac5a0acdd225b3e30c42a67b8b4c7cc59235ee8f1eb453069a64d315a2a18493",
+    "opentt3d/reviews/20261003/bank-tropic-world-opengl.png": "fdc33a78e83438482bb5428d7b4bcccc6b665ff1cf597b774debbbc67bed8597",
+    "opentt3d/reviews/20261003/bank-tropic-world-vulkan.png": "8801a0b1dd6e5f8bcc937e469bd301c8b9b7db32b27a54a087957ffb9c4ea500",
+    "opentt3d/reviews/20261003/canal-arctic-world.png": "f270c03f8351cde825419525ebe0fe3dfe7781ef224662fb1c5b77c4f8248963",
+    "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9",
+    "opentt3d/reviews/20261003/canal-catalogue-b.png": "80cae1ec1727f37a6e6d91d4a25f634dfa6e9a05fe5386e3af17ec77f8616794",
+    "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+    "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+    "opentt3d/reviews/20261003/canal-temperate-world.png": "ebf8a2ad8305a05f3d7aba65920f362d326b190c1a927f2ef780fe8f108ba3db",
+    "opentt3d/reviews/20261003/canal-toyland-world.png": "7b555f0c09661a3e106a7c1d6a434f818fa875b2178d85ab59a3b8acad9d5456",
+    "opentt3d/reviews/20261003/canal-tropic-world.png": "45c3f054d0de2ccf64a14833e6460918aad43b02a8a6adec91e6aba75faa55bb"
+  },
+  "models": {
+    "bank_north": {
+      "score": 7, "fingerprint": "42178d4a3b99fa02b6bfcc3752df6930bf99b75ad9a1d8be475d9df659ed684a",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-temperate-source.png","opentt3d/reviews/20261003/bank-temperate-orbit.png","opentt3d/reviews/20261003/bank-temperate-street.png","opentt3d/reviews/20261003/bank-temperate-world-vulkan.png","opentt3d/reviews/20261003/bank-temperate-world-opengl.png"],
+      "notes": ["Individually inspected in the joined original58/59 roof. Cupola is centred and partitioned without seam loss; finial and colonnade remain volumetric."],
+      "defects": ["Facade relief, glazing reflections and directional roof paint remain less source-detailed than the original."]
+    },
+    "bank_south": {
+      "score": 7, "fingerprint": "06937f4d0cc913fadd891957a9911414f1615a2e82dd19d79fd28ba2828d7616",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-temperate-source.png","opentt3d/reviews/20261003/bank-temperate-orbit.png","opentt3d/reviews/20261003/bank-temperate-street.png","opentt3d/reviews/20261003/bank-temperate-world-vulkan.png","opentt3d/reviews/20261003/bank-temperate-world-opengl.png"],
+      "notes": ["Original59 owns its half of the centred cupola and the actual shared entry arch; all four original finished-body construction slots are retained."],
+      "defects": ["Entry recess shading, stone courses and front-window paint still need source-scale refinement."]
+    },
+    "bank2_north": {
+      "score": 7, "fingerprint": "c9f430df6d7789e21866a0bc454e697d78ed617121bfa2caa3199c8d9b9b1ea1",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-arctic-source.png","opentt3d/reviews/20261003/bank-arctic-orbit.png","opentt3d/reviews/20261003/bank-arctic-street.png","opentt3d/reviews/20261003/bank-arctic-world-vulkan.png","opentt3d/reviews/20261003/bank-arctic-world-opengl.png","opentt3d/reviews/20261003/bank-tropic-world-vulkan.png","opentt3d/reviews/20261003/bank-tropic-world-opengl.png"],
+      "notes": ["Original89 has a properly joined two-storey brick office and centred golden cupola. The dome crosses the owner seam without duplicate cells or missing ribs."],
+      "defects": ["Gold rib/finial silhouette and glazing highlights remain provisional against the native source."]
+    },
+    "bank2_south": {
+      "score": 7, "fingerprint": "05a9ee76dfb13f20c500e682491e6a50e26c7e3a51bd7287d4eca3f937207b07",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-arctic-source.png","opentt3d/reviews/20261003/bank-arctic-orbit.png","opentt3d/reviews/20261003/bank-arctic-street.png","opentt3d/reviews/20261003/bank-arctic-world-vulkan.png","opentt3d/reviews/20261003/bank-arctic-world-opengl.png","opentt3d/reviews/20261003/bank-tropic-world-vulkan.png","opentt3d/reviews/20261003/bank-tropic-world-opengl.png"],
+      "notes": ["Original90 retains its native near-wing offset, cornice, windows, colonnade and complementary cupola portion; Arctic and tropical live worlds are verified."],
+      "defects": ["The front colonnade reads too flat at native scale; detailed glazing/recess paint is not yet source-comparable."]
+    },
+    "bank_north_ground": {
+      "score": 7, "fingerprint": "e48278987df29ee5f762fb26b014e9a6875f7109f7af75b328e7633a6a6d1276",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-temperate-source.png","opentt3d/reviews/20261003/bank-temperate-orbit.png"],
+      "notes": ["Independent original58 finished paving and planter retain their ownership and meet the connected body without a seam step."],
+      "defects": ["Paving/planting grain and source shadow detail require closer native-source matching."]
+    },
+    "bank_south_ground": {
+      "score": 7, "fingerprint": "d074fb834be823cb81f97055701b85286fb154fdd0b9b46704fa239b4beb2397",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-temperate-source.png","opentt3d/reviews/20261003/bank-temperate-orbit.png"],
+      "notes": ["Original59 paving completes the finished two-tile court; street review confirms slab contact and separate ground ownership."],
+      "defects": ["Tile-relative paving marks and fine source shadow/recess paint remain provisional."]
+    },
+    "bank2_north_ground": {
+      "score": 7, "fingerprint": "55d62246fa531ffe23d1808b287ca87f65df3a7355d96caa4ae9bac4314b6011",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-arctic-source.png","opentt3d/reviews/20261003/bank-arctic-orbit.png"],
+      "notes": ["The source89 front paving and narrow planted strip retain their independent tile layer and native contact height."],
+      "defects": ["Planting colours and paving grain are less varied than the original source."]
+    },
+    "bank2_south_ground": {
+      "score": 7, "fingerprint": "8d9e8b4ae907603bedb0bee73079c3f860f5f94815dec14217a2164d031899fa",
+      "checks": {"source":false,"orbit":true,"street":true,"world":true,"states":true,"consistency":true},
+      "evidence": ["opentt3d/reviews/20261003/bank-arctic-source.png","opentt3d/reviews/20261003/bank-arctic-orbit.png"],
+      "notes": ["The source90 ground cut registers with the joined office rather than duplicating another tile's border or garden."],
+      "defects": ["Garden trim and source-scale stone/soil shadow detail need further comparison."]
+    },
+    "canal_dike_0": {
+      "score":7,"fingerprint":"102e4b19a80499dc20e15071131c4ce005751d5513599373f6bc7bb753c1715e",
+      "checks":{"source":false,"orbit":true,"street":true,"world":true,"states":false,"consistency":true},
+      "evidence":["opentt3d/reviews/20261003/canal-side-orbit.png","opentt3d/reviews/20261003/canal-side-street.png","opentt3d/reviews/20261003/canal-catalogue-a.png"],
+      "notes":["Dry -X side has a genuine stepped toe, retaining courses and coping; all-angle/street inspection confirms physical depth and an open channel."],
+      "defects":["Neutral masonry grain/coping still needs native-source refinement and full clearance/fallback acceptance."]
+    },
+    "canal_dike_1": {
+      "score":7,"fingerprint":"e1b01bb2462cef7de9c78b31fbfca371b1f6e0334d2d77bdd491cf1d466e64b9",
+      "checks":{"source":false,"orbit":false,"street":false,"world":true,"states":false,"consistency":true},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-a.png"],
+      "notes":["Dry +Y retaining side is correctly rotated and remains ground-owned. Its actual climate soil margin is independently preserved under masonry."],
+      "defects":["Full individual turntable/street, exact trim fidelity and fleet-clearance reviews remain open."]
+    },
+    "canal_dike_2": {
+      "score":7,"fingerprint":"60e8c6ed8aa55f73d02c22a6760b81f93448cbe92f6b48b2e16d63ff6b6a1634",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-a.png"],
+      "notes":["The dry +X side has coherent physical toe/coping depth in opposite-orbit and street previews, without crossing the central ship channel."],
+      "defects":["Individual native, live-corner, fleet-clearance and full-angle evidence is incomplete."]
+    },
+    "canal_dike_3": {
+      "score":7,"fingerprint":"94d2627be165019f63e54d4a60e20f265aa1c1bee133697e8088ce49de8862ad",
+      "checks":{"source":false,"orbit":false,"street":false,"world":true,"states":false,"consistency":true},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-a.png"],
+      "notes":["The dry -Y side uses the correct original axis and retains a low real retaining wall beside independently animated water."],
+      "defects":["Full-angle source comparison, coping paint and fleet-clearance acceptance remain unfinished."]
+    },
+    "canal_dike_4": {
+      "score":7,"fingerprint":"5a499693a75333d8e22fcc2a6c7258d3247f8e8226a98404c8f4dcbc470b00ea",
+      "checks":{"source":false,"orbit":false,"street":false,"world":true,"states":false,"consistency":true},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The -X/+Y convex join has a chamfered toe and coping volume, not a painted ground corner; live selection is independently observed."],
+      "defects":["Source corner bevel/paint and all connected-view/clearance evidence remain provisional."]
+    },
+    "canal_dike_5": {
+      "score":7,"fingerprint":"9203ef318fe21d8962a94fb01d38eb963ca06452c00922d47ae546ba859cd0a7",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The +X/+Y convex corner is physically stepped and correctly rotated in the inspected opposite-orbit/street previews."],
+      "defects":["Full native-source and live joined-corner fidelity/clearance checks are still required."]
+    },
+    "canal_dike_6": {
+      "score":7,"fingerprint":"b9c9cefa4418dabd48e2a4232394bb13a7498e365a76880140a42538c97d5986",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The +X/-Y convex corner retains original registration, genuine vertical depth and a compact diagonal footprint."],
+      "defects":["All-angle, native corner paint, live selection and clearance acceptance remain incomplete."]
+    },
+    "canal_dike_7": {
+      "score":7,"fingerprint":"6891fd4f4e32539393ddb5343676b22e1a85422a7d9486ece9d07118d87d72d8",
+      "checks":{"source":false,"orbit":false,"street":false,"world":true,"states":false,"consistency":true},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The -X/-Y convex join remains coherent where two real dry-edge walls meet in the live harbour; no wall spans the navigable interior."],
+      "defects":["Coping/junction source refinement and complete connected-angle/fleet-clearance review remain open."]
+    },
+    "canal_dike_8": {
+      "score":6,"fingerprint":"add8930f1fed3615b67814e91de56b0a36a9a6ac25e22e66708e5f50afb961e2",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The -X/+Y concave piece is genuinely stepped and smaller than its convex counterpart, but the breadth preview is too small to approve the junction."],
+      "defects":["Native bevel/paint, dry-diagonal connectivity and close all-angle/live clearance reviews are incomplete."]
+    },
+    "canal_dike_9": {
+      "score":6,"fingerprint":"807b2f4572616d3f1347aae79f476478f44f9aaf38efc69c9bc3db4168a7d351",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The +X/+Y concave corner retains actual XYZ depth rather than relying on its original soil patch; native joined appearance is unaccepted."],
+      "defects":["Full source-soil/coping junction, live dry-diagonal selection and clearance evidence remain required."]
+    },
+    "canal_dike_10": {
+      "score":6,"fingerprint":"f6391af7bb5ec8726a2878c748779c5b4f2e3cd8bc8502b7213742b298ad93cd",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The +X/-Y concave model is a small rotated retaining/coping volume with an unobstructed interior, not an extruded sprite."],
+      "defects":["Detailed native junction, live connectivity and all-angle/fleet-clearance reviews remain incomplete."]
+    },
+    "canal_dike_11": {
+      "score":6,"fingerprint":"0b6802d6501559a346b0d31ac23fd331507d0d32ea1173b3e8ca2e2bf2d3bfe9",
+      "checks":{"source":false,"orbit":false,"street":false,"world":false,"states":false,"consistency":false},
+      "evidence":["opentt3d/reviews/20261003/canal-catalogue-b.png"],
+      "notes":["The -X/-Y concave corner has the proper complementary diagonal footprint and physical lower toe, but needs close joined-world inspection."],
+      "defects":["Native corner paint, dry-diagonal transitions and all-angle/fleet-clearance evidence remain missing."]
+    }
+  },
+  "note": "Individual quick-pass ratings require exact model/six-face fingerprints and explicit review evidence. Do not bulk-promote existing work-in-progress artwork. This rating ledger does not confer final original-art visual approvals."
+}

@@ -4,9 +4,9 @@ class ShipCatalogueInfo extends AIInfo {
 	function GetName()        { return "OpenTT3D Ship Catalogue"; }
 	function GetShortName()   { return "3DSC"; }
 	function GetDescription() { return "Build an ordinary canal harbour and operate selected original ships between docks."; }
-	function GetVersion()     { return 6; }
+	function GetVersion()     { return 7; }
 	function GetAPIVersion()  { return "15"; }
-	function GetDate()        { return "2026-09-24"; }
+	function GetDate()        { return "2026-10-03"; }
 	function CreateInstance(){ return "ShipCatalogue"; }
 	function UseAsRandomAI() { return false; }
 	function GetSettings() {
@@ -18,6 +18,7 @@ class ShipCatalogueInfo extends AIInfo {
 		AddSetting({name="all_docks",description="Build both additional dock-bank orientations",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
 		AddSetting({name="dock_hold",description="Retain the final ordinary full-load dock call for review",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
 		AddSetting({name="buoy_waypoint",description="Build and visit an original buoy waypoint",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
+		AddSetting({name="dike_island",description="Retain a dry tile for concave canal-bank review",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
 	}
 }
 RegisterAI(ShipCatalogueInfo());

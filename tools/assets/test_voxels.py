@@ -8,6 +8,67 @@ from compile_vehicles import definitions as vehicle_definitions
 
 
 class VoxelCompilerTests(unittest.TestCase):
+    def test_canals_keep_all_twelve_original_ground_owned_volumes_and_clear_water_channel(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        names = {f"canal_dike_{variant}" for variant in range(12)}
+        source["models"] = {name:source["models"][name] for name in names}
+        source["bindings"] = {"infrastructure":{str(5380+variant):source["bindings"]["infrastructure"][str(5380+variant)] for variant in range(12)}}
+        data = compile_catalogue(source)
+        volumes = {}
+        painted = {}
+        for variant in range(12):
+            name = f"canal_dike_{variant}"
+            model = data["models"][name]
+            self.assertEqual(data["bindings"]["infrastructure"][str(5380+variant)],{str(climate):name for climate in range(4)})
+            self.assertEqual(model["origin"],[0,0,-0.5])
+            self.assertEqual(model["cell_size"],[0.5]*3)
+            cells = {(x+i,y,z) for x,y,z,length,material in model["runs"] for i in range(length)}
+            volumes[variant] = cells
+            painted[variant] = {(x+i,y,z):tuple(data["materials"][material-1]) for x,y,z,length,material in model["runs"] for i in range(length)}
+            self.assertEqual({z for x,y,z in cells},set(range(4)),"Real side walls/coping have XYZ depth, not a flat source overlay")
+            self.assertTrue(all(x < 6 or x >= 26 or y < 6 or y >= 26 for x,y,z in cells),"No masonry enters the central ten-world-unit ship channel")
+            self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in cells))
+            colours = {colour for *_,material in model["runs"] for colour in data["materials"][material-1]}
+            self.assertTrue(colours <= set(range(1,15)),"Keep the captured original grey/white masonry; pure white15 is absent from the source")
+        # Original order: dry -X,+Y,+X,-Y; corresponding corners start at -X,+Y.
+        self.assertEqual({x for x,y,z in volumes[0]},set(range(4)))
+        self.assertEqual({y for x,y,z in volumes[1]},set(range(28,32)))
+        self.assertEqual({x for x,y,z in volumes[2]},set(range(28,32)))
+        self.assertEqual({y for x,y,z in volumes[3]},set(range(4)))
+        for outer,inner in zip(range(4,8),range(8,12)):
+            self.assertTrue(volumes[inner] <= volumes[outer],"Concave joins retain a smaller genuine diagonal volume")
+        for first,second,corner in ((0,1,4),(1,2,5),(2,3,6),(3,0,7)):
+            for a,b in ((first,second),(first,corner),(second,corner)):
+                for cell in painted[a].keys() & painted[b].keys():
+                    self.assertEqual(painted[a][cell],painted[b][cell],"Intersecting original side/corner owners must not fight with different six-face coping or masonry paint")
+
+    def test_bank_cupolas_are_centered_and_partitioned_without_missing_seam_cells(self):
+        root = Path(__file__).resolve().parents[2]
+        source = json.loads((root / "assets/3d/voxels.json").read_text())
+        names = ("bank_north", "bank_south", "bank2_north", "bank2_south")
+        source["models"] = {name:source["models"][name] for name in names}
+        source["bindings"] = {}
+        for label,component,size in (("bank", "bank_joined_body", [64,32,46]), ("bank2", "bank2_joined_shell", [64,32,90])):
+            ops = [["use",component]]
+            if label == "bank2":
+                ops.append(["use","bank2_rooftop_dome"])
+            source["models"][label+"_joined_check"] = {"size":size,"cell_size":[0.5,0.5,0.5 if label=="bank2" else 1],"ops":ops}
+        data = compile_catalogue(source)
+        def cells(name):
+            return {(x+i,y,z):tuple(data["materials"][material-1]) for x,y,z,length,material in data["models"][name]["runs"] for i in range(length)}
+        for label,centre,height in (("bank", (32,14),30), ("bank2", (31,11.5),56)):
+            a,b = cells(label+"_north"),cells(label+"_south")
+            self.assertFalse(a.keys() & b.keys(), "Two original owners must not duplicate any cupola or roof cell")
+            whole = {**a,**b}
+            self.assertEqual(whole,cells(label+"_joined_check"),"Partitioning must not truncate a centered dome at the tile seam")
+            for part in (a,b):
+                self.assertTrue(any(z >= height for x,y,z in part),"Both source cuts own their actual half of the dome")
+            upper = [cell for cell in whole if cell[2] >= height]
+            bounds = [(min(p[axis] for p in upper),max(p[axis] for p in upper)+1) for axis in (0,1)]
+            self.assertEqual(tuple((low+high)/2 for low,high in bounds),centre)
+            self.assertTrue(all(source["models"][label+side].get("review_status") != "approved" for side in ("_north","_south")))
+
     def test_bubbles_keep_open_volumetric_rims_eight_free_fragments_and_all_original_climates(self):
         root = Path(__file__).resolve().parents[2]
         source = json.loads((root / "assets/3d/voxels.json").read_text())
@@ -952,7 +1013,8 @@ class VoxelCompilerTests(unittest.TestCase):
         for x in range(28,36):
             for z in range(1,17):
                 self.assertNotIn((x,24,z),joined,"Retain the shared bank's usable entrance beneath its arch")
-        self.assertIn((25,9,43),joined,"Keep the original fine white finial above its supported dome")
+        self.assertIn((32,14,43),joined,"Keep the fine white finial above the centered, supported dome")
+        self.assertNotIn((25,9,43),joined,"Do not retain the old offset finial as a second dome")
 
     def test_food_processing_retains_independent_ground_source_states_and_open_vessels(self):
         root = Path(__file__).resolve().parents[2]

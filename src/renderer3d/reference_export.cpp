@@ -392,6 +392,29 @@ void ExportTerrainReferences()
 	const SpriteID tunnels[] = {SPR_TUNNEL_ENTRY_REAR_RAIL,SPR_TUNNEL_ENTRY_REAR_MONO,SPR_TUNNEL_ENTRY_REAR_MAGLEV,SPR_TUNNEL_ENTRY_REAR_ROAD};
 	for (unsigned style = 0; style < 4; ++style) for (unsigned variant = 0; variant < 8; ++variant) image("tunnel",style,variant,tunnels[style]+variant);
 	image("road",0,0,SPR_ROAD_X);
+	for (unsigned variant = 0; variant < 12; ++variant) image("canal-dike",0,variant,SPR_CANAL_DIKES_BASE+variant);
+	for (unsigned variant = 0; variant < 48; ++variant) image("canal-lock",variant/24,variant%24,SPR_LOCK_BASE+variant);
+	for (unsigned variant = 0; variant < 4; ++variant) image("water-slope",0,variant,SPR_CANALS_BASE+variant);
+	TileIndex canal = INVALID_TILE;
+	for (uint y = 1; y < Map::MaxY() && canal == INVALID_TILE; ++y) for (uint x = 1; x < Map::MaxX(); ++x) {
+		TileIndex tile = TileXY(x,y);
+		if (!IsTileType(tile,MP_WATER) || !IsCanal(tile) || !IsTileFlat(tile)) continue;
+		canal = tile;
+		break;
+	}
+	if (canal != INVALID_TILE) {
+		SpriteID base = GetCanalSprite(CF_DIKES,canal);
+		unsigned verified = 0;
+		for (unsigned variant = 0; variant < 12; ++variant) {
+			SpriteID resolved = (base == 0 ? SPR_CANAL_DIKES_BASE : base)+GetCanalSpriteOffset(CF_DIKES,canal,variant);
+			image("canal-dike-resolved",0,variant,resolved);
+			manifest.back()["tile"] = {TileX(canal),TileY(canal)};
+			manifest.back()["base"] = base;
+			manifest.back()["base_graphics"] = IsBaseGraphicsSprite(resolved);
+			if (IsClassicCanalDikeSprite(resolved)) { VerifyCanalDikeGroundTexture(resolved); ++verified; }
+		}
+		Debug(driver,1,"OpenTT3D: {} resolved canal soil textures preserve original climate pixels, palette animation and registration without flat masonry",verified);
+	}
 	image("track",0,0,SPR_RAIL_TRACK_X);
 	image("track",1,0,SPR_MONO_TRACK_X);
 	image("track",2,0,SPR_MGLV_TRACK_X);
@@ -968,6 +991,19 @@ void VerifyRoadStops()
 				Scene isolated, expanded;
 				isolated.instances = {instance}; expanded.vertices = isolated.ExpandedVertices(true);
 				if (!RenderScene(isolated,camera,pixels,&ids) || !RenderScene(expanded,camera,reference,&reference_ids) || pixels != reference || ids != reference_ids) throw std::runtime_error("Road-stop component material differs between CPU and GPU instances");
+				if (!instance.mesh->empty() && instance.mesh->front().texture.z == 0) {
+					/* Independent full source projection: a microcrop can pass a
+					 * CPU/GPU equality test while still disagreeing with the road. */
+					const auto &source = *GetStationTileLayout(truck ? StationType::Truck : StationType::Bus,layout);
+					const auto &texture = Textures().Get(source.ground.sprite&SPRITE_MASK,
+						GroundSpritePaletteTransform(source.ground.sprite,source.ground.pal,PALETTE_TO_BLUE),0,true);
+					for (auto &vertex : expanded.vertices) {
+						Vec3 p = vertex.position;
+						vertex.texture = texture.UV(2*(p.y-p.x)*ZOOM_BASE-texture.x_offset,(p.x+p.y)*ZOOM_BASE-texture.y_offset);
+						vertex.surface = static_cast<SurfaceMode>(static_cast<uint32_t>(vertex.surface)&~SURFACE_SPRITE_LOCAL_UV);
+					}
+					if (!RenderScene(expanded,camera,reference,&reference_ids) || pixels != reference || ids != reference_ids) throw std::runtime_error("Road-stop substrate differs from the original adjoining road chart");
+				}
 			}
 			++views;
 		}
