@@ -12,6 +12,24 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Actual river feature identity is evidence, not structural approval
+
+`reviews/20261003/river-live-feature-selectors/` retains draw-site feature/flags/
+callback input/output and complete originals: 454 ground/899 bank owner states
+per Classic/OpenGFX base set, exact across both renderers. All twelve flat bank
+inputs occur in each climate, but only one naturally occurring SW/SE slope per
+climate; NE/NW/full selectors and relief/water/terrain/animation/ship ownership
+remain open. OpenGFX supplies banks and variable tile-local ground sources—the
+initial absence assumption is rejected, not converted to approval or forced absence.
+
+The three separate ledgers still have 2,866/2,950/2,998 rows and 57/141/189 individual
+records. Source/renderer-coupled pending fingerprints follow the diagnostic edits;
+scores/checks/defects/evidence and bindings are unchanged. Every required-eight gate
+fails with zero approvals/four gaps. 32 strict world equalities and 213 native/266
+working asset/250 isolated asset/99 harness tests do not promote source-only layers,
+48 rejected/provisional unbound lock volumes or rejected larger HQ owners. Original
+artwork, canonical reviews and immutable recommended `.42` remain untouched.
+
 ## Raised artwork in river ground is not hidden by a water-surface label
 
 Actual complete sloped-river sources in

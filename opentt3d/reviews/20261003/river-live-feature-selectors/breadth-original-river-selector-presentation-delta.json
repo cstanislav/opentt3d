@@ -1,0 +1,36 @@
+{
+  "audited_utc": "2026-10-03T21:02:19.033705+00:00",
+  "files": [
+    {
+      "file": "src/water_cmd.cpp",
+      "original_sha256": "a56b128bcf6d3f427ba276900469c631b10d0f5a7601eccc3d6deb91ffa8848e",
+      "current_sha256": "c3fd28f8fda65dab5d4c08a6ba0babe6ffa3b70d090694b325e49aa2c5330272",
+      "original_after_removing_only_read_only_diagnostics_byte_exact": true
+    },
+    {
+      "file": "src/renderer3d/world_capture.h",
+      "original_sha256": "eb810ba798b9202fe615b7514a932996dd9ce5beffc378bcc10e664ba972903c",
+      "current_sha256": "a383db4d6396c0a5ae624d7ad26adb598edf7905070d935936c442da4e3e066a",
+      "original_after_removing_only_read_only_diagnostics_byte_exact": true
+    },
+    {
+      "file": "src/renderer3d/world_capture.cpp",
+      "original_sha256": "866ad02a93cb32f55c53d82a620d24ba7e3d965c63ad34236d29ae3569c2b74f",
+      "current_sha256": "5a16e62b821b8b5c1cc469ef918d65f1301bdbbe46c1810cb1271840d36054e3",
+      "original_after_removing_only_read_only_diagnostics_byte_exact": true
+    },
+    {
+      "file": "src/renderer3d/sprite_textures.hpp",
+      "original_sha256": "6279b97f96a79f26d3f354a2e199b7b8035b25af51b57c3a7f845f07f826330b",
+      "current_sha256": "089f91d2b3bb93da0bda5ceef83a9827f5aabf46f964d8877a10e2555a612461",
+      "original_after_removing_only_read_only_diagnostics_byte_exact": true
+    },
+    {
+      "file": "src/renderer3d/reference_export.cpp",
+      "original_sha256": "41ac80d109b3f30650f5d4f37bff14c3201f1f10ab6c7bbd0862c3427b12e0a7",
+      "current_sha256": "30da35191da2859be72574ae2a7db0788734ba7658d73cdb239ed8490d9829e1",
+      "original_after_removing_only_read_only_diagnostics_byte_exact": true
+    }
+  ],
+  "scope": "All five modified C++/header files restore byte-exactly to the retained pre-edit source when only the new env-gated observer declarations/definitions, read-only local selector snapshots and three observation calls are removed. The shared flag retains the exact prior default-off predicate. Original draws, callback call sites/counts, commands, simulation, save layouts, source heights, terrain/object dimensions, palettes and RNG code have no other delta. This is a source/draw-boundary proof, not full replay/network/performance or visual quality acceptance."
+}

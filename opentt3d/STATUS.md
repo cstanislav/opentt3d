@@ -2,6 +2,32 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — river feature callbacks observed; geometry still pending
+
+Original draw-site observations now retain actual river feature/base/flags and
+callback input/output, with no second callback invocation. Forty quiet native
+controls retain 454 ground and 899 bank owner states per Classic/OpenGFX base set,
+matching complete original source bytes/metadata across renderers. All twelve flat
+bank inputs occur in each climate; only naturally observed SW/SE sloped groups are
+established. OpenGFX actually supplies banks/tile-local ground variants, so its
+initial zero-base expectation is rejected and retained. No actual absent-bank
+control, complete custom-family, relief/water decomposition or phase/ship acceptance.
+
+32 strict saved-world prior/default-off/tracing comparisons have zero changed pixels,
+no masks/tolerance. Native 213, working asset 266, isolated committed-artwork/compiler
+asset 250, harness 99 and presentation boundary checks pass. All five C++/header
+files restore byte-exactly after removing diagnostic-only additions. Immutable
+1,831-model artwork/bindings and recommended `.42` remain unchanged. Pending
+source/renderer fingerprints refresh without any rating/check/defect/evidence
+promotion; required-eight still fails in all three separately identified scopes.
+
+160 successful generated atlas captures are losslessly compacted with complete PAM
+headers/exact reconstructed hashes, recovering 742,288,984 bytes without touching
+original sprites, screenshots, saves, failures or models. Evidence and rejected
+syntax/absence/context attempts: `reviews/20261003/river-live-feature-selectors/`.
+Lock/HQ fidelity, full catalogue breadth, performance and all platform/input/replay/
+network work continue; source capture is not runtime 3D substitution or completion.
+
 ## October 3 — provisional front repair and real river ground artwork
 
 Twenty-eight changed unbound lock owners have new individual defect records after

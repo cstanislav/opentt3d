@@ -1,5 +1,30 @@
 # Active extended development goal
 
+## Actual river feature/offset selections retained — October 3
+
+The default-off observer now records values at original river draw sites, without
+rerunning callbacks. Forty quiet native controls retain 454 ground/899 bank owner
+states per Classic/OpenGFX base set, exact across backends, and 32 strict prior/
+default-off/tracing world equalities. All twelve flat-bank inputs occur in every
+climate; only naturally present SW/SE slopes are observed. OpenGFX also supplies
+banks and tile-local ground variants: the absent-bank assumption is rejected and
+retained, not forced. No actual zero-feature execution is established.
+
+Native 213, working asset 266, isolated committed-artwork/compiler asset 250 and
+harness 99 tests pass. Removing only the diagnostic additions restores five runtime
+source files byte-exactly. Lossless compaction retains 160 atlas captures/complete
+PAM reconstructions while recovering 742,288,984 bytes; original sprite sources,
+screenshots, saves, failures and models stay unchanged. Evidence:
+`reviews/20261003/river-live-feature-selectors/`. Source/renderer fingerprints are
+refreshed, but all ratings/checks/defects/evidence/bindings remain conservative.
+
+Continue the full original lock/river/raised/water ownership and geometry work;
+feature identity alone does not resolve relief, phases, terrain grade, ship clearance
+or complete/custom-family coverage. Eight lock street silhouettes and larger-HQ
+ownership remain rejected. Canonical 1,831 models and recommended `.42` are unchanged;
+zero 8/10 approvals, four inventory gaps and the entire catalogue/performance/
+platform/input/replay/network goal remain open. This is not a stopping-clock entry.
+
 ## Front profiles repaired provisionally; raised river ground kept in scope — October 3
 
 The unbound lock candidate separates slender/dark front coping from wider rear

@@ -1,0 +1,16 @@
+{
+  "commit": "ff74b6eaa73d3c4220e935129f570b4a4595404d",
+  "asset_tests": 250,
+  "experimental_hq_compiler_artwork_tests_present": false,
+  "overlaid_read_only_tools_and_observer_sources": {
+    "tools/assets/live_river_selectors.py": "a89ebd879ec480041664d53a6f870cc89d12b2b788fb5fa35ba23369f4e5b783",
+    "tools/assets/test_live_river_selectors.py": "6e32aa83c1575d0680a79982e5012b4210eca05859a3b62748847b895048e4a5",
+    "src/water_cmd.cpp": "c3fd28f8fda65dab5d4c08a6ba0babe6ffa3b70d090694b325e49aa2c5330272",
+    "src/renderer3d/world_capture.h": "a383db4d6396c0a5ae624d7ad26adb598edf7905070d935936c442da4e3e066a",
+    "src/renderer3d/world_capture.cpp": "5a16e62b821b8b5c1cc469ef918d65f1301bdbbe46c1810cb1271840d36054e3",
+    "src/renderer3d/sprite_textures.hpp": "089f91d2b3bb93da0bda5ceef83a9827f5aabf46f964d8877a10e2555a612461",
+    "src/renderer3d/reference_export.cpp": "30da35191da2859be72574ae2a7db0788734ba7658d73cdb239ed8490d9829e1"
+  },
+  "test_log_sha256": "ee8bfc14bc7abc87cd49f5d936a625911a024a32e144bb6844fdc60ef3198736",
+  "scope": "Committed1831-model artwork/compiler/reviews with the read-only callback selector/source-gate validators and observer; not mixed working HQ artwork, an exact-tag binary or geometry acceptance."
+}
