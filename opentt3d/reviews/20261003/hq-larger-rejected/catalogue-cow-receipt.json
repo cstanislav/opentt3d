@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-03T16:42:10.901434+00:00",
+  "records": [
+    {
+      "source": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-east-corrected-catalogue.json",
+      "target": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-east-corrected-frozen-build/baseset/opentt3d-voxels.json",
+      "sha256": "136b85718bbcf699c66635246dc88a833c2d1c7392e2677144c4f959ab0e7b74",
+      "exact_bytes": 83608918,
+      "copy_on_write_independent": true
+    },
+    {
+      "source": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-owner-corrected-catalogue.json",
+      "target": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-owner-corrected-frozen-build/baseset/opentt3d-voxels.json",
+      "sha256": "9ce554befcf469a6cc1dc605962157c1da9445f9661b5ad80f25755ad6592f5a",
+      "exact_bytes": 83608870,
+      "copy_on_write_independent": true
+    },
+    {
+      "source": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-semantic-ground-catalogue.json",
+      "target": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-semantic-ground-frozen-build/baseset/opentt3d-voxels.json",
+      "sha256": "4d0f0ea7eed03602f6b0e383b897be54fcea0d29dcf042123cc3342636570909",
+      "exact_bytes": 83607136,
+      "copy_on_write_independent": true
+    },
+    {
+      "source": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-perimeter-owner-catalogue.json",
+      "target": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-medium-perimeter-owner-frozen-build/baseset/opentt3d-voxels.json",
+      "sha256": "7a4979f3fa7ecf27981867a785d358391d60c6446d13c4d7efb848dec0b0936e",
+      "exact_bytes": 83606989,
+      "copy_on_write_independent": true
+    }
+  ],
+  "scope": "APFS clones of explicit identical generated diagnostic catalogue copies only. No unique input, hard link, evidence deletion, reformatting or quality approval."
+}

@@ -12,6 +12,25 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## October 3 — rejected larger HQs; original water inventory
+
+`reviews/20261003/hq-larger-rejected/` retains84 individually inspected prototype
+owners, each bound to exact artwork and its own source/native/four-orbit/four-street
+sheet:73 provisional6/10 and11 structural rejections5/10. Missing large-east walls,
+foreign Toyland gate/tower fragments, coarse architecture/paint and absent natural
+size2…4/all-climate world/state evidence prevent approval. All six acceptance checks
+remain false. The separately merged1,915-model working ledger has2,578 entries/141
+individual records and zero8/10 approvals; required-eight correctly fails. The
+source/compiler/test copies in this review directory are quarantined snapshots,
+not runtime asset changes. Recommended`.42`remains its immutable1,831-model release.
+
+`reviews/20261003/water-original-sources/` preserves208 exact paired original lock/
+water images from eight quiet exact-tag `.42` runs. The new read-only source inventory
+retains48 default lock wall layers, four slopes, sixty unresolved custom river edge
+offsets and original absent-bank semantics. Working assets235 and independently
+isolated committed-artwork assets219 pass. Neither static sources nor tests establish
+live feature selection, 3D lock/river coverage, ship clearance or visual ratings.
+
 ## Rating rules
 
 - **1:** missing structural coverage or original sprite fallback.

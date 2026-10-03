@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-10-03T16:56:34.657691+00:00",
+  "candidate_models": 1915,
+  "prior_models_exact": 1831,
+  "candidate_catalogue_sha256": "7a4979f3fa7ecf27981867a785d358391d60c6446d13c4d7efb848dec0b0936e",
+  "prototype_source_sha256": "70fcb510d7aba3a65bb5edb849ba081a294b83a48e2c0b976ad9de6f3041df0e",
+  "prototype_individual_reviews": 84,
+  "prototype_scores": {
+    "6": 73,
+    "5": 11
+  },
+  "total_candidate_ledger_entries": 2578,
+  "total_individual_reviews": 141,
+  "ledger_score_counts": {
+    "1": 192,
+    "3": 183,
+    "4": 159,
+    "5": 1914,
+    "6": 113,
+    "7": 17
+  },
+  "final_approvals": 0,
+  "require_eight_exit": 1,
+  "runtime_artwork_committed": false,
+  "scope": "Explicit individual negative/provisional decisions for the quarantined1915-model candidate only. Source/orbit/street images were individually inspected, not bulk-approved. The six booleans mean acceptance, not mere viewing; all remain false. Eleven5/10 entries retain structural rejection scores for missing/misowned source geometry, not aesthetic approval. Released1831-model artwork/reviews remain unchanged.",
+  "reproduce_combined_reviews": "build-macos/breadth-original-hq-medium-perimeter-owner-combined-rejected-reviews.json",
+  "quality_report_sha256": "69265c4dd5ab19d1546b228ebbc98f533c8db1eaeb0dfd439325d933de8d4fcd"
+}

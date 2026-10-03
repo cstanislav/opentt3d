@@ -8,6 +8,7 @@ import re
 from compile_vehicles import compile_catalogue
 from compile_voxels import compile_catalogue as compile_voxel_catalogue
 from original_objects import catalogue as original_object_catalogue
+from original_water import catalogue as original_water_catalogue
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -262,7 +263,8 @@ def inventory(voxels=None):
                "airport_tiles": airports, "depots": depots, "ship_depots": ship_depots, "docks": docks,
                "effect_types":effect_types,"effect_source_frames":effect_frames,
                 "effect_source_note":"Source export alone is not voxel coverage. Bubble generation threshold4754 is immediately replaced before viewport presentation; retain its original source without inventing a runtime frame. Movement, lifetimes, transparency and unclickable ownership remain original.",
-                "original_objects":original_object_catalogue(),
+                 "original_objects":original_object_catalogue(),
+                 "water_structures":original_water_catalogue(),
               "voxel_models": {name: {"occupied_cells": model["occupied"], "cell_size": model["cell_size"], "review_status": model["review_status"], **placement(model)}
                               for name, model in voxels["models"].items()},
              "voxel_bindings": voxels["bindings"],
@@ -304,6 +306,8 @@ def main():
     print(f"Original effect types: {len(data['effect_types'])}; source sprites: {len(effects)}; presentable: {sum(e['presentable'] for e in effects)}; voxel-bound presentable sprites: {sum(e['presentable'] and bool(e['voxel_states']) for e in effects)}; source export is not artwork approval")
     objects = data["original_objects"]
     print(f"Original objects: {len(objects['types'])} types, {len(objects['tiles'])} tile layouts including five four-tile HQ sizes; {objects['headquarters_ground_only_slots']} HQ slots have no separate body; source inventory does not assert voxel coverage")
+    water = data["water_structures"]
+    print(f"Original water source scope: {water['default_lock_source_count']} default lock wall sources, {len(water['default_water_slopes'])} default slopes and {len(water['river_edge_source_offsets'])} unresolved custom river-edge offsets; live custom selection and geometry remain unverified")
     if args.vehicle_families:
         for family in data["vehicle_source_families"]:
             if family["kind"] == args.vehicle_families:

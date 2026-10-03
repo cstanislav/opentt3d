@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Individual HQ defects retained; water selector work continues — October 3
+
+All84 larger HQ prototype owners now have their own hash-bound source/native,
+four-orbit/four-street defect records:73 provisional6/10,11 structural rejections5/10,
+zero approvals and no accepted source/orbit/street/world/state/consistency check.
+The working1,915-model ledger has2,578 entries/141 individual records and still fails
+required-eight. Quarantined source/compiler/tests and sheets are review evidence,
+not replacements for the immutable recommended1,831-model`.42`packages.
+
+Eight quiet unchanged exact-tag source controls retain208 default lock/water image
+equalities across four climates. Original source inventory preserves48 wall sprites,
+four slopes, sixty unresolved custom river-bank offsets and absent-bank semantics.
+Working asset235 and isolated committed-artwork219 tests pass. Static source IDs,
+sorting extents and exports do not establish live feature resolution or real3D
+locks/rivers. Continue actual public-command natural lock worlds, callback-selected
+sources, independent water/wall ownership, geometry and ship clearance without
+forcing terrain, dimensions, time, ratings, selectors or simulation RNG. Catalogue-
+wide breadth/fidelity, all-climate natural HQ upgrades, performance and platform/
+input/replay/network remain active. No stopping clock is inferred from this checkpoint.
+
 ## `.42` public; complete catalogue-wide goal remains active — October 3
 
 Recommended development packages are now immutable`.42`at

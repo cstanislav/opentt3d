@@ -2,6 +2,24 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — individual prototype rejections and water sources
+
+All84 larger HQ prototype owners now have individual source/native/four-orbit/four-
+street defect records:73 provisional6/10 and11 structural rejections5/10. Their own
+artwork/sheet hashes are bound; no source, orbit, street, world, state or consistency
+acceptance is granted. Large/huge/Toyland ownership/detail remain defective, naturally
+selected size2…4 worlds remain absent, and strict wider-backend equality still fails.
+Portable snapshots are quarantined in`reviews/20261003/hq-larger-rejected/`; active
+asset/compiler paths and the immutable`.42`packages are not updated by these reviews.
+
+Read-only original water inventory preserves three parts/four directions/two default
+elevation selections, independent water, source anchors/sorting extents and sixty
+unresolved custom river-edge offsets with absent-bank semantics. Eight quiet unchanged
+exact-tag `.42`controls retain208 original default lock/water PAMs and their metadata
+exactly across renderers. Working assets235 and isolated committed-artwork assets219
+pass. Source exports are not live Classic/NewGRF selection or volumetric coverage;
+locks/rivers remain open. Evidence:`reviews/20261003/water-original-sources/`.
+
 ## October 3 — independently rebuilt `.42` published and recommended
 
 The recommended development download is [`.42`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)

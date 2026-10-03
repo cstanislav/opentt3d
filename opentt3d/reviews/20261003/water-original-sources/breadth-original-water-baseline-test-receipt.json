@@ -1,0 +1,12 @@
+{
+  "commit": "fbd907ea680074766f6c4c8b825b2e32767e1c55",
+  "asset_tests": 219,
+  "experimental_hq_compiler_artwork_tests_present": false,
+  "overlaid_read_only_tools": {
+    "tools/assets/inventory.py": "57b71cd80e1cfb144796d9f2ea1f1e0c579fc6d10adcd71b434031b8c39c48df",
+    "tools/assets/original_water.py": "fe09858a9d0ca010f5c1449af1c4adcc9232e2ff41f401deb0fff7854a62c493",
+    "tools/assets/test_original_water.py": "5ba6f4240e32a238ceca9d9269040c34ad5a84b6a74f6281f4167d3ee6375f9d"
+  },
+  "test_log_sha256": "1591cadd06af9121c4af4d8f28cb7696f615cafef463e817b2280555b49c4029",
+  "scope": "Committed1831-model sources/compiler plus the three new read-only water inventory/test tools only. No native binary is built from this test tree and no prototype is approved."
+}

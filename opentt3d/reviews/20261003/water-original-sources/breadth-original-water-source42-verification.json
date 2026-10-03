@@ -1,0 +1,5206 @@
+{
+  "audited_utc": "2026-10-03T17:10:11.242138+00:00",
+  "tag": "opentt3d-dev-20261003.42",
+  "commit": "1247c88d5e180ac6fbd88bdf9b71bfafd468f7a5",
+  "binary_sha256": "9947915f13e84c7308f86a5af41bf2da71fea1fda96e9421a48036074111be22",
+  "catalogue_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+  "runs": [
+    {
+      "climate": "temperate",
+      "backend": "vulkan",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-temperate-vulkan",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-temperate-vulkan",
+        "--background",
+        "--backend",
+        "vulkan",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-temperate-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-temperate-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "temperate",
+      "backend": "opengl",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-temperate-opengl",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-temperate-opengl",
+        "--background",
+        "--backend",
+        "opengl",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-temperate-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-temperate-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "arctic",
+      "backend": "vulkan",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-arctic-vulkan",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-arctic-vulkan",
+        "--background",
+        "--backend",
+        "vulkan",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-arctic-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-arctic-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "arctic",
+      "backend": "opengl",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-arctic-opengl",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-arctic-opengl",
+        "--background",
+        "--backend",
+        "opengl",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-arctic-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-arctic-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "tropic",
+      "backend": "vulkan",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-tropic-vulkan",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-tropic-vulkan",
+        "--background",
+        "--backend",
+        "vulkan",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-tropic-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-tropic-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "tropic",
+      "backend": "opengl",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-tropic-opengl",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-tropic-opengl",
+        "--background",
+        "--backend",
+        "opengl",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-tropic-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-tropic-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "toyland",
+      "backend": "vulkan",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-toyland-vulkan",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-toyland-vulkan",
+        "--background",
+        "--backend",
+        "vulkan",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-toyland-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-toyland-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    },
+    {
+      "climate": "toyland",
+      "backend": "opengl",
+      "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-toyland-opengl",
+      "command": [
+        "python3",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-smoke-cow.py",
+        "--build-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/Resources",
+        "--executable",
+        "/Users/stanislav/Projects/opentt3d/build-macos/playable-release42-independent-extracted/OpenTT3D.app/Contents/MacOS/opentt3d",
+        "--output",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-source42-toyland-opengl",
+        "--background",
+        "--backend",
+        "opengl",
+        "--savegame",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-toyland-owned-land-fixture/save/object-fixture.sav",
+        "--ai-dir",
+        "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-object-command-toyland-owned-land-fixture/ai",
+        "--reference-object",
+        "4",
+        "--reference-object-tile",
+        "45",
+        "8",
+        "--export-terrain",
+        "--verify-world-atlas",
+        "--verify-tile-picking",
+        "--synchronous-save",
+        "--zoom",
+        "0",
+        "--resolution",
+        "640",
+        "480",
+        "--timeout",
+        "300",
+        "--brief"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_inventory": {
+    "format": 1,
+    "locks": [
+      {
+        "part": 0,
+        "part_name": "middle",
+        "direction": 0,
+        "direction_name": "NE",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 1,
+          "default_sprite": 5329,
+          "is_flat_water": false,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 1,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5333,
+              5357
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              0,
+              15,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              10
+            ],
+            "sprite_offset": 5,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5337,
+              5361
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 0,
+        "part_name": "middle",
+        "direction": 1,
+        "direction_name": "SE",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 0,
+          "default_sprite": 5328,
+          "is_flat_water": false,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 0,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5332,
+              5356
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              15,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              10
+            ],
+            "sprite_offset": 4,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5336,
+              5360
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 0,
+        "part_name": "middle",
+        "direction": 2,
+        "direction_name": "SW",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 2,
+          "default_sprite": 5330,
+          "is_flat_water": false,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 2,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5334,
+              5358
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              0,
+              15,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              10
+            ],
+            "sprite_offset": 6,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5338,
+              5362
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 0,
+        "part_name": "middle",
+        "direction": 3,
+        "direction_name": "NW",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 3,
+          "default_sprite": 5331,
+          "is_flat_water": false,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 3,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5335,
+              5359
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              15,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              10
+            ],
+            "sprite_offset": 7,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5339,
+              5363
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 1,
+        "part_name": "lower",
+        "direction": 0,
+        "direction_name": "NE",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 9,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5341,
+              5365
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              0,
+              15,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              10
+            ],
+            "sprite_offset": 13,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5345,
+              5369
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 1,
+        "part_name": "lower",
+        "direction": 1,
+        "direction_name": "SE",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 8,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5340,
+              5364
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              15,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              10
+            ],
+            "sprite_offset": 12,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5344,
+              5368
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 1,
+        "part_name": "lower",
+        "direction": 2,
+        "direction_name": "SW",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 10,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5342,
+              5366
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              0,
+              15,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              10
+            ],
+            "sprite_offset": 14,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5346,
+              5370
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 1,
+        "part_name": "lower",
+        "direction": 3,
+        "direction_name": "NW",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 11,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5343,
+              5367
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              15,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              10
+            ],
+            "sprite_offset": 15,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5347,
+              5371
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 2,
+        "part_name": "upper",
+        "direction": 0,
+        "direction_name": "NE",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 17,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5349,
+              5373
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              0,
+              15,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 21,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5353,
+              5377
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 2,
+        "part_name": "upper",
+        "direction": 1,
+        "direction_name": "SE",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 16,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5348,
+              5372
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              15,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 20,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5352,
+              5376
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 2,
+        "part_name": "upper",
+        "direction": 2,
+        "direction_name": "SW",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 18,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5350,
+              5374
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              0,
+              15,
+              0
+            ],
+            "sort_extent": [
+              16,
+              1,
+              6
+            ],
+            "sprite_offset": 22,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5354,
+              5378
+            ]
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "part": 2,
+        "part_name": "upper",
+        "direction": 3,
+        "direction_name": "NW",
+        "footprint_tiles": [
+          1,
+          1
+        ],
+        "ground": {
+          "source_value": 4061,
+          "default_sprite": 4061,
+          "is_flat_water": true,
+          "palette": "PAL_NONE",
+          "ownership": "Independent animated water surface; not a lock wall or billboard volume."
+        },
+        "body": [
+          {
+            "face": "rear",
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 19,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5351,
+              5375
+            ]
+          },
+          {
+            "face": "front",
+            "origin": [
+              15,
+              0,
+              0
+            ],
+            "sort_extent": [
+              1,
+              16,
+              6
+            ],
+            "sprite_offset": 23,
+            "palette": "PAL_NONE",
+            "default_sprite_variants": [
+              5355,
+              5379
+            ]
+          }
+        ],
+        "reviewed": false
+      }
+    ],
+    "runtime_selection": {
+      "default_elevation_threshold_source_pixels": {
+        "middle": 0,
+        "lower": 0,
+        "upper": 8
+      },
+      "elevated_default_sprite_offset": 24,
+      "elevation_only_applies_when_lock_base_is_zero": true,
+      "source_height_is_not_doubled_for_selection": true,
+      "structure_visibility": "TO_BUILDINGS",
+      "custom_feature_resolution_required": [
+        "CF_LOCKS",
+        "CF_WATERSLOPE",
+        "CF_RIVER_SLOPE",
+        "CF_RIVER_EDGE"
+      ],
+      "callback_offsets_required": true,
+      "custom_flat_water_flag": "CFF_HAS_FLAT_SPRITE bit0",
+      "river_default_slopes": [
+        {
+          "slope": "SLOPE_NW",
+          "sprite_name": "SPR_WATER_SLOPE_Y_DOWN"
+        },
+        {
+          "slope": "SLOPE_SW",
+          "sprite_name": "SPR_WATER_SLOPE_X_UP"
+        },
+        {
+          "slope": "SLOPE_SE",
+          "sprite_name": "SPR_WATER_SLOPE_Y_UP"
+        },
+        {
+          "slope": "SLOPE_NE",
+          "sprite_name": "SPR_WATER_SLOPE_X_DOWN"
+        }
+      ],
+      "river_custom_groups": [
+        {
+          "slope": "SLOPE_FLAT",
+          "ground_offset": 0,
+          "edge_offset": 0
+        },
+        {
+          "slope": "SLOPE_SE",
+          "ground_offset": 0,
+          "edge_offset": 12
+        },
+        {
+          "slope": "SLOPE_NE",
+          "ground_offset": 1,
+          "edge_offset": 24
+        },
+        {
+          "slope": "SLOPE_SW",
+          "ground_offset": 2,
+          "edge_offset": 36
+        },
+        {
+          "slope": "SLOPE_NW",
+          "ground_offset": 3,
+          "edge_offset": 48
+        }
+      ],
+      "river_bank_absence": "No CF_RIVER_EDGE sprite base means original edges intentionally absent; never invent a native bank owner.",
+      "custom_rule": "Observe actual resolved base/callback/flag/provenance before binding; static source IDs are not proof of live Classic/NewGRF selection."
+    },
+    "default_lock_source_count": 48,
+    "default_water_slopes": [
+      {
+        "slot": 0,
+        "sprite": 5328
+      },
+      {
+        "slot": 1,
+        "sprite": 5329
+      },
+      {
+        "slot": 2,
+        "sprite": 5330
+      },
+      {
+        "slot": 3,
+        "sprite": 5331
+      }
+    ],
+    "river_edge_source_offsets": [
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 0,
+        "offset": 0
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 1,
+        "offset": 1
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 2,
+        "offset": 2
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 3,
+        "offset": 3
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 4,
+        "offset": 4
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 5,
+        "offset": 5
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 6,
+        "offset": 6
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 7,
+        "offset": 7
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 8,
+        "offset": 8
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 9,
+        "offset": 9
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 10,
+        "offset": 10
+      },
+      {
+        "slope": "SLOPE_FLAT",
+        "edge": 11,
+        "offset": 11
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 0,
+        "offset": 12
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 1,
+        "offset": 13
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 2,
+        "offset": 14
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 3,
+        "offset": 15
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 4,
+        "offset": 16
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 5,
+        "offset": 17
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 6,
+        "offset": 18
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 7,
+        "offset": 19
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 8,
+        "offset": 20
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 9,
+        "offset": 21
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 10,
+        "offset": 22
+      },
+      {
+        "slope": "SLOPE_SE",
+        "edge": 11,
+        "offset": 23
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 0,
+        "offset": 24
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 1,
+        "offset": 25
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 2,
+        "offset": 26
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 3,
+        "offset": 27
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 4,
+        "offset": 28
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 5,
+        "offset": 29
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 6,
+        "offset": 30
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 7,
+        "offset": 31
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 8,
+        "offset": 32
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 9,
+        "offset": 33
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 10,
+        "offset": 34
+      },
+      {
+        "slope": "SLOPE_NE",
+        "edge": 11,
+        "offset": 35
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 0,
+        "offset": 36
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 1,
+        "offset": 37
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 2,
+        "offset": 38
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 3,
+        "offset": 39
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 4,
+        "offset": 40
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 5,
+        "offset": 41
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 6,
+        "offset": 42
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 7,
+        "offset": 43
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 8,
+        "offset": 44
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 9,
+        "offset": 45
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 10,
+        "offset": 46
+      },
+      {
+        "slope": "SLOPE_SW",
+        "edge": 11,
+        "offset": 47
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 0,
+        "offset": 48
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 1,
+        "offset": 49
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 2,
+        "offset": 50
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 3,
+        "offset": 51
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 4,
+        "offset": 52
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 5,
+        "offset": 53
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 6,
+        "offset": 54
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 7,
+        "offset": 55
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 8,
+        "offset": 56
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 9,
+        "offset": 57
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 10,
+        "offset": 58
+      },
+      {
+        "slope": "SLOPE_NW",
+        "edge": 11,
+        "offset": 59
+      }
+    ],
+    "source_sha256": {
+      "src/table/water_land.h": "de2a3f4a05e1b14d64c2775f48d01f462c33cf96536de09e928809d99d303e07",
+      "src/table/sprites.h": "526f30397907c03d1231a99df9a789fb600e434f0a65dfd09e34269d5d6e2d5e",
+      "src/tile_type.h": "cd139a181271d2f58868fc71874dfb069edca2837d3910d8852287cf144ae026",
+      "src/water_cmd.cpp": "a56b128bcf6d3f427ba276900469c631b10d0f5a7601eccc3d6deb91ffa8848e",
+      "src/water_map.h": "e384da4c9c7e576df49668728a137b216ca4befe03a2402f88ad602d09cea0c7",
+      "src/direction_type.h": "c1dae8110847ab611cc6061c96a9975d5c5b44c6efc66a73e5d3d90cd4d09490",
+      "src/newgrf_canal.h": "ddb25c7a6e243e06d6fd600098123bf2ec726f9bdb580c14f96d669e39a020d6"
+    },
+    "reviewed": false,
+    "final_visual_approvals": 0,
+    "scope": "Read-only original source table/selector inventory. Rear/front walls retain distinct origins and sorting extents, not inferred artwork dimensions. All three parts/four directions/two default elevation variants, four default water slopes and sixty custom river edge offsets are retained. Custom resolved IDs, source pixels, geometry, every climate/state/world, fleet clearance and ratings remain unaccepted. Animated water surfaces stay independently owned; no simulation, commands, heights, callbacks, RNG, geometry or bindings are modified."
+  },
+  "comparisons": [
+    {
+      "climate": "temperate",
+      "source_images_exact": 52,
+      "metadata_and_pam_bytes_exact": true,
+      "source_sha256": {
+        "canal-lock-0-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5332,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "06e6ec505202665993298248807ed845d0df7df0a708fc12e09cdb3a91a365db"
+        },
+        "canal-lock-0-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5333,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "2e82879b6b79f7ce6efc08ffc114d03bdf477c1e93f9e474f39b9f8f80e8c9e8"
+        },
+        "canal-lock-0-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5334,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "b2824ffad68721bcdf97a354340147d84d8e63e3d6e4820c049a729ccd26e574"
+        },
+        "canal-lock-0-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5335,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "5026c0f0036c2c5361408685dde198be32919aa93931601c9d75cb8847ac9a42"
+        },
+        "canal-lock-0-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5336,
+            "style": 0,
+            "variant": 4
+          },
+          "sha256": "bef9e2f4fc55cacbb187bdb42b2b48537c610282f0e0f0ee06dcb226ec638260"
+        },
+        "canal-lock-0-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5337,
+            "style": 0,
+            "variant": 5
+          },
+          "sha256": "da465155d104d6a8da88fe4876678bfd1dda4b616066b2625c9c7ac6dd92918f"
+        },
+        "canal-lock-0-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5338,
+            "style": 0,
+            "variant": 6
+          },
+          "sha256": "8b82f4919e0049ee60489f6924755d74a486d17f235e3836e46981ea0496ee52"
+        },
+        "canal-lock-0-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5339,
+            "style": 0,
+            "variant": 7
+          },
+          "sha256": "c3334afc99e7e52a67e0dee4a9c2cd96c46697321f5bd7c54f32540a69bbc515"
+        },
+        "canal-lock-0-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-8.pam",
+            "offset": [
+              -20,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5340,
+            "style": 0,
+            "variant": 8
+          },
+          "sha256": "2945afc0c0587c531d1753bbeecd9b2d9b49f4a4f8c63f6666cad34680c3bb14"
+        },
+        "canal-lock-0-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              136
+            ],
+            "sprite": 5341,
+            "style": 0,
+            "variant": 9
+          },
+          "sha256": "153887f8bd2b7a6d75073e478d8a2672a724651d5797ded11594d5be7ffe3d31"
+        },
+        "canal-lock-0-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-10.pam",
+            "offset": [
+              -124,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5342,
+            "style": 0,
+            "variant": 10
+          },
+          "sha256": "c384ab56a97772e3896b082dc011c1b98eb964418152174b2f875b7802e8ec16"
+        },
+        "canal-lock-0-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              132
+            ],
+            "sprite": 5343,
+            "style": 0,
+            "variant": 11
+          },
+          "sha256": "8a805c23267fd1cab07079902d3995d193da4ff18510990af82d4f055039384a"
+        },
+        "canal-lock-0-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-12.pam",
+            "offset": [
+              4,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5344,
+            "style": 0,
+            "variant": 12
+          },
+          "sha256": "725deaa7657c8ab31cca9c44b38aeb31ea1051dae46bdc3a0f29ac1312383fab"
+        },
+        "canal-lock-0-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-13.pam",
+            "offset": [
+              -156,
+              -52
+            ],
+            "size": [
+              160,
+              120
+            ],
+            "sprite": 5345,
+            "style": 0,
+            "variant": 13
+          },
+          "sha256": "be8046e436ce213236dae396940664b613a154b19391717f6b78e448eea0c48d"
+        },
+        "canal-lock-0-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-14.pam",
+            "offset": [
+              -148,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5346,
+            "style": 0,
+            "variant": 14
+          },
+          "sha256": "b985b805ea13a4b43d5b3605d5967d68edd1c91fd416fa39130f75eb0d6bf681"
+        },
+        "canal-lock-0-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              164,
+              120
+            ],
+            "sprite": 5347,
+            "style": 0,
+            "variant": 15
+          },
+          "sha256": "7ac4a0b25cdfb8db533f05a0961440516a29e2be4e2e5f0cfa3e26197e77b6dc"
+        },
+        "canal-lock-0-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5348,
+            "style": 0,
+            "variant": 16
+          },
+          "sha256": "951541c85ee1dcadab6b19ab912481c792a73eba3fe5746c166cd85c74396540"
+        },
+        "canal-lock-0-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5349,
+            "style": 0,
+            "variant": 17
+          },
+          "sha256": "fcbc60f5406e484e99e361c72dae9fbba85312fddbd58eafdc28661ead55f5cb"
+        },
+        "canal-lock-0-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5350,
+            "style": 0,
+            "variant": 18
+          },
+          "sha256": "21b65845b92707209e144daf4fd576db33e827cca482a4687cfd290fb2c7ef0c"
+        },
+        "canal-lock-0-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5351,
+            "style": 0,
+            "variant": 19
+          },
+          "sha256": "8f00ef426443514cfb98073bb1fb3cda3184f4c67c35bcd705b83316f15ae2e5"
+        },
+        "canal-lock-0-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5352,
+            "style": 0,
+            "variant": 20
+          },
+          "sha256": "fd769857ed09fab5c8ff054d4c4a422c6dfd0865b7418e7a4a21fe5ef67ca981"
+        },
+        "canal-lock-0-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5353,
+            "style": 0,
+            "variant": 21
+          },
+          "sha256": "ee98ee5858e4731cdd516e9de0490a78135de97d68ced3e4a1ba9ce475d09742"
+        },
+        "canal-lock-0-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5354,
+            "style": 0,
+            "variant": 22
+          },
+          "sha256": "c1d5eae458193de886e5b87adc94e28109e1985f01229d4bf33d0a7c13495215"
+        },
+        "canal-lock-0-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5355,
+            "style": 0,
+            "variant": 23
+          },
+          "sha256": "d62e0fe04f0d9d6cebf2c81051875158c0c5c5f1527d0cf6414b367e3ebc9541"
+        },
+        "canal-lock-1-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5356,
+            "style": 1,
+            "variant": 0
+          },
+          "sha256": "e72524f12fb2a1831971642731d4ef4c2203a0287b1e9f8df6f9938114429bd1"
+        },
+        "canal-lock-1-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5357,
+            "style": 1,
+            "variant": 1
+          },
+          "sha256": "5b590c56cf7303e5f14daf86910f584a01a7f78c886acaa3e4cff1d85c8d21ca"
+        },
+        "canal-lock-1-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5358,
+            "style": 1,
+            "variant": 2
+          },
+          "sha256": "93f53170c70a68e290229aae4694b2b97b06f3cec34ec605107fd2d6465a8fe2"
+        },
+        "canal-lock-1-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5359,
+            "style": 1,
+            "variant": 3
+          },
+          "sha256": "5c269621ec0cd9618ffe9ed0f130bdd8a702c167d326d0ccb048ff5b6d175935"
+        },
+        "canal-lock-1-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5360,
+            "style": 1,
+            "variant": 4
+          },
+          "sha256": "8661a11c0b742a8b668d7ed88870a0a96b8b51f64a02b68362ee94a5a0cb38a8"
+        },
+        "canal-lock-1-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5361,
+            "style": 1,
+            "variant": 5
+          },
+          "sha256": "d1eb8c1b65a2a387f7e28678a9ce515e2c4a8258f0fe46d7fc6e3533195e3dfa"
+        },
+        "canal-lock-1-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5362,
+            "style": 1,
+            "variant": 6
+          },
+          "sha256": "139b524b49b025e96f5f847283bd7ac39512f132c108dc6b2fd990013635edd2"
+        },
+        "canal-lock-1-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5363,
+            "style": 1,
+            "variant": 7
+          },
+          "sha256": "901f38331faab5b6d14803d010c4dbd2690d12b92a915bbfd9c625919ff84bca"
+        },
+        "canal-lock-1-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-8.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5364,
+            "style": 1,
+            "variant": 8
+          },
+          "sha256": "32270cf7f04d2cf64b0bd7f41f191a6be3a0d44270722ddcf6e6ab2422afd493"
+        },
+        "canal-lock-1-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5365,
+            "style": 1,
+            "variant": 9
+          },
+          "sha256": "285fa77d4d58ffeb7f35fd502927ee7a78c6579ba7882e0a44f1048319c0c2f9"
+        },
+        "canal-lock-1-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-10.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5366,
+            "style": 1,
+            "variant": 10
+          },
+          "sha256": "9283a810ec26b840bb67f9eab9478584731d98218f86b191cf5829e0e02d3429"
+        },
+        "canal-lock-1-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5367,
+            "style": 1,
+            "variant": 11
+          },
+          "sha256": "f88ab7259625603df9ad8edc74020b2aff88aab03aa98af7d88232c5d84ee883"
+        },
+        "canal-lock-1-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-12.pam",
+            "offset": [
+              4,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5368,
+            "style": 1,
+            "variant": 12
+          },
+          "sha256": "b32f4b2b8127ec0b65eb9cd36825e9421638ea414a76d8115c01a06cc67300ad"
+        },
+        "canal-lock-1-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-13.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5369,
+            "style": 1,
+            "variant": 13
+          },
+          "sha256": "1a3884630d8f61f32c3bd692144a0613a94715b2871336023249b4f71e8bb77d"
+        },
+        "canal-lock-1-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-14.pam",
+            "offset": [
+              -148,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5370,
+            "style": 1,
+            "variant": 14
+          },
+          "sha256": "22cd71cdc0ba601cd37a06ac8b9b3b9164ff3ca73bfae541d1fb77813e50a096"
+        },
+        "canal-lock-1-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5371,
+            "style": 1,
+            "variant": 15
+          },
+          "sha256": "b34d7253d50c6effa18751dc25e7c3362ab7d013bc1a1524139dbc812734c8d7"
+        },
+        "canal-lock-1-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5372,
+            "style": 1,
+            "variant": 16
+          },
+          "sha256": "a1f9db5632112560e34ebc0f6cce3a69e12a7b2b5fa229885df5bd80411d1e29"
+        },
+        "canal-lock-1-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5373,
+            "style": 1,
+            "variant": 17
+          },
+          "sha256": "7d9acf5970c4de3c8da814d222a064396cc002d908c741a78977b893be22bddd"
+        },
+        "canal-lock-1-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5374,
+            "style": 1,
+            "variant": 18
+          },
+          "sha256": "3f842045bed1fac956e48f7f68482d874248b8130348db0992711d5b64192476"
+        },
+        "canal-lock-1-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5375,
+            "style": 1,
+            "variant": 19
+          },
+          "sha256": "35f354a60f978d2ef7b0284f69ff2aad2a0f38f69f119b35940465ad369e1649"
+        },
+        "canal-lock-1-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5376,
+            "style": 1,
+            "variant": 20
+          },
+          "sha256": "13b496ef3af302fa5629be8b9f74fe81c55264a5f812ad997306c1308e7b9337"
+        },
+        "canal-lock-1-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5377,
+            "style": 1,
+            "variant": 21
+          },
+          "sha256": "23feb167982fab37ec7c0dfa563b5878594b14013b684ea7cc7b5bda082ee597"
+        },
+        "canal-lock-1-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5378,
+            "style": 1,
+            "variant": 22
+          },
+          "sha256": "f0599a2c70b50e21612b19b6230400895b6de3099c4ded93d3da659db68bb09d"
+        },
+        "canal-lock-1-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5379,
+            "style": 1,
+            "variant": 23
+          },
+          "sha256": "eeaf2da6040a1021a16a517a3f8a5bd4c4010e88edaa82e4afe3f9aae876daf1"
+        },
+        "water-slope-0-0.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-0.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5328,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "3d023eacc5e2de5deceee1bee28aea6806b64188ee778c29112fad593918464e"
+        },
+        "water-slope-0-1.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-1.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5329,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "9bcd80f4aa9730f0919e4ad761fc80d2556a8abeb1350aa32e49a48208feea67"
+        },
+        "water-slope-0-2.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-2.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5330,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "a0d191d159f5c152d41022aae6b67eb11b9079655c6a4130d8b99f34f0651b65"
+        },
+        "water-slope-0-3.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-3.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5331,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "f75a43771c5bf24e94d71a75f633cc7981c22ec9088b25662b08656937d6a90c"
+        }
+      }
+    },
+    {
+      "climate": "arctic",
+      "source_images_exact": 52,
+      "metadata_and_pam_bytes_exact": true,
+      "source_sha256": {
+        "canal-lock-0-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5332,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "06e6ec505202665993298248807ed845d0df7df0a708fc12e09cdb3a91a365db"
+        },
+        "canal-lock-0-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5333,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "2e82879b6b79f7ce6efc08ffc114d03bdf477c1e93f9e474f39b9f8f80e8c9e8"
+        },
+        "canal-lock-0-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5334,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "b2824ffad68721bcdf97a354340147d84d8e63e3d6e4820c049a729ccd26e574"
+        },
+        "canal-lock-0-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5335,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "5026c0f0036c2c5361408685dde198be32919aa93931601c9d75cb8847ac9a42"
+        },
+        "canal-lock-0-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5336,
+            "style": 0,
+            "variant": 4
+          },
+          "sha256": "bef9e2f4fc55cacbb187bdb42b2b48537c610282f0e0f0ee06dcb226ec638260"
+        },
+        "canal-lock-0-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5337,
+            "style": 0,
+            "variant": 5
+          },
+          "sha256": "da465155d104d6a8da88fe4876678bfd1dda4b616066b2625c9c7ac6dd92918f"
+        },
+        "canal-lock-0-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5338,
+            "style": 0,
+            "variant": 6
+          },
+          "sha256": "8b82f4919e0049ee60489f6924755d74a486d17f235e3836e46981ea0496ee52"
+        },
+        "canal-lock-0-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5339,
+            "style": 0,
+            "variant": 7
+          },
+          "sha256": "c3334afc99e7e52a67e0dee4a9c2cd96c46697321f5bd7c54f32540a69bbc515"
+        },
+        "canal-lock-0-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-8.pam",
+            "offset": [
+              -20,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5340,
+            "style": 0,
+            "variant": 8
+          },
+          "sha256": "2945afc0c0587c531d1753bbeecd9b2d9b49f4a4f8c63f6666cad34680c3bb14"
+        },
+        "canal-lock-0-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              136
+            ],
+            "sprite": 5341,
+            "style": 0,
+            "variant": 9
+          },
+          "sha256": "153887f8bd2b7a6d75073e478d8a2672a724651d5797ded11594d5be7ffe3d31"
+        },
+        "canal-lock-0-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-10.pam",
+            "offset": [
+              -124,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5342,
+            "style": 0,
+            "variant": 10
+          },
+          "sha256": "c384ab56a97772e3896b082dc011c1b98eb964418152174b2f875b7802e8ec16"
+        },
+        "canal-lock-0-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              132
+            ],
+            "sprite": 5343,
+            "style": 0,
+            "variant": 11
+          },
+          "sha256": "8a805c23267fd1cab07079902d3995d193da4ff18510990af82d4f055039384a"
+        },
+        "canal-lock-0-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-12.pam",
+            "offset": [
+              4,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5344,
+            "style": 0,
+            "variant": 12
+          },
+          "sha256": "725deaa7657c8ab31cca9c44b38aeb31ea1051dae46bdc3a0f29ac1312383fab"
+        },
+        "canal-lock-0-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-13.pam",
+            "offset": [
+              -156,
+              -52
+            ],
+            "size": [
+              160,
+              120
+            ],
+            "sprite": 5345,
+            "style": 0,
+            "variant": 13
+          },
+          "sha256": "be8046e436ce213236dae396940664b613a154b19391717f6b78e448eea0c48d"
+        },
+        "canal-lock-0-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-14.pam",
+            "offset": [
+              -148,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5346,
+            "style": 0,
+            "variant": 14
+          },
+          "sha256": "b985b805ea13a4b43d5b3605d5967d68edd1c91fd416fa39130f75eb0d6bf681"
+        },
+        "canal-lock-0-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              164,
+              120
+            ],
+            "sprite": 5347,
+            "style": 0,
+            "variant": 15
+          },
+          "sha256": "7ac4a0b25cdfb8db533f05a0961440516a29e2be4e2e5f0cfa3e26197e77b6dc"
+        },
+        "canal-lock-0-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5348,
+            "style": 0,
+            "variant": 16
+          },
+          "sha256": "951541c85ee1dcadab6b19ab912481c792a73eba3fe5746c166cd85c74396540"
+        },
+        "canal-lock-0-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5349,
+            "style": 0,
+            "variant": 17
+          },
+          "sha256": "fcbc60f5406e484e99e361c72dae9fbba85312fddbd58eafdc28661ead55f5cb"
+        },
+        "canal-lock-0-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5350,
+            "style": 0,
+            "variant": 18
+          },
+          "sha256": "21b65845b92707209e144daf4fd576db33e827cca482a4687cfd290fb2c7ef0c"
+        },
+        "canal-lock-0-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5351,
+            "style": 0,
+            "variant": 19
+          },
+          "sha256": "8f00ef426443514cfb98073bb1fb3cda3184f4c67c35bcd705b83316f15ae2e5"
+        },
+        "canal-lock-0-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5352,
+            "style": 0,
+            "variant": 20
+          },
+          "sha256": "fd769857ed09fab5c8ff054d4c4a422c6dfd0865b7418e7a4a21fe5ef67ca981"
+        },
+        "canal-lock-0-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5353,
+            "style": 0,
+            "variant": 21
+          },
+          "sha256": "ee98ee5858e4731cdd516e9de0490a78135de97d68ced3e4a1ba9ce475d09742"
+        },
+        "canal-lock-0-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5354,
+            "style": 0,
+            "variant": 22
+          },
+          "sha256": "c1d5eae458193de886e5b87adc94e28109e1985f01229d4bf33d0a7c13495215"
+        },
+        "canal-lock-0-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5355,
+            "style": 0,
+            "variant": 23
+          },
+          "sha256": "d62e0fe04f0d9d6cebf2c81051875158c0c5c5f1527d0cf6414b367e3ebc9541"
+        },
+        "canal-lock-1-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5356,
+            "style": 1,
+            "variant": 0
+          },
+          "sha256": "e72524f12fb2a1831971642731d4ef4c2203a0287b1e9f8df6f9938114429bd1"
+        },
+        "canal-lock-1-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5357,
+            "style": 1,
+            "variant": 1
+          },
+          "sha256": "5b590c56cf7303e5f14daf86910f584a01a7f78c886acaa3e4cff1d85c8d21ca"
+        },
+        "canal-lock-1-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5358,
+            "style": 1,
+            "variant": 2
+          },
+          "sha256": "93f53170c70a68e290229aae4694b2b97b06f3cec34ec605107fd2d6465a8fe2"
+        },
+        "canal-lock-1-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5359,
+            "style": 1,
+            "variant": 3
+          },
+          "sha256": "5c269621ec0cd9618ffe9ed0f130bdd8a702c167d326d0ccb048ff5b6d175935"
+        },
+        "canal-lock-1-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5360,
+            "style": 1,
+            "variant": 4
+          },
+          "sha256": "8661a11c0b742a8b668d7ed88870a0a96b8b51f64a02b68362ee94a5a0cb38a8"
+        },
+        "canal-lock-1-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5361,
+            "style": 1,
+            "variant": 5
+          },
+          "sha256": "d1eb8c1b65a2a387f7e28678a9ce515e2c4a8258f0fe46d7fc6e3533195e3dfa"
+        },
+        "canal-lock-1-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5362,
+            "style": 1,
+            "variant": 6
+          },
+          "sha256": "139b524b49b025e96f5f847283bd7ac39512f132c108dc6b2fd990013635edd2"
+        },
+        "canal-lock-1-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5363,
+            "style": 1,
+            "variant": 7
+          },
+          "sha256": "901f38331faab5b6d14803d010c4dbd2690d12b92a915bbfd9c625919ff84bca"
+        },
+        "canal-lock-1-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-8.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5364,
+            "style": 1,
+            "variant": 8
+          },
+          "sha256": "32270cf7f04d2cf64b0bd7f41f191a6be3a0d44270722ddcf6e6ab2422afd493"
+        },
+        "canal-lock-1-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5365,
+            "style": 1,
+            "variant": 9
+          },
+          "sha256": "285fa77d4d58ffeb7f35fd502927ee7a78c6579ba7882e0a44f1048319c0c2f9"
+        },
+        "canal-lock-1-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-10.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5366,
+            "style": 1,
+            "variant": 10
+          },
+          "sha256": "9283a810ec26b840bb67f9eab9478584731d98218f86b191cf5829e0e02d3429"
+        },
+        "canal-lock-1-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5367,
+            "style": 1,
+            "variant": 11
+          },
+          "sha256": "f88ab7259625603df9ad8edc74020b2aff88aab03aa98af7d88232c5d84ee883"
+        },
+        "canal-lock-1-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-12.pam",
+            "offset": [
+              4,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5368,
+            "style": 1,
+            "variant": 12
+          },
+          "sha256": "b32f4b2b8127ec0b65eb9cd36825e9421638ea414a76d8115c01a06cc67300ad"
+        },
+        "canal-lock-1-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-13.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5369,
+            "style": 1,
+            "variant": 13
+          },
+          "sha256": "1a3884630d8f61f32c3bd692144a0613a94715b2871336023249b4f71e8bb77d"
+        },
+        "canal-lock-1-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-14.pam",
+            "offset": [
+              -148,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5370,
+            "style": 1,
+            "variant": 14
+          },
+          "sha256": "22cd71cdc0ba601cd37a06ac8b9b3b9164ff3ca73bfae541d1fb77813e50a096"
+        },
+        "canal-lock-1-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5371,
+            "style": 1,
+            "variant": 15
+          },
+          "sha256": "b34d7253d50c6effa18751dc25e7c3362ab7d013bc1a1524139dbc812734c8d7"
+        },
+        "canal-lock-1-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5372,
+            "style": 1,
+            "variant": 16
+          },
+          "sha256": "a1f9db5632112560e34ebc0f6cce3a69e12a7b2b5fa229885df5bd80411d1e29"
+        },
+        "canal-lock-1-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5373,
+            "style": 1,
+            "variant": 17
+          },
+          "sha256": "7d9acf5970c4de3c8da814d222a064396cc002d908c741a78977b893be22bddd"
+        },
+        "canal-lock-1-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5374,
+            "style": 1,
+            "variant": 18
+          },
+          "sha256": "3f842045bed1fac956e48f7f68482d874248b8130348db0992711d5b64192476"
+        },
+        "canal-lock-1-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5375,
+            "style": 1,
+            "variant": 19
+          },
+          "sha256": "35f354a60f978d2ef7b0284f69ff2aad2a0f38f69f119b35940465ad369e1649"
+        },
+        "canal-lock-1-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5376,
+            "style": 1,
+            "variant": 20
+          },
+          "sha256": "13b496ef3af302fa5629be8b9f74fe81c55264a5f812ad997306c1308e7b9337"
+        },
+        "canal-lock-1-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5377,
+            "style": 1,
+            "variant": 21
+          },
+          "sha256": "23feb167982fab37ec7c0dfa563b5878594b14013b684ea7cc7b5bda082ee597"
+        },
+        "canal-lock-1-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5378,
+            "style": 1,
+            "variant": 22
+          },
+          "sha256": "f0599a2c70b50e21612b19b6230400895b6de3099c4ded93d3da659db68bb09d"
+        },
+        "canal-lock-1-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5379,
+            "style": 1,
+            "variant": 23
+          },
+          "sha256": "eeaf2da6040a1021a16a517a3f8a5bd4c4010e88edaa82e4afe3f9aae876daf1"
+        },
+        "water-slope-0-0.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-0.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5328,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "3d023eacc5e2de5deceee1bee28aea6806b64188ee778c29112fad593918464e"
+        },
+        "water-slope-0-1.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-1.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5329,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "9bcd80f4aa9730f0919e4ad761fc80d2556a8abeb1350aa32e49a48208feea67"
+        },
+        "water-slope-0-2.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-2.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5330,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "a0d191d159f5c152d41022aae6b67eb11b9079655c6a4130d8b99f34f0651b65"
+        },
+        "water-slope-0-3.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-3.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5331,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "f75a43771c5bf24e94d71a75f633cc7981c22ec9088b25662b08656937d6a90c"
+        }
+      }
+    },
+    {
+      "climate": "tropic",
+      "source_images_exact": 52,
+      "metadata_and_pam_bytes_exact": true,
+      "source_sha256": {
+        "canal-lock-0-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5332,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "06e6ec505202665993298248807ed845d0df7df0a708fc12e09cdb3a91a365db"
+        },
+        "canal-lock-0-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5333,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "2e82879b6b79f7ce6efc08ffc114d03bdf477c1e93f9e474f39b9f8f80e8c9e8"
+        },
+        "canal-lock-0-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5334,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "b2824ffad68721bcdf97a354340147d84d8e63e3d6e4820c049a729ccd26e574"
+        },
+        "canal-lock-0-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5335,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "5026c0f0036c2c5361408685dde198be32919aa93931601c9d75cb8847ac9a42"
+        },
+        "canal-lock-0-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5336,
+            "style": 0,
+            "variant": 4
+          },
+          "sha256": "bef9e2f4fc55cacbb187bdb42b2b48537c610282f0e0f0ee06dcb226ec638260"
+        },
+        "canal-lock-0-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5337,
+            "style": 0,
+            "variant": 5
+          },
+          "sha256": "da465155d104d6a8da88fe4876678bfd1dda4b616066b2625c9c7ac6dd92918f"
+        },
+        "canal-lock-0-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5338,
+            "style": 0,
+            "variant": 6
+          },
+          "sha256": "8b82f4919e0049ee60489f6924755d74a486d17f235e3836e46981ea0496ee52"
+        },
+        "canal-lock-0-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5339,
+            "style": 0,
+            "variant": 7
+          },
+          "sha256": "c3334afc99e7e52a67e0dee4a9c2cd96c46697321f5bd7c54f32540a69bbc515"
+        },
+        "canal-lock-0-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-8.pam",
+            "offset": [
+              -20,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5340,
+            "style": 0,
+            "variant": 8
+          },
+          "sha256": "2945afc0c0587c531d1753bbeecd9b2d9b49f4a4f8c63f6666cad34680c3bb14"
+        },
+        "canal-lock-0-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              136
+            ],
+            "sprite": 5341,
+            "style": 0,
+            "variant": 9
+          },
+          "sha256": "153887f8bd2b7a6d75073e478d8a2672a724651d5797ded11594d5be7ffe3d31"
+        },
+        "canal-lock-0-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-10.pam",
+            "offset": [
+              -124,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5342,
+            "style": 0,
+            "variant": 10
+          },
+          "sha256": "c384ab56a97772e3896b082dc011c1b98eb964418152174b2f875b7802e8ec16"
+        },
+        "canal-lock-0-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              132
+            ],
+            "sprite": 5343,
+            "style": 0,
+            "variant": 11
+          },
+          "sha256": "8a805c23267fd1cab07079902d3995d193da4ff18510990af82d4f055039384a"
+        },
+        "canal-lock-0-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-12.pam",
+            "offset": [
+              4,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5344,
+            "style": 0,
+            "variant": 12
+          },
+          "sha256": "725deaa7657c8ab31cca9c44b38aeb31ea1051dae46bdc3a0f29ac1312383fab"
+        },
+        "canal-lock-0-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-13.pam",
+            "offset": [
+              -156,
+              -52
+            ],
+            "size": [
+              160,
+              120
+            ],
+            "sprite": 5345,
+            "style": 0,
+            "variant": 13
+          },
+          "sha256": "be8046e436ce213236dae396940664b613a154b19391717f6b78e448eea0c48d"
+        },
+        "canal-lock-0-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-14.pam",
+            "offset": [
+              -148,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5346,
+            "style": 0,
+            "variant": 14
+          },
+          "sha256": "b985b805ea13a4b43d5b3605d5967d68edd1c91fd416fa39130f75eb0d6bf681"
+        },
+        "canal-lock-0-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              164,
+              120
+            ],
+            "sprite": 5347,
+            "style": 0,
+            "variant": 15
+          },
+          "sha256": "7ac4a0b25cdfb8db533f05a0961440516a29e2be4e2e5f0cfa3e26197e77b6dc"
+        },
+        "canal-lock-0-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5348,
+            "style": 0,
+            "variant": 16
+          },
+          "sha256": "951541c85ee1dcadab6b19ab912481c792a73eba3fe5746c166cd85c74396540"
+        },
+        "canal-lock-0-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5349,
+            "style": 0,
+            "variant": 17
+          },
+          "sha256": "fcbc60f5406e484e99e361c72dae9fbba85312fddbd58eafdc28661ead55f5cb"
+        },
+        "canal-lock-0-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5350,
+            "style": 0,
+            "variant": 18
+          },
+          "sha256": "21b65845b92707209e144daf4fd576db33e827cca482a4687cfd290fb2c7ef0c"
+        },
+        "canal-lock-0-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5351,
+            "style": 0,
+            "variant": 19
+          },
+          "sha256": "8f00ef426443514cfb98073bb1fb3cda3184f4c67c35bcd705b83316f15ae2e5"
+        },
+        "canal-lock-0-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5352,
+            "style": 0,
+            "variant": 20
+          },
+          "sha256": "fd769857ed09fab5c8ff054d4c4a422c6dfd0865b7418e7a4a21fe5ef67ca981"
+        },
+        "canal-lock-0-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5353,
+            "style": 0,
+            "variant": 21
+          },
+          "sha256": "ee98ee5858e4731cdd516e9de0490a78135de97d68ced3e4a1ba9ce475d09742"
+        },
+        "canal-lock-0-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5354,
+            "style": 0,
+            "variant": 22
+          },
+          "sha256": "c1d5eae458193de886e5b87adc94e28109e1985f01229d4bf33d0a7c13495215"
+        },
+        "canal-lock-0-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5355,
+            "style": 0,
+            "variant": 23
+          },
+          "sha256": "d62e0fe04f0d9d6cebf2c81051875158c0c5c5f1527d0cf6414b367e3ebc9541"
+        },
+        "canal-lock-1-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5356,
+            "style": 1,
+            "variant": 0
+          },
+          "sha256": "e72524f12fb2a1831971642731d4ef4c2203a0287b1e9f8df6f9938114429bd1"
+        },
+        "canal-lock-1-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5357,
+            "style": 1,
+            "variant": 1
+          },
+          "sha256": "5b590c56cf7303e5f14daf86910f584a01a7f78c886acaa3e4cff1d85c8d21ca"
+        },
+        "canal-lock-1-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5358,
+            "style": 1,
+            "variant": 2
+          },
+          "sha256": "93f53170c70a68e290229aae4694b2b97b06f3cec34ec605107fd2d6465a8fe2"
+        },
+        "canal-lock-1-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5359,
+            "style": 1,
+            "variant": 3
+          },
+          "sha256": "5c269621ec0cd9618ffe9ed0f130bdd8a702c167d326d0ccb048ff5b6d175935"
+        },
+        "canal-lock-1-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5360,
+            "style": 1,
+            "variant": 4
+          },
+          "sha256": "8661a11c0b742a8b668d7ed88870a0a96b8b51f64a02b68362ee94a5a0cb38a8"
+        },
+        "canal-lock-1-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5361,
+            "style": 1,
+            "variant": 5
+          },
+          "sha256": "d1eb8c1b65a2a387f7e28678a9ce515e2c4a8258f0fe46d7fc6e3533195e3dfa"
+        },
+        "canal-lock-1-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5362,
+            "style": 1,
+            "variant": 6
+          },
+          "sha256": "139b524b49b025e96f5f847283bd7ac39512f132c108dc6b2fd990013635edd2"
+        },
+        "canal-lock-1-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5363,
+            "style": 1,
+            "variant": 7
+          },
+          "sha256": "901f38331faab5b6d14803d010c4dbd2690d12b92a915bbfd9c625919ff84bca"
+        },
+        "canal-lock-1-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-8.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5364,
+            "style": 1,
+            "variant": 8
+          },
+          "sha256": "32270cf7f04d2cf64b0bd7f41f191a6be3a0d44270722ddcf6e6ab2422afd493"
+        },
+        "canal-lock-1-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5365,
+            "style": 1,
+            "variant": 9
+          },
+          "sha256": "285fa77d4d58ffeb7f35fd502927ee7a78c6579ba7882e0a44f1048319c0c2f9"
+        },
+        "canal-lock-1-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-10.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5366,
+            "style": 1,
+            "variant": 10
+          },
+          "sha256": "9283a810ec26b840bb67f9eab9478584731d98218f86b191cf5829e0e02d3429"
+        },
+        "canal-lock-1-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5367,
+            "style": 1,
+            "variant": 11
+          },
+          "sha256": "f88ab7259625603df9ad8edc74020b2aff88aab03aa98af7d88232c5d84ee883"
+        },
+        "canal-lock-1-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-12.pam",
+            "offset": [
+              4,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5368,
+            "style": 1,
+            "variant": 12
+          },
+          "sha256": "b32f4b2b8127ec0b65eb9cd36825e9421638ea414a76d8115c01a06cc67300ad"
+        },
+        "canal-lock-1-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-13.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5369,
+            "style": 1,
+            "variant": 13
+          },
+          "sha256": "1a3884630d8f61f32c3bd692144a0613a94715b2871336023249b4f71e8bb77d"
+        },
+        "canal-lock-1-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-14.pam",
+            "offset": [
+              -148,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5370,
+            "style": 1,
+            "variant": 14
+          },
+          "sha256": "22cd71cdc0ba601cd37a06ac8b9b3b9164ff3ca73bfae541d1fb77813e50a096"
+        },
+        "canal-lock-1-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5371,
+            "style": 1,
+            "variant": 15
+          },
+          "sha256": "b34d7253d50c6effa18751dc25e7c3362ab7d013bc1a1524139dbc812734c8d7"
+        },
+        "canal-lock-1-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5372,
+            "style": 1,
+            "variant": 16
+          },
+          "sha256": "a1f9db5632112560e34ebc0f6cce3a69e12a7b2b5fa229885df5bd80411d1e29"
+        },
+        "canal-lock-1-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5373,
+            "style": 1,
+            "variant": 17
+          },
+          "sha256": "7d9acf5970c4de3c8da814d222a064396cc002d908c741a78977b893be22bddd"
+        },
+        "canal-lock-1-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5374,
+            "style": 1,
+            "variant": 18
+          },
+          "sha256": "3f842045bed1fac956e48f7f68482d874248b8130348db0992711d5b64192476"
+        },
+        "canal-lock-1-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5375,
+            "style": 1,
+            "variant": 19
+          },
+          "sha256": "35f354a60f978d2ef7b0284f69ff2aad2a0f38f69f119b35940465ad369e1649"
+        },
+        "canal-lock-1-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5376,
+            "style": 1,
+            "variant": 20
+          },
+          "sha256": "13b496ef3af302fa5629be8b9f74fe81c55264a5f812ad997306c1308e7b9337"
+        },
+        "canal-lock-1-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5377,
+            "style": 1,
+            "variant": 21
+          },
+          "sha256": "23feb167982fab37ec7c0dfa563b5878594b14013b684ea7cc7b5bda082ee597"
+        },
+        "canal-lock-1-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5378,
+            "style": 1,
+            "variant": 22
+          },
+          "sha256": "f0599a2c70b50e21612b19b6230400895b6de3099c4ded93d3da659db68bb09d"
+        },
+        "canal-lock-1-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5379,
+            "style": 1,
+            "variant": 23
+          },
+          "sha256": "eeaf2da6040a1021a16a517a3f8a5bd4c4010e88edaa82e4afe3f9aae876daf1"
+        },
+        "water-slope-0-0.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-0.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5328,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "3d023eacc5e2de5deceee1bee28aea6806b64188ee778c29112fad593918464e"
+        },
+        "water-slope-0-1.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-1.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5329,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "9bcd80f4aa9730f0919e4ad761fc80d2556a8abeb1350aa32e49a48208feea67"
+        },
+        "water-slope-0-2.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-2.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5330,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "a0d191d159f5c152d41022aae6b67eb11b9079655c6a4130d8b99f34f0651b65"
+        },
+        "water-slope-0-3.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-3.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5331,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "f75a43771c5bf24e94d71a75f633cc7981c22ec9088b25662b08656937d6a90c"
+        }
+      }
+    },
+    {
+      "climate": "toyland",
+      "source_images_exact": 52,
+      "metadata_and_pam_bytes_exact": true,
+      "source_sha256": {
+        "canal-lock-0-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5332,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "06e6ec505202665993298248807ed845d0df7df0a708fc12e09cdb3a91a365db"
+        },
+        "canal-lock-0-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5333,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "2e82879b6b79f7ce6efc08ffc114d03bdf477c1e93f9e474f39b9f8f80e8c9e8"
+        },
+        "canal-lock-0-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5334,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "b2824ffad68721bcdf97a354340147d84d8e63e3d6e4820c049a729ccd26e574"
+        },
+        "canal-lock-0-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5335,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "5026c0f0036c2c5361408685dde198be32919aa93931601c9d75cb8847ac9a42"
+        },
+        "canal-lock-0-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5336,
+            "style": 0,
+            "variant": 4
+          },
+          "sha256": "bef9e2f4fc55cacbb187bdb42b2b48537c610282f0e0f0ee06dcb226ec638260"
+        },
+        "canal-lock-0-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5337,
+            "style": 0,
+            "variant": 5
+          },
+          "sha256": "da465155d104d6a8da88fe4876678bfd1dda4b616066b2625c9c7ac6dd92918f"
+        },
+        "canal-lock-0-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5338,
+            "style": 0,
+            "variant": 6
+          },
+          "sha256": "8b82f4919e0049ee60489f6924755d74a486d17f235e3836e46981ea0496ee52"
+        },
+        "canal-lock-0-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5339,
+            "style": 0,
+            "variant": 7
+          },
+          "sha256": "c3334afc99e7e52a67e0dee4a9c2cd96c46697321f5bd7c54f32540a69bbc515"
+        },
+        "canal-lock-0-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-8.pam",
+            "offset": [
+              -20,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5340,
+            "style": 0,
+            "variant": 8
+          },
+          "sha256": "2945afc0c0587c531d1753bbeecd9b2d9b49f4a4f8c63f6666cad34680c3bb14"
+        },
+        "canal-lock-0-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              136
+            ],
+            "sprite": 5341,
+            "style": 0,
+            "variant": 9
+          },
+          "sha256": "bdcb9994a9a8e10972c3a4914e677fd4c0642e2b21e7ce37340b47b76a2c3663"
+        },
+        "canal-lock-0-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-10.pam",
+            "offset": [
+              -124,
+              -88
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5342,
+            "style": 0,
+            "variant": 10
+          },
+          "sha256": "c384ab56a97772e3896b082dc011c1b98eb964418152174b2f875b7802e8ec16"
+        },
+        "canal-lock-0-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              132
+            ],
+            "sprite": 5343,
+            "style": 0,
+            "variant": 11
+          },
+          "sha256": "e28a5dee64abd3d5d50e0c16f276c82156bd7371d2b986d4c7c20ad9a57a5c35"
+        },
+        "canal-lock-0-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-12.pam",
+            "offset": [
+              4,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5344,
+            "style": 0,
+            "variant": 12
+          },
+          "sha256": "e859aec654a87bb2d33e886fc9384813a63d8d23b04837e485d4dd3ed29a0e96"
+        },
+        "canal-lock-0-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-13.pam",
+            "offset": [
+              -156,
+              -52
+            ],
+            "size": [
+              160,
+              120
+            ],
+            "sprite": 5345,
+            "style": 0,
+            "variant": 13
+          },
+          "sha256": "9e60edf8385e09a198998bde77b29227c0c6b04ff5379ab87a929a3594005e46"
+        },
+        "canal-lock-0-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-14.pam",
+            "offset": [
+              -148,
+              -96
+            ],
+            "size": [
+              152,
+              164
+            ],
+            "sprite": 5346,
+            "style": 0,
+            "variant": 14
+          },
+          "sha256": "3e4f73a71ec0e82c705c23f2d112b0cce40f49a5dd08fbf31d8136cb16217ca4"
+        },
+        "canal-lock-0-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              164,
+              120
+            ],
+            "sprite": 5347,
+            "style": 0,
+            "variant": 15
+          },
+          "sha256": "3a1db16cc6363620f6aa16d0be7f1c924b56c50ef8d38c18ff2878736d9452e0"
+        },
+        "canal-lock-0-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5348,
+            "style": 0,
+            "variant": 16
+          },
+          "sha256": "951541c85ee1dcadab6b19ab912481c792a73eba3fe5746c166cd85c74396540"
+        },
+        "canal-lock-0-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5349,
+            "style": 0,
+            "variant": 17
+          },
+          "sha256": "fcbc60f5406e484e99e361c72dae9fbba85312fddbd58eafdc28661ead55f5cb"
+        },
+        "canal-lock-0-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5350,
+            "style": 0,
+            "variant": 18
+          },
+          "sha256": "21b65845b92707209e144daf4fd576db33e827cca482a4687cfd290fb2c7ef0c"
+        },
+        "canal-lock-0-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5351,
+            "style": 0,
+            "variant": 19
+          },
+          "sha256": "8f00ef426443514cfb98073bb1fb3cda3184f4c67c35bcd705b83316f15ae2e5"
+        },
+        "canal-lock-0-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5352,
+            "style": 0,
+            "variant": 20
+          },
+          "sha256": "fd769857ed09fab5c8ff054d4c4a422c6dfd0865b7418e7a4a21fe5ef67ca981"
+        },
+        "canal-lock-0-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5353,
+            "style": 0,
+            "variant": 21
+          },
+          "sha256": "ee98ee5858e4731cdd516e9de0490a78135de97d68ced3e4a1ba9ce475d09742"
+        },
+        "canal-lock-0-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5354,
+            "style": 0,
+            "variant": 22
+          },
+          "sha256": "c1d5eae458193de886e5b87adc94e28109e1985f01229d4bf33d0a7c13495215"
+        },
+        "canal-lock-0-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-0-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5355,
+            "style": 0,
+            "variant": 23
+          },
+          "sha256": "d62e0fe04f0d9d6cebf2c81051875158c0c5c5f1527d0cf6414b367e3ebc9541"
+        },
+        "canal-lock-1-0.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-0.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5356,
+            "style": 1,
+            "variant": 0
+          },
+          "sha256": "e72524f12fb2a1831971642731d4ef4c2203a0287b1e9f8df6f9938114429bd1"
+        },
+        "canal-lock-1-1.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-1.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5357,
+            "style": 1,
+            "variant": 1
+          },
+          "sha256": "5b590c56cf7303e5f14daf86910f584a01a7f78c886acaa3e4cff1d85c8d21ca"
+        },
+        "canal-lock-1-2.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-2.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5358,
+            "style": 1,
+            "variant": 2
+          },
+          "sha256": "93f53170c70a68e290229aae4694b2b97b06f3cec34ec605107fd2d6465a8fe2"
+        },
+        "canal-lock-1-3.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-3.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5359,
+            "style": 1,
+            "variant": 3
+          },
+          "sha256": "5c269621ec0cd9618ffe9ed0f130bdd8a702c167d326d0ccb048ff5b6d175935"
+        },
+        "canal-lock-1-4.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-4.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5360,
+            "style": 1,
+            "variant": 4
+          },
+          "sha256": "8661a11c0b742a8b668d7ed88870a0a96b8b51f64a02b68362ee94a5a0cb38a8"
+        },
+        "canal-lock-1-5.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-5.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5361,
+            "style": 1,
+            "variant": 5
+          },
+          "sha256": "d1eb8c1b65a2a387f7e28678a9ce515e2c4a8258f0fe46d7fc6e3533195e3dfa"
+        },
+        "canal-lock-1-6.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-6.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5362,
+            "style": 1,
+            "variant": 6
+          },
+          "sha256": "139b524b49b025e96f5f847283bd7ac39512f132c108dc6b2fd990013635edd2"
+        },
+        "canal-lock-1-7.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-7.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5363,
+            "style": 1,
+            "variant": 7
+          },
+          "sha256": "901f38331faab5b6d14803d010c4dbd2690d12b92a915bbfd9c625919ff84bca"
+        },
+        "canal-lock-1-8.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-8.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5364,
+            "style": 1,
+            "variant": 8
+          },
+          "sha256": "32270cf7f04d2cf64b0bd7f41f191a6be3a0d44270722ddcf6e6ab2422afd493"
+        },
+        "canal-lock-1-9.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-9.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5365,
+            "style": 1,
+            "variant": 9
+          },
+          "sha256": "285fa77d4d58ffeb7f35fd502927ee7a78c6579ba7882e0a44f1048319c0c2f9"
+        },
+        "canal-lock-1-10.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-10.pam",
+            "offset": [
+              -124,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5366,
+            "style": 1,
+            "variant": 10
+          },
+          "sha256": "9283a810ec26b840bb67f9eab9478584731d98218f86b191cf5829e0e02d3429"
+        },
+        "canal-lock-1-11.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-11.pam",
+            "offset": [
+              -20,
+              -52
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5367,
+            "style": 1,
+            "variant": 11
+          },
+          "sha256": "f88ab7259625603df9ad8edc74020b2aff88aab03aa98af7d88232c5d84ee883"
+        },
+        "canal-lock-1-12.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-12.pam",
+            "offset": [
+              4,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5368,
+            "style": 1,
+            "variant": 12
+          },
+          "sha256": "b32f4b2b8127ec0b65eb9cd36825e9421638ea414a76d8115c01a06cc67300ad"
+        },
+        "canal-lock-1-13.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-13.pam",
+            "offset": [
+              -148,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5369,
+            "style": 1,
+            "variant": 13
+          },
+          "sha256": "1a3884630d8f61f32c3bd692144a0613a94715b2871336023249b4f71e8bb77d"
+        },
+        "canal-lock-1-14.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-14.pam",
+            "offset": [
+              -148,
+              -60
+            ],
+            "size": [
+              152,
+              128
+            ],
+            "sprite": 5370,
+            "style": 1,
+            "variant": 14
+          },
+          "sha256": "22cd71cdc0ba601cd37a06ac8b9b3b9164ff3ca73bfae541d1fb77813e50a096"
+        },
+        "canal-lock-1-15.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-15.pam",
+            "offset": [
+              4,
+              -52
+            ],
+            "size": [
+              152,
+              120
+            ],
+            "sprite": 5371,
+            "style": 1,
+            "variant": 15
+          },
+          "sha256": "b34d7253d50c6effa18751dc25e7c3362ab7d013bc1a1524139dbc812734c8d7"
+        },
+        "canal-lock-1-16.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-16.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5372,
+            "style": 1,
+            "variant": 16
+          },
+          "sha256": "a1f9db5632112560e34ebc0f6cce3a69e12a7b2b5fa229885df5bd80411d1e29"
+        },
+        "canal-lock-1-17.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-17.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5373,
+            "style": 1,
+            "variant": 17
+          },
+          "sha256": "7d9acf5970c4de3c8da814d222a064396cc002d908c741a78977b893be22bddd"
+        },
+        "canal-lock-1-18.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-18.pam",
+            "offset": [
+              -124,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5374,
+            "style": 1,
+            "variant": 18
+          },
+          "sha256": "3f842045bed1fac956e48f7f68482d874248b8130348db0992711d5b64192476"
+        },
+        "canal-lock-1-19.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-19.pam",
+            "offset": [
+              -20,
+              -20
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5375,
+            "style": 1,
+            "variant": 19
+          },
+          "sha256": "35f354a60f978d2ef7b0284f69ff2aad2a0f38f69f119b35940465ad369e1649"
+        },
+        "canal-lock-1-20.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-20.pam",
+            "offset": [
+              4,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5376,
+            "style": 1,
+            "variant": 20
+          },
+          "sha256": "13b496ef3af302fa5629be8b9f74fe81c55264a5f812ad997306c1308e7b9337"
+        },
+        "canal-lock-1-21.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-21.pam",
+            "offset": [
+              -148,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5377,
+            "style": 1,
+            "variant": 21
+          },
+          "sha256": "23feb167982fab37ec7c0dfa563b5878594b14013b684ea7cc7b5bda082ee597"
+        },
+        "canal-lock-1-22.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-22.pam",
+            "offset": [
+              -148,
+              -20
+            ],
+            "size": [
+              152,
+              88
+            ],
+            "sprite": 5378,
+            "style": 1,
+            "variant": 22
+          },
+          "sha256": "f0599a2c70b50e21612b19b6230400895b6de3099c4ded93d3da659db68bb09d"
+        },
+        "canal-lock-1-23.pam": {
+          "metadata": {
+            "category": "canal-lock",
+            "image": "canal-lock-1-23.pam",
+            "offset": [
+              4,
+              -28
+            ],
+            "size": [
+              152,
+              96
+            ],
+            "sprite": 5379,
+            "style": 1,
+            "variant": 23
+          },
+          "sha256": "eeaf2da6040a1021a16a517a3f8a5bd4c4010e88edaa82e4afe3f9aae876daf1"
+        },
+        "water-slope-0-0.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-0.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5328,
+            "style": 0,
+            "variant": 0
+          },
+          "sha256": "b0839afebbe97966b16c9934c977ba3d53653aa128895a2b350b22573b0865cf"
+        },
+        "water-slope-0-1.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-1.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5329,
+            "style": 0,
+            "variant": 1
+          },
+          "sha256": "0c5f82445379943866ed1fd70d0bf5a19859dce8b4b460474f9962bf93bdd98a"
+        },
+        "water-slope-0-2.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-2.pam",
+            "offset": [
+              -124,
+              0
+            ],
+            "size": [
+              256,
+              92
+            ],
+            "sprite": 5330,
+            "style": 0,
+            "variant": 2
+          },
+          "sha256": "b4c54c20b6ae504e773a5f89afe07a3276d61b106e90934de1905497ac49d3fe"
+        },
+        "water-slope-0-3.pam": {
+          "metadata": {
+            "category": "water-slope",
+            "image": "water-slope-0-3.pam",
+            "offset": [
+              -124,
+              -32
+            ],
+            "size": [
+              256,
+              156
+            ],
+            "sprite": 5331,
+            "style": 0,
+            "variant": 3
+          },
+          "sha256": "82749cd664b8eadd21799e479286d2a57704a361c62b272a4d668dfe94697926"
+        }
+      }
+    }
+  ],
+  "source_equalities": 208,
+  "geometry_approvals": 0,
+  "scope": "Eight quiet native export/atlas/picking/synchronous-save controls use the unchanged exact-tag downloaded app/resources. All48 default lock wall sources and four default water slopes retain original metadata and exact backend bytes per climate. Static exports do not resolve active Classic/NewGRF lock/river features or prove any lock model/world/ship clearance, river bank geometry, performance or quality. No game selector, commands, terrain, time, ratings, RNG, renderer or artwork changed."
+}

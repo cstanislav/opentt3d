@@ -1,0 +1,129 @@
+{
+  "models": 1915,
+  "baseline_models_exact": 1831,
+  "four_joined_mediums_word_exact": true,
+  "comparisons": [
+    {
+      "climate": "temperate",
+      "scope": "native",
+      "exit_code": 0,
+      "images": 121,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-temperate-native-strict.json",
+      "report_sha256": "c6853d90d1ab41ec8432599d2a594f68978ce406f4c2a18b9adfe128c63ba2af"
+    },
+    {
+      "climate": "temperate",
+      "scope": "gallery",
+      "exit_code": 1,
+      "images": 1329,
+      "different_images": 143,
+      "different_pixels": 6629,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-temperate-gallery-strict.json",
+      "report_sha256": "b6bb50fa1e860e25499626fe4b801d541f69bd6b4fff82cf24be8522bbfeaae5"
+    },
+    {
+      "climate": "temperate",
+      "scope": "world",
+      "exit_code": 1,
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 10,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-temperate-world-strict.json",
+      "report_sha256": "d87a85c56e15639d283de67a6f53ef2f3daa225afc3cf0b2115fb9d2ab6fca3b"
+    },
+    {
+      "climate": "arctic",
+      "scope": "native",
+      "exit_code": 0,
+      "images": 121,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-arctic-native-strict.json",
+      "report_sha256": "ceecf914dc7586b80fde6ca9282622aa4691ba4cc103a8c5bcd978c00f1de332"
+    },
+    {
+      "climate": "arctic",
+      "scope": "gallery",
+      "exit_code": 1,
+      "images": 1329,
+      "different_images": 143,
+      "different_pixels": 6629,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-arctic-gallery-strict.json",
+      "report_sha256": "7392a3668ce5a8b8ff556c3a994728108214371374d309fc73b251d85e73a7ee"
+    },
+    {
+      "climate": "arctic",
+      "scope": "world",
+      "exit_code": 1,
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 9,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-arctic-world-strict.json",
+      "report_sha256": "73389fc2ec5149f4aa3163e7d74550c28a5808f0ff2ff1ccee188684a8052ccc"
+    },
+    {
+      "climate": "tropic",
+      "scope": "native",
+      "exit_code": 0,
+      "images": 121,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-tropic-native-strict.json",
+      "report_sha256": "13a342527cec7173431cfba7b481c054714f3d95bb493342a45ca8fd62d4bd5f"
+    },
+    {
+      "climate": "tropic",
+      "scope": "gallery",
+      "exit_code": 1,
+      "images": 1329,
+      "different_images": 143,
+      "different_pixels": 6629,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-tropic-gallery-strict.json",
+      "report_sha256": "aa4a30adc9e44c28d43207ad5d5ed32ecb8d2b9c62ff01a5e1a7ad793db48a04"
+    },
+    {
+      "climate": "tropic",
+      "scope": "world",
+      "exit_code": 1,
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 12,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-tropic-world-strict.json",
+      "report_sha256": "fd73ebef024f99519c923815c61b2c5f3c407827b4de3d314a693034ce9ff528"
+    },
+    {
+      "climate": "toyland",
+      "scope": "native",
+      "exit_code": 0,
+      "images": 121,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-toyland-native-strict.json",
+      "report_sha256": "c35a8e9cd712893b134d464ca0da9f73b0d22e416c2980072c76a03105678918"
+    },
+    {
+      "climate": "toyland",
+      "scope": "gallery",
+      "exit_code": 1,
+      "images": 1329,
+      "different_images": 144,
+      "different_pixels": 6573,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-toyland-gallery-strict.json",
+      "report_sha256": "cc4e809aa3173b8fd86428d4523b0308baa5e320a75c7acd2092fae03f6f6e4c"
+    },
+    {
+      "climate": "toyland",
+      "scope": "world",
+      "exit_code": 1,
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 8,
+      "report": "build-macos/breadth-original-hq-medium-perimeter-owner-toyland-world-strict.json",
+      "report_sha256": "6b3dbc3dc60e02add0ee881bb741ac5c33a1dc84404975db599c398f648d8af5"
+    }
+  ],
+  "individual_approvals": 0,
+  "approved": false
+}
