@@ -12,6 +12,21 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Original water states remain in both quality scopes
+
+`reviews/20261003/water-quality-scope/` retains 544 separate original wall/water/
+conditional bank states: 192 missing structural lock owners, 96 independent water
+owners, sixteen default slope/climate surfaces and 240 unresolved river-bank/climate
+selectors. Conditional absence does not license an invented bank, and static IDs
+or live source captures do not establish model fidelity or animation coverage.
+
+The unchanged 1,831-model/canonical-review scope has 2,846 ledger entries and 57
+individual records; the separately rejected 1,915-model HQ scope has 2,930/141.
+Both required-eight checks correctly fail, with zero approvals and four coverage
+gaps. Working asset 247 and isolated committed-artwork/compiler asset 231 tests
+pass. Matching inventories, reports and LF CSVs are hash-bound; no runtime artwork,
+bindings, canonical reviews or `.42` package changes.
+
 ## October 3 — rejected larger HQs; original water inventory
 
 `reviews/20261003/hq-larger-rejected/` retains84 individually inspected prototype

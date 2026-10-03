@@ -181,12 +181,6 @@ class QualityAuditTests(unittest.TestCase):
                                       "object_ground":{str(12+part):{"0":"sample"} for part in range(3)}}
         self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,0))
         self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"ground",0,0))
-        self.catalogue["bindings"]["object_ground"]["15"] = {"0":"sample"}
-        self.assertEqual(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,0),"sample")
-        self.assertEqual(original_object_layer_model(self.catalogue,objects,tiles[3],"ground",0,0),"sample")
-        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,1))
-        del self.catalogue["bindings"]["objects"]["14"]
-        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"ground",0,0))
 
     def test_water_scope_keeps_each_independent_owner_and_unresolved_conditional_bank(self):
         water = water_catalogue()
@@ -249,6 +243,12 @@ class QualityAuditTests(unittest.TestCase):
         self.reviews["models"][water["model"]] = dict(self.reviews["models"]["sample"],fingerprint=water["fingerprint"])
         with self.assertRaisesRegex(ValueError,"Missing structural coverage"):
             audit(self.catalogue,self.reviews,self.root,scope)
+        self.catalogue["bindings"]["object_ground"]["15"] = {"0":"sample"}
+        self.assertEqual(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,0),"sample")
+        self.assertEqual(original_object_layer_model(self.catalogue,objects,tiles[3],"ground",0,0),"sample")
+        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"body",0,1))
+        del self.catalogue["bindings"]["objects"]["14"]
+        self.assertIsNone(original_object_layer_model(self.catalogue,objects,tiles[0],"ground",0,0))
 
 
 if __name__ == "__main__":

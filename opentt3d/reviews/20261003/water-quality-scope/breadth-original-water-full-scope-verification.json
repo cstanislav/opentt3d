@@ -1,0 +1,43 @@
+{
+  "audited_utc": "2026-10-03T18:28:01.484177+00:00",
+  "ledgers": [
+    {
+      "scope": "canonical",
+      "catalogue_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+      "source_models": 1831,
+      "inventory_sha256": "d6863dedfbcc425a598e568053679531aba048d34d489140ad6d5cd98ff27e4b",
+      "reviews_sha256": "59a60d23947bcab3c54f22b3f20415907a1afbc59bc8217e43bf37741a58ba14",
+      "quality_report_sha256": "4daf3939d6b40974846260b3e6c86e5d379b9c83c7b3780ca4159427802af59a",
+      "csv_sha256": "36eede39507c726d670970ab64738f5d7d6ddf2ae6079963a11cbdc3e1703c50",
+      "ledger_entries": 2846,
+      "individual_records": 57,
+      "water_state_entries": 544,
+      "structural_lock_gaps": 192,
+      "conditional_river_selectors": 240,
+      "require_eight_exit": 1,
+      "approvals": 0
+    },
+    {
+      "scope": "hq-rejected-candidate",
+      "catalogue_sha256": "7a4979f3fa7ecf27981867a785d358391d60c6446d13c4d7efb848dec0b0936e",
+      "source_models": 1915,
+      "inventory_sha256": "5cbda5bee7dc11876a0783a8435dd7dab275a254f066a615c1c173f2e9a5847b",
+      "reviews_sha256": "ff112b1028141a4575e829b84e8e736580d04dc5064cf23a72c5068bdfcea54a",
+      "quality_report_sha256": "de2c1a0f9892d8e9c926be8e1c2dfdce3ba9ca8cd3dd957e373342e8d3817f3b",
+      "csv_sha256": "51035d26339f57bc4534a663a84f79d88de1833da7bb71ef64726c15ca984b8a",
+      "ledger_entries": 2930,
+      "individual_records": 141,
+      "water_state_entries": 544,
+      "structural_lock_gaps": 192,
+      "conditional_river_selectors": 240,
+      "require_eight_exit": 1,
+      "approvals": 0
+    }
+  ],
+  "tools_sha256": {
+    "tools/assets/inventory.py": "57b71cd80e1cfb144796d9f2ea1f1e0c579fc6d10adcd71b434031b8c39c48df",
+    "tools/assets/quality_audit.py": "c2ef6505f36b5b78fdd06ad29f77dd285c0807c4dbcb92f8fa309b958ffa6d66",
+    "tools/assets/test_quality_audit.py": "8bdc69b009a69d15ac7c573724bc9e0f4eb32634451f17a0e930d42b81665720"
+  },
+  "scope": "No artwork, bindings, canonical reviews or .42 package changed. Canonical and quarantined larger-HQ ledgers remain distinct. Default and conditional water source scope is retained, not live custom/geometry/animation/visual approval. Working CSV includes rejected HQ candidates and is not a released model catalogue."
+}

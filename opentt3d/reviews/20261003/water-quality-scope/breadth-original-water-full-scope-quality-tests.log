@@ -1,0 +1,14 @@
+.........E.........
+======================================================================
+ERROR: test_missing_water_scope_is_explicit_and_present_scope_cannot_inherit_model_approval (test_quality_audit.QualityAuditTests.test_missing_water_scope_is_explicit_and_present_scope_cannot_inherit_model_approval)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/tools/assets/test_quality_audit.py", line 246, in test_missing_water_scope_is_explicit_and_present_scope_cannot_inherit_model_approval
+    self.catalogue["bindings"]["object_ground"]["15"] = {"0":"sample"}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'object_ground'
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.128s
+
+FAILED (errors=1)
