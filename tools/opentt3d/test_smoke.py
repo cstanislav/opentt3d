@@ -92,35 +92,50 @@ class ExplicitClearCommandTests(unittest.TestCase):
         second = "live voxel canal dike 3 climate 0 source 9811 captured at 44,28 with original ground ownership"
         smoke.require_live_canal_dikes(first+"\n"+second,[0,3])
 
-    def generated_script(self, *flags):
+    def generated_script(self, *flags, host=None):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             build = root / "build"
             build.mkdir()
-            (build / ("opentt3d.exe" if sys.platform == "win32" else "opentt3d")).touch()
+            platform = host or smoke.platform.system()
+            (build / ("opentt3d.exe" if platform == "Windows" else "opentt3d")).touch()
             output = root / "review"
             argv = ["smoke.py", "--build-dir", str(build), "--output", str(output), *flags]
-            with mock.patch.object(sys, "argv", argv), mock.patch("smoke.subprocess.Popen", side_effect=RuntimeError("stop before launch")) as launch:
+            with mock.patch("smoke.platform.system",return_value=platform), mock.patch.object(sys, "argv", argv), mock.patch("smoke.subprocess.Popen", side_effect=RuntimeError("stop before launch")) as launch:
                 with self.assertRaisesRegex(RuntimeError, "stop before launch"):
                     smoke.main()
                 launch.assert_called_once()
                 return (output / "scripts/game_start.scr").read_text().splitlines(), launch.call_args.kwargs["env"]
 
     def test_original_object_export_does_not_create_objects_change_ratings_or_start_simulation(self):
-        commands, env = self.generated_script("--export-objects", "--background")
-        self.assertIn("renderer3d object-references", commands)
-        self.assertEqual(commands.count("renderer3d object-references"), 1)
-        self.assertNotIn("unpause", commands)
-        self.assertFalse(any("build_object" in command or "rating" in command for command in commands))
-        self.assertEqual(env["OPENTT3D_BACKGROUND"], "1")
+        for host in ("Darwin","Linux","Windows"):
+            with self.subTest(host=host):
+                flags = ("--background",) if host == "Darwin" else ()
+                commands, env = self.generated_script("--export-objects",*flags,host=host)
+                self.assertIn("renderer3d object-references", commands)
+                self.assertEqual(commands.count("renderer3d object-references"), 1)
+                self.assertNotIn("unpause", commands)
+                self.assertFalse(any("build_object" in command or "rating" in command for command in commands))
+                if host == "Darwin": self.assertEqual(env["OPENTT3D_BACKGROUND"], "1")
 
     def test_catalogue_overview_is_read_only_and_retains_optional_prefix(self):
-        for flags,command in (((),"renderer3d voxel-overview"),(("--gallery-voxel-prefix","bank"),"renderer3d voxel-overview bank")):
-            commands,env = self.generated_script("--gallery-voxel-overview","--background",*flags)
-            self.assertIn(command,commands)
-            self.assertEqual(commands.count(command),1)
-            self.assertNotIn("unpause",commands)
-            self.assertEqual(env["OPENTT3D_BACKGROUND"],"1")
+        for host in ("Darwin","Linux","Windows"):
+            for flags,command in (((),"renderer3d voxel-overview"),(("--gallery-voxel-prefix","bank"),"renderer3d voxel-overview bank")):
+                with self.subTest(host=host,prefix=flags):
+                    background = ("--background",) if host == "Darwin" else ()
+                    commands,env = self.generated_script("--gallery-voxel-overview",*background,*flags,host=host)
+                    self.assertIn(command,commands)
+                    self.assertEqual(commands.count(command),1)
+                    self.assertNotIn("unpause",commands)
+                    if host == "Darwin": self.assertEqual(env["OPENTT3D_BACKGROUND"],"1")
+
+    def test_background_platform_guard_is_not_relaxed_for_portable_script_tests(self):
+        for host in ("Linux","Windows"):
+            with self.subTest(host=host), mock.patch("smoke.platform.system",return_value=host), mock.patch.object(sys,"argv",["smoke.py","--build-dir","unused","--output","unused","--background"]), mock.patch("smoke.subprocess.Popen") as launch, contextlib.redirect_stderr(io.StringIO()):
+                with self.assertRaises(SystemExit) as raised:
+                    smoke.main()
+                self.assertEqual(raised.exception.code,2)
+                launch.assert_not_called()
 
     def test_original_command_runs_after_gallery_with_explicit_draw_delay(self):
         commands, env = self.generated_script("--clear-tile", "64", "65", "--running", "--benchmark-frames", "240", "--gallery-voxel-prefix", "effect_explosion_small_")

@@ -12,6 +12,14 @@ platform jobs remain read-only and all package gates stay unchanged. Harness75
 passes. No packages are published or recommended until a fresh eight-job run and
 independent audits pass; `.37` remains the verified download.
 
+The fresh draft-access run37104029160 passes lookup/boundary140/asset174 but rejects
+two script tests that used the macOS-only background flag on Linux. `.38` stays
+at its original tag with zero attachments. Corrected tests cover macOS/Linux/Windows
+script generation and preserve the non-macOS rejection; native-host harness76 and
+Linux-host script tests pass. `.39` is the fresh-tag successor, still subject to
+all eight jobs and independent audits. Real hosted Linux/memory execution is not
+claimed from host-name emulation.
+
 ## Baseline
 
 - [x] October3 consistency increment: road stops sample the original full-tile

@@ -1,5 +1,24 @@
 # Active extended development goal
 
+## `.38` source-test rejection; portable `.39` successor — October 3, 06:49:00 UTC
+
+Fresh workflow37104029160 resolves the unchanged `.38` draft/tag correctly and
+passes boundary140/asset174, but fails two Linux script-generation unit tests:
+they supplied macOS-only `--background` unconditionally. The failed run/log are
+retained under `build-macos/playable-release38-draft-lookup-failed-*`. Platform
+compilation/package jobs never ran, and `.38` remains rejected with no attachments;
+its tag will not be moved or repaired in place.
+
+The corrected tests explicitly generate the unchanged read-only object/export
+commands on macOS, Linux and Windows, use background only on macOS, and retain a
+negative non-macOS-background guard. Native-host harness76 and Linux-host script
+tests pass. A whole-suite host-name emulation was also attempted and remains a
+failed experiment: native memory sampling needs the real Linux `/proc` kernel,
+which this Mac does not provide. It does not establish hosted Linux execution.
+`.39` must use a fresh exact tag and pass all eight jobs/independent audits. Its
+artwork and runtime fixes remain those validated at `18c3ae698`; no rejected
+package or structural/8/10 acceptance is inferred. `.37` remains recommended.
+
 ## Immutable `.38` draft-release access repair — October 3, 06:43:14 UTC
 
 The road-stop/canal/bank increment is committed and pushed at
