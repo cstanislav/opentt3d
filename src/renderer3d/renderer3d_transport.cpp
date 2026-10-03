@@ -616,6 +616,55 @@ TEST_CASE("Tunnel excavation respects translated roots and the ends of its segme
 	}
 }
 
+TEST_CASE("Raised source-owner grounds keep above-vault relief through independent LOD tunnel cuts", "[renderer3d][voxel]")
+{
+	/* The same tunnel subtraction used by ClippedGroundMesh must not flatten a
+	 * raised original ground owner. Stress a near-vault diagnostic slab as well
+	 * as the ordinary doubled-height separation; no actual map is modified. */
+	std::array<VoxelGrid,4> owners{
+		VoxelGrid({64,64,24},{{{72,73,74,75,76,77}}},{0,0,-0.5f},{0.5f,0.5f,0.5f}),
+		VoxelGrid({64,64,24},{{{72,73,74,75,76,77}}},{-16,0,-0.5f},{0.5f,0.5f,0.5f}),
+		VoxelGrid({64,64,24},{{{72,73,74,75,76,77}}},{0,-16,-0.5f},{0.5f,0.5f,0.5f}),
+		VoxelGrid({64,64,24},{{{72,73,74,75,76,77}}},{-16,-16,-0.5f},{0.5f,0.5f,0.5f})};
+	for (int z = 0; z < 24; ++z) for (int y = 0; y < 64; ++y) for (int x = 0; x < 64; ++x) {
+		if (z != 0 && !(x >= 8 && x < 56 && y >= 8 && y < 56)) continue;
+		unsigned owner = (2*x-z >= 64) | ((2*y-z >= 64)<<1);
+		owners[owner].Fill({x,y,z},{x+1,y+1,z+1},1);
+	}
+	for (unsigned part = 0; part < owners.size(); ++part) for (unsigned factor : {1U,2U,4U,8U,16U}) {
+		CAPTURE(part,factor);
+		auto mesh = owners[part].ReducedMesh(factor,true);
+		for (TunnelKind kind : {TunnelKind::Rail,TunnelKind::Road}) for (unsigned direction = 0; direction < 4; ++direction) {
+			CAPTURE(kind,direction);
+			/* A legal full doubled terrain level above the bore is untouched. */
+			CHECK_FALSE(GroundIntersectsTunnelVault(mesh.vertices,-16));
+			auto retained = CutTunnelTerrain(mesh.vertices,kind,direction,-16);
+			REQUIRE(retained.size() == mesh.vertices.size());
+			CHECK(std::memcmp(retained.data(),mesh.vertices.data(),retained.size()*sizeof(Vertex)) == 0);
+			CHECK(GroundIntersectsTunnelVault(mesh.vertices,0));
+			TunnelAssembly clipped; clipped.parts[0] = CutTunnelTerrain(mesh.vertices,kind,direction,0);
+			Vec3 top = TunnelPoint(direction,{8,8,12.5f});
+			TunnelAssembly uncut; uncut.parts[0] = mesh.vertices;
+			CHECK(FirstHit(uncut,{top,{0,0,-1}}) == Approx(1));
+			CHECK(FirstHit(clipped,{top,{0,0,-1}}) == Approx(1));
+			Vec3 bore = TunnelPoint(direction,{8,8,-0.25f});
+			CHECK(FirstHit(clipped,{bore,{0,0,1}}) > 7.75f);
+			CHECK(std::ranges::all_of(clipped.parts[0],[](const Vertex &vertex) {
+				return vertex.texture.x >= 72.5f/256 && vertex.texture.x <= 77.5f/256 && vertex.opacity == 1;
+			}));
+			/* Every upper source triangle survives as the same three vertex words
+			 * in source order, including its normal, paint and surface identity. */
+			size_t cursor = 0;
+			for (size_t i = 0; i < mesh.vertices.size(); i += 3) {
+				if (GroundIntersectsTunnelVault(std::span(mesh.vertices).subspan(i,3),0)) continue;
+				while (cursor < clipped.parts[0].size() && std::memcmp(&mesh.vertices[i],&clipped.parts[0][cursor],3*sizeof(Vertex)) != 0) cursor += 3;
+				REQUIRE(cursor < clipped.parts[0].size());
+				cursor += 3;
+			}
+		}
+	}
+}
+
 TEST_CASE("Rail routes join the upstream edge ports with continuous gauge", "[renderer3d]")
 {
 	static_assert(TRACK_X == 0 && TRACK_Y == 1 && TRACK_UPPER == 2 && TRACK_LOWER == 3 && TRACK_LEFT == 4 && TRACK_RIGHT == 5);

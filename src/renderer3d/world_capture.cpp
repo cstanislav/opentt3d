@@ -819,7 +819,7 @@ static const std::vector<Vertex> *ClippedGroundMesh(const std::vector<Vertex> *m
 		static std::map<Key,std::vector<Vertex>> clipped;
 		const auto &bore = cut->second;
 		int floor = bore.floor-static_cast<int>(TerrainZ(tile.z));
-		if (std::any_of(mesh->begin(),mesh->end(),[&](const Vertex &v) { return v.position.z+tile_offset.z < floor+7.75f; })) {
+		if (GroundIntersectsTunnelVault(*mesh,static_cast<float>(floor),tile_offset)) {
 			auto [found,inserted] = clipped.try_emplace(Key{mesh,bore.kind,bore.direction,floor,tile_offset.x,tile_offset.y,tile_offset.z});
 			if (inserted) found->second = CutTunnelTerrain(*mesh,bore.kind,bore.direction,static_cast<float>(floor),tile_offset);
 			return &found->second;
@@ -1360,8 +1360,20 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 		if (DrawVoxelObjectGround(capture->scene,(*object)[0],(*object)[1],(*object)[2],image,origin,palette)) {
 			++capture->tile_layers;
 			for (size_t i = first; i < capture->scene.instances.size(); ++i) {
-				capture->scene.instances[i].mesh = ClippedGroundMesh(capture->scene.instances[i].mesh,tile);
-				capture->scene.instances[i].data.SetObjectId(TILE_PICK_ID|tile.tile.base());
+				auto &instance = capture->scene.instances[i];
+				const auto *source_mesh = instance.mesh;
+				instance.mesh = ClippedGroundMesh(source_mesh,tile);
+				instance.data.SetObjectId(TILE_PICK_ID|tile.tile.base());
+				if (!capture->diagnostic && (*object)[0] == OBJECT_HQ) {
+					auto bore = capture->tunnel_cuts.find(tile.tile);
+					if (bore != capture->tunnel_cuts.end() && instance.mesh == source_mesh) {
+						static std::set<std::tuple<uint32_t,unsigned,unsigned,size_t>> retained;
+						if (retained.emplace(tile.tile.base(),(*object)[1],(*object)[2],source_mesh->size()).second) {
+							Debug(driver,1,"OpenTT3D: live HQ ground tunnel retention size {} part {} tile {},{}, relative floor {}, {} source vertex words unchanged by CaptureGround/ClippedGroundMesh",
+								(*object)[1],(*object)[2],TileX(tile.tile),TileY(tile.tile),bore->second.floor-static_cast<int>(TerrainZ(tile.z)),source_mesh->size());
+						}
+					}
+				}
 			}
 			capture->scene.instances.erase(std::remove_if(capture->scene.instances.begin()+first,capture->scene.instances.end(),
 				[](const auto &instance) { return instance.mesh->empty(); }),capture->scene.instances.end());

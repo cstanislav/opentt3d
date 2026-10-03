@@ -1,0 +1,57 @@
+[2026-10-03 09:29:20] dbg: [net:3] Starting dedicated server, version opentt3d-dev-20261003.41
+[2026-10-03 09:29:20] dbg: [net:3] Starting network
+[2026-10-03 09:29:20] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 09:29:20] dbg: [net:3] Network online, multiplayer available
+[2026-10-03 09:29:20] dbg: [net:3] Detected broadcast addresses:
+[2026-10-03 09:29:20] dbg: [net:3]   0) 192.168.1.255
+[2026-10-03 09:29:20] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-10-03 09:29:20] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - opentt3d-dev-20261003.41
+------------------------------------
+use "help" for more information.
+
+[2026-10-03 09:29:21] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-10-03 09:29:21] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-10-03 09:29:21] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 09:29:21] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 09:29:21] dbg: [net:3] Listening on 127.0.0.1:53081 (IPv4)
+[2026-10-03 09:29:21] dbg: [net:3] Listening on 127.0.0.1:53081 (IPv4)
+[2026-10-03 09:29:21] dbg: [net:3] Network revision name: opentt3d-dev-20261003.41
+[2026-10-03 09:29:21] dbg: [net:3] [crypto] Creating a new random key
+‎*** Game still paused (waiting for link graph update)
+‎*** Game unpaused (waiting for link graph update)
+[2026-10-03 09:29:22] dbg: [script:4] [0] [I] HQ_NATURAL_TOWN_SERVICE {"town":0,"cargo":0,"vehicle":10,"engine":116,"running_cost":426,"first":3082,"second":3596,"existing_connected_roads":true}
+[2026-10-03 09:29:22] dbg: [script:4] [0] [I] HQ_NATURAL_TOWN_SERVICE {"town":0,"cargo":2,"vehicle":11,"engine":126,"running_cost":421,"first":3339,"second":3468,"existing_connected_roads":true}
+[2026-10-03 09:29:22] dbg: [script:4] [0] [I] HQ_NATURAL_READY {"hq_x":8,"hq_y":8}
+[2026-10-03 09:29:22] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749715,"year":2052,"month":8,"rating":155,"income":0,"delivered":0,"cash":10199207,"loan":17000000,"profit_last_year":13105}
+‎*** Game paused (manual)
+Saving map...
+Map successfully saved to 'hq-natural-initial.sav'.
+‎*** Game unpaused (manual)
+[2026-10-03 09:29:26] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749717,"year":2052,"month":8,"rating":155,"income":0,"delivered":0,"cash":10206339,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:29] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749719,"year":2052,"month":8,"rating":155,"income":0,"delivered":0,"cash":10206329,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:33] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749720,"year":2052,"month":8,"rating":155,"income":0,"delivered":0,"cash":10206323,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:36] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749722,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177954,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:40] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749724,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177943,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:43] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749726,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177935,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:47] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749727,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177928,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:50] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749729,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177917,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:54] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749731,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177914,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:29:57] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749733,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177908,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:00] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749734,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177898,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:04] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749736,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177935,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:07] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749738,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177927,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:11] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749739,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177922,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:14] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749741,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177920,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:18] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749743,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177910,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:21] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749745,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177944,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:25] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749746,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177936,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:28] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749748,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177936,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:32] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749750,"year":2052,"month":9,"rating":155,"income":0,"delivered":0,"cash":10177932,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:35] dbg: [script:4] [0] [I] HQ_NATURAL_ECONOMY {"date":749752,"year":2052,"month":10,"rating":180,"income":7267,"delivered":321,"cash":10149569,"loan":17000000,"profit_last_year":13105}
+[2026-10-03 09:30:35] dbg: [script:4] [0] [I] HQ_NATURAL_UPGRADE_READY {"rating":180,"hq_x":8,"hq_y":8}
+‎*** Game paused (manual)
+Saving map...
+Map successfully saved to 'hq-natural-final.sav'.
+[2026-10-03 09:30:36] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 09:30:36] dbg: [net:3] Shutting down network

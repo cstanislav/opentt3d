@@ -116,12 +116,22 @@ inline std::vector<ClipVolume> TunnelSceneryRegions(TunnelKind kind, float lengt
 	return regions;
 }
 
+/** Shared runtime early-out: raised source artwork above the vault is immutable. */
+inline bool GroundIntersectsTunnelVault(std::span<const Vertex> input, float floor, Vec3 tile_offset = {})
+{
+	return std::ranges::any_of(input,[&](const Vertex &vertex) { return vertex.position.z+tile_offset.z < floor+7.75f; });
+}
+
 /** Subtract one convex bore segment from terrain or rooted scenery triangles. Some legal slopes dip
  * below the vault beside the centreline; merely drawing a tube under them
  * leaves strips of grass crossing the interior. Material charts interpolate
  * with the clipped geometry, and the actual map heights are never modified. */
 inline std::vector<Vertex> CutTunnelTerrain(std::span<const Vertex> input, TunnelKind kind, unsigned direction, float floor, Vec3 tile_offset = {})
 {
+	/* Subtracting the side/end planes before the ceiling can unnecessarily split
+	 * completely above-vault triangles. Match ClippedGroundMesh's exact early-out
+	 * in direct diagnostic callers too, retaining all source vertex words. */
+	if (!GroundIntersectsTunnelVault(input,floor,tile_offset)) return {input.begin(),input.end()};
 	std::vector<Vertex> result;
 	auto profile = TunnelProfile(kind,0);
 	auto local = [&](Vec3 point) { point = TunnelPoint((4-direction)%4,point+tile_offset); point.z -= floor; return point; };
@@ -142,6 +152,13 @@ inline std::vector<Vertex> CutTunnelTerrain(std::span<const Vertex> input, Tunne
 		return a;
 	};
 	for (size_t triangle = 0; triangle < input.size(); triangle += 3) {
+		/* A compound ground may have both a near-vault base and high relief.
+		 * Keep each completely above-vault triangle word-exact too: unrelated
+		 * bore side/end planes must not subdivide the roof or its paint. */
+		if (!GroundIntersectsTunnelVault(input.subspan(triangle,3),floor,tile_offset)) {
+			result.insert(result.end(),input.begin()+triangle,input.begin()+triangle+3);
+			continue;
+		}
 		std::vector<Vertex> inside{input[triangle],input[triangle+1],input[triangle+2]};
 		for (const auto &plane : planes) {
 			if (inside.empty()) break;

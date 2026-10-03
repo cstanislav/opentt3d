@@ -129,6 +129,10 @@ const Catalogue &Models()
 					(category == "object_ground" && std::stoul(id) < 4))) throw std::runtime_error("Invalid original object layer/climate binding");
 			if ((category == "airport_tiles" || category == "airport_ground") && (std::stoul(id) >= 74 || std::stoul(state) >= 64 || std::stoul(state)%16 >= GetAirportTileLayouts(std::stoul(id)).size())) throw std::runtime_error("Invalid voxel airport climate/frame state");
 			result.bindings.emplace(std::tuple{category,static_cast<unsigned>(std::stoul(id)),static_cast<unsigned>(std::stoul(state))},model);
+			/* Original HQ layers partition one compound across independent source
+			 * owners. Coarse blocks may reduce paint, but must never inflate across
+			 * those boundaries or fill the adjoining owner's air/openings. */
+			if ((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) result.models.at(model).lod_preserve_occupancy = true;
 			if (category == "trees") {
 				unsigned base = std::stoul(id), stage = std::stoul(state);
 				if (base >= 1576 && base <= 2003 && (base-1576)%7 == 0 && stage < 7) result.tree_models[base-1576+stage] = &result.models.at(model);
@@ -166,7 +170,8 @@ void AddVoxelInstance(Scene &scene, const VoxelModel &model, const InstanceData 
 			if (!lod) {
 				lod = std::make_unique<VoxelModel>();
 				lod->lod_source = model.source.get(); lod->reduction = 1U<<level;
-				lod->surface = model.source->Expand(Models().materials).ReducedMesh(lod->reduction);
+				lod->lod_preserve_occupancy = model.lod_preserve_occupancy;
+				lod->surface = model.source->Expand(Models().materials).ReducedMesh(lod->reduction,lod->lod_preserve_occupancy);
 				Models().surfaces.Register(*lod);
 			}
 			selected = lod.get();
@@ -2124,6 +2129,78 @@ void VerifyVoxelMeshes(std::string_view prefix)
 		}
 	}
 	Debug(driver,1,"OpenTT3D: {} original HQ ground views preserve independent opaque source ownership, all16 company palettes and intentional body absences",object_ground_views);
+	/* Exercise runtime selection, not just ReducedMesh in isolation. Different
+	 * original owners can select different levels at the same camera distance;
+	 * exact occupancy/air boundaries must survive each independent transition. */
+	unsigned object_lod_views = 0;
+	unsigned object_lod_rebuilds = 0;
+	const char *auto_lod = std::getenv("OPENTT3D_AUTO_LOD");
+	if (auto_lod == nullptr || std::string_view(auto_lod) != "0") for (const auto &[binding,name] : catalogue.bindings) {
+		const auto &[category,layout,climate] = binding;
+		if ((category != "object_ground" && category != "objects") || layout < 4 || climate != effect_climate || !name.starts_with(prefix)) continue;
+		unsigned size = (layout-4)/4, part = (layout-4)%4;
+		if (!HasVoxelObjectLayout(4,size,climate)) continue;
+		const auto *source = GetOriginalObjectTileLayout(4,size,part);
+		const auto &model = catalogue.models.at(name);
+		if (!model.lod_preserve_occupancy) throw std::runtime_error("Independent HQ source owner lost its occupancy-preserving LOD policy");
+		auto grid = model.source->Expand(catalogue.materials);
+		constexpr std::array<float,5> scales{2.0f,0.75f,0.375f,0.1875f,0.09375f};
+		for (unsigned level = 0; level < scales.size(); ++level) {
+			Textures().BeginScene();
+			unsigned factor = 1U<<level;
+			auto reduced = grid.ReducedMesh(factor,true);
+			if (reduced.occupied != model.surface.occupied || reduced.exposed_faces != model.surface.exposed_faces ||
+					reduced.low != model.surface.low || reduced.high != model.surface.high) throw std::runtime_error("Independent HQ LOD changed occupied/air cells or source bounds");
+			Scene actual, reference; reference.persistent_meshes = false;
+			actual.detail = Scene::DetailView{{},{},1,scales[level],0.05f};
+			Vec3 origin{3.5f,2.25f,17};
+			PaletteID palette = PALETTE_RECOLOUR_START+(part+level)%16;
+			bool drawn = category == "object_ground" ? DrawVoxelObjectGround(actual,4,size,part,source->ground.sprite,origin,palette) :
+				DrawVoxelObjectBody(actual,4,size,part,source->GetSequence().front().image.sprite,origin,palette,level&1U ? 0.38f : 1);
+			const auto *selected = level == 0 ? &model : model.lods[level-1].get();
+			if (!drawn || actual.instances.size() != 1 || selected == nullptr || actual.instances.front().mesh != &selected->surface.vertices ||
+					selected->surface.vertices.size() != reduced.vertices.size() || std::memcmp(selected->surface.vertices.data(),reduced.vertices.data(),reduced.vertices.size()*sizeof(Vertex)) != 0) {
+				throw std::runtime_error("Independent HQ runtime LOD selected different geometry/paint or changed its source transform");
+			}
+			actual.instances.front().data.SetObjectId(TILE_PICK_ID|83);
+			reference.instances.push_back({&reduced.vertices,actual.instances.front().data});
+			Camera camera = StreetReviewCamera(reduced.low+origin,reduced.high+origin,256,256,part+0.15f);
+			if (!RenderScene(actual,camera,pixels,&ids) || !RenderScene(reference,camera,expected,&expected_ids) || pixels != expected || ids != expected_ids) {
+				throw std::runtime_error("Independent HQ LOD differs from its exact occupied-cell geometry in paint, opacity or tile picking");
+			}
+			/* Retire the actual selected owner, not an unrelated diagnostic model.
+			 * A copied scene must pin it through pressure, and a genuinely unused
+			 * level must reconstruct at the same mesh identity with exact words. */
+			auto detail = actual.detail;
+			auto copied = actual; actual = {};
+			const auto *identity = &selected->surface.vertices;
+			catalogue.surfaces.Trim(0);
+			if (copied.instances.front().mesh != identity || copied.VertexCount() != reduced.vertices.size() ||
+					std::memcmp(identity->data(),reduced.vertices.data(),reduced.vertices.size()*sizeof(Vertex)) != 0) {
+				throw std::runtime_error("CPU pressure changed a copied independent HQ owner scene");
+			}
+			copied = {};
+			/* The live viewport may independently pin a level; do not discard it. */
+			if (!catalogue.surfaces.IsPinned(*selected)) {
+				catalogue.surfaces.Trim(0);
+				if (identity->capacity() != 0) throw std::runtime_error("Unused independent HQ LOD storage was not retired");
+				actual.detail = detail;
+				if (category == "object_ground") DrawVoxelObjectGround(actual,4,size,part,source->ground.sprite,origin,palette);
+				else DrawVoxelObjectBody(actual,4,size,part,source->GetSequence().front().image.sprite,origin,palette,level&1U ? 0.38f : 1);
+				if (actual.instances.size() == 1) actual.instances.front().data.SetObjectId(TILE_PICK_ID|83);
+				if (actual.instances.size() != 1 || actual.instances.front().mesh != identity || identity->size() != reduced.vertices.size() ||
+						std::memcmp(identity->data(),reduced.vertices.data(),reduced.vertices.size()*sizeof(Vertex)) != 0 ||
+						!RenderScene(actual,camera,pixels,&ids) || pixels != expected || ids != expected_ids) {
+					throw std::runtime_error(fmt::format("Restored independent HQ owner {} factor {} changed identity, source geometry, paint, opacity or picking",name,factor));
+				}
+				++object_lod_rebuilds;
+			}
+			++object_lod_views;
+		}
+	}
+	Debug(driver,1,"OpenTT3D: {} independent HQ owner LOD views preserve exact occupied/air boundaries, automatic factors1/2/4/8/16, source transforms, opacity and tile picking",object_lod_views);
+	if (object_lod_views != 0 && object_lod_rebuilds == 0) throw std::runtime_error("No independent HQ owner LOD retired and rebuilt under CPU pressure");
+	Debug(driver,1,"OpenTT3D: {} independent HQ owner LOD rebuild views preserve copied-scene pins, stable mesh identities and exact vertex words/RGBA/picking",object_lod_rebuilds);
 	unsigned object_joined_views = 0;
 	for (unsigned size = 0; size < 5; ++size) {
 		if (!HasVoxelObjectLayout(4,size,effect_climate)) continue;

@@ -2,6 +2,34 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — unchanged HQ artwork, repaired runtime ownership
+
+The runtime-only increment retains the exact1,831-model catalogue and original
+compiler/bindings. Automatic HQ LODs reduce paint without inflating occupied cells
+across independent owners or filling their openings. Selected-owner CPU pressure
+retains copied-scene pins and rebuilds exact words at stable mesh identities.
+Completely above-vault ground/relief stays word-exact; intersecting bore subtraction
+remains active. Doubled terrain height, source dimensions and simulation/RNG remain
+unchanged. `.41` retains its old LOD defect and remains draft/unrecommended.
+
+Sealed14:59:54UTC: native213/asset204/harness94/boundary140 and22 quiet native
+controls pass, including640 exact owner rebuild views, eight unchanged source/world
+comparisons, complete-source fallback and actual raised-ground tunnel capture at
+zooms0/4/5. Public costed freight plus passenger/mail service reaches180, and the
+acknowledged save actually renders size1 in both backends. This is temperate evidence
+only, not all-climate/upgraded-stage or aesthetic approval. Portable receipts:
+`reviews/20261003/hq-runtime-repair/verification.json`.
+
+Two600-frame controls retain136/132 intervals over20ms, OpenGL50.356959ms work and
+2,857,782,608/3,073,641,880 sampled bytes; smooth60fps/long-duration memory remain
+unaccepted. The separate1,915-model working prototype catalogue adds84 larger HQ
+owners; individual inspection rejects a missing medium-east wall, now under a fresh
+source-guided repair. Those prototypes/compiler/ratings are excluded from the
+runtime-only commit and release candidate. Zero8/10 approvals exist. Full breadth,
+individual fidelity, strict backends, fleet/emitter/platform/replay/network work
+continue. `.40` stays recommended until a fresh successor passes eight packaging
+jobs and independent immutable-tag audits. The seal is not a stopping clock.
+
 ## October 3 — two ground-only HQ sizes, still below8/10
 
 The current1,831-model working catalogue adds32 original HQ ground owners for

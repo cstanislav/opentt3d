@@ -53,14 +53,18 @@ public:
 	/** Automatically aggregate authored cells. Any occupied cell retains its
 	 * coarse block (thin posts cannot disappear); deterministic majority material
 	 * retains original palette/remap indices. Clamp the mesh to the original
-	 * occupied bounds, preserving ground contact and complete physical footprints. */
-	VoxelMesh ReducedMesh(unsigned factor) const
+	 * occupied bounds, preserving ground contact and complete physical footprints.
+	 * Source-owner partitions must also retain every occupied/air cell: independently
+	 * inflating their shared coarse blocks would overlap neighbouring owners. Their
+	 * automatic LOD aggregates paint, allowing greedy surface reduction without
+	 * filling an original opening or changing a source ownership boundary. */
+	VoxelMesh ReducedMesh(unsigned factor, bool preserve_occupancy = false) const
 	{
 		if (factor == 1) return Mesh();
 		if (factor < 2 || factor > 16 || (factor & (factor-1)) != 0) throw std::invalid_argument("Invalid automatic voxel LOD factor");
 		std::array<int,3> extent;
 		for (unsigned axis = 0; axis < 3; ++axis) extent[axis] = (size[axis]+factor-1)/factor;
-		VoxelGrid reduced(extent,materials,origin,step*factor);
+		VoxelGrid reduced(preserve_occupancy ? size : extent,materials,origin,preserve_occupancy ? step : step*factor);
 		Vec3 low{INFINITY,INFINITY,INFINITY}, high{-INFINITY,-INFINITY,-INFINITY};
 		std::vector<unsigned> counts(materials.size()+1);
 		std::vector<uint16_t> used;
@@ -76,7 +80,17 @@ public:
 			}
 			uint16_t selected = 0;
 			for (uint16_t cell : used) if (selected == 0 || counts[cell] > counts[selected] || (counts[cell] == counts[selected] && cell < selected)) selected = cell;
-			if (selected != 0) reduced.Fill({x,y,z},{x+1,y+1,z+1},selected);
+			if (selected != 0) {
+				if (preserve_occupancy) {
+					for (int dz = z*factor; dz < std::min<int>((z+1)*factor,size[2]); ++dz)
+					for (int dy = y*factor; dy < std::min<int>((y+1)*factor,size[1]); ++dy)
+					for (int dx = x*factor; dx < std::min<int>((x+1)*factor,size[0]); ++dx) {
+						if (Get(dx,dy,dz) != 0) reduced.cells[reduced.Index(dx,dy,dz)] = selected;
+					}
+				} else {
+					reduced.Fill({x,y,z},{x+1,y+1,z+1},selected);
+				}
+			}
 			for (uint16_t cell : used) counts[cell] = 0;
 			used.clear();
 		}

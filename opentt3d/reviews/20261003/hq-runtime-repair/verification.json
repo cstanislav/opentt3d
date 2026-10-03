@@ -1,0 +1,350 @@
+{
+  "sealed_utc": "2026-10-03T14:59:54.715779+00:00",
+  "models": 1831,
+  "artwork_compiler_bindings_unchanged": true,
+  "catalogue_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+  "binary_sha256": "f8297acd5b9d674aecd0585f82469ac01799ec1b84e7b4c3f1011c29ed8ff99a",
+  "runtime_sources": {
+    "src/renderer3d/voxel_models.cpp": "433a8c0f7fcac2e349c1346453f0adb81e6ff3f02c9934905147f25ad179650f",
+    "src/renderer3d/voxel_geometry.hpp": "f2a71901af6427184bb9441c4f9bec171df23e250068680b887fc9f5fcdd5385",
+    "src/renderer3d/voxel_mesh_cache.hpp": "d2fa03d6a68d3b35a4957b0b6b0fd23ce9937d9369bb42b988eeb52b4978d1d4",
+    "src/renderer3d/renderer3d_voxels.cpp": "4180e3d25caf18bd7685fea0e1f688dfcf1eaafd5885998de7d7b02788d5a5d2",
+    "src/renderer3d/renderer3d_transport.cpp": "c9b826e01c43af2351f024a3774cacf95f86c868c68bb4088e6be2e9ebcfd902",
+    "src/renderer3d/world_capture.cpp": "db67fa2f829dc622e45d662666cefb26905f74b3e0c53117486b065faba571e3",
+    "src/renderer3d/tunnel_geometry.hpp": "8ce5bfdeb6e594309e199c37d87d2cc564fc2e194789de80fc7b146141b5b399"
+  },
+  "native_tests": 213,
+  "asset_tests": 204,
+  "harness_tests": 94,
+  "presentation_boundary_files": 140,
+  "final_quiet_native_runs": 22,
+  "owner_lod_rebuilds": [
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-opengl",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-vulkan",
+      "exact_rebuilt_owner_views": 40
+    },
+    {
+      "run": "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-opengl",
+      "exact_rebuilt_owner_views": 40
+    }
+  ],
+  "original_source_and_world_preservation": [
+    {
+      "climate": "temperate",
+      "backend": "vulkan",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "temperate",
+      "backend": "opengl",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "arctic",
+      "backend": "vulkan",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "arctic",
+      "backend": "opengl",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "tropic",
+      "backend": "vulkan",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "tropic",
+      "backend": "opengl",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "toyland",
+      "backend": "vulkan",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    },
+    {
+      "climate": "toyland",
+      "backend": "opengl",
+      "source_pams_byte_exact": 37,
+      "world_rgba_exact": true
+    }
+  ],
+  "missing_owner_fallback": [
+    {
+      "mode": "missing-ground",
+      "backend": "vulkan",
+      "original_images_byte_exact": 37,
+      "world_rgba_byte_exact": true,
+      "world_sha256": "9bf9bb39d1ba5ad6c2780ba8aa19dc7a72fb71ea16a30ed34229193d46b89476"
+    },
+    {
+      "mode": "missing-body",
+      "backend": "vulkan",
+      "original_images_byte_exact": 37,
+      "world_rgba_byte_exact": true,
+      "world_sha256": "9bf9bb39d1ba5ad6c2780ba8aa19dc7a72fb71ea16a30ed34229193d46b89476"
+    },
+    {
+      "mode": "missing-ground",
+      "backend": "opengl",
+      "original_images_byte_exact": 37,
+      "world_rgba_byte_exact": true,
+      "world_sha256": "49177c4a3d6f7257cf2877ed1060866ac4585855661804094d8c5c5eae5d1039"
+    },
+    {
+      "mode": "missing-body",
+      "backend": "opengl",
+      "original_images_byte_exact": 37,
+      "world_rgba_byte_exact": true,
+      "world_sha256": "49177c4a3d6f7257cf2877ed1060866ac4585855661804094d8c5c5eae5d1039"
+    }
+  ],
+  "actual_saved_rendered_natural_size1": true,
+  "natural_upgrade_climate": "temperate",
+  "natural_performance_rating": 180,
+  "actual_ground_tunnel_world_size": 0,
+  "raised_ground_floor_separation": -32,
+  "actual_world_zooms": [
+    0,
+    4,
+    5
+  ],
+  "pacing": [
+    {
+      "backend": "vulkan",
+      "frames": 600,
+      "intervals_over_20_ms": 136,
+      "measured_fps": 59.97227032151011,
+      "frame_work_ms": {
+        "max": 7.793166,
+        "mean": 0.860454306666666,
+        "p50": 0.768916,
+        "p95": 1.504792,
+        "p99": 1.951792
+      },
+      "memory": {
+        "limit_bytes": 4294967296,
+        "peak_sampled_bytes": 2857782608,
+        "samples": 117,
+        "limit_exceeded": false
+      },
+      "accepted_smooth60fps": false
+    },
+    {
+      "backend": "opengl",
+      "frames": 600,
+      "intervals_over_20_ms": 132,
+      "measured_fps": 59.98746136683635,
+      "frame_work_ms": {
+        "max": 50.356959,
+        "mean": 1.9082999150000004,
+        "p50": 0.831375,
+        "p95": 6.803333,
+        "p99": 17.605167
+      },
+      "memory": {
+        "limit_bytes": 4294967296,
+        "peak_sampled_bytes": 3073641880,
+        "samples": 116,
+        "limit_exceeded": false
+      },
+      "accepted_smooth60fps": false
+    }
+  ],
+  "portable_evidence_sha256": {
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel-vulkan.png": "6224f1cc20d4bb86731e92fc27ff6fd4318b8f9a17286089b1da1628ede5d571",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel-vulkan.log": "be99a5194bc5b4d44a672a4621a637d78fac9a2e80487bb798e57522255b0073",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel-opengl.png": "5a81d7a1dca2b8ba1abacddf51d7cc45f005439b21f3f20ed15cb28a7e90b75b",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel-opengl.log": "7d8bac0867807bcf00b1134c3e806115364530d095a002e3fe89b88d5d15a8ee",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1-vulkan.png": "94779f1b146961b15c6e80cf5da36e6b0182b9005da10d2b1eeb277ec8840a45",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1-vulkan.log": "e5a1b572044164111d374e5b7153b9becf496d6a04a6f1d2b6349e08a063472c",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1-opengl.png": "3d2219a6416644b3f4b8b2497fb773b6306e509bd58b4008ec7e2e89da46fc17",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1-opengl.log": "e6973c8533348ae7ff461e9512cbf6237f83f56dbb17201668add15cdcf01918",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1/receipt.json": "1b1746c0d227f2726b627d62aa07f40cb0ecc9cfcbcae56716d6c046c0ace67a",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1/fixture.log": "827a0f2f662da6600e369b2172c6c698f991d5bae76fac5c89eb3bf551e861a4",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1/original.sav": "9e449b1f67138eba3b866a6e9231e509f39938f85fa9043e26a5c8f8b02650fd",
+    "opentt3d/reviews/20261003/hq-runtime-repair/natural-size1/main.nut": "820e8d06fa7b4054cf4d6e12ded187f4791be62013b69423476cf8339b4339e3",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel/receipt.json": "0bd4fae2d696ea79b9b9a17ff7b1a7ddb9f06294d0eb6b8294a6469e86d39010",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel/fixture.log": "98f26a0a021f07a19fdedbb30c467771393c89c2503a580dbd3f347a521a77bb",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel/original.sav": "6fe52878419708a8e2075d7057ae915e4b629955becdc60a111fb65c903f0593",
+    "opentt3d/reviews/20261003/hq-runtime-repair/public-tunnel/main.nut": "a404c9b67931a87a1cdb5be59c9ced89b331b4d3ab06b835ab61189cef493282",
+    "opentt3d/reviews/20261003/hq-runtime-repair/costed-service/receipt.json": "1b5017186a6b8a07fd6391bcaa704edd027705723963be973977c71a7dea5d28",
+    "opentt3d/reviews/20261003/hq-runtime-repair/costed-service/fixture.log": "e89e809712acbdd46e962d7df8b376994f15d93aa776b4a35d9e1b350db14a13",
+    "opentt3d/reviews/20261003/hq-runtime-repair/costed-service/main.nut": "99e56e0196d99b2812484fdfa0b6aedd7e5e70a8deaec4e54bc24bdc5cd999d1"
+  },
+  "evidence_sha256": {
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-vulkan/run.log": "679bb0511e68a5ac770ea1efe91a5793c11f3465a8adf6995bf13bfaeb22f0b5",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-vulkan/result.json": "69bc825953bb6269bba1e5fbfdea77f5b9c175731389d25217aa0dd4f73d39cf",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-vulkan/screenshot/smoke.png": "9ea5bad547ed1f0acb9ca66d6d70576429ed41cdc3ecdc9bbfac22d9539d65bb",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-vulkan/save/smoke-state.sav": "df136173d764bca2654d6f98dffc4c9491da3ccb77bbd5b3f9389cabaf56ed85",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-opengl/run.log": "51749818debafcc4c9d7413b151f8827743217548fd7903dbf0e0f9cf7398f27",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-opengl/result.json": "ef9ae17c94d5c3570e03c11d8dce8cffb5a5f9608e096b3c0715226708ef3e0d",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-opengl/screenshot/smoke.png": "a68fe55d4d2d1133091c1ac5edb675e4ee051558b3fdf57ba1f168cb3d296f19",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-temperate-opengl/save/smoke-state.sav": "df136173d764bca2654d6f98dffc4c9491da3ccb77bbd5b3f9389cabaf56ed85",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-vulkan/run.log": "256c21b963da84581bfc0c2723d7bdb12999bdda187e8b189a1321a12c3b8557",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-vulkan/result.json": "26df091ea44d258fbdebfa69580e6ad7477a89a405f86759dae42f577131a99e",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-vulkan/screenshot/smoke.png": "a21e0860a7c5215cc1c877e6c2dd7082962878d070fa9776dda120af5a14590b",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-vulkan/save/smoke-state.sav": "c80176331b4f10393e11df3022de51b36796dd0e8fc0e54d0356d1bd517676e3",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-opengl/run.log": "cfcee5fac5d2f8d1843726c7647d7209cb2b62ac41205d2d44eeb2e4d2aa41da",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-opengl/result.json": "65aca52d3b0e0d657b7c747943bdd16ebaaf522e73c16b9a6c6e09d7bc95c10b",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-opengl/screenshot/smoke.png": "c724c083b8de65b46d006fef2e81b5216838e7326f94b6802f0e224e707ee53d",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-arctic-opengl/save/smoke-state.sav": "c80176331b4f10393e11df3022de51b36796dd0e8fc0e54d0356d1bd517676e3",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-vulkan/run.log": "da876f46bd8228b1453e206133e9764b54448e23836f23c2c0dc7fc062d4beff",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-vulkan/result.json": "abaef58d0378ef09e109185555d37a56aabc0d1c63c3ea199388353aa7b7015a",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-vulkan/screenshot/smoke.png": "9e796bc40e44894a1812fddcc8c1cfe2207961eaad6d59c2d211a03478c5cd96",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-vulkan/save/smoke-state.sav": "20df75e22e3300cd119a6f5ed4ef85cd180df7c636a6f828c021d1ccb73f335c",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-opengl/run.log": "5a224193cd734ad6a3a4b4603979c5ca2b5d5e917796e4e2217f3d33a59e6aca",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-opengl/result.json": "a1b733c1077abf8444f29ea9c006323bafba60331de050af9357cf54e13a1028",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-opengl/screenshot/smoke.png": "8dfc0dbf52e96f7a3291d00155cf54c570d6555cf4ad2f82a84f10351284935e",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-tropic-opengl/save/smoke-state.sav": "20df75e22e3300cd119a6f5ed4ef85cd180df7c636a6f828c021d1ccb73f335c",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-vulkan/run.log": "a7c6f138491c3c5ae5659b13118bae89278d1085aa57b15985b67d083028087a",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-vulkan/result.json": "698e862f651a6d4892c68b7f1fbdb9a4d0904f66f0a7417fa0a23df5695ab558",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-vulkan/screenshot/smoke.png": "f216c4802617b6062226c5cdc2d1f4e31f7f21da5931f0201690636fefca8ae8",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-vulkan/save/smoke-state.sav": "a9837315e1512e00e8fbc66841df888b92bf9fd3d63996212da5190e7622bac0",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-opengl/run.log": "65d53ba3ddad277ff1560eacb44a05d71a5d544c1f0007e27d12bc3a16771b0c",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-opengl/result.json": "068e4d4b1c516f2d71b7d45447906a3c433c137cb4d9f38ba630eb0bcc8220c4",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-opengl/screenshot/smoke.png": "c44cd4572f6e00f86a2a343503c8cf07c8f35328181fb7b125dec1fcb8010ca4",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-toyland-opengl/save/smoke-state.sav": "a9837315e1512e00e8fbc66841df888b92bf9fd3d63996212da5190e7622bac0",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-vulkan/run.log": "be99a5194bc5b4d44a672a4621a637d78fac9a2e80487bb798e57522255b0073",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-vulkan/result.json": "785ada42e6365e8b8fd61f7b5af053408ed76f11b2c8b39a582d28f79f4b7bfb",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-vulkan/screenshot/smoke.png": "6224f1cc20d4bb86731e92fc27ff6fd4318b8f9a17286089b1da1628ede5d571",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-vulkan/save/smoke-state.sav": "4cd721a60f1a04bb83da1f1870db5f138fee2972d08eada986b66c249ba53b76",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-opengl/run.log": "7d8bac0867807bcf00b1134c3e806115364530d095a002e3fe89b88d5d15a8ee",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-opengl/result.json": "1ef7219ae2bb7a63ec7fd6a2fb2a238148cea13f24f400a709da0d10696fb5d9",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-opengl/screenshot/smoke.png": "5a81d7a1dca2b8ba1abacddf51d7cc45f005439b21f3f20ed15cb28a7e90b75b",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-public-tunnel-opengl/save/smoke-state.sav": "4cd721a60f1a04bb83da1f1870db5f138fee2972d08eada986b66c249ba53b76",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/run.log": "e5a1b572044164111d374e5b7153b9becf496d6a04a6f1d2b6349e08a063472c",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/result.json": "8b2312708354b3ddde846977ab33bb16c72bb27585bbdefde6632c450a7c1a18",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/screenshot/smoke.png": "94779f1b146961b15c6e80cf5da36e6b0182b9005da10d2b1eeb277ec8840a45",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/benchmark.json": "d7a970418a91826561c1dcf02ddafc5982de2a397be30b0277320aade50d6a86",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/memory-summary.json": "0ee001f0ab99ce400752270ebe15305cba03066efba8d2e4a923a21318e51ccd",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/memory.jsonl": "fd6723756858318028773605521b935135185a3406be137df28fdc70ee501821",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-vulkan/save/smoke-state.sav": "254376136568d988cb4d9caecf6772e2b98456f40d2a7034bdc376a67640d696",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/run.log": "e6973c8533348ae7ff461e9512cbf6237f83f56dbb17201668add15cdcf01918",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/result.json": "758a3a8bc437eca7e1551d6c269ab73293b6be3b37848a88f4973707dee448c2",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/screenshot/smoke.png": "3d2219a6416644b3f4b8b2497fb773b6306e509bd58b4008ec7e2e89da46fc17",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/benchmark.json": "39b6272f3dba0db39cdea6d8c3e8847448bbb12c77d81015d635a2719713aa55",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/memory-summary.json": "e08545023e44bffd9414ca3eae700e0ac22dfdc35d2f1703d3f21daea3cd4a3e",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/memory.jsonl": "c719da02a1de9c87bf77f453edf1a443e7bc66cd265b3df1674a81a8eeb148d7",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-natural-size1-opengl/save/smoke-state.sav": "254376136568d988cb4d9caecf6772e2b98456f40d2a7034bdc376a67640d696",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-vulkan/run.log": "2566315990255d302ec0722c5edf013d1c58317596e5a0d6d6d4ce452c44635b",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-vulkan/result.json": "4b1f06426a2c19c9296c4f69db732bae5f239396214f2ddfdfa6cac156521f6a",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-vulkan/screenshot/smoke.png": "aeb177a4dcee99909a6620cf343ec108500031c3b6b640b479adc33428e9ee5e",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-vulkan/save/smoke-state.sav": "4cd721a60f1a04bb83da1f1870db5f138fee2972d08eada986b66c249ba53b76",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-opengl/run.log": "644113b25c08c19185698c06ccaf21ee5dc5fcaa0aacaf8a6e74b528a86f55ba",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-opengl/result.json": "1074a91618d4959bc8599c82ee5f9473cd44d6a6255815a6569318b901841c04",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-opengl/screenshot/smoke.png": "22d739781c1a5a69dbbd8d2ec877d6851e2747fb182c7857f71cc1578cea82ce",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom4-opengl/save/smoke-state.sav": "4cd721a60f1a04bb83da1f1870db5f138fee2972d08eada986b66c249ba53b76",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-vulkan/run.log": "3b4fe9ea766e4f28fc3a92a30ebc2fab69145154f48862662ea6180e95e9f3e9",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-vulkan/result.json": "5a433bab0a6c0b1c430d199a01b39130df4592e68b108080eb8f670472a86d32",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-vulkan/screenshot/smoke.png": "dcf9419048252e4d9a9a12b788b2bda7b212d8c432fdce47c4d23e9fa8115a94",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-vulkan/save/smoke-state.sav": "4cd721a60f1a04bb83da1f1870db5f138fee2972d08eada986b66c249ba53b76",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-opengl/run.log": "36a60dde8676aa20b905f3805e405873489214caba350b821fb05225b139d1b3",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-opengl/result.json": "c0ec9c4ec6f793047c5bdcf7526adb0d033b27fca4f7652eec1202791f27338f",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-opengl/screenshot/smoke.png": "eacf7e221618b0f9d3e52a92a6ff6435c0073857c58df1cfc393cca430748d1a",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-zoom5-opengl/save/smoke-state.sav": "4cd721a60f1a04bb83da1f1870db5f138fee2972d08eada986b66c249ba53b76",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-vulkan/run.log": "b4401106beb5886a7c79eadc73659cfedd6988887894d68c319ea94f1f140323",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-vulkan/result.json": "c5cb3a84157adc38c427e6f792e1bf4ae5eb1f7146d6610a42ba185da5613a58",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-vulkan/screenshot/smoke.png": "9bf9bb39d1ba5ad6c2780ba8aa19dc7a72fb71ea16a30ed34229193d46b89476",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-vulkan/save/smoke-state.sav": "ada5d345a3f9449e3b7d7e5cc6dbac48324baff9df2decad5e5961afedce4bc6",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-vulkan/run.log": "7cb05ff1a6b0d0da5b6ba202ccd650c751a187db073e8750191cb69acd1533b4",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-vulkan/result.json": "03c0f61d1c9b53d9574f1050e27fae697763e75fe303b9dd93404b91a073fa48",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-vulkan/screenshot/smoke.png": "9bf9bb39d1ba5ad6c2780ba8aa19dc7a72fb71ea16a30ed34229193d46b89476",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-vulkan/save/smoke-state.sav": "ada5d345a3f9449e3b7d7e5cc6dbac48324baff9df2decad5e5961afedce4bc6",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-vulkan/run.log": "17153f74dbcaf2a253ed2d3ae48c30b9e33d3f64a38a2681c7d3b8db26e4756c",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-vulkan/result.json": "f32db97a27a83a9ced6ccad387af585b7acc3e588006fa9d8aab4b1783df35e4",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-vulkan/screenshot/smoke.png": "9bf9bb39d1ba5ad6c2780ba8aa19dc7a72fb71ea16a30ed34229193d46b89476",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-vulkan/save/smoke-state.sav": "ada5d345a3f9449e3b7d7e5cc6dbac48324baff9df2decad5e5961afedce4bc6",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-opengl/run.log": "0f29b68682b9f0b85f768f6416842d6b053b0dc7e6ecd5329091d2749e138482",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-opengl/result.json": "8d9df7b8fa8db270912b9315ed20917e44ba10770fb5e130b41e74bb46b3fd13",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-opengl/screenshot/smoke.png": "49177c4a3d6f7257cf2877ed1060866ac4585855661804094d8c5c5eae5d1039",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-ground-opengl/save/smoke-state.sav": "ada5d345a3f9449e3b7d7e5cc6dbac48324baff9df2decad5e5961afedce4bc6",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-opengl/run.log": "25b6b0ab88551329c22783f2d00b82534b60011a13a603fbc7c611ab071134ec",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-opengl/result.json": "cc1f55a4e82ae6b27311c24730f9fcad5e1826f20a1a1700d1dd2a755413dfa2",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-opengl/screenshot/smoke.png": "49177c4a3d6f7257cf2877ed1060866ac4585855661804094d8c5c5eae5d1039",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-missing-body-opengl/save/smoke-state.sav": "ada5d345a3f9449e3b7d7e5cc6dbac48324baff9df2decad5e5961afedce4bc6",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-opengl/run.log": "20eb3b5b1abc10ea30d5c51097a75fbdfa900e76abe26e857baa2dd4e30620e1",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-opengl/result.json": "9686a9b1e61e734de648618d786105bb3e72a6d0190fa9b039ef5a51c536c76c",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-opengl/screenshot/smoke.png": "49177c4a3d6f7257cf2877ed1060866ac4585855661804094d8c5c5eae5d1039",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-complete-source-opengl/save/smoke-state.sav": "ada5d345a3f9449e3b7d7e5cc6dbac48324baff9df2decad5e5961afedce4bc6",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-runs.json": "7bee01177d0c3c25047938413f0b0a6512360f151f998343752424b9931a04b4",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-world-runs.json": "0095df086e2049c170b16fbdd54ed1b937182959b0e689a747c77132be35bf91",
+    "build-macos/breadth-original-hq-runtime-repair1831-far-tunnel-runs.json": "79a7d01223207d0117e99a238c6ab20f70235887e13e873d3e77bee79677bb81",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-runs.json": "4b3759d795e420b0921e6d1e6c4bfffdc2f26f84adcb15eae280c3ed95a4f719",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-native-tests.log": "cd51c175429243ca40bece33074391f74bc6d1e95d7196c4137bed0e20aea606",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-asset-tests.log": "8188b441eeb27488749b83fb7f2670373e7452a53f4779670b419ce34f088943",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-harness-tests.log": "34cd4acf0df3546a951b94e3fda121011cd9d91fcf60c6f9e4b74ec814c9ed38",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-boundary.log": "132544b4818f48a0bf5af2e5e4b4a20d0ed00b8e915156dd64e613868ac4c911",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-frozen-build/manifest.json": "ab5c2994bc9d250a6bf122d1cc48ac088ae71d0191c7522b486832855d25216a",
+    "build-macos/breadth-original-hq-runtime-repair1831-pressure-detail-world-preservation.json": "70b43fc4a2adf737d43d8375c5e7512b7d72036cbf51a72b9390f66c69560310",
+    "build-macos/breadth-original-hq-runtime-repair1831-final-fallback-reconciliation.json": "5cfba1ebf236a4875879d0c693832785d10ec4fb7e42a3d394eb5a007c30f583"
+  },
+  "individual_visual_approvals": 0,
+  "meets_objective": false,
+  "scope": "Validated runtime-only repair of independent HQ automatic LOD occupancy and above-vault terrain retention. Authored1831-model catalogue, original simulation/commands/state/RNG are unchanged. Temperate actual saved/rendered size1 and real size0 tunnel hill are positive scoped evidence. Eighty-four larger1915-model prototypes/compiler and their unresolved individual source-fidelity defects are excluded. Wider strict-backend, every-model-eight, arbitrary-world smooth60fps/memory, platform/input/replay/network gates remain open. Seal time is not a stopping time."
+}

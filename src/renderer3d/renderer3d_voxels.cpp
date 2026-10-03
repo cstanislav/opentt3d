@@ -765,6 +765,49 @@ static std::pair<double,double> VoxelAreaVolume(const VoxelMesh &mesh)
 	return {area,volume};
 }
 
+TEST_CASE("Independent source-owner LODs retain exact air boundaries at every automatic factor", "[renderer3d][voxel]")
+{
+	const std::vector<VoxelMaterial> materials{{{72,73,74,75,76,77}},{{198,199,200,201,202,203}}};
+	std::array<VoxelGrid,4> owners{
+		VoxelGrid({20,18,22},materials,{-16,0,-0.5f},{0.5f,0.5f,0.5f}),
+		VoxelGrid({20,18,22},materials,{-16,0,-0.5f},{0.5f,0.5f,0.5f}),
+		VoxelGrid({20,18,22},materials,{-16,0,-0.5f},{0.5f,0.5f,0.5f}),
+		VoxelGrid({20,18,22},materials,{-16,0,-0.5f},{0.5f,0.5f,0.5f})};
+	unsigned occupied = 0;
+	for (int z = 0; z < 22; ++z) for (int y = 0; y < 18; ++y) for (int x = 0; x < 20; ++x) {
+		if (x >= 5 && x < 8 && y >= 4 && y < 11 && z >= 3 && z < 19) continue; // Genuine open window/interior.
+		unsigned owner = (2*x-z >= 16) | ((2*y-z >= 16)<<1);
+		owners[owner].Fill({x,y,z},{x+1,y+1,z+1},1+(x+y+z)%2);
+		++occupied;
+	}
+	for (unsigned factor : {2U,4U,8U,16U}) {
+		CAPTURE(factor);
+		double joined_volume = 0;
+		for (const auto &grid : owners) {
+			auto original = grid.Mesh(), reduced = grid.ReducedMesh(factor,true);
+			CHECK(reduced.occupied == original.occupied);
+			CHECK(reduced.exposed_faces == original.exposed_faces);
+			CHECK(reduced.low == original.low);
+			CHECK(reduced.high == original.high);
+			CHECK(reduced.vertices.size() < original.vertices.size());
+			CHECK(VoxelAreaVolume(reduced).first == Approx(VoxelAreaVolume(original).first));
+			CHECK(VoxelAreaVolume(reduced).second == Approx(VoxelAreaVolume(original).second));
+			joined_volume += VoxelAreaVolume(reduced).second;
+			VoxelSource source(grid);
+			VoxelCachedSurface cached;
+			cached.lod_source = &source; cached.reduction = factor; cached.lod_preserve_occupancy = true;
+			cached.surface = std::move(reduced);
+			auto expected = cached.surface.vertices;
+			VoxelMeshCache cache(0); cache.Register(cached);
+			CHECK(cached.surface.vertices.empty());
+			auto lease = cache.Pin(cached,materials);
+			REQUIRE(cached.surface.vertices.size() == expected.size());
+			CHECK(std::memcmp(cached.surface.vertices.data(),expected.data(),expected.size()*sizeof(Vertex)) == 0);
+		}
+		CHECK(joined_volume == Approx(occupied*0.125));
+	}
+}
+
 TEST_CASE("Voxel meshes merge colour-compatible faces and eliminate internal boundaries", "[renderer3d][voxel]")
 {
 	VoxelGrid grid({4,3,2},{{{72,73,74,75,76,77}},{{80,81,82,83,84,85}}},{2,4,8});

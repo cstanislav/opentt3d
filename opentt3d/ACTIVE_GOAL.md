@@ -1,5 +1,41 @@
 # Active extended development goal
 
+## HQ runtime repair sealed; full catalogue goal unchanged — October 3
+
+At14:59:54UTC the runtime-only repair retains all1,831 committed model definitions,
+cells/six-face colours/dimensions/origins/components and bindings exactly. Independent
+automatic LODs keep occupied/air boundaries at factors1/2/4/8/16; actual selected-
+owner retirement/reconstruction preserves copied-scene leases, stable identities
+and exact words/RGBA/picking. Above-vault source ground and each upper triangle are
+word-exact; intersecting terrain still clears the complete bore. Native213,
+baseline asset204, harness94, boundary140 and22 quiet native controls pass.
+
+Public cost-aware freight and passenger/mail service reaches180 without forcing
+ratings, dates, HQ stages, production, terrain, funding or simulation RNG. The
+acknowledged original save actually renders HQ size1 in both backends. This advances
+the temperate world-state evidence only. Real public-command size0 HQ ground above
+an existing tunnel is retained at near/far zooms0/4/5; source/world preservation and
+whole-family fallback remain strict. Portable SHA-256 evidence:
+`reviews/20261003/hq-runtime-repair/verification.json`.
+
+The1,915-model working prototype adds84 larger HQ owners, but individual source
+inspection rejects incomplete medium-east wall ownership. Its fresh source-guided
+repair passes216 asset tests and is undergoing native/source/eight-view review;
+none of the84 prototypes/compiler/updated screening ledger enters the runtime-only
+commit or successor package. Every rejected source/LOD/tunnel/fixture attempt stays
+preserved. Exact-byte APFS clones share2,609,815,526bytes of duplicate diagnostic
+catalogue storage without hard links, content changes or evidence deletion.
+
+No model reaches8/10. Catalogue-wide breadth/fidelity, all-climate naturally selected
+upgrades, locks/rivers/disasters, strict backend equality, fleet/emitter clearance,
+platform/input/replay/network work remain active. New600-frame controls still retain
+136/132 intervals over20ms, OpenGL50.356959ms work and2.86/3.07GB sampled peaks;
+smooth60fps and long-duration memory remain unaccepted. `.41` stays immutable,
+draft and unrecommended despite successful artifact auditing; `.40` remains the
+recommended public release until a fresh exact-tag successor passes eight packaging
+jobs and independent audits. This is an ongoing seal, not a stopping-clock entry
+or a narrowed completion target.
+
 ## First two HQ sizes individually reviewed — October 3, 11:53:21 UTC checkpoint
 
 The scoped increment is sealed at **12:01:32 UTC**, preserving634 exact evidence/

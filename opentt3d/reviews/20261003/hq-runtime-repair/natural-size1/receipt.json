@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/Users/stanislav/Projects/opentt3d/build-macos/opentt3d",
+    "-D",
+    "127.0.0.1:53081",
+    "-c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-natural-upgrade-temperate-costed-town-service-study/openttd.cfg",
+    "-x",
+    "-X",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-d",
+    "script=4,console=1",
+    "-g",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-natural-upgrade-temperate-costed-service-study/save/hq-natural-final.sav"
+  ],
+  "fixture": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-natural-upgrade-temperate-costed-service-study",
+  "fixture_save_sha256": "f81f78145e4e732f962f7a2fff76818428a2ce818a28348b2ecd75687d1e96e1",
+  "observer_sha256": "820e8d06fa7b4054cf4d6e12ded187f4791be62013b69423476cf8339b4339e3",
+  "scope": "One ordinary public HQ build and unforced quarterly updates. The hash-bound copied observer uses public NoAI commands only; existing routes/orders/industries remain unchanged. The grow-service default adds three wood wagons; a custom observer may cost/select a replacement locomotive, add capacity and repay an affordable loan through normal commands. Readiness rating is not rendered-size evidence; all original assets/state controls remain separate.",
+  "grow_service": false,
+  "binary_sha256": "bcc76028c1482aa9ed7f84b52197598b15ad71fc71a4020f003acf9363230b23",
+  "deadline_seconds": 1500,
+  "observed_upgrade": {
+    "rating": 180,
+    "hq_x": 8,
+    "hq_y": 8
+  },
+  "result": "ordinary rating threshold observed; native size rendering not yet verified",
+  "site": {
+    "hq_x": 8,
+    "hq_y": 8
+  },
+  "final_save": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-hq-natural-upgrade-temperate-costed-town-service-study/save/hq-natural-final.sav",
+  "final_save_sha256": "9e449b1f67138eba3b866a6e9231e509f39938f85fa9043e26a5c8f8b02650fd"
+}

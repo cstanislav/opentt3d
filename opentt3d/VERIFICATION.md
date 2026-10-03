@@ -1,5 +1,44 @@
 # Implementation verification
 
+## Independent HQ runtime LOD/tunnel repair — October 3
+
+The14:59:54UTC seal binds the unchanged1,831-model catalogue
+`6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d`
+and final local binary
+`f8297acd5b9d674aecd0585f82469ac01799ec1b84e7b4c3f1011c29ed8ff99a`.
+Native213, exact baseline asset204, harness94 and presentation boundary140 pass.
+Twenty-two final quiet native controls include640 selected-owner LOD rebuild views
+at factors1/2/4/8/16, exact copied-scene leases/mesh identities/vertex words and
+RGBA/picking, all-climate saves, eight prior source/world equalities and four
+whole-world missing-owner fallback equalities. The latter focus the actual HQ site;
+all37 source layers remain byte-exact. Larger HQ stages remain original in this
+catalogue, never a partial prototype family.
+
+Actual public-command tunnel ground records two original owners at relative
+floor-32, retaining23,142/12,726 source vertex words at the near view; far zooms4/5
+retain their automatically selected sources too. Both live tunnel controls preserve
+the20 strict scenery/cab captures and original vehicle state. No terrain is forced.
+The synthetic mixed-relief checks preserve every wholly above-vault triangle word
+and still require complete bore clearance. Both rejected native attempts remain
+frozen; the pressure fixture's lost-camera-detail failure is preserved separately.
+
+Costed original wood service reaches162; ordinary passenger/mail operations then
+reach180. Both renderers load the acknowledged save and emit actual size1's four
+ground owners with no invented bodies. This proves one temperate upgrade, not
+all climates, sizes2…4 or model quality. The earlier batched-console, coupling,
+time-bounded and fallback-collection failures remain retained, not relabelled passes.
+
+The separate larger84-owner source prototype still fails individual fidelity;
+its medium-east wall correction passes216 asset tests but remains under fresh
+native/source review. It is excluded from this runtime-only catalogue/commit.
+Wider strict-backend differences remain failures. Two600-frame final controls
+retain136/132 intervals over20ms, a50.356959ms OpenGL work stall and sampled peaks
+2,857,782,608/3,073,641,880bytes. No smooth60fps, long-duration memory or8/10 approval.
+Evidence:`reviews/20261003/hq-runtime-repair/verification.json`and
+`build-macos/breadth-original-hq-runtime-repair1831-final-sealed-reconciliation.json`.
+`.41` stays immutable and withheld; `.40` stays recommended pending fresh packaging
+and independent successor audits. The seal is not an actual stopping time.
+
 ## Independent ground-owned HQ sizes0/1 — October 3
 
 Scoped evidence is sealed at12:01:32UTC with634 exact preserved files:
