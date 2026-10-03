@@ -1,0 +1,66 @@
+name: OpenTT3D - Publish independently reviewed draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Exact independently audited draft tag
+        required: true
+        type: string
+      commit:
+        description: Exact immutable reviewed commit
+        required: true
+        type: string
+      packaging_run:
+        description: Eight-job successful packaging run ID
+        required: true
+        type: string
+      manifest_sha256:
+        description: SHA256SUMS hash sealed by independent package/source/runtime audits
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opentt3d-reviewed-publication-${{ inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  publish-reviewed:
+    if: github.repository == 'cstanislav/opentt3d'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test publication guards
+        run: python3 -m unittest discover -s tools/opentt3d -p 'test_publish_reviewed_release.py'
+      - name: Publish only the independently audited bytes
+        # GITHUB_TOKEN does not trigger the release-published build workflow.
+        # A personal-token publication would rebuild/clobber the audited assets.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+          REVIEWED_COMMIT: ${{ inputs.commit }}
+          PACKAGING_RUN: ${{ inputs.packaging_run }}
+          MANIFEST_SHA256: ${{ inputs.manifest_sha256 }}
+        run: >-
+          python3 tools/opentt3d/publish_reviewed_release.py
+          --tag "$RELEASE_TAG" --commit "$REVIEWED_COMMIT"
+          --run "$PACKAGING_RUN" --manifest-sha256 "$MANIFEST_SHA256"
+          --publish --output publication-receipt.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: independently-reviewed-publication
+          path: publication-receipt.json
+          if-no-files-found: error
+          retention-days: 30
