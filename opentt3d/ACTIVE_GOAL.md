@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Execution stopping-clock audit — October 3, 22:35:34 UTC
+
+**Actual stopping clock check: 2026-10-03 22:35:34 UTC.** Modelling/native review
+work in this execution stops after the validated natural-selector increment is
+pushed as `43a64b3ab33711ab8e3f898dcc07d5f2b9f469f3`; only this clock bookkeeping
+follows. Reason: stop at a preserved, audited checkpoint rather than promoting an
+unaccepted renderer/artwork study. The framebuffer-origin candidate still changes
+seven world pixels/leaves nineteen backend differences, and all three required-eight
+gates still fail with zero approvals/four gaps. Source-faithful separate geometry,
+lock/HQ ownership/fidelity, states/ships, sustained60fps and platform/input/replay/
+network acceptance have not been completed in this execution. This is not a claim
+that further work is impossible or that the full objective is met.
+
+No background run remains pending. All failures, originals and rejected prototypes
+are retained; larger-HQ artwork/compiler/tests and the working candidate CSV remain
+uncommitted and excluded. Runtime C++ is byte-exact to the committed source, quality
+reports are unchanged and immutable recommended`.42` remains available. The full
+extended goal remains active for continuation; the 22:28:57 evidence seal is not
+being substituted for this actual stopping-clock check.
+
 ## Natural river slope/climate breadth established; origin repair rejected — October 3
 
 Five normally generated maps are surveyed through read-only public NoAI queries and
