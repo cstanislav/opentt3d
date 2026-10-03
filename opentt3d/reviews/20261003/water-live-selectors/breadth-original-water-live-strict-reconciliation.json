@@ -1,0 +1,33 @@
+{
+  "audited_utc": "2026-10-03T18:17:57.143123+00:00",
+  "comparisons": [
+    {
+      "climate": "temperate",
+      "walls": 48,
+      "independent_water": 24,
+      "source_bytes_metadata_anchors_and_slopes_exact": true
+    },
+    {
+      "climate": "arctic",
+      "walls": 48,
+      "independent_water": 24,
+      "source_bytes_metadata_anchors_and_slopes_exact": true
+    },
+    {
+      "climate": "tropic",
+      "walls": 48,
+      "independent_water": 24,
+      "source_bytes_metadata_anchors_and_slopes_exact": true
+    },
+    {
+      "climate": "toyland",
+      "walls": 48,
+      "independent_water": 24,
+      "source_bytes_metadata_anchors_and_slopes_exact": true
+    }
+  ],
+  "validator_sha256": "d4368dc445a2afafc87025d73edf9fe5919302b7dfa091e924495641f141cb1b",
+  "validator_tests_sha256": "a3c9f4323f121461e2ad78929fcd5eaf1141362c1d0c33bf9b6aeaa512b8f904",
+  "geometry_approvals": 0,
+  "scope": "The strengthened offline guards reconcile unchanged actual callback sources, independent original slope enums, exact integral anchors/source sizes/water classes/provenance. Native observations and fixtures were not rewritten or forced."
+}

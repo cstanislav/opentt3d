@@ -1,5 +1,23 @@
 # Active extended development goal
 
+## Actual lock source states observed; 3D geometry continues — October 3
+
+Four unchanged exact-tag public-command worlds retain 32 natural locks, acknowledged
+saves and bidirectional water connectivity without terrain/state forcing. 64 quiet
+native controls verify 192 selected wall states and 96 independently owned water
+states exactly across both renderers. The locally compiled, default-off observer
+loads unchanged released assets and records actual callback results, not inferred
+static IDs. Eight default-off and eight tracing-on/off world comparisons are strict.
+Native 213, working asset 243, isolated committed-artwork asset 227 and harness 99
+tests pass; retained startup/build-target/offline slope-guard failures are reconciled.
+Evidence: `reviews/20261003/water-live-selectors/`.
+
+No lock volume, ship traversal/clearance, animation phase, alternate/custom-family
+completeness or quality rating is established. Continue source-faithful wall/water
+ownership, lock/river/disaster breadth and the full individual 8/10, all-climate HQ,
+smooth 60fps, platform/input/replay/network goal. Immutable `.42` is unchanged.
+This is an ongoing checkpoint, not a stopping-clock entry or completion claim.
+
 ## Individual HQ defects retained; water selector work continues — October 3
 
 All84 larger HQ prototype owners now have their own hash-bound source/native,

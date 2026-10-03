@@ -1,0 +1,12 @@
+{
+  "audited_utc": "2026-10-03T18:19:35.274855+00:00",
+  "commit": "8e945bc0c9be174d025704b29b6793f2cb294cef",
+  "asset_tests": 227,
+  "experimental_hq_compiler_artwork_tests_present": false,
+  "overlaid_read_only_tools": {
+    "tools/assets/live_water.py": "d4368dc445a2afafc87025d73edf9fe5919302b7dfa091e924495641f141cb1b",
+    "tools/assets/test_live_water.py": "a3c9f4323f121461e2ad78929fcd5eaf1141362c1d0c33bf9b6aeaa512b8f904"
+  },
+  "test_log_sha256": "c6b742afd8a7f6a5d4ab83fcc1cc19f3cae4510fada9960a18ab2d8ae27758b9",
+  "scope": "Committed1831-model source/compiler plus live-source validation only; no experimental larger HQ/compiler/tests and no native build or geometry approval."
+}

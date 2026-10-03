@@ -1,0 +1,79 @@
+[  0%] Built target script_window
+[  1%] Generating ../../baseset/opentt3d-voxels.json
+[  2%] Built target strgen
+[  3%] Built target settingsgen
+[  5%] Built target baseset_files
+-- Version string: 20261003-main-mfbd907ea68
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[  5%] Built target find_version
+[  5%] Built target renderer3d_models
+[  5%] Built target renderer3d_shaders
+[ 13%] Built target script_ai
+[ 21%] Built target script_game
+[ 22%] Built target ai_compat_files
+[ 25%] Built target gs_compat_files
+[ 33%] Built target script_template
+[ 40%] Built target language_files
+[ 41%] Built target table_strings
+[ 41%] Built target table_settings
+[ 41%] Built target script_ai_includes
+[ 41%] Built target script_game_includes
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/generated/rev.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/gl_backend.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/viewport_3d.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/sprite_textures.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/voxel_models.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/profiling.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/vulkan_backend.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/reference_export.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/world_capture.cpp.o
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:682:30: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  682 |                 if (std::popcount(emitted) < (check.ground ? 2 : check.colour_count)) return;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/bridge_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/tunnel_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/rail_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/depot_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/crossing_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/road_stop_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/station_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/ground_detail_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/authored_geometry.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/console_cmds.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/spritecache.cpp.o
+[100%] Built target openttd_lib
+Compiled 1915 authored voxel volumes; visual approval remains separate
+[100%] Built target renderer3d_asset_files
+[100%] Linking CXX executable opentt3d
+[100%] Built target openttd
+[  0%] Built target script_window
+[  1%] Built target strgen
+[  2%] Built target settingsgen
+[  2%] Built target renderer3d_models
+[  2%] Built target renderer3d_shaders
+[ 10%] Built target script_ai
+[ 19%] Built target script_game
+[ 27%] Built target script_template
+[ 35%] Built target language_files
+[ 36%] Built target table_strings
+[ 36%] Built target table_settings
+-- Version string: 20261003-main-m8e945bc0c9
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 36%] Built target find_version
+[ 36%] Built target script_ai_includes
+[ 36%] Built target script_game_includes
+[ 36%] Building CXX object CMakeFiles/openttd_lib.dir/generated/rev.cpp.o
+[ 96%] Built target openttd_lib
+[ 96%] Building CXX object CMakeFiles/openttd_test.dir/src/renderer3d/renderer3d_camera.cpp.o
+[ 97%] Building CXX object CMakeFiles/openttd_test.dir/src/renderer3d/renderer3d_transport.cpp.o
+[ 97%] Linking CXX executable openttd_test
+[100%] Built target openttd_test

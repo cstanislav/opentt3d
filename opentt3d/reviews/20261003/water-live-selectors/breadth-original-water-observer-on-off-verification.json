@@ -1,0 +1,95 @@
+{
+  "audited_utc": "2026-10-03T18:10:39.219203+00:00",
+  "comparisons": [
+    {
+      "climate": "temperate",
+      "backend": "vulkan",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-vulkan",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-temperate-vulkan-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-temperate-vulkan-on-off-strict.json",
+      "report_sha256": "e6b02381605860c193fba94aff4bf218cc747cd4007f3922ff7cb0ba0805a1cc"
+    },
+    {
+      "climate": "temperate",
+      "backend": "opengl",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-temperate-0-0-opengl",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-temperate-opengl-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-temperate-opengl-on-off-strict.json",
+      "report_sha256": "a619350c0f1a33df667464f1c163d6735454b4db10bf11d3f1aaf22fc5dd04b7"
+    },
+    {
+      "climate": "arctic",
+      "backend": "vulkan",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-vulkan",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-arctic-vulkan-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-arctic-vulkan-on-off-strict.json",
+      "report_sha256": "975ed2f060adc5e5637a7c26a9272626409ba05a89c40d5a0597a6f5d47e1005"
+    },
+    {
+      "climate": "arctic",
+      "backend": "opengl",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-arctic-0-0-opengl",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-arctic-opengl-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-arctic-opengl-on-off-strict.json",
+      "report_sha256": "4f65321662b1055c55f35d5a4e02d88faaadc6e92f76816fda4e004727227ede"
+    },
+    {
+      "climate": "tropic",
+      "backend": "vulkan",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-vulkan",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-tropic-vulkan-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-tropic-vulkan-on-off-strict.json",
+      "report_sha256": "96653f6d5d96c7c9977e830e7b87b2dcede1132206bd0e97db7f2d32bf09078b"
+    },
+    {
+      "climate": "tropic",
+      "backend": "opengl",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-tropic-0-0-opengl",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-tropic-opengl-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-tropic-opengl-on-off-strict.json",
+      "report_sha256": "96fdf981c5823cb21ded73d65e51b6eae2ebdd60f304f2be7c26099b62f080b2"
+    },
+    {
+      "climate": "toyland",
+      "backend": "vulkan",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-vulkan",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-toyland-vulkan-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-toyland-vulkan-on-off-strict.json",
+      "report_sha256": "0be3ee813f20bf6fb69e497cfa172fd2f67b664d095e0b14679a8cd57d6b56e3"
+    },
+    {
+      "climate": "toyland",
+      "backend": "opengl",
+      "on_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-live-source-toyland-0-0-opengl",
+      "off_output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-preservation-toyland-opengl-observer-off",
+      "exit_code": 0,
+      "different_images": 0,
+      "different_pixels": 0,
+      "report": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-water-observer-toyland-opengl-on-off-strict.json",
+      "report_sha256": "40446f1b9417102c811222e1dbe69413ecee4355b721c2899a8eead0e1f7957b"
+    }
+  ],
+  "all_worlds_strict_exact": true,
+  "scope": "Actual recorded diagnostic-on and default-off controls load the same original paused natural-lock saves and use the same centers/atlas/picking checks. Vulkan uses presented capture on both; OpenGL compares the native presented and external-executable viewport paths too. Exact equality is measured, never presumed; no tolerance, UI mask, source-state forcing, geometry or quality approval."
+}

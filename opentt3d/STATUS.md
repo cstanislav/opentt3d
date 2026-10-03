@@ -2,6 +2,24 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 3 — actual public lock selectors verified; volumes still open
+
+The unchanged downloaded `.42` app builds 32 legal locks on existing slopes in
+four climates, with acknowledged synchronous saves and original bidirectional
+water connectivity. An opt-in read-only callback observer, locally compiled with
+three diagnostic C++ deltas and the unchanged 1,831-model payload, passes 64 quiet
+native source/atlas/picking/save controls: 192 wall owner states and 96 independent
+water states match exactly across renderers. It records dynamic Classic selection
+and source height/anchors/provenance without rerunning feature callbacks.
+
+16 further native controls preserve eight exact-tag saved-world captures with the
+observer disabled; eight tracing-on/off comparisons are also strictly exact.
+Native 213, working asset 243, isolated committed-artwork/compiler asset 227 and
+harness 99 tests pass. Both startup-data failures, the wrong CMake target request
+and rejected offline slope guard remain retained. These checks do not approve new
+geometry, animated phases, custom-family completeness, ships, performance or model
+ratings. Evidence: `reviews/20261003/water-live-selectors/`. `.42` stays unchanged.
+
 ## October 3 — individual prototype rejections and water sources
 
 All84 larger HQ prototype owners now have individual source/native/four-orbit/four-

@@ -1,0 +1,52 @@
+[2026-10-03 12:28:59] dbg: [net:3] Starting dedicated server, version opentt3d-dev-20261003.42^0
+[2026-10-03 12:28:59] dbg: [net:3] Starting network
+[2026-10-03 12:28:59] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 12:28:59] dbg: [net:3] Network online, multiplayer available
+[2026-10-03 12:28:59] dbg: [net:3] Detected broadcast addresses:
+[2026-10-03 12:28:59] dbg: [net:3]   0) 192.168.1.255
+[2026-10-03 12:28:59] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-10-03 12:28:59] dbg: [net:3] Using certificate path: none
+[2026-10-03 12:28:59] dbg: [sl:0] Game load failed...File not readable
+OpenTTD Game Console Revision 7 - opentt3d-dev-20261003.42^0
+------------------------------------
+use "help" for more information.
+
+[2026-10-03 12:29:00] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-10-03 12:29:00] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-10-03 12:29:00] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 12:29:00] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 12:29:00] dbg: [net:3] Listening on 127.0.0.1:61932 (IPv4)
+[2026-10-03 12:29:00] dbg: [net:3] Listening on 127.0.0.1:61932 (IPv4)
+[2026-10-03 12:29:00] dbg: [net:3] Network revision name: opentt3d-dev-20261003.42^0
+[2026-10-03 12:29:00] dbg: [net:3] [crypto] Creating a new random key
+[2026-10-03 12:29:00] dbg: [net:3] Generating map, please wait...
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 5
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 11
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 15
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 20
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 60
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 65
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 70
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 75
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 80
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 85
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 90
+[2026-10-03 12:29:00] dbg: [net:3] Map generation percentage complete: 99
+[2026-10-03 12:29:00] dbg: [net:3] Map generated, starting game
+Game is already unpaused.
+[2026-10-03 12:29:01] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":613,"x":101,"y":4,"direction":0,"elevation":0,"height":0,"lower":614,"upper":612,"connected_both_ways":true}
+[2026-10-03 12:29:01] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":561,"x":49,"y":4,"direction":1,"elevation":0,"height":0,"lower":433,"upper":689,"connected_both_ways":true}
+[2026-10-03 12:29:01] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":1575,"x":39,"y":12,"direction":2,"elevation":0,"height":0,"lower":1574,"upper":1576,"connected_both_ways":true}
+[2026-10-03 12:29:02] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":5128,"x":8,"y":40,"direction":3,"elevation":0,"height":0,"lower":5256,"upper":5000,"connected_both_ways":true}
+[2026-10-03 12:29:03] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":1880,"x":88,"y":14,"direction":0,"elevation":1,"height":1,"lower":1881,"upper":1879,"connected_both_ways":true}
+[2026-10-03 12:29:03] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":832,"x":64,"y":6,"direction":1,"elevation":1,"height":1,"lower":704,"upper":960,"connected_both_ways":true}
+[2026-10-03 12:29:03] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":2155,"x":107,"y":16,"direction":2,"elevation":1,"height":1,"lower":2154,"upper":2156,"connected_both_ways":true}
+[2026-10-03 12:29:05] dbg: [script:4] [0] [I] LOCK_FIXTURE_BUILT {"tile":5855,"x":95,"y":45,"direction":3,"elevation":1,"height":1,"lower":5983,"upper":5727,"connected_both_ways":true}
+[2026-10-03 12:29:05] dbg: [script:4] [0] [I] LOCK_FIXTURE_READY {"company":0,"map_width":128,"map_height":128,"locks":[{"tile":613,"x":101,"y":4,"direction":0,"elevation":0,"height":0,"lower":614,"upper":612,"connected_both_ways":true},{"tile":561,"x":49,"y":4,"direction":1,"elevation":0,"height":0,"lower":433,"upper":689,"connected_both_ways":true},{"tile":1575,"x":39,"y":12,"direction":2,"elevation":0,"height":0,"lower":1574,"upper":1576,"connected_both_ways":true},{"tile":5128,"x":8,"y":40,"direction":3,"elevation":0,"height":0,"lower":5256,"upper":5000,"connected_both_ways":true},{"tile":1880,"x":88,"y":14,"direction":0,"elevation":1,"height":1,"lower":1881,"upper":1879,"connected_both_ways":true},{"tile":832,"x":64,"y":6,"direction":1,"elevation":1,"height":1,"lower":704,"upper":960,"connected_both_ways":true},{"tile":2155,"x":107,"y":16,"direction":2,"elevation":1,"height":1,"lower":2154,"upper":2156,"connected_both_ways":true},{"tile":5855,"x":95,"y":45,"direction":3,"elevation":1,"height":1,"lower":5983,"upper":5727,"connected_both_ways":true}]}
+‎*** Game paused (manual)
+Saving map...
+[2026-10-03 12:29:05] dbg: [script:3] [0] [W] Save function is not implemented
+[2026-10-03 12:29:05] dbg: [script:3] [0] [W] Save function is not implemented
+Map successfully saved to 'lock-fixture.sav'.
+[2026-10-03 12:29:05] dbg: [net:3] Initializing UDP listeners
+[2026-10-03 12:29:05] dbg: [net:3] Shutting down network

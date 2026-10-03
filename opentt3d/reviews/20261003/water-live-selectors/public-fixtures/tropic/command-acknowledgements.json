@@ -1,0 +1,18 @@
+[
+  {
+    "command": "unpause",
+    "acknowledgement": "Game is already unpaused"
+  },
+  {
+    "command": "start_ai \"OpenTT3D Original Lock Fixture\"",
+    "acknowledgement": "LOCK_FIXTURE_READY {\"company\":0,\"map_width\":128,\"map_height\":128,\"locks\":[{\"tile\":613,\"x\":101,\"y\":4,\"direction\":0,\"elevation\":0,\"height\":0,\"lower\":614,\"upper\":612,\"connected_both_ways\":true},{\"tile\":561,\"x\":49,\"y\":4,\"direction\":1,\"elevation\":0,\"height\":0,\"lower\":433,\"upper\":689,\"connected_both_ways\":true},{\"tile\":1575,\"x\":39,\"y\":12,\"direction\":2,\"elevation\":0,\"height\":0,\"lower\":1574,\"upper\":1576,\"connected_both_ways\":true},{\"tile\":5128,\"x\":8,\"y\":40,\"direction\":3,\"elevation\":0,\"height\":0,\"lower\":5256,\"upper\":5000,\"connected_both_ways\":true},{\"tile\":2246,\"x\":70,\"y\":17,\"direction\":0,\"elevation\":1,\"height\":1,\"lower\":2247,\"upper\":2245,\"connected_both_ways\":true},{\"tile\":1726,\"x\":62,\"y\":13,\"direction\":1,\"elevation\":1,\"height\":1,\"lower\":1598,\"upper\":1854,\"connected_both_ways\":true},{\"tile\":2107,\"x\":59,\"y\":16,\"direction\":2,\"elevation\":1,\"height\":1,\"lower\":2106,\"upper\":2108,\"connected_both_ways\":true},{\"tile\":4315,\"x\":91,\"y\":33,\"direction\":3,\"elevation\":1,\"height\":1,\"lower\":4443,\"upper\":4187,\"connected_both_ways\":true}]}"
+  },
+  {
+    "command": "pause",
+    "acknowledgement": "Game paused"
+  },
+  {
+    "command": "save lock-fixture",
+    "acknowledgement": "Map successfully saved to 'lock-fixture.sav'."
+  }
+]

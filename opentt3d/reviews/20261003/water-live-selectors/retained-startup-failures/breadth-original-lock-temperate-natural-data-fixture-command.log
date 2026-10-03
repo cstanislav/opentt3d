@@ -1,0 +1,11 @@
+Verified shared /Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-data-fixture/baseset/OpenGFX2_Classic-0.8.1.tar
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/tools/opentt3d/fixture_locks.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/tools/opentt3d/fixture_locks.py", line 138, in main
+    observe(r"Listening on 127\.0\.0\.1:")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/stanislav/Projects/opentt3d/tools/opentt3d/fixture_locks.py", line 121, in observe
+    raise RuntimeError(f"Original lock fixture failed; inspect {logfile}")
+RuntimeError: Original lock fixture failed; inspect /Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-data-fixture/run.log
