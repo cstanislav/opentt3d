@@ -20,6 +20,11 @@ replaced. The catalogue-wide goal remains unfinished.
   complete-family fallback remains intact. Original working bytes are archived.
 - The explicit ownership-plane union compiler operation and its regression tests
   preserve existing cells, registration and all six face colours.
+- OpenGL now skips an exact zero-heading identity yaw just like Vulkan, with
+  unchanged nonzero rotation paths. Twelve fresh and eight explicitly reused
+  native controls preserve2,498 complete same-backend images and ten save-byte
+  pairs exactly, including all116 HQ owners and five original vehicle pose
+  matrices. This is scoped noninterference, not a strict-backend or60fps claim.
 
 ## Acceptance limits
 
@@ -30,6 +35,10 @@ wave/bank decomposition remain unaccepted. The playable1,915-model catalogue has
 2,950 quality rows/141 individual reviews/four broad gaps/zero approvals; the larger
 2,035-model bank diagnostic scope has3,070 rows/261 individual reviews/zero approvals.
 Required-eight fails in both scopes.
+
+The new bounded original saved-size1 runs are near60 mean fps but retain421 Vulkan/
+181 OpenGL intervals over20ms and approximately3GiB sampled process peaks. They
+explicitly **do not pass sustained60fps/memory acceptance** or establish a speedup.
 
 Doubled-terrain bank support, every source/state/conditional/LOD/picking/ship axis,
 remaining effects/fleet clearances, larger-HQ natural upgrades, strict whole-world

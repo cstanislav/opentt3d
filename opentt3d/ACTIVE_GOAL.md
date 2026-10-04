@@ -26,6 +26,14 @@ tile/slope/height rows, complete source wave fringes and all100 earlier banks re
 All120 banks are unbound. Exact source/native comparisons fail20 images/4,065 RGBA
 pixels; broad paired galleries fail35 views/165 pixels. Every failure is retained.
 
+Scoped zero-heading GL/Vulkan identity-transform parity passes twelve fresh/eight
+explicitly reused quiet controls,2,498 full same-backend images and ten save-byte
+pairs. All116 HQ owner galleries, full scene CPU/palette/picking and five original
+vehicle engine pose matrices remain exact. Existing broad backend differences are
+not repaired or tolerated. Two fresh1,800-frame saved-size1 timing controls retain
+421 Vulkan/181 GL intervals over20ms and approximately3GiB process peaks; near60
+mean fps is not sustained60fps/memory acceptance or a measured speedup.
+
 The2,035-model diagnostic freeze retains3,070 quality rows/261 individual reviews/
 four broad gaps/zero approvals and fails required-eight. Extra doubled-terrain
 support, all runtime/state/LOD/picking/ship/source/terrain/conditional axes, other

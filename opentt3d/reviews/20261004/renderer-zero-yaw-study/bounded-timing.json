@@ -1,0 +1,58 @@
+{
+  "observed_utc": "2026-10-04T17:54:45.867143+00:00",
+  "observations": [
+    {
+      "backend": "vulkan",
+      "actual_saved_size1_world": true,
+      "quiet_background_only": true,
+      "measured_fps": 59.99361942860036,
+      "intervals_over_20_ms": 421,
+      "frame_interval_ms": {
+        "max": 28.83225,
+        "mean": 16.66843923611111,
+        "p50": 16.649834,
+        "p95": 22.452875,
+        "p99": 23.733417
+      },
+      "frame_work_ms": {
+        "max": 10.151458,
+        "mean": 0.7379944400000009,
+        "p50": 0.58575,
+        "p95": 1.694083,
+        "p99": 2.238042
+      },
+      "peak_sampled_bytes": 3161853384,
+      "samples": 179,
+      "no_speedup_inferred_without_an_independent_paired_baseline": true,
+      "sustained_60fps_accepted": false
+    },
+    {
+      "backend": "opengl",
+      "actual_saved_size1_world": true,
+      "quiet_background_only": true,
+      "measured_fps": 60.00189672595755,
+      "intervals_over_20_ms": 181,
+      "frame_interval_ms": {
+        "max": 24.62275,
+        "mean": 16.66613981500001,
+        "p50": 16.649917,
+        "p95": 21.715667,
+        "p99": 23.479792
+      },
+      "frame_work_ms": {
+        "max": 3.50725,
+        "mean": 0.8182632783333338,
+        "p50": 0.733083,
+        "p95": 1.757166,
+        "p99": 2.333333
+      },
+      "peak_sampled_bytes": 3227520456,
+      "samples": 176,
+      "no_speedup_inferred_without_an_independent_paired_baseline": true,
+      "sustained_60fps_accepted": false
+    }
+  ],
+  "frames_per_backend": 1800,
+  "all_families_resolution_platforms_world_sizes_foreground_input_or_60fps_accepted": false,
+  "quality_approvals": 0
+}

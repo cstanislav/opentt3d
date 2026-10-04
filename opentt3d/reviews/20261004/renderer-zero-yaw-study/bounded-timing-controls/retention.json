@@ -1,0 +1,101 @@
+{
+  "retained_utc": "2026-10-04T17:57:10.319179+00:00",
+  "controls": [
+    {
+      "source": "build-macos/breadth-original-zero-yaw-size1-vulkan-bounded-timing",
+      "portable": "opentt3d/reviews/20261004/renderer-zero-yaw-study/bounded-timing-controls/breadth-original-zero-yaw-size1-vulkan-bounded-timing",
+      "backend": "vulkan",
+      "all_copied_bytes_exact": true
+    },
+    {
+      "source": "build-macos/breadth-original-zero-yaw-size1-opengl-bounded-timing",
+      "portable": "opentt3d/reviews/20261004/renderer-zero-yaw-study/bounded-timing-controls/breadth-original-zero-yaw-size1-opengl-bounded-timing",
+      "backend": "opengl",
+      "all_copied_bytes_exact": true
+    }
+  ],
+  "files": {
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/result.json": {
+      "sha256": "21206f449392341ada1db73e4f2ba2429c22435a1be86258f8a8e85848e0a7f0",
+      "bytes": 390390
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/run.log": {
+      "sha256": "9a329857bff00ff0d6a3dd8972a3c645e07d583ff2d3faf99151e9c7ce1443b0",
+      "bytes": 9598
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/openttd.cfg": {
+      "sha256": "bd58696aeef2cdf3eff65c07cbb81fcad1447afaccac3f291a7c570b2cb91a86",
+      "bytes": 472
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/benchmark.json": {
+      "sha256": "08e85ca10744183c1517f532c4e58d9ab4b6542042144fb46673e9e7a745c7ca",
+      "bytes": 364978
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/memory.jsonl": {
+      "sha256": "f7be3a32cb7edd412a39ae59b5f41c97463f845f69df20d3690d097e3557b890",
+      "bytes": 24252
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/console-review.log": {
+      "sha256": "3055a49e60c5a28b3e66c005fa34c4fd9b23589d28d89f2399e3392e068bc39a",
+      "bytes": 684
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/memory-summary.json": {
+      "sha256": "9ea46a3f77bc78904c46527d6f637dd192e6fd9ccdcccac83e8c3de5e136c502",
+      "bytes": 113
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/result.json": {
+      "sha256": "328dd974998cedd4c5150061f6814d203a55e28f767234fbccfe48db362d54ba",
+      "bytes": 169999
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/run.log": {
+      "sha256": "53f6b25c1f97b12f4194240b7a25c4b6cc6cfba77e304620c4104895ee5385bb",
+      "bytes": 3303
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/openttd.cfg": {
+      "sha256": "bd58696aeef2cdf3eff65c07cbb81fcad1447afaccac3f291a7c570b2cb91a86",
+      "bytes": 472
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/benchmark.json": {
+      "sha256": "975bea768d8b9425e3879abeeaf0a34ce69cda917e3040373ab3f3c1abedeb62",
+      "bytes": 158074
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/memory.jsonl": {
+      "sha256": "43de1eea4bd0ad5aa7c4958e0bd6874ae3ba1e3b4fc547f292f44ce8e6bc36ac",
+      "bytes": 23872
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/console-review.log": {
+      "sha256": "33193d4ed33d142e62b6cdfb73be60d04699e0b3efa8c42d4f83bc46380f196d",
+      "bytes": 684
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/memory-summary.json": {
+      "sha256": "2751ceb7687ca649c80b9793ea16eabf0baa521a184500ba43b9b0b394e64326",
+      "bytes": 113
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/screenshot/smoke.png": {
+      "sha256": "ae86331b1b99c5ec9c533a94760a0ef3b3b4df3c7a92ef829588a52d7194efe0",
+      "bytes": 68860
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/scripts/game_start.scr": {
+      "sha256": "bb19762f01bed274a956e06e0efe6d87622c287a8b444feca902fc4883e291f3",
+      "bytes": 843
+    },
+    "breadth-original-zero-yaw-size1-opengl-bounded-timing/save/smoke-state.sav": {
+      "sha256": "5af9fa8a2acd1f8bd5117601441e1dae548ac15322465b331cc32353563b0268",
+      "bytes": 28648
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/screenshot/smoke.png": {
+      "sha256": "92b09a580402209fecf7b1af59b79c27fde414164f0c09aa523a0408976d0a78",
+      "bytes": 68838
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/scripts/game_start.scr": {
+      "sha256": "df04d3ad91f725d589cb2d69dc672818e37b4a3a530acc2cc07555909a20aecd",
+      "bytes": 843
+    },
+    "breadth-original-zero-yaw-size1-vulkan-bounded-timing/save/smoke-state.sav": {
+      "sha256": "5af9fa8a2acd1f8bd5117601441e1dae548ac15322465b331cc32353563b0268",
+      "bytes": 28648
+    }
+  },
+  "sustained_60fps_approved": false,
+  "quality_approvals": 0
+}

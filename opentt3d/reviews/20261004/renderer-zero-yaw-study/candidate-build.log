@@ -1,0 +1,33 @@
+[  0%] Built target script_window
+[  0%] Built target renderer3d_models
+[  0%] Built target renderer3d_shaders
+[  1%] Built target strgen
+[  2%] Built target settingsgen
+[  4%] Built target baseset_files
+[  5%] Built target ai_compat_files
+[  7%] Built target gs_compat_files
+[  8%] Built target renderer3d_asset_files
+[  8%] Built target regression_stationlist_files
+[  9%] Built target regression_regression_files
+[ 17%] Built target script_ai
+[ 25%] Built target script_game
+[ 25%] Built target table_settings
+[ 32%] Built target language_files
+[ 33%] Built target table_strings
+[ 41%] Built target script_template
+-- Version string: 20261004-main-m88fed4dcbb
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 41%] Built target find_version
+[ 41%] Built target script_game_includes
+[ 41%] Built target script_ai_includes
+[ 41%] Built target regression_files
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/gl_backend.cpp.o
+[ 97%] Built target openttd_lib
+[ 97%] Linking CXX executable opentt3d
+[ 97%] Linking CXX executable openttd_test
+[ 97%] Built target openttd
+[100%] Built target openttd_test

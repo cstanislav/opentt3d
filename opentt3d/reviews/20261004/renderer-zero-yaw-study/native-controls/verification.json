@@ -1,0 +1,530 @@
+{
+  "audited_utc": "2026-10-04T17:53:24.860036+00:00",
+  "retained_controls": 20,
+  "fresh_candidate_and_supplement_controls": 12,
+  "explicitly_reused_shore_baseline_controls": 8,
+  "controls": [
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-arctic-opengl-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-arctic-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-arctic-vulkan-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-arctic-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-supplement-candidate-opengl-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-supplement-candidate-opengl-study",
+      "actual_commands_acknowledged": 17,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-supplement-candidate-vulkan-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-supplement-candidate-vulkan-study",
+      "actual_commands_acknowledged": 17,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-supplement-original-opengl-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-supplement-original-opengl-study",
+      "actual_commands_acknowledged": 17,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-supplement-original-vulkan-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-supplement-original-vulkan-study",
+      "actual_commands_acknowledged": 17,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-temperate-opengl-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-temperate-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-temperate-vulkan-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-temperate-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-toyland-opengl-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-toyland-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-toyland-vulkan-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-toyland-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-tropic-opengl-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-tropic-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-renderer-zero-yaw-tropic-vulkan-study",
+      "original": "build-macos/breadth-original-renderer-zero-yaw-tropic-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-arctic-opengl-study",
+      "original": "build-macos/breadth-original-river-shore-initial-arctic-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-arctic-vulkan-study",
+      "original": "build-macos/breadth-original-river-shore-initial-arctic-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-temperate-opengl-study",
+      "original": "build-macos/breadth-original-river-shore-initial-temperate-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-temperate-vulkan-study",
+      "original": "build-macos/breadth-original-river-shore-initial-temperate-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-toyland-opengl-study",
+      "original": "build-macos/breadth-original-river-shore-initial-toyland-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-toyland-vulkan-study",
+      "original": "build-macos/breadth-original-river-shore-initial-toyland-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-tropic-opengl-study",
+      "original": "build-macos/breadth-original-river-shore-initial-tropic-opengl-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/breadth-original-river-shore-initial-tropic-vulkan-study",
+      "original": "build-macos/breadth-original-river-shore-initial-tropic-vulkan-study",
+      "actual_commands_acknowledged": 11,
+      "actual_save_success_text": true
+    }
+  ],
+  "same_backend_comparisons": [
+    {
+      "label": "temperate-vulkan-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/temperate-vulkan-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/temperate-vulkan-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/temperate-vulkan-shore-gallery.json",
+      "images": 54,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/temperate-opengl-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/temperate-opengl-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/temperate-opengl-shore-gallery.json",
+      "images": 54,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/arctic-vulkan-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/arctic-vulkan-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/arctic-vulkan-shore-gallery.json",
+      "images": 36,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/arctic-opengl-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/arctic-opengl-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/arctic-opengl-shore-gallery.json",
+      "images": 36,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/tropic-vulkan-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/tropic-vulkan-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/tropic-vulkan-shore-gallery.json",
+      "images": 36,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/tropic-opengl-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/tropic-opengl-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/tropic-opengl-shore-gallery.json",
+      "images": 36,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/toyland-vulkan-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/toyland-vulkan-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/toyland-vulkan-shore-gallery.json",
+      "images": 54,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/toyland-opengl-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/toyland-opengl-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-shore-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/toyland-opengl-shore-gallery.json",
+      "images": 54,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "supplement-vulkan-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/supplement-vulkan-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "supplement-vulkan-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/supplement-vulkan-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "supplement-vulkan-hq-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/supplement-vulkan-hq-gallery.json",
+      "images": 1044,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "supplement-opengl-world",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/supplement-opengl-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "supplement-opengl-atlas",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/supplement-opengl-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "supplement-opengl-hq-gallery",
+      "report": "opentt3d/reviews/20261004/renderer-zero-yaw-study/native-controls/strict-comparisons/supplement-opengl-hq-gallery.json",
+      "images": 1044,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    }
+  ],
+  "same_backend_exact_images": 2498,
+  "same_backend_different_images": 0,
+  "same_backend_different_pixels": 0,
+  "exact_original_save_pairs": [
+    {
+      "scope": "temperate-vulkan",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "candidate_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "temperate-opengl",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "candidate_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "arctic-vulkan",
+      "original_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "candidate_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "arctic-opengl",
+      "original_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "candidate_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-vulkan",
+      "original_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "candidate_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-opengl",
+      "original_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "candidate_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "toyland-vulkan",
+      "original_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "candidate_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "toyland-opengl",
+      "original_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "candidate_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "supplement-vulkan",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "candidate_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "supplement-opengl",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "candidate_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    }
+  ],
+  "lossless_pam_reconstructions": 5464,
+  "complete_original_pam_bytes_reconstructed": 2060919840,
+  "zero_heading_noninterference_accepted": true,
+  "full_renderer_source_fidelity_or_60fps_accepted": false,
+  "quality_approvals": 0
+}

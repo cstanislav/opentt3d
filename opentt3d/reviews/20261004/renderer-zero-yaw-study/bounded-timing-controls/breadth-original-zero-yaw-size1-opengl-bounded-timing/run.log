@@ -1,0 +1,29 @@
+[2026-10-04 12:54:00] dbg: [driver:1] Successfully loaded blitter '40bpp-anim'
+[2026-10-04 12:54:00] dbg: [driver:1] OpenTT3D: Cocoa process 99448
+[2026-10-04 12:54:00] dbg: [driver:1] OpenGL driver: Apple - Apple M3 Pro (4.1 Metal - 90.5)
+[2026-10-04 12:54:00] dbg: [driver:2] OpenGL shading language version: 4.10, texture units = 80
+[2026-10-04 12:54:00] dbg: [driver:1] Successfully loaded video driver 'cocoa-opengl'
+[2026-10-04 12:54:00] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-10-04 12:54:00] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-10-04 12:54:01] dbg: [driver:1] OpenTT3D: background Cocoa window active=false, key=false, visible=false, policy=2
+[2026-10-04 12:54:01] dbg: [driver:1] using thread for game-loop
+[2026-10-04 12:54:14] dbg: [driver:1] OpenTT3D: loaded 1915 authored voxel models, 17785862 occupied cells, 12516896 exposed cell faces merged to 2723798 conforming rectangles / 21053432 triangles
+[2026-10-04 12:54:14] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 37617680 bytes instead of 1794874548 dense cell bytes, with one shared palette
+[2026-10-04 12:54:14] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1068767120 bytes under a scene-pinned soft budget, including 195155120 exact restoration bytes
+[2026-10-04 12:54:14] dbg: [driver:1] OpenTT3D: focused voxel object 4 size 1 at 8,8
+[2026-10-04 12:54:14] dbg: [driver:1] OpenTT3D: benchmarking 1800 presented frames after 30 warm-up frames
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: loaded 62 profiles from opentt3d-trees.json
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live projected tree 1653 stage 3 captured at 8,2
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live projected tree 1576 stage 3 captured at 7,4
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live projected tree 1639 stage 0 captured at 7,4
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live voxel object 4 size 1 part 0 ground climate 0 source 2607 captured at 8,8 with original ground ownership
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live voxel object 4 size 1 part 1 ground climate 0 source 2609 captured at 9,8 with original ground ownership
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live projected tree 1702 stage 3 captured at 5,9
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live projected tree 1660 stage 3 captured at 5,9
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live projected tree 1681 stage 2 captured at 6,9
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live voxel object 4 size 1 part 2 ground climate 0 source 2608 captured at 8,9 with original ground ownership
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: live voxel object 4 size 1 part 3 ground climate 0 source 2610 captured at 9,9 with original ground ownership
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: 23 ground-detail tiles rendered with raised crops, hay, rocks or turf
+[2026-10-04 12:54:15] dbg: [driver:1] OpenTT3D: depth-tested mesh renderer initialized
+[2026-10-04 12:54:45] dbg: [driver:1] OpenTT3D: benchmark 60.00 fps, p95 work 1.76ms; /Users/stanislav/Projects/opentt3d/build-macos/breadth-original-zero-yaw-size1-opengl-bounded-timing/benchmark.json
+[2026-10-04 12:54:45] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 2 GPU viewport regions

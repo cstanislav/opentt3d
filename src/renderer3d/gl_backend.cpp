@@ -485,18 +485,22 @@ void main() {
             n.xz = canonical_pitch(n.xz, pitch.xzy);
             n = normalize(n);
         }
-        bool canonical_yaw = (uint(identity.z) & 8u) != 0u;
-        float cs = canonical_yaw ? mirror.x : cos(mirror.w);
-        float sn = canonical_yaw ? mirror.y : sin(mirror.w);
-        mat2 yaw = mat2(cs, sn, -sn, cs);
-        if (canonical_yaw) {
-            local.xy = canonical_rotate(local.xy, cs, sn);
-            n.xy = canonical_rotate(n.xy, cs, sn);
-            sample_position.xy = canonical_rotate(sample_position.xy, cs, sn);
-        } else {
-            local.xy = yaw * local.xy;
-            n.xy = yaw * n.xy;
-            sample_position.xy = yaw * sample_position.xy;
+        // Match the Vulkan vertex path: a zero heading is already the exact
+        // identity. Do not add backend-specific arithmetic to it.
+        if (mirror.w != 0.0) {
+            bool canonical_yaw = (uint(identity.z) & 8u) != 0u;
+            float cs = canonical_yaw ? mirror.x : cos(mirror.w);
+            float sn = canonical_yaw ? mirror.y : sin(mirror.w);
+            mat2 yaw = mat2(cs, sn, -sn, cs);
+            if (canonical_yaw) {
+                local.xy = canonical_rotate(local.xy, cs, sn);
+                n.xy = canonical_rotate(n.xy, cs, sn);
+                sample_position.xy = canonical_rotate(sample_position.xy, cs, sn);
+            } else {
+                local.xy = yaw * local.xy;
+                n.xy = yaw * n.xy;
+                sample_position.xy = yaw * sample_position.xy;
+            }
         }
         p = origin.xyz + local + n * (longitudinal ? 0.0 : mirror.z);
         bool local_bias = (uint(identity.z) & 32u) != 0u;

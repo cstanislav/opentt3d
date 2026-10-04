@@ -1,0 +1,6 @@
+{
+  "original_driver_sha256": "3259609a5bb129cd549df95923f8ef4e23e26a2d206356f7fdd1d0a727ad83e8",
+  "retained": "retained-file-comparison-driver.py.gz",
+  "failure": "The initial compare helper used directory-only capture lookup for world PNG paths, yielding empty world sets. Empty/file comparisons cannot establish world noninterference. Keep original audit, run fresh complete raw file comparisons and require nonempty image sets before retaining the candidate.",
+  "source_fidelity_approval_or_comparison_tolerance_changed": false
+}
