@@ -1,5 +1,29 @@
 # Active extended development goal
 
+## Execution stopping-clock audit — October 4, 00:00:34 UTC
+
+**Actual stopping clock check: 2026-10-04 00:00:34 UTC.** Modelling/native validation
+now stops after the reviewed HQ/lock increment`87ab22ae0` and source-palette foam
+increment`f167fdfb810696df938748ffd4e0e8eea7080460` are pushed and portable hashes
+verified. Only this stopping-clock bookkeeping follows. Reason: preserve an audited
+checkpoint rather than promote defect-bearing artwork or relax strict renderer
+acceptance. Six HQ owners, all48 lock surface studies and the six later foam repairs
+have fresh individual provisional6/10 decisions; no8/10 approval is inferred.
+
+The last foam candidate still has nine wider-backend pixel differences; the earlier
+canonical eight lock street mismatches, larger-HQ source/ownership/renderer defects,
+natural larger-stage/all-climate worlds, independent water phases/terrain/custom/
+ships, missing catalogue states/emitter clearance, sustained60fps/memory and platform/
+input/replay/network acceptance remain open. All three quality scopes still have zero
+approvals/four gaps, and required-eight fails. This is neither full-goal completion
+nor a claim that further work is impossible.
+
+No background run remains pending. Every original, failure and rejected study is
+retained. Uncommitted larger-HQ artwork/compiler/tests and the candidate CSV stay
+quarantined; runtime C++ and canonical reviews are unchanged. Immutable recommended
+`.42` remains available. The full extended objective below remains active for the
+next continuation; the23:56:42 evidence seal is not substituted for this clock check.
+
 ## Original foam palette/width repaired provisionally — October 3
 
 Six lower-sea owners now use original animated glitter palette250 rather than its
