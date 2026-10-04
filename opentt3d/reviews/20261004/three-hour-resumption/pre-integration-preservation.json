@@ -1,0 +1,52 @@
+{
+  "retained_utc": "2026-10-04T16:23:38.549859+00:00",
+  "start_utc": "2026-10-04T16:20:27Z",
+  "requested_deadline_utc": "2026-10-04T19:20:27Z",
+  "branch": "main",
+  "base_commit": "88fed4dcbb7af154f99ba86e68490cc4f026936f",
+  "original_working_files": {
+    "assets/3d/voxels.json": {
+      "original_sha256": "5dd2ee33fda4fe4f2d927139a5a30993799093f6a76c93461b79f6eb6bd85c03",
+      "original_bytes": 3024860,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-voxels.json.gz",
+      "retained_sha256": "1fdea3598297fb46c38ead9b74902d97d633ba36d66a75870c13de1d0e1e58db"
+    },
+    "opentt3d/MODEL_RATINGS.csv": {
+      "original_sha256": "6274c9110631b7e88c7364906d43a1f7180e78941f8f7415dc18b228cbed6854",
+      "original_bytes": 704703,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-MODEL_RATINGS.csv.gz",
+      "retained_sha256": "a02902a41d7e2caa73cd71f3b3c292d9a0bfd188b21593d97cb19fb153331309"
+    },
+    "tools/assets/compile_voxels.py": {
+      "original_sha256": "b8fabec6775eeae0adea037ac427a0e142a67c9100648b57db84d391bb730ecf",
+      "original_bytes": 43379,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-compile_voxels.py.gz",
+      "retained_sha256": "ffa17001da1ca0667ba4e5a3b49ea2145417369cb0f8992336e16dce0675ec75"
+    },
+    "tools/assets/test_hq_ground_voxels.py": {
+      "original_sha256": "3484fdb870534f30e0d0dc3052e0d4e46eb7a067e8d222e01b63dca67d2932a3",
+      "original_bytes": 9817,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-test_hq_ground_voxels.py.gz",
+      "retained_sha256": "b626985c03c857fcb28ea64cbc8c6284e2b4ac4feec06ed36785243a1bdc3bee"
+    },
+    "tools/assets/test_object_voxels.py": {
+      "original_sha256": "66d9513daf922151f0746775bbbae0b8cc3a97221fb0e860bcf1152f6d8228b2",
+      "original_bytes": 7364,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-test_object_voxels.py.gz",
+      "retained_sha256": "e0e590276792bb4da50ab250564ccfa72de189a9270fe0fc325e4f74253c2387"
+    },
+    "tools/assets/test_voxel_owner_planes.py": {
+      "original_sha256": "1d277a7fccb525789bed071e4b7a873c2c6c444049311ac13c77b1b3a3624015",
+      "original_bytes": 4266,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-test_voxel_owner_planes.py.gz",
+      "retained_sha256": "b44451724b91dca73f4150b45614e620847677e7611552bb1f57f9bc51bef2db"
+    },
+    "tools/assets/test_hq_complete_voxels.py": {
+      "original_sha256": "d7f5bbbd95402b7bfd436b689c2bd3fa6d321d70a6c2dfa78afdc7b268318a5d",
+      "original_bytes": 16310,
+      "retained": "opentt3d/reviews/20261004/three-hour-resumption/pre-integration-test_hq_complete_voxels.py.gz",
+      "retained_sha256": "d5b30ff238eb599ba4f540eaa9bcecbbc0ee2028663bdc4722aaf94053511473"
+    }
+  },
+  "all_original_bytes_retained": true
+}

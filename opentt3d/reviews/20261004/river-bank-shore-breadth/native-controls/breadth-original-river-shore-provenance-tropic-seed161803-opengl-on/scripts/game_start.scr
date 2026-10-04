@@ -1,0 +1,29 @@
+script "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-shore-provenance-tropic-seed161803-opengl-on/console-review.log"
+echo "__opentt3d_review_begin_0__"
+pause
+echo "__opentt3d_review_end_0__"
+echo "__opentt3d_review_begin_1__"
+scrollto instant 64 64
+echo "__opentt3d_review_end_1__"
+echo "__opentt3d_review_begin_2__"
+renderer3d on
+echo "__opentt3d_review_end_2__"
+echo "__opentt3d_review_begin_3__"
+renderer3d zoom 5
+echo "__opentt3d_review_end_3__"
+echo "__opentt3d_review_begin_4__"
+renderer3d verify-tile-picking
+echo "__opentt3d_review_end_4__"
+echo "__opentt3d_review_begin_5__"
+renderer3d verify-world-atlas
+echo "__opentt3d_review_end_5__"
+echo "__opentt3d_review_begin_6__"
+renderer3d zoom 5
+echo "__opentt3d_review_end_6__"
+echo "__opentt3d_review_begin_7__"
+save smoke-state
+echo "__opentt3d_review_end_7__"
+echo "__opentt3d_review_begin_8__"
+screenshot presented smoke
+echo "__opentt3d_review_end_8__"
+script

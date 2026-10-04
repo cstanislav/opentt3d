@@ -1,0 +1,234 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-off/screenshot/smoke.png",
+  "actual": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed271828-opengl-off/screenshot/smoke.png",
+  "pattern": "*",
+  "images": 1,
+  "pixels": 307200,
+  "differences": [
+    {
+      "name": "world",
+      "changed_pixels": 45,
+      "pixels": [
+        {
+          "pixel": [
+            451,
+            135
+          ],
+          "reference": [
+            89,
+            126,
+            46,
+            255
+          ],
+          "actual": [
+            77,
+            97,
+            62,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            234,
+            149
+          ],
+          "reference": [
+            108,
+            160,
+            96,
+            255
+          ],
+          "actual": [
+            104,
+            135,
+            99,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            179,
+            155
+          ],
+          "reference": [
+            95,
+            135,
+            50,
+            255
+          ],
+          "actual": [
+            82,
+            104,
+            66,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            181,
+            155
+          ],
+          "reference": [
+            82,
+            104,
+            66,
+            255
+          ],
+          "actual": [
+            95,
+            135,
+            50,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            182,
+            155
+          ],
+          "reference": [
+            78,
+            104,
+            17,
+            255
+          ],
+          "actual": [
+            108,
+            104,
+            83,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            190,
+            155
+          ],
+          "reference": [
+            104,
+            135,
+            99,
+            255
+          ],
+          "actual": [
+            108,
+            104,
+            83,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            192,
+            155
+          ],
+          "reference": [
+            95,
+            135,
+            50,
+            255
+          ],
+          "actual": [
+            69,
+            52,
+            33,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            198,
+            155
+          ],
+          "reference": [
+            108,
+            104,
+            83,
+            255
+          ],
+          "actual": [
+            82,
+            104,
+            66,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            199,
+            155
+          ],
+          "reference": [
+            104,
+            135,
+            99,
+            255
+          ],
+          "actual": [
+            113,
+            166,
+            99,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            200,
+            155
+          ],
+          "reference": [
+            82,
+            104,
+            66,
+            255
+          ],
+          "actual": [
+            108,
+            104,
+            83,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            289,
+            155
+          ],
+          "reference": [
+            80,
+            104,
+            60,
+            255
+          ],
+          "actual": [
+            69,
+            52,
+            33,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            290,
+            155
+          ],
+          "reference": [
+            104,
+            135,
+            99,
+            255
+          ],
+          "actual": [
+            95,
+            135,
+            50,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

@@ -1,5 +1,39 @@
 # Active extended development goal
 
+## Three-hour user-requested resumption — October 4, 16:20:27 UTC
+
+Storage cleanup resolved the historical disk blocker without changing original
+evidence or the earlier stopping clocks:78.615524GiB was recovered and80.684101GiB
+remained free at the cleanup stop. Necessary archived catalogues/restore tools and
+hash ledgers remain under`.opentt3d-local/cleanup-20261004/`; do not delete them as
+cache. This resumption begins at**2026-10-04 16:20:27 UTC**, with requested work
+deadline**2026-10-04 19:20:27 UTC**. Final validation, GitHub development packaging
+and merging all validated work to`main` are included. This is not a new stopping
+record, full-goal completion or quality promotion.
+
+The previously quarantined seven files are losslessly retained before integration.
+All84 larger-HQ owners/components/materials stay exact; their unaccepted proposed
+bindings move byte-exactly to an explicit diagnostic sidecar, not the playable
+runtime. Their original individual below-eight reviews remain defect-bearing.
+Structural tests cannot silently activate unaccepted larger-HQ source replacements.
+
+Concrete shore breadth adds20 separately authored thin sea-level bank volumes,
+individually screened ten at4/10 and ten at5/10, plus20 independent3/10 actual-source
+instances. Five fresh public terrain-type surveys observe particular normal/snow/
+rainforest tiles, not complete desert/parameter/grid/grass/snowline coverage. New
+command correlation tokens reject interleaved reloaded-AI logs; original saved
+tile/slope/height rows, complete source wave fringes and all100 earlier banks remain.
+All120 banks are unbound. Exact source/native comparisons fail20 images/4,065 RGBA
+pixels; broad paired galleries fail35 views/165 pixels. Every failure is retained.
+
+The2,035-model diagnostic freeze retains3,070 quality rows/261 individual reviews/
+four broad gaps/zero approvals and fails required-eight. Extra doubled-terrain
+support, all runtime/state/LOD/picking/ship/source/terrain/conditional axes, other
+catalogue families, sustained60fps/memory and platform/input/replay/network
+acceptance remain open. Keep recommended immutable`.42`unchanged unless new
+accepted runtime progress separately warrants recommendation. Full objective below
+remains active; final actual stopping clock/reason will be recorded after work.
+
 ## Execution pause audit — October 4, 07:13:52 UTC
 
 **Actual stopping clock check: 2026-10-04 07:13:52 UTC.** Modelling and native

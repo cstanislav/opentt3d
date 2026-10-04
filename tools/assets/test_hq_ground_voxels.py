@@ -17,8 +17,10 @@ class HeadquartersGroundTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.source = json.loads((ROOT/"assets/3d/voxels.json").read_text())
-        cls.source["models"] = {name:model for name,model in cls.source["models"].items() if name.startswith("hq_ground_")}
-        cls.source["bindings"] = {"object_ground":cls.source["bindings"]["object_ground"]}
+        cls.source["models"] = {name:model for name,model in cls.source["models"].items()
+                                if name.startswith(("hq_ground_tiny_","hq_ground_small_"))}
+        cls.source["bindings"] = {"object_ground":{layout:states for layout,states in cls.source["bindings"]["object_ground"].items()
+                                                   if 4 <= int(layout) < 12}}
         cls.compiled = compile_catalogue(cls.source)
         cls.original = catalogue()
 

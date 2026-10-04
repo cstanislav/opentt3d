@@ -1,0 +1,1282 @@
+[
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10364,
+    "climate": 1,
+    "draw_origin": [
+      720,
+      960,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 37,
+    "resolved_offset": 37,
+    "selected_sprite": 10401,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10401-0-generation3.pam",
+    "source_offset": [
+      -16,
+      24
+    ],
+    "source_size": [
+      148,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 7725,
+    "tile_xy": [
+      45,
+      60
+    ],
+    "water_class": 2,
+    "source_image_sha256": "d8352e944e533f18380dd30400fcf3e2640d4bafbe1b2a9229928192b3981f6f",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 683582092,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-arctic-reload-correlated/fixture.json",
+    "public_survey_fixture_sha256": "bf8893d644bdc252494c374dfb45bbeacfed5a99fe88d9d99e5a3e216e470233",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10401-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/arctic-shore-37.pam",
+    "source_pam_sha256": "d8352e944e533f18380dd30400fcf3e2640d4bafbe1b2a9229928192b3981f6f",
+    "native_size": [
+      37,
+      17
+    ],
+    "native_offset": [
+      -4,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10364,
+    "climate": 1,
+    "draw_origin": [
+      720,
+      960,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 39,
+    "resolved_offset": 39,
+    "selected_sprite": 10403,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10403-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 7725,
+    "tile_xy": [
+      45,
+      60
+    ],
+    "water_class": 2,
+    "source_image_sha256": "e8cbae7a9fda67d58cf65f04d3a776057d11a1eddaaad8f85057afd449b9b49a",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 683582092,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-arctic-reload-correlated/fixture.json",
+    "public_survey_fixture_sha256": "bf8893d644bdc252494c374dfb45bbeacfed5a99fe88d9d99e5a3e216e470233",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10403-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/arctic-shore-39.pam",
+    "source_pam_sha256": "e8cbae7a9fda67d58cf65f04d3a776057d11a1eddaaad8f85057afd449b9b49a",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10364,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      640,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 48,
+    "resolved_offset": 48,
+    "selected_sprite": 10412,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10412-0-generation3.pam",
+    "source_offset": [
+      -20,
+      -32
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 5163,
+    "tile_xy": [
+      43,
+      40
+    ],
+    "water_class": 2,
+    "source_image_sha256": "36355b4c4fb310dfd2af23a8ba8cec123dafe0bde1b75b4e6678868e9f575fc9",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 683582092,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-arctic-reload-correlated/fixture.json",
+    "public_survey_fixture_sha256": "bf8893d644bdc252494c374dfb45bbeacfed5a99fe88d9d99e5a3e216e470233",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10412-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/arctic-shore-48.pam",
+    "source_pam_sha256": "36355b4c4fb310dfd2af23a8ba8cec123dafe0bde1b75b4e6678868e9f575fc9",
+    "native_size": [
+      38,
+      26
+    ],
+    "native_offset": [
+      -5,
+      -8
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10364,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      640,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 50,
+    "resolved_offset": 50,
+    "selected_sprite": 10414,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10414-0-generation3.pam",
+    "source_offset": [
+      -124,
+      20
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 5163,
+    "tile_xy": [
+      43,
+      40
+    ],
+    "water_class": 2,
+    "source_image_sha256": "13983ecba085cfbd7674415ef6d88696741b0e1894a6b66e612472358c60e3da",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 683582092,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-arctic-reload-correlated/fixture.json",
+    "public_survey_fixture_sha256": "bf8893d644bdc252494c374dfb45bbeacfed5a99fe88d9d99e5a3e216e470233",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10414-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/arctic-shore-50.pam",
+    "source_pam_sha256": "13983ecba085cfbd7674415ef6d88696741b0e1894a6b66e612472358c60e3da",
+    "native_size": [
+      38,
+      26
+    ],
+    "native_offset": [
+      -31,
+      5
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10304,
+    "climate": 0,
+    "draw_origin": [
+      1392,
+      240,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 12,
+    "resolved_offset": 12,
+    "selected_sprite": 10316,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10316-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 2007,
+    "tile_xy": [
+      87,
+      15
+    ],
+    "water_class": 2,
+    "source_image_sha256": "6702b738d223b23afcac0516a4b853fdeda3596b51f058369e289f54ba793dcb",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1992553537,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10316-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/temperate-shore-12.pam",
+    "source_pam_sha256": "6702b738d223b23afcac0516a4b853fdeda3596b51f058369e289f54ba793dcb",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10304,
+    "climate": 0,
+    "draw_origin": [
+      1424,
+      240,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 14,
+    "resolved_offset": 14,
+    "selected_sprite": 10318,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10318-0-generation3.pam",
+    "source_offset": [
+      -124,
+      24
+    ],
+    "source_size": [
+      144,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 2009,
+    "tile_xy": [
+      89,
+      15
+    ],
+    "water_class": 2,
+    "source_image_sha256": "ac38923fe20037e1bbf85ffa559e5928b91c0ce1f67920a655e02024baa477b8",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1992553537,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10318-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/temperate-shore-14.pam",
+    "source_pam_sha256": "ac38923fe20037e1bbf85ffa559e5928b91c0ce1f67920a655e02024baa477b8",
+    "native_size": [
+      36,
+      17
+    ],
+    "native_offset": [
+      -31,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10304,
+    "climate": 0,
+    "draw_origin": [
+      304,
+      1520,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 25,
+    "resolved_offset": 25,
+    "selected_sprite": 10329,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10329-0-generation3.pam",
+    "source_offset": [
+      -20,
+      20
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 12179,
+    "tile_xy": [
+      19,
+      95
+    ],
+    "water_class": 2,
+    "source_image_sha256": "858bc286b26eb7404901001f743b0e07e4d8df5ec5c1ebc959f30808324de982",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1992553537,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10329-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/temperate-shore-25.pam",
+    "source_pam_sha256": "858bc286b26eb7404901001f743b0e07e4d8df5ec5c1ebc959f30808324de982",
+    "native_size": [
+      38,
+      26
+    ],
+    "native_offset": [
+      -5,
+      5
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10304,
+    "climate": 0,
+    "draw_origin": [
+      304,
+      1520,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 27,
+    "resolved_offset": 27,
+    "selected_sprite": 10331,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10331-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      148,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 12179,
+    "tile_xy": [
+      19,
+      95
+    ],
+    "water_class": 2,
+    "source_image_sha256": "48cb727d9f6bae57ac2434465685711ababa5047073d68384308a6b4d2762c70",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1992553537,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10331-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/temperate-shore-27.pam",
+    "source_pam_sha256": "48cb727d9f6bae57ac2434465685711ababa5047073d68384308a6b4d2762c70",
+    "native_size": [
+      37,
+      26
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10304,
+    "climate": 0,
+    "draw_origin": [
+      704,
+      672,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 37,
+    "resolved_offset": 37,
+    "selected_sprite": 10341,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10341-0-generation3.pam",
+    "source_offset": [
+      -16,
+      24
+    ],
+    "source_size": [
+      148,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 5420,
+    "tile_xy": [
+      44,
+      42
+    ],
+    "water_class": 2,
+    "source_image_sha256": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1992553537,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10341-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/temperate-shore-37.pam",
+    "source_pam_sha256": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "native_size": [
+      37,
+      17
+    ],
+    "native_offset": [
+      -4,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10304,
+    "climate": 0,
+    "draw_origin": [
+      704,
+      656,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 39,
+    "resolved_offset": 39,
+    "selected_sprite": 10343,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10343-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 5292,
+    "tile_xy": [
+      44,
+      41
+    ],
+    "water_class": 2,
+    "source_image_sha256": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1992553537,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10343-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/temperate-shore-39.pam",
+    "source_pam_sha256": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10544,
+    "climate": 3,
+    "draw_origin": [
+      1392,
+      240,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 12,
+    "resolved_offset": 12,
+    "selected_sprite": 10556,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10556-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 2007,
+    "tile_xy": [
+      87,
+      15
+    ],
+    "water_class": 2,
+    "source_image_sha256": "c43285cc86a4d1ec28bd945b42e25cdacc2dd519fe590ba4465be43cc7658c9e",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 146378629,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10556-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/toyland-shore-12.pam",
+    "source_pam_sha256": "c43285cc86a4d1ec28bd945b42e25cdacc2dd519fe590ba4465be43cc7658c9e",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10544,
+    "climate": 3,
+    "draw_origin": [
+      1424,
+      240,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 14,
+    "resolved_offset": 14,
+    "selected_sprite": 10558,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10558-0-generation3.pam",
+    "source_offset": [
+      -124,
+      24
+    ],
+    "source_size": [
+      144,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 2009,
+    "tile_xy": [
+      89,
+      15
+    ],
+    "water_class": 2,
+    "source_image_sha256": "03e66199651a6be9ae22c60c801c40414e1298c6facd4226b880f4dcbdfeb389",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 146378629,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10558-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/toyland-shore-14.pam",
+    "source_pam_sha256": "03e66199651a6be9ae22c60c801c40414e1298c6facd4226b880f4dcbdfeb389",
+    "native_size": [
+      36,
+      17
+    ],
+    "native_offset": [
+      -31,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10544,
+    "climate": 3,
+    "draw_origin": [
+      304,
+      1520,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 25,
+    "resolved_offset": 25,
+    "selected_sprite": 10569,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10569-0-generation3.pam",
+    "source_offset": [
+      -20,
+      20
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 12179,
+    "tile_xy": [
+      19,
+      95
+    ],
+    "water_class": 2,
+    "source_image_sha256": "ce43dd631c60f00cfe7d22e00463472b93b63ffce5944ce533ca31e56e114403",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 146378629,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10569-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/toyland-shore-25.pam",
+    "source_pam_sha256": "ce43dd631c60f00cfe7d22e00463472b93b63ffce5944ce533ca31e56e114403",
+    "native_size": [
+      38,
+      26
+    ],
+    "native_offset": [
+      -5,
+      5
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10544,
+    "climate": 3,
+    "draw_origin": [
+      304,
+      1520,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 27,
+    "resolved_offset": 27,
+    "selected_sprite": 10571,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10571-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      148,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 12179,
+    "tile_xy": [
+      19,
+      95
+    ],
+    "water_class": 2,
+    "source_image_sha256": "40fd97bf704874a330b25cbe3a660057b37404ab5250f56927af6acd24ed7398",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 146378629,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10571-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/toyland-shore-27.pam",
+    "source_pam_sha256": "40fd97bf704874a330b25cbe3a660057b37404ab5250f56927af6acd24ed7398",
+    "native_size": [
+      37,
+      26
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10544,
+    "climate": 3,
+    "draw_origin": [
+      704,
+      672,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 37,
+    "resolved_offset": 37,
+    "selected_sprite": 10581,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10581-0-generation3.pam",
+    "source_offset": [
+      -16,
+      24
+    ],
+    "source_size": [
+      148,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 5420,
+    "tile_xy": [
+      44,
+      42
+    ],
+    "water_class": 2,
+    "source_image_sha256": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 146378629,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10581-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/toyland-shore-37.pam",
+    "source_pam_sha256": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "native_size": [
+      37,
+      17
+    ],
+    "native_offset": [
+      -4,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10544,
+    "climate": 3,
+    "draw_origin": [
+      704,
+      656,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 39,
+    "resolved_offset": 39,
+    "selected_sprite": 10583,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10583-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 5292,
+    "tile_xy": [
+      44,
+      41
+    ],
+    "water_class": 2,
+    "source_image_sha256": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 0,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 146378629,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10583-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/toyland-shore-39.pam",
+    "source_pam_sha256": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10484,
+    "climate": 2,
+    "draw_origin": [
+      720,
+      1104,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 12,
+    "resolved_offset": 12,
+    "selected_sprite": 10496,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10496-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 8877,
+    "tile_xy": [
+      45,
+      69
+    ],
+    "water_class": 2,
+    "source_image_sha256": "afee9e8fc7fedcf95b52569c1c4d43879e509ac21f19dc040e87bd3ee4a0fadd",
+    "climate_name": "tropic",
+    "seed": 161803,
+    "backend": "vulkan",
+    "public_terrain_type": 2,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1620215652,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-tropic-seed161803-correlated/fixture.json",
+    "public_survey_fixture_sha256": "5e2b61809084e05974ad42e7787124003ce8a73d5e955bda3d48b61e29321e23",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-tropic-seed161803-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-tropic-seed161803-vulkan-on/renderer3d-reference/river-selector-source-10496-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/tropic-shore-12.pam",
+    "source_pam_sha256": "afee9e8fc7fedcf95b52569c1c4d43879e509ac21f19dc040e87bd3ee4a0fadd",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10484,
+    "climate": 2,
+    "draw_origin": [
+      752,
+      1104,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 14,
+    "resolved_offset": 14,
+    "selected_sprite": 10498,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10498-0-generation3.pam",
+    "source_offset": [
+      -124,
+      24
+    ],
+    "source_size": [
+      144,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 8879,
+    "tile_xy": [
+      47,
+      69
+    ],
+    "water_class": 2,
+    "source_image_sha256": "c038c26a9398680a5757d27c3583b08ca5415b47919d1473cb438df7223a6e24",
+    "climate_name": "tropic",
+    "seed": 161803,
+    "backend": "vulkan",
+    "public_terrain_type": 2,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 1620215652,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-tropic-seed161803-correlated/fixture.json",
+    "public_survey_fixture_sha256": "5e2b61809084e05974ad42e7787124003ce8a73d5e955bda3d48b61e29321e23",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-tropic-seed161803-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-tropic-seed161803-vulkan-on/renderer3d-reference/river-selector-source-10498-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/tropic-shore-14.pam",
+    "source_pam_sha256": "c038c26a9398680a5757d27c3583b08ca5415b47919d1473cb438df7223a6e24",
+    "native_size": [
+      36,
+      17
+    ],
+    "native_offset": [
+      -31,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10484,
+    "climate": 2,
+    "draw_origin": [
+      672,
+      1344,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 37,
+    "resolved_offset": 37,
+    "selected_sprite": 10521,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10521-0-generation3.pam",
+    "source_offset": [
+      -16,
+      24
+    ],
+    "source_size": [
+      148,
+      68
+    ],
+    "texture_generation": 3,
+    "tile": 10794,
+    "tile_xy": [
+      42,
+      84
+    ],
+    "water_class": 2,
+    "source_image_sha256": "54f5349da98acee574812613da674d038a32fb95663ef701212173807d6ed0b5",
+    "climate_name": "tropic",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 2,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 994062848,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-tropic-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "84f60e9d2b3b8966ae0c2115e7269d5b3cd8163a11cd945289621ad413693ac5",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10521-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/tropic-shore-37.pam",
+    "source_pam_sha256": "54f5349da98acee574812613da674d038a32fb95663ef701212173807d6ed0b5",
+    "native_size": [
+      37,
+      17
+    ],
+    "native_offset": [
+      -4,
+      6
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10484,
+    "climate": 2,
+    "draw_origin": [
+      672,
+      1312,
+      0
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 39,
+    "resolved_offset": 39,
+    "selected_sprite": 10523,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-10523-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 10538,
+    "tile_xy": [
+      42,
+      82
+    ],
+    "water_class": 2,
+    "source_image_sha256": "fe858aeb7fa10f27cbb65c97209857c2ae23223396f0e8648b42a5a6706e806a",
+    "climate_name": "tropic",
+    "seed": 271828,
+    "backend": "vulkan",
+    "public_terrain_type": 2,
+    "public_terrain_type_query_performed": true,
+    "public_survey_token": 994062848,
+    "public_survey_fixture": "build-macos/breadth-original-river-terrain-query-tropic-seed271828-correlated/fixture.json",
+    "public_survey_fixture_sha256": "84f60e9d2b3b8966ae0c2115e7269d5b3cd8163a11cd945289621ad413693ac5",
+    "native_control": "build-macos/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-on",
+    "original_source_pam": "build-macos/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10523-0-generation3.pam",
+    "quality_approved": false,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-shore-breadth/sources/tropic-shore-39.pam",
+    "source_pam_sha256": "fe858aeb7fa10f27cbb65c97209857c2ae23223396f0e8648b42a5a6706e806a",
+    "native_size": [
+      37,
+      10
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_source_pixels_resized": false,
+    "source_wave_fringe_preserved": true,
+    "source_state": "actual-observed-sea-level-shore",
+    "runtime_bound": false
+  }
+]

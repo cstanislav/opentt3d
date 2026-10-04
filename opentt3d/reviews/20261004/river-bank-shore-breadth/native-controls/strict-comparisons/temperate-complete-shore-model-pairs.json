@@ -1,0 +1,918 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-temperate-vulkan-study/renderer3d-reference",
+  "actual": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-temperate-opengl-study/renderer3d-reference",
+  "pattern": "model-voxel-river_bank_shore_study_*",
+  "images": 54,
+  "pixels": 3153640,
+  "differences": [
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset12-6",
+      "changed_pixels": 6,
+      "pixels": [
+        {
+          "pixel": [
+            111,
+            192
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            112,
+            192
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            113,
+            192
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            114,
+            192
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            115,
+            192
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            116,
+            192
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset14-6",
+      "changed_pixels": 6,
+      "pixels": [
+        {
+          "pixel": [
+            139,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            140,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            141,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            142,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            143,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            144,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset25-4",
+      "changed_pixels": 6,
+      "pixels": [
+        {
+          "pixel": [
+            111,
+            193
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            112,
+            193
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            113,
+            193
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            125,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            126,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            127,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset25-5",
+      "changed_pixels": 3,
+      "pixels": [
+        {
+          "pixel": [
+            136,
+            192
+          ],
+          "reference": [
+            120,
+            120,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            137,
+            192
+          ],
+          "reference": [
+            120,
+            120,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            138,
+            192
+          ],
+          "reference": [
+            120,
+            120,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset25-6",
+      "changed_pixels": 3,
+      "pixels": [
+        {
+          "pixel": [
+            131,
+            193
+          ],
+          "reference": [
+            32,
+            80,
+            4,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            132,
+            193
+          ],
+          "reference": [
+            32,
+            80,
+            4,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            133,
+            193
+          ],
+          "reference": [
+            32,
+            80,
+            4,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset27-4",
+      "changed_pixels": 3,
+      "pixels": [
+        {
+          "pixel": [
+            122,
+            193
+          ],
+          "reference": [
+            32,
+            80,
+            4,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            123,
+            193
+          ],
+          "reference": [
+            32,
+            80,
+            4,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            124,
+            193
+          ],
+          "reference": [
+            32,
+            80,
+            4,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset27-5",
+      "changed_pixels": 3,
+      "pixels": [
+        {
+          "pixel": [
+            117,
+            192
+          ],
+          "reference": [
+            120,
+            120,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            118,
+            192
+          ],
+          "reference": [
+            120,
+            120,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            119,
+            192
+          ],
+          "reference": [
+            120,
+            120,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset37-7",
+      "changed_pixels": 6,
+      "pixels": [
+        {
+          "pixel": [
+            111,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            112,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            113,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            114,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            115,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            116,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset39-6",
+      "changed_pixels": 5,
+      "pixels": [
+        {
+          "pixel": [
+            117,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            118,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            119,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            120,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            121,
+            193
+          ],
+          "reference": [
+            60,
+            88,
+            48,
+            255
+          ],
+          "actual": [
+            32,
+            80,
+            4,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_shore_study_temperate_offset39-7",
+      "changed_pixels": 6,
+      "pixels": [
+        {
+          "pixel": [
+            139,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            140,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            141,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            142,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            143,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            144,
+            192
+          ],
+          "reference": [
+            148,
+            148,
+            100,
+            255
+          ],
+          "actual": [
+            133,
+            178,
+            219,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

@@ -1,0 +1,949 @@
+{
+  "audited_utc": "2026-10-04T17:22:24.392849+00:00",
+  "fresh_quiet_acknowledged_native_controls": 28,
+  "fresh_correlated_public_query_surveys": 5,
+  "controls": [
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-temperate-seed271828-opengl-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-temperate-seed271828-opengl-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-arctic-seed271828-vulkan-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-arctic-seed271828-opengl-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-arctic-seed271828-opengl-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed271828-vulkan-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed271828-opengl-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed271828-opengl-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-toyland-seed271828-vulkan-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-toyland-seed271828-opengl-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-toyland-seed271828-opengl-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed161803-vulkan-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "tropic",
+      "seed": 161803,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed161803-vulkan-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "tropic",
+      "seed": 161803,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed161803-opengl-off",
+      "commands_acknowledged": 9,
+      "scope": "tracing-off",
+      "climate": "tropic",
+      "seed": 161803,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-tropic-seed161803-opengl-on",
+      "commands_acknowledged": 9,
+      "scope": "tracing-on",
+      "climate": "tropic",
+      "seed": 161803,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-temperate-vulkan-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-temperate-opengl-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-arctic-vulkan-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-arctic-opengl-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-tropic-vulkan-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-tropic-opengl-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-toyland-vulkan-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    },
+    {
+      "control": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-initial-toyland-opengl-study",
+      "commands_acknowledged": 11,
+      "scope": "study",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "opengl",
+      "actual_save_success_text": true,
+      "fresh_during_this_resumption": true
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "temperate-271828-vulkan-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-271828-vulkan-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-vulkan-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-271828-vulkan-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-vulkan-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-vulkan-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-opengl-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-271828-opengl-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-opengl-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-271828-opengl-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-opengl-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-opengl-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 46,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-complete-shore-model-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-complete-shore-model-pairs.json",
+      "images": 54,
+      "different_images": 10,
+      "different_pixels": 47,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-registered-native-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/temperate-registered-native-pairs.json",
+      "images": 6,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-vulkan-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-271828-vulkan-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-vulkan-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-271828-vulkan-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-vulkan-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-vulkan-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-opengl-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-271828-opengl-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-opengl-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-271828-opengl-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-opengl-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-opengl-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 18,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-complete-shore-model-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-complete-shore-model-pairs.json",
+      "images": 36,
+      "different_images": 7,
+      "different_pixels": 29,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-registered-native-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/arctic-registered-native-pairs.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-vulkan-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-271828-vulkan-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-vulkan-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-271828-vulkan-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-vulkan-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-vulkan-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-opengl-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-271828-opengl-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-opengl-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-271828-opengl-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-opengl-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-opengl-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 45,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-complete-shore-model-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-complete-shore-model-pairs.json",
+      "images": 36,
+      "different_images": 6,
+      "different_pixels": 34,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-registered-native-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-registered-native-pairs.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-vulkan-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-271828-vulkan-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-vulkan-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-271828-vulkan-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-vulkan-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-vulkan-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-opengl-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-271828-opengl-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-opengl-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-271828-opengl-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-unbound-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-opengl-unbound-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-unbound-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-opengl-unbound-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 24,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-complete-shore-model-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-complete-shore-model-pairs.json",
+      "images": 54,
+      "different_images": 12,
+      "different_pixels": 55,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-registered-native-pairs",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/toyland-registered-native-pairs.json",
+      "images": 6,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-vulkan-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-161803-vulkan-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-vulkan-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-161803-vulkan-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-opengl-observer-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-161803-opengl-observer-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-opengl-observer-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-161803-opengl-observer-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/strict-comparisons/tropic-161803-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 158,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    }
+  ],
+  "exact_save_pairs": [
+    {
+      "scope": "temperate-271828-vulkan-observer-save",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "actual_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "temperate-vulkan-unbound-save",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "actual_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "temperate-271828-opengl-observer-save",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "actual_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "temperate-opengl-unbound-save",
+      "original_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "actual_sha256": "4558282b95668c19d0984f89805fb7b928256958db3f6520bee4581311d79a88",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "arctic-271828-vulkan-observer-save",
+      "original_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "actual_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "arctic-vulkan-unbound-save",
+      "original_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "actual_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "arctic-271828-opengl-observer-save",
+      "original_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "actual_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "arctic-opengl-unbound-save",
+      "original_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "actual_sha256": "375c6979a114a79641e22fa3af7b076c5f300961a0b3a9802533b3b51ce7cca4",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-271828-vulkan-observer-save",
+      "original_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "actual_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-vulkan-unbound-save",
+      "original_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "actual_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-271828-opengl-observer-save",
+      "original_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "actual_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-opengl-unbound-save",
+      "original_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "actual_sha256": "d5f171d9e738d43e67ef165d41ef1a7bfa4a5cf5ede5bd7f507f965c1a98959a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "toyland-271828-vulkan-observer-save",
+      "original_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "actual_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "toyland-vulkan-unbound-save",
+      "original_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "actual_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "toyland-271828-opengl-observer-save",
+      "original_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "actual_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "toyland-opengl-unbound-save",
+      "original_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "actual_sha256": "033880b4bd0659afb4916d5d30c2ee3d263f97e59803b3f8e95267c3ec3b7acd",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-161803-vulkan-observer-save",
+      "original_sha256": "cda9e9559913d2c56c9607edf43a9d7c12e5629b0eb0bfcb9cfb868dc50f152a",
+      "actual_sha256": "cda9e9559913d2c56c9607edf43a9d7c12e5629b0eb0bfcb9cfb868dc50f152a",
+      "exact_original_save_bytes": true
+    },
+    {
+      "scope": "tropic-161803-opengl-observer-save",
+      "original_sha256": "cda9e9559913d2c56c9607edf43a9d7c12e5629b0eb0bfcb9cfb868dc50f152a",
+      "actual_sha256": "cda9e9559913d2c56c9607edf43a9d7c12e5629b0eb0bfcb9cfb868dc50f152a",
+      "exact_original_save_bytes": true
+    }
+  ],
+  "lossless_pam_reconstructions": 994,
+  "complete_original_pam_bytes_reconstructed": 346242848,
+  "observer_noninterference_worlds_exact": 10,
+  "observer_noninterference_atlas_images_exact": 40,
+  "unbound_study_worlds_exact": 8,
+  "unbound_study_atlas_images_exact": 32,
+  "complete_model_backend_pairs": 180,
+  "all_strict_renderers_accepted": false,
+  "runtime_bank_coverage_accepted": 0,
+  "source_fidelity_or_all_terrain_type_states_accepted": false,
+  "quality_approvals": 0
+}

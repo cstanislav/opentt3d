@@ -3,7 +3,7 @@ import copy
 from pathlib import Path
 import unittest
 
-from fixture_rivers import validate_survey
+from fixture_rivers import survey_tiles, validate_survey
 
 
 class RiverSurveyTests(unittest.TestCase):
@@ -21,6 +21,8 @@ class RiverSurveyTests(unittest.TestCase):
         self.assertEqual(result["tiles"], tiles)
         self.assertFalse(result["complete_river_family_verified"])
         self.assertFalse(result["geometry_or_quality_approved"])
+        self.assertFalse(result["public_terrain_type_queries"])
+        self.assertEqual(result["observed_public_terrain_types"], [])
 
     def test_empty_survey_does_not_infer_absence(self):
         row, _ = self.survey()
@@ -50,7 +52,54 @@ class RiverSurveyTests(unittest.TestCase):
         self.assertIn("AITile.IsRiverTile(tile)", source)
         self.assertIn("AITile.GetSlope(tile)", source)
         self.assertIn("AITile.GetMinHeight(tile)", source)
+        self.assertIn("AITile.GetTerrainType(tile)", source)
         self.assertNotRegex(source, r"\b(?:Build\w*|DemolishTile|RaiseTile|LowerTile|LevelTiles|SetLoanAmount|SetName|Random|Rand)\s*\(")
+
+    def test_public_terrain_types_remain_distinct_from_raw_newgrf_snow_codes(self):
+        row, tiles = self.survey()
+        row["public_terrain_type_queries"] = True
+        tiles[0]["public_terrain_type"], tiles[1]["public_terrain_type"] = 1, 3
+        result = validate_survey(row, tiles)
+        self.assertEqual(result["observed_public_terrain_types"], [1, 3])
+        self.assertIn("snow=4", result["terrain_type_code_domain"])
+        self.assertFalse(result["complete_terrain_type_or_snowline_coverage_verified"])
+        self.assertFalse(result["geometry_or_quality_approved"])
+
+    def test_missing_invalid_or_unacknowledged_terrain_queries_fail(self):
+        row, tiles = self.survey()
+        row["public_terrain_type_queries"] = True
+        for value in (None, True, 1.0, -1, 4):
+            changed = copy.deepcopy(tiles)
+            changed[0]["public_terrain_type"], changed[1]["public_terrain_type"] = value, 0
+            with self.subTest(value=value), self.assertRaises(ValueError): validate_survey(row, changed)
+        with self.assertRaises(ValueError): validate_survey(row, tiles)
+        row["public_terrain_type_queries"] = 1
+        with self.assertRaises(ValueError): validate_survey(row, tiles)
+        row["public_terrain_type_queries"] = False
+        tiles[0]["public_terrain_type"] = 0
+        with self.assertRaises(ValueError): validate_survey(row, tiles)
+
+    def test_reloaded_survey_uses_the_original_save_and_verifies_its_header(self):
+        source = Path(__file__).with_name("fixture_rivers.py").read_text()
+        self.assertIn("input_save_sha256 = verify_save(input_save)", source)
+        self.assertIn('["-g", str(input_save)] if input_save is not None', source)
+        self.assertIn("loaded_original_world_not_regenerated=True", source)
+
+    def test_interleaved_loaded_ai_output_cannot_acknowledge_the_new_public_command(self):
+        text = '\n'.join((
+            'RIVER_SURVEY_TILE {"tile":99,"survey_token":0}',
+            'RIVER_SURVEY_TILE {"tile":4002,"survey_token":17}',
+            'RIVER_SURVEY_TILE {"tile":88,"survey_token":18}',
+            'RIVER_SURVEY_TILE {"tile":4003,"survey_token":17}',
+            'RIVER_SURVEY_TILE {"tile":77,"survey_token":true}'))
+        self.assertEqual(survey_tiles(text,17),[{"tile":4002,"survey_token":17},{"tile":4003,"survey_token":17}])
+        for token in (None,True,0,-1,17.0,0x80000000):
+            with self.subTest(token=token),self.assertRaises(ValueError): survey_tiles(text,token)
+        row,tiles = self.survey();row["survey_token"] = 17
+        tiles[0]["survey_token"],tiles[1]["survey_token"] = 17,18
+        with self.assertRaises(ValueError): validate_survey(row,tiles)
+        tiles[1]["survey_token"] = 17
+        self.assertEqual(validate_survey(row,tiles)["survey_token"],17)
 
     def test_failed_script_can_still_acknowledge_an_original_saved_world(self):
         source = Path(__file__).with_name("fixture_rivers.py").read_text()

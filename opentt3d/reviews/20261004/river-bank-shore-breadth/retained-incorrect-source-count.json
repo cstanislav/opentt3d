@@ -1,0 +1,30 @@
+{
+  "retained_utc": "2026-10-04T16:53:28.608372+00:00",
+  "failure": "Incorrect initial expectation of thirty naturally observed shore sources; only twenty actual distinct sources were drawn in the five reloaded natural fixtures. No missing observation is fabricated or declared absent.",
+  "incorrect_expected_sources": 30,
+  "actual_sources": 20,
+  "original_driver_sha256": "c48aa93835abd9636f3376645ff7e1a03dde579e9306e3aa88c94ea470554947",
+  "retained_driver": "retained-incorrect-source-count-driver.py.gz",
+  "copied_original_sources_retained_without_changes": {
+    "sources/tropic-shore-37.pam": "54f5349da98acee574812613da674d038a32fb95663ef701212173807d6ed0b5",
+    "sources/temperate-shore-14.pam": "ac38923fe20037e1bbf85ffa559e5928b91c0ce1f67920a655e02024baa477b8",
+    "sources/temperate-shore-12.pam": "6702b738d223b23afcac0516a4b853fdeda3596b51f058369e289f54ba793dcb",
+    "sources/arctic-shore-50.pam": "13983ecba085cfbd7674415ef6d88696741b0e1894a6b66e612472358c60e3da",
+    "sources/temperate-shore-39.pam": "f7333dcd85f4a5fd78452b72a516062b21034fa12bf7cc716ad95f7336d54d94",
+    "sources/toyland-shore-12.pam": "c43285cc86a4d1ec28bd945b42e25cdacc2dd519fe590ba4465be43cc7658c9e",
+    "sources/arctic-shore-37.pam": "d8352e944e533f18380dd30400fcf3e2640d4bafbe1b2a9229928192b3981f6f",
+    "sources/toyland-shore-39.pam": "2a83de50b28b87e0c6b7b0147bfbf29fd726498ffedd8272bd418818584fac18",
+    "sources/toyland-shore-14.pam": "03e66199651a6be9ae22c60c801c40414e1298c6facd4226b880f4dcbdfeb389",
+    "sources/toyland-shore-27.pam": "40fd97bf704874a330b25cbe3a660057b37404ab5250f56927af6acd24ed7398",
+    "sources/toyland-shore-25.pam": "ce43dd631c60f00cfe7d22e00463472b93b63ffce5944ce533ca31e56e114403",
+    "sources/toyland-shore-37.pam": "71f11eafb07b480832d910afcb9017d8903d556ea30eb933ea6f7f54a550feb3",
+    "sources/arctic-shore-39.pam": "e8cbae7a9fda67d58cf65f04d3a776057d11a1eddaaad8f85057afd449b9b49a",
+    "sources/temperate-shore-37.pam": "4122478594da9ac83dd6b5af49d9185cd2ba0a9c875e0d552f03af2b0c903d78",
+    "sources/tropic-shore-14.pam": "c038c26a9398680a5757d27c3583b08ca5415b47919d1473cb438df7223a6e24",
+    "sources/arctic-shore-48.pam": "36355b4c4fb310dfd2af23a8ba8cec123dafe0bde1b75b4e6678868e9f575fc9",
+    "sources/temperate-shore-27.pam": "48cb727d9f6bae57ac2434465685711ababa5047073d68384308a6b4d2762c70",
+    "sources/tropic-shore-39.pam": "fe858aeb7fa10f27cbb65c97209857c2ae23223396f0e8648b42a5a6706e806a",
+    "sources/temperate-shore-25.pam": "858bc286b26eb7404901001f743b0e07e4d8df5ec5c1ebc959f30808324de982",
+    "sources/tropic-shore-12.pam": "afee9e8fc7fedcf95b52569c1c4d43879e509ac21f19dc040e87bd3ee4a0fadd"
+  }
+}

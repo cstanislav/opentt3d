@@ -17,7 +17,8 @@ class ObjectVoxelTests(unittest.TestCase):
         names = {"object_transmitter","object_lighthouse","object_owned_land_sign",
                  "object_company_statue","object_company_gnome","airport_radio_tower"}
         cls.source["models"] = {name:cls.source["models"][name] for name in names}
-        cls.source["bindings"] = {"objects":cls.source["bindings"]["objects"]}
+        cls.source["bindings"] = {"objects":{layout:states for layout,states in cls.source["bindings"]["objects"].items()
+                                             if int(layout) < 4}}
         cls.compiled = compile_catalogue(cls.source)
 
     def paint(self,name):

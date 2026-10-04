@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-shore-breadth/retain-sources.py", line 58, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-shore-breadth/retain-sources.py", line 45, in main
+    rows=[row for key,row in sorted(selected.items())];assert len(rows)==30
+                                                              ^^^^^^^^^^^^^
+AssertionError

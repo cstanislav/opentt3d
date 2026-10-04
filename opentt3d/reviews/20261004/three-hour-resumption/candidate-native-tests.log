@@ -1,0 +1,444 @@
+Internal ctest changing into directory: /Users/stanislav/Projects/opentt3d/build-macos
+Test project /Users/stanislav/Projects/opentt3d/build-macos
+        Start   1: Indexed immutable meshes preserve every vertex attribute and triangle order
+  1/219 Test   #1: Indexed immutable meshes preserve every vertex attribute and triangle order .....................................................   Passed    0.30 sec
+        Start   2: Mesh indices retain signed zero, NaN payloads and values beyond 16 bits
+  2/219 Test   #2: Mesh indices retain signed zero, NaN payloads and values beyond 16 bits .........................................................   Passed    0.07 sec
+        Start   3: Fractional instance chart offsets stay independent of atlas placement
+  3/219 Test   #3: Fractional instance chart offsets stay independent of atlas placement ...........................................................   Passed    0.05 sec
+        Start   4: Palette raster culling never leaks onto shared sprite-overlay batches
+  4/219 Test   #4: Palette raster culling never leaks onto shared sprite-overlay batches ...........................................................   Passed    0.09 sec
+        Start   5: Foundation walls close every exposed side and the raised half-tile
+  5/219 Test   #5: Foundation walls close every exposed side and the raised half-tile ..............................................................   Passed    0.08 sec
+        Start   6: Terrain surfaces and fence feet follow all vanilla slopes
+  6/219 Test   #6: Terrain surfaces and fence feet follow all vanilla slopes .......................................................................   Passed    0.45 sec
+        Start   7: Bridge ramps meet upstream vehicle slopes in all four directions
+  7/219 Test   #7: Bridge ramps meet upstream vehicle slopes in all four directions ................................................................   Passed    0.05 sec
+        Start   8: Bridge assemblies have finite outward faces under axis reflection
+  8/219 Test   #8: Bridge assemblies have finite outward faces under axis reflection ...............................................................   Passed    0.05 sec
+        Start   9: Atlas packing retains nonoverlapping UV rectangles for mixed sprite sizes
+  9/219 Test   #9: Atlas packing retains nonoverlapping UV rectangles for mixed sprite sizes .......................................................   Passed    0.04 sec
+        Start  10: Reusable instance batches retain submission order and discard previous scenes
+ 10/219 Test  #10: Reusable instance batches retain submission order and discard previous scenes ...................................................   Passed    0.04 sec
+        Start  11: Instance staging preserves composite order through rehash and retirement
+ 11/219 Test  #11: Instance staging preserves composite order through rehash and retirement ........................................................   Passed    0.05 sec
+        Start  12: Mesh allocation addresses do not decide coplanar draw precedence
+ 12/219 Test  #12: Mesh allocation addresses do not decide coplanar draw precedence ................................................................   Passed    0.05 sec
+        Start  13: Opacity-boundary mesh groups retain their unpartitioned painter order
+ 13/219 Test  #13: Opacity-boundary mesh groups retain their unpartitioned painter order ...........................................................   Passed    0.05 sec
+        Start  14: Instance rotations preserve separately rounded products at voxel face boundaries
+ 14/219 Test  #14: Instance rotations preserve separately rounded products at voxel face boundaries ................................................   Passed    0.04 sec
+        Start  15: Canonical palette yaw staging retains reference vertices and complete instance metadata
+ 15/219 Test  #15: Canonical palette yaw staging retains reference vertices and complete instance metadata .........................................   Passed    0.05 sec
+        Start  16: Ordered child batches follow parents without changing picking flags or mesh reuse
+ 16/219 Test  #16: Ordered child batches follow parents without changing picking flags or mesh reuse ...............................................   Passed    0.04 sec
+        Start  17: Repeating component charts preserve surface area and stay inside their selected material
+ 17/219 Test  #17: Repeating component charts preserve surface area and stay inside their selected material ........................................   Passed    0.05 sec
+        Start  18: Repeating chart phases remain independent of instance placement and atlas position
+ 18/219 Test  #18: Repeating chart phases remain independent of instance placement and atlas position ..............................................   Passed    0.05 sec
+        Start  19: Classic material pixels keep their world scale through growth and texture LOD
+ 19/219 Test  #19: Classic material pixels keep their world scale through growth and texture LOD ...................................................   Passed    0.05 sec
+        Start  20: Tile picking IDs preserve every map-index bit and the existing material flags
+ 20/219 Test  #20: Tile picking IDs preserve every map-index bit and the existing material flags ...................................................   Passed    0.05 sec
+        Start  21: UI blending preserves coverage over GPU viewports and opaque legacy pixels
+ 21/219 Test  #21: UI blending preserves coverage over GPU viewports and opaque legacy pixels ......................................................   Passed    0.04 sec
+        Start  22: World AABB culling agrees with projected point visibility
+ 22/219 Test  #22: World AABB culling agrees with projected point visibility .......................................................................   Passed    0.05 sec
+        Start  23: Instanced geometry keeps immutable meshes and value-only material records
+ 23/219 Test  #23: Instanced geometry keeps immutable meshes and value-only material records .......................................................   Passed    0.05 sec
+        Start  24: Detached edge pixels do not stretch texture registration
+ 24/219 Test  #24: Detached edge pixels do not stretch texture registration ........................................................................   Passed    0.04 sec
+        Start  25: Perspective preserves the original focal-plane art proportions
+ 25/219 Test  #25: Perspective preserves the original focal-plane art proportions ..................................................................   Passed    0.04 sec
+        Start  26: Perspective screen rays hit the projected point at every rotation and zoom
+ 26/219 Test  #26: Perspective screen rays hit the projected point at every rotation and zoom ......................................................   Passed    0.04 sec
+        Start  27: Perspective makes nearer objects larger and clips behind the camera
+ 27/219 Test  #27: Perspective makes nearer objects larger and clips behind the camera .............................................................   Passed    0.04 sec
+        Start  28: Pinhole projection uses square pixels and limits tall-building lean
+ 28/219 Test  #28: Pinhole projection uses square pixels and limits tall-building lean .............................................................   Passed    0.05 sec
+        Start  29: First-person projection and rays share the calibrated lens
+ 29/219 Test  #29: First-person projection and rays share the calibrated lens ......................................................................   Passed    0.05 sec
+        Start  30: Clicked-point orbit retains the picked pixel and physical eye radius at every tilt
+ 30/219 Test  #30: Clicked-point orbit retains the picked pixel and physical eye radius at every tilt ..............................................   Passed    0.05 sec
+        Start  31: Street-level orbit retains subpixel anchors at large world coordinates
+ 31/219 Test  #31: Street-level orbit retains subpixel anchors at large world coordinates ..........................................................   Passed    0.05 sec
+        Start  32: First-person frusta include distant terrain and full-map bounds across the horizon
+ 32/219 Test  #32: First-person frusta include distant terrain and full-map bounds across the horizon ..............................................   Passed    0.05 sec
+        Start  33: Long-distance picking enters the map before stepping its first cell
+ 33/219 Test  #33: Long-distance picking enters the map before stepping its first cell .............................................................   Passed    0.05 sec
+        Start  34: Camera interpolation is frame-rate independent and crosses yaw wrap smoothly
+ 34/219 Test  #34: Camera interpolation is frame-rate independent and crosses yaw wrap smoothly ....................................................   Passed    0.04 sec
+        Start  35: Perspective GPU matrix and CPU projection agree
+ 35/219 Test  #35: Perspective GPU matrix and CPU projection agree .................................................................................   Passed    0.05 sec
+        Start  36: OpenTT3D scene instances preserve authored models
+ 36/219 Test  #36: OpenTT3D scene instances preserve authored models ...............................................................................   Passed    0.04 sec
+        Start  37: Tiled perspective rendering preserves full-image rays and projection
+ 37/219 Test  #37: Tiled perspective rendering preserves full-image rays and projection ............................................................   Passed    0.04 sec
+        Start  38: Perspective zoom and drag preserve their world-space anchor
+ 38/219 Test  #38: Perspective zoom and drag preserve their world-space anchor .....................................................................   Passed    0.05 sec
+        Start  39: Original objects retain source climate restrictions and all five four-tile HQ selectors
+ 39/219 Test  #39: Original objects retain source climate restrictions and all five four-tile HQ selectors .........................................   Passed    0.04 sec
+        Start  40: Voxel fence families retain openings, heights and raised diagonal contact
+ 40/219 Test  #40: Voxel fence families retain openings, heights and raised diagonal contact .......................................................   Passed    0.25 sec
+        Start  41: Voxel foundations stay below playable surfaces and support every legal foundation
+ 41/219 Test  #41: Voxel foundations stay below playable surfaces and support every legal foundation ...............................................   Passed    0.58 sec
+        Start  42: Voxel hedge corner caps agree where perpendicular volumes overlap
+ 42/219 Test  #42: Voxel hedge corner caps agree where perpendicular volumes overlap ...............................................................   Passed    0.06 sec
+        Start  43: Tunnel entrances and lining leave actual Cab and vehicle clearances
+ 43/219 Test  #43: Tunnel entrances and lining leave actual Cab and vehicle clearances .............................................................   Passed    0.05 sec
+        Start  44: Airport source climate guards preserve distinct Toyland terminal artwork
+ 44/219 Test  #44: Airport source climate guards preserve distinct Toyland terminal artwork ........................................................   Passed    0.05 sec
+        Start  45: Airport climate bindings select only the active source and animation frame
+ 45/219 Test  #45: Airport climate bindings select only the active source and animation frame ......................................................   Passed    0.05 sec
+        Start  46: Tunnel directions connect paired portals without moving the track centre
+ 46/219 Test  #46: Tunnel directions connect paired portals without moving the track centre ........................................................   Passed    0.05 sec
+        Start  47: Captured contact wires retain grade, diagonal and bridge elevations
+ 47/219 Test  #47: Captured contact wires retain grade, diagonal and bridge elevations .............................................................   Passed    0.04 sec
+        Start  48: Electric collectors retain roof mounts while following both tunnel mouths
+ 48/219 Test  #48: Electric collectors retain roof mounts while following both tunnel mouths .......................................................   Passed    0.05 sec
+        Start  49: Underground labels are visible through mouths rather than through walls
+ 49/219 Test  #49: Underground labels are visible through mouths rather than through walls .........................................................   Passed    0.05 sec
+        Start  50: Tunnel scenery regions conservatively retain both mouths and crossing bounds
+ 50/219 Test  #50: Tunnel scenery regions conservatively retain both mouths and crossing bounds ....................................................   Passed    0.08 sec
+        Start  51: Industry source-climate replacements retain independent ground and body ownership
+ 51/219 Test  #51: Industry source-climate replacements retain independent ground and body ownership ...............................................   Passed    0.04 sec
+        Start  52: Industry climate bindings prefer explicit artwork without leaking shared source states
+ 52/219 Test  #52: Industry climate bindings prefer explicit artwork without leaking shared source states ..........................................   Passed    0.04 sec
+        Start  53: Toy-factory source children preserve physical press and conveyor motion
+ 53/219 Test  #53: Toy-factory source children preserve physical press and conveyor motion .........................................................   Passed    0.05 sec
+        Start  54: Bubble-generator children preserve construction absence and axial plunger travel
+ 54/219 Test  #54: Bubble-generator children preserve construction absence and axial plunger travel ................................................   Passed    0.04 sec
+        Start  55: Sugar-mine crossbar motion preserves source fill states and genuine child absences
+ 55/219 Test  #55: Sugar-mine crossbar motion preserves source fill states and genuine child absences ..............................................   Passed    0.04 sec
+        Start  56: Toffee cutter follows its inclined shaft and never treats sound markers as absence
+ 56/219 Test  #56: Toffee cutter follows its inclined shaft and never treats sound markers as absence ..............................................   Passed    0.04 sec
+        Start  57: Tunnel excavation removes intersecting terrain while retaining the shoulders and charts
+ 57/219 Test  #57: Tunnel excavation removes intersecting terrain while retaining the shoulders and charts .........................................   Passed    0.05 sec
+        Start  58: Voxel ground excavation keeps palette indices and clears the complete soil slab
+ 58/219 Test  #58: Voxel ground excavation keeps palette indices and clears the complete soil slab .................................................   Passed    0.07 sec
+        Start  59: Tunnel excavation respects translated roots and the ends of its segment
+ 59/219 Test  #59: Tunnel excavation respects translated roots and the ends of its segment .........................................................   Passed    0.05 sec
+        Start  60: Raised source-owner grounds keep above-vault relief through independent LOD tunnel cuts
+ 60/219 Test  #60: Raised source-owner grounds keep above-vault relief through independent LOD tunnel cuts .........................................   Passed    0.63 sec
+        Start  61: Rail routes join the upstream edge ports with continuous gauge
+ 61/219 Test  #61: Rail routes join the upstream edge ports with continuous gauge ..................................................................   Passed    0.04 sec
+        Start  62: Voxel rail heads follow straight bands and match adjoining diagonal tiles
+ 62/219 Test  #62: Voxel rail heads follow straight bands and match adjoining diagonal tiles .......................................................   Passed    0.24 sec
+        Start  63: Low bridge decks clear Cab paths and contain their pillar caps
+ 63/219 Test  #63: Low bridge decks clear Cab paths and contain their pillar caps ..................................................................   Passed    0.05 sec
+        Start  64: Rail assemblies sit on legal gameplay foundations at every detail level
+ 64/219 Test  #64: Rail assemblies sit on legal gameplay foundations at every detail level .........................................................   Passed    1.88 sec
+        Start  65: Bridge rail supports match the ramp deck in all four world orientations
+ 65/219 Test  #65: Bridge rail supports match the ramp deck in all four world orientations .........................................................   Passed    0.04 sec
+        Start  66: Maglev junction guide walls leave every running route open
+ 66/219 Test  #66: Maglev junction guide walls leave every running route open ......................................................................   Passed    0.16 sec
+        Start  67: Maglev junction slabs agree on colours at shared tile-port surfaces
+ 67/219 Test  #67: Maglev junction slabs agree on colours at shared tile-port surfaces .............................................................   Passed    0.11 sec
+        Start  68: Station platforms and mirrored halls retain train and Cab clearance
+ 68/219 Test  #68: Station platforms and mirrored halls retain train and Cab clearance .............................................................   Passed    0.05 sec
+        Start  69: Raised crop and rock details remain supported by all terrain slopes
+ 69/219 Test  #69: Raised crop and rock details remain supported by all terrain slopes .............................................................   Passed    0.10 sec
+        Start  70: Catenary joins retain contact height and long-span messenger continuity
+ 70/219 Test  #70: Catenary joins retain contact height and long-span messenger continuity .........................................................   Passed    0.04 sec
+        Start  71: Signal faces and semaphore swing follow the upstream direction convention
+ 71/219 Test  #71: Signal faces and semaphore swing follow the upstream direction convention .......................................................   Passed    0.04 sec
+        Start  72: Depot doors retain vehicle clearance and tracks stop inside the back wall
+ 72/219 Test  #72: Depot doors retain vehicle clearance and tracks stop inside the back wall .......................................................   Passed    0.22 sec
+        Start  73: Crossing equipment clears both road lanes and maglev gates obey the barred state
+ 73/219 Test  #73: Crossing equipment clears both road lanes and maglev gates obey the barred state ................................................   Passed    0.23 sec
+        Start  74: Road-stop shelters have real roofs and leave both vehicle lanes open
+ 74/219 Test  #74: Road-stop shelters have real roofs and leave both vehicle lanes open ............................................................   Passed    0.05 sec
+        Start  75: Road-stop ground samples the adjoining full tile without microtexture repetition
+ 75/219 Test  #75: Road-stop ground samples the adjoining full tile without microtexture repetition ................................................   Passed    0.06 sec
+        Start  76: Canal dikes preserve original runtime selection for static and resolved base-set IDs
+ 76/219 Test  #76: Canal dikes preserve original runtime selection for static and resolved base-set IDs ............................................   Passed    0.05 sec
+        Start  77: Canal soil masks preserve climate paint without a second flat masonry wall
+ 77/219 Test  #77: Canal soil masks preserve climate paint without a second flat masonry wall ......................................................   Passed    0.05 sec
+        Start  78: Tapered branches remain closed across bends and detail transitions
+ 78/219 Test  #78: Tapered branches remain closed across bends and detail transitions ..............................................................   Passed    0.04 sec
+        Start  79: Tree crowns and drooping boughs keep closed finite volumes at every LOD
+ 79/219 Test  #79: Tree crowns and drooping boughs keep closed finite volumes at every LOD .........................................................   Passed    0.05 sec
+        Start  80: Invalid branch controls cannot enter immutable mesh caches
+ 80/219 Test  #80: Invalid branch controls cannot enter immutable mesh caches ......................................................................   Passed    0.04 sec
+        Start  81: Palm leaflets and succulent blades have closed raised surfaces
+ 81/219 Test  #81: Palm leaflets and succulent blades have closed raised surfaces ..................................................................   Passed    0.05 sec
+        Start  82: Toyland turned crowns and individual gores are closed volumes
+ 82/219 Test  #82: Toyland turned crowns and individual gores are closed volumes ...................................................................   Passed    0.04 sec
+        Start  83: Turf blades, pebbles and rough-ground volumes follow every legal terrain slope
+ 83/219 Test  #83: Turf blades, pebbles and rough-ground volumes follow every legal terrain slope ..................................................   Passed    0.08 sec
+        Start  84: Natural ground borders preserve map height and voxel-compatible edge samples
+ 84/219 Test  #84: Natural ground borders preserve map height and voxel-compatible edge samples ....................................................   Passed    0.04 sec
+        Start  85: Middle-distance crop rows preserve growth height without unresolved stems
+ 85/219 Test  #85: Middle-distance crop rows preserve growth height without unresolved stems .......................................................   Passed    0.05 sec
+        Start  86: Automatic voxel LODs retain bounds thin parts palette and deterministic residency
+ 86/219 Test  #86: Automatic voxel LODs retain bounds thin parts palette and deterministic residency ...............................................   Passed    0.05 sec
+        Start  87: Bounded compressed restoration keeps exact vertex words and source fallback
+ 87/219 Test  #87: Bounded compressed restoration keeps exact vertex words and source fallback .....................................................   Passed    0.12 sec
+        Start  88: CPU voxel retirement pins scene copies and restores exact meshes at stable addresses
+ 88/219 Test  #88: CPU voxel retirement pins scene copies and restores exact meshes at stable addresses ............................................   Passed    0.04 sec
+        Start  89: Retained voxel sources release dense storage and reproduce exact diagnostic geometry
+ 89/219 Test  #89: Retained voxel sources release dense storage and reproduce exact diagnostic geometry ............................................   Passed    0.05 sec
+        Start  90: Background visibility jobs pin retired CPU voxel sources until their last read
+ 90/219 Test  #90: Background visibility jobs pin retired CPU voxel sources until their last read ..................................................   Passed    0.05 sec
+        Start  91: Background voxel visibility cancels stale cameras and owns its complete value snapshot
+ 91/219 Test  #91: Background voxel visibility cancels stale cameras and owns its complete value snapshot ..........................................   Passed    0.04 sec
+        Start  92: Parallel voxel preparation preserves the newest per-mesh snapshot and cancellation
+ 92/219 Test  #92: Parallel voxel preparation preserves the newest per-mesh snapshot and cancellation ..............................................   Passed    0.04 sec
+        Start  93: Shared visibility results survive cache eviction without copying or mutation
+ 93/219 Test  #93: Shared visibility results survive cache eviction without copying or mutation ....................................................   Passed    0.04 sec
+        Start  94: Idle visibility workers release cancelled camera results without another request
+ 94/219 Test  #94: Idle visibility workers release cancelled camera results without another request ................................................   Passed    0.04 sec
+        Start  95: Conservative voxel pixel bounds retain projected triangle sample coverage
+ 95/219 Test  #95: Conservative voxel pixel bounds retain projected triangle sample coverage .......................................................   Passed    0.06 sec
+        Start  96: Indexed visible voxel streams preserve corners, instance identity and chunk resets
+ 96/219 Test  #96: Indexed visible voxel streams preserve corners, instance identity and chunk resets ..............................................   Passed    0.04 sec
+        Start  97: Packed voxel meshes retain every vertex bit, primitive order and signed normals
+ 97/219 Test  #97: Packed voxel meshes retain every vertex bit, primitive order and signed normals .................................................   Passed    0.06 sec
+        Start  98: Packed voxel meshes refuse nonrepresentable attributes and oversized layouts
+ 98/219 Test  #98: Packed voxel meshes refuse nonrepresentable attributes and oversized layouts ....................................................   Passed    0.04 sec
+        Start  99: Packed voxel volumes retain every cell, face colour and physical bound
+ 99/219 Test  #99: Packed voxel volumes retain every cell, face colour and physical bound ..........................................................   Passed    0.04 sec
+        Start 100: Voxel surface skipping bounds agree with independent exhaustive cell distances
+100/219 Test #100: Voxel surface skipping bounds agree with independent exhaustive cell distances ..................................................   Passed    0.05 sec
+        Start 101: Voxel rays preserve all six faces, openings and inside-volume backface rules
+101/219 Test #101: Voxel rays preserve all six faces, openings and inside-volume backface rules ....................................................   Passed    0.04 sec
+        Start 102: Voxel front proxies retain mesh fallback when the eye or near plane intersects their bounds
+102/219 Test #102: Voxel front proxies retain mesh fallback when the eye or near plane intersects their bounds .....................................   Passed    0.04 sec
+        Start 103: Voxel ray traversal agrees with independent exposed-triangle intersections
+103/219 Test #103: Voxel ray traversal agrees with independent exposed-triangle intersections ......................................................   Passed    0.04 sec
+        Start 104: Voxel vehicle climate overrides preserve shared cargo pairs without cross-climate leakage
+104/219 Test #104: Voxel vehicle climate overrides preserve shared cargo pairs without cross-climate leakage .......................................   Passed    0.04 sec
+        Start 105: Original train voxel bodies retain source proportions without overlapping map-step couplings
+105/219 Test #105: Original train voxel bodies retain source proportions without overlapping map-step couplings ....................................   Passed    0.04 sec
+        Start 106: Pitched train instances preserve physical lengths, rail support and outward normals
+106/219 Test #106: Pitched train instances preserve physical lengths, rail support and outward normals .............................................   Passed    0.04 sec
+        Start 107: Pitched collectors retain every roof mount while independently meeting their wire
+107/219 Test #107: Pitched collectors retain every roof mount while independently meeting their wire ...............................................   Passed    0.04 sec
+        Start 108: Independent source-owner LODs retain exact air boundaries at every automatic factor
+108/219 Test #108: Independent source-owner LODs retain exact air boundaries at every automatic factor .............................................   Passed    0.08 sec
+        Start 109: Original lock callbacks retain all48 separate owners and complete climate fallback
+109/219 Test #109: Original lock callbacks retain all48 separate owners and complete climate fallback ..............................................   Passed    0.04 sec
+        Start 110: Doubled lock terrain lifts columns without stretching owners and restores exact supported LODs
+110/219 Test #110: Doubled lock terrain lifts columns without stretching owners and restores exact supported LODs ..................................   Passed    2.33 sec
+        Start 111: Original river relief requires all four distinct slopes in the actual climate
+111/219 Test #111: Original river relief requires all four distinct slopes in the actual climate ...................................................   Passed    0.05 sec
+        Start 112: River substitution retains redirected custom changed flagged and partial original selectors
+112/219 Test #112: River substitution retains redirected custom changed flagged and partial original selectors .....................................   Passed    0.04 sec
+        Start 113: Independent river material preserves all five original components and explicit absences
+113/219 Test #113: Independent river material preserves all five original components and explicit absences .........................................   Passed    0.04 sec
+        Start 114: River relief supports original columns and retains independent air paint and exact LOD restoration
+114/219 Test #114: River relief supports original columns and retains independent air paint and exact LOD restoration ..............................   Passed    2.80 sec
+        Start 115: Voxel meshes merge colour-compatible faces and eliminate internal boundaries
+115/219 Test #115: Voxel meshes merge colour-compatible faces and eliminate internal boundaries ....................................................   Passed    0.05 sec
+        Start 116: Coplanar voxel colour borders retain cell diagonals while interiors still merge
+116/219 Test #116: Coplanar voxel colour borders retain cell diagonals while interiors still merge .................................................   Passed    0.05 sec
+        Start 117: Voxel silhouettes retain reference unit diagonals on anisotropic grids
+117/219 Test #117: Voxel silhouettes retain reference unit diagonals on anisotropic grids ..........................................................   Passed    0.05 sec
+        Start 118: Voxel cavities and thin parts keep exact volume, face normals and palette cells
+118/219 Test #118: Voxel cavities and thin parts keep exact volume, face normals and palette cells .................................................   Passed    0.05 sec
+        Start 119: Voxel animation observers select actual palette texels without shifting neighbours
+119/219 Test #119: Voxel animation observers select actual palette texels without shifting neighbours ..............................................   Passed    0.04 sec
+        Start 120: Voxel material partitions keep their shared occupied boundaries hidden
+120/219 Test #120: Voxel material partitions keep their shared occupied boundaries hidden ..........................................................   Passed    0.05 sec
+        Start 121: Shared voxel edge cuts keep coloured steps free of raster T-junctions
+121/219 Test #121: Shared voxel edge cuts keep coloured steps free of raster T-junctions ...........................................................   Passed    0.05 sec
+        Start 122: Voxel input bounds prevent malformed grids and silent clipped authoring
+122/219 Test #122: Voxel input bounds prevent malformed grids and silent clipped authoring .........................................................   Passed    0.04 sec
+        Start 123: Greedy voxel rectangles cover exactly the authored exterior material cells
+123/219 Test #123: Greedy voxel rectangles cover exactly the authored exterior material cells ......................................................   Passed    0.05 sec
+        Start 124: AlternatingIterator tests
+124/219 Test #124: AlternatingIterator tests .......................................................................................................   Passed    0.04 sec
+        Start 125: SetBitIterator tests
+125/219 Test #125: SetBitIterator tests ............................................................................................................   Passed    0.05 sec
+        Start 126: EnumOverOptimisation_BoundsCheck
+126/219 Test #126: EnumOverOptimisation_BoundsCheck ................................................................................................   Passed    0.04 sec
+        Start 127: EnumOverOptimisation_Bitmask
+127/219 Test #127: EnumOverOptimisation_Bitmask ....................................................................................................   Passed    0.04 sec
+        Start 128: FlatSet - basic
+128/219 Test #128: FlatSet - basic .................................................................................................................   Passed    0.04 sec
+        Start 129: History Rotation and Reporting tests
+129/219 Test #129: History Rotation and Reporting tests ............................................................................................   Passed    0.04 sec
+        Start 130: PartialPixelSlopeAdditionTest - A one corner slope, plus the opposite three corner slope results in a flat but elevated slope
+130/219 Test #130: PartialPixelSlopeAdditionTest - A one corner slope, plus the opposite three corner slope results in a flat but elevated slope ...   Passed    0.04 sec
+        Start 131: PartialPixelSlopeAdditionTest - Diagonal slopes with their opposite slope result in a flat but elevated slope
+131/219 Test #131: PartialPixelSlopeAdditionTest - Diagonal slopes with their opposite slope result in a flat but elevated slope ...................   Passed    0.04 sec
+        Start 132: PartialPixelSlopeAdditionTest - Half tile slopes with their opposite half tile slope result in a flat but elevated slope
+132/219 Test #132: PartialPixelSlopeAdditionTest - Half tile slopes with their opposite half tile slope result in a flat but elevated slope ........   Passed    0.04 sec
+        Start 133: PartialPixelSlopeAdditionTest - Two opposite one corner slopes result in the two corner slope with opposite corners
+133/219 Test #133: PartialPixelSlopeAdditionTest - Two opposite one corner slopes result in the two corner slope with opposite corners .............   Passed    0.04 sec
+        Start 134: PartialPixelSlopeAdditionTest - A steep slope is a one corner slope on top of a three corner slope
+134/219 Test #134: PartialPixelSlopeAdditionTest - A steep slope is a one corner slope on top of a three corner slope ..............................   Passed    0.04 sec
+        Start 135: PartialPixelSlopeAdditionTest - A half tile steep slope is a one corner half tile on top of a three corner slope
+135/219 Test #135: PartialPixelSlopeAdditionTest - A half tile steep slope is a one corner half tile on top of a three corner slope ................   Passed    0.04 sec
+        Start 136: PartialPixelTest - One corner up slopes - SLOPE_N
+136/219 Test #136: PartialPixelTest - One corner up slopes - SLOPE_N ...............................................................................   Passed    0.04 sec
+        Start 137: PartialPixelTest - One corner up slopes - SLOPE_E
+137/219 Test #137: PartialPixelTest - One corner up slopes - SLOPE_E ...............................................................................   Passed    0.05 sec
+        Start 138: PartialPixelTest - One corner up slopes - SLOPE_S
+138/219 Test #138: PartialPixelTest - One corner up slopes - SLOPE_S ...............................................................................   Passed    0.05 sec
+        Start 139: PartialPixelTest - One corner up slopes - SLOPE_W
+139/219 Test #139: PartialPixelTest - One corner up slopes - SLOPE_W ...............................................................................   Passed    0.04 sec
+        Start 140: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NE
+140/219 Test #140: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NE ....................................................................   Passed    0.05 sec
+        Start 141: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SE
+141/219 Test #141: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SE ....................................................................   Passed    0.06 sec
+        Start 142: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SW
+142/219 Test #142: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SW ....................................................................   Passed    0.05 sec
+        Start 143: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NW
+143/219 Test #143: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NW ....................................................................   Passed    0.05 sec
+        Start 144: PartialPixelTest - Two opposite corner up slopes - SLOPE_NS
+144/219 Test #144: PartialPixelTest - Two opposite corner up slopes - SLOPE_NS .....................................................................   Passed    0.04 sec
+        Start 145: PartialPixelTest - Two opposite corner up slopes - SLOPE_EW
+145/219 Test #145: PartialPixelTest - Two opposite corner up slopes - SLOPE_EW .....................................................................   Passed    0.04 sec
+        Start 146: PartialPixelTest - Three corner up slopes - SLOPE_ENW
+146/219 Test #146: PartialPixelTest - Three corner up slopes - SLOPE_ENW ...........................................................................   Passed    0.04 sec
+        Start 147: PartialPixelTest - Three corner up slopes - SLOPE_SEN
+147/219 Test #147: PartialPixelTest - Three corner up slopes - SLOPE_SEN ...........................................................................   Passed    0.04 sec
+        Start 148: PartialPixelTest - Three corner up slopes - SLOPE_WSE
+148/219 Test #148: PartialPixelTest - Three corner up slopes - SLOPE_WSE ...........................................................................   Passed    0.04 sec
+        Start 149: PartialPixelTest - Three corner up slopes - SLOPE_NWS
+149/219 Test #149: PartialPixelTest - Three corner up slopes - SLOPE_NWS ...........................................................................   Passed    0.04 sec
+        Start 150: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_N
+150/219 Test #150: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_N .....................................................................   Passed    0.04 sec
+        Start 151: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_E
+151/219 Test #151: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_E .....................................................................   Passed    0.04 sec
+        Start 152: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_S
+152/219 Test #152: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_S .....................................................................   Passed    0.04 sec
+        Start 153: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_W
+153/219 Test #153: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_W .....................................................................   Passed    0.04 sec
+        Start 154: PartialPixelTest - Steep slopes - SLOPE_STEEP_N
+154/219 Test #154: PartialPixelTest - Steep slopes - SLOPE_STEEP_N .................................................................................   Passed    0.04 sec
+        Start 155: PartialPixelTest - Steep slopes - SLOPE_STEEP_E
+155/219 Test #155: PartialPixelTest - Steep slopes - SLOPE_STEEP_E .................................................................................   Passed    0.04 sec
+        Start 156: PartialPixelTest - Steep slopes - SLOPE_STEEP_S
+156/219 Test #156: PartialPixelTest - Steep slopes - SLOPE_STEEP_S .................................................................................   Passed    0.04 sec
+        Start 157: PartialPixelTest - Steep slopes - SLOPE_STEEP_W
+157/219 Test #157: PartialPixelTest - Steep slopes - SLOPE_STEEP_W .................................................................................   Passed    0.04 sec
+        Start 158: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_N
+158/219 Test #158: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_N ......................................................   Passed    0.04 sec
+        Start 159: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_E
+159/219 Test #159: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_E ......................................................   Passed    0.04 sec
+        Start 160: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_S
+160/219 Test #160: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_S ......................................................   Passed    0.04 sec
+        Start 161: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_W
+161/219 Test #161: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_W ......................................................   Passed    0.04 sec
+        Start 162: DivideApproxTest - Negative
+162/219 Test #162: DivideApproxTest - Negative .....................................................................................................   Passed    0.04 sec
+        Start 163: DivideApproxTest, Divide
+163/219 Test #163: DivideApproxTest, Divide ........................................................................................................   Passed    0.04 sec
+        Start 164: IntSqrtTest - Zero
+164/219 Test #164: IntSqrtTest - Zero ..............................................................................................................   Passed    0.04 sec
+        Start 165: IntSqrtTest - FindSqRt
+165/219 Test #165: IntSqrtTest - FindSqRt ..........................................................................................................   Passed    0.04 sec
+        Start 166: ClampTo
+166/219 Test #166: ClampTo .........................................................................................................................   Passed    0.04 sec
+        Start 167: SoftClamp
+167/219 Test #167: SoftClamp .......................................................................................................................   Passed    0.04 sec
+        Start 168: StringBuilder - basic
+168/219 Test #168: StringBuilder - basic ...........................................................................................................   Passed    0.04 sec
+        Start 169: StringBuilder - binary
+169/219 Test #169: StringBuilder - binary ..........................................................................................................   Passed    0.04 sec
+        Start 170: StringBuilder - text
+170/219 Test #170: StringBuilder - text ............................................................................................................   Passed    0.04 sec
+        Start 171: StringConsumer - basic
+171/219 Test #171: StringConsumer - basic ..........................................................................................................   Passed    0.04 sec
+        Start 172: StringConsumer - binary8
+172/219 Test #172: StringConsumer - binary8 ........................................................................................................   Passed    0.04 sec
+        Start 173: StringConsumer - binary16
+173/219 Test #173: StringConsumer - binary16 .......................................................................................................   Passed    0.05 sec
+        Start 174: StringConsumer - binary32
+174/219 Test #174: StringConsumer - binary32 .......................................................................................................   Passed    0.04 sec
+        Start 175: StringConsumer - binary64
+175/219 Test #175: StringConsumer - binary64 .......................................................................................................   Passed    0.04 sec
+        Start 176: StringConsumer - utf8
+176/219 Test #176: StringConsumer - utf8 ...........................................................................................................   Passed    0.04 sec
+        Start 177: StringConsumer - conditions
+177/219 Test #177: StringConsumer - conditions .....................................................................................................   Passed    0.04 sec
+        Start 178: StringConsumer - ascii
+178/219 Test #178: StringConsumer - ascii ..........................................................................................................   Passed    0.04 sec
+        Start 179: StringConsumer - parse int
+179/219 Test #179: StringConsumer - parse int ......................................................................................................   Passed    0.04 sec
+        Start 180: StringConsumer - invalid int
+180/219 Test #180: StringConsumer - invalid int ....................................................................................................   Passed    0.04 sec
+        Start 181: StringConsumer - most negative
+181/219 Test #181: StringConsumer - most negative ..................................................................................................   Passed    0.04 sec
+        Start 182: InPlaceReplacement
+182/219 Test #182: InPlaceReplacement ..............................................................................................................   Passed    0.04 sec
+        Start 183: StrCompareIgnoreCase - std::string
+183/219 Test #183: StrCompareIgnoreCase - std::string ..............................................................................................   Passed    0.04 sec
+        Start 184: StrCompareIgnoreCase - std::string_view
+184/219 Test #184: StrCompareIgnoreCase - std::string_view .........................................................................................   Passed    0.04 sec
+        Start 185: StrEqualsIgnoreCase - std::string
+185/219 Test #185: StrEqualsIgnoreCase - std::string ...............................................................................................   Passed    0.04 sec
+        Start 186: StrEqualsIgnoreCase - std::string_view
+186/219 Test #186: StrEqualsIgnoreCase - std::string_view ..........................................................................................   Passed    0.04 sec
+        Start 187: StrStartsWithIgnoreCase - std::string
+187/219 Test #187: StrStartsWithIgnoreCase - std::string ...........................................................................................   Passed    0.04 sec
+        Start 188: StrStartsWithIgnoreCase - std::string_view
+188/219 Test #188: StrStartsWithIgnoreCase - std::string_view ......................................................................................   Passed    0.04 sec
+        Start 189: StrEndsWithIgnoreCase - std::string
+189/219 Test #189: StrEndsWithIgnoreCase - std::string .............................................................................................   Passed    0.04 sec
+        Start 190: StrEndsWithIgnoreCase - std::string_view
+190/219 Test #190: StrEndsWithIgnoreCase - std::string_view ........................................................................................   Passed    0.04 sec
+        Start 191: FormatArrayAsHex
+191/219 Test #191: FormatArrayAsHex ................................................................................................................   Passed    0.04 sec
+        Start 192: ConvertHexToBytes
+192/219 Test #192: ConvertHexToBytes ...............................................................................................................   Passed    0.04 sec
+        Start 193: StrTrimInPlace
+193/219 Test #193: StrTrimInPlace ..................................................................................................................   Passed    0.04 sec
+        Start 194: StrTrimView
+194/219 Test #194: StrTrimView .....................................................................................................................   Passed    0.04 sec
+        Start 195: FixSCCEncoded
+195/219 Test #195: FixSCCEncoded ...................................................................................................................   Passed    0.04 sec
+        Start 196: FixSCCEncodedNegative
+196/219 Test #196: FixSCCEncodedNegative ...........................................................................................................   Passed    0.04 sec
+        Start 197: EncodedString::ReplaceParam - positive
+197/219 Test #197: EncodedString::ReplaceParam - positive ..........................................................................................   Passed    0.04 sec
+        Start 198: EncodedString::ReplaceParam - negative
+198/219 Test #198: EncodedString::ReplaceParam - negative ..........................................................................................   Passed    0.04 sec
+        Start 199: Authentication_KeyExchangeOnly
+199/219 Test #199: Authentication_KeyExchangeOnly ..................................................................................................   Passed    0.04 sec
+        Start 200: Authentication_PAKE
+200/219 Test #200: Authentication_PAKE .............................................................................................................   Passed    0.04 sec
+        Start 201: Authentication_AuthorizedKey
+201/219 Test #201: Authentication_AuthorizedKey ....................................................................................................   Passed    0.04 sec
+        Start 202: Authentication_Combined
+202/219 Test #202: Authentication_Combined .........................................................................................................   Passed    0.05 sec
+        Start 203: Encryption handling
+203/219 Test #203: Encryption handling .............................................................................................................   Passed    0.04 sec
+        Start 204: Squirrel -> JSON conversion
+204/219 Test #204: Squirrel -> JSON conversion .....................................................................................................   Passed    0.04 sec
+        Start 205: JSON -> Squirrel conversion
+205/219 Test #205: JSON -> Squirrel conversion .....................................................................................................   Passed    0.04 sec
+        Start 206: WindowDesc - ini_key uniqueness
+206/219 Test #206: WindowDesc - ini_key uniqueness .................................................................................................   Passed    0.04 sec
+        Start 207: WindowDesc - ini_key validity
+207/219 Test #207: WindowDesc - ini_key validity ...................................................................................................   Passed    0.04 sec
+        Start 208: WindowDesc - NWidgetParts properly closed
+208/219 Test #208: WindowDesc - NWidgetParts properly closed .......................................................................................   Passed    0.04 sec
+        Start 209: WindowDesc - NWidgetPart validity
+209/219 Test #209: WindowDesc - NWidgetPart validity ...............................................................................................   Passed    0.04 sec
+        Start 210: SpiralTileSequence - minimum
+210/219 Test #210: SpiralTileSequence - minimum ....................................................................................................   Passed    0.04 sec
+        Start 211: SpiralTileSequence - odd
+211/219 Test #211: SpiralTileSequence - odd ........................................................................................................   Passed    0.04 sec
+        Start 212: SpiralTileSequence - even
+212/219 Test #212: SpiralTileSequence - even .......................................................................................................   Passed    0.04 sec
+        Start 213: SpiralTileSequence - zero hole
+213/219 Test #213: SpiralTileSequence - zero hole ..................................................................................................   Passed    0.04 sec
+        Start 214: SpiralTileSequence - normal hole
+214/219 Test #214: SpiralTileSequence - normal hole ................................................................................................   Passed    0.04 sec
+        Start 215: Utf8View - empty
+215/219 Test #215: Utf8View - empty ................................................................................................................   Passed    0.04 sec
+        Start 216: Utf8View - invalid
+216/219 Test #216: Utf8View - invalid ..............................................................................................................   Passed    0.04 sec
+        Start 217: Utf8View - iterate
+217/219 Test #217: Utf8View - iterate ..............................................................................................................   Passed    0.04 sec
+        Start 218: regression_regression
+218/219 Test #218: regression_regression ...........................................................................................................   Passed   17.22 sec
+        Start 219: regression_stationlist
+219/219 Test #219: regression_stationlist ..........................................................................................................   Passed    0.47 sec
+
+100% tests passed, 0 tests failed out of 219
+
+Total Test time (real) =  37.51 sec

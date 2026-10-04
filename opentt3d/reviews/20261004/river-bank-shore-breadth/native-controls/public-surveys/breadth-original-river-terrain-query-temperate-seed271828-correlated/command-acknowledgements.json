@@ -1,0 +1,18 @@
+[
+  {
+    "command": "unpause",
+    "acknowledgement": "Game unpaused"
+  },
+  {
+    "command": "start_ai \"OpenTT3D Original River Survey\" \"survey_token=1992553537\"",
+    "acknowledgement": "RIVER_SURVEY_READY {\"map_width\":128,\"map_height\":128,\"river_tiles\":380,\"survey_token\":1992553537,\"read_only_tile_queries\":true,\"public_terrain_type_queries\":true}"
+  },
+  {
+    "command": "pause",
+    "acknowledgement": "Game paused"
+  },
+  {
+    "command": "save river-survey",
+    "acknowledgement": "Map successfully saved to 'river-survey.sav'."
+  }
+]

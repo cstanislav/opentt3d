@@ -1,0 +1,155 @@
+[
+  {
+    "climate": "temperate",
+    "seed": 271828,
+    "output": "build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated",
+    "command": [
+      "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python",
+      "tools/opentt3d/fixture_rivers.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-terrain-query-temperate-seed271828-correlated",
+      "--climate",
+      "temperate",
+      "--seed",
+      "271828",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-temperate/save/river-survey.sav",
+      "--timeout",
+      "300"
+    ],
+    "reused_fresh_correlated_arctic_run": false,
+    "original_tile_slope_height_rows_exact": true,
+    "fixture_sha256": "ed171bb1fdcd4900553c1999388a280daddc6c1d9a60f38a35da62f726da6b7d",
+    "input_original_save_sha256": "cbdc06b16885a472d56dbd69d4be4a764a00e0e573310b2a00c49246a3decf80",
+    "original_save_sha256": "f3f19f120dc96b3786f7376dbd24f2787dc19c6b73691abd697cb3ec814f9078",
+    "public_terrain_type_counts": {
+      "0": 380
+    },
+    "actual_command_acknowledgements_sha256": "cacee0f9d2598278192bd1ee331774ebc448bb8db952922699e327175467402f",
+    "survey_token": 1992553537,
+    "complete_terrain_type_or_snowline_coverage": false,
+    "quality_approved": false
+  },
+  {
+    "climate": "arctic",
+    "seed": 271828,
+    "output": "build-macos/breadth-original-river-terrain-query-arctic-reload-correlated",
+    "command": null,
+    "reused_fresh_correlated_arctic_run": true,
+    "original_tile_slope_height_rows_exact": true,
+    "fixture_sha256": "bf8893d644bdc252494c374dfb45bbeacfed5a99fe88d9d99e5a3e216e470233",
+    "input_original_save_sha256": "e2a9f1588987425a64e1e785a76b7f9d59dd3ee2d87b7d396691b768978874bb",
+    "original_save_sha256": "92a130b149fb51efbd6d60a044dec8e6cd01ec235b126ab3cbf80b2f990d95c5",
+    "public_terrain_type_counts": {
+      "3": 46,
+      "0": 353
+    },
+    "actual_command_acknowledgements_sha256": "48b702a483d00f048c32f709fa975c0903b7070e68fbe225a7c198a5b9949522",
+    "survey_token": 683582092,
+    "complete_terrain_type_or_snowline_coverage": false,
+    "quality_approved": false
+  },
+  {
+    "climate": "tropic",
+    "seed": 271828,
+    "output": "build-macos/breadth-original-river-terrain-query-tropic-seed271828-correlated",
+    "command": [
+      "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python",
+      "tools/opentt3d/fixture_rivers.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-terrain-query-tropic-seed271828-correlated",
+      "--climate",
+      "tropic",
+      "--seed",
+      "271828",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-tropic/save/river-survey.sav",
+      "--timeout",
+      "300"
+    ],
+    "reused_fresh_correlated_arctic_run": false,
+    "original_tile_slope_height_rows_exact": true,
+    "fixture_sha256": "84f60e9d2b3b8966ae0c2115e7269d5b3cd8163a11cd945289621ad413693ac5",
+    "input_original_save_sha256": "4f203ed7e83a067a348fdbd11eb47a898e951294b72d98980308284f98321b8e",
+    "original_save_sha256": "77c99f3da33d4a8ac08c197b197ac9374c5fee39f2636d905fdc7b31e9eb10b0",
+    "public_terrain_type_counts": {
+      "2": 4,
+      "0": 73
+    },
+    "actual_command_acknowledgements_sha256": "54f35f3de2be0faf0592d8426eb834705728ffbe67f7c5e46c7e4dfc389d23ad",
+    "survey_token": 994062848,
+    "complete_terrain_type_or_snowline_coverage": false,
+    "quality_approved": false
+  },
+  {
+    "climate": "toyland",
+    "seed": 271828,
+    "output": "build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated",
+    "command": [
+      "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python",
+      "tools/opentt3d/fixture_rivers.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated",
+      "--climate",
+      "toyland",
+      "--seed",
+      "271828",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-toyland/save/river-survey.sav",
+      "--timeout",
+      "300"
+    ],
+    "reused_fresh_correlated_arctic_run": false,
+    "original_tile_slope_height_rows_exact": true,
+    "fixture_sha256": "2aaf7afc5330f35d97fe305c453ab119e3d5ca9293af3df92322f5e5b2c2ca91",
+    "input_original_save_sha256": "7314c0ec0f7da896232d44ad342529f8107555982956ce2428a5da4a3ae34960",
+    "original_save_sha256": "6ae3f8862ddc623f1dda23632f91e45b2fb948b0bd4ff5e873c6ed4f84f07331",
+    "public_terrain_type_counts": {
+      "0": 380
+    },
+    "actual_command_acknowledgements_sha256": "36401e39dc9f67cd981e9dd5a169c3cf275a5e7a83c7b1a79a7baa56a13f4206",
+    "survey_token": 146378629,
+    "complete_terrain_type_or_snowline_coverage": false,
+    "quality_approved": false
+  },
+  {
+    "climate": "tropic",
+    "seed": 161803,
+    "output": "build-macos/breadth-original-river-terrain-query-tropic-seed161803-correlated",
+    "command": [
+      "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python",
+      "tools/opentt3d/fixture_rivers.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-terrain-query-tropic-seed161803-correlated",
+      "--climate",
+      "tropic",
+      "--seed",
+      "161803",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-tropic-seed161803/save/river-survey.sav",
+      "--timeout",
+      "300"
+    ],
+    "reused_fresh_correlated_arctic_run": false,
+    "original_tile_slope_height_rows_exact": true,
+    "fixture_sha256": "5e2b61809084e05974ad42e7787124003ce8a73d5e955bda3d48b61e29321e23",
+    "input_original_save_sha256": "636a1a50bb84e28e00953c715592b94927ffb6a59b6c32b51a89bde030f0c61d",
+    "original_save_sha256": "179bd9987c8a872c472a16d390b3f301eba6a2d3c620c91e34e81b9b40764233",
+    "public_terrain_type_counts": {
+      "2": 95,
+      "0": 135
+    },
+    "actual_command_acknowledgements_sha256": "9862168edb4ea46dca84d19558b409b8a96b34f68b69a4c7afcd19f3848ae6e7",
+    "survey_token": 1620215652,
+    "complete_terrain_type_or_snowline_coverage": false,
+    "quality_approved": false
+  }
+]

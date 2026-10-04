@@ -1544,6 +1544,15 @@
     "hq_castle_door": [56,54,54,58,28,58],
     "hq_castle_path": [58,54,56,58,54,58],
     "hq_flag_pole": [56,54,54,58,28,58],
+    "hq_asphalt": [4,2,3,5,2,4],
+    "hq_asphalt_grain": [5,3,4,6,2,5],
+    "hq_concrete": [12,9,10,13,8,12],
+    "hq_concrete_grain": [13,10,11,14,8,11],
+    "hq_office_frame": [14,11,12,15,10,14],
+    "hq_office_glass": [131,128,129,130,128,131],
+    "hq_office_flag_pole": [12,10,11,14,9,13],
+    "hq_courtyard_grass": [85,83,84,86,82,85],
+    "hq_courtyard_grass_grain": [87,84,85,88,82,87],
     "object_white": [11,9,10,12,8,14],
     "object_white_grain": [12,10,11,13,9,15],
     "object_brick": [76,73,74,77,73,78],
@@ -9956,9 +9965,607 @@
       ["repeat",[0,8,0],7,[["box","hq_castle_stone",58,4,14,61,7,18]]],
       ["scatter_paint","hq_castle_stone_grain",9,2607,3,3,1,61,61,18,"hq_castle_stone",[2,2,3]],
       ["box","hq_castle_path",28,56,0,36,64,1]
+    ],
+    "hq_ground_source_region": [
+      ["clip_plane",[2,0,-1],0,"greater_equal"], ["clip_plane",[0,2,-1],0,"greater_equal"]
+    ],
+    "hq_body_source_region": [
+      ["clip_any",[[[2,0,-1],0,"less"],[[0,2,-1],0,"less"]]]
+    ],
+    "hq_body_source_north": [
+      ["clip_plane",[-1,1,0],-32,"greater_equal"], ["clip_plane",[-1,1,0],33,"less"]
+    ],
+    "hq_body_source_west": [["clip_plane",[-1,1,0],-32,"less"]],
+    "hq_body_source_east": [["clip_plane",[-1,1,0],33,"greater_equal"]],
+    "hq_large_east_brick_column": [
+      ["box","hq_brick",15,47,31,16,48,69],
+      ["scatter_paint","hq_brick_grain",5,2619,15,47,31,16,48,69,"hq_brick",[1,1,3]],
+      ["box","hq_company_roof",15,47,69,16,48,71],
+      ["scatter_paint","hq_company_roof_grain",4,2619,15,47,69,16,48,71,"hq_company_roof",[1,1,1]]
+    ],
+    "hq_bed_temperate": [["scatter_paint","hq_grass_temperate",3,2616,0,0,0,64,64,1,"hq_soil",[1,1,1]]],
+    "hq_bed_arctic": [["scatter_paint","hq_grass_arctic",3,2616,0,0,0,64,64,1,"hq_soil",[1,1,1]]],
+    "hq_bed_tropic": [["scatter_paint","hq_grass_tropic",3,2616,0,0,0,64,64,1,"hq_soil",[1,1,1]]],
+    "hq_medium_compound_temperate": [["use","hq_medium_site"],["use","hq_bed_temperate"],["use","hq_medium_office"],["use","hq_medium_shed"],["use","hq_medium_flag"]],
+    "hq_medium_compound_arctic": [["use","hq_medium_site"],["use","hq_bed_arctic"],["use","hq_medium_office"],["use","hq_medium_shed"],["use","hq_medium_flag"]],
+    "hq_medium_compound_tropic": [["use","hq_medium_site"],["use","hq_bed_tropic"],["use","hq_medium_office"],["use","hq_medium_shed"],["use","hq_medium_flag"]],
+    "hq_medium_compound_toyland": [["use","hq_castle_courtyard_site"],["use","hq_castle_medium_keep"],["use","hq_castle_corner_flags"]],
+    "hq_medium_ground_base_temperate": [["use","hq_medium_site"],["use","hq_bed_temperate"],["box","hq_concrete",26,29,0,31,33,1]],
+    "hq_medium_ground_base_arctic": [["use","hq_medium_site"],["use","hq_bed_arctic"],["box","hq_concrete",26,29,0,31,33,1]],
+    "hq_medium_ground_base_tropic": [["use","hq_medium_site"],["use","hq_bed_tropic"],["box","hq_concrete",26,29,0,31,33,1]],
+    "hq_medium_ground_source_region": [
+      ["erase",61,1,3,63,2,7], ["erase",61,2,5,63,3,7],
+      ["erase",1,33,3,2,63,7], ["erase",2,33,5,3,63,7]
+    ],
+    "hq_medium_north_ground_office": [
+      ["use","hq_medium_office"], ["erase",14,13,27,38,14,28],
+      ["erase",32,0,0,64,64,1], ["erase",0,32,0,32,64,1]
+    ],
+    "hq_medium_tile_owner_north": [["clip_plane",[1,0,0],32,"less"],["clip_plane",[0,1,0],32,"less"]],
+    "hq_medium_tile_owner_west": [["clip_plane",[1,0,0],32,"greater_equal"],["clip_plane",[0,1,0],32,"less"]],
+    "hq_medium_tile_owner_east": [["clip_plane",[1,0,0],32,"less"],["clip_plane",[0,1,0],32,"greater_equal"]],
+    "hq_medium_tile_owner_south": [["clip_plane",[1,0,0],32,"greater_equal"],["clip_plane",[0,1,0],32,"greater_equal"]],
+    "hq_medium_north_source_region": [
+      ["clip_plane",[1,0,0],14,"greater_equal"], ["clip_plane",[1,0,0],38,"less"],
+      ["clip_plane",[0,1,0],13,"greater_equal"], ["clip_plane",[0,1,0],14,"less"],
+      ["clip_plane",[0,0,1],27,"greater_equal"], ["clip_plane",[0,0,1],28,"less"]
+    ],
+    "hq_medium_west_source_region": [
+      ["clip_plane",[1,0,0],61,"greater_equal"], ["clip_plane",[1,0,0],63,"less"],
+      ["clip_plane",[0,1,0],1,"greater_equal"], ["clip_plane",[0,1,0],3,"less"],
+      ["clip_plane",[0,0,1],7,"less"], ["clip_plane",[0,2,-1],0,"less"]
+    ],
+    "hq_medium_east_source_region": [
+      ["clip_plane",[1,0,0],1,"greater_equal"], ["clip_plane",[1,0,0],3,"less"],
+      ["clip_plane",[0,1,0],33,"greater_equal"], ["clip_plane",[0,1,0],63,"less"],
+      ["clip_plane",[0,0,1],7,"less"], ["clip_plane",[2,0,-1],0,"less"]
+    ],
+    "hq_large_compound_temperate": [["use","hq_large_site"],["use","hq_bed_temperate"],["use","hq_large_office"],["use","hq_large_flag"]],
+    "hq_large_compound_arctic": [["use","hq_large_site"],["use","hq_bed_arctic"],["use","hq_large_office"],["use","hq_large_flag"]],
+    "hq_large_compound_tropic": [["use","hq_large_site"],["use","hq_bed_tropic"],["use","hq_large_office"],["use","hq_large_flag"]],
+    "hq_large_compound_toyland": [["use","hq_castle_courtyard_site"],["use","hq_castle_large_keep"],["use","hq_castle_front_towers"]],
+    "hq_huge_compound_temperate": [["use","hq_huge_site"],["use","hq_bed_temperate"],["use","hq_huge_office"],["use","hq_huge_flag"]],
+    "hq_huge_compound_arctic": [["use","hq_huge_site"],["use","hq_bed_arctic"],["use","hq_huge_office"],["use","hq_huge_flag"]],
+    "hq_huge_compound_tropic": [["use","hq_huge_site"],["use","hq_bed_tropic"],["use","hq_huge_office"],["use","hq_huge_flag"]],
+    "hq_huge_compound_toyland": [["use","hq_castle_courtyard_site"],["use","hq_castle_large_keep"],["use","hq_castle_huge_extension"],["use","hq_castle_front_towers"]],
+    "hq_medium_site": [
+      ["box","hq_concrete",0,0,0,64,64,1],
+      ["scatter_paint","hq_concrete_grain",4,2611,0,0,0,64,64,1,"hq_concrete",[1,1,1]],
+      ["box","hq_asphalt",6,36,0,30,60,1],
+      ["scatter_paint","hq_asphalt_grain",4,2613,6,36,0,30,60,1,"hq_asphalt",[1,1,1]],
+      ["box","hq_soil",34,34,0,60,60,1],
+      ["scatter_paint","hq_soil_grain",3,2617,34,34,0,60,60,1,"hq_soil",[1,1,1]],
+      ["box","hq_brick",61,1,1,63,63,7],
+      ["box","hq_brick",1,33,1,3,63,7],
+      ["box","hq_brick",1,61,1,6,63,7], ["box","hq_brick",30,61,1,63,63,7],
+      ["scatter_paint","hq_brick_grain",5,2614,0,0,1,64,64,7,"hq_brick",[2,2,1]]
+    ],
+    "hq_medium_office": [
+      ["box","hq_brick",15,15,1,37,27,21], ["box","hq_brick",15,27,1,27,37,21],
+      ["erase",17,17,2,35,25,21], ["erase",17,25,2,25,35,21],
+      ["box","hq_company_roof",14,14,21,38,28,25], ["box","hq_company_roof",14,28,21,28,38,25],
+      ["box","hq_office_frame",14,13,25,38,14,28], ["box","hq_office_frame",37,14,25,38,28,27],
+      ["box","hq_office_frame",13,14,25,14,38,28], ["box","hq_office_frame",14,37,25,28,38,27],
+      ["box","hq_office_frame",27,27,25,38,28,27], ["box","hq_office_frame",27,27,25,28,38,27],
+      ["scatter_paint","hq_brick_grain",5,2611,15,15,1,37,37,21,"hq_brick",[1,1,2]],
+      ["scatter_paint","hq_company_roof_grain",4,2612,14,14,21,38,38,25,"hq_company_roof",[1,1,1]],
+      ["repeat",[6,0,0],2,[["erase",17,35,5,21,38,17],["box","hq_office_glass",17,35,5,21,36,17]]],
+      ["repeat",[6,0,0],2,[["erase",28,25,5,32,28,17],["box","hq_office_glass",28,25,5,32,26,17]]],
+      ["erase",35,17,5,38,22,17], ["box","hq_office_glass",35,17,5,36,22,17],
+      ["erase",25,29,1,28,33,18], ["box","hq_company_fence",25,29,1,26,33,18],
+      ["box","hq_concrete",26,29,0,31,33,2]
+    ],
+    "hq_medium_shed": [
+      ["box","hq_brick",43,9,1,59,25,10], ["erase",45,11,1,57,23,10],
+      ["gable","hq_shed_roof",42,8,9,60,26,16,"y"],
+      ["repeat",[3,0,0],6,[["paint","hq_shed_roof_rib",42,8,9,43,26,16]]],
+      ["erase",47,23,1,55,26,8], ["box","hq_castle_shadow",47,23,1,55,24,8]
+    ],
+    "hq_medium_flag": [
+      ["box","hq_concrete",24,44,1,29,49,2], ["box","hq_office_flag_pole",26,46,2,27,47,37],
+      ["box","hq_castle_flag",26,47,27,27,56,36], ["erase",26,54,35,27,56,36]
+    ],
+    "hq_large_site": [
+      ["box","hq_concrete",0,0,0,64,64,1],
+      ["scatter_paint","hq_concrete_grain",4,2618,0,0,0,64,64,1,"hq_concrete",[1,1,1]],
+      ["box","hq_asphalt",32,32,0,61,61,1],
+      ["scatter_paint","hq_asphalt_grain",4,2624,32,32,0,61,61,1,"hq_asphalt",[1,1,1]],
+      ["box","hq_soil",44,13,0,57,26,1],
+      ["box","hq_brick",1,1,1,63,3,7], ["box","hq_brick",1,1,1,3,63,7],
+      ["box","hq_brick",61,1,1,63,63,7],
+      ["box","hq_brick",1,61,1,48,63,7], ["box","hq_brick",61,61,1,63,63,7],
+      ["scatter_paint","hq_brick_grain",5,2621,0,0,1,64,64,7,"hq_brick",[2,2,1]]
+    ],
+    "hq_large_office": [
+      ["box","hq_brick",15,21,1,42,48,69], ["erase",17,23,2,40,46,69],
+      ["scatter_paint","hq_brick_grain",5,2619,15,21,1,42,48,69,"hq_brick",[1,1,3]],
+      ["repeat",[0,0,29],2,[["repeat",[5,0,0],5,[["erase",17,46,7,20,49,32],["box","hq_office_glass",17,46,7,20,47,32],
+        ["box","hq_concrete",16,47,6,17,49,33]]]]],
+      ["repeat",[0,0,29],2,[["repeat",[0,5,0],5,[["erase",40,23,7,43,26,32],["box","hq_office_glass",40,23,7,41,26,32],
+        ["box","hq_concrete",41,22,6,43,23,33]]]]],
+      ["box","hq_company_roof",14,20,69,43,49,71], ["scatter_paint","hq_company_roof_grain",4,2619,14,20,69,43,49,71,"hq_company_roof",[1,1,1]],
+      ["box","hq_brick",14,20,69,43,21,74], ["box","hq_brick",14,48,69,43,49,74],
+      ["box","hq_brick",14,20,69,15,49,74], ["box","hq_brick",42,20,69,43,49,74],
+      ["box","hq_brick",25,31,71,32,38,78], ["erase",26,32,72,31,37,78],
+      ["box","hq_company_roof",26,32,72,31,37,73],
+      ["box","hq_concrete",30,36,73,31,37,80],
+      ["erase",27,46,1,33,49,19], ["box","hq_office_glass",27,46,1,33,47,19],
+      ["box","hq_company_roof",24,47,20,36,57,22],
+      ["box","hq_concrete",25,54,1,26,56,20], ["box","hq_concrete",34,54,1,35,56,20],
+      ["box","hq_concrete",25,48,0,35,58,1]
+    ],
+    "hq_large_flag": [
+      ["box","hq_concrete",48,18,1,53,23,2], ["box","hq_office_flag_pole",50,20,2,51,21,65],
+      ["box","hq_castle_flag",50,21,53,51,30,64], ["erase",50,28,63,51,30,64]
+    ],
+    "hq_huge_site": [
+      ["box","hq_concrete",0,0,0,64,64,1],
+      ["scatter_paint","hq_concrete_grain",4,2625,0,0,0,64,64,1,"hq_concrete",[1,1,1]],
+      ["box","hq_asphalt",6,6,0,61,61,1],
+      ["scatter_paint","hq_asphalt_grain",4,2631,6,6,0,61,61,1,"hq_asphalt",[1,1,1]],
+      ["box","hq_concrete",14,7,0,54,39,1],
+      ["scatter_paint","hq_concrete_grain",4,2625,14,7,0,54,39,1,"hq_concrete",[1,1,1]],
+      ["box","hq_soil",2,49,0,12,59,1], ["box","hq_soil",26,44,0,36,56,1], ["box","hq_soil",44,47,0,56,61,1],
+      ["box","hq_concrete",1,1,1,63,3,7], ["box","hq_concrete",1,1,1,3,63,7],
+      ["box","hq_concrete",61,1,1,63,63,7],
+      ["box","hq_concrete",1,61,1,35,63,7], ["box","hq_concrete",48,61,1,63,63,7],
+      ["scatter_paint","hq_concrete_grain",5,2628,0,0,1,64,64,7,"hq_concrete",[2,2,1]]
+    ],
+    "hq_huge_office": [
+      ["box","hq_brick",17,11,1,52,33,111], ["erase",19,13,2,50,31,111],
+      ["box","hq_company_roof",17,33,1,52,38,27], ["erase",19,31,2,50,36,27],
+      ["scatter_paint","hq_brick_grain",5,2626,17,11,1,52,33,111,"hq_brick",[1,1,3]],
+      ["repeat",[0,0,27],4,[["repeat",[6,0,0],6,[["erase",18,31,7,22,34,26],["box","hq_office_glass",18,31,7,22,32,26],
+        ["box","hq_office_frame",17,32,6,18,34,27],["box","hq_office_frame",22,32,6,23,34,27]]]]],
+      ["repeat",[0,0,27],4,[["repeat",[0,5,0],4,[["erase",50,12,7,53,16,26],["box","hq_office_glass",50,12,7,51,16,26],
+        ["box","hq_office_frame",51,11,6,53,12,27],["box","hq_office_frame",51,16,6,53,17,27]]]]],
+      ["box","hq_company_roof",16,10,111,53,34,113],
+      ["scatter_paint","hq_company_roof_grain",4,2626,16,10,111,53,34,113,"hq_company_roof",[1,1,1]],
+      ["box","hq_office_frame",16,10,111,53,11,116], ["box","hq_office_frame",16,33,111,53,34,116],
+      ["box","hq_office_frame",16,10,111,17,34,116], ["box","hq_office_frame",52,10,111,53,34,116],
+      ["box","hq_company_roof",16,33,27,53,39,29],
+      ["repeat",[6,0,0],6,[["erase",18,36,4,22,39,23],["box","hq_office_glass",18,36,4,22,37,23],
+        ["box","hq_office_frame",17,37,3,18,39,24],["box","hq_office_frame",22,37,3,23,39,24]]],
+      ["erase",30,36,1,36,39,24], ["box","hq_office_glass",30,36,1,36,37,24],
+      ["box","hq_concrete",29,37,0,37,42,1]
+    ],
+    "hq_huge_flag": [
+      ["box","hq_concrete",28,48,1,33,53,2], ["box","hq_office_flag_pole",30,50,2,31,51,71],
+      ["box","hq_castle_flag",30,51,59,31,60,70], ["erase",30,58,69,31,60,70]
+    ],
+    "hq_castle_courtyard_site": [
+      ["box","hq_concrete",0,0,0,64,64,1],
+      ["scatter_paint","hq_concrete_grain",4,2611,0,0,0,64,64,1,"hq_concrete",[1,1,1]],
+      ["box","hq_courtyard_grass",7,7,0,57,57,1],
+      ["scatter_paint","hq_courtyard_grass_grain",3,2617,7,7,0,57,57,1,"hq_courtyard_grass",[1,1,1]],
+      ["box","hq_castle_path",29,51,0,36,64,1],
+      ["box","hq_castle_stone",3,3,1,61,7,21], ["box","hq_castle_stone",3,3,1,7,61,21],
+      ["box","hq_castle_stone",57,3,1,61,61,21],
+      ["box","hq_castle_stone",3,57,1,29,61,21], ["box","hq_castle_stone",36,57,1,61,61,21],
+      ["repeat",[7,0,0],8,[["box","hq_castle_stone",3,3,21,6,7,26]]],
+      ["repeat",[0,7,0],8,[["box","hq_castle_stone",3,3,21,7,6,26]]],
+      ["repeat",[0,7,0],8,[["box","hq_castle_stone",57,3,21,61,6,26]]],
+      ["repeat",[7,0,0],4,[["box","hq_castle_stone",3,57,21,6,61,26]]],
+      ["repeat",[7,0,0],4,[["box","hq_castle_stone",36,57,21,39,61,26]]],
+      ["scatter_paint","hq_castle_stone_grain",7,2614,3,3,1,61,61,26,"hq_castle_stone",[1,1,3]]
+    ],
+    "hq_castle_medium_keep": [
+      ["box","hq_castle_stone",22,13,1,42,33,49], ["erase",24,15,2,40,31,49],
+      ["box","hq_castle_shadow",21,12,48,43,34,50],
+      ["hip","hq_castle_roof",21,12,50,43,34,81,10],
+      ["scatter_paint","hq_castle_stone_grain",7,2611,22,13,1,42,33,49,"hq_castle_stone",[1,1,3]],
+      ["repeat",[6,0,0],3,[["erase",24,31,29,26,34,44],["box","hq_castle_window",24,31,29,26,32,44]]],
+      ["repeat",[0,6,0],3,[["erase",40,15,29,43,17,44],["box","hq_castle_window",40,15,29,41,17,44]]],
+      ["erase",40,22,1,43,29,19],
+      ["repeat",[0,2,0],4,[["box","hq_castle_door",40,22,1,41,23,18]]],
+      ["box","hq_castle_door",40,22,8,41,29,10], ["box","hq_castle_door",40,22,15,41,29,17],
+      ["box","hq_flag_pole",32,23,80,33,24,91],
+      ["box","hq_castle_flag",32,14,84,33,23,90], ["erase",32,14,89,33,17,90]
+    ],
+    "hq_castle_corner_flags": [
+      ["box","hq_flag_pole",55,9,24,56,10,38], ["box","hq_castle_flag",56,9,29,64,10,37],
+      ["box","hq_flag_pole",9,55,24,10,56,38], ["box","hq_castle_flag",10,55,29,19,56,37],
+      ["box","hq_flag_pole",55,55,24,56,56,38], ["box","hq_castle_flag",56,55,29,64,56,37]
+    ],
+    "hq_castle_large_keep": [
+      ["box","hq_castle_stone",22,13,1,42,33,67], ["erase",24,15,2,40,31,67],
+      ["box","hq_castle_shadow",21,12,66,43,34,69],
+      ["hip","hq_castle_roof",21,12,69,43,34,104,10],
+      ["scatter_paint","hq_castle_stone_grain",7,2618,22,13,1,42,33,67,"hq_castle_stone",[1,1,3]],
+      ["repeat",[6,0,0],3,[["erase",24,31,42,26,34,59],["box","hq_castle_window",24,31,42,26,32,59]]],
+      ["repeat",[0,6,0],3,[["erase",40,15,42,43,17,59],["box","hq_castle_window",40,15,42,41,17,59]]],
+      ["erase",40,22,1,43,29,20],
+      ["repeat",[0,2,0],4,[["box","hq_castle_door",40,22,1,41,23,19]]],
+      ["box","hq_castle_door",40,22,9,41,29,11], ["box","hq_castle_door",40,22,16,41,29,18],
+      ["box","hq_flag_pole",32,23,103,33,24,116],
+      ["box","hq_castle_flag",32,14,108,33,23,115], ["erase",32,14,114,33,17,115],
+      ["box","hq_flag_pole",32,24,103,33,25,116],
+      ["box","hq_castle_flag",32,25,108,33,33,115], ["erase",32,31,114,33,33,115]
+    ],
+    "hq_castle_front_tower": [
+      ["lathe","hq_castle_stone",[5,5],[[1,5,2.5],[54,5,2.5]]],
+      ["lathe","hq_castle_shadow",[5,5],[[53,6,3],[57,6,3]]],
+      ["lathe","hq_castle_roof",[5,5],[[57,5,0],[72,0.75,0]]],
+      ["erase",7,3,35,11,5,50], ["box","hq_castle_window",7,3,35,8,5,50],
+      ["erase",3,7,35,5,11,50], ["box","hq_castle_window",3,7,35,5,8,50],
+      ["scatter_paint","hq_castle_stone_grain",7,2622,0,0,1,10,10,54,"hq_castle_stone",[1,1,3]],
+      ["box","hq_flag_pole",5,5,71,6,6,87], ["box","hq_castle_flag",0,5,79,5,6,86]
+    ],
+    "hq_castle_front_towers": [
+      ["use","hq_castle_front_tower",[47,7,0]], ["use","hq_castle_front_tower",[7,47,0]],
+      ["use","hq_castle_front_tower",[47,47,0]]
+    ],
+    "hq_castle_huge_extension": [
+      ["box","hq_castle_stone",22,31,1,42,43,61], ["erase",24,30,2,40,41,61],
+      ["hip","hq_castle_roof",21,31,61,43,44,76,6],
+      ["box","hq_castle_stone",30,33,1,38,41,94], ["erase",32,35,2,36,39,94],
+      ["box","hq_castle_shadow",29,32,93,39,42,96],
+      ["hip","hq_castle_roof",29,32,96,39,42,112,4],
+      ["erase",36,35,76,39,38,91], ["box","hq_castle_window",36,35,76,37,38,91],
+      ["erase",32,39,76,35,42,91], ["box","hq_castle_window",32,39,76,35,40,91],
+      ["box","hq_flag_pole",34,37,111,35,38,124],
+      ["box","hq_castle_flag",34,28,116,35,37,123], ["erase",34,28,122,35,31,123],
+      ["box","hq_castle_stone",26,46,1,34,54,126], ["erase",28,48,2,32,52,126],
+      ["box","hq_castle_shadow",25,45,125,35,55,129],
+      ["hip","hq_castle_roof",25,45,129,35,55,137,4],
+      ["erase",32,48,107,35,51,123], ["box","hq_castle_window",32,48,107,33,51,123],
+      ["erase",28,52,107,31,55,123], ["box","hq_castle_window",28,52,107,31,53,123],
+      ["box","hq_flag_pole",30,50,136,31,51,149],
+      ["box","hq_castle_flag",30,41,141,31,50,148], ["erase",30,41,147,31,44,148],
+      ["paint","hq_courtyard_grass",30,33,1,38,41,10],
+      ["paint","hq_courtyard_grass",22,31,1,42,43,4],
+      ["paint","hq_courtyard_grass",26,46,1,34,54,10]
     ]
   },
   "models": {
+    "hq_ground_huge_temperate_north": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 north ground2625 owns the lower white-framed/brick office relief and paving. Upper multi-storey roof/body2626 remains independently sorted; sort height60 is not an artwork dimension. All-angle/source/state/world fidelity is provisional.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_huge_temperate_west": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 west ground2629 independently owns planted soil/paving and lower office fragments, below separate tall facade/body2630.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_huge_temperate_east": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 east ground2627 retains the low company-coloured entrance wing and its true inset glazing/door, paving and separate white perimeter.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_huge_temperate_south": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 south ground2631 retains independently rooted paving, flag/plant-bed edge relief and lower white perimeter, without a manufactured south body.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_huge_temperate_north": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 north body2626 retains four physically separated white-framed glazing/brick storeys and company roof/parapet. Real interior/air and independently grounded entrance wing remain intact.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_body_source_region"],["use","hq_body_source_north"]]
+    },
+    "hq_body_huge_temperate_west": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 west body2630 owns the tall left office facade/roof edge, not a resized size3 wall or a duplicated whole compound.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_body_source_region"],["use","hq_body_source_west"]]
+    },
+    "hq_body_huge_temperate_east": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size4 east body2628 retains the white upper perimeter overlay independently of the ground-owned low entrance wing; original sequence origin is preserved.",
+      "ops":[["use","hq_huge_compound_temperate"],["use","hq_body_source_region"],["use","hq_body_source_east"]]
+    },
+    "hq_ground_huge_arctic_north": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size4 north ground2625 retains independent lower white-framed office relief and paving; no unforced upgraded/snow-world approval.",
+      "ops":[["use","hq_huge_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_huge_arctic_west": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size4 west ground2629 has distinct dry-climate planted soil and independently rooted paving/lower facade fragments.",
+      "ops":[["use","hq_huge_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_huge_arctic_east": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size4 east ground2627 keeps a genuinely low blue entrance wing, recessed glazing, original paving and ground/body separation.",
+      "ops":[["use","hq_huge_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_huge_arctic_south": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size4 south ground2631 preserves separately grounded paving/flag-bed/perimeter relief and the intentional absence of a body.",
+      "ops":[["use","hq_huge_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_huge_arctic_north": {"extends":"hq_body_huge_temperate_north","review_status":"work-in-progress","reference":"Arctic size4 north body2626 retains the same inspected original upper multi-storey office source, with independent climate/state review still required."},
+    "hq_body_huge_arctic_west": {"extends":"hq_body_huge_temperate_west","review_status":"work-in-progress","reference":"Arctic size4 west body2630 retains the same original tall left office source at its own sequence anchor."},
+    "hq_body_huge_arctic_east": {"extends":"hq_body_huge_temperate_east","review_status":"work-in-progress","reference":"Arctic size4 east body2628 retains the original independently sorted white perimeter overlay, not unrelated body art."},
+    "hq_ground_huge_tropic_north": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size4 north ground2625 keeps independent lower office/paving ownership; no natural upgraded/desert-world acceptance is inferred.",
+      "ops":[["use","hq_huge_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_huge_tropic_west": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size4 west ground2629 retains separate pale-green/soil beds, paving and lower office fragments below body2630.",
+      "ops":[["use","hq_huge_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_huge_tropic_east": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size4 east ground2627 keeps its low entrance wing, physical glazing recesses and independently owned pavement/perimeter.",
+      "ops":[["use","hq_huge_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_huge_tropic_south": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size4 south ground2631 independently retains pavement/flag-bed/perimeter relief; the original absent body is not filled.",
+      "ops":[["use","hq_huge_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_huge_tropic_north": {"extends":"hq_body_huge_temperate_north","review_status":"work-in-progress","reference":"Tropical size4 north body2626 retains the original upper multi-storey office source and independent climate binding, not an approved shortcut."},
+    "hq_body_huge_tropic_west": {"extends":"hq_body_huge_temperate_west","review_status":"work-in-progress","reference":"Tropical size4 west body2630 retains the original tall left facade/roof edge, with exact source sequence origin."},
+    "hq_body_huge_tropic_east": {"extends":"hq_body_huge_temperate_east","review_status":"work-in-progress","reference":"Tropical size4 east body2628 independently retains the original white perimeter overlay; no ground/body duplication."},
+    "hq_ground_huge_toyland_north": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 north ground2625 retains lower expanded keep, vines and curtain walls; the high keep, extra tall rear turret and four flags have separately sorted upper bodies.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_huge_toyland_west": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 west ground2629 owns lower tower/curtain-wall/courtyard relief, distinct from the ordinary office and prior three-tower castle stage.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_huge_toyland_east": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 east ground2627 retains separate lower right conical-turret base, real entrance and opaque courtyard paving.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_huge_toyland_south": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 south ground2631 retains the lower front turret, entrance path and curtain-wall/paving contact, without inventing a south body.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_huge_toyland_north": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 north body2626 retains the expanded upper keep and additional tall rear turret/flag. It has distinct physical geometry, not a reused size3 castle label.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_north"]]
+    },
+    "hq_body_huge_toyland_west": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 west body2630 retains independently anchored upper left conical tower/flag relief; its ground and central keep are never duplicated.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_west"]]
+    },
+    "hq_body_huge_toyland_east": {
+      "size":[64,64,160],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size4 east body2628 retains independently sorted upper right conical tower/flag relief at the original sequence anchor.",
+      "ops":[["use","hq_huge_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_east"]]
+    },
+    "hq_ground_large_temperate_north": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 north ground2618 independently owns lower red-brick office/window relief, entrance canopy/columns and paving. Body2619 retains the upper storeys/roof; table sort height50 is not the artwork dimension.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_large_temperate_west": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 west ground2622 retains a separate planted flag bed and lower red perimeter; separately sorted body2623 is not folded into ground.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_large_temperate_east": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 east ground2620 retains source-owned canopy/front wall fragments, paving and driveway below its independently sorted upper facade/perimeter.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_large_temperate_south": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 south ground2624 remains independent paving/drive/perimeter with no invented separate body or state override.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_large_temperate_north": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 north body2619 retains upper red-brick storeys, real recessed vertical glazing, blue roof, parapet and raised roof hatch; exact sequence origin is retained. Source-edge/native/state/world fidelity is provisional.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_body_source_region"],["use","hq_body_source_north"],["erase",15,47,31,16,48,71]]
+    },
+    "hq_body_large_temperate_west": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 west body2623 retains independent red perimeter/upper left source fragments at the original anchor, not a duplicate whole office.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_body_source_region"],["use","hq_body_source_west"]]
+    },
+    "hq_body_large_temperate_east": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size3 east body2621 owns the connected upper brick office corner at x15/y47 as well as the raised perimeter band. Forty explicitly authored existing cells/six-face colours transfer from the north body; the neighbouring white mullion stays north-owned, not folded into this source's brick column. Original registration, joined compound, dimensions and south-body absence stay exact. Source edge/paint/roof fidelity and world/state acceptance remain provisional.",
+      "ops":[["use","hq_large_compound_temperate"],["use","hq_body_source_region"],["use","hq_body_source_east"],["use","hq_large_east_brick_column"]]
+    },
+    "hq_ground_large_arctic_north": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size3 north ground2618 retains independent lower office/entrance/paving ownership; natural upgraded/snow-world evidence remains unaccepted.",
+      "ops":[["use","hq_large_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_large_arctic_west": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size3 west ground2622 retains its flag bed/dry climate palette and lower red perimeter independently of body2623.",
+      "ops":[["use","hq_large_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_large_arctic_east": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size3 east ground2620 keeps source-owned canopy/front relief, driveway and paving without absorbing upper body2621.",
+      "ops":[["use","hq_large_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_large_arctic_south": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size3 south ground2624 is independently rooted opaque paving/perimeter; absent body is preserved.",
+      "ops":[["use","hq_large_compound_arctic"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_large_arctic_north": {"extends":"hq_body_large_temperate_north","review_status":"work-in-progress","reference":"Arctic size3 north body2619 has the same inspected original upper-office source; natural climate/state evidence remains separate."},
+    "hq_body_large_arctic_west": {"extends":"hq_body_large_temperate_west","review_status":"work-in-progress","reference":"Arctic size3 west body2623 retains the same original independently sorted brick perimeter fragments, not unrelated source art."},
+    "hq_body_large_arctic_east": {"extends":"hq_body_large_temperate_east","review_status":"work-in-progress","reference":"Arctic size3 east body2621 retains the same original upper-right facade/perimeter source, independently climate-bound."},
+    "hq_ground_large_tropic_north": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size3 north ground2618 retains lower office/entrance/paving relief, not a recoloured tiny cottage. No natural upgraded/desert-world acceptance.",
+      "ops":[["use","hq_large_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_large_tropic_west": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size3 west ground2622 preserves its separate planted flag bed and source-edge perimeter with native climate paint.",
+      "ops":[["use","hq_large_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_large_tropic_east": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size3 east ground2620 keeps independent front relief and pavement, below the separately sorted upper facade.",
+      "ops":[["use","hq_large_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_large_tropic_south": {
+      "size":[64,64,88],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size3 south ground2624 remains an independently rooted driveway/pavement owner; no south body is manufactured.",
+      "ops":[["use","hq_large_compound_tropic"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_large_tropic_north": {"extends":"hq_body_large_temperate_north","review_status":"work-in-progress","reference":"Tropical size3 north body2619 retains the same original red-brick upper storeys/roof; native state/world fidelity still requires independent review."},
+    "hq_body_large_tropic_west": {"extends":"hq_body_large_temperate_west","review_status":"work-in-progress","reference":"Tropical size3 west body2623 retains the original red perimeter overlay at its own tile/sequence anchor."},
+    "hq_body_large_tropic_east": {"extends":"hq_body_large_temperate_east","review_status":"work-in-progress","reference":"Tropical size3 east body2621 retains the original separately sorted right facade/perimeter geometry and its own binding."},
+    "hq_ground_large_toyland_north": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 north ground2618 owns lower keep/curtain walls and courtyard. Upper twin-flag keep and three conical turret roofs have separate source bodies.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_large_toyland_west": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 west ground2622 retains independent lower corner tower/curtain wall and courtyard relief, never the ordinary planted flag bed.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_large_toyland_east": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 east ground2620 retains independently grounded gate/courtyard and lower right turret, below the upper tower body.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_large_toyland_south": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 south ground2624 owns the gate/path/front courtyard and grounded lower tower corner. Original separate south body is absent.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_large_toyland_north": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 north body2619 owns the high hipped keep and paired flags; genuine hollow walls/roof are distinct from every earlier castle stage.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_north"]]
+    },
+    "hq_body_large_toyland_west": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 west body2623 retains the independently anchored left conical turret/flag upper relief, not a vertical slice of the central keep.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_west"]]
+    },
+    "hq_body_large_toyland_east": {
+      "size":[64,64,128],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size3 east body2621 retains the independent right conical turret/flag upper relief. Ground/body ownership and original sequence anchors remain separate.",
+      "ops":[["use","hq_large_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_east"]]
+    },
+    "hq_ground_medium_temperate_north": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 north ground2611: L-shaped office with true interior, glazing, company roof and separate source-owned paving. Sort height20 is not an artwork dimension. Source/native/world/state fidelity is unaccepted.",
+      "ops":[["use","hq_medium_ground_base_temperate"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_north"],["use","hq_medium_north_ground_office"]]
+    },
+    "hq_ground_medium_temperate_west": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 west ground2615 retains the independent corrugated shed and lower perimeter; body2616 remains a separate small wall-tip owner.",
+      "ops":[["use","hq_medium_ground_base_temperate"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_west"],["use","hq_medium_shed"]]
+    },
+    "hq_ground_medium_temperate_east": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 east ground2613: independently opaque paving/driveway, flagpole and source-edge office relief; upper wall2614 is not folded into this ground.",
+      "ops":[["use","hq_medium_ground_base_temperate"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_east"],["use","hq_medium_flag"]]
+    },
+    "hq_ground_medium_temperate_south": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 south ground2617 retains planted soil and an independently anchored perimeter; no south body exists or is invented.",
+      "ops":[["use","hq_medium_ground_base_temperate"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_south"]]
+    },
+    "hq_body_medium_temperate_north": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 north body2612 owns one pale roof-edge diagonal only. Explicit authored trim ownership excludes the other ground-owned roof branch and all perimeter bricks without changing the joined compound. Source/native/world/state fidelity remains provisional.",
+      "ops":[["use","hq_medium_compound_temperate"],["use","hq_medium_north_source_region"]]
+    },
+    "hq_body_medium_temperate_west": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 west body2616 is a small separately sorted perimeter tip, never a duplicated shed or arbitrary full facade.",
+      "ops":[["use","hq_medium_compound_temperate"],["use","hq_medium_west_source_region"]]
+    },
+    "hq_body_medium_temperate_east": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original size2 east body2614 retains separately sorted brick perimeter relief above its own ground owner, with exact original sequence origin and company palette.",
+      "ops":[["use","hq_medium_compound_temperate"],["use","hq_medium_east_source_region"]]
+    },
+    "hq_ground_medium_arctic_north": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size2 north ground2611 keeps its L-shaped office and independent source palette; natural upgraded/snow-world evidence remains missing.",
+      "ops":[["use","hq_medium_ground_base_arctic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_north"],["use","hq_medium_north_ground_office"]]
+    },
+    "hq_ground_medium_arctic_west": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size2 west ground2615 retains corrugated shed relief and independent paving/climate ground, without absorbing the separate tip body.",
+      "ops":[["use","hq_medium_ground_base_arctic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_west"],["use","hq_medium_shed"]]
+    },
+    "hq_ground_medium_arctic_east": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size2 east ground2613 independently retains paving/driveway and flag relief; original body2614 remains separately sorted.",
+      "ops":[["use","hq_medium_ground_base_arctic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_east"],["use","hq_medium_flag"]]
+    },
+    "hq_ground_medium_arctic_south": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Arctic size2 south ground2617 keeps dry-climate planted soil and independent ground contact; original south body absence is preserved.",
+      "ops":[["use","hq_medium_ground_base_arctic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_south"]]
+    },
+    "hq_body_medium_arctic_north": {"extends":"hq_body_medium_temperate_north","review_status":"work-in-progress","reference":"Arctic size2 north body2612 has the same inspected original roof-trim source as temperate; independent climate binding/state review remains required."},
+    "hq_body_medium_arctic_west": {"extends":"hq_body_medium_temperate_west","review_status":"work-in-progress","reference":"Arctic size2 west body2616 retains the same original small perimeter tip; it is not an alias for an unrelated building source."},
+    "hq_body_medium_arctic_east": {"extends":"hq_body_medium_temperate_east","review_status":"work-in-progress","reference":"Arctic size2 east body2614 retains the same original perimeter geometry/paint as temperate, with its own climate binding."},
+    "hq_ground_medium_tropic_north": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size2 north ground2611 retains the true L-shaped office and independent native ground source; no natural upgraded/desert-world approval.",
+      "ops":[["use","hq_medium_ground_base_tropic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_north"],["use","hq_medium_north_ground_office"]]
+    },
+    "hq_ground_medium_tropic_west": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size2 west ground2615 has the corrugated shed and separately grounded paving; original perimeter-tip body remains independent.",
+      "ops":[["use","hq_medium_ground_base_tropic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_west"],["use","hq_medium_shed"]]
+    },
+    "hq_ground_medium_tropic_east": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size2 east ground2613 keeps source-owned flag, paving and driveway relief without swallowing body2614.",
+      "ops":[["use","hq_medium_ground_base_tropic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_east"],["use","hq_medium_flag"]]
+    },
+    "hq_ground_medium_tropic_south": {
+      "size":[64,64,48],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original tropical size2 south ground2617 retains its separate pale-green/soil bed and ground contact; absent south body remains absent.",
+      "ops":[["use","hq_medium_ground_base_tropic"],["use","hq_medium_ground_source_region"],["use","hq_medium_tile_owner_south"]]
+    },
+    "hq_body_medium_tropic_north": {"extends":"hq_body_medium_temperate_north","review_status":"work-in-progress","reference":"Tropical size2 north body2612 retains the same original pale roof trim, independently climate-bound and not visually approved."},
+    "hq_body_medium_tropic_west": {"extends":"hq_body_medium_temperate_west","review_status":"work-in-progress","reference":"Tropical size2 west body2616 retains the original small brick tip and exact sequence anchor; unrelated shed art is not aliased."},
+    "hq_body_medium_tropic_east": {"extends":"hq_body_medium_temperate_east","review_status":"work-in-progress","reference":"Tropical size2 east body2614 retains original perimeter relief with its own climate/state binding, not an approved shortcut."},
+    "hq_ground_medium_toyland_north": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 north ground2611 owns the lower keep, gate and curtain-wall relief. Its hipped upper roof/flag has an independent original body owner.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_north"]]
+    },
+    "hq_ground_medium_toyland_west": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 west ground2615 keeps physical castellated walls/courtyard, not the ordinary climate's corrugated shed.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_west"]]
+    },
+    "hq_ground_medium_toyland_east": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 east ground2613 retains the courtyard and real entrance wall gap at its source tile, below the separate corner-flag body.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_east"]]
+    },
+    "hq_ground_medium_toyland_south": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[-16,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 south ground2617 owns the entrance path, courtyard and lower curtain-wall corner; no separate body is invented.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_ground_source_region"],["use","hq_source_owner_south"]]
+    },
+    "hq_body_medium_toyland_north": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 north body2612 retains the true hipped upper keep and flag; it is not the tiny-stage turret or ordinary L-shaped office.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_north"]]
+    },
+    "hq_body_medium_toyland_west": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[-16,0,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 west body2616 keeps the separate upper left corner flag/wall, with original sequence registration.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_west"]]
+    },
+    "hq_body_medium_toyland_east": {
+      "size":[64,64,96],"cell_size":[0.5,0.5,0.5],"origin":[0,-16,-0.5],"review_status":"work-in-progress",
+      "reference":"Original Toyland size2 east body2614 is the distinct upper right corner flag/wall owner, never duplicated into its ground or south layer.",
+      "ops":[["use","hq_medium_compound_toyland"],["use","hq_body_source_region"],["use","hq_body_source_east"]]
+    },
     "hq_ground_tiny_temperate_north": {
       "size":[64,64,44],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original HQ size0 north ground2603 owns the raised cottage; no separate body exists. Explicit32x32 joined site clipped to the northern16x16 owner, not a sprite extrusion. Source/street/world fidelity remains provisional.",

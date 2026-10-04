@@ -123,29 +123,35 @@ def compile_catalogue(data):
                     apply(components[op[1]], tuple(offset[d]+delta[d] for d in range(3)), depth+1, target)
                     component_stack.remove(op[1])
                     continue
-                if kind == "clip_plane":
+                if kind in ("clip_plane", "clip_any"):
                     # Explicit authored cell-space ownership plane. Raised source
                     # artwork can cross a physical tile edge; assigning whole
                     # vertical columns to that neighbour changes its source owner.
                     # This operation partitions existing cells only, never infers
                     # geometry or paint from a source image.
-                    if len(op) != 4 or op[3] not in ("less","greater_equal"):
-                        raise ValueError("Ownership clipping needs a plane, threshold and retained side")
-                    plane = vector(op[1],"ownership plane",True)
-                    if not any(plane):
-                        raise ValueError("Ownership plane must have a nonzero normal")
-                    for value in plane: integer(value,-1024,1024,"ownership plane coefficient")
-                    threshold = integer(op[2],-3*1024*1024,3*1024*1024,"ownership plane threshold")
-                    threshold += sum(plane[d]*offset[d] for d in range(3))
-                    transform_work += len(target)
+                    specs = [op[1:]] if kind == "clip_plane" else op[1] if len(op) == 2 else None
+                    if not isinstance(specs,list) or not 1 <= len(specs) <= 16:
+                        raise ValueError("Ownership clipping needs one to sixteen explicit planes")
+                    planes = []
+                    for spec in specs:
+                        if not isinstance(spec,list) or len(spec) != 3 or spec[2] not in ("less","greater_equal"):
+                            raise ValueError("Ownership clipping needs a plane, threshold and retained side")
+                        plane = vector(spec[0],"ownership plane",True)
+                        if not any(plane):
+                            raise ValueError("Ownership plane must have a nonzero normal")
+                        for value in plane: integer(value,-1024,1024,"ownership plane coefficient")
+                        threshold = integer(spec[1],-3*1024*1024,3*1024*1024,"ownership plane threshold")
+                        threshold += sum(plane[d]*offset[d] for d in range(3))
+                        planes.append((plane,threshold,spec[2] == "less"))
+                    transform_work += len(target)*len(planes)
                     if transform_work > 16*1024*1024:
                         raise ValueError("Voxel transforms exceed their cell budget")
                     for index,material in enumerate(target):
                         if material == 0: continue
                         x,yz = index%size[0],index//size[0]
                         y,z = yz%size[1],yz//size[1]
-                        less = plane[0]*x+plane[1]*y+plane[2]*z < threshold
-                        if less != (op[3] == "less"): target[index] = 0
+                        if not any((plane[0]*x+plane[1]*y+plane[2]*z < threshold) == less
+                                   for plane,threshold,less in planes): target[index] = 0
                     continue
                 if kind == "rotate_z":
                     if len(op) != 4 or isinstance(op[1], bool) or not isinstance(op[1], (int, float)) or not math.isfinite(op[1]) or not -360 <= op[1] <= 360:

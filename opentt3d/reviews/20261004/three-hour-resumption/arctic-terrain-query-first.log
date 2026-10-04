@@ -1,0 +1,10 @@
+Verified shared /Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-terrain-query-arctic-reload-first/baseset/OpenGFX2_Classic-0.8.1.tar
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/tools/opentt3d/fixture_rivers.py", line 181, in <module>
+    main()
+    ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/tools/opentt3d/fixture_rivers.py", line 143, in main
+    manifest = validate_survey(json.loads(ready[1]), tiles)
+  File "/Users/stanislav/Projects/opentt3d/tools/opentt3d/fixture_rivers.py", line 24, in validate_survey
+    raise ValueError("Original river observation count differs")
+ValueError: Original river observation count differs

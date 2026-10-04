@@ -4,6 +4,41 @@ The target is **every runtime asset genuinely 3D, detailed and consistent, with
 every model at least 8/10**. It is not yet met. A model count, successful build or
 source export does not establish visual quality or whole-world coverage.
 
+## Shore-bank breadth and conservative larger-HQ integration — October 4
+
+`reviews/20261004/river-bank-shore-breadth/` retains20 separate actually observed
+sea-level thin soil/toe/turf volumes:6 temperate/4 Arctic/4 tropical/6 Toyland. Five
+fresh public terrain-type surveys retain original saved tile/slope/height rows,
+with46 particular snow and99 rainforest river tiles. Public snow code3 is not raw
+NewGRF0x81 code4; desert/parameter/grid/grass/all-snowline coverage is not inferred.
+An interleaved loaded-AI run and an incorrect30-source expectation are retained/
+rejected, not fabricated coverage. Complete original wave fringes stay independent
+and unmasked; these models author no blue bank voxels or approved new water split.
+
+All20 source/native/four-orbit/four-street sheets were individually inspected:
+ten at4/10 and ten at5/10, with unique defects/fingerprints/SHA-256 evidence. All six
+acceptance gates are false;20 actual-source instances retain independent3/10
+screenings. Regular courses, angular endpoints, pale/cold/Toyland paint and source
+bank/wave decomposition remain unaccepted. All120 banks remain unbound; existing
+conditional states are not recounted as new shape slots.
+
+Raw complete-source/native comparisons fail20 images/4,065 RGBA pixels with1,637
+additional alpha-presence differences. All20 native backend pairs match; complete
+galleries fail35 views/165 pixels.28 fresh quiet acknowledged40bpp-anim controls
+preserve observer10-world/40-atlas/10-save and unbound8-world/32-atlas/8-save byte
+equalities. Portable994 PNGs reconstruct346,242,848 complete original PAM bytes.
+Noninterference is not bank-specific live placement/support/picking/phase/ships.
+
+The84 prior larger-HQ models/components/materials and proposed bindings are fully
+retained before integration. Proposed larger-stage bindings move exactly to
+`assets/3d/hq-diagnostic-bindings.json`, explicitly not loaded by the playable
+catalogue. Their below-eight individual reviews and known defects remain; structural
+tests cannot promote them or change complete-family runtime fallback. The2,035-model
+diagnostic scope retains3,070 rows/261 individual reviews/four broad gaps/zero
+approvals and fails required-eight. Full240 conditional bank slots/160 unobserved
+sloped slots, support/LOD/state/terrain/custom/absence and all other catalogue,
+performance and platform gates remain open. Recommended immutable`.42`is unchanged.
+
 ## Snow-painted bank state breadth — twenty additional screenings
 
 `reviews/20261004/river-bank-snow-breadth/` retains twenty particular actually

@@ -1,0 +1,31 @@
+{
+  "failure": "Loaded original AI observations interleaved with the newly started AI. The first terrain query run is rejected; no source-state or public-query acknowledgement is inferred from it. The failed original save and full script/log bytes remain. Fresh correlation-token surveys correct the harness without changing engine commands or RNG.",
+  "original": "build-macos/breadth-original-river-terrain-query-arctic-reload-first",
+  "files": {
+    "run.log": {
+      "sha256": "fe21823ecb330a34a8aad849127f476a60f999e50973bbe92de6dcd45ff0e3bc",
+      "bytes": 120856
+    },
+    "openttd.cfg": {
+      "sha256": "583fa202c248230fd9e908396f44ded1eeab636ca93666697a8f6dd3b5f98c05",
+      "bytes": 446
+    },
+    "command-acknowledgements.json": {
+      "sha256": "e8793fe4d4f80b43de411ba6cc3b55203762522178b1c778635948ad9bc830e2",
+      "bytes": 520
+    },
+    "save/failed-river-survey.sav": {
+      "sha256": "358198665c61fe6f2a2c10199ae164981bfea21cf28db93d714010ec40c64ee5",
+      "bytes": 31264
+    },
+    "ai/river-survey/info.nut": {
+      "sha256": "612bb9832696670ff1533493b116beda439ee2b914fb42ceb4f3b11f6716f30e",
+      "bytes": 703
+    },
+    "ai/river-survey/main.nut": {
+      "sha256": "87d16ba6c6ec0163fb6d43d865f8bef6e312a33ddc4e3d37be63f4fba4ad78c4",
+      "bytes": 881
+    }
+  },
+  "quality_approvals": 0
+}

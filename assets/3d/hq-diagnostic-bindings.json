@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "reference": "Retained proposed larger-HQ source-owner bindings for explicit diagnostic studies and structural tests only. All 84 owners remain below source/native/world/state/consistency acceptance. This file is not loaded into the playable runtime catalogue. Canonical complete-family fallback stays intact; no quality approval or additional accepted runtime coverage follows.",
+  "runtime_enabled": false,
+  "bindings": {
+    "objects": {
+      "12":{"0":"hq_body_medium_temperate_north","1":"hq_body_medium_arctic_north","2":"hq_body_medium_tropic_north","3":"hq_body_medium_toyland_north"},
+      "13":{"0":"hq_body_medium_temperate_west","1":"hq_body_medium_arctic_west","2":"hq_body_medium_tropic_west","3":"hq_body_medium_toyland_west"},
+      "14":{"0":"hq_body_medium_temperate_east","1":"hq_body_medium_arctic_east","2":"hq_body_medium_tropic_east","3":"hq_body_medium_toyland_east"},
+      "16":{"0":"hq_body_large_temperate_north","1":"hq_body_large_arctic_north","2":"hq_body_large_tropic_north","3":"hq_body_large_toyland_north"},
+      "17":{"0":"hq_body_large_temperate_west","1":"hq_body_large_arctic_west","2":"hq_body_large_tropic_west","3":"hq_body_large_toyland_west"},
+      "18":{"0":"hq_body_large_temperate_east","1":"hq_body_large_arctic_east","2":"hq_body_large_tropic_east","3":"hq_body_large_toyland_east"},
+      "20":{"0":"hq_body_huge_temperate_north","1":"hq_body_huge_arctic_north","2":"hq_body_huge_tropic_north","3":"hq_body_huge_toyland_north"},
+      "21":{"0":"hq_body_huge_temperate_west","1":"hq_body_huge_arctic_west","2":"hq_body_huge_tropic_west","3":"hq_body_huge_toyland_west"},
+      "22":{"0":"hq_body_huge_temperate_east","1":"hq_body_huge_arctic_east","2":"hq_body_huge_tropic_east","3":"hq_body_huge_toyland_east"}
+    },
+    "object_ground": {
+      "12":{"0":"hq_ground_medium_temperate_north","1":"hq_ground_medium_arctic_north","2":"hq_ground_medium_tropic_north","3":"hq_ground_medium_toyland_north"},
+      "13":{"0":"hq_ground_medium_temperate_west","1":"hq_ground_medium_arctic_west","2":"hq_ground_medium_tropic_west","3":"hq_ground_medium_toyland_west"},
+      "14":{"0":"hq_ground_medium_temperate_east","1":"hq_ground_medium_arctic_east","2":"hq_ground_medium_tropic_east","3":"hq_ground_medium_toyland_east"},
+      "15":{"0":"hq_ground_medium_temperate_south","1":"hq_ground_medium_arctic_south","2":"hq_ground_medium_tropic_south","3":"hq_ground_medium_toyland_south"},
+      "16":{"0":"hq_ground_large_temperate_north","1":"hq_ground_large_arctic_north","2":"hq_ground_large_tropic_north","3":"hq_ground_large_toyland_north"},
+      "17":{"0":"hq_ground_large_temperate_west","1":"hq_ground_large_arctic_west","2":"hq_ground_large_tropic_west","3":"hq_ground_large_toyland_west"},
+      "18":{"0":"hq_ground_large_temperate_east","1":"hq_ground_large_arctic_east","2":"hq_ground_large_tropic_east","3":"hq_ground_large_toyland_east"},
+      "19":{"0":"hq_ground_large_temperate_south","1":"hq_ground_large_arctic_south","2":"hq_ground_large_tropic_south","3":"hq_ground_large_toyland_south"},
+      "20":{"0":"hq_ground_huge_temperate_north","1":"hq_ground_huge_arctic_north","2":"hq_ground_huge_tropic_north","3":"hq_ground_huge_toyland_north"},
+      "21":{"0":"hq_ground_huge_temperate_west","1":"hq_ground_huge_arctic_west","2":"hq_ground_huge_tropic_west","3":"hq_ground_huge_toyland_west"},
+      "22":{"0":"hq_ground_huge_temperate_east","1":"hq_ground_huge_arctic_east","2":"hq_ground_huge_tropic_east","3":"hq_ground_huge_toyland_east"},
+      "23":{"0":"hq_ground_huge_temperate_south","1":"hq_ground_huge_arctic_south","2":"hq_ground_huge_tropic_south","3":"hq_ground_huge_toyland_south"}
+    }
+  }
+}

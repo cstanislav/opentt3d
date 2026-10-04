@@ -1,0 +1,3489 @@
+{
+  "map_width": 128,
+  "map_height": 128,
+  "river_tiles": 380,
+  "survey_token": 146378629,
+  "read_only_tile_queries": true,
+  "public_terrain_type_queries": true,
+  "tiles": [
+    {
+      "tile": 2007,
+      "x": 87,
+      "y": 15,
+      "slope": 6,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2008,
+      "x": 88,
+      "y": 15,
+      "slope": 6,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2009,
+      "x": 89,
+      "y": 15,
+      "slope": 6,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2135,
+      "x": 87,
+      "y": 16,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2136,
+      "x": 88,
+      "y": 16,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2137,
+      "x": 89,
+      "y": 16,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2263,
+      "x": 87,
+      "y": 17,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2264,
+      "x": 88,
+      "y": 17,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2265,
+      "x": 89,
+      "y": 17,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2390,
+      "x": 86,
+      "y": 18,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2391,
+      "x": 87,
+      "y": 18,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2392,
+      "x": 88,
+      "y": 18,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2393,
+      "x": 89,
+      "y": 18,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2518,
+      "x": 86,
+      "y": 19,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2519,
+      "x": 87,
+      "y": 19,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2520,
+      "x": 88,
+      "y": 19,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2521,
+      "x": 89,
+      "y": 19,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2646,
+      "x": 86,
+      "y": 20,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2647,
+      "x": 87,
+      "y": 20,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2648,
+      "x": 88,
+      "y": 20,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2649,
+      "x": 89,
+      "y": 20,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2774,
+      "x": 86,
+      "y": 21,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2775,
+      "x": 87,
+      "y": 21,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2776,
+      "x": 88,
+      "y": 21,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2902,
+      "x": 86,
+      "y": 22,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2903,
+      "x": 87,
+      "y": 22,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 2904,
+      "x": 88,
+      "y": 22,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3030,
+      "x": 86,
+      "y": 23,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3031,
+      "x": 87,
+      "y": 23,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3032,
+      "x": 88,
+      "y": 23,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3033,
+      "x": 89,
+      "y": 23,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3158,
+      "x": 86,
+      "y": 24,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3159,
+      "x": 87,
+      "y": 24,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3160,
+      "x": 88,
+      "y": 24,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3161,
+      "x": 89,
+      "y": 24,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3162,
+      "x": 90,
+      "y": 24,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3254,
+      "x": 54,
+      "y": 25,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3286,
+      "x": 86,
+      "y": 25,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3287,
+      "x": 87,
+      "y": 25,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3288,
+      "x": 88,
+      "y": 25,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3289,
+      "x": 89,
+      "y": 25,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3290,
+      "x": 90,
+      "y": 25,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3382,
+      "x": 54,
+      "y": 26,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3415,
+      "x": 87,
+      "y": 26,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3416,
+      "x": 88,
+      "y": 26,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3417,
+      "x": 89,
+      "y": 26,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3418,
+      "x": 90,
+      "y": 26,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3510,
+      "x": 54,
+      "y": 27,
+      "slope": 9,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3544,
+      "x": 88,
+      "y": 27,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3545,
+      "x": 89,
+      "y": 27,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3546,
+      "x": 90,
+      "y": 27,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3637,
+      "x": 53,
+      "y": 28,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3638,
+      "x": 54,
+      "y": 28,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3671,
+      "x": 87,
+      "y": 28,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3672,
+      "x": 88,
+      "y": 28,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3673,
+      "x": 89,
+      "y": 28,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3674,
+      "x": 90,
+      "y": 28,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3764,
+      "x": 52,
+      "y": 29,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3765,
+      "x": 53,
+      "y": 29,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3799,
+      "x": 87,
+      "y": 29,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3800,
+      "x": 88,
+      "y": 29,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3801,
+      "x": 89,
+      "y": 29,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3802,
+      "x": 90,
+      "y": 29,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3892,
+      "x": 52,
+      "y": 30,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3927,
+      "x": 87,
+      "y": 30,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3928,
+      "x": 88,
+      "y": 30,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3929,
+      "x": 89,
+      "y": 30,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 3930,
+      "x": 90,
+      "y": 30,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4020,
+      "x": 52,
+      "y": 31,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4055,
+      "x": 87,
+      "y": 31,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4056,
+      "x": 88,
+      "y": 31,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4057,
+      "x": 89,
+      "y": 31,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4148,
+      "x": 52,
+      "y": 32,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4183,
+      "x": 87,
+      "y": 32,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4184,
+      "x": 88,
+      "y": 32,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4185,
+      "x": 89,
+      "y": 32,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4276,
+      "x": 52,
+      "y": 33,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4311,
+      "x": 87,
+      "y": 33,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4312,
+      "x": 88,
+      "y": 33,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4313,
+      "x": 89,
+      "y": 33,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4404,
+      "x": 52,
+      "y": 34,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4439,
+      "x": 87,
+      "y": 34,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4440,
+      "x": 88,
+      "y": 34,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4441,
+      "x": 89,
+      "y": 34,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4529,
+      "x": 49,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4530,
+      "x": 50,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4531,
+      "x": 51,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4532,
+      "x": 52,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4567,
+      "x": 87,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4568,
+      "x": 88,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4569,
+      "x": 89,
+      "y": 35,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4657,
+      "x": 49,
+      "y": 36,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4695,
+      "x": 87,
+      "y": 36,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4696,
+      "x": 88,
+      "y": 36,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4697,
+      "x": 89,
+      "y": 36,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4783,
+      "x": 47,
+      "y": 37,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4784,
+      "x": 48,
+      "y": 37,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4785,
+      "x": 49,
+      "y": 37,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4823,
+      "x": 87,
+      "y": 37,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4824,
+      "x": 88,
+      "y": 37,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4825,
+      "x": 89,
+      "y": 37,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4911,
+      "x": 47,
+      "y": 38,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4951,
+      "x": 87,
+      "y": 38,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4952,
+      "x": 88,
+      "y": 38,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 4953,
+      "x": 89,
+      "y": 38,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5037,
+      "x": 45,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5038,
+      "x": 46,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5039,
+      "x": 47,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5040,
+      "x": 48,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5079,
+      "x": 87,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5080,
+      "x": 88,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5081,
+      "x": 89,
+      "y": 39,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5165,
+      "x": 45,
+      "y": 40,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5166,
+      "x": 46,
+      "y": 40,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5167,
+      "x": 47,
+      "y": 40,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5168,
+      "x": 48,
+      "y": 40,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5207,
+      "x": 87,
+      "y": 40,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5208,
+      "x": 88,
+      "y": 40,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5292,
+      "x": 44,
+      "y": 41,
+      "slope": 3,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5293,
+      "x": 45,
+      "y": 41,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5294,
+      "x": 46,
+      "y": 41,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5334,
+      "x": 86,
+      "y": 41,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5335,
+      "x": 87,
+      "y": 41,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5336,
+      "x": 88,
+      "y": 41,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5420,
+      "x": 44,
+      "y": 42,
+      "slope": 3,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5421,
+      "x": 45,
+      "y": 42,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5422,
+      "x": 46,
+      "y": 42,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5462,
+      "x": 86,
+      "y": 42,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5463,
+      "x": 87,
+      "y": 42,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5464,
+      "x": 88,
+      "y": 42,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5590,
+      "x": 86,
+      "y": 43,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5591,
+      "x": 87,
+      "y": 43,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5717,
+      "x": 85,
+      "y": 44,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5718,
+      "x": 86,
+      "y": 44,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5719,
+      "x": 87,
+      "y": 44,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5844,
+      "x": 84,
+      "y": 45,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5845,
+      "x": 85,
+      "y": 45,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5846,
+      "x": 86,
+      "y": 45,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5847,
+      "x": 87,
+      "y": 45,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5968,
+      "x": 80,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5969,
+      "x": 81,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5970,
+      "x": 82,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5971,
+      "x": 83,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5972,
+      "x": 84,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5973,
+      "x": 85,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 5974,
+      "x": 86,
+      "y": 46,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6092,
+      "x": 76,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6093,
+      "x": 77,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6094,
+      "x": 78,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6095,
+      "x": 79,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6096,
+      "x": 80,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6097,
+      "x": 81,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6098,
+      "x": 82,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6099,
+      "x": 83,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6100,
+      "x": 84,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6101,
+      "x": 85,
+      "y": 47,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6220,
+      "x": 76,
+      "y": 48,
+      "slope": 6,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6222,
+      "x": 78,
+      "y": 48,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6223,
+      "x": 79,
+      "y": 48,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6224,
+      "x": 80,
+      "y": 48,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6225,
+      "x": 81,
+      "y": 48,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6347,
+      "x": 75,
+      "y": 49,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6348,
+      "x": 76,
+      "y": 49,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6470,
+      "x": 70,
+      "y": 50,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6471,
+      "x": 71,
+      "y": 50,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6472,
+      "x": 72,
+      "y": 50,
+      "slope": 12,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6473,
+      "x": 73,
+      "y": 50,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6474,
+      "x": 74,
+      "y": 50,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6475,
+      "x": 75,
+      "y": 50,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6597,
+      "x": 69,
+      "y": 51,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6598,
+      "x": 70,
+      "y": 51,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6725,
+      "x": 69,
+      "y": 52,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6853,
+      "x": 69,
+      "y": 53,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 6981,
+      "x": 69,
+      "y": 54,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 7108,
+      "x": 68,
+      "y": 55,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 7109,
+      "x": 69,
+      "y": 55,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 7236,
+      "x": 68,
+      "y": 56,
+      "slope": 6,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 7362,
+      "x": 66,
+      "y": 57,
+      "slope": 0,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 7363,
+      "x": 67,
+      "y": 57,
+      "slope": 0,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 7364,
+      "x": 68,
+      "y": 57,
+      "slope": 0,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9023,
+      "x": 63,
+      "y": 70,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9045,
+      "x": 85,
+      "y": 70,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9151,
+      "x": 63,
+      "y": 71,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9172,
+      "x": 84,
+      "y": 71,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9173,
+      "x": 85,
+      "y": 71,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9279,
+      "x": 63,
+      "y": 72,
+      "slope": 9,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9300,
+      "x": 84,
+      "y": 72,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9407,
+      "x": 63,
+      "y": 73,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9428,
+      "x": 84,
+      "y": 73,
+      "slope": 9,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9535,
+      "x": 63,
+      "y": 74,
+      "slope": 9,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9556,
+      "x": 84,
+      "y": 74,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9662,
+      "x": 62,
+      "y": 75,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9663,
+      "x": 63,
+      "y": 75,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9684,
+      "x": 84,
+      "y": 75,
+      "slope": 9,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9788,
+      "x": 60,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9789,
+      "x": 61,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9790,
+      "x": 62,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9791,
+      "x": 63,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9792,
+      "x": 64,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9793,
+      "x": 65,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9794,
+      "x": 66,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9795,
+      "x": 67,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9796,
+      "x": 68,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9812,
+      "x": 84,
+      "y": 76,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9916,
+      "x": 60,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9924,
+      "x": 68,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9925,
+      "x": 69,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9926,
+      "x": 70,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9927,
+      "x": 71,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9928,
+      "x": 72,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 9940,
+      "x": 84,
+      "y": 77,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10044,
+      "x": 60,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10056,
+      "x": 72,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10057,
+      "x": 73,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10060,
+      "x": 76,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10061,
+      "x": 77,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10062,
+      "x": 78,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10063,
+      "x": 79,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10064,
+      "x": 80,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10065,
+      "x": 81,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10066,
+      "x": 82,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10067,
+      "x": 83,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10068,
+      "x": 84,
+      "y": 78,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10170,
+      "x": 58,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10171,
+      "x": 59,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10172,
+      "x": 60,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10185,
+      "x": 73,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10186,
+      "x": 74,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10187,
+      "x": 75,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10188,
+      "x": 76,
+      "y": 79,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10297,
+      "x": 57,
+      "y": 80,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10298,
+      "x": 58,
+      "y": 80,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10425,
+      "x": 57,
+      "y": 81,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10550,
+      "x": 54,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10551,
+      "x": 55,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10552,
+      "x": 56,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10553,
+      "x": 57,
+      "y": 82,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10677,
+      "x": 53,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10678,
+      "x": 54,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10679,
+      "x": 55,
+      "y": 83,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10796,
+      "x": 44,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10797,
+      "x": 45,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10798,
+      "x": 46,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10799,
+      "x": 47,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10800,
+      "x": 48,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10801,
+      "x": 49,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10805,
+      "x": 53,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10806,
+      "x": 54,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10807,
+      "x": 55,
+      "y": 84,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10922,
+      "x": 42,
+      "y": 85,
+      "slope": 3,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10923,
+      "x": 43,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10924,
+      "x": 44,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10925,
+      "x": 45,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10926,
+      "x": 46,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10927,
+      "x": 47,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10928,
+      "x": 48,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10929,
+      "x": 49,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10930,
+      "x": 50,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10931,
+      "x": 51,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10932,
+      "x": 52,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10933,
+      "x": 53,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 10934,
+      "x": 54,
+      "y": 85,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11050,
+      "x": 42,
+      "y": 86,
+      "slope": 3,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11051,
+      "x": 43,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11052,
+      "x": 44,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11053,
+      "x": 45,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11056,
+      "x": 48,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11057,
+      "x": 49,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11058,
+      "x": 50,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11059,
+      "x": 51,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11060,
+      "x": 52,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11061,
+      "x": 53,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 11062,
+      "x": 54,
+      "y": 86,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12176,
+      "x": 16,
+      "y": 95,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12177,
+      "x": 17,
+      "y": 95,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12178,
+      "x": 18,
+      "y": 95,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12179,
+      "x": 19,
+      "y": 95,
+      "slope": 12,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12294,
+      "x": 6,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12295,
+      "x": 7,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12296,
+      "x": 8,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12297,
+      "x": 9,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12298,
+      "x": 10,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12299,
+      "x": 11,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12300,
+      "x": 12,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12301,
+      "x": 13,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12302,
+      "x": 14,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12303,
+      "x": 15,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12304,
+      "x": 16,
+      "y": 96,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12420,
+      "x": 4,
+      "y": 97,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12421,
+      "x": 5,
+      "y": 97,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12422,
+      "x": 6,
+      "y": 97,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12500,
+      "x": 84,
+      "y": 97,
+      "slope": 0,
+      "min_height_levels": 6,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12501,
+      "x": 85,
+      "y": 97,
+      "slope": 0,
+      "min_height_levels": 6,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12547,
+      "x": 3,
+      "y": 98,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12548,
+      "x": 4,
+      "y": 98,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12628,
+      "x": 84,
+      "y": 98,
+      "slope": 9,
+      "min_height_levels": 5,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12756,
+      "x": 84,
+      "y": 99,
+      "slope": 0,
+      "min_height_levels": 5,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 12884,
+      "x": 84,
+      "y": 100,
+      "slope": 0,
+      "min_height_levels": 5,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13012,
+      "x": 84,
+      "y": 101,
+      "slope": 9,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13140,
+      "x": 84,
+      "y": 102,
+      "slope": 0,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13268,
+      "x": 84,
+      "y": 103,
+      "slope": 0,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13269,
+      "x": 85,
+      "y": 103,
+      "slope": 0,
+      "min_height_levels": 4,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13397,
+      "x": 85,
+      "y": 104,
+      "slope": 9,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13525,
+      "x": 85,
+      "y": 105,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13600,
+      "x": 32,
+      "y": 106,
+      "slope": 6,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13653,
+      "x": 85,
+      "y": 106,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13728,
+      "x": 32,
+      "y": 107,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13781,
+      "x": 85,
+      "y": 107,
+      "slope": 9,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13856,
+      "x": 32,
+      "y": 108,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13908,
+      "x": 84,
+      "y": 108,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13909,
+      "x": 85,
+      "y": 108,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13983,
+      "x": 31,
+      "y": 109,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 13984,
+      "x": 32,
+      "y": 109,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14036,
+      "x": 84,
+      "y": 109,
+      "slope": 9,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14111,
+      "x": 31,
+      "y": 110,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14163,
+      "x": 83,
+      "y": 110,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14164,
+      "x": 84,
+      "y": 110,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14239,
+      "x": 31,
+      "y": 111,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14291,
+      "x": 83,
+      "y": 111,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14366,
+      "x": 30,
+      "y": 112,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14367,
+      "x": 31,
+      "y": 112,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14419,
+      "x": 83,
+      "y": 112,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14494,
+      "x": 30,
+      "y": 113,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14547,
+      "x": 83,
+      "y": 113,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14621,
+      "x": 29,
+      "y": 114,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14622,
+      "x": 30,
+      "y": 114,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14675,
+      "x": 83,
+      "y": 114,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14749,
+      "x": 29,
+      "y": 115,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14803,
+      "x": 83,
+      "y": 115,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14877,
+      "x": 29,
+      "y": 116,
+      "slope": 6,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14931,
+      "x": 83,
+      "y": 116,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 14932,
+      "x": 84,
+      "y": 116,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15005,
+      "x": 29,
+      "y": 117,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15060,
+      "x": 84,
+      "y": 117,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15133,
+      "x": 29,
+      "y": 118,
+      "slope": 0,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15187,
+      "x": 83,
+      "y": 118,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15188,
+      "x": 84,
+      "y": 118,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15261,
+      "x": 29,
+      "y": 119,
+      "slope": 6,
+      "min_height_levels": 2,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15314,
+      "x": 82,
+      "y": 119,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15315,
+      "x": 83,
+      "y": 119,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15389,
+      "x": 29,
+      "y": 120,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15442,
+      "x": 82,
+      "y": 120,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15517,
+      "x": 29,
+      "y": 121,
+      "slope": 0,
+      "min_height_levels": 3,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15570,
+      "x": 82,
+      "y": 121,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15676,
+      "x": 60,
+      "y": 122,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15698,
+      "x": 82,
+      "y": 122,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15804,
+      "x": 60,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15805,
+      "x": 61,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15815,
+      "x": 71,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15816,
+      "x": 72,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15817,
+      "x": 73,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15818,
+      "x": 74,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15819,
+      "x": 75,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15820,
+      "x": 76,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15821,
+      "x": 77,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15822,
+      "x": 78,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15823,
+      "x": 79,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15824,
+      "x": 80,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15825,
+      "x": 81,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15826,
+      "x": 82,
+      "y": 123,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15827,
+      "x": 83,
+      "y": 123,
+      "slope": 12,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15933,
+      "x": 61,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15936,
+      "x": 64,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15937,
+      "x": 65,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15938,
+      "x": 66,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15939,
+      "x": 67,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15940,
+      "x": 68,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15941,
+      "x": 69,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15942,
+      "x": 70,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15943,
+      "x": 71,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15952,
+      "x": 80,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15953,
+      "x": 81,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15954,
+      "x": 82,
+      "y": 124,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 15955,
+      "x": 83,
+      "y": 124,
+      "slope": 12,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 16061,
+      "x": 61,
+      "y": 125,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 16062,
+      "x": 62,
+      "y": 125,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 16063,
+      "x": 63,
+      "y": 125,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 16064,
+      "x": 64,
+      "y": 125,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 16082,
+      "x": 82,
+      "y": 125,
+      "slope": 0,
+      "min_height_levels": 1,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    },
+    {
+      "tile": 16083,
+      "x": 83,
+      "y": 125,
+      "slope": 12,
+      "min_height_levels": 0,
+      "public_terrain_type": 0,
+      "survey_token": 146378629
+    }
+  ],
+  "observed_slopes": [
+    0,
+    3,
+    6,
+    9,
+    12
+  ],
+  "observed_min_height_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "observed_public_terrain_types": [
+    0
+  ],
+  "terrain_type_code_domain": "Public AITile enum: 0 normal, 1 desert, 2 rainforest, 3 snow; not raw NewGRF variable 0x81 (snow=4).",
+  "complete_terrain_type_or_snowline_coverage_verified": false,
+  "complete_river_family_verified": false,
+  "geometry_or_quality_approved": false,
+  "climate": "toyland",
+  "seed": 271828,
+  "save": "save/river-survey.sav",
+  "save_sha256": "6ae3f8862ddc623f1dda23632f91e45b2fb948b0bd4ff5e873c6ed4f84f07331",
+  "source": "Original public AITile.IsRiverTile/GetSlope/GetMinHeight/GetTerrainType queries on a normally generated or reloaded original map.",
+  "source_height_units": "Original map height levels; each level is eight source-height units, not doubled rendered terrain.",
+  "simulation_mutations": "Original start_ai/pause/save commands and ordinary simulation only; no construction, terraform or forced selectors/RNG.",
+  "graphics_or_bank_absence_verified": false,
+  "ship_traversal_verified": false,
+  "command": [
+    "/Users/stanislav/Projects/opentt3d/build-macos/opentt3d",
+    "-D",
+    "127.0.0.1:63367",
+    "-c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-terrain-query-toyland-seed271828-correlated/openttd.cfg",
+    "-x",
+    "-X",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-d",
+    "script=4,console=1,net=3",
+    "-g",
+    "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-toyland/save/river-survey.sav"
+  ],
+  "input_save": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-survey-toyland/save/river-survey.sav",
+  "input_save_sha256": "7314c0ec0f7da896232d44ad342529f8107555982956ce2428a5da4a3ae34960",
+  "loaded_original_world_not_regenerated": true,
+  "climate_provenance": "Requested survey climate is recorded; the reloaded save retains its own original climate and seed."
+}
