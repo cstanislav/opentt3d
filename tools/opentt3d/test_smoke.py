@@ -205,6 +205,22 @@ class ExplicitClearCommandTests(unittest.TestCase):
         self.generated_script()
         self.assertIn("threaded_saves = true",self.generated_config)
 
+    def test_non_hidpi_capture_is_explicit_and_preserves_default_and_simulation(self):
+        default_commands, default_env = self.generated_script(host="Darwin")
+        self.assertNotIn("allow_hidpi", self.generated_config)
+        commands, env = self.generated_script("--no-hidpi",host="Darwin")
+        self.assertIn("allow_hidpi = false", self.generated_config)
+        self.assertEqual(default_commands,commands)
+        self.assertEqual(default_env,env)
+        self.assertIn("pause",commands)
+
+    def test_non_hidpi_capture_rejects_foreign_platforms_and_fullscreen(self):
+        for host,flags in (("Linux",()),("Windows",()),("Darwin",("--fullscreen",))):
+            with self.subTest(host=host,flags=flags), mock.patch("smoke.platform.system",return_value=host), mock.patch.object(sys,"argv",["smoke.py","--build-dir","unused","--output","unused","--no-hidpi",*flags]), mock.patch("smoke.subprocess.Popen") as launch, contextlib.redirect_stderr(io.StringIO()):
+                with self.assertRaises(SystemExit) as raised: smoke.main()
+                self.assertEqual(raised.exception.code,2)
+                launch.assert_not_called()
+
     def test_live_object_reference_is_a_read_only_focus_not_object_construction(self):
         commands,env = self.generated_script("--reference-object","2","--background",host="Darwin")
         self.assertIn("renderer3d object-locate 2",commands)

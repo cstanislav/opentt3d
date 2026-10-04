@@ -1,0 +1,9 @@
+pause
+scrollto instant 87 15
+renderer3d on
+renderer3d zoom -2
+renderer3d verify-tile-picking
+renderer3d verify-world-atlas
+renderer3d zoom -2
+save smoke-state
+screenshot presented smoke

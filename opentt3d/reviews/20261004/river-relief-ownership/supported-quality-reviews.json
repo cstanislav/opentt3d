@@ -1,0 +1,397 @@
+{
+  "format": 1,
+  "models": {
+    "river_relief_study_rock_sw": {
+      "score": 5,
+      "fingerprint": "cf02d58b57e7391dd7c2d4a3f1e7e1ad375e9e017377eed79ab7e70dfdc64cd7",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_sw.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-sw-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-3-0-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-3-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-3-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_sw.png": "b5e7c7dbf36f05900acd49e5a556b094485405abc4bf99343d526a0af6db9dce",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-sw-source.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.json": "4fe4276a6dee12e402ebfca6c06d62845d7da1ba795389a2e4d48e25a5d70f37",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-3-0-native.json": "8df4ee011e6a1e98f41daac72ee497aad1bbd0d197fadedaf207df980aa5ddc0",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-3-vulkan-complete/screenshot/smoke.png": "79dd8322d88f3bc49c3d0cac7112ca3658be40c2efcab08f1f40e1e75b6764eb",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-3-opengl-complete/screenshot/smoke.png": "12d9ec70eb4a9a170a81968c6fee1fefb724537693a7cd70b4896a32ad2c8227"
+      },
+      "defects": [
+        "Rear ledge, low chip and central narrow return remain simplified; regular side courses and mottled face paint do not match the source.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Rear ledge, low chip and central narrow return remain simplified; regular side courses and mottled face paint do not match the source.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_rock_se": {
+      "score": 5,
+      "fingerprint": "a2707385daa2245bf4ea6793660138a7aa9e2da4cfd3f0ad467ee542120e3630",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_se.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-se-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-6-0-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-6-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-6-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_se.png": "166a89b2befd846709e83904ee43e606aee0f46d19d20d20721161d248e3edd5",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-se-source.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.json": "f0cee16dcb4d10cbe14eddd5570e6d65f21b002fd401255e46c5e01f70651304",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-6-0-native.json": "755eb14714d39eaa44efbb61574ae2ceb001712f1b4955afb4f562c6cf12a357",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-6-vulkan-complete/screenshot/smoke.png": "3d4ce2d2554b92836771b0ddc5b33568d00e4fe5bd40262a61973fd4fa0a98fd",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-6-opengl-complete/screenshot/smoke.png": "a3a13dde9ce80571204772b0f75bbd555162d936baa5ccf32e3d287695193808"
+      },
+      "defects": [
+        "Six independent dark lobes retain rounded/faceted block profiles, an unfaithful broken rear crest and regular stepped underside bands.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Six independent dark lobes retain rounded/faceted block profiles, an unfaithful broken rear crest and regular stepped underside bands.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_rock_nw": {
+      "score": 5,
+      "fingerprint": "7f2352f2cae87d4bce74494ee8dff84a16266167dec630fdcb80abac4b612fb2",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_nw.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-nw-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-9-0-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-9-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-9-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_nw.png": "6aa63eea560287ebf97700e09c3bb610ef5a655f150efb1aab466707756a7f34",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-nw-source.pam": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.json": "f84c9bc8816790a74be31b5c93bfeeedeab2ab6b717fb2cd005b15ec80454184",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-9-0-native.json": "e1b1eb8339b159394e1dfd0a26c6cb43b5d5154db72daf1e74004df5bfda5f5b",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-9-vulkan-complete/screenshot/smoke.png": "b972bd368cad999e13c96aac51b009c0bc484ca156f9a32897314350cd7e663f",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-9-opengl-complete/screenshot/smoke.png": "b1e06d4a02f9dc630029441e91e79cf5ae8037e62295c8473d89669c4929f4a7"
+      },
+      "defects": [
+        "Broad downstream slab and rear return lack the source's square chipped face and sharp paint transitions; supported street undersides remain striped.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Broad downstream slab and rear return lack the source's square chipped face and sharp paint transitions; supported street undersides remain striped.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_rock_ne": {
+      "score": 5,
+      "fingerprint": "d2f0fb8247a6d405b35710b8cbeaec82e4fa397a2aa770ab0fa3a6a886edef9b",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_ne.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-ne-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-12-0-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-12-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-12-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_rock_ne.png": "85c1e1cfca8373ec308569743ad1a228d03d6cdacd2e8a68ec4ec74a36755878",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-ne-source.pam": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.json": "1c62226a8f630dd71920cf14578bfec47b1635e2eca732608673d61fba4f0f0e",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-temperate-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-12-0-native.json": "924ee53011e9fb1ac81b74fdcfe147b10eac348ce7173a61c0a4b1ea258863f1",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-12-vulkan-complete/screenshot/smoke.png": "7f10f850f75b3fdfcbc8295706a253524397cb436daf14397fc26e29374a4b0d",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-12-opengl-complete/screenshot/smoke.png": "03287c6883d1a82ad69f34b3bf8c47252949a0120eb885bbbc74b6fe4b9776f6"
+      },
+      "defects": [
+        "Rear-right mass and downstream wedge have overly straight courses and simplified mottled paint/height transitions; street silhouettes remain too regular.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Rear-right mass and downstream wedge have overly straight courses and simplified mottled paint/height transitions; street silhouettes remain too regular.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_island_sw": {
+      "score": 5,
+      "fingerprint": "8384205776f3a0eca67d64d4aeabad312dde35a622a3fb5b8a3e7133eab263ec",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_sw.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-sw-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-3-3-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-3-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-3-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_sw.png": "d7c10f177916d023517613af7b1a654db139aa120b398998faa6af0787fe5ca8",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-sw-source.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.json": "46fcd6030f6405647f9d7dfa878cb3181b6f5b7a651a9f877b3445e7e9d41abe",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-3-3-native.json": "eaa13e3f7e999a181c6e18fed708b60a3cab32d0ae1925b9de18de73abed9086",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-3-vulkan-complete/screenshot/smoke.png": "11d1150e7f1ffefebfb8d7465f579a19e89cc4280a2cf89d2dcfb237c9e30735",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-3-opengl-complete/screenshot/smoke.png": "6802a1b230286400228b20b506c05aa13de811557ecc172a5ca615d1405bd3d8"
+      },
+      "defects": [
+        "Yellow/pale cap contours, near contact and cliff shades remain approximate; the extra column support tilts caps and exposes regular underside steps in street studies.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Yellow/pale cap contours, near contact and cliff shades remain approximate; the extra column support tilts caps and exposes regular underside steps in street studies.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_island_se": {
+      "score": 5,
+      "fingerprint": "6fa21a724647dc9dcf20f6f3f42fbe22a314e0b22eda3b79a15b1fd7f498faee",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_se.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-se-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_se-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-6-3-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-6-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-6-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_se.png": "8ea0c585050b82135c3ba4af2c418cf5abfd6719b653e669ed38070b786f349d",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-se-source.pam": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_se-native.json": "45438b6925ec3ca09d0aadefa01cf1c9930ab30048ee73d248c979b93ad33d91",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-6-3-native.json": "7c506a3447edc2b8f13d72768c8ab5b5a6fa99205eeae1edd9e780f0267febfe",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-6-vulkan-complete/screenshot/smoke.png": "320b264bc527766d74a9fe04eb5ee2f3886e2296ba5831fcaa7bdec020169db3",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-6-opengl-complete/screenshot/smoke.png": "f3913b44370f41bb36e8a09e14fb5ce9a922a04b7debe686634974af459efbbb"
+      },
+      "defects": [
+        "Pale-front/yellow-rear caps remain too regular with incorrect spacing, wall heights and narrow side shades; supported street bands are not source-faithful.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Pale-front/yellow-rear caps remain too regular with incorrect spacing, wall heights and narrow side shades; supported street bands are not source-faithful.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_island_nw": {
+      "score": 5,
+      "fingerprint": "f7d2957571c16f9df375701a2ff34fbe35adb1d1ee5b17e9539e2eab732560d9",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_nw.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-nw-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-9-3-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-9-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-9-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_nw.png": "0c0a0afae7b22f318efa756cacbd4764b59175a1eb879e5a01e0cb7698d21ed3",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-nw-source.pam": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.json": "faa19a01a0c257cbe1014ffdf668d446c830dff04ec9a057443b088243606de8",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-9-3-native.json": "7fbb6559d85aaf023ab1bd91b3361262da19bedbb99871794a97e9154c7cad1d",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-9-vulkan-complete/screenshot/smoke.png": "9128326f5077191233cfadecf3935a16dd00af757d3e5949bf0ef8b08a41c99e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-9-opengl-complete/screenshot/smoke.png": "5288f063f2271e1fd1e605579f1b7105fea2a8f12628e41f2d57061c73b188cc"
+      },
+      "defects": [
+        "Pale downstream cliff remains shallow/regular; cap notches, yellow upper side paint and supported underside courses do not reproduce the original.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Pale downstream cliff remains shallow/regular; cap notches, yellow upper side paint and supported underside courses do not reproduce the original.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    },
+    "river_relief_study_island_ne": {
+      "score": 5,
+      "fingerprint": "47f80f87ddec9a08ed2335e6ac89e1c00483057b313f51557e35a23deec9ec02",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_ne.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-ne-source.pam",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-12-3-native.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-12-vulkan-complete/screenshot/smoke.png",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-12-opengl-complete/screenshot/smoke.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-ownership/supported-model-sheets/river_relief_study_island_ne.png": "efad0ee1fbd3167d9d18d757ce43abd50f882c325407d0536ecc1b21c51271df",
+        "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-ne-source.pam": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.json": "8d70e8e2b892bd9eede0f41774087d6151a23e4cd23843b1d2552cdd11d84cfb",
+        "opentt3d/reviews/20261004/river-relief-ownership/complete-water-world-controls/breadth-original-river-relief-world-complete-water-toyland-271828-vulkan-complete-classic/renderer3d-reference/model-voxel-river-supported-12-3-native.json": "549eb2a815b5855bf387e83cbd3944142eb5c628cb42170403ae294c1d28d521",
+        "opentt3d/reviews/20261004/river-relief-ownership/resolved-source-paint.json": "fb0f5b6b259c859967355a605697053206ea85ab8a270dd9fc790dc3915b7280",
+        "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/verification.json": "21ddc0d30eae4352ed0f154e4cd151c16e6cb7ce1667072f6ebd6648d894115c",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/verification.json": "e23ad67bd18c70211bf5d72b9a7ad7ecbc82d59afac1ddb8b80ed0f0f2a0355e",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-12-vulkan-complete/screenshot/smoke.png": "687ec7975d25486c7c423c666a96ed32e67813a87b6c1c0fcbfb6977b6ad65c8",
+        "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-toyland-12-opengl-complete/screenshot/smoke.png": "bc5e4355c94cfda08f326f9cca8b78cc51622cd5567c85f3f74915bac9ae4413"
+      },
+      "defects": [
+        "Yellow cliff is shallower than the original; cap notches, gray returns and vertical transitions remain simplified; planar cap/piecewise support fidelity is unresolved.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ],
+      "notes": [
+        "Individually reinspected source/native/supported orbit/street/saved-world study:5/10, not release approval.",
+        "Yellow cliff is shallower than the original; cap notches, gray returns and vertical transitions remain simplified; planar cap/piecewise support fidelity is unresolved.",
+        "Only diagnostic freezes bind relief/water. Canonical artwork and bindings are unchanged; remaining banks/terrain, theoretical inputs/heights/neighbourhoods/flags, zero-feature absences and custom families are incomplete.",
+        "Seventeen pixels are semantically resolved and visible original water stays exact. Hidden lower authoring paint is retained, not a claim about unavailable hidden compiled-dither bytes or independent rendered phase completeness.",
+        "Strict complete gallery, supported street and saved-world cross-backend comparisons fail without masks or tolerance; native equality is not aesthetic approval.",
+        "Relief-specific live GPU picking, all-height terrain/ship clearance, ship traversal, independent phases, sustained60fps/memory and platform/input/replay/network acceptance remain open."
+      ]
+    }
+  }
+}

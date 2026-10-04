@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "tools/assets/quality_audit.py",
+    "--catalogue",
+    "build-macos/breadth-original-river-relief-world-observer-separated-canonical-frozen-build/baseset/opentt3d-voxels.json",
+    "--reviews",
+    "assets/3d/quality_reviews.json",
+    "--inventory",
+    "opentt3d/reviews/20261004/river-relief-ownership/exact-canonical-catalogue-inventory.json",
+    "--output",
+    "opentt3d/reviews/20261004/river-relief-ownership/canonical-full-required-eight-quality.json",
+    "--require-eight"
+  ],
+  "exit_code": 1,
+  "models": 2866,
+  "coverage_gaps": 4,
+  "quality_approvals": 0,
+  "objective_met": false
+}

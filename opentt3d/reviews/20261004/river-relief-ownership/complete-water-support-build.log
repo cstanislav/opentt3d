@@ -1,0 +1,41 @@
+[  0%] Built target script_window
+[  1%] Built target renderer3d_asset_files
+[  3%] Built target settingsgen
+[  3%] Built target strgen
+[  5%] Built target baseset_files
+[  5%] Built target renderer3d_models
+[  5%] Built target renderer3d_shaders
+[ 13%] Built target script_ai
+[ 21%] Built target script_game
+[ 22%] Built target ai_compat_files
+[ 25%] Built target gs_compat_files
+[ 33%] Built target script_template
+-- Version string: 20261004-main-mb3b04b5579
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 33%] Built target find_version
+[ 40%] Built target language_files
+[ 41%] Built target table_strings
+[ 41%] Built target table_settings
+[ 41%] Built target script_ai_includes
+[ 41%] Built target script_game_includes
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/world_capture.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/sprite_textures.cpp.o
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:760:30: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  760 |                 if (std::popcount(emitted) < (check.ground ? 2 : check.colour_count)) return;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:1457:12: error: use of undeclared identifier 'GetOriginFile'
+ 1457 |                                 return GetOriginFile(selected.base+offset) == GetOriginFile(selected.base) &&
+      |                                        ^
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:1457:51: error: use of undeclared identifier 'GetOriginFile'
+ 1457 |                                 return GetOriginFile(selected.base+offset) == GetOriginFile(selected.base) &&
+      |                                                                               ^
+1 warning and 2 errors generated.
+make[3]: *** [CMakeFiles/openttd_lib.dir/src/renderer3d/world_capture.cpp.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/openttd_lib.dir/all] Error 2
+make[1]: *** [CMakeFiles/openttd.dir/rule] Error 2
+make: *** [openttd] Error 2

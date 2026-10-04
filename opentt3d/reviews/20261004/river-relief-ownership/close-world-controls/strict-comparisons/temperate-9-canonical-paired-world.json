@@ -1,0 +1,126 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-9-vulkan-canonical/screenshot/smoke.png",
+  "actual": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-9-opengl-canonical/screenshot/smoke.png",
+  "pattern": "*",
+  "images": 1,
+  "pixels": 1228800,
+  "differences": [
+    {
+      "name": "world",
+      "changed_pixels": 6,
+      "pixels": [
+        {
+          "pixel": [
+            34,
+            203
+          ],
+          "reference": [
+            80,
+            104,
+            60,
+            255
+          ],
+          "actual": [
+            148,
+            148,
+            100,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            655,
+            443
+          ],
+          "reference": [
+            148,
+            149,
+            148,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            384,
+            474
+          ],
+          "reference": [
+            176,
+            176,
+            132,
+            255
+          ],
+          "actual": [
+            255,
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            751,
+            518
+          ],
+          "reference": [
+            148,
+            149,
+            148,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            1212,
+            699
+          ],
+          "reference": [
+            44,
+            80,
+            124,
+            255
+          ],
+          "actual": [
+            48,
+            84,
+            128,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            1036,
+            818
+          ],
+          "reference": [
+            32,
+            68,
+            112,
+            255
+          ],
+          "actual": [
+            48,
+            84,
+            128,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

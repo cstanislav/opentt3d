@@ -1,0 +1,322 @@
+[
+  {
+    "source": "opentt3d/reviews/20261004/river-relief-ownership/upstream/toyland_rivertiles_32bpp.pdn",
+    "source_sha256": "05f90c47913a7e92c01084e84c129eaca0040033471f0fe8a398cc95ca713cda",
+    "size": [
+      467,
+      48
+    ],
+    "layers": [
+      {
+        "name": "Water Tile Source",
+        "index": 0,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/00-water-tile-source.png",
+        "sha256": "3eef744510d0b60dc2fd171e81c68caeae4fc41e4b9128048bb0e551dd491683"
+      },
+      {
+        "name": "Water Texture",
+        "index": 1,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/01-water-texture.png",
+        "sha256": "bc9b1ddba276ac3be75931d4ae447f266022fe23513a06428535e9e488130cf6"
+      },
+      {
+        "name": "Anti-flickr",
+        "index": 2,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/02-anti-flickr.png",
+        "sha256": "27205990c42127a50ae6ec96e62b12745dbc84c0531f896c1210efe8277422aa"
+      },
+      {
+        "name": "SparkleMask",
+        "index": 3,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/03-sparklemask.png",
+        "sha256": "62974183ce80eefaa1e252e8042d6bed7b6c574ec3a406d3f4001812d5a561aa"
+      },
+      {
+        "name": "Rocks",
+        "index": 4,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/04-rocks.png",
+        "sha256": "1bf2234c495e8651c4f47df9fc857c49f2da76e4130640fff090694d091c41fd"
+      },
+      {
+        "name": "64 Mask",
+        "index": 5,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/05-64-mask.png",
+        "sha256": "936e4cf8297a13ed7e4e3109f2b6d8c2e09f3eef4d1143ea12b9f5d04fee14b3"
+      }
+    ]
+  },
+  {
+    "source": "opentt3d/reviews/20261004/river-relief-ownership/upstream/toyland_rivertiles_cbt32bpp.pdn",
+    "source_sha256": "76c21cd53ab190de46d0df87dad182b225e715f78c11e6576f6573217d50710b",
+    "size": [
+      467,
+      48
+    ],
+    "layers": [
+      {
+        "name": "64 Mask",
+        "index": 0,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_cbt32bpp/00-64-mask.png",
+        "sha256": "5d4afbe2a8dcb52cbe05b21a2840131ec27affaf1296937ca9e054ec4f4b7079"
+      },
+      {
+        "name": "Layer 2",
+        "index": 1,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_cbt32bpp/01-layer-2.png",
+        "sha256": "938885c332391bc76757197478af7da0e3fc2f8ee01a2a027a63ef6d6d569d8f"
+      }
+    ]
+  },
+  {
+    "source": "opentt3d/reviews/20261004/river-relief-ownership/upstream/toyland_rivertiles_palmask.pdn",
+    "source_sha256": "05f90c47913a7e92c01084e84c129eaca0040033471f0fe8a398cc95ca713cda",
+    "size": [
+      467,
+      48
+    ],
+    "layers": [
+      {
+        "name": "Water Tile Source",
+        "index": 0,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_palmask/00-water-tile-source.png",
+        "sha256": "3eef744510d0b60dc2fd171e81c68caeae4fc41e4b9128048bb0e551dd491683"
+      },
+      {
+        "name": "Water Texture",
+        "index": 1,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_palmask/01-water-texture.png",
+        "sha256": "bc9b1ddba276ac3be75931d4ae447f266022fe23513a06428535e9e488130cf6"
+      },
+      {
+        "name": "Anti-flickr",
+        "index": 2,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_palmask/02-anti-flickr.png",
+        "sha256": "27205990c42127a50ae6ec96e62b12745dbc84c0531f896c1210efe8277422aa"
+      },
+      {
+        "name": "SparkleMask",
+        "index": 3,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_palmask/03-sparklemask.png",
+        "sha256": "62974183ce80eefaa1e252e8042d6bed7b6c574ec3a406d3f4001812d5a561aa"
+      },
+      {
+        "name": "Rocks",
+        "index": 4,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_palmask/04-rocks.png",
+        "sha256": "1bf2234c495e8651c4f47df9fc857c49f2da76e4130640fff090694d091c41fd"
+      },
+      {
+        "name": "64 Mask",
+        "index": 5,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_palmask/05-64-mask.png",
+        "sha256": "936e4cf8297a13ed7e4e3109f2b6d8c2e09f3eef4d1143ea12b9f5d04fee14b3"
+      }
+    ]
+  },
+  {
+    "source": "opentt3d/reviews/20261004/river-relief-ownership/upstream/universal_rivertiles_32bpp.pdn",
+    "source_sha256": "c5402e8503020f14ab6dc745167efcd4000edb4a2d49d1684aa4ec34a3571d82",
+    "size": [
+      467,
+      48
+    ],
+    "layers": [
+      {
+        "name": "Water Tile Source",
+        "index": 0,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/00-water-tile-source.png",
+        "sha256": "3eef744510d0b60dc2fd171e81c68caeae4fc41e4b9128048bb0e551dd491683"
+      },
+      {
+        "name": "Water Texture",
+        "index": 1,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/01-water-texture.png",
+        "sha256": "bc9b1ddba276ac3be75931d4ae447f266022fe23513a06428535e9e488130cf6"
+      },
+      {
+        "name": "Sparkle Texture",
+        "index": 2,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/02-sparkle-texture.png",
+        "sha256": "52a4453e7e353cfb968625ce84f8ae9a06ce70340d5abae370fe8ec6737b59f6"
+      },
+      {
+        "name": "Anti-flickr",
+        "index": 3,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/03-anti-flickr.png",
+        "sha256": "927ac2af630977c26dab5f00f63bac4536d1f375b3ea80345c72dcf77cad6c9e"
+      },
+      {
+        "name": "Sparkle",
+        "index": 4,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/04-sparkle.png",
+        "sha256": "76dfa208e6b6bf7c24998596049f150a8356efd1e4a7adf0e4cfa7be66c2b1dd"
+      },
+      {
+        "name": "TiledClouds",
+        "index": 5,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/05-tiledclouds.png",
+        "sha256": "c98796be4809a88c8cf59b0cf38530c9ab8361eacb5dd6c1cbd487a7066af346"
+      },
+      {
+        "name": "Cloud Brightnes-66 Contrast100",
+        "index": 6,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/06-cloud-brightnes-66-contrast100.png",
+        "sha256": "ec64ba1982bf942d6c6c236eaf01017a1af617cf2c52d9af96c46066d144e1ba"
+      },
+      {
+        "name": "SparkleMask",
+        "index": 7,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/07-sparklemask.png",
+        "sha256": "62974183ce80eefaa1e252e8042d6bed7b6c574ec3a406d3f4001812d5a561aa"
+      },
+      {
+        "name": "Rocks Unshaded",
+        "index": 8,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/08-rocks-unshaded.png",
+        "sha256": "eab9cf09f85cabda1168e1b7ca7898ab1196b450f1cdee8cc46794a7c94f861d"
+      },
+      {
+        "name": "Rocks Slopeshade",
+        "index": 9,
+        "visible": true,
+        "opacity": 120,
+        "blend_mode": 11,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/09-rocks-slopeshade.png",
+        "sha256": "5dd730786fcd46f874e687df79721b21282dfd41f77d9b514819ab88657266e2"
+      },
+      {
+        "name": "Rocks Brightness Adjust",
+        "index": 10,
+        "visible": true,
+        "opacity": 20,
+        "blend_mode": 7,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/10-rocks-brightness-adjust.png",
+        "sha256": "c2169f27858ca6ae7c67338ee77b53d579af8df5b12dca509d6ad0a09137c6c8"
+      },
+      {
+        "name": "64 Mask",
+        "index": 11,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/11-64-mask.png",
+        "sha256": "936e4cf8297a13ed7e4e3109f2b6d8c2e09f3eef4d1143ea12b9f5d04fee14b3"
+      }
+    ]
+  },
+  {
+    "source": "opentt3d/reviews/20261004/river-relief-ownership/upstream/universal_rivertiles_cbt32bpp.pdn",
+    "source_sha256": "5eacff4302c86ce2b038463c753e4caeab8654bdb7e36fcaffd15e06b2cd7cd6",
+    "size": [
+      467,
+      48
+    ],
+    "layers": [
+      {
+        "name": "RocksMask",
+        "index": 0,
+        "visible": false,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_cbt32bpp/00-rocksmask.png",
+        "sha256": "8bfb204654d67d24dacf2df1d4c564c45813cfce95a2b72dbc1fd9dc99c79d70"
+      },
+      {
+        "name": "ShadingSource",
+        "index": 1,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_cbt32bpp/01-shadingsource.png",
+        "sha256": "f9467be26c49cf10e72999c86bf73691683b098d4a5f1d6e558d702130922f5d"
+      },
+      {
+        "name": "Shading",
+        "index": 2,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_cbt32bpp/02-shading.png",
+        "sha256": "15af3d8dc91e14e11000868c6d21af45e84a31dc0ce3e3005756ab2e9d2ba4fe"
+      },
+      {
+        "name": "Layer 12",
+        "index": 3,
+        "visible": true,
+        "opacity": 255,
+        "blend_mode": 0,
+        "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_cbt32bpp/03-layer-12.png",
+        "sha256": "938885c332391bc76757197478af7da0e3fc2f8ee01a2a027a63ef6d6d569d8f"
+      }
+    ]
+  }
+]

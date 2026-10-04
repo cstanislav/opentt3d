@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-ownership/compare-observer-separation.py", line 40, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-ownership/compare-observer-separation.py", line 22, in main
+    result = audit.compare(previous / "screenshot/smoke.png",current / "screenshot/smoke.png","*",target / f"{index:02d}-world.json")
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-ownership/audit-world-controls.py", line 30, in compare
+    assert first.size == second.size
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

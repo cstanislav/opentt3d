@@ -1,5 +1,50 @@
 # Active extended development goal
 
+## River relief ownership/support resumed; bank volume breadth continues — October 4
+
+The full **every runtime asset genuinely3D / every model at least8/10** goal is
+still active and unmet. Original pinned layers resolve all17 formerly undecided
+river pixels (ten relief/seven water), preserve5,854 visible water pixels exactly,
+and retain2,351 hidden lower-stack authoring pixels. An initial omission of402
+hidden sparkle/anti-flicker texels is rejected/preserved; no image fitting,
+inpainting, rendered-phase index inference or comparison mask is used.
+
+Four-slope diagnostic volumes now render in actual saved worlds in all climates.
+Interception requires the complete actual Classic family/flags/uncropped five-
+component source bytes/registration and separate water. Missing/changed/alternate
+families preserve16 whole same-backend worlds exactly per40-control matrix. Extra
+doubled-terrain support lifts original columns without scaling object height;
+each eight-gallery matrix preserves160 LOD/160 exact retirement/restoration views.
+Source-datum native equality does not excuse nine broader images/88 pixels or the
+latest supported14/14/14/58-pixel failures. Cross-backend worlds remain unaccepted.
+
+Display-scale changes invalidated some close/old-new comparisons (640×480 versus
+1280×960); all captures/failures remain. An explicit isolated upstream non-HiDPI
+setting keeps normal application defaults unchanged. Forty fixed-pixel controls
+prove16 old/new world pairs/64 atlas views and eight diagnostic tracing-on/off
+world pairs/32 atlas views exactly. The source observer stays default-off, separate
+from runtime selector retention, and never reruns callbacks or touches simulation RNG.
+
+Eight individually reinspected models remain5/10, with fresh evidence and unchanged
+volume fingerprints;16 supported instances have separate5/10 defect records and
+six false gates. Full2866/2874-row inventories retain four gaps/zero approvals and
+fail required-eight. Native217 (3,203,437 assertions), isolated approved-compiler
+asset257, mixed working asset275, harness108 and presentation-boundary checks pass.
+`reviews/20261004/river-relief-ownership/` retains all originals, rejected materials,
+build/test/audit failures and lossless complete-world evidence. Canonical artwork/
+bindings, quarantined mixed HQ/compiler/CSV work and immutable recommended`.42`
+are unchanged. No release promotion follows from below-eight studies.
+
+Concrete modelling continues in `reviews/20261004/river-bank-breadth/`:48 new
+unbound flat-bank volume candidates preserve twelve separate source owners per
+climate. Sloped/sea-level/snow/desert/parameter/custom/absence families remain
+explicitly missing; native source/orbit/street review and individual ratings are
+not yet completed for these new candidates. Banks are not replaced in worlds.
+Continue all remaining terrain/bank/catalogue models, locks/HQs, independent phases,
+live relief picking/ships/clearances, effects/fleets, sustained60fps/memory and
+platform/input/replay/network acceptance. This resumes after the historical02:44:19
+pause below; it is not a new stopping-clock claim or a narrowed completion target.
+
 ## Execution stopping-clock audit — October 4, 02:44:19 UTC
 
 **Actual stopping clock check: 2026-10-04 02:44:19 UTC.** Modelling and native

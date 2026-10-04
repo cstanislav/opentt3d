@@ -1,0 +1,574 @@
+{
+  "audited_utc": "2026-10-04T04:16:03.592330+00:00",
+  "quiet_world_controls": 40,
+  "full_worlds": 40,
+  "lossless_pam_reconstructions": 3504,
+  "original_bytes_reconstructed": 1367241940,
+  "actual_emitted_instances": 256,
+  "actual_climate_slope_combinations": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      2,
+      12
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      3,
+      12
+    ]
+  ],
+  "source_heights": [
+    0,
+    8,
+    16,
+    24,
+    32,
+    40,
+    48
+  ],
+  "comparisons": [
+    {
+      "label": "temperate-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 58,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-canonical-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-271828-canonical-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 232,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-271828-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 58,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-271828-complete-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-271828-complete-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 232,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/arctic-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 44,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-canonical-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/arctic-271828-canonical-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 176,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/arctic-271828-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 44,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-271828-complete-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/arctic-271828-complete-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 176,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 78,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-canonical-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-271828-canonical-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 312,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-271828-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 78,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-271828-complete-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-271828-complete-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 312,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-271828-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 25,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-canonical-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-271828-canonical-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 100,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-271828-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 25,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-271828-complete-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-271828-complete-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 100,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-161803-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 96,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-canonical-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-161803-canonical-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 384,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-161803-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 97,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-161803-complete-paired-atlas",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-161803-complete-paired-atlas.json",
+      "images": 4,
+      "different_images": 4,
+      "different_pixels": 388,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-missing-owner-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-vulkan-missing-owner-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-missing-water-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-vulkan-missing-water-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-changed-source-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-vulkan-changed-source-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-alternate-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-vulkan-alternate-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-missing-owner-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-opengl-missing-owner-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-missing-water-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-opengl-missing-water-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-changed-source-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-opengl-changed-source-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-alternate-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-opengl-alternate-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-all-relief-model-views",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-all-relief-model-views.json",
+      "images": 72,
+      "different_images": 9,
+      "different_pixels": 88,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-registered-native-relief",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-registered-native-relief.json",
+      "images": 8,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-missing-owner-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-vulkan-missing-owner-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-missing-water-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-vulkan-missing-water-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-changed-source-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-vulkan-changed-source-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-alternate-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-vulkan-alternate-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-missing-owner-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-opengl-missing-owner-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-missing-water-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-opengl-missing-water-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-changed-source-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-opengl-changed-source-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-alternate-fallback",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-opengl-alternate-fallback.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-all-relief-model-views",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-all-relief-model-views.json",
+      "images": 72,
+      "different_images": 9,
+      "different_pixels": 88,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-registered-native-relief",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-registered-native-relief.json",
+      "images": 8,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-all-supported-views",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-all-supported-views.json",
+      "images": 36,
+      "different_images": 1,
+      "different_pixels": 14,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-registered-native-supported",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/temperate-registered-native-supported.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-all-supported-views",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/arctic-all-supported-views.json",
+      "images": 36,
+      "different_images": 1,
+      "different_pixels": 14,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-registered-native-supported",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/arctic-registered-native-supported.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-all-supported-views",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-all-supported-views.json",
+      "images": 36,
+      "different_images": 1,
+      "different_pixels": 14,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-registered-native-supported",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/tropic-registered-native-supported.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-all-supported-views",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-all-supported-views.json",
+      "images": 36,
+      "different_images": 1,
+      "different_pixels": 58,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-registered-native-supported",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/strict-comparisons/toyland-registered-native-supported.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    }
+  ],
+  "supported_lod_views": 160,
+  "supported_lod_retirement_views": 160,
+  "generic_cpu_palette_instance_views": 1536,
+  "diagnostic_bound_only": true,
+  "canonical_artwork_or_bindings_changed": false,
+  "native_model_equality_is_not_aesthetic_approval": true,
+  "independent_phase_ship_and_live_relief_picking_accepted": false,
+  "strict_renderers_accepted": false,
+  "quality_approvals": 0
+}

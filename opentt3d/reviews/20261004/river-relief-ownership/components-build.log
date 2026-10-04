@@ -1,0 +1,37 @@
+[  0%] Built target script_window
+[  1%] Built target renderer3d_asset_files
+[  2%] Built target strgen
+[  3%] Built target settingsgen
+[  5%] Built target baseset_files
+[  5%] Built target renderer3d_models
+[  5%] Built target renderer3d_shaders
+[ 13%] Built target script_ai
+[ 21%] Built target script_game
+[ 22%] Built target ai_compat_files
+[ 25%] Built target gs_compat_files
+-- Version string: 20261004-main-mb3b04b5579
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 25%] Built target find_version
+[ 33%] Built target script_template
+[ 37%] Built target table_strings
+[ 41%] Built target language_files
+[ 41%] Built target table_settings
+[ 41%] Built target script_ai_includes
+[ 41%] Built target script_game_includes
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/generated/rev.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/gl_backend.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/viewport_3d.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/sprite_textures.cpp.o
+/Users/stanislav/Projects/opentt3d/src/renderer3d/sprite_textures.cpp:14:10: fatal error: 'nlohmann/json.hpp' file not found
+   14 | #include <nlohmann/json.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[3]: *** [CMakeFiles/openttd_lib.dir/src/renderer3d/sprite_textures.cpp.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/openttd_lib.dir/all] Error 2
+make[1]: *** [CMakeFiles/openttd.dir/rule] Error 2
+make: *** [openttd] Error 2

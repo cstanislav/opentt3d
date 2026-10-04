@@ -1,0 +1,188 @@
+{
+  "audited_utc": "2026-10-04T04:31:19.620396+00:00",
+  "quiet_controls": 32,
+  "individual_models": 8,
+  "lossless_pam_reconstructions": 1408,
+  "original_bytes_reconstructed": 515918112,
+  "comparisons": [
+    {
+      "label": "temperate-3-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-3-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 3,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-3-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-3-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 4,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-6-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-6-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 1,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-6-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-6-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 1,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-9-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-9-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 6,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-9-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-9-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 6,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-12-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-12-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 3,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-12-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/temperate-12-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 3,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-3-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-3-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 0,
+      "dimension_mismatches": 1,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-3-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-3-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 0,
+      "dimension_mismatches": 1,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-6-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-6-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-6-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-6-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 0,
+      "dimension_mismatches": 1,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-9-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-9-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 6,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-9-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-9-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 0,
+      "dimension_mismatches": 1,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-12-canonical-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-12-canonical-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 0,
+      "dimension_mismatches": 1,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-12-complete-paired-world",
+      "report": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/strict-comparisons/toyland-12-complete-paired-world.json",
+      "images": 1,
+      "different_images": 1,
+      "different_pixels": 0,
+      "dimension_mismatches": 1,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    }
+  ],
+  "live_relief_specific_picking_phase_and_ship_acceptance": false,
+  "approvals": 0,
+  "all_renderer_pairs_accepted": false
+}

@@ -1,0 +1,14 @@
+test_custom_callback_outputs_are_retained_not_forced_to_input_or_classic_ids (test_live_river_selectors.RiverSelectorTests.test_custom_callback_outputs_are_retained_not_forced_to_input_or_classic_ids) ... ok
+test_default_sloped_ground_keeps_zero_edge_group_and_no_offset_callback (test_live_river_selectors.RiverSelectorTests.test_default_sloped_ground_keeps_zero_edge_group_and_no_offset_callback) ... ok
+test_empty_or_undrawn_edges_never_establish_absence (test_live_river_selectors.RiverSelectorTests.test_empty_or_undrawn_edges_never_establish_absence) ... ok
+test_flat_flag_and_every_slope_group_keep_original_offset_inputs (test_live_river_selectors.RiverSelectorTests.test_flat_flag_and_every_slope_group_keep_original_offset_inputs) ... ok
+test_missing_ground_and_mismatched_tile_state_cannot_be_merged (test_live_river_selectors.RiverSelectorTests.test_missing_ground_and_mismatched_tile_state_cannot_be_merged) ... ok
+test_observer_is_default_off_excludes_synthetic_and_never_resolves_callbacks_again (test_live_river_selectors.RiverSelectorTests.test_observer_is_default_off_excludes_synthetic_and_never_resolves_callbacks_again) ... ok
+test_registration_boolean_coercions_unknown_features_and_missing_provenance_fail (test_live_river_selectors.RiverSelectorTests.test_registration_boolean_coercions_unknown_features_and_missing_provenance_fail) ... ok
+test_reloads_deduplicate_only_exact_metadata_and_image_bytes (test_live_river_selectors.RiverSelectorTests.test_reloads_deduplicate_only_exact_metadata_and_image_bytes) ... ok
+test_source_corner_bits_are_independent_of_screen_order (test_live_river_selectors.RiverSelectorTests.test_source_corner_bits_are_independent_of_screen_order) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.276s
+
+OK

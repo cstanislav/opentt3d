@@ -1,0 +1,1055 @@
+[
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11264,
+      "climate": 0,
+      "draw_origin": [
+        704,
+        656,
+        0
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 11267,
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "river-selector-source-11267-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 5292,
+      "tile_xy": [
+        44,
+        41
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11267-0-generation3.pam",
+      "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+      "slope_name": "SW"
+    },
+    "relief_layer": {
+      "name": "Rocks Unshaded",
+      "index": 8,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/08-rocks-unshaded.png",
+      "sha256": "eab9cf09f85cabda1168e1b7ca7898ab1196b450f1cdee8cc46794a7c94f861d"
+    },
+    "crop_xy": [
+      81,
+      1
+    ],
+    "undecided_pixels_from_prior": [
+      {
+        "screen_xy": [
+          1,
+          16
+        ],
+        "rgba": [
+          132,
+          132,
+          164,
+          255
+        ],
+        "sheet_xy": [
+          113,
+          17
+        ],
+        "original_relief_layer_rgba": [
+          180,
+          180,
+          192,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      }
+    ],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        1216,
+        768,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 11270,
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11270-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 6220,
+      "tile_xy": [
+        76,
+        48
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11270-0-generation3.pam",
+      "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+      "slope_name": "SE"
+    },
+    "relief_layer": {
+      "name": "Rocks Unshaded",
+      "index": 8,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/08-rocks-unshaded.png",
+      "sha256": "eab9cf09f85cabda1168e1b7ca7898ab1196b450f1cdee8cc46794a7c94f861d"
+    },
+    "crop_xy": [
+      161,
+      1
+    ],
+    "undecided_pixels_from_prior": [
+      {
+        "screen_xy": [
+          4,
+          4
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ],
+        "sheet_xy": [
+          196,
+          5
+        ],
+        "original_relief_layer_rgba": [
+          148,
+          156,
+          168,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          17,
+          8
+        ],
+        "rgba": [
+          132,
+          132,
+          164,
+          255
+        ],
+        "sheet_xy": [
+          209,
+          9
+        ],
+        "original_relief_layer_rgba": [
+          228,
+          228,
+          240,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          17,
+          10
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ],
+        "sheet_xy": [
+          209,
+          11
+        ],
+        "original_relief_layer_rgba": [
+          192,
+          200,
+          212,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          16,
+          11
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ],
+        "sheet_xy": [
+          208,
+          12
+        ],
+        "original_relief_layer_rgba": [
+          192,
+          200,
+          212,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      }
+    ],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        864,
+        432,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 11273,
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11273-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 3510,
+      "tile_xy": [
+        54,
+        27
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11273-0-generation3.pam",
+      "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+      "slope_name": "NW"
+    },
+    "relief_layer": {
+      "name": "Rocks Unshaded",
+      "index": 8,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/08-rocks-unshaded.png",
+      "sha256": "eab9cf09f85cabda1168e1b7ca7898ab1196b450f1cdee8cc46794a7c94f861d"
+    },
+    "crop_xy": [
+      241,
+      1
+    ],
+    "undecided_pixels_from_prior": [],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        1152,
+        800,
+        16
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 11271,
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "river-selector-source-11271-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 6472,
+      "tile_xy": [
+        72,
+        50
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+      "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+      "slope_name": "NE"
+    },
+    "relief_layer": {
+      "name": "Rocks Unshaded",
+      "index": 8,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/universal_rivertiles_32bpp/08-rocks-unshaded.png",
+      "sha256": "eab9cf09f85cabda1168e1b7ca7898ab1196b450f1cdee8cc46794a7c94f861d"
+    },
+    "crop_xy": [
+      321,
+      1
+    ],
+    "undecided_pixels_from_prior": [
+      {
+        "screen_xy": [
+          -21,
+          7
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ],
+        "sheet_xy": [
+          331,
+          16
+        ],
+        "original_relief_layer_rgba": [
+          32,
+          32,
+          255,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          13,
+          7
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ],
+        "sheet_xy": [
+          365,
+          16
+        ],
+        "original_relief_layer_rgba": [
+          100,
+          108,
+          124,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          11,
+          8
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ],
+        "sheet_xy": [
+          363,
+          17
+        ],
+        "original_relief_layer_rgba": [
+          100,
+          108,
+          124,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          -25,
+          10
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ],
+        "sheet_xy": [
+          327,
+          19
+        ],
+        "original_relief_layer_rgba": [
+          32,
+          32,
+          255,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          -29,
+          13
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ],
+        "sheet_xy": [
+          323,
+          22
+        ],
+        "original_relief_layer_rgba": [
+          16,
+          16,
+          255,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          -11,
+          14
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ],
+        "sheet_xy": [
+          341,
+          23
+        ],
+        "original_relief_layer_rgba": [
+          188,
+          192,
+          204,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          12,
+          17
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ],
+        "sheet_xy": [
+          364,
+          26
+        ],
+        "original_relief_layer_rgba": [
+          100,
+          108,
+          124,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          2,
+          20
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ],
+        "sheet_xy": [
+          354,
+          29
+        ],
+        "original_relief_layer_rgba": [
+          188,
+          192,
+          204,
+          255
+        ],
+        "layer_owner": "relief",
+        "verified_against_runtime_components": false
+      }
+    ],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11284,
+      "climate": 3,
+      "draw_origin": [
+        704,
+        656,
+        0
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 11287,
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "river-selector-source-11287-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 5292,
+      "tile_xy": [
+        44,
+        41
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11287-0-generation3.pam",
+      "sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam",
+      "slope_name": "SW"
+    },
+    "relief_layer": {
+      "name": "Rocks",
+      "index": 4,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/04-rocks.png",
+      "sha256": "1bf2234c495e8651c4f47df9fc857c49f2da76e4130640fff090694d091c41fd"
+    },
+    "crop_xy": [
+      81,
+      1
+    ],
+    "undecided_pixels_from_prior": [],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        1216,
+        768,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 11290,
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11290-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 6220,
+      "tile_xy": [
+        76,
+        48
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11290-0-generation3.pam",
+      "sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam",
+      "slope_name": "SE"
+    },
+    "relief_layer": {
+      "name": "Rocks",
+      "index": 4,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/04-rocks.png",
+      "sha256": "1bf2234c495e8651c4f47df9fc857c49f2da76e4130640fff090694d091c41fd"
+    },
+    "crop_xy": [
+      161,
+      1
+    ],
+    "undecided_pixels_from_prior": [
+      {
+        "screen_xy": [
+          8,
+          1
+        ],
+        "rgba": [
+          127,
+          127,
+          127,
+          255
+        ],
+        "sheet_xy": [
+          200,
+          2
+        ],
+        "original_relief_layer_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      }
+    ],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        864,
+        432,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 11293,
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11293-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 3510,
+      "tile_xy": [
+        54,
+        27
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11293-0-generation3.pam",
+      "sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam",
+      "slope_name": "NW"
+    },
+    "relief_layer": {
+      "name": "Rocks",
+      "index": 4,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/04-rocks.png",
+      "sha256": "1bf2234c495e8651c4f47df9fc857c49f2da76e4130640fff090694d091c41fd"
+    },
+    "crop_xy": [
+      241,
+      1
+    ],
+    "undecided_pixels_from_prior": [],
+    "runtime_binding_allowed": false
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        1152,
+        800,
+        16
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 11291,
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "river-selector-source-11291-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 6472,
+      "tile_xy": [
+        72,
+        50
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11291-0-generation3.pam",
+      "sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam",
+      "slope_name": "NE"
+    },
+    "relief_layer": {
+      "name": "Rocks",
+      "index": 4,
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-relief-ownership/original-layers/toyland_rivertiles_32bpp/04-rocks.png",
+      "sha256": "1bf2234c495e8651c4f47df9fc857c49f2da76e4130640fff090694d091c41fd"
+    },
+    "crop_xy": [
+      321,
+      1
+    ],
+    "undecided_pixels_from_prior": [
+      {
+        "screen_xy": [
+          -21,
+          7
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ],
+        "sheet_xy": [
+          331,
+          16
+        ],
+        "original_relief_layer_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          -25,
+          10
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ],
+        "sheet_xy": [
+          327,
+          19
+        ],
+        "original_relief_layer_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      },
+      {
+        "screen_xy": [
+          -29,
+          13
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ],
+        "sheet_xy": [
+          323,
+          22
+        ],
+        "original_relief_layer_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer_owner": "water",
+        "verified_against_runtime_components": false
+      }
+    ],
+    "runtime_binding_allowed": false
+  }
+]

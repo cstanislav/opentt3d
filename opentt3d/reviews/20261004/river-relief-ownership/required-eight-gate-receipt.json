@@ -1,0 +1,42 @@
+[
+  {
+    "scope": "supported",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "build-macos/breadth-original-river-relief-world-observer-separated-complete-frozen-build/baseset/opentt3d-voxels.json",
+      "--reviews",
+      "opentt3d/reviews/20261004/river-relief-ownership/supported-combined-quality-reviews.json",
+      "--output",
+      "opentt3d/reviews/20261004/river-relief-ownership/supported-required-eight-quality-retry.json",
+      "--require-eight",
+      "--inventory",
+      "opentt3d/reviews/20261004/river-relief-ownership/exact-supported-catalogue-inventory.json"
+    ],
+    "exit_code": 1,
+    "required_eight_met": false,
+    "quality_rows": 2874,
+    "coverage_gaps": 4,
+    "quality_approvals": 0
+  },
+  {
+    "scope": "canonical",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "build-macos/breadth-original-river-relief-world-observer-separated-canonical-frozen-build/baseset/opentt3d-voxels.json",
+      "--reviews",
+      "assets/3d/quality_reviews.json",
+      "--output",
+      "opentt3d/reviews/20261004/river-relief-ownership/canonical-required-eight-quality-retry.json",
+      "--require-eight"
+    ],
+    "exit_code": 1,
+    "required_eight_met": false,
+    "quality_rows": 2160,
+    "coverage_gaps": 5,
+    "quality_approvals": 0
+  }
+]

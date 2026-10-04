@@ -1,0 +1,234 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/breadth-original-river-relief-world-observer-separated-tropic-271828-vulkan-complete-classic/screenshot/smoke.png",
+  "actual": "opentt3d/reviews/20261004/river-relief-ownership/observer-separated-world-controls/breadth-original-river-relief-world-observer-separated-tropic-271828-opengl-complete-classic/screenshot/smoke.png",
+  "pattern": "*",
+  "images": 1,
+  "pixels": 1228800,
+  "differences": [
+    {
+      "name": "world",
+      "changed_pixels": 78,
+      "pixels": [
+        {
+          "pixel": [
+            672,
+            306
+          ],
+          "reference": [
+            52,
+            77,
+            42,
+            255
+          ],
+          "actual": [
+            87,
+            104,
+            64,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            667,
+            339
+          ],
+          "reference": [
+            55,
+            94,
+            71,
+            255
+          ],
+          "actual": [
+            40,
+            68,
+            51,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            791,
+            347
+          ],
+          "reference": [
+            108,
+            148,
+            123,
+            255
+          ],
+          "actual": [
+            85,
+            117,
+            97,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            608,
+            350
+          ],
+          "reference": [
+            125,
+            125,
+            67,
+            255
+          ],
+          "actual": [
+            112,
+            112,
+            60,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            779,
+            351
+          ],
+          "reference": [
+            104,
+            135,
+            99,
+            255
+          ],
+          "actual": [
+            95,
+            135,
+            50,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            760,
+            352
+          ],
+          "reference": [
+            95,
+            135,
+            50,
+            255
+          ],
+          "actual": [
+            108,
+            104,
+            83,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            651,
+            353
+          ],
+          "reference": [
+            100,
+            105,
+            97,
+            255
+          ],
+          "actual": [
+            57,
+            57,
+            55,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            600,
+            354
+          ],
+          "reference": [
+            76,
+            98,
+            57,
+            255
+          ],
+          "actual": [
+            57,
+            74,
+            43,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            679,
+            356
+          ],
+          "reference": [
+            23,
+            51,
+            31,
+            255
+          ],
+          "actual": [
+            30,
+            67,
+            41,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            643,
+            362
+          ],
+          "reference": [
+            164,
+            96,
+            64,
+            255
+          ],
+          "actual": [
+            148,
+            72,
+            56,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            802,
+            372
+          ],
+          "reference": [
+            90,
+            86,
+            26,
+            255
+          ],
+          "actual": [
+            23,
+            51,
+            31,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            504,
+            381
+          ],
+          "reference": [
+            74,
+            105,
+            20,
+            255
+          ],
+          "actual": [
+            86,
+            122,
+            23,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

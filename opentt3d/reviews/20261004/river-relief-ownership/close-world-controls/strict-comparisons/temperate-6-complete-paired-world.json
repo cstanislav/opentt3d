@@ -1,0 +1,36 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-6-vulkan-complete/screenshot/smoke.png",
+  "actual": "opentt3d/reviews/20261004/river-relief-ownership/close-world-controls/breadth-original-river-relief-close-observer-separated-temperate-6-opengl-complete/screenshot/smoke.png",
+  "pattern": "*",
+  "images": 1,
+  "pixels": 1228800,
+  "differences": [
+    {
+      "name": "world",
+      "changed_pixels": 1,
+      "pixels": [
+        {
+          "pixel": [
+            1255,
+            821
+          ],
+          "reference": [
+            32,
+            68,
+            112,
+            255
+          ],
+          "actual": [
+            44,
+            80,
+            124,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

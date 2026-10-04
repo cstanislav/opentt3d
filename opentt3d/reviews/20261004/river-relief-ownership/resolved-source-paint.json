@@ -1,0 +1,1023 @@
+{
+  "original_sources": [
+    {
+      "climate": 0,
+      "slope": 3,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-sw-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-sw-source-components.json",
+      "source_pam_sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+      "source_components_sha256": "9f358f429890ea817175576aa5be286c5a2fd48e01eb224970164d39ae9948a5",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 476,
+      "retained_lower_layer_pixels": 292
+    },
+    {
+      "climate": 0,
+      "slope": 6,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-se-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-se-source-components.json",
+      "source_pam_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "source_components_sha256": "41f83cb504c39895afcf5943a52623687b8a0e22df480328c06200a7c8356204",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 478,
+      "retained_lower_layer_pixels": 290
+    },
+    {
+      "climate": 0,
+      "slope": 9,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-nw-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-nw-source-components.json",
+      "source_pam_sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+      "source_components_sha256": "d94ba74fcbfad37de9b5777c46c2f6585eea3775a3552c2d8186215f2db247ee",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 952,
+      "retained_lower_layer_pixels": 331
+    },
+    {
+      "climate": 0,
+      "slope": 12,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-ne-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/temperate-ne-source-components.json",
+      "source_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 911,
+      "retained_lower_layer_pixels": 372
+    },
+    {
+      "climate": 3,
+      "slope": 3,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-sw-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-sw-source-components.json",
+      "source_pam_sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+      "source_components_sha256": "bb4e76cec81f013819c6e8dbae66154f53c659e5e15f7607a1520114f6871a36",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 531,
+      "retained_lower_layer_pixels": 237
+    },
+    {
+      "climate": 3,
+      "slope": 6,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-se-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-se-source-components.json",
+      "source_pam_sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+      "source_components_sha256": "d9c29c08a78c01bbdcd5c810321f86582d5c9e35ee8070edd61967ddae6de487",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 531,
+      "retained_lower_layer_pixels": 238
+    },
+    {
+      "climate": 3,
+      "slope": 9,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-nw-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-nw-source-components.json",
+      "source_pam_sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+      "source_components_sha256": "98889b084c7ce34235a3b6f374842fb9c27a1f8efd6c5a48faf6b027f7574f06",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 983,
+      "retained_lower_layer_pixels": 300
+    },
+    {
+      "climate": 3,
+      "slope": 12,
+      "source_pam": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-ne-source.pam",
+      "source_components": "opentt3d/reviews/20261004/river-relief-ownership/water-source-study/toyland-ne-source-components.json",
+      "source_pam_sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "source_components_sha256": "28236a40c482acc177b856019e8ffcf997fee11c507c7ad8afb55d73fe7471db",
+      "complete_original_pam_reconstructed": true,
+      "visible_original_water_components_unchanged": 992,
+      "retained_lower_layer_pixels": 291
+    }
+  ],
+  "previously_undecided_pixels": [
+    {
+      "screen_xy": [
+        1,
+        16
+      ],
+      "rgba": [
+        132,
+        132,
+        164,
+        255
+      ],
+      "sheet_xy": [
+        113,
+        17
+      ],
+      "original_relief_layer_rgba": [
+        180,
+        180,
+        192,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 3,
+      "native_xy": [
+        32,
+        16
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        133
+      ],
+      "actual_original_rgba": [
+        132,
+        132,
+        164,
+        255
+      ],
+      "independent_water_components": [
+        142,
+        142,
+        142,
+        255,
+        253
+      ],
+      "original_source_components_sha256": "9f358f429890ea817175576aa5be286c5a2fd48e01eb224970164d39ae9948a5",
+      "original_pam_sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        4,
+        4
+      ],
+      "rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "sheet_xy": [
+        196,
+        5
+      ],
+      "original_relief_layer_rgba": [
+        148,
+        156,
+        168,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 6,
+      "native_xy": [
+        35,
+        4
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        17
+      ],
+      "actual_original_rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "independent_water_components": [
+        107,
+        107,
+        107,
+        255,
+        201
+      ],
+      "original_source_components_sha256": "41f83cb504c39895afcf5943a52623687b8a0e22df480328c06200a7c8356204",
+      "original_pam_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        17,
+        8
+      ],
+      "rgba": [
+        132,
+        132,
+        164,
+        255
+      ],
+      "sheet_xy": [
+        209,
+        9
+      ],
+      "original_relief_layer_rgba": [
+        228,
+        228,
+        240,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 6,
+      "native_xy": [
+        48,
+        8
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        133
+      ],
+      "actual_original_rgba": [
+        132,
+        132,
+        164,
+        255
+      ],
+      "independent_water_components": [
+        107,
+        107,
+        107,
+        255,
+        247
+      ],
+      "original_source_components_sha256": "41f83cb504c39895afcf5943a52623687b8a0e22df480328c06200a7c8356204",
+      "original_pam_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        17,
+        10
+      ],
+      "rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "sheet_xy": [
+        209,
+        11
+      ],
+      "original_relief_layer_rgba": [
+        192,
+        200,
+        212,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 6,
+      "native_xy": [
+        48,
+        10
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        19
+      ],
+      "actual_original_rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "independent_water_components": [
+        107,
+        107,
+        107,
+        255,
+        245
+      ],
+      "original_source_components_sha256": "41f83cb504c39895afcf5943a52623687b8a0e22df480328c06200a7c8356204",
+      "original_pam_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        16,
+        11
+      ],
+      "rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "sheet_xy": [
+        208,
+        12
+      ],
+      "original_relief_layer_rgba": [
+        192,
+        200,
+        212,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 6,
+      "native_xy": [
+        47,
+        11
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        19
+      ],
+      "actual_original_rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "independent_water_components": [
+        107,
+        107,
+        107,
+        255,
+        245
+      ],
+      "original_source_components_sha256": "41f83cb504c39895afcf5943a52623687b8a0e22df480328c06200a7c8356204",
+      "original_pam_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -21,
+        7
+      ],
+      "rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "sheet_xy": [
+        331,
+        16
+      ],
+      "original_relief_layer_rgba": [
+        32,
+        32,
+        255,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        10,
+        15
+      ],
+      "actual_original_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        13,
+        7
+      ],
+      "rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "sheet_xy": [
+        365,
+        16
+      ],
+      "original_relief_layer_rgba": [
+        100,
+        108,
+        124,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        44,
+        15
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        17
+      ],
+      "actual_original_rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        249
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        11,
+        8
+      ],
+      "rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "sheet_xy": [
+        363,
+        17
+      ],
+      "original_relief_layer_rgba": [
+        100,
+        108,
+        124,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        42,
+        16
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        17
+      ],
+      "actual_original_rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        247
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -25,
+        10
+      ],
+      "rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "sheet_xy": [
+        327,
+        19
+      ],
+      "original_relief_layer_rgba": [
+        32,
+        32,
+        255,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        6,
+        18
+      ],
+      "actual_original_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -29,
+        13
+      ],
+      "rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "sheet_xy": [
+        323,
+        22
+      ],
+      "original_relief_layer_rgba": [
+        16,
+        16,
+        255,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        2,
+        21
+      ],
+      "actual_original_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -11,
+        14
+      ],
+      "rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "sheet_xy": [
+        341,
+        23
+      ],
+      "original_relief_layer_rgba": [
+        188,
+        192,
+        204,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        20,
+        22
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        19
+      ],
+      "actual_original_rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        249
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        12,
+        17
+      ],
+      "rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "sheet_xy": [
+        364,
+        26
+      ],
+      "original_relief_layer_rgba": [
+        100,
+        108,
+        124,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        43,
+        25
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        17
+      ],
+      "actual_original_rgba": [
+        68,
+        76,
+        92,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        248
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        2,
+        20
+      ],
+      "rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "sheet_xy": [
+        354,
+        29
+      ],
+      "original_relief_layer_rgba": [
+        188,
+        192,
+        204,
+        255
+      ],
+      "layer_owner": "relief",
+      "verified_against_runtime_components": true,
+      "climate": 0,
+      "slope": 12,
+      "native_xy": [
+        33,
+        28
+      ],
+      "actual_original_components": [
+        128,
+        128,
+        128,
+        255,
+        19
+      ],
+      "actual_original_rgba": [
+        108,
+        116,
+        132,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        246
+      ],
+      "original_source_components_sha256": "89c86527cf71fdc797e8b1553e9109da030a1b20cb68e2a472b94396e169c96a",
+      "original_pam_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        8,
+        1
+      ],
+      "rgba": [
+        127,
+        127,
+        127,
+        255
+      ],
+      "sheet_xy": [
+        200,
+        2
+      ],
+      "original_relief_layer_rgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 3,
+      "slope": 6,
+      "native_xy": [
+        39,
+        1
+      ],
+      "actual_original_components": [
+        127,
+        127,
+        127,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        127,
+        127,
+        127,
+        255
+      ],
+      "independent_water_components": [
+        127,
+        127,
+        127,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "d9c29c08a78c01bbdcd5c810321f86582d5c9e35ee8070edd61967ddae6de487",
+      "original_pam_sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -21,
+        7
+      ],
+      "rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "sheet_xy": [
+        331,
+        16
+      ],
+      "original_relief_layer_rgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 3,
+      "slope": 12,
+      "native_xy": [
+        10,
+        15
+      ],
+      "actual_original_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "28236a40c482acc177b856019e8ffcf997fee11c507c7ad8afb55d73fe7471db",
+      "original_pam_sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -25,
+        10
+      ],
+      "rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "sheet_xy": [
+        327,
+        19
+      ],
+      "original_relief_layer_rgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 3,
+      "slope": 12,
+      "native_xy": [
+        6,
+        18
+      ],
+      "actual_original_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "28236a40c482acc177b856019e8ffcf997fee11c507c7ad8afb55d73fe7471db",
+      "original_pam_sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "comparison_mask": false,
+      "quality_approved": false
+    },
+    {
+      "screen_xy": [
+        -29,
+        13
+      ],
+      "rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "sheet_xy": [
+        323,
+        22
+      ],
+      "original_relief_layer_rgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "layer_owner": "water",
+      "verified_against_runtime_components": true,
+      "climate": 3,
+      "slope": 12,
+      "native_xy": [
+        2,
+        21
+      ],
+      "actual_original_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "actual_original_rgba": [
+        104,
+        104,
+        104,
+        255
+      ],
+      "independent_water_components": [
+        104,
+        104,
+        104,
+        255,
+        0
+      ],
+      "original_source_components_sha256": "28236a40c482acc177b856019e8ffcf997fee11c507c7ad8afb55d73fe7471db",
+      "original_pam_sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "comparison_mask": false,
+      "quality_approved": false
+    }
+  ],
+  "resolved_counts": {
+    "relief": 10,
+    "water": 7
+  },
+  "undecided_pixels_in_this_eight_source_study": 0,
+  "visible_original_water_pixels_exact": 5854,
+  "original_pam_reconstructions": 8,
+  "original_callback_or_phase_rgb_used_to_infer_indices": false,
+  "hidden_original_authoring_paint_not_hidden_compiled_dither_bytes": true,
+  "geometry_approvals": 0,
+  "scope": "Lossless eight-source semantic paint proof only; not custom, theoretical, independent phase, bank, terrain/ship, runtime quality or performance acceptance."
+}

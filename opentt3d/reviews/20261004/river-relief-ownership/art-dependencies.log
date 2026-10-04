@@ -1,0 +1,17 @@
+Collecting pypdn==1.0.6
+  Downloading pypdn-1.0.6-py3-none-any.whl.metadata (7.0 kB)
+Collecting numpy>=1.12 (from pypdn==1.0.6)
+  Downloading numpy-2.5.3-cp314-cp314-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Collecting aenum>=1.0 (from pypdn==1.0.6)
+  Downloading aenum-3.1.17-py3-none-any.whl.metadata (3.8 kB)
+Downloading pypdn-1.0.6-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 3.3 MB/s  0:00:01
+Downloading aenum-3.1.17-py3-none-any.whl (165 kB)
+Downloading numpy-2.5.3-cp314-cp314-macosx_14_0_arm64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 15.2 MB/s  0:00:00
+Installing collected packages: aenum, numpy, pypdn
+
+Successfully installed aenum-3.1.17 numpy-2.5.3 pypdn-1.0.6
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: /private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python -m pip install --upgrade pip

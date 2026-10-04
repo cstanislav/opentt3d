@@ -6,6 +6,37 @@ source export does not establish visual quality or whole-world coverage.
 
 ## River relief breadth — eight separately rated diagnostic studies
 
+Later ownership/support work in `reviews/20261004/river-relief-ownership/` resolves
+all17 ambiguous pixels using original layers (ten relief/seven water), preserving
+5,854 visible water pixels exactly. The full lower authoring stack retains2,351
+hidden texels; an initial402-texel sparkle/anti-flicker omission stays rejected.
+Hidden authoring paint is not unavailable hidden compiled-dither evidence, phase
+completeness, geometry extraction or a comparison mask.
+
+Complete-source Classic interception, independent animated water and extra
+doubled-terrain column support now present all four relief slopes in saved worlds
+across all climates. Each40-world matrix retains16 exact same-backend incomplete/
+changed/alternate fallback pairs,160 supported LOD/160 restoration views and all16
+actual climate/slope combinations at observed source heights0…48. Forty fixed-
+pixel controls prove16 old/new world pairs/64 atlas views and eight diagnostic
+tracing-on/off world pairs/32 atlas views. Display-size failures are preserved,
+never resized; normal HiDPI defaults stay unchanged.
+
+All eight models remain individually5/10 with fresh evidence, unchanged volumes,
+explicit source/cap/cliff/underside defects and six false gates. Sixteen supported
+instances have independent5/10 fingerprints/defects, not inherited approval.
+Broader nine-image/88-pixel galleries, supported14/14/14/58-pixel failures and
+cross-backend worlds remain rejected. Full2866/2874-row inventories still have
+four gaps/zero approvals and fail required-eight. Native217, isolated asset257,
+working asset275, harness108 and boundary pass without establishing source/world/
+phase/ship, sustained performance or platform/input/replay/network acceptance.
+Canonical artwork/bindings and recommended`.42`remain unchanged.
+
+The new48 flat-bank candidates in `reviews/20261004/river-bank-breadth/` are
+unbound and not yet individually rated. Sloped/sea-level/snow/desert/parameter/
+custom/absence families and the entire every-model8/10 goal remain open.
+Historical paragraphs below retain their original unbound scope and counts.
+
 `reviews/20261004/river-relief-breadth/` adds four explicit Classic rock arrangements
 and four Toyland yellow/pale island arrangements. Individual source/native/orbit/
 street inspection prompted a retained second geometry pass: fuller angular rock

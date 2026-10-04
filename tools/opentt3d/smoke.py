@@ -244,6 +244,7 @@ def main():
     parser.add_argument("--zoom", type=int, default=1, choices=range(-6, 6))
     parser.add_argument("--fullscreen", action="store_true")
     parser.add_argument("--resolution", nargs=2, type=int, default=(1280,800), metavar=("WIDTH", "HEIGHT"), help="Window dimensions; smaller scenes improve software-rendered live-state sampling")
+    parser.add_argument("--no-hidpi", action="store_true", help="macOS: use the original allow_hidpi=false setting in this isolated capture so display-scale changes do not change review dimensions; normal defaults stay unchanged")
     parser.add_argument("--center", nargs=2, type=int, default=(64, 64), metavar=("TILE_X", "TILE_Y"))
     parser.add_argument("--infinite-water", action="store_true", help="Generate a new world with infinite water borders")
     parser.add_argument("--first-person", metavar="VEHICLE_ID", help="Exercise the vehicle window's Cab button; use 'auto' for the first visible primary vehicle")
@@ -267,6 +268,8 @@ def main():
         parser.error("--resolution requires width 640…8192 and height 480…8192")
     if args.background and (platform.system() != "Darwin" or args.verify_native_input or args.fullscreen):
         parser.error("--background requires macOS windowed rendering without --verify-native-input")
+    if args.no_hidpi and (platform.system() != "Darwin" or args.fullscreen):
+        parser.error("--no-hidpi requires macOS windowed rendering")
     if args.memory_limit_mib is not None and (args.memory_limit_mib <= 0 or args.keep_open):
         parser.error("--memory-limit-mib requires a positive limit and cannot be used with --keep-open")
     if args.verify_voxel_meshes is not None and not re.fullmatch(r"[a-z][a-z0-9_]{0,95}",args.verify_voxel_meshes):
@@ -437,6 +440,9 @@ generation_seed = 314159
 [network]
 server_advertise = false
 """)
+    if args.no_hidpi:
+        config = output / "openttd.cfg"
+        config.write_text(config.read_text().replace("[misc]", "[misc]\nallow_hidpi = false", 1))
     if args.fullscreen:
         config = output / "openttd.cfg"
         config.write_text(config.read_text().replace("fullscreen = false", "fullscreen = true"))
@@ -1044,6 +1050,8 @@ server_advertise = false
                 raise RuntimeError("Industry gallery did not complete")
             if args.screenshot_size and tuple(args.screenshot_size) != image_size:
                 raise RuntimeError(f"Screenshot dimensions differ: requested {args.screenshot_size}, got {image_size}")
+            if args.no_hidpi and not args.screenshot_size and tuple(args.resolution) != image_size:
+                raise RuntimeError(f"Non-HiDPI review dimensions differ: requested {args.resolution}, got {image_size}")
             if args.trace_aircraft_clearance and not all(marker in text for marker in ("clearance aircraft frame ","clearance airport frame ")):
                 raise RuntimeError("The clearance trace needs both emitted aircraft and airport bodies; inspect run.log")
             if args.trace_effects:
@@ -1063,6 +1071,8 @@ server_advertise = false
                       "background": args.background}
             if args.synchronous_save:
                 result["synchronous_original_save_verified"] = True
+            if args.no_hidpi:
+                result["original_allow_hidpi"] = False
             if args.verify_object_palette is not None:
                 result["object_palette_verified"] = args.verify_object_palette
             if args.trace_aircraft_clearance:

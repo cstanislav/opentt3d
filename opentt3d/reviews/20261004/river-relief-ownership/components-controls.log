@@ -1,0 +1,17 @@
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-temperate-vulkan-on", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-temperate-vulkan-off", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-temperate-opengl-on", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-temperate-opengl-off", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-arctic-vulkan-on", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-arctic-vulkan-off", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-arctic-opengl-on", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-arctic-opengl-off", "image_size": [640, 480]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-ownership-components-tropic-vulkan-on", "image_size": [640, 480]}
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-ownership/run-components.py", line 60, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-ownership/run-components.py", line 55, in main
+    assert (output / "renderer3d-reference/river-selectors.json").is_file() == traced
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
