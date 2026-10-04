@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import urllib.request
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[3]
@@ -70,6 +71,14 @@ def main():
         '--dir',str(ROOT/'build-macos/playable-release43-public-manifest')],check=True)
     manifest=ROOT/'build-macos/playable-release43-public-manifest/SHA256SUMS'
     assert hashlib.sha256(manifest.read_bytes()).hexdigest()==audit['manifest_sha256']
+    public_url=f"https://github.com/{REPO}/releases/download/{audit['tag']}/SHA256SUMS"
+    request=urllib.request.Request(public_url,headers={'User-Agent':'OpenTT3D-independent-public-review'})
+    # This separate HTTP request has no GitHub token or logged-in browser state.
+    # A successful authenticated gh download alone is not public-access evidence.
+    with urllib.request.urlopen(request,timeout=120) as response:
+        anonymous_manifest=response.read();assert response.status==200
+    assert anonymous_manifest==manifest.read_bytes()
+    with (HERE/'public-anonymous-SHA256SUMS').open('xb') as stream:stream.write(anonymous_manifest)
     assert subprocess.check_output(['git','rev-parse',f"{audit['tag']}^{{commit}}"],cwd=ROOT,text=True).strip()==audit['commit']
     remote=dict((line.split()[1],line.split()[0]) for line in subprocess.check_output(['git','ls-remote','origin',
         f"refs/tags/{audit['tag']}",f"refs/tags/{audit['tag']}^{{}}"],cwd=ROOT,text=True).splitlines())
@@ -80,6 +89,7 @@ def main():
         'guarded_publication_run':args.publication_run,'original_packaging_run':audit['packaging_run'],
         'original_packaging_jobs_passed':8,'attachment_ids_sizes_digests_exact':True,'immutable_attachments':19,
         'manifest_sha256':audit['manifest_sha256'],'source_package_and_downloaded_native_audits_pass':True,
+        'anonymous_public_manifest_url':public_url,'anonymous_public_manifest_bytes_exact':True,
         'release_title_notes_commit_and_tag_unchanged':True,'no_packaging_rebuild_observed':True,'packaging_runs':builds,
         'prior_releases':prior_checks,'recommended_release':'opentt3d-dev-20261003.42','quality_approvals':0,
         'every_runtime_asset_3d_every_model8_and_sustained60fps_met':False}

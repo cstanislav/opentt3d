@@ -1,0 +1,956 @@
+{
+  "total_count": 8,
+  "jobs": [
+    {
+      "id": 111496093707,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9a9gCw",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111496093707",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111496093707",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T18:00:43Z",
+      "started_at": "2026-10-04T18:00:46Z",
+      "completed_at": "2026-10-04T18:10:52Z",
+      "name": "source",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:00:46Z",
+          "completed_at": "2026-10-04T18:00:47Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-04T18:00:47Z",
+          "completed_at": "2026-10-04T18:01:49Z"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-04T18:01:49Z",
+          "completed_at": "2026-10-04T18:01:49Z"
+        },
+        {
+          "name": "Resolve the immutable release commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-04T18:01:49Z",
+          "completed_at": "2026-10-04T18:01:50Z"
+        },
+        {
+          "name": "Verify source and authoring tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-04T18:01:50Z",
+          "completed_at": "2026-10-04T18:04:56Z"
+        },
+        {
+          "name": "Archive matching game and graphics sources",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-04T18:04:56Z",
+          "completed_at": "2026-10-04T18:10:47Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-04T18:10:47Z",
+          "completed_at": "2026-10-04T18:10:50Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-04T18:10:50Z",
+          "completed_at": "2026-10-04T18:10:50Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-04T18:10:50Z",
+          "completed_at": "2026-10-04T18:10:50Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-04T18:10:50Z",
+          "completed_at": "2026-10-04T18:10:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111496093707",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000001820,
+      "runner_name": "GitHub Actions 1000001820",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111498065002,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9c10ag",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111498065002",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111498065002",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T18:10:52Z",
+      "started_at": "2026-10-04T18:10:58Z",
+      "completed_at": "2026-10-04T18:22:22Z",
+      "name": "macos (macos-15, arm64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:10:58Z",
+          "completed_at": "2026-10-04T18:10:59Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-04T18:10:59Z",
+          "completed_at": "2026-10-04T18:12:20Z"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-04T18:12:20Z",
+          "completed_at": "2026-10-04T18:12:21Z"
+        },
+        {
+          "name": "Install build dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-04T18:12:21Z",
+          "completed_at": "2026-10-04T18:12:26Z"
+        },
+        {
+          "name": "Fetch pinned Vulkan runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-04T18:12:26Z",
+          "completed_at": "2026-10-04T18:12:27Z"
+        },
+        {
+          "name": "Build and test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-04T18:12:27Z",
+          "completed_at": "2026-10-04T18:19:49Z"
+        },
+        {
+          "name": "Record hosted graphics capabilities",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-04T18:19:49Z",
+          "completed_at": "2026-10-04T18:19:49Z"
+        },
+        {
+          "name": "Package, sign and test the extracted app on both renderers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-04T18:19:49Z",
+          "completed_at": "2026-10-04T18:22:13Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-04T18:22:13Z",
+          "completed_at": "2026-10-04T18:22:15Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-04T18:22:15Z",
+          "completed_at": "2026-10-04T18:22:16Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-04T18:22:16Z",
+          "completed_at": "2026-10-04T18:22:16Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-04T18:22:16Z",
+          "completed_at": "2026-10-04T18:22:17Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-04T18:22:17Z",
+          "completed_at": "2026-10-04T18:22:21Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111498065002",
+      "labels": [
+        "macos-15"
+      ],
+      "runner_id": 1000001821,
+      "runner_name": "GitHub Actions 1000001821",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111498065025,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9c10gQ",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111498065025",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111498065025",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-04T18:10:52Z",
+      "started_at": "2026-10-04T18:10:54Z",
+      "completed_at": "2026-10-04T18:12:10Z",
+      "name": "windows (x86, x86)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:10:55Z",
+          "completed_at": "2026-10-04T18:10:58Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 2,
+          "started_at": "2026-10-04T18:10:58Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run OpenTTD/actions/setup-vcpkg@v6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Install installer compiler",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run ilammy/msvc-dev-cmd@v1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Build native code-generation tools",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run ilammy/msvc-dev-cmd@v1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Build game and fetch graphics",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run native tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Package installer and portable archive",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:07Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-04T18:12:07Z",
+          "completed_at": "2026-10-04T18:12:08Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-04T18:12:08Z",
+          "completed_at": "2026-10-04T18:12:08Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111498065025",
+      "labels": [
+        "windows-2022"
+      ],
+      "runner_id": 1000001822,
+      "runner_name": "GitHub Actions 1000001822",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111498065034,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9c10ig",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111498065034",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111498065034",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T18:10:52Z",
+      "started_at": "2026-10-04T18:12:03Z",
+      "completed_at": "2026-10-04T18:52:59Z",
+      "name": "linux",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:12:04Z",
+          "completed_at": "2026-10-04T18:12:04Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-04T18:12:04Z",
+          "completed_at": "2026-10-04T18:13:12Z"
+        },
+        {
+          "name": "Build Debian 12 release environment",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-04T18:13:12Z",
+          "completed_at": "2026-10-04T18:13:50Z"
+        },
+        {
+          "name": "Build and test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-04T18:13:50Z",
+          "completed_at": "2026-10-04T18:28:17Z"
+        },
+        {
+          "name": "Package and test the extracted download on both renderers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-04T18:28:17Z",
+          "completed_at": "2026-10-04T18:31:59Z"
+        },
+        {
+          "name": "Verify the repaired electric-train journey on Linux",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-04T18:31:59Z",
+          "completed_at": "2026-10-04T18:52:52Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-04T18:52:52Z",
+          "completed_at": "2026-10-04T18:52:55Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-04T18:52:55Z",
+          "completed_at": "2026-10-04T18:52:56Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-04T18:52:56Z",
+          "completed_at": "2026-10-04T18:52:57Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-04T18:52:57Z",
+          "completed_at": "2026-10-04T18:52:57Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111498065034",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000001823,
+      "runner_name": "GitHub Actions 1000001823",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111498065078,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9c10tg",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111498065078",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111498065078",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T18:10:52Z",
+      "started_at": "2026-10-04T18:10:54Z",
+      "completed_at": "2026-10-04T18:46:11Z",
+      "name": "macos (macos-15-intel, x86_64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:10:55Z",
+          "completed_at": "2026-10-04T18:10:56Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-04T18:10:56Z",
+          "completed_at": "2026-10-04T18:13:13Z"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-04T18:13:13Z",
+          "completed_at": "2026-10-04T18:13:14Z"
+        },
+        {
+          "name": "Install build dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-04T18:13:14Z",
+          "completed_at": "2026-10-04T18:13:28Z"
+        },
+        {
+          "name": "Fetch pinned Vulkan runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-04T18:13:28Z",
+          "completed_at": "2026-10-04T18:13:32Z"
+        },
+        {
+          "name": "Build and test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-04T18:13:32Z",
+          "completed_at": "2026-10-04T18:41:02Z"
+        },
+        {
+          "name": "Record hosted graphics capabilities",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-04T18:41:02Z",
+          "completed_at": "2026-10-04T18:41:04Z"
+        },
+        {
+          "name": "Package, sign and test the extracted app on both renderers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-04T18:41:04Z",
+          "completed_at": "2026-10-04T18:46:02Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-04T18:46:02Z",
+          "completed_at": "2026-10-04T18:46:06Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-04T18:46:06Z",
+          "completed_at": "2026-10-04T18:46:07Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-04T18:46:07Z",
+          "completed_at": "2026-10-04T18:46:07Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-04T18:46:07Z",
+          "completed_at": "2026-10-04T18:46:08Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-04T18:46:08Z",
+          "completed_at": "2026-10-04T18:46:09Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111498065078",
+      "labels": [
+        "macos-15-intel"
+      ],
+      "runner_id": 1000001824,
+      "runner_name": "GitHub Actions 1000001824",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111498065089,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9c10wQ",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111498065089",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111498065089",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-04T18:10:52Z",
+      "started_at": "2026-10-04T18:10:54Z",
+      "completed_at": "2026-10-04T18:12:20Z",
+      "name": "windows (x64, x64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:10:55Z",
+          "completed_at": "2026-10-04T18:10:57Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 2,
+          "started_at": "2026-10-04T18:10:57Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run OpenTTD/actions/setup-vcpkg@v6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Install installer compiler",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run ilammy/msvc-dev-cmd@v1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Build native code-generation tools",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run ilammy/msvc-dev-cmd@v1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Build game and fetch graphics",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run native tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Package installer and portable archive",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:19Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-04T18:12:19Z",
+          "completed_at": "2026-10-04T18:12:19Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111498065089",
+      "labels": [
+        "windows-2022"
+      ],
+      "runner_id": 1000001825,
+      "runner_name": "GitHub Actions 1000001825",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111498065195,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9c11Kw",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111498065195",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111498065195",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-04T18:10:52Z",
+      "started_at": "2026-10-04T18:10:54Z",
+      "completed_at": "2026-10-04T18:12:20Z",
+      "name": "windows (arm64, x64_arm64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-04T18:10:55Z",
+          "completed_at": "2026-10-04T18:10:58Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 2,
+          "started_at": "2026-10-04T18:10:58Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run OpenTTD/actions/setup-vcpkg@v6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Install installer compiler",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run ilammy/msvc-dev-cmd@v1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Build native code-generation tools",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run ilammy/msvc-dev-cmd@v1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Build game and fetch graphics",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run native tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Package installer and portable archive",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:17Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-04T18:12:17Z",
+          "completed_at": "2026-10-04T18:12:19Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-04T18:12:19Z",
+          "completed_at": "2026-10-04T18:12:19Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111498065195",
+      "labels": [
+        "windows-2022"
+      ],
+      "runner_id": 1000001826,
+      "runner_name": "GitHub Actions 1000001826",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111506042466,
+      "run_id": 37222704319,
+      "workflow_name": "OpenTT3D - Playable releases",
+      "head_branch": "opentt3d-dev-20261004.43",
+      "run_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/runs/37222704319",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUh67x88AAAAZ9kcuYg",
+      "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/jobs/111506042466",
+      "html_url": "https://github.com/cstanislav/opentt3d/actions/runs/37222704319/job/111506042466",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-10-04T18:53:00Z",
+      "started_at": "2026-10-04T18:53:00Z",
+      "completed_at": "2026-10-04T18:52:59Z",
+      "name": "publish",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/cstanislav/opentt3d/check-runs/111506042466",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}

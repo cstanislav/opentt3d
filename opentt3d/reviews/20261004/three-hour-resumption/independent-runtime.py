@@ -30,10 +30,15 @@ def original_source_bytes(path):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--tag',required=True);parser.add_argument('--commit',required=True);args=parser.parse_args()
-    audit=json.loads((HERE/'independent-artifact-audit.json').read_text())
-    assert audit['source_and_all_downloaded_artifacts_exact'] and audit['tag']==args.tag and audit['commit']==args.commit
-    download=BUILD/'playable-release43-independent-download'/f'{args.tag}-macos-arm64.zip'
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--tag',required=True);parser.add_argument('--commit',required=True)
+    parser.add_argument('--ci-preview',action='store_true',help='Explicitly limited CI-artifact preview; never a hosted all-platform/publication acceptance')
+    args=parser.parse_args()
+    audit=json.loads((HERE/('ci-preview-artifact-audit.json' if args.ci_preview else 'independent-artifact-audit.json')).read_text())
+    assert audit['tag']==args.tag and audit['commit']==args.commit
+    if args.ci_preview:
+        assert audit['accepted_partial_macos_ci_artifact'] and not audit['source_and_all_downloaded_artifacts_exact'] and not audit['accepted_publication']
+    else:assert audit['source_and_all_downloaded_artifacts_exact']
+    download=BUILD/('playable-release43-ci-preview-download' if args.ci_preview else 'playable-release43-independent-download')/f'{args.tag}-macos-arm64.zip'
     expected=next(row for row in audit['assets'] if row['name']==download.name)
     assert digest(download)==expected['sha256'] and download.stat().st_size==expected['bytes']
     extracted=BUILD/'playable-release43-independent-extracted';assert not extracted.exists()
@@ -55,7 +60,7 @@ def main():
         packages.append({'output':str(output.relative_to(ROOT)),'command':command,'exit_code':process.returncode})
         (HERE/'independent-package-runs.json').write_text(json.dumps(packages,indent=2)+'\n')
         if process.returncode:raise SystemExit(process.returncode)
-    for climate in ('temperate','arctic','tropic','toyland'):
+    for climate in (('temperate',) if args.ci_preview else ('temperate','arctic','tropic','toyland')):
         fixture=BUILD/f'breadth-original-object-command-{climate}-owned-land-fixture';site=json.loads((fixture/'fixture.json').read_text())
         for backend in ('vulkan','opengl'):
             output=BUILD/f'playable-release43-independent-{climate}-{backend}'
@@ -127,6 +132,9 @@ def main():
             for path in run.glob(pattern):evidence[str(path.relative_to(ROOT))]=digest(path)
     value={'audited_utc':datetime.now(timezone.utc).isoformat(),'tag':args.tag,'commit':args.commit,'app':str(app.relative_to(ROOT)),
         'independent_native_reviewer_sha256':digest(Path(__file__)),
+        'download_kind':'explicitly-limited-CI-artifact-preview' if args.ci_preview else 'all-platform-hosted-release-attachments',
+        'ci_preview_only':args.ci_preview,'accepted_publication':False,
+        'source_and_all_downloaded_artifacts_exact':audit['source_and_all_downloaded_artifacts_exact'],
         'independent_download_sha256':expected['sha256'],'binary_sha256':binary,'catalogue_sha256':catalogue,'models':1915,
         'resources_only_from_download':True,'package_controls':packages,'native_controls':records,'scoped_equalities':equal,
         'evidence_sha256':evidence,'accepted_scoped_native_runtime':True,'accepted_full_objective':False,

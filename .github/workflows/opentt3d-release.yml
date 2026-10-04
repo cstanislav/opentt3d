@@ -189,6 +189,11 @@ jobs:
     env:
       RELEASE_TAG: ${{ needs.source.outputs.tag }}
     steps:
+      - name: Enable full evidence paths before checkout
+        # Retained native source/provenance paths can exceed MAX_PATH. Preserve
+        # them verbatim; checkout must not fail before the build even starts.
+        shell: pwsh
+        run: git config --global core.longpaths true
       - uses: actions/checkout@v6
         with:
           ref: ${{ needs.source.outputs.sha }}

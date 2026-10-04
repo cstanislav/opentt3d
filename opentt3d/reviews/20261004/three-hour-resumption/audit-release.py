@@ -39,6 +39,8 @@ def main():
             member=source.getmember(f'{args.tag}/{name}');data=member.linkname.encode() if member.issym() else source.extractfile(member).read()
             assert hashlib.sha1(f'blob {len(data)}\0'.encode()+data).hexdigest()==blob,name
         info=json.load(source.extractfile(f'{args.tag}/release-source.json'));assert info['tag']==args.tag and info['commit']==args.commit
+        tagged_pin=json.load(source.extractfile(f'{args.tag}/opentt3d/upstream.json'))
+        assert info['upstream']==tagged_pin
         graphics_path=f"{args.tag}/external/OpenGFX2-{info['upstream']['graphics']['commit']}.tar.gz"
         graphics=source.extractfile(graphics_path).read();assert hashlib.sha256(graphics).hexdigest()==info['graphics_source_sha256']
         extras={member.name for member in source.getmembers() if member.isfile() or member.issym()}-{f'{args.tag}/{name}' for name in tracked}
@@ -57,13 +59,22 @@ def main():
     for target in ('macos-arm64','macos-x86_64','windows-x64','windows-x86','windows-arm64','linux-x86_64'):
         report=json.loads((download/f'{args.tag}-{target}.json').read_text())
         assert report['tag']==args.tag and report['commit']==args.commit and report['platform']==target
+        assert report['upstream']==tagged_pin
         archive=download/report['archive_verified']
+        resources={}
         if archive.suffix=='.zip':
             with zipfile.ZipFile(archive) as package:
                 for name in package.namelist():
                     path=PurePosixPath(name);assert not path.is_absolute() and '..' not in path.parts
                 catalogue,=[name for name in package.namelist() if name.endswith('/baseset/opentt3d-voxels.json')]
                 metadata,=[name for name in package.namelist() if name.endswith('/release-info/build.json')]
+                for suffix in ('/lang/english.lng','/baseset/opntitle.dat','/PLAYING.md','/COPYING.md',
+                    '/baseset/'+tagged_pin['graphics']['filename']):
+                    resource,=[name for name in package.namelist() if name.endswith(suffix)]
+                    payload=package.read(resource);assert payload
+                    resources[suffix]={'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest()}
+                baseset_prefix=catalogue.rsplit('/baseset/',1)[0]+'/baseset/'
+                assert [name for name in package.namelist() if name.startswith(baseset_prefix) and name.endswith('.tar')]==[resource]
                 data=package.read(catalogue);metadata=json.loads(package.read(metadata))
         else:
             with tarfile.open(archive) as package:
@@ -71,14 +82,25 @@ def main():
                     path=PurePosixPath(member.name);assert not path.is_absolute() and '..' not in path.parts
                 catalogue,=[member for member in package.getmembers() if member.name.endswith('/baseset/opentt3d-voxels.json')]
                 metadata,=[member for member in package.getmembers() if member.name.endswith('/release-info/build.json')]
+                for suffix in ('/lang/english.lng','/baseset/opntitle.dat','/PLAYING.md','/COPYING.md',
+                    '/baseset/'+tagged_pin['graphics']['filename']):
+                    resource,=[member for member in package.getmembers() if member.name.endswith(suffix)]
+                    payload=package.extractfile(resource).read();assert payload
+                    resources[suffix]={'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest()}
+                baseset_prefix=catalogue.name.rsplit('/baseset/',1)[0]+'/baseset/'
+                assert [member.name for member in package.getmembers() if member.name.startswith(baseset_prefix) and member.name.endswith('.tar')]==[resource.name]
                 data=package.extractfile(catalogue).read();metadata=json.load(package.extractfile(metadata))
         assert metadata['tag']==args.tag and metadata['commit']==args.commit
+        assert metadata['upstream']==tagged_pin
+        assert resources['/baseset/'+tagged_pin['graphics']['filename']]['sha256']==tagged_pin['graphics']['sha256']
         assert json.loads(data)==expected,'Packaged volumes/materials/bindings differ from immutable tagged authoring'
         lf_sha=hashlib.sha256(data.replace(b'\r\n',b'\n')).hexdigest();normalized.add(lf_sha)
         packages.append({'platform':target,'models':1915,'catalogue_lf_sha256':lf_sha,'raw_catalogue_sha256':hashlib.sha256(data).hexdigest(),
-            'compiled_tagged_source_cells_materials_bindings_exact':True,'windows_arm64_execution_inferred':False})
+            'compiled_tagged_source_cells_materials_bindings_exact':True,'pinned_graphics_metadata_required_resources':resources,
+            'windows_arm64_execution_inferred':False})
     assert len(normalized)==1
     value={'audited_utc':datetime.now(timezone.utc).isoformat(),'tag':args.tag,'commit':args.commit,'packaging_run':args.run,
+        'independent_artifact_reviewer_sha256':digest(Path(__file__)),
         'release_id':raw['id'],'packaging_jobs_passed':8,'assets':assets,'manifest_sha256':manifest_sha,'exact_source_files':len(tracked),
         'source_archive_sha256':digest(source_archive),'extra_source_files':sorted(extras),'packages':packages,
         'catalogue_lf_sha256':next(iter(normalized)),'source_and_all_downloaded_artifacts_exact':True,

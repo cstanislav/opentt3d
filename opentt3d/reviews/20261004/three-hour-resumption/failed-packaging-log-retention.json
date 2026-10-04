@@ -1,0 +1,21 @@
+{
+  "reason": "Preserve exact original CI errors and watch output without trimming whitespace or adding textual Git whitespace failures.",
+  "files": {
+    "packaging-completion-watch.log": {
+      "original_sha256": "df4f18718a85afbff7c8e1decba21133d08434bf1a997f1ca6d18eec7d43d912",
+      "original_bytes": 459877,
+      "archive": "packaging-completion-watch.log.gz",
+      "archive_sha256": "3cfb4d4d4b711256ac8cbf1a36815c3ba7595d150e85f25c9b04a09c77c20963",
+      "original_whitespace_and_eof_preserved": true
+    },
+    "windows-checkout-failure.log": {
+      "original_sha256": "83bab0bb7f14913961207405b3a5728742fb1b93bbbe38ed1dd1795e73603aab",
+      "original_bytes": 3037177,
+      "archive": "windows-checkout-failure.log.gz",
+      "archive_sha256": "059bf9634d1147d16584e808a28bebe860d8eb1580c2e33e29e9dee7342a189c",
+      "original_whitespace_and_eof_preserved": true
+    }
+  },
+  "all_original_bytes_reconstruct_exact": true,
+  "failed_gates_reclassified_as_pass": false
+}

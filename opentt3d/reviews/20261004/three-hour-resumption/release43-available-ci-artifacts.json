@@ -1,0 +1,145 @@
+{
+  "total_count": 7,
+  "artifacts": [
+    {
+      "id": 11312217007,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMjIxNzAwNw==",
+      "name": "release-linux-checks",
+      "size_in_bytes": 1629742,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11312217007",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11312217007/zip",
+      "expired": false,
+      "digest": "sha256:2832aa22fe5068c1a3d1761741b276b2681d774f1b873b9f8ee2c9d13ed5a6f6",
+      "created_at": "2026-10-04T18:52:56Z",
+      "updated_at": "2026-10-04T18:52:56Z",
+      "expires_at": "2026-10-09T18:52:55Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    },
+    {
+      "id": 11312037475,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMjAzNzQ3NQ==",
+      "name": "release-linux-x86_64",
+      "size_in_bytes": 44036851,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11312037475",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11312037475/zip",
+      "expired": false,
+      "digest": "sha256:a1f009351cbf9961923b759ab0b0a991b51c49a9bb83445073610150fb29ae56",
+      "created_at": "2026-10-04T18:52:54Z",
+      "updated_at": "2026-10-04T18:52:54Z",
+      "expires_at": "2026-10-09T18:52:52Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    },
+    {
+      "id": 11311418372,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMTQxODM3Mg==",
+      "name": "release-macos-x86_64-checks",
+      "size_in_bytes": 710872,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11311418372",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11311418372/zip",
+      "expired": false,
+      "digest": "sha256:70d41f439693ca9da9ba86f62b94afb6c3f9ce83e1ff535bc915a4c5ea63c9e9",
+      "created_at": "2026-10-04T18:46:07Z",
+      "updated_at": "2026-10-04T18:46:07Z",
+      "expires_at": "2026-10-09T18:46:06Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    },
+    {
+      "id": 11311243190,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMTI0MzE5MA==",
+      "name": "release-macos-arm64-checks",
+      "size_in_bytes": 710078,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11311243190",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11311243190/zip",
+      "expired": false,
+      "digest": "sha256:53b5c4e5d687aef6229e4a3b85cf16a3ca9d961ef3e5bd5bc87b33448d2ab456",
+      "created_at": "2026-10-04T18:22:16Z",
+      "updated_at": "2026-10-04T18:22:16Z",
+      "expires_at": "2026-10-09T18:22:15Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    },
+    {
+      "id": 11311164123,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMTE2NDEyMw==",
+      "name": "release-macos-x86_64",
+      "size_in_bytes": 75781672,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11311164123",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11311164123/zip",
+      "expired": false,
+      "digest": "sha256:1575b5c8cb230cbc98832a91fa7f7bb2a2fc638cc16aaa9d200899ba20f1c545",
+      "created_at": "2026-10-04T18:46:06Z",
+      "updated_at": "2026-10-04T18:46:06Z",
+      "expires_at": "2026-10-09T18:46:04Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    },
+    {
+      "id": 11310834420,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMDgzNDQyMA==",
+      "name": "release-macos-arm64",
+      "size_in_bytes": 74398933,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11310834420",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11310834420/zip",
+      "expired": false,
+      "digest": "sha256:b46bdf41bfcf6323332d8b81f59a57a69a8b53450f8cb83085ac5191587a0de6",
+      "created_at": "2026-10-04T18:22:15Z",
+      "updated_at": "2026-10-04T18:22:15Z",
+      "expires_at": "2026-10-09T18:22:14Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    },
+    {
+      "id": 11310509003,
+      "node_id": "MDg6QXJ0aWZhY3QxMTMxMDUwOTAwMw==",
+      "name": "release-source",
+      "size_in_bytes": 645663418,
+      "url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11310509003",
+      "archive_download_url": "https://api.github.com/repos/cstanislav/opentt3d/actions/artifacts/11310509003/zip",
+      "expired": false,
+      "digest": "sha256:ed1d581267d30f656fa3eba81444597eb892e10852e9cf553273a4955862e9c1",
+      "created_at": "2026-10-04T18:10:50Z",
+      "updated_at": "2026-10-04T18:10:50Z",
+      "expires_at": "2026-10-09T18:10:47Z",
+      "workflow_run": {
+        "id": 37222704319,
+        "repository_id": 1377745863,
+        "head_repository_id": 1377745863,
+        "head_branch": "opentt3d-dev-20261004.43",
+        "head_sha": "ccd153ba5be8b779b666e469db735d3985ffbdd9"
+      }
+    }
+  ]
+}
