@@ -30,6 +30,22 @@ after work; neither native log times nor evidence seals replace it.
 - Integrated asset276, harness116 and native219 tests pass, as does the presentation
   boundary. The initial native build output is losslessly archived with its exact
   original whitespace and hash rather than silently trimmed.
+- A separate fresh terrain-provenance supplement matches all100 earlier bank
+  source instances at the exact same tile, slope, original height, callback flags,
+  requested/resolved offsets, source registration and complete original PAM bytes.
+  Their freshly queried public terrain types are69 normal/22 snow/9 rainforest.
+  The twenty prior snow-painted studies now have fresh equivalence witnesses, not
+  retroactive command acknowledgements. Historical indices/claims remain unchanged,
+  every model score stays below8, and no new conditional slot, all-snowline state
+  or live bank approval is inferred. The failed raw-PAM-only assumption is retained.
+- The corrected aggregate integrity checker verifies all21 sealed evidence
+  manifests/46,452 file records and reconstructs all seven original working files.
+  Every authored model/component/material, original57 reviews and added84 HQ
+  reviews remain exact; runtime plus diagnostic bindings reconstruct the original
+  proposed bindings exactly. An initial checker used the wrong root for older
+  repository-relative manifests: its missing-file claims are rejected and its
+  reports are losslessly retained. Four path-schema regression tests pass; no
+  historical evidence manifest, stopping clock or score is silently rewritten.
 
 Release helpers wait for all eight exact packaging jobs, independently download
 every hosted attachment, verify all tagged source blobs and exact compiled packaged

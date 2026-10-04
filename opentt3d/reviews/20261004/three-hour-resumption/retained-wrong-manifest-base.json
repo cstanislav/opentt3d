@@ -1,0 +1,16 @@
+{
+  "failure": "The first aggregate checker treated every sealed manifest key as manifest-directory-relative. Older manifests explicitly store repository-relative opentt3d/reviews/... keys. Its missing-file claims are rejected; no evidence is actually removed. Preserve the failed checker reports and select each original manifest schema explicitly before exact-hash revalidation.",
+  "records": {
+    "all-sealed-evidence-integrity.log": {
+      "sha256": "99d2cb90c22f08e766684fdf7b2124238f5ec02a17edb99bb2e9cc12bb63ef7f",
+      "bytes": 2369300,
+      "retained": "retained-wrong-manifest-base-all-sealed-evidence-integrity.log.gz"
+    },
+    "all-sealed-evidence-integrity.json": {
+      "sha256": "6a5cda698e509042e49a3e50510224bca4ac6a8983ff3da4d09f0c76db3dd054",
+      "bytes": 5514067,
+      "retained": "retained-wrong-manifest-base-all-sealed-evidence-integrity.json.gz"
+    }
+  },
+  "quality_approvals": 0
+}

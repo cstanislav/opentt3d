@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+from PIL import Image
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[3]
@@ -19,6 +20,13 @@ from compare_galleries import captures,image
 
 def digest(path):
     with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
+
+
+def original_source_bytes(path):
+    if path.suffix=='.pam':return path.read_bytes()
+    with Image.open(path) as picture:
+        assert picture.mode=='RGBA'
+        return picture.info['opentt3d_pam_header'].encode('ascii')+picture.tobytes()
 
 
 def main():
@@ -77,8 +85,10 @@ def main():
             assert len(old_sources)==37 and old_sources.keys()==new_sources.keys()
             for name,path in old_sources.items():
                 a,b=image(path),image(new_sources[name]);assert a.size==b.size and a.tobytes()==b.tobytes(),(climate,backend,name)
+                assert original_source_bytes(path)==original_source_bytes(new_sources[name]),(climate,backend,name,'complete original PAM bytes')
                 source_count+=1
             equal.append({'climate':climate,'backend':backend,'prior_tiny_ground_gallery_images_exact':144,'prior_original_source_images_exact':source_count,
+                'prior_complete_original_source_pam_headers_and_rgba_bytes_exact':True,
                 'scoped_native_owner_lod_picking_atlas_and_actual_save_success_verified':True,'whole_world_equality_to_old_unlogged_control_inferred':False})
             subprocess.run([sys.executable,'tools/assets/compact_reviews.py',str(BUILD),'--validation-manifest',str(HERE/'independent-native-runs.json'),'--apply'],cwd=ROOT,check=True)
     for kind,size,x,y,fixture in (
@@ -116,6 +126,7 @@ def main():
         for pattern in ('run.log','result.json','console-review.log','screenshot/*.png','save/*.sav'):
             for path in run.glob(pattern):evidence[str(path.relative_to(ROOT))]=digest(path)
     value={'audited_utc':datetime.now(timezone.utc).isoformat(),'tag':args.tag,'commit':args.commit,'app':str(app.relative_to(ROOT)),
+        'independent_native_reviewer_sha256':digest(Path(__file__)),
         'independent_download_sha256':expected['sha256'],'binary_sha256':binary,'catalogue_sha256':catalogue,'models':1915,
         'resources_only_from_download':True,'package_controls':packages,'native_controls':records,'scoped_equalities':equal,
         'evidence_sha256':evidence,'accepted_scoped_native_runtime':True,'accepted_full_objective':False,

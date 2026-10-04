@@ -1,0 +1,50 @@
+{
+  "verified_utc": "2026-10-04T18:28:18.521064+00:00",
+  "tag": "opentt3d-dev-20261004.43",
+  "commit": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+  "runtime_and_authored_source_files_exact": [
+    {
+      "path": "assets/3d/voxels.json",
+      "tagged_sha256": "d9896572c8ab466b739f49ee2cd8c8ba560317f87fc3d0dfe32ffddd52bf8537",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "assets/3d/quality_reviews.json",
+      "tagged_sha256": "6b8765b4ab8550ae2781bad3f1deee3ce9d56c1dd015b9bacac6c6842f567844",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "assets/3d/hq-diagnostic-bindings.json",
+      "tagged_sha256": "6be423c2a81012519b152ff81f993b537ddeee8c3268dd75caf0f49416cb6b6a",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "tools/assets/compile_voxels.py",
+      "tagged_sha256": "b8fabec6775eeae0adea037ac427a0e142a67c9100648b57db84d391bb730ecf",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "src/renderer3d/gl_backend.cpp",
+      "tagged_sha256": "a9f8004800d25e8014e4ea1917df9cc67858acec5e5e1bc89879684732f7b4e2",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "tools/opentt3d/fixture_rivers.py",
+      "tagged_sha256": "e475eec7790a56b5e7c09838af52a48ddd7d499e00fec97a3043d7e79685b943",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "tools/opentt3d/fixtures/rivers/info.nut",
+      "tagged_sha256": "34a226be70c66b41e0df776e98ff7c4ecd92a09d9d2716b36185de50ba6db3fa",
+      "working_bytes_exact": true
+    },
+    {
+      "path": "tools/opentt3d/fixtures/rivers/main.nut",
+      "tagged_sha256": "268e27d972feac5037f04843480cad9f20fcedf01c4f117fe8dc7970f9710d40",
+      "working_bytes_exact": true
+    }
+  ],
+  "subsequent_supplement_only_reviewer_scripts_and_evidence": true,
+  "quality_approvals_changed": false,
+  "tag_or_release_bytes_replaced": false
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/three-hour-resumption/supplement-bank-terrain-provenance.py", line 65, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/three-hour-resumption/supplement-bank-terrain-provenance.py", line 45, in main
+    picture=control/'renderer3d-reference'/new['source_image'];assert digest(picture)==old['source_pam_sha256']
+                                                                      ~~~~~~^^^^^^^^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/three-hour-resumption/supplement-bank-terrain-provenance.py", line 18, in digest
+    with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
+         ~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 776, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-shore-breadth/native-controls/breadth-original-river-shore-provenance-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10064-0-generation3.pam'
