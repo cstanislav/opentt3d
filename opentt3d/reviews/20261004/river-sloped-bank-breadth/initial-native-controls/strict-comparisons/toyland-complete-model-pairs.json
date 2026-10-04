@@ -1,0 +1,222 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-sloped-bank-breadth/initial-native-controls/breadth-original-river-sloped-bank-initial-toyland-vulkan-study/renderer3d-reference",
+  "actual": "opentt3d/reviews/20261004/river-sloped-bank-breadth/initial-native-controls/breadth-original-river-sloped-bank-initial-toyland-opengl-study/renderer3d-reference",
+  "pattern": "model-voxel-river_bank_slope_study_toyland_*",
+  "images": 72,
+  "pixels": 4205175,
+  "differences": [
+    {
+      "name": "model-voxel-river_bank_slope_study_toyland_se_edge00-5",
+      "changed_pixels": 2,
+      "pixels": [
+        {
+          "pixel": [
+            60,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            61,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_slope_study_toyland_se_edge00-7",
+      "changed_pixels": 2,
+      "pixels": [
+        {
+          "pixel": [
+            194,
+            185
+          ],
+          "reference": [
+            96,
+            92,
+            28,
+            255
+          ],
+          "actual": [
+            80,
+            76,
+            20,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            195,
+            185
+          ],
+          "reference": [
+            96,
+            92,
+            28,
+            255
+          ],
+          "actual": [
+            80,
+            76,
+            20,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_slope_study_toyland_se_edge02-7",
+      "changed_pixels": 2,
+      "pixels": [
+        {
+          "pixel": [
+            194,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            195,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_slope_study_toyland_sw_edge01-6",
+      "changed_pixels": 2,
+      "pixels": [
+        {
+          "pixel": [
+            60,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            61,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_bank_slope_study_toyland_sw_edge03-4",
+      "changed_pixels": 2,
+      "pixels": [
+        {
+          "pixel": [
+            194,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            195,
+            185
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            96,
+            92,
+            28,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

@@ -1,5 +1,52 @@
 # Active extended development goal
 
+## Sloped-bank breadth — thirty-two more independent volumes — October 4
+
+After the pushed flat-bank increment `333da9864`, concrete modelling adds32 separate
+sloped bank owners: two actual selected sides per original slope per climate.
+Explicit soil toe/shelf/turf shells follow undoubled SW/SE/NW/NE planes, with at
+most four quarter-unit cells of bank thickness, unchanged tile datum and empty
+water centre. All1831 canonical models/materials/bindings and48 earlier flat
+studies remain byte-exact in the1911-model diagnostic freeze. The mixed working
+HQ/compiler/ratings files, simulation/RNG and immutable recommended`.42`stay untouched.
+
+The actual source selections include26 elevated and six sea-level cases. Original
+wave fringes remain independently original, not voxel water or comparison masks.
+The full240 conditional-bank inventory retains160 other unobserved sloped slots;
+they are not fabricated or declared absent. Other shore/snow/desert/parameter/
+custom/incomplete/absence/height/neighbourhood/phase/LOD/support/picking/ship states
+remain required. Extra doubled-terrain support is not yet authored/accepted here.
+
+All32 owners were individually inspected through complete original/native/four-
+orbit/four-street views:23 at4/10, nine at5/10, all six acceptance gates false.
+32 actual source instances have separate3/10 records; no score/approval is inherited.
+Source/native failures remain32 images/6,399 RGBA pixels and3,226 additional
+silhouette differences. Narrow shoulders, regular courses/end lobes and stark
+Toyland top-only pale caps are unresolved source defects. Zero banks are bound.
+Before sealing, a cropped/alpha-composited display-helper audit was rejected and
+preserved. Fresh raw paste-only registered comparisons retain every source/native
+byte and unchanged per-model failure counts across all80 flat/sloped owners. Four
+hidden-RGB/partial-alpha/extent/anchor regressions pass; no quality gate is relaxed.
+
+Eight fresh quiet40bpp-anim/non-HiDPI controls retain actual public command
+acknowledgements, synchronous save-success text and original save headers/files.
+Eight prior immutable acknowledged canonical controls are explicitly reused.
+Eight same-backend canonical/study worlds and32 atlas images are exact; all32
+registered native model pairs match. Complete galleries still fail17 views/34
+pixels, alongside canonical-world46/18/45/24-pixel failures. Portable704 PNGs
+reconstruct336,137,248 original PAM bytes without masks, tolerance or exemptions.
+All1,094 portable evidence files are sealed and reverified; earlier faulty
+display-composited reports remain rejected/preserved rather than overwritten.
+Structural bank tests4, harness112 and presentation boundary pass. The exact2946-
+row current catalogue has137 individual reviews, four broad gaps, zero approvals
+and fails required-eight; canonical2866 rows remain unchanged/failing.
+
+Continue concrete missing-bank/terrain and all catalogue-family breadth, then
+fidelity passes and live support/phase/picking/ship controls, locks/HQs/effects/
+fleet clearances, sustained60fps/memory and platform/input/replay/network acceptance.
+The full every-model8/10 objective remains active and unmet; no newer stopping
+clock or complete release is inferred from these reviews.
+
 ## River-bank breadth — forty-eight individually screened volumes — October 4
 
 Concrete bank modelling now retains48 separate elevated-flat owner candidates

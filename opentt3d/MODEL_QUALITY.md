@@ -4,6 +4,45 @@ The target is **every runtime asset genuinely 3D, detailed and consistent, with
 every model at least 8/10**. It is not yet met. A model count, successful build or
 source export does not establish visual quality or whole-world coverage.
 
+## Sloped bank breadth — thirty-two additional independent screenings
+
+`reviews/20261004/river-sloped-bank-breadth/` adds two observed side owners on each
+original river slope per climate, as separate thin3D soil/shelf/turf shells.26
+particular elevated and six particular sea-level sources keep their original
+selectors, registered complete paint and independent wave fringes.160 other
+conditional sloped slots are unobserved/unmodelled, not inferred absent; the full
+240-state source inventory and all extra state axes remain required. Canonical
+artwork/bindings and48 prior flat owners remain byte-exact; banks remain unbound.
+
+All32 original/native/four-orbit/four-street sheets were individually inspected:
+23 at4/10 and nine at5/10, with unique defects, fingerprints and SHA-256 evidence.
+Scores4/5 are structural screening, not aesthetic acceptance. Every source/orbit/
+street/world/states/consistency gate is false.32 actual source instances have
+independent3/10 records and inherit no score, coverage or approval. Thin shoulders,
+regular sediment/end profiles and overly stark top-only Toyland caps remain.
+The old cropped/alpha-composited display-helper source audit is retained/rejected.
+New paste-only raw registration preserves hidden RGB, partial alpha and complete
+extents/anchors with four regressions; a supplement checks all48 earlier flat
+owners without modifying immutable evidence. All80 models retain the same per-
+model failure counts and below-eight scores, with refreshed corrective evidence.
+
+Complete source/native comparisons fail32 images/6,399 RGBA pixels with3,226
+additional alpha-presence differences; no wave fringe or source pixel is masked
+out. All32 registered native backend pairs match, but complete galleries fail17
+views/34 pixels (sky versus bank coverage) and canonical world46/18/45/24-pixel
+failures persist. Eight fresh acknowledged quiet saved-world controls and eight
+explicitly reused immutable canonical controls preserve eight same-backend worlds/
+32 atlas images exactly. That is noninterference, not live bank fidelity/support/
+phase/picking/ship acceptance. Portable704 PNGs reconstruct336,137,248 original
+PAM bytes. Structural tests4, harness112 and presentation boundary pass.
+
+The exact1911-model diagnostic freeze retains2946 quality rows/137 individual
+reviews/four broad gaps/zero approvals and fails required-eight. Canonical2866
+rows remain unchanged/failing; extra doubled-terrain support, all source states,
+every-family8/10, sustained60fps/memory and platforms/input/replay/network stay
+unaccepted. Recommended immutable`.42`and mixed working art/compiler/HQ/ratings
+changes remain untouched. Continue catalogue breadth and concrete repair work.
+
 ## River-bank breadth — forty-eight individually screened unbound volumes
 
 `reviews/20261004/river-bank-breadth/` retains twelve independent elevated-flat bank

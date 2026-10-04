@@ -1,0 +1,23 @@
+{
+  "reason": "Display helpers alpha-composited and cropped transparent source/native borders. Full raw byte preservation was not established; previous no-crop/full-RGBA assertions are rejected. All retained original sources/captures and below-eight screenings remain; no approvals granted.",
+  "original_reports_and_drivers_sha256": {
+    "make-review-sheets.py": "4ca3c8dd81a0b568247e8dbd98983fc23a40bd02c7b6657b8f379496676e42d9",
+    "rate-studies.py": "e6f5d2a64d5431b22559140364cc2d41ebf7802b466f90af0cfa9f4c10a47b2b",
+    "source-native-audit.json": "d2f623029ad3cd420a4e59763d4f84f275358d8d90ec83b71fc53171b243b6e4",
+    "individual-rating-command.log": "aaa5edd2461537742944f423e6554c5f3b3b2057785fa7481a47ed817e3865d2",
+    "current-quality-reviews.json": "231282974286c2ac650430bcd8cbfb6dfb158fd53a5124f102c9f095198642f5",
+    "diagnostic-source-instance-records.json": "09368e3057b0aac97573f085102a76ec9f54146a0db7a110b757876f507cb89d",
+    "current-conditional-family-inventory.json": "e8952deb75d970bfae719a3cdb51bd0162b9d24a96d5879e9a8baf128ce67709",
+    "current-combined-quality-reviews.json": "1a556947df8f55f1bef8e4c4cdbde43d280091ba5ec56400ea76da2826f92c31",
+    "current-full-catalogue-quality.json": "5899e0503f00d406f27e192c9d11f598f4c22ca2676af8fd4ad442737e39e31e",
+    "current-full-catalogue-ratings.csv": "bbf1f0705192c32ced9e08779da595e7785301b36bfabb6a78c4af322e5c4133",
+    "required-eight-quality.json": "5899e0503f00d406f27e192c9d11f598f4c22ca2676af8fd4ad442737e39e31e",
+    "required-eight.log": "5cacc5b332919200ea3679601ec698505756b05445db98ebc2a4317658072273",
+    "required-eight-gate-receipt.json": "457e390e18eae361f20838d0b8a56c12592a0ec86ecdc2ca2aa38a18c7031056",
+    "individual-decisions.json": "5da3e424c4e9f0ad58439e6d4eedd5aa132be07b0c54c705c01da828511cbddd",
+    "tools/assets/contact_sheet.py": "82262e3810ad11c23d4240a27b17f213d45b8b06130009db2c705dd9c8052604",
+    "tools/assets/object_review.py": "e4f0af483084b703b9b743af0a1ad964773a63d0ee382018173aa6e6aa2374a7"
+  },
+  "full_raw_fidelity_accepted": false,
+  "quality_approvals": 0
+}
