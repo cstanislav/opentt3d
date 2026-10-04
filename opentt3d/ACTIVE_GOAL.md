@@ -1,5 +1,29 @@
 # Active extended development goal
 
+## Execution stopping-clock audit — October 4, 01:31:28 UTC
+
+**Actual stopping clock check: 2026-10-04 01:31:28 UTC.** Modelling/native validation
+stops after support-only increment`4670d9cceeaba998e7ad00afe78f4a375d030a96` is
+pushed. Only this stopping-clock bookkeeping and its commit/push follow. Reason:
+preserve a validated, audited diagnostic checkpoint rather than promote below-eight
+lock artwork or relax strict renderer acceptance. This is not full-goal completion
+or a claim that further work is impossible.
+
+The94 corrected/five rejected quiet controls retain99 full lossless world images.
+All6,217 portable files and376 exact atlas-PAM reconstructions verify. Actual source
+mapping, support, complete-family fallback and original visibility are validated;
+32 paired prototype worlds still differ by1,213 pixels. Source/orbit/street/world/
+state/consistency gates, independent phases, ships, terrain/custom coverage, larger
+HQ states/ownership, remaining catalogue volumes/effects/emitter clearance,
+sustained60fps/memory and platform/input/replay/network acceptance remain open.
+Every catalogue-wide required-eight gate still fails with zero approvals/four gaps.
+
+No background work remains pending. All originals, failed controls/verifiers and
+rejected artwork remain preserved. Canonical artwork/bindings and recommended`.42`
+are unchanged; mixed HQ artwork/compiler/tests and candidate CSV remain uncommitted
+and quarantined. The full every-model8/10 objective below remains active for the
+next continuation. The evidence-seal timestamp is not substituted for this clock.
+
 ## Resumed: original locks reach diagnostic saved worlds — October 4
 
 The48 provisional lock owners now render through a separately bound diagnostic
