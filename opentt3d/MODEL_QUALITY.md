@@ -4,6 +4,39 @@ The target is **every runtime asset genuinely 3D, detailed and consistent, with
 every model at least 8/10**. It is not yet met. A model count, successful build or
 source export does not establish visual quality or whole-world coverage.
 
+## Snow-painted bank state breadth — twenty additional screenings
+
+`reviews/20261004/river-bank-snow-breadth/` retains twenty particular actually
+selected snow-painted Arctic owners:12 flat and two per original river slope.
+Separate manually authored thin soil/snow volumes add wider shoulders/corner arms
+without image extrusion, alpha tracing, source fitting, object inflation or water
+voxelisation. Original complete PAMs/registration/selectors/tile/heights and all
+earlier80 bank studies remain. Snow-paint observations do not establish public
+terrain-type inputs or all snowline transitions. The full240 conditional slots,
+160 unobserved sloped slots and all other state axes stay required.
+
+Every20 source/native/four-orbit/four-street sheet was individually inspected:
+12 at4/10 and eight at5/10, with unique defects, fingerprints and SHA-256 evidence.
+All source/orbit/street/world/states/consistency gates are false;20 actual source
+instances have independent3/10 records and inherit no rating/coverage/approval.
+Angular snowy returns, underfilled/pointed lobes, regular sediment/crest courses
+and inaccurate cold/white source face paint remain. All100 bank studies are unbound.
+
+Raw source/native comparisons fail20 images/2731 RGBA pixels with941 additional
+alpha-presence differences.20 native backend pairs are exact, but complete
+galleries fail12 views/260 pixels and the canonical Arctic world18 pixels. Two
+fresh quiet acknowledged40bpp-anim controls and two explicitly reused canonical
+controls preserve two same-backend worlds, eight atlas views and two original save
+byte pairs exactly. Portable392 PNGs reconstruct134486480 original PAM bytes.
+Structural4/harness112 and presentation boundary pass, not source/runtime/support/
+phase/ship/performance acceptance. Extra doubled-terrain support remains required.
+
+The exact1931-model diagnostic catalogue retains2966 quality rows/157 individual
+reviews/four broad gaps/zero approvals and fails required-eight. Canonical2866 rows
+remain unchanged/failing. All other catalogue families, sustained60fps/memory and
+platform/input/replay/network gates stay open; recommended immutable`.42`and mixed
+working HQ/art/compiler/ratings changes remain untouched. No aesthetic promotion.
+
 ## Sloped bank breadth — thirty-two additional independent screenings
 
 `reviews/20261004/river-sloped-bank-breadth/` adds two observed side owners on each

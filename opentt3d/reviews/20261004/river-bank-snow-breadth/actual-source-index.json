@@ -1,0 +1,1402 @@
+[
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1568,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 10184,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10184-0-generation3.pam",
+    "source_offset": [
+      -20,
+      0
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 12635,
+    "tile_xy": [
+      91,
+      98
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -5,
+      0
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset00.pam",
+    "source_pam_sha256": "a208181d610a91a407ab561504d023c0d6fcd7db6f248f24ffd72d1652335e38",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12635,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 0,
+      "resolved_offset": 0,
+      "selected_sprite": 10184,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10184-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/a208181d610a91a407ab561504d023c0d6fcd7db6f248f24ffd72d1652335e38.pam",
+      "sha256": "a208181d610a91a407ab561504d023c0d6fcd7db6f248f24ffd72d1652335e38"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1584,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 10185,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10185-0-generation3.pam",
+    "source_offset": [
+      -20,
+      52
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 12763,
+    "tile_xy": [
+      91,
+      99
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -5,
+      13
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset01.pam",
+    "source_pam_sha256": "30ebce177d78ec77ddcf80cb8726de8fb39c000aca58276ae7c24511485fceb4",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12763,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 10185,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10185-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/30ebce177d78ec77ddcf80cb8726de8fb39c000aca58276ae7c24511485fceb4.pam",
+      "sha256": "30ebce177d78ec77ddcf80cb8726de8fb39c000aca58276ae7c24511485fceb4"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1568,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 10186,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10186-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 12635,
+    "tile_xy": [
+      91,
+      98
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset02.pam",
+    "source_pam_sha256": "8023ae5fa8c513ab1220d2bccad27afbfc1805033e54d44dee85c81d00491ba3",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12635,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 10186,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10186-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/8023ae5fa8c513ab1220d2bccad27afbfc1805033e54d44dee85c81d00491ba3.pam",
+      "sha256": "8023ae5fa8c513ab1220d2bccad27afbfc1805033e54d44dee85c81d00491ba3"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1568,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 10187,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10187-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 12635,
+    "tile_xy": [
+      91,
+      98
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset03.pam",
+    "source_pam_sha256": "5b8e9b6a5252ffab28f8442b386a0ee063e5568f9cc91cdebc9d8b19e32b67a2",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12635,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 10187,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10187-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/5b8e9b6a5252ffab28f8442b386a0ee063e5568f9cc91cdebc9d8b19e32b67a2.pam",
+      "sha256": "5b8e9b6a5252ffab28f8442b386a0ee063e5568f9cc91cdebc9d8b19e32b67a2"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1584,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 10188,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10188-0-generation3.pam",
+    "source_offset": [
+      68,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 12763,
+    "tile_xy": [
+      91,
+      99
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      17,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset04.pam",
+    "source_pam_sha256": "055f8f0bdc9d18e5fc29275c2ed3a22122485e763438416d9429e4f172615bd3",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12763,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 10188,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10188-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/055f8f0bdc9d18e5fc29275c2ed3a22122485e763438416d9429e4f172615bd3.pam",
+      "sha256": "055f8f0bdc9d18e5fc29275c2ed3a22122485e763438416d9429e4f172615bd3"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      976,
+      944,
+      40
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 5,
+    "resolved_offset": 5,
+    "selected_sprite": 10189,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 40,
+    "source_image": "river-selector-source-10189-0-generation3.pam",
+    "source_offset": [
+      -44,
+      92
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 7613,
+    "tile_xy": [
+      61,
+      59
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -11,
+      23
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset05.pam",
+    "source_pam_sha256": "6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7613,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 5,
+      "resolved_offset": 5,
+      "selected_sprite": 10189,
+      "source_height": 40,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10189-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570.pam",
+      "sha256": "6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1568,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 6,
+    "resolved_offset": 6,
+    "selected_sprite": 10190,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10190-0-generation3.pam",
+    "source_offset": [
+      -124,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 12635,
+    "tile_xy": [
+      91,
+      98
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset06.pam",
+    "source_pam_sha256": "81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12635,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 6,
+      "resolved_offset": 6,
+      "selected_sprite": 10190,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10190-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82.pam",
+      "sha256": "81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1568,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 7,
+    "resolved_offset": 7,
+    "selected_sprite": 10191,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10191-0-generation3.pam",
+    "source_offset": [
+      -44,
+      0
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 12635,
+    "tile_xy": [
+      91,
+      98
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -11,
+      0
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset07.pam",
+    "source_pam_sha256": "bf5d34d45acbe92259cf5cb8fba50f0d0766e2403b6fde0b33bd952ee33f3661",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12635,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 7,
+      "resolved_offset": 7,
+      "selected_sprite": 10191,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10191-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/bf5d34d45acbe92259cf5cb8fba50f0d0766e2403b6fde0b33bd952ee33f3661.pam",
+      "sha256": "bf5d34d45acbe92259cf5cb8fba50f0d0766e2403b6fde0b33bd952ee33f3661"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1472,
+      1584,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 8,
+    "resolved_offset": 8,
+    "selected_sprite": 10192,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10192-0-generation3.pam",
+    "source_offset": [
+      92,
+      48
+    ],
+    "source_size": [
+      40,
+      28
+    ],
+    "texture_generation": 3,
+    "tile": 12764,
+    "tile_xy": [
+      92,
+      99
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      23,
+      12
+    ],
+    "native_size": [
+      10,
+      7
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset08.pam",
+    "source_pam_sha256": "fb0a8abbe04a349963784ab4a798ec5e56f71f69da1c3053a9a05421d89824b6",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12764,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 8,
+      "resolved_offset": 8,
+      "selected_sprite": 10192,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10192-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/fb0a8abbe04a349963784ab4a798ec5e56f71f69da1c3053a9a05421d89824b6.pam",
+      "sha256": "fb0a8abbe04a349963784ab4a798ec5e56f71f69da1c3053a9a05421d89824b6"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1664,
+      40
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 9,
+    "resolved_offset": 9,
+    "selected_sprite": 10193,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 40,
+    "source_image": "river-selector-source-10193-0-generation3.pam",
+    "source_offset": [
+      -20,
+      104
+    ],
+    "source_size": [
+      48,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 13403,
+    "tile_xy": [
+      91,
+      104
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -5,
+      26
+    ],
+    "native_size": [
+      12,
+      5
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset09.pam",
+    "source_pam_sha256": "41ec27b3d6c0eb08c5f47bd8c5d3077f2a2ef70576a3d02d641f8745f9e6fa8e",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 13403,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 9,
+      "resolved_offset": 9,
+      "selected_sprite": 10193,
+      "source_height": 40,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10193-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/41ec27b3d6c0eb08c5f47bd8c5d3077f2a2ef70576a3d02d641f8745f9e6fa8e.pam",
+      "sha256": "41ec27b3d6c0eb08c5f47bd8c5d3077f2a2ef70576a3d02d641f8745f9e6fa8e"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1456,
+      1584,
+      56
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 10,
+    "resolved_offset": 10,
+    "selected_sprite": 10194,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 56,
+    "source_image": "river-selector-source-10194-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      40,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 12763,
+    "tile_xy": [
+      91,
+      99
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      10,
+      5
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset10.pam",
+    "source_pam_sha256": "e2769cf1a33a351d89bb9bed8c3814d92d3ee12ea710b6886ae09c7ae2ad0398",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 12763,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 10,
+      "resolved_offset": 10,
+      "selected_sprite": 10194,
+      "source_height": 56,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10194-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/e2769cf1a33a351d89bb9bed8c3814d92d3ee12ea710b6886ae09c7ae2ad0398.pam",
+      "sha256": "e2769cf1a33a351d89bb9bed8c3814d92d3ee12ea710b6886ae09c7ae2ad0398"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1472,
+      1632,
+      48
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 11,
+    "resolved_offset": 11,
+    "selected_sprite": 10195,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 48,
+    "source_image": "river-selector-source-10195-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      40,
+      16
+    ],
+    "texture_generation": 3,
+    "tile": 13148,
+    "tile_xy": [
+      92,
+      102
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_size": [
+      10,
+      4
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset11.pam",
+    "source_pam_sha256": "c86d6799901564ba2bf018f07cebd2fc0a5f8462c84ab2fdd97f884c51ac40bb",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 13148,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 11,
+      "resolved_offset": 11,
+      "selected_sprite": 10195,
+      "source_height": 48,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10195-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/c86d6799901564ba2bf018f07cebd2fc0a5f8462c84ab2fdd97f884c51ac40bb.pam",
+      "sha256": "c86d6799901564ba2bf018f07cebd2fc0a5f8462c84ab2fdd97f884c51ac40bb"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1200,
+      928,
+      32
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 12,
+    "resolved_offset": 12,
+    "selected_sprite": 10196,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 32,
+    "source_image": "river-selector-source-10196-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 7499,
+    "tile_xy": [
+      75,
+      58
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_size": [
+      37,
+      10
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset12.pam",
+    "source_pam_sha256": "52ee61e3bcd729ebe7ee596a7d610a6c031dc7454f470876c81494e95e02b939",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7499,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 12,
+      "resolved_offset": 12,
+      "selected_sprite": 10196,
+      "source_height": 32,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10196-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/52ee61e3bcd729ebe7ee596a7d610a6c031dc7454f470876c81494e95e02b939.pam",
+      "sha256": "52ee61e3bcd729ebe7ee596a7d610a6c031dc7454f470876c81494e95e02b939"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1200,
+      928,
+      32
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 14,
+    "resolved_offset": 14,
+    "selected_sprite": 10198,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 32,
+    "source_image": "river-selector-source-10198-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      144,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 7499,
+    "tile_xy": [
+      75,
+      58
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      36,
+      10
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset14.pam",
+    "source_pam_sha256": "9596cc477f8f9e71435b0a1440e7f2b5f5fa6789858ae93fc7f311653dbd4943",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7499,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 14,
+      "resolved_offset": 14,
+      "selected_sprite": 10198,
+      "source_height": 32,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10198-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/9596cc477f8f9e71435b0a1440e7f2b5f5fa6789858ae93fc7f311653dbd4943.pam",
+      "sha256": "9596cc477f8f9e71435b0a1440e7f2b5f5fa6789858ae93fc7f311653dbd4943"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      2000,
+      1616,
+      32
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 25,
+    "resolved_offset": 25,
+    "selected_sprite": 10209,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 32,
+    "source_image": "river-selector-source-10209-0-generation3.pam",
+    "source_offset": [
+      -20,
+      20
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 13053,
+    "tile_xy": [
+      125,
+      101
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -5,
+      5
+    ],
+    "native_size": [
+      38,
+      26
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset25.pam",
+    "source_pam_sha256": "1899846559403b9331fbd8494c55e05b49be46b15bdd9f87653eeb97feb2632f",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 13053,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 25,
+      "resolved_offset": 25,
+      "selected_sprite": 10209,
+      "source_height": 32,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10209-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/1899846559403b9331fbd8494c55e05b49be46b15bdd9f87653eeb97feb2632f.pam",
+      "sha256": "1899846559403b9331fbd8494c55e05b49be46b15bdd9f87653eeb97feb2632f"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      2000,
+      1616,
+      32
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 27,
+    "resolved_offset": 27,
+    "selected_sprite": 10211,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 32,
+    "source_image": "river-selector-source-10211-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      148,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 13053,
+    "tile_xy": [
+      125,
+      101
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "native_size": [
+      37,
+      26
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset27.pam",
+    "source_pam_sha256": "acb9e3f07d3f34f67244fe1e3c47832f0c1a406ac1355d0841df42cf7711421f",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 13053,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 27,
+      "resolved_offset": 27,
+      "selected_sprite": 10211,
+      "source_height": 32,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10211-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/acb9e3f07d3f34f67244fe1e3c47832f0c1a406ac1355d0841df42cf7711421f.pam",
+      "sha256": "acb9e3f07d3f34f67244fe1e3c47832f0c1a406ac1355d0841df42cf7711421f"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      944,
+      944,
+      32
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 37,
+    "resolved_offset": 37,
+    "selected_sprite": 10221,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 32,
+    "source_image": "river-selector-source-10221-0-generation3.pam",
+    "source_offset": [
+      -16,
+      52
+    ],
+    "source_size": [
+      148,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 7611,
+    "tile_xy": [
+      59,
+      59
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -4,
+      13
+    ],
+    "native_size": [
+      37,
+      10
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset37.pam",
+    "source_pam_sha256": "9898c4ed99f10504dd6b5d911059e58008b2d33a8c93e9645adf879f5d438fe6",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7611,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 37,
+      "resolved_offset": 37,
+      "selected_sprite": 10221,
+      "source_height": 32,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10221-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/9898c4ed99f10504dd6b5d911059e58008b2d33a8c93e9645adf879f5d438fe6.pam",
+      "sha256": "9898c4ed99f10504dd6b5d911059e58008b2d33a8c93e9645adf879f5d438fe6"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      944,
+      944,
+      32
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 39,
+    "resolved_offset": 39,
+    "selected_sprite": 10223,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 32,
+    "source_image": "river-selector-source-10223-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      144,
+      40
+    ],
+    "texture_generation": 3,
+    "tile": 7611,
+    "tile_xy": [
+      59,
+      59
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_size": [
+      36,
+      10
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset39.pam",
+    "source_pam_sha256": "20b5fd7af7a372f5456dd1913baee002dfbf45646c2d8418831a06f985a7e99c",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7611,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 39,
+      "resolved_offset": 39,
+      "selected_sprite": 10223,
+      "source_height": 32,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10223-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/20b5fd7af7a372f5456dd1913baee002dfbf45646c2d8418831a06f985a7e99c.pam",
+      "sha256": "20b5fd7af7a372f5456dd1913baee002dfbf45646c2d8418831a06f985a7e99c"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1472,
+      1616,
+      48
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 48,
+    "resolved_offset": 48,
+    "selected_sprite": 10232,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 48,
+    "source_image": "river-selector-source-10232-0-generation3.pam",
+    "source_offset": [
+      -20,
+      -32
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 13020,
+    "tile_xy": [
+      92,
+      101
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -5,
+      -8
+    ],
+    "native_size": [
+      38,
+      26
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset48.pam",
+    "source_pam_sha256": "b0dc00c8b3b167468ade9b5b113227fcfb3df74b133bea3eaff05d861f8670c9",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 13020,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 48,
+      "resolved_offset": 48,
+      "selected_sprite": 10232,
+      "source_height": 48,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10232-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/b0dc00c8b3b167468ade9b5b113227fcfb3df74b133bea3eaff05d861f8670c9.pam",
+      "sha256": "b0dc00c8b3b167468ade9b5b113227fcfb3df74b133bea3eaff05d861f8670c9"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      1472,
+      1616,
+      48
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 50,
+    "resolved_offset": 50,
+    "selected_sprite": 10234,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 48,
+    "source_image": "river-selector-source-10234-0-generation3.pam",
+    "source_offset": [
+      -124,
+      20
+    ],
+    "source_size": [
+      152,
+      104
+    ],
+    "texture_generation": 3,
+    "tile": 13020,
+    "tile_xy": [
+      92,
+      101
+    ],
+    "water_class": 2,
+    "source_state": "observed-above-sea-level-snow-paint",
+    "native_offset": [
+      -31,
+      5
+    ],
+    "native_size": [
+      38,
+      26
+    ],
+    "source_pam": "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset50.pam",
+    "source_pam_sha256": "af021b91a4ef5d8519df27fd97e3b7203e6c5e8ff7dadd60ef650c6a051cddc1",
+    "original_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 13020,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 50,
+      "resolved_offset": 50,
+      "selected_sprite": 10234,
+      "source_height": 48,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10234-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/af021b91a4ef5d8519df27fd97e3b7203e6c5e8ff7dadd60ef650c6a051cddc1.pam",
+      "sha256": "af021b91a4ef5d8519df27fd97e3b7203e6c5e8ff7dadd60ef650c6a051cddc1"
+    },
+    "prior_source_file_map_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "actual_selector_sha256": "e1c0fb2c8cd658c6639bdf0c7a3d9d2168075577903f97fe7e87092d7fda6c0a",
+    "public_terrain_type_query_performed": false,
+    "quality_approved": false,
+    "scope": "One actual selected Arctic snow-painted bank at this tile/height. Neither all snowline transitions, terrain-type callback inputs, shore/desert/grass/grid parameters, custom/incomplete/absence states nor water phases are accepted."
+  }
+]

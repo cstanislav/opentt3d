@@ -1,0 +1,733 @@
+{
+  "audited_utc": "2026-10-04T07:01:18.204427+00:00",
+  "models": 20,
+  "rows": [
+    {
+      "model": "river_bank_snow_study_arctic_offset00",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 0,
+      "shared_bounds": [
+        -9,
+        -5,
+        37,
+        23
+      ],
+      "raw_source_bounds": [
+        -5,
+        0,
+        33,
+        18
+      ],
+      "raw_native_bounds": [
+        -9,
+        -5,
+        37,
+        23
+      ],
+      "complete_rgba_changed_pixels": 153,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "exit_code": 1,
+      "original_visible_pixels": 175,
+      "model_visible_pixels": 174,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset00.pam": "a208181d610a91a407ab561504d023c0d6fcd7db6f248f24ffd72d1652335e38",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset00-native.png": "5864673a6110f1dbecc43328c0c87c26cd3625cfd2064b92a394646e8bf30065",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset00-native.json": "4dd86655ecdd10d09c249bd3e5327ef5cd64158eeded1d55d4029f50ce696ded"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset01",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 1,
+      "shared_bounds": [
+        -9,
+        0,
+        37,
+        37
+      ],
+      "raw_source_bounds": [
+        -5,
+        13,
+        33,
+        31
+      ],
+      "raw_native_bounds": [
+        -9,
+        0,
+        37,
+        37
+      ],
+      "complete_rgba_changed_pixels": 146,
+      "alpha_presence_differences_additional_diagnostic": 45,
+      "exit_code": 1,
+      "original_visible_pixels": 178,
+      "model_visible_pixels": 141,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset01.pam": "30ebce177d78ec77ddcf80cb8726de8fb39c000aca58276ae7c24511485fceb4",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset01-native.png": "7966c0e501490a064ef6507fa197b1df86241e83d600340926a8b65be1ecea95",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset01-native.json": "d4db05bc681843febe81917e2999a0198d3cfc11111ad06a2137bd2b5d1beeed"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset02",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 2,
+      "shared_bounds": [
+        -37,
+        0,
+        9,
+        37
+      ],
+      "raw_source_bounds": [
+        -31,
+        13,
+        6,
+        31
+      ],
+      "raw_native_bounds": [
+        -37,
+        0,
+        9,
+        37
+      ],
+      "complete_rgba_changed_pixels": 185,
+      "alpha_presence_differences_additional_diagnostic": 106,
+      "exit_code": 1,
+      "original_visible_pixels": 179,
+      "model_visible_pixels": 143,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset02.pam": "8023ae5fa8c513ab1220d2bccad27afbfc1805033e54d44dee85c81d00491ba3",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset02-native.png": "875b2f726a60b638559d47b4470488bbc374217261206ac4af42c3170a860c4b",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset02-native.json": "b91b86e64edb73ce0394fb67fbd6c160bb0e6e30482154716110756d09b82a77"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset03",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 3,
+      "shared_bounds": [
+        -37,
+        -5,
+        9,
+        23
+      ],
+      "raw_source_bounds": [
+        -31,
+        0,
+        6,
+        18
+      ],
+      "raw_native_bounds": [
+        -37,
+        -5,
+        9,
+        23
+      ],
+      "complete_rgba_changed_pixels": 167,
+      "alpha_presence_differences_additional_diagnostic": 59,
+      "exit_code": 1,
+      "original_visible_pixels": 151,
+      "model_visible_pixels": 172,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset03.pam": "5b8e9b6a5252ffab28f8442b386a0ee063e5568f9cc91cdebc9d8b19e32b67a2",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset03-native.png": "74a8e8cc2715241fe18e10564f71b3f03ba62e305756cdd6ac72af48cb8f875f",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset03-native.json": "67896ed71b43fdfdc0657883ff6431e5067ea4a5d40aa3c06aca8b79d524434b"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset04",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 4,
+      "shared_bounds": [
+        0,
+        0,
+        37,
+        27
+      ],
+      "raw_source_bounds": [
+        17,
+        10,
+        33,
+        21
+      ],
+      "raw_native_bounds": [
+        0,
+        0,
+        37,
+        27
+      ],
+      "complete_rgba_changed_pixels": 90,
+      "alpha_presence_differences_additional_diagnostic": 15,
+      "exit_code": 1,
+      "original_visible_pixels": 97,
+      "model_visible_pixels": 98,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset04.pam": "055f8f0bdc9d18e5fc29275c2ed3a22122485e763438416d9429e4f172615bd3",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset04-native.png": "5ca2be04713b36b5624b0e6394d7f8ca6b4c5d68a0e44d28079c65fbf27226db",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset04-native.json": "45137d090540bc375bfed3c28433ab82d85a6887d8b4a3f1479296ed52008aea"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset05",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 5,
+      "shared_bounds": [
+        -17,
+        0,
+        17,
+        37
+      ],
+      "raw_source_bounds": [
+        -11,
+        23,
+        13,
+        31
+      ],
+      "raw_native_bounds": [
+        -17,
+        0,
+        17,
+        37
+      ],
+      "complete_rgba_changed_pixels": 95,
+      "alpha_presence_differences_additional_diagnostic": 34,
+      "exit_code": 1,
+      "original_visible_pixels": 98,
+      "model_visible_pixels": 88,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset05.pam": "6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset05-native.png": "83c12b908610344a63eb78f1bfbea980559ce51d3cc3559034f58dce14e39177",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset05-native.json": "f084af7a14bd1b9b5a98ea47f6df19804700e90bb825b773d0c350a7c388a43e"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset06",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 6,
+      "shared_bounds": [
+        -37,
+        0,
+        0,
+        27
+      ],
+      "raw_source_bounds": [
+        -31,
+        10,
+        -15,
+        21
+      ],
+      "raw_native_bounds": [
+        -37,
+        0,
+        0,
+        27
+      ],
+      "complete_rgba_changed_pixels": 109,
+      "alpha_presence_differences_additional_diagnostic": 41,
+      "exit_code": 1,
+      "original_visible_pixels": 93,
+      "model_visible_pixels": 98,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset06.pam": "81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset06-native.png": "8adf1bd44447b4e624cc30311fb7adc78c1c61717985ee648331f3f927d8ccb3",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset06-native.json": "e2bfc04109f9fbf6fe62474c1fb9329277159c34554125fd6cc4c340fcea9b38"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset07",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 7,
+      "shared_bounds": [
+        -17,
+        -5,
+        17,
+        12
+      ],
+      "raw_source_bounds": [
+        -11,
+        0,
+        13,
+        8
+      ],
+      "raw_native_bounds": [
+        -17,
+        -5,
+        17,
+        12
+      ],
+      "complete_rgba_changed_pixels": 103,
+      "alpha_presence_differences_additional_diagnostic": 24,
+      "exit_code": 1,
+      "original_visible_pixels": 99,
+      "model_visible_pixels": 111,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset07.pam": "bf5d34d45acbe92259cf5cb8fba50f0d0766e2403b6fde0b33bd952ee33f3661",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset07-native.png": "8dc8977d6cbc3881ce45b3310375182248836c6f556ff5792ead68bbce173338",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset07-native.json": "8e0f4062ea11f0d1b69fc511da5b81a35da5596c6518e0a2b934dafbbca5303b"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset08",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 8,
+      "shared_bounds": [
+        0,
+        0,
+        37,
+        24
+      ],
+      "raw_source_bounds": [
+        23,
+        12,
+        33,
+        19
+      ],
+      "raw_native_bounds": [
+        0,
+        0,
+        37,
+        24
+      ],
+      "complete_rgba_changed_pixels": 41,
+      "alpha_presence_differences_additional_diagnostic": 13,
+      "exit_code": 1,
+      "original_visible_pixels": 37,
+      "model_visible_pixels": 34,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset08.pam": "fb0a8abbe04a349963784ab4a798ec5e56f71f69da1c3053a9a05421d89824b6",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset08-native.png": "0f44e742b32dcf5093f314474a8262fb55ab819555eec185d39105b58c7cf319",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset08-native.json": "bed258ec3794bcd4f1094c667794d318b35f67c1e15a0bcec1ae97000c0b6bf3"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset09",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 9,
+      "shared_bounds": [
+        -11,
+        0,
+        12,
+        37
+      ],
+      "raw_source_bounds": [
+        -5,
+        26,
+        7,
+        31
+      ],
+      "raw_native_bounds": [
+        -11,
+        0,
+        12,
+        37
+      ],
+      "complete_rgba_changed_pixels": 45,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "exit_code": 1,
+      "original_visible_pixels": 40,
+      "model_visible_pixels": 29,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset09.pam": "41ec27b3d6c0eb08c5f47bd8c5d3077f2a2ef70576a3d02d641f8745f9e6fa8e",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset09-native.png": "c7071d663f43f4276aeb4706c198b44ddf0903255ff00bd789d00c2444fc9bd7",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset09-native.json": "8b988abea1f1c4e412280e4ec7dd3f85c16afe9d58d6bfe3b183b0f31eb770fa"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset10",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 10,
+      "shared_bounds": [
+        -37,
+        0,
+        0,
+        24
+      ],
+      "raw_source_bounds": [
+        -31,
+        13,
+        -21,
+        18
+      ],
+      "raw_native_bounds": [
+        -37,
+        0,
+        0,
+        24
+      ],
+      "complete_rgba_changed_pixels": 41,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "exit_code": 1,
+      "original_visible_pixels": 33,
+      "model_visible_pixels": 34,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset10.pam": "e2769cf1a33a351d89bb9bed8c3814d92d3ee12ea710b6886ae09c7ae2ad0398",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset10-native.png": "db2f02b54299f419dca1f9ad05a394033f6b2e20879ed1b752cabba6409aed6c",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset10-native.json": "42155df732c1ef03cbbf158135547629715d61b5a43fe055e97a7831183392a0"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset11",
+      "climate": 1,
+      "slope": 0,
+      "requested_offset": 11,
+      "shared_bounds": [
+        -12,
+        -5,
+        11,
+        9
+      ],
+      "raw_source_bounds": [
+        -4,
+        0,
+        6,
+        4
+      ],
+      "raw_native_bounds": [
+        -12,
+        -5,
+        11,
+        9
+      ],
+      "complete_rgba_changed_pixels": 42,
+      "alpha_presence_differences_additional_diagnostic": 21,
+      "exit_code": 1,
+      "original_visible_pixels": 29,
+      "model_visible_pixels": 38,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset11.pam": "c86d6799901564ba2bf018f07cebd2fc0a5f8462c84ab2fdd97f884c51ac40bb",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset11-native.png": "614fd53f4e16d4e28e95bd412932dee62601689243d2e0b8b8391af74b0332d0",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset11-native.json": "2597c4b1238abdeacc22f932bcb05f19095a49fc22ef94b4d8618b60903bd748"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset12",
+      "climate": 1,
+      "slope": 6,
+      "requested_offset": 12,
+      "shared_bounds": [
+        -9,
+        -5,
+        37,
+        15
+      ],
+      "raw_source_bounds": [
+        -4,
+        0,
+        33,
+        10
+      ],
+      "raw_native_bounds": [
+        -9,
+        -5,
+        37,
+        15
+      ],
+      "complete_rgba_changed_pixels": 149,
+      "alpha_presence_differences_additional_diagnostic": 28,
+      "exit_code": 1,
+      "original_visible_pixels": 137,
+      "model_visible_pixels": 145,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset12.pam": "52ee61e3bcd729ebe7ee596a7d610a6c031dc7454f470876c81494e95e02b939",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset12-native.png": "3d9b87d595ebba5a3b010ac036d90c7e48eda8985cfce46ed760fd4b463229a8",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset12-native.json": "f97e82c489c3968ce2976875e432a050047bbd2cf63a9fa43f300085cf578eca"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset14",
+      "climate": 1,
+      "slope": 6,
+      "requested_offset": 14,
+      "shared_bounds": [
+        -37,
+        0,
+        9,
+        29
+      ],
+      "raw_source_bounds": [
+        -31,
+        13,
+        5,
+        23
+      ],
+      "raw_native_bounds": [
+        -37,
+        0,
+        9,
+        29
+      ],
+      "complete_rgba_changed_pixels": 166,
+      "alpha_presence_differences_additional_diagnostic": 83,
+      "exit_code": 1,
+      "original_visible_pixels": 139,
+      "model_visible_pixels": 128,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset14.pam": "9596cc477f8f9e71435b0a1440e7f2b5f5fa6789858ae93fc7f311653dbd4943",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset14-native.png": "3eac8dbf74e0f42cae9648de5be6cb89675862f55ca7e5baf9323c7c5980790b",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset14-native.json": "a537037db416588db4a7fb1b52b8c3af83b21e5649b0a5f5db8c10c49bfa7673"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset25",
+      "climate": 1,
+      "slope": 12,
+      "requested_offset": 25,
+      "shared_bounds": [
+        -9,
+        0,
+        37,
+        37
+      ],
+      "raw_source_bounds": [
+        -5,
+        5,
+        33,
+        31
+      ],
+      "raw_native_bounds": [
+        -9,
+        0,
+        37,
+        37
+      ],
+      "complete_rgba_changed_pixels": 227,
+      "alpha_presence_differences_additional_diagnostic": 55,
+      "exit_code": 1,
+      "original_visible_pixels": 224,
+      "model_visible_pixels": 195,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset25.pam": "1899846559403b9331fbd8494c55e05b49be46b15bdd9f87653eeb97feb2632f",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset25-native.png": "30021278270fd94a8e9298564d74b60aa9fe92a9d46669f6d9086a85f230d8d6",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset25-native.json": "d4db05bc681843febe81917e2999a0198d3cfc11111ad06a2137bd2b5d1beeed"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset27",
+      "climate": 1,
+      "slope": 12,
+      "requested_offset": 27,
+      "shared_bounds": [
+        -37,
+        -14,
+        9,
+        23
+      ],
+      "raw_source_bounds": [
+        -31,
+        -8,
+        6,
+        18
+      ],
+      "raw_native_bounds": [
+        -37,
+        -14,
+        9,
+        23
+      ],
+      "complete_rgba_changed_pixels": 235,
+      "alpha_presence_differences_additional_diagnostic": 85,
+      "exit_code": 1,
+      "original_visible_pixels": 198,
+      "model_visible_pixels": 219,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset27.pam": "acb9e3f07d3f34f67244fe1e3c47832f0c1a406ac1355d0841df42cf7711421f",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset27-native.png": "2a0b04591be99481f4f90862651c9cb24a9d4fdfefad8d6eef269f412a764f8d",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset27-native.json": "a5e65698bec038264f385063105071002dd9232219cfe2f59ccf1cc1b3573c60"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset37",
+      "climate": 1,
+      "slope": 3,
+      "requested_offset": 37,
+      "shared_bounds": [
+        -9,
+        0,
+        37,
+        29
+      ],
+      "raw_source_bounds": [
+        -4,
+        13,
+        33,
+        23
+      ],
+      "raw_native_bounds": [
+        -9,
+        0,
+        37,
+        29
+      ],
+      "complete_rgba_changed_pixels": 138,
+      "alpha_presence_differences_additional_diagnostic": 60,
+      "exit_code": 1,
+      "original_visible_pixels": 143,
+      "model_visible_pixels": 129,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset37.pam": "9898c4ed99f10504dd6b5d911059e58008b2d33a8c93e9645adf879f5d438fe6",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset37-native.png": "a72f6280ee290148fe4e8ab7e6003797a044cca084993b71297fe56a796151f2",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset37-native.json": "aebdb45c05c51d9d39e1c86b8d3647e81ac4c6e341565b4e03ec1ecf935df056"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset39",
+      "climate": 1,
+      "slope": 3,
+      "requested_offset": 39,
+      "shared_bounds": [
+        -37,
+        -5,
+        9,
+        15
+      ],
+      "raw_source_bounds": [
+        -31,
+        0,
+        5,
+        10
+      ],
+      "raw_native_bounds": [
+        -37,
+        -5,
+        9,
+        15
+      ],
+      "complete_rgba_changed_pixels": 144,
+      "alpha_presence_differences_additional_diagnostic": 52,
+      "exit_code": 1,
+      "original_visible_pixels": 132,
+      "model_visible_pixels": 142,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset39.pam": "20b5fd7af7a372f5456dd1913baee002dfbf45646c2d8418831a06f985a7e99c",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset39-native.png": "5d4e54d230d14768a5095ea1e4469394725d4995c22c960849f978957d9bc677",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset39-native.json": "460b9fd9f081174e67b911c0d759284045ca119535fa1395b2757760c9f3cf3e"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset48",
+      "climate": 1,
+      "slope": 9,
+      "requested_offset": 48,
+      "shared_bounds": [
+        -9,
+        -14,
+        37,
+        23
+      ],
+      "raw_source_bounds": [
+        -5,
+        -8,
+        33,
+        18
+      ],
+      "raw_native_bounds": [
+        -9,
+        -14,
+        37,
+        23
+      ],
+      "complete_rgba_changed_pixels": 205,
+      "alpha_presence_differences_additional_diagnostic": 31,
+      "exit_code": 1,
+      "original_visible_pixels": 208,
+      "model_visible_pixels": 221,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset48.pam": "b0dc00c8b3b167468ade9b5b113227fcfb3df74b133bea3eaff05d861f8670c9",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset48-native.png": "40144b6ee5e96f805c6745679e4c159ec7bea8e313ffbdfbf376daa36e44d0a0",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset48-native.json": "7488373a90d07cf6f3fe16ffd7f3335502b9c7478e71f0afaeb925cc95e97451"
+      }
+    },
+    {
+      "model": "river_bank_snow_study_arctic_offset50",
+      "climate": 1,
+      "slope": 9,
+      "requested_offset": 50,
+      "shared_bounds": [
+        -37,
+        0,
+        9,
+        37
+      ],
+      "raw_source_bounds": [
+        -31,
+        5,
+        7,
+        31
+      ],
+      "raw_native_bounds": [
+        -37,
+        0,
+        9,
+        37
+      ],
+      "complete_rgba_changed_pixels": 250,
+      "alpha_presence_differences_additional_diagnostic": 120,
+      "exit_code": 1,
+      "original_visible_pixels": 213,
+      "model_visible_pixels": 195,
+      "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+      "resizing_cropping_masks_fitting_or_tolerance_used": false,
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/sources/arctic-snow-offset50.pam": "af021b91a4ef5d8519df27fd97e3b7203e6c5e8ff7dadd60ef650c6a051cddc1",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset50-native.png": "c7117a0a19d142a61efe1921ebc7f82ad03dbc5cf1008a382aba385a7ce766ee",
+        "opentt3d/reviews/20261004/river-bank-snow-breadth/initial-native-controls/breadth-original-river-bank-snow-initial-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_snow_study_arctic_offset50-native.json": "b91b86e64edb73ce0394fb67fbd6c160bb0e6e30482154716110756d09b82a77"
+      }
+    }
+  ],
+  "different_images": 20,
+  "different_pixels": 2731,
+  "silhouette_differences_additional_diagnostic": 941,
+  "all_raw_image_bytes_preserved_without_alpha_compositing": true,
+  "source_geometry_fitted_traced_extruded_or_tolerance_used": false,
+  "runtime_bank_coverage_accepted": 0,
+  "quality_approvals": 0
+}

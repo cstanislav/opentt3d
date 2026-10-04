@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "tools/assets/quality_audit.py",
+    "--catalogue",
+    "build-macos/breadth-original-river-bank-snow-initial-frozen-build/baseset/opentt3d-voxels.json",
+    "--reviews",
+    "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-snow-breadth/current-combined-quality-reviews.json",
+    "--inventory",
+    "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-snow-breadth/exact-current-catalogue-inventory.json",
+    "--output",
+    "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-snow-breadth/required-eight-quality.json",
+    "--require-eight"
+  ],
+  "exit_code": 1,
+  "required_eight_met": false,
+  "quality_rows": 2966,
+  "individually_reviewed_rows": 157,
+  "coverage_gaps": 4,
+  "quality_approvals": 0
+}

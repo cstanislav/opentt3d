@@ -1,5 +1,47 @@
 # Active extended development goal
 
+## Snow-painted bank state breadth — twenty additional volumes — October 4
+
+After sloped increment `d49b59dc2`, concrete state modelling adds20 separate
+above-sea-level snow-painted Arctic bank volumes:12 flat and two sides per slope.
+Manual soil toes/shelves, wider snow shoulders, two-arm corners and smaller inner
+snow caps retain thin solid columns, original tile datum and clear water centre.
+Original undoubled slopes are not doubled object heights; extra displayed-terrain
+support remains unaccepted. Canonical1831 models/materials/bindings and all80 earlier
+bank studies are byte-exact in the1931-model diagnostic freeze. Quarantined mixed
+HQ/art/compiler/ratings, simulation/RNG and recommended immutable`.42`are untouched.
+
+All20 particular original sources are retained/inspected with actual selections,
+full registered PAMs and SHA-256 provenance. Public terrain-type queries or all
+snowline transitions are not inferred from snow-paint observations. The full240
+conditional bank slots,160 unobserved sloped slots and all shore/desert/grass/grid/
+parameter/custom/incomplete/absence/height/neighbourhood/phase/LOD/support/picking/
+ship cases remain required;20 snow variants do not claim20 more shape slots.
+
+Every source/native/four-orbit/four-street model was individually inspected:
+12 at4/10 and eight at5/10, with unique defects and all six acceptance gates false.
+20 actual source instances have independent3/10 records, never inherited ratings.
+Raw byte-preserving source/native comparisons fail20 images/2731 RGBA pixels and
+941 additional silhouette differences. Angular/underfilled snowy returns, pointed
+inner lobes, regular crest/courses and inaccurate cold/white face paint remain.
+
+Two fresh quiet40bpp-anim/non-HiDPI controls retain actual public command
+acknowledgements, synchronous save-success text and original saves/headers. Two
+immutable acknowledged canonical controls are explicitly reused. Two same-backend
+worlds, eight atlas images and two original save-byte pairs are exact;20 native
+backend pairs match. Complete galleries still fail12 views/260 pixels and the
+canonical Arctic world18 pixels. Portable392 PNGs reconstruct134486480 complete
+original PAM bytes; structural4/harness112 and presentation boundary pass. The exact
+560 portable evidence files are sealed/reverified, including recomputed complete
+raw registered source failures and checks on the untouched local quarantine. The
+2966-row diagnostic scope has157 individual reviews, four broad gaps, zero approvals
+and fails required-eight. Zero banks are bound; canonical2866 rows still fail.
+
+Keep full catalogue state/family breadth moving, then source-faithful fidelity and
+runtime bank/support/phase/picking/ship controls; retain outstanding river/lock/HQ/
+effects/fleet, sustained60fps/memory and platform/input/replay/network work. No
+completion, release promotion or newer stopping clock follows from these reviews.
+
 ## Sloped-bank breadth — thirty-two more independent volumes — October 4
 
 After the pushed flat-bank increment `333da9864`, concrete modelling adds32 separate
