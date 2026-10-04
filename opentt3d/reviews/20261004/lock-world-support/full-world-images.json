@@ -1,0 +1,812 @@
+[
+  {
+    "phase": "initial",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/initial/complete/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "29d246d480e13340936780a87af957442e880a7e1c66f1f768cd5f701cfed9eb"
+  },
+  {
+    "phase": "initial",
+    "scope": "canonical",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/initial/canonical/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "acdcde613130d0d4029a724372fd925732c82a8919dc29ae96546832633e50ce"
+  },
+  {
+    "phase": "initial",
+    "scope": "missing-owner",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/initial/missing-owner/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "acdcde613130d0d4029a724372fd925732c82a8919dc29ae96546832633e50ce"
+  },
+  {
+    "phase": "initial",
+    "scope": "prior-canonical",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/initial/prior-canonical/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "4e428caa5e7caee9b1addda99f0d2c2a263b1ed09d117489d29c6069568ab157"
+  },
+  {
+    "phase": "initial",
+    "scope": "alternate",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/initial/alternate/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "29d246d480e13340936780a87af957442e880a7e1c66f1f768cd5f701cfed9eb"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/complete/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "29d246d480e13340936780a87af957442e880a7e1c66f1f768cd5f701cfed9eb"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "canonical",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/canonical/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "acdcde613130d0d4029a724372fd925732c82a8919dc29ae96546832633e50ce"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "missing-owner",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/missing-owner/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "acdcde613130d0d4029a724372fd925732c82a8919dc29ae96546832633e50ce"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "prior-canonical",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/prior-canonical/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "4e428caa5e7caee9b1addda99f0d2c2a263b1ed09d117489d29c6069568ab157"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "alternate",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/alternate/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "cc3d889aa391f3ae7267b7e59e0175ce666cce9247edbc2020ce38930f4b7bc3"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "prior-alternate",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/prior-alternate/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "2f850c2d233f34a9fdbfcc997b9a84b61369e858d7f28a13a4f97408e07ca2f7"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/complete/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "ae873c51e822886027e77359527e137fadb35d84a29193cdbd16e6cbd71229d1"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "canonical",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/canonical/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "dee6893a644d527d2c254142851ada7c7032e427058b6a062648647275a81efd"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "missing-owner",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/missing-owner/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "dee6893a644d527d2c254142851ada7c7032e427058b6a062648647275a81efd"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "prior-canonical",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/prior-canonical/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "5bed1c421d1eebe4d30487eb5b9c98a300e1614cb0b1eb6527365f1be214c712"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "alternate",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/alternate/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "85484d6836770633ec38b4cd23193fa9d79287a7e348f370650b264b26d83c30"
+  },
+  {
+    "phase": "corrected-pilot",
+    "scope": "prior-alternate",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/corrected-pilot/prior-alternate/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "61a8b9975eb63ebc71e40eefb1434849dccd67c4bf4b3bb773355a5422931e97"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "29d246d480e13340936780a87af957442e880a7e1c66f1f768cd5f701cfed9eb"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-1/vulkan/screenshot/smoke.png",
+    "sha256": "0b55a3e7232fffd08ce6134fe0bfb333eb599b4994be26385f649d8c20155b7a"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-2/vulkan/screenshot/smoke.png",
+    "sha256": "5ae5e9271206b220feee7db2e7eccf87bc451bd47616a20defdc2f7150dbb082"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-3/vulkan/screenshot/smoke.png",
+    "sha256": "d7d90a7e72d99b6e7a2564e8d877a3bb2354b0248c9aa451d5377491a71ed1b9"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-0/vulkan/screenshot/smoke.png",
+    "sha256": "dfa3f639c72700c3a856f0bd759e83b9cdf0124cea373ac775d4ee9677e6e6cf"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-1/vulkan/screenshot/smoke.png",
+    "sha256": "697e0fb1c9bb85b00553a52e887a42fb657a4aa66c15ba5139f01ed358afd5a7"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-2/vulkan/screenshot/smoke.png",
+    "sha256": "9d4e33cfd9e40a93b0b8bb7d86c9ec4592bd03a3d6f6c033bb73eb94e26b81cd"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-3/vulkan/screenshot/smoke.png",
+    "sha256": "000465b54d874741a3c80c770a18cb529e0be8b6b867fb2be22b84f841e48eb7"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-0/opengl/screenshot/smoke.png",
+    "sha256": "ae873c51e822886027e77359527e137fadb35d84a29193cdbd16e6cbd71229d1"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-1/opengl/screenshot/smoke.png",
+    "sha256": "9eff3161367e23422ca269804e820d4cb8d8bcfc1e1275e1c52169872bbff104"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-2/opengl/screenshot/smoke.png",
+    "sha256": "c02f04299f87864e9be58ce845bef53593b1ded672210c241e2ebfcda10b1544"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/0-3/opengl/screenshot/smoke.png",
+    "sha256": "c0ce6f78d9ec0485671fa22ff8a54dc672c90afa906b2ac9e1bc7d1c06c631fa"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-0/opengl/screenshot/smoke.png",
+    "sha256": "b444ba714070a1b068436db311e21498a2412cd169bb3efae02f87c923c69542"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-1/opengl/screenshot/smoke.png",
+    "sha256": "c3aed88f10d5828992e536e1c85078b0cdda99dd54a93e3fbccf9d39484e4a41"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-2/opengl/screenshot/smoke.png",
+    "sha256": "f3997cac444bbaf090581ffe3c14654f3b83103d71b2edbb1165f18363841b30"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "temperate",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/temperate/1-3/opengl/screenshot/smoke.png",
+    "sha256": "1e33c600c21f73af1d1911e2f3cff4e4c35afb9ad4e4317fe5295047d37d99b5"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "e5dbb74b0faa69e5ddb1242b42337cb081acb752ed932767c63b12a8642e1879"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-1/vulkan/screenshot/smoke.png",
+    "sha256": "79c9991fdbb49df35e194b975c3f569eacd386562e51de5add41957ac05be68b"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-2/vulkan/screenshot/smoke.png",
+    "sha256": "67d9de6f980742b1d863c6fa83c7825d9a572449c102bbe5e9b4475d5935557d"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-3/vulkan/screenshot/smoke.png",
+    "sha256": "98896a539a727eefbdc280b30bdeb1463b70dfb7fdf24c32568e4c68123cbee1"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-0/vulkan/screenshot/smoke.png",
+    "sha256": "6ff6f25d2a8eabf98f5cf9fc984be042d84100b36c2faa2a04565daab2310114"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-1/vulkan/screenshot/smoke.png",
+    "sha256": "95ef48cf90ad0355fd26a428991eb9293604282abecbc5856c59161465ba215e"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-2/vulkan/screenshot/smoke.png",
+    "sha256": "41e619628b4d174e71d608084b1e9f29ea9bda9508b14a1672ab62f498fa9762"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-3/vulkan/screenshot/smoke.png",
+    "sha256": "799f56492b439e6cf2299f3ef2ebaa05e084f2c8e4801a94384b1f1365c24341"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-0/opengl/screenshot/smoke.png",
+    "sha256": "4f72834fcd291bb9e5aaea54d2eaff13b2d3093eb8ce104dc50faa491fb06d0f"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-1/opengl/screenshot/smoke.png",
+    "sha256": "c5e0bf9c12cd18f20e89360f6557ec296f694408c34d7f8ed3ffb295d1032e90"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-2/opengl/screenshot/smoke.png",
+    "sha256": "a90282721a52ff99e641735295ed5684d05bec97f59ae0962b1d2400e38d6589"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/0-3/opengl/screenshot/smoke.png",
+    "sha256": "8f42075986a584708cc384fa72aab219bb9a1a46a3f9fe1424d3f6676a9712ed"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-0/opengl/screenshot/smoke.png",
+    "sha256": "db3ea640ee67c69e3b5188dd9c8e57179c2e714f1fb97ad0cf9b19c6f52094d9"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-1/opengl/screenshot/smoke.png",
+    "sha256": "337f11eb59dac7fab6aaba3a07b9dc3f0959fbd360df8ec7c11d4df9c88525a8"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-2/opengl/screenshot/smoke.png",
+    "sha256": "601c1bc4d14f27e02eb3c3a998cfbad39c19193b7b45b41c69b22d1fdaa71e72"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "arctic",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/arctic/1-3/opengl/screenshot/smoke.png",
+    "sha256": "753c382e43d708c828a9b7026219f14eb66c05dda5937e75c27d3d0c6616b076"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "553b06bd2ffad7db07595aee01d25030baab7488d73971f4f64705994ef17441"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-1/vulkan/screenshot/smoke.png",
+    "sha256": "3e34c9344b3399ad4086060887c0b0fa90aabe56cd0c10a008de7ab3d7633ce7"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-2/vulkan/screenshot/smoke.png",
+    "sha256": "3363cfdb466b75254922318f43c9871c4676f29a557d3cf59bd81e5999f456ee"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-3/vulkan/screenshot/smoke.png",
+    "sha256": "28b120822467ad99a51c59f8e45113ac1582ef981f0267d87682368f412115c1"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-0/vulkan/screenshot/smoke.png",
+    "sha256": "db2d333d51f53365cde6f738f2da93fe271b3c135a07894caa7c77acb651aa28"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-1/vulkan/screenshot/smoke.png",
+    "sha256": "329a83de95dff86a2a27c80810633a803300161d319f94827a776ecba079b80d"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-2/vulkan/screenshot/smoke.png",
+    "sha256": "5990e08a9f2f85044ffca41941cc568a66ba528c78e78d70d9d86bbcf01e6194"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-3/vulkan/screenshot/smoke.png",
+    "sha256": "82f5d00f3312c9f304b3d337ce9cd862569821b6cc0174e907908131655f274e"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-0/opengl/screenshot/smoke.png",
+    "sha256": "365f02384791e8fe3b368b736b1b809511b3f2ea560badf16c38a74817d48b9d"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-1/opengl/screenshot/smoke.png",
+    "sha256": "87e5086fbf17c61a96b2bb230dca0c896b5048e2d6edb1f1a4a12e2807d5a78e"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-2/opengl/screenshot/smoke.png",
+    "sha256": "ea6d87c98f02d49cc2b7b6b3e3bd1a6ab6ad91574d527b4c96a854068e391781"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/0-3/opengl/screenshot/smoke.png",
+    "sha256": "f75b19b2a46e9b6c819ca7b2bbbe00a42b0eab70238b71416e165fb2342032c6"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-0/opengl/screenshot/smoke.png",
+    "sha256": "11976a89c02664b6e9b4cf4fe97ec34818cc74b9cc20d9d1968ff7c30e73970c"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-1/opengl/screenshot/smoke.png",
+    "sha256": "def4e18d24f055b55abd8419f92dfdaea7aa0f7d27275a73f585fb4a5954a4e8"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-2/opengl/screenshot/smoke.png",
+    "sha256": "b84dcfc2e26ea3c96113e3d1ee5dc9a8c7ad8c4b9ab0480e5c5bfba5eae2e286"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "tropic",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/tropic/1-3/opengl/screenshot/smoke.png",
+    "sha256": "2fd226b56ef0382ccb6325bef79e1e6fc7fdfcb2c872b71bacd648d01545ef8c"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-0/vulkan/screenshot/smoke.png",
+    "sha256": "b7f92b7773b09408eb7b0e904dceb7d7867283f28ea820b8be1c3e1d948129d3"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-1/vulkan/screenshot/smoke.png",
+    "sha256": "6c7cd195fba3bcce0326c43b93d1b68f7a7f99ceb6c3fc4e5722c0024c1f39a0"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-2/vulkan/screenshot/smoke.png",
+    "sha256": "48fb4ab7c1e9ce46003d07b374576a3ce5e09b69b4afd97b0eba9f496753aa0b"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-3/vulkan/screenshot/smoke.png",
+    "sha256": "1f43e864e16491cd927c875bef2ff630bf471154d16d661be112a1305335d2ea"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-0/vulkan/screenshot/smoke.png",
+    "sha256": "52a6f39aad5d831cc92a309b76f2d3f232f09ce8c9c1f3f3ca8e5f477d3c3de4"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-1/vulkan/screenshot/smoke.png",
+    "sha256": "e6b7c46f87ec157d92ff083d6b728f879e42653e09b385db7d2d5126278b76c3"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-2/vulkan/screenshot/smoke.png",
+    "sha256": "07dc5c4d5ccfdfa9569724c3fb5a7e00cfd5d81bf51c1ee628220cbc9a70eac0"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "vulkan",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-3/vulkan/screenshot/smoke.png",
+    "sha256": "b648c35f25a9699442f98d60d4e30e0a70f93e0f72a0dcf19e7f57c6e23cf2d9"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-0/opengl/screenshot/smoke.png",
+    "sha256": "13aa34438ac104bd81947db687859a2dff87cd087cc92e35b7e70ae6a325770a"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-1/opengl/screenshot/smoke.png",
+    "sha256": "9cd622be4198b3c041abd9799cc3b0c0da65643ff2bda63cf23aa69c9948965d"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-2/opengl/screenshot/smoke.png",
+    "sha256": "516bba31c40a3913c68e17631a239a962d943ff6d9832d1297c973981ca29be8"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 0,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/0-3/opengl/screenshot/smoke.png",
+    "sha256": "c771c47c100d6dcfef3cf2f647a6ba524ba1f9da179a7c6e94ffaf2c6d552468"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 0,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-0/opengl/screenshot/smoke.png",
+    "sha256": "f1e978cbcd248b36865def2379371418e4f6b04f0c64a4b8a0f2ba8efdc7cc9c"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 1,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-1/opengl/screenshot/smoke.png",
+    "sha256": "10233446b350863f3da19259c194de6d992b6523d32f0e455e12dda3adbe2289"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 2,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-2/opengl/screenshot/smoke.png",
+    "sha256": "8313f1ce17b9e1f3f722243302e7a27a38d2350d1dbce18a274659a0994e0f8f"
+  },
+  {
+    "phase": "matrix",
+    "scope": "complete",
+    "climate": "toyland",
+    "elevation": 1,
+    "direction": 3,
+    "backend": "opengl",
+    "image": "opentt3d/reviews/20261004/lock-world-support/native-controls/matrix/complete/toyland/1-3/opengl/screenshot/smoke.png",
+    "sha256": "c2ca49fbd66390224a16f88cbe348e3a08533b4d632a5c325ed1f23db54db8df"
+  }
+]

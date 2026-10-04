@@ -1,0 +1,45 @@
+{
+  "sealed_utc": "2026-10-04T01:22:04.430197+00:00",
+  "corrected_native_controls": 94,
+  "rejected_initial_controls": 5,
+  "full_lossless_world_images": 99,
+  "source_and_atlas_records": 5394,
+  "original_source_records": 4998,
+  "water_source_records": 3334,
+  "river_source_records": 1664,
+  "atlas_records": 396,
+  "exact_portable_atlas_png_reconstructions": 376,
+  "individual_bound_state_records": 192,
+  "strict_same_backend_preservation_comparisons": 16,
+  "strict_matrix_different_images": 32,
+  "strict_matrix_different_pixels": 1213,
+  "canonical_assets_and_bindings_changed": false,
+  "geometry_approvals": 0,
+  "quality_scopes": [
+    {
+      "scope": "canonical",
+      "rows": 2866,
+      "individual_records": 57,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "meets_objective": false
+    },
+    {
+      "scope": "rejected-hq",
+      "rows": 2950,
+      "individual_records": 141,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "meets_objective": false
+    },
+    {
+      "scope": "rejected-hq-lock",
+      "rows": 2998,
+      "individual_records": 189,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "meets_objective": false
+    }
+  ],
+  "scope": "Diagnostic lock wall selection/support and original visibility only. No independent phase, ship, lock-specific pick, all-climate visibility, source-fidelity or performance acceptance."
+}

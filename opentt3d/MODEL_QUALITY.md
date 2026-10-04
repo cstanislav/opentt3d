@@ -12,6 +12,24 @@ and climate absences; absent bodies do not excuse raised artwork in ground layer
 Procedural families still need expansion/review of every slope, layout and state.
 Uncatalogued disasters and river variants remain explicit coverage gaps.
 
+## Diagnostic saved-world locks are not release approval
+
+`reviews/20261004/lock-world-support/` separately binds all48 retained lock studies
+for world/terrain-support testing only. The original192 wall/96 independent water
+source states remain exact across64 quiet Vulkan/OpenGL controls. Complete-family,
+actual alternate-set, missing-owner and original visibility controls preserve16
+same-backend full views exactly. The prototype's32 paired world views still differ
+by1,213 pixels, and independent phases/ships/terrain/custom/source fidelity remain
+unaccepted. No mask, tolerance or rejected framebuffer-origin change is used.
+
+Unchanged authored source models retain their historical provisional6/10 defects.
+Each of the192 newly bound diagnostic owner/climate instances has its own5/10
+structural record, source/support/world fingerprint, six false gates and defects;
+instances do not inherit source approval. Canonical/HQ/mixed2,866/2,950/2,998-row
+ledgers retain57/141/189 individual records, zero8/10 approvals/four gaps and fail
+all required-eight gates. Canonical artwork/bindings and recommended`.42` are not
+changed or promoted. The complete catalogue-wide goal remains active.
+
 ## Changed HQ and lock owners receive fresh provisional reviews
 
 The subsequent `reviews/20261003/water-foam-palette-study/` corrects six lower-sea

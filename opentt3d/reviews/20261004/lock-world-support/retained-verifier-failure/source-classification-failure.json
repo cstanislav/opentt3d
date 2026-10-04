@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-04T01:19:44.126354+00:00",
+  "status": "rejected-verifier",
+  "command": "art-python verify-portable.py --seal",
+  "exit_code": 1,
+  "exception": "AssertionError: original_source_records == 4998 and atlas_records == 396",
+  "reason": "The counter included only water-live-source filenames, omitting1664 already-retained original river-selector sources. Actual input consists of3334 water sources,1664 river sources and396 generated atlas controls.",
+  "native_evidence_modified": false,
+  "geometry_approvals": 0
+}

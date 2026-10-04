@@ -1,0 +1,779 @@
+[
+  {
+    "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-complete-temperate-0-0-vulkan",
+    "exit_code": 0,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/opentt3d/smoke.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-complete-frozen-build",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-complete-temperate-0-0-vulkan",
+      "--background",
+      "--backend",
+      "vulkan",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/save/lock-fixture.sav",
+      "--ai-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/ai",
+      "--center",
+      "101",
+      "4",
+      "--verify-world-atlas",
+      "--verify-tile-picking",
+      "--synchronous-save",
+      "--zoom",
+      "0",
+      "--resolution",
+      "640",
+      "480",
+      "--timeout",
+      "300",
+      "--brief"
+    ],
+    "scope": "complete",
+    "climate": "temperate",
+    "backend": "vulkan",
+    "elevation": 0,
+    "direction": 0,
+    "binary_sha256": "cec1fd28d1f1d02bef145f1bab7ec8155ce3f2059fd4191580a3f44b7d8b77ed",
+    "catalogue_sha256": "0cca28a9854836e7c71bb4fe8f4b146880ad0eab1b2994aa59ae86ffd9c5b37d",
+    "emitted_walls": [
+      {
+        "owner": 10,
+        "part": 1,
+        "direction": 2,
+        "face": 0,
+        "climate": 0,
+        "base": 9992,
+        "source": 10002,
+        "tile_xy": [
+          38,
+          12
+        ],
+        "origin": [
+          608.0,
+          192.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 14,
+        "part": 1,
+        "direction": 2,
+        "face": 1,
+        "climate": 0,
+        "base": 9992,
+        "source": 10006,
+        "tile_xy": [
+          38,
+          12
+        ],
+        "origin": [
+          608.0,
+          207.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 2,
+        "part": 0,
+        "direction": 2,
+        "face": 0,
+        "climate": 0,
+        "base": 9992,
+        "source": 9994,
+        "tile_xy": [
+          39,
+          12
+        ],
+        "origin": [
+          624.0,
+          192.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 6,
+        "part": 0,
+        "direction": 2,
+        "face": 1,
+        "climate": 0,
+        "base": 9992,
+        "source": 9998,
+        "tile_xy": [
+          39,
+          12
+        ],
+        "origin": [
+          624.0,
+          207.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 18,
+        "part": 2,
+        "direction": 2,
+        "face": 0,
+        "climate": 0,
+        "base": 9992,
+        "source": 10010,
+        "tile_xy": [
+          40,
+          12
+        ],
+        "origin": [
+          640.0,
+          192.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 22,
+        "part": 2,
+        "direction": 2,
+        "face": 1,
+        "climate": 0,
+        "base": 9992,
+        "source": 10014,
+        "tile_xy": [
+          40,
+          12
+        ],
+        "origin": [
+          640.0,
+          207.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 10,
+        "part": 1,
+        "direction": 2,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10026,
+        "tile_xy": [
+          51,
+          16
+        ],
+        "origin": [
+          816.0,
+          256.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 14,
+        "part": 1,
+        "direction": 2,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10030,
+        "tile_xy": [
+          51,
+          16
+        ],
+        "origin": [
+          816.0,
+          271.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 2,
+        "part": 0,
+        "direction": 2,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10018,
+        "tile_xy": [
+          52,
+          16
+        ],
+        "origin": [
+          832.0,
+          256.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 6,
+        "part": 0,
+        "direction": 2,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10022,
+        "tile_xy": [
+          52,
+          16
+        ],
+        "origin": [
+          832.0,
+          271.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 18,
+        "part": 2,
+        "direction": 2,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10034,
+        "tile_xy": [
+          53,
+          16
+        ],
+        "origin": [
+          848.0,
+          256.0,
+          32.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 22,
+        "part": 2,
+        "direction": 2,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10038,
+        "tile_xy": [
+          53,
+          16
+        ],
+        "origin": [
+          848.0,
+          271.0,
+          32.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 8,
+        "part": 1,
+        "direction": 1,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10024,
+        "tile_xy": [
+          64,
+          7
+        ],
+        "origin": [
+          1024.0,
+          112.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 12,
+        "part": 1,
+        "direction": 1,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10028,
+        "tile_xy": [
+          64,
+          7
+        ],
+        "origin": [
+          1039.0,
+          112.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 0,
+        "part": 0,
+        "direction": 1,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10016,
+        "tile_xy": [
+          64,
+          8
+        ],
+        "origin": [
+          1024.0,
+          128.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 4,
+        "part": 0,
+        "direction": 1,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10020,
+        "tile_xy": [
+          64,
+          8
+        ],
+        "origin": [
+          1039.0,
+          128.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 16,
+        "part": 2,
+        "direction": 1,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10032,
+        "tile_xy": [
+          64,
+          9
+        ],
+        "origin": [
+          1024.0,
+          144.0,
+          32.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 20,
+        "part": 2,
+        "direction": 1,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10036,
+        "tile_xy": [
+          64,
+          9
+        ],
+        "origin": [
+          1039.0,
+          144.0,
+          32.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 17,
+        "part": 2,
+        "direction": 0,
+        "face": 0,
+        "climate": 0,
+        "base": 9992,
+        "source": 10009,
+        "tile_xy": [
+          100,
+          4
+        ],
+        "origin": [
+          1600.0,
+          64.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 21,
+        "part": 2,
+        "direction": 0,
+        "face": 1,
+        "climate": 0,
+        "base": 9992,
+        "source": 10013,
+        "tile_xy": [
+          100,
+          4
+        ],
+        "origin": [
+          1600.0,
+          79.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 1,
+        "part": 0,
+        "direction": 0,
+        "face": 0,
+        "climate": 0,
+        "base": 9992,
+        "source": 9993,
+        "tile_xy": [
+          101,
+          4
+        ],
+        "origin": [
+          1616.0,
+          64.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 5,
+        "part": 0,
+        "direction": 0,
+        "face": 1,
+        "climate": 0,
+        "base": 9992,
+        "source": 9997,
+        "tile_xy": [
+          101,
+          4
+        ],
+        "origin": [
+          1616.0,
+          79.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 9,
+        "part": 1,
+        "direction": 0,
+        "face": 0,
+        "climate": 0,
+        "base": 9992,
+        "source": 10001,
+        "tile_xy": [
+          102,
+          4
+        ],
+        "origin": [
+          1632.0,
+          64.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 13,
+        "part": 1,
+        "direction": 0,
+        "face": 1,
+        "climate": 0,
+        "base": 9992,
+        "source": 10005,
+        "tile_xy": [
+          102,
+          4
+        ],
+        "origin": [
+          1632.0,
+          79.0,
+          0.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 17,
+        "part": 2,
+        "direction": 0,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10033,
+        "tile_xy": [
+          80,
+          14
+        ],
+        "origin": [
+          1280.0,
+          224.0,
+          32.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 21,
+        "part": 2,
+        "direction": 0,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10037,
+        "tile_xy": [
+          80,
+          14
+        ],
+        "origin": [
+          1280.0,
+          239.0,
+          32.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 1,
+        "part": 0,
+        "direction": 0,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10017,
+        "tile_xy": [
+          81,
+          14
+        ],
+        "origin": [
+          1296.0,
+          224.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 5,
+        "part": 0,
+        "direction": 0,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10021,
+        "tile_xy": [
+          81,
+          14
+        ],
+        "origin": [
+          1296.0,
+          239.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 9,
+        "part": 1,
+        "direction": 0,
+        "face": 0,
+        "climate": 0,
+        "base": 10016,
+        "source": 10025,
+        "tile_xy": [
+          82,
+          14
+        ],
+        "origin": [
+          1312.0,
+          224.0,
+          16.0
+        ],
+        "opacity": 1.0
+      },
+      {
+        "owner": 13,
+        "part": 1,
+        "direction": 0,
+        "face": 1,
+        "climate": 0,
+        "base": 10016,
+        "source": 10029,
+        "tile_xy": [
+          82,
+          14
+        ],
+        "origin": [
+          1312.0,
+          239.0,
+          16.0
+        ],
+        "opacity": 1.0
+      }
+    ]
+  },
+  {
+    "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-canonical-temperate-0-0-vulkan",
+    "exit_code": 0,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/opentt3d/smoke.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-canonical-frozen-build",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-canonical-temperate-0-0-vulkan",
+      "--background",
+      "--backend",
+      "vulkan",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/save/lock-fixture.sav",
+      "--ai-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/ai",
+      "--center",
+      "101",
+      "4",
+      "--verify-world-atlas",
+      "--verify-tile-picking",
+      "--synchronous-save",
+      "--zoom",
+      "0",
+      "--resolution",
+      "640",
+      "480",
+      "--timeout",
+      "300",
+      "--brief"
+    ],
+    "scope": "canonical",
+    "climate": "temperate",
+    "backend": "vulkan",
+    "elevation": 0,
+    "direction": 0,
+    "binary_sha256": "cec1fd28d1f1d02bef145f1bab7ec8155ce3f2059fd4191580a3f44b7d8b77ed",
+    "catalogue_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+    "emitted_walls": []
+  },
+  {
+    "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-missing-owner-temperate-0-0-vulkan",
+    "exit_code": 0,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/opentt3d/smoke.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-missing-owner-frozen-build",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-missing-owner-temperate-0-0-vulkan",
+      "--background",
+      "--backend",
+      "vulkan",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/save/lock-fixture.sav",
+      "--ai-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/ai",
+      "--center",
+      "101",
+      "4",
+      "--verify-world-atlas",
+      "--verify-tile-picking",
+      "--synchronous-save",
+      "--zoom",
+      "0",
+      "--resolution",
+      "640",
+      "480",
+      "--timeout",
+      "300",
+      "--brief"
+    ],
+    "scope": "missing-owner",
+    "climate": "temperate",
+    "backend": "vulkan",
+    "elevation": 0,
+    "direction": 0,
+    "binary_sha256": "cec1fd28d1f1d02bef145f1bab7ec8155ce3f2059fd4191580a3f44b7d8b77ed",
+    "catalogue_sha256": "908327fb57d5d9bcaafaa629814adc1fe177917dc30886b7024bc83f970f332d",
+    "emitted_walls": []
+  },
+  {
+    "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-prior-canonical-temperate-0-0-vulkan",
+    "exit_code": 0,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/opentt3d/smoke.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-selector1831-frozen-build",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-prior-canonical-temperate-0-0-vulkan",
+      "--background",
+      "--backend",
+      "vulkan",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/save/lock-fixture.sav",
+      "--ai-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/ai",
+      "--center",
+      "101",
+      "4",
+      "--verify-world-atlas",
+      "--verify-tile-picking",
+      "--synchronous-save",
+      "--zoom",
+      "0",
+      "--resolution",
+      "640",
+      "480",
+      "--timeout",
+      "300",
+      "--brief"
+    ],
+    "scope": "prior-canonical",
+    "climate": "temperate",
+    "backend": "vulkan",
+    "elevation": 0,
+    "direction": 0,
+    "binary_sha256": "29b85554f9ee4316434fde6c47cfc61c2224c7ebf1e8cb8d5c4803b1db62a0fc",
+    "catalogue_sha256": "6e5be58e30a55d36be9d1e40a118739fc687d3a84afa22ebf3217469350ca56d",
+    "emitted_walls": []
+  },
+  {
+    "output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-alternate-temperate-0-0-vulkan",
+    "exit_code": 0,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/opentt3d/smoke.py",
+      "--build-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-complete-frozen-build",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-alternate-temperate-0-0-vulkan",
+      "--background",
+      "--backend",
+      "vulkan",
+      "--savegame",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/save/lock-fixture.sav",
+      "--ai-dir",
+      "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-temperate-natural-resources-fixture/ai",
+      "--center",
+      "101",
+      "4",
+      "--verify-world-atlas",
+      "--verify-tile-picking",
+      "--synchronous-save",
+      "--zoom",
+      "0",
+      "--resolution",
+      "640",
+      "480",
+      "--timeout",
+      "300",
+      "--brief",
+      "--graphics",
+      "OpenGFX"
+    ],
+    "scope": "alternate",
+    "climate": "temperate",
+    "backend": "vulkan",
+    "elevation": 0,
+    "direction": 0,
+    "binary_sha256": "cec1fd28d1f1d02bef145f1bab7ec8155ce3f2059fd4191580a3f44b7d8b77ed",
+    "catalogue_sha256": "0cca28a9854836e7c71bb4fe8f4b146880ad0eab1b2994aa59ae86ffd9c5b37d"
+  }
+]

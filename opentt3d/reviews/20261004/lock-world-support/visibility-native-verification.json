@@ -1,0 +1,66 @@
+{
+  "audited_utc": "2026-10-04T01:07:45.192396+00:00",
+  "quiet_native_controls": 18,
+  "independent_water_and_original_visibility_exact": true,
+  "preservation_comparisons": [
+    {
+      "label": "prior-canonical-to-canonical-transparent-vulkan",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/prior-canonical-to-canonical-transparent-vulkan.json"
+    },
+    {
+      "label": "prior-canonical-to-canonical-invisible-vulkan",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/prior-canonical-to-canonical-invisible-vulkan.json"
+    },
+    {
+      "label": "canonical-to-missing-owner-transparent-vulkan",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/canonical-to-missing-owner-transparent-vulkan.json"
+    },
+    {
+      "label": "canonical-to-complete-invisible-vulkan",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/canonical-to-complete-invisible-vulkan.json"
+    },
+    {
+      "label": "prior-alternate-to-alternate-transparent-vulkan",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/prior-alternate-to-alternate-transparent-vulkan.json"
+    },
+    {
+      "label": "prior-canonical-to-canonical-transparent-opengl",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/prior-canonical-to-canonical-transparent-opengl.json"
+    },
+    {
+      "label": "prior-canonical-to-canonical-invisible-opengl",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/prior-canonical-to-canonical-invisible-opengl.json"
+    },
+    {
+      "label": "canonical-to-missing-owner-transparent-opengl",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/canonical-to-missing-owner-transparent-opengl.json"
+    },
+    {
+      "label": "canonical-to-complete-invisible-opengl",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/canonical-to-complete-invisible-opengl.json"
+    },
+    {
+      "label": "prior-alternate-to-alternate-transparent-opengl",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/visibility-strict-comparisons/prior-alternate-to-alternate-transparent-opengl.json"
+    }
+  ],
+  "strict_preservation_passed": true,
+  "geometry_approvals": 0,
+  "does_not_establish": [
+    "all-climate visibility",
+    "independent animated phases",
+    "ship clearance",
+    "lock-specific GPU pick samples",
+    "strict paired-renderer acceptance"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-04T01:15:02.345986+00:00",
+  "status": "rejected-verifier",
+  "command": "python3 opentt3d/reviews/20261004/lock-world-support/verify-portable.py",
+  "exit_code": 1,
+  "exception": "KeyError: 'files'",
+  "reason": "A local bound-state evidence dictionary shadowed the portable manifest at the final print. Hash/semantic checks completed; non-sealing verification still failed.",
+  "evidence_changed": false,
+  "approvals": 0
+}

@@ -1,0 +1,88 @@
+[  1%] Generating ../../baseset/opentt3d-voxels.json
+[  1%] Built target script_window
+[  3%] Built target baseset_files
+[  4%] Built target settingsgen
+[  5%] Built target strgen
+[  5%] Built target renderer3d_models
+[  5%] Built target renderer3d_shaders
+[ 15%] Built target script_game
+[ 21%] Built target script_ai
+[ 22%] Built target ai_compat_files
+[ 25%] Built target gs_compat_files
+[ 36%] Built target script_template
+[ 40%] Built target language_files
+-- Version string: 20261004-main-m3b1bcea43f
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 40%] Built target find_version
+[ 41%] Built target table_settings
+[ 41%] Built target table_strings
+[ 41%] Built target script_game_includes
+[ 41%] Built target script_ai_includes
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/generated/rev.cpp.o
+[ 41%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/viewport_3d.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/voxel_models.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/reference_export.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/world_capture.cpp.o
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:753:30: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  753 |                 if (std::popcount(emitted) < (check.ground ? 2 : check.colour_count)) return;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:1902:67: warning: comparison of integers of different signs: 'const signed char' and 'unsigned int' [-Wsign-compare]
+ 1902 |                                 bounds.origin.x == (along_x ? 0 : 15*face) && bounds.origin.y == (along_x ? 15*face : 0) && bounds.origin.z == 0 &&
+      |                                                                               ~~~~~~~~~~~~~~~ ^   ~~~~~~~~~~~~~~~~~~~~~
+/Users/stanislav/Projects/opentt3d/src/renderer3d/world_capture.cpp:1902:21: warning: comparison of integers of different signs: 'const signed char' and 'unsigned int' [-Wsign-compare]
+ 1902 |                                 bounds.origin.x == (along_x ? 0 : 15*face) && bounds.origin.y == (along_x ? 15*face : 0) && bounds.origin.z == 0 &&
+      |                                 ~~~~~~~~~~~~~~~ ^   ~~~~~~~~~~~~~~~~~~~~~
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/bridge_capture.cpp.o
+3 warnings generated.
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/rail_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/depot_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/station_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/ground_detail_capture.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/renderer3d/authored_geometry.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/clear_cmd.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/console_cmds.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/elrail.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/landscape.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/rail_cmd.cpp.o
+[ 42%] Building CXX object CMakeFiles/openttd_lib.dir/src/road_cmd.cpp.o
+[ 43%] Building CXX object CMakeFiles/openttd_lib.dir/src/station_cmd.cpp.o
+[ 43%] Building CXX object CMakeFiles/openttd_lib.dir/src/tunnelbridge_cmd.cpp.o
+[ 43%] Building CXX object CMakeFiles/openttd_lib.dir/src/vehicle.cpp.o
+[ 43%] Building CXX object CMakeFiles/openttd_lib.dir/src/viewport.cpp.o
+[ 43%] Building CXX object CMakeFiles/openttd_lib.dir/src/water_cmd.cpp.o
+[100%] Built target openttd_lib
+Compiled 1915 authored voxel volumes; visual approval remains separate
+[100%] Built target renderer3d_asset_files
+[100%] Linking CXX executable opentt3d
+[100%] Built target openttd
+[  0%] Built target script_window
+[  0%] Built target renderer3d_models
+[  0%] Built target renderer3d_shaders
+[  1%] Built target settingsgen
+[  2%] Built target strgen
+[ 10%] Built target script_ai
+[ 19%] Built target script_game
+[ 27%] Built target script_template
+[ 35%] Built target language_files
+[ 36%] Built target table_strings
+[ 36%] Built target table_settings
+[ 36%] Built target script_ai_includes
+[ 36%] Built target script_game_includes
+-- Version string: 20261004-main-m3b1bcea43f
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 36%] Built target find_version
+[ 96%] Built target openttd_lib
+[ 96%] Building CXX object CMakeFiles/openttd_test.dir/src/renderer3d/renderer3d_camera.cpp.o
+[ 97%] Building CXX object CMakeFiles/openttd_test.dir/src/renderer3d/renderer3d_transport.cpp.o
+[ 97%] Building CXX object CMakeFiles/openttd_test.dir/src/renderer3d/renderer3d_vegetation.cpp.o
+[ 97%] Building CXX object CMakeFiles/openttd_test.dir/src/renderer3d/renderer3d_voxels.cpp.o
+[ 97%] Linking CXX executable openttd_test
+[100%] Built target openttd_test

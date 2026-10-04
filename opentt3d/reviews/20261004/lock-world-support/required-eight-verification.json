@@ -1,0 +1,32 @@
+{
+  "audited_utc": "2026-10-04T01:11:39.227885+00:00",
+  "gates": [
+    {
+      "scope": "canonical",
+      "exit_code": 1,
+      "rows": 2866,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "stale_reviews_or_evidence": false,
+      "meets_objective": false
+    },
+    {
+      "scope": "rejected-hq",
+      "exit_code": 1,
+      "rows": 2950,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "stale_reviews_or_evidence": false,
+      "meets_objective": false
+    },
+    {
+      "scope": "rejected-hq-lock",
+      "exit_code": 1,
+      "rows": 2998,
+      "approvals": 0,
+      "coverage_gaps": 4,
+      "stale_reviews_or_evidence": false,
+      "meets_objective": false
+    }
+  ]
+}

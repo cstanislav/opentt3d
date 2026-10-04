@@ -1,0 +1,421 @@
+[2026-10-03 19:40:55] dbg: [driver:1] Successfully loaded blitter '32bpp-optimized'
+[2026-10-03 19:40:55] dbg: [driver:1] OpenTT3D: Cocoa process 70275
+[2026-10-03 19:40:55] dbg: [driver:1] OpenGL driver: Apple - Apple M3 Pro (4.1 Metal - 90.5)
+[2026-10-03 19:40:55] dbg: [driver:2] OpenGL shading language version: 4.10, texture units = 80
+[2026-10-03 19:40:55] dbg: [driver:1] Successfully loaded video driver 'cocoa-opengl'
+[2026-10-03 19:40:55] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-10-03 19:40:55] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-10-03 19:40:55] dbg: [driver:1] OpenTT3D: background Cocoa window active=false, key=false, visible=false, policy=2
+[2026-10-03 19:40:55] dbg: [driver:1] using thread for game-loop
+[2026-10-03 19:40:55] dbg: [driver:1] OpenTT3D: retained live water source tile 38,12 role ground sprite 9952 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: loaded 1879 authored voxel models, 18030699 occupied cells, 12403230 exposed cell faces merged to 2716566 conforming rectangles / 20904444 triangles
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 37959552 bytes instead of 1735511220 dense cell bytes, with one shared palette
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1066947232 bytes under a scene-pinned soft budget, including 193335232 exact restoration bytes
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 38,12 role body sprite 10002 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 38,12 role body sprite 10006 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 10 part 1 direction 2 face 0 climate 0 base 9992 family 9992 source 10002 captured at 38,12 origin 608,192,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 14 part 1 direction 2 face 1 climate 0 base 9992 family 9992 source 10006 captured at 38,12 origin 608,207,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 39,12 role ground sprite 9955 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 39,12 role body sprite 9994 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 39,12 role body sprite 9998 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 2 part 0 direction 2 face 0 climate 0 base 9992 family 9992 source 9994 captured at 39,12 origin 624,192,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 6 part 0 direction 2 face 1 climate 0 base 9992 family 9992 source 9998 captured at 39,12 origin 624,207,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 40,12 role ground sprite 9952 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 40,12 role body sprite 10010 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 40,12 role body sprite 10014 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 18 part 2 direction 2 face 0 climate 0 base 9992 family 9992 source 10010 captured at 40,12 origin 640,192,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 22 part 2 direction 2 face 1 climate 0 base 9992 family 9992 source 10014 captured at 40,12 origin 640,207,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: loaded 62 profiles from opentt3d-trees.json
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 51,16 role ground sprite 9957 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 51,16 role body sprite 10026 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 51,16 role body sprite 10030 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 34 part 1 direction 2 face 0 climate 0 base 10016 family 9992 source 10026 captured at 51,16 origin 816,256,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 38 part 1 direction 2 face 1 climate 0 base 10016 family 9992 source 10030 captured at 51,16 origin 816,271,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 52,16 role ground sprite 9960 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 52,16 role body sprite 10018 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 52,16 role body sprite 10022 at original height 8
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 26 part 0 direction 2 face 0 climate 0 base 10016 family 9992 source 10018 captured at 52,16 origin 832,256,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 30 part 0 direction 2 face 1 climate 0 base 10016 family 9992 source 10022 captured at 52,16 origin 832,271,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 53,16 role ground sprite 9957 at original height 16
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 53,16 role body sprite 10034 at original height 16
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 53,16 role body sprite 10038 at original height 16
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 42 part 2 direction 2 face 0 climate 0 base 10016 family 9992 source 10034 captured at 53,16 origin 848,256,32 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel lock wall 46 part 2 direction 2 face 1 climate 0 base 10016 family 9992 source 10038 captured at 53,16 origin 848,271,32 opacity 1 with independent original water ground
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,30 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,30 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,30 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,30 feature 6 base 10064 offset 7->7 sprite 10071 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,30 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,30 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,30 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,30 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,30 feature 6 base 10064 offset 9->9 sprite 10073 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 40,30 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 40,30 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 40,30 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 41,30 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 41,30 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 41,30 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,30 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,30 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,30 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,30 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,30 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 34,31 feature 5 base 11264 offset 3->3 sprite 11267 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 34,31 role ground sprite 11267 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 34,31 feature 6 base 10304 offset 39->39 sprite 10343 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 34,31 role ground sprite 10343 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 35,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 35,31 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 36,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 36,31 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,31 feature 6 base 10064 offset 11->11 sprite 10075 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,31 feature 6 base 10064 offset 9->9 sprite 10073 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,31 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,31 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 39,31 feature 6 base 10064 offset 5->5 sprite 10069 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,31 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,31 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,31 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 42,31 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 43,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 43,31 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 43,31 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,31 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,31 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,31 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,31 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,31 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 34,32 feature 5 base 11264 offset 3->3 sprite 11267 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 34,32 role ground sprite 11267 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 34,32 feature 6 base 10304 offset 37->37 sprite 10341 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained live water source tile 34,32 role ground sprite 10341 at original height 0
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 35,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 35,32 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 36,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 36,32 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 37,32 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,32 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,32 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 38,32 feature 6 base 10064 offset 5->5 sprite 10069 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,32 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,32 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,32 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 44,32 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 45,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 45,32 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 45,32 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,32 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,32 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,32 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,32 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,32 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,33 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,33 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,33 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,33 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 46,33 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,33 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,33 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,33 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,33 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,33 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,34 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,34 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,34 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,34 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 47,34 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,34 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,34 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,34 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,34 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,34 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,35 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,35 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 48,35 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 49,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 49,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 49,35 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 50,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 50,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 50,35 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 51,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 51,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 51,35 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 52,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 52,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 52,35 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 53,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 53,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 53,35 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 54,35 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 54,35 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 54,35 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 54,35 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 54,35 feature 6 base 10064 offset 5->5 sprite 10069 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: retained river selector tile 54,35 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live projected tree 1674 stage 6 captured at 41,36
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live projected tree 1576 stage 3 captured at 43,38
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live projected tree 1639 stage 3 captured at 43,38
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live projected tree 1604 stage 3 captured at 43,38
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live projected tree 1688 stage 3 captured at 45,38
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 captured at 46,38
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 variant 2 captured
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: 51 ground-detail tiles rendered with raised crops, hay, rocks or turf
+[2026-10-03 19:41:08] dbg: [driver:1] OpenTT3D: 6 unmodelled reference sprites in this view (release coverage is incomplete)
+[2026-10-03 19:41:08] dbg: [driver:2] OpenTT3D: pre-existing OpenGL error before mesh pass (1286)
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: depth-tested mesh renderer initialized
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 captured at 43,40
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 variant 3 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 20 construction stage 3 captured at 45,41
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 20 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 20 construction stage 3 captured at 45,41
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 20 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 22 construction stage 3 captured at 46,41
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 22 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 22 construction stage 3 captured at 46,41
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 22 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 21 construction stage 3 captured at 45,42
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 21 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 21 construction stage 3 captured at 45,42
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 21 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 23 construction stage 3 captured at 46,42
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 23 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 23 construction stage 3 captured at 46,42
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 23 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 captured at 43,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 6 construction stage 3 variant 0 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 2 captured at 45,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 2 variant 3 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 2 captured at 45,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 2 variant 3 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 11 construction stage 3 captured at 46,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 11 construction stage 3 variant 0 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 3 captured at 44,45
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 3 variant 3 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 3 captured at 46,45
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 39 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 3 captured at 46,45
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 39 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 15 construction stage 3 captured at 47,45
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 15 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: 2 slope foundations rendered with complete retaining walls
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 26 construction stage 0 captured at 50,39
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house ground 26 construction stage 0 variant 0 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1632 stage 3 captured at 51,39
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1625 stage 1 captured at 51,39
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1653 stage 3 captured at 51,39
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 2 captured at 48,41
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 26 construction stage 2 variant 3 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 captured at 49,41
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 captured at 48,42
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 variant 0 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1583 stage 3 captured at 49,42
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 27 construction stage 3 captured at 49,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 27 construction stage 3 variant 0 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 61,60 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 61,60 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 61,60 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 61,60 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 61,60 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 61,60 feature 6 base 10064 offset 7->7 sprite 10071 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 62,60 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 62,60 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 62,60 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,60 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,60 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,60 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,60 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,60 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,61 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,61 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,61 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,62 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,62 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,62 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,63 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,63 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,63 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,64 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,64 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,64 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,65 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,65 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,65 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,66 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,66 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 63,66 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,66 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,66 feature 6 base 10064 offset 9->9 sprite 10073 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 65,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 65,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 65,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,66 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,66 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,66 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,66 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,66 feature 6 base 10064 offset 9->9 sprite 10073 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,66 feature 6 base 10064 offset 7->7 sprite 10071 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 74,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 74,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 74,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 75,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 75,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 75,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 76,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 76,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 76,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 77,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 77,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 77,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 78,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 78,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 78,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 79,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 79,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 79,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 80,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 80,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 80,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,67 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,67 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,67 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,67 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,67 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,67 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,67 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 66,67 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 67,67 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 67,67 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 67,67 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,67 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,67 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,67 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,67 feature 6 base 10064 offset 8->8 sprite 10072 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,67 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,67 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,67 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,67 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,67 feature 6 base 10064 offset 9->9 sprite 10073 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,67 feature 6 base 10064 offset 7->7 sprite 10071 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,67 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,67 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,67 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,67 feature 6 base 10064 offset 5->5 sprite 10069 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 73,67 feature 6 base 10064 offset 11->11 sprite 10075 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 captured at 48,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 16 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 14 construction stage 3 captured at 49,44
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 14 construction stage 3 variant 2 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 captured at 43,45
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel house 24 construction stage 3 variant 1 captured
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1688 stage 5 captured at 53,38
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1674 stage 3 captured at 53,39
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1618 stage 2 captured at 52,40
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1618 stage 5 captured at 52,43
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 81,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 81,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 81,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 82,66 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 82,66 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 82,66 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 82,66 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 82,66 feature 6 base 10064 offset 5->5 sprite 10069 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 82,66 feature 6 base 10064 offset 6->6 sprite 10070 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,68 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,68 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 64,68 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,68 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,68 feature 6 base 10064 offset 0->0 sprite 10064 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,68 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,68 feature 6 base 10064 offset 4->4 sprite 10068 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 68,68 feature 6 base 10064 offset 10->10 sprite 10074 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 69,68 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 69,68 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 69,68 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 70,68 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 70,68 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 70,68 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 71,68 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 71,68 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 71,68 feature 6 base 10064 offset 3->3 sprite 10067 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,68 feature 5 base 11269 offset 0->0 sprite 11269 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,68 feature 6 base 10064 offset 1->1 sprite 10065 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,68 feature 6 base 10064 offset 2->2 sprite 10066 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,68 feature 6 base 10064 offset 5->5 sprite 10069 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained river selector tile 72,68 feature 6 base 10064 offset 11->11 sprite 10075 absent false
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,7 role ground sprite 9957 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,7 role body sprite 10024 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,7 role body sprite 10028 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 32 part 1 direction 1 face 0 climate 0 base 10016 family 9992 source 10024 captured at 64,7 origin 1024,112,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 36 part 1 direction 1 face 1 climate 0 base 10016 family 9992 source 10028 captured at 64,7 origin 1039,112,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,8 role ground sprite 9958 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,8 role body sprite 10016 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,8 role body sprite 10020 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 24 part 0 direction 1 face 0 climate 0 base 10016 family 9992 source 10016 captured at 64,8 origin 1024,128,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 28 part 0 direction 1 face 1 climate 0 base 10016 family 9992 source 10020 captured at 64,8 origin 1039,128,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,9 role ground sprite 9957 at original height 16
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,9 role body sprite 10032 at original height 16
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 64,9 role body sprite 10036 at original height 16
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 40 part 2 direction 1 face 0 climate 0 base 10016 family 9992 source 10032 captured at 64,9 origin 1024,144,32 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 44 part 2 direction 1 face 1 climate 0 base 10016 family 9992 source 10036 captured at 64,9 origin 1039,144,32 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1695 stage 3 captured at 51,33
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1702 stage 3 captured at 51,33
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1611 stage 6 captured at 51,34
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: 81 roof/wall pixels select their owning tile across four rotations, with independent vehicle picking
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1611 stage 3 captured at 90,1
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1625 stage 3 captured at 94,2
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1632 stage 5 captured at 94,2
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1653 stage 2 captured at 89,3
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 100,4 role ground sprite 9952 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 100,4 role body sprite 10009 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 100,4 role body sprite 10013 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 17 part 2 direction 0 face 0 climate 0 base 9992 family 9992 source 10009 captured at 100,4 origin 1600,64,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 21 part 2 direction 0 face 1 climate 0 base 9992 family 9992 source 10013 captured at 100,4 origin 1600,79,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 101,4 role ground sprite 9954 at original height 0
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 101,4 role body sprite 9993 at original height 0
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 101,4 role body sprite 9997 at original height 0
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 1 part 0 direction 0 face 0 climate 0 base 9992 family 9992 source 9993 captured at 101,4 origin 1616,64,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 5 part 0 direction 0 face 1 climate 0 base 9992 family 9992 source 9997 captured at 101,4 origin 1616,79,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 102,4 role ground sprite 9952 at original height 0
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 102,4 role body sprite 10001 at original height 0
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 102,4 role body sprite 10005 at original height 0
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 9 part 1 direction 0 face 0 climate 0 base 9992 family 9992 source 10001 captured at 102,4 origin 1632,64,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 13 part 1 direction 0 face 1 climate 0 base 9992 family 9992 source 10005 captured at 102,4 origin 1632,79,0 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1576 stage 6 captured at 99,7
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live projected tree 1590 stage 4 captured at 102,8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 80,14 role ground sprite 9957 at original height 16
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 80,14 role body sprite 10033 at original height 16
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 80,14 role body sprite 10037 at original height 16
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 41 part 2 direction 0 face 0 climate 0 base 10016 family 9992 source 10033 captured at 80,14 origin 1280,224,32 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 45 part 2 direction 0 face 1 climate 0 base 10016 family 9992 source 10037 captured at 80,14 origin 1280,239,32 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 81,14 role ground sprite 9959 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 81,14 role body sprite 10017 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 81,14 role body sprite 10021 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 25 part 0 direction 0 face 0 climate 0 base 10016 family 9992 source 10017 captured at 81,14 origin 1296,224,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 29 part 0 direction 0 face 1 climate 0 base 10016 family 9992 source 10021 captured at 81,14 origin 1296,239,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 82,14 role ground sprite 9957 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 82,14 role body sprite 10025 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: retained live water source tile 82,14 role body sprite 10029 at original height 8
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 33 part 1 direction 0 face 0 climate 0 base 10016 family 9992 source 10025 captured at 82,14 origin 1312,224,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: live voxel lock wall 37 part 1 direction 0 face 1 climate 0 base 10016 family 9992 source 10029 captured at 82,14 origin 1312,239,16 opacity 1 with independent original water ground
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: whole-world atlas relocation preserves 1228800 exact RGBA/picking pixels across repack, clear and forced row relocation
+[2026-10-03 19:41:09] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 1 GPU viewport regions

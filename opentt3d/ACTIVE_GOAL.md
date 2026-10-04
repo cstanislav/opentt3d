@@ -1,5 +1,37 @@
 # Active extended development goal
 
+## Resumed: original locks reach diagnostic saved worlds — October 4
+
+The48 provisional lock owners now render through a separately bound diagnostic
+catalogue in real public saved worlds. Both original callback-selected walls run
+first; complete Classic provenance, both matching selections and all48 owner/climate
+bindings are required before replacing either. Independent water remains original;
+alternate/custom/missing-owner families keep all original walls. Middle columns gain
+only additional doubled-terrain support, without scaling object height or changing
+source cells/paint/XY anchors/openings. Occupancy-preserving supported LODs and exact
+scene-pinned retirement/restoration retain the existing cache budgets.
+
+An initial elevated-group/sea-owner mapping bug and a missing-archive alternate
+control are rejected/preserved, not asserted away. Corrected64 quiet controls cover
+all192 wall/96 independent water-source states in both renderers. Twelve focused
+and18 visibility controls preserve16 complete same-backend comparisons exactly;
+original transparent0.38 walls/hidden absence do not alter water. Native215,
+working asset271, isolated canonical/schema253 and harness106 tests pass, as does
+the presentation boundary. Generic picking is not lock-specific GPU acceptance.
+
+Strict paired worlds still fail32 views/1,213 pixels; source fidelity, independent
+animation, ships, terrain/custom completeness, all-climate visibility and performance
+remain open. Historical authored studies retain provisional6/10 defects;192 bound
+instances are independently screened5/10, with six false gates and no inherited
+approval. Full2,866/2,950/2,998-row scopes retain zero approvals/four gaps and fail
+required-eight. Portable evidence:`reviews/20261004/lock-world-support/` retains99
+lossless worlds, source bytes and all initial failures. Canonical artwork/bindings,
+mixed working HQ artwork/compiler/tests/CSV and immutable recommended`.42` remain
+unpromoted/unchanged. The full every-model8/10 objective below remains active.
+
+This resumes work after the historical00:00:34 pause; it is neither completion nor
+a new actual stopping-clock entry. Continue the full catalogue, not just locks.
+
 ## Execution stopping-clock audit — October 4, 00:00:34 UTC
 
 **Actual stopping clock check: 2026-10-04 00:00:34 UTC.** Modelling/native validation

@@ -1,0 +1,14 @@
+{
+  "status": "rejected",
+  "native_controls_completed": 5,
+  "geometry_approvals": 0,
+  "reasons": [
+    "Classic elevated source group base10016 was treated as sea group base9992 plus a local owner; incidental elevated owners were misidentified even though the focused sea lock looked plausible.",
+    "The alternate control freeze lacked opengfx-8.0.tar and selected Classic despite the requested OpenGFX CLI value; this is not alternate-family coverage.",
+    "Initial build introduced two signedness warnings; corrected source also validates original sorting extents."
+  ],
+  "actual_alternate_source_sets": [
+    "OpenGFX2 Classic"
+  ],
+  "originals_retained": true
+}

@@ -1,0 +1,16 @@
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-complete-temperate-0-0-vulkan", "image_size": [1280, 960]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-canonical-temperate-0-0-vulkan", "image_size": [1280, 960]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-missing-owner-temperate-0-0-vulkan", "image_size": [1280, 960]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-prior-canonical-temperate-0-0-vulkan", "image_size": [1280, 960]}
+{"output": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-lock-world-support-pilot-alternate-temperate-0-0-vulkan", "image_size": [1280, 960]}
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/lock-world-support/run-controls.py", line 211, in <module>
+    main()
+    ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/lock-world-support/run-controls.py", line 207, in main
+    run(args.prefix, args.phase)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/lock-world-support/run-controls.py", line 166, in run
+    assert not observed, "An incomplete/alternate/canonical family must not hide any original wall"
+           ^^^^^^^^^^^^
+AssertionError: An incomplete/alternate/canonical family must not hide any original wall

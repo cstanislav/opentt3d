@@ -1,0 +1,83 @@
+{
+  "audited_utc": "2026-10-04T00:45:31.032315+00:00",
+  "phase": "pilot",
+  "comparisons": [
+    {
+      "label": "preservation-canonical-vulkan",
+      "scope": "preservation",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-preservation-canonical-vulkan.json",
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "label": "preservation-missing-owner-vulkan",
+      "scope": "preservation",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-preservation-missing-owner-vulkan.json",
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "label": "preservation-alternate-vulkan",
+      "scope": "preservation",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-preservation-alternate-vulkan.json",
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "label": "preservation-canonical-opengl",
+      "scope": "preservation",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-preservation-canonical-opengl.json",
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "label": "preservation-missing-owner-opengl",
+      "scope": "preservation",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-preservation-missing-owner-opengl.json",
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "label": "preservation-alternate-opengl",
+      "scope": "preservation",
+      "exit_code": 0,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-preservation-alternate-opengl.json",
+      "different_images": 0,
+      "different_pixels": 0
+    },
+    {
+      "label": "paired-complete",
+      "scope": "paired-world",
+      "exit_code": 1,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-paired-complete.json",
+      "different_images": 1,
+      "different_pixels": 74
+    },
+    {
+      "label": "paired-canonical",
+      "scope": "paired-world",
+      "exit_code": 1,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-paired-canonical.json",
+      "different_images": 1,
+      "different_pixels": 47
+    },
+    {
+      "label": "paired-alternate",
+      "scope": "paired-world",
+      "exit_code": 1,
+      "report": "opentt3d/reviews/20261004/lock-world-support/strict-comparisons/pilot-paired-alternate.json",
+      "different_images": 1,
+      "different_pixels": 39
+    }
+  ],
+  "geometry_approvals": 0,
+  "masks_or_tolerance": false,
+  "exact_preservation_controls": 6,
+  "different_images": 3,
+  "different_pixels": 160
+}
