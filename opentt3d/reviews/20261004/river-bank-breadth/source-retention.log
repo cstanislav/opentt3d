@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-breadth/retain-sources.py", line 74, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-bank-breadth/retain-sources.py", line 31, in main
+    row = next(row for row in observed if row["feature"] == "CF_RIVER_EDGE" and row["slope"] == 0 and
+        row["requested_offset"] == edge and row["resolved_offset"] == edge and row["source_height"] > 0)
+StopIteration

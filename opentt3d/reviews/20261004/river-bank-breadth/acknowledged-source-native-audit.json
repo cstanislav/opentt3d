@@ -1,0 +1,1164 @@
+{
+  "audited_utc": "2026-10-04T05:52:22.369234+00:00",
+  "models": 48,
+  "rows": [
+    {
+      "model": "river_bank_study_temperate_flat_00",
+      "climate": 0,
+      "edge": 0,
+      "shared_bounds": [
+        -5,
+        -1,
+        33,
+        18
+      ],
+      "complete_rgba_changed_pixels": 167,
+      "alpha_presence_differences_additional_diagnostic": 29,
+      "source_visible_pixels": 175,
+      "model_visible_pixels": 164,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-0.pam": "d077f715c772c501627fd18297a6d7a3cd3685eb5c03c7d1cf67a592c5f636bd",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_00-native.png": "126eb197c15a3da2d0bf0d0696cae192c4fac88bbead6fe68be0e7ca180fa7a9",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_00-native.json": "225f5df1c99f523a1b3ba9f32cdc18f3ffaa50a2507015d2834b595db8076b16"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_01",
+      "climate": 0,
+      "edge": 1,
+      "shared_bounds": [
+        -5,
+        13,
+        33,
+        32
+      ],
+      "complete_rgba_changed_pixels": 175,
+      "alpha_presence_differences_additional_diagnostic": 55,
+      "source_visible_pixels": 178,
+      "model_visible_pixels": 131,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-1.pam": "3f9bbcc37142bc8614c292c953e942f609112c00098d4ef4b9a885d9a3979c10",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_01-native.png": "aa529e140a450eccbc360f30ad01d11e31a7181cc05ed7e19367e2f03d62d06a",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_01-native.json": "e7eef463edf1586df1b77cba8bcfe1fd3d107702eb0dad4c8b511dd5a45c852c"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_02",
+      "climate": 0,
+      "edge": 2,
+      "shared_bounds": [
+        -32,
+        13,
+        6,
+        32
+      ],
+      "complete_rgba_changed_pixels": 202,
+      "alpha_presence_differences_additional_diagnostic": 116,
+      "source_visible_pixels": 179,
+      "model_visible_pixels": 133,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-2.pam": "03ce9faebec40538daf16394c343e8d4f6deafc9ae278b8becb698f6b1f4116c",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_02-native.png": "4c268824c20a77c154aae9054c8cef9cd4883bc02416616125972eba3c91e750",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_02-native.json": "c7fabd4cca6d2aca49f998613c763b091b06fa7f805fbae3c90c7a6dca5c7d8d"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_03",
+      "climate": 0,
+      "edge": 3,
+      "shared_bounds": [
+        -32,
+        -1,
+        6,
+        18
+      ],
+      "complete_rgba_changed_pixels": 184,
+      "alpha_presence_differences_additional_diagnostic": 67,
+      "source_visible_pixels": 151,
+      "model_visible_pixels": 162,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-3.pam": "528c9b2b69fe543d4dcd06840292f5f103164fa1e0f60c6fedeab1566edf56b0",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_03-native.png": "9eae246b5809c39fa67c12ef7337d3f2e4633624ec2a520de200e09213150a2b",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_03-native.json": "00a87e8828f6f26d39a5e974c4944b41981027e19d0c4f7a2a9b97d092e54502"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_04",
+      "climate": 0,
+      "edge": 4,
+      "shared_bounds": [
+        17,
+        10,
+        33,
+        22
+      ],
+      "complete_rgba_changed_pixels": 98,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 97,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-4.pam": "084826b176afebeef10b89741e82bc021e74283b3c8a03fd2ba272a94cbf6e64",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_04-native.png": "d85d13952bd53d5e7ab088e79c94ba64f4d509f09d712745425d08f9675ae51a",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_04-native.json": "45137d090540bc375bfed3c28433ab82d85a6887d8b4a3f1479296ed52008aea"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_05",
+      "climate": 0,
+      "edge": 5,
+      "shared_bounds": [
+        -11,
+        23,
+        13,
+        32
+      ],
+      "complete_rgba_changed_pixels": 100,
+      "alpha_presence_differences_additional_diagnostic": 36,
+      "source_visible_pixels": 98,
+      "model_visible_pixels": 86,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-5.pam": "556e0112190eddae6e30eaf6ebc0d631d546181ed06b733017cab75c142169cd",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_05-native.png": "04d0abbb8785e6ffbf62fa8ede9ad4dcc3e98af7dad438fe6f8a4f3b2853dfe8",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_05-native.json": "f084af7a14bd1b9b5a98ea47f6df19804700e90bb825b773d0c350a7c388a43e"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_06",
+      "climate": 0,
+      "edge": 6,
+      "shared_bounds": [
+        -32,
+        10,
+        -15,
+        22
+      ],
+      "complete_rgba_changed_pixels": 110,
+      "alpha_presence_differences_additional_diagnostic": 44,
+      "source_visible_pixels": 93,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-6.pam": "31a3f9a1f365d6b286ce17f84f4fe117d8552390d936044b017eb4d16d0c20dd",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_06-native.png": "a7defaaf22b0ec7794e3c527975b89110bcd29a7b817f7817dd1612ab15b8b9f",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_06-native.json": "e2bfc04109f9fbf6fe62474c1fb9329277159c34554125fd6cc4c340fcea9b38"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_07",
+      "climate": 0,
+      "edge": 7,
+      "shared_bounds": [
+        -12,
+        -1,
+        13,
+        8
+      ],
+      "complete_rgba_changed_pixels": 108,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 99,
+      "model_visible_pixels": 110,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-7.pam": "a8d74d417ccdec9d0ece0007c385530c0fb93033ff9affef253789b7e2d6437d",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_07-native.png": "ad77b31a87f9e9ea18d5509b794bc8b3ece0871db4ef5faa73be7c66e4598611",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_07-native.json": "8e0f4062ea11f0d1b69fc511da5b81a35da5596c6518e0a2b934dafbbca5303b"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_08",
+      "climate": 0,
+      "edge": 8,
+      "shared_bounds": [
+        23,
+        12,
+        33,
+        19
+      ],
+      "complete_rgba_changed_pixels": 41,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 37,
+      "model_visible_pixels": 37,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-8.pam": "dfa3fe1dba4bd71004ca359a88df529d20694a90c3321716dffbe046b2ba2a79",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_08-native.png": "80ac24c53dd9b972879cb16d61f7ce124f6e8dfcb6e93e34e064c5550467fbf3",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_08-native.json": "bed258ec3794bcd4f1094c667794d318b35f67c1e15a0bcec1ae97000c0b6bf3"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_09",
+      "climate": 0,
+      "edge": 9,
+      "shared_bounds": [
+        -5,
+        26,
+        7,
+        32
+      ],
+      "complete_rgba_changed_pixels": 46,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 40,
+      "model_visible_pixels": 31,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-9.pam": "732b900c0d24ce18697e3aa298b32218207a187cb140e339da3dc67a7bc6f3cd",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_09-native.png": "06201a564bcfcaff3f423692ea9dd3963ddc19f64b66ae5aaa34b0bb07787039",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_09-native.json": "5a0bad07dffe757863bf086cc5a746a4805bf66fcabd528916a130d665439e09"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_10",
+      "climate": 0,
+      "edge": 10,
+      "shared_bounds": [
+        -32,
+        13,
+        -21,
+        20
+      ],
+      "complete_rgba_changed_pixels": 44,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 33,
+      "model_visible_pixels": 38,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-10.pam": "48177cbaa159d7133fee7ce14068d8c2ff82af48b2bfcc33a727fe0fdb6698b0",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_10-native.png": "80691a08e5e9f29a25fce749b3872e8d7dcca2a275f298d9f49dccd24bd308f2",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_10-native.json": "d905957e197bec3ef12ae4444a96d655ffe28ff394c6ee7e58f8753f5c272cd8"
+      }
+    },
+    {
+      "model": "river_bank_study_temperate_flat_11",
+      "climate": 0,
+      "edge": 11,
+      "shared_bounds": [
+        -8,
+        -1,
+        6,
+        5
+      ],
+      "complete_rgba_changed_pixels": 42,
+      "alpha_presence_differences_additional_diagnostic": 21,
+      "source_visible_pixels": 29,
+      "model_visible_pixels": 40,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-11.pam": "bb666df5291d4fbd5b5ee7d6e2f76473106121fc2449d8a9d6d3b695b9a81d6f",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_11-native.png": "65cd2eac7e261150712d7ada349653c6580f7a869f2fdf0fcc779766763e0a4e",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_temperate_flat_11-native.json": "b1f103d909feb42e4cd1a7ab7527e71eb2b07e17570bed94a4b3bc4c33cd577d"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_00",
+      "climate": 1,
+      "edge": 0,
+      "shared_bounds": [
+        -5,
+        -1,
+        33,
+        18
+      ],
+      "complete_rgba_changed_pixels": 164,
+      "alpha_presence_differences_additional_diagnostic": 29,
+      "source_visible_pixels": 175,
+      "model_visible_pixels": 164,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-0.pam": "97e0c1a3e92359b8f82724927f9260b4485bc5a73fbd6fabfafa56526610e84a",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_00-native.png": "fef3c917d0b2e3e61495d9468c54f3a55e0ac9cdbaaaefb741c7a93bb418cac6",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_00-native.json": "225f5df1c99f523a1b3ba9f32cdc18f3ffaa50a2507015d2834b595db8076b16"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_01",
+      "climate": 1,
+      "edge": 1,
+      "shared_bounds": [
+        -5,
+        13,
+        33,
+        32
+      ],
+      "complete_rgba_changed_pixels": 165,
+      "alpha_presence_differences_additional_diagnostic": 55,
+      "source_visible_pixels": 178,
+      "model_visible_pixels": 131,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-1.pam": "621146fcdfde6564ad0dfd696b0c89868e0461d298b3a5bdf8519b8587c6803d",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_01-native.png": "a0da2ea970086c83740e767eeaff014a82108fdd178ea0b44ee0eb71e5eab9cc",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_01-native.json": "e7eef463edf1586df1b77cba8bcfe1fd3d107702eb0dad4c8b511dd5a45c852c"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_02",
+      "climate": 1,
+      "edge": 2,
+      "shared_bounds": [
+        -32,
+        13,
+        6,
+        32
+      ],
+      "complete_rgba_changed_pixels": 196,
+      "alpha_presence_differences_additional_diagnostic": 116,
+      "source_visible_pixels": 179,
+      "model_visible_pixels": 133,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-2.pam": "1ae7ab52512afa306ffdd5ec7e187344daf52b313c02d99b64a550e10ef1e0af",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_02-native.png": "816e1510ac92337f13074235974cfae687f003cb63c8da9c23eaaade3f30f2f2",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_02-native.json": "c7fabd4cca6d2aca49f998613c763b091b06fa7f805fbae3c90c7a6dca5c7d8d"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_03",
+      "climate": 1,
+      "edge": 3,
+      "shared_bounds": [
+        -32,
+        -1,
+        6,
+        18
+      ],
+      "complete_rgba_changed_pixels": 172,
+      "alpha_presence_differences_additional_diagnostic": 67,
+      "source_visible_pixels": 151,
+      "model_visible_pixels": 162,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-3.pam": "01a545aabf26deb2f62422d76bd7e631b436b0e72ac90482a327eaa7f1978f7f",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_03-native.png": "53d30969b13a7d4415182cc79841077cc4283988dd5ab86c2852901d781a7897",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_03-native.json": "00a87e8828f6f26d39a5e974c4944b41981027e19d0c4f7a2a9b97d092e54502"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_04",
+      "climate": 1,
+      "edge": 4,
+      "shared_bounds": [
+        17,
+        10,
+        33,
+        22
+      ],
+      "complete_rgba_changed_pixels": 94,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 97,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-4.pam": "1215530e9b09fd25de2481f6f942e9a228cd1613373fb8940a94918ce3b37200",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_04-native.png": "7a898b5f485934e47611e4711b115e85e76970214ffd0fa5a2c024f3a67e1c17",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_04-native.json": "45137d090540bc375bfed3c28433ab82d85a6887d8b4a3f1479296ed52008aea"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_05",
+      "climate": 1,
+      "edge": 5,
+      "shared_bounds": [
+        -11,
+        23,
+        13,
+        32
+      ],
+      "complete_rgba_changed_pixels": 89,
+      "alpha_presence_differences_additional_diagnostic": 36,
+      "source_visible_pixels": 98,
+      "model_visible_pixels": 86,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-5.pam": "6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_05-native.png": "a0e0d9e68f43460ec06d8f0d85d7d2439e442978ecea8a76a5cdab58ed963947",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_05-native.json": "f084af7a14bd1b9b5a98ea47f6df19804700e90bb825b773d0c350a7c388a43e"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_06",
+      "climate": 1,
+      "edge": 6,
+      "shared_bounds": [
+        -32,
+        10,
+        -15,
+        22
+      ],
+      "complete_rgba_changed_pixels": 101,
+      "alpha_presence_differences_additional_diagnostic": 44,
+      "source_visible_pixels": 93,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-6.pam": "81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_06-native.png": "30c883cc10d9c0d30b58dae3356a5b54aa82d0bac35765688743accdaf0f5b65",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_06-native.json": "e2bfc04109f9fbf6fe62474c1fb9329277159c34554125fd6cc4c340fcea9b38"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_07",
+      "climate": 1,
+      "edge": 7,
+      "shared_bounds": [
+        -12,
+        -1,
+        13,
+        8
+      ],
+      "complete_rgba_changed_pixels": 109,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 99,
+      "model_visible_pixels": 110,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-7.pam": "c4a2b95bdbe050faa886dbc351703f9f129d3f3b1e30e4b8321b1aad8e882d56",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_07-native.png": "6ee48b09988ee2295a2abe3e4e2bbe0a10733700ea49f7845ed15fee6be64880",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_07-native.json": "8e0f4062ea11f0d1b69fc511da5b81a35da5596c6518e0a2b934dafbbca5303b"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_08",
+      "climate": 1,
+      "edge": 8,
+      "shared_bounds": [
+        23,
+        12,
+        33,
+        19
+      ],
+      "complete_rgba_changed_pixels": 40,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 37,
+      "model_visible_pixels": 37,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-8.pam": "29924bb29dddec4e2706d1cda033e5e31b5c94ec56133fd64cd7a92ea433c808",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_08-native.png": "392c94b06ddfd0acf353dcef56288ee4dfb408a6f1a70bd64c7b1552970796b8",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_08-native.json": "bed258ec3794bcd4f1094c667794d318b35f67c1e15a0bcec1ae97000c0b6bf3"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_09",
+      "climate": 1,
+      "edge": 9,
+      "shared_bounds": [
+        -5,
+        26,
+        7,
+        32
+      ],
+      "complete_rgba_changed_pixels": 44,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 40,
+      "model_visible_pixels": 31,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-9.pam": "c5b40606266ce58c403ae32927d3e7442a3c2efde1f1c27711cf82caebf7fd0c",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_09-native.png": "91e5bb122d580c2a930cdbe84a37245cfc254f4d3897cc3af9f9d07b09127786",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_09-native.json": "5a0bad07dffe757863bf086cc5a746a4805bf66fcabd528916a130d665439e09"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_10",
+      "climate": 1,
+      "edge": 10,
+      "shared_bounds": [
+        -32,
+        13,
+        -21,
+        20
+      ],
+      "complete_rgba_changed_pixels": 45,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 33,
+      "model_visible_pixels": 38,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-10.pam": "a61382bf1230874d3be3f18b13bec6bd1020997f88c8a6f18d9f3274f2d7c736",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_10-native.png": "cc151f3d24656fca728bd4d6c5c9783d367624175e3f192537d6f1a96f190a1e",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_10-native.json": "d905957e197bec3ef12ae4444a96d655ffe28ff394c6ee7e58f8753f5c272cd8"
+      }
+    },
+    {
+      "model": "river_bank_study_arctic_flat_11",
+      "climate": 1,
+      "edge": 11,
+      "shared_bounds": [
+        -8,
+        -1,
+        6,
+        5
+      ],
+      "complete_rgba_changed_pixels": 42,
+      "alpha_presence_differences_additional_diagnostic": 21,
+      "source_visible_pixels": 29,
+      "model_visible_pixels": 40,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-11.pam": "eb3c8103ac27a093025114e2851fc5a850ac76531bb4b06d90f6ced8d7e4b3c7",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_11-native.png": "426dac23e6407ec8c7625d96647975058d8d4ca7ae3b6da87685752fc1623010",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_arctic_flat_11-native.json": "b1f103d909feb42e4cd1a7ab7527e71eb2b07e17570bed94a4b3bc4c33cd577d"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_00",
+      "climate": 2,
+      "edge": 0,
+      "shared_bounds": [
+        -5,
+        -1,
+        33,
+        18
+      ],
+      "complete_rgba_changed_pixels": 155,
+      "alpha_presence_differences_additional_diagnostic": 29,
+      "source_visible_pixels": 175,
+      "model_visible_pixels": 164,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-0.pam": "3985b52a0d0749f38251121bedbd47b8289607487eaa1a2034cbd9b33242872c",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_00-native.png": "ec07a4016b22017acac7be42e89c0eb7c5a5a8a064300ecfe63d481ad2a8a1b2",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_00-native.json": "225f5df1c99f523a1b3ba9f32cdc18f3ffaa50a2507015d2834b595db8076b16"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_01",
+      "climate": 2,
+      "edge": 1,
+      "shared_bounds": [
+        -5,
+        13,
+        33,
+        32
+      ],
+      "complete_rgba_changed_pixels": 164,
+      "alpha_presence_differences_additional_diagnostic": 55,
+      "source_visible_pixels": 178,
+      "model_visible_pixels": 131,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-1.pam": "0344a5d909bfb86e0dbe4f93a956efdd631763a6a0538ae0a232242b5303b5ea",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_01-native.png": "09c00b07134f5c1fbede8442f0d22dbb22861c1db200d0732fca9c0847c07c4f",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_01-native.json": "e7eef463edf1586df1b77cba8bcfe1fd3d107702eb0dad4c8b511dd5a45c852c"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_02",
+      "climate": 2,
+      "edge": 2,
+      "shared_bounds": [
+        -32,
+        13,
+        6,
+        32
+      ],
+      "complete_rgba_changed_pixels": 199,
+      "alpha_presence_differences_additional_diagnostic": 116,
+      "source_visible_pixels": 179,
+      "model_visible_pixels": 133,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-2.pam": "1514c599a4a976e40ac3c30e5c2efef7d3432aa855a047fb76e1c315eab41bf0",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_02-native.png": "63ff75010e1a5c41a30357a6d43b17f1931a6b2e396eba9840d4a61b82fa2e32",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_02-native.json": "c7fabd4cca6d2aca49f998613c763b091b06fa7f805fbae3c90c7a6dca5c7d8d"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_03",
+      "climate": 2,
+      "edge": 3,
+      "shared_bounds": [
+        -32,
+        -1,
+        6,
+        18
+      ],
+      "complete_rgba_changed_pixels": 173,
+      "alpha_presence_differences_additional_diagnostic": 67,
+      "source_visible_pixels": 151,
+      "model_visible_pixels": 162,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-3.pam": "3ccbe8218f11ef6ab0640a637986dba55a95b8559777a6e6d9114e0733466c59",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_03-native.png": "791c84259f0b2d9f2f5971bd32a48cb2e7f8e053a449b5f5be3f31dd33d1eacf",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_03-native.json": "00a87e8828f6f26d39a5e974c4944b41981027e19d0c4f7a2a9b97d092e54502"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_04",
+      "climate": 2,
+      "edge": 4,
+      "shared_bounds": [
+        17,
+        10,
+        33,
+        22
+      ],
+      "complete_rgba_changed_pixels": 85,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 97,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-4.pam": "7f1d74628d54a4c4956dbd8db96620af64cc75a14a2bd31cfd727b9a643353b3",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_04-native.png": "b0ebe68ca6b8f00170e78425edec7cf8b19e207256f18d778cce482034edbe9c",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_04-native.json": "45137d090540bc375bfed3c28433ab82d85a6887d8b4a3f1479296ed52008aea"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_05",
+      "climate": 2,
+      "edge": 5,
+      "shared_bounds": [
+        -11,
+        23,
+        13,
+        32
+      ],
+      "complete_rgba_changed_pixels": 82,
+      "alpha_presence_differences_additional_diagnostic": 36,
+      "source_visible_pixels": 98,
+      "model_visible_pixels": 86,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-5.pam": "b8e4dd7a4a845df87e50126fa416e52ddcae6d0fca75dcd5f3f110828ff83294",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_05-native.png": "995382fba3bfaed369dad6875d76aa1a49684033342c383c0daa7c09726e4418",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_05-native.json": "f084af7a14bd1b9b5a98ea47f6df19804700e90bb825b773d0c350a7c388a43e"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_06",
+      "climate": 2,
+      "edge": 6,
+      "shared_bounds": [
+        -32,
+        10,
+        -15,
+        22
+      ],
+      "complete_rgba_changed_pixels": 98,
+      "alpha_presence_differences_additional_diagnostic": 44,
+      "source_visible_pixels": 93,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-6.pam": "64c27b2122b4aae50f736d3d44b329e32cb7d96c2fdcab68a9bdaf452f858ce1",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_06-native.png": "c9380c68e6bee3c80c9fbda89a6dea930d8bfe855cf0e4e0a0734e45327fd9dc",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_06-native.json": "e2bfc04109f9fbf6fe62474c1fb9329277159c34554125fd6cc4c340fcea9b38"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_07",
+      "climate": 2,
+      "edge": 7,
+      "shared_bounds": [
+        -12,
+        -1,
+        13,
+        8
+      ],
+      "complete_rgba_changed_pixels": 100,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 99,
+      "model_visible_pixels": 110,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-7.pam": "730895e829c3b160b86d33e28e27bd5183896ad808b5259e6771d1e9dea85b04",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_07-native.png": "54de20dc9651e7825bf2ebd337ed8e5b7fbdad4486006b9218631690fe7f1fe0",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_07-native.json": "8e0f4062ea11f0d1b69fc511da5b81a35da5596c6518e0a2b934dafbbca5303b"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_08",
+      "climate": 2,
+      "edge": 8,
+      "shared_bounds": [
+        23,
+        12,
+        33,
+        19
+      ],
+      "complete_rgba_changed_pixels": 38,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 37,
+      "model_visible_pixels": 37,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-8.pam": "c52d91d609a10e2000b2ada364a96b30897da81a2cdd8d9edeaf6b2725b7f593",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_08-native.png": "61afe5a1914318efe9c73ad8048e4d4eb9f54bf6940d3844c83edf7b25bf9cc1",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_08-native.json": "bed258ec3794bcd4f1094c667794d318b35f67c1e15a0bcec1ae97000c0b6bf3"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_09",
+      "climate": 2,
+      "edge": 9,
+      "shared_bounds": [
+        -5,
+        26,
+        7,
+        32
+      ],
+      "complete_rgba_changed_pixels": 42,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 40,
+      "model_visible_pixels": 31,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-9.pam": "174ca0a16984a070fe93c7c3bc50a090ab3b0a35494e85c73daa6e6e91e9838d",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_09-native.png": "3eadabceb60b21507b6735af7c1e939e34287002d5ed3a966087338d8aa7d2d7",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_09-native.json": "5a0bad07dffe757863bf086cc5a746a4805bf66fcabd528916a130d665439e09"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_10",
+      "climate": 2,
+      "edge": 10,
+      "shared_bounds": [
+        -32,
+        13,
+        -21,
+        20
+      ],
+      "complete_rgba_changed_pixels": 43,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 33,
+      "model_visible_pixels": 38,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-10.pam": "693488168baacef508c2d04df34a653a78285e883962aa10604631f765ff143a",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_10-native.png": "b03705b8d4951e9283225fd215e4e5b3d1030b4032c8b370eed1a708db90eb26",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_10-native.json": "d905957e197bec3ef12ae4444a96d655ffe28ff394c6ee7e58f8753f5c272cd8"
+      }
+    },
+    {
+      "model": "river_bank_study_tropic_flat_11",
+      "climate": 2,
+      "edge": 11,
+      "shared_bounds": [
+        -8,
+        -1,
+        6,
+        5
+      ],
+      "complete_rgba_changed_pixels": 40,
+      "alpha_presence_differences_additional_diagnostic": 21,
+      "source_visible_pixels": 29,
+      "model_visible_pixels": 40,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-11.pam": "00022dabb031234a6bb0713f8af37d37e7469bcfe937e6220d2c1ecd43a191b7",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_11-native.png": "7d18ad160fae8c059e9a637d885a76b7b2d49abf2d2f693dd51d5ebbc7227243",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_tropic_flat_11-native.json": "b1f103d909feb42e4cd1a7ab7527e71eb2b07e17570bed94a4b3bc4c33cd577d"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_00",
+      "climate": 3,
+      "edge": 0,
+      "shared_bounds": [
+        -5,
+        -1,
+        33,
+        18
+      ],
+      "complete_rgba_changed_pixels": 172,
+      "alpha_presence_differences_additional_diagnostic": 29,
+      "source_visible_pixels": 175,
+      "model_visible_pixels": 164,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-0.pam": "9f3a2e1a9b98dd44446bdadc939ea6fd11a587ac0e5a729c431ba852327d4bc8",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_00-native.png": "f1477b5a357f4cc65c0db951f87c7f90f3275f2ca6b0ef95c105d1aca96e4bdc",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_00-native.json": "225f5df1c99f523a1b3ba9f32cdc18f3ffaa50a2507015d2834b595db8076b16"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_01",
+      "climate": 3,
+      "edge": 1,
+      "shared_bounds": [
+        -5,
+        13,
+        33,
+        32
+      ],
+      "complete_rgba_changed_pixels": 180,
+      "alpha_presence_differences_additional_diagnostic": 55,
+      "source_visible_pixels": 178,
+      "model_visible_pixels": 131,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-1.pam": "01a40aba3852b25a65aea6c3d4967f18a5bfc80482f0de5ca007c63af06d47ff",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_01-native.png": "cfbef48119124579946b6ad0413011a55a66fb35f83cb4a2f726fbe17d703936",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_01-native.json": "e7eef463edf1586df1b77cba8bcfe1fd3d107702eb0dad4c8b511dd5a45c852c"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_02",
+      "climate": 3,
+      "edge": 2,
+      "shared_bounds": [
+        -32,
+        13,
+        6,
+        32
+      ],
+      "complete_rgba_changed_pixels": 203,
+      "alpha_presence_differences_additional_diagnostic": 116,
+      "source_visible_pixels": 179,
+      "model_visible_pixels": 133,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-2.pam": "f68db0e9312c01d30b6d790f6d1e47c79b98a3e5953e04bceb919205ee0d8912",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_02-native.png": "70adf6490ae0110a29c30e02bfc8b45d284ee157c94b02cfa6e71bd149b2bb4f",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_02-native.json": "c7fabd4cca6d2aca49f998613c763b091b06fa7f805fbae3c90c7a6dca5c7d8d"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_03",
+      "climate": 3,
+      "edge": 3,
+      "shared_bounds": [
+        -32,
+        -1,
+        6,
+        18
+      ],
+      "complete_rgba_changed_pixels": 186,
+      "alpha_presence_differences_additional_diagnostic": 67,
+      "source_visible_pixels": 151,
+      "model_visible_pixels": 162,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-3.pam": "c6aec26e265cc97edb5cfa47347564180363fc94bf8e127f9110c02c313c2acf",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_03-native.png": "24e5b030449a482eec2b3a912dcef5726ddcffabb608738bdf60c495d73db593",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_03-native.json": "00a87e8828f6f26d39a5e974c4944b41981027e19d0c4f7a2a9b97d092e54502"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_04",
+      "climate": 3,
+      "edge": 4,
+      "shared_bounds": [
+        17,
+        10,
+        33,
+        22
+      ],
+      "complete_rgba_changed_pixels": 98,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 97,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-4.pam": "27f0c6acc2ca06f3aee449b1d864733e49b5d1d8f33464a4a384ced621b111ef",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_04-native.png": "cd80250e5f399ec6c30d1607bddb3f96c26893605adf3960f4aed6f4acef1c50",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_04-native.json": "45137d090540bc375bfed3c28433ab82d85a6887d8b4a3f1479296ed52008aea"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_05",
+      "climate": 3,
+      "edge": 5,
+      "shared_bounds": [
+        -11,
+        23,
+        13,
+        32
+      ],
+      "complete_rgba_changed_pixels": 90,
+      "alpha_presence_differences_additional_diagnostic": 36,
+      "source_visible_pixels": 98,
+      "model_visible_pixels": 86,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-5.pam": "d84c0a43b112d52089b663cc41b8d4757f4a09da0f6db32eb12cf8d76719cc68",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_05-native.png": "7977299bdf4b579a2c6f150fa3a017719d7632b721042cc01020329b0bd9d9d5",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_05-native.json": "f084af7a14bd1b9b5a98ea47f6df19804700e90bb825b773d0c350a7c388a43e"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_06",
+      "climate": 3,
+      "edge": 6,
+      "shared_bounds": [
+        -32,
+        10,
+        -15,
+        22
+      ],
+      "complete_rgba_changed_pixels": 114,
+      "alpha_presence_differences_additional_diagnostic": 44,
+      "source_visible_pixels": 93,
+      "model_visible_pixels": 95,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-6.pam": "528acc1918edac89e6385ae76fba8e7bdc95a88f1839906e26d2a156757dbb2f",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_06-native.png": "d793b712800dceab58eead7c7b7b8d9626501bde520e9abce563ce51f4584195",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_06-native.json": "e2bfc04109f9fbf6fe62474c1fb9329277159c34554125fd6cc4c340fcea9b38"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_07",
+      "climate": 3,
+      "edge": 7,
+      "shared_bounds": [
+        -12,
+        -1,
+        13,
+        8
+      ],
+      "complete_rgba_changed_pixels": 109,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 99,
+      "model_visible_pixels": 110,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-7.pam": "753d1c55239966b86a92c4eda4efb6add391818777db7a6ffb3f205d6b392f80",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_07-native.png": "238db36f070472f522d93ba638d5c64e9b5b7b5fa32510d35cb6d74b6bb1df19",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_07-native.json": "8e0f4062ea11f0d1b69fc511da5b81a35da5596c6518e0a2b934dafbbca5303b"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_08",
+      "climate": 3,
+      "edge": 8,
+      "shared_bounds": [
+        23,
+        12,
+        33,
+        19
+      ],
+      "complete_rgba_changed_pixels": 44,
+      "alpha_presence_differences_additional_diagnostic": 14,
+      "source_visible_pixels": 37,
+      "model_visible_pixels": 37,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-8.pam": "32f436e4babef097cad43587513f44aa05a70e51322d6e0bffbeeb48427e21e9",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_08-native.png": "f2f22d58694c0d46c4b77b1376a45aeb37c4d997cb6e34e7bc320f433054e764",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_08-native.json": "bed258ec3794bcd4f1094c667794d318b35f67c1e15a0bcec1ae97000c0b6bf3"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_09",
+      "climate": 3,
+      "edge": 9,
+      "shared_bounds": [
+        -5,
+        26,
+        7,
+        32
+      ],
+      "complete_rgba_changed_pixels": 45,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 40,
+      "model_visible_pixels": 31,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-9.pam": "0462513df30d1b3f9ae0551f59e09be1a8f1535609745b4492732cf845c32e90",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_09-native.png": "439494b691527f6f6042e1e8b758fffaefe0ee62e6b9329e897e231b3a4857e9",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_09-native.json": "5a0bad07dffe757863bf086cc5a746a4805bf66fcabd528916a130d665439e09"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_10",
+      "climate": 3,
+      "edge": 10,
+      "shared_bounds": [
+        -32,
+        13,
+        -21,
+        20
+      ],
+      "complete_rgba_changed_pixels": 47,
+      "alpha_presence_differences_additional_diagnostic": 23,
+      "source_visible_pixels": 33,
+      "model_visible_pixels": 38,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-10.pam": "deb787ba680078d0d837b0f32420890039f94bf9db5ad9d11c9106fa905e6b76",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_10-native.png": "f59c3cf7e02eb52643f9ce09dab1c779c3c97340a155d593e9f0bc7ca0aebdae",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_10-native.json": "d905957e197bec3ef12ae4444a96d655ffe28ff394c6ee7e58f8753f5c272cd8"
+      }
+    },
+    {
+      "model": "river_bank_study_toyland_flat_11",
+      "climate": 3,
+      "edge": 11,
+      "shared_bounds": [
+        -8,
+        -1,
+        6,
+        5
+      ],
+      "complete_rgba_changed_pixels": 43,
+      "alpha_presence_differences_additional_diagnostic": 21,
+      "source_visible_pixels": 29,
+      "model_visible_pixels": 40,
+      "exit_code": 1,
+      "complete_source_and_native_images_retained": true,
+      "resizing_alignment_masks_or_tolerance_used": false,
+      "comparison_padding": "Transparent union canvas at the exact original tile origin; no visible-bounds recentering or source crop.",
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-11.pam": "646a97a3bdb08261347d91fe54220fe2306bfeb16c37edb4a9b7a54f1a2a81fc",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_11-native.png": "d15d20dea8b79a761cfe5080f161ea5137654b7813ac5da36a4b62ac12a0a821",
+        "opentt3d/reviews/20261004/river-bank-breadth/acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/renderer3d-reference/model-voxel-river_bank_study_toyland_flat_11-native.json": "b1f103d909feb42e4cd1a7ab7527e71eb2b07e17570bed94a4b3bc4c33cd577d"
+      }
+    }
+  ],
+  "different_images": 48,
+  "different_pixels": 5128,
+  "silhouette_differences_additional_diagnostic": 1860,
+  "quality_approvals": 0,
+  "native_backend_equality_is_not_source_fidelity": true,
+  "geometry_or_materials_modified": false
+}

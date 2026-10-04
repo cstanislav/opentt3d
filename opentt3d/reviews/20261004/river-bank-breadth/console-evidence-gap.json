@@ -1,0 +1,12 @@
+{
+  "scope": "initial, revised, snow-repaired and paint-repaired native matrices",
+  "retained_runs_without_original_console_output": 40,
+  "valid_original_save_files_retained": true,
+  "original_save_success_console_messages_retained": false,
+  "command_acknowledgement_requirement_satisfied": false,
+  "reason": "Original IConsolePrint output goes to GUI/its optional original script log, not driver stderr. The smoke harness validated original file headers and reported synchronous success but did not record the actual Map successfully saved console text. No success message is inferred from file validity.",
+  "repair": "Fresh outputs use upstream script/echo console recording, require ordered command boundaries and actual synchronous original save success text, and retain both console log and original save file/header. No engine console hooks or simulation/RNG changes.",
+  "rejected_patch_attempt": "First harness patch matched an outdated --synchronous-save help string and failed verification without changing files; the corrected patch uses the actual source context.",
+  "old_runs_reused_as_command_acknowledged": false,
+  "quality_approvals": 0
+}

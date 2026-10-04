@@ -4,6 +4,43 @@ The target is **every runtime asset genuinely 3D, detailed and consistent, with
 every model at least 8/10**. It is not yet met. A model count, successful build or
 source export does not establish visual quality or whole-world coverage.
 
+## River-bank breadth — forty-eight individually screened unbound volumes
+
+`reviews/20261004/river-bank-breadth/` retains twelve independent elevated-flat bank
+owners per climate, including separate manually authored soil toe/shelf/crest and
+corrected two-arm corners. All48 current source/native/orbit/street presentations
+were individually inspected:24 at4/10 and24 at5/10, with unique defects, unchanged
+tile datum/maximum study height, SHA-256 evidence and all six acceptance gates
+false.48 actual source instances have independent3/10 records and inherit no
+volume score or coverage. Two snow-painted Arctic references and distinct Toyland
+yellow-centre/pale-end paint were separately repaired; rejected earlier passes stay.
+
+All48 complete registered source/native comparisons fail (5,128 RGBA pixels /
+1,860 additional alpha-presence differences). Broad pale toes, narrow shoulders,
+rounded inner contours, regular street courses and inaccurate source paint remain.
+864 revised paired model images plus216 snowy/216 Toyland repair images are exact,
+but canonical whole-world46/18/45/24-pixel backend failures are still failures.
+No mask, scale fitting, source extrusion or tolerance is used.
+
+The original full inventory keeps240 conditional bank instances.48 particular
+elevated-flat observations have candidates;192 sloped instances do not. Sea-level,
+other snow/desert/grass/grid parameters, custom/incomplete/absent selectors, heights,
+neighbourhoods, phases, extra doubled-terrain support/LODs and actual bank picking/
+ship clearances remain unaccepted. Banks are **unbound in all saved worlds**.
+Exact2914-row bank-diagnostic/2866-row canonical inventories still have four broad
+gaps/zero approvals and fail required-eight. No runtime bank coverage is claimed.
+
+Forty earlier quiet controls keep valid original synchronous save files but lack
+actual original console acknowledgements/save-success text. That gap is explicitly
+rejected and preserved; fresh16 controls retain actual upstream script/echo boundaries
+and save-success text, not an engine hook or inference from stderr/file validity.
+All16 original save byte pairs,16 same-backend worlds,64 atlas and864 complete model
+images match between console-off/on. Portable3,472 PNGs reconstruct1,411,566,848
+complete original PAM bytes. Bank tests22, harness112 and presentation boundary
+pass. Current `.42`, canonical art/bindings and quarantined mixed HQ/
+compiler/ratings work remain unchanged. The entire every-model8/10, sustained60fps/
+memory and platform/input/replay/network target stays open.
+
 ## River relief breadth — eight separately rated diagnostic studies
 
 Later ownership/support work in `reviews/20261004/river-relief-ownership/` resolves

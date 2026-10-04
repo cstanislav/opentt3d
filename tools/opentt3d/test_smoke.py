@@ -221,6 +221,37 @@ class ExplicitClearCommandTests(unittest.TestCase):
                 self.assertEqual(raised.exception.code,2)
                 launch.assert_not_called()
 
+    def test_console_recording_uses_only_original_script_and_echo_commands(self):
+        commands,env = self.generated_script("--record-console","--synchronous-save")
+        self.assertTrue(commands[0].startswith('script "'))
+        self.assertEqual(commands[-1],"script")
+        self.assertIn('echo "__opentt3d_review_begin_0__"',commands)
+        self.assertIn('echo "__opentt3d_review_end_0__"',commands)
+        self.assertIn("pause",commands)
+        self.assertIn("save smoke-state",commands)
+        self.assertIn("threaded_saves = false",self.generated_config)
+        self.assertNotIn("OPENTT3D_RECORD_CONSOLE",env)
+
+    def test_console_recording_requires_an_actual_synchronous_game(self):
+        for flags in ((),("--synchronous-save","--menu")):
+            with self.subTest(flags=flags), mock.patch.object(sys,"argv",["smoke.py","--build-dir","unused","--output","unused","--record-console",*flags]), mock.patch("smoke.subprocess.Popen") as launch, contextlib.redirect_stderr(io.StringIO()):
+                with self.assertRaises(SystemExit) as raised: smoke.main()
+                self.assertEqual(raised.exception.code,2); launch.assert_not_called()
+
+    def test_actual_console_save_acknowledgement_is_required_in_order(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "console.log"; commands = ["pause","save smoke-state"]
+            valid = "Console log output started\n__opentt3d_review_begin_0__\nGame paused.\n__opentt3d_review_end_0__\n__opentt3d_review_begin_1__\nMap successfully saved to 'smoke-state.sav'.\n__opentt3d_review_end_1__\nConsole log file closed.\n"
+            path.write_text(valid)
+            self.assertEqual(smoke.require_console_command_acknowledgements(path,commands),valid)
+            for bad in (valid.replace("Map successfully saved to 'smoke-state.sav'.",""),valid.replace("__opentt3d_review_end_0__",""),valid.replace("Game paused.","Usage: pause"),valid.replace("Console log file closed.","")):
+                path.write_text(bad)
+                with self.assertRaises(RuntimeError): smoke.require_console_command_acknowledgements(path,commands)
+
+    def test_console_recording_path_cannot_inject_a_command(self):
+        for name in ('bad"log','bad\nlog','bad\rlog'):
+            with self.subTest(name=name), self.assertRaises(ValueError): smoke.recorded_console_commands(["pause"],Path(name))
+
     def test_live_object_reference_is_a_read_only_focus_not_object_construction(self):
         commands,env = self.generated_script("--reference-object","2","--background",host="Darwin")
         self.assertIn("renderer3d object-locate 2",commands)

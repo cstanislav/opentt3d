@@ -1,5 +1,49 @@
 # Active extended development goal
 
+## River-bank breadth — forty-eight individually screened volumes — October 4
+
+Concrete bank modelling now retains48 separate elevated-flat owner candidates
+(twelve per climate), with manually authored soil toe/shelf/crest and corrected
+two-arm corners. Individual source/native/orbit/street inspection prompted two
+paint-only Arctic snow repairs and distinct Toyland yellow-centre/pale-end repairs.
+All originals, rejected geometry/paint, failed surveys/tests and native evidence
+are retained in `reviews/20261004/river-bank-breadth/`. Canonical artwork/bindings,
+simulation/RNG, quarantined mixed working HQ/compiler/ratings work and recommended
+immutable`.42`remain unchanged; bank candidates are not installed in worlds.
+
+All48 current models have individual SHA-256 evidence and defects:24 at4/10,
+24 at5/10, six false acceptance gates and zero approvals.48 actual source instances
+have separate3/10 screenings, never inherited model ratings. Complete original
+inventory retains240 conditional bank instances;192 sloped instances have no
+candidates, and sea-level/snow/desert/parameter/custom/absence/height/neighbourhood/
+phase/LOD/support/picking/ship cases remain incomplete. Every runtime bank instance
+is still unaccepted. Complete source/native comparisons fail48 images/5,128 RGBA
+pixels (1,860 additional silhouette differences); regular pale toes/crest courses,
+undersized shoulders/inner contours and source paint remain provisional defects.
+
+Forty earlier quiet40bpp-anim/non-HiDPI saved controls preserve20 same-backend canonical/
+unbound worlds and80 atlas views exactly, but lack original console acknowledgements
+and the actual save-success message; valid original save files do not repair that
+evidence gap. They remain retained/incomplete. A fresh16-run matrix records actual
+upstream console script/echo boundaries and synchronous save text without engine
+or simulation hooks, with8 canonical/study world pairs,32 atlas images and864 model
+images exact. Logging-on/off comparisons preserve16 original save byte pairs,
+16 same-backend worlds,64 atlas and864 complete model images. No older run is
+retrospectively declared acknowledged.
+864 revised gallery images plus216 snowy
+and216 Toyland repair images match between backends; first-pass32 images/480 pixels
+and canonical-world46/18/45/24-pixel failures remain. Portable3,472 PNGs reconstruct
+1,411,566,848 original PAM bytes; all4,834 portable evidence files are sealed and
+reverified. Bank tests22, harness112 and presentation boundary pass.
+Exact2914-row bank-diagnostic and2866-row canonical required-eight scopes both
+retain four broad gaps/zero approvals and fail. This is catalogue breadth, not
+source/animation/runtime/ship/performance acceptance or full-goal completion.
+
+Continue manual sloped-bank/terrain and all other catalogue families, then fidelity
+passes, locks/HQs/effects/fleet clearances, independent phases, sustained60fps/memory
+and platform/input/replay/network acceptance. No newer stopping-clock claim is
+inferred here; earlier sections below retain their historical scopes and counts.
+
 ## River relief ownership/support resumed; bank volume breadth continues — October 4
 
 The full **every runtime asset genuinely3D / every model at least8/10** goal is

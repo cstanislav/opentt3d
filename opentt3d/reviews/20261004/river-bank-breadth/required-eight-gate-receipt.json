@@ -1,0 +1,46 @@
+[
+  {
+    "scope": "bank-diagnostic",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "build-macos/breadth-original-river-bank-paint-repaired-frozen-build/baseset/opentt3d-voxels.json",
+      "--reviews",
+      "opentt3d/reviews/20261004/river-bank-breadth/current-combined-quality-reviews.json",
+      "--inventory",
+      "opentt3d/reviews/20261004/river-bank-breadth/exact-current-catalogue-inventory.json",
+      "--output",
+      "opentt3d/reviews/20261004/river-bank-breadth/bank-diagnostic-required-eight-quality.json",
+      "--require-eight"
+    ],
+    "exit_code": 1,
+    "quality_rows": 2914,
+    "coverage_gaps": 4,
+    "required_eight_met": false,
+    "quality_approvals": 0,
+    "current_console_acknowledged_bank_evidence": true
+  },
+  {
+    "scope": "canonical",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "tools/assets/quality_audit.py",
+      "--catalogue",
+      "build-macos/breadth-original-river-relief-world-observer-separated-canonical-frozen-build/baseset/opentt3d-voxels.json",
+      "--reviews",
+      "assets/3d/quality_reviews.json",
+      "--inventory",
+      "opentt3d/reviews/20261004/river-relief-ownership/exact-canonical-catalogue-inventory.json",
+      "--output",
+      "opentt3d/reviews/20261004/river-bank-breadth/canonical-required-eight-quality.json",
+      "--require-eight"
+    ],
+    "exit_code": 1,
+    "quality_rows": 2866,
+    "coverage_gaps": 4,
+    "required_eight_met": false,
+    "quality_approvals": 0,
+    "current_console_acknowledged_bank_evidence": false
+  }
+]

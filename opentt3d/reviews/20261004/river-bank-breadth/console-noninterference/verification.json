@@ -1,0 +1,584 @@
+{
+  "audited_utc": "2026-10-04T05:54:04.866048+00:00",
+  "same_backend_world_pairs_exact": 16,
+  "same_backend_atlas_images_exact": 64,
+  "same_backend_full_bank_model_images_exact": 864,
+  "comparisons": [
+    {
+      "label": "temperate-vulkan-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-vulkan-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-vulkan-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-vulkan-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-vulkan-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-vulkan-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-vulkan-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-opengl-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-opengl-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-opengl-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-opengl-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "temperate-opengl-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/temperate-opengl-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-vulkan-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-vulkan-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-vulkan-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-vulkan-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-vulkan-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-vulkan-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-opengl-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-opengl-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-opengl-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-opengl-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "arctic-opengl-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/arctic-opengl-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-vulkan-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-vulkan-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-vulkan-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-vulkan-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-vulkan-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-vulkan-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-opengl-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-opengl-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-opengl-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-opengl-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "tropic-opengl-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/tropic-opengl-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-vulkan-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-vulkan-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-vulkan-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-vulkan-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-vulkan-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-vulkan-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-canonical-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-opengl-canonical-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-canonical-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-opengl-canonical-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-study-world",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-opengl-study-world.json",
+      "images": 1,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-study-atlas",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-opengl-study-atlas.json",
+      "images": 4,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "toyland-opengl-study-models",
+      "report": "opentt3d/reviews/20261004/river-bank-breadth/console-noninterference/toyland-opengl-study-models.json",
+      "images": 108,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    }
+  ],
+  "original_save_file_pairs": [
+    {
+      "scope": "temperate-vulkan-canonical",
+      "original_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "console_logged_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-temperate-vulkan-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "temperate-vulkan-study",
+      "original_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "console_logged_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-temperate-vulkan-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-vulkan-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "temperate-opengl-canonical",
+      "original_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "console_logged_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-temperate-opengl-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-opengl-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "temperate-opengl-study",
+      "original_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "console_logged_sha256": "60ae9cd012e852f70cdf31591721aa1c7c4d43057f5d35c99b45a308e0c9e0b0",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-temperate-opengl-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-temperate-opengl-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "arctic-vulkan-canonical",
+      "original_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "console_logged_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "exact_bytes": true,
+      "original_file": "snow-repaired-native-controls/breadth-original-river-bank-snow-repaired-arctic-vulkan-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "arctic-vulkan-study",
+      "original_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "console_logged_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "exact_bytes": true,
+      "original_file": "snow-repaired-native-controls/breadth-original-river-bank-snow-repaired-arctic-vulkan-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-vulkan-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "arctic-opengl-canonical",
+      "original_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "console_logged_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "exact_bytes": true,
+      "original_file": "snow-repaired-native-controls/breadth-original-river-bank-snow-repaired-arctic-opengl-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-opengl-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "arctic-opengl-study",
+      "original_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "console_logged_sha256": "7dd678037ea59adbfd840b39935afdd8e68621090b736e702c94e7d878a012c0",
+      "exact_bytes": true,
+      "original_file": "snow-repaired-native-controls/breadth-original-river-bank-snow-repaired-arctic-opengl-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-arctic-opengl-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "tropic-vulkan-canonical",
+      "original_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "console_logged_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-tropic-vulkan-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "tropic-vulkan-study",
+      "original_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "console_logged_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-tropic-vulkan-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-vulkan-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "tropic-opengl-canonical",
+      "original_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "console_logged_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-tropic-opengl-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-opengl-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "tropic-opengl-study",
+      "original_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "console_logged_sha256": "5cd92db06916fa3811c06cfc3f36a0d31823941f92a0e411becc195172d28c9e",
+      "exact_bytes": true,
+      "original_file": "revised-native-controls/breadth-original-river-bank-revised-tropic-opengl-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-tropic-opengl-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "toyland-vulkan-canonical",
+      "original_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "console_logged_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "exact_bytes": true,
+      "original_file": "paint-repaired-native-controls/breadth-original-river-bank-paint-repaired-toyland-vulkan-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "toyland-vulkan-study",
+      "original_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "console_logged_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "exact_bytes": true,
+      "original_file": "paint-repaired-native-controls/breadth-original-river-bank-paint-repaired-toyland-vulkan-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-vulkan-study/save/smoke-state.sav"
+    },
+    {
+      "scope": "toyland-opengl-canonical",
+      "original_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "console_logged_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "exact_bytes": true,
+      "original_file": "paint-repaired-native-controls/breadth-original-river-bank-paint-repaired-toyland-opengl-canonical/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-opengl-canonical/save/smoke-state.sav"
+    },
+    {
+      "scope": "toyland-opengl-study",
+      "original_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "console_logged_sha256": "8342da2138b97e68e959982fa01c96924f62d28005e7cbd2f0a5756f21e361a4",
+      "exact_bytes": true,
+      "original_file": "paint-repaired-native-controls/breadth-original-river-bank-paint-repaired-toyland-opengl-study/save/smoke-state.sav",
+      "logged_file": "acknowledged-native-controls/breadth-original-river-bank-acknowledged-toyland-opengl-study/save/smoke-state.sav"
+    }
+  ],
+  "original_save_byte_pairs_exact": 16,
+  "complete_rgba": true,
+  "resizing_masks_or_tolerance_used": false,
+  "old_missing_console_acknowledgements_retroactively_accepted": false,
+  "quality_approvals": 0,
+  "runtime_bank_coverage_accepted": 0
+}

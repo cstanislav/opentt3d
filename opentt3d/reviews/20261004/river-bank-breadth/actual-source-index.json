@@ -1,0 +1,3218 @@
+[
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      416,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 10064,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10064-0-generation3.pam",
+    "source_offset": [
+      -20,
+      0
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3382,
+    "tile_xy": [
+      54,
+      26
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-0.pam",
+    "source_pam_sha256": "d077f715c772c501627fd18297a6d7a3cd3685eb5c03c7d1cf67a592c5f636bd",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3382,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 0,
+      "resolved_offset": 0,
+      "selected_sprite": 10064,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10064-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/d077f715c772c501627fd18297a6d7a3cd3685eb5c03c7d1cf67a592c5f636bd.pam",
+      "sha256": "d077f715c772c501627fd18297a6d7a3cd3685eb5c03c7d1cf67a592c5f636bd"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      0
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 10065,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10065-0-generation3.pam",
+    "source_offset": [
+      -20,
+      52
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3638,
+    "tile_xy": [
+      54,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-1.pam",
+    "source_pam_sha256": "3f9bbcc37142bc8614c292c953e942f609112c00098d4ef4b9a885d9a3979c10",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3638,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 10065,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10065-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/3f9bbcc37142bc8614c292c953e942f609112c00098d4ef4b9a885d9a3979c10.pam",
+      "sha256": "3f9bbcc37142bc8614c292c953e942f609112c00098d4ef4b9a885d9a3979c10"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      13
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      416,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 10066,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10066-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3382,
+    "tile_xy": [
+      54,
+      26
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-2.pam",
+    "source_pam_sha256": "03ce9faebec40538daf16394c343e8d4f6deafc9ae278b8becb698f6b1f4116c",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3382,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 10066,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10066-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/03ce9faebec40538daf16394c343e8d4f6deafc9ae278b8becb698f6b1f4116c.pam",
+      "sha256": "03ce9faebec40538daf16394c343e8d4f6deafc9ae278b8becb698f6b1f4116c"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      848,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 10067,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10067-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3637,
+    "tile_xy": [
+      53,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-3.pam",
+    "source_pam_sha256": "528c9b2b69fe543d4dcd06840292f5f103164fa1e0f60c6fedeab1566edf56b0",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3637,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 10067,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10067-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/528c9b2b69fe543d4dcd06840292f5f103164fa1e0f60c6fedeab1566edf56b0.pam",
+      "sha256": "528c9b2b69fe543d4dcd06840292f5f103164fa1e0f60c6fedeab1566edf56b0"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      768,
+      1376,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 10068,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10068-0-generation3.pam",
+    "source_offset": [
+      68,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 11056,
+    "tile_xy": [
+      48,
+      86
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-4.pam",
+    "source_pam_sha256": "084826b176afebeef10b89741e82bc021e74283b3c8a03fd2ba272a94cbf6e64",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 11056,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 10068,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10068-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/084826b176afebeef10b89741e82bc021e74283b3c8a03fd2ba272a94cbf6e64.pam",
+      "sha256": "084826b176afebeef10b89741e82bc021e74283b3c8a03fd2ba272a94cbf6e64"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      17,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 5,
+    "resolved_offset": 5,
+    "selected_sprite": 10069,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10069-0-generation3.pam",
+    "source_offset": [
+      -44,
+      92
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 3638,
+    "tile_xy": [
+      54,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-5.pam",
+    "source_pam_sha256": "556e0112190eddae6e30eaf6ebc0d631d546181ed06b733017cab75c142169cd",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3638,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 5,
+      "resolved_offset": 5,
+      "selected_sprite": 10069,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10069-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/556e0112190eddae6e30eaf6ebc0d631d546181ed06b733017cab75c142169cd.pam",
+      "sha256": "556e0112190eddae6e30eaf6ebc0d631d546181ed06b733017cab75c142169cd"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      23
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      768,
+      624,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 6,
+    "resolved_offset": 6,
+    "selected_sprite": 10070,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10070-0-generation3.pam",
+    "source_offset": [
+      -124,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 5040,
+    "tile_xy": [
+      48,
+      39
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-6.pam",
+    "source_pam_sha256": "31a3f9a1f365d6b286ce17f84f4fe117d8552390d936044b017eb4d16d0c20dd",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 5040,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 6,
+      "resolved_offset": 6,
+      "selected_sprite": 10070,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10070-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/31a3f9a1f365d6b286ce17f84f4fe117d8552390d936044b017eb4d16d0c20dd.pam",
+      "sha256": "31a3f9a1f365d6b286ce17f84f4fe117d8552390d936044b017eb4d16d0c20dd"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      848,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 7,
+    "resolved_offset": 7,
+    "selected_sprite": 10071,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10071-0-generation3.pam",
+    "source_offset": [
+      -44,
+      0
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 3637,
+    "tile_xy": [
+      53,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-7.pam",
+    "source_pam_sha256": "a8d74d417ccdec9d0ece0007c385530c0fb93033ff9affef253789b7e2d6437d",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3637,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 7,
+      "resolved_offset": 7,
+      "selected_sprite": 10071,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10071-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/a8d74d417ccdec9d0ece0007c385530c0fb93033ff9affef253789b7e2d6437d.pam",
+      "sha256": "a8d74d417ccdec9d0ece0007c385530c0fb93033ff9affef253789b7e2d6437d"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      0
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      768,
+      1360,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 8,
+    "resolved_offset": 8,
+    "selected_sprite": 10072,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10072-0-generation3.pam",
+    "source_offset": [
+      92,
+      48
+    ],
+    "source_size": [
+      40,
+      28
+    ],
+    "texture_generation": 3,
+    "tile": 10928,
+    "tile_xy": [
+      48,
+      85
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-8.pam",
+    "source_pam_sha256": "dfa3fe1dba4bd71004ca359a88df529d20694a90c3321716dffbe046b2ba2a79",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10928,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 8,
+      "resolved_offset": 8,
+      "selected_sprite": 10072,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10072-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/dfa3fe1dba4bd71004ca359a88df529d20694a90c3321716dffbe046b2ba2a79.pam",
+      "sha256": "dfa3fe1dba4bd71004ca359a88df529d20694a90c3321716dffbe046b2ba2a79"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      23,
+      12
+    ],
+    "native_size": [
+      10,
+      7
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      848,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 9,
+    "resolved_offset": 9,
+    "selected_sprite": 10073,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10073-0-generation3.pam",
+    "source_offset": [
+      -20,
+      104
+    ],
+    "source_size": [
+      48,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 3637,
+    "tile_xy": [
+      53,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-9.pam",
+    "source_pam_sha256": "732b900c0d24ce18697e3aa298b32218207a187cb140e339da3dc67a7bc6f3cd",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3637,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 9,
+      "resolved_offset": 9,
+      "selected_sprite": 10073,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10073-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/732b900c0d24ce18697e3aa298b32218207a187cb140e339da3dc67a7bc6f3cd.pam",
+      "sha256": "732b900c0d24ce18697e3aa298b32218207a187cb140e339da3dc67a7bc6f3cd"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      26
+    ],
+    "native_size": [
+      12,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      752,
+      624,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 10,
+    "resolved_offset": 10,
+    "selected_sprite": 10074,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10074-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      40,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 5039,
+    "tile_xy": [
+      47,
+      39
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-10.pam",
+    "source_pam_sha256": "48177cbaa159d7133fee7ce14068d8c2ff82af48b2bfcc33a727fe0fdb6698b0",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 5039,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 10,
+      "resolved_offset": 10,
+      "selected_sprite": 10074,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10074-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/48177cbaa159d7133fee7ce14068d8c2ff82af48b2bfcc33a727fe0fdb6698b0.pam",
+      "sha256": "48177cbaa159d7133fee7ce14068d8c2ff82af48b2bfcc33a727fe0fdb6698b0"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      10,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10064,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 11,
+    "resolved_offset": 11,
+    "selected_sprite": 10075,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10075-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      40,
+      16
+    ],
+    "texture_generation": 3,
+    "tile": 3638,
+    "tile_xy": [
+      54,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/temperate-flat-11.pam",
+    "source_pam_sha256": "bb666df5291d4fbd5b5ee7d6e2f76473106121fc2449d8a9d6d3b695b9a81d6f",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "temperate",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3638,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 11,
+      "resolved_offset": 11,
+      "selected_sprite": 10075,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10075-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/temperate/bb666df5291d4fbd5b5ee7d6e2f76473106121fc2449d8a9d6d3b695b9a81d6f.pam",
+      "sha256": "bb666df5291d4fbd5b5ee7d6e2f76473106121fc2449d8a9d6d3b695b9a81d6f"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_size": [
+      10,
+      4
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      560,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 10244,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10244-0-generation3.pam",
+    "source_offset": [
+      -20,
+      0
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 4523,
+    "tile_xy": [
+      43,
+      35
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-0.pam",
+    "source_pam_sha256": "97e0c1a3e92359b8f82724927f9260b4485bc5a73fbd6fabfafa56526610e84a",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 4523,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 0,
+      "resolved_offset": 0,
+      "selected_sprite": 10244,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10244-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/97e0c1a3e92359b8f82724927f9260b4485bc5a73fbd6fabfafa56526610e84a.pam",
+      "sha256": "97e0c1a3e92359b8f82724927f9260b4485bc5a73fbd6fabfafa56526610e84a"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      0
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      880,
+      944,
+      24
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 10245,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 24,
+    "source_image": "river-selector-source-10245-0-generation3.pam",
+    "source_offset": [
+      -20,
+      52
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 7607,
+    "tile_xy": [
+      55,
+      59
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-1.pam",
+    "source_pam_sha256": "621146fcdfde6564ad0dfd696b0c89868e0461d298b3a5bdf8519b8587c6803d",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7607,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 10245,
+      "source_height": 24,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10245-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/621146fcdfde6564ad0dfd696b0c89868e0461d298b3a5bdf8519b8587c6803d.pam",
+      "sha256": "621146fcdfde6564ad0dfd696b0c89868e0461d298b3a5bdf8519b8587c6803d"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      13
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      560,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 10246,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10246-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 4523,
+    "tile_xy": [
+      43,
+      35
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-2.pam",
+    "source_pam_sha256": "1ae7ab52512afa306ffdd5ec7e187344daf52b313c02d99b64a550e10ef1e0af",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 4523,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 10246,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10246-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/1ae7ab52512afa306ffdd5ec7e187344daf52b313c02d99b64a550e10ef1e0af.pam",
+      "sha256": "1ae7ab52512afa306ffdd5ec7e187344daf52b313c02d99b64a550e10ef1e0af"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      848,
+      944,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 10247,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10247-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 7605,
+    "tile_xy": [
+      53,
+      59
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-3.pam",
+    "source_pam_sha256": "01a545aabf26deb2f62422d76bd7e631b436b0e72ac90482a327eaa7f1978f7f",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7605,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 10247,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10247-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/01a545aabf26deb2f62422d76bd7e631b436b0e72ac90482a327eaa7f1978f7f.pam",
+      "sha256": "01a545aabf26deb2f62422d76bd7e631b436b0e72ac90482a327eaa7f1978f7f"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      1488,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 10248,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10248-0-generation3.pam",
+    "source_offset": [
+      68,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 11947,
+    "tile_xy": [
+      43,
+      93
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-4.pam",
+    "source_pam_sha256": "1215530e9b09fd25de2481f6f942e9a228cd1613373fb8940a94918ce3b37200",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 11947,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 10248,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10248-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/1215530e9b09fd25de2481f6f942e9a228cd1613373fb8940a94918ce3b37200.pam",
+      "sha256": "1215530e9b09fd25de2481f6f942e9a228cd1613373fb8940a94918ce3b37200"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      17,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      976,
+      944,
+      40
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 5,
+    "resolved_offset": 5,
+    "selected_sprite": 10189,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 40,
+    "source_image": "river-selector-source-10189-0-generation3.pam",
+    "source_offset": [
+      -44,
+      92
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 7613,
+    "tile_xy": [
+      61,
+      59
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-5.pam",
+    "source_pam_sha256": "6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7613,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 5,
+      "resolved_offset": 5,
+      "selected_sprite": 10189,
+      "source_height": 40,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10189-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570.pam",
+      "sha256": "6f41b38150860a8761c537107bebba3645ed05788b2a131761b235fd977e3570"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      23
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10184,
+    "climate": 1,
+    "draw_origin": [
+      976,
+      944,
+      40
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 6,
+    "resolved_offset": 6,
+    "selected_sprite": 10190,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 40,
+    "source_image": "river-selector-source-10190-0-generation3.pam",
+    "source_offset": [
+      -124,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 7613,
+    "tile_xy": [
+      61,
+      59
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-6.pam",
+    "source_pam_sha256": "81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7613,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 6,
+      "resolved_offset": 6,
+      "selected_sprite": 10190,
+      "source_height": 40,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10190-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82.pam",
+      "sha256": "81e81fb98e892034246d1df8009a6e02b806ea5da191eda9a69e4839bab65e82"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      848,
+      944,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 7,
+    "resolved_offset": 7,
+    "selected_sprite": 10251,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10251-0-generation3.pam",
+    "source_offset": [
+      -44,
+      0
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 7605,
+    "tile_xy": [
+      53,
+      59
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-7.pam",
+    "source_pam_sha256": "c4a2b95bdbe050faa886dbc351703f9f129d3f3b1e30e4b8321b1aad8e882d56",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7605,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 7,
+      "resolved_offset": 7,
+      "selected_sprite": 10251,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10251-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/c4a2b95bdbe050faa886dbc351703f9f129d3f3b1e30e4b8321b1aad8e882d56.pam",
+      "sha256": "c4a2b95bdbe050faa886dbc351703f9f129d3f3b1e30e4b8321b1aad8e882d56"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      0
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      1472,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 8,
+    "resolved_offset": 8,
+    "selected_sprite": 10252,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10252-0-generation3.pam",
+    "source_offset": [
+      92,
+      48
+    ],
+    "source_size": [
+      40,
+      28
+    ],
+    "texture_generation": 3,
+    "tile": 11819,
+    "tile_xy": [
+      43,
+      92
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-8.pam",
+    "source_pam_sha256": "29924bb29dddec4e2706d1cda033e5e31b5c94ec56133fd64cd7a92ea433c808",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 11819,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 8,
+      "resolved_offset": 8,
+      "selected_sprite": 10252,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10252-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/29924bb29dddec4e2706d1cda033e5e31b5c94ec56133fd64cd7a92ea433c808.pam",
+      "sha256": "29924bb29dddec4e2706d1cda033e5e31b5c94ec56133fd64cd7a92ea433c808"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      23,
+      12
+    ],
+    "native_size": [
+      10,
+      7
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      848,
+      944,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 9,
+    "resolved_offset": 9,
+    "selected_sprite": 10253,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10253-0-generation3.pam",
+    "source_offset": [
+      -20,
+      104
+    ],
+    "source_size": [
+      48,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 7605,
+    "tile_xy": [
+      53,
+      59
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-9.pam",
+    "source_pam_sha256": "c5b40606266ce58c403ae32927d3e7442a3c2efde1f1c27711cf82caebf7fd0c",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7605,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 9,
+      "resolved_offset": 9,
+      "selected_sprite": 10253,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10253-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/c5b40606266ce58c403ae32927d3e7442a3c2efde1f1c27711cf82caebf7fd0c.pam",
+      "sha256": "c5b40606266ce58c403ae32927d3e7442a3c2efde1f1c27711cf82caebf7fd0c"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      26
+    ],
+    "native_size": [
+      12,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      704,
+      1456,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 10,
+    "resolved_offset": 10,
+    "selected_sprite": 10254,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10254-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      40,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 11692,
+    "tile_xy": [
+      44,
+      91
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-10.pam",
+    "source_pam_sha256": "a61382bf1230874d3be3f18b13bec6bd1020997f88c8a6f18d9f3274f2d7c736",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 11692,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 10,
+      "resolved_offset": 10,
+      "selected_sprite": 10254,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10254-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/a61382bf1230874d3be3f18b13bec6bd1020997f88c8a6f18d9f3274f2d7c736.pam",
+      "sha256": "a61382bf1230874d3be3f18b13bec6bd1020997f88c8a6f18d9f3274f2d7c736"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      10,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10244,
+    "climate": 1,
+    "draw_origin": [
+      848,
+      960,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 11,
+    "resolved_offset": 11,
+    "selected_sprite": 10255,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10255-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      40,
+      16
+    ],
+    "texture_generation": 3,
+    "tile": 7733,
+    "tile_xy": [
+      53,
+      60
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/arctic-flat-11.pam",
+    "source_pam_sha256": "eb3c8103ac27a093025114e2851fc5a850ac76531bb4b06d90f6ced8d7e4b3c7",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "arctic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 7733,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 11,
+      "resolved_offset": 11,
+      "selected_sprite": 10255,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10255-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/arctic/eb3c8103ac27a093025114e2851fc5a850ac76531bb4b06d90f6ced8d7e4b3c7.pam",
+      "sha256": "eb3c8103ac27a093025114e2851fc5a850ac76531bb4b06d90f6ced8d7e4b3c7"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_size": [
+      10,
+      4
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1040,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 10424,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10424-0-generation3.pam",
+    "source_offset": [
+      -20,
+      0
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 8389,
+    "tile_xy": [
+      69,
+      65
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-0.pam",
+    "source_pam_sha256": "3985b52a0d0749f38251121bedbd47b8289607487eaa1a2034cbd9b33242872c",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 8389,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 0,
+      "resolved_offset": 0,
+      "selected_sprite": 10424,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10424-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/3985b52a0d0749f38251121bedbd47b8289607487eaa1a2034cbd9b33242872c.pam",
+      "sha256": "3985b52a0d0749f38251121bedbd47b8289607487eaa1a2034cbd9b33242872c"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      0
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1072,
+      1280,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 10425,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10425-0-generation3.pam",
+    "source_offset": [
+      -20,
+      52
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 10307,
+    "tile_xy": [
+      67,
+      80
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-1.pam",
+    "source_pam_sha256": "0344a5d909bfb86e0dbe4f93a956efdd631763a6a0538ae0a232242b5303b5ea",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10307,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 10425,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10425-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/0344a5d909bfb86e0dbe4f93a956efdd631763a6a0538ae0a232242b5303b5ea.pam",
+      "sha256": "0344a5d909bfb86e0dbe4f93a956efdd631763a6a0538ae0a232242b5303b5ea"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      13
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1040,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 10426,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10426-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 8389,
+    "tile_xy": [
+      69,
+      65
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-2.pam",
+    "source_pam_sha256": "1514c599a4a976e40ac3c30e5c2efef7d3432aa855a047fb76e1c315eab41bf0",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 8389,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 10426,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10426-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/1514c599a4a976e40ac3c30e5c2efef7d3432aa855a047fb76e1c315eab41bf0.pam",
+      "sha256": "1514c599a4a976e40ac3c30e5c2efef7d3432aa855a047fb76e1c315eab41bf0"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1040,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 10427,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10427-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 8389,
+    "tile_xy": [
+      69,
+      65
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-3.pam",
+    "source_pam_sha256": "3ccbe8218f11ef6ab0640a637986dba55a95b8559777a6e6d9114e0733466c59",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 8389,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 10427,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10427-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/3ccbe8218f11ef6ab0640a637986dba55a95b8559777a6e6d9114e0733466c59.pam",
+      "sha256": "3ccbe8218f11ef6ab0640a637986dba55a95b8559777a6e6d9114e0733466c59"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      720,
+      1328,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 10428,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10428-0-generation3.pam",
+    "source_offset": [
+      68,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 10669,
+    "tile_xy": [
+      45,
+      83
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-4.pam",
+    "source_pam_sha256": "7f1d74628d54a4c4956dbd8db96620af64cc75a14a2bd31cfd727b9a643353b3",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 161803,
+      "backend": "vulkan",
+      "tile": 10669,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 10428,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed161803-vulkan-on/renderer3d-reference/river-selector-source-10428-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/7f1d74628d54a4c4956dbd8db96620af64cc75a14a2bd31cfd727b9a643353b3.pam",
+      "sha256": "7f1d74628d54a4c4956dbd8db96620af64cc75a14a2bd31cfd727b9a643353b3"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      17,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1280,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 5,
+    "resolved_offset": 5,
+    "selected_sprite": 10429,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10429-0-generation3.pam",
+    "source_offset": [
+      -44,
+      92
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 10309,
+    "tile_xy": [
+      69,
+      80
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-5.pam",
+    "source_pam_sha256": "b8e4dd7a4a845df87e50126fa416e52ddcae6d0fca75dcd5f3f110828ff83294",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10309,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 5,
+      "resolved_offset": 5,
+      "selected_sprite": 10429,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10429-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/b8e4dd7a4a845df87e50126fa416e52ddcae6d0fca75dcd5f3f110828ff83294.pam",
+      "sha256": "b8e4dd7a4a845df87e50126fa416e52ddcae6d0fca75dcd5f3f110828ff83294"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      23
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1040,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 6,
+    "resolved_offset": 6,
+    "selected_sprite": 10430,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10430-0-generation3.pam",
+    "source_offset": [
+      -124,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 8389,
+    "tile_xy": [
+      69,
+      65
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-6.pam",
+    "source_pam_sha256": "64c27b2122b4aae50f736d3d44b329e32cb7d96c2fdcab68a9bdaf452f858ce1",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 8389,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 6,
+      "resolved_offset": 6,
+      "selected_sprite": 10430,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10430-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/64c27b2122b4aae50f736d3d44b329e32cb7d96c2fdcab68a9bdaf452f858ce1.pam",
+      "sha256": "64c27b2122b4aae50f736d3d44b329e32cb7d96c2fdcab68a9bdaf452f858ce1"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1040,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 7,
+    "resolved_offset": 7,
+    "selected_sprite": 10431,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10431-0-generation3.pam",
+    "source_offset": [
+      -44,
+      0
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 8389,
+    "tile_xy": [
+      69,
+      65
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-7.pam",
+    "source_pam_sha256": "730895e829c3b160b86d33e28e27bd5183896ad808b5259e6771d1e9dea85b04",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 8389,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 7,
+      "resolved_offset": 7,
+      "selected_sprite": 10431,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10431-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/730895e829c3b160b86d33e28e27bd5183896ad808b5259e6771d1e9dea85b04.pam",
+      "sha256": "730895e829c3b160b86d33e28e27bd5183896ad808b5259e6771d1e9dea85b04"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      0
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      736,
+      1328,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 8,
+    "resolved_offset": 8,
+    "selected_sprite": 10432,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10432-0-generation3.pam",
+    "source_offset": [
+      92,
+      48
+    ],
+    "source_size": [
+      40,
+      28
+    ],
+    "texture_generation": 3,
+    "tile": 10670,
+    "tile_xy": [
+      46,
+      83
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-8.pam",
+    "source_pam_sha256": "c52d91d609a10e2000b2ada364a96b30897da81a2cdd8d9edeaf6b2725b7f593",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 161803,
+      "backend": "vulkan",
+      "tile": 10670,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 8,
+      "resolved_offset": 8,
+      "selected_sprite": 10432,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed161803-vulkan-on/renderer3d-reference/river-selector-source-10432-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/c52d91d609a10e2000b2ada364a96b30897da81a2cdd8d9edeaf6b2725b7f593.pam",
+      "sha256": "c52d91d609a10e2000b2ada364a96b30897da81a2cdd8d9edeaf6b2725b7f593"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      23,
+      12
+    ],
+    "native_size": [
+      10,
+      7
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1056,
+      1280,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 9,
+    "resolved_offset": 9,
+    "selected_sprite": 10433,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10433-0-generation3.pam",
+    "source_offset": [
+      -20,
+      104
+    ],
+    "source_size": [
+      48,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 10306,
+    "tile_xy": [
+      66,
+      80
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-9.pam",
+    "source_pam_sha256": "174ca0a16984a070fe93c7c3bc50a090ab3b0a35494e85c73daa6e6e91e9838d",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10306,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 9,
+      "resolved_offset": 9,
+      "selected_sprite": 10433,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10433-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/174ca0a16984a070fe93c7c3bc50a090ab3b0a35494e85c73daa6e6e91e9838d.pam",
+      "sha256": "174ca0a16984a070fe93c7c3bc50a090ab3b0a35494e85c73daa6e6e91e9838d"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      26
+    ],
+    "native_size": [
+      12,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      736,
+      1328,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 10,
+    "resolved_offset": 10,
+    "selected_sprite": 10434,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10434-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      40,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 10670,
+    "tile_xy": [
+      46,
+      83
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-10.pam",
+    "source_pam_sha256": "693488168baacef508c2d04df34a653a78285e883962aa10604631f765ff143a",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10670,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 10,
+      "resolved_offset": 10,
+      "selected_sprite": 10434,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10434-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/693488168baacef508c2d04df34a653a78285e883962aa10604631f765ff143a.pam",
+      "sha256": "693488168baacef508c2d04df34a653a78285e883962aa10604631f765ff143a"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      10,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10424,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1280,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 11,
+    "resolved_offset": 11,
+    "selected_sprite": 10435,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10435-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      40,
+      16
+    ],
+    "texture_generation": 3,
+    "tile": 10309,
+    "tile_xy": [
+      69,
+      80
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/tropic-flat-11.pam",
+    "source_pam_sha256": "00022dabb031234a6bb0713f8af37d37e7469bcfe937e6220d2c1ecd43a191b7",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "tropic",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10309,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 11,
+      "resolved_offset": 11,
+      "selected_sprite": 10435,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10435-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/tropic/00022dabb031234a6bb0713f8af37d37e7469bcfe937e6220d2c1ecd43a191b7.pam",
+      "sha256": "00022dabb031234a6bb0713f8af37d37e7469bcfe937e6220d2c1ecd43a191b7"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_size": [
+      10,
+      4
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      416,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 10604,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10604-0-generation3.pam",
+    "source_offset": [
+      -20,
+      0
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3382,
+    "tile_xy": [
+      54,
+      26
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-0.pam",
+    "source_pam_sha256": "9f3a2e1a9b98dd44446bdadc939ea6fd11a587ac0e5a729c431ba852327d4bc8",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3382,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 0,
+      "resolved_offset": 0,
+      "selected_sprite": 10604,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10604-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/9f3a2e1a9b98dd44446bdadc939ea6fd11a587ac0e5a729c431ba852327d4bc8.pam",
+      "sha256": "9f3a2e1a9b98dd44446bdadc939ea6fd11a587ac0e5a729c431ba852327d4bc8"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      0
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 10605,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10605-0-generation3.pam",
+    "source_offset": [
+      -20,
+      52
+    ],
+    "source_size": [
+      152,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3638,
+    "tile_xy": [
+      54,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-1.pam",
+    "source_pam_sha256": "01a40aba3852b25a65aea6c3d4967f18a5bfc80482f0de5ca007c63af06d47ff",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3638,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 10605,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10605-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/01a40aba3852b25a65aea6c3d4967f18a5bfc80482f0de5ca007c63af06d47ff.pam",
+      "sha256": "01a40aba3852b25a65aea6c3d4967f18a5bfc80482f0de5ca007c63af06d47ff"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      13
+    ],
+    "native_size": [
+      38,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      416,
+      16
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 10606,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-10606-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3382,
+    "tile_xy": [
+      54,
+      26
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-2.pam",
+    "source_pam_sha256": "f68db0e9312c01d30b6d790f6d1e47c79b98a3e5953e04bceb919205ee0d8912",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3382,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 10606,
+      "source_height": 16,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10606-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/f68db0e9312c01d30b6d790f6d1e47c79b98a3e5953e04bceb919205ee0d8912.pam",
+      "sha256": "f68db0e9312c01d30b6d790f6d1e47c79b98a3e5953e04bceb919205ee0d8912"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      848,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 10607,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10607-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      148,
+      72
+    ],
+    "texture_generation": 3,
+    "tile": 3637,
+    "tile_xy": [
+      53,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-3.pam",
+    "source_pam_sha256": "c6aec26e265cc97edb5cfa47347564180363fc94bf8e127f9110c02c313c2acf",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3637,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 10607,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10607-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/c6aec26e265cc97edb5cfa47347564180363fc94bf8e127f9110c02c313c2acf.pam",
+      "sha256": "c6aec26e265cc97edb5cfa47347564180363fc94bf8e127f9110c02c313c2acf"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      0
+    ],
+    "native_size": [
+      37,
+      18
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      768,
+      1376,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 10608,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10608-0-generation3.pam",
+    "source_offset": [
+      68,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 11056,
+    "tile_xy": [
+      48,
+      86
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-4.pam",
+    "source_pam_sha256": "27f0c6acc2ca06f3aee449b1d864733e49b5d1d8f33464a4a384ced621b111ef",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 11056,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 10608,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10608-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/27f0c6acc2ca06f3aee449b1d864733e49b5d1d8f33464a4a384ced621b111ef.pam",
+      "sha256": "27f0c6acc2ca06f3aee449b1d864733e49b5d1d8f33464a4a384ced621b111ef"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      17,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 5,
+    "resolved_offset": 5,
+    "selected_sprite": 10609,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10609-0-generation3.pam",
+    "source_offset": [
+      -44,
+      92
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 3638,
+    "tile_xy": [
+      54,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-5.pam",
+    "source_pam_sha256": "d84c0a43b112d52089b663cc41b8d4757f4a09da0f6db32eb12cf8d76719cc68",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3638,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 5,
+      "resolved_offset": 5,
+      "selected_sprite": 10609,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10609-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/d84c0a43b112d52089b663cc41b8d4757f4a09da0f6db32eb12cf8d76719cc68.pam",
+      "sha256": "d84c0a43b112d52089b663cc41b8d4757f4a09da0f6db32eb12cf8d76719cc68"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      23
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      768,
+      624,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 6,
+    "resolved_offset": 6,
+    "selected_sprite": 10610,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10610-0-generation3.pam",
+    "source_offset": [
+      -124,
+      40
+    ],
+    "source_size": [
+      64,
+      44
+    ],
+    "texture_generation": 3,
+    "tile": 5040,
+    "tile_xy": [
+      48,
+      39
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-6.pam",
+    "source_pam_sha256": "528acc1918edac89e6385ae76fba8e7bdc95a88f1839906e26d2a156757dbb2f",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 5040,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 6,
+      "resolved_offset": 6,
+      "selected_sprite": 10610,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10610-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/528acc1918edac89e6385ae76fba8e7bdc95a88f1839906e26d2a156757dbb2f.pam",
+      "sha256": "528acc1918edac89e6385ae76fba8e7bdc95a88f1839906e26d2a156757dbb2f"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      10
+    ],
+    "native_size": [
+      16,
+      11
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      848,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 7,
+    "resolved_offset": 7,
+    "selected_sprite": 10611,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10611-0-generation3.pam",
+    "source_offset": [
+      -44,
+      0
+    ],
+    "source_size": [
+      96,
+      32
+    ],
+    "texture_generation": 3,
+    "tile": 3637,
+    "tile_xy": [
+      53,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-7.pam",
+    "source_pam_sha256": "753d1c55239966b86a92c4eda4efb6add391818777db7a6ffb3f205d6b392f80",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3637,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 7,
+      "resolved_offset": 7,
+      "selected_sprite": 10611,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10611-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/753d1c55239966b86a92c4eda4efb6add391818777db7a6ffb3f205d6b392f80.pam",
+      "sha256": "753d1c55239966b86a92c4eda4efb6add391818777db7a6ffb3f205d6b392f80"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -11,
+      0
+    ],
+    "native_size": [
+      24,
+      8
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      768,
+      1360,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 8,
+    "resolved_offset": 8,
+    "selected_sprite": 10612,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10612-0-generation3.pam",
+    "source_offset": [
+      92,
+      48
+    ],
+    "source_size": [
+      40,
+      28
+    ],
+    "texture_generation": 3,
+    "tile": 10928,
+    "tile_xy": [
+      48,
+      85
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-8.pam",
+    "source_pam_sha256": "32f436e4babef097cad43587513f44aa05a70e51322d6e0bffbeeb48427e21e9",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 10928,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 8,
+      "resolved_offset": 8,
+      "selected_sprite": 10612,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10612-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/32f436e4babef097cad43587513f44aa05a70e51322d6e0bffbeeb48427e21e9.pam",
+      "sha256": "32f436e4babef097cad43587513f44aa05a70e51322d6e0bffbeeb48427e21e9"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      23,
+      12
+    ],
+    "native_size": [
+      10,
+      7
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      848,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 9,
+    "resolved_offset": 9,
+    "selected_sprite": 10613,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10613-0-generation3.pam",
+    "source_offset": [
+      -20,
+      104
+    ],
+    "source_size": [
+      48,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 3637,
+    "tile_xy": [
+      53,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-9.pam",
+    "source_pam_sha256": "0462513df30d1b3f9ae0551f59e09be1a8f1535609745b4492732cf845c32e90",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3637,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 9,
+      "resolved_offset": 9,
+      "selected_sprite": 10613,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10613-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/0462513df30d1b3f9ae0551f59e09be1a8f1535609745b4492732cf845c32e90.pam",
+      "sha256": "0462513df30d1b3f9ae0551f59e09be1a8f1535609745b4492732cf845c32e90"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -5,
+      26
+    ],
+    "native_size": [
+      12,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      752,
+      624,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 10,
+    "resolved_offset": 10,
+    "selected_sprite": 10614,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10614-0-generation3.pam",
+    "source_offset": [
+      -124,
+      52
+    ],
+    "source_size": [
+      40,
+      20
+    ],
+    "texture_generation": 3,
+    "tile": 5039,
+    "tile_xy": [
+      47,
+      39
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-10.pam",
+    "source_pam_sha256": "deb787ba680078d0d837b0f32420890039f94bf9db5ad9d11c9106fa905e6b76",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 5039,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 10,
+      "resolved_offset": 10,
+      "selected_sprite": 10614,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10614-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/deb787ba680078d0d837b0f32420890039f94bf9db5ad9d11c9106fa905e6b76.pam",
+      "sha256": "deb787ba680078d0d837b0f32420890039f94bf9db5ad9d11c9106fa905e6b76"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -31,
+      13
+    ],
+    "native_size": [
+      10,
+      5
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 10604,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      448,
+      8
+    ],
+    "feature": "CF_RIVER_EDGE",
+    "feature_flags": 0,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 11,
+    "resolved_offset": 11,
+    "selected_sprite": 10615,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-10615-0-generation3.pam",
+    "source_offset": [
+      -16,
+      0
+    ],
+    "source_size": [
+      40,
+      16
+    ],
+    "texture_generation": 3,
+    "tile": 3638,
+    "tile_xy": [
+      54,
+      28
+    ],
+    "water_class": 2,
+    "source_pam": "opentt3d/reviews/20261004/river-bank-breadth/sources-complete-survey/toyland-flat-11.pam",
+    "source_pam_sha256": "646a97a3bdb08261347d91fe54220fe2306bfeb16c37edb4a9b7a54f1a2a81fc",
+    "actual_selection_provenance": {
+      "scope": "natural",
+      "base_set_family": "classic",
+      "climate": "toyland",
+      "seed": 271828,
+      "backend": "vulkan",
+      "tile": 3638,
+      "feature": "CF_RIVER_EDGE",
+      "requested_offset": 11,
+      "resolved_offset": 11,
+      "selected_sprite": 10615,
+      "source_height": 8,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-10615-0-generation3.pam",
+      "portable_image": "opentt3d/reviews/20261003/river-natural-selector-breadth/sources/natural/classic/toyland/646a97a3bdb08261347d91fe54220fe2306bfeb16c37edb4a9b7a54f1a2a81fc.pam",
+      "sha256": "646a97a3bdb08261347d91fe54220fe2306bfeb16c37edb4a9b7a54f1a2a81fc"
+    },
+    "prior_source_matrix_sha256": "07bd935f1f0a995615e604943815fef301d44af98792056c6c59242183a96ff4",
+    "native_offset": [
+      -4,
+      0
+    ],
+    "native_size": [
+      10,
+      4
+    ],
+    "geometry_approved": false,
+    "scope": "One actual elevated flat-bank source selection; not sea-level, snow/desert, grid parameter, sloped group, theoretical input or absence coverage."
+  }
+]

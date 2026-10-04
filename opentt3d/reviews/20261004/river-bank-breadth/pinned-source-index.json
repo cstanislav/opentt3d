@@ -1,0 +1,327 @@
+{
+  "retained_utc": "2026-10-04T04:37:50.025180+00:00",
+  "files": [
+    {
+      "path": "graphics/infrastructure/64/river_overlaynormal.png",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "url": "https://media.githubusercontent.com/media/OpenTTD/OpenGFX2/013cbc9e700c796af001a381a2d93592d49146ac/graphics/infrastructure/64/river_overlaynormal.png",
+      "sha256": "88e7bcfd2e2afe1f6078540fbb27f98cca67a45c8cfe64eeacc3bad930bba975",
+      "bytes": 3890,
+      "portable": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlaynormal.png"
+    },
+    {
+      "path": "graphics/infrastructure/64/river_overlaynormal.pdn",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "url": "https://media.githubusercontent.com/media/OpenTTD/OpenGFX2/013cbc9e700c796af001a381a2d93592d49146ac/graphics/infrastructure/64/river_overlaynormal.pdn",
+      "sha256": "04f351b260335ea79f89d776b9437bc4430274342958fad6794a82a367bbeae3",
+      "bytes": 28409,
+      "portable": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlaynormal.pdn"
+    },
+    {
+      "path": "graphics/infrastructure/64/river_overlayalpha.png",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "url": "https://media.githubusercontent.com/media/OpenTTD/OpenGFX2/013cbc9e700c796af001a381a2d93592d49146ac/graphics/infrastructure/64/river_overlayalpha.png",
+      "sha256": "dbb8dcabd9b41fd2011c1d318b24bf84342dd18b07482d4a2ebb671cddef77d9",
+      "bytes": 14971,
+      "portable": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.png"
+    },
+    {
+      "path": "graphics/infrastructure/64/river_overlayalpha.pdn",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "url": "https://media.githubusercontent.com/media/OpenTTD/OpenGFX2/013cbc9e700c796af001a381a2d93592d49146ac/graphics/infrastructure/64/river_overlayalpha.pdn",
+      "sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "bytes": 137053,
+      "portable": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn"
+    },
+    {
+      "path": "graphics/infrastructure/64/river_overlayshading.png",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "url": "https://media.githubusercontent.com/media/OpenTTD/OpenGFX2/013cbc9e700c796af001a381a2d93592d49146ac/graphics/infrastructure/64/river_overlayshading.png",
+      "sha256": "758b4793510e91d012100d5e0a6f0956777ef1e714b3d039a1cd26435e2224be",
+      "bytes": 14781,
+      "portable": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.png"
+    },
+    {
+      "path": "graphics/infrastructure/64/river_overlayshading.pdn",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "url": "https://media.githubusercontent.com/media/OpenTTD/OpenGFX2/013cbc9e700c796af001a381a2d93592d49146ac/graphics/infrastructure/64/river_overlayshading.pdn",
+      "sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "bytes": 68534,
+      "portable": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn"
+    }
+  ],
+  "original_layers": [
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlaynormal.pdn",
+      "document_sha256": "04f351b260335ea79f89d776b9437bc4430274342958fad6794a82a367bbeae3",
+      "index": 0,
+      "name": "256 Tile Mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlaynormal/00-256-tile-mask.png",
+      "sha256": "11ff9e0705736052300978f263827080e1eaae9952bcfa745dde0ba5ef08fcfa",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlaynormal.pdn",
+      "document_sha256": "04f351b260335ea79f89d776b9437bc4430274342958fad6794a82a367bbeae3",
+      "index": 1,
+      "name": "256 Composite sprite mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlaynormal/01-256-composite-sprite-mask.png",
+      "sha256": "6aa6739724f5b411fe958e0f3006891f37306471adc9cad28a0ba53ba659250f",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 0,
+      "name": "Background",
+      "visible": false,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/00-background.png",
+      "sha256": "e510e08aac039937a83ebdf4ca88107852e8e6e3ab498cbf47f037e1fda38a83",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 1,
+      "name": "Stones",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/01-stones.png",
+      "sha256": "c70cd36f62e10f1a1f81f55527f194f1afd805696705e9f50cd797a5f3b31d66",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 2,
+      "name": "Mid Grey Noise 57",
+      "visible": false,
+      "opacity": 255,
+      "blend_mode": 7,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/02-mid-grey-noise-57.png",
+      "sha256": "527d02276a7b13136741b45e30e0c7f54a1532aff1caf5168fe5437c78d86ba8",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 3,
+      "name": "Mid Grey Noise 57 Masked",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 7,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/03-mid-grey-noise-57-masked.png",
+      "sha256": "fccf477d29831e9e73ee662369fd8a648bedcb815b7988ee9a86f2353af0955e",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 4,
+      "name": "Shading",
+      "visible": false,
+      "opacity": 255,
+      "blend_mode": 7,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/04-shading.png",
+      "sha256": "1924817229de4a79682924bc52f63db10cc78359e0f1d91c38bd4ad822cbf7a7",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 5,
+      "name": "Shading Masked",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 7,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/05-shading-masked.png",
+      "sha256": "f6079479eb6437c4dca41b14be55a0f46974b3f7a60f7c9f76109848a87ec6eb",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 6,
+      "name": "Mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/06-mask.png",
+      "sha256": "d59134fe4f1635bce1365ad992c894bdb4a013fc59a306b4166f7b0e9da93f14",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 7,
+      "name": "64 Tile Mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/07-64-tile-mask.png",
+      "sha256": "89d1e774ffae758e4afe886954fb4500425579288f4356d5283c894fff7d2d83",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayalpha.pdn",
+      "document_sha256": "0719741e51cfcefb9fc84a120495e33b03cca056a052bf92dd33f6f5b4cdb7e0",
+      "index": 8,
+      "name": "256 Composite sprite mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayalpha/08-256-composite-sprite-mask.png",
+      "sha256": "50b8055c0c1f979b559004a1abb83883d7bf1981464e4cd1e9d64ac9177070e5",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 0,
+      "name": "Hand Detail 2",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/00-hand-detail-2.png",
+      "sha256": "970e0f3d982c3ed0a4d9da6544be1c6ccb6763bf3a442527c40ea283ea8dd079",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 1,
+      "name": "Hand Detail 1",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/01-hand-detail-1.png",
+      "sha256": "59da4f544240bf0d49c021004662e925e6af67ae72aa531f39bc65fabe864f61",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 2,
+      "name": "Hand Detail 1",
+      "visible": true,
+      "opacity": 107,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/02-hand-detail-1.png",
+      "sha256": "59da4f544240bf0d49c021004662e925e6af67ae72aa531f39bc65fabe864f61",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 3,
+      "name": "Hand Detail 1",
+      "visible": true,
+      "opacity": 154,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/03-hand-detail-1.png",
+      "sha256": "59da4f544240bf0d49c021004662e925e6af67ae72aa531f39bc65fabe864f61",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 4,
+      "name": "Hand Detail 3",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/04-hand-detail-3.png",
+      "sha256": "caaf9c99460b6e7416fff90e3a305b32422ed8dfdfc34b0307e0d1d91298087c",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 5,
+      "name": "64 Tile Mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/05-64-tile-mask.png",
+      "sha256": "9068c78c1e1cd76c6cee8db3a8fb61ba90b8623e0fea23e78b54bb5b917e8e3e",
+      "size": [
+        326,
+        161
+      ]
+    },
+    {
+      "document": "opentt3d/reviews/20261004/river-bank-breadth/upstream/river_overlayshading.pdn",
+      "document_sha256": "8fa0bde3702a65a431d52bdff9948f49a21b688e9888b57ad5fa30662cae5949",
+      "index": 6,
+      "name": "64 Composite sprite mask",
+      "visible": true,
+      "opacity": 255,
+      "blend_mode": 0,
+      "image": "opentt3d/reviews/20261004/river-bank-breadth/original-layers/river_overlayshading/06-64-composite-sprite-mask.png",
+      "sha256": "638824aed11c9a1a293fbc7519b1f50c28e9e404807fd37c11bd1d46f90b2323",
+      "size": [
+        326,
+        161
+      ]
+    }
+  ],
+  "local_lfs_pointers_unchanged": true,
+  "geometry_approvals": 0
+}

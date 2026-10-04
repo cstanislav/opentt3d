@@ -1,0 +1,47 @@
+{
+  "original_support_sources": [
+    {
+      "original_path": "templates/zoom-sensitive.pnml",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "retained_path": "opentt3d/reviews/20261004/river-bank-breadth/upstream/zoom-sensitive.pnml",
+      "sha256": "8c69ad519a836f7516e933d83894e6db37151f850e48026baa6276c78018de83",
+      "complete_original_bytes": 65356,
+      "byte_exact": true
+    },
+    {
+      "original_path": "graphics/infrastructure/canalriver_terrainoverlay.py",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "retained_path": "opentt3d/reviews/20261004/river-bank-breadth/upstream/canalriver_terrainoverlay.py",
+      "sha256": "301273ce79b43dfcbf8085c991458148ffeeac7dc14df210fccb656dbc632d5c",
+      "complete_original_bytes": 9443,
+      "byte_exact": true
+    },
+    {
+      "original_path": "baseset/nml/extra/extra-plus-rivers.pnml",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "retained_path": "opentt3d/reviews/20261004/river-bank-breadth/upstream/extra-plus-rivers.pnml",
+      "sha256": "664572434d662d734409f99f46567c0aceb43c4cb6ed9123cd412d2a80403a69",
+      "complete_original_bytes": 33260,
+      "byte_exact": true
+    },
+    {
+      "original_path": "graphics/tools.py",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "retained_path": "opentt3d/reviews/20261004/river-bank-breadth/upstream/tools.py",
+      "sha256": "da150d9d23f9fbe88515c9955f8c490aca67e479c6c93359682f94022e7c945f",
+      "complete_original_bytes": 17744,
+      "byte_exact": true
+    },
+    {
+      "original_path": "LICENSE",
+      "upstream_commit": "013cbc9e700c796af001a381a2d93592d49146ac",
+      "retained_path": "opentt3d/reviews/20261004/river-bank-breadth/upstream/LICENSE",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "complete_original_bytes": 18092,
+      "byte_exact": true
+    }
+  ],
+  "staged_diff_check_exit_code": 2,
+  "authored_changes_excluding_pinned_upstream_diff_check_exit_code": 0,
+  "upstream_originals_normalized_or_modified": false
+}

@@ -1,0 +1,11 @@
+pause
+scrollto instant 64 64
+renderer3d on
+renderer3d zoom 5
+renderer3d voxel-overview river_bank_study_tropic
+renderer3d verify-voxel-meshes river_bank_study_tropic
+renderer3d verify-tile-picking
+renderer3d verify-world-atlas
+renderer3d zoom 5
+save smoke-state
+screenshot presented smoke

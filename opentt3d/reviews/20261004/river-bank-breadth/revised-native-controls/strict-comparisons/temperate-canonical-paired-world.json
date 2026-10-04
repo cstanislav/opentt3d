@@ -1,0 +1,234 @@
+{
+  "reference": "opentt3d/reviews/20261004/river-bank-breadth/revised-native-controls/breadth-original-river-bank-revised-temperate-vulkan-canonical/screenshot/smoke.png",
+  "actual": "opentt3d/reviews/20261004/river-bank-breadth/revised-native-controls/breadth-original-river-bank-revised-temperate-opengl-canonical/screenshot/smoke.png",
+  "pattern": "*",
+  "images": 1,
+  "pixels": 307200,
+  "differences": [
+    {
+      "name": "world",
+      "changed_pixels": 46,
+      "pixels": [
+        {
+          "pixel": [
+            231,
+            155
+          ],
+          "reference": [
+            85,
+            112,
+            74,
+            255
+          ],
+          "actual": [
+            69,
+            128,
+            45,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            232,
+            155
+          ],
+          "reference": [
+            59,
+            104,
+            22,
+            255
+          ],
+          "actual": [
+            51,
+            80,
+            30,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            233,
+            155
+          ],
+          "reference": [
+            67,
+            80,
+            37,
+            255
+          ],
+          "actual": [
+            59,
+            104,
+            22,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            234,
+            155
+          ],
+          "reference": [
+            51,
+            80,
+            30,
+            255
+          ],
+          "actual": [
+            59,
+            104,
+            22,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            235,
+            155
+          ],
+          "reference": [
+            59,
+            104,
+            22,
+            255
+          ],
+          "actual": [
+            43,
+            40,
+            15,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            236,
+            155
+          ],
+          "reference": [
+            51,
+            80,
+            30,
+            255
+          ],
+          "actual": [
+            64,
+            104,
+            45,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            249,
+            155
+          ],
+          "reference": [
+            64,
+            104,
+            45,
+            255
+          ],
+          "actual": [
+            59,
+            104,
+            22,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            250,
+            155
+          ],
+          "reference": [
+            51,
+            80,
+            30,
+            255
+          ],
+          "actual": [
+            59,
+            104,
+            22,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            251,
+            155
+          ],
+          "reference": [
+            59,
+            104,
+            22,
+            255
+          ],
+          "actual": [
+            51,
+            80,
+            30,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            254,
+            155
+          ],
+          "reference": [
+            64,
+            104,
+            45,
+            255
+          ],
+          "actual": [
+            69,
+            128,
+            45,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            255,
+            155
+          ],
+          "reference": [
+            51,
+            80,
+            30,
+            255
+          ],
+          "actual": [
+            67,
+            80,
+            37,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            256,
+            155
+          ],
+          "reference": [
+            64,
+            104,
+            45,
+            255
+          ],
+          "actual": [
+            64,
+            88,
+            7,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

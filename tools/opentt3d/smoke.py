@@ -56,6 +56,37 @@ def require_synchronous_fixture_save(path):
             raise RuntimeError("The synchronous fixture save lacks an original OpenTTD format header")
 
 
+def recorded_console_commands(commands, path):
+    """Use only upstream script/echo commands; never hook the simulation or console."""
+    if any(value in str(path) for value in ('"', '\n', '\r')):
+        raise ValueError("Console review log paths cannot contain quotes or newlines")
+    recorded = [f'script "{path}"']
+    for index, command in enumerate(commands):
+        recorded += [f'echo "__opentt3d_review_begin_{index}__"',command,
+                     f'echo "__opentt3d_review_end_{index}__"']
+    return [*recorded,"script"]
+
+
+def require_console_command_acknowledgements(path, commands):
+    """Retain actual original console output, not an inference from stderr/save bytes."""
+    text = path.read_text() if path.is_file() else ""
+    if "Console log output started" not in text or "Console log file closed." not in text:
+        raise RuntimeError("Original console review logging did not start and close")
+    cursor = 0
+    for index, command in enumerate(commands):
+        begin,end = f"__opentt3d_review_begin_{index}__",f"__opentt3d_review_end_{index}__"
+        start = text.find(begin,cursor); finish = text.find(end,start+len(begin)) if start >= 0 else -1
+        if start < cursor or finish < 0:
+            raise RuntimeError(f"Public review command lacks ordered console acknowledgement: {command}")
+        output = text[start+len(begin):finish]
+        if any(error in output for error in ("Usage:","not found.","Saving map failed.","Could not open console log file")):
+            raise RuntimeError(f"Public review command reported an original console error: {command}")
+        if command.startswith("save ") and "Map successfully saved to '" not in output:
+            raise RuntimeError("Synchronous original console save success was not acknowledged")
+        cursor = finish+len(end)
+    return text
+
+
 def require_live_canal_dikes(text, variants):
     """An isolated voxel gallery must never stand in for live source selection."""
     seen = {int(match[1]) for match in re.finditer(r"live voxel canal dike (\d+) climate \d+ source \d+ captured at \d+,\d+ with original ground ownership",text)}
@@ -253,6 +284,7 @@ def main():
     parser.add_argument("--screenshot-size", nargs=2, type=int, metavar=("WIDTH", "HEIGHT"), help="Exercise tiled large-image rendering at the requested size")
     parser.add_argument("--blitter", choices=("32bpp-optimized", "40bpp-anim"), default="32bpp-optimized")
     parser.add_argument("--synchronous-save", action="store_true", help="Use the original non-threaded fixture save setting so exact screenshots do not race the transient Saving game UI; normal application behavior is unchanged")
+    parser.add_argument("--record-console", action="store_true", help="Retain upstream script/echo command acknowledgements and actual synchronous console save success in this isolated review")
     parser.add_argument("--timeout", type=int, default=90)
     parser.add_argument("--memory-limit-mib", type=int, help="Sample game RSS/footprint and abort above this MiB limit (macOS/Linux); retain memory.jsonl")
     parser.add_argument("--keep-open", action="store_true")
@@ -270,6 +302,8 @@ def main():
         parser.error("--background requires macOS windowed rendering without --verify-native-input")
     if args.no_hidpi and (platform.system() != "Darwin" or args.fullscreen):
         parser.error("--no-hidpi requires macOS windowed rendering")
+    if args.record_console and (not args.synchronous_save or args.menu):
+        parser.error("--record-console requires --synchronous-save and an actual game, not --menu")
     if args.memory_limit_mib is not None and (args.memory_limit_mib <= 0 or args.keep_open):
         parser.error("--memory-limit-mib requires a positive limit and cannot be used with --keep-open")
     if args.verify_voxel_meshes is not None and not re.fullmatch(r"[a-z][a-z0-9_]{0,95}",args.verify_voxel_meshes):
@@ -691,6 +725,9 @@ server_advertise = false
         commands.append(f"screenshot normal size {args.screenshot_size[0]} {args.screenshot_size[1]} smoke")
     elif not benchmark_frames:
         commands.append(f"screenshot {'presented' if gpu_presentation else 'viewport'} smoke")
+    public_commands = commands
+    if args.record_console:
+        commands = recorded_console_commands(commands,output / "console-review.log")
     (scripts / ("autoexec.scr" if args.menu else "game_start.scr")).write_text("\n".join(commands) + "\n")
     debug = "driver=5,console=1,script=4" if args.trace_aircraft_clearance or args.trace_effects else "driver=2,console=1"
     command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", "-X",
@@ -1071,6 +1108,11 @@ server_advertise = false
                       "background": args.background}
             if args.synchronous_save:
                 result["synchronous_original_save_verified"] = True
+            if args.record_console:
+                console = output / "console-review.log"
+                require_console_command_acknowledgements(console,public_commands)
+                result["original_console_commands_acknowledged"] = len(public_commands)
+                result["original_console_save_success_recorded"] = True
             if args.no_hidpi:
                 result["original_allow_hidpi"] = False
             if args.verify_object_palette is not None:
