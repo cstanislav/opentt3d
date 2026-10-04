@@ -1,5 +1,35 @@
 # Active extended development goal
 
+## Requested-window stopping audit — October 4, 19:19:36 UTC
+
+**Actual stopping clock:2026-10-04 19:19:36 UTC.** Modelling/native/release
+operations stop after approximatelythree hours from16:20:27; only final evidence
+sealing and commit/push bookkeeping follow. All validated changes are on`main`.
+The full every-runtime-asset3D/every-model8/10/sustained60fps objective is **not met**.
+
+The .43 immutable draft failed its release gate: source/both Macs/Linux passed,
+but all three Windows checkouts failed on long retained evidence paths. The repair
+enables Git long paths before checkout without excluding or shortening originals;
+118 harness tests pass. A new .44 immutable recovery draft at`3c95db599` is queued
+in Actions run37227313179. Remote CI may continue; no automatic/public publication
+is promised. .42 remains immutable/recommended and .41/.43 remain immutable drafts.
+
+The downloaded .43 Mac CI preview verifies its outer digest, tagged catalogue and
+pinned graphics and passes two quiet package controls/one acknowledged temperate
+Vulkan native control with144 exact tiny-ground gallery images. Its strict original
+source comparison fails starting at`object-0-0-0-body-0`; the full failures and raw
+bytes are preserved without tolerance, phase inference or inherited acceptance.
+This is not nineteen hosted attachments or completed independent native acceptance.
+No local background review remains. Follow the .44 CI run and complete fresh exact
+download/source/resource/native/publication checks before any later publication.
+
+Twenty shore studies remain individually4–5/10; all120 banks and84 larger-HQ
+proposals remain unbound. All21 earlier seals/46,452 records and seven original
+working files verify. Remaining catalogue breadth, all240 conditional bank slots/
+160 unobserved sloped slots, source/ownership/state/support/LOD/picking/ship/fidelity,
+performance/memory/platform/input/replay/network gates remain required. No full-goal
+completion, resolved renderer/source failure or sustained60fps claim is made.
+
 ## Three-hour user-requested resumption — October 4, 16:20:27 UTC
 
 Storage cleanup resolved the historical disk blocker without changing original

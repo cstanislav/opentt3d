@@ -1,0 +1,54 @@
+{
+  "reference": "build-macos/breadth-original-hq-source-owner-final-temperate-vulkan/renderer3d-reference",
+  "actual": "opentt3d/reviews/20261004/three-hour-resumption/incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference",
+  "pattern": "object-*",
+  "images": 37,
+  "pixels": 68252,
+  "differences": [
+    {
+      "name": "object-0-0-0-body-0",
+      "changed_pixels": 2,
+      "pixels": [
+        {
+          "pixel": [
+            26,
+            11
+          ],
+          "reference": [
+            128,
+            0,
+            0,
+            255
+          ],
+          "actual": [
+            20,
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            32,
+            52
+          ],
+          "reference": [
+            128,
+            0,
+            0,
+            255
+          ],
+          "actual": [
+            20,
+            0,
+            0,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "masks_or_tolerance_used": false,
+  "strict_complete_rgba": true,
+  "exit_code": 1
+}

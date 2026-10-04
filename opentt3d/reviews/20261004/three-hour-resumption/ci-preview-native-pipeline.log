@@ -1,0 +1,15 @@
+{"audited_utc": "2026-10-04T19:11:18.173327+00:00", "tag": "opentt3d-dev-20261004.43", "commit": "ccd153ba5be8b779b666e469db735d3985ffbdd9", "artifact_id": 11310834420, "outer_ci_artifact_sha256": "b46bdf41bfcf6323332d8b81f59a57a69a8b53450f8cb83085ac5191587a0de6", "catalogue_lf_sha256": "5ae9db238e7f5050a908df6725d760a9f8f6188d9ad1a0e3a0ffa8afb210ff7a", "compiled_immutable_tagged_authoring_and_pinned_graphics_exact": true, "accepted_partial_macos_ci_artifact": true, "source_and_all_downloaded_artifacts_exact": false, "accepted_publication": false, "quality_approvals": 0, "reason": "Windows checkout failed; only this available Mac CI artifact is audited. This is not nineteen hosted assets, eight passed jobs, or publication acceptance."}
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/three-hour-resumption/independent-runtime.py", line 146, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/three-hour-resumption/independent-runtime.py", line 92, in main
+    a,b=image(path),image(new_sources[name]);assert a.size==b.size and a.tobytes()==b.tobytes(),(climate,backend,name)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('temperate', 'vulkan', 'object-0-0-0-body-0')
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python', 'opentt3d/reviews/20261004/three-hour-resumption/independent-runtime.py', '--tag', 'opentt3d-dev-20261004.43', '--commit', 'ccd153ba5be8b779b666e469db735d3985ffbdd9', '--ci-preview']' returned non-zero exit status 1.

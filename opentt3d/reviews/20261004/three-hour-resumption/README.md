@@ -1,5 +1,22 @@
 # Requested three-hour resumption, integration and development release
 
+## Wrap-up outcome: publication withheld, recovery draft queued
+
+All validated modelling, conservative HQ integration, zero-heading parity,
+provenance and Windows checkout repair are on`main`. .43 is an immutable draft:
+source/both Mac/Linux passed, all three Windows checkouts failed on long retained
+evidence paths, and upload/checksum publication was skipped. .44 is a new immutable
+recovery draft at`3c95db599bf8c864afab63d563f4bddd155fcf70`, packaging run37227313179.
+No public release or automatic later publication is claimed. .42 stays recommended.
+
+The independently downloaded .43 Mac CI artifact matches its outer digest,
+compiled tagged1,915-model source and pinned graphics. Two quiet default-package
+controls and one acknowledged temperate Vulkan native control completed, with144
+tiny-ground gallery images exact. The original-source comparison fails beginning
+at`object-0-0-0-body-0`; complete strict results and all images are preserved in
+`incomplete-native-preview/`. No palette-phase explanation, tolerance, full native
+matrix or publication acceptance is inferred. See`RELEASE_BLOCKER.md`for recovery.
+
 Actual start:**2026-10-04 16:20:27 UTC**. Requested deadline:
 **2026-10-04 19:20:27 UTC**. The final stopping clock/reason is recorded separately
 after work; neither native log times nor evidence seals replace it.

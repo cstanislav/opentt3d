@@ -1,0 +1,6 @@
+pause
+scrollto instant 64 64
+renderer3d zoom -2
+renderer3d verify-clipping
+renderer3d benchmark 3 capture
+save package-smoke

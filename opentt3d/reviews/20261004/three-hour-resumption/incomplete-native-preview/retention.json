@@ -1,0 +1,53 @@
+{
+  "retained_utc": "2026-10-04T19:17:18.550307+00:00",
+  "controls": [
+    {
+      "portable": "opentt3d/reviews/20261004/three-hour-resumption/incomplete-native-preview/playable-release43-independent-temperate-vulkan",
+      "scope": "one actual acknowledged temperate Vulkan native control; no inherited full-source/publication acceptance",
+      "commands_acknowledged": 13,
+      "actual_save_success_text": true
+    },
+    {
+      "portable": "opentt3d/reviews/20261004/three-hour-resumption/incomplete-native-preview/playable-release43-independent-package-default",
+      "scope": "default package compatibility only; unlogged commands not retroactively acknowledged"
+    },
+    {
+      "portable": "opentt3d/reviews/20261004/three-hour-resumption/incomplete-native-preview/playable-release43-independent-package-opengl",
+      "scope": "default package compatibility only; unlogged commands not retroactively acknowledged"
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "tiny-ground-gallery",
+      "report": "opentt3d/reviews/20261004/three-hour-resumption/incomplete-native-preview/strict-comparisons/tiny-ground-gallery.json",
+      "images": 144,
+      "different_images": 0,
+      "different_pixels": 0,
+      "dimension_mismatches": 0,
+      "exit_code": 0,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    },
+    {
+      "label": "complete-original-object-sources",
+      "report": "opentt3d/reviews/20261004/three-hour-resumption/incomplete-native-preview/strict-comparisons/complete-original-object-sources.json",
+      "images": 37,
+      "different_images": 1,
+      "different_pixels": 2,
+      "dimension_mismatches": 0,
+      "exit_code": 1,
+      "strict_complete_rgba": true,
+      "masks_or_tolerance_used": false
+    }
+  ],
+  "lossless_pam_reconstructions": 234,
+  "complete_original_pam_bytes_reconstructed": 117890596,
+  "fresh_acknowledged_native_controls": 1,
+  "separate_default_package_compatibility_controls": 2,
+  "first_failed_original_source": "object-0-0-0-body-0",
+  "complete_original_source_comparison_passed": false,
+  "full_twelve_native_controls_completed": false,
+  "accepted_publication": false,
+  "quality_approvals": 0,
+  "reason": "Preserve the source mismatch and first preview failure. Do not crop, mask, tolerate, infer a palette-phase explanation or claim complete downloaded-release acceptance."
+}

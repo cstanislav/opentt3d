@@ -1,0 +1,26 @@
+[
+  {
+    "output": "build-macos/playable-release43-independent-package-default",
+    "command": [
+      "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python",
+      "tools/opentt3d/package_smoke.py",
+      "/Users/stanislav/Projects/opentt3d/build-macos/playable-release43-independent-extracted/OpenTT3D.app",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/playable-release43-independent-package-default"
+    ],
+    "exit_code": 0
+  },
+  {
+    "output": "build-macos/playable-release43-independent-package-opengl",
+    "command": [
+      "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/voxel-art-20261002-venv/bin/python",
+      "tools/opentt3d/package_smoke.py",
+      "/Users/stanislav/Projects/opentt3d/build-macos/playable-release43-independent-extracted/OpenTT3D.app",
+      "--output",
+      "/Users/stanislav/Projects/opentt3d/build-macos/playable-release43-independent-package-opengl",
+      "--driver",
+      "cocoa-opengl"
+    ],
+    "exit_code": 0
+  }
+]

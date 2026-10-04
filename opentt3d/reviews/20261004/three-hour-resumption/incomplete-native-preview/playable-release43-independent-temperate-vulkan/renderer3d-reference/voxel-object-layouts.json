@@ -1,0 +1,56 @@
+[
+  {
+    "climate": 0,
+    "layers": [
+      {
+        "category": "object_ground",
+        "layout": 4,
+        "model": "hq_ground_tiny_temperate_north",
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "part": 0
+      },
+      {
+        "category": "object_ground",
+        "layout": 5,
+        "model": "hq_ground_tiny_temperate_west",
+        "origin": [
+          16.0,
+          0.0,
+          0.0
+        ],
+        "part": 1
+      },
+      {
+        "category": "object_ground",
+        "layout": 6,
+        "model": "hq_ground_tiny_temperate_east",
+        "origin": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "part": 2
+      },
+      {
+        "category": "object_ground",
+        "layout": 7,
+        "model": "hq_ground_tiny_temperate_south",
+        "origin": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "part": 3
+      }
+    ],
+    "native": "model-voxel-object-4-0-native.pam",
+    "object": 4,
+    "ordinary_ground": "original independent terrain texture",
+    "parts": 4,
+    "size": 0
+  }
+]

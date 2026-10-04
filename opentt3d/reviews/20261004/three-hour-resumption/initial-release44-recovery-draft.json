@@ -1,0 +1,11 @@
+{
+  "assets": [],
+  "body": "# OpenTT3D development .44 \u2014 Windows checkout recovery\n\n**Development draft; publication is withheld until all original packaging and\nindependent-download/native checks pass.**\n\nThis preserves the .43 shore/HQ/zero-heading work and enables Git long paths\nbefore Windows checkout. The first .43 build passed source, macOS ARM64,\nmacOS x86_64 and Linux, but all three Windows jobs failed before compilation:\nretained original evidence paths exceeded Windows MAX_PATH. Those failures and\nthe immutable .43 tag/draft are preserved, not hidden by removing evidence or\nskipping Windows. Two checkout regression tests guard the repair. The .44\npackaging run is a fresh recovery attempt, not an already accepted release.\n\nTwenty new manually authored shore-bank studies were individually screened at\n4\u20135/10. All 120 bank studies and all 84 larger-HQ proposals remain unbound; no\nquality approval or accepted bank/larger-HQ runtime coverage is claimed.\nScoped zero-heading GL/Vulkan identity parity preserves 2,498 complete\nsame-backend images and ten save pairs, with unchanged nonzero rotations.\nActual terrain-query/source evidence is retained, including all failed controls.\n\nThe every-runtime-asset-3D / every-model-8/10 / sustained-60fps objective is\nunfinished. Source fidelity, strict whole-world backend equality, conditional\nstates, support/LOD/picking/ship clearances, memory and platform/input/replay/\nnetwork gates remain open. The fresh bounded saved-size1 controls have near-60\naverage FPS but 421 Vulkan / 181 OpenGL intervals over20ms and approximately3GiB\nprocess peaks; sustained60fps is not accepted. Windows ARM64 execution and\nWindows GPU/foreground input remain unverified.\n\n[Immutable .42](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)\nremains recommended. No older tag, notes, package or recommendation is replaced.\n",
+  "databaseId": 403167413,
+  "isDraft": true,
+  "isPrerelease": true,
+  "name": "OpenTT3D development .44 \u2014 Windows checkout recovery",
+  "tagName": "opentt3d-dev-20261004.44",
+  "targetCommitish": "3c95db599bf8c864afab63d563f4bddd155fcf70",
+  "url": "https://github.com/cstanislav/opentt3d/releases/tag/untagged-b33a96a75b090cb4ab9d"
+}

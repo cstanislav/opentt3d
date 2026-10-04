@@ -21,7 +21,10 @@ def digest(path):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--seal',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--seal',action='store_true')
+    parser.add_argument('--blocked',action='store_true',help='Verify an explicitly unpublished failed/recovery checkpoint, never publication acceptance')
+    args=parser.parse_args()
+    if args.blocked:return verify_blocked(args.seal)
     publication=json.loads((HERE/'public-release43-verification.json').read_text())
     artifacts=json.loads((HERE/'independent-artifact-audit.json').read_text())
     runtime=json.loads((HERE/'independent-runtime-audit.json').read_text())
@@ -83,6 +86,58 @@ def main():
         'prior_sealed_file_records_exact':46452,'original_working_files_exact':7,'actual_stopping_utc':stop['actual_stopping_utc'],
         'all_source_or_8_or_60fps_or_platform_gates_accepted':False,'quality_approvals':0,'recommended_release_changed':False}
     RECEIPT.write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt))
+
+
+def verify_blocked(seal):
+    failed=json.loads((HERE/'release43-failed-packaging-jobs.json').read_text())
+    assert failed['total_count']==8
+    assert sum(row['conclusion']=='success' for row in failed['jobs'])==4
+    assert sum(row['conclusion']=='failure' for row in failed['jobs'])==3
+    assert sum(row['conclusion']=='skipped' for row in failed['jobs'])==1
+    recovery=json.loads((HERE/'release44-recovery-dispatch.json').read_text())
+    assert recovery['tag']=='opentt3d-dev-20261004.44' and not recovery['public_publication_completed']
+    artifact=json.loads((HERE/'ci-preview-artifact-audit.json').read_text())
+    assert artifact['accepted_partial_macos_ci_artifact'] and not artifact['source_and_all_downloaded_artifacts_exact'] and not artifact['accepted_publication']
+    native=HERE/'incomplete-native-preview';retained=json.loads((native/'retention.json').read_text())
+    assert retained['fresh_acknowledged_native_controls']==1 and not retained['complete_original_source_comparison_passed']
+    assert not retained['accepted_publication'] and not retained['full_twelve_native_controls_completed']
+    count,original_bytes=0,0
+    for row in json.loads((native/'lossless-images.json').read_text()):
+        path=ROOT/row['portable'];assert digest(path)==row['png_sha256']
+        with Image.open(path) as picture:
+            payload=picture.info['opentt3d_pam_header'].encode('ascii')+picture.tobytes()
+        assert hashlib.sha256(payload).hexdigest()==row['pam_sha256'] and len(payload)==row['original_bytes']
+        count+=1;original_bytes+=len(payload)
+    for row in retained['controls']:
+        if not row.get('commands_acknowledged'):continue
+        run=ROOT/row['portable']
+        commands=[line for line in (run/'scripts/game_start.scr').read_text().splitlines() if not line.startswith(('script','echo '))]
+        require_console_command_acknowledgements(run/'console-review.log',commands);require_synchronous_fixture_save(run/'save/smoke-state.sav')
+    for row in json.loads((HERE/'pre-integration-preservation.json').read_text())['original_working_files'].values():
+        assert digest(ROOT/row['retained'])==row['retained_sha256']
+        assert hashlib.sha256(gzip.decompress((ROOT/row['retained']).read_bytes())).hexdigest()==row['original_sha256']
+    prior=json.loads((HERE/'all-sealed-evidence-integrity-corrected.json').read_text())
+    assert prior['sealed_manifests']==21 and prior['file_records_checked']==46452 and not prior['mismatches']
+    for row in prior['results']:
+        manifest=ROOT/row['manifest'];assert digest(manifest)==row['manifest_sha256']
+        for key,record in json.loads(manifest.read_text())['files'].items():
+            relative=Path(key);path=ROOT/relative if relative.parts[0]=='opentt3d' else manifest.parent/relative
+            assert digest(path)==(record['sha256'] if isinstance(record,dict) else record)
+    stop=json.loads((HERE/'STOPPING.json').read_text())
+    assert stop['actual_stopping_utc'] and stop['reason'] and stop['published_release'] is None and not stop['full_objective_met']
+    files=sorted(path for path in HERE.rglob('*') if path.is_file() and path not in {MANIFEST,RECEIPT}
+        and '__pycache__' not in path.parts and path.suffix!='.pyc' and not path.name.startswith('resumption-verify-command'))
+    hashes={str(path.relative_to(HERE)):{'sha256':digest(path),'bytes':path.stat().st_size} for path in files}
+    if seal:
+        with MANIFEST.open('x') as stream:json.dump({'format':1,'files':hashes,'quality_approved':False,'publication_accepted':False},stream,indent=2);stream.write('\n')
+    assert json.loads(MANIFEST.read_text())['files']==hashes
+    value={'verified_utc':datetime.now(timezone.utc).isoformat(),'portable_files':len(files),'prior_sealed_manifests_exact':21,
+        'prior_file_records_exact':46452,'original_working_files_exact':7,'lossless_pam_reconstructions':count,
+        'complete_original_pam_bytes_reconstructed':original_bytes,'release43_windows_checkout_failure_preserved':True,
+        'independent_preview_original_source_failure_preserved':True,'recovery_tag':recovery['tag'],'recovery_run':recovery['packaging_run'],
+        'public_release_completed':False,'quality_approvals':0,'required_eight_or_sustained60fps_met':False,'recommended_release_changed':False,
+        'actual_stopping_utc':stop['actual_stopping_utc']}
+    RECEIPT.write_text(json.dumps(value,indent=2)+'\n');print(json.dumps(value))
 
 
 if __name__=='__main__':main()

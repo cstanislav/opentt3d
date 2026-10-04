@@ -1,0 +1,31 @@
+{
+  "audited_utc": "2026-10-04T19:11:18.173327+00:00",
+  "tag": "opentt3d-dev-20261004.43",
+  "commit": "ccd153ba5be8b779b666e469db735d3985ffbdd9",
+  "artifact_id": 11310834420,
+  "outer_ci_artifact_sha256": "b46bdf41bfcf6323332d8b81f59a57a69a8b53450f8cb83085ac5191587a0de6",
+  "assets": [
+    {
+      "name": "opentt3d-dev-20261004.43-macos-arm64.zip",
+      "bytes": 39328222,
+      "sha256": "2f729833f0a3c01512bd9f4aea0cfac540dee5542d1fabfd9a2cd456944814c5"
+    },
+    {
+      "name": "opentt3d-dev-20261004.43-macos-arm64.json",
+      "bytes": 1832,
+      "sha256": "955cd4b812814b4d46802674644d1f71c7dc80da33bd65f5f18d0c96a0a3199b"
+    },
+    {
+      "name": "opentt3d-dev-20261004.43-macos-arm64.dmg",
+      "bytes": 35068339,
+      "sha256": "b097f5649f6e0d88330147562f27b609132ad47b13409b9a4536e7ecacfa5de9"
+    }
+  ],
+  "catalogue_lf_sha256": "5ae9db238e7f5050a908df6725d760a9f8f6188d9ad1a0e3a0ffa8afb210ff7a",
+  "compiled_immutable_tagged_authoring_and_pinned_graphics_exact": true,
+  "accepted_partial_macos_ci_artifact": true,
+  "source_and_all_downloaded_artifacts_exact": false,
+  "accepted_publication": false,
+  "quality_approvals": 0,
+  "reason": "Windows checkout failed; only this available Mac CI artifact is audited. This is not nineteen hosted assets, eight passed jobs, or publication acceptance."
+}

@@ -1,0 +1,1503 @@
+{
+  "format": 1,
+  "files": {
+    "PLAN.md": {
+      "sha256": "7288f47fd47dd36929e89c7706a91a495d900f1aa284b8a064a9d12433038c4f",
+      "bytes": 2193
+    },
+    "README.md": {
+      "sha256": "c4aec8730af853d95c6e31c55202f8c0ccbd9e4e1a742b27a933ba226c3221b3",
+      "bytes": 5572
+    },
+    "RELEASE44_NOTES.md": {
+      "sha256": "504fc6ada73feee8d02ab6462cba506da12480a8addddd78b5b0bb3e75e64039",
+      "bytes": 1868
+    },
+    "RELEASE_BLOCKER.md": {
+      "sha256": "34968a9f0fb25d9af6e799f2a8c5206c0f50619afffff98d4fb965952f0d348e",
+      "bytes": 2029
+    },
+    "RELEASE_NOTES.md": {
+      "sha256": "2ffe69aa6f05ad1d7b6b1f3ae0f0661e62797edadbe0a25a9e8b0f4e523f2510",
+      "bytes": 3567
+    },
+    "STOPPING.json": {
+      "sha256": "cc4b53ff255d30a146b4b62265b0e6cefab4c469b70f766e68e74c3f20725b88",
+      "bytes": 1107
+    },
+    "all-sealed-evidence-integrity-corrected.json": {
+      "sha256": "091aee4ae3b3bae1c2ca392a02cb470dc3696afe2d0b1b44a1b52a9d79769338",
+      "bytes": 6673
+    },
+    "all-sealed-evidence-integrity-corrected.log": {
+      "sha256": "c652f7fb98490e65d3e333088ab1894758ca2a8f38c07b26d9c312b337c4c0b1",
+      "bytes": 445
+    },
+    "all-sealed-evidence-integrity.json": {
+      "sha256": "6a5cda698e509042e49a3e50510224bca4ac6a8983ff3da4d09f0c76db3dd054",
+      "bytes": 5514067
+    },
+    "all-sealed-evidence-integrity.log": {
+      "sha256": "99d2cb90c22f08e766684fdf7b2124238f5ec02a17edb99bb2e9cc12bb63ef7f",
+      "bytes": 2369300
+    },
+    "arctic-terrain-query-correlated.log": {
+      "sha256": "5a7a82dfe36047c4bce68476caa255c01468d70ed7d8f423c537d47a2ac6420f",
+      "bytes": 383
+    },
+    "arctic-terrain-query-first.log": {
+      "sha256": "8097a5944bfbdb03fad99edcee9e01656e571df17b205794c74d5e34896cfe17",
+      "bytes": 692
+    },
+    "audit-release.py": {
+      "sha256": "a9fb030e7600ef27b4595d869ebd18b11f27338d401b79e0155339e092f2a547",
+      "bytes": 9279
+    },
+    "candidate-native-tests.log": {
+      "sha256": "a969bc9176872e0179c1acb1d1c87851c56d37a1ff3bb1e86b7698c72dc9dd08",
+      "bytes": 54764
+    },
+    "check-ci-preview.py": {
+      "sha256": "4096e544035b22820b9a8795ff0668cef8595fbab0a44d8db2cb56648cf9a49a",
+      "bytes": 3943
+    },
+    "checkout-repair-harness-tests.log": {
+      "sha256": "a45b8fb448543b4ee3df8ab8d4646eaec22e07f0dca5210cfdb71377a546c524",
+      "bytes": 636
+    },
+    "ci-preview-artifact-audit.json": {
+      "sha256": "39d9343a90f1f5936823e720449e11ee684683b449a577e6a736a72bc57d54e9",
+      "bytes": 1324
+    },
+    "ci-preview-native-pipeline.log": {
+      "sha256": "755ea91fbd4a51f55f503e169ddf5abbfe3b9d76679c0f4e12a108e9d50bb418",
+      "bytes": 2084
+    },
+    "collect-release.py": {
+      "sha256": "33a2f7ac12306327517cf2ea8761a482bfae6c4c08c346dd4c5b7300003526f6",
+      "bytes": 2834
+    },
+    "earlier-bank-fresh-terrain-supplement-complete.log": {
+      "sha256": "6503b0b9b2c4737d36a14f4f754375afa0dad51cbd57abde724d94b4cb96e0b1",
+      "bytes": 535
+    },
+    "earlier-bank-fresh-terrain-supplement.json": {
+      "sha256": "15cca31cf26398045c155b43681546dbb3569b7038f6ee35cabf01792266ed0c",
+      "bytes": 390330
+    },
+    "earlier-bank-fresh-terrain-supplement.log": {
+      "sha256": "0020db2fecbca32cb483580273d9bd31a151f61f943e4f39d1c29d5766e5f7f5",
+      "bytes": 1450
+    },
+    "failed-packaging-log-retention.json": {
+      "sha256": "a4c118e408de9349027a17750339a8a211b86b34d1f3f48fd4fa686d864ed7f1",
+      "bytes": 988
+    },
+    "final-integrated-asset-tests.log": {
+      "sha256": "2ed745a2eee2408d43546698ac6bbcac65cd3c1f50d0ccd5c31d476506daa964",
+      "bytes": 378
+    },
+    "final-presentation-boundary.log": {
+      "sha256": "d15d2c4a89e463aa428de1619783d3c5353f3d6a5785801c53fe06aa286b9dfa",
+      "bytes": 103
+    },
+    "fresh-terrain-byte-tests.log": {
+      "sha256": "fd67c1e78e0f1e5eabc8dd2a7829c17909c4da6e3e8f439f1c702f57e7cbeaed",
+      "bytes": 792
+    },
+    "hq-integration-preservation.json": {
+      "sha256": "8ab99b093026380dd357fd24d527d858e00aa4e088d933c4e8e758b78250c3c8",
+      "bytes": 222
+    },
+    "hq-unbound-integration-tests.log": {
+      "sha256": "7b306ec19750d12e93df809de33824cdb134cab9098bb86beed729d716f307b8",
+      "bytes": 3672
+    },
+    "immutable-tag-vs-main-runtime.json": {
+      "sha256": "4ee475bb6c5563d81c801d1173153a0f716534a11cc4e7a5dc3d21dcca16059c",
+      "bytes": 1854
+    },
+    "immutable-tag-vs-main-runtime.log": {
+      "sha256": "071c5f1b76420aad6632ae4893c7d2316ddca73e3ec0de72ef22f6f4876abbfb",
+      "bytes": 78
+    },
+    "incomplete-native-preview/lossless-images.json": {
+      "sha256": "b819622f5071feebe63b04e6f0b8c7564055ac3c277eecdce7e28f8c144f97c0",
+      "bytes": 167600
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/benchmark.json": {
+      "sha256": "0ecfa3d5fb5221fadfb0717a5da9102c04c8774356c9774fea3de68031efd0ef",
+      "bytes": 6061
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/input.sav": {
+      "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d",
+      "bytes": 156304
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/openttd.cfg": {
+      "sha256": "d17d5a1f1a0dca26f6374d86c1bc9c648e6c64abae6b205e60ceaeecc11d0abc",
+      "bytes": 140
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/result.json": {
+      "sha256": "0001532852e19ee6e853ca8a8f0e93add860cbafc3f3ad1719efadc12aa38b6b",
+      "bytes": 7550
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/run.log": {
+      "sha256": "a1fa007c31839fe5b13ac3d399f6654198317ff8149fd68fceebb659b19a5dc2",
+      "bytes": 14500
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/save/package-smoke.sav": {
+      "sha256": "f82bb9198ad983641c7ec362a4ba05b9d5495115fb79615cb293061520427432",
+      "bytes": 156364
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/screenshot/smoke.png": {
+      "sha256": "3452aee0ee59e02feeae5bec95868c70cfcb0dd02694e0ed451d61ea7080e99b",
+      "bytes": 103535
+    },
+    "incomplete-native-preview/playable-release43-independent-package-default/scripts/game_start.scr": {
+      "sha256": "30738cb629cb8d1a11dc09b621801e987bc6b85916ee4810d85799f1f420f6b0",
+      "bytes": 125
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/benchmark.json": {
+      "sha256": "ed06c3522928c6a1792a78883f5ddb6557de953574d9e8617ac2ef9e79804f2b",
+      "bytes": 5504
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/input.sav": {
+      "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d",
+      "bytes": 156304
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/openttd.cfg": {
+      "sha256": "d17d5a1f1a0dca26f6374d86c1bc9c648e6c64abae6b205e60ceaeecc11d0abc",
+      "bytes": 140
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/result.json": {
+      "sha256": "22805245a61bb4cce557944fc49561b2cd8dd8d7d30d8fb6b99dde65fce4edcb",
+      "bytes": 6995
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/run.log": {
+      "sha256": "3b4958c31e9ba08104f9a75fe5c7bcf64a8611f58a24ff59ba3f7dddeb41407c",
+      "bytes": 8301
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/save/package-smoke.sav": {
+      "sha256": "f82bb9198ad983641c7ec362a4ba05b9d5495115fb79615cb293061520427432",
+      "bytes": 156364
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/screenshot/smoke.png": {
+      "sha256": "bc4ad78d8fd50f951a265738750029df88c3ec2692ba21d278af276e4a1d1aca",
+      "bytes": 103528
+    },
+    "incomplete-native-preview/playable-release43-independent-package-opengl/scripts/game_start.scr": {
+      "sha256": "30738cb629cb8d1a11dc09b621801e987bc6b85916ee4810d85799f1f420f6b0",
+      "bytes": 125
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/console-review.log": {
+      "sha256": "24bc430b8e78b4ec70b449d7de6c4fbea75ed3e8f958556c4d45a700df389ff3",
+      "bytes": 952
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/openttd.cfg": {
+      "sha256": "bd58696aeef2cdf3eff65c07cbb81fcad1447afaccac3f291a7c570b2cb91a86",
+      "bytes": 472
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-0.png": {
+      "sha256": "73b42880ac00ccaf132c2786bf8d720f945f874c7acb6bec1d10027787c4eaf4",
+      "bytes": 15636
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-1.png": {
+      "sha256": "cd1e6625f9e061598d7dda6a5ca8be61cfd16ae4db942befaa91ad5b0ef3b985",
+      "bytes": 15565
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-2.png": {
+      "sha256": "1289ad5a373c445069902a72b78adce71b8b2428920bf250956d3b049b700ead",
+      "bytes": 15849
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-3.png": {
+      "sha256": "05e725ddd148d9830ad4670e219eb4f145ce08eee0390b76f0ea7a01b3bfe71c",
+      "bytes": 15572
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-4.png": {
+      "sha256": "8e8ff631e8039f660bee57638e9353ef08931fdd284616b20b605d24e807c951",
+      "bytes": 5872
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-5.png": {
+      "sha256": "b23117beab4fd0c4b1669617e778d1a7af0f9101369f41e5d5955106d2616a32",
+      "bytes": 5908
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-6.png": {
+      "sha256": "16114a7b062c59ad0101f2b5e7c1cdc74dbb3d56307a05ef4831eb37a7c370a5",
+      "bytes": 5880
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-7.png": {
+      "sha256": "c560d4dd0a3bd67f80413a1262f82ad1ebcd3d74cdef0206bd99d4875104d819",
+      "bytes": 5730
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-0.png": {
+      "sha256": "bf9aaf156d4b0751bb361131090176cb194f23c4c39c4082cd7f984a4f27a824",
+      "bytes": 16249
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-1.png": {
+      "sha256": "37a37b5422d8f5a234249cc6dd1a8ba0e0feb7f903c01120db332b01580d64ae",
+      "bytes": 17156
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-2.png": {
+      "sha256": "bd4a67f6ea1d7c010cca378c7ff321c983a695cfb001c4a330d1810786eb8eea",
+      "bytes": 17466
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-3.png": {
+      "sha256": "b84fe2448d9adcc9bb17940509acf6e725e164481f18379f3fc29973c725a3f7",
+      "bytes": 17133
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-4.png": {
+      "sha256": "9b6c3ef5108cab241c34996476f66df95c7b98cdfd52a1710167d2876592c54f",
+      "bytes": 6156
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-5.png": {
+      "sha256": "2b5815cb28d7e3d38b788be1684e43c4f22c49e5ccdcc0bd18b933d430e60654",
+      "bytes": 6633
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-6.png": {
+      "sha256": "e721361ee67a62951d4e0852e4c1ff5a0aacca5b55eecf0ff8d0fc7e6f7d9ea4",
+      "bytes": 6615
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-0-7.png": {
+      "sha256": "c8b8583f8bdf0a6aff8f471fd70c57bf8b2ba35b9e8e0530c2f190659f25855f",
+      "bytes": 7050
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-0.png": {
+      "sha256": "c436cae9f39df2bbb8ed28c29cdffcb1edc95e641b274d699f538e37be1fbf56",
+      "bytes": 14364
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-1.png": {
+      "sha256": "88a86b66dab27626ee17ff1c810cbfdfceeff94440a9810cb3d4d0a6107ed244",
+      "bytes": 14510
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-2.png": {
+      "sha256": "7415f8ecca48b774d06c69d815a3dcc504412a7774ada211df63667ab69cc71b",
+      "bytes": 14671
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-3.png": {
+      "sha256": "c3e36669f9e8530eb3e67340aebb0d4f5f544cdf1ceacd221dcc852955cdcdcd",
+      "bytes": 14523
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-4.png": {
+      "sha256": "dabdf6a56e4c961a728d1e91f8727024f770c92058d616b97ba250c5e3bb3b0f",
+      "bytes": 5449
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-5.png": {
+      "sha256": "191da94b69fbab45e1ffc904a0a7d601d2b023457024741e75e0b26fc0afbeee",
+      "bytes": 5554
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-6.png": {
+      "sha256": "e9647042659a8eab3b5eb5fc98761ec1b87e4a6ad0369e48aedb17947bbc7e53",
+      "bytes": 5434
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-1-7.png": {
+      "sha256": "fd5be9b521912b6a61aac1ba82e0c3da801c0d0fdc3259efe4ac30a97aec52e3",
+      "bytes": 5320
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-0.png": {
+      "sha256": "6d18a311a17bec7ae7a815a0fb5afef92bbfbd8de0301b847a95c1775666aab5",
+      "bytes": 14801
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-1.png": {
+      "sha256": "983e91dcd809d68d83b50c43ac01f4288e93267d40e7b0216e02ed87250b9c78",
+      "bytes": 15323
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-2.png": {
+      "sha256": "81aa503789f1be0613ffaf348a0f0283b0d2e6f72a01face2bd89fb4f48d9c1b",
+      "bytes": 15468
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-3.png": {
+      "sha256": "b8bbf09891551fabc08cd68842bcf37ba1c7fd5288d49bdfed301aa0859071ff",
+      "bytes": 14935
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-4.png": {
+      "sha256": "7d3066645618d316b8d439b0f07d056883e2b119348ceb6fbb9df3df3d8a68a7",
+      "bytes": 5557
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-5.png": {
+      "sha256": "ef3fb5a4abf04995af7c9fe8e8b5cb82ef750cbe3d3405869437f60dfa8f50aa",
+      "bytes": 5649
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-6.png": {
+      "sha256": "4e362604681e7bac1b1efa620bd8b42db63e39ee0e2c63fbbb27b07496f0c325",
+      "bytes": 5519
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-2-7.png": {
+      "sha256": "8f2ddbe1c61552ab7c666a8b2a8ebac356a580d3edad4687e2b898f6720d999a",
+      "bytes": 5536
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-0.png": {
+      "sha256": "813c690e0269a979dc385174d49aa49fbf52b14888e924b3acb05aece67324f3",
+      "bytes": 14401
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-1.png": {
+      "sha256": "41b8d4ac36210e20798fa5147a448d338895c39c505840e228931d66d6d21a87",
+      "bytes": 14751
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-2.png": {
+      "sha256": "f7f61c627e9f8c9c5ed8fadaf785af68efe1ed6b7342c8c967eece8f80bbcbcd",
+      "bytes": 14872
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-3.png": {
+      "sha256": "79ce382024771b45c17010b5d9cb60fcc02e244dce1694a3f8dec3c5265aa6b9",
+      "bytes": 14537
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-4.png": {
+      "sha256": "4d19dd41b2a71aad454aa7ac50e98893216154efc8a1592483d1690fbed7680a",
+      "bytes": 5690
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-5.png": {
+      "sha256": "6a05c62f838ad5538d32b995bac0d527db208295dd1dcebb6940ebdc51eb2611",
+      "bytes": 5673
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-6.png": {
+      "sha256": "29b615097b58fef23114d45ae89d624b431aa22391ff5b9c122e77502d30808a",
+      "bytes": 5427
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-context-object_ground-3-7.png": {
+      "sha256": "9b8762dd8b3b0929c783f061a8236d824d9e14fadf33aff79e790a2ee77ea4a6",
+      "bytes": 5379
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-0.png": {
+      "sha256": "67afbbe4829794dba7a8436971d8029a99dbee0d22e31b14eaf884c10faf3a7b",
+      "bytes": 4514
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-1.png": {
+      "sha256": "b56ace0bf798e3d6b0d12c6a7ddd95e3b2e1cf1619b63b2b98411f69b9fc46f4",
+      "bytes": 4718
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-2.png": {
+      "sha256": "aab8bc58b429100965c49035fad259329579ea95d30917bba7783f341ebef31d",
+      "bytes": 4624
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-3.png": {
+      "sha256": "a60f494d888bf00036680800046e8abb0e0e6c79ef83ff796fb21cf550f7664d",
+      "bytes": 4513
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-4.png": {
+      "sha256": "d1a0952c02454469a6c3bd88d73aa79c2f5ee657e74f598e40e594ae5ea4f0d3",
+      "bytes": 1725
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-5.png": {
+      "sha256": "9161164edb4303828d4924521bef4082d1b241f565b74579298d55e89b197d42",
+      "bytes": 1748
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-6.png": {
+      "sha256": "7a84d82163406cd6cc4365e6696dc6d711bafefd4463c7fef2f02a9cc87295cc",
+      "bytes": 1809
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-7.png": {
+      "sha256": "59eefa0a02b65563baa8232a8e419be3e1dab6d3f077ba753449e6ecf1171f1b",
+      "bytes": 1834
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_east-native.png": {
+      "sha256": "8f97c431e9ec13cdf3f124e81dce19abc5817a5c7a06b9c3012059b2d89ae093",
+      "bytes": 1030
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-0.png": {
+      "sha256": "16b40787290d0bef71f37fb5c4cd0f81acf88696f94b8d296108ec963b16203b",
+      "bytes": 5067
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-1.png": {
+      "sha256": "ebd24bebc93266b29c50d6aa44af241298034279c34f32c7150577a0c9368b35",
+      "bytes": 5386
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-2.png": {
+      "sha256": "582bf1845606f83fac1b29b158b6b106e24018733a227d094f54a403b3d6e9ce",
+      "bytes": 5234
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-3.png": {
+      "sha256": "105c6ba7e626f43b30754ebf222b285c88af4d538e355019bbd8d69f054e1e57",
+      "bytes": 4929
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-4.png": {
+      "sha256": "aa6b4e35bda1ade588ec34dee21b8254398a91f3e902bcde0a02c06479464f3f",
+      "bytes": 2003
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-5.png": {
+      "sha256": "d27478aef23cfb09a13ef972d39b5ba6eb168bb22b198fdf9899f6f860527214",
+      "bytes": 2122
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-6.png": {
+      "sha256": "5d31b9a8c7046593520d3b94ac83bd812ef0a7eee82aa7b8bbd8e1e5ea975852",
+      "bytes": 1742
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-7.png": {
+      "sha256": "bcd3e14e55ddb48d3b0abd775c78ec7a90efe569e26482891560d20de796fe8a",
+      "bytes": 2285
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_north-native.png": {
+      "sha256": "5f92ee154a8b4bb75772534d65217b91a6e6d4f7f5990940add8823cd3cf8269",
+      "bytes": 1160
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-0.png": {
+      "sha256": "bb1d975c774682f60e4b86f094e3dda5aab4031d2d2e1b845e7289321f9ca729",
+      "bytes": 4386
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-1.png": {
+      "sha256": "b56e00d86fea8b010ac8e2783c695ea386d98c4100f61d44633bff96c951bc1c",
+      "bytes": 4451
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-2.png": {
+      "sha256": "87372b557766a75c72734dc43098344588016aac1df2a9d77f8139f1b2b6cc3e",
+      "bytes": 4490
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-3.png": {
+      "sha256": "021261702c205233828458ce17a2e16a4165e7b990fb8d686df3430cbb110575",
+      "bytes": 4425
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-4.png": {
+      "sha256": "f9a08d6f377b11f107ef827a27b447cefd23ce2d32fb1c432da0829e03147fae",
+      "bytes": 1738
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-5.png": {
+      "sha256": "6ec4b4e6d011fca455525fc361b5f5f26bd8a773730424e817d2033a3cfddb1a",
+      "bytes": 1787
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-6.png": {
+      "sha256": "26c07bd4559182f881496102e7c3bfccba0efd13b296e9bdfd04caeef77caff5",
+      "bytes": 1692
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-7.png": {
+      "sha256": "af0639b5791984a15e7f521fe48b30bbb001d6e223a870bc04ae4eb7f7ccf238",
+      "bytes": 1734
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_south-native.png": {
+      "sha256": "cfe466b4baae7dacfe762e7a50278384a3c2c6383c68dd40a2f6d84bd6e9e72f",
+      "bytes": 1006
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-0.png": {
+      "sha256": "15886e94ab2687297e48f027870d9ba5b9dae125363177eaf7f07e22b83343b9",
+      "bytes": 4441
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-1.png": {
+      "sha256": "e23accb578d4d47a74fe70a55c9d2f4e4a7e59dc53c3e19d4561db6f34ae765c",
+      "bytes": 4333
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-2.png": {
+      "sha256": "fcf302ff85499800cc147488b19fa5102e37453c59f1c72685865cdb1bc7f113",
+      "bytes": 4480
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-3.png": {
+      "sha256": "13fd4a40f1a53042cce5d69b43acb654c7a69637f102adf1615750d705cd230a",
+      "bytes": 4498
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-4.png": {
+      "sha256": "97cd0f06bf1ecde5490a87c5279d15ec8271db550611aab11cd7cd84593bab6f",
+      "bytes": 1694
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-5.png": {
+      "sha256": "920a3b1e60e7680a30202a1b3bff1cffde83d706a14ebd5b4f7251af85ef09dd",
+      "bytes": 1746
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-6.png": {
+      "sha256": "409f176e783838fb2da7f4c93567824fdd825750672756a40e8fdafca170551e",
+      "bytes": 1776
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-7.png": {
+      "sha256": "ff5c196e8df8ab0944bff7ada4b0a312671e03dc48d2de0023eb39c300d6e56a",
+      "bytes": 1762
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_arctic_west-native.png": {
+      "sha256": "06ca81cac6f4ac040fdaa165734565a2cb57de9e7e87dbffc2f40ab885033c66",
+      "bytes": 965
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-0.png": {
+      "sha256": "68821999986df3a3136ce7ffb34fbab60e625cd1e647ef528def5db597aa25bf",
+      "bytes": 4411
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-1.png": {
+      "sha256": "b131bc6bb93f0caaba989cc86a03a2eef67bb4f59b492b1f5b6ceda5daf5e2f6",
+      "bytes": 4679
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-2.png": {
+      "sha256": "7ccb78947f19fb4a7c56df889d308d47cc7b70f59b896547c19f067fab948b02",
+      "bytes": 4608
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-3.png": {
+      "sha256": "50d824d9dd901dc60e16f2f01970fa28b1b5159a081837b7b00910706f67f8e2",
+      "bytes": 4427
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-4.png": {
+      "sha256": "e254c48eb009400f85136998798d511df0b6c281f2f980118fcc4c98adb76487",
+      "bytes": 1738
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-5.png": {
+      "sha256": "5dfaab9f055ef04bb77ebe3778208beba7c1375cd0d834caa773a9db09f7b497",
+      "bytes": 1757
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-6.png": {
+      "sha256": "cef79f134e43b589595231ded9e4f720b341e2c0fbf01895b2afdd898a1c664b",
+      "bytes": 1793
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-7.png": {
+      "sha256": "4e68290e2aea43b888bbddb771c1b335b793c9d8b0a9c50071b7f495cda18a43",
+      "bytes": 1805
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_east-native.png": {
+      "sha256": "46d797876c34e1e980dcffd1b41b6214916fb576f1cb978d7a35ccb4bc8462a6",
+      "bytes": 972
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-0.png": {
+      "sha256": "5ab8a4e9dd3c2eb37a3188c930da5f1526939c0d9bc8513db891e2d3e8752eac",
+      "bytes": 5045
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-1.png": {
+      "sha256": "1df7d3e72e7caa042fbce0decd513292bd751185edd703b35fed6248ea5453c3",
+      "bytes": 5370
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-2.png": {
+      "sha256": "8fa299f16d6a615ec8f1cc5cbd40e191d137a6873717dd0fc1319639e1b9265c",
+      "bytes": 5229
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-3.png": {
+      "sha256": "0c27be0755d078b0a5826eab91ba522af50f48ceb95add506a074d83e6502a3d",
+      "bytes": 4912
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-4.png": {
+      "sha256": "79c0db39334f31252805733715ef90869c53416584cf43f21047b798064c4e91",
+      "bytes": 2012
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-5.png": {
+      "sha256": "369dc32167cd14ebe6f0e06b5ebfca1a275f9f82128e5b952a9fa870774f4c06",
+      "bytes": 2105
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-6.png": {
+      "sha256": "2a39ddb76e8d84507c492b2b2faa0d52a548388c59ca9403474abbeeea078e3b",
+      "bytes": 1723
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-7.png": {
+      "sha256": "a28bbba741887b38f72484562476df902fc86954ad17a91bd6588924c44859a9",
+      "bytes": 2282
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_north-native.png": {
+      "sha256": "c430c7db9b8e0d9b52b45d5a433a1ae48d0beee5c9235088538bb4807d5a92ca",
+      "bytes": 1156
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-0.png": {
+      "sha256": "9d9f0ef5b2a6515c4708317b40868c43a26a109c7ec47209ffdb4b027738fac8",
+      "bytes": 4231
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-1.png": {
+      "sha256": "a4eb6f082581980632465aa7bc9373af72798b7b51ac0014bd721df8b8f39ebc",
+      "bytes": 4423
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-2.png": {
+      "sha256": "ff7760b38177e9323ed4b58f5d1e1b28eeac1e22fb774a6a9d826c6ee312b932",
+      "bytes": 4524
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-3.png": {
+      "sha256": "7488c60ad9434330f59ed2ec927fad610e2bfef14b4f2acef91b73435dc25f70",
+      "bytes": 4346
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-4.png": {
+      "sha256": "e909d9fa881d9aab8ff3cf459f27dec92177041d23205731d07d8b907104cf5b",
+      "bytes": 1745
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-5.png": {
+      "sha256": "602cd6eb1bccc1b7141501d7efabebf7f23e4965e3e64a999c60d4a4bce240d0",
+      "bytes": 1793
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-6.png": {
+      "sha256": "3c1d85ebc45b2cf6a27c1986142a562a4be456a1adea2244751aed33de9b687e",
+      "bytes": 1669
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-7.png": {
+      "sha256": "fb31153eac3b8b04956517a4d8f9ef5db3af7f02b84bb272f6c4e5b6171f2baf",
+      "bytes": 1708
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_south-native.png": {
+      "sha256": "99b30a437e68802d40d9817e8c81fc16969c177e05758d9e2a533687844a7484",
+      "bytes": 937
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-0.png": {
+      "sha256": "3eafd12f1cbd9ca21b896c7c9814729eea102f096b21e8eedeb60eb9314a6fcc",
+      "bytes": 4346
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-1.png": {
+      "sha256": "d36b4a93f8043f7a475a1582c04916ec8a4f2b5bec48d19b9fcf8098cdaac739",
+      "bytes": 4319
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-2.png": {
+      "sha256": "0e32ca6811950a6ee8f010feca164bfa627882ca293f8c9ee0445cea60ad7dfc",
+      "bytes": 4478
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-3.png": {
+      "sha256": "1755474ba19d604fed474b1f20d8dcf988e2ab91b80dd654af64043d129785fe",
+      "bytes": 4478
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-4.png": {
+      "sha256": "1bf7903b9ae683fa333439ef1730ac310a03224b5ff1493ea908d51c5eb41540",
+      "bytes": 1695
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-5.png": {
+      "sha256": "30e99f82c4a0c81009d317ac78bf1646e9de7dfa8dfb92fb8bd7afbd79fb2717",
+      "bytes": 1748
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-6.png": {
+      "sha256": "e5a3ed7d0d4e87774314c54547aa634b5f0ee906a5ae83839b71fb2939ce52fc",
+      "bytes": 1752
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-7.png": {
+      "sha256": "a09df9d81df55280e9f76152dbabb10b8eb88146b00a8af2a66244081222c852",
+      "bytes": 1730
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_temperate_west-native.png": {
+      "sha256": "bb674a4c5adb9ae7c610256023126f9dbb7a5f687ae6489fc4b1c6d2eaf1338b",
+      "bytes": 958
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-0.png": {
+      "sha256": "e5f69503d4cb15416ba9b3e276e32c587525fc8a63a43ea1717d48c80424b866",
+      "bytes": 2908
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-1.png": {
+      "sha256": "1c680450272419aec4b481519cad035b915d574613bf50926919d92f56c38f9d",
+      "bytes": 3094
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-2.png": {
+      "sha256": "d0c2e481d651a64aa1378372109f3559bfa9f2ac20a40aebb9a4e05953776d53",
+      "bytes": 3097
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-3.png": {
+      "sha256": "8cca1e803a9369aa3b221ae74d24ba410a7622b0379718f8c6ada979661f3cb4",
+      "bytes": 2836
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-4.png": {
+      "sha256": "ef50692ba13efb1e8d987c2b7f7598211a5dd84fe03de570c884c6a152f00e31",
+      "bytes": 1607
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-5.png": {
+      "sha256": "72f2b0e75ab2397bc478d180803b68ccd3e89b6d86c3417829d7857fe8b46855",
+      "bytes": 1463
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-6.png": {
+      "sha256": "11c198db5d9f557d921ed559b0dbc39b061be6be5d0ddccfe7021820f3408b54",
+      "bytes": 1475
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-7.png": {
+      "sha256": "bb7be321fd010116ba51ea6d8a4d32898abfcf9b27a55e9e2d41a3e20f14ea91",
+      "bytes": 1603
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_east-native.png": {
+      "sha256": "34d36513de802c1db3f843c6fd929d22fe5fac4c32afe394366cf314602f8ec8",
+      "bytes": 759
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-0.png": {
+      "sha256": "877651b24f84ade34fdfd1e7669cabae028afea96d7af27034b3dcfc1f7fa1d6",
+      "bytes": 3727
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-1.png": {
+      "sha256": "7cb4f3734ab8834a09a17bb2720855113811c6ab3f77a0460372dd89cf26bd9f",
+      "bytes": 3988
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-2.png": {
+      "sha256": "b065d48964dc2ad584d7f20169794310696ccc7dcdf4cf655432dbb182466eea",
+      "bytes": 3666
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-3.png": {
+      "sha256": "ab5b534d079073bc16fd3ad069ad221cbf34957b3eea54a7d4bf75705b6abec7",
+      "bytes": 4172
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-4.png": {
+      "sha256": "cf6ffccb4734ea61bc61503a0f7b40a8952b006ce9addf86232cd652607680b9",
+      "bytes": 1700
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-5.png": {
+      "sha256": "a90464d2436d0d5c41b0da47b9e11aff42b7c240724d6d1bf2b97f40d8cd9a71",
+      "bytes": 1809
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-6.png": {
+      "sha256": "30eb91321978e3815ca632fe3f016105ad3ff4b8565d88ae45bd6a4116717120",
+      "bytes": 2181
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-7.png": {
+      "sha256": "e0332b11af9e1caa89a85a0c55c8b1d073c21518ce593cd7acfd076d7bcbe50b",
+      "bytes": 2025
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-native.json": {
+      "sha256": "6ada06d8d7e333d252ae63f98bee7d12812fec79f5a7f9314bd186fe2f5119c1",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_north-native.png": {
+      "sha256": "021c9305b8f18c39f472b4da1e53cc2e32962c82a248031f240cc46af1265931",
+      "bytes": 1045
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-0.png": {
+      "sha256": "7404f34fdc71edc14ebf7428aabfe18335d1e578bcf983f6a1ea46a43744449c",
+      "bytes": 2810
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-1.png": {
+      "sha256": "b20919af82ecbd715aefdf6124b9dbb7d6e377ff5fa40fc4ae7708132ce84cb2",
+      "bytes": 2830
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-2.png": {
+      "sha256": "befbfdc169ce56af5844fc59565a3a46ae86df588698b8a7a1fa214d9a7628eb",
+      "bytes": 2848
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-3.png": {
+      "sha256": "115951731f2e89034c265b04e89239ea8d2fc994d019e18e0367f4279cc02c85",
+      "bytes": 2832
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-4.png": {
+      "sha256": "3274d7f898f3e847c1134822c670bf699da196ce4dc5e1a8ba246aa732a967ec",
+      "bytes": 1514
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-5.png": {
+      "sha256": "31762cb961238944850d93514909d17cfcbe68272f15eaad95d618067e427d5e",
+      "bytes": 1479
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-6.png": {
+      "sha256": "3e74c8fe14972ba8fd70796025e697dfa8c87e88ae8eaaa9ef62149706f950e5",
+      "bytes": 1482
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-7.png": {
+      "sha256": "28151ed854ac0eb79d8c712bce5fe5117601a12113c47db0c6f2911c374cb1e0",
+      "bytes": 1460
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_south-native.png": {
+      "sha256": "ed8ac97028f0cb1ee77ab05f14968dbba51b40729ad66ae7176640a0fc90a4f8",
+      "bytes": 726
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-0.png": {
+      "sha256": "7020721101a5ce8c32bd40161e28036bb1ffcc3b97cf3035188a7bdac19c94ee",
+      "bytes": 2709
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-1.png": {
+      "sha256": "0aea7a686c2cf46c14cc0b54e092610c49536928775b9e047ab848cd54ef46f5",
+      "bytes": 2684
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-2.png": {
+      "sha256": "dff08ffcd09b20d8ed8c8f6946934d5f80b4fec0cc3a8324377726fd83171b64",
+      "bytes": 2803
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-3.png": {
+      "sha256": "ae07ef344412a9bc3e982503a989c22188e3eaa1bd9a30632ed96eaca57b2cf2",
+      "bytes": 2712
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-4.png": {
+      "sha256": "8a87d87b6954e56c7a6409d583cce0a4b5b7b84d742101aa93cd14b3e390a6eb",
+      "bytes": 1385
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-5.png": {
+      "sha256": "d03060b9c55c73beccb9e889852a9f7f50274db6c9372a45bae5ae69b1050a3d",
+      "bytes": 1411
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-6.png": {
+      "sha256": "7a526802e7d26c73475331cc71516075d9c83b49441f6292edec99785bef9012",
+      "bytes": 1539
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-7.png": {
+      "sha256": "74ed20c201bf8a8c4ef328a3bc9e0488f2920ab27030cdbfc359495ae4cfecc9",
+      "bytes": 1458
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_toyland_west-native.png": {
+      "sha256": "cf8abb2cf4d3863cd16e4da36a8e9d79000cdb059eb7347e906ce11c42e942e7",
+      "bytes": 702
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-0.png": {
+      "sha256": "41ef65c13cf192ab1916ce78f9d8696da3cdd074ea74f3e2933240327134abe7",
+      "bytes": 4477
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-1.png": {
+      "sha256": "cb31c22746cd9d099443195e112cf1466e675761150dd2b277e397003af5caa1",
+      "bytes": 4738
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-2.png": {
+      "sha256": "2e7fe0674adcfd1fc882bf3e4671922673b96ce12be6f6576e9549ea8fd5440c",
+      "bytes": 4643
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-3.png": {
+      "sha256": "d544bd239d050f8ee6da0d3bba84091c9950d520980a76c2b5228f63804cd80b",
+      "bytes": 4476
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-4.png": {
+      "sha256": "709402dd36be7e333b1fd4fd1d1dca72fa1dc2d8bc345d41183bd1b48f3a4409",
+      "bytes": 1732
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-5.png": {
+      "sha256": "01bfc05e1188a2317accf584957051c4ee0ea70083ef4f2842d6876bf055307f",
+      "bytes": 1761
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-6.png": {
+      "sha256": "139d947722929573dfdae2555129c94e42019f4e92cf55915ca99db04767f309",
+      "bytes": 1775
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-7.png": {
+      "sha256": "60d0fc4dbea4d34b27c16fff5a176c4803e6a19b7a5b2d956baf7609c34a76eb",
+      "bytes": 1829
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_east-native.png": {
+      "sha256": "406a5855cc4c4c2c229e817cf9eaf0ee4943abcdebeac705c63abfe336c3fc44",
+      "bytes": 985
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-0.png": {
+      "sha256": "46dbc4ae24e65015cfafda69e3b3abc23fe19bf53c795bb8f65164f33529faa5",
+      "bytes": 5046
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-1.png": {
+      "sha256": "1496fd58a1f69aada125b8628032199a2c2ada8f8858dc58b3ee306dd459111e",
+      "bytes": 5431
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-2.png": {
+      "sha256": "337460b25dd5aa813fa444ab0c459f6e304e0f24619752fa7774f1d0195aca50",
+      "bytes": 5284
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-3.png": {
+      "sha256": "cadff3d019bff3df10ec0260b6f17a4c0eb4973b2a609d5eed0a597c0e83b26d",
+      "bytes": 4970
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-4.png": {
+      "sha256": "886f03f8846472d8b628e952d77b75cb6b584266dd134a4b28e0d78365577c1c",
+      "bytes": 2022
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-5.png": {
+      "sha256": "7672060a9e27a7054a98155c6fab37bd402ab1e4cc4c5b672c3075756ecf6d17",
+      "bytes": 2106
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-6.png": {
+      "sha256": "d4b0a979d00fba77644f39cba121d67225e87376490411730e2b9c7dcb073c36",
+      "bytes": 1715
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-7.png": {
+      "sha256": "5d4e329c30f7a6be186780577b0aa51a6a520915265fcf090ebbf34a467a8270",
+      "bytes": 2279
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_north-native.png": {
+      "sha256": "4dbe84ddc8f97c9b59ddc6d43b1b8132ad814f46c253a90a98fc8ec4173d8310",
+      "bytes": 1175
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-0.png": {
+      "sha256": "187086d5d6782b1c3f999ff291fe1ce754484aeb0a3d782c0ada395be121d50a",
+      "bytes": 4363
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-1.png": {
+      "sha256": "66537733a53f8bbbb226c822dd86975b2fc438828c374cc62d6cc135277502a5",
+      "bytes": 4485
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-2.png": {
+      "sha256": "5ca419d182feb6d36599bf613d138ac1053fc0b7b6594b7fcc46afdf92be0a94",
+      "bytes": 4512
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-3.png": {
+      "sha256": "95a13b1b135aa06ad6d7ea5c95ccfd206d6ccd77ed30d4e50241838d43e45ce3",
+      "bytes": 4381
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-4.png": {
+      "sha256": "ec16d65a3788fbdf3530dd3e0239b7348e35580972357436d8db22f36d9813e1",
+      "bytes": 1750
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-5.png": {
+      "sha256": "7763dda23047c3584f2d50471f7c371f361f092cd92d32c7f3e6f1b468cddd9f",
+      "bytes": 1792
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-6.png": {
+      "sha256": "531194069a8d01bcd656956bf8574c944af1af0ababd7b0d0696bcaa97c05dff",
+      "bytes": 1665
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-7.png": {
+      "sha256": "b7ea76e782675b9f41ba072fc7c56b62d036710c46885a913b68cbeea231b10a",
+      "bytes": 1739
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_south-native.png": {
+      "sha256": "f0ec339c5c7f2790da3cd0961125b618ec508c565f373b72192ac26fb5b679d4",
+      "bytes": 984
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-0.png": {
+      "sha256": "a4af6368d628ffa9972b594513a069e56b46c71c0305f8880a5dbae69e787b5f",
+      "bytes": 4462
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-1.png": {
+      "sha256": "e3c3db3062c6cb846b534c9f94d9958f0e1cf33b60dbca4220a1675f708be04e",
+      "bytes": 4418
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-2.png": {
+      "sha256": "948e9cadc53c14063e6f894430f4d7a04e3249e835232999acc91433d443b48c",
+      "bytes": 4481
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-3.png": {
+      "sha256": "97cb0bff94e58c9a0d69305783433389bfb72416227d3a7d95454853f5a45cd2",
+      "bytes": 4498
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-4.png": {
+      "sha256": "cc75064fbac4c0628fb20061bbc6a560429a80a792016ed0bc8f2a4b137d2961",
+      "bytes": 1704
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-5.png": {
+      "sha256": "dfcb1ff6aac5833ec034f3ea7a118f2c229205618119c72048ad39b7f39f5626",
+      "bytes": 1753
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-6.png": {
+      "sha256": "fcfa0fe3a85d70af978b96fde1c0c8cdb60acbc34538f5b7e6eed65574571ed9",
+      "bytes": 1750
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-7.png": {
+      "sha256": "f8eab0dfd038ead12e4b603e3e997dfbbeae8d30ef8605ae15fa53a7b3871987",
+      "bytes": 1765
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-native.json": {
+      "sha256": "aec90d577f64e07582ef61f48363673bda401e99646d21e487756dc98115e73c",
+      "bytes": 80
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-hq_ground_tiny_tropic_west-native.png": {
+      "sha256": "caac11da568c3da26c341ef3e09aca1ca1df3ca655a995d6d6f1485461388ae9",
+      "bytes": 973
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-0.png": {
+      "sha256": "bf55fdef92988b3fdd00856c88804d95ca84165abe0c6e848dd8a8740e8ac38d",
+      "bytes": 8504
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-1.png": {
+      "sha256": "47a99cbbb2e116263576c707c0b3df834797a0b3a78c890208346f4224b4bbe4",
+      "bytes": 8525
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-2.png": {
+      "sha256": "d837e88ddd93e5ce5f11342f3f3b27830da3a4c417de5789b8ed799952b628cd",
+      "bytes": 8541
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-3.png": {
+      "sha256": "8922e6cff3e6ab352719ae4ac0b9bef975d19bbe10ad605518b68099661d68b7",
+      "bytes": 8487
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-4.png": {
+      "sha256": "0ae4aabc36ddd5d725039626a0daa6418f7f1f44c9d1fbb8e89289bf73eb8260",
+      "bytes": 2061
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-5.png": {
+      "sha256": "572ea7b090325a286b375284b62f5e2f5a4f76fa6825657e0d21c5195fb23fbf",
+      "bytes": 2129
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-6.png": {
+      "sha256": "000e6ef9a84fe19443fa90a4a0f1b3014c8cb7d44bf722060f78ce7fc855b20e",
+      "bytes": 1966
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-7.png": {
+      "sha256": "9c1b6a4319718b4183f4cf44a96db0575164df038336b1d768a4db203735f061",
+      "bytes": 2026
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-native.json": {
+      "sha256": "99f977953d7124de48a2dc215f8c3bd8bc05d381c4e20e1a94352d33722253bc",
+      "bytes": 81
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-voxel-object-4-0-native.png": {
+      "sha256": "40a8fd7e7b2b75d4f19e4b124763e8569f6658b7ffc452bf2c3e1e8cde712300",
+      "bytes": 2444
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-world-atlas-0.png": {
+      "sha256": "25fccae5c2ef52a09cf926107b75b413005f000bff14022eb3dcdb6f6958a65c",
+      "bytes": 78261
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-world-atlas-1.png": {
+      "sha256": "25fccae5c2ef52a09cf926107b75b413005f000bff14022eb3dcdb6f6958a65c",
+      "bytes": 78261
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-world-atlas-2.png": {
+      "sha256": "25fccae5c2ef52a09cf926107b75b413005f000bff14022eb3dcdb6f6958a65c",
+      "bytes": 78261
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/model-world-atlas-3.png": {
+      "sha256": "25fccae5c2ef52a09cf926107b75b413005f000bff14022eb3dcdb6f6958a65c",
+      "bytes": 78261
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-0-0-0-body-0.png": {
+      "sha256": "7362fee11a45c7505986821c0edeb14e4c5c370b2696958142d5fe6a5b7570de",
+      "bytes": 1317
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-0-0-0-ground.png": {
+      "sha256": "3d866eec21b9bb87493727d62521f4a9b2e2176408d5f1ef281977263995b529",
+      "bytes": 1873
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-1-0-0-body-0.png": {
+      "sha256": "a62d63e1ea43a7eb518718188d7ee45ee48bae44679726f884403b8115a4bcb3",
+      "bytes": 1628
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-1-0-0-ground.png": {
+      "sha256": "3d866eec21b9bb87493727d62521f4a9b2e2176408d5f1ef281977263995b529",
+      "bytes": 1873
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-2-0-0-body-0.png": {
+      "sha256": "e0825e363f26c3548c99741d487d20ee9141287115f55b5297b450799c12b98c",
+      "bytes": 1390
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-2-0-0-ground.png": {
+      "sha256": "935de80c09da0402482d07d9057074180888376747af8c8998006784dadb3f2c",
+      "bytes": 1296
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-3-0-0-body-0.png": {
+      "sha256": "f891955fa45fd7c8c70763efbcbafaab144ac18b8a1337ff0138c7e3f213a38d",
+      "bytes": 307
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-3-0-0-ground.png": {
+      "sha256": "06d160d4fbfa546387b56b40a406ea43b822ede0c35c941bc0d78a438f25c26b",
+      "bytes": 1433
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-0-0-ground.png": {
+      "sha256": "a82b981690b2a96d2f0f9460bb3e1509ca4ad7613ef7d69babfccd6d35af6aea",
+      "bytes": 1883
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-0-1-ground.png": {
+      "sha256": "d8b2a1c9190efa0e6e47953611e6106c56dd306f6aff2eb1c633b9c079bfa66d",
+      "bytes": 1991
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-0-2-ground.png": {
+      "sha256": "4b26d086df04e4b9046e35c15fb3f44e09b8a120ae03cac674eb780444ae5168",
+      "bytes": 2129
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-0-3-ground.png": {
+      "sha256": "0d1b50949b0ac10c5b348f07ac343d43f8cd922900b4751be2eb2d329ff1e940",
+      "bytes": 1973
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-1-0-ground.png": {
+      "sha256": "1e9155aefc609d6bde58a8fe11dc51bbd8ffac32cf9b300b6e1a8a3161ac97bc",
+      "bytes": 2030
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-1-1-ground.png": {
+      "sha256": "0c08bd54b3ca8eac6755c9d93265188e4bcbfd82a7a2be51dfd43c3ce3ca2662",
+      "bytes": 2059
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-1-2-ground.png": {
+      "sha256": "709c90cb19f1b5aed7be6a2dbbc70939daa6a0cd0233caa36b8dd3573f6ab28c",
+      "bytes": 2125
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-1-3-ground.png": {
+      "sha256": "d85c4fd1784ceb0bef04e06d83f59fa97a61054cb660c2ff0b7e2d4af570fd4b",
+      "bytes": 1941
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-0-body-0.png": {
+      "sha256": "6a3081bd3ff5548214fdb6e83680bffab8331407e44053ab3d97c6662ac6cd7d",
+      "bytes": 199
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-0-ground.png": {
+      "sha256": "229937d4b4fa5dd53ca8fa34976534d56c2e94075ce97cbf03c9f141273755f7",
+      "bytes": 1814
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-1-body-0.png": {
+      "sha256": "40beb927aa009f3cd42d02673998c61720bd472b71190ab96ca2f1d7c498938e",
+      "bytes": 195
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-1-ground.png": {
+      "sha256": "3819270514e5da885d779d60883a19ecc00affffb5a068ebe677c9488e41b2a0",
+      "bytes": 1787
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-2-body-0.png": {
+      "sha256": "b4f89fd14c0410d854b673948d4548a67b9182bb1347a07469eeb8b017a86a3c",
+      "bytes": 370
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-2-ground.png": {
+      "sha256": "dd7c6ac02c350e4f67bb3785fa3dc7885b1c96b960ca1f3618cb96dc251b9dd3",
+      "bytes": 1718
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-2-3-ground.png": {
+      "sha256": "ae3a9eee08534446bfb17588abb6304dbffe06bc1a82ce49b4c489dc3902c634",
+      "bytes": 1861
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-0-body-0.png": {
+      "sha256": "3138a788cae4e367bdbb8419b000627690f124e9d58ebadf0efd9d214b6204f6",
+      "bytes": 1842
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-0-ground.png": {
+      "sha256": "214c46757905ada6218195bae6e3833d02cdd1319085183c1ae1793f987e6083",
+      "bytes": 1973
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-1-body-0.png": {
+      "sha256": "38b7efd6e540aad8ac6f891fd791dc85b311834ce9ec14126ec9fd7e1c013e1c",
+      "bytes": 459
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-1-ground.png": {
+      "sha256": "470006ced128b8b1362e2edb8442d560ddf1181baec2364278b014cd4ed171a2",
+      "bytes": 1655
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-2-body-0.png": {
+      "sha256": "aa62fe7f46f955a6361aa20efb69692e8ffd334e3eca5c65386c8bce64257cfd",
+      "bytes": 664
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-2-ground.png": {
+      "sha256": "d29789c49bf898d8c20e5d0348db190c408ab6a85dc5dd91ed585f4671d2b335",
+      "bytes": 1687
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-3-3-ground.png": {
+      "sha256": "3080821c457b70bb116132623882264584546f3f0f27e6f95275997a06b83033",
+      "bytes": 1246
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-0-body-0.png": {
+      "sha256": "802858a065edba5b426f358e1131653087fdfc3a5da2562204e6847eaf870f30",
+      "bytes": 2545
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-0-ground.png": {
+      "sha256": "1e3a2ca5eea159633f29beb17add825ce8a4ccbd5c7958d8932f7a9b0c6cc14b",
+      "bytes": 1692
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-1-body-0.png": {
+      "sha256": "81dcc072f3727ba863d0c0755eaeafc555e3b94a4264a2b1104f1c4791afcab4",
+      "bytes": 1234
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-1-ground.png": {
+      "sha256": "51eaf3b8796184b07225969e062d87bf0cac0cc23ed8a8b212c11408359dad6b",
+      "bytes": 1654
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-2-body-0.png": {
+      "sha256": "df7166a3e681ec8da4dda2e6ae1d7cf65d6b617a1ba45f488383fe393b29e01a",
+      "bytes": 499
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-2-ground.png": {
+      "sha256": "a5ce8aab1ea4a6a7d1c821acbeda8f510c243f3f46bb0f57b034b8d0259dc0dc",
+      "bytes": 1776
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/object-4-4-3-ground.png": {
+      "sha256": "99dd20848a7cc96ed563cdde2e77806c18d2936836d1c3ad7cafa8a6d005eeb7",
+      "bytes": 1556
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/objects.json": {
+      "sha256": "2a4a1e99884270caf5ccd7498f5bfa7b63ecb2fb50319af9eb8d44b26d05121e",
+      "bytes": 29489
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/renderer3d-reference/voxel-object-layouts.json": {
+      "sha256": "8c0dd36e6f310d02990c751e07ef4d53270063f5c782d61808664f098ba8ea20",
+      "bytes": 1091
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/result.json": {
+      "sha256": "a4414b63bae3eca649fae37f544757d068b21bed7c9ee755c71699c8b74b3530",
+      "bytes": 1220
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/run.log": {
+      "sha256": "37874799dbebc75977273acfa7b745c4fc6b455dcfa75c839c0ce24ab01bf090",
+      "bytes": 20517
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/save/smoke-state.sav": {
+      "sha256": "548b25b5b2351fecb8a87f1fca7f3741e89d6ab62faf7aa885ef7ecac5e8dc9c",
+      "bytes": 23840
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/screenshot/smoke.png": {
+      "sha256": "aae311d066e1bcbe5c1b895f4d25578d43e0dc3364223214f3d218fd80fc019c",
+      "bytes": 60845
+    },
+    "incomplete-native-preview/playable-release43-independent-temperate-vulkan/scripts/game_start.scr": {
+      "sha256": "13407320825afe05779e03074225c59c12f87a80ecc36d8a017aafe105a2cb03",
+      "bytes": 1342
+    },
+    "incomplete-native-preview/retention.json": {
+      "sha256": "22061fb0606f68b9d30edb3887a374fdfd9354dcc679767227b81fe142b0e79f",
+      "bytes": 2385
+    },
+    "incomplete-native-preview/strict-comparisons/complete-original-object-sources.json": {
+      "sha256": "e448bf0d053f8d27c78027e964f931ea32a2c0807d28281e78d9233d58232765",
+      "bytes": 1105
+    },
+    "incomplete-native-preview/strict-comparisons/tiny-ground-gallery.json": {
+      "sha256": "bc4414e824552adb1bd45d503c86df958b176018465b2bc123b1eccb3502e1f8",
+      "bytes": 458
+    },
+    "independent-codesign-before.log": {
+      "sha256": "9afaeac1540f0f7861dae5a03e9890ce0d0a52ed70b4536ce2c17c031e7df0d9",
+      "bytes": 2059
+    },
+    "independent-native-runs.json": {
+      "sha256": "29a3a8c34b93ace2074c9ea40eb646305ba70e818248a950f99a48d46b7736cb",
+      "bytes": 1737
+    },
+    "independent-package-runs.json": {
+      "sha256": "218f602eb45b78db01de771c5fe77fcf8cf71fb8b980c95d15feb142d5fadf64",
+      "bytes": 1059
+    },
+    "independent-release-pipeline.log": {
+      "sha256": "f37e0909320ae874681dff9545cf67f8e67ffe896de48678625149c723e1099a",
+      "bytes": 1786
+    },
+    "independent-runtime.py": {
+      "sha256": "a8db59d72cd9601572ffc2ff310d89e7c94202cef1cf75c264b20bd6f24c3d4d",
+      "bytes": 12039
+    },
+    "initial-harness-tests.log": {
+      "sha256": "178e3e28c47efaa36e1ee709a953d49f4387738d33ad36fc8792a7311df9ed78",
+      "bytes": 630
+    },
+    "initial-mixed-asset-tests.log": {
+      "sha256": "9c8b55d652d278a76f8e678c97e4605f123542bf1a6b4aa6cde1b5772f1d82f9",
+      "bytes": 377
+    },
+    "initial-native-build-log-retention.json": {
+      "sha256": "dbc65b00f6dfec47318d537fa7bfffadd664793051c44b265a70732975c3ef71",
+      "bytes": 581
+    },
+    "initial-native-build.log.gz": {
+      "sha256": "b58d9c2f403a7a0d36619d9c5678c959d312f0b9c245cfdb73c52cc9a49d773d",
+      "bytes": 13207
+    },
+    "initial-release43-draft.json": {
+      "sha256": "e52a575845e5288d302377d96694ea806cd769cd1dd8e4b1b4a4103c41a90782",
+      "bytes": 4019
+    },
+    "initial-release44-recovery-draft.json": {
+      "sha256": "dc9345cc63c984d2ffc9f993ea968dee9e3ebe73f04eccfaac38ad00f5dcd116",
+      "bytes": 2278
+    },
+    "integrate-reviewed-hq.py": {
+      "sha256": "10e819c20ee7574d9f9e3455a27a10021eb2c5a2ee5dd56efad7f9ddfec33ca3",
+      "bytes": 3590
+    },
+    "packaging-completion-watch.log.gz": {
+      "sha256": "3cfb4d4d4b711256ac8cbf1a36815c3ba7595d150e85f25c9b04a09c77c20963",
+      "bytes": 5058
+    },
+    "playable-catalogue-inventory.json": {
+      "sha256": "7642c0ba6ba8e0f40561fbf67679293d3438f12cb109f0a63f98118503cdad3b",
+      "bytes": 1934957
+    },
+    "playable-catalogue-quality.json": {
+      "sha256": "d885473a6ad690c849a8293a34dba93f41492481db11f7af440ccc2524b8b2b7",
+      "bytes": 2534122
+    },
+    "playable-quality-integration.json": {
+      "sha256": "1b57b07b22d89ff9f85e9a76dc5ecd4884784ea86a0415574f9e9cabc8fe48c5",
+      "bytes": 1417
+    },
+    "playable-quality-integration.log": {
+      "sha256": "98d5c391d426b4beefe51dd775600e3a3328761c9de8fd6421a5a5dcf7b989ef",
+      "bytes": 1335
+    },
+    "playable-release43-independent-package-default.log": {
+      "sha256": "2fe6e8c4a2dff50953ccd09d133c069d969a8de1e6afcd51e2bdd2415b7039b9",
+      "bytes": 163
+    },
+    "playable-release43-independent-package-opengl.log": {
+      "sha256": "2fe6e8c4a2dff50953ccd09d133c069d969a8de1e6afcd51e2bdd2415b7039b9",
+      "bytes": 163
+    },
+    "playable-release43-independent-temperate-vulkan.log": {
+      "sha256": "e453b7e64ce67a84c53ec84b4de6b1e399ff821cddff0b111793eac8a9b21062",
+      "bytes": 281
+    },
+    "playable-required-eight-quality.json": {
+      "sha256": "d885473a6ad690c849a8293a34dba93f41492481db11f7af440ccc2524b8b2b7",
+      "bytes": 2534122
+    },
+    "playable-required-eight.log": {
+      "sha256": "37f2b4b979f86c63cc7eef3ba41931e3498e2a775fac721c2ae0c5e3642d1ee5",
+      "bytes": 213
+    },
+    "pre-integration-MODEL_RATINGS.csv.gz": {
+      "sha256": "a02902a41d7e2caa73cd71f3b3c292d9a0bfd188b21593d97cb19fb153331309",
+      "bytes": 27900
+    },
+    "pre-integration-compile_voxels.py.gz": {
+      "sha256": "ffa17001da1ca0667ba4e5a3b49ea2145417369cb0f8992336e16dce0675ec75",
+      "bytes": 10430
+    },
+    "pre-integration-preservation.json": {
+      "sha256": "7caafcdc684d3b503b056a3380e55859d6b8e65eb152a17a06df91c5535975a0",
+      "bytes": 2924
+    },
+    "pre-integration-quality_reviews.json.gz": {
+      "sha256": "f09e096fc203894803d911b3b463b83ae83e193a7f321fed2e61e88e8025bbeb",
+      "bytes": 12593
+    },
+    "pre-integration-test_hq_complete_voxels.py.gz": {
+      "sha256": "d5b30ff238eb599ba4f540eaa9bcecbbc0ee2028663bdc4722aaf94053511473",
+      "bytes": 4395
+    },
+    "pre-integration-test_hq_ground_voxels.py.gz": {
+      "sha256": "b626985c03c857fcb28ea64cbc8c6284e2b4ac4feec06ed36785243a1bdc3bee",
+      "bytes": 3139
+    },
+    "pre-integration-test_object_voxels.py.gz": {
+      "sha256": "e0e590276792bb4da50ab250564ccfa72de189a9270fe0fc325e4f74253c2387",
+      "bytes": 2587
+    },
+    "pre-integration-test_voxel_owner_planes.py.gz": {
+      "sha256": "b44451724b91dca73f4150b45614e620847677e7611552bb1f57f9bc51bef2db",
+      "bytes": 1334
+    },
+    "pre-integration-voxels.json.gz": {
+      "sha256": "1fdea3598297fb46c38ead9b74902d97d633ba36d66a75870c13de1d0e1e58db",
+      "bytes": 440396
+    },
+    "prior-releases-after-blocked-recovery.json": {
+      "sha256": "58beb1d043ce838283d75a823ed6d2f411a2e6662e5a4309f1840e43cb39a283",
+      "bytes": 411
+    },
+    "prior-releases-before.json": {
+      "sha256": "4b74e11dc073a0dbd8c4f47fa376bf8b890bccb4dade0a9d9b1b9ffc1af92199",
+      "bytes": 34153
+    },
+    "release43-available-ci-artifacts.json": {
+      "sha256": "772e17ecf14f756278e9dbf542f0b437b42c715ee04e6d4d8879f1bb5f22b7d4",
+      "bytes": 6150
+    },
+    "release43-failed-packaging-jobs.json": {
+      "sha256": "15a1331424b60aef44047f1e8700b3b90c6fb6a257342b4c7c566ea1c7b2042a",
+      "bytes": 32652
+    },
+    "release43-failed-packaging-run.json": {
+      "sha256": "27c3aaba2b2cc0a0baa39937e4eed5b5501de497f31e503ee935b443d97b15b8",
+      "bytes": 13658
+    },
+    "release43-packaging-dispatch.json": {
+      "sha256": "93b5ace273724ef01b1dbf4094c4aaf4d02db7ba28e4810709abfae468e78eab",
+      "bytes": 387
+    },
+    "release44-recovery-dispatch.json": {
+      "sha256": "19e8f0afbb97e3252b87127e1f3f6fd7b2890b865ef41bfc7b0faf93ff1a6c74",
+      "bytes": 601
+    },
+    "retain-incomplete-preview.log": {
+      "sha256": "3cf8ae2cc0ea1daa8192b8da48f93180ca241b343c2ab0c6ab30f16fdf8ffe38",
+      "bytes": 914
+    },
+    "retain-native-release-evidence.py": {
+      "sha256": "92da3732dd85153b002d6c5fffa13dc9c91679064bb88d8201c48fe2b48d352e",
+      "bytes": 4212
+    },
+    "retained-interleaved-arctic-query/ai/river-survey/info.nut": {
+      "sha256": "612bb9832696670ff1533493b116beda439ee2b914fb42ceb4f3b11f6716f30e",
+      "bytes": 703
+    },
+    "retained-interleaved-arctic-query/ai/river-survey/main.nut": {
+      "sha256": "87d16ba6c6ec0163fb6d43d865f8bef6e312a33ddc4e3d37be63f4fba4ad78c4",
+      "bytes": 881
+    },
+    "retained-interleaved-arctic-query/command-acknowledgements.json": {
+      "sha256": "e8793fe4d4f80b43de411ba6cc3b55203762522178b1c778635948ad9bc830e2",
+      "bytes": 520
+    },
+    "retained-interleaved-arctic-query/openttd.cfg": {
+      "sha256": "583fa202c248230fd9e908396f44ded1eeab636ca93666697a8f6dd3b5f98c05",
+      "bytes": 446
+    },
+    "retained-interleaved-arctic-query/retention.json": {
+      "sha256": "5f897558ed5d95f035b16f355c9daca91eb738aa7e33832071b4fdd00bc65cc4",
+      "bytes": 1329
+    },
+    "retained-interleaved-arctic-query/run.log": {
+      "sha256": "fe21823ecb330a34a8aad849127f476a60f999e50973bbe92de6dcd45ff0e3bc",
+      "bytes": 120856
+    },
+    "retained-interleaved-arctic-query/save/failed-river-survey.sav": {
+      "sha256": "358198665c61fe6f2a2c10199ae164981bfea21cf28db93d714010ec40c64ee5",
+      "bytes": 31264
+    },
+    "retained-uncompacted-source-assumption.json": {
+      "sha256": "971bbcdf208846bb1a4a87754ba87972022bd2a4e63385921e2412b248be53ee",
+      "bytes": 497
+    },
+    "retained-uncompacted-source-assumption.py.gz": {
+      "sha256": "56c199d1ccf49358fa2b2b68de98ebb16f5c35b77203824442d1062ca48e9b8a",
+      "bytes": 1838
+    },
+    "retained-wrong-manifest-base-all-sealed-evidence-integrity.json.gz": {
+      "sha256": "4c63e4d324c892d5942ba06ea351d6e8b4e8198c61209f90b73c89bffe94bb28",
+      "bytes": 145395
+    },
+    "retained-wrong-manifest-base-all-sealed-evidence-integrity.log.gz": {
+      "sha256": "98bca200bc7ee3cbaa672ac3479b723ee0f456adb3b6d8f3d4a79510451d682a",
+      "bytes": 71775
+    },
+    "retained-wrong-manifest-base.json": {
+      "sha256": "2b78cee6a69a33b0ee89297aeecf6d77ca5cd601b0f239db2a03bb069b13bd47",
+      "bytes": 919
+    },
+    "sealed-integrity-schema-tests.log": {
+      "sha256": "c9a268e2e885af49a334557a301c975fb0c15f7989d96612cb92baea59692ca8",
+      "bytes": 636
+    },
+    "smoke-cow.py": {
+      "sha256": "242b85ad9ce4021a9e7c305bdf7490ed2d5eee09763ae7be10f2cf42148965ee",
+      "bytes": 833
+    },
+    "supplement-bank-terrain-provenance.py": {
+      "sha256": "db1d97ba3ecfb167fd33e58bd4d8a1e9de29a2a9a2c43719eba5da83b55b4690",
+      "bytes": 5556
+    },
+    "terrain-query-harness-tests.log": {
+      "sha256": "dd04b5c97a11a6b658c6a1ba9c82f7338f6f6c11666b575cfd1ed1da3e068b1f",
+      "bytes": 634
+    },
+    "test_sealed_integrity.py": {
+      "sha256": "a566766acb954a3e4b6c8a5623cb8c061b302b7b6396f012ecff165cd2a5bf24",
+      "bytes": 1471
+    },
+    "test_terrain_supplement_bytes.py": {
+      "sha256": "0ae39ded3091c140bb76fe745290f8e491a36ee31a86980393fabc90ed773c5e",
+      "bytes": 2961
+    },
+    "unbound-integration-asset-tests.log": {
+      "sha256": "16ceff9527993fc58b9ecd77c4dd09a9defe72a1381022eabfdff8bd8c0c2249",
+      "bytes": 378
+    },
+    "unbound-integration-build.log": {
+      "sha256": "4ac970d6c68619e6d8602c91e1faa8c85e9dfa66edb7ba7f2694c196e401f85b",
+      "bytes": 996
+    },
+    "verify-publication.py": {
+      "sha256": "c414ea0fc683d26726e6f7d0df188ce4b155b2c3abb4be5f5e5a3c54353dbe2a",
+      "bytes": 7507
+    },
+    "verify-resumption.py": {
+      "sha256": "a393d2c26ab70be1c71868150a3afd70e9745ba37400df71af349382ebc022a8",
+      "bytes": 11057
+    },
+    "verify-sealed-integrity.py": {
+      "sha256": "9b6c781fa5b91bd9a7153247f124d899af78fd5904ffb5371e4ac8cf9109ce1b",
+      "bytes": 4804
+    },
+    "windows-checkout-failure.log.gz": {
+      "sha256": "059bf9634d1147d16584e808a28bebe860d8eb1580c2e33e29e9dee7342a189c",
+      "bytes": 81201
+    }
+  },
+  "quality_approved": false,
+  "publication_accepted": false
+}
