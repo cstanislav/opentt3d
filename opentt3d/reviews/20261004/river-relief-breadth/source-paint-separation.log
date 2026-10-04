@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/separate-source-paint.py", line 83, in <module>
+    main()
+    ~~~~^^
+  File "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/separate-source-paint.py", line 64, in main
+    assert all(ownership.count(owner)%(divisor*divisor) == 0 for owner in (1,2,3))
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

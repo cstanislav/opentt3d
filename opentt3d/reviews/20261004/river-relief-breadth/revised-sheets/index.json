@@ -1,0 +1,818 @@
+[
+  {
+    "model": "river_relief_study_rock_sw",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11264,
+      "climate": 0,
+      "draw_origin": [
+        704,
+        656,
+        0
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 11267,
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "river-selector-source-11267-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 5292,
+      "tile_xy": [
+        44,
+        41
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11267-0-generation3.pam",
+      "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+      "slope_name": "SW"
+    },
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "native_bounds": [
+      -19,
+      3,
+      22,
+      21
+    ],
+    "shared_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_rock_sw.png",
+    "sheet_sha256": "e792b3a5344c964b80cd8de4d01d74e220ad0e6837eaa6d2632c93787a983fe8",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.json": "4fe4276a6dee12e402ebfca6c06d62845d7da1ba795389a2e4d48e25a5d70f37",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.pam": "1ed48fa475cbec1d6d51261cdd686a1fcf7ecd6f2d405c0b8f55f918663f0fe1",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-0.pam": "8bd2ddf3756fe572fed062345bc5fce3cc16bb3d86afc10c43fac95a6edcbdae",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-1.pam": "38a1b3f710de3f2da352e1091d94270ce3172531cf651e575d4527f0f6de739f",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-2.pam": "be3e2bd36ad16b4868ba1203bf46264a28b203f79de3903760a185b35d42c68f",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-3.pam": "496fb48924aac9f426f016c38ab165e5a54b7ca75d82f810bbc80be0767e02d2",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-4.pam": "420f91b2ee6a19a6a1d8bed2898133d2aedeb850b7a3a8f5aaccb5d21ab47119",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-5.pam": "c8135e3bbeef9fe8e2f29d2dfab3477c300927cf1632eed101107c92797b0f53",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-6.pam": "78e03cacdb819aeaa46249a498bf2c33555e105c9df59d1cdfd9d7e9f445916f",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-7.pam": "956a1cf408bba4ff49242395d03d0e088f6e3c4dbc963afa508066d528888ae4"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_rock_se",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        1216,
+        768,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 11270,
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11270-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 6220,
+      "tile_xy": [
+        76,
+        48
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11270-0-generation3.pam",
+      "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+      "slope_name": "SE"
+    },
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "native_bounds": [
+      -22,
+      2,
+      16,
+      22
+    ],
+    "shared_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_rock_se.png",
+    "sheet_sha256": "e9a9aa5a85333286f91837b9e5ad740713c6e70c2e0d3b5d2cb6633deda81e3b",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.json": "f0cee16dcb4d10cbe14eddd5570e6d65f21b002fd401255e46c5e01f70651304",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.pam": "15ca0e613059ed4b2a11a88b6a1b0adaac8e935ee52a4ce5b3e7a256d0d51454",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-0.pam": "90825ba652c9adcad6ada5b05b2399db6c2cba59639712f16c24764d928ff8e8",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-1.pam": "a8c45aca5d55c79e8bac9c55836fbdc2e9cd8eef6c0badd50d0122b9003dfe3b",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-2.pam": "c1461dc4f2410564f957cb8e0fe2bbc2a8ba954206c44d4a9bcd3026da0213aa",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-3.pam": "309952e3caf58c7f7d63c77f477079ccadb6e4e89802951d685f1c96c35fdbe7",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-4.pam": "6f915e910a3a5d226027e4cb2c7c67550e8505f2187033374a99843f294dace9",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-5.pam": "b1d73eea88382d315dc982fa851a0ba8c0aa182b33c259f80b492a39aabf322a",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-6.pam": "c1dc6a5b6994f3f29c5b5805c100e2b086c3bb855512aa949d92d9ffef71bd8d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-7.pam": "fff267d428c5d278cfc223f5bcacff67b08310a53f9aadfe2b8c37142233fcce"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_rock_nw",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        864,
+        432,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 11273,
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11273-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 3510,
+      "tile_xy": [
+        54,
+        27
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11273-0-generation3.pam",
+      "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+      "slope_name": "NW"
+    },
+    "source_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -17,
+      -4,
+      26,
+      27
+    ],
+    "shared_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_rock_nw.png",
+    "sheet_sha256": "3b88d2f6f3c5995880d5c65052388ea97a67bba7066d9892c6c3b5d3e91e4f0a",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.json": "f84c9bc8816790a74be31b5c93bfeeedeab2ab6b717fb2cd005b15ec80454184",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.pam": "58bcd7d8c79fd547b7d07bd1ab06d29fc08eef3607d1be44799fd02ee7753e90",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-0.pam": "fc2bfebcaaecfb4a3dcac1bc10ef5a50a4d25d2f79524934f330307269b4324e",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-1.pam": "d2572c9f9bd206fbc41021ff7f27cd6e76d019839810e18231fba178816d9191",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-2.pam": "c4148b969127a36012cff506b1e4319c944d5ed6bcbbcbe573543a4bc27b1a6c",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-3.pam": "0ad1b26968ffb42f5bd300b7eb43ebe27291e069d965c3eff9d794ca33dd5e30",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-4.pam": "c9f02889c014cd741c7d288e279596f3428863ac539499cd4124aa6d27f722dc",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-5.pam": "88c11564c4abe1eb11b44573f552e78e59bcf0e64638f3c022071db255d86c42",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-6.pam": "557cd12604449f364ba3c493376e0585c1ab4b23cb0ec6a703d62bc4a63e53e0",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-7.pam": "cda6510f247dc541f4dbb8201307c2837aba95a565fa83c1639367bb060ef239"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_rock_ne",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        1152,
+        800,
+        16
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 11271,
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "river-selector-source-11271-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 6472,
+      "tile_xy": [
+        72,
+        50
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+      "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+      "slope_name": "NE"
+    },
+    "source_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -22,
+      2,
+      14,
+      27
+    ],
+    "shared_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_rock_ne.png",
+    "sheet_sha256": "74857dbc0ea0aef025ad1ac3c33ec3f50f6224da159cdd2fc2ae6515331e44c1",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.json": "1c62226a8f630dd71920cf14578bfec47b1635e2eca732608673d61fba4f0f0e",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.pam": "6fdab290154e6a6719d10bfd1c80fccbf72afe6bca24bcc7730729db1d54f43f",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-0.pam": "7a9ef037724ed91dbc1a646ad8cbf878f15850452930393cc3f143ad9f08da65",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-1.pam": "59e8dea043c233fe97b416edd7eda78121382184b3edaf6d288a68338d54c98d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-2.pam": "09c7e062f4b5f331cd4dd806771efb57b2a1a4534f59e834dc0a168e7c2c255d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-3.pam": "5844661f842b75bbf627257f7c45d5b8da0674f8efbcbc808f785d8f7aa1dad5",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-4.pam": "f13aa7d845a4198f3be671f5331a2a18bb1bc6aedc372257297ded5999b50c8d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-5.pam": "b5a399b389d8590e9dff2ae04dab138da557027181c59b57b9e0680201746699",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-6.pam": "664678a8b6d05dfb197d27db62cbbc23f3c9f5ebe29d647d4e17f4aca0d498bd",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-7.pam": "850540a53d9837c796d960c2a09a30e69cdeebe5c715dbead80d9687abcff530"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_island_sw",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11284,
+      "climate": 3,
+      "draw_origin": [
+        704,
+        656,
+        0
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 11287,
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "river-selector-source-11287-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 5292,
+      "tile_xy": [
+        44,
+        41
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11287-0-generation3.pam",
+      "sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam",
+      "slope_name": "SW"
+    },
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "native_bounds": [
+      -15,
+      2,
+      9,
+      19
+    ],
+    "shared_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_island_sw.png",
+    "sheet_sha256": "ed7f4ec0e29fef1c1168f0d1c655103e0447316ec200bba54c460f2aa6167677",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.json": "46fcd6030f6405647f9d7dfa878cb3181b6f5b7a651a9f877b3445e7e9d41abe",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.pam": "a6d46d5259005c0f204354f3a271e2de5247b8c5f4866691959533982173a74e",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-0.pam": "fff0aed34a8845e31286695898ea536bc60881a39f48d0b1761a3fb5cdee06e3",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-1.pam": "b5890e602564ffa2964a87461879b69d9bad35c3b8c7bd995ce57eca76f0367c",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-2.pam": "326d781f48ea890d52e9260ed22724e70861259623d0207a544edb8c21a563b4",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-3.pam": "22035ba262cba8011a99128c1397a9c46c2b6cc7c4f93389f857851f6c8cca69",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-4.pam": "065aa49dfb963de35cc3ead91a5adf53da12fafe7026c1df1cd585c9018d2de5",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-5.pam": "c6894b46edec538a07531d30de7b3c06d6a41f2d13f7db223f8ec96df9b395e2",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-6.pam": "78e695205e4d5119722308a09f078be16cd6a97431d29825416d1c83ded92bbd",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-7.pam": "a3756b849c4e45068602ba650fdec1aa9acac9196d8cef95416d4a6284ccc85f"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_island_se",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        1216,
+        768,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 11290,
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11290-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 6220,
+      "tile_xy": [
+        76,
+        48
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11290-0-generation3.pam",
+      "sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam",
+      "slope_name": "SE"
+    },
+    "source_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "native_bounds": [
+      -16,
+      1,
+      16,
+      14
+    ],
+    "shared_bounds": [
+      -31,
+      0,
+      33,
+      23
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_island_se.png",
+    "sheet_sha256": "d3f6a739bc8abef56b41258f632917be01255f5be7066708da959587de66638a",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-native.json": "45438b6925ec3ca09d0aadefa01cf1c9930ab30048ee73d248c979b93ad33d91",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-native.pam": "5bc5363818521c415edca02abaf5b77d574c13446d341395dc1319fdaa062b6e",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-0.pam": "5c9032d2d30215da62b27fe3d8d31976e174d6a40da1dc8c1325adfa715c4884",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-1.pam": "4a57d963810608c15a413a0b81d0ab0563e0b2ff80954e7ca43cfa0db28e5494",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-2.pam": "58c08850af1b484ce049841dede7baf719d214667d6ae61627fa540938770021",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-3.pam": "a8727cc2744c43a8cb65d5f3bc1d3e23c13d3377954d4f8cd6e479ef0d75fff4",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-4.pam": "dc834c666d6fe342366662c7826bebf78ea8fadf94dfb69f4587268381c24548",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-5.pam": "020376703f50aee07ccc27150515c0fab106295bdb3424ac2249c6b4279120d7",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-6.pam": "676815d59dfd9e58d6efbe475b4ca6934ebba9d3d8379bf096c2807d30583c64",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-7.pam": "38c2bdf7573a399fb3fec743382e16ade92d63a582b549c523cc38028be0bf74"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_island_nw",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        864,
+        432,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 11293,
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11293-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 3510,
+      "tile_xy": [
+        54,
+        27
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11293-0-generation3.pam",
+      "sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam",
+      "slope_name": "NW"
+    },
+    "source_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -16,
+      1,
+      16,
+      25
+    ],
+    "shared_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_island_nw.png",
+    "sheet_sha256": "69ffdbab446478829af268303e63179b14e21df6de7e22ec9fe6b6ca3198f0c0",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.json": "faa19a01a0c257cbe1014ffdf668d446c830dff04ec9a057443b088243606de8",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.pam": "1fc1942c5e116ecd04bc2327523e236472287fc37a83cb5d9540c4c7f2e3bba9",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-0.pam": "90c2292d4bc518a9f57245d2873036a5f1612349326508426f2882c0a7a4aa2d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-1.pam": "6f29e345c2ef4d899f5fcd71dd945a2015308e47842efe86707164f4550bac7d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-2.pam": "7408c6ad31ee0610264ec566c21d6d8f36dd716ce2dff1a705e6bdea9173ed62",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-3.pam": "87bf642fb8f6da978b079b9bb63cfa2aacb9245debac513e934ed650219f23d2",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-4.pam": "a35956fdb832a385dde43a11dfccee681ab597029408a4a5dd31a98347cb2dca",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-5.pam": "90b2298260b91c2a8065064f0e6ec8f09e1d689ff57a14f78b7697a2559e41f5",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-6.pam": "12a696509f2e87d7f54555001aaa225f84d91a4d76c27845eed22a4bcf451de9",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-7.pam": "1ccc56700dfe1cb79b51bfb9146131366c067718cddb2cd68985448c16cdaf36"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  },
+  {
+    "model": "river_relief_study_island_ne",
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        1152,
+        800,
+        16
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 11291,
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "river-selector-source-11291-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 6472,
+      "tile_xy": [
+        72,
+        50
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11291-0-generation3.pam",
+      "sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam",
+      "slope_name": "NE"
+    },
+    "source_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "native_bounds": [
+      -16,
+      2,
+      16,
+      15
+    ],
+    "shared_bounds": [
+      -31,
+      -8,
+      33,
+      31
+    ],
+    "sheet": "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/owners/river_relief_study_island_ne.png",
+    "sheet_sha256": "6e7ffea61339b4a0a235c8ad6bd722dfd7d0edfbd92383b9741c923f7cd7ac30",
+    "evidence_sha256": {
+      "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.json": "8d70e8e2b892bd9eede0f41774087d6151a23e4cd23843b1d2552cdd11d84cfb",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.pam": "c4e650277e0f3f5f0f78a943a3ebed4a4e05c3eb22dccb23410ac1e1968bd334",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-0.pam": "1ea2e141e557010be3a19afbcf6d543847fd342e35b44146abf2a18d07c684ab",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-1.pam": "45b6c09edfc19eae0047f725c029c12165727541320559d02ac68d73c0dde4d4",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-2.pam": "ebf24e240913c2b1cc8202b4eb977b223c8ba36b4c2ebd0b0f25c369da90b948",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-3.pam": "657d52c9cb7eeb33358de5feb25b538c3c77b44cc89829b6dd3cae20deaf5979",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-4.pam": "a20cf8e046bba8c5668c7c64998ab90add58dab7c06524e06ac08a549b54ca9b",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-5.pam": "6f19b1ea4821cb28487a261873a04b2b3ccc8986532d68af0b88786a22645a00",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-6.pam": "1700e8a2baa57e57e9d9c85cbea8603aac65099263f6fd2cc2ff0c12089bdc76",
+      "build-macos/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-7.pam": "fd0f5c7cd18c35f4b412abab658a87e62ecfeb1236acbff37bf31b3d34aa17b2"
+    },
+    "runtime_bound": false,
+    "source_water_excluded_from_volume": true,
+    "quality_approved": false
+  }
+]

@@ -1,0 +1,1362 @@
+[
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      416,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 11269,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11269-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      124
+    ],
+    "texture_generation": 3,
+    "tile": 3382,
+    "tile_xy": [
+      54,
+      26
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11269-0-generation3.pam",
+    "sha256": "7dde59f1bf6a8892f94e3230ac41a10e19c0095277b57661223fe358e2b17b99",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      31
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-flat-control.pam",
+    "study_model": null,
+    "source_bytes_equal_to_inspected_study": false,
+    "flat_control_has_no_authored_relief": true,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11264,
+    "climate": 0,
+    "draw_origin": [
+      704,
+      656,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 11267,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11267-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 5292,
+    "tile_xy": [
+      44,
+      41
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11267-0-generation3.pam",
+    "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+    "study_model": "river_relief_study_rock_sw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      1216,
+      768,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 11270,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11270-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 6220,
+    "tile_xy": [
+      76,
+      48
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11270-0-generation3.pam",
+    "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+    "study_model": "river_relief_study_rock_se",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      432,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 11273,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11273-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 3510,
+    "tile_xy": [
+      54,
+      27
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11273-0-generation3.pam",
+    "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+    "study_model": "river_relief_study_rock_nw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      1152,
+      800,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11271,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11271-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 6472,
+    "tile_xy": [
+      72,
+      50
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+    "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+    "study_model": "river_relief_study_rock_ne",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      560,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 11269,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11269-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      124
+    ],
+    "texture_generation": 3,
+    "tile": 4523,
+    "tile_xy": [
+      43,
+      35
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11269-0-generation3.pam",
+    "sha256": "7dde59f1bf6a8892f94e3230ac41a10e19c0095277b57661223fe358e2b17b99",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-arctic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      31
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-flat-control.pam",
+    "study_model": null,
+    "source_bytes_equal_to_inspected_study": false,
+    "flat_control_has_no_authored_relief": true,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 1,
+    "draw_origin": [
+      864,
+      944,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 11272,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11272-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 7606,
+    "tile_xy": [
+      54,
+      59
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11272-0-generation3.pam",
+    "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-arctic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+    "study_model": "river_relief_study_rock_sw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 1,
+    "draw_origin": [
+      1216,
+      800,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 11270,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11270-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 6476,
+    "tile_xy": [
+      76,
+      50
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11270-0-generation3.pam",
+    "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-arctic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+    "study_model": "river_relief_study_rock_se",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11264,
+    "climate": 1,
+    "draw_origin": [
+      688,
+      640,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 11268,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11268-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 5163,
+    "tile_xy": [
+      43,
+      40
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11268-0-generation3.pam",
+    "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-arctic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+    "study_model": "river_relief_study_rock_nw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 1,
+    "draw_origin": [
+      1312,
+      736,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11271,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11271-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 5970,
+    "tile_xy": [
+      82,
+      46
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "arctic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-arctic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+    "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-arctic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+    "study_model": "river_relief_study_rock_ne",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1040,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 11269,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11269-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      124
+    ],
+    "texture_generation": 3,
+    "tile": 8389,
+    "tile_xy": [
+      69,
+      65
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "tropic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11269-0-generation3.pam",
+    "sha256": "7dde59f1bf6a8892f94e3230ac41a10e19c0095277b57661223fe358e2b17b99",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-tropic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      31
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-flat-control.pam",
+    "study_model": null,
+    "source_bytes_equal_to_inspected_study": false,
+    "flat_control_has_no_authored_relief": true,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11264,
+    "climate": 2,
+    "draw_origin": [
+      672,
+      1312,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 11267,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11267-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 10538,
+    "tile_xy": [
+      42,
+      82
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "tropic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11267-0-generation3.pam",
+    "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-tropic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+    "study_model": "river_relief_study_rock_sw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11264,
+    "climate": 2,
+    "draw_origin": [
+      720,
+      1104,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 11265,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11265-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 8877,
+    "tile_xy": [
+      45,
+      69
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "tropic",
+    "seed": 161803,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed161803-vulkan-on/renderer3d-reference/river-selector-source-11265-0-generation3.pam",
+    "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-tropic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+    "study_model": "river_relief_study_rock_se",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 2,
+    "draw_origin": [
+      1104,
+      1200,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 11273,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11273-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 9669,
+    "tile_xy": [
+      69,
+      75
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "tropic",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11273-0-generation3.pam",
+    "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-tropic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+    "study_model": "river_relief_study_rock_nw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 2,
+    "draw_origin": [
+      736,
+      1744,
+      24
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11271,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 24,
+    "source_image": "river-selector-source-11271-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 13998,
+    "tile_xy": [
+      46,
+      109
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "tropic",
+    "seed": 161803,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-tropic-seed161803-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+    "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-tropic.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+    "study_model": "river_relief_study_rock_ne",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      416,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 0,
+    "resolved_offset": 0,
+    "selected_sprite": 11289,
+    "slope": 0,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11289-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      124
+    ],
+    "texture_generation": 3,
+    "tile": 3382,
+    "tile_xy": [
+      54,
+      26
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11289-0-generation3.pam",
+    "sha256": "6f346c7974c5d709d3b3c01e4331c21d34e10b3ec1a06d92b88c072082e20dfc",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      31
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-flat-control.pam",
+    "study_model": null,
+    "source_bytes_equal_to_inspected_study": false,
+    "flat_control_has_no_authored_relief": true,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11284,
+    "climate": 3,
+    "draw_origin": [
+      704,
+      656,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 11287,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11287-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 5292,
+    "tile_xy": [
+      44,
+      41
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11287-0-generation3.pam",
+    "sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam",
+    "study_model": "river_relief_study_island_sw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      1216,
+      768,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 11290,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11290-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 6220,
+    "tile_xy": [
+      76,
+      48
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11290-0-generation3.pam",
+    "sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam",
+    "study_model": "river_relief_study_island_se",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      432,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 11293,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11293-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 3510,
+    "tile_xy": [
+      54,
+      27
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11293-0-generation3.pam",
+    "sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam",
+    "study_model": "river_relief_study_island_nw",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      1152,
+      800,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11291,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11291-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 6472,
+    "tile_xy": [
+      72,
+      50
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11291-0-generation3.pam",
+    "sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam",
+    "study_model": "river_relief_study_island_ne",
+    "source_bytes_equal_to_inspected_study": true,
+    "flat_control_has_no_authored_relief": false,
+    "runtime_bound": false,
+    "quality_approved": false,
+    "scope": "One actual observed selector/source per slope/climate. Flat is a full retained water control, not an authored raised asset. Equal source bytes do not transfer state/instance approval or establish all heights, neighbourhoods, phases or custom completeness."
+  }
+]

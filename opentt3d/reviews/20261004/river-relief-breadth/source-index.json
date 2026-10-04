@@ -1,0 +1,506 @@
+[
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11264,
+    "climate": 0,
+    "draw_origin": [
+      704,
+      656,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 11267,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11267-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 5292,
+    "tile_xy": [
+      44,
+      41
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11267-0-generation3.pam",
+    "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+    "slope_name": "SW"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      1216,
+      768,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 11270,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11270-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 6220,
+    "tile_xy": [
+      76,
+      48
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11270-0-generation3.pam",
+    "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+    "slope_name": "SE"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      864,
+      432,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 11273,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11273-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 3510,
+    "tile_xy": [
+      54,
+      27
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11273-0-generation3.pam",
+    "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+    "slope_name": "NW"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11269,
+    "climate": 0,
+    "draw_origin": [
+      1152,
+      800,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11271,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11271-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 6472,
+    "tile_xy": [
+      72,
+      50
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "temperate",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+    "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+    "slope_name": "NE"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11284,
+    "climate": 3,
+    "draw_origin": [
+      704,
+      656,
+      0
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 3,
+    "resolved_offset": 3,
+    "selected_sprite": 11287,
+    "slope": 3,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 0,
+    "source_image": "river-selector-source-11287-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 5292,
+    "tile_xy": [
+      44,
+      41
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11287-0-generation3.pam",
+    "sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam",
+    "slope_name": "SW"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      1216,
+      768,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 1,
+    "resolved_offset": 1,
+    "selected_sprite": 11290,
+    "slope": 6,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11290-0-generation3.pam",
+    "source_offset": [
+      -124,
+      0
+    ],
+    "source_size": [
+      256,
+      92
+    ],
+    "texture_generation": 3,
+    "tile": 6220,
+    "tile_xy": [
+      76,
+      48
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11290-0-generation3.pam",
+    "sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      23
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      0
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam",
+    "slope_name": "SE"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      864,
+      432,
+      8
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 4,
+    "resolved_offset": 4,
+    "selected_sprite": 11293,
+    "slope": 9,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 8,
+    "source_image": "river-selector-source-11293-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 3510,
+    "tile_xy": [
+      54,
+      27
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11293-0-generation3.pam",
+    "sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam",
+    "slope_name": "NW"
+  },
+  {
+    "absent": false,
+    "base_graphics": true,
+    "base_set": "OpenGFX2 Classic",
+    "base_sprite": 11289,
+    "climate": 3,
+    "draw_origin": [
+      1152,
+      800,
+      16
+    ],
+    "feature": "CF_RIVER_SLOPE",
+    "feature_flags": 1,
+    "offset_callback": true,
+    "palette": 0,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11291,
+    "slope": 12,
+    "source_file": "ogfx2e_extra_8",
+    "source_height": 16,
+    "source_image": "river-selector-source-11291-0-generation3.pam",
+    "source_offset": [
+      -124,
+      -32
+    ],
+    "source_size": [
+      256,
+      156
+    ],
+    "texture_generation": 3,
+    "tile": 6472,
+    "tile_xy": [
+      72,
+      50
+    ],
+    "water_class": 2,
+    "base_set_family": "classic",
+    "climate_name": "toyland",
+    "seed": 271828,
+    "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11291-0-generation3.pam",
+    "sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+    "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+    "display_scale": 3,
+    "native_source_size": [
+      64,
+      39
+    ],
+    "sprite_cache_to_native_divisor": 4,
+    "native_tile_anchor": [
+      50,
+      52
+    ],
+    "native_offset": [
+      -31,
+      -8
+    ],
+    "complete_uncropped_source": true,
+    "raised_water_ownership_verified": false,
+    "geometry_approved": false,
+    "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam",
+    "slope_name": "NE"
+  }
+]

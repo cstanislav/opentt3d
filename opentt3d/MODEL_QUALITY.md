@@ -4,6 +4,32 @@ The target is **every runtime asset genuinely 3D, detailed and consistent, with
 every model at least 8/10**. It is not yet met. A model count, successful build or
 source export does not establish visual quality or whole-world coverage.
 
+## River relief breadth — eight separately rated diagnostic studies
+
+`reviews/20261004/river-relief-breadth/` adds four explicit Classic rock arrangements
+and four Toyland yellow/pale island arrangements. Individual source/native/orbit/
+street inspection prompted a retained second geometry pass: fuller angular rock
+faces/SW return and corrected island cap/cliff profiles. All eight remain **5/10**,
+unbound, with fresh fingerprints, explicit defects and all six gates false. The
+sixteen mapped source instances have separate 3/10 records and inherit no approval.
+
+Sixteen quiet 40bpp-anim controls preserve eight same-backend complete-world pairs
+exactly; all eight registered native views match in both passes. Broader paired
+galleries still fail nine images/69 initial and 88 revised pixels; canonical/study
+temperate/Toyland worlds differ by 48/76 pixels. Exact preservation of unbound worlds
+is not new runtime geometry. Eight source-paint decompositions retain every byte,
+including **17 undecided edge/transition pixels**; water ownership, hidden-water
+support, phases, terrain/custom/absence states and ships prohibit binding yet.
+
+The full canonical-plus-study scopes retain 2,874 rows, 65 individual reviews, four
+gaps and **zero approvals**; both required-eight gates fail. 384 portable images
+reconstruct 443,307,448 original PAM bytes, while all original build captures remain.
+Current 10 study/215 native/271 working asset/253 isolated canonical asset/106 harness
+tests and the presentation boundary pass. Canonical artwork/bindings, the mixed
+working CSV, rejected HQ/lock studies and recommended immutable `.42` are unchanged.
+Every-model 8/10, complete catalogue breadth, sustained 60fps/memory and platform/
+input/replay/network acceptance remain open; no source/world approval is inferred.
+
 `MODEL_RATINGS.csv` records every compiled voxel model, retained reference profile,
 permitted active tree profile and procedural family. Missing original object/HQ
 layers and lock walls are listed individually, including climate and state. The

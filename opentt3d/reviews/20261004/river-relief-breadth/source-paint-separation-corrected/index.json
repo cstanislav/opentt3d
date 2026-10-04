@@ -1,0 +1,971 @@
+[
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11264,
+      "climate": 0,
+      "draw_origin": [
+        704,
+        656,
+        0
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 11267,
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "river-selector-source-11267-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 5292,
+      "tile_xy": [
+        44,
+        41
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11267-0-generation3.pam",
+      "sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+      "slope_name": "SW"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-ownership.png",
+    "native_pixel_counts": {
+      "water": 475,
+      "relief": 292,
+      "undecided": 1
+    },
+    "undecided_pixels": [
+      {
+        "screen_xy": [
+          1,
+          16
+        ],
+        "rgba": [
+          132,
+          132,
+          164,
+          255
+        ]
+      }
+    ],
+    "portable_source_size": [
+      64,
+      23
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "38cf66c5cd0a9aabc35ca0e4a19a5a08b185d46ab19ff2288b97d924895cf77f",
+    "source_sha256": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-ownership.png": "31088a71a9f7a996a1878c8cb285be24313661db29fd5247c49d5c8551e667af",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-water-paint.png": "ae0c20b77db7102a65ca6f6d06e86030a16304a263733df95fcd0bcab56eb5c8",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-relief-paint.png": "6be5f97b19a06d5d48908f35d35c845195a7eb1769790ba4fadeddaba2659e17",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-sw-undecided-paint.png": "b8470ea78403cc3c0a7dba680fa33927edd0ffcef5dbfc99b4405374a7a63783"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        1216,
+        768,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 11270,
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11270-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 6220,
+      "tile_xy": [
+        76,
+        48
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11270-0-generation3.pam",
+      "sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+      "slope_name": "SE"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-ownership.png",
+    "native_pixel_counts": {
+      "water": 480,
+      "relief": 284,
+      "undecided": 4
+    },
+    "undecided_pixels": [
+      {
+        "screen_xy": [
+          4,
+          4
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          17,
+          8
+        ],
+        "rgba": [
+          132,
+          132,
+          164,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          17,
+          10
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          16,
+          11
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ]
+      }
+    ],
+    "portable_source_size": [
+      64,
+      23
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "2dc5e7438c81ccb45521c1e2c4ab7765be1106070979e7576a41bd058c97ffbc",
+    "source_sha256": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-ownership.png": "4bd9e5e61f2c6b6caba481fcfdf606e957cbc6880229aae326e2cb6c3f28ab73",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-water-paint.png": "03ff0e55c043714bb7030983e9eb813a50f0e12fa71d401c47760c05e0bf9e2c",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-relief-paint.png": "5d469b1483c7d8c178648044c943f4f7e6cdcb32925c2f34785e2892be7b07ec",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-se-undecided-paint.png": "5ac4818d159d06cfe097fa1e7e8921a7371775d5195ac725aaedc71ebe24370e"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        864,
+        432,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 11273,
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11273-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 3510,
+      "tile_xy": [
+        54,
+        27
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11273-0-generation3.pam",
+      "sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+      "slope_name": "NW"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-ownership.png",
+    "native_pixel_counts": {
+      "water": 953,
+      "relief": 330,
+      "undecided": 0
+    },
+    "undecided_pixels": [],
+    "portable_source_size": [
+      64,
+      39
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "4fc40cf59ed970d03ca839ebd41d213253a151b601f22c3a2a86c23c516f528b",
+    "source_sha256": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-ownership.png": "807775fc7934881a20bc1492880283c5e0230dd19753a5aa971ca5703a109e1c",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-water-paint.png": "ebbb7212726f8ce8c1430f118002ce885cfead39c4a6ba9da9dd7da929373dce",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-relief-paint.png": "5c8584581a7532c1a88bbbc7cd886bd10c0bc786ca90a64ff7a47d4f9b2aef0f",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-nw-undecided-paint.png": "5378b76110297b8af52e1e5e750eb45129b5fce751736389a7424996c628813b"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11269,
+      "climate": 0,
+      "draw_origin": [
+        1152,
+        800,
+        16
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 11271,
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "river-selector-source-11271-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 6472,
+      "tile_xy": [
+        72,
+        50
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "temperate",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-temperate-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11271-0-generation3.pam",
+      "sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-temperate.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+      "slope_name": "NE"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-ownership.png",
+    "native_pixel_counts": {
+      "water": 908,
+      "relief": 367,
+      "undecided": 8
+    },
+    "undecided_pixels": [
+      {
+        "screen_xy": [
+          -21,
+          7
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          13,
+          7
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          11,
+          8
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          -25,
+          10
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          -29,
+          13
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          -11,
+          14
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          12,
+          17
+        ],
+        "rgba": [
+          68,
+          76,
+          92,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          2,
+          20
+        ],
+        "rgba": [
+          108,
+          116,
+          132,
+          255
+        ]
+      }
+    ],
+    "portable_source_size": [
+      64,
+      39
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "8c955a6ef8aa60a68e67fece3afd93c6695bf1431be1d44934e4951e00c5d67a",
+    "source_sha256": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-ownership.png": "02b3693f018e735a3882e9389230adb106aa7de66a9d551b09e40560e504fa39",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-water-paint.png": "458db291c068cec773843dcafce8071ee569851a49039dd820ff33551f1f9b78",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-relief-paint.png": "867af3d32e823ce97cf2c1116d9da27137256b6a46d9210a5e0e016c1d117888",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/temperate-ne-undecided-paint.png": "8494429b512d52c826141c5bd4f638d7667291a4fb4306cf964c3a2d4e7a82a4"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11284,
+      "climate": 3,
+      "draw_origin": [
+        704,
+        656,
+        0
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 3,
+      "resolved_offset": 3,
+      "selected_sprite": 11287,
+      "slope": 3,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 0,
+      "source_image": "river-selector-source-11287-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 5292,
+      "tile_xy": [
+        44,
+        41
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11287-0-generation3.pam",
+      "sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam",
+      "slope_name": "SW"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-ownership.png",
+    "native_pixel_counts": {
+      "water": 531,
+      "relief": 237,
+      "undecided": 0
+    },
+    "undecided_pixels": [],
+    "portable_source_size": [
+      64,
+      23
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "49ac8e4e5d9feb9eb52d05c61f5a4101dd6aaed8f0360175ce546cb22fe75e55",
+    "source_sha256": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-ownership.png": "dc7c9cdb9de03dfce434e52c28d18341f7b995cb56e80af1994328a52d62d3e0",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-water-paint.png": "7fdc348b978cc1c6f4f21681d0556ee79ebf73aa33ea375ea9f4c2d8f55797ad",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-relief-paint.png": "05bdf39ebf8529e5bb0ce793febccffa79731981e89458feb9e0f6de88546082",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-sw-undecided-paint.png": "0dc3434fc2ff40e9c8af51b4baab7ed29fdad9b3ed557ee9bee5f9e429b354ff"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        1216,
+        768,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 1,
+      "resolved_offset": 1,
+      "selected_sprite": 11290,
+      "slope": 6,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11290-0-generation3.pam",
+      "source_offset": [
+        -124,
+        0
+      ],
+      "source_size": [
+        256,
+        92
+      ],
+      "texture_generation": 3,
+      "tile": 6220,
+      "tile_xy": [
+        76,
+        48
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11290-0-generation3.pam",
+      "sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        23
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        0
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam",
+      "slope_name": "SE"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-ownership.png",
+    "native_pixel_counts": {
+      "water": 530,
+      "relief": 238,
+      "undecided": 1
+    },
+    "undecided_pixels": [
+      {
+        "screen_xy": [
+          8,
+          1
+        ],
+        "rgba": [
+          127,
+          127,
+          127,
+          255
+        ]
+      }
+    ],
+    "portable_source_size": [
+      64,
+      23
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "37d5254345ac1de8649bd9c6750a2c44e3cbb51b5ae88dbdf3d432a225bf2e1f",
+    "source_sha256": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-ownership.png": "8ac46bac194093504ab9b25eb6bd4fb94d76df72ced77fdb77f703c518b1a235",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-water-paint.png": "f720a2ca46f54a0ccff1a45bcd70f1169d379c450dc980bf0dd5522d588280b4",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-relief-paint.png": "12a1056afcf6aa9694ab3a3cda4e7d69891fde9d2a2256c3724f34e375bd94e9",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-se-undecided-paint.png": "bc8fc99d412e03bcef4403bc13964e411ad16ef4a42e54a30df3c93947710d24"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        864,
+        432,
+        8
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 4,
+      "resolved_offset": 4,
+      "selected_sprite": 11293,
+      "slope": 9,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 8,
+      "source_image": "river-selector-source-11293-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 3510,
+      "tile_xy": [
+        54,
+        27
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11293-0-generation3.pam",
+      "sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam",
+      "slope_name": "NW"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-ownership.png",
+    "native_pixel_counts": {
+      "water": 983,
+      "relief": 300,
+      "undecided": 0
+    },
+    "undecided_pixels": [],
+    "portable_source_size": [
+      64,
+      39
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "d8364e0944feb857593ca6c235486fa2e02208e42e824652cb35204a7f2d1678",
+    "source_sha256": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-ownership.png": "2bbf5bb7ba51835ab3a5fc95495c52ee9a8fcabfa7f6567800df79c57022b63f",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-water-paint.png": "4fc568f2c717bd6630b77060be3063b6a5de19b3425eaaa47260017e99942eb0",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-relief-paint.png": "89c9c616cda87d8351bfdfea421359607989a64b5629926e44a5df3cf4c4bd2d",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-nw-undecided-paint.png": "5378b76110297b8af52e1e5e750eb45129b5fce751736389a7424996c628813b"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  },
+  {
+    "source": {
+      "absent": false,
+      "base_graphics": true,
+      "base_set": "OpenGFX2 Classic",
+      "base_sprite": 11289,
+      "climate": 3,
+      "draw_origin": [
+        1152,
+        800,
+        16
+      ],
+      "feature": "CF_RIVER_SLOPE",
+      "feature_flags": 1,
+      "offset_callback": true,
+      "palette": 0,
+      "requested_offset": 2,
+      "resolved_offset": 2,
+      "selected_sprite": 11291,
+      "slope": 12,
+      "source_file": "ogfx2e_extra_8",
+      "source_height": 16,
+      "source_image": "river-selector-source-11291-0-generation3.pam",
+      "source_offset": [
+        -124,
+        -32
+      ],
+      "source_size": [
+        256,
+        156
+      ],
+      "texture_generation": 3,
+      "tile": 6472,
+      "tile_xy": [
+        72,
+        50
+      ],
+      "water_class": 2,
+      "base_set_family": "classic",
+      "climate_name": "toyland",
+      "seed": 271828,
+      "original_image": "/Users/stanislav/Projects/opentt3d/build-macos/breadth-original-river-natural-selector-classic-toyland-seed271828-vulkan-on/renderer3d-reference/river-selector-source-11291-0-generation3.pam",
+      "sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+      "sheet": "build-macos/breadth-original-river-natural-source-sheets-registered/classic-toyland.png",
+      "display_scale": 3,
+      "native_source_size": [
+        64,
+        39
+      ],
+      "sprite_cache_to_native_divisor": 4,
+      "native_tile_anchor": [
+        50,
+        52
+      ],
+      "native_offset": [
+        -31,
+        -8
+      ],
+      "complete_uncropped_source": true,
+      "raised_water_ownership_verified": false,
+      "geometry_approved": false,
+      "portable_source": "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam",
+      "slope_name": "NE"
+    },
+    "layers": {
+      "water-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-water-paint.png",
+      "relief-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-relief-paint.png",
+      "undecided-paint": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-undecided-paint.png"
+    },
+    "ownership": "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-ownership.png",
+    "native_pixel_counts": {
+      "water": 989,
+      "relief": 291,
+      "undecided": 3
+    },
+    "undecided_pixels": [
+      {
+        "screen_xy": [
+          -21,
+          7
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          -25,
+          10
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ]
+      },
+      {
+        "screen_xy": [
+          -29,
+          13
+        ],
+        "rgba": [
+          104,
+          104,
+          104,
+          255
+        ]
+      }
+    ],
+    "portable_source_size": [
+      64,
+      39
+    ],
+    "portable_source_to_native_divisor": 1,
+    "exact_complete_rgba_reconstruction": true,
+    "reconstructed_rgba_sha256": "88f8c36df703bab586d4f3c08d1ad8fcb9b1d46c9ce26b936829ec0cb170f4b0",
+    "source_sha256": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+    "sha256": {
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-ownership.png": "53e33f2f6cc37eb70c721f42cdce15b857410dd7bd9307be5410254d69d1f83e",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-water-paint.png": "352d12481fa5b5808ecd85a07e433aa5d6343a2b585c99a511a24b2a68e35e94",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-relief-paint.png": "943fdb4d8a10aa4d3c19a53d4aa141fd720154533a1728fec7264aad34847d20",
+      "opentt3d/reviews/20261004/river-relief-breadth/source-paint-separation-corrected/toyland-ne-undecided-paint.png": "3800c76c9bc84a2da32eaa6394df3f18d19bce5cf41755c32d1cb73346ad26c3"
+    },
+    "hidden_water_inpainted": false,
+    "palette_phase_indices_recovered": false,
+    "runtime_binding_allowed": false,
+    "scope": "Lossless paint/ownership study only. Uncertain edge colours stay in a third layer. No original paint is discarded, no hidden water is invented, no volume or world coverage is inferred, and no comparison uses this mask."
+  }
+]

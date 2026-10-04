@@ -1,0 +1,477 @@
+{
+  "format": 1,
+  "models": {
+    "river_relief_study_rock_sw": {
+      "score": 5,
+      "fingerprint": "f3297b339a779520eaca23169747a9eaa66e354924a8e8bce9b89e8a43f8045c",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_sw.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope3.pam": "be7a1b45eca40a09f43f1fb9be7616beade9df71a5b71a34d6ac808a9ff91da8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_sw.png": "c955411491ba4303ed8ca93a654d1c68579f77d37a3f9930dc68bb062ecd01cf",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.json": "6b228aca8bf4cce235f4c2ad52b1ed6068d2c1684ff79017a1ff7b7745804912",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-0.png": "4789650c82d7fc413e3c87fff63226c3016894f2415e41a8c9a5296f9b632caf",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-1.png": "6f9d416d68549563055c59b94f6ce5b1d71a34fb4ff25389bb10b6b05f1e9529",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-2.png": "2755752c06438843815c45a4a0edc662d244f1c98972f09d0318e3946af64b4e",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-3.png": "01f019c32ec20c5140d6a10b0799c3783d9c8b491863243a374a7a4effcc6868",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-4.png": "dd35e7a477b5b8b57491c0e910efc70dd151d627b2d87b5f7818fa2a4cec7390",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-5.png": "9a926f357f03156721c9337b4eef9b5dc661e30d8ce33c277d0580b9ad7f0251",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-6.png": "9eb4027568f09ccced9047d3a19422c15d7042f5e81fdff527edc648781ee6d0",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-7.png": "c30bcb9730c213606da7fc7750a23af32d2c185a78272d33e704cb5af825ab1b",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_sw-native.png": "c4ee20457ee4ab982f56f23c34d34551866ec56a7831a63fbf7835e09fd8f0cb"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The rear ledge and low front chip remain too regular; the central return still lacks the source's irregular narrow pillar and dark recessed paint.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The rear ledge and low front chip remain too regular; the central return still lacks the source's irregular narrow pillar and dark recessed paint.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_rock_se": {
+      "score": 5,
+      "fingerprint": "8cb3efaa585f2c071550a4d57f9978c77ab21c6c22927fa0ef346dd0574186f1",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_se.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope6.pam": "5aababc1c980a8199877a75f9d7412b6a40a8bf2e168269a7f7862e08e5fa01d",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_se.png": "36ebe88e5f918773a58b7a681190a09174b65959559daa920c6cea2f80533142",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.json": "53c26d0ec1d4b542729dd20eeb39571d5ec00b69253d1deea922bcc2651ae2e2",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-0.png": "5f3dc93f06804f93e769f86861d6208b002e6aadd6e1d35cf4a3e7cbd093c568",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-1.png": "331f0a71c914e6a299604ce9beb735e72b3498e70655e44002b4288c93791dbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-2.png": "25f61487a0b449a049740024b22121c4df0df739108bacff02f235375e8957fd",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-3.png": "2d827d46a475b430deb90e45cf83132eeb7f62f6fc22cf5b9842e91462e707b8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-4.png": "123eadb7092c8811f22bb8b8c677bd7822e77a004f697deeb3b89e3172aee42a",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-5.png": "8144476fcb32b4dfb92d4d87c381e3821fff1987c3b7e3db120b5b20aa7adffb",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-6.png": "2ee9676da38ea29dfaeb5e5053ec52429c5715738b31a52cfe74ab22693f50ec",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-7.png": "bf26928bce335eab1aa81758ee79fb6e81e062bb4c42ad1c04ff690a1017d463",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_se-native.png": "e2234c068103ccff5b8b2c19ce46b3286ff606c1979eaa73aaa2381d12044145"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "Six correctly distinct lobes remain simplified faceted blocks; the rear rock's broken crest and the downstream dark chip/face distributions are not source-faithful.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "Six correctly distinct lobes remain simplified faceted blocks; the rear rock's broken crest and the downstream dark chip/face distributions are not source-faithful.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_rock_nw": {
+      "score": 5,
+      "fingerprint": "bceb53551fb00946dbb3f6f67acb2fdbc4d39ef0e3bac3bc41d546f2f34aa0ee",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_nw.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope9.pam": "56791f28821d2417e737a05cf941710f31a39384a3ca63a3d01c391c468c2774",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_nw.png": "a664eaae6fbbc04e111823a486797c4c1de5f7789944141e8f2c71f613a51462",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.json": "f84c9bc8816790a74be31b5c93bfeeedeab2ab6b717fb2cd005b15ec80454184",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-0.png": "05bbfff51da41c20e5b52f7e41798e710876af8f82cacc25e651ba3a31e8b982",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-1.png": "af43a1da3f879745e74fbca19f268db005634f748fbd3c9aee8b1ba2bd901f25",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-2.png": "0209d0081fed480d152b808fdbf0bda3db5e57dccf6bcf8e343961010c431ebb",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-3.png": "2d0a6f7cb64541a062ec9398656137cd1dc7b006dba40c4204f87835877b6343",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-4.png": "0685d4c2622e170221ea79cb2eb6fd889e56f247666e8bba1a3a5ae1c5dd9d77",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-5.png": "4dd086d5ee46480bbce2ea4254acd476f662c7f96cb9a35ef477417d0c12640d",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-6.png": "e0cb070c86822e1140d2268a503016520915701074fe19a4dd95b56793f75463",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-7.png": "a9f7681449c661801dd79e396472731fbbff3b7d96f94eabcd64178c920ca577",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_nw-native.png": "ad3ec9e9db9a2240c1204d7d768e35d938631735e3257c8c63ccafd2e5c8650a"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The broad downstream slab is still too faceted and misses the original square face, chipped lower corner and rear rock's sharply shaded return.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The broad downstream slab is still too faceted and misses the original square face, chipped lower corner and rear rock's sharply shaded return.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_rock_ne": {
+      "score": 5,
+      "fingerprint": "ec7240a23e00cd1de0f72f3240c8a4fca0a3a23e47041e97e3f0c32a52e23e6e",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_ne.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/temperate-slope12.pam": "54cc140217cfeba5f406cb8f5ec1599215d19a9f069affa7170ad10c8c1451f1",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_rock_ne.png": "858dadb6764b1c47b72e67076aaacbbfba30a77f8b8d0ffaad9be218c6184365",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.json": "1c62226a8f630dd71920cf14578bfec47b1635e2eca732608673d61fba4f0f0e",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-0.png": "19873179296628a8481089ee52bf67bb49574aecc31c3361a5681eb636b64fd8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-1.png": "8efde08484c2133391363ab28f8b1d248d596e2f5dd3ed48b95d4d5c274bdab1",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-2.png": "e1babdba9730f5b3ce66fd6f4c35598cd5d81678920fb1201a4c86afc08c577c",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-3.png": "d16e879f484794350ca64ff0a3dc487d84af0e47a528048fe58377371ac2b81c",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-4.png": "e3c5059cf96d99e330b750d5fcf245713550018229d03bd30fc29cd72c99127e",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-5.png": "2ac8a0dd23a4054d8cbf921e32f130a266d01d1cc3eb3652411133889ed86492",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-6.png": "1e023c112fe03b32f5dc7c524a8e73bede21fd7288e187be8065f02c49431c2b",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-7.png": "1ec8a76e6a1c4f28a146dc2887b65bccfa757609992dd6df9c98d73640edbc91",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_rock_ne-native.png": "8b1337bc3a99529eb7df0bf7549f2a6e127a37ffcb844fb425c8a92a611f5001"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The rear-right mass and downstream wedge retain overly straight courses and simplified height/face transitions; original mottled dark paint is not reproduced.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The rear-right mass and downstream wedge retain overly straight courses and simplified height/face transitions; original mottled dark paint is not reproduced.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_island_sw": {
+      "score": 5,
+      "fingerprint": "d6410a16c73e5a7fa403c9e3623138ffa9ee60057df9c69550b675fbe7e02b52",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_sw.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope3.pam": "a93336db11fc89ff1bae132ca3993b5a0767a99002c4ed831ca037cbd5711468",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_sw.png": "814c62ee2fb8c6825207c63288eaa97c62e19ac1fe3221aa40af3475884adb5a",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.json": "75f3f1fc65ec48a0c6c980ea72cea809a790747d76e236c85738c326163434cc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-0.png": "d88d62e384466de5cd12c527dd4b362a2e29e6e9a484416e38197ff9025895df",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-1.png": "250b92228a7fddf2a8d554132f4803ff28a35d9e0f1aece64428a62285c3b27e",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-2.png": "30640b60269cf02d4b873d830021a390dac6b2761f1a495435ca2ed981694dce",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-3.png": "025c43ac2207049cf50d39410719baa98d06fb66a8df9aca16cb364d08bf6c59",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-4.png": "9d80e707dbdf628cba9ef16736f1a7134db5d917f5bd9ef2c99449bdbf2c7829",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-5.png": "159053349de55761b667b371b54d0fed0a26c1a597c590cbcf24ba573dcecba7",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-6.png": "f499caf5e835d3c964c8255c4ea822a94e627130d2a028358c2524b0ab3bc22d",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-7.png": "cadcd27e49796ed4f5524b5958a2f83af29df95b3df0653c5adf4c078393b0ea",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_sw-native.png": "c1c6cca5b2e1a22b237f745456dd1c4e72f6da2732b68f433878343c308a75c9"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The fuller yellow cliff is a better volume study, but both cap contours, their near contact, cliff heights and pale-wall paint transitions remain approximate.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The fuller yellow cliff is a better volume study, but both cap contours, their near contact, cliff heights and pale-wall paint transitions remain approximate.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_island_se": {
+      "score": 5,
+      "fingerprint": "14a7b207332735ec6f6bc5e7f916a9e4e98a4e85eab4885688fbb8ca45307289",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_se.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope6.pam": "8dca9e9bbfc6dc9b310240b237b5ed255fc3041bb08dd23f7e669d64709e7328",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_se.png": "9c61d9dd725151e5bf669e37fa27894829082e9ac31c976381c6c5f1416b702a",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-native.json": "e3d01d676f8b9afde4663b186ed04e112f7ad2f1b66b5dab0f03e193b32fdca8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-0.png": "db9667ecf0eb9a73c57e7dc0c4527bc48139eadba678a32ee7d0b3b3b79a95c8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-1.png": "ca38a72ddfa2e17def5facc5cb736ce6eeb41cc68c7689867b1097ff77f952e9",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-2.png": "49293f57dd2d6b95612e4fa68731467e2d94d2b9d5a7dd18888e889e37c3e5ac",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-3.png": "307af5195722b61221c83067abf7a95e97a7f384becbe5bdd4440da016186bd8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-4.png": "465782a5ff0ae85425876e67905af8cb5634306fb02ead92b63664bebc59d3a8",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-5.png": "9954fba9c297715555175cc708d0b5ad3e270a6902cc6b0c36bf5fde456a14d2",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-6.png": "5c7b6437e3704e1839a60d1278520e025cb55fdd289168ceb340b27bdfb3a616",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-7.png": "dd5b9a59ae0d4765c005ba3c02603778e031a8a807ab46a00655fa4f339df8df",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_se-native.png": "ed16abfcaa5f6efa6ed25a67b7d581d6f29bce729952c2fd13914b757019d7e6"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The pale-front/yellow-rear arrangement is recognizable, but the source cap spacing, wall heights and narrow intermediate side shades remain incorrect; street7 differs by three renderer pixels.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The pale-front/yellow-rear arrangement is recognizable, but the source cap spacing, wall heights and narrow intermediate side shades remain incorrect; street7 differs by three renderer pixels.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_island_nw": {
+      "score": 5,
+      "fingerprint": "422ad16cc840305a3d41213d0804a1170aa6a6b8caff4ede2155f6f2b6f67987",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_nw.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope9.pam": "264568f9d09f506de5c9afc311deb507464193bcce8fb59a70e028f615b67bcc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_nw.png": "b651a3d5d42136048dcd3c562d812d6d79f976b18ee1879395fe689e105216b9",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.json": "3bcd3791bc2a47a19be2976a16a482b978294f7cd3f70858978406a7fa92767b",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-0.png": "ca702ccf0441b207fd87cf0fecb3238eca52342294b0f7a12142f5d19c6b4fa6",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-1.png": "a87428ba13c985d4e4f4b91df7eb525148c487aa7e71f975ed346e1975f6ee38",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-2.png": "73d62d78abf40b4a94eeb9b287b2c05b42558ced32d03b1eaca808e491e1a354",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-3.png": "f6b917bd221cb19c5060e3fcbf5c76103ecafb03602610a07ea4b6d39f06c634",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-4.png": "89844f1cb22147af1c8ceaaf9ae97886dafbe9ac452093abf5996ee9b022ed04",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-5.png": "04fcb2e6e66bc1b594fc0e79310505e9641bab3d0c2eed06458afa7893599e10",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-6.png": "881c0a486fe6f02c9195e51f15807632206eb3f5796c949d6e793be854acb3cd",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-7.png": "b39c0bd025d5ea95221962e21235fefdd761e567e9c38c960b49f75144380f58",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_nw-native.png": "550489ade4c40d9566070e262959a79b48482955e45e6ed4bc5bb3785e26431a"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The pale downstream cliff is too shallow and regular; its cap contour and the upper yellow island's original side/edge paint are not matched.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The pale downstream cliff is too shallow and regular; its cap contour and the upper yellow island's original side/edge paint are not matched.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    },
+    "river_relief_study_island_ne": {
+      "score": 5,
+      "fingerprint": "6aa951c7fe6d0ee128a64105b69693d0d374b19daa342bd01cb5bd16b1734186",
+      "checks": {
+        "source": false,
+        "orbit": false,
+        "street": false,
+        "world": false,
+        "states": false,
+        "consistency": false
+      },
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_ne.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.json",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-0.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-1.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-2.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-3.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-4.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-5.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-6.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-7.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/sources/toyland-slope12.pam": "ad4c16f7c76ac93a5bac245ccecb7d61714408b799866e3bd9c9a89cd188b07d",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-sheets/owners/river_relief_study_island_ne.png": "c63d44bd7be9d49e1cf6ea3cfff6e8554873a93c9dfff0d1551f74256361db3d",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/frozen-authored-source.json": "0c7a6fa479eaa86ac310c0bdc5eae1a610433bdd85c8bf178b4e84a8fbab9846",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/verification.json": "66990ae732bcd3b8a2698475eb4fd7b595e01b3977b2dd2f818ee57e92006bbc",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.json": "62cb947c3dd0083d96e141309e798594e0a6668c1101b280624e645713ddcf22",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-0.png": "413c76ce615eebf95a501088701e136375390be70027424c1ca539aac27afeea",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-1.png": "34797a3c3574d209771609e78494f06dc4e8713fb7f5a9836a190c6b851974d5",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-2.png": "cecf5d6a52e7d46a3b9ad36aad960424fbc9fc11bd9f0b034fb213a701b09115",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-3.png": "5808cd07a930ec82de9be15ee08b12b792cab5ecff343308677e0a9607d975ca",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-4.png": "4bd43052380d353e40205d0ea3698562216098740caad2884daf8c5f88525c21",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-5.png": "b068cf599a2d1f8407ac7e6f7718edb3f6ae9060d50aba7ab7ebea1ec2e1629f",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-6.png": "0080064213958c07526fc6e03a82ca7a5820ccfa48255a3f6c29d223da247d94",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-7.png": "371f3591e625d4497c7c1c7de7d12f9d934838630902a391f5946ffed2d52966",
+        "opentt3d/reviews/20261004/river-relief-breadth/initial-native-controls/breadth-original-river-relief-initial-temperate-vulkan-study/renderer3d-reference/model-voxel-river_relief_study_island_ne-native.png": "eddd9c61dc0c2885a7dedff4c746c34b1dd9ca963be2066f034906d22ef0e8e1"
+      },
+      "defects": [
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The yellow cliff still reads shallower than the source, with simplified cap notches, gray return paint and vertical colour transitions.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ],
+      "notes": [
+        "Individually inspected original/native/orbit/street relief study:5/10 provisional, not aesthetic approval or runtime coverage.",
+        "First retained arrangement underfills the observed rock silhouettes or skews/thins the island cap and wall profiles; superseded, not deleted.",
+        "The yellow cliff still reads shallower than the source, with simplified cap notches, gray return paint and vertical colour transitions.",
+        "Unbound original-datum studies are not runtime relief: independent animated water decomposition, exact extra doubled-terrain support and terrain/ship clearance remain unverified.",
+        "Original source edge/transition paint includes seventeen undecided pixels across the eight sources; no hidden water or phase index is inferred.",
+        "Cross-backend full-gallery/world acceptance fails. Per-owner LOD air boundaries, live custom/absence/order/phase states and sustained60fps/memory are not established."
+      ]
+    }
+  }
+}

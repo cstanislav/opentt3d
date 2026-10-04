@@ -1,0 +1,1232 @@
+{
+  "reference": "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/revised-native-controls/breadth-original-river-relief-revised-temperate-vulkan-study/renderer3d-reference",
+  "actual": "/Users/stanislav/Projects/opentt3d/opentt3d/reviews/20261004/river-relief-breadth/revised-native-controls/breadth-original-river-relief-revised-temperate-opengl-study/renderer3d-reference",
+  "images": 72,
+  "pixels": 4204704,
+  "differences": [
+    {
+      "name": "model-voxel-river_relief_study_island_se-7",
+      "changed_pixels": 3,
+      "first_pixel": [
+        68,
+        227
+      ],
+      "reference_rgba": [
+        133,
+        178,
+        219,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            68,
+            227
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            69,
+            227
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            70,
+            227
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_ne-4",
+      "changed_pixels": 4,
+      "first_pixel": [
+        92,
+        191
+      ],
+      "reference_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "actual_rgba": [
+        98,
+        101,
+        98,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            92,
+            191
+          ],
+          "reference": [
+            48,
+            48,
+            48,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            93,
+            191
+          ],
+          "reference": [
+            48,
+            48,
+            48,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            94,
+            191
+          ],
+          "reference": [
+            48,
+            48,
+            48,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            95,
+            191
+          ],
+          "reference": [
+            48,
+            48,
+            48,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_ne-6",
+      "changed_pixels": 4,
+      "first_pixel": [
+        153,
+        191
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        98,
+        101,
+        98,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            153,
+            191
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            154,
+            191
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            155,
+            191
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            156,
+            191
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            98,
+            101,
+            98,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_nw-5",
+      "changed_pixels": 7,
+      "first_pixel": [
+        126,
+        192
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            126,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            127,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            128,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            129,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            130,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            131,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            132,
+            192
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_nw-7",
+      "changed_pixels": 18,
+      "first_pixel": [
+        105,
+        192
+      ],
+      "reference_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            105,
+            192
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            106,
+            192
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            107,
+            192
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            105,
+            197
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            106,
+            197
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            107,
+            197
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            166,
+            197
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            167,
+            197
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            168,
+            197
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            169,
+            197
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            170,
+            197
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            171,
+            197
+          ],
+          "reference": [
+            131,
+            133,
+            131,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_se-7",
+      "changed_pixels": 12,
+      "first_pixel": [
+        166,
+        191
+      ],
+      "reference_rgba": [
+        82,
+        80,
+        82,
+        255
+      ],
+      "actual_rgba": [
+        65,
+        64,
+        65,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            166,
+            191
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            167,
+            191
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            168,
+            191
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            191,
+            191
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            192,
+            191
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            193,
+            191
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            109,
+            203
+          ],
+          "reference": [
+            65,
+            64,
+            65,
+            255
+          ],
+          "actual": [
+            82,
+            80,
+            82,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            110,
+            203
+          ],
+          "reference": [
+            65,
+            64,
+            65,
+            255
+          ],
+          "actual": [
+            82,
+            80,
+            82,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            111,
+            203
+          ],
+          "reference": [
+            65,
+            64,
+            65,
+            255
+          ],
+          "actual": [
+            82,
+            80,
+            82,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            102,
+            207
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            103,
+            207
+          ],
+          "reference": [
+            82,
+            80,
+            82,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            104,
+            207
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            65,
+            64,
+            65,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_sw-4",
+      "changed_pixels": 2,
+      "first_pixel": [
+        83,
+        203
+      ],
+      "reference_rgba": [
+        98,
+        101,
+        98,
+        255
+      ],
+      "actual_rgba": [
+        131,
+        133,
+        131,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            83,
+            203
+          ],
+          "reference": [
+            98,
+            101,
+            98,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            84,
+            203
+          ],
+          "reference": [
+            98,
+            101,
+            98,
+            255
+          ],
+          "actual": [
+            131,
+            133,
+            131,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_sw-6",
+      "changed_pixels": 1,
+      "first_pixel": [
+        84,
+        193
+      ],
+      "reference_rgba": [
+        133,
+        178,
+        219,
+        255
+      ],
+      "actual_rgba": [
+        148,
+        149,
+        148,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            84,
+            193
+          ],
+          "reference": [
+            133,
+            178,
+            219,
+            255
+          ],
+          "actual": [
+            148,
+            149,
+            148,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-voxel-river_relief_study_rock_sw-7",
+      "changed_pixels": 37,
+      "first_pixel": [
+        73,
+        188
+      ],
+      "reference_rgba": [
+        115,
+        117,
+        115,
+        255
+      ],
+      "actual_rgba": [
+        48,
+        48,
+        48,
+        255
+      ],
+      "pixels": [
+        {
+          "pixel": [
+            73,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            74,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            75,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            76,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            77,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            78,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            79,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            80,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            81,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            82,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            83,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        },
+        {
+          "pixel": [
+            84,
+            188
+          ],
+          "reference": [
+            115,
+            117,
+            115,
+            255
+          ],
+          "actual": [
+            48,
+            48,
+            48,
+            255
+          ]
+        }
+      ]
+    }
+  ]
+}

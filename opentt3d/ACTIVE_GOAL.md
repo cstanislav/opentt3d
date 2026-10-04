@@ -1,5 +1,62 @@
 # Active extended development goal
 
+## Execution stopping-clock audit — October 4, 02:44:19 UTC
+
+**Actual stopping clock check: 2026-10-04 02:44:19 UTC.** Modelling and native
+validation stop at the fully verified river-relief diagnostic increment. Only this
+stopping-clock bookkeeping and its commit/push follow. Reason: preserve the eight
+new/refined volume studies and their exact evidence without binding undecided water
+paint, promoting 5/10 artwork or relaxing strict renderer acceptance. This is not
+full-goal completion or a claim that further work is impossible. No background run
+remains. The full catalogue-wide every-model-8/10 objective continues.
+
+All 695 portable files, 384 exact PAM reconstructions, sixteen complete worlds and
+eight same-backend preservation pairs verify. Eight current model reviews remain
+5/10 with explicit defects; broader galleries retain nine images/88 revised pixels,
+and source-paint ownership retains seventeen undecided pixels. Runtime river relief/
+support/phases/custom/ships, lock/HQ repairs, remaining families, sustained 60fps/
+memory and platform/input/replay/network acceptance remain open. Canonical artwork,
+bindings and recommended immutable `.42` are unchanged; there are zero approvals.
+
+## River relief breadth increment — October 4, 2026
+
+The full catalogue-wide objective remains **every runtime asset genuinely 3D,
+detailed and consistent, with every model at least 8/10**. It is not met; breadth
+remains ahead of later fidelity passes, and uncertain coverage is not accepted.
+
+`reviews/20261004/river-relief-breadth/` now retains eight new unbound Classic river
+relief models: four independently placed ordinary rock arrangements and four
+Toyland yellow/pale island arrangements. A second actual geometry pass fills out
+rock faces/SW return and corrects island cap/cliff profiles. Originals, both frozen
+catalogues, all first studies and all failures remain. Each changed model has a
+fresh individual **5/10** source/native/orbit/street review; sixteen mapped source
+instances remain separately screened 3/10. No release coverage or approval follows.
+
+Sixteen quiet 40bpp-anim controls retain 288 complete model views and sixteen full
+worlds. Eight same-backend study/canonical world pairs are pixel-exact; eight native
+views match per pass. Broader galleries still fail nine images/69 initial and 88
+revised pixels; paired temperate/Toyland worlds differ by 48/76 pixels in canonical
+and study controls. Eight source-paint separations reconstruct every byte while
+**17 undecided edge/transition pixels** stay separate: do not bind relief, invent
+hidden water, recover phase indices by guessing, or use these masks to relax tests.
+
+Portable evidence verifies 695 files and 384 exact PAM reconstructions totalling
+443,307,448 bytes. All original build PAMs/captures remain; compaction copies only.
+Current 10 study/215 native/271 working asset/253 isolated canonical asset/106 harness
+tests and presentation boundary pass. Each full canonical-plus-study quality scope
+retains 2,874 rows, 65 individual reviews, four broad gaps and zero approvals; both
+required-eight gates fail honestly. Canonical artwork/bindings, the mixed working
+CSV, quarantined HQ/compiler tests, rejected lock studies and immutable `.42` are
+unchanged. No package/tag/release is promoted from this below-eight study.
+
+Next: resolve river relief/water ownership and exact extra terrain support before
+diagnostic world substitution; preserve independent phases, full original fallback,
+owner LOD boundaries and ships. Continue bank/terrain volumes, lock/HQ repairs,
+missing effects/fleet clearance and sustained 60fps/memory/platform/input/replay/
+network acceptance across the full catalogue. No background work remains from this
+increment; the actual next stopping clock is recorded separately, never inferred
+from evidence sealing or native log timestamps.
+
 ## Execution stopping-clock audit — October 4, 01:31:28 UTC
 
 **Actual stopping clock check: 2026-10-04 01:31:28 UTC.** Modelling/native validation

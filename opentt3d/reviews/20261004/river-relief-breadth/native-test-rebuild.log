@@ -1,0 +1,24 @@
+[  0%] Built target script_window
+[  2%] Built target strgen
+[  2%] Built target settingsgen
+[  2%] Built target renderer3d_models
+[  2%] Built target renderer3d_shaders
+[ 10%] Built target script_ai
+[ 19%] Built target script_game
+[ 27%] Built target script_template
+[ 35%] Built target language_files
+[ 36%] Built target table_strings
+[ 36%] Built target table_settings
+-- Version string: 20261004-main-m342ba54a9e
+-- Generating rev.cpp
+-- Generating CPackProperties.cmake
+-- Generating Doxyfile
+-- Generating Doxyfile_AI
+-- Generating Doxyfile_GS
+[ 36%] Built target script_ai_includes
+[ 36%] Built target find_version
+[ 36%] Built target script_game_includes
+[ 36%] Building CXX object CMakeFiles/openttd_lib.dir/generated/rev.cpp.o
+[ 96%] Built target openttd_lib
+[ 96%] Linking CXX executable openttd_test
+[100%] Built target openttd_test

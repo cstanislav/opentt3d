@@ -1,0 +1,101 @@
+{
+  "reviewed_utc": "2026-10-04T02:24:43.127970+00:00",
+  "phases": {
+    "initial": {
+      "authored_relief_models": 8,
+      "individual_model_scores": {
+        "river_relief_study_rock_sw": 5,
+        "river_relief_study_rock_se": 5,
+        "river_relief_study_rock_nw": 5,
+        "river_relief_study_rock_ne": 5,
+        "river_relief_study_island_sw": 5,
+        "river_relief_study_island_se": 5,
+        "river_relief_study_island_nw": 5,
+        "river_relief_study_island_ne": 5
+      },
+      "full_quality_rows": 2874,
+      "individual_reviews": 65,
+      "coverage_gaps": 4,
+      "approvals": 0,
+      "meets_objective": false,
+      "runtime_bound": false,
+      "all_six_acceptance_gates": false
+    },
+    "revised": {
+      "authored_relief_models": 8,
+      "individual_model_scores": {
+        "river_relief_study_rock_sw": 5,
+        "river_relief_study_rock_se": 5,
+        "river_relief_study_rock_nw": 5,
+        "river_relief_study_rock_ne": 5,
+        "river_relief_study_island_sw": 5,
+        "river_relief_study_island_se": 5,
+        "river_relief_study_island_nw": 5,
+        "river_relief_study_island_ne": 5
+      },
+      "full_quality_rows": 2874,
+      "individual_reviews": 65,
+      "coverage_gaps": 4,
+      "approvals": 0,
+      "meets_objective": false,
+      "runtime_bound": false,
+      "all_six_acceptance_gates": false
+    }
+  },
+  "changed_models": {
+    "river_relief_study_rock_sw": {
+      "initial_occupied": 4124,
+      "revised_occupied": 5453,
+      "initial_fingerprint": "f3297b339a779520eaca23169747a9eaa66e354924a8e8bce9b89e8a43f8045c",
+      "revised_fingerprint": "cf02d58b57e7391dd7c2d4a3f1e7e1ad375e9e017377eed79ab7e70dfdc64cd7"
+    },
+    "river_relief_study_rock_se": {
+      "initial_occupied": 3230,
+      "revised_occupied": 4292,
+      "initial_fingerprint": "8cb3efaa585f2c071550a4d57f9978c77ab21c6c22927fa0ef346dd0574186f1",
+      "revised_fingerprint": "a2707385daa2245bf4ea6793660138a7aa9e2da4cfd3f0ad467ee542120e3630"
+    },
+    "river_relief_study_rock_nw": {
+      "initial_occupied": 4422,
+      "revised_occupied": 6020,
+      "initial_fingerprint": "bceb53551fb00946dbb3f6f67acb2fdbc4d39ef0e3bac3bc41d546f2f34aa0ee",
+      "revised_fingerprint": "7f2352f2cae87d4bce74494ee8dff84a16266167dec630fdcb80abac4b612fb2"
+    },
+    "river_relief_study_rock_ne": {
+      "initial_occupied": 4616,
+      "revised_occupied": 5980,
+      "initial_fingerprint": "ec7240a23e00cd1de0f72f3240c8a4fca0a3a23e47041e97e3f0c32a52e23e6e",
+      "revised_fingerprint": "d2f0fb8247a6d405b35710b8cbeaec82e4fa397a2aa770ab0fa3a6a886edef9b"
+    },
+    "river_relief_study_island_sw": {
+      "initial_occupied": 4002,
+      "revised_occupied": 7936,
+      "initial_fingerprint": "d6410a16c73e5a7fa403c9e3623138ffa9ee60057df9c69550b675fbe7e02b52",
+      "revised_fingerprint": "8384205776f3a0eca67d64d4aeabad312dde35a622a3fb5b8a3e7133eab263ec"
+    },
+    "river_relief_study_island_se": {
+      "initial_occupied": 4103,
+      "revised_occupied": 5888,
+      "initial_fingerprint": "14a7b207332735ec6f6bc5e7f916a9e4e98a4e85eab4885688fbb8ca45307289",
+      "revised_fingerprint": "6fa21a724647dc9dcf20f6f3f42fbe22a314e0b22eda3b79a15b1fd7f498faee"
+    },
+    "river_relief_study_island_nw": {
+      "initial_occupied": 3492,
+      "revised_occupied": 5760,
+      "initial_fingerprint": "422ad16cc840305a3d41213d0804a1170aa6a6b8caff4ede2155f6f2b6f67987",
+      "revised_fingerprint": "f7d2957571c16f9df375701a2ff34fbe35adb1d1ee5b17e9539e2eab732560d9"
+    },
+    "river_relief_study_island_ne": {
+      "initial_occupied": 3588,
+      "revised_occupied": 4992,
+      "initial_fingerprint": "6aa951c7fe6d0ee128a64105b69693d0d374b19daa342bd01cb5bd16b1734186",
+      "revised_fingerprint": "47f80f87ddec9a08ed2335e6ac89e1c00483057b313f51557e35a23deec9ec02"
+    }
+  },
+  "source_instances_separately_screened": 16,
+  "new_runtime_voxel_coverage": 0,
+  "canonical_artwork_or_bindings_changed": false,
+  "prior_mixed_working_2998_row_csv_untouched": true,
+  "recommended_release": "opentt3d-dev-20261003.42",
+  "geometry_approvals": 0
+}

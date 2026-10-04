@@ -1,0 +1,15 @@
+{
+  "canonical_asset_tests": 253,
+  "working_asset_tests": 271,
+  "native_ctest_cases": 215,
+  "unit_native_cases": 213,
+  "harness_tests": 106,
+  "study_structural_tests": 10,
+  "presentation_boundary_passed": true,
+  "canonical_test_tree": "build-macos/breadth-original-river-relief-clean-test-tree",
+  "base_commit": "342ba54a9e563d9e826ab8966934c328fff89008",
+  "quarantined_hq_artwork_compiler_tests_present": false,
+  "scope": "Committed canonical tree is tested separately from unchanged mixed working artwork/compiler/tests. Unit runner213 plus two regression CTest cases are the full215 native tests, not missing tests.",
+  "unit_stdout_sha256": "244e38ffe03d342fc3fb3dafa08d7ea7a9b6662d6a36ed1374c98ac1453e0953",
+  "unit_stdout_archive": "unit-native-tests.log.gz"
+}
