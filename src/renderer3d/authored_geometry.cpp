@@ -475,7 +475,7 @@ std::unordered_map<unsigned,AuthoredModel> LoadModels(const std::string &pack, b
 					for (unsigned lod = 1; lod <= 2; ++lod) BuildPart(model.distant_dead[lod - 1], part, lod);
 				};
 				for (const auto &part : value.at("parts")) if (part[0]=="round" || part[0]=="tube") dead_part(part);
-				/* Shared hand-authored branch rig, scaled to each authored crown. */
+				/* Shared generated branch rig, scaled to each authored crown. */
 				float h=model.high.z, r=std::max(model.high.x-model.low.x,model.high.y-model.low.y)*0.35f;
 				for (const auto &path : {std::array<Vec3,3>{{{0,0,h*0.35f},{r*0.6f,0,h*0.55f},{r,0,h*0.66f}}},
 					std::array<Vec3,3>{{{0,0,h*0.48f},{-r*0.6f,0,h*0.67f},{-r,0,h*0.8f}}},

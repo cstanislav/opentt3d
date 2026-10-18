@@ -6,7 +6,7 @@ release or a verified portable desktop package.
 
 ## Progress
 
-- The catalogue contains **1,019 manually authored voxel volumes** and bindings for
+- The catalogue contains **1,019 explicitly constructed voxel volumes** and bindings for
   **161/256 original vehicle definitions**, including all33 ordinary fixed-wing
   aircraft. Seventeen new bodies preserve propeller, delta, high-wing, twin/four-
   engine and multi-body layouts, with aliases only where original source art permits.

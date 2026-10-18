@@ -10,7 +10,7 @@
 #include <map>
 
 namespace Renderer3D {
-void DrawRoadStop(Scene &scene, const Camera &camera, Vec3 origin, bool truck, unsigned layout, bool tram, PaletteID palette, bool transparent, bool invisible, float height_limit)
+void DrawRoadStop(Scene &scene, const Camera &camera, Vec3 origin, bool truck, unsigned layout, bool tram, PaletteID palette, bool transparent, bool invisible, float height_limit, SpriteID road_ground)
 {
 	if (scene.visibility && !scene.visibility->Intersects(origin,origin+Vec3{16,16,12})) return;
 	bool detail = camera.PixelScaleAt(origin+Vec3{8,8,4}) >= 1.25f;
@@ -30,10 +30,11 @@ void DrawRoadStop(Scene &scene, const Camera &camera, Vec3 origin, bool truck, u
 		bool substrate = material == RoadStopMaterial::Road || material == RoadStopMaterial::Paving;
 		data.identity = {0,static_cast<float>(static_cast<uint32_t>(SurfaceMode::Opaque) | (substrate ? 0 : SURFACE_SHADED)),1,2};
 		const auto &source = *GetStationTileLayout(truck ? StationType::Truck : StationType::Bus,layout);
-		SpriteID image = substrate ? source.ground.sprite & SPRITE_MASK :
+		bool road_lane = material == RoadStopMaterial::Road && road_ground != 0;
+		SpriteID image = substrate ? (road_lane ? road_ground : source.ground.sprite & SPRITE_MASK) :
 			material == RoadStopMaterial::Company ? SPR_BUS_STOP_DT_X_W : material == RoadStopMaterial::Masonry ? SPR_TRUCK_STOP_DT_X_W : 0;
 		if (image != 0) {
-			PaletteID material_palette = substrate ? GroundSpritePaletteTransform(source.ground.sprite,source.ground.pal,palette) : material == RoadStopMaterial::Company ? palette : PAL_NONE;
+			PaletteID material_palette = road_lane ? PAL_NONE : substrate ? GroundSpritePaletteTransform(source.ground.sprite,source.ground.pal,palette) : material == RoadStopMaterial::Company ? palette : PAL_NONE;
 			const auto &texture = Textures().Get(image,material_palette,0,true);
 			data.uv_transform[3] = static_cast<float>(texture.page);
 			data.region = texture.Region();

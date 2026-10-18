@@ -6407,7 +6407,7 @@ python3 tools/opentt3d/smoke.py --build-dir build-macos \
 The industry pack now has **40/175** explicit tile profiles. Additional assemblies
 cover refinery tanks/pipe racks, offshore platforms, pump-jack poses, farm buildings,
 silos, factory wings and steelworks. Completed sprite bindings come from the pinned
-upstream table or an explicitly listed animation set; geometry is hand-authored.
+upstream table or an explicitly listed animation set; geometry is generated.
 
 Lathed surfaces support authored source rectangles for wall/rim/interior material
 regions, or explicit source-sample positions. Both GPU backends are compared against

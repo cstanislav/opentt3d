@@ -38,8 +38,18 @@ def main():
     data = json.loads(PIN.read_text())
     if args.action == "check":
         latest = json.loads(subprocess.check_output(["gh", "api", "repos/OpenTTD/OpenTTD/releases/latest"], text=True))
+        releases = json.loads(subprocess.check_output(
+            ["gh", "api", "--paginate", "--slurp", "repos/OpenTTD/OpenTTD/releases?per_page=100"], text=True))
+        flat = [release for page in releases for release in page if not release.get("draft")]
+        prereleases = [release for release in flat if release.get("prerelease")]
+        newest = prereleases[0] if prereleases else None
         result = {"pinned": data["openttd"]["tag"], "latest_stable": latest["tag_name"],
                   "update_available": latest["tag_name"] != data["openttd"]["tag"], "url": latest["html_url"]}
+        if newest is not None:
+            result["latest_prerelease"] = newest["tag_name"]
+            result["latest_prerelease_url"] = newest["html_url"]
+            result["newer_prerelease_available"] = (newest["tag_name"] != data["openttd"]["tag"] and
+                                                    newest["published_at"] > latest["published_at"])
         print(json.dumps(result, indent=2))
         return
     if args.tag is None or re.fullmatch(r"[0-9]+(?:\.[0-9]+){1,2}", args.tag) is None:

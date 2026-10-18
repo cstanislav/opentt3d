@@ -43,7 +43,7 @@ performance and platform gates remain open. Recommended immutable`.42`is unchang
 
 `reviews/20261004/river-bank-snow-breadth/` retains twenty particular actually
 selected snow-painted Arctic owners:12 flat and two per original river slope.
-Separate manually authored thin soil/snow volumes add wider shoulders/corner arms
+Separate explicitly constructed thin soil/snow volumes add wider shoulders/corner arms
 without image extrusion, alpha tracing, source fitting, object inflation or water
 voxelisation. Original complete PAMs/registration/selectors/tile/heights and all
 earlier80 bank studies remain. Snow-paint observations do not establish public
@@ -114,7 +114,7 @@ changes remain untouched. Continue catalogue breadth and concrete repair work.
 ## River-bank breadth — forty-eight individually screened unbound volumes
 
 `reviews/20261004/river-bank-breadth/` retains twelve independent elevated-flat bank
-owners per climate, including separate manually authored soil toe/shelf/crest and
+owners per climate, including separate explicitly constructed soil toe/shelf/crest and
 corrected two-arm corners. All48 current source/native/orbit/street presentations
 were individually inspected:24 at4/10 and24 at5/10, with unique defects, unchanged
 tile datum/maximum study height, SHA-256 evidence and all six acceptance gates
@@ -234,7 +234,7 @@ changed or promoted. The complete catalogue-wide goal remains active.
 ## Changed HQ and lock owners receive fresh provisional reviews
 
 The subsequent `reviews/20261003/water-foam-palette-study/` corrects six lower-sea
-foam owners to animated palette250 and manually authored half-unit widths. The
+foam owners to animated palette250 and explicitly constructed half-unit widths. The
 baseline source colour matches the original glitter entry, without static RGB
 substitution. Nonfoam geometry/paint/registration and42 other models remain exact;
 756 unchanged full views and108 new complete lossless images are retained. All six

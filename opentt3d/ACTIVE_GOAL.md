@@ -200,7 +200,7 @@ clock or complete release is inferred from these reviews.
 ## River-bank breadth — forty-eight individually screened volumes — October 4
 
 Concrete bank modelling now retains48 separate elevated-flat owner candidates
-(twelve per climate), with manually authored soil toe/shelf/crest and corrected
+(twelve per climate), with explicitly constructed soil toe/shelf/crest and corrected
 two-arm corners. Individual source/native/orbit/street inspection prompted two
 paint-only Arctic snow repairs and distinct Toyland yellow-centre/pale-end repairs.
 All originals, rejected geometry/paint, failed surveys/tests and native evidence
@@ -426,7 +426,7 @@ next continuation; the23:56:42 evidence seal is not substituted for this clock c
 ## Original foam palette/width repaired provisionally — October 3
 
 Six lower-sea owners now use original animated glitter palette250 rather than its
-dark252 entry, and manually authored half-unit waterline/return widths. Original
+dark252 entry, and explicitly constructed half-unit waterline/return widths. Original
 observed216/244/252 RGB at the nonanimated baseline matches250; no static white
 material freezes the original cycle. Nonfoam cells/six-face paint, object height,
 openings/origins remain exact. Forty-two other owners retain756 exact full views and
@@ -1912,7 +1912,7 @@ Evidence:`breadth-airport-fence-subpixel-clearance-study.json` and
 
 ## First voxel effects integrated — September28,02:35:59UTC
 
-Four manually authored roadworks orientations bring the catalogue to1,707. Explicit
+Four explicitly constructed roadworks orientations bring the catalogue to1,707. Explicit
 sprite1416…1419/climate0…3 bindings preserve all1,703 previous volumes, components,
 material faces and earlier bindings. The tracked body has separate rollers, a supported
 recessed cab/operator, exhaust, an open underbody and a curved two-sided blade. Original
@@ -2012,7 +2012,7 @@ Peak sampled memory is3,555,692,096bytes. Evidence:`breadth-effects-source-recon
 
 The source review preserves expanding/perforating steam, separate spark poses, rising
 explosion rings, independent bubble generation/burst/absorption offsets and four actual
-bulldozer image directions. A manually authored bulldozer study is isolated and unbound.
+bulldozer image directions. A explicitly constructed bulldozer study is isolated and unbound.
 The pier27 support study finds a source-contained1.25-unit recess that clears2,483
 observed local poses across both earlier Cab traces; full-body and native review follow.
 Other airport clearance defects, effect authoring, source fidelity and smooth60fps remain.
@@ -4063,7 +4063,7 @@ immediately; record cosmetic findings for their appropriate later pass.
   real bridges and tunnels both full and empty. The complete frozen1,169 matrices
   pass28,056 mesh views/322,048 vehicle poses/backend; broaderCI memory remains open.
 
-- **Forest/refinery candidate:**25 manually authored volumes add graphics16…23 and
+- **Forest/refinery candidate:**25 explicitly constructed volumes add graphics16…23 and
   independent grounds. Both native backends observe the unchanged actual forest tile's
   wood-dispatch/log/regrowth lifecycle; all24 refinery construction body/ground selections
   pass. Source/street review corrects orientation, occupied footprints, log ends and a
@@ -4114,7 +4114,7 @@ immediately; record cosmetic findings for their appropriate later pass.
   matrices pass after call-scoped diagnostic CPU/GPU reference ownership;4.38GiB peak.
   Source preview`opentt3d-dev-20260926.1` is published frommain. CI exposes a Windows
   macro collision and an inherited90second Linux timeout; repair while the fullGL
-  follow-up runs. New manually authored early-aircraft families and a public-NoAI
+  follow-up runs. New explicitly constructed early-aircraft families and a public-NoAI
   operating fixture are in progress. The19:00UTC minimum and complete goal remain active.
 
 - **03:18UTC — quiet review path verified:** hidden nativeGL/Vulkan and LaunchServices
@@ -4187,7 +4187,7 @@ immediately; record cosmetic findings for their appropriate later pass.
   and Vulkan105 observe original239/240 and242…244 palette phases on actual houses;
   the non-animating32bpp cafe attempt remains failed evidence. Fifty-two volumes and
   every later source/detail/footprint review remain visually unapproved.
-- Seven additional temperate tree families1604…1646 add49 manually authored lifecycle
+- Seven additional temperate tree families1604…1646 add49 explicitly constructed lifecycle
   volumes, bringing the current catalogue to736; root audit passes after repairing
   an unsupported fork and accidental leaf sliver. GPU/source/state review is active.
   Lossless compaction preserves3,282 generated images and saves4,537,202,321bytes.

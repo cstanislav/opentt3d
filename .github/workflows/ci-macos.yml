@@ -23,7 +23,9 @@ jobs:
 
     runs-on: macos-latest
     env:
-      MACOSX_DEPLOYMENT_TARGET: 10.13
+      # std::filesystem requires the 10.15 runtime; 10.13 makes the current
+      # Xcode/libc++ headers unavailable during the nightly build.
+      MACOSX_DEPLOYMENT_TARGET: 10.15
 
     steps:
     - name: Setup Xcode version

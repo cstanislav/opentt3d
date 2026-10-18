@@ -26,16 +26,16 @@ class VoxelCompilerTests(unittest.TestCase):
             cells = {(x+i,y,z) for x,y,z,length,material in model["runs"] for i in range(length)}
             volumes[variant] = cells
             painted[variant] = {(x+i,y,z):tuple(data["materials"][material-1]) for x,y,z,length,material in model["runs"] for i in range(length)}
-            self.assertEqual({z for x,y,z in cells},set(range(4)),"Real side walls/coping have XYZ depth, not a flat source overlay")
+            self.assertEqual({z for x,y,z in cells},set(range(12)),"Real side walls/coping have XYZ depth, not a flat source overlay")
             self.assertTrue(all(x < 6 or x >= 26 or y < 6 or y >= 26 for x,y,z in cells),"No masonry enters the central ten-world-unit ship channel")
             self.assertTrue(all(0 <= x < 32 and 0 <= y < 32 for x,y,z in cells))
             colours = {colour for *_,material in model["runs"] for colour in data["materials"][material-1]}
             self.assertTrue(colours <= set(range(1,15)),"Keep the captured original grey/white masonry; pure white15 is absent from the source")
         # Original order: dry -X,+Y,+X,-Y; corresponding corners start at -X,+Y.
-        self.assertEqual({x for x,y,z in volumes[0]},set(range(4)))
-        self.assertEqual({y for x,y,z in volumes[1]},set(range(28,32)))
-        self.assertEqual({x for x,y,z in volumes[2]},set(range(28,32)))
-        self.assertEqual({y for x,y,z in volumes[3]},set(range(4)))
+        self.assertEqual({x for x,y,z in volumes[0]},set(range(6)))
+        self.assertEqual({y for x,y,z in volumes[1]},set(range(26,32)))
+        self.assertEqual({x for x,y,z in volumes[2]},set(range(26,32)))
+        self.assertEqual({y for x,y,z in volumes[3]},set(range(6)))
         for outer,inner in zip(range(4,8),range(8,12)):
             self.assertTrue(volumes[inner] <= volumes[outer],"Concave joins retain a smaller genuine diagonal volume")
         for first,second,corner in ((0,1,4),(1,2,5),(2,3,6),(3,0,7)):
@@ -57,7 +57,7 @@ class VoxelCompilerTests(unittest.TestCase):
         data = compile_catalogue(source)
         def cells(name):
             return {(x+i,y,z):tuple(data["materials"][material-1]) for x,y,z,length,material in data["models"][name]["runs"] for i in range(length)}
-        for label,centre,height in (("bank", (32,14),30), ("bank2", (31,11.5),56)):
+        for label,centre,height in (("bank", (32,14),30), ("bank2", (32,11.5),56)):
             a,b = cells(label+"_north"),cells(label+"_south")
             self.assertFalse(a.keys() & b.keys(), "Two original owners must not duplicate any cupola or roof cell")
             whole = {**a,**b}

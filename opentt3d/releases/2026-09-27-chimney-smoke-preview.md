@@ -6,7 +6,7 @@ volumes, with continuous lower wisps and detached upper eddies. The catalogue re
 
 ## Changes
 
-- Added eight manually authored chimney frames with explicit bindings in every climate.
+- Added eight explicitly constructed chimney frames with explicit bindings in every climate.
 - Preserved original stationary anchors, local altitude, countdown, spawning, deletion,
   industry availability and simulation RNG.
 - Kept smoke absent under original industry transparency/invisibility and before the

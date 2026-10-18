@@ -133,6 +133,10 @@ jobs:
           - arch: arm64
             host: x64_arm64
     steps:
+      - name: Enable full evidence paths before checkout
+        # Retained native review paths exceed the Windows MAX_PATH limit.
+        shell: pwsh
+        run: git config --global core.longpaths true
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0

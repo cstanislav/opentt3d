@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bind hand-authored assemblies to the pinned upstream vehicle sprite tables.
+"""Bind generated assemblies to the pinned upstream vehicle sprite tables.
 
 Only metadata is extracted from upstream. Geometry comes exclusively from the
 explicit assemblies in assets/3d/vehicles.json, never from image analysis.

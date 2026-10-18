@@ -1,0 +1,24 @@
+{
+  "checked_run": 39092709178,
+  "workflow": "CI - Nightly",
+  "head_sha": "ebe8c521f88e1ddade536b44ca8a53ebe345eca6",
+  "conclusion": "failure",
+  "successful_jobs": [
+    "Mac OS (x64)"
+  ],
+  "failed_jobs": [
+    "MinGW (x86_64)",
+    "MinGW (i686)"
+  ],
+  "causes": [
+    "Windows checkout rejected retained evidence paths above MAX_PATH",
+    "macOS CI forced MACOSX_DEPLOYMENT_TARGET 10.13 while std::filesystem requires 10.15"
+  ],
+  "repairs": [
+    "git config --global core.longpaths true before Windows checkout",
+    "MACOSX_DEPLOYMENT_TARGET 10.15",
+    "regression tests in tools/opentt3d/test_release_checkout.py"
+  ],
+  "evidence_excluded_or_shortened": false,
+  "nightly_green_run_claimed": false
+}

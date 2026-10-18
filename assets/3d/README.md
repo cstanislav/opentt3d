@@ -47,7 +47,7 @@ selected climate and each independent layer state. Ordinary aircraft fixtures ca
 use `--starting-year 1958` for still-available small airports; the default is2050.
 
 Effect bindings use the original sprite ID and an explicit climate state `0…3`.
-The first four bound sources, roadworks1416…1419, use one manually authored tracked
+The first four bound sources, roadworks1416…1419, use one explicitly constructed tracked
 machine in four registered orientations. Their sixteen explicit climate bindings follow
 exact comparisons of source pixels, palettes, sizes and offsets across all climates.
 The runtime selects the original displayed sprite, including a bulldozer reversing

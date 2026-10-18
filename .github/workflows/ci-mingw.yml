@@ -20,6 +20,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: Enable full evidence paths before checkout
+      # Retained native review paths exceed the Windows MAX_PATH limit. Keep
+      # the original files verbatim instead of excluding review evidence.
+      shell: pwsh
+      run: git config --global core.longpaths true
+
     - name: Checkout
       uses: actions/checkout@v6
 

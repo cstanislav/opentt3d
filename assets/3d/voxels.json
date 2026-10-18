@@ -4719,11 +4719,11 @@
       ["scatter_paint","bank2_brick_light",6,3186,10,0,1,52,23,52,"bank2_brick",[1,1,2]]
     ],
     "bank2_rooftop_dome": [
-      ["lathe","bank2_frame",[31,11.5],[[54,6.5,0],[56,6.5,0]]],
-      ["lathe","bank2_gold",[31,11.5],[[56,6.5,5],[59,6.5,5],[69,5,3.5],[77,2.5,1],[80,1,0]]],
-      ["radial_paint","bank2_gold_rib",[31,11.5],56,80,32,286331153],
-      ["lathe","bank2_gold_rib",[31,11.5],[[79,1.1,0],[84,1.1,0]]],
-      ["lathe","bank2_finial",[31,11.5],[[83,0.75,0],[88,0.75,0]]]
+      ["lathe","bank2_frame",[32,11.5],[[54,6.5,0],[56,6.5,0]]],
+      ["lathe","bank2_gold",[32,11.5],[[56,6.5,5],[59,6.5,5],[69,5,3.5],[77,2.5,1],[80,1,0]]],
+      ["radial_paint","bank2_gold_rib",[32,11.5],56,80,32,286331153],
+      ["lathe","bank2_gold_rib",[32,11.5],[[79,1.1,0],[84,1.1,0]]],
+      ["lathe","bank2_finial",[32,11.5],[[83,0.75,0],[88,0.75,0]]]
     ],
     "bank2_finished_front_paving": [
       ["box","bank2_ground_shadow",0,0,0,32,32,1],
@@ -5429,22 +5429,21 @@
       ["repeat",[0,8,0],4,[["paint","bank_paving_seam",0,0,0,32,1,1]]]
     ],
     "canal_dike_side": [
-      ["prism","canal_stone",1,0,32,[[0,0],[4,0],[4,1],[2,1],[2,4],[0,4]]],
-      ["paint","canal_coping",0,0,3,2,32,4]
+      ["prism","canal_stone",1,0,32,[[0,0],[6,0],[6,2],[4,2],[4,4],[2,4],[2,12],[0,12]]],
+      ["paint","canal_coping",0,0,10,3,32,12]
     ],
     "canal_dike_outer_corner": [
-      ["prism","canal_stone",2,0,1,[[0,26],[2,26],[6,30],[6,32],[0,32]]],
-      ["prism","canal_stone",2,1,4,[[0,28],[2,28],[4,30],[4,32],[0,32]]],
-      ["paint","canal_coping",0,28,3,4,32,4]
+      ["prism","canal_stone",2,0,12,[[0,26],[6,26],[6,32],[0,32]]],
+      ["paint","canal_coping",0,26,10,6,32,12]
     ],
     "canal_dike_inner_corner": [
-      ["prism","canal_stone",2,0,1,[[0,28],[4,32],[0,32]]],
-      ["prism","canal_stone",2,1,4,[[0,30],[2,32],[0,32]]],
-      ["paint","canal_coping",0,30,3,2,32,4]
+      ["prism","canal_stone",2,0,12,[[0,26],[6,26],[6,28],[2,28],[2,32],[0,32]]],
+      ["paint","canal_coping",0,26,10,6,28,12],
+      ["paint","canal_coping",0,28,10,2,32,12]
     ],
     "canal_dike_finish": [
-      ["scatter_paint","canal_stone_grain",4,5380,0,0,0,32,32,3,"canal_stone"],
-      ["scatter_paint","canal_coping_grain",5,5381,0,0,3,32,32,4,"canal_coping"]
+      ["scatter_paint","canal_stone_grain",5,5380,0,0,0,32,32,10,"canal_stone"],
+      ["scatter_paint","canal_coping_grain",7,5381,0,0,10,32,32,12,"canal_coping"]
     ],
     "food_soil_slab": [
       ["box","food_soil",0,0,0,32,32,1],
@@ -33769,7 +33768,7 @@
     },
     "bank2_north": {
       "size":[64,32,90],"cell_size":[0.5,0.5,0.5],"origin":[0,0,0],"review_status":"work-in-progress",
-      "reference":"Original Arctic/tropical bank89 body2186 is finished in every construction slot. Joined red two-storey brick office, recessed colonnade glazing, flat olive roof and white cornice. Golden dome is centered on the roof at cell31,11.5 and partitioned at the original tile seam, never duplicated or truncated",
+      "reference":"Original Arctic/tropical bank89 body2186 is finished in every construction slot. Joined red two-storey brick office, recessed colonnade glazing, flat olive roof and white cornice. Golden dome is centered on the roof at cell32,11.5 and partitioned at the original tile seam, never duplicated or truncated",
       "ops":[["use","bank2_joined_shell"],["use","bank2_rooftop_dome"],["erase",32,0,0,64,32,90]]
     },
     "bank2_south": {
@@ -37391,62 +37390,62 @@
       ]
     },
     "canal_dike_0": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original canal edge5380, dry -X neighbour: stepped stone toe, vertical retaining courses and bright solid coping; independently authored XYZ masonry, not extruded source pixels. Original water/adjacency/picking remain separate",
       "ops":[["use","canal_dike_side"],["use","canal_dike_finish"]]
     },
     "canal_dike_1": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5381 +Y canal bank; original edge-selection order retained",
       "ops":[["rotate_z",-90,[16,16,0],[["use","canal_dike_side"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_2": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5382 +X canal bank; physical toe/retaining wall/coping, fixed world-facing material lighting",
       "ops":[["rotate_z",180,[16,16,0],[["use","canal_dike_side"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_3": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5383 -Y canal bank; remains on original ground ownership when buildings are hidden",
       "ops":[["rotate_z",90,[16,16,0],[["use","canal_dike_side"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_4": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5384 convex -X/+Y corner: chamfered solid masonry fills the junction of two dry sides; original selection still owns this corner",
       "ops":[["use","canal_dike_outer_corner"],["use","canal_dike_finish"]]
     },
     "canal_dike_5": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5385 convex +X/+Y canal corner; symmetric footprint with world-directed six-face stone paint",
       "ops":[["rotate_z",-90,[16,16,0],[["use","canal_dike_outer_corner"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_6": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5386 convex +X/-Y canal corner; no road, shore or water plane is part of the masonry model",
       "ops":[["rotate_z",180,[16,16,0],[["use","canal_dike_outer_corner"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_7": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5387 convex -X/-Y canal corner; separate native origin retained",
       "ops":[["rotate_z",90,[16,16,0],[["use","canal_dike_outer_corner"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_8": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5388 concave -X/+Y diagonal corner; only selected when both cardinal neighbours are watered and the original diagonal is dry",
       "ops":[["use","canal_dike_inner_corner"],["use","canal_dike_finish"]]
     },
     "canal_dike_9": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5389 concave +X/+Y diagonal corner; small genuine stepped retaining/coping volume with an open ship channel",
       "ops":[["rotate_z",-90,[16,16,0],[["use","canal_dike_inner_corner"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_10": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5390 concave +X/-Y diagonal corner; no invented wall across either adjoining wet tile",
       "ops":[["rotate_z",180,[16,16,0],[["use","canal_dike_inner_corner"]]],["use","canal_dike_finish"]]
     },
     "canal_dike_11": {
-      "size":[32,32,4],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
+      "size":[32,32,12],"cell_size":[0.5,0.5,0.5],"origin":[0,0,-0.5],"review_status":"work-in-progress",
       "reference":"Original5391 concave -X/-Y diagonal corner; original sprite ID/state continues to determine presentation only",
       "ops":[["rotate_z",90,[16,16,0],[["use","canal_dike_inner_corner"]]],["use","canal_dike_finish"]]
     },

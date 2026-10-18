@@ -1486,7 +1486,7 @@ Evidence includes native `voxel-silver-first-review`, `voxel-trees-native-scale-
 `voxel-columns-grain-review`, `voxel-columns-final-scale-review` and
 `voxel-silver-stage-{0,1,6}-live`; Linux corresponding first/shading/grain/final-scale
 validation runs. Current336 exact voxel-tree views are separate from5,376 older
-component views for the remaining60 families. Geometry is manually authored throughout.
+component views for the remaining60 families. Geometry is explicitly constructed throughout.
 
 ## Drooping spruce: active review
 

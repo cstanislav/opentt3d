@@ -1183,8 +1183,16 @@ bool CaptureRoadStop(const TileInfo &tile, unsigned layout, const DrawTileSprite
 	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
 	size_t first = capture->scene.instances.size();
 	float height = IsBridgeAbove(tile.tile) ? std::max(1.0f,TerrainZ(GetBridgePixelHeight(GetNorthernBridgeEnd(tile.tile))-tile.z)-1) : 12;
+	/* Use the adjoining road's own paved ground for the drive lane, so a stop
+	 * does not introduce a visibly different asphalt rectangle at its border. */
+	SpriteID road_ground = 0;
+	if (tile.tileh == SLOPE_FLAT && road != INVALID_ROADTYPE && layout >= 4 && IsDriveThroughStopTile(tile.tile)) {
+		Axis axis = GetDriveThroughStopAxis(tile.tile);
+		SpriteID candidate = (axis == AXIS_X ? SPR_ROAD_X : SPR_ROAD_Y) - 19;
+		if (IsBaseGraphicsSprite(candidate)) road_ground = candidate;
+	}
 	DrawRoadStop(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},truck,layout,tram != INVALID_ROADTYPE,palette,
-		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS),height);
+		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS),height,road_ground);
 	if (capture->scene.instances.size() != first) ++capture->road_stop_sections;
 	return true;
 }
@@ -1364,8 +1372,7 @@ static Vec3 SpriteUV(const SpriteTexture &texture, Vec3 p, Vec3 origin, int extr
 }
 
 /** Every upstream slope has an immutable local mesh, shared by terrain layers. */
-static const std::vector<Vertex> &GroundGeometry(Slope tileh, bool flat_material, unsigned fine_edges)
-{
+static const std::vector<Vertex> &GroundGeometry(Slope tileh, bool flat_material, unsigned fine_edges){
 	static std::array<std::vector<Vertex>, 512*16> meshes;
 	auto &vertices = meshes[(to_underlying(tileh)*2+flat_material)*16+fine_edges];
 	if (!vertices.empty()) return vertices;

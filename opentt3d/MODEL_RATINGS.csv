@@ -196,9 +196,9 @@ arctic_farm_livestock_ground,5,authored-voxel,structural-screen-only,Authored oc
 arctic_farm_livestock_yard,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
 arctic_farm_silo_ground,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
 arctic_farm_silos,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
-bank2_north,7,authored-voxel,individually-reviewed,Original89 has a properly joined two-storey brick office and centred golden cupola. The dome crosses the owner seam without duplicate cells or missing ribs.
+bank2_north,7,authored-voxel,individually-reviewed,Golden cupola is centred at cell32 on the joined roof seam; both original owner halves partition the same volume.
 bank2_north_ground,7,authored-voxel,individually-reviewed,The source89 front paving and narrow planted strip retain their independent tile layer and native contact height.
-bank2_south,7,authored-voxel,individually-reviewed,"Original90 retains its native near-wing offset, cornice, windows, colonnade and complementary cupola portion; Arctic and tropical live worlds are verified."
+bank2_south,7,authored-voxel,individually-reviewed,Near wing retains its complementary cupola half and native offset; the joined dome is centred across the tile seam.
 bank2_south_ground,7,authored-voxel,individually-reviewed,The source90 ground cut registers with the joined office rather than duplicating another tile's border or garden.
 bank_north,7,authored-voxel,individually-reviewed,Individually inspected in the joined original58/59 roof. Cupola is centred and partitioned without seam loss; finial and colonnade remain volumetric.
 bank_north_ground,7,authored-voxel,individually-reviewed,Independent original58 finished paving and planter retain their ownership and meet the connected body without a seam step.
@@ -217,18 +217,18 @@ bubble_161_body,5,authored-voxel,structural-screen-only,Authored occupied 3D cel
 bubble_162_body,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
 bubble_plunger,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
 bubble_spring,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
-canal_dike_0,7,authored-voxel,individually-reviewed,"Dry -X side has a genuine stepped toe, retaining courses and coping; all-angle/street inspection confirms physical depth and an open channel."
-canal_dike_1,7,authored-voxel,individually-reviewed,Dry +Y retaining side is correctly rotated and remains ground-owned. Its actual climate soil margin is independently preserved under masonry.
-canal_dike_10,6,authored-voxel,individually-reviewed,"The +X/-Y concave model is a small rotated retaining/coping volume with an unobstructed interior, not an extruded sprite."
-canal_dike_11,6,authored-voxel,individually-reviewed,"The -X/-Y concave corner has the proper complementary diagonal footprint and physical lower toe, but needs close joined-world inspection."
-canal_dike_2,7,authored-voxel,individually-reviewed,"The dry +X side has coherent physical toe/coping depth in opposite-orbit and street previews, without crossing the central ship channel."
-canal_dike_3,7,authored-voxel,individually-reviewed,The dry -Y side uses the correct original axis and retains a low real retaining wall beside independently animated water.
-canal_dike_4,7,authored-voxel,individually-reviewed,"The -X/+Y convex join has a chamfered toe and coping volume, not a painted ground corner; live selection is independently observed."
-canal_dike_5,7,authored-voxel,individually-reviewed,The +X/+Y convex corner is physically stepped and correctly rotated in the inspected opposite-orbit/street previews.
-canal_dike_6,7,authored-voxel,individually-reviewed,"The +X/-Y convex corner retains original registration, genuine vertical depth and a compact diagonal footprint."
-canal_dike_7,7,authored-voxel,individually-reviewed,The -X/-Y convex join remains coherent where two real dry-edge walls meet in the live harbour; no wall spans the navigable interior.
-canal_dike_8,6,authored-voxel,individually-reviewed,"The -X/+Y concave piece is genuinely stepped and smaller than its convex counterpart, but the breadth preview is too small to approve the junction."
-canal_dike_9,6,authored-voxel,individually-reviewed,The +X/+Y concave corner retains actual XYZ depth rather than relying on its original soil patch; native joined appearance is unaccepted.
+canal_dike_0,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_1,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_10,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_11,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_2,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_3,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_4,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_5,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_6,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_7,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_8,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
+canal_dike_9,7,authored-voxel,individually-reviewed,Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain.
 civic_fountain,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
 civic_statue,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.
 cola_bowl,5,authored-voxel,structural-screen-only,Authored occupied 3D cells; individual visual/detail/world consistency review is not yet established.

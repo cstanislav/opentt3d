@@ -1,7 +1,7 @@
 # OpenTT3D
 
 A renderer-only source port of OpenTTD, based on OpenTTD **15.3**, with
-hand-authored 3D artwork referencing **OpenGFX2 Classic 0.8.1**.
+generated 3D artwork referencing **OpenGFX2 Classic 0.8.1**.
 
 Repository: https://github.com/cstanislav/opentt3d
 
