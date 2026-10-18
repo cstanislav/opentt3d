@@ -33,6 +33,14 @@ class ReleaseCheckoutTests(unittest.TestCase):
             self.assertNotIn('--timeout 120',text,name)
             self.assertIn('--timeout 300',text,name)
 
+    def test_nightly_fetches_pinned_opengfx2(self):
+        sha='2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf'
+        for name in ('ci-macos.yml','ci-mingw.yml'):
+            text=(ROOT/'.github/workflows'/name).read_text()
+            self.assertIn('OpenGFX2_Classic-0.8.1.tar',text,name)
+            self.assertIn(sha,text,name)
+            self.assertLess(text.index('Install pinned OpenGFX2 Classic'),text.index('- name: Test'),name)
+
     def test_nightly_macos_uses_filesystem_capable_deployment_target(self):
         text=(ROOT/'.github/workflows/ci-macos.yml').read_text()
         target=re.search(r'MACOSX_DEPLOYMENT_TARGET:\s*([0-9.]+)',text)

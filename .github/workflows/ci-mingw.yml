@@ -85,6 +85,13 @@ jobs:
         cmake --build .
         echo "::endgroup::"
 
+    - name: Install pinned OpenGFX2 Classic
+      shell: bash
+      run: |
+        mkdir -p build/baseset
+        curl -L -sS https://github.com/OpenTTD/OpenGFX2/releases/download/0.8.1/OpenGFX2_Classic-0.8.1.tar -o build/baseset/OpenGFX2_Classic-0.8.1.tar
+        echo "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf  build/baseset/OpenGFX2_Classic-0.8.1.tar" | sha256sum -c -
+
     - name: Test
       shell: msys2 {0}
       run: |

@@ -20,5 +20,24 @@
     "regression tests in tools/opentt3d/test_release_checkout.py"
   ],
   "evidence_excluded_or_shortened": false,
-  "nightly_green_run_claimed": false
+  "nightly_green_run_claimed": false,
+  "verification_run": {
+    "id": 39167610459,
+    "head_sha": "07d08405e2cc4b00638a88b3f360346b6da741ae",
+    "status_at_record": "in_progress",
+    "macos": {
+      "build": "success",
+      "tests": "217/219 passed; regression_regression and regression_stationlist hit the 120s per-test timeout under parallel load",
+      "conclusion": "failure"
+    },
+    "mingw64": {
+      "checkout": "success with core.longpaths",
+      "setup_msys2": "success",
+      "build": "success",
+      "tests": "pending"
+    },
+    "mingw32": "removed because MSYS2 retired the i686 lzo2/lld packages",
+    "fix": "raised CTest per-test timeout to300s in all CI workflows; committed 57cf17ece"
+  },
+  "retained_utc": "2026-10-18T21:47:56.224439+00:00"
 }
