@@ -31,10 +31,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
+        # MSYS2 has retired the 32-bit MINGW32 repositories and no longer
+        # provides lzo2/lld for i686. The Windows x86 release target is still
+        # built natively with MSVC; keep this nightly job on the supported
+        # MINGW64 environment rather than failing package setup every night.
         - msystem: MINGW64
           arch: x86_64
-        - msystem: MINGW32
-          arch: i686
 
     name: MinGW (${{ matrix.arch }})
 

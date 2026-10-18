@@ -9,8 +9,8 @@ progress record, not a claim that every model has reached 9/10.
 - **Drive-through bus and truck stops:** the lane substrate now samples the
   adjoining paved road ground sprite (`SPR_ROAD_X/Y - 19`) instead of the station
   ground sprite. The drive lane therefore uses the same asphalt texture and
-  markings as the road at its border. Bay stops keep the original station ground
-  because their road side is not derivable from a drive-through axis.
+  markings as the road at its border. Bay stops use an adjacent road tile's actual road bits, so their lane
+  matches that road without guessing a station orientation.
 - **Canal dikes:** all twelve original ground-owned dike volumes were raised from
   a two-unit strip to a six-world-unit stepped stone quay. The original ten-world-
   unit navigable channel remains clear. The quay has three stepped masonry

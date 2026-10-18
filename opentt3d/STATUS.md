@@ -2,6 +2,26 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## October 18 — bus-stop, canal, bank and branding consistency pass
+
+Drive-through bus/truck stop lanes now sample the adjoining paved road ground, so
+the asphalt and centre markings continue through the stop instead of introducing a
+different station-ground rectangle. Bay stops sample an adjacent road tile's actual road bits. All twelve canal dikes are now six-world-unit
+stepped stone quays with a solid coping and stone grain; the original ten-world-unit
+channel, water animation, ship level, adjacency and picking remain independent.
+Arctic/tropical `bank2` cupolas moved one cell onto the exact joined roof seam at
+cell32. The icon is a new orange-cube/OPEN-TT3D composition.
+
+The canal and bank volumes changed, so their structural tests and quality-review
+fingerprints were refreshed. Canal straight/outer-corner owners and both bank halves
+remain7/10 with explicit residual defects; inner corners moved6→7/10. No model was
+promoted to8 or9: source, state and all-angle clearance acceptance remain incomplete.
+Asset276, harness120 and native219 tests pass; the presentation boundary passes.
+`CI - Nightly` run39167264752 is the fresh verification run; it is not green merely
+because the workflow was dispatched. Upstream stable remains15.3; 16.0-beta4 is the
+newest prerelease and is not merged. `.42` remains recommended until a newer release
+passes independent publication checks.
+
 ## October 3 — HQ brick ownership and unbound lock detail improved provisionally
 
 The later unbound foam study corrects six owners to original animated palette250

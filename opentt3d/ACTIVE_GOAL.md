@@ -1,5 +1,25 @@
 # Active extended development goal
 
+## Current objective — October 18: every model at least9/10
+
+The active target is **every runtime asset genuinely 3D, detailed and consistent,
+with every model rated 1–10 and no model below9/10**. This supersedes the earlier
+8/10 wording retained in historical sections below. It is **not met**.
+
+Concrete progress: drive-through bus/truck lanes match adjoining road asphalt;
+twelve canal dikes are six-unit stepped stone quays with the original ten-unit
+channel and water level; bank2 cupolas sit on the exact joined-roof seam; the icon
+is an orange cube with OPEN/TT3D ribbons; nightly Windows checkout/Mac filesystem
+targets are repaired; public docs have fresh screenshots and no hand-crafting
+language. Asset276/harness120/native219 tests and the presentation boundary pass.
+
+The ledger still has1,827 models at5/10,271 at4/10,536 missing/fallback rows at1/10,
+and only21 at7/10. No model is9/10. Nightly run39167264752 is the fresh verification
+attempt. Upstream stable is15.3; 16.0-beta4 is the newest prerelease but is not
+merged. `.42` remains recommended. Continue individual modelling, source/world/
+state/LOD/picking/clearance reviews, performance and platform work; do not promote
+a score without the six gates and no open defects.
+
 ## Requested-window stopping audit — October 4, 19:19:36 UTC
 
 **Actual stopping clock:2026-10-04 19:19:36 UTC.** Modelling/native/release

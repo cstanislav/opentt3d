@@ -1,8 +1,26 @@
 # Model quality ledger
 
 The target is **every runtime asset genuinely 3D, detailed and consistent, with
-every model at least 8/10**. It is not yet met. A model count, successful build or
-source export does not establish visual quality or whole-world coverage.
+every model at least 9/10**. It is not yet met. A model count, successful build or
+source export does not establish visual quality or whole-world coverage. Historical
+sections that mention an 8/10 target record the earlier gate; the current target is
+9/10.
+
+## October 18 consistency pass — canals, bus stops, banks and branding
+
+All twelve canal dikes were rebuilt as six-world-unit stepped stone quays while
+retaining the original ten-world-unit clear channel, animated water, ship level,
+adjacency and picking. Straight and outer-corner owners remain7/10; the four inner
+corners moved6→7/10 after gaining a distinct L footprint. Residual defects are the
+planar water surface, broad coping/coarse stone grain and missing live clearance/
+state acceptance.
+
+Drive-through bus/truck stop lanes now use the adjoining paved road ground sprite;
+bay stops sample an adjacent road tile's actual road bits. The Arctic/tropical bank2 cupola is centred at
+cell32, the exact joined-roof seam, with both owner halves partition-tested. The
+new orange-cube/OPEN-TT3D icon replaces the locomotive icon. No model is promoted
+to8 or9; the every-model9/10, complete catalogue and sustained60fps goals remain
+open. See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4
 

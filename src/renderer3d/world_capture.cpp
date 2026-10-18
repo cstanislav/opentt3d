@@ -1186,10 +1186,24 @@ bool CaptureRoadStop(const TileInfo &tile, unsigned layout, const DrawTileSprite
 	/* Use the adjoining road's own paved ground for the drive lane, so a stop
 	 * does not introduce a visibly different asphalt rectangle at its border. */
 	SpriteID road_ground = 0;
-	if (tile.tileh == SLOPE_FLAT && road != INVALID_ROADTYPE && layout >= 4 && IsDriveThroughStopTile(tile.tile)) {
-		Axis axis = GetDriveThroughStopAxis(tile.tile);
-		SpriteID candidate = (axis == AXIS_X ? SPR_ROAD_X : SPR_ROAD_Y) - 19;
-		if (IsBaseGraphicsSprite(candidate)) road_ground = candidate;
+	if (tile.tileh == SLOPE_FLAT && road != INVALID_ROADTYPE) {
+		static constexpr unsigned offsets[16] = {0,18,17,7,16,0,10,5,15,8,1,4,9,3,6,2};
+		auto paved = [](RoadBits bits) {
+			SpriteID candidate = SPR_ROAD_Y + offsets[bits] - 19;
+			return IsBaseGraphicsSprite(candidate) ? candidate : 0;
+		};
+		if (IsDriveThroughStopTile(tile.tile)) {
+			road_ground = paved(GetDriveThroughStopAxis(tile.tile) == AXIS_X ? ROAD_X : ROAD_Y);
+		} else {
+			/* A bay stop's lane is owned by its adjoining road tile. Use that
+			 * tile's actual road bits instead of guessing a station orientation. */
+			for (DiagDirection dir : {DIAGDIR_NE,DIAGDIR_SE,DIAGDIR_SW,DIAGDIR_NW}) {
+				TileIndex next = TileAddByDiagDir(tile.tile,dir);
+				if (!IsValidTile(next) || !IsTileType(next,MP_ROAD) || GetRoadTypeRoad(next) == INVALID_ROADTYPE) continue;
+				road_ground = paved(GetRoadBits(next,RTT_ROAD));
+				if (road_ground != 0) break;
+			}
+		}
 	}
 	DrawRoadStop(capture->scene,capture->camera,{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)},truck,layout,tram != INVALID_ROADTYPE,palette,
 		IsTransparencySet(TO_BUILDINGS),IsInvisibilitySet(TO_BUILDINGS),height,road_ground);
