@@ -1,0 +1,22 @@
+{
+  "audited_utc": "2026-10-18T21:35:59.349864+00:00",
+  "models": 1915,
+  "bound_models": 1831,
+  "unbound_diagnostic_models": 84,
+  "single_layer_ground_or_fx_models": 195,
+  "two_layer_models": 18,
+  "six_face_material_violations": 0,
+  "overview_sheets": 20,
+  "overview_models": 1915,
+  "overview_note": "Every model has a labelled tile on one of the twenty full-catalogue contact sheets. Most bound entries are true multi-layer volumes; single/two-layer entries are ground, construction-site or effect surfaces. The 84 unbound larger-HQ tiles are blank because the runtime overview does not render them. No ordinary runtime object uses a sprite billboard.",
+  "unbound_hq_models_not_rendered_by_overview": 84,
+  "residual_priority_families": [
+    "airport/runway/lawn ground slabs are flat surfaces",
+    "construction sites and paving are intentionally flat plates",
+    "effect particles are thin/volumetric shells",
+    "84 larger-HQ studies remain unbound",
+    "lock fallback and incomplete river/conditional states remain"
+  ],
+  "every_model_9_advanced": false,
+  "quality_approvals": 0
+}

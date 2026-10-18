@@ -57,6 +57,17 @@ macOS target to 10.15. Four regression tests assert ordering, the target and the
 absence of sparse/excluding workarounds. The failed run is retained; no green
 nightly run is claimed until GitHub completes one.
 
+## Full-catalogue visual sweep
+
+Twenty labelled contact sheets in `overview-sheets/` cover all1,915 compiled
+models (100 per sheet). They were individually viewed. Most entries are true
+multi-layer volumes. The single/two-layer entries are ground, runway, lawn,
+construction-site, paving or effect surfaces; no ordinary runtime object is a
+sprite billboard. The sweep also exposed the remaining priorities: flat airport
+ground slabs, intentionally flat site plates, thin effect shells, the84 unbound
+larger-HQ studies (not rendered by the runtime overview) and the lock/river
+fallback states. See`coverage-audit.json`. The sweep is not a 9/10 approval.
+
 ## Verification
 
 - 276 asset tests pass, including the updated twelve-dike and bank-seam tests.
