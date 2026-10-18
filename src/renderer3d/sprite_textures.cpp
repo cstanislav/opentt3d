@@ -267,8 +267,7 @@ std::pair<int, Point> SpriteTextures::Allocate(int width, int height)
 		oldest->Reset();
 	}
 	auto &page = pages[index];
-	auto rect = page.allocator.Allocate(width + 2, height + 2);
-	assert(rect.has_value());
+	if (!page.allocator.Allocate(width + 2, height + 2)) throw std::runtime_error("Atlas allocation failed");
 	page.last_used = epoch;
 	/* Only allocated rectangles are sampled. Get/Repack marks each rectangle,
 	 * including its zeroed gutter, instead of uploading unused page capacity. */

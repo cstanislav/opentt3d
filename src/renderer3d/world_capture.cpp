@@ -763,7 +763,7 @@ static void ObserveVoxelIndustryPalette(TileIndex tile, unsigned graphics, size_
 	if (check.tile == INVALID_TILE) {
 		unsigned emitted = 0;
 		for (size_t i = first; i < capture->scene.instances.size(); ++i) emitted |= VoxelPaletteMask(*capture->scene.instances[i].mesh,check.first_colour,check.colour_count);
-		if (std::popcount(emitted) < (check.ground ? 2 : check.colour_count)) return;
+		if (std::popcount(emitted) < (check.ground ? 2U : check.colour_count)) return;
 		check.tile = tile;
 		check.industry = GetIndustryIndex(tile).base();
 		check.materials = emitted;
@@ -2487,7 +2487,7 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 					Debug(driver,1,"OpenTT3D: toy-factory frame {} captured at {},{} industry {}, clay {} robot {} stamp {} holder {}",frame,TileX(tile),TileY(tile),industry,children[0].image,children[1].image,children[2].image,children[3].image);
 				}
 				checked_toy_factory_frames |= uint64_t{1}<<frame;
-				if (std::popcount(checked_toy_factory_frames) == std::size(_industry_anim_offs_toys)) {
+				if (static_cast<size_t>(std::popcount(checked_toy_factory_frames)) == std::size(_industry_anim_offs_toys)) {
 					Debug(driver,1,"OpenTT3D: voxel toy-factory verification passed: 50 original ordered child frames and absences on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
 					check_toy_factory = false;
 				}
@@ -2521,7 +2521,7 @@ void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transpar
 				if (checked_bubble_tile == tile && checked_bubble_industry == industry) {
 					if ((checked_bubble_frames & (uint64_t{1}<<frame)) == 0) Debug(driver,1,"OpenTT3D: bubble-generator frame {} captured at {},{} industry {}, plunger {} cylinder {}",frame,TileX(tile),TileY(tile),industry,children[0].image,children[1].image);
 					checked_bubble_frames |= uint64_t{1}<<frame;
-					if (std::popcount(checked_bubble_frames) == std::size(_industry_anim_offs_bubbles)) {
+					if (static_cast<size_t>(std::popcount(checked_bubble_frames)) == std::size(_industry_anim_offs_bubbles)) {
 						Debug(driver,1,"OpenTT3D: voxel bubble-generator verification passed: 40 original ordered child frames on tile {},{} industry {}",TileX(tile),TileY(tile),industry);
 						check_bubble_generator = false;
 					}
