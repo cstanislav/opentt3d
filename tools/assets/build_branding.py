@@ -17,7 +17,18 @@ FONT = {
     "3": ("11110", "00001", "00001", "01110", "00001", "00001", "11110"),
     "D": ("11110", "10001", "10001", "10001", "10001", "10001", "11110"),
 }
-DOLLAR = ("0011100", "0100010", "0100000", "0011100", "0000010", "0100010", "0011100", "0001000", "0001000")
+DOLLAR = (
+    "....#....",
+    "...###...",
+    "..#.#.#..",
+    "..#.#....",
+    "...###...",
+    ".....#...",
+    "..#.#.#..",
+    "...###...",
+    "....#....",
+    "....#....",
+)
 
 
 def polygon(points, fill):
@@ -67,10 +78,6 @@ def ribbon(cx, cy, angle, length, height, text, cell=2.15):
     return out
 
 
-def face(origin, u, v):
-    ox, oy = origin
-    return lambda x, y: (ox+u[0]*x+v[0]*y, oy+u[1]*x+v[1]*y)
-
 
 def build_svg():
     shapes = []
@@ -83,22 +90,28 @@ def build_svg():
     shapes.append(polygon([(54,84),(122,120),(122,132),(54,97)],"#ffc46a"))
     shapes.append(polygon([(134,128),(202,88),(202,98),(134,138)],"#df640c"))
     shapes.append(polygon([(54,156),(54,164),(124,204),(124,196)],"#c95a0a"))
-    # White dollar sign is painted on the right face.
-    point = face((128,126),(80,-42),(0,78))
-    left, right, top, bottom = 0.06, 0.94, 0.03, 0.97
-    cell_w, cell_h = (right-left)/7, (bottom-top)/len(DOLLAR)
+    # A large central dollar sign, kept in screen space like the classic mark.
+    cell_w = cell_h = 10
+    glyph_w, glyph_h = len(DOLLAR[0])*cell_w, len(DOLLAR)*cell_h
+    origin_x, origin_y = 128-glyph_w/2, 124-glyph_h/2
+    dark, pale = [], []
     for row, bits in enumerate(DOLLAR):
         run = None
-        for column in range(8):
-            on = column < 7 and bits[column] == "1"
+        for column in range(len(bits)+1):
+            on = column < len(bits) and bits[column] == "#"
             if on and run is None:
                 run = column
-            if (not on or column == 7) and run is not None:
+            if (not on or column == len(bits)) and run is not None:
                 end = column
-                x0, x1 = left+run*cell_w, left+end*cell_w
-                y0, y1 = top+row*cell_h, top+(row+1)*cell_h
-                shapes.append(polygon([point(x0,y0),point(x1,y0),point(x1,y1),point(x0,y1)],"#fff4d6"))
+                x0, x1 = origin_x+run*cell_w, origin_x+end*cell_w
+                y0, y1 = origin_y+row*cell_h, origin_y+(row+1)*cell_h
+                dark.append((x0-2,y0-2,x1+2,y1+2))
+                pale.append((x0,y0,x1,y1))
                 run = None
+    for x0,y0,x1,y1 in dark:
+        shapes.append(polygon([(x0,y0),(x1,y0),(x1,y1),(x0,y1)],"#0f1519"))
+    for x0,y0,x1,y1 in pale:
+        shapes.append(polygon([(x0,y0),(x1,y0),(x1,y1),(x0,y1)],"#fff4d6"))
     # Two green ribbons, as close as possible to the classic OPEN/TTD layout.
     shapes.extend(ribbon(60,205,-0.66,112,27,"OPEN"))
     shapes.extend(ribbon(196,205,0.66,112,27,"TT3D"))
