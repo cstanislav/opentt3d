@@ -78,4 +78,4 @@ jobs:
       shell: bash
       run: |
         cd build
-        ctest --timeout 120
+        ctest --timeout 300

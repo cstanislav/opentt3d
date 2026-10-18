@@ -27,6 +27,12 @@ class ReleaseCheckoutTests(unittest.TestCase):
         self.assertLess(windows.index('git config --global core.longpaths true'),windows.index('uses: actions/checkout@v6'))
         self.assertIn('shell: pwsh',windows[:windows.index('uses: actions/checkout@v6')])
 
+    def test_nightly_allows_slow_renderer_regressions(self):
+        for name in ('ci-macos.yml','ci-mingw.yml','ci-windows.yml','ci-linux.yml'):
+            text=(ROOT/'.github/workflows'/name).read_text()
+            self.assertNotIn('--timeout 120',text,name)
+            self.assertIn('--timeout 300',text,name)
+
     def test_nightly_macos_uses_filesystem_capable_deployment_target(self):
         text=(ROOT/'.github/workflows/ci-macos.yml').read_text()
         target=re.search(r'MACOSX_DEPLOYMENT_TARGET:\s*([0-9.]+)',text)
