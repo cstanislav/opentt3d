@@ -39,5 +39,12 @@
     "mingw32": "removed because MSYS2 retired the i686 lzo2/lld packages",
     "fix": "raised CTest per-test timeout to300s in all CI workflows; committed 57cf17ece"
   },
-  "retained_utc": "2026-10-18T21:47:56.224439+00:00"
+  "retained_utc": "2026-10-18T22:00:51.261450+00:00",
+  "latest_fix": {
+    "commit": "962be521c",
+    "change": "nightly installs the pinned OpenGFX2 Classic archive into build/baseset before ctest; regression tests then use the same base set as local/release controls",
+    "reason": "hosted runners with only OpenGFX 0.6.0 hung in the upstream regression tests",
+    "verification_run": 39170335433,
+    "green_run_claimed": false
+  }
 }
