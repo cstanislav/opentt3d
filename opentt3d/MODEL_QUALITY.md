@@ -27,9 +27,11 @@ locomotive/collector, road-vehicle/cargo and ship models were then accepted at
 All137 finished house bodies were then accepted at9/10 from the source-derived
 OpenGFX2 house profiles and representative world views; construction sites, frames,
 shells and ground layers remain separate. All93 wagon bodies were also accepted at
-9/10. Their separate ground, support, LOD, picking and ship-clearance layers remain
-open. The remaining975 bound screens stay5/10,271 profiles4/10,112 models6/10,183
-models3/10 and536 missing/fallback rows1/10. The every-model9/10, complete
+9/10. All105 finished industry bodies were then accepted at9/10 from the
+source-derived OpenGFX2 industry profiles; construction stages, shells, sites and
+ground layers remain separate. Their separate ground, support, LOD, picking and
+ship-clearance layers remain open. The remaining870 bound screens stay5/10,271
+profiles4/10,112 models6/10,183 models3/10 and536 missing/fallback rows1/10. The every-model9/10, complete
 catalogue and sustained60fps goals remain open.
 See`reviews/20261018-asset-consistency/`.
 
