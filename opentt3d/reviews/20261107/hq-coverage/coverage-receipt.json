@@ -1,0 +1,66 @@
+{
+  "reviewed_utc": "2026-11-07T16:23:00Z",
+  "scope": "Bound complete medium/large/huge HQ source-owner families at existing 6/9 model scores. This removes84 source-layer fallbacks but does not accept any larger-HQ visual fidelity or world placement.",
+  "ground_layouts": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "body_layouts": [
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22
+  ],
+  "ground_models": 48,
+  "body_models": 36,
+  "bound_instance_rows": 84,
+  "model_scores": {
+    "6": 76,
+    "9": 8
+  },
+  "instance_score": 5,
+  "remaining_fallback_rows": 20,
+  "score_counts": {
+    "1": 20,
+    "3": 183,
+    "4": 24,
+    "5": 356,
+    "6": 76,
+    "9": 2395
+  },
+  "native": {
+    "gallery_result": "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/result.json",
+    "gallery_log": "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/run.log",
+    "save": "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/save/smoke-state.sav",
+    "screenshot": "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/screenshot.png",
+    "console_commands_acknowledged": 10,
+    "synchronous_original_save_verified": true,
+    "console_save_success_recorded": true,
+    "models_exported": 84,
+    "larger_hq_world_verified": false
+  },
+  "not_accepted": "No natural size2-4 HQ saved-world review, source/world/state fidelity, painting/proportion fixes, LOD/picking/ship clearance or performance acceptance is claimed. The76 models remain6/10.",
+  "evidence_sha256": {
+    "opentt3d/reviews/20261107/hq-coverage/README.md": "4a3a51aa2cd2d53960102880ad425625952942002f49a5eaea481bc5c444f081",
+    "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/console-review.log": "1049660eca2e969bdaaae6cbdb829c200f11e740e417c3ba1154e0f983bfe135",
+    "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/result.json": "9d254b1895a3ef7c0f200dd824b8f55c25f134916f59d91a594338a974c8be3a",
+    "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/run.log": "435bfeec8dcb6c2117a82d75754c9057930b0968a29a732956524cb5fcc7275e",
+    "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/save/smoke-state.sav": "94c708985ef78472bd2ad9cd43e6ea5c06a16245abbc535f61641e8ecde64726",
+    "opentt3d/reviews/20261107/hq-coverage/native-hq-gallery-vulkan/screenshot.png": "ea13a047d0b873ba62bf4a8f3d44a90a64dad015ad971e20f48cc859e6c65fc8"
+  }
+}

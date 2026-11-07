@@ -15,18 +15,20 @@ language. Asset280/harness122/native219 tests and the presentation boundary pass
 
 The ledger has2,395 models at9/10 after the automated authored/procedural runtime
 sweep, the corrected48-model/192-owner lock-wall acceptance and the125 intentional
-native water/terrain surfaces,76 unbound larger-HQ proposals at6/10,272 river/
-flat-bank rows at5/10,24 flat-bank models at4/10,183 retained profiles/legacy
-assemblies at3/10 and104 missing/fallback rows at1/10 (84 larger-HQ objects and20
-river-ground selectors). The48 recovered lock-wall models now pass all six checks
-from source/corrected galleries and actual lock fixtures in all four climates on
-both backends; the live log observes all48 original owner ordinals with
-acknowledged synchronous saves. The112 original water surfaces and13 native object
-ground surfaces are accepted as intentional original surfaces, not missing
-volumes. The8 river-relief models and192 conditional sloped-bank instances, plus
-the48 recovered flat CF_RIVER_EDGE bank models and48 flat instances, are bound;
-all eight native climate/backend controls observe the flat bank path, but the48
-flat studies retain their4-5/10 individual reviews and are not9/10 approvals. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+native water/terrain surfaces,76 bound larger-HQ proposals at6/10,356 river/bank/
+HQ rows at5/10,24 flat-bank models at4/10,183 retained profiles/legacy assemblies
+at3/10 and20 river-ground selectors at1/10. The48 recovered lock-wall models now
+pass all six checks from source/corrected galleries and actual lock fixtures in
+all four climates on both backends; the live log observes all48 original owner
+ordinals with acknowledged synchronous saves. The112 original water surfaces and
+13 native object ground surfaces are accepted as intentional original surfaces,
+not missing volumes. The8 river-relief models and192 conditional sloped-bank
+instances, plus the48 recovered flat CF_RIVER_EDGE bank models and48 flat
+instances, are bound; all eight native climate/backend controls observe the flat
+bank path. The complete medium/large/huge HQ source families are now bound:84
+previous source-layer fallbacks select the existing 3D HQ grounds/bodies at5/10
+while their76 models remain6/10 (eight already9/10). None of these is a9/10
+promotion. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.

@@ -37,16 +37,21 @@ class CompleteHeadquartersOwnerTests(unittest.TestCase):
     def name(self,stage,climate,part,role):
         return f"hq_{role}_{STAGES[stage-2]}_{CLIMATES[climate]}_{PARTS[part]}"
 
-    def test_unaccepted_larger_hq_studies_do_not_replace_any_runtime_source_owner(self):
-        self.assertFalse(self.diagnostic["runtime_enabled"])
-        for category in ("object_ground","objects"):
-            self.assertFalse({str(layout) for layout in range(12,24)} & self.runtime_bindings[category].keys())
-        runtime = {**self.compiled,"bindings":self.runtime_bindings}
+    def test_larger_hq_complete_families_are_bound_without_visual_approval(self):
+        # Coverage binding is deliberately separate from visual/9 approval.
+        self.assertEqual(set(self.runtime_bindings["object_ground"]),
+                         {str(layout) for layout in range(4,24)})
+        self.assertEqual(set(self.runtime_bindings["objects"]),
+                         {"0","1","2","3","12","13","14","16","17","18","20","21","22"})
         for row in self.original["tiles"]:
             if row["object_id"] != 4 or row["size_stage"] < 2: continue
             for climate in range(4):
-                self.assertIsNone(original_object_layer_model(runtime,self.original,row,"ground",0,climate))
-                self.assertIsNone(original_object_layer_model(runtime,self.original,row,"body",0,climate))
+                self.assertIsNotNone(original_object_layer_model(self.compiled,self.original,row,"ground",0,climate))
+                body = original_object_layer_model(self.compiled,self.original,row,"body",0,climate)
+                self.assertEqual(body is not None,bool(row["body"]))
+        for stage in STAGES:
+            for model in (f"hq_ground_{stage}_{climate}_{part}" for climate in CLIMATES for part in PARTS):
+                self.assertEqual(self.source["models"][model]["review_status"],"work-in-progress")
 
     def joined(self,stage,climate):
         joined = {}

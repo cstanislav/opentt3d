@@ -24,9 +24,9 @@ engine's path.
 > model has reached its final detail level. The immutable
 > [`.42` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)
 > is the recommended desktop checkpoint. 2,395 runtime entries have passed
-> individual 9/10 reviews; 272 river/bank rows now select bound 3D volumes but
-> remain at 4-5/10 pending individual quality review, and 104 missing/fallback
-> rows still lack authored 3D volumes. A `.45` development draft has also been packaged
+> individual 9/10 reviews; 356 river/bank/HQ rows now select bound 3D volumes but
+> remain at 4-6/10 pending individual quality review, and 20 river-ground
+> selectors still lack authored 3D volumes. A `.45` development draft has also been packaged
 > for maintainer review and remains unpublished pending full independent native
 > checks.
 
