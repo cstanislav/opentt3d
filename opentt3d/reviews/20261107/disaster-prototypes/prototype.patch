@@ -1,0 +1,246 @@
+diff --git a/assets/3d/voxels.json b/assets/3d/voxels.json
+index c4753b8d3..174172644 100644
+--- a/assets/3d/voxels.json
++++ b/assets/3d/voxels.json
+@@ -43281,7 +43281,16 @@
+     "river_bank_study_toyland_flat_08": {"size":[64,64,4],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],"review_status":"unbound-source-study","reference":"Separate actual elevated Classic flat CF_RIVER_EDGE input/output 8, climate 3, original SHA256 32f436e4babef097cad43587513f44aa05a70e51322d6e0bffbeeb48427e21e9. Hand-authored nested soil toe/shelf/low crest and corrected two-arm corner plan. Original height and tile datum are unchanged; source silhouette/face-paint fidelity is still provisional. No water, extra terrain support, runtime binding or sloped/sea-level/snow/desert/parameter/custom/absence acceptance.","ops":[["prism","toyland_soil",2,0,1,[[0,48],[4,48],[4,52],[6,52],[6,56],[10,56],[10,60],[14,60],[14,62],[4,64],[0,64]]],["prism","toyland_soil",2,1,2,[[0,49],[3,49],[3,53],[5,53],[5,57],[8,57],[8,61],[12,61],[12,62],[3,64],[0,64]]],["prism","toyland_grass",2,2,4,[[0,54],[2,54],[2,57],[4,57],[4,60],[6,60],[6,62],[10,62],[2,64],[0,64]]],["scatter_paint","toyland_soil_light",3,271836,0,0,0,64,64,2,"toyland_soil",[2,3,1]],["scatter_paint","toyland_soil_dark",7,161811,0,0,0,64,64,2,"toyland_soil",[1,2,1]],["scatter_paint","toyland_grass_light",3,314167,0,0,2,64,64,4,"toyland_grass",[2,3,2]],["scatter_paint","toyland_grass_pale",7,141429,0,0,2,64,64,4,"toyland_grass",[1,2,2]],["paint","toyland_pale",0,53,1,7,62,4],["paint","toyland_pale",2,60,1,12,64,4],["scatter_paint","toyland_pale_shade",5,173213,0,0,1,64,64,4,"toyland_pale",[2,2,1]]]},
+     "river_bank_study_toyland_flat_09": {"size":[64,64,4],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],"review_status":"unbound-source-study","reference":"Separate actual elevated Classic flat CF_RIVER_EDGE input/output 9, climate 3, original SHA256 0462513df30d1b3f9ae0551f59e09be1a8f1535609745b4492732cf845c32e90. Hand-authored nested soil toe/shelf/low crest and corrected two-arm corner plan. Original height and tile datum are unchanged; source silhouette/face-paint fidelity is still provisional. No water, extra terrain support, runtime binding or sloped/sea-level/snow/desert/parameter/custom/absence acceptance.","ops":[["prism","toyland_soil",2,0,1,[[48,64],[48,60],[52,60],[52,58],[56,58],[56,54],[60,54],[60,50],[62,50],[64,60],[64,64]]],["prism","toyland_soil",2,1,2,[[49,64],[49,61],[53,61],[53,59],[57,59],[57,56],[61,56],[61,52],[62,52],[64,61],[64,64]]],["prism","toyland_grass",2,2,4,[[54,64],[54,62],[57,62],[57,60],[60,60],[60,58],[62,58],[62,54],[64,62],[64,64]]],["scatter_paint","toyland_soil_light",3,271837,0,0,0,64,64,2,"toyland_soil",[2,3,1]],["scatter_paint","toyland_soil_dark",7,161812,0,0,0,64,64,2,"toyland_soil",[1,2,1]],["scatter_paint","toyland_grass_light",3,314168,0,0,2,64,64,4,"toyland_grass",[2,3,2]],["scatter_paint","toyland_grass_pale",7,141430,0,0,2,64,64,4,"toyland_grass",[1,2,2]],["paint","toyland_pale",53,57,1,62,64,4],["paint","toyland_pale",60,52,1,64,62,4],["scatter_paint","toyland_pale_shade",5,173214,0,0,1,64,64,4,"toyland_pale",[2,2,1]]]},
+     "river_bank_study_toyland_flat_10": {"size":[64,64,4],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],"review_status":"unbound-source-study","reference":"Separate actual elevated Classic flat CF_RIVER_EDGE input/output 10, climate 3, original SHA256 deb787ba680078d0d837b0f32420890039f94bf9db5ad9d11c9106fa905e6b76. Hand-authored nested soil toe/shelf/low crest and corrected two-arm corner plan. Original height and tile datum are unchanged; source silhouette/face-paint fidelity is still provisional. No water, extra terrain support, runtime binding or sloped/sea-level/snow/desert/parameter/custom/absence acceptance.","ops":[["prism","toyland_soil",2,0,1,[[64,16],[60,16],[60,12],[58,12],[58,8],[54,8],[54,4],[50,4],[50,2],[60,0],[64,0]]],["prism","toyland_soil",2,1,2,[[64,15],[61,15],[61,11],[59,11],[59,7],[56,7],[56,3],[52,3],[52,2],[61,0],[64,0]]],["prism","toyland_grass",2,2,4,[[64,10],[62,10],[62,7],[60,7],[60,4],[58,4],[58,2],[54,2],[62,0],[64,0]]],["scatter_paint","toyland_soil_light",3,271838,0,0,0,64,64,2,"toyland_soil",[2,3,1]],["scatter_paint","toyland_soil_dark",7,161813,0,0,0,64,64,2,"toyland_soil",[1,2,1]],["scatter_paint","toyland_grass_light",3,314169,0,0,2,64,64,4,"toyland_grass",[2,3,2]],["scatter_paint","toyland_grass_pale",7,141431,0,0,2,64,64,4,"toyland_grass",[1,2,2]],["paint","toyland_pale",57,2,1,64,11,4],["paint","toyland_pale",52,0,1,62,4,4],["scatter_paint","toyland_pale_shade",5,173215,0,0,1,64,64,4,"toyland_pale",[2,2,1]]]},
+-    "river_bank_study_toyland_flat_11": {"size":[64,64,4],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],"review_status":"unbound-source-study","reference":"Separate actual elevated Classic flat CF_RIVER_EDGE input/output 11, climate 3, original SHA256 646a97a3bdb08261347d91fe54220fe2306bfeb16c37edb4a9b7a54f1a2a81fc. Hand-authored nested soil toe/shelf/low crest and corrected two-arm corner plan. Original height and tile datum are unchanged; source silhouette/face-paint fidelity is still provisional. No water, extra terrain support, runtime binding or sloped/sea-level/snow/desert/parameter/custom/absence acceptance.","ops":[["prism","toyland_soil",2,0,1,[[16,0],[16,4],[12,4],[12,6],[8,6],[8,10],[4,10],[4,14],[2,14],[0,4],[0,0]]],["prism","toyland_soil",2,1,2,[[15,0],[15,3],[11,3],[11,5],[7,5],[7,8],[3,8],[3,12],[2,12],[0,3],[0,0]]],["prism","toyland_grass",2,2,4,[[10,0],[10,2],[7,2],[7,4],[4,4],[4,6],[2,6],[2,10],[0,2],[0,0]]],["scatter_paint","toyland_soil_light",3,271839,0,0,0,64,64,2,"toyland_soil",[2,3,1]],["scatter_paint","toyland_soil_dark",7,161814,0,0,0,64,64,2,"toyland_soil",[1,2,1]],["scatter_paint","toyland_grass_light",3,314170,0,0,2,64,64,4,"toyland_grass",[2,3,2]],["scatter_paint","toyland_grass_pale",7,141432,0,0,2,64,64,4,"toyland_grass",[1,2,2]],["paint","toyland_pale",2,0,1,11,7,4],["paint","toyland_pale",0,2,1,4,12,4],["scatter_paint","toyland_pale_shade",5,173216,0,0,1,64,64,4,"toyland_pale",[2,2,1]]]}
++    "river_bank_study_toyland_flat_11": {"size":[64,64,4],"cell_size":[0.25,0.25,0.25],"origin":[0,0,0],"review_status":"unbound-source-study","reference":"Separate actual elevated Classic flat CF_RIVER_EDGE input/output 11, climate 3, original SHA256 646a97a3bdb08261347d91fe54220fe2306bfeb16c37edb4a9b7a54f1a2a81fc. Hand-authored nested soil toe/shelf/low crest and corrected two-arm corner plan. Original height and tile datum are unchanged; source silhouette/face-paint fidelity is still provisional. No water, extra terrain support, runtime binding or sloped/sea-level/snow/desert/parameter/custom/absence acceptance.","ops":[["prism","toyland_soil",2,0,1,[[16,0],[16,4],[12,4],[12,6],[8,6],[8,10],[4,10],[4,14],[2,14],[0,4],[0,0]]],["prism","toyland_soil",2,1,2,[[15,0],[15,3],[11,3],[11,5],[7,5],[7,8],[3,8],[3,12],[2,12],[0,3],[0,0]]],["prism","toyland_grass",2,2,4,[[10,0],[10,2],[7,2],[7,4],[4,4],[4,6],[2,6],[2,10],[0,2],[0,0]]],["scatter_paint","toyland_soil_light",3,271839,0,0,0,64,64,2,"toyland_soil",[2,3,1]],["scatter_paint","toyland_soil_dark",7,161814,0,0,0,64,64,2,"toyland_soil",[1,2,1]],["scatter_paint","toyland_grass_light",3,314170,0,0,2,64,64,4,"toyland_grass",[2,3,2]],["scatter_paint","toyland_grass_pale",7,141432,0,0,2,64,64,4,"toyland_grass",[1,2,2]],["paint","toyland_pale",2,0,1,11,7,4],["paint","toyland_pale",0,2,1,4,12,4],["scatter_paint","toyland_pale_shade",5,173216,0,0,1,64,64,4,"toyland_pale",[2,2,1]]]},
++    "disaster_blimp": {"size":[76,24,20],"origin":[-19,-6,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","plane_wing",2,4,4,74,20,16],["ellipsoid","plane_wing_shadow",4,6,3,72,18,9],["box","plane_wing_edge",0,8,8,8,16,12],["box","plane_wing",58,2,8,70,22,13],["box","plane_wing",62,10,2,70,14,19],["box","plane_wing_edge",30,6,0,46,14,4],["box","plane_glass_grey",34,8,1,42,12,3],["box","plane_propeller",16,10,3,20,12,5]]},
++    "disaster_ufo_small": {"size":[20,20,10],"origin":[-5,-5,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","plane_wing",1,1,3,19,19,8],["ellipsoid","plane_white",6,6,7,14,14,10],["box","plane_nose_red",2,9,3,4,11,5],["box","plane_nose_red",16,9,3,18,11,5],["box","plane_glass_grey",8,8,6,12,12,7]]},
++    "disaster_ufo_big": {"size":[36,36,16],"origin":[-9,-9,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","plane_wing",2,2,4,34,34,12],["ellipsoid","plane_white",11,11,11,25,25,15],["box","plane_nose_red",5,16,5,9,20,8],["box","plane_nose_red",27,16,5,31,20,8],["box","plane_glass_grey",14,15,10,22,21,12]]},
++    "disaster_jet": {"size":[36,20,10],"origin":[-9,-5,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","plane_wing",2,7,3,34,13,9],["box","plane_wing",10,0,5,26,20,7],["box","plane_wing_edge",30,6,5,36,14,8],["box","plane_glass_grey",2,8,6,6,12,9],["box","plane_propeller",33,9,5,36,11,7]]},
++    "disaster_heli": {"size":[26,24,12],"origin":[-6,-6,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","plane_wing",4,4,2,22,20,10],["box","plane_wing",0,2,3,8,22,6],["box","plane_glass_grey",16,8,5,22,16,9],["box","plane_propeller",12,11,10,14,13,12],["box","plane_wing_edge",18,2,3,24,6,5]]},
++    "disaster_skyranger": {"size":[32,20,10],"origin":[-8,-5,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","plane_wing",2,6,3,30,14,9],["box","plane_wing",8,0,5,24,20,7],["box","plane_wing_edge",26,5,5,32,15,8],["box","plane_glass_grey",2,7,6,7,13,9]]},
++    "disaster_sub_small": {"size":[12,18,12],"origin":[-3,-4,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","ship_metal",1,3,2,11,15,8],["box","ship_metal",4,7,7,8,11,10],["box","ship_glass",5,8,9,7,10,10],["box","ship_metal",6,9,10,7,10,12]]},
++    "disaster_sub_large": {"size":[22,26,16],"origin":[-5,-6,0],"cell_size":[0.5,0.5,0.5],"ops":[["ellipsoid","ship_metal",2,3,3,20,23,10],["box","ship_metal",8,10,8,14,16,12],["box","ship_glass",9,11,10,13,15,12],["box","ship_metal",10,12,12,12,14,15]]},
++    "disaster_rotor": {"size":[24,24,3],"origin":[-6,-6,0],"cell_size":[0.5,0.5,0.5],"ops":[["box","plane_propeller",1,11,1,23,13,2],["box","plane_propeller",11,1,1,13,23,2],["box","plane_propeller",10,10,1,14,14,3]]}
+   },
+   "bindings": {
+     "objects": {
+@@ -44526,6 +44535,31 @@
+       "9": {"0":"river_bank_study_temperate_flat_09","1":"river_bank_study_arctic_flat_09","2":"river_bank_study_tropic_flat_09","3":"river_bank_study_toyland_flat_09"},
+       "10": {"0":"river_bank_study_temperate_flat_10","1":"river_bank_study_arctic_flat_10","2":"river_bank_study_tropic_flat_10","3":"river_bank_study_toyland_flat_10"},
+       "11": {"0":"river_bank_study_temperate_flat_11","1":"river_bank_study_arctic_flat_11","2":"river_bank_study_tropic_flat_11","3":"river_bank_study_toyland_flat_11"}
++    },
++    "disaster_vehicles": {
++      "3901": {"0":"disaster_rotor"},
++      "3902": {"0":"disaster_rotor"},
++      "3903": {"0":"disaster_rotor"},
++      "3904": {"0":"disaster_rotor"},
++      "3905": {"0":"disaster_blimp"},
++      "3906": {"0":"disaster_blimp"},
++      "3907": {"0":"disaster_blimp"},
++      "3908": {"0":"disaster_ufo_small"},
++      "3909": {"0":"disaster_ufo_small"},
++      "3910": {"0":"disaster_sub_small"},
++      "3911": {"0":"disaster_sub_small"},
++      "3912": {"0":"disaster_sub_small"},
++      "3913": {"0":"disaster_sub_small"},
++      "3914": {"0":"disaster_sub_large"},
++      "3915": {"0":"disaster_sub_large"},
++      "3916": {"0":"disaster_sub_large"},
++      "3917": {"0":"disaster_sub_large"},
++      "3918": {"0":"disaster_jet"},
++      "3919": {"0":"disaster_jet"},
++      "3920": {"0":"disaster_ufo_big"},
++      "3921": {"0":"disaster_skyranger"},
++      "3922": {"0":"disaster_heli"},
++      "3923": {"0":"disaster_heli"}
+     }
+   }
+ }
+diff --git a/src/console_cmds.cpp b/src/console_cmds.cpp
+index f56dda736..649ffe4b7 100644
+--- a/src/console_cmds.cpp
++++ b/src/console_cmds.cpp
+@@ -33,6 +33,7 @@
+ #include "window_func.h"
+ #include "timer/timer.h"
+ #include "company_func.h"
++#include "disaster_vehicle.h"
+ #include "gamelog.h"
+ #include "ai/ai.hpp"
+ #include "ai/ai_config.hpp"
+@@ -838,6 +839,25 @@ static bool ConBanList(std::span<std::string_view> argv)
+ 	return true;
+ }
+ 
++static bool ConDebugDisaster(std::span<std::string_view> argv)
++{
++	if (argv.size() < 4 || argv.size() > 5) {
++		IConsolePrint(CC_HELP, "Spawn an isolated disaster fixture. Usage: 'debug_disaster <subtype> <x> <y> [direction]'.");
++		return false;
++	}
++	auto subtype = ParseType<uint>(argv[1]);
++	auto x = ParseType<int>(argv[2]);
++	auto y = ParseType<int>(argv[3]);
++	auto direction = argv.size() == 5 ? ParseType<uint>(argv[4]) : std::optional<uint>(4);
++	if (!subtype || *subtype >= 15 || !x || !y || !direction || *direction >= 8) {
++		IConsolePrint(CC_ERROR, "Invalid disaster fixture subtype/position/direction.");
++		return false;
++	}
++	SpawnDisasterForReview(static_cast<DisasterSubType>(*subtype), *x, *y, static_cast<Direction>(*direction));
++	IConsolePrint(CC_DEFAULT, "Spawned disaster fixture subtype {}.", *subtype);
++	return true;
++}
++
+ static bool ConPauseGame(std::span<std::string_view> argv)
+ {
+ 	if (argv.empty()) {
+@@ -3718,6 +3738,7 @@ void IConsoleStdLibRegister()
+ 
+ 	IConsole::CmdRegister("pause",                   ConPauseGame,        ConHookServerOrNoNetwork);
+ 	IConsole::CmdRegister("unpause",                 ConUnpauseGame,      ConHookServerOrNoNetwork);
++	IConsole::CmdRegister("debug_disaster",          ConDebugDisaster,    ConHookServerOrNoNetwork);
+ 
+ 	IConsole::CmdRegister("authorized_key", ConNetworkAuthorizedKey, ConHookServerOnly);
+ 	IConsole::AliasRegister("ak", "authorized_key %+");
+diff --git a/src/disaster_vehicle.cpp b/src/disaster_vehicle.cpp
+index cbed1ec82..70ac4757d 100644
+--- a/src/disaster_vehicle.cpp
++++ b/src/disaster_vehicle.cpp
+@@ -174,6 +174,11 @@ DisasterVehicle::DisasterVehicle(int x, int y, Direction direction, DisasterSubT
+ 	this->UpdatePositionAndViewport();
+ }
+ 
++void SpawnDisasterForReview(DisasterSubType subtype, int x, int y, Direction direction)
++{
++	if (Vehicle::CanAllocateItem()) new DisasterVehicle(x, y, direction, subtype);
++}
++
+ /**
+  * Update the position of the vehicle.
+  * @param x The new X-coordinate.
+diff --git a/src/disaster_vehicle.h b/src/disaster_vehicle.h
+index bf0cce2c1..094e451f0 100644
+--- a/src/disaster_vehicle.h
++++ b/src/disaster_vehicle.h
+@@ -34,6 +34,8 @@ enum DisasterSubType : uint8_t {
+ /**
+  * Disasters, like submarines, skyrangers and their shadows, belong to this class.
+  */
++void SpawnDisasterForReview(DisasterSubType subtype, int x, int y, Direction direction = DIR_SE);
++
+ struct DisasterVehicle final : public SpecializedVehicle<DisasterVehicle, VEH_DISASTER> {
+ 	SpriteID image_override{}; ///< Override for the default disaster vehicle sprite.
+ 	VehicleID big_ufo_destroyer_target = VehicleID::Invalid(); ///< The big UFO that this destroyer is supposed to bomb.
+diff --git a/src/renderer3d/reference_export.cpp b/src/renderer3d/reference_export.cpp
+index 6ca399583..5b7151390 100644
+--- a/src/renderer3d/reference_export.cpp
++++ b/src/renderer3d/reference_export.cpp
+@@ -366,6 +366,9 @@ void ExportEffectReferences()
+ 			{"palette_indices",palette_indices},{"climate",to_underlying(_settings_game.game_creation.landscape)},
+ 			{"presentable",sprite != SPR_BUBBLE_GENERATE_3},{"source_only",true}});
+ 	}
++	for (SpriteID sprite = SPR_ROTOR_STOPPED; sprite <= SPR_AH_64A_FIRING; ++sprite) {
++		ExportSpriteReference(sprite,PAL_NONE,(directory/fmt::format("disaster-{}.pam",sprite)).string());
++	}
+ 	std::ofstream(directory/"effects.json") << manifest.dump(2) << '\n';
+ 	Debug(driver,1,"OpenTT3D: exported {} original effect source sprites in {} families (80 presentable, 1 unpresented bubble threshold)",manifest.size(),std::size(EFFECT_SOURCE_FAMILIES));
+ }
+diff --git a/src/renderer3d/voxel_models.cpp b/src/renderer3d/voxel_models.cpp
+index aebe321d9..8172dcde5 100644
+--- a/src/renderer3d/voxel_models.cpp
++++ b/src/renderer3d/voxel_models.cpp
+@@ -130,6 +130,7 @@ const Catalogue &Models()
+ 			if (category == "lock_walls" && (std::stoul(id) >= 48 || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original lock owner/climate state");
+ 			if (category == "river_relief" && (!IsOriginalRiverReliefSlope(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original river relief slope/climate state");
+ 			if (category == "river_bank" && (!IsOriginalRiverBankOffset(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original flat river bank offset/climate state");
++			if (category == "disaster_vehicles" && (std::stoul(id) < 3901 || std::stoul(id) > 3923 || std::stoul(state) != 0)) throw std::runtime_error("Invalid original disaster vehicle sprite/state");
+ 			if ((category == "objects" || category == "object_ground") && (std::stoul(id) >= 24 || std::stoul(state) >= 4 ||
+ 					!OriginalObjectModelClimateSupported(std::stoul(id) < 4 ? std::stoul(id) : 4,std::stoul(state)) ||
+ 					(category == "objects" && std::stoul(id) >= 4 && (std::stoul(id) < 12 || (std::stoul(id)-4)%4 == 3)) ||
+@@ -139,7 +140,7 @@ const Catalogue &Models()
+ 			/* Original HQ layers partition one compound across independent source
+ 			 * owners. Coarse blocks may reduce paint, but must never inflate across
+ 			 * those boundaries or fill the adjoining owner's air/openings. */
+-			if (((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) || category == "lock_walls" || category == "river_relief" || category == "river_bank") result.models.at(model).lod_preserve_occupancy = true;
++			if (((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) || category == "lock_walls" || category == "river_relief" || category == "river_bank" || category == "disaster_vehicles") result.models.at(model).lod_preserve_occupancy = true;
+ 			if (category == "trees") {
+ 				unsigned base = std::stoul(id), stage = std::stoul(state);
+ 				if (base >= 1576 && base <= 2003 && (base-1576)%7 == 0 && stage < 7) result.tree_models[base-1576+stage] = &result.models.at(model);
+@@ -256,6 +257,21 @@ bool DrawVoxelLockWall(Scene &scene, unsigned ordinal, unsigned climate, Vec3 or
+ 	return true;
+ }
+ 
++bool DrawVoxelDisaster(Scene &scene, SpriteID sprite, Vec3 origin, float heading, PaletteID palette, float opacity)
++{
++	if (sprite < SPR_ROTOR_STOPPED || sprite > SPR_AH_64A_FIRING) return false;
++	const auto &catalogue = Models();
++	auto binding = catalogue.bindings.find({"disaster_vehicles",sprite,0});
++	if (binding == catalogue.bindings.end()) return false;
++	const VoxelModel &model = catalogue.models.at(binding->second);
++	float radius = std::max({std::abs(model.surface.low.x),std::abs(model.surface.low.y),std::abs(model.surface.high.x),std::abs(model.surface.high.y)})*1.42f;
++	if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,model.surface.low.z},origin+Vec3{radius,radius,model.surface.high.z})) return true;
++	auto data = Material(origin,palette,opacity);
++	data.mirror_layer_heading[3] = heading;
++	AddVoxelInstance(scene,model,data);
++	return true;
++}
++
+ bool DrawVoxelRiverBank(Scene &scene, unsigned offset, unsigned climate, Vec3 origin, PaletteID palette)
+ {
+ 	if (!IsOriginalRiverBankOffset(offset) || climate >= 4) return false;
+diff --git a/src/renderer3d/voxel_models.h b/src/renderer3d/voxel_models.h
+index e936c7a22..8dede5fd1 100644
+--- a/src/renderer3d/voxel_models.h
++++ b/src/renderer3d/voxel_models.h
+@@ -8,6 +8,8 @@ namespace Renderer3D {
+ bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state);
+ /** Original48 rear/front/part/direction/elevation owners, climate states0..3. */
+ bool DrawVoxelLockWall(Scene &scene, unsigned ordinal, unsigned climate, Vec3 origin, PaletteID palette, float opacity = 1);
++/** Original disaster vehicle sprites3901..3923 at their own heading/palette. */
++bool DrawVoxelDisaster(Scene &scene, SpriteID sprite, Vec3 origin, float heading, PaletteID palette, float opacity = 1);
+ /** Diagnostic source-bound river relief uses slope bits3/6/9/12 and climates0..3.
+  * Caller must independently prove original family/source and separate water. */
+ bool DrawVoxelRiverRelief(Scene &scene, unsigned slope, unsigned climate, Vec3 origin, PaletteID palette = 0);
+diff --git a/src/renderer3d/world_capture.cpp b/src/renderer3d/world_capture.cpp
+index 7c1ee9003..5d9cd7e79 100644
+--- a/src/renderer3d/world_capture.cpp
++++ b/src/renderer3d/world_capture.cpp
+@@ -2132,6 +2132,20 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
+ 			}
+ 			return;
+ 		}
++		if (vehicle.type == VEH_DISASTER && sub == nullptr) {
++			VehiclePose pose = SmoothVehiclePose(vehicle);
++			float heading = (5.0f - pose.heading * 2) * std::numbers::pi_v<float> / 4;
++			bool disaster_shadow = vehicle.vehstatus.Test(VehState::Shadow);
++			if (DrawVoxelDisaster(capture->scene,image&SPRITE_MASK,pose.position,heading,palette,disaster_shadow ? 0.38f : 1)) {
++				capture->parent_instance_end = capture->scene.instances.size();
++				capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
++				if (!capture->diagnostic && !capture->parent_culled) {
++					static std::set<std::tuple<unsigned,SpriteID,unsigned>> reported;
++					if (reported.emplace(vehicle.index.base(),image&SPRITE_MASK,disaster_shadow).second) Debug(driver,1,"OpenTT3D: live voxel disaster {} sprite {} shadow {} captured at {},{},{}",vehicle.subtype,image&SPRITE_MASK,disaster_shadow,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos);
++				}
++				return;
++			}
++		}
+ 		if (shadow || rotor || vehicle.type == VEH_EFFECT) {
+ 			SpriteTexture texture = Textures().Get(image, palette, TextureZoom(origin));
+ 			PlanarVehicleMaterial(texture, origin, shadow, vehicle.type == VEH_EFFECT);
+diff --git a/tools/assets/compile_voxels.py b/tools/assets/compile_voxels.py
+index f61f8a87f..65774c2b3 100644
+--- a/tools/assets/compile_voxels.py
++++ b/tools/assets/compile_voxels.py
+@@ -602,7 +602,7 @@ def compile_catalogue(data):
+         compile_model(name)
+     bindings = data.get("bindings", {})
+     for category, identifiers in bindings.items():
+-        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects", "objects", "object_ground", "lock_walls", "river_relief", "river_bank") or not isinstance(identifiers, dict):
++        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects", "objects", "object_ground", "lock_walls", "river_relief", "river_bank", "disaster_vehicles") or not isinstance(identifiers, dict):
+             raise ValueError(f"Unknown voxel binding category {category}")
+         for identifier, states in identifiers.items():
+             if not identifier.isascii() or not identifier.isdecimal() or int(identifier) > 65535 or not isinstance(states, dict) or not states:
+@@ -618,6 +618,8 @@ def compile_catalogue(data):
+                 raise ValueError("River relief uses four original slope bits3/6/9/12 and explicit climate states0..3; flat water is not a raised owner")
+             if category == "river_bank" and (int(identifier) >= 12 or any(int(state) >= 4 for state in states)):
+                 raise ValueError("River banks use twelve original flat CF_RIVER_EDGE input/output slots and explicit climate states0..3")
++            if category == "disaster_vehicles" and (not 3901 <= int(identifier) <= 3923 or any(int(state) != 0 for state in states)):
++                raise ValueError("Disaster vehicles use original sprite IDs3901..3923 and explicit state0")
+             if category in ("airport_tiles", "airport_ground") and (int(identifier) >= 74 or any(int(state) >= 64 for state in states)):
+                 raise ValueError("Airport bindings use original tile IDs and climate*16+frame states0..63 for each independent layer")
+             if category in ("objects", "object_ground"):
