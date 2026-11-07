@@ -34,9 +34,14 @@ bodies were accepted at9/10; runway/apron/edge ground plates and fences remain
 separate. All273 remaining 3D construction/mid-state and dynamic-industry bodies
 were then accepted at9/10; flat ground/site/floor/fence/effect/water layers remain
 outside this batch. Their separate ground, support, LOD, picking and ship-clearance
-layers remain open. The remaining539 bound screens stay5/10,271 profiles4/10,112
-models6/10,183 models3/10 and536 missing/fallback rows1/10. The every-model9/10, complete
-catalogue and sustained60fps goals remain open.
+layers remain open. A final authored-surface sweep then accepted the remaining
+authored surfaces/effects/water/stadium/industry grounds, and a runtime sweep
+accepted all remaining bound HQ/object/bank grounds, object instances, procedural
+road stops/stations and projected tree profiles at9/10. The ledger now has2,030 at
+9/10,76 unbound larger-HQ proposals at6/10,125 native water/terrain layers at4/10,
+183 retained profiles/legacy assemblies at3/10 and536 missing/fallback lock/river/
+HQ rows at1/10. The fallback rows still lack authored3D volumes. The every-model
+9/10, complete catalogue and sustained60fps goals remain open.
 See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4

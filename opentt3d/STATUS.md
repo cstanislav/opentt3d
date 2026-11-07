@@ -22,8 +22,11 @@ accepted at9/10 from the source-derived vehicle tables and world/street views. A
 137 finished house bodies, all93 wagon bodies,105 finished industry bodies and58
 airport buildings/fixtures, all97 airport ground/edge/runway/apron surfaces and
 273 3D construction/mid-state/dynamic-industry bodies were also accepted at9/10;
-all house stages/grounds were also accepted at9/10; remaining fences, effects and
-water layers remain separate. Their water, ground, support, LOD, picking and
+all house stages/grounds, remaining bound HQ/object/bank grounds, object instances,
+procedural road stops/stations and projected tree profiles were also accepted at
+9/10. The remaining ledger is76 unbound larger-HQ proposals at6/10,125 native
+water/terrain layers at4/10,183 retained profiles/legacy assemblies at3/10 and536
+missing/fallback lock/river/HQ rows at1/10. Their water, ground, support, LOD, picking and
 ship-clearance layers remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset276, harness120 and native219 tests pass; the presentation boundary passes.
