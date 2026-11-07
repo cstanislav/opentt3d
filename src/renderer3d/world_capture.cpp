@@ -763,7 +763,7 @@ static void ObserveVoxelIndustryPalette(TileIndex tile, unsigned graphics, size_
 	if (check.tile == INVALID_TILE) {
 		unsigned emitted = 0;
 		for (size_t i = first; i < capture->scene.instances.size(); ++i) emitted |= VoxelPaletteMask(*capture->scene.instances[i].mesh,check.first_colour,check.colour_count);
-		if (std::popcount(emitted) < (check.ground ? 2U : check.colour_count)) return;
+		if (static_cast<unsigned>(std::popcount(emitted)) < (check.ground ? 2U : check.colour_count)) return;
 		check.tile = tile;
 		check.industry = GetIndustryIndex(tile).base();
 		check.materials = emitted;
