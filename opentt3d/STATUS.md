@@ -17,8 +17,8 @@ fingerprints were refreshed. Canal straight/outer-corner owners and both bank ha
 remain7/10 with explicit residual defects; inner corners moved6→7/10. No model was
 promoted to8 or9: source, state and all-angle clearance acceptance remain incomplete.
 Asset276, harness120 and native219 tests pass; the presentation boundary passes.
-`CI - Nightly` run39167264752 is the fresh verification run; it is not green merely
-because the workflow was dispatched. Upstream stable remains15.3; 16.0-beta4 is the
+`CI - Nightly` run42402873295 is green on both platform jobs and the annotation
+check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-beta4 is the
 newest prerelease and is not merged. `.42` remains recommended until a newer release
 passes independent publication checks.
 

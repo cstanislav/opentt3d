@@ -14,8 +14,7 @@ targets are repaired; public docs have fresh screenshots and no hand-crafting
 language. Asset276/harness120/native219 tests and the presentation boundary pass.
 
 The ledger still has1,827 models at5/10,271 at4/10,536 missing/fallback rows at1/10,
-and only21 at7/10. No model is9/10. Nightly run39167264752 is the fresh verification
-attempt. Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+and only21 at7/10. No model is9/10. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.

@@ -92,11 +92,11 @@ and which comparisons still fail.
 
 ## Nightly CI and upstream
 
-The nightly workflow builds macOS x86-64 and both MinGW targets. Recent runs
-failed during checkout because retained review evidence exceeds Windows'
-`MAX_PATH`; the workflows now enable Git long paths before checkout and use a
-filesystem-capable macOS deployment target. See
-[the current CI runs](https://github.com/cstanislav/opentt3d/actions).
+The nightly workflow builds macOS x86-64 and MinGW x86-64, runs the native tests
+and checks compiler annotations. It now passes after enabling Git long paths,
+using a filesystem-capable macOS deployment target, pinning OpenGFX2 for the
+regression suite and allowing the slow renderer tests to finish. See
+[the green nightly run](https://github.com/cstanislav/opentt3d/actions/runs/42402873295).
 
 The upstream stable release is **OpenTTD 15.3**. OpenTTD **16.0-RC1** is the
 newest upstream prerelease; it is not merged into this port yet. The scheduled
