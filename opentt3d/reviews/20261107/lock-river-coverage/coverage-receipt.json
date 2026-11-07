@@ -1,6 +1,6 @@
 {
-  "reviewed_utc": "2026-11-07T15:42:00Z",
-  "scope": "The corrected 48 lock-wall models and192 original owner instances are accepted at9/10 from all-climate native worlds and corrected galleries. The 8 river-relief models and192 river-relief instances remain bound at5/10. The 48 flat river-bank and20 river-ground selectors plus84 larger-HQ rows remain fallback.",
+  "reviewed_utc": "2026-11-07T15:50:00Z",
+  "scope": "Corrected48 lock-wall models/192 owner instances and125 native surface rows accepted at9/10; 8 river-relief models/192 instances remain at5/10; 152 fallback rows remain.",
   "catalogue_sha256": "76019050f6dd14b3d58d7f21d9fe18fa37d2da64516c3751a26a6cc1470af828",
   "models": 1971,
   "new_lock_models": 48,
@@ -18,10 +18,9 @@
   "score_counts": {
     "1": 152,
     "3": 183,
-    "4": 125,
     "5": 200,
     "6": 76,
-    "9": 2270
+    "9": 2395
   },
   "rows": 3006,
   "native": {
@@ -54,9 +53,9 @@
       "console_save_success_text": "Map successfully saved to 'smoke-state.sav'."
     }
   },
-  "not_accepted": "River relief remains at5/10; active custom CF_RIVER_SLOPE substitution, source fidelity, phases/support/ship clearance and all480 non-9 rows remain open. No every-model9 claim.",
+  "not_accepted": "River relief remains at5/10; active custom CF_RIVER_SLOPE substitution, full source fidelity, phases/support/picking/ship clearance and the152 fallback rows remain open. No every-model9 claim.",
   "evidence_sha256": {
-    "opentt3d/reviews/20261107/lock-river-coverage/README.md": "71891c69c6ddcfbc4f73ef07bef1c7c38daaa0497771ef8a2866840e091c965e",
+    "opentt3d/reviews/20261107/lock-river-coverage/README.md": "4a45dedccb5c31b7b9fc665a3ea7a850972b36218dc0748f3d1ca4b43c0cd994",
     "opentt3d/reviews/20261107/lock-river-coverage/catalogue-inventory.json": "2de7f7e230e2ee734e903afdb689109029e95fdd87a57357909d532602ae056b",
     "opentt3d/reviews/20261107/lock-river-coverage/catalogue.json.sha256": "3b5803bb62b72c2ec9e7df0d1bc5df9de367d942a72e5137afa717959470d527",
     "opentt3d/reviews/20261107/lock-river-coverage/lock-contact-sheets/lock-contact-0.png": "9ff31c0d38ef6946a07d848b0e9c458ae2b1821307a629643be3d2ba3ff7df7c",
@@ -112,10 +111,12 @@
     "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/result.json": "7e16a2747c012582a1d5160774a46a8ac3d328d41616ccbfb7e6c638024cde27",
     "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/run.log": "c21baeacf0f5a7bae4888c0730fa57b1c3f6193e92d3f13d6e4198d8bd38a225",
     "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/save/smoke-state.sav": "1675cafcf5921a41db366cfef99a98cbd0d9c6429cc0c97c942199ae506fa11b",
-    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992"
+    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-surface-batch.json": "ae728faff8fbf911b52f7ce13d6ce4820454e296e1c66e4ab23601c924937af4"
   },
   "accepted_lock_models": 48,
   "accepted_lock_instance_rows": 192,
   "pending_river_models": 8,
-  "pending_river_instance_rows": 192
+  "pending_river_instance_rows": 192,
+  "accepted_native_surface_rows": 125
 }

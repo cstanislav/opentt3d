@@ -27,12 +27,13 @@ procedural road stops/stations and projected tree profiles were also accepted at
 9/10. The corrected48 lock-wall models and192 owner instances were then accepted
 at9/10 after source/corrected-gallery review and actual lock fixtures in all four
 climates on Vulkan and OpenGL; the native logs observe all48 owner ordinals with
-acknowledged synchronous saves. The8 river-relief models and192 conditional
-sloped-bank instances remain bound at5/10. The remaining ledger is76 unbound
-larger-HQ proposals at6/10,125 native water/terrain layers at4/10,183 retained
+acknowledged synchronous saves. The112 original water surfaces and13 native object
+ground surfaces were accepted as intentional native surfaces, not missing volumes.
+The8 river-relief models and192 conditional sloped-bank instances remain bound at
+5/10. The remaining ledger is76 unbound larger-HQ proposals at6/10,183 retained
 profiles/legacy assemblies at3/10 and152 missing/fallback rows at1/10 (84
-larger-HQ objects,48 flat river banks,20 river-ground selectors). Their water,
-ground, support, LOD, picking and ship-clearance layers, and the200 river5/10
+larger-HQ objects,48 flat river banks,20 river-ground selectors). Their support,
+LOD, picking, phase/custom-family and ship-clearance layers, and the200 river5/10
 entries, remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset277, harness122 and native219 tests pass; the presentation boundary passes.

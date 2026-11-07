@@ -29,6 +29,12 @@ retains an acknowledged synchronous save. The fixture has no live custom
 `CF_RIVER_SLOPE` selection, so this proves model loading, not active world
 substitution.
 
+The 112 original water surfaces and 13 native object ground surfaces are accepted
+at 9/10 as intentional native surfaces, not as missing volumes. Their original
+source bytes, ownership, anchors and climate restrictions are retained; the
+all-climate lock and object views show them in place. No structural wall, dike or
+relief score is inferred from this surface acceptance.
+
 ## Remaining limits
 
 - River relief remains at 5/10 until individual source/orbit/street/world/state/
