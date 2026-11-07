@@ -33,7 +33,7 @@ fallback rows at1/10 (84 larger-HQ objects,48 flat river banks,20 river-ground
 selectors). Their water, ground, support, LOD, picking and ship-clearance layers,
 and the440 new5/10 entries, remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
-Asset276, harness120 and native219 tests pass; the presentation boundary passes.
+Asset277, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. `.42` remains recommended until a newer release
