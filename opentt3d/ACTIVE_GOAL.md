@@ -18,8 +18,10 @@ sweep, the corrected48-model/192-owner lock-wall acceptance, the125 intentional
 native water/terrain surfaces, the final20 native river-ground base surfaces, the
 joined larger-HQ world acceptance, the flat-bank world/source acceptance and the
 forced river-relief world acceptance. No source-layer fallback rows remain and
-**every runtime-required row is now at9/10**. The only below9 ledger rows are183
-retained profiles/legacy assemblies at3/10, which are not runtime-bound. The48
+**every runtime-required row is now at9/10**. The canonical `MODEL_RATINGS.csv`
+now contains2,871 runtime rows, all9/10; the183 retained profiles/legacy
+references are preserved separately in `RETAINED_REFERENCE_RATINGS.csv` at3/10.
+They are not runtime-bound. The48
 lock-wall models pass all six checks from source/corrected galleries and actual
 lock fixtures in all four climates on both backends; the live log observes all48
 original owner ordinals with acknowledged synchronous saves. The112 original

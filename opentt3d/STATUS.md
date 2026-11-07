@@ -45,8 +45,9 @@ flat CF_RIVER_EDGE bank models and48 instances were then accepted at9/10 from
 all twelve native offset observations and natural source fixtures. The8
 river-relief models and192 conditional sloped-bank instances were then accepted
 at9/10 from a forced actual river world, source sheets and the complete bound
-family. Every runtime-required row is now at9/10; the only remaining below9 rows
-are183 retained profiles/legacy assemblies at3/10, which are not runtime-bound.
+family. The canonical `MODEL_RATINGS.csv` now contains2,871 runtime rows, all at
+9/10; the183 retained profiles/legacy assemblies are preserved separately in
+`RETAINED_REFERENCE_RATINGS.csv` at3/10, not runtime-bound.
 Natural company-score selection, natural custom river-source selection, absence,
 phase/custom-family, LOD/picking/ship-clearance and performance gates remain
 separate. The audit's remaining coverage gap is the uncatalogued disaster/world-

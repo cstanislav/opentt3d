@@ -390,13 +390,20 @@ def audit(catalogue, reviews, root=ROOT, scope=None):
             "note":"Screening scores are deliberately conservative, not claimed aesthetic judgements or final upstream-art approvals. Unknown and stale reviews cannot satisfy8/10."}
 
 
-def write_ratings_csv(path, rows):
+def write_ratings_csv(path, rows, runtime_only=False):
+    if runtime_only:
+        rows = [row for row in rows if row["representation"] not in ("retained-profile","legacy-assembly")]
     path.parent.mkdir(parents=True,exist_ok=True)
     with path.open("w",newline="") as stream:
         writer = csv.writer(stream,lineterminator="\n")
         writer.writerow(("model","score/10","representation","review_status","notes"))
         for row in rows:
             writer.writerow((row["model"],row["score"],row["representation"],row["status"]," ".join(row["notes"])))
+
+
+def write_reference_ratings_csv(path, rows):
+    references = [row for row in rows if row["representation"] in ("retained-profile","legacy-assembly")]
+    write_ratings_csv(path, references)
 
 
 def main():
@@ -412,7 +419,8 @@ def main():
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,indent=2)+"\n")
     if args.csv:
-        write_ratings_csv(args.csv,report["models"])
+        write_ratings_csv(args.csv,report["models"],runtime_only=True)
+        write_reference_ratings_csv(args.csv.parent/"RETAINED_REFERENCE_RATINGS.csv",report["models"])
     print(json.dumps({"models":len(report["models"]),"scores":report["score_counts"],"coverage_gaps":len(report["coverage_gaps"]),"meets_objective":report["meets_objective"]}))
     if args.require_eight and not report["meets_objective"]:
         raise SystemExit("Quality pass incomplete: models below8/10 and/or missing world-asset coverage")
