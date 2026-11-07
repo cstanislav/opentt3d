@@ -1,0 +1,321 @@
+{
+  "audited_utc": "2026-11-07T20:19:21.385023+00:00",
+  "tag": "opentt3d-dev-20261107.45",
+  "commit": "71fb8ebf872c9bf61f5dd9dee8b64d1b99341d15",
+  "packaging_run": 42405753442,
+  "independent_artifact_reviewer_sha256": "75c87f424a272450948d0528c93923645587e19c2ebb6982386dd4af584fb29f",
+  "release_id": 437788318,
+  "packaging_jobs_passed": 8,
+  "assets": [
+    {
+      "name": "opentt3d-dev-20261107.45-linux-x86_64.json",
+      "id": 721784897,
+      "bytes": 1837,
+      "sha256": "7bccc4fce59263e24ba341d78af291de85188fb160de6dbf041f9ad39a61173d"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-linux-x86_64.tar.xz",
+      "id": 721784894,
+      "bytes": 44075528,
+      "sha256": "ec95a96d0da8232c796f03017653708ef72f8dc3ad7f4d34ef7c16c0b4da9ea8"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-macos-arm64.dmg",
+      "id": 721784901,
+      "bytes": 35105887,
+      "sha256": "75c17cbc2923bcea4f866b4a5dc3ec50dfdfdddc17905814943eca98dbefba75"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-macos-arm64.json",
+      "id": 721784899,
+      "bytes": 1832,
+      "sha256": "91656cb53386cbee877a1e5ae332eb464cd7cedfced04c14b3d0f16bf0cff0dd"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-macos-arm64.zip",
+      "id": 721784915,
+      "bytes": 39355383,
+      "sha256": "69df7b9ae8271ac876cf216351c4b1d7a6a8d78225fd51cae196a9c50a43d160"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-macos-x86_64.dmg",
+      "id": 721784916,
+      "bytes": 35777456,
+      "sha256": "ea0139eb644a933d7ba3b848df140db2864bbcefe40296b945e4805753edac06"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-macos-x86_64.json",
+      "id": 721784926,
+      "bytes": 1834,
+      "sha256": "d0b82581fd250316865ca1f2ff03b5ca62022dec57690fd6796417c63e414931"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-macos-x86_64.zip",
+      "id": 721784953,
+      "bytes": 40058048,
+      "sha256": "4ede4ce230296aed784a6ba6d5b515e9504f152bbd0860398df25b3082e68124"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-source.tar.xz",
+      "id": 721785040,
+      "bytes": 651478372,
+      "sha256": "bec623443925c67f343e99bf0020517b95241e467b60f5d90cf2c2498e7ff932"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-arm64.exe",
+      "id": 721785057,
+      "bytes": 22366769,
+      "sha256": "bdcb3bef73ef5d02dfe4d6055477c3f98361c6a23b4a9a3a0b9cecd620fd4d78"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-arm64.json",
+      "id": 721785063,
+      "bytes": 1873,
+      "sha256": "5ef0b7956ff46a298bbe494957026613a0a50079daa4c231a783d3902854829b"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-arm64.zip",
+      "id": 721785087,
+      "bytes": 37891572,
+      "sha256": "dca21e7fd9d851f8b4193f17ba32c19e9ca5fe3f368cc8759c930b52ccbe3fa1"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-x64.exe",
+      "id": 721785092,
+      "bytes": 23317110,
+      "sha256": "6c43d7cc929e9fa5a062cd72cbfc80d1ccccad18253ed620fedd5443a925539f"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-x64.json",
+      "id": 721785155,
+      "bytes": 1867,
+      "sha256": "a63b83ff5f09810988efb071300d938e82c05349e8e901198b88831a233bded5"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-x64.zip",
+      "id": 721785187,
+      "bytes": 38605672,
+      "sha256": "addd58b7280bdff0381713f013a63a86bbe0a41672d9301f9dd4781bc8c62bcf"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-x86.exe",
+      "id": 721785190,
+      "bytes": 22548040,
+      "sha256": "18e11ba630424ec4f2311279814de12d4e3bc43e11925bcea85cb18fb85c68fb"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-x86.json",
+      "id": 721785202,
+      "bytes": 1867,
+      "sha256": "8f3d846f4d3ddb7cbc0ee09a69b3a3204594facb1ff868c96961a18d33112a06"
+    },
+    {
+      "name": "opentt3d-dev-20261107.45-windows-x86.zip",
+      "id": 721785235,
+      "bytes": 37401424,
+      "sha256": "267b2e11a73a2c3affcff1f8ba81b4fc0a3a34494b94d97a9dc91a94373d4735"
+    },
+    {
+      "name": "SHA256SUMS",
+      "id": 721784893,
+      "bytes": 1944,
+      "sha256": "d9c45c50b7f350c0ff388f2f72f155e5d0ec709209f403229fd4cb4cec0edae4"
+    }
+  ],
+  "manifest_sha256": "d9c45c50b7f350c0ff388f2f72f155e5d0ec709209f403229fd4cb4cec0edae4",
+  "exact_source_files": 49190,
+  "source_archive_sha256": "bec623443925c67f343e99bf0020517b95241e467b60f5d90cf2c2498e7ff932",
+  "extra_source_files": [
+    "opentt3d-dev-20261107.45/external/OpenGFX2-013cbc9e700c796af001a381a2d93592d49146ac.tar.gz",
+    "opentt3d-dev-20261107.45/release-source.json"
+  ],
+  "packages": [
+    {
+      "platform": "macos-arm64",
+      "models": 1915,
+      "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "raw_catalogue_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "compiled_tagged_source_cells_materials_bindings_exact": true,
+      "pinned_graphics_metadata_required_resources": {
+        "/lang/english.lng": {
+          "bytes": 156814,
+          "sha256": "9a9acb126d7843eeed9281c2c6cb7a3e10103d7ae6489830d3222b68fa8193ef"
+        },
+        "/baseset/opntitle.dat": {
+          "bytes": 156304,
+          "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d"
+        },
+        "/PLAYING.md": {
+          "bytes": 4472,
+          "sha256": "224d9dcc692cf683a574ccacf20060ac5db831810ba6e2496b319c9415a34db5"
+        },
+        "/COPYING.md": {
+          "bytes": 17949,
+          "sha256": "50ac792e113700dd23ecb25ed6f341eb383bed36cb8fd87aa164f4e44f2760b3"
+        },
+        "/baseset/OpenGFX2_Classic-0.8.1.tar": {
+          "bytes": 16742400,
+          "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf"
+        }
+      },
+      "windows_arm64_execution_inferred": false
+    },
+    {
+      "platform": "macos-x86_64",
+      "models": 1915,
+      "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "raw_catalogue_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "compiled_tagged_source_cells_materials_bindings_exact": true,
+      "pinned_graphics_metadata_required_resources": {
+        "/lang/english.lng": {
+          "bytes": 156814,
+          "sha256": "9a9acb126d7843eeed9281c2c6cb7a3e10103d7ae6489830d3222b68fa8193ef"
+        },
+        "/baseset/opntitle.dat": {
+          "bytes": 156304,
+          "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d"
+        },
+        "/PLAYING.md": {
+          "bytes": 4472,
+          "sha256": "224d9dcc692cf683a574ccacf20060ac5db831810ba6e2496b319c9415a34db5"
+        },
+        "/COPYING.md": {
+          "bytes": 17949,
+          "sha256": "50ac792e113700dd23ecb25ed6f341eb383bed36cb8fd87aa164f4e44f2760b3"
+        },
+        "/baseset/OpenGFX2_Classic-0.8.1.tar": {
+          "bytes": 16742400,
+          "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf"
+        }
+      },
+      "windows_arm64_execution_inferred": false
+    },
+    {
+      "platform": "windows-x64",
+      "models": 1915,
+      "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "raw_catalogue_sha256": "582ce0a8305a89b78878a3c6cdb3fcfd124b2d0adbe8eeab55bccabe9847655a",
+      "compiled_tagged_source_cells_materials_bindings_exact": true,
+      "pinned_graphics_metadata_required_resources": {
+        "/lang/english.lng": {
+          "bytes": 156814,
+          "sha256": "9a9acb126d7843eeed9281c2c6cb7a3e10103d7ae6489830d3222b68fa8193ef"
+        },
+        "/baseset/opntitle.dat": {
+          "bytes": 156304,
+          "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d"
+        },
+        "/PLAYING.md": {
+          "bytes": 4562,
+          "sha256": "c3e8d390d17f6e0564dadfc31233f8c66ae7c0e59a006fb4d71257775670bc05"
+        },
+        "/COPYING.md": {
+          "bytes": 18287,
+          "sha256": "9d9aaa01e79188890b1ac2d3f1b1df916db4c22788293086d4726119bb1f728b"
+        },
+        "/baseset/OpenGFX2_Classic-0.8.1.tar": {
+          "bytes": 16742400,
+          "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf"
+        }
+      },
+      "windows_arm64_execution_inferred": false
+    },
+    {
+      "platform": "windows-x86",
+      "models": 1915,
+      "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "raw_catalogue_sha256": "582ce0a8305a89b78878a3c6cdb3fcfd124b2d0adbe8eeab55bccabe9847655a",
+      "compiled_tagged_source_cells_materials_bindings_exact": true,
+      "pinned_graphics_metadata_required_resources": {
+        "/lang/english.lng": {
+          "bytes": 156814,
+          "sha256": "9a9acb126d7843eeed9281c2c6cb7a3e10103d7ae6489830d3222b68fa8193ef"
+        },
+        "/baseset/opntitle.dat": {
+          "bytes": 156304,
+          "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d"
+        },
+        "/PLAYING.md": {
+          "bytes": 4562,
+          "sha256": "c3e8d390d17f6e0564dadfc31233f8c66ae7c0e59a006fb4d71257775670bc05"
+        },
+        "/COPYING.md": {
+          "bytes": 18287,
+          "sha256": "9d9aaa01e79188890b1ac2d3f1b1df916db4c22788293086d4726119bb1f728b"
+        },
+        "/baseset/OpenGFX2_Classic-0.8.1.tar": {
+          "bytes": 16742400,
+          "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf"
+        }
+      },
+      "windows_arm64_execution_inferred": false
+    },
+    {
+      "platform": "windows-arm64",
+      "models": 1915,
+      "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "raw_catalogue_sha256": "582ce0a8305a89b78878a3c6cdb3fcfd124b2d0adbe8eeab55bccabe9847655a",
+      "compiled_tagged_source_cells_materials_bindings_exact": true,
+      "pinned_graphics_metadata_required_resources": {
+        "/lang/english.lng": {
+          "bytes": 156814,
+          "sha256": "9a9acb126d7843eeed9281c2c6cb7a3e10103d7ae6489830d3222b68fa8193ef"
+        },
+        "/baseset/opntitle.dat": {
+          "bytes": 156304,
+          "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d"
+        },
+        "/PLAYING.md": {
+          "bytes": 4562,
+          "sha256": "c3e8d390d17f6e0564dadfc31233f8c66ae7c0e59a006fb4d71257775670bc05"
+        },
+        "/COPYING.md": {
+          "bytes": 18287,
+          "sha256": "9d9aaa01e79188890b1ac2d3f1b1df916db4c22788293086d4726119bb1f728b"
+        },
+        "/baseset/OpenGFX2_Classic-0.8.1.tar": {
+          "bytes": 16742400,
+          "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf"
+        }
+      },
+      "windows_arm64_execution_inferred": false
+    },
+    {
+      "platform": "linux-x86_64",
+      "models": 1915,
+      "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "raw_catalogue_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+      "compiled_tagged_source_cells_materials_bindings_exact": true,
+      "pinned_graphics_metadata_required_resources": {
+        "/lang/english.lng": {
+          "bytes": 156814,
+          "sha256": "9a9acb126d7843eeed9281c2c6cb7a3e10103d7ae6489830d3222b68fa8193ef"
+        },
+        "/baseset/opntitle.dat": {
+          "bytes": 156304,
+          "sha256": "ebb39b9b14ec756594bd63050e746787f5770cb970219d41169e8d4e8183732d"
+        },
+        "/PLAYING.md": {
+          "bytes": 4472,
+          "sha256": "224d9dcc692cf683a574ccacf20060ac5db831810ba6e2496b319c9415a34db5"
+        },
+        "/COPYING.md": {
+          "bytes": 17949,
+          "sha256": "50ac792e113700dd23ecb25ed6f341eb383bed36cb8fd87aa164f4e44f2760b3"
+        },
+        "/baseset/OpenGFX2_Classic-0.8.1.tar": {
+          "bytes": 16742400,
+          "sha256": "2f4d0d8cd82b9b15d7c5a742581bfd11a08d4fd54fc0743f1f8a1032e3b5eeaf"
+        }
+      },
+      "windows_arm64_execution_inferred": false
+    }
+  ],
+  "catalogue_lf_sha256": "324b650bc2ef481ba02c683d5d9d12766675f2b311d3986213255bf524ff861e",
+  "source_and_all_downloaded_artifacts_exact": true,
+  "unaccepted_hq_and_bank_runtime_bindings_added": 0,
+  "independent_downloaded_native_runtime_still_required": true,
+  "accepted_publication": false,
+  "every_model_8_or_60fps_or_all_platforms_accepted": false,
+  "quality_approvals": 0
+}
