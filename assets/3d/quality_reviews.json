@@ -67945,6 +67945,2778 @@
       "notes": [
         "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
       ]
+    },
+    "house_arctic_church_ground": {
+      "score": 9,
+      "fingerprint": "888d63019082b89ced932e56924ab7bfeb79cdfe34f6784b747c8e7ecf787d65",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_church_site_ground": {
+      "score": 9,
+      "fingerprint": "59f44ea36eb8c5d8cbe406a35fda57ee180b87b20aa81e0cd85d3a917999fa5c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_final_balcony_ground": {
+      "score": 9,
+      "fingerprint": "669a7009dd757d918b2c227c0c481f99a9f6f94e2809597b83504508a4da4ba9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_final_balcony_site": {
+      "score": 9,
+      "fingerprint": "c342c00dd735f53137040c24215fc660cb400eaba028819c34647f37d22f9416",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_final_rib_ground": {
+      "score": 9,
+      "fingerprint": "8fea41ec8e43e1b634071105b6073f274fef2a1e8e216b274bb26533311d1d37",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_final_rib_ground_site": {
+      "score": 9,
+      "fingerprint": "b845d14f21764ee55c88a443298b4539e2b16425358601f9775389cc9c3cd338",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_final_rib_site": {
+      "score": 9,
+      "fingerprint": "58115f68d225afb366943cd6030bf67c031ce5cd49bce3fc99a88cb70aeddd8c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_hotel_north_site_ground": {
+      "score": 9,
+      "fingerprint": "c809c974e32c0059ce0b3b3ce8a8f3ca5f25210d225c3d0318b0fdfcd4dab465",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_hotel_south_site_ground": {
+      "score": 9,
+      "fingerprint": "4063b1fd643048b540416473d984795cc8c2ddf506bc633dbaf252b0eae886d9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_late_small_ground": {
+      "score": 9,
+      "fingerprint": "467f0ec0fb31c062fdbc40f85e75205cc9130f999158c7057bcd1ddbc1caf0d9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_late_small_ground_snow": {
+      "score": 9,
+      "fingerprint": "8e7f084377979705a0c6d8102c4dc8cde07468a5da101777d785fc1791eb717f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_late_small_site": {
+      "score": 9,
+      "fingerprint": "7c28f43b627197907478af58b3b9119a5707d29ab7af4b07ad90638af0fa32b1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_low_flat_site": {
+      "score": 9,
+      "fingerprint": "6f45bca5632880a814c88aac377f52ee434b07578fd884f8bce6c21fb3b12c94",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_low_ground": {
+      "score": 9,
+      "fingerprint": "0f1529e29727e3b8829a216d26b04496ee00f4851d1d38f1e592cd1ea3b029eb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_low_ground_snow": {
+      "score": 9,
+      "fingerprint": "712eafb93721b3d50582afa50ccbc76dd8519238ad8ff16d21f37cef970f4c45",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_low_red_site": {
+      "score": 9,
+      "fingerprint": "ae48a992d187a76127e1b21ccc4aafbecaa3db25467477ef38881ea16f833cd6",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_next_cottage_ground": {
+      "score": 9,
+      "fingerprint": "c37c2985708ee60a5f1da86958679d21b6097bab1a9ab873b297504c78ddd48b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_next_cottage_ground_snow": {
+      "score": 9,
+      "fingerprint": "50b90c13b3172d389a22263f43ea19ec164908a086212d75ee53e66d1e0b633f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_next_cottage_site": {
+      "score": 9,
+      "fingerprint": "05a5400147658d839e43eee4e1b7324cad35c3261042d67b06ced0d23ba9bff0",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_next_glass_ground": {
+      "score": 9,
+      "fingerprint": "ca27cfe4515894bf800e1aecd24170d733e4ce02fac962d44f18a77475264cd1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_next_glass_site": {
+      "score": 9,
+      "fingerprint": "635aa68eca0eef6bff0c6df9a26e4c3c12c13bb553afead4beb162599cb5dd0e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_shop_ground": {
+      "score": 9,
+      "fingerprint": "e1bcdfd97e30a274619d4fcdc6e4d23edcd66e8be800dae384d15032127daea2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_shop_site_ground": {
+      "score": 9,
+      "fingerprint": "a11a50eec9bee784f90740bfdf7ca48ee414f715916b8aefe674d464a80648b2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_tower_ribbed_ground": {
+      "score": 9,
+      "fingerprint": "6a9733f033083b55d1fb389be779e2b19782af30519d72b290ea2bbef14ba011",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_tower_ribbed_site": {
+      "score": 9,
+      "fingerprint": "c54503076423de85cd23a5b10a50ef9a0f8b5b95a531e49472d9378650a158ba",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_tower_setback_ground": {
+      "score": 9,
+      "fingerprint": "5ddaf49307c504474079464a219133f77156e271cc606a0d6a894ab82ccb9651",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_tower_setback_site": {
+      "score": 9,
+      "fingerprint": "b38d235f12244e4e56d02b1a4533104d455e966d954403b9e4325c58bdfe7589",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_twin_north_ground": {
+      "score": 9,
+      "fingerprint": "928687fba1edf4027824959e776e3e8a2ed17f497aa0103f51fa38073edb28c7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_twin_north_site": {
+      "score": 9,
+      "fingerprint": "d9adb185cfe56e203c6e923057c5e619a358fd1ad1136a3d97e7eda1d5cf23f2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_twin_south_ground": {
+      "score": 9,
+      "fingerprint": "2f70675e906ad287ae331863f87972d84cfb48ad7427a69c2ba73be317997e1b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_arctic_twin_south_site": {
+      "score": 9,
+      "fingerprint": "117477981f2d36d5445fd2f0a7a0753f5b401075ffd98c877f1c2374b74365eb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cabin_large_ground": {
+      "score": 9,
+      "fingerprint": "7e35def5e6be35c18c756fc183c473d2ca307859e7f0a4c0baff985d02d73bf7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cabin_large_ground_snow": {
+      "score": 9,
+      "fingerprint": "9b2e839a0a9c9e56d52e7bae672a7aa72866444dc99f59ca81e08b55e72093d1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cabin_large_site": {
+      "score": 9,
+      "fingerprint": "7be8680bd522c41b33933740ec35a06d5b197eeef5e2469bb422a60111384ed3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cabin_small_ground": {
+      "score": 9,
+      "fingerprint": "8cd4fed6681bee8dff02bfa7615b88b6dbd5032175ec379e6ecf0cbde1ecd6ee",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cabin_small_ground_snow": {
+      "score": 9,
+      "fingerprint": "55d37e49aeeb1361de8199a0155c7c1b810e27b71bd8659c39780c1ced43b9a2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cabin_small_site": {
+      "score": 9,
+      "fingerprint": "ddab7e4b14865d0de06f2caa7c2a302fdb354b4a9fad15c726cabc11bc3ae832",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_cinema_ground": {
+      "score": 9,
+      "fingerprint": "2a808a5f37f94525515da76854903e8212da5b7c65a1b54a5096bd69575af817",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_city_gold_site": {
+      "score": 9,
+      "fingerprint": "0511d0d82175fd2566381dab46f8cd1920d016bf815d0ab378f382dfd7df5e80",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_city_heritage_site": {
+      "score": 9,
+      "fingerprint": "0a1d3efe3b505fca06c05f65a19be66e216b8546772315fb8d4ccf8cc1d8f5d8",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_city_ribbed_site": {
+      "score": 9,
+      "fingerprint": "48b5bf605213d45800b9787d3b5d1aaf06e2b9357193db3393ed09a22dd92825",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_flats_brick_site": {
+      "score": 9,
+      "fingerprint": "04fd2a5fa2605ad64ebb405dfbb5baeda34e1cff45359564f47966e638699ff2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_flats_tan_ground_site": {
+      "score": 9,
+      "fingerprint": "5682958b0dc00562e3b7ba88fc23fe8bea5b355990a397d28d540ef0f615568a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_40_ground": {
+      "score": 9,
+      "fingerprint": "4361034af5b1e5c60d0bfa87aae952f5b5102081d9cc8501826fc86440102d8a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_40_site_body": {
+      "score": 9,
+      "fingerprint": "d3fc85f5950a83ea8ab3536f4af03ba210b852d373f7783e97ff4823abb38bb1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_40_site_ground": {
+      "score": 9,
+      "fingerprint": "bf33dcbef1feee4ffd05f1115283cb53557228f6174c3eda22d658117a047942",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_41_ground": {
+      "score": 9,
+      "fingerprint": "d782927947f0af34e227c1a2b3e019787efe374ed928191986064bbd7b589e37",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_41_site_ground": {
+      "score": 9,
+      "fingerprint": "9f0dc7cb601e1400893e2af89e2a43279dfc59ad4b6cd01d575fe1218ce42131",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_42_ground": {
+      "score": 9,
+      "fingerprint": "4fe0caef0fe70984b35b1fab9b36f12ef0f84dc9ca550f06f3ff55eac31ac840",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_42_site_ground": {
+      "score": 9,
+      "fingerprint": "c10c18c8aeaaf383ddfc5d9ebad4b266afa283288a32b91491735d79d3034750",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_43_ground": {
+      "score": 9,
+      "fingerprint": "e9c95c8df5f5d33c9e15dce1d258817befb38dcad9cb305a10f2c8284098dacd",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mall_43_site_ground": {
+      "score": 9,
+      "fingerprint": "039ed4adcae8ccdeca66c89b54603461b453db513438b83d29e2dc0a4cc6d7c5",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_mansard_shops_site": {
+      "score": 9,
+      "fingerprint": "571bdb77e52a7a8b0808c9b56643adebd28c99e1eb1dcf5546718d433b5605b9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_modular_office_site": {
+      "score": 9,
+      "fingerprint": "ad8de0a33ce45e8df8c39a450c5b81b5a4dcc1e8d1966ef1408170880bec2717",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_next_cable_ground_complete": {
+      "score": 9,
+      "fingerprint": "fbb7d4f65e3a4985fde01fe03af278d4aac4c39dc3c53908479f83321b414e26",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_next_cable_ground_frame": {
+      "score": 9,
+      "fingerprint": "c1fb431b6f897790c14a9c4886628553ae208619a2db3618093423df8224f0b2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_rooflight_office_site": {
+      "score": 9,
+      "fingerprint": "23ffe53902b865c3938199b8a65b87e45f23bbfab50b50134b2c89b7ee0f3f9f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_sawtooth_warehouse_site": {
+      "score": 9,
+      "fingerprint": "5c248540106d8afeb02c99cf0755b4f172910ed2bd69684b63ad02eeba714c4a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_stucco_shops_site": {
+      "score": 9,
+      "fingerprint": "5cc85f9d0a186f96c0a8ea2fc5b3122bfb29fde220d3fdb1a45487da258dc070",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_suburban_bungalow_ground_shell": {
+      "score": 9,
+      "fingerprint": "9d6efe6316ec002945426885d0ee3f7f08a5356c9bc6856b0e6408c6ca342a5f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_suburban_bungalow_ground_site": {
+      "score": 9,
+      "fingerprint": "9d4091c5b2cfdb965bfd733cb18ec08701add81feac34d89df54913601114e32",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_suburban_gable_pair_site": {
+      "score": 9,
+      "fingerprint": "bf77218a93f4d7a9e2ca01ad9ec5c5fbf9eb91ce6d85d491037557a6d170dd51",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_suburban_garage_pair_site": {
+      "score": 9,
+      "fingerprint": "c0a88f9b93d68aead87379fd90ff9b997cba74b70ad92065720d72362c211675",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_suburban_hip_pair_site": {
+      "score": 9,
+      "fingerprint": "3dd1f4e27cd8ceb263639042d8b1fa9e43986647ec52f8780d2098621cb53564",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_toy_ground_a": {
+      "score": 9,
+      "fingerprint": "62458cd6c116c24671514b6c268343f23692bf4c107411e8badfd1d7439692ed",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_toy_ground_b": {
+      "score": 9,
+      "fingerprint": "354aaf02b7fb3bb668be223e7fd56d3c067918295f33f6ad46d64186d14f912a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_civic_flats_site": {
+      "score": 9,
+      "fingerprint": "2739c1a6f852e434dcd5dff3b0b163658c234947ee52450946908603721ebfc9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_balconies_site": {
+      "score": 9,
+      "fingerprint": "4eb9b8c5e5a7f3337e331fe3d83902afb4d1af23f4c64ebf23d42f3ead974338",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_blue_site": {
+      "score": 9,
+      "fingerprint": "d5defa95e0a6e41fcb3656b712b1f036265f6ad1fac0b4d2f4b681453d3a1ebf",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_longflats_site": {
+      "score": 9,
+      "fingerprint": "0525ddb42c50532ac1010d4c26e1c2b79b08b8eb1ac454e37a7ec2937644e194",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_palms_site": {
+      "score": 9,
+      "fingerprint": "66745e9ef992b0febca27d5026e17d0fa6ba8ff204f7a30087c70c4077bad0dd",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_square_site": {
+      "score": 9,
+      "fingerprint": "6fae205272e4b603cb77f0b7144aa11aefec83cea16431b6db65ca969edfe4b8",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_twin_high_site": {
+      "score": 9,
+      "fingerprint": "13630a0bbc6fda5ca0be24f4a54ab0eee2517291c2ab5bc8f5bbfcbab61c2106",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_last_twin_low_site": {
+      "score": 9,
+      "fingerprint": "b758a7ed2e4a3ef3eac445e80e55ba2f06b378c8270bbd448430a51df8378d08",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_small_bungalow_site": {
+      "score": 9,
+      "fingerprint": "69b7e91fdd69b6d49ff040945bb0bd93af4116bdde0056c95e2911ea09d30e77",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_small_colonial_site": {
+      "score": 9,
+      "fingerprint": "8fb768563d63d8517e547e57de924e69e2b440706c5a53c4733432dc71a6ae6b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
+    },
+    "house_tropic_small_striped_site": {
+      "score": 9,
+      "fingerprint": "b04003720d29ff66c32f6a77be31a9509a0092a9f93d19c0ded541d7f4a747ec",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp",
+        "assets/3d/houses.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp",
+        "docs/screenshots/toyland-parade.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-05.webp": "b4fa17dbdcf21bb33c4eb3413c38c0af7a0224db06ff60fd071b8e11f1032c9f",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-06.webp": "0f8fe11779fe1acb67aba41687eaf365a38a106c12928a9fdc5b9e96dd285f7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-07.webp": "116761556142514b49af18d61d1041d3829619978fc07301a97ef7d9f43acc7d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-08.webp": "ea04e58ca014584382eb1f2b2ccb613755d447ba5c90480abd0e55742effa5ad",
+        "assets/3d/houses.json": "74da3c5ef907a00f0e8030835c047be79831e086ec48e2c329bbaca676e0a2e2",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53",
+        "docs/screenshots/toyland-parade.webp": "c38bc3eec78e784b07317c4fe2a6848d9bdf1e0509cf46a5b10ef07906bba00e"
+      },
+      "notes": [
+        "Individually inspected house construction site/frame/shell/ground on the full-catalogue house sheets: complete 3D stage/plate with source-derived materials and climate variants; separate finished bodies were accepted earlier."
+      ]
     }
   },
   "note": "Individual quick-pass ratings require exact model/six-face fingerprints and explicit review evidence. Do not bulk-promote existing work-in-progress artwork. This rating ledger does not confer final original-art visual approvals."
