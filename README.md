@@ -23,7 +23,7 @@ engine's path.
 > performance work are still in progress; this README does not claim that every
 > model has reached its final detail level. The immutable
 > [`.42` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)
-> is the recommended desktop checkpoint. Sixteen bank/dike volumes, 434 bound tree volumes, 188 vehicle models and 137 finished houses have passed individual 9/10 reviews; the remaining catalogue still needs the same treatment. A `.45` development draft has also been packaged for maintainer review and
+> is the recommended desktop checkpoint. Sixteen bank/dike volumes, 434 bound tree volumes, 188 vehicle models, 137 finished houses and 93 wagons have passed individual 9/10 reviews; the remaining catalogue still needs the same treatment. A `.45` development draft has also been packaged for maintainer review and
 > remains unpublished pending full independent native checks.
 
 ## Download and play

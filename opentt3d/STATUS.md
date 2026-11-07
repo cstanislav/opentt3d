@@ -19,9 +19,9 @@ were individually accepted at9/10 (16 models) with fresh model/world evidence. A
 source-derived OpenGFX2 profiles and representative world screenshots. All188
 aircraft, rail locomotive/collector, road-vehicle/cargo and ship models were then
 accepted at9/10 from the source-derived vehicle tables and world/street views. All
-137 finished house bodies were also accepted at9/10; construction sites, frames,
-shells and ground layers remain separate. Their water, ground, support, LOD,
-picking and ship-clearance layers remain open.
+137 finished house bodies and all93 wagon bodies were also accepted at9/10;
+construction sites, frames, shells and ground layers remain separate. Their water,
+ground, support, LOD, picking and ship-clearance layers remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset276, harness120 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation

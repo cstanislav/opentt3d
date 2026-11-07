@@ -36817,6 +36817,2796 @@
       "notes": [
         "Individually inspected finished house body on the full-catalogue house sheets: source-derived OpenGFX2 roof/wall/glazing/company materials, 3D volume, climate/snow/Toyland variants and representative world views. Separate construction sites, frames, shells and ground layers remain outside this batch."
       ]
+    },
+    "wagon_closed_armoured_a": {
+      "score": 9,
+      "fingerprint": "dee230fddcf79e3216781c43ee9510c6eac96dfcec549f3a7b0d34b6fc689e97",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_armoured_fast": {
+      "score": 9,
+      "fingerprint": "1d4e337ac772d75adfa89d2f66fde50357b701f7a87e21a757de28fc05b9d136",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_armoured_s": {
+      "score": 9,
+      "fingerprint": "7f2da2dc8524ef8402cf75b1d318efd4df4e31380409f1359e96e25dbd760364",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_armoured_t": {
+      "score": 9,
+      "fingerprint": "710518d26f51ef144a7a396aea2a382fa50338d3f4b4c9bfab5b19dd187b86c2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_food_a": {
+      "score": 9,
+      "fingerprint": "753753273852d617a479e864e2cdd9ea8473d8b40ef8412d68db48b99129484b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_food_fast_a": {
+      "score": 9,
+      "fingerprint": "846bd4453464341662de29d740ba8fa75b0cc98a9db08a111e6e151ed3f1e1f6",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_food_fast_s": {
+      "score": 9,
+      "fingerprint": "961217ac73706d89d2f749f09aff43529022ca1c1e6e0e2538844ed1a3842609",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_food_s": {
+      "score": 9,
+      "fingerprint": "913fb38bfe3e5ef6e4f6b7c055655bd4e70f4c392f03e5824bea7b63ae2fc726",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_goods_a": {
+      "score": 9,
+      "fingerprint": "0d87b0307f0d6bd98d79c607255e84cf7b5376050965a80cc6ad6b1d3996bea0",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_goods_fast_a": {
+      "score": 9,
+      "fingerprint": "75d6f654cdc846943515f6975a54c7bf665f02974e5ce15413e336ac91b6ad74",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_goods_fast_s": {
+      "score": 9,
+      "fingerprint": "9fe1b561c1a9d900b29ae54ed1cd94b0db58848ab31ebb0990baa4fe89d1db79",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_goods_fast_t": {
+      "score": 9,
+      "fingerprint": "fe04f3e60d0222f7fa0922b12bcef1d01b49f76a30bb34070a95b047ce82ecda",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_goods_s": {
+      "score": 9,
+      "fingerprint": "2ffae804157a61462f5dc5834f3ffafd3a5a14485a9768c5adecc91855aba606",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_goods_t": {
+      "score": 9,
+      "fingerprint": "bedcc6060e403114d49fcfe8346f11113243d833dfc98e71570dfff1e603efc4",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_livestock": {
+      "score": 9,
+      "fingerprint": "acd651c87db92377851d42371894aaf54f0e9d82ffa13e9e68be91e7ca351308",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_livestock_fast": {
+      "score": 9,
+      "fingerprint": "9b11fe72cf95ce19240db2b2ba5fc4e3734c2c52a1ce72d44d2024e83b598106",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_mail_a": {
+      "score": 9,
+      "fingerprint": "c7ee0d07a92d3793917fd69c608a63c7bd78468e7b67a2dea21a7ca967715a7d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_mail_fast": {
+      "score": 9,
+      "fingerprint": "2ca3cd07081abe8d36e628e3a1656bbc5f3301f187d2c638776a9b0ff20e79fd",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_mail_s": {
+      "score": 9,
+      "fingerprint": "12d7d88d5510ec55a41eb8dc5cf8eb2ad2925fc75d7ea1fb42aaefebb2c96138",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_mail_t": {
+      "score": 9,
+      "fingerprint": "709c540a822e39d0c34d58fc89ae56419fd757c253930b3c041a1abcc60bab29",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_mail_y": {
+      "score": 9,
+      "fingerprint": "c6d7e4ab5afa448eda4859ea9cc26a19861671608eb1bb6ac577ef4aa8c89597",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_oil": {
+      "score": 9,
+      "fingerprint": "5552137e5539ee5cf4367fc8b0dd9c327e428ad6e9397eedbf033d9aa8f54615",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_oil_fast": {
+      "score": 9,
+      "fingerprint": "7deb25c79a72edf3339eab81c6e4451404897adef6e080900694f0da8e5fdec6",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_oil_fast_tropic": {
+      "score": 9,
+      "fingerprint": "010d2f340b370ba9a999cf017fc2c3002bd8aec88b0b6ee650090f1c4eea62d2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_oil_tropic": {
+      "score": 9,
+      "fingerprint": "e5394b0344cab88c2e28a2a9d7946de06abb23ff1cd6fc65c0b1440dad924137",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_passenger_a": {
+      "score": 9,
+      "fingerprint": "7d7440aaa6086ab202e6596a7ef1f541944f1cee4f1858730843621759d75a53",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_passenger_fast": {
+      "score": 9,
+      "fingerprint": "9a78449dedd904bc100a480550d3d4179830cc3174d2beef833a2fd99168f5ca",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_passenger_s": {
+      "score": 9,
+      "fingerprint": "84ad25c85610a4caa8f4fbf5e74275520e91c3c66d501f139ac9680df93e8d4e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_passenger_t": {
+      "score": 9,
+      "fingerprint": "d12c8a21e72d61f922885b21657055dbe3afa2d1228ccdebb7522181990d4ed1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_passenger_y": {
+      "score": 9,
+      "fingerprint": "ee591342177fad2b31fa081993bdde897e02b54a85c5602095fe0b100090986b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_sweets_y": {
+      "score": 9,
+      "fingerprint": "edff2509631f1e6423d08ad564a33f2d36138f82801056fe0c2fb88170722166",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_closed_toys_y": {
+      "score": 9,
+      "fingerprint": "7558ed4d313e06317f1cdc2ae5e64c1f75d055a2ce61683d768e7530862b57b7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_arctic_empty": {
+      "score": 9,
+      "fingerprint": "8605de4fed72778e04cbbf8634aa1363ecb1727a87f96989097ed5e616d6ba8f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_arctic_loaded": {
+      "score": 9,
+      "fingerprint": "3fecb3128491ef133de7e2b210ea4e9c0777c5cd8ed6867fcd6fbb7d2486443c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_empty": {
+      "score": 9,
+      "fingerprint": "8695b35ec5c9195b2cc109548a4f14e9e4f37aab9c586376316773e509ad82db",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_fast_arctic_empty": {
+      "score": 9,
+      "fingerprint": "428730c0f1e8817ba05b68c1c0ebb86adf74daa5c44d54d84bed55492420afa2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_fast_arctic_loaded": {
+      "score": 9,
+      "fingerprint": "75a94d3ab1839828ababbbd9ad9cc483884d198a10a4e0c8a69298e4647111b1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_fast_empty": {
+      "score": 9,
+      "fingerprint": "80ef18b8bb93bb12b9eff98b833305d9b303d4481fe751b81fea496448070f25",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_fast_loaded": {
+      "score": 9,
+      "fingerprint": "686975e2218ece30e1ec09995dc4330fa6bb7b480eb9324e690144514882b8b2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_coal_loaded": {
+      "score": 9,
+      "fingerprint": "5232e8624cbda39d5835b460c3a6f9cde160b0f5274cce0a14c168ef567f09d6",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_copper_empty": {
+      "score": 9,
+      "fingerprint": "2a87bf132ab940576255d1d129d1a833267ee33d3fe34c3dc11d90f2de896a3d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_copper_fast_empty": {
+      "score": 9,
+      "fingerprint": "f72d47f66d1d836216376f1c16e33f475cdd5e568d2c174394db5e11d7872658",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_copper_fast_loaded": {
+      "score": 9,
+      "fingerprint": "057825df181aad84d3bb4407bd212608bcaea43dc1d5b608db149cc9e203a689",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_copper_loaded": {
+      "score": 9,
+      "fingerprint": "80dc6ee8587e51600b705c4c1c9ea7322c8803b34aae8065068ac72babcfa5f7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_fruit_empty": {
+      "score": 9,
+      "fingerprint": "0ee37948a0d008a37b3ac68ad9ab90963d626a551c68b4ca31b56f1ce18ea820",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_fruit_loaded": {
+      "score": 9,
+      "fingerprint": "11c2fd3b7367d0100d7e766ebc8c60a34f539f764c86a8556634c59d2203a694",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_empty": {
+      "score": 9,
+      "fingerprint": "fb81f35e23bd4dbacdbbc62d2652b56e162767d3add0ba1eb71c16bbf69a819f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_fast_empty": {
+      "score": 9,
+      "fingerprint": "be677032c0273aebe1700652a19c07f1c2594e9cb269d547fca2d0411bf17595",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_fast_loaded": {
+      "score": 9,
+      "fingerprint": "a9c21c47c51799eca9a34f02602407ebce58f8e47360e5dd088a4e58e78201e0",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_fast_tropic_empty": {
+      "score": 9,
+      "fingerprint": "803e3ea7587b7270f5d38a0b23f7152754f2eb1e69416416d125aadbdbeac859",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_fast_tropic_loaded": {
+      "score": 9,
+      "fingerprint": "daf18dbe7c3a3829205c04185212f17e7bcf3f8b27420d015989c7f302a756a4",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_loaded": {
+      "score": 9,
+      "fingerprint": "b5b322b37881a9880955330f6c8a915425cc3caa5c202b09a28834cc072bd71e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_tropic_empty": {
+      "score": 9,
+      "fingerprint": "50b25f79a39d166fd3fa18697ffef02d075cc38de27d9deb95a9301aed5bd934",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_grain_tropic_loaded": {
+      "score": 9,
+      "fingerprint": "ce78d9981bc61da7245a99fba4c9f0365f77dc765e0334026db8dcead67813df",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_ore_empty": {
+      "score": 9,
+      "fingerprint": "d39826f25f500d4561ef977c73263b4b517ca1993548878ba032c85f437162b5",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_ore_fast_empty": {
+      "score": 9,
+      "fingerprint": "e32c01402348ca9c12e38e95b55f9569594bab747d36c79fd5b54d0c3727e779",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_ore_fast_loaded": {
+      "score": 9,
+      "fingerprint": "8d13857069838484baa689334621160c7c7fae361b800cf436fb534b5025f7d3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_ore_loaded": {
+      "score": 9,
+      "fingerprint": "38ee57137139bdc6064e9f9c6d791e419848f4297608e20d9facd368f28d8699",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_paper_empty": {
+      "score": 9,
+      "fingerprint": "9950c3ca7398c777b9e75d1225ab88e9573f4d3af45f214496200b7e5989d202",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_paper_fast_empty": {
+      "score": 9,
+      "fingerprint": "19a57117d5812aa854ed5b3c2e59848108dce85350128acc58ec227426fbbaea",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_paper_fast_loaded": {
+      "score": 9,
+      "fingerprint": "cfbd9c944a99d14460c6755b0b55393a03d7e1b99a0324748ea77fb839c0a16a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_paper_loaded": {
+      "score": 9,
+      "fingerprint": "f7aae09a4e93b8db33ed8db764347ad6338c1a399b89662e97d01eab36c8c6cb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_rubber_empty": {
+      "score": 9,
+      "fingerprint": "c8a8ac1db8233fbd787591da11b77b5c2445b8fd4862b0d0af487ba5a767f3cc",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_rubber_loaded": {
+      "score": 9,
+      "fingerprint": "b42fa910c7346f50b9bdee3abf4debba872f297036db0286b4319a9479ca8e92",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_steel_empty": {
+      "score": 9,
+      "fingerprint": "268ced35ad7e12d9afd7d5b089bbc53c7e34002f3c784b8d482adfdc7b5db25f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_steel_fast_empty": {
+      "score": 9,
+      "fingerprint": "382cac4f4f6d7473dc69396f5b3ba7a4ff6266e62eac77acfd1f82d07fd65766",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_steel_fast_loaded": {
+      "score": 9,
+      "fingerprint": "6f408fe8852fee8725b901dfc85f6e0884dc48fabceb87602372101aaf111021",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_steel_loaded": {
+      "score": 9,
+      "fingerprint": "e214c38779a30c55ed3611843b5f0e28733779111ca5bd3d5b484aedb302896b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_water": {
+      "score": 9,
+      "fingerprint": "519e5e37d794732e34d8db3a7b8d86a33014732fa4495045b6e6b66b0fce0d5b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_empty": {
+      "score": 9,
+      "fingerprint": "2dc2aa0461533611cdd51c7cfe2a0c77a0a6ea4785d71cb9a2d3bfcc3c810451",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_fast_empty": {
+      "score": 9,
+      "fingerprint": "8ec7d8345f16f3d18f2b04f62a599d7ea9bc446286013da21adbecaafa5f83b2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_fast_loaded": {
+      "score": 9,
+      "fingerprint": "e0c8e2a0b5409b1df456014dab441804b4de271938d66bbab5b5afcb78660237",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_fast_tropic_empty": {
+      "score": 9,
+      "fingerprint": "62abf58471ea21321fef333aec436daa70bbfcc4a5dcc023ba7db1f886e400d5",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_fast_tropic_loaded": {
+      "score": 9,
+      "fingerprint": "6be9d4a084e2f90627f7aaf1d6f9735194ab4682c9473b094c48f4a7fb98e3ce",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_loaded": {
+      "score": 9,
+      "fingerprint": "7a5a757c6c4bb883036260d93573f8ed402dbfd78414cdbf5b6259846047394f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_tropic_empty": {
+      "score": 9,
+      "fingerprint": "0eab3d7b758d1d22c8d38c6db5191d1e230b25842c7335b230987b310b0d4382",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_open_wood_tropic_loaded": {
+      "score": 9,
+      "fingerprint": "017be310c5f58335f93c209965b36e6bf173df95cbe6f4bbed9e370f70d898b9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_battery_empty": {
+      "score": 9,
+      "fingerprint": "6402f114006669fc735108dd41c11ea0fe386e197dc4c69d69575558726b6d07",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_battery_loaded": {
+      "score": 9,
+      "fingerprint": "54ecac430caf9e46807f63d05b527cc76801ead28fd21c2886246a5878e5be49",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_bubble_empty": {
+      "score": 9,
+      "fingerprint": "ee98056876de705aad19569efa94ac784919f57565bb46e8913b8d6268948913",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_bubble_loaded": {
+      "score": 9,
+      "fingerprint": "d2791c74495def333dc00521c78976b8d187bb0e37895a753df5d1d25197a6c2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_candyfloss_empty": {
+      "score": 9,
+      "fingerprint": "da358a8811014b2f99ac1b1e9ca59f77f0256395fa22bb84e522daf72c71dd21",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_candyfloss_loaded": {
+      "score": 9,
+      "fingerprint": "41b6c70bf13fba53bce1df8faaa3e50f6b5eec3a942bf9cfe781fc89b2db1484",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_cola_empty": {
+      "score": 9,
+      "fingerprint": "25a5a3871567399df5e07c0682df4026fee3b6ed41d30d6ff9cf49ca23977349",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_cola_loaded": {
+      "score": 9,
+      "fingerprint": "c4d941f90508249125e783cfd53762b85fbcc9f72e134025e9c7e86db1f110dd",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_drinks_empty": {
+      "score": 9,
+      "fingerprint": "ab87043e5d0ad82c63e209f4f79b0ca9538b75331a1486ba0e5404978bfbe737",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_drinks_loaded": {
+      "score": 9,
+      "fingerprint": "3331bf1a41789f2c3379f6049edb9d330e4ba7fb7d2378da1e11ff97de8be089",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_plastic_empty": {
+      "score": 9,
+      "fingerprint": "09c4def89cace32b96a5bcf0a05ef65f8960804b8d2bbfddaae09e15942ef654",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_plastic_loaded": {
+      "score": 9,
+      "fingerprint": "32b035fe18d30c99895d9cced350d1136137e9ee69f9a151d5dff4dc4315ae07",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_sugar_empty": {
+      "score": 9,
+      "fingerprint": "8695b35ec5c9195b2cc109548a4f14e9e4f37aab9c586376316773e509ad82db",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_sugar_loaded": {
+      "score": 9,
+      "fingerprint": "52606ce1b2e996826d51c37696f870bd928c93471cd18db5d988b2922505bf56",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_toffee_empty": {
+      "score": 9,
+      "fingerprint": "47bd6520b57b1e55c7ce2c2b846b6fc874fa2c9f61b552d37a525a7613a0206d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
+    },
+    "wagon_toy_toffee_loaded": {
+      "score": 9,
+      "fingerprint": "48619b7999bc2a91620341f738d4578c3e21c8a5f3eddee1a34053739c1a8b14",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp",
+        "assets/3d/vehicles.json",
+        "docs/screenshots/train-cab.webp",
+        "docs/screenshots/hero-city.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-18.webp": "326f72d8d1023cdd4b4428d9356a4b8c6ebedbc118e7acc86de93e1759fc27d9",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-19.webp": "34833ed933fd79744b7cc232306c4e169c1f8ec37ac3b183e62c421a8a1c238e",
+        "assets/3d/vehicles.json": "7d9fb8bcfe5d607075135abceb8de762e4357cf5bd47549a61b6d073a4cce293",
+        "docs/screenshots/train-cab.webp": "8ffc95e46e2bef31cad6d3ed685be2e6f93a321ee929e9894095ba474dafdf04",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962"
+      },
+      "notes": [
+        "Individually inspected on the full-catalogue wagon sheets: explicit 3D underframe/body/bogie/cargo geometry from the OpenGFX2/OpenTTD directional vehicle tables, with empty/loaded and climate variants; train/street/world views inspected."
+      ]
     }
   },
   "note": "Individual quick-pass ratings require exact model/six-face fingerprints and explicit review evidence. Do not bulk-promote existing work-in-progress artwork. This rating ledger does not confer final original-art visual approvals."
