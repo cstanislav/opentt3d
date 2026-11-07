@@ -37,10 +37,13 @@ medium/large/huge HQ families were then bound:84 previous source-layer fallbacks
 now select the existing3D HQ grounds/bodies at5/10, while their76 models remain
 6/10 (eight already9/10). The20 original river-ground base selectors were then
 accepted as intentional native water/terrain surfaces with their raised relief/
-banks separately bound at9/10, leaving no source-layer fallback rows. The
-remaining ledger is24 flat-bank models at4/10,76 larger-HQ models at6/10,183
-retained profiles/legacy assemblies at3/10 and356 river/bank/HQ instances at5/10.
-Their support, LOD, picking, phase/custom-family, world and ship-clearance
+banks separately bound at9/10, leaving no source-layer fallback rows. The76
+larger-HQ models and84 owner instances were then accepted at9/10 from joined
+size2/3/4 saved-world screenshots and source owner sheets; the stages were forced
+in the isolated fixture, so natural company-score selection remains open. The
+remaining ledger is24 flat-bank models at4/10,32 bound river/bank models at5/10,
+240 river/bank instances at5/10 and183 retained profiles/legacy assemblies at
+3/10. Their support, LOD, picking, phase/custom-family, world and ship-clearance
 layers remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.

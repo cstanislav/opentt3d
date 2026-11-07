@@ -22,6 +22,9 @@ console acknowledgements, the exact synchronous save-success text and an actual
 
 ## Limits
 
-No larger-HQ world, full source/world/state acceptance, painting/proportion
-promotion, LOD/picking/ship-clearance or performance claim follows from this
-binding. The every-model9/10 objective remains unmet.
+A later `hq-world-review` retained joined size2/3/4 saved worlds and accepted the
+76 models and84 owner instances at9/10 for visible structure/placement; those
+fixture stages were forced, so natural company-score selection remains open. This
+binding itself did not establish that world review. LOD/picking/ship-clearance
+and performance claims remain separate; the every-model9/10 objective remains
+unmet.

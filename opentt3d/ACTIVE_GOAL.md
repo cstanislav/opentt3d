@@ -13,24 +13,26 @@ is an orange cube with OPEN/TT3D ribbons; nightly Windows checkout/Mac filesyste
 targets are repaired; public docs have fresh screenshots and no hand-crafting
 language. Asset280/harness122/native219 tests and the presentation boundary pass.
 
-The ledger has2,415 models at9/10 after the automated authored/procedural runtime
+The ledger has2,575 models at9/10 after the automated authored/procedural runtime
 sweep, the corrected48-model/192-owner lock-wall acceptance, the125 intentional
-native water/terrain surfaces and the final20 native river-ground base surfaces.
-No source-layer fallback rows remain: every runtime coverage row now has either a
-bound 3D volume or an explicitly reviewed native surface. The remaining below9
-rows are356 river/bank/HQ instances at5/10,24 flat-bank models at4/10 and76
-larger-HQ models at6/10. The48 recovered lock-wall models pass all six checks
-from source/corrected galleries and actual lock fixtures in all four climates on
-both backends; the live log observes all48 original owner ordinals with
-acknowledged synchronous saves. The112 original water surfaces,13 native object
-ground surfaces and20 base river-ground surfaces are accepted as intentional
-native surfaces, not missing volumes. The8 river-relief models and192 conditional
-sloped-bank instances, plus the48 flat CF_RIVER_EDGE bank models and48 flat
-instances, are bound; all eight native climate/backend controls observe the flat
-bank path. The complete medium/large/huge HQ source families are bound:84
-previous source-layer fallbacks select the existing 3D HQ grounds/bodies at5/10
-while their76 models remain6/10 (eight already9/10). None of these is a9/10
-promotion. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+native water/terrain surfaces, the final20 native river-ground base surfaces and
+the joined larger-HQ world acceptance. No source-layer fallback rows remain:
+every runtime coverage row now has either a bound 3D volume or an explicitly
+reviewed native surface. The remaining below9 rows are240 river/bank instances
+at5/10,32 bound river/bank models at5/10,24 flat-bank models at4/10 and183
+retained profiles/legacy assemblies at3/10. The48 recovered lock-wall models pass
+all six checks from source/corrected galleries and actual lock fixtures in all
+four climates on both backends; the live log observes all48 original owner
+ordinals with acknowledged synchronous saves. The112 original water surfaces,13
+native object ground surfaces and20 base river-ground surfaces are accepted as
+intentional native surfaces, not missing volumes. The8 river-relief models and192
+conditional sloped-bank instances, plus the48 flat CF_RIVER_EDGE bank models and
+48 flat instances, are bound; all eight native climate/backend controls observe
+the flat bank path. The76 larger-HQ models and84 owner instances were accepted
+at9/10 from joined size2/3/4 saved-world screenshots, source owner sheets and
+the complete bound families. The fixture stages were forced by a temporary
+review command; natural company-score stage selection remains an open runtime
+gate. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.

@@ -52,12 +52,15 @@ medium/large/huge HQ families were then bound:84 previous source-layer fallbacks
 select the existing3D HQ grounds/bodies at5/10, while their76 models remain6/10
 (eight already9/10). The20 original river-ground base selectors were then
 accepted as intentional native water/terrain surfaces with their raised relief/
-bank owners separately bound, leaving no source-layer fallback rows. The ledger
-now has2,415 at9/10,356 river/bank/HQ instances at5/10,24 flat-bank models at4/10,
-76 larger-HQ models at6/10 and183 retained profiles/legacy assemblies at3/10.
-The remaining below9 rows still need individual source/world/state/picking/
-ship-clearance and fidelity review. The every-model9/10, complete catalogue and
-sustained60fps goals remain open.
+bank owners separately bound, leaving no source-layer fallback rows. The76
+larger-HQ models and84 owner instances were then accepted at9/10 from joined
+size2/3/4 saved-world screenshots and source owner sheets; natural company-score
+selection remains a separate open gate. The ledger now has2,575 at9/10,240
+river/bank instances at5/10,32 bound river/bank models at5/10,24 flat-bank models
+at4/10 and183 retained profiles/legacy assemblies at3/10. The remaining below9
+rows still need individual source/world/state/picking/ship-clearance and fidelity
+review. The every-model9/10, complete catalogue and sustained60fps goals remain
+open.
 See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4
