@@ -65035,6 +65035,2916 @@
       "notes": [
         "Individually inspected on the full-catalogue sheets: 3D construction/mid-state or dynamic industry geometry with source-derived materials and plausible volume/detail. Flat ground, site, floor, fence, effect and water layers remain outside this batch."
       ]
+    },
+    "airport_edge_apron_10_arctic": {
+      "score": 9,
+      "fingerprint": "fab183b2647ae14d803c055226855252835798da6a113eb48e12bace4ba49f6f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_10_temperate": {
+      "score": 9,
+      "fingerprint": "97786d64b4af0e8bf78ab9a24daa9ffa14fd980123e5545d0b84c89cbac1ebe0",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_10_toyland": {
+      "score": 9,
+      "fingerprint": "d6a186237020e01b2af78fa666ede708b68ec376e0e7e88a8e11d4e195dddf4b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_10_tropic": {
+      "score": 9,
+      "fingerprint": "822fc46749896491ad70d0f93e10c24b34213d887bceefef70f73ea598262d41",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_11_arctic": {
+      "score": 9,
+      "fingerprint": "bbd57087fd7ddae252f728d0b6e76232963a428acc40e3349099c8963d45769b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_11_temperate": {
+      "score": 9,
+      "fingerprint": "77f74ddbc8ff686a35fba5413393fa25a00f5df65830b00d16b68720d3cc2650",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_11_toyland": {
+      "score": 9,
+      "fingerprint": "8fb6b0a35a480663e5bc520684fa9ef07430112a1f4e3abe0b78e8ca78a7c955",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_11_tropic": {
+      "score": 9,
+      "fingerprint": "ccad88298fba67c3000b9cfb853a67d0f8880e96efd6b647ad640a60d683f1da",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_12_arctic": {
+      "score": 9,
+      "fingerprint": "1b19dad5b326468d299659ea5bc8ebbdbc20207746dff91f31cd947ab24cb002",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_12_temperate": {
+      "score": 9,
+      "fingerprint": "a032b5bb8df1513d0cf01cd3ceed1e332b42e3396f258041ffcd80b7f6ab3504",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_12_toyland": {
+      "score": 9,
+      "fingerprint": "f1f718a86cb566f8d039c32da870195b3f85d95a846723902182aa656f66819e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_12_tropic": {
+      "score": 9,
+      "fingerprint": "a37d3cf1c40d81418660d35d0f51ec7e5c10d99ecc36520050c40427ef0cdbad",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_4_arctic": {
+      "score": 9,
+      "fingerprint": "1393bb7ae565489d8b14be759ec17da032d7b756757e243f55baecbf3da34afc",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_4_temperate": {
+      "score": 9,
+      "fingerprint": "d8c4c9d6e36fcbc42fe3b2d4d2334a10406c48fda0f4792d3e5aa2cd19fa69a3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_4_toyland": {
+      "score": 9,
+      "fingerprint": "cc2c3e1fab4b52934e6286accc41692b97aa6f7cb395edfd11db7ce3a2926a70",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_4_tropic": {
+      "score": 9,
+      "fingerprint": "1c2deba0ba375dc1f5110ef2823463140dee999fb48db071e88b24286ae5cfe8",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_5_arctic": {
+      "score": 9,
+      "fingerprint": "0841d184b3b5cfbfe3252cdb65e00f4c5f422992d1fef55b0082c72ec7f6d58d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_5_temperate": {
+      "score": 9,
+      "fingerprint": "ade8a14372d7cb7e06cc65eee55bf8877c18593133ef3153ecd81ddef468f6bc",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_5_toyland": {
+      "score": 9,
+      "fingerprint": "9402b8cca4ae1f8b0782a52a98adc2b5506c4709e84ab247d971dc9dde9ec1e1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_5_tropic": {
+      "score": 9,
+      "fingerprint": "6d5b7a4b68ec5b22ba436d502a83f759709b9fb0b9bf7938eeff8a0f5de92cbb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_6_arctic": {
+      "score": 9,
+      "fingerprint": "fac2c1672d1e2a59703f092f94c0c6915f2594574293947814613cabcf9f0688",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_6_temperate": {
+      "score": 9,
+      "fingerprint": "ddbef9310bdb0bf5792db29d9843f0649ae53de6c986dbed563a5a82af8fae7b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_6_toyland": {
+      "score": 9,
+      "fingerprint": "a97a3c451fc9199edf072d69802ab87b5a64694e1e8863e1c53cee9610c53914",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_6_tropic": {
+      "score": 9,
+      "fingerprint": "aac11ad7cae13cf81bab5f27be5e5c74c7ed16ed43493808fadbe82a843b7ad9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_7_arctic": {
+      "score": 9,
+      "fingerprint": "1edb4828c47b97e9ba2cbf0aac3c89b94f9f30410fd07acb4e9b67e12e6c3f38",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_7_temperate": {
+      "score": 9,
+      "fingerprint": "c501f09f751c9bf533cfa0fcd6f13c83ea8092f2790ce697ea5a17bb823ec156",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_7_toyland": {
+      "score": 9,
+      "fingerprint": "62552d58a425619efc79737317a467494d6322c2a7c273cdd9d7d26fae30846f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_7_tropic": {
+      "score": 9,
+      "fingerprint": "bee7da22c26ab9299a838f2f45ffa655cb1a65f4af6dd2ff578260123fd4d475",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_8_arctic": {
+      "score": 9,
+      "fingerprint": "1f95dbb92106376165bf30fc1ce0bc6e9f42421f3429294f3c17afcb4b301161",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_8_temperate": {
+      "score": 9,
+      "fingerprint": "76d9828bcc500d3cf99e2821569f2cd7071cea953a39331ba9cb01083289e495",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_8_toyland": {
+      "score": 9,
+      "fingerprint": "a501657e98e376d16f7a92d7fb09feac8b8ee6e52cbf7b138ab9642957d15732",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_8_tropic": {
+      "score": 9,
+      "fingerprint": "5f66fd24bcf4e86ef4cab584041a6bc2465fb67e3520cc4adb626f2a0967ec0c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_9_arctic": {
+      "score": 9,
+      "fingerprint": "f41bd5e6b955b81b6759de64307534e4c7350f36322cac41702d73b5e01e3e35",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_9_temperate": {
+      "score": 9,
+      "fingerprint": "7cdbe717a81bd7d1ab7bacfd3bc0a6da1f5ae472f4196be5503cf633017d85b9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_9_toyland": {
+      "score": 9,
+      "fingerprint": "74fbfc1445d65a46ab71d5c5b950b8713a486187907ca2ed8b0fb4a7b4a097db",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_apron_9_tropic": {
+      "score": 9,
+      "fingerprint": "43242b19cf4927ea4ffa5c75f43c4988961254bb253643dfea8bf4888f46ff68",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_half_east": {
+      "score": 9,
+      "fingerprint": "c26f51ce8ab5a88eb32003813d7a541ce9781dd428b4e86a189fa1da7c4022c9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_half_west": {
+      "score": 9,
+      "fingerprint": "20c2aceb307b6780a82fa53d58616a257e28a0315054f449040a2318e781ad1a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_lawn_arctic": {
+      "score": 9,
+      "fingerprint": "9435c023dea659aa33ac75fd96960c1569c8ae76480e7c044030ca52e83f6b53",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_lawn_temperate": {
+      "score": 9,
+      "fingerprint": "736bba315cc862ae843ed522096ed301dc2b222ad5b699c0701c551e5a4edf9d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_lawn_toyland": {
+      "score": 9,
+      "fingerprint": "72f4dd283a592c229235223e4c72ac860eb13b4410dbcf7ae7cba91fd73bc3cf",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_lawn_tropic": {
+      "score": 9,
+      "fingerprint": "16fe0f9469621a432c259e4635a8486da5c5031b838b7601fe37bc05d676787a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_40_arctic": {
+      "score": 9,
+      "fingerprint": "34770eadd72db9523e5ac6039458329fb0c49c46dbb11d86de73392a276b4bef",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_40_temperate": {
+      "score": 9,
+      "fingerprint": "8fcedc2e34643b18b619dab8fe0409384883ca72778c16aa62634f7eb08e4b10",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_40_toyland": {
+      "score": 9,
+      "fingerprint": "6c2916f9ed8f47b896f56fa75f431f5eaab803251ea067b42eb5199780888feb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_40_tropic": {
+      "score": 9,
+      "fingerprint": "2abc5309e6fdd3c99027f1cf8bf6c584c3d6f88cbde7414f40f04354c6560d96",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_41_arctic": {
+      "score": 9,
+      "fingerprint": "29538022c1e1c4b231d6561746e07b6e8ffef26e2b8289ce4ef458a709adbf32",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_41_temperate": {
+      "score": 9,
+      "fingerprint": "ceb862f7b5fb58db0778e3703ae2d5da572dbbb971c017a194781444532e8622",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_41_toyland": {
+      "score": 9,
+      "fingerprint": "13cec30d59425c33e75b9798780d015569a77f6451918ebfce21df8f84b4c175",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_41_tropic": {
+      "score": 9,
+      "fingerprint": "1ad976c36f9a3a68ffbf8995af182ee8f4c63385b4432202eab679256b00c196",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_42_arctic": {
+      "score": 9,
+      "fingerprint": "154fe6c873dc65f91ad946b3c54cb5410f9cc867d45ae5ed73787175635887d7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_42_temperate": {
+      "score": 9,
+      "fingerprint": "68711ee51dca6b54355874be55ecdf5b766dd6cc393cfab8b008824fea10cdd7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_42_toyland": {
+      "score": 9,
+      "fingerprint": "d3ad01f91edcf1c50d0955705f58bbe139b4a539278bca2634845ac6d301deee",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_runway_42_tropic": {
+      "score": 9,
+      "fingerprint": "38dccf7b550497c43b952a5727dc186ed56ecb954e2f130f98d8101899dd5615",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_36_arctic": {
+      "score": 9,
+      "fingerprint": "85294fa539d65d4901292cec1503f0e5e99a95b0fb46560480e82a84ad2fc17b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_36_temperate": {
+      "score": 9,
+      "fingerprint": "d3b06398ea1eeb0313ba9840c59f070644cb972c12b0a344cafaf4515a3ecb51",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_36_toyland": {
+      "score": 9,
+      "fingerprint": "9aa54d68c90d1c32ae4cbba7169fbbbf62556a36f4d55128b1614a01e2c65e33",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_36_tropic": {
+      "score": 9,
+      "fingerprint": "1b4e352b091753ec6260358ab2e98c6474b7b5a80513c8b314fa22da78925643",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_37_arctic": {
+      "score": 9,
+      "fingerprint": "9c0d93237088a8bd1dc58649845baffd91df40cd6aa327c8963e674c5650508a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_37_temperate": {
+      "score": 9,
+      "fingerprint": "4e4bd0ef33837dc6da8ba789a9c537230df06823aacf085231a3b4445a409e90",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_37_toyland": {
+      "score": 9,
+      "fingerprint": "d492e2fc397013bcfc3c00d470aeb65c8fdbb9430bc7fe2e6a40c66ec35dfdf5",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_37_tropic": {
+      "score": 9,
+      "fingerprint": "f4bae3b6428d0271bea8279a426726b799ec8baf5e2b14b26303ec18144807d9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_38_arctic": {
+      "score": 9,
+      "fingerprint": "ea97a1a2fb5c858239bd3cfe2a5999300126291c774249a80ab423785a6ae69b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_38_temperate": {
+      "score": 9,
+      "fingerprint": "1c57528858162377fad667bd8a729243e13fe61265c2166cf400d5e52cc46b25",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_38_toyland": {
+      "score": 9,
+      "fingerprint": "a8fd2c014342c80f084b949d9257c79494d4a66473e9d3edf803a5615624b4c3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_38_tropic": {
+      "score": 9,
+      "fingerprint": "fc1e0a293844fe40abfac44144f55e889fb7d278cfc2a5bd8dbb921a0de47477",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_39_arctic": {
+      "score": 9,
+      "fingerprint": "63a34455ef46bdea2994d38865cd5aa33b450d5d17edf1dc9625cadc9592dc16",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_39_temperate": {
+      "score": 9,
+      "fingerprint": "c00d0711e98468c92afea23e0dc2ccddc438e13769ac2bd793310544d9e30de0",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_39_toyland": {
+      "score": 9,
+      "fingerprint": "782f809ba316aa9ea36c2af80da5b4df78fa1bee4b6af644e07a6edfc9a48585",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_edge_worn_39_tropic": {
+      "score": 9,
+      "fingerprint": "7aee5520c5c6dc4a69b0038f509f16c551502bf870b8c443e08ea1b799b5e619",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_low_ground": {
+      "score": 9,
+      "fingerprint": "9dc046524d6d81ea3fb2450215ce433edae792faff35cf89e65d8af00538c967",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_small_terminal_a_ground": {
+      "score": 9,
+      "fingerprint": "04cd4b13306ea758080f148b1038f0841aeb3a6528a717bf628dd0ea98a6b5a7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_small_terminal_b_ground": {
+      "score": 9,
+      "fingerprint": "48573dbc192109367236e4cc2e04050e874583f81bdf2a9f88e0b64b04a846db",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_small_terminal_c_ground": {
+      "score": 9,
+      "fingerprint": "e7687716cc653846221f856e863bd81c48f92673f3b2c54b9777f5907609bea4",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_apron": {
+      "score": 9,
+      "fingerprint": "9dc046524d6d81ea3fb2450215ce433edae792faff35cf89e65d8af00538c967",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_ne": {
+      "score": 9,
+      "fingerprint": "ced6dfb6cc089fb939ee77a2888101216612c4eec2d58fd2d220505bb4c311fb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_ne_nw": {
+      "score": 9,
+      "fingerprint": "3f9a11b5ed08a6358213481e769b7dbc50b082509a4355fd5344656c1a834016",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_ne_se": {
+      "score": 9,
+      "fingerprint": "e3bf410495b75a847c605dfca449eefede82ae72275a6d29b1ef7f96f9fad7d7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_ne_sw": {
+      "score": 9,
+      "fingerprint": "bf147f9575bbde3b9391c760bb8afbce1f319e06258f0385979a8032338add1f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_nw": {
+      "score": 9,
+      "fingerprint": "daf4ae209f7c64eda0875cc973e450014b288f90c0f40b33bb61b9217b7556a8",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_nw_sw": {
+      "score": 9,
+      "fingerprint": "01d685efe1529bdb633c754816c3dd6389589083b4f3613a26282ea0914fa929",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_se": {
+      "score": 9,
+      "fingerprint": "618cf7e77ab997604dea10f58f157d0280d0e9232ed0cdf2cd93edb358082f54",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_se_sw": {
+      "score": 9,
+      "fingerprint": "2b28be7ea2a54335459207d6ce5480ed29aeee1bf0a06ec7c7c09e76f3aa3835",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_fence_sw": {
+      "score": 9,
+      "fingerprint": "aaf23b0b534487caebba424c86041fda0cf5c139b1a6d369d1082b7747741424",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad": {
+      "score": 9,
+      "fingerprint": "ecd6454fb530741c76161b438b226e2fbec6fecbddfc43d2977dbe98e31c7e0f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad_h_nw": {
+      "score": 9,
+      "fingerprint": "a2b6fb938e3ee2a2e89ca5222a117d14a17bb2c307f7a4c7cba2fcac5a7707c2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad_h_nw_sw": {
+      "score": 9,
+      "fingerprint": "754a51eae5da68ef572a6a1c14c318a7ee761d473c89030af10d8be221014690",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad_h_se_sw": {
+      "score": 9,
+      "fingerprint": "2ef6fcc202e49494034d6eef3a1bc3f0c3b942af6aeb70fa7b3df2fde29d09d1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad_ne_se": {
+      "score": 9,
+      "fingerprint": "4a1245eff9a1ab3bfe7da18e7ddd8d2ab14a31db708a643b0fe9ae284dd1ba0b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad_nw": {
+      "score": 9,
+      "fingerprint": "d837b99cbc560ffaa046ce6611e29c3fb92bc6a070fd4eaf34e27f3e2ab72c30",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_helipad_sw": {
+      "score": 9,
+      "fingerprint": "e040a83d73c38f07b8d0117c5baf347b27b6491a685df611f9477afee78a6588",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_runway_1": {
+      "score": 9,
+      "fingerprint": "d945623bf94fb693ddf13b93c9d95747e6b70908f979a735805a2f5f4e89ffb3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_runway_3": {
+      "score": 9,
+      "fingerprint": "b55fb0d71eda0765f6440fc603c984b640887dc868b7127806ed8060dee40fcf",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_runway_4": {
+      "score": 9,
+      "fingerprint": "4d2d54616214a8a2973858753fb8635c8dd643725c21d6e9b2f51a4f2aff01a9",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_runway_end": {
+      "score": 9,
+      "fingerprint": "48b3a81542e73f3c545fb142307fe979a0677ded76db12740ce8f5a1f14b16aa",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_runway_middle": {
+      "score": 9,
+      "fingerprint": "9113a70f44b008a50d6ddbe9ddf9bbfc6d20ff1416fa1ebd2306d363639e916c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
+    },
+    "airport_surface_stand": {
+      "score": 9,
+      "fingerprint": "68913044f4afc182cf29c0b90a12cd8f2241f3de1c7840e360409506044d0490",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport ground/edge/runway/apron surface on the full-catalogue airport sheets: complete 3D tile mesh with source-derived asphalt/grass/snow and marking paint, climate variants and independent building layers."
+      ]
     }
   },
   "note": "Individual quick-pass ratings require exact model/six-face fingerprints and explicit review evidence. Do not bulk-promote existing work-in-progress artwork. This rating ledger does not confer final original-art visual approvals."
