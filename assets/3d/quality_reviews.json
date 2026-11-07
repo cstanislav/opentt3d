@@ -118324,6 +118324,686 @@
       "notes": [
         "Bound flat CF_RIVER_EDGE bank river_bank_study_tropic_flat_11; original review score5/10 and residual source/paint fidelity defects retained. The twelve-offset family now renders in native controls, but coverage is not a quality promotion."
       ]
+    },
+    "original/river-ground/SLOPE_FLAT/climate0": {
+      "score": 9,
+      "fingerprint": "eb4615b93a00ac8e961ae0ec772f82c3d4021504df68ca648fb000b2cce45117",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_FLAT/climate0 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_FLAT/climate1": {
+      "score": 9,
+      "fingerprint": "d7b2e8330cef9f449db0bd532154929ce741072c00a4232f1bc236e42330b0b1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_FLAT/climate1 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_FLAT/climate2": {
+      "score": 9,
+      "fingerprint": "dba1a85086cae3338fd9d74b1a4e71e419fc078d8706e4005094b14750df13dc",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_FLAT/climate2 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_FLAT/climate3": {
+      "score": 9,
+      "fingerprint": "06f8ea80e113ade77d51f26d3ca43fc3d7c688fab8c325cf2e7178c003248766",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_FLAT/climate3 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NE/climate0": {
+      "score": 9,
+      "fingerprint": "1314152fa01f605046d5d0931af4e4931bfa8df8ee803f74c41b63f16d0d0e2e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NE/climate0 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NE/climate1": {
+      "score": 9,
+      "fingerprint": "85e0be8b323b59faa464f9d1626349f67e5141a250dd12f54122c1c123bed79d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NE/climate1 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NE/climate2": {
+      "score": 9,
+      "fingerprint": "8096a0c9d6e7b8764a3b8479747e7170b7b365fa435bf35359ab9cd20aeb0185",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NE/climate2 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NE/climate3": {
+      "score": 9,
+      "fingerprint": "1019cd34931a7ae2a90c98e8dd862bdf16d83834958e089f690a21032ae3a96b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NE/climate3 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NW/climate0": {
+      "score": 9,
+      "fingerprint": "341f5a867dbe73a1c9fcd6c1c867c273f2832284eae4c20946f9cfa05ebf30e2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NW/climate0 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NW/climate1": {
+      "score": 9,
+      "fingerprint": "ac09a5cc1ffd349285e0f53fe087a57c414e26713dc52f4ff0dc2714522963e7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NW/climate1 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NW/climate2": {
+      "score": 9,
+      "fingerprint": "74713049983f5203cb44d2345c8556bbb82373bfa2fd462b8035fbe3110fd28d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NW/climate2 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_NW/climate3": {
+      "score": 9,
+      "fingerprint": "a980cfe59b178f63d3df082d57d637646096104cdce9dbeee08181fccb3108b5",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_NW/climate3 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SE/climate0": {
+      "score": 9,
+      "fingerprint": "ee4f49bce99d16873439e6b1082d9fed81051ff5a3fe22263e2157e758f593be",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SE/climate0 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SE/climate1": {
+      "score": 9,
+      "fingerprint": "03572686ea77cdbfa316fa25d8d8b7d89bb376e1e4074e436485a11510fcdc5e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SE/climate1 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SE/climate2": {
+      "score": 9,
+      "fingerprint": "68ec8df1abd2be8f8ab321d3d3cd4eeb9b80a3dbc123736b6fea3d911b22f854",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SE/climate2 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SE/climate3": {
+      "score": 9,
+      "fingerprint": "243ebf5a8f92c84a54d60e504cb11ebede0b9c3afed5f4f86568973b792bfa7c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SE/climate3 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SW/climate0": {
+      "score": 9,
+      "fingerprint": "8f02a1645e8342a2d5342841406f8b3bb02757d5f451762562d8009402d5afc4",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SW/climate0 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SW/climate1": {
+      "score": 9,
+      "fingerprint": "65bdce79417356504bd068eedeb643a03e211951bb7dd4a1869ecfac7e6246f2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SW/climate1 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SW/climate2": {
+      "score": 9,
+      "fingerprint": "d59c37a49f7371c8ad890a2a1ff9728d740372103227292272fc82cd68b073a7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SW/climate2 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
+    },
+    "original/river-ground/SLOPE_SW/climate3": {
+      "score": 9,
+      "fingerprint": "51beaacf5c735986cd1df4a6073c5527958fe261715eab3c3d83d57b1d68cb5e",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261004/river-relief-breadth/all-eight-relief-sources.png": "13282576e654727c507ad9c071f029d53607326c18b9e1e18ba09a21539ca332",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/rock-all-four-source-native-orbit-street.png": "87dfefdf72eae657757996aa5d906714afef0081a01f53c0daffe6aeb7ee916c",
+        "opentt3d/reviews/20261004/river-relief-breadth/revised-sheets/island-all-four-source-native-orbit-street.png": "9b399eee1f104135460ca8f80a146a508586db1272f489289976acbdf68ac649",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992",
+        "opentt3d/reviews/20261107/lock-river-coverage/native-lock-all-climates.json": "7b4ef16b4537c44215f12e06a4bc44271f1e2ce7ebf0b5bfaa4fabf341f72972",
+        "opentt3d/reviews/20261107/flat-bank-coverage/native-temperate-vulkan/screenshot.png": "e3568644e69629fb734d8ba1d0c42bcc15e72c56b789e524f819b833699fb85f",
+        "opentt3d/reviews/20261107/flat-bank-coverage/coverage-receipt.json": "158e42c9beac1da1468bc86cc5dfa5064a894693bc7bf51417d5cc8ca01cdb2f"
+      },
+      "notes": [
+        "Original CF_RIVER_SLOPE base ground selector original/river-ground/SLOPE_SW/climate3 retained as an intentional native water/terrain surface; the raised flat-bank or four-slope relief family is independently bound as 3D and reviewed separately. Source bytes/anchors, climate states and the world/water context are retained; no missing volume is inferred."
+      ]
     }
   },
   "note": "Individual quick-pass ratings require exact model/six-face fingerprints and explicit review evidence. Do not bulk-promote existing work-in-progress artwork. This rating ledger does not confer final original-art visual approvals."

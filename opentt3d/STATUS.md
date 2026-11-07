@@ -35,10 +35,13 @@ acknowledged saves, but the studies retain their4-5/10 reviews. The8 river-relie
 models and192 conditional sloped-bank instances remain bound at5/10. The complete
 medium/large/huge HQ families were then bound:84 previous source-layer fallbacks
 now select the existing3D HQ grounds/bodies at5/10, while their76 models remain
-6/10 (eight already9/10). The remaining ledger is24 flat-bank models at4/10,76
-larger-HQ models at6/10,183 retained profiles/legacy assemblies at3/10 and20
-river-ground selectors at1/10. Their support, LOD, picking, phase/custom-family,
-world and ship-clearance layers, and the356 river/bank/HQ5/10 entries, remain open.
+6/10 (eight already9/10). The20 original river-ground base selectors were then
+accepted as intentional native water/terrain surfaces with their raised relief/
+banks separately bound at9/10, leaving no source-layer fallback rows. The
+remaining ledger is24 flat-bank models at4/10,76 larger-HQ models at6/10,183
+retained profiles/legacy assemblies at3/10 and356 river/bank/HQ instances at5/10.
+Their support, LOD, picking, phase/custom-family, world and ship-clearance
+layers remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation

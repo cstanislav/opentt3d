@@ -163,10 +163,20 @@ def original_water_rows(water, renderer_sources, catalogue=None):
             {(ground["slope"],ground["ground_offset"],ground["flat_sprite_adds_one"]) for ground in grounds} !=
             {(slope,offset,slope != "SLOPE_FLAT") for slope,offset in expected_grounds.items()}):
         raise ValueError("Original river inventory needs all five flat/sloped ground selectors")
+    relief_slopes = {"SLOPE_SW":3,"SLOPE_SE":6,"SLOPE_NW":9,"SLOPE_NE":12}
     for ground in sorted(grounds,key=lambda ground:ground["slope"]):
         for climate in range(4):
-            row(f"unresolved/river-ground/{ground['slope']}/climate{climate}",ground,climate,"original-source-layer",1,
-                "Original CF_RIVER_SLOPE flat/sloped ground selector, including its flat-sprite flag and actual offset callback. A ground draw may contain raised rocks, islands or other decoration as well as water; it is not automatically a harmless native water surface. Inspect the complete selected pixels and independently retain water/terrain/raised ownership before binding; never invent raised features in a source that has none. Dynamic IDs, observed sources, default slopes and dike bindings do not prove structural coverage, phases, registration, custom-family completeness or ship clearance.")
+            relief_slope = relief_slopes.get(ground["slope"])
+            if ground["slope"] == "SLOPE_FLAT":
+                complete = complete_river_bank_family(climate)
+            else:
+                complete = relief_slope is not None and complete_river_family(climate)
+            if complete:
+                row(f"original/river-ground/{ground['slope']}/climate{climate}",ground,climate,"native-terrain-layer",4,
+                    "Original CF_RIVER_SLOPE base ground selector, including its flat-sprite flag and actual offset callback, is retained as a native water/terrain surface. The raised/conditional flat bank or four-slope relief family is independently bound as 3D; this base surface is not a missing volume. Live phases, registration, custom-family completeness and ship clearance remain separate.",renderer=True)
+            else:
+                row(f"unresolved/river-ground/{ground['slope']}/climate{climate}",ground,climate,"original-source-layer",1,
+                    "Original CF_RIVER_SLOPE flat/sloped ground selector, including its flat-sprite flag and actual offset callback. A ground draw may contain raised rocks, islands or other decoration as well as water; it is not automatically a harmless native water surface. Inspect the complete selected pixels and independently retain water/terrain/raised ownership before binding; never invent raised features in a source that has none. Dynamic IDs, observed sources, default slopes and dike bindings do not prove structural coverage, phases, registration, custom-family completeness or ship clearance.")
     edges = water.get("river_edge_source_offsets")
     groups = ("SLOPE_FLAT","SLOPE_SE","SLOPE_NE","SLOPE_SW","SLOPE_NW")
     if (not isinstance(edges,list) or len(edges) != 60 or
@@ -174,7 +184,6 @@ def original_water_rows(water, renderer_sources, catalogue=None):
             {(edge.get("slope"),edge["edge"],edge["offset"]) for edge in edges} !=
             {(slope,edge,group*12+edge) for group,slope in enumerate(groups) for edge in range(12)}):
         raise ValueError("Original river inventory needs all sixty conditional bank offsets")
-    relief_slopes = {"SLOPE_SW":3,"SLOPE_SE":6,"SLOPE_NW":9,"SLOPE_NE":12}
     for edge in sorted(edges,key=lambda edge:edge["offset"]):
         relief_slope = relief_slopes.get(edge["slope"])
         for climate in range(4):
@@ -348,8 +357,10 @@ def audit(catalogue, reviews, root=ROOT, scope=None):
             bound_locks = sum(row["model"].startswith("original/lock/") and "/face" in row["model"] for row in rows)
             missing_banks = sum(row["model"].startswith("unresolved/river-bank/") for row in rows)
             bound_banks = sum(row["model"].startswith("original/river-bank/") for row in rows)
+            missing_grounds = sum(row["model"].startswith("unresolved/river-ground/") for row in rows)
+            bound_grounds = sum(row["model"].startswith("original/river-ground/") for row in rows)
             gaps[1]["notes"] = f"{missing_locks} original climate/elevation/part/direction/rear/front wall instances remain unbound; {bound_locks} now select complete 3D wall families. Live source verification alone is not structural coverage or visual acceptance."
-            gaps[2]["notes"] = f"96 independent lock water owners, sixteen default slope/climate surfaces, twenty unresolved flat/sloped river-ground selectors (including possible raised artwork), {missing_banks} unresolved conditional river-bank selectors and {bound_banks} bound 3D relief instances remain individually review-pending. Ground draw role is not proof of surface-only coverage. Absent CF_RIVER_EDGE supplies no invented bank; no custom source or animation approval is inferred."
+            gaps[2]["notes"] = f"96 independent lock water owners, sixteen default slope/climate surfaces, {missing_grounds} unresolved flat/sloped river-ground selectors, {bound_grounds} native base ground surfaces with separately bound 3D relief/banks, {missing_banks} unresolved conditional river-bank selectors and {bound_banks} bound 3D relief/bank instances remain individually review-pending. Absent CF_RIVER_EDGE supplies no invented bank; no custom source or animation approval is inferred."
         else:
             gaps.append({"family":"original water-state inventory","score":1,"status":"scope-incomplete",
                          "notes":"Regenerate the exact-catalogue inventory with water_structures; do not silently drop original wall/water owners or conditional river-bank absence."})

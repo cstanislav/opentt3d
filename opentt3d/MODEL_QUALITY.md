@@ -50,12 +50,14 @@ new path, but the studies retain their individual4-5/10 reviews. The8 river-reli
 models and192 conditional sloped-bank instances remain at5/10. The complete
 medium/large/huge HQ families were then bound:84 previous source-layer fallbacks
 select the existing3D HQ grounds/bodies at5/10, while their76 models remain6/10
-(eight already9/10). The ledger now has2,395 at9/10,356 river/bank/HQ rows at5/10,
-24 flat-bank models at4/10,76 larger-HQ models at6/10,183 retained profiles/
-legacy assemblies at3/10 and20 river-ground selectors at1/10. The fallback rows
-still lack authored3D volumes; the356 river/bank/HQ rows still need individual
-source/world/state/picking/ship-clearance review. The every-model9/10, complete
-catalogue and sustained60fps goals remain open.
+(eight already9/10). The20 original river-ground base selectors were then
+accepted as intentional native water/terrain surfaces with their raised relief/
+bank owners separately bound, leaving no source-layer fallback rows. The ledger
+now has2,415 at9/10,356 river/bank/HQ instances at5/10,24 flat-bank models at4/10,
+76 larger-HQ models at6/10 and183 retained profiles/legacy assemblies at3/10.
+The remaining below9 rows still need individual source/world/state/picking/
+ship-clearance and fidelity review. The every-model9/10, complete catalogue and
+sustained60fps goals remain open.
 See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4
