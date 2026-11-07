@@ -21,10 +21,15 @@ new orange-cube/OPEN-TT3D icon replaces the locomotive icon. After fresh model/w
 review, the four joined bank bodies and all twelve canal dikes were accepted at9/10
 (16 models). All434 bound tree volumes were then individually swept on the
 full-catalogue sheets and accepted at9/10 from the source-derived OpenGFX2 tree
-profiles, with temperate/Arctic/Toyland world evidence. Their separate ground,
-support, LOD, picking and ship-clearance layers remain open. The remaining1,393
-bound screens stay5/10,271 profiles4/10,112 models6/10,183 models3/10 and536
-missing/fallback rows1/10. The every-model9/10, complete
+profiles, with temperate/Arctic/Toyland world evidence. All188 aircraft, rail
+locomotive/collector, road-vehicle/cargo and ship models were then accepted at
+9/10 from the source-derived vehicle tables and representative world/street views.
+All137 finished house bodies were then accepted at9/10 from the source-derived
+OpenGFX2 house profiles and representative world views; construction sites, frames,
+shells and ground layers remain separate. Their separate ground, support, LOD,
+picking and ship-clearance layers remain open. The remaining1,068 bound screens
+stay5/10,271 profiles4/10,112 models6/10,183 models3/10 and536 missing/fallback
+rows1/10. The every-model9/10, complete
 catalogue and sustained60fps goals remain open.
 See`reviews/20261018-asset-consistency/`.
 
