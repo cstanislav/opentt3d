@@ -98,7 +98,7 @@ failed during checkout because retained review evidence exceeds Windows'
 filesystem-capable macOS deployment target. See
 [the current CI runs](https://github.com/cstanislav/opentt3d/actions).
 
-The upstream stable release is **OpenTTD 15.3**. OpenTTD **16.0-beta4** is the
+The upstream stable release is **OpenTTD 15.3**. OpenTTD **16.0-RC1** is the
 newest upstream prerelease; it is not merged into this port yet. The scheduled
 upstream check reports both the latest stable and the newest prerelease.
 

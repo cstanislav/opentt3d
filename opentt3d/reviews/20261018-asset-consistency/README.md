@@ -41,7 +41,7 @@ installer assets and the SDL icon header.
   sealed review evidence is not rewritten; those files are audit records, not
   current project descriptions.
 - Recorded the upstream check: pinned **15.3**, latest stable **15.3**, newest
-  prerelease **16.0-beta4**. No merge or pin change was made.
+  prerelease **16.0-RC1**. No merge or pin change was made.
 
 ## Nightly repair
 
