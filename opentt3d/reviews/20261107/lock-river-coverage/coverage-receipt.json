@@ -1,0 +1,78 @@
+{
+  "reviewed_utc": "2026-11-07T15:20:00Z",
+  "scope": "Bound the 48 recovered original lock-wall volumes and 8 river-relief volumes, and replaced complete-family source fallbacks with 3D instance rows. These are coverage bindings at5/10, not 9/10 approvals.",
+  "catalogue_sha256": "76019050f6dd14b3d58d7f21d9fe18fa37d2da64516c3751a26a6cc1470af828",
+  "models": 1971,
+  "new_lock_models": 48,
+  "new_river_relief_models": 8,
+  "lock_wall_owners": 48,
+  "river_relief_slopes": 4,
+  "bound_lock_instance_rows": 192,
+  "bound_river_relief_instance_rows": 192,
+  "remaining_fallback_rows": 152,
+  "remaining_fallback_breakdown": {
+    "flat_river_banks": 48,
+    "river_ground_selectors": 20,
+    "larger_HQ_objects": 84
+  },
+  "score_counts": {
+    "1": 152,
+    "3": 183,
+    "4": 125,
+    "5": 440,
+    "6": 76,
+    "9": 2030
+  },
+  "rows": 3006,
+  "native": {
+    "lock_vulkan": {
+      "result": "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/result.json",
+      "save": "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/save/smoke-state.sav",
+      "synchronous_original_save_verified": true,
+      "console_commands_acknowledged": 10,
+      "console_save_success_recorded": true,
+      "live_voxel_wall_log_lines": 36,
+      "console_save_success_text": "Map successfully saved to 'smoke-state.sav'."
+    },
+    "lock_opengl": {
+      "result": "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/result.json",
+      "save": "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/save/smoke-state.sav",
+      "synchronous_original_save_verified": true,
+      "console_commands_acknowledged": 10,
+      "console_save_success_recorded": true,
+      "live_voxel_wall_log_lines": 36,
+      "console_save_success_text": "Map successfully saved to 'smoke-state.sav'."
+    },
+    "river_gallery_vulkan": {
+      "result": "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/result.json",
+      "save": "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/save/smoke-state.sav",
+      "synchronous_original_save_verified": true,
+      "console_commands_acknowledged": 10,
+      "console_save_success_recorded": true,
+      "models_exported": 8,
+      "reference_images": 80,
+      "console_save_success_text": "Map successfully saved to 'smoke-state.sav'."
+    }
+  },
+  "not_accepted": "Both families remain individually unreviewed at5/10. Active river relief substitution requires a live custom CF_RIVER_SLOPE source; the default river gallery proves model loading only. Full six-gate source/world/state/picking/ship-clearance review and every-model9 remain open.",
+  "evidence_sha256": {
+    "opentt3d/reviews/20261107/lock-river-coverage/README.md": "71891c69c6ddcfbc4f73ef07bef1c7c38daaa0497771ef8a2866840e091c965e",
+    "opentt3d/reviews/20261107/lock-river-coverage/catalogue-inventory.json": "2de7f7e230e2ee734e903afdb689109029e95fdd87a57357909d532602ae056b",
+    "opentt3d/reviews/20261107/lock-river-coverage/catalogue.json.sha256": "3b5803bb62b72c2ec9e7df0d1bc5df9de367d942a72e5137afa717959470d527",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/console-review.log": "e563f3faac82c1b82c12f16f46c2d7d17ec6575a16161ceb6720a30c7ff6c701",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/result.json": "cb2f0eb261b82d1cfb4a4ffe572b3fdef0bbebc14112c7f1cc6f96bb732892b3",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/run.log": "1bd43c05e92311a717014e794bba080e5bdd346c24051c542f181be72d697ee2",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/save/smoke-state.sav": "38e9848d1909eb842ff577bfe68002095c5b35bbec1d7cc374ef7eaa41e54d36",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-opengl/screenshot.png": "554a91fdf571cb9045a9384b16f877513ce3d8e6052fc541f02f9ce1fa92d897",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/console-review.log": "f5fbd3bc4eb8c563d6c3fd0cda961a91d89530641fa9a9e059981344bedeaef3",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/result.json": "641e2d6a715727fdf024ac05bbf855bc9a26c8b5058d5c89fab1dbb50bc5c3df",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/run.log": "dd217ed1a50e9da13dbc5d674108a2dbc622311312748e8ce89c2c8b44284805",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/save/smoke-state.sav": "38e9848d1909eb842ff577bfe68002095c5b35bbec1d7cc374ef7eaa41e54d36",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-lock-vulkan/screenshot.png": "06c3bbaca56ac9ce884c93dd2101a702540a140a4193dfaf5b6d2168e56537d1",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/console-review.log": "c6f3ee8c221e6eb866f0899d56308f1e9a5c83c944023ec4681010cc437fd9dd",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/result.json": "7e16a2747c012582a1d5160774a46a8ac3d328d41616ccbfb7e6c638024cde27",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/run.log": "c21baeacf0f5a7bae4888c0730fa57b1c3f6193e92d3f13d6e4198d8bd38a225",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/save/smoke-state.sav": "1675cafcf5921a41db366cfef99a98cbd0d9c6429cc0c97c942199ae506fa11b",
+    "opentt3d/reviews/20261107/lock-river-coverage/native-river-gallery-vulkan/screenshot.png": "85d7c53d1ddc3334a14707bf4787aec279a2566fedb0a24805eabb163683c992"
+  }
+}

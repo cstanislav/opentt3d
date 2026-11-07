@@ -202,6 +202,25 @@ class QualityAuditTests(unittest.TestCase):
         self.assertTrue(all("raised rocks" in row["notes"][0] and row["representation"] == "original-source-layer" and row["score"] == 1
                             for row in rows if row["model"].startswith("unresolved/river-ground/")))
 
+    def test_complete_lock_and_relief_families_become_instances_without_inheriting_approval(self):
+        water = water_catalogue()
+        catalogue = {"format":1,"materials":[[2,3,4,5,6,7]],"models":{"sample":self.model},
+                     "bindings":{"lock_walls":{str(owner):{"0":"sample"} for owner in range(48)},
+                                 "river_relief":{str(slope):{"0":"sample"} for slope in (3,6,9,12)}}}
+        rows = original_water_rows(water,{"renderer.cpp":"a"*64},catalogue)
+        locks = [row for row in rows if row["model"].startswith("original/lock/") and "/face" in row["model"]]
+        banks = [row for row in rows if row["model"].startswith("original/river-bank/")]
+        flat = [row for row in rows if row["model"].startswith("unresolved/river-bank/SLOPE_FLAT/")]
+        self.assertEqual(len(locks),48)
+        self.assertEqual(len(banks),48)
+        self.assertEqual(len(flat),48)
+        self.assertTrue(all(row["score"] == 5 and row["representation"] == "authored-voxel-instance" and row["owners"] for row in locks+banks))
+        self.assertEqual(len([row for row in rows if row["model"].startswith("missing/lock/")]),144)
+        catalogue["bindings"]["lock_walls"].pop("17")
+        partial = original_water_rows(water,{"renderer.cpp":"a"*64},catalogue)
+        self.assertEqual(len([row for row in partial if row["model"].startswith("missing/lock/")]),192)
+        self.assertFalse(any(row["model"].startswith("original/lock/") and "/face" in row["model"] for row in partial))
+
     def test_water_source_fingerprints_follow_originals_not_unrelated_renderer_diagnostics(self):
         import copy
         water = water_catalogue()

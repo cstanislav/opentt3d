@@ -64,11 +64,12 @@ def original_object_layer_model(catalogue, objects, tile, role, index, climate):
     return bound("objects" if role == "body" else "object_ground",layout)
 
 
-def original_water_rows(water, renderer_sources):
+def original_water_rows(water, renderer_sources, catalogue=None):
     """Keep all original owners/conditional bank selectors, not just authored models.
 
-    These read-only default tables are not live NewGRF provenance. No binding or
-    model review can turn source entries into runtime lock coverage by itself.
+    These read-only default tables are not live NewGRF provenance. Complete original
+    families whose three-dimensional volumes are bound become instance rows; a
+    partial or unbound family stays an explicit source-layer fallback.
     """
     if not isinstance(water,dict) or water.get("format") != 1:
         raise ValueError("Original water inventory must retain the complete source table")
@@ -77,17 +78,40 @@ def original_water_rows(water, renderer_sources):
             any(not isinstance(lock,dict) or type(lock.get("part")) is not int or type(lock.get("direction")) is not int for lock in locks) or
             {(lock["part"],lock["direction"]) for lock in locks} != {(part,direction) for part in range(3) for direction in range(4)}):
         raise ValueError("Original water inventory needs all three parts/four directions")
+    bindings = catalogue.get("bindings",{}) if isinstance(catalogue,dict) else {}
+    lock_bindings = bindings.get("lock_walls",{})
+    river_bindings = bindings.get("river_relief",{})
+    if not isinstance(lock_bindings,dict) or not isinstance(river_bindings,dict):
+        raise ValueError("Voxel catalogue bindings must be dictionaries")
     rows = []
 
-    def row(name, source, climate, representation, score, notes, renderer=False):
-        value = {"source":source,"climate":climate,"selection":water["runtime_selection"],"source_sha256":water["source_sha256"]}
+    def bound_model(category, owner, climate):
+        states = (lock_bindings if category == "lock_walls" else river_bindings).get(str(owner),{})
+        if not isinstance(states,dict):
+            return None
+        model = states.get(str(climate))
+        models = catalogue.get("models",{}) if isinstance(catalogue,dict) else {}
+        if not isinstance(model,str) or model not in models:
+            return None
+        return model
+
+    def complete_lock_family(climate):
+        return all(bound_model("lock_walls",owner,climate) for owner in range(48))
+
+    def complete_river_family(climate):
+        return all(bound_model("river_relief",slope,climate) for slope in (3,6,9,12))
+
+    def row(name, source, climate, representation, score, notes, renderer=False, owners=None, fingerprint_value=None):
+        value = fingerprint_value if fingerprint_value is not None else {
+            "source":source,"climate":climate,"selection":water["runtime_selection"],"source_sha256":water["source_sha256"]}
         if renderer:
             value["renderer"] = renderer_sources
         rows.append({"model":name,"representation":representation,"score":score,
-            "status":"individual-visual-review-pending" if renderer else "original-sprite-fallback" if name.startswith("missing/lock/") else "live-source-selection-pending",
+            "status":"individual-visual-review-pending" if renderer else "structural-screen-only" if owners else "original-sprite-fallback" if name.startswith("missing/lock/") else "live-source-selection-pending",
             "fingerprint":definition_fingerprint(value),"required_runtime_review":True,
-            "owners":[],"checks":{},"evidence":[],"notes":[notes]})
+            "owners":owners or [],"checks":{},"evidence":[],"notes":[notes]})
 
+    directions = {0:1,1:0,2:2,3:3}
     for lock in sorted(locks,key=lambda lock:(lock["part"],lock["direction"])):
         owners = lock.get("body")
         if not isinstance(owners,list) or len(owners) != 2 or [owner.get("face") for owner in owners if isinstance(owner,dict)] != ["rear","front"]:
@@ -98,9 +122,20 @@ def original_water_rows(water, renderer_sources):
                 raise ValueError("Original lock owners need both default elevation sources")
             for elevation in range(2):
                 for climate in range(4):
-                    name = f"missing/lock/elevation{elevation}/part{lock['part']}/direction{lock['direction']}/face{face}/climate{climate}"
-                    row(name,{"layout":lock,"owner":owner,"elevation":elevation},climate,"original-source-layer",1,
-                        f"Original {owner['face']} wall, default sprite{variants[elevation]}, at its own sequence anchor. Actual custom IDs/bytes require live provenance; sorting extents are not dimensions. No runtime structural replacement or visual approval is established.")
+                    ordinal = elevation*24+lock["part"]*8+face*4+directions[lock["direction"]]
+                    model = bound_model("lock_walls",ordinal,climate) if complete_lock_family(climate) else None
+                    if model:
+                        name = f"original/lock/elevation{elevation}/part{lock['part']}/direction{lock['direction']}/face{face}/climate{climate}"
+                        row(name,{"layout":lock,"owner":owner,"elevation":elevation},climate,"authored-voxel-instance",5,
+                            f"Original {owner['face']} wall, default sprite{variants[elevation]}, selects bound 3D wall {model} at its own sequence anchor. The complete48-owner family is present; individual source/world/state/ship-clearance review is still pending.",
+                            owners=[f"lock_walls/{ordinal}/{climate}"],
+                            fingerprint_value={"source":{"layout":lock,"owner":owner,"elevation":elevation},"climate":climate,
+                                "selection":water["runtime_selection"],"source_sha256":water["source_sha256"],
+                                "model":model,"voxel":fingerprint(catalogue["models"][model],catalogue["materials"])})
+                    else:
+                        name = f"missing/lock/elevation{elevation}/part{lock['part']}/direction{lock['direction']}/face{face}/climate{climate}"
+                        row(name,{"layout":lock,"owner":owner,"elevation":elevation},climate,"original-source-layer",1,
+                            f"Original {owner['face']} wall, default sprite{variants[elevation]}, at its own sequence anchor. Actual custom IDs/bytes require live provenance; sorting extents are not dimensions. No complete runtime structural replacement or visual approval is established.")
         for elevation in range(2):
             for climate in range(4):
                 name = f"original/lock/elevation{elevation}/part{lock['part']}/direction{lock['direction']}/water/climate{climate}"
@@ -135,10 +170,20 @@ def original_water_rows(water, renderer_sources):
             {(edge.get("slope"),edge["edge"],edge["offset"]) for edge in edges} !=
             {(slope,edge,group*12+edge) for group,slope in enumerate(groups) for edge in range(12)}):
         raise ValueError("Original river inventory needs all sixty conditional bank offsets")
+    relief_slopes = {"SLOPE_SW":3,"SLOPE_SE":6,"SLOPE_NW":9,"SLOPE_NE":12}
     for edge in sorted(edges,key=lambda edge:edge["offset"]):
+        relief_slope = relief_slopes.get(edge["slope"])
         for climate in range(4):
-            row(f"unresolved/river-bank/{edge['slope']}/edge{edge['edge']}/climate{climate}",edge,climate,"original-source-layer",1,
-                "Conditional original CF_RIVER_EDGE owner: live base/callback/connectivity/source bytes must be observed before geometry is bound. When the original feature supplies no bank it is intentionally absent, not a license to invent one. Static offsets or unrelated dike models do not establish river-bank coverage.")
+            model = bound_model("river_relief",relief_slope,climate) if relief_slope is not None and complete_river_family(climate) else None
+            if model:
+                row(f"original/river-bank/{edge['slope']}/edge{edge['edge']}/climate{climate}",edge,climate,"authored-voxel-instance",5,
+                    f"Conditional original CF_RIVER_EDGE owner selects bound 3D {edge['slope']} relief {model} when the original source supplies the bank. The complete four-slope family is present; zero-feature absence, live callbacks/phases, terrain support, picking and ship clearance still require individual review.",
+                    owners=[f"river_relief/{relief_slope}/{climate}"],
+                    fingerprint_value={"source":edge,"climate":climate,"selection":water["runtime_selection"],
+                        "model":model,"voxel":fingerprint(catalogue["models"][model],catalogue["materials"])})
+            else:
+                row(f"unresolved/river-bank/{edge['slope']}/edge{edge['edge']}/climate{climate}",edge,climate,"original-source-layer",1,
+                    "Conditional original CF_RIVER_EDGE owner: live base/callback/connectivity/source bytes must be observed before geometry is bound. When the original feature supplies no bank it is intentionally absent, not a license to invent one. Static offsets or unrelated dike models do not establish river-bank coverage.")
     return rows
 
 
@@ -289,9 +334,13 @@ def audit(catalogue, reviews, root=ROOT, scope=None):
         gaps[0]["notes"] = f"24 original layouts/37 layers retain every climate/owner/absence. {missing_objects} available source-layer instances still lack complete-family volumes; ordinary flat terrain remains native and independently review-pending. Binding availability never establishes visual approval."
         if "water_structures" in scope:
             runtime_scope["water_structures"] = scope["water_structures"]
-            rows.extend(original_water_rows(scope["water_structures"],renderer_sources))
-            gaps[1]["notes"] = "192 original climate/elevation/part/direction/rear/front wall instances remain separately required. Live source verification alone is not structural coverage or visual acceptance."
-            gaps[2]["notes"] = "96 independent lock water owners, sixteen default slope/climate surfaces, twenty unresolved flat/sloped river-ground selectors (including possible raised artwork) and240 unresolved conditional river-bank selectors remain individually review-pending. Ground draw role is not proof of surface-only coverage. Absent CF_RIVER_EDGE supplies no invented bank; no custom source or animation approval is inferred."
+            rows.extend(original_water_rows(scope["water_structures"],renderer_sources,catalogue))
+            missing_locks = sum(row["model"].startswith("missing/lock/") for row in rows)
+            bound_locks = sum(row["model"].startswith("original/lock/") and "/face" in row["model"] for row in rows)
+            missing_banks = sum(row["model"].startswith("unresolved/river-bank/") for row in rows)
+            bound_banks = sum(row["model"].startswith("original/river-bank/") for row in rows)
+            gaps[1]["notes"] = f"{missing_locks} original climate/elevation/part/direction/rear/front wall instances remain unbound; {bound_locks} now select complete 3D wall families. Live source verification alone is not structural coverage or visual acceptance."
+            gaps[2]["notes"] = f"96 independent lock water owners, sixteen default slope/climate surfaces, twenty unresolved flat/sloped river-ground selectors (including possible raised artwork), {missing_banks} unresolved conditional river-bank selectors and {bound_banks} bound 3D relief instances remain individually review-pending. Ground draw role is not proof of surface-only coverage. Absent CF_RIVER_EDGE supplies no invented bank; no custom source or animation approval is inferred."
         else:
             gaps.append({"family":"original water-state inventory","score":1,"status":"scope-incomplete",
                          "notes":"Regenerate the exact-catalogue inventory with water_structures; do not silently drop original wall/water owners or conditional river-bank absence."})
