@@ -42,11 +42,14 @@ larger-HQ models and84 owner instances were then accepted at9/10 from joined
 size2/3/4 saved-world screenshots and source owner sheets; the stages were forced
 in the isolated fixture, so natural company-score selection remains open. The48
 flat CF_RIVER_EDGE bank models and48 instances were then accepted at9/10 from
-all twelve native offset observations and natural source fixtures. The remaining
-runtime ledger is8 river-relief models and192 conditional sloped-bank instances
-at5/10; 183 retained profiles/legacy assemblies remain non-runtime references at
-3/10. Their support, LOD, picking, phase/custom-family, active-world and ship-
-clearance layers remain open.
+all twelve native offset observations and natural source fixtures. The8
+river-relief models and192 conditional sloped-bank instances were then accepted
+at9/10 from a forced actual river world, source sheets and the complete bound
+family. Every runtime-required row is now at9/10; the only remaining below9 rows
+are183 retained profiles/legacy assemblies at3/10, which are not runtime-bound.
+Natural company-score selection, natural custom river-source selection, absence,
+phase/custom-family, LOD/picking/ship-clearance and performance gates remain
+separate.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation

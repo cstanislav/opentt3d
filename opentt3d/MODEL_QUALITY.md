@@ -57,11 +57,13 @@ larger-HQ models and84 owner instances were then accepted at9/10 from joined
 size2/3/4 saved-world screenshots and source owner sheets; natural company-score
 selection remains a separate open gate. The48 flat CF_RIVER_EDGE bank models and
 48 instances were then accepted at9/10 from all twelve native offset observations
-and natural source fixtures, including the tropic4/8 source fixture. The ledger
-now has2,671 at9/10; the only remaining runtime rows below9 are the8 river-relief
-models and192 conditional sloped-bank instances at5/10. All183 retained
-profiles/legacy assemblies are non-runtime references at3/10. Their support, LOD,
-picking, phase/custom-family, active-world and ship-clearance review remains
+and natural source fixtures, including the tropic4/8 source fixture. The8
+river-relief models and192 conditional sloped-bank instances were then accepted
+at9/10 from a forced actual river world, source sheets and the complete bound
+family. The ledger now has2,871 at9/10; every runtime-required row is at9/10. The
+only below9 rows are183 retained profiles/legacy assemblies at3/10, which are not
+runtime-bound. Natural company-score and custom river-source selection, absence,
+phase/custom-family, LOD/picking/ship-clearance and performance review remain
 open; the every-model9/10, complete catalogue and sustained60fps goals remain
 unmet.
 See`reviews/20261018-asset-consistency/`.

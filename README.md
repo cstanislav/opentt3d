@@ -23,10 +23,10 @@ engine's path.
 > performance work are still in progress; this README does not claim that every
 > model has reached its final detail level. The immutable
 > [`.42` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)
-> is the recommended desktop checkpoint. 2,671 runtime entries have passed
-> individual 9/10 reviews; the remaining runtime quality gap is the river-relief
-> family (8 models and 192 conditional instances) at 5/10. No source-layer
-> fallback rows remain. A `.45` development draft has also been packaged
+> is the recommended desktop checkpoint. 2,871 runtime entries have passed
+> individual 9/10 reviews; every runtime-required row is at 9/10. The remaining
+> 183 below-9 ledger rows are retained non-runtime profiles/legacy references.
+> No source-layer fallback rows remain. A `.45` development draft has also been packaged
 > for maintainer review and remains unpublished pending full independent native
 > checks.
 
