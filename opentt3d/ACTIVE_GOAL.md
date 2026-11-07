@@ -13,15 +13,16 @@ is an orange cube with OPEN/TT3D ribbons; nightly Windows checkout/Mac filesyste
 targets are repaired; public docs have fresh screenshots and no hand-crafting
 language. Asset277/harness122/native219 tests and the presentation boundary pass.
 
-The ledger has2,030 models at9/10 after the automated authored/procedural runtime
-sweep,76 unbound larger-HQ proposals at6/10,125 native water/terrain layers at4/10,
+The ledger has2,270 models at9/10 after the automated authored/procedural runtime
+sweep and the corrected48-model/192-owner lock-wall acceptance,76 unbound larger-HQ
+proposals at6/10,200 river-relief rows at5/10,125 native water/terrain layers at4/10,
 183 retained profiles/legacy assemblies at3/10 and152 missing/fallback rows at1/10
 (84 larger-HQ objects,48 flat river banks and20 river-ground selectors). The48
-recovered lock-wall and8 river-relief families are now bound and render as3D:
-192 lock owner rows and192 conditional sloped-bank rows are 3D instance entries at
-5/10, while both native lock backends render the live walls with an acknowledged
-synchronous save. Those440 rows remain individually unreviewed; binding is not a
-9/10 approval. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+recovered lock-wall models now pass all six checks from source/corrected galleries
+and actual lock fixtures in all four climates on both backends; the live log
+observes all48 original owner ordinals with acknowledged synchronous saves. The8
+river-relief models and192 conditional sloped-bank instances remain bound at5/10;
+binding is not a9/10 approval. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.

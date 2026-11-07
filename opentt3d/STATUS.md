@@ -24,14 +24,16 @@ airport buildings/fixtures, all97 airport ground/edge/runway/apron surfaces and
 273 3D construction/mid-state/dynamic-industry bodies were also accepted at9/10;
 all house stages/grounds, remaining bound HQ/object/bank grounds, object instances,
 procedural road stops/stations and projected tree profiles were also accepted at
-9/10. The48 recovered lock-wall and8 river-relief volumes are now bound, making192
-lock owner rows and192 conditional sloped-bank rows explicit3D instances at5/10;
-both native lock backends pass a live render and acknowledged synchronous save. The
-remaining ledger is76 unbound larger-HQ proposals at6/10,125 native water/terrain
-layers at4/10,183 retained profiles/legacy assemblies at3/10 and152 missing/
-fallback rows at1/10 (84 larger-HQ objects,48 flat river banks,20 river-ground
-selectors). Their water, ground, support, LOD, picking and ship-clearance layers,
-and the440 new5/10 entries, remain open.
+9/10. The corrected48 lock-wall models and192 owner instances were then accepted
+at9/10 after source/corrected-gallery review and actual lock fixtures in all four
+climates on Vulkan and OpenGL; the native logs observe all48 owner ordinals with
+acknowledged synchronous saves. The8 river-relief models and192 conditional
+sloped-bank instances remain bound at5/10. The remaining ledger is76 unbound
+larger-HQ proposals at6/10,125 native water/terrain layers at4/10,183 retained
+profiles/legacy assemblies at3/10 and152 missing/fallback rows at1/10 (84
+larger-HQ objects,48 flat river banks,20 river-ground selectors). Their water,
+ground, support, LOD, picking and ship-clearance layers, and the200 river5/10
+entries, remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset277, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
