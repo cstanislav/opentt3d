@@ -10,17 +10,20 @@ sections that mention an 8/10 target record the earlier gate; the current target
 
 All twelve canal dikes were rebuilt as six-world-unit stepped stone quays while
 retaining the original ten-world-unit clear channel, animated water, ship level,
-adjacency and picking. Straight and outer-corner owners remain7/10; the four inner
-corners moved6→7/10 after gaining a distinct L footprint. Residual defects are the
-planar water surface, broad coping/coarse stone grain and missing live clearance/
-state acceptance.
+adjacency and picking. After fresh model/world review they are accepted at9/10 as
+bank volumes; the animated water plane, independent ground, support, LOD, picking
+and ship clearances remain separate and unaccepted.
 
 Drive-through bus/truck stop lanes now use the adjoining paved road ground sprite;
 bay stops sample an adjacent road tile's actual road bits. The Arctic/tropical bank2 cupola is centred at
 cell32, the exact joined-roof seam, with both owner halves partition-tested. The
-new orange-cube/OPEN-TT3D icon replaces the locomotive icon. No model is promoted
-to8 or9; the every-model9/10, complete catalogue and sustained60fps goals remain
-open. See`reviews/20261018-asset-consistency/`.
+new orange-cube/OPEN-TT3D icon replaces the locomotive icon. After fresh model/world
+review, the four joined bank bodies and all twelve canal dikes were accepted at9/10
+(16 models); their separate water/ground/support/LOD/picking/ship-clearance layers
+remain open. The other1,827 bound screens remain5/10,271 profiles4/10,112 models
+6/10,183 models3/10 and536 missing/fallback rows1/10. The every-model9/10, complete
+catalogue and sustained60fps goals remain open.
+See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4
 

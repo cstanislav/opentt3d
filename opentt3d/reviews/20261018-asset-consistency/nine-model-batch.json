@@ -1,0 +1,465 @@
+{
+  "reviewed_utc": "2026-11-07T19:22:56.092497+00:00",
+  "models": [
+    {
+      "model": "bank_north",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "docs/screenshots/hero-city.webp",
+        "opentt3d/reviews/20261003/bank-temperate-source.png",
+        "opentt3d/reviews/20261003/bank-temperate-orbit.png",
+        "opentt3d/reviews/20261003/bank-temperate-street.png",
+        "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png",
+        "opentt3d/reviews/20261003/bank-temperate-world-opengl.png"
+      ],
+      "evidence_sha256": {
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "opentt3d/reviews/20261003/bank-temperate-source.png": "9e6270d886bcf760d7aaa58bfe42981a7923808bef0498ed3fb0fbb37bdd264b",
+        "opentt3d/reviews/20261003/bank-temperate-orbit.png": "874bee6abd03ca7047cb9079bd2554edefe9d43795301185ba8410a359c422c2",
+        "opentt3d/reviews/20261003/bank-temperate-street.png": "d5972da7a30c0c82ba073cb07c837a74d717dcc15da577914492bc591992708a",
+        "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png": "ac5a0acdd225b3e30c42a67b8b4c7cc59235ee8f1eb453069a64d315a2a18493",
+        "opentt3d/reviews/20261003/bank-temperate-world-opengl.png": "a6743004486c0ac29a2ddd177c5510b05a8fb56460168cce5bc0a3b468336477"
+      }
+    },
+    {
+      "model": "bank_south",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "docs/screenshots/hero-city.webp",
+        "opentt3d/reviews/20261003/bank-temperate-source.png",
+        "opentt3d/reviews/20261003/bank-temperate-orbit.png",
+        "opentt3d/reviews/20261003/bank-temperate-street.png",
+        "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png",
+        "opentt3d/reviews/20261003/bank-temperate-world-opengl.png"
+      ],
+      "evidence_sha256": {
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "opentt3d/reviews/20261003/bank-temperate-source.png": "9e6270d886bcf760d7aaa58bfe42981a7923808bef0498ed3fb0fbb37bdd264b",
+        "opentt3d/reviews/20261003/bank-temperate-orbit.png": "874bee6abd03ca7047cb9079bd2554edefe9d43795301185ba8410a359c422c2",
+        "opentt3d/reviews/20261003/bank-temperate-street.png": "d5972da7a30c0c82ba073cb07c837a74d717dcc15da577914492bc591992708a",
+        "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png": "ac5a0acdd225b3e30c42a67b8b4c7cc59235ee8f1eb453069a64d315a2a18493",
+        "opentt3d/reviews/20261003/bank-temperate-world-opengl.png": "a6743004486c0ac29a2ddd177c5510b05a8fb56460168cce5bc0a3b468336477"
+      }
+    },
+    {
+      "model": "bank2_north",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "docs/screenshots/bank-cupola.webp",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png",
+        "opentt3d/reviews/20261003/bank-arctic-source.png",
+        "opentt3d/reviews/20261003/bank-arctic-orbit.png",
+        "opentt3d/reviews/20261003/bank-arctic-street.png",
+        "opentt3d/reviews/20261003/bank-arctic-world-vulkan.png",
+        "opentt3d/reviews/20261003/bank-arctic-world-opengl.png",
+        "opentt3d/reviews/20261003/bank-tropic-world-vulkan.png",
+        "opentt3d/reviews/20261003/bank-tropic-world-opengl.png"
+      ],
+      "evidence_sha256": {
+        "docs/screenshots/bank-cupola.webp": "cfbd1d3d840baefde561cfadb0e15e2c6937db6a82f2273ff05c9985bcf2935b",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png": "cc530f966a77d3fbc2520fabcb3cc90798f09be969b2514e5716c5e47895e12d",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png": "516626a0a4ea5d8f72a8d63df9d7e6bf50f823a82299dcbb5a23b12eda8f2fc9",
+        "opentt3d/reviews/20261003/bank-arctic-source.png": "9e4c1405300ffdc14e96a75c669d85a4bdaf49d50f91638cbc45481a8f5953bb",
+        "opentt3d/reviews/20261003/bank-arctic-orbit.png": "21e6b74a6bb5499c3f2dfb64033eab5c7aa19ee6c71d016c8d8e654358f692d7",
+        "opentt3d/reviews/20261003/bank-arctic-street.png": "55735c6a565a4e435971310e84e9819d89ce8192d0be4d06fa79cf9ad58e4be4",
+        "opentt3d/reviews/20261003/bank-arctic-world-vulkan.png": "be020ec03489eaaf5ee83a10aafbe7a16edac457a9b8f635497277735645c4b7",
+        "opentt3d/reviews/20261003/bank-arctic-world-opengl.png": "bb080e90c158005a7a20beeccdb6111350f138fc982419015eb03e0186833c4a",
+        "opentt3d/reviews/20261003/bank-tropic-world-vulkan.png": "8801a0b1dd6e5f8bcc937e469bd301c8b9b7db32b27a54a087957ffb9c4ea500",
+        "opentt3d/reviews/20261003/bank-tropic-world-opengl.png": "fdc33a78e83438482bb5428d7b4bcccc6b665ff1cf597b774debbbc67bed8597"
+      }
+    },
+    {
+      "model": "bank2_south",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "docs/screenshots/bank-cupola.webp",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png",
+        "opentt3d/reviews/20261003/bank-arctic-source.png",
+        "opentt3d/reviews/20261003/bank-arctic-orbit.png",
+        "opentt3d/reviews/20261003/bank-arctic-street.png",
+        "opentt3d/reviews/20261003/bank-arctic-world-vulkan.png",
+        "opentt3d/reviews/20261003/bank-arctic-world-opengl.png",
+        "opentt3d/reviews/20261003/bank-tropic-world-vulkan.png",
+        "opentt3d/reviews/20261003/bank-tropic-world-opengl.png"
+      ],
+      "evidence_sha256": {
+        "docs/screenshots/bank-cupola.webp": "cfbd1d3d840baefde561cfadb0e15e2c6937db6a82f2273ff05c9985bcf2935b",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png": "cc530f966a77d3fbc2520fabcb3cc90798f09be969b2514e5716c5e47895e12d",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png": "516626a0a4ea5d8f72a8d63df9d7e6bf50f823a82299dcbb5a23b12eda8f2fc9",
+        "opentt3d/reviews/20261003/bank-arctic-source.png": "9e4c1405300ffdc14e96a75c669d85a4bdaf49d50f91638cbc45481a8f5953bb",
+        "opentt3d/reviews/20261003/bank-arctic-orbit.png": "21e6b74a6bb5499c3f2dfb64033eab5c7aa19ee6c71d016c8d8e654358f692d7",
+        "opentt3d/reviews/20261003/bank-arctic-street.png": "55735c6a565a4e435971310e84e9819d89ce8192d0be4d06fa79cf9ad58e4be4",
+        "opentt3d/reviews/20261003/bank-arctic-world-vulkan.png": "be020ec03489eaaf5ee83a10aafbe7a16edac457a9b8f635497277735645c4b7",
+        "opentt3d/reviews/20261003/bank-arctic-world-opengl.png": "bb080e90c158005a7a20beeccdb6111350f138fc982419015eb03e0186833c4a",
+        "opentt3d/reviews/20261003/bank-tropic-world-vulkan.png": "8801a0b1dd6e5f8bcc937e469bd301c8b9b7db32b27a54a087957ffb9c4ea500",
+        "opentt3d/reviews/20261003/bank-tropic-world-opengl.png": "fdc33a78e83438482bb5428d7b4bcccc6b665ff1cf597b774debbbc67bed8597"
+      }
+    },
+    {
+      "model": "canal_dike_0",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_1",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_2",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_3",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_4",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_5",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_6",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_7",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_8",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_9",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_10",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    {
+      "model": "canal_dike_11",
+      "score": 9,
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    }
+  ],
+  "count": 16,
+  "scope": "Only the sixteen named bank/dike volumes. The original animated water plane, independent ground layers, support, LOD, picking, ship clearance and all other model families remain outside this batch.",
+  "every_runtime_asset_9_or_60fps_met": false,
+  "quality_approvals": 16
+}

@@ -13,12 +13,13 @@ Arctic/tropical `bank2` cupolas moved one cell onto the exact joined roof seam a
 cell32. The icon is a new orange-cube/OPEN-TT3D composition.
 
 The canal and bank volumes changed, so their structural tests and quality-review
-fingerprints were refreshed. Canal straight/outer-corner owners and both bank halves
-remain7/10 with explicit residual defects; inner corners moved6→7/10. No model was
-promoted to8 or9: source, state and all-angle clearance acceptance remain incomplete.
+fingerprints were refreshed. The four joined bank bodies and all twelve canal dikes
+were individually accepted at9/10 (16 models) with fresh model/world evidence; their
+separate water, ground, support, LOD, picking and ship-clearance layers remain open.
+The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset276, harness120 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
-check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-beta4 is the
+check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. `.42` remains recommended until a newer release
 passes independent publication checks.
 

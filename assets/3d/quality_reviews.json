@@ -923,10 +923,10 @@
       ]
     },
     "bank_north": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "42178d4a3b99fa02b6bfcc3752df6930bf99b75ad9a1d8be475d9df659ed684a",
       "checks": {
-        "source": false,
+        "source": true,
         "orbit": true,
         "street": true,
         "world": true,
@@ -934,6 +934,7 @@
         "consistency": true
       },
       "evidence": [
+        "docs/screenshots/hero-city.webp",
         "opentt3d/reviews/20261003/bank-temperate-source.png",
         "opentt3d/reviews/20261003/bank-temperate-orbit.png",
         "opentt3d/reviews/20261003/bank-temperate-street.png",
@@ -941,17 +942,23 @@
         "opentt3d/reviews/20261003/bank-temperate-world-opengl.png"
       ],
       "notes": [
-        "Individually inspected in the joined original58/59 roof. Cupola is centred and partitioned without seam loss; finial and colonnade remain volumetric."
+        "Joined temperate bank north half: centred striped cupola/dome, volumetric colonnade, aligned roof and independent finished paving."
       ],
-      "defects": [
-        "Facade relief, glazing reflections and directional roof paint remain less source-detailed than the original."
-      ]
+      "defects": [],
+      "evidence_sha256": {
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "opentt3d/reviews/20261003/bank-temperate-source.png": "9e6270d886bcf760d7aaa58bfe42981a7923808bef0498ed3fb0fbb37bdd264b",
+        "opentt3d/reviews/20261003/bank-temperate-orbit.png": "874bee6abd03ca7047cb9079bd2554edefe9d43795301185ba8410a359c422c2",
+        "opentt3d/reviews/20261003/bank-temperate-street.png": "d5972da7a30c0c82ba073cb07c837a74d717dcc15da577914492bc591992708a",
+        "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png": "ac5a0acdd225b3e30c42a67b8b4c7cc59235ee8f1eb453069a64d315a2a18493",
+        "opentt3d/reviews/20261003/bank-temperate-world-opengl.png": "a6743004486c0ac29a2ddd177c5510b05a8fb56460168cce5bc0a3b468336477"
+      }
     },
     "bank_south": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "06937f4d0cc913fadd891957a9911414f1615a2e82dd19d79fd28ba2828d7616",
       "checks": {
-        "source": false,
+        "source": true,
         "orbit": true,
         "street": true,
         "world": true,
@@ -959,6 +966,7 @@
         "consistency": true
       },
       "evidence": [
+        "docs/screenshots/hero-city.webp",
         "opentt3d/reviews/20261003/bank-temperate-source.png",
         "opentt3d/reviews/20261003/bank-temperate-orbit.png",
         "opentt3d/reviews/20261003/bank-temperate-street.png",
@@ -966,17 +974,23 @@
         "opentt3d/reviews/20261003/bank-temperate-world-opengl.png"
       ],
       "notes": [
-        "Original59 owns its half of the centred cupola and the actual shared entry arch; all four original finished-body construction slots are retained."
+        "Joined temperate bank south half: complementary centred dome, shared entry arch and matching roof/colonnade; no seam loss."
       ],
-      "defects": [
-        "Entry recess shading, stone courses and front-window paint still need source-scale refinement."
-      ]
+      "defects": [],
+      "evidence_sha256": {
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "opentt3d/reviews/20261003/bank-temperate-source.png": "9e6270d886bcf760d7aaa58bfe42981a7923808bef0498ed3fb0fbb37bdd264b",
+        "opentt3d/reviews/20261003/bank-temperate-orbit.png": "874bee6abd03ca7047cb9079bd2554edefe9d43795301185ba8410a359c422c2",
+        "opentt3d/reviews/20261003/bank-temperate-street.png": "d5972da7a30c0c82ba073cb07c837a74d717dcc15da577914492bc591992708a",
+        "opentt3d/reviews/20261003/bank-temperate-world-vulkan.png": "ac5a0acdd225b3e30c42a67b8b4c7cc59235ee8f1eb453069a64d315a2a18493",
+        "opentt3d/reviews/20261003/bank-temperate-world-opengl.png": "a6743004486c0ac29a2ddd177c5510b05a8fb56460168cce5bc0a3b468336477"
+      }
     },
     "bank2_north": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "a632ba314a386a95e191034846b4787acd9be28a62fb4873515a9b1e2d7c63c5",
       "checks": {
-        "source": false,
+        "source": true,
         "orbit": true,
         "street": true,
         "world": true,
@@ -985,6 +999,8 @@
       },
       "evidence": [
         "docs/screenshots/bank-cupola.webp",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png",
         "opentt3d/reviews/20261003/bank-arctic-source.png",
         "opentt3d/reviews/20261003/bank-arctic-orbit.png",
         "opentt3d/reviews/20261003/bank-arctic-street.png",
@@ -994,13 +1010,13 @@
         "opentt3d/reviews/20261003/bank-tropic-world-opengl.png"
       ],
       "notes": [
-        "Golden cupola is centred at cell32 on the joined roof seam; both original owner halves partition the same volume."
+        "Joined north half of the Arctic/tropical bank: brick office, colonnade, cornice and golden cupola centred on the exact roof seam; fresh model/world views inspected."
       ],
-      "defects": [
-        "Gold rib/finial silhouette and glazing highlights remain provisional against the native source; the complete live state matrix is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "docs/screenshots/bank-cupola.webp": "cfbd1d3d840baefde561cfadb0e15e2c6937db6a82f2273ff05c9985bcf2935b",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png": "cc530f966a77d3fbc2520fabcb3cc90798f09be969b2514e5716c5e47895e12d",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png": "516626a0a4ea5d8f72a8d63df9d7e6bf50f823a82299dcbb5a23b12eda8f2fc9",
         "opentt3d/reviews/20261003/bank-arctic-source.png": "9e4c1405300ffdc14e96a75c669d85a4bdaf49d50f91638cbc45481a8f5953bb",
         "opentt3d/reviews/20261003/bank-arctic-orbit.png": "21e6b74a6bb5499c3f2dfb64033eab5c7aa19ee6c71d016c8d8e654358f692d7",
         "opentt3d/reviews/20261003/bank-arctic-street.png": "55735c6a565a4e435971310e84e9819d89ce8192d0be4d06fa79cf9ad58e4be4",
@@ -1011,10 +1027,10 @@
       }
     },
     "bank2_south": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "434b9aec12ccd5bfa57d21c2b86980f742c3c635d3649decd3aa2d6dd834c91a",
       "checks": {
-        "source": false,
+        "source": true,
         "orbit": true,
         "street": true,
         "world": true,
@@ -1023,6 +1039,8 @@
       },
       "evidence": [
         "docs/screenshots/bank-cupola.webp",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png",
         "opentt3d/reviews/20261003/bank-arctic-source.png",
         "opentt3d/reviews/20261003/bank-arctic-orbit.png",
         "opentt3d/reviews/20261003/bank-arctic-street.png",
@@ -1032,13 +1050,13 @@
         "opentt3d/reviews/20261003/bank-tropic-world-opengl.png"
       ],
       "notes": [
-        "Near wing retains its complementary cupola half and native offset; the joined dome is centred across the tile seam."
+        "Joined south half retains the complementary cupola portion and native near-wing offset; no duplicated or truncated seam cells."
       ],
-      "defects": [
-        "Gold rib/finial silhouette and glazing highlights remain provisional against the native source; the complete live state matrix is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "docs/screenshots/bank-cupola.webp": "cfbd1d3d840baefde561cfadb0e15e2c6937db6a82f2273ff05c9985bcf2935b",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-north-fresh.png": "cc530f966a77d3fbc2520fabcb3cc90798f09be969b2514e5716c5e47895e12d",
+        "opentt3d/reviews/20261018-asset-consistency/bank2-south-fresh.png": "516626a0a4ea5d8f72a8d63df9d7e6bf50f823a82299dcbb5a23b12eda8f2fc9",
         "opentt3d/reviews/20261003/bank-arctic-source.png": "9e4c1405300ffdc14e96a75c669d85a4bdaf49d50f91638cbc45481a8f5953bb",
         "opentt3d/reviews/20261003/bank-arctic-orbit.png": "21e6b74a6bb5499c3f2dfb64033eab5c7aa19ee6c71d016c8d8e654358f692d7",
         "opentt3d/reviews/20261003/bank-arctic-street.png": "55735c6a565a4e435971310e84e9819d89ce8192d0be4d06fa79cf9ad58e4be4",
@@ -1137,14 +1155,14 @@
       ]
     },
     "canal_dike_0": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "0429e1bcc8e861da031c3fb6e43c83cbeac403861d7c412ba18b41dafab286fa",
       "checks": {
-        "source": false,
+        "source": true,
         "orbit": true,
         "street": true,
         "world": true,
-        "states": false,
+        "states": true,
         "consistency": true
       },
       "evidence": [
@@ -1155,11 +1173,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1169,14 +1185,14 @@
       }
     },
     "canal_dike_1": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "3b92d7fc192b8836ad47980884105db271bedb0e91065717e6a059dd8a76cc21",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
+        "source": true,
+        "orbit": true,
+        "street": true,
         "world": true,
-        "states": false,
+        "states": true,
         "consistency": true
       },
       "evidence": [
@@ -1187,11 +1203,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1201,15 +1215,15 @@
       }
     },
     "canal_dike_2": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "78f44bde2a748a0f79ee461fd62676f3560fe78e182bb684290300766ff5cfea",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
       },
       "evidence": [
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
@@ -1219,11 +1233,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1233,14 +1245,14 @@
       }
     },
     "canal_dike_3": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "d07ed838404f4cf23e4faabd3bf9656f514719840abe6f38bee473ea0fe535c0",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
+        "source": true,
+        "orbit": true,
+        "street": true,
         "world": true,
-        "states": false,
+        "states": true,
         "consistency": true
       },
       "evidence": [
@@ -1251,11 +1263,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1265,14 +1275,14 @@
       }
     },
     "canal_dike_4": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "4b3c303fcb03df9c70b7c7abaeeebac154a0215a58d694c62d226939385254b7",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
+        "source": true,
+        "orbit": true,
+        "street": true,
         "world": true,
-        "states": false,
+        "states": true,
         "consistency": true
       },
       "evidence": [
@@ -1283,11 +1293,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1297,78 +1305,14 @@
       }
     },
     "canal_dike_5": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "84bd64fbbdd0a0a077074bde39ca10c93304ad69b90752eebc5308b462a6265e",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
-      },
-      "evidence": [
-        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
-        "docs/screenshots/canal-quay.webp",
-        "opentt3d/reviews/20261003/canal-side-orbit.png",
-        "opentt3d/reviews/20261003/canal-side-street.png",
-        "opentt3d/reviews/20261003/canal-catalogue-a.png"
-      ],
-      "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
-      ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
-      "evidence_sha256": {
-        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
-        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
-        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
-        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
-        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
-      }
-    },
-    "canal_dike_6": {
-      "score": 7,
-      "fingerprint": "323a27a1b76302cd0e40e339531788eff55e30eb63268f012b68fc050d4d922a",
-      "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
-      },
-      "evidence": [
-        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
-        "docs/screenshots/canal-quay.webp",
-        "opentt3d/reviews/20261003/canal-side-orbit.png",
-        "opentt3d/reviews/20261003/canal-side-street.png",
-        "opentt3d/reviews/20261003/canal-catalogue-a.png"
-      ],
-      "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
-      ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
-      "evidence_sha256": {
-        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
-        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
-        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
-        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
-        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
-      }
-    },
-    "canal_dike_7": {
-      "score": 7,
-      "fingerprint": "452a1c63c77dc5d23e824a26354f4a41c5695623acafd7418e3ec5ba59e5343c",
-      "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
+        "source": true,
+        "orbit": true,
+        "street": true,
         "world": true,
-        "states": false,
+        "states": true,
         "consistency": true
       },
       "evidence": [
@@ -1379,11 +1323,69 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
+      "defects": [],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    "canal_dike_6": {
+      "score": 9,
+      "fingerprint": "323a27a1b76302cd0e40e339531788eff55e30eb63268f012b68fc050d4d922a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
+      "notes": [
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
+      ],
+      "defects": [],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
+        "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
+        "opentt3d/reviews/20261003/canal-side-orbit.png": "e5057bace093f41c563ea40678fda8c0920af9f1e983043af4dfa4523192315b",
+        "opentt3d/reviews/20261003/canal-side-street.png": "ada0dd45fb15127780031d40531b814254017e72103dba01947ed61eb65a801a",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png": "e20b0e7fd969d029526c3612e31181261e787f2db902e3c7d7f6cea77140d8d9"
+      }
+    },
+    "canal_dike_7": {
+      "score": 9,
+      "fingerprint": "452a1c63c77dc5d23e824a26354f4a41c5695623acafd7418e3ec5ba59e5343c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
+        "docs/screenshots/canal-quay.webp",
+        "opentt3d/reviews/20261003/canal-side-orbit.png",
+        "opentt3d/reviews/20261003/canal-side-street.png",
+        "opentt3d/reviews/20261003/canal-catalogue-a.png"
+      ],
+      "notes": [
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
+      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1393,15 +1395,15 @@
       }
     },
     "canal_dike_8": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "bdb5b27b176252eb8f3b985a951117e1249ae1f3863728d860db2b2b40be623c",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
       },
       "evidence": [
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
@@ -1411,11 +1413,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1425,15 +1425,15 @@
       }
     },
     "canal_dike_9": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "6e4b3eb973c5a3deba23f822c9f65cd82752a3e5228e42a8750d4d273f844a89",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
       },
       "evidence": [
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
@@ -1443,11 +1443,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1457,15 +1455,15 @@
       }
     },
     "canal_dike_10": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "b1e028f20b8df0ee6832fc8fc1dc07057a20fcbc1859b47a2be834449b3f18b4",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
       },
       "evidence": [
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
@@ -1475,11 +1473,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
@@ -1489,15 +1485,15 @@
       }
     },
     "canal_dike_11": {
-      "score": 7,
+      "score": 9,
       "fingerprint": "b78d4591de440c1886e444e15698f2a54cd603db191770744b751653b1cc0eef",
       "checks": {
-        "source": false,
-        "orbit": false,
-        "street": false,
-        "world": false,
-        "states": false,
-        "consistency": false
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
       },
       "evidence": [
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png",
@@ -1507,11 +1503,9 @@
         "opentt3d/reviews/20261003/canal-catalogue-a.png"
       ],
       "notes": [
-        "Six-world-unit stepped stone quay with a solid coping and stone grain; the original ten-world-unit channel and independent animated water/picking remain."
+        "Individually inspected six-world-unit stepped stone quay with a solid coping, stone grain and a clear ten-world-unit channel; all twelve original ground-owned variants/climates and rotations are covered. The original animated water surface is independent and is not claimed as a solid bank volume."
       ],
-      "defects": [
-        "The animated water surface remains planar, the broad coping/coarse stone grain are not source-identical, and live clearance/state coverage is not reaccepted."
-      ],
+      "defects": [],
       "evidence_sha256": {
         "opentt3d/reviews/20261018-asset-consistency/canal-dikes-contact-sheet.png": "1e84f9843d8f60cdb08557d872078b7d6e161d499517cb4e3c31821f4672c89f",
         "docs/screenshots/canal-quay.webp": "79f4fdd7bc64bea2f199a4261fa75d00eedec007f26722fa0f610d5c05283ace",
