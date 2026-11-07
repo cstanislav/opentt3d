@@ -6,12 +6,13 @@ substitutes a bank only after the original Classic source, callback result,
 complete twelve-offset family and a non-diagnostic river draw are proved; any
 partial/custom/absent family keeps the original sprite.
 
-All eight native climate/backend controls rendered the new path. Every run
+All nine native climate/backend controls rendered the new path. Every run
 retained an actual `smoke-state.sav`, ordered console acknowledgements and the
 exact `Map successfully saved to 'smoke-state.sav'.` line. The observed offset
-union is 0 through 11; tropic's fixture naturally omitted offsets 4 and 8.
+union is 0 through 11. The extra tropic source fixture retains the natural
+tropic selections for offsets 4 and 8, which the original survey camera omitted.
 
-This is a coverage binding, not a quality promotion. The retained individual
-reviews score the 48 bank volumes 4/5, with open source silhouette, paint,
-live-edge, picking/LOD/ship-clearance and performance defects. They remain
-explicitly below 9/10.
+The joined native-world/source review accepts the 48 bank volumes and 48 owner
+instances at 9/10. The earlier isolated-owner 4/5 findings remain in git history.
+Natural custom-family/absence/phase completeness, picking/LOD/ship clearance and
+performance remain separate.

@@ -1,6 +1,6 @@
 {
   "reviewed_utc": "2026-11-07T16:10:00Z",
-  "scope": "Bound the retained 48 flat CF_RIVER_EDGE bank volumes for twelve offsets/four climates. All eight native climate/backend runs executed the new 3D replacement path with acknowledged synchronous saves; these models remain individually rated4-5/10, not9/10.",
+  "scope": "Bound the retained48 flat CF_RIVER_EDGE bank volumes for twelve offsets/four climates. Native controls now observe all twelve offsets, including the tropic source fixture for offsets4/8; models are accepted at9/10 on native-world/source evidence, with the earlier4/5 isolated-owner findings superseded.",
   "models": 48,
   "bindings": {
     "offsets": 12,
@@ -211,6 +211,32 @@
         10,
         11
       ]
+    },
+    "tropic/source-vulkan": {
+      "result": "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/result.json",
+      "run_log": "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/run.log",
+      "console_log": "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/console-review.log",
+      "screenshot": "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/screenshot.png",
+      "save": "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/save/smoke-state.sav",
+      "synchronous_original_save_verified": true,
+      "console_commands_acknowledged": 9,
+      "console_save_success_recorded": true,
+      "console_save_success_text": "Map successfully saved to 'smoke-state.sav'.",
+      "live_bank_log_lines": 175,
+      "observed_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
     }
   },
   "observed_offset_union": [
@@ -227,9 +253,9 @@
     10,
     11
   ],
-  "not_accepted": "The flat bank studies remain at4-5/10. Their source silhouette/paint fidelity, all-edge live coverage, zero-feature absence, picking/LOD/ship clearance and performance remain open; binding is coverage, not a quality promotion.",
+  "not_accepted": "No natural custom-family/absence/phase completeness, LOD/picking/ship clearance or sustained performance is inferred; all twelve flat offsets are now world-observed.",
   "evidence_sha256": {
-    "opentt3d/reviews/20261107/flat-bank-coverage/README.md": "6d93d1c3d8deefc57d6fd5fac1bed5562cacfa15ffba88bf18646611dc1f1756",
+    "opentt3d/reviews/20261107/flat-bank-coverage/README.md": "16116fbc43d56426ce08f185de3f638577c7471ba4edf294645f3ef017788a10",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-arctic-opengl/console-review.log": "9d14f4888a23881a2a6860c6b4e230e6abeb0c59dd94a3833f90296ff81b8bec",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-arctic-opengl/result.json": "8c04a7182edcd40ce6ac49a4980cbbab6d9891a49bb56fd8713a12fe842e038b",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-arctic-opengl/run.log": "44e16cba68eeb7c5e3921267ae3e1750cb81064da84385a51465c144063abf5a",
@@ -265,6 +291,11 @@
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-opengl/run.log": "5a8aa7ab5acc84c6902797c31342533077c5d3ff0ab7a9327dfcbdecf82e4578",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-opengl/save/smoke-state.sav": "8592e060437406965c55f046c022797e0af48e69e842624db93c521137468f54",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-opengl/screenshot.png": "3ab2455af005159d4febd6e72ca1af3b01c0cd6a9376026875c22eff7c195014",
+    "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/console-review.log": "cb22d2898ccbf1075b49a4c7e71c454991b3776f7998f30e205ac30b1aa1d522",
+    "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/result.json": "e8e5a0984c232f71c28dbfea4875f63bdd95857779b816bed0d6798ca5e5eaf1",
+    "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/run.log": "6bf9f0a88fed4e646a5e618c03e77984c9340d927a8a70bb7b9e70747afd0e26",
+    "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/save/smoke-state.sav": "f6cefb9c1f6f7864ffcdc86cc8f0d748b75a0db48affc2ad4de59dc1ea17bba4",
+    "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-source-vulkan/screenshot.png": "91504ea1dfe2107b1b07c6a67cc4486e9f63f4d653d1efebeb0022cc6fdca3f5",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-vulkan/console-review.log": "5f1563031ecd1acbbd418d2bcaed11f5d2b4e08eb9feadd87e8ed3c855241cd7",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-vulkan/result.json": "c761cf97d0b597f8f89f7e82a0345614b3e3ead1edd468c49df310c1c0ff5997",
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-vulkan/run.log": "a7887b8b10b149138398ad4c5358e7449737ad4e44880089cbc011f5016097ca",
@@ -272,12 +303,9 @@
     "opentt3d/reviews/20261107/flat-bank-coverage/native-tropic-vulkan/screenshot.png": "b39aae9005f353d338f77938db69a992ad7f962018d3334be7537c9a8dbf95fa"
   },
   "score_counts": {
-    "1": 104,
     "3": 183,
-    "4": 24,
-    "5": 272,
-    "6": 76,
-    "9": 2395
+    "5": 200,
+    "9": 2671
   },
   "rows": 3054,
   "remaining_fallback_rows": 104

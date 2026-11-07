@@ -40,11 +40,13 @@ accepted as intentional native water/terrain surfaces with their raised relief/
 banks separately bound at9/10, leaving no source-layer fallback rows. The76
 larger-HQ models and84 owner instances were then accepted at9/10 from joined
 size2/3/4 saved-world screenshots and source owner sheets; the stages were forced
-in the isolated fixture, so natural company-score selection remains open. The
-remaining ledger is24 flat-bank models at4/10,32 bound river/bank models at5/10,
-240 river/bank instances at5/10 and183 retained profiles/legacy assemblies at
-3/10. Their support, LOD, picking, phase/custom-family, world and ship-clearance
-layers remain open.
+in the isolated fixture, so natural company-score selection remains open. The48
+flat CF_RIVER_EDGE bank models and48 instances were then accepted at9/10 from
+all twelve native offset observations and natural source fixtures. The remaining
+runtime ledger is8 river-relief models and192 conditional sloped-bank instances
+at5/10; 183 retained profiles/legacy assemblies remain non-runtime references at
+3/10. Their support, LOD, picking, phase/custom-family, active-world and ship-
+clearance layers remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation

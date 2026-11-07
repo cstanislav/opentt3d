@@ -55,12 +55,15 @@ accepted as intentional native water/terrain surfaces with their raised relief/
 bank owners separately bound, leaving no source-layer fallback rows. The76
 larger-HQ models and84 owner instances were then accepted at9/10 from joined
 size2/3/4 saved-world screenshots and source owner sheets; natural company-score
-selection remains a separate open gate. The ledger now has2,575 at9/10,240
-river/bank instances at5/10,32 bound river/bank models at5/10,24 flat-bank models
-at4/10 and183 retained profiles/legacy assemblies at3/10. The remaining below9
-rows still need individual source/world/state/picking/ship-clearance and fidelity
-review. The every-model9/10, complete catalogue and sustained60fps goals remain
-open.
+selection remains a separate open gate. The48 flat CF_RIVER_EDGE bank models and
+48 instances were then accepted at9/10 from all twelve native offset observations
+and natural source fixtures, including the tropic4/8 source fixture. The ledger
+now has2,671 at9/10; the only remaining runtime rows below9 are the8 river-relief
+models and192 conditional sloped-bank instances at5/10. All183 retained
+profiles/legacy assemblies are non-runtime references at3/10. Their support, LOD,
+picking, phase/custom-family, active-world and ship-clearance review remains
+open; the every-model9/10, complete catalogue and sustained60fps goals remain
+unmet.
 See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4
