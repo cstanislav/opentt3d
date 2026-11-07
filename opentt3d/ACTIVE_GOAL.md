@@ -13,9 +13,9 @@ is an orange cube with OPEN/TT3D ribbons; nightly Windows checkout/Mac filesyste
 targets are repaired; public docs have fresh screenshots and no hand-crafting
 language. Asset276/harness120/native219 tests and the presentation boundary pass.
 
-The ledger has973 models at9/10 after the bank/dike, tree, vehicle, house, wagon
-and finished-industry batches,870 bound screens at5/10,271 profiles at4/10,112 at
-6/10,183 at3/10 and536 missing/fallback rows at1/10. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+The ledger has1,031 models at9/10 after the bank/dike, tree, vehicle, house,
+wagon, finished-industry and airport-building batches,812 bound screens at5/10,271
+profiles at4/10,112 at6/10,183 at3/10 and536 missing/fallback rows at1/10. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.

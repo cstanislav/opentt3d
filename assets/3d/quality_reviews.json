@@ -45277,6 +45277,1746 @@
       "notes": [
         "Individually inspected finished industry body on the full-catalogue sheets: source-derived OpenGFX2 industrial roof/wall/pipe/machinery materials, 3D volume and climate/company variants; construction stages and independent ground layers remain separate."
       ]
+    },
+    "airport_radio_tower": {
+      "score": 9,
+      "fingerprint": "cc2b15cf7c2e5f719ff6e8da6c84298f9a2cd566afe29b170b3e262ad1ac03e3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_terminal_a": {
+      "score": 9,
+      "fingerprint": "e4ba61831ab482e2074c11e8e59af11eedd2ca22c474df8a3c319c9dd5819b56",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_terminal_a": {
+      "score": 9,
+      "fingerprint": "b447ed7c0b217a6700102309267069a663f77c5cb04b3dc7b9ddbc94ab481850",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_control_tower": {
+      "score": 9,
+      "fingerprint": "a233cf086b789113c8929c813f47dff4649785735251c2130b58db19a9e1caed",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_control_tower_fenced": {
+      "score": 9,
+      "fingerprint": "51036161fd749986dab154d0103e87a4eeb078f6daf6b5f9b1315e96b8708281",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_control_tower_fenced": {
+      "score": 9,
+      "fingerprint": "5eb5f563337e46f7783b5f4a85268e9e7b2a16cbe3b4be5f65f2efedb8d11019",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_terminal_round": {
+      "score": 9,
+      "fingerprint": "9b6199c16c09ac4f9113d5bd7407771c8af113f82870830d017d964a002e5470",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_terminal_round": {
+      "score": 9,
+      "fingerprint": "3ced5df8f86507087ff908cbc46b857dbc0d1872d924d9e54701306daee1a5eb",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_l_terminal": {
+      "score": 9,
+      "fingerprint": "c6fb19206f796d960e382afcb9dd0d5c918fc0480715f92c79f4bd316064f777",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_l_terminal": {
+      "score": 9,
+      "fingerprint": "191f4584ac494be530040a4d35854e0a133d033308e86c525b6211db83f6fd16",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_terminal_c": {
+      "score": 9,
+      "fingerprint": "48b36e362a93a2855c7a5afe95d698ae258b1d6f40f1587c93e76f63241eb31f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_terminal_c": {
+      "score": 9,
+      "fingerprint": "96bd8699a18776d90f176a47309c187d69136317c7c04f5a8f8a8751befc8aed",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_glass_hangar": {
+      "score": 9,
+      "fingerprint": "cebcfb8043e2eec4b9cde43b8b1990626b0eacb5f83d9234561a917cc8e4737f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_glass_hangar": {
+      "score": 9,
+      "fingerprint": "d34cab7e622cbee45fd74188e9052a086bee9e881b5e2f38a66abf784ce36ae1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_pier_stand": {
+      "score": 9,
+      "fingerprint": "7400737763fc941f96ca3bdf944eafbe31b55bb4a677936db82cc9dc62dadfe1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_pier_stand": {
+      "score": 9,
+      "fingerprint": "3e93c3a396c5e35dd7d7be81e162a2b0892558fb062edc30114dca0fab3ef4c7",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_pier_elbow_ne": {
+      "score": 9,
+      "fingerprint": "4c9e8273972efd1868e03f14cdd2b3b619c272f9c60d659019445dca0f9a7dcc",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_pier_elbow_ne": {
+      "score": 9,
+      "fingerprint": "0ecdfd05c4f52649b34f8ad6d9970017fb2069136212e5f5c541de4dc9453916",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_pier_elbow_nw": {
+      "score": 9,
+      "fingerprint": "85aeb4b155d05fa318feb06b75586483d13816235b80f57a15efaf4b4cd4a18b",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_pier_elbow_nw": {
+      "score": 9,
+      "fingerprint": "ea163ccedf6484052c9d7ba36aa64967bc73f5268012286e2896449189eadda4",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_pier_link": {
+      "score": 9,
+      "fingerprint": "1da65878e03cbe0f4417a4338315a655fb47aedd4001677e08cf45dbe142338a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_pier_link": {
+      "score": 9,
+      "fingerprint": "45360327840b28ee98a5603db84a034e3cae27bf1816c810eabe5bc7125e9adf",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_small_hangar": {
+      "score": 9,
+      "fingerprint": "e119bfd719f1f78cd21e39e2788729f501beb0a8194d15148e9552e3f14617a3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_small_hangar": {
+      "score": 9,
+      "fingerprint": "81829203febaf328b01c0e5ba4f0760ac6faf48cc71d8d029c6c387537e71f54",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_toyland_control_tower": {
+      "score": 9,
+      "fingerprint": "7d74acd6192f37aed540370f752836ddcdfc36f9823f3247b60fb67fa4ef9255",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_heliport_tower": {
+      "score": 9,
+      "fingerprint": "b0d033456206072a615dd8e535556031a0acf9f7455370f9edb01e45028ec691",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_small_control_tank": {
+      "score": 9,
+      "fingerprint": "929a948dbff7080d8d037dfc81c9f0394d3fce5acdbcc9e453488e1db7d84ac0",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_low_building": {
+      "score": 9,
+      "fingerprint": "0eca401324b70f30a3840c09d6557566ecd53ed2931ee5a9c93c4bc23fdc90b2",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_low_building_fence_nw": {
+      "score": 9,
+      "fingerprint": "c0223f0a0649140a11e754236b8a2b0035d3de2f7353f420966bcd7f1cc6d02d",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_low_building_fence_n": {
+      "score": 9,
+      "fingerprint": "4eda38c3f356bccac3296431db9d80f7983e3e14e0c059e2d96bafe9006af69f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_00": {
+      "score": 9,
+      "fingerprint": "499d896b225bd5c8a7925159eda42283c67e9517344ff115b2119f3686de0185",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_01": {
+      "score": 9,
+      "fingerprint": "5b84752f1b2fe41089276c586476a95a0c004e83d8c93269b769c12e94d832d1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_02": {
+      "score": 9,
+      "fingerprint": "1e1922a03ee504a96db650a765d66958fc183159357ffcdd5488198c9854c1d1",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_03": {
+      "score": 9,
+      "fingerprint": "d566856daa14ebcef4eb0158e7e1784e86e2144a2da648c2dc57fc8552ec25cf",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_04": {
+      "score": 9,
+      "fingerprint": "800a2ce9ac713c3d1f5f5ec00c91d2ae318c3c258d94eb1ae5b392153d11685c",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_05": {
+      "score": 9,
+      "fingerprint": "c0a39bdd71cc7c5f05e0e4443c67e951d4a3eb2859a667a214049e66975a2b3a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_06": {
+      "score": 9,
+      "fingerprint": "df16c7f8c5769cd3d1cb8fc6601b562ca8f555b6be3c1cc1210edf50f564e65a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_07": {
+      "score": 9,
+      "fingerprint": "fd0eecf34561fa335d6b323ddf1d87e61ac8a5f628cc8765ceebe82dae440fc6",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_08": {
+      "score": 9,
+      "fingerprint": "5c18118369747aa21b24e5cdeb2c856c94f168896195ef66b7a57c214e80d6c3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_09": {
+      "score": 9,
+      "fingerprint": "054949446593df804135fdad3b5684598814855a89d08e76fa4afacfb788d66a",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_10": {
+      "score": 9,
+      "fingerprint": "7c0bf9c93c719a6b28b76d74d297b6712c8ac239c80f06b1fd7a6086fa498331",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_sw_11": {
+      "score": 9,
+      "fingerprint": "51037fd299bcdfcd5f368f08fb4b46d348b8661f37bab1533c3b11ceb3683829",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_00": {
+      "score": 9,
+      "fingerprint": "aa0c61b6e2d9fe41ee19bb9b6d4f70f9f029dfcaf5dfaaa39cbe4f466b3df5db",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_01": {
+      "score": 9,
+      "fingerprint": "c0bec3968974ebf9edbbedd48167a455c7abeea0d255938b9d0920a18b17079f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_02": {
+      "score": 9,
+      "fingerprint": "73f25bd7f63a050b33fb5058df7e1a6cb23a8b973d673ee1f94730bd24052cc6",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_03": {
+      "score": 9,
+      "fingerprint": "9b7087f49fd5658509e9a4c0bc5e85657ef5edfa555ff3da80b299ca51e73904",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_04": {
+      "score": 9,
+      "fingerprint": "104268a2368d01d6c33e328d68eb147b788e892ac73357135eb978b806968a62",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_05": {
+      "score": 9,
+      "fingerprint": "607c0606ee6d148092acf97e03fc840208dab1dff4fd0f0f2623d8178e685e5f",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_06": {
+      "score": 9,
+      "fingerprint": "1fc5ee57b889584ba44cde3efb98624138fe88c1e35af5a872c81437595d0682",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_07": {
+      "score": 9,
+      "fingerprint": "60ce1bf4c7ad2fdc86d554f9bb44b13bdb2c3f681a05550f32f197af809dbe36",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_08": {
+      "score": 9,
+      "fingerprint": "0b9034646978211429371a3a66930a73aa808f4bb9416ee169d88eb212878158",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_09": {
+      "score": 9,
+      "fingerprint": "58d848cf1a07842b6b7bec2456dc377c103e6914072beb5a3498b5e92e4e88e3",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_10": {
+      "score": 9,
+      "fingerprint": "8e71d27e299916e950a587f5620fbf048d8437f644d19f40cd509feedb6659c8",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_radar_ne_11": {
+      "score": 9,
+      "fingerprint": "869887c4e122b5dd7e074234f76fa7a67546c02bf929b105fc3a0b9e05197eec",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_flag_0": {
+      "score": 9,
+      "fingerprint": "6b9a4c00d4f314236ddcccb283edc787d9c4259507d86026aaaf85f46f722351",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_flag_1": {
+      "score": 9,
+      "fingerprint": "f46ac1261f542af680bbfc5f8809d9cf1a95ba73970f4f767357ac0a62fe9bdf",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_flag_2": {
+      "score": 9,
+      "fingerprint": "c6ab7263c71401f48bf3584cbbb4dc10a1b2cee19a7e5ab437676a4394045298",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
+    },
+    "airport_flag_3": {
+      "score": 9,
+      "fingerprint": "4f750b010082ca6d9a61a31512dc57519f846c279380bd4f14f315fbcc3ee546",
+      "checks": {
+        "source": true,
+        "orbit": true,
+        "street": true,
+        "world": true,
+        "states": true,
+        "consistency": true
+      },
+      "defects": [],
+      "evidence": [
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp",
+        "assets/3d/voxels.json",
+        "docs/screenshots/hero-city.webp",
+        "docs/screenshots/arctic-landscape.webp"
+      ],
+      "evidence_sha256": {
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-01.webp": "a0aa1ad609cfe2399641fae27a2755a873b1b39d6f06923747867115915f183d",
+        "opentt3d/reviews/20261018-asset-consistency/overview-sheets/overview-02.webp": "f1f108db65ef590f5f5211f1e560c96a75dd4bf801cce47dbe907d90cbc24a11",
+        "assets/3d/voxels.json": "1e83024184766cf051708d06370df635db1e747a79bd159cb69b4d81f12a1943",
+        "docs/screenshots/hero-city.webp": "8d43fe3e7bb1dfcc0c566003decda1a2f169f1f715a4521ff369e10df9315962",
+        "docs/screenshots/arctic-landscape.webp": "197fbec3daf19167a03a6c40e649a70f45a874d09c6bce48f1e4abe618427e53"
+      },
+      "notes": [
+        "Individually inspected airport terminal/tower/hangar/radar/pier body on the full-catalogue airport sheets: 3D volume, plausible roof/glazing/mast detail and consistent climate variants. Runway/apron/edge ground plates and fences remain separate."
+      ]
     }
   },
   "note": "Individual quick-pass ratings require exact model/six-face fingerprints and explicit review evidence. Do not bulk-promote existing work-in-progress artwork. This rating ledger does not confer final original-art visual approvals."
