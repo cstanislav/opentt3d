@@ -23,8 +23,8 @@ engine's path.
 > performance work are still in progress; this README does not claim that every
 > model has reached its final detail level. The immutable
 > [`.42` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)
-> is the recommended desktop checkpoint. Sixteen bank/dike volumes have passed an individual 9/10 review; the remaining catalogue still needs the same treatment. [`.45`](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261107.45)
-> is a newer recovery draft awaiting independent publication checks.
+> is the recommended desktop checkpoint. Sixteen bank/dike volumes have passed an individual 9/10 review; the remaining catalogue still needs the same treatment. A `.45` development draft has also been packaged for maintainer review and
+> remains unpublished pending full independent native checks.
 
 ## Download and play
 
