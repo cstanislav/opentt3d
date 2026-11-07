@@ -49,7 +49,9 @@ family. Every runtime-required row is now at9/10; the only remaining below9 rows
 are183 retained profiles/legacy assemblies at3/10, which are not runtime-bound.
 Natural company-score selection, natural custom river-source selection, absence,
 phase/custom-family, LOD/picking/ship-clearance and performance gates remain
-separate.
+separate. The audit's remaining coverage gap is the uncatalogued disaster/world-
+sprite inventory; disaster vehicles still use original2D sprites and are not in
+the authored model ledger.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation

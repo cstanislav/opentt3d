@@ -33,7 +33,9 @@ The8 river-relief models and192 conditional instances were accepted at9/10 from 
 forced actual river world, source sheets and the complete bound family. The HQ
 stages and river relief were forced in isolated fixtures; natural company-score
 selection, natural custom river-source selection, absence and phase gates remain
-open. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+open. The audit's remaining coverage gap is the uncatalogued disaster/world-sprite
+inventory; disaster vehicles are still rendered from their original2D sprites and
+are not in the authored model ledger. No completion claim is made. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.
