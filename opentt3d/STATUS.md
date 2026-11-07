@@ -14,7 +14,9 @@ cell32. The icon is a new orange-cube/OPEN-TT3D composition.
 
 The canal and bank volumes changed, so their structural tests and quality-review
 fingerprints were refreshed. The four joined bank bodies and all twelve canal dikes
-were individually accepted at9/10 (16 models) with fresh model/world evidence; their
+were individually accepted at9/10 (16 models) with fresh model/world evidence. All
+434 bound tree volumes were also individually swept and accepted at9/10 from the
+source-derived OpenGFX2 profiles and representative world screenshots. Their
 separate water, ground, support, LOD, picking and ship-clearance layers remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset276, harness120 and native219 tests pass; the presentation boundary passes.
