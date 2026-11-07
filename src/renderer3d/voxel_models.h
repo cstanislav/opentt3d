@@ -11,6 +11,9 @@ bool DrawVoxelLockWall(Scene &scene, unsigned ordinal, unsigned climate, Vec3 or
 /** Diagnostic source-bound river relief uses slope bits3/6/9/12 and climates0..3.
  * Caller must independently prove original family/source and separate water. */
 bool DrawVoxelRiverRelief(Scene &scene, unsigned slope, unsigned climate, Vec3 origin, PaletteID palette = 0);
+/** Conservative flat CF_RIVER_EDGE substitution; original source/family guards
+ * are proved by the caller and all twelve edge slots must be present. */
+bool DrawVoxelRiverBank(Scene &scene, unsigned offset, unsigned climate, Vec3 origin, PaletteID palette = 0);
 /** Four ordinary layouts followed by the original five north/west/east/south HQs. */
 inline std::optional<unsigned> OriginalObjectLayoutIdentifier(unsigned type, unsigned size, unsigned part)
 {

@@ -29,14 +29,16 @@ at9/10 after source/corrected-gallery review and actual lock fixtures in all fou
 climates on Vulkan and OpenGL; the native logs observe all48 owner ordinals with
 acknowledged synchronous saves. The112 original water surfaces and13 native object
 ground surfaces were accepted as intentional native surfaces, not missing volumes.
-The8 river-relief models and192 conditional sloped-bank instances remain bound at
-5/10. The remaining ledger is76 unbound larger-HQ proposals at6/10,183 retained
-profiles/legacy assemblies at3/10 and152 missing/fallback rows at1/10 (84
-larger-HQ objects,48 flat river banks,20 river-ground selectors). Their support,
-LOD, picking, phase/custom-family and ship-clearance layers, and the200 river5/10
-entries, remain open.
+The48 recovered flat CF_RIVER_EDGE bank models and48 flat instances were then
+bound; all eight climate/backend controls observe the new 3D bank path with
+acknowledged saves, but the studies retain their4-5/10 reviews. The8 river-relief
+models and192 conditional sloped-bank instances remain bound at5/10. The
+remaining ledger is76 unbound larger-HQ proposals at6/10,183 retained profiles/
+legacy assemblies at3/10 and104 missing/fallback rows at1/10 (84 larger-HQ
+objects,20 river-ground selectors). Their support, LOD, picking, phase/custom-
+family and ship-clearance layers, and the272 river/bank5/10 entries, remain open.
 The earlier7/10 provisional reviews and their defects are retained in git history.
-Asset277, harness122 and native219 tests pass; the presentation boundary passes.
+Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. `.42` remains recommended until a newer release

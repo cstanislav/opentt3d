@@ -602,7 +602,7 @@ def compile_catalogue(data):
         compile_model(name)
     bindings = data.get("bindings", {})
     for category, identifiers in bindings.items():
-        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects", "objects", "object_ground", "lock_walls", "river_relief") or not isinstance(identifiers, dict):
+        if category not in ("houses", "house_ground", "industries", "industry_ground", "vehicles", "vehicle_collectors", "trees", "airport_tiles", "airport_ground", "infrastructure", "depots", "depot_floors", "depot_wires", "ship_depots", "docks", "effects", "objects", "object_ground", "lock_walls", "river_relief", "river_bank") or not isinstance(identifiers, dict):
             raise ValueError(f"Unknown voxel binding category {category}")
         for identifier, states in identifiers.items():
             if not identifier.isascii() or not identifier.isdecimal() or int(identifier) > 65535 or not isinstance(states, dict) or not states:
@@ -616,6 +616,8 @@ def compile_catalogue(data):
                 raise ValueError("Lock walls use all48 original source-owner ordinals and explicit climate states0..3")
             if category == "river_relief" and (int(identifier) not in (3,6,9,12) or any(int(state) >= 4 for state in states)):
                 raise ValueError("River relief uses four original slope bits3/6/9/12 and explicit climate states0..3; flat water is not a raised owner")
+            if category == "river_bank" and (int(identifier) >= 12 or any(int(state) >= 4 for state in states)):
+                raise ValueError("River banks use twelve original flat CF_RIVER_EDGE input/output slots and explicit climate states0..3")
             if category in ("airport_tiles", "airport_ground") and (int(identifier) >= 74 or any(int(state) >= 64 for state in states)):
                 raise ValueError("Airport bindings use original tile IDs and climate*16+frame states0..63 for each independent layer")
             if category in ("objects", "object_ground"):

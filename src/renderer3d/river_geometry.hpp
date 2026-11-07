@@ -11,6 +11,16 @@ namespace Renderer3D {
  * in an arbitrary source. Flat water has no fabricated raised decoration. */
 inline bool IsOriginalRiverReliefSlope(unsigned slope) { return slope == 3 || slope == 6 || slope == 9 || slope == 12; }
 
+/** Flat CF_RIVER_EDGE input/output slots, not a slope or water-class selector. */
+inline bool IsOriginalRiverBankOffset(unsigned offset) { return offset < 12; }
+
+template <typename HasOwner> bool CompleteOriginalRiverBankFamily(unsigned climate, HasOwner has_owner)
+{
+	if (climate >= 4) return false;
+	for (unsigned offset = 0; offset < 12; ++offset) if (!has_owner(offset,climate)) return false;
+	return true;
+}
+
 /** Only the observed complete Classic flat-first selector protocol is eligible.
  * A callback redirect, changed flags or alternate/custom owner retains originals. */
 inline std::optional<unsigned> SelectOriginalRiverRelief(unsigned slope, uint32_t base, uint32_t image,

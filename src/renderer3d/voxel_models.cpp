@@ -129,6 +129,7 @@ const Catalogue &Models()
 			if (category == "effects" && (!IsPresentableEffectSource(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid voxel effect source/climate state");
 			if (category == "lock_walls" && (std::stoul(id) >= 48 || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original lock owner/climate state");
 			if (category == "river_relief" && (!IsOriginalRiverReliefSlope(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original river relief slope/climate state");
+			if (category == "river_bank" && (!IsOriginalRiverBankOffset(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original flat river bank offset/climate state");
 			if ((category == "objects" || category == "object_ground") && (std::stoul(id) >= 24 || std::stoul(state) >= 4 ||
 					!OriginalObjectModelClimateSupported(std::stoul(id) < 4 ? std::stoul(id) : 4,std::stoul(state)) ||
 					(category == "objects" && std::stoul(id) >= 4 && (std::stoul(id) < 12 || (std::stoul(id)-4)%4 == 3)) ||
@@ -138,7 +139,7 @@ const Catalogue &Models()
 			/* Original HQ layers partition one compound across independent source
 			 * owners. Coarse blocks may reduce paint, but must never inflate across
 			 * those boundaries or fill the adjoining owner's air/openings. */
-			if (((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) || category == "lock_walls" || category == "river_relief") result.models.at(model).lod_preserve_occupancy = true;
+			if (((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) || category == "lock_walls" || category == "river_relief" || category == "river_bank") result.models.at(model).lod_preserve_occupancy = true;
 			if (category == "trees") {
 				unsigned base = std::stoul(id), stage = std::stoul(state);
 				if (base >= 1576 && base <= 2003 && (base-1576)%7 == 0 && stage < 7) result.tree_models[base-1576+stage] = &result.models.at(model);
@@ -252,6 +253,19 @@ bool DrawVoxelLockWall(Scene &scene, unsigned ordinal, unsigned climate, Vec3 or
 		model = supported->second.get();
 	}
 	AddVoxelInstance(scene,*model,Material(origin,palette,opacity));
+	return true;
+}
+
+bool DrawVoxelRiverBank(Scene &scene, unsigned offset, unsigned climate, Vec3 origin, PaletteID palette)
+{
+	if (!IsOriginalRiverBankOffset(offset) || climate >= 4) return false;
+	const auto &catalogue = Models();
+	if (!CompleteOriginalRiverBankFamily(climate,[&](unsigned owner,unsigned state) { return catalogue.bindings.contains({"river_bank",owner,state}); })) return false;
+	auto binding = catalogue.bindings.find({"river_bank",offset,climate});
+	if (binding == catalogue.bindings.end()) return false;
+	const VoxelModel *model = &catalogue.models.at(binding->second);
+	if (scene.visibility && !scene.visibility->Intersects(origin+model->surface.low,origin+model->surface.high)) return true;
+	AddVoxelInstance(scene,*model,Material(origin,palette,1));
 	return true;
 }
 

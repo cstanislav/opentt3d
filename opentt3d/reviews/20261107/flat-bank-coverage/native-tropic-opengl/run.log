@@ -1,0 +1,241 @@
+[2026-11-07 16:04:39] dbg: [driver:1] Successfully loaded blitter '32bpp-optimized'
+[2026-11-07 16:04:39] dbg: [driver:1] OpenTT3D: Cocoa process 84558
+[2026-11-07 16:04:39] dbg: [driver:1] OpenGL driver: Apple - Apple M3 Pro (4.1 Metal - 90.5)
+[2026-11-07 16:04:39] dbg: [driver:2] OpenGL shading language version: 4.10, texture units = 80
+[2026-11-07 16:04:39] dbg: [driver:1] Successfully loaded video driver 'cocoa-opengl'
+[2026-11-07 16:04:40] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-11-07 16:04:40] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: background Cocoa window active=false, key=false, visible=false, policy=2
+[2026-11-07 16:04:40] dbg: [driver:1] using thread for game-loop
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: loaded 62 profiles from opentt3d-trees.json
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1863 stage 3 captured at 66,12
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1933 stage 3 captured at 74,12
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1926 stage 4 captured at 74,12
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1863 stage 6 captured at 76,12
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1842 stage 3 captured at 70,13
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1898 stage 3 captured at 71,13
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1898 stage 6 captured at 71,13
+[2026-11-07 16:04:40] dbg: [driver:1] OpenTT3D: live projected tree 1940 stage 3 captured at 71,13
+[2026-11-07 16:04:52] dbg: [driver:1] OpenTT3D: loaded 2019 authored voxel models, 18490111 occupied cells, 12932984 exposed cell faces merged to 2801928 conforming rectangles / 21846546 triangles
+[2026-11-07 16:04:52] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 39446592 bytes instead of 1808911540 dense cell bytes, with one shared palette
+[2026-11-07 16:04:52] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1072975448 bytes under a scene-pinned soft budget, including 205103288 exact restoration bytes
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1870 stage 3 captured at 75,13
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1835 stage 3 captured at 75,13
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1926 stage 3 captured at 71,14
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 81 construction stage 0 captured at 75,14
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 81 construction stage 0 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 78 construction stage 3 captured at 76,14
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 78 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 78 construction stage 3 captured at 76,14
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 78 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:2] OpenTT3D: source texture 4603 mip family request 2 decode 0.501 ms, preparation 0.530 ms
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: 17 ground-detail tiles rendered with raised crops, hay, rocks or turf
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: 8 unmodelled reference sprites in this view (release coverage is incomplete)
+[2026-11-07 16:04:53] dbg: [driver:2] OpenTT3D: pre-existing OpenGL error before mesh pass (1286)
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: depth-tested mesh renderer initialized
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 82 construction stage 3 captured at 74,16
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 82 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 82 construction stage 3 captured at 74,16
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 82 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 84 construction stage 3 captured at 76,16
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 84 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 84 construction stage 3 captured at 76,16
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 84 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 80 construction stage 3 captured at 76,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 80 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 80 construction stage 3 captured at 76,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 80 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 89 construction stage 1 captured at 77,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 89 construction stage 1 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 89 construction stage 1 captured at 77,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 89 construction stage 1 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 78 construction stage 3 captured at 72,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 78 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 78 construction stage 3 captured at 72,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 78 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 82 construction stage 3 captured at 74,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 82 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 82 construction stage 3 captured at 74,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 82 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 89 construction stage 3 captured at 76,19
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 89 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 89 construction stage 3 captured at 76,19
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 89 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: 4 slope foundations rendered with complete retaining walls
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1870 stage 2 captured at 80,13
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1877 stage 3 captured at 82,13
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1842 stage 5 captured at 82,13
+[2026-11-07 16:04:53] dbg: [driver:2] OpenTT3D: source texture 1332 mip family request 2 decode 1.928 ms, preparation 0.147 ms
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 80 construction stage 3 captured at 78,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 80 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 80 construction stage 3 captured at 78,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 80 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 79 construction stage 3 captured at 80,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 79 construction stage 3 variant 1 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 79 construction stage 3 captured at 80,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 79 construction stage 3 variant 1 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 78 construction stage 3 captured at 82,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 78 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 78 construction stage 3 captured at 82,17
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 78 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 10 construction stage 3 captured at 78,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 10 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 84 construction stage 3 captured at 80,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 84 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 84 construction stage 3 captured at 80,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 84 construction stage 3 variant 2 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 84 construction stage 3 captured at 82,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 84 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 84 construction stage 3 captured at 82,18
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 84 construction stage 3 variant 0 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 81 construction stage 3 captured at 82,19
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 81 construction stage 3 variant 1 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 81 construction stage 3 captured at 82,19
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 81 construction stage 3 variant 1 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 82 construction stage 3 captured at 80,20
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house ground 82 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 82 construction stage 3 captured at 80,20
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel house 82 construction stage 3 variant 3 captured
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: 64 roof/wall pixels select their owning tile across four rotations, with independent vehicle picking
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1940 stage 5 captured at 52,40
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1828 stage 3 captured at 52,40
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1884 stage 3 captured at 52,40
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1835 stage 6 captured at 45,42
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1905 stage 3 captured at 53,44
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1905 stage 4 captured at 53,44
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1835 stage 1 captured at 48,45
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1821 stage 6 captured at 54,45
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1821 stage 3 captured at 54,45
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1842 stage 6 captured at 49,46
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1870 stage 5 captured at 50,48
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1905 stage 1 captured at 46,54
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1884 stage 5 captured at 67,54
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1940 stage 0 captured at 71,54
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1884 stage 6 captured at 46,56
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1905 stage 0 captured at 59,56
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1926 stage 2 captured at 65,56
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1828 stage 1 captured at 57,57
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1884 stage 1 captured at 68,57
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1884 stage 0 captured at 72,57
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1842 stage 2 captured at 64,58
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1870 stage 6 captured at 65,58
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1884 stage 4 captured at 72,58
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1828 stage 2 captured at 48,59
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1926 stage 5 captured at 66,59
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1898 stage 4 captured at 66,60
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1940 stage 1 captured at 50,62
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1821 stage 5 captured at 73,62
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1891 stage 3 captured at 73,62
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1842 stage 1 captured at 45,63
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1856 stage 3 captured at 45,63
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1821 stage 2 captured at 60,63
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1863 stage 5 captured at 64,63
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1898 stage 0 captured at 67,63
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1940 stage 2 captured at 68,63
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1933 stage 5 captured at 67,64
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1898 stage 1 captured at 68,64
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1835 stage 0 captured at 72,64
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1863 stage 2 captured at 67,65
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,65 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,65 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 69,65 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 6 climate 2 source 10430 captured at 69,65 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 7 climate 2 source 10431 captured at 69,65 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1898 stage 2 captured at 70,65
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,66 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,66 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1821 stage 4 captured at 66,67
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,67 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,67 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1856 stage 5 captured at 64,68
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1821 stage 0 captured at 68,68
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,68 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,68 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,69 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,69 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1940 stage 6 captured at 73,69
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,70 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,70 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,71 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,71 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live projected tree 1905 stage 6 captured at 68,72
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,72 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,72 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,73 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,73 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,74 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,74 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,76 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,76 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,77 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,77 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,78 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,78 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 69,79 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,79 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 66,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 66,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 9 climate 2 source 10433 captured at 66,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 7 climate 2 source 10431 captured at 66,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 67,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 67,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 68,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 68,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 69,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 69,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 5 climate 2 source 10429 captured at 69,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 11 climate 2 source 10435 captured at 69,80 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 60,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 60,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 7 climate 2 source 10431 captured at 60,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 61,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 62,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 63,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 64,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 65,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 9 climate 2 source 10433 captured at 65,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 66,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 66,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 5 climate 2 source 10429 captured at 66,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 11 climate 2 source 10435 captured at 66,81 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 43,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 44,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 45,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 46,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 46,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 6 climate 2 source 10430 captured at 46,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 0 climate 2 source 10424 captured at 55,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 55,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 7 climate 2 source 10431 captured at 55,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 56,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 57,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 58,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 59,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 11 climate 2 source 10435 captured at 60,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 9 climate 2 source 10433 captured at 61,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 62,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 63,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 64,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 65,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 65,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 5 climate 2 source 10429 captured at 65,82 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 10 climate 2 source 10434 captured at 46,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 47,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 48,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 49,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 50,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 51,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 52,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 53,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 3 climate 2 source 10427 captured at 54,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 11 climate 2 source 10435 captured at 55,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 9 climate 2 source 10433 captured at 56,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 57,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 58,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 59,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 60,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 1 climate 2 source 10425 captured at 61,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 2 climate 2 source 10426 captured at 61,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: live voxel flat river bank 5 climate 2 source 10429 captured at 61,83 with independent original ground/water
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: whole-world atlas relocation preserves 1228800 exact RGBA/picking pixels across repack, clear and forced row relocation
+[2026-11-07 16:04:53] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 1 GPU viewport regions

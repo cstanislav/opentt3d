@@ -81,12 +81,13 @@ def original_water_rows(water, renderer_sources, catalogue=None):
     bindings = catalogue.get("bindings",{}) if isinstance(catalogue,dict) else {}
     lock_bindings = bindings.get("lock_walls",{})
     river_bindings = bindings.get("river_relief",{})
-    if not isinstance(lock_bindings,dict) or not isinstance(river_bindings,dict):
+    bank_bindings = bindings.get("river_bank",{})
+    if not isinstance(lock_bindings,dict) or not isinstance(river_bindings,dict) or not isinstance(bank_bindings,dict):
         raise ValueError("Voxel catalogue bindings must be dictionaries")
     rows = []
 
     def bound_model(category, owner, climate):
-        states = (lock_bindings if category == "lock_walls" else river_bindings).get(str(owner),{})
+        states = {"lock_walls":lock_bindings,"river_relief":river_bindings,"river_bank":bank_bindings}[category].get(str(owner),{})
         if not isinstance(states,dict):
             return None
         model = states.get(str(climate))
@@ -100,6 +101,9 @@ def original_water_rows(water, renderer_sources, catalogue=None):
 
     def complete_river_family(climate):
         return all(bound_model("river_relief",slope,climate) for slope in (3,6,9,12))
+
+    def complete_river_bank_family(climate):
+        return all(bound_model("river_bank",offset,climate) for offset in range(12))
 
     def row(name, source, climate, representation, score, notes, renderer=False, owners=None, fingerprint_value=None):
         value = fingerprint_value if fingerprint_value is not None else {
@@ -174,11 +178,16 @@ def original_water_rows(water, renderer_sources, catalogue=None):
     for edge in sorted(edges,key=lambda edge:edge["offset"]):
         relief_slope = relief_slopes.get(edge["slope"])
         for climate in range(4):
-            model = bound_model("river_relief",relief_slope,climate) if relief_slope is not None and complete_river_family(climate) else None
+            if edge["slope"] == "SLOPE_FLAT":
+                model = bound_model("river_bank",edge["edge"],climate) if complete_river_bank_family(climate) else None
+                owner = f"river_bank/{edge['edge']}/{climate}"
+            else:
+                model = bound_model("river_relief",relief_slope,climate) if relief_slope is not None and complete_river_family(climate) else None
+                owner = f"river_relief/{relief_slope}/{climate}"
             if model:
                 row(f"original/river-bank/{edge['slope']}/edge{edge['edge']}/climate{climate}",edge,climate,"authored-voxel-instance",5,
-                    f"Conditional original CF_RIVER_EDGE owner selects bound 3D {edge['slope']} relief {model} when the original source supplies the bank. The complete four-slope family is present; zero-feature absence, live callbacks/phases, terrain support, picking and ship clearance still require individual review.",
-                    owners=[f"river_relief/{relief_slope}/{climate}"],
+                    f"Conditional original CF_RIVER_EDGE owner selects bound 3D {edge['slope']} bank {model} when the original source supplies the bank. The complete twelve-slot flat (or four-slope) family is present; zero-feature absence, live callbacks/phases, terrain support, picking and ship clearance still require individual review.",
+                    owners=[owner],
                     fingerprint_value={"source":edge,"climate":climate,"selection":water["runtime_selection"],
                         "model":model,"voxel":fingerprint(catalogue["models"][model],catalogue["materials"])})
             else:

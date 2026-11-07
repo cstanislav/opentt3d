@@ -44,14 +44,16 @@ pass source/orbit/street/world/state/consistency checks, and actual lock fixture
 in all four climates on Vulkan/OpenGL observe all48 owner ordinals with
 acknowledged synchronous saves. The112 original water surfaces and13 native object
 ground surfaces were individually accepted at9/10 as intentional native surfaces,
-not missing volumes. The8 river-relief models and192 conditional sloped-bank
-instances remain at5/10. The ledger now has2,395 at9/10,76 unbound larger-HQ
-proposals at6/10,200 river-relief rows at5/10,183 retained profiles/legacy
-assemblies at3/10 and152 missing/fallback rows at1/10 (84 larger-HQ objects,48
-flat river banks,20 river-ground selectors). The fallback rows still lack authored
-3D volumes; the200 river rows still need individual source/world/state/picking/
-ship-clearance review. The every-model9/10, complete catalogue and sustained60fps
-goals remain open.
+not missing volumes. The48 recovered flat CF_RIVER_EDGE bank studies and48 flat
+instances were then bound; all eight native climate/backend controls render the
+new path, but the studies retain their individual4-5/10 reviews. The8 river-relief
+models and192 conditional sloped-bank instances remain at5/10. The ledger now has
+2,395 at9/10,76 unbound larger-HQ proposals at6/10,272 river/bank rows at5/10,24
+flat-bank models at4/10,183 retained profiles/legacy assemblies at3/10 and104
+missing/fallback rows at1/10 (84 larger-HQ objects,20 river-ground selectors).
+The fallback rows still lack authored3D volumes; the272 river/bank rows still need
+individual source/world/state/picking/ship-clearance review. The every-model9/10,
+complete catalogue and sustained60fps goals remain open.
 See`reviews/20261018-asset-consistency/`.
 
 ## Shore-bank breadth and conservative larger-HQ integration — October 4

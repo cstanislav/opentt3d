@@ -127,6 +127,7 @@ struct CaptureState {
 	};
 	std::optional<LockCapture> lock;
 	std::optional<RiverSourceSelector> river_ground;
+	std::optional<RiverSourceSelector> river_edge;
 };
 static std::optional<CaptureState> capture;
 static std::vector<Vertex> recycled_vertices;
@@ -267,8 +268,9 @@ void ObserveRiverSelector(TileIndex tile, const RiverSourceSelector &selector)
 
 void CaptureOriginalRiverSelector(TileIndex tile, const RiverSourceSelector &selector)
 {
-	if (!capture || capture->diagnostic || capture->tile == nullptr || capture->tile->tile != tile || selector.feature != CF_RIVER_SLOPE) return;
-	capture->river_ground = selector;
+	if (!capture || capture->diagnostic || capture->tile == nullptr || capture->tile->tile != tile) return;
+	if (selector.feature == CF_RIVER_SLOPE) capture->river_ground = selector;
+	else if (selector.feature == CF_RIVER_EDGE) capture->river_edge = selector;
 }
 
 bool BeginVoxelLockCapture(const TileInfo &tile, SpriteID base)
@@ -492,7 +494,7 @@ void CaptureTile(const TileInfo *tile)
 	if (!capture) return;
 	capture->tile = tile; capture->vehicle = nullptr;
 	capture->tile_layers = 0; capture->have_parent = false;
-	capture->river_ground.reset();
+	capture->river_ground.reset(); capture->river_edge.reset();
 }
 
 void CaptureVehicle(const Vehicle *vehicle)
@@ -1463,6 +1465,28 @@ void CaptureGround(SpriteID image, PaletteID palette, int x, int y, int z, const
 	SpriteID sprite = image&SPRITE_MASK;
 	std::optional<SpriteTexture> river_water;
 	unsigned river_climate = to_underlying(_settings_game.game_creation.landscape);
+	if (capture->river_edge) {
+		auto selected = *capture->river_edge; capture->river_edge.reset();
+		const GraphicsSet *set = BaseGraphics::GetUsedSet();
+		const unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+		if (!capture->diagnostic && sub == nullptr && palette == PAL_NONE &&
+				x == tile.x && y == tile.y && z == tile.z && offset_x == 0 && offset_y == 0 &&
+				tile.tileh == SLOPE_FLAT && IsTileType(tile.tile,MP_WATER) && IsRiver(tile.tile) &&
+				set != nullptr && set->name == "OpenGFX2 Classic" && selected.feature == CF_RIVER_EDGE &&
+				!selected.absent && selected.offset_callback && selected.selected_sprite == image && IsBaseGraphicsSprite(selected.base) &&
+				selected.requested_offset == selected.resolved_offset && IsOriginalRiverBankOffset(selected.requested_offset) &&
+				CompleteOriginalRiverBankFamily(climate,[&](unsigned bank,unsigned state) { return HasVoxelAsset("river_bank",bank,state); })) {
+			static std::set<std::array<unsigned,3>> reported;
+			const Vec3 root{static_cast<float>(tile.x),static_cast<float>(tile.y),TerrainZ(tile.z)};
+			size_t first = capture->scene.instances.size();
+			if (!DrawVoxelRiverBank(capture->scene,selected.requested_offset,climate,root,palette)) throw std::runtime_error("Complete flat river bank family lost its separate volume owner");
+			for (size_t i = first; i < capture->scene.instances.size(); ++i) capture->scene.instances[i].data.SetObjectId(TILE_PICK_ID|tile.tile.base());
+			if (reported.insert({tile.tile.base(),selected.requested_offset,climate}).second) Debug(driver,1,
+				"OpenTT3D: live voxel flat river bank {} climate {} source {} captured at {},{} with independent original ground/water",
+				selected.requested_offset,climate,image,TileX(tile.tile),TileY(tile.tile));
+			return;
+		}
+	}
 	if (capture->river_ground) {
 		auto selected = *capture->river_ground; capture->river_ground.reset();
 		/* Observe the original selector once. Complete source pixels/registration,

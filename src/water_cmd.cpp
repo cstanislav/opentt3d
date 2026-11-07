@@ -736,7 +736,9 @@ static void DrawWaterSprite(SpriteID base, uint offset, CanalFeature feature, Ti
 		offset = GetCanalSpriteOffset(feature, tile, offset);
 	}
 	if (feature == CF_RIVER_EDGE && Renderer3D::IsCapturing()) {
-		Renderer3D::ObserveRiverSelector(tile,{feature,base,base+offset,requested_offset,offset,_water_feature[feature].flags,offset_callback,false});
+		const Renderer3D::RiverSourceSelector selected{feature,base,base+offset,requested_offset,offset,_water_feature[feature].flags,offset_callback,false};
+		Renderer3D::CaptureOriginalRiverSelector(tile,selected);
+		Renderer3D::ObserveRiverSelector(tile,selected);
 	}
 	DrawGroundSprite(base + offset, PAL_NONE);
 }
