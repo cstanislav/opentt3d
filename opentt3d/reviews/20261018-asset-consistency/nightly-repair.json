@@ -46,5 +46,30 @@
     "reason": "hosted runners with only OpenGFX 0.6.0 hung in the upstream regression tests",
     "verification_run": 39170335433,
     "green_run_claimed": false
-  }
+  },
+  "green_verification": {
+    "verified_utc": "2026-11-07T19:11:25.121011+00:00",
+    "run": 42402873295,
+    "head_sha": "0d505c961481be544cc681addd77e55c01fd364c",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/cstanislav/opentt3d/actions/runs/42402873295",
+    "jobs": {
+      "Mac OS (x64)": "success",
+      "MinGW (x86_64)": "success",
+      "Check Annotations": "success"
+    },
+    "fixes": [
+      "Windows checkout long paths",
+      "macOS deployment target 10.15",
+      "retired MINGW32 matrix",
+      "per-test timeout 300s",
+      "pinned OpenGFX2 in build/baseset for regression tests",
+      "removed all compiler annotations"
+    ],
+    "nightly_pipeline_works": true,
+    "full_objective_met": false,
+    "quality_approvals": 0
+  },
+  "green_run_claimed": true
 }

@@ -54,8 +54,9 @@ installer assets and the SDL icon header.
 
 The workflows now enable `core.longpaths` before Windows checkout and set the
 macOS target to 10.15. Four regression tests assert ordering, the target and the
-absence of sparse/excluding workarounds. The failed run is retained; no green
-nightly run is claimed until GitHub completes one.
+absence of sparse/excluding workarounds. The first verification attempts are retained. The repaired workflow now passes run
+[42402873295](https://github.com/cstanislav/opentt3d/actions/runs/42402873295):
+both platform jobs and the annotation check are green. See`nightly-run.json`.
 
 ## Full-catalogue visual sweep
 
