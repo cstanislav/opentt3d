@@ -32,6 +32,9 @@ void CaptureOriginalRiverSelector(TileIndex tile, const RiverSourceSelector &sel
 /** Original callbacks/draws run first. Replace both walls only after retaining
  * their already-selected source owners and proving the complete original family. */
 bool BeginVoxelLockCapture(const TileInfo &tile, SpriteID base);
+/** Draw the complete authored lock tile from map ownership, independent of
+ * source sprite culling/custom family selection. */
+bool CaptureVoxelLockTile(const TileInfo &tile);
 void FinishVoxelLockCapture();
 /** Original base-set canal artwork can resolve to dynamic NewGRF sprite IDs. */
 inline std::optional<unsigned> SelectCanalDikeVariant(SpriteID image, SpriteID base, bool original_source, bool complete_family)

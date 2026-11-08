@@ -106,6 +106,7 @@ struct CaptureState {
 	std::array<std::pair<uint32_t,bool>,64> crossing_observations{};
 	unsigned crossing_observation_count = 0;
 	std::set<TileIndex> captured_tunnel_ends;
+	std::set<TileIndex> modelled_waypoints;
 	struct TunnelCut { TunnelKind kind; unsigned direction; int floor; };
 	std::map<TileIndex,TunnelCut> tunnel_cuts;
 	bool diagnostic = false;
@@ -273,6 +274,30 @@ void CaptureOriginalRiverSelector(TileIndex tile, const RiverSourceSelector &sel
 	else if (selector.feature == CF_RIVER_EDGE) capture->river_edge = selector;
 }
 
+bool CaptureVoxelLockTile(const TileInfo &tile)
+{
+	if (!capture || capture->tile != &tile || capture->vehicle != nullptr || capture->lock) return false;
+	if (!IsValidTile(tile.tile) || !IsTileType(tile.tile,MP_WATER) || !IsLock(tile.tile)) return false;
+	const unsigned part = to_underlying(GetLockPart(tile.tile));
+	const unsigned direction = to_underlying(GetLockDirection(tile.tile));
+	const unsigned climate = to_underlying(_settings_game.game_creation.landscape);
+	const unsigned elevation = tile.z > (part == 2 ? 8u : 0u) ? 1u : 0u;
+	std::array<unsigned,2> owners{};
+	for (unsigned face = 0; face < 2; ++face) {
+		auto owner = OriginalLockWallOrdinal(part,direction,face,elevation);
+		if (!owner || !HasVoxelAsset("lock_walls",*owner,climate)) return false;
+		owners[face] = *owner;
+	}
+	const bool along_x = direction == 0 || direction == 2;
+	ObjectTag tag{capture->scene.vertices.size(),TILE_PICK_ID | tile.tile.base()};
+	for (unsigned face = 0; face < 2; ++face) {
+		const Vec3 origin{static_cast<float>(TileX(tile.tile) + (along_x ? 0 : face * 15)),
+			static_cast<float>(TileY(tile.tile) + (along_x ? face * 15 : 0)), TerrainZ(tile.z)};
+		if (!DrawVoxelLockWall(capture->scene,owners[face],climate,origin,PAL_NONE,1)) return false;
+	}
+	return true;
+}
+
 bool BeginVoxelLockCapture(const TileInfo &tile, SpriteID base)
 {
 	if (!capture || capture->tile != &tile || capture->vehicle != nullptr || capture->lock ||
@@ -303,28 +328,49 @@ void FinishVoxelLockCapture()
 	 * Every failure leaves their geometry, ordering and parent metadata intact. */
 	auto pending = std::move(*capture->lock);
 	capture->lock.reset();
-	if (capture->tile == nullptr || capture->tile->tile != pending.tile || pending.count != 2 ||
-		!pending.walls[0].valid || !pending.walls[1].valid) return;
-	auto owners = SelectOriginalLockWalls(pending.part,pending.direction,pending.base,
-		{pending.walls[0].image,pending.walls[1].image},true,true);
-	if (!owners) return;
+	if (capture->tile == nullptr || capture->tile->tile != pending.tile) return;
+	/* At oblique camera angles upstream culls one wall face before the second
+	 * source callback. The original two-face selection is still preferred, but
+	 * the complete 3D owner family lets us render both faces from the map owner
+	 * instead of leaving the original vertical reference plane in the world. */
+	std::array<unsigned,2> owners{};
+	bool selected = pending.count == 2 && pending.walls[0].valid && pending.walls[1].valid;
+	if (selected) {
+		auto resolved = SelectOriginalLockWalls(pending.part,pending.direction,pending.base,
+			{pending.walls[0].image,pending.walls[1].image},true,true);
+		if (resolved) owners = *resolved; else selected = false;
+	}
+	if (!selected) {
+		const unsigned elevation = pending.selected_base >= pending.base + 24 ? 1u : 0u;
+		for (unsigned face = 0; face < 2; ++face) {
+			auto owner = OriginalLockWallOrdinal(pending.part,pending.direction,face,elevation);
+			if (!owner || !HasVoxelAsset("lock_walls",*owner,pending.climate)) return;
+			owners[face] = *owner;
+		}
+	}
 	capture->scene.vertices.resize(pending.vertices);
 	capture->scene.instances.resize(pending.instances);
 	capture->reference_billboards = pending.billboards;
 	ObjectTag tag{pending.vertices,TILE_PICK_ID | pending.tile.base()};
+	const bool along_x = pending.direction == 0 || pending.direction == 2;
 	for (unsigned face = 0; face < 2; ++face) {
 		const auto &wall = pending.walls[face];
+		const Vec3 fallback_origin{static_cast<float>(TileX(pending.tile) + (along_x ? 0 : face * 15)),
+			static_cast<float>(TileY(pending.tile) + (along_x ? face * 15 : 0)), TerrainZ(GetTileZ(pending.tile))};
+		const Vec3 origin = selected && wall.valid ? wall.origin : fallback_origin;
+		const PaletteID palette = selected && wall.valid ? wall.palette : PAL_NONE;
+		const float opacity = selected && wall.valid ? wall.opacity : 1.0f;
 		capture->parent_mesh_begin = capture->parent_mesh_end = capture->scene.vertices.size();
 		capture->parent_instance_begin = capture->scene.instances.size();
-		if (!DrawVoxelLockWall(capture->scene,(*owners)[face],pending.climate,wall.origin,wall.palette,wall.opacity)) throw std::runtime_error("Complete original lock family lost a wall owner");
+		if (!DrawVoxelLockWall(capture->scene,owners[face],pending.climate,origin,palette,opacity)) throw std::runtime_error("Complete original lock family lost a wall owner");
 		capture->parent_instance_end = capture->scene.instances.size();
 		capture->parent_culled = capture->parent_instance_begin == capture->parent_instance_end;
-		capture->parent_offsets_pending = true; capture->parent_palette = wall.palette;
+		capture->parent_offsets_pending = true; capture->parent_palette = palette;
 		if (!capture->diagnostic) {
 			static std::set<std::array<unsigned,3>> reported;
-			if (reported.insert({pending.tile.base(),(*owners)[face],pending.climate}).second) Debug(driver,1,
+			if (reported.insert({pending.tile.base(),owners[face],pending.climate}).second) Debug(driver,1,
 				"OpenTT3D: live voxel lock wall {} part {} direction {} face {} climate {} base {} family {} source {} captured at {},{} origin {:.9g},{:.9g},{:.9g} opacity {:.9g} with independent original water ground",
-				(*owners)[face],pending.part,pending.direction,face,pending.climate,pending.selected_base,pending.base,wall.image,TileX(pending.tile),TileY(pending.tile),wall.origin.x,wall.origin.y,wall.origin.z,wall.opacity);
+				owners[face],pending.part,pending.direction,face,pending.climate,pending.selected_base,pending.base,wall.image,TileX(pending.tile),TileY(pending.tile),origin.x,origin.y,origin.z,opacity);
 		}
 	}
 }
@@ -1970,6 +2016,38 @@ void BeginVoxelHelicopterRotorCheck(unsigned engine)
 	Debug(driver,1,"OpenTT3D: observing original stopped/moving rotor states on voxel helicopter {}",engine);
 }
 
+static void ColoredBox(Scene &scene, Vec3 low, Vec3 high, Rgb colour)
+{
+	const Vec3 p000{low.x,low.y,low.z}, p100{high.x,low.y,low.z}, p110{high.x,high.y,low.z}, p010{low.x,high.y,low.z};
+	const Vec3 p001{low.x,low.y,high.z}, p101{high.x,low.y,high.z}, p111{high.x,high.y,high.z}, p011{low.x,high.y,high.z};
+	scene.Quad(p000,p100,p110,p010,colour);
+	scene.Quad(p001,p011,p111,p101,colour);
+	scene.Quad(p000,p001,p101,p100,colour);
+	scene.Quad(p010,p110,p111,p011,colour);
+	scene.Quad(p000,p010,p011,p001,colour);
+	scene.Quad(p100,p101,p111,p110,colour);
+}
+
+/** Road waypoints are ordinary roadside signage, not buildings. Their original
+ * source is two overlaid station sprites; a post and two-sided sign board keep
+ * the marker in world space at every camera rotation. */
+static void DrawRoadWaypointSign(Scene &scene, TileIndex tile)
+{
+	const float x = static_cast<float>(TileX(tile)), y = static_cast<float>(TileY(tile));
+	const float z = TerrainZ(GetTileZ(tile));
+	const Roadside roadside = GetRoadWaypointRoadside(tile);
+	const float side = (to_underlying(roadside) & 1) ? 2.0f : 13.0f;
+	const Vec3 low{x + side, y + 7.0f, z};
+	const Vec3 post_high{x + side + 1.2f, y + 8.2f, z + 10.0f};
+	ColoredBox(scene,low,post_high,Rgb{0.40f,0.40f,0.42f});
+	const Vec3 board_low{x + side - 2.0f, y + 7.2f, z + 8.0f};
+	const Vec3 board_high{x + side + 3.2f, y + 8.0f, z + 13.0f};
+	ColoredBox(scene,board_low,board_high,Rgb{0.12f,0.30f,0.72f});
+	const Vec3 inset_low{x + side - 1.3f, y + 7.0f, z + 9.0f};
+	const Vec3 inset_high{x + side + 2.5f, y + 7.2f, z + 12.0f};
+	ColoredBox(scene,inset_low,inset_high,Rgb{0.92f,0.92f,0.95f});
+}
+
 void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const SpriteBounds &bounds, bool transparent, const SubSprite *sub)
 {
 	if (!capture) return;
@@ -2422,6 +2500,22 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 			unsigned base = (image&SPRITE_MASK)-tree_stage;
 			if (reported.emplace(base,tree_stage).second) Debug(driver,1,"OpenTT3D: live projected tree {} stage {} captured at {},{}",base,tree_stage,TileX(capture->tile->tile),TileY(capture->tile->tile));
 		}
+		return;
+	}
+	if (capture->tile != nullptr && IsTileType(capture->tile->tile,MP_ROAD) && capture->tile->tileh != SLOPE_FLAT && capture->vehicle == nullptr && sub == nullptr) {
+		/* A sloped road's source sprite is a ground-conforming surface. Use the
+		 * same terrain mesh path as other ground layers instead of a vertical
+		 * reference plane that becomes edge-on when the camera turns. */
+		CaptureGround(image,palette,capture->tile->x,capture->tile->y,capture->tile->z,*capture->tile,nullptr,0,0);
+		capture->parent_instance_end = capture->scene.instances.size();
+		capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
+		return;
+	}
+	if (capture->tile != nullptr && IsTileType(capture->tile->tile,MP_STATION) && GetStationType(capture->tile->tile) == StationType::RoadWaypoint) {
+		if (capture->modelled_waypoints.insert(capture->tile->tile).second) DrawRoadWaypointSign(capture->scene,capture->tile->tile);
+		capture->parent_mesh_end = capture->scene.vertices.size();
+		capture->parent_instance_end = capture->scene.instances.size();
+		capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin && capture->parent_mesh_end == capture->parent_mesh_begin;
 		return;
 	}
 	ReferenceSprite(texture, origin, transparent ? 0.38f : 1.0f);
