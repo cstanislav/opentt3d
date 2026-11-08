@@ -4,7 +4,9 @@
 
 The active target is **every runtime asset genuinely 3D, detailed and consistent,
 with every model rated 1–10 and no model below9/10**. This supersedes the earlier
-8/10 wording retained in historical sections below. It is **not met**.
+8/10 wording retained in historical sections below. The model-ledger objective
+is met; independent natural-selection, release, performance and platform gates
+remain open.
 
 Concrete progress: drive-through bus/truck lanes match adjoining road asphalt;
 twelve canal dikes are six-unit stepped stone quays with the original ten-unit
@@ -13,13 +15,13 @@ is an orange cube with OPEN/TT3D ribbons; nightly Windows checkout/Mac filesyste
 targets are repaired; public docs have fresh screenshots and no hand-crafting
 language. Asset280/harness122/native219 tests and the presentation boundary pass.
 
-The ledger has2,871 models at9/10 after the automated authored/procedural runtime
-sweep, the corrected48-model/192-owner lock-wall acceptance, the125 intentional
+The ledger has2,886 models at9/10 after the automated authored/procedural runtime
+sweep, the disaster body/shadow acceptance, the corrected48-model/192-owner lock-wall acceptance, the125 intentional
 native water/terrain surfaces, the final20 native river-ground base surfaces, the
 joined larger-HQ world acceptance, the flat-bank world/source acceptance and the
 forced river-relief world acceptance. No source-layer fallback rows remain and
 **every runtime-required row is now at9/10**. The canonical `MODEL_RATINGS.csv`
-now contains2,871 runtime rows, all9/10; the183 retained profiles/legacy
+now contains2,886 runtime rows, all9/10; the183 retained profiles/legacy
 references are preserved separately in `RETAINED_REFERENCE_RATINGS.csv` at3/10.
 They are not runtime-bound. The48
 lock-wall models pass all six checks from source/corrected galleries and actual
@@ -36,8 +38,12 @@ forced actual river world, source sheets and the complete bound family. The HQ
 stages and river relief were forced in isolated fixtures; natural company-score
 selection, natural custom river-source selection, absence and phase gates remain
 open. The audit's remaining coverage gap is the uncatalogued disaster/world-sprite
-inventory; disaster vehicles are still rendered from their original2D sprites and
-are not in the authored model ledger. No completion claim is made. The remaining families still need the same treatment. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
+inventory. That gap is now covered by fifteen authored 3D disaster body/shadow
+volumes and23 source-sprite bindings, with all fifteen subtypes observed in one
+actual saved Vulkan world. The canonical audit now reports an empty coverage-gap
+list and every runtime-required row at9/10. No release-completion claim is made:
+natural-selection, LOD/picking/ship-clearance, sustained performance and platform
+gates remain. Nightly run42402873295 is now green (macOS, MinGW and annotation check). Upstream stable is15.3; 16.0-RC1 is the newest prerelease but is not
 merged. `.42` remains recommended. Continue individual modelling, source/world/
 state/LOD/picking/clearance reviews, performance and platform work; do not promote
 a score without the six gates and no open defects.

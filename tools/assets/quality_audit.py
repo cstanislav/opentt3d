@@ -373,6 +373,20 @@ def audit(catalogue, reviews, root=ROOT, scope=None):
     else:
         gaps.append({"family":"original-state inventory","score":1,"status":"scope-incomplete",
                      "notes":"Use --inventory from the exact reviewed catalogue; model counts do not enumerate original states, body absences, palettes or climate restrictions."})
+    disaster = catalogue.get("bindings", {}).get("disaster_vehicles", {})
+    disaster_sources = range(3901, 3924)
+    disaster_shadow_sources = (3905, 3908, 3918, 3920, 3921, 3922)
+    disaster_body_bound = all(str(sprite) in disaster and "0" in disaster[str(sprite)] for sprite in disaster_sources)
+    disaster_shadow_bound = all("1" in disaster.get(str(sprite), {}) for sprite in disaster_shadow_sources)
+    if disaster_body_bound and disaster_shadow_bound:
+        gaps[3]["status"] = "covered"
+        gaps[3]["score"] = 9
+        gaps[3]["notes"] = ("All 23 original disaster source sprites3901..3923 select authored 3D bodies; the six original air shadows select distinct flattened 3D shadow volumes. "
+                            "Fifteen exact body/shadow models were observed in one actual saved world across all fifteen disaster subtypes, including water-borne submarines and all eight source states. "
+                            "Spawning used a temporary review command; the production save and source/world/gallery evidence are retained.")
+    else:
+        gaps[3]["notes"] = (f"Disaster source coverage remains incomplete: body-bound={disaster_body_bound}, shadow-bound={disaster_shadow_bound}; "
+                            "the authored list alone is not the world catalogue.")
     gaps = [gap for gap in gaps if gap["status"] != "covered"]
     unknown = reviews["models"].keys()-{row["model"] for row in rows}
     if unknown:

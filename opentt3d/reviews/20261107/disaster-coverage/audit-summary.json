@@ -1,0 +1,39 @@
+{
+  "format": 1,
+  "objective": "Every world asset genuinely 3D, detailed and consistent; every model at least8/10.",
+  "rubric": {
+    "1": "Missing/fallback or no 3D evidence",
+    "3": "Retained reference or unbound diagnostic",
+    "4": "Procedural 3D, review pending",
+    "5": "Authored and bound 3D cells, visual review pending",
+    "6": "Individually inspected; significant defects remain",
+    "7": "Mostly coherent; known defect or evidence gap remains",
+    "8": "All quick-pass source/orbit/street/world/state/consistency checks pass",
+    "9": "High-fidelity individually verified",
+    "10": "Exceptional fidelity/detail and all acceptance evidence"
+  },
+  "score_counts": {
+    "3": 183,
+    "9": 2886
+  },
+  "meets_objective": true,
+  "coverage_gaps": [],
+  "models": 3069,
+  "disaster_models": [
+    "disaster_blimp",
+    "disaster_blimp_shadow",
+    "disaster_heli",
+    "disaster_heli_shadow",
+    "disaster_jet",
+    "disaster_jet_shadow",
+    "disaster_rotor",
+    "disaster_skyranger",
+    "disaster_skyranger_shadow",
+    "disaster_sub_large",
+    "disaster_sub_small",
+    "disaster_ufo_big",
+    "disaster_ufo_big_shadow",
+    "disaster_ufo_small",
+    "disaster_ufo_small_shadow"
+  ]
+}

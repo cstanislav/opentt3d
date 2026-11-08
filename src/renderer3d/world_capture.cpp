@@ -2132,6 +2132,20 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 			}
 			return;
 		}
+		if (vehicle.type == VEH_DISASTER && sub == nullptr) {
+			VehiclePose pose = SmoothVehiclePose(vehicle);
+			float heading = (5.0f - pose.heading * 2) * std::numbers::pi_v<float> / 4;
+			bool disaster_shadow = vehicle.vehstatus.Test(VehState::Shadow);
+			if (DrawVoxelDisaster(capture->scene,image&SPRITE_MASK,pose.position,heading,palette,disaster_shadow ? 0.45f : 1, disaster_shadow)) {
+				capture->parent_instance_end = capture->scene.instances.size();
+				capture->parent_culled = capture->parent_instance_end == capture->parent_instance_begin;
+				if (!capture->diagnostic && !capture->parent_culled) {
+					static std::set<std::tuple<unsigned,SpriteID,unsigned>> reported;
+					if (reported.emplace(vehicle.index.base(),image&SPRITE_MASK,disaster_shadow).second) Debug(driver,1,"OpenTT3D: live voxel disaster {} sprite {} shadow {} captured at {},{},{}",vehicle.subtype,image&SPRITE_MASK,disaster_shadow,vehicle.x_pos,vehicle.y_pos,vehicle.z_pos);
+				}
+				return;
+			}
+		}
 		if (shadow || rotor || vehicle.type == VEH_EFFECT) {
 			SpriteTexture texture = Textures().Get(image, palette, TextureZoom(origin));
 			PlanarVehicleMaterial(texture, origin, shadow, vehicle.type == VEH_EFFECT);

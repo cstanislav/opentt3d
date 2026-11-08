@@ -23,14 +23,14 @@ engine's path.
 > performance work are still in progress; this README does not claim that every
 > model has reached its final detail level. The immutable
 > [`.42` release](https://github.com/cstanislav/opentt3d/releases/tag/opentt3d-dev-20261003.42)
-> is the recommended desktop checkpoint. 2,871 runtime entries have passed
-> individual 9/10 reviews; the canonical runtime ledger has 2,871 entries, all
+> is the recommended desktop checkpoint. 2,886 runtime entries have passed
+> individual 9/10 reviews; the canonical runtime ledger has 2,886 entries, all
 > at 9/10. The 183 retained profiles/legacy references are kept separately and
-> are not runtime-bound. Disaster vehicles still use original 2D sprites and are
-> the remaining uncatalogued runtime asset gap. No source-layer fallback rows
-> remain. A `.45` development draft has also been packaged
-> for maintainer review and remains unpublished pending full independent native
-> checks.
+> are not runtime-bound. The fifteen original disaster subtypes and their 23
+> source sprites now use authored 3D body and shadow volumes with actual saved-
+> world evidence. No source-layer fallback rows remain. A `.45` development draft
+> has also been packaged for maintainer review and remains unpublished pending
+> full independent native checks.
 
 ## Download and play
 

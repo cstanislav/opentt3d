@@ -8,6 +8,8 @@ namespace Renderer3D {
 bool HasVoxelAsset(std::string_view category, unsigned identifier, unsigned state);
 /** Original48 rear/front/part/direction/elevation owners, climate states0..3. */
 bool DrawVoxelLockWall(Scene &scene, unsigned ordinal, unsigned climate, Vec3 origin, PaletteID palette, float opacity = 1);
+/** Original disaster vehicle sprites3901..3923 at their own heading/palette. */
+bool DrawVoxelDisaster(Scene &scene, SpriteID sprite, Vec3 origin, float heading, PaletteID palette, float opacity = 1, bool shadow = false);
 /** Diagnostic source-bound river relief uses slope bits3/6/9/12 and climates0..3.
  * Caller must independently prove original family/source and separate water. */
 bool DrawVoxelRiverRelief(Scene &scene, unsigned slope, unsigned climate, Vec3 origin, PaletteID palette = 0);

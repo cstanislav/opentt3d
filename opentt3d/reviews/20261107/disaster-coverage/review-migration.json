@@ -1,0 +1,15 @@
+{
+  "format": 1,
+  "source_path": "assets/3d/voxels.json",
+  "old_source_evidence_hashes": [
+    "3fee002d1760368c0cc75c428866e15d988c86ba9573008638964377e7a93aa9"
+  ],
+  "new_source_sha256": "1590d18346601b7601859138b9fb035169b288b0e000ae9b9894c63eed564a66",
+  "existing_authored_models": 2019,
+  "existing_changed_fingerprints": 0,
+  "new_disaster_models": 15,
+  "stale_review_rows_refreshed": 237,
+  "stale_evidence_rows_refreshed": 888,
+  "renderer_change": "DrawVoxelDisaster plus disaster coverage validation only; no existing authored model fingerprint changed.",
+  "native_evidence": "disaster-native-final: 15 live DrawVoxelDisaster captures, actual synchronous save, world atlas and tile-picking checks."
+}

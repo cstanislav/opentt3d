@@ -45,14 +45,17 @@ flat CF_RIVER_EDGE bank models and48 instances were then accepted at9/10 from
 all twelve native offset observations and natural source fixtures. The8
 river-relief models and192 conditional sloped-bank instances were then accepted
 at9/10 from a forced actual river world, source sheets and the complete bound
-family. The canonical `MODEL_RATINGS.csv` now contains2,871 runtime rows, all at
+family. The canonical `MODEL_RATINGS.csv` now contains2,886 runtime rows, all at
 9/10; the183 retained profiles/legacy assemblies are preserved separately in
-`RETAINED_REFERENCE_RATINGS.csv` at3/10, not runtime-bound.
-Natural company-score selection, natural custom river-source selection, absence,
-phase/custom-family, LOD/picking/ship-clearance and performance gates remain
-separate. The audit's remaining coverage gap is the uncatalogued disaster/world-
-sprite inventory; disaster vehicles still use original2D sprites and are not in
-the authored model ledger.
+`RETAINED_REFERENCE_RATINGS.csv` at3/10, not runtime-bound. The fifteen original
+disaster subtypes and23 source sprites were then accepted at9/10 from authored
+3D body/shadow volumes, source sprite evidence, an eight-view gallery and one
+actual saved Vulkan world containing all fifteen subtypes, both submarines on
+water, four rotor frames and six shadow states. The audit's coverage-gap list is
+empty and every runtime-required row is at9/10. Natural company-score selection,
+natural custom river-source selection, absence, phase/custom-family,
+LOD/picking/ship-clearance, performance and independent release gates remain
+separate.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation

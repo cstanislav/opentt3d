@@ -1,0 +1,316 @@
+{
+  "disaster_blimp_shadow": {
+    "size": [
+      76,
+      24,
+      2
+    ],
+    "origin": [
+      -19,
+      -6,
+      0
+    ],
+    "cell_size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "ops": [
+      [
+        "ellipsoid",
+        "disaster_tire",
+        2,
+        4,
+        0,
+        74,
+        20,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        62,
+        10,
+        0,
+        74,
+        14,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        62,
+        2,
+        0,
+        74,
+        22,
+        2
+      ]
+    ]
+  },
+  "disaster_ufo_small_shadow": {
+    "size": [
+      22,
+      14,
+      2
+    ],
+    "origin": [
+      -5,
+      -3,
+      0
+    ],
+    "cell_size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "ops": [
+      [
+        "ellipsoid",
+        "disaster_tire",
+        0,
+        0,
+        0,
+        22,
+        14,
+        2
+      ]
+    ]
+  },
+  "disaster_ufo_big_shadow": {
+    "size": [
+      36,
+      22,
+      2
+    ],
+    "origin": [
+      -9,
+      -5,
+      0
+    ],
+    "cell_size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "ops": [
+      [
+        "ellipsoid",
+        "disaster_tire",
+        0,
+        0,
+        0,
+        36,
+        22,
+        2
+      ]
+    ]
+  },
+  "disaster_jet_shadow": {
+    "size": [
+      36,
+      20,
+      2
+    ],
+    "origin": [
+      -9,
+      -5,
+      0
+    ],
+    "cell_size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "ops": [
+      [
+        "ellipsoid",
+        "disaster_tire",
+        2,
+        7,
+        0,
+        34,
+        13,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        8,
+        2,
+        0,
+        28,
+        8,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        8,
+        12,
+        0,
+        28,
+        18,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        24,
+        2,
+        0,
+        32,
+        8,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        24,
+        12,
+        0,
+        32,
+        18,
+        2
+      ]
+    ]
+  },
+  "disaster_heli_shadow": {
+    "size": [
+      26,
+      24,
+      2
+    ],
+    "origin": [
+      -6,
+      -6,
+      0
+    ],
+    "cell_size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "ops": [
+      [
+        "ellipsoid",
+        "disaster_tire",
+        8,
+        9,
+        0,
+        22,
+        15,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        0,
+        10,
+        0,
+        10,
+        14,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        12,
+        4,
+        0,
+        17,
+        8,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        12,
+        16,
+        0,
+        17,
+        20,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        10,
+        10,
+        0,
+        16,
+        14,
+        2
+      ]
+    ]
+  },
+  "disaster_skyranger_shadow": {
+    "size": [
+      32,
+      20,
+      2
+    ],
+    "origin": [
+      -8,
+      -5,
+      0
+    ],
+    "cell_size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "ops": [
+      [
+        "ellipsoid",
+        "disaster_tire",
+        3,
+        7,
+        0,
+        30,
+        13,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        7,
+        3,
+        0,
+        22,
+        7,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        7,
+        13,
+        0,
+        22,
+        17,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        23,
+        2,
+        0,
+        30,
+        8,
+        2
+      ],
+      [
+        "box",
+        "disaster_tire",
+        23,
+        12,
+        0,
+        30,
+        18,
+        2
+      ]
+    ]
+  }
+}

@@ -130,6 +130,7 @@ const Catalogue &Models()
 			if (category == "lock_walls" && (std::stoul(id) >= 48 || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original lock owner/climate state");
 			if (category == "river_relief" && (!IsOriginalRiverReliefSlope(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original river relief slope/climate state");
 			if (category == "river_bank" && (!IsOriginalRiverBankOffset(std::stoul(id)) || std::stoul(state) >= 4)) throw std::runtime_error("Invalid original flat river bank offset/climate state");
+			if (category == "disaster_vehicles" && (std::stoul(id) < 3901 || std::stoul(id) > 3923 || std::stoul(state) > 1)) throw std::runtime_error("Invalid original disaster vehicle sprite/body-shadow state");
 			if ((category == "objects" || category == "object_ground") && (std::stoul(id) >= 24 || std::stoul(state) >= 4 ||
 					!OriginalObjectModelClimateSupported(std::stoul(id) < 4 ? std::stoul(id) : 4,std::stoul(state)) ||
 					(category == "objects" && std::stoul(id) >= 4 && (std::stoul(id) < 12 || (std::stoul(id)-4)%4 == 3)) ||
@@ -139,7 +140,7 @@ const Catalogue &Models()
 			/* Original HQ layers partition one compound across independent source
 			 * owners. Coarse blocks may reduce paint, but must never inflate across
 			 * those boundaries or fill the adjoining owner's air/openings. */
-			if (((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) || category == "lock_walls" || category == "river_relief" || category == "river_bank") result.models.at(model).lod_preserve_occupancy = true;
+			if (((category == "object_ground" || category == "objects") && std::stoul(id) >= 4) || category == "lock_walls" || category == "river_relief" || category == "river_bank" || category == "disaster_vehicles") result.models.at(model).lod_preserve_occupancy = true;
 			if (category == "trees") {
 				unsigned base = std::stoul(id), stage = std::stoul(state);
 				if (base >= 1576 && base <= 2003 && (base-1576)%7 == 0 && stage < 7) result.tree_models[base-1576+stage] = &result.models.at(model);
@@ -253,6 +254,21 @@ bool DrawVoxelLockWall(Scene &scene, unsigned ordinal, unsigned climate, Vec3 or
 		model = supported->second.get();
 	}
 	AddVoxelInstance(scene,*model,Material(origin,palette,opacity));
+	return true;
+}
+
+bool DrawVoxelDisaster(Scene &scene, SpriteID sprite, Vec3 origin, float heading, PaletteID palette, float opacity, bool shadow)
+{
+	if (sprite < SPR_ROTOR_STOPPED || sprite > SPR_AH_64A_FIRING) return false;
+	const auto &catalogue = Models();
+	auto binding = catalogue.bindings.find({"disaster_vehicles",sprite,shadow ? 1u : 0u});
+	if (binding == catalogue.bindings.end()) return false;
+	const VoxelModel &model = catalogue.models.at(binding->second);
+	float radius = std::max({std::abs(model.surface.low.x),std::abs(model.surface.low.y),std::abs(model.surface.high.x),std::abs(model.surface.high.y)})*1.42f;
+	if (scene.visibility && !scene.visibility->Intersects(origin+Vec3{-radius,-radius,model.surface.low.z},origin+Vec3{radius,radius,model.surface.high.z})) return true;
+	auto data = Material(origin,palette,opacity);
+	data.mirror_layer_heading[3] = heading;
+	AddVoxelInstance(scene,model,data);
 	return true;
 }
 
