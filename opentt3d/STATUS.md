@@ -45,14 +45,17 @@ flat CF_RIVER_EDGE bank models and48 instances were then accepted at9/10 from
 all twelve native offset observations and natural source fixtures. The8
 river-relief models and192 conditional sloped-bank instances were then accepted
 at9/10 from a forced actual river world, source sheets and the complete bound
-family. The canonical `MODEL_RATINGS.csv` now contains2,886 runtime rows, all at
+family. The canonical `MODEL_RATINGS.csv` now contains2,887 runtime rows, all at
 9/10; the183 retained profiles/legacy assemblies are preserved separately in
 `RETAINED_REFERENCE_RATINGS.csv` at3/10, not runtime-bound. The fifteen original
 disaster subtypes and23 source sprites were then accepted at9/10 from authored
 3D body/shadow volumes, source sprite evidence, an eight-view gallery and one
 actual saved Vulkan world containing all fifteen subtypes, both submarines on
 water, four rotor frames and six shadow states. The audit's coverage-gap list is
-empty and every runtime-required row is at9/10. Natural company-score selection,
+empty and every runtime-required row is at9/10. The actual title-world Vulkan
+capture now reports zero unmodelled reference sprites: road slopes/road waypoint
+signs use world geometry, locks use the complete map-owned wall family, and the
+Toyland factory144 completed state has an authored 3D body. Natural company-score selection,
 natural custom river-source selection, absence, phase/custom-family,
 LOD/picking/ship-clearance, performance and independent release gates remain
 separate.

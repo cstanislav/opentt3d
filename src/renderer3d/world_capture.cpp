@@ -2502,7 +2502,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 		}
 		return;
 	}
-	if (capture->tile != nullptr && IsTileType(capture->tile->tile,MP_ROAD) && capture->tile->tileh != SLOPE_FLAT && capture->vehicle == nullptr && sub == nullptr) {
+	if (capture->tile != nullptr && IsTileType(capture->tile->tile,MP_ROAD) && capture->vehicle == nullptr && sub == nullptr) {
 		/* A sloped road's source sprite is a ground-conforming surface. Use the
 		 * same terrain mesh path as other ground layers instead of a vertical
 		 * reference plane that becomes edge-on when the camera turns. */

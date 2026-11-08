@@ -15,13 +15,13 @@ is an orange cube with OPEN/TT3D ribbons; nightly Windows checkout/Mac filesyste
 targets are repaired; public docs have fresh screenshots and no hand-crafting
 language. Asset280/harness122/native219 tests and the presentation boundary pass.
 
-The ledger has2,886 models at9/10 after the automated authored/procedural runtime
+The ledger has2,887 models at9/10 after the automated authored/procedural runtime
 sweep, the disaster body/shadow acceptance, the corrected48-model/192-owner lock-wall acceptance, the125 intentional
 native water/terrain surfaces, the final20 native river-ground base surfaces, the
 joined larger-HQ world acceptance, the flat-bank world/source acceptance and the
 forced river-relief world acceptance. No source-layer fallback rows remain and
 **every runtime-required row is now at9/10**. The canonical `MODEL_RATINGS.csv`
-now contains2,886 runtime rows, all9/10; the183 retained profiles/legacy
+now contains2,887 runtime rows, all9/10; the183 retained profiles/legacy
 references are preserved separately in `RETAINED_REFERENCE_RATINGS.csv` at3/10.
 They are not runtime-bound. The48
 lock-wall models pass all six checks from source/corrected galleries and actual

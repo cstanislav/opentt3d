@@ -1,0 +1,43 @@
+{
+  "renderer": "3d",
+  "rotation": 1,
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "screenshot": "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/unmodelled-title10/screenshot/smoke.png",
+  "image_size": [
+    1600,
+    1200
+  ],
+  "command": [
+    "/Users/stanislav/Projects/opentt3d/build-macos/opentt3d",
+    "-c",
+    "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/unmodelled-title10/openttd.cfg",
+    "-x",
+    "-X",
+    "-v",
+    "cocoa-vulkan",
+    "-b",
+    "32bpp-optimized",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-r",
+    "800x600",
+    "-d",
+    "driver=2,console=1",
+    "-G",
+    "314159",
+    "-t",
+    "1950",
+    "-g",
+    "/private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opencode/unmodelled-title10/input.sav"
+  ],
+  "pid": 2361,
+  "background": true
+}
