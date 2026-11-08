@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "survey": "natural original river map generation",
+  "climate": "temperate",
+  "seed": 271828,
+  "map": {
+    "width": 128,
+    "height": 128,
+    "river_tiles": 380
+  },
+  "observed_slopes": [
+    0,
+    3,
+    6,
+    9,
+    12
+  ],
+  "read_only_tile_queries": true,
+  "approved": false,
+  "limits": [
+    "natural original river generation, not a custom NewGRF river source",
+    "zero-feature absence and animated phase/custom-family states remain separate",
+    "survey is not visual/terrain-support/ship-clearance acceptance"
+  ]
+}
