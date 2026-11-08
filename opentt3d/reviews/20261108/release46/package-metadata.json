@@ -1,0 +1,14 @@
+{
+  "format": 1,
+  "tag": "opentt3d-dev-20261108.46",
+  "commit": "0128cbdc8",
+  "platform": "macos-arm64",
+  "runtime_ledger": {"9": 2886, "retained_references_3": 183, "coverage_gaps": 0},
+  "package": {
+    "dmg_sha256": "0d424128b33fe54fdb9c358653d0d52abcb744df4d08f63ec2d6bef044b43538",
+    "zip_sha256": "0b944f132949e6a85e4236cdf8296edc8b430961b6766ccb3469a9f469b7cdc4"
+  },
+  "smoke": {"vulkan": true, "opengl": true},
+  "published": false,
+  "independent_hosted_matrix": false
+}
