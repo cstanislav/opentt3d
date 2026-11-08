@@ -29,8 +29,10 @@ engine's path.
 > are not runtime-bound. The fifteen original disaster subtypes and their 23
 > source sprites now use authored 3D body and shadow volumes with actual saved-
 > world evidence. No source-layer fallback rows remain. A `.45` development draft
-> has also been packaged for maintainer review and remains unpublished pending
-> full independent native checks.
+> remains unpublished. A `.46` macOS-arm64 candidate was built from the accepted
+> runtime commit and passed packaged Vulkan/OpenGL load/save smoke, but it is not
+> published; the hosted independent matrix, Windows/Linux package jobs and
+> sustained performance checks remain open.
 
 ## Download and play
 
