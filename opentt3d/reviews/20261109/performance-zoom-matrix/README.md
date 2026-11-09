@@ -20,7 +20,18 @@ similar vertex count captures in ~17 ms. Setting
 **4.470 GiB** (under the 6 GiB limit). The same setting leaves zoom5 at
 **37.42 fps**, so it is a retained cache pathology, not a 60 fps solution.
 
-This matrix does not redefine the objective: sustained60fps at the wide title
-view remains failed. It does show that the narrow view reaches 60.01 fps and
-that the default cache budget causes a severe zoom3 cache collapse that is
-discarded from no evidence.
+## Default cache change
+
+Because the zoom3 collapse is repeatable and severe, the renderer's default CPU
+voxel cache was raised from 1 GiB to **1.5 GiB** (`OPENTT3D_CPU_VOXEL_CACHE_MIB`
+still overrides it). A 300-frame retest with the new default gives:
+
+| zoom | fps | capture mean | p95 work | peak footprint |
+|---:|---:|---:|---:|---:|
+| 3 | **46.89** | 10.60 ms | 28.67 ms | 4.374 GiB |
+| 5 | **38.53** | 19.05 ms | 34.49 ms | 3.897 GiB |
+
+The zoom3 cache collapse is fixed; the wide-view performance remains a failure
+(38.53 fps versus the prior 39.37 fps control). The memory peak remains under
+the 6 GiB limit. This is a real cache-budget repair, not a resolution/detail
+reduction or a 60 fps claim.

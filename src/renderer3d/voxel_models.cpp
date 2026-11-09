@@ -55,7 +55,7 @@ using VoxelModel = VoxelCachedSurface;
 uint64_t VoxelCPUCacheBudget()
 {
 	const char *value = std::getenv("OPENTT3D_CPU_VOXEL_CACHE_MIB");
-	if (value == nullptr || *value == '\0') return 1024ULL*1024*1024;
+	if (value == nullptr || *value == '\0') return 1536ULL*1024*1024;
 	char *end = nullptr;
 	unsigned long long mib = std::strtoull(value,&end,10);
 	if (*value == '-' || *end != '\0' || mib > 1024*1024) throw std::runtime_error("Invalid CPU voxel cache budget");
