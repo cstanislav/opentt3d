@@ -17,10 +17,12 @@ runners. All four jobs passed.
   cross-compiling x64 host, so the previously pending native ARM64 execution is
   now verified.
 - The Windows jobs exercise native executable/resource loading and save
-  serialization only. Hosted Windows runners have no interactive GPU desktop,
-  so their windowed renderer, pointer input, replay and client/server checks
-  remain separate from this evidence. The Linux job exercises the real window,
-  OpenGL presentation and tile picking under Xvfb.
+  serialization only. Hosted Windows runners have no interactive GPU desktop
+  or usable console stdin for the GUI-subsystem executable, so their windowed
+  renderer, pointer input, replay and dedicated-server checks remain separate
+  from this evidence. The Linux job exercises the real window, OpenGL
+  presentation, tile picking and a native dedicated loopback listener under
+  Xvfb (`network-linux/`).
 - The hosted archives were checksum-verified against the release
   `SHA256SUMS`. No source or asset byte was rebuilt or modified for these runs.
 

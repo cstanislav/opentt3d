@@ -1,0 +1,29 @@
+{
+  "native_listener": true,
+  "log_acknowledged": true,
+  "loopback_connected": true,
+  "port": 52587,
+  "package": "/home/runner/work/opentt3d/opentt3d/package/opentt3d-dev-20261108.46-linux-x86_64",
+  "executable": "/home/runner/work/opentt3d/opentt3d/package/opentt3d-dev-20261108.46-linux-x86_64/opentt3d.sh",
+  "command": [
+    "/home/runner/work/opentt3d/opentt3d/package/opentt3d-dev-20261108.46-linux-x86_64/opentt3d.sh",
+    "-D",
+    "127.0.0.1:52587",
+    "-c",
+    "/home/runner/work/opentt3d/opentt3d/checks/network/openttd.cfg",
+    "-x",
+    "-X",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-g",
+    "/home/runner/work/opentt3d/opentt3d/checks/network/input.sav"
+  ]
+}
