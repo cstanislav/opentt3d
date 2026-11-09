@@ -66,11 +66,11 @@ audit now verifies all2,035 authored volumes at automatic LOD factors2/4/8/16
 coarse cell; `reviews/20261109/catalogue-lods46/`). A current scene-scope full
 renderer/picking run also passes 24,528 tree, 20,832 distant-tree, 8,688
 industry and 48 power-spark views plus GPU/atlas/unlimited-distance/picking
-checks (`reviews/20261109/scene-picking46/`). Vehicle pose shard0-63 now
-passes its complete 16-palette/crash/cargo/heading/picking matrix with72
-acknowledged commands and a synchronous save
-(`reviews/20261109/vehicle-poses-shard0/`); shards64-255 are running and the
-no-scope renderer run is retained incomplete. Explicit custom-base
+checks (`reviews/20261109/scene-picking46/`). All four vehicle pose shards0-63,64-127,128-191 and192-255 now pass their
+complete 16-palette/crash/cargo/heading/picking matrices with72 acknowledged
+commands and synchronous saves each (`reviews/20261109/vehicle-poses-shard*/`).
+The no-scope renderer run is retained incomplete; scene scope plus all vehicle
+shards provide the complete picking matrix. Explicit custom-base
 absence, full ship bridge/swept clearance, performance and full client/replay
 checks remain separate. A repeatable zoom3 cache collapse was repaired by raising the default CPU voxel
 cache budget to1.5GiB: zoom3 moved from6.9fps/146.96ms capture to46.89fps/10.60ms,
