@@ -82,8 +82,9 @@ OpenGL title-world save with tile picking, while Windows x64/x86/native-ARM64
 each loaded and re-saved the packaged title world (`windows-11-arm`, not a
 cross-compiler). Four independent `.46` title worlds at rotations0–3 retain
 64 picking samples each, eight to eleven acknowledged commands and synchronous
-saves. Windows windowed rendering, pointer input, network transport and replay
-remain open. It is not published. The final `.46`
+saves. The downloaded Linux package also started its native dedicated server,
+listened on loopback and accepted a client connection. Windows windowed
+rendering, pointer input, network transport and replay remain open. It is not published. The final `.46`
 performance control measured39.37fps at1280×720/zoom5 and retains the60fps
 failure. `.42` remains recommended until those remaining runtime/network checks
 and sustained60fps pass.

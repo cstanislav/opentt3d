@@ -19,15 +19,16 @@ independently downloaded and checked:
   - Linux x86_64 passed default Vulkan and explicit OpenGL package presentation,
     perspective clipping and saved worlds, then an OpenGL title-world run with
     64 tile-picking samples, nine acknowledged console commands and a
-    synchronous save under Xvfb;
+    synchronous save under Xvfb; its native dedicated server then listened on
+    loopback and accepted a client connection;
   - Windows x64, x86 and native ARM64 each loaded and re-saved the packaged
     title world with the downloaded native executable. ARM64 ran on
     `windows-11-arm`, not a cross-compiling host.
 
 The Windows controls are headless native load/save checks; hosted Windows
-runners do not provide an interactive GPU desktop. Windowed Windows rendering,
-pointer input, replay and multiplayer transport remain open, as do sustained
-60fps/memory acceptance. The draft remains **unpublished**; `.42` remains
+runners do not provide an interactive GPU desktop or a usable console stdin for
+the GUI-subsystem executable. Windowed Windows rendering, pointer input, replay
+and multiplayer transport remain open, as do sustained60fps/memory acceptance. The draft remains **unpublished**; `.42` remains
 recommended. The detailed source/artifact audit is
 `independent-artifact-audit.json`; native smoke evidence is in
 `../release-smoke46/`.
