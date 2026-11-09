@@ -175,12 +175,12 @@ jobs:
         id: vcpkg
         shell: bash
         run: |
-          toolchain="${{ steps.vcpkg_first.outputs.vcpkg-cmake }}"
+          toolchain="${{ steps.vcpkg_fallback.outputs.vcpkg-cmake }}"
           if [ -z "$toolchain" ]; then
-            toolchain="${{ steps.vcpkg_retry.outputs.vcpkg-cmake }}"
+            toolchain="${{ steps.vcpkg_first.outputs.vcpkg-cmake }}"
           fi
           if [ -z "$toolchain" ]; then
-            toolchain="${{ steps.vcpkg_fallback.outputs.vcpkg-cmake }}"
+            toolchain="${{ steps.vcpkg_retry.outputs.vcpkg-cmake }}"
           fi
           if [ -z "$toolchain" ]; then
             echo "No vcpkg toolchain was produced" >&2
