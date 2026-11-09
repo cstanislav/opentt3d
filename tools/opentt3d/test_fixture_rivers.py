@@ -101,6 +101,13 @@ class RiverSurveyTests(unittest.TestCase):
         tiles[1]["survey_token"] = 17
         self.assertEqual(validate_survey(row,tiles)["survey_token"],17)
 
+    def test_newgrf_staging_activates_only_the_supplied_custom_sources(self):
+        source = Path(__file__).with_name("fixture_rivers.py").read_text()
+        self.assertIn("newgrf_files = sorted", source)
+        self.assertIn('"[newgrf]\\n"', source)
+        self.assertIn('args.newgrf_dir else ["-X"]', source)
+        self.assertIn("--newgrf-dir", source)
+
     def test_failed_script_can_still_acknowledge_an_original_saved_world(self):
         source = Path(__file__).with_name("fixture_rivers.py").read_text()
         self.assertIn('not allow_failed and "script died unexpectedly" in text', source)

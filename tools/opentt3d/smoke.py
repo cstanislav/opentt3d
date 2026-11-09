@@ -730,7 +730,7 @@ server_advertise = false
         commands = recorded_console_commands(commands,output / "console-review.log")
     (scripts / ("autoexec.scr" if args.menu else "game_start.scr")).write_text("\n".join(commands) + "\n")
     debug = "driver=5,console=1,script=4" if args.trace_aircraft_clearance or args.trace_effects else "driver=2,console=1"
-    command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", "-X",
+    command = [str(executable), "-c", str(output / "openttd.cfg"), "-x", *([] if args.newgrf_dir else ["-X"]),
                "-v", driver, "-b", args.blitter, "-s", "null", "-m", "null",
                *([] if args.graphics_from_config else ["-I", args.graphics or graphics["name"]]), "-S", "NoSound", "-M", "NoMusic", "-r", f"{args.resolution[0]}x{args.resolution[1]}", "-d", debug, "-G", "314159", "-t", str(args.year), "-g"]
     if args.menu:

@@ -55,9 +55,14 @@ water, four rotor frames and six shadow states. The audit's coverage-gap list is
 empty and every runtime-required row is at9/10. The actual title-world Vulkan
 capture now reports zero unmodelled reference sprites: road slopes/road waypoint
 signs use world geometry, locks use the complete map-owned wall family, and the
-Toyland factory144 completed state has an authored 3D body. Natural company-score selection is now verified at stage4 from an actual company score870 and a normal HQ build (`opentt3d/reviews/20261109/natural-hq-selection/`); lower thresholds remain source-governed. Natural custom river-source selection, absence, phase/custom-family,
-LOD/picking/full ship-clearance, performance and independent release gates remain
-separate. The final `.46` performance control measured39.37fps at1280×720/zoom5
+Toyland factory144 completed state has an authored 3D body. Natural company-score selection is now verified at stage4 from an actual company score870 and a normal HQ build (`opentt3d/reviews/20261109/natural-hq-selection/`); lower thresholds remain source-governed. A real GPL-2.0 custom river NewGRF
+now retains 1,156 natural source selectors, all twelve flat bank offsets and
+custom rivermouth/rapids sources (`opentt3d/reviews/20261109/custom-river-source/`);
+this source is static, so animation phases are not claimed, and its 29
+undrawn interior tiles are no-draw absence rather than a zero-feature base.
+Four-rotation title-world picking and saves pass. Full LOD geometry review,
+explicit custom-base absence, full ship clearance, performance and independent
+network/replay checks remain separate. The final `.46` performance control measured39.37fps at1280×720/zoom5
 and retains the60fps failure; the ship fixture verified all seven original ship engines through both docks.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
@@ -72,8 +77,10 @@ controls under Rosetta. Independent native run42565973306 then ran the downloade
 archives: Linux-x86_64 passed default Vulkan/OpenGL presentation and an
 OpenGL title-world save with tile picking, while Windows x64/x86/native-ARM64
 each loaded and re-saved the packaged title world (`windows-11-arm`, not a
-cross-compiler). Windows windowed rendering, pointer input, replay and
-multiplayer transport remain open. It is not published. The final `.46`
+cross-compiler). Four independent `.46` title worlds at rotations0–3 retain
+64 picking samples each, nine to eleven acknowledged commands and synchronous
+saves. Windows windowed rendering, pointer input, network transport and replay
+remain open. It is not published. The final `.46`
 performance control measured39.37fps at1280×720/zoom5 and retains the60fps
 failure. `.42` remains recommended until those remaining runtime/network checks
 and sustained60fps pass.

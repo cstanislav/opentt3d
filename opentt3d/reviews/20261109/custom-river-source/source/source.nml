@@ -1,0 +1,725 @@
+grf {
+ grfid: "RIVE";
+ name: string(STR_GRF_NAME);
+ desc: string(STR_GRF_DESCRIPTION);
+ url: string(STR_GRF_URL);
+ version: 1;
+ min_compatible_version: 1;
+ }
+
+template tmpl_level_ground_file(x, y, file) {
+    [ x, y, 64, 31, -31,  0, file ]
+}
+//template tmpl_river(x,y){
+	/////////////////////27
+	 //[   41,   27, 64, 31, -31,  0 ]
+	 //[   134,   27, 64, 31, -31,  0 ]
+	 //[   219,   27, 64, 31, -31,  0 ]
+	 //[   312,   27, 64, 31, -31,  0 ]
+	 //[   389,   27, 64, 31, -31,  0 ]
+	 //[   482,   27, 64, 31, -31,  0 ]
+	 //[   567,   27, 64, 31, -31,  0 ]
+	 //[   641,   27, 64, 31, -31,  0 ]
+	 //[   717,   27, 64, 31, -31,  0 ]
+	 //[   790,   27, 64, 31, -31,  0 ]
+	 //[   875,   27, 64, 31, -31,  0 ]
+	 //[   968,   27, 64, 31, -31,  0 ]
+	 ////////////////////75
+	 //[   41,   75, 64, 23, -31,  0 ]
+	 //[   134,   75, 64, 23, -31,  0 ]
+	 //[   219,   75, 64, 23, -31,  0 ]
+	 //[   312,   75, 64, 23, -31,  0 ]
+	 //[   389,   75, 64, 23, -31,  0 ]
+	 //[   482,   75, 64, 23, -31,  0 ]
+	 //[   567,   75, 64, 23, -31,  0 ]
+	 //[   641,   75, 64, 23, -31,  0 ]
+	 //[   717,   75, 64, 23, -31,  0 ]
+	 //[   790,   75, 64, 23, -31,  0 ]
+	 //[   875,   75, 64, 23, -31,  0 ]
+	 //[   968,   75, 64, 23, -31,  0 ]
+	 ///////////////////113
+	 //[   41,  113, 64, 39, -31, -8 ]
+	 //[   134,  113, 64, 39, -31, -8 ]
+	 //[   219,  113, 64, 39, -31, -8 ]
+	 //[   312,  113, 64, 39, -31, -8 ]
+	 //[   389,  113, 64, 39, -31, -8 ]
+	 //[   482,  113, 64, 39, -31, -8 ]
+	 //[   567,  113, 64, 39, -31, -8 ]
+	 //[   641,  113, 64, 39, -31, -8 ]
+	 //[   717,  113, 64, 39, -31, -8 ]
+	 //[   790,  113, 64, 39, -31, -8 ]
+	 //[   875,  113, 64, 39, -31, -8 ]
+	 //[   968,  113, 64, 39, -31, -8 ]
+	 //169
+	 //[   41,   169, 64, 23, -31,  0 ]
+	 //[   134,   169, 64, 23, -31,  0 ]
+	 //[   219,   169, 64, 23, -31,  0 ]
+	 //[   312,   169, 64, 23, -31,  0 ]
+	 //[   389,   169, 64, 23, -31,  0 ]
+	 //[   482,   169, 64, 23, -31,  0 ]
+	 //[   567,   169, 64, 23, -31,  0 ]
+	 //[   641,   169, 64, 23, -31,  0 ]
+	 //[   717,   169, 64, 23, -31,  0 ]
+	 //[   790,   169, 64, 23, -31,  0 ]
+	 //[   875,   169, 64, 23, -31,  0 ]
+	 //[   968,   169, 64, 23, -31, 0 ]
+	 //205
+	 //[   41,   205, 64, 39, -31, -8 ]
+	 //[   134,   205, 64, 39, -31, -8 ]
+	 //[   219,   205, 64, 39, -31, -8 ]
+	 //[   312,   205, 64, 39, -31, -8 ]
+	 //[   389,   205, 64, 39, -31, -8 ]
+	 //[   482,   205, 64, 39, -31, -8 ]
+	 //[   567,   205, 64, 39, -31, -8 ]
+	 //[   641,   205, 64, 39, -31, -8 ]
+	 //[   717,   205, 64, 39, -31, -8 ]
+	 //[   790,   205, 64, 39, -31, -8 ]
+	 //[   875,   205, 64, 39, -31, -8 ]
+	 //[   968,   205, 64, 39, -31,-8 ]
+//}
+//river rapids
+spriteset(set_riverwater_1, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[   2,   22,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[  82,   22,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 162,   22,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 242,   22,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_2, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 354,   22,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 434,   22,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 514,   22,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 594,   22,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_3, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 706,   22,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[   2,   86,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[  82,   86,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 162,   86,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_4, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 274,   86,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 354,   86,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 434,   86,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 514,   86,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_5, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 626,   86,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 706,   86,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[   2,  150,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[  82,  150,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_6, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 194,  150,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 274,  150,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 354,  150,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 434,  150,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_7, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 546,  150,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 626,  150,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 706,  150,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[   2,  214,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_8, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 114,  214,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 194,  214,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 274,  214,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 354,  214,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_9, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 466,  214,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 546,  214,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 626,  214,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 706,  214,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_10, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[  18,  278,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[  98,  278,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 178,  278,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 258,  278,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_11, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 370,  278,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 450,  278,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 530,  278,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 610,  278,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_12, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 722,  278,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[   2,  342,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[  82,  342,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 162,  342,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_13, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 274,  342,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 354,  342,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 434,  342,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 514,  342,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_14, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 626,  342,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 706,  342,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[   2,  406,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[  82,  406,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_15, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 194,  406,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 274,  406,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 354,  406,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 434,  406,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+spriteset(set_riverwater_16, "") {
+	tmpl_level_ground_file(1, 1, "gfx/river_water.gimp.png")
+	[ 546,  406,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[ 626,  406,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+	[ 706,  406,  64,  23, -31,   0, ANIM, "gfx/riverrapids.png"]
+	[   2,  470,  64,  39, -31,  -8, ANIM, "gfx/riverrapids.png"]
+}
+random_switch(FEAT_CANALS, SELF, randomswitch_riverwater) {
+	1: set_riverwater_1;
+	1: set_riverwater_2;
+	1: set_riverwater_3;
+	1: set_riverwater_4;
+	1: set_riverwater_5;
+	1: set_riverwater_6;
+	1: set_riverwater_7;
+	1: set_riverwater_8;
+	1: set_riverwater_9;
+	1: set_riverwater_10;
+	1: set_riverwater_11;
+	1: set_riverwater_12;
+	1: set_riverwater_13;
+	1: set_riverwater_14;
+	1: set_riverwater_15;
+	1: set_riverwater_16;
+}
+
+item(FEAT_CANALS, riverwater, WF_RIVER_SLOPE) {
+	property {
+		graphic_flags: bitmask(WATERFEATURE_ALTERNATIVE_SPRITES);
+	}
+	graphics {
+		default: randomswitch_riverwater;
+	}
+}
+
+spriteset(set_rivermouth_snow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/rivermouth_snow.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/rivermouth_snow.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/rivermouth_snow.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/rivermouth_snow.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/rivermouth_snow.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/rivermouth_snow.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/rivermouth_snow.png"]
+	
+}
+
+spriteset(set_rivermouth, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/rivermouth.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/rivermouth.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/rivermouth.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/rivermouth.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/rivermouth.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/rivermouth.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/rivermouth.png"]
+	
+}
+
+spriteset(set_riverbank_snow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/riverbank_snow.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/riverbank_snow.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/riverbank_snow.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/riverbank_snow.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/riverbank_snow.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/riverbank_snow.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/riverbank_snow.png"]
+	
+}
+
+spriteset(set_riverbank, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/riverbank.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/riverbank.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/riverbank.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/riverbank.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/riverbank.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/riverbank.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/riverbank.png"]
+	
+}
+spriteset(set_riverbank_snow_14, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/riverbank_snow_14.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/riverbank_snow_14.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/riverbank_snow_14.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/riverbank_snow_14.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/riverbank_snow_14.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/riverbank_snow_14.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/riverbank_snow_14.png"]
+	
+}
+
+spriteset(set_riverbank_snow_24, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/riverbank_snow_24.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/riverbank_snow_24.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/riverbank_snow_24.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/riverbank_snow_24.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/riverbank_snow_24.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/riverbank_snow_24.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/riverbank_snow_24.png"]
+	
+}
+
+spriteset(set_riverbank_snow_34, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+	 [   41,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   134,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   219,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   312,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   389,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   482,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   567,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   641,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   717,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   790,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   875,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   968,   27, 64, 31, -31,  0, "gfx/riverbank_snow_34.png"]
+	 ////////////////////75
+	 [   41,   75, 64, 23, -31,   0, "gfx/riverbank_snow_34.png"]
+	 [   134,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   219,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   312,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   389,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   482,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   567,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   641,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   717,   75, 64 ,23, -31,  0,"gfx/riverbank_snow_34.png"]
+	 [   790,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   875,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   968,   75, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 ///////////////////113
+	 [   41,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   134,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   219,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   312,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   389,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   482,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   567,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   641,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   717,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   790,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   875,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   968,  113, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 //169
+	 [   41,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   134,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   219,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   312,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   389,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   482,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   567,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   641,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   717,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   790,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   875,   169, 64, 23, -31,  0, "gfx/riverbank_snow_34.png"]
+	 [   968,   169, 64, 23, -31, 0, "gfx/riverbank_snow_34.png"]
+	 //205
+	 [   41,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   134,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   219,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   312,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   389,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   482,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   567,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   641,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   717,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   790,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   875,   205, 64, 39, -31, -8, "gfx/riverbank_snow_34.png"]
+	 [   968,   205, 64, 39, -31,-8 , "gfx/riverbank_snow_34.png"]
+	
+}
+
+
+switch( FEAT_CANALS, SELF, switch_riverbank_height_arctic, tile_height) {
+	0: set_rivermouth;
+	set_riverbank;
+}
+switch( FEAT_CANALS, SELF, switch_riverbank_height_snow, tile_height) {
+	0: set_rivermouth_snow;
+	set_riverbank_snow;
+}
+
+switch( FEAT_CANALS, SELF, switch_riverbank_terrain_arctic,
+		[
+			STORE_TEMP(                (tile_height > (snowline_height - 2)), 0),
+			STORE_TEMP( LOAD_TEMP(0) + (tile_height > (snowline_height - 1)), 0),
+			STORE_TEMP( LOAD_TEMP(0) + (tile_height > (snowline_height    )), 0),
+			STORE_TEMP( LOAD_TEMP(0) + (tile_height > (snowline_height + 1)), 0),
+			LOAD_TEMP(0)
+		] ) {
+	0: switch_riverbank_height_arctic;
+	1: set_riverbank_snow_14;
+	2: set_riverbank_snow_24;
+	3: set_riverbank_snow_34;
+	switch_riverbank_height_snow;
+}
+
+item( FEAT_CANALS, riverbanks, WF_RIVERBANKS) {
+	graphics {
+		default: switch_riverbank_terrain_arctic;
+	}
+}

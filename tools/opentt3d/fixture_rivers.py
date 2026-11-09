@@ -72,6 +72,7 @@ def main():
     parser.add_argument("--climate", choices=("temperate", "arctic", "tropic", "toyland"), default="temperate")
     parser.add_argument("--seed", type=int, default=271828)
     parser.add_argument("--savegame", type=Path, help="Requery an existing original world without regenerating its terrain")
+    parser.add_argument("--newgrf-dir", type=Path, help="Stage actual NewGRF files and activate them for a custom-source survey")
     parser.add_argument("--timeout", type=int, default=300)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
@@ -80,11 +81,20 @@ def main():
         parser.error("Use a built executable and a new output directory; retain failed surveys")
     if args.timeout < 1 or not 0 <= args.seed <= 0xffffffff:
         parser.error("Use a positive timeout and an original unsigned map-generation seed")
+    if args.newgrf_dir is not None and not args.newgrf_dir.is_dir():
+        parser.error("--newgrf-dir must be an existing directory of actual NewGRF files")
     input_save = args.savegame.resolve() if args.savegame is not None else None
     if input_save is not None:
         input_save_sha256 = verify_save(input_save)
     graphics = json.loads((Path(__file__).resolve().parents[2] / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "rivers", output / "ai/river-survey")
+    newgrf_files = []
+    if args.newgrf_dir is not None:
+        newgrf_files = sorted(path.name for path in args.newgrf_dir.iterdir() if path.is_file() and path.suffix.lower() == ".grf")
+        if not newgrf_files:
+            parser.error("--newgrf-dir contains no .grf files")
+        shutil.copytree(args.newgrf_dir, output / "newgrf")
+    newgrf_config = "" if not newgrf_files else "[newgrf]\n" + "".join(f"{name} = \n" for name in newgrf_files)
     if (build / "lang").is_dir():
         (output / "lang").symlink_to(build / "lang", target_is_directory=True)
     fetch(output / "baseset", seed=build / "baseset" / graphics["filename"])
@@ -113,13 +123,13 @@ ai_in_multiplayer = true
 server_advertise = false
 min_active_clients = 0
 pause_on_join = false
-""")
+{newgrf_config}""")
     with socket.socket() as probe:
         probe.bind(("127.0.0.1", 0))
         port = probe.getsockname()[1]
-    command = [str(executable), "-D", f"127.0.0.1:{port}", "-c", str(output / "openttd.cfg"), "-x", "-X",
+    command = [str(executable), "-D", f"127.0.0.1:{port}", "-c", str(output / "openttd.cfg"), "-x", *([] if args.newgrf_dir else ["-X"]),
                "-s", "null", "-m", "null", "-I", graphics["name"], "-S", "NoSound", "-M", "NoMusic",
-               "-d", "script=4,console=1,net=3"]
+               "-d", "script=4,console=1,net=3,grf=2"]
     command.extend(["-g", str(input_save)] if input_save is not None else ["-G", str(args.seed), "-t", "1950", "-g"])
     logfile = output / "run.log"
     token = int.from_bytes(hashlib.sha256(str(output).encode()).digest()[:4], "big") & 0x7fffffff or 1
@@ -161,6 +171,7 @@ pause_on_join = false
             send("save river-survey", r"Map successfully saved to 'river-survey\.sav'\.", timeout=30)
             save = output / "save/river-survey.sav"
             manifest.update(climate=args.climate, seed=args.seed, save="save/river-survey.sav", save_sha256=verify_save(save),
+                newgrf_files=newgrf_files,
                 source="Original public AITile.IsRiverTile/GetSlope/GetMinHeight/GetTerrainType queries on a normally generated or reloaded original map.",
                 source_height_units="Original map height levels; each level is eight source-height units, not doubled rendered terrain.",
                 simulation_mutations="Original start_ai/pause/save commands and ordinary simulation only; no construction, terraform or forced selectors/RNG.",
