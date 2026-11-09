@@ -63,10 +63,12 @@ The earlier7/10 provisional reviews and their defects are retained in git histor
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
-newest prerelease and is not merged. A local `.46` macOS-arm64 candidate built
-from the accepted runtime commit passed packaged Vulkan/OpenGL load/save smoke;
-it is not published. `.42` remains recommended until a newer release passes the
-full independent publication matrix.
+newest prerelease and is not merged. A `.46` draft is hosted from the accepted
+runtime tag; its macOS-arm64 candidate passed packaged Vulkan/OpenGL and an
+independent title-world save control. It is not published. The final `.46`
+performance control measured39.37fps at1280×720/zoom5 and retains the 60fps
+failure. `.42` remains recommended until the hosted all-platform and independent
+runtime matrix passes.
 
 ## October 3 — HQ brick ownership and unbound lock detail improved provisionally
 

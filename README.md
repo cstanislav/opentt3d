@@ -28,11 +28,13 @@ engine's path.
 > at 9/10. The 183 retained profiles/legacy references are kept separately and
 > are not runtime-bound. The fifteen original disaster subtypes and their 23
 > source sprites now use authored 3D body and shadow volumes with actual saved-
-> world evidence. No source-layer fallback rows remain. A `.45` development draft
-> remains unpublished. A `.46` macOS-arm64 candidate was built from the accepted
-> runtime commit and passed packaged Vulkan/OpenGL load/save smoke, but it is not
-> published; the hosted independent matrix, Windows/Linux package jobs and
-> sustained performance checks remain open.
+> world evidence. No source-layer fallback rows remain. The reviewed title view
+> reports zero unmodelled reference sprites. A `.45` development draft remains
+> unpublished. A `.46` draft is hosted from the accepted runtime tag; its
+> macOS-arm64 candidate passed packaged Vulkan/OpenGL and independent title-world
+> save controls. It is not published: the hosted all-platform package matrix,
+> independent Windows/Linux runtime checks and sustained 60 fps/memory gates
+> remain open.
 
 ## Download and play
 
