@@ -1,0 +1,387 @@
+﻿2026-11-09T06:49:14.8099488Z Current runner version: '2.338.2'
+2026-11-09T06:49:14.8129123Z ##[group]Runner Image Provisioner
+2026-11-09T06:49:14.8129953Z Hosted Compute Agent
+2026-11-09T06:49:14.8130519Z Version: 20261028.624
+2026-11-09T06:49:14.8131088Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-09T06:49:14.8131754Z Build Date: 2026-10-28T21:51:42Z
+2026-11-09T06:49:14.8132415Z Worker ID: {5d5bbe12-3de9-4f15-976d-f35831e14f3e}
+2026-11-09T06:49:14.8133049Z Region: westus
+2026-11-09T06:49:14.8133591Z Cloud: Azure
+2026-11-09T06:49:14.8134077Z ##[endgroup]
+2026-11-09T06:49:14.8135507Z ##[group]Operating System
+2026-11-09T06:49:14.8136167Z Microsoft Windows Server 2022
+2026-11-09T06:49:14.8136711Z 10.0.20348
+2026-11-09T06:49:14.8137214Z Datacenter
+2026-11-09T06:49:14.8137687Z ##[endgroup]
+2026-11-09T06:49:14.8138161Z ##[group]Runner Image
+2026-11-09T06:49:14.8138787Z Image: windows-2022
+2026-11-09T06:49:14.8139294Z Version: 20261101.353.1
+2026-11-09T06:49:14.8140681Z Included Software: https://github.com/actions/runner-images/blob/win22/20261101.353/images/windows/Windows2022-Readme.md
+2026-11-09T06:49:14.8142221Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20261101.353
+2026-11-09T06:49:14.8143168Z ##[endgroup]
+2026-11-09T06:49:14.8144268Z ##[group]GITHUB_TOKEN Permissions
+2026-11-09T06:49:14.8146254Z Actions: read
+2026-11-09T06:49:14.8146808Z Contents: write
+2026-11-09T06:49:14.8147349Z Metadata: read
+2026-11-09T06:49:14.8147824Z ##[endgroup]
+2026-11-09T06:49:14.8150091Z Secret source: Actions
+2026-11-09T06:49:14.8150999Z Cache mode: write
+2026-11-09T06:49:14.8151692Z Prepare workflow directory
+2026-11-09T06:49:14.9468893Z Prepare all required actions
+2026-11-09T06:49:14.9520719Z Getting action download info
+2026-11-09T06:49:15.3733178Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-11-09T06:49:15.4984336Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-11-09T06:49:15.6218371Z Download action repository 'actions/upload-artifact@v5' (SHA:330a01c490aca151604b8cf639adc76d48f6c5d4)
+2026-11-09T06:49:16.0220691Z Complete job name: windows-x64-window
+2026-11-09T06:49:16.2348760Z ##[group]Run git config --global core.longpaths true
+2026-11-09T06:49:16.2350375Z [36;1mgit config --global core.longpaths true[0m
+2026-11-09T06:49:16.2596459Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-09T06:49:16.2598379Z ##[endgroup]
+2026-11-09T06:49:17.4437018Z ##[group]Run actions/checkout@v6
+2026-11-09T06:49:17.4438275Z with:
+2026-11-09T06:49:17.4439147Z   repository: cstanislav/opentt3d
+2026-11-09T06:49:17.4447548Z   token: ***
+2026-11-09T06:49:17.4448390Z   ssh-strict: true
+2026-11-09T06:49:17.4449247Z   ssh-user: git
+2026-11-09T06:49:17.4450115Z   persist-credentials: true
+2026-11-09T06:49:17.4451092Z   clean: true
+2026-11-09T06:49:17.4452108Z   sparse-checkout-cone-mode: true
+2026-11-09T06:49:17.4453149Z   fetch-depth: 1
+2026-11-09T06:49:17.4454079Z   fetch-tags: false
+2026-11-09T06:49:17.4454954Z   show-progress: true
+2026-11-09T06:49:17.4455826Z   lfs: false
+2026-11-09T06:49:17.4456628Z   submodules: false
+2026-11-09T06:49:17.4457514Z   set-safe-directory: true
+2026-11-09T06:49:17.4458503Z   allow-unsafe-pr-checkout: false
+2026-11-09T06:49:17.4459553Z ##[endgroup]
+2026-11-09T06:49:17.6054594Z Syncing repository: cstanislav/opentt3d
+2026-11-09T06:49:17.6057666Z ##[group]Getting Git version info
+2026-11-09T06:49:17.6059017Z Working directory is 'D:\a\opentt3d\opentt3d'
+2026-11-09T06:49:17.7031989Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-09T06:49:17.7344617Z git version 2.56.0.windows.4
+2026-11-09T06:49:17.7395285Z ##[endgroup]
+2026-11-09T06:49:17.7410860Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\39a68937-7fa0-424b-8641-128d1cef6f4f\.gitconfig'
+2026-11-09T06:49:17.7436780Z Temporarily overriding HOME='D:\a\_temp\39a68937-7fa0-424b-8641-128d1cef6f4f' before making global git config changes
+2026-11-09T06:49:17.7441822Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T06:49:17.7448839Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\opentt3d\opentt3d
+2026-11-09T06:49:17.7776628Z Deleting the contents of 'D:\a\opentt3d\opentt3d'
+2026-11-09T06:49:17.7782001Z ##[group]Determining repository object format
+2026-11-09T06:49:17.7785130Z ##[endgroup]
+2026-11-09T06:49:17.7787190Z ##[group]Initializing the repository
+2026-11-09T06:49:17.7795438Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\opentt3d\opentt3d
+2026-11-09T06:49:17.8722313Z Initialized empty Git repository in D:/a/opentt3d/opentt3d/.git/
+2026-11-09T06:49:17.8770931Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/cstanislav/opentt3d
+2026-11-09T06:49:17.9479822Z ##[endgroup]
+2026-11-09T06:49:17.9482262Z ##[group]Disabling automatic garbage collection
+2026-11-09T06:49:17.9491311Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-09T06:49:17.9950641Z ##[endgroup]
+2026-11-09T06:49:17.9952081Z ##[group]Setting up auth
+2026-11-09T06:49:17.9953562Z Removing SSH command configuration
+2026-11-09T06:49:17.9972741Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T06:49:18.0318935Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T06:49:19.5515572Z Removing HTTP extra header
+2026-11-09T06:49:19.5530719Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T06:49:19.5968670Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T06:49:20.2002678Z Removing includeIf entries pointing to credentials config files
+2026-11-09T06:49:20.2015819Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-09T06:49:20.2361930Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-09T06:49:20.8135443Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-09T06:49:20.8517318Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/opentt3d/opentt3d/.git.path D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:49:20.8879357Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/opentt3d/opentt3d/.git/worktrees/*.path D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:49:20.9276047Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:49:20.9636767Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:49:20.9989407Z ##[endgroup]
+2026-11-09T06:49:20.9989905Z ##[group]Fetching the repository
+2026-11-09T06:49:21.0007140Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9c320197ca9380df9dedf7c988cb2555118eed97:refs/remotes/origin/main
+2026-11-09T06:49:32.7082186Z From https://github.com/cstanislav/opentt3d
+2026-11-09T06:49:32.7083664Z  * [new ref]         9c320197ca9380df9dedf7c988cb2555118eed97 -> origin/main
+2026-11-09T06:49:32.7140627Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+2026-11-09T06:49:32.7497528Z   origin/main
+2026-11-09T06:49:32.7540269Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+2026-11-09T06:49:32.7927049Z 9c320197ca9380df9dedf7c988cb2555118eed97
+2026-11-09T06:49:32.7959010Z ##[endgroup]
+2026-11-09T06:49:32.7959453Z ##[group]Determining the checkout info
+2026-11-09T06:49:32.7961194Z ##[endgroup]
+2026-11-09T06:49:32.7971600Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-09T06:49:32.8421893Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-09T06:49:32.8774087Z ##[group]Checking out the ref
+2026-11-09T06:49:32.8796024Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-11-09T06:49:34.2045471Z Updating files:   3% (1719/49656)
+2026-11-09T06:49:34.3296840Z Updating files:   4% (1987/49656)
+2026-11-09T06:49:34.4239764Z Updating files:   5% (2483/49656)
+2026-11-09T06:49:34.5798869Z Updating files:   6% (2980/49656)
+2026-11-09T06:49:34.9823778Z Updating files:   7% (3476/49656)
+2026-11-09T06:49:35.2382492Z Updating files:   7% (3702/49656)
+2026-11-09T06:49:35.5904792Z Updating files:   8% (3973/49656)
+2026-11-09T06:49:35.7603175Z Updating files:   9% (4470/49656)
+2026-11-09T06:49:35.8479187Z Updating files:  10% (4966/49656)
+2026-11-09T06:49:35.9380911Z Updating files:  11% (5463/49656)
+2026-11-09T06:49:35.9841679Z Updating files:  12% (5959/49656)
+2026-11-09T06:49:36.4547649Z Updating files:  12% (5987/49656)
+2026-11-09T06:49:36.5780947Z Updating files:  13% (6456/49656)
+2026-11-09T06:49:36.9832555Z Updating files:  14% (6952/49656)
+2026-11-09T06:49:37.0462068Z Updating files:  14% (7233/49656)
+2026-11-09T06:49:37.1860394Z Updating files:  15% (7449/49656)
+2026-11-09T06:49:37.5168230Z Updating files:  16% (7945/49656)
+2026-11-09T06:49:37.7037076Z Updating files:  17% (8442/49656)
+2026-11-09T06:49:37.9394731Z Updating files:  18% (8939/49656)
+2026-11-09T06:49:37.9851517Z Updating files:  19% (9435/49656)
+2026-11-09T06:49:38.1154866Z Updating files:  19% (9580/49656)
+2026-11-09T06:49:38.3029528Z Updating files:  20% (9932/49656)
+2026-11-09T06:49:38.4531485Z Updating files:  21% (10428/49656)
+2026-11-09T06:49:38.6099571Z Updating files:  22% (10925/49656)
+2026-11-09T06:49:38.8380183Z Updating files:  23% (11421/49656)
+2026-11-09T06:49:38.9863471Z Updating files:  24% (11918/49656)
+2026-11-09T06:49:39.0447000Z Updating files:  24% (12266/49656)
+2026-11-09T06:49:39.2780734Z Updating files:  25% (12414/49656)
+2026-11-09T06:49:39.5093777Z Updating files:  26% (12911/49656)
+2026-11-09T06:49:39.6242710Z Updating files:  27% (13408/49656)
+2026-11-09T06:49:39.7195759Z Updating files:  28% (13904/49656)
+2026-11-09T06:49:39.8262228Z Updating files:  29% (14401/49656)
+2026-11-09T06:49:39.9177821Z Updating files:  30% (14897/49656)
+2026-11-09T06:49:39.9895741Z Updating files:  31% (15394/49656)
+2026-11-09T06:49:40.0209264Z Updating files:  31% (15760/49656)
+2026-11-09T06:49:40.1359224Z Updating files:  32% (15890/49656)
+2026-11-09T06:49:40.2313268Z Updating files:  33% (16387/49656)
+2026-11-09T06:49:40.3309810Z Updating files:  34% (16884/49656)
+2026-11-09T06:49:40.4204011Z Updating files:  35% (17380/49656)
+2026-11-09T06:49:40.5116031Z Updating files:  36% (17877/49656)
+2026-11-09T06:49:40.6563897Z Updating files:  37% (18373/49656)
+2026-11-09T06:49:40.7823508Z Updating files:  38% (18870/49656)
+2026-11-09T06:49:40.9554595Z Updating files:  39% (19366/49656)
+2026-11-09T06:49:40.9899447Z Updating files:  40% (19863/49656)
+2026-11-09T06:49:41.0740232Z Updating files:  40% (20001/49656)
+2026-11-09T06:49:41.1829219Z Updating files:  41% (20359/49656)
+2026-11-09T06:49:41.5443303Z Updating files:  42% (20856/49656)
+2026-11-09T06:49:41.7168437Z Updating files:  43% (21353/49656)
+2026-11-09T06:49:41.9175763Z Updating files:  44% (21849/49656)
+2026-11-09T06:49:42.0050709Z Updating files:  45% (22346/49656)
+2026-11-09T06:49:42.3233399Z Updating files:  45% (22390/49656)
+2026-11-09T06:49:42.4411673Z Updating files:  46% (22842/49656)
+2026-11-09T06:49:42.5536113Z Updating files:  47% (23339/49656)
+2026-11-09T06:49:42.8313921Z Updating files:  48% (23835/49656)
+2026-11-09T06:49:42.9924509Z Updating files:  49% (24332/49656)
+2026-11-09T06:49:43.2899264Z Updating files:  49% (24477/49656)
+2026-11-09T06:49:43.4289720Z Updating files:  50% (24828/49656)
+2026-11-09T06:49:43.7089254Z Updating files:  51% (25325/49656)
+2026-11-09T06:49:43.9941740Z Updating files:  52% (25822/49656)
+2026-11-09T06:49:44.0297220Z Updating files:  52% (26139/49656)
+2026-11-09T06:49:44.3340884Z Updating files:  53% (26318/49656)
+2026-11-09T06:49:44.7779274Z Updating files:  54% (26815/49656)
+2026-11-09T06:49:44.9956013Z Updating files:  55% (27311/49656)
+2026-11-09T06:49:45.0016041Z Updating files:  55% (27776/49656)
+2026-11-09T06:49:45.1601256Z Updating files:  56% (27808/49656)
+2026-11-09T06:49:45.2852202Z Updating files:  57% (28304/49656)
+2026-11-09T06:49:45.4140349Z Updating files:  58% (28801/49656)
+2026-11-09T06:49:45.5254306Z Updating files:  59% (29298/49656)
+2026-11-09T06:49:45.6576372Z Updating files:  60% (29794/49656)
+2026-11-09T06:49:45.7817178Z Updating files:  61% (30291/49656)
+2026-11-09T06:49:45.9023385Z Updating files:  62% (30787/49656)
+2026-11-09T06:49:45.9951887Z Updating files:  63% (31284/49656)
+2026-11-09T06:49:46.0341178Z Updating files:  63% (31627/49656)
+2026-11-09T06:49:46.1459458Z Updating files:  64% (31780/49656)
+2026-11-09T06:49:46.2537258Z Updating files:  65% (32277/49656)
+2026-11-09T06:49:46.3885214Z Updating files:  66% (32773/49656)
+2026-11-09T06:49:46.8637860Z Updating files:  67% (33270/49656)
+2026-11-09T06:49:46.9989553Z Updating files:  68% (33767/49656)
+2026-11-09T06:49:47.0265857Z Updating files:  68% (34182/49656)
+2026-11-09T06:49:47.1922318Z Updating files:  69% (34263/49656)
+2026-11-09T06:49:47.3309506Z Updating files:  70% (34760/49656)
+2026-11-09T06:49:47.4795504Z Updating files:  71% (35256/49656)
+2026-11-09T06:49:47.6167254Z Updating files:  72% (35753/49656)
+2026-11-09T06:49:47.7646924Z Updating files:  73% (36249/49656)
+2026-11-09T06:49:48.1844078Z Updating files:  74% (36746/49656)
+2026-11-09T06:49:48.1985898Z Updating files:  74% (37210/49656)
+2026-11-09T06:49:48.3397371Z Updating files:  75% (37242/49656)
+2026-11-09T06:49:48.4736583Z Updating files:  76% (37739/49656)
+2026-11-09T06:49:48.6068563Z Updating files:  77% (38236/49656)
+2026-11-09T06:49:48.7566617Z Updating files:  78% (38732/49656)
+2026-11-09T06:49:48.8802833Z Updating files:  79% (39229/49656)
+2026-11-09T06:49:48.9969745Z Updating files:  80% (39725/49656)
+2026-11-09T06:49:49.0002868Z Updating files:  80% (40198/49656)
+2026-11-09T06:49:49.1649408Z Updating files:  81% (40222/49656)
+2026-11-09T06:49:49.6213416Z Updating files:  82% (40718/49656)
+2026-11-09T06:49:49.7294604Z Updating files:  83% (41215/49656)
+2026-11-09T06:49:49.8500170Z Updating files:  84% (41712/49656)
+2026-11-09T06:49:49.9694944Z Updating files:  85% (42208/49656)
+2026-11-09T06:49:49.9975322Z Updating files:  86% (42705/49656)
+2026-11-09T06:49:50.0879493Z Updating files:  86% (42829/49656)
+2026-11-09T06:49:50.2145925Z Updating files:  87% (43201/49656)
+2026-11-09T06:49:50.3401318Z Updating files:  88% (43698/49656)
+2026-11-09T06:49:50.4593188Z Updating files:  89% (44194/49656)
+2026-11-09T06:49:50.5873049Z Updating files:  90% (44691/49656)
+2026-11-09T06:49:51.0242519Z Updating files:  91% (45187/49656)
+2026-11-09T06:49:51.0305212Z Updating files:  91% (45650/49656)
+2026-11-09T06:49:51.3407380Z Updating files:  92% (45684/49656)
+2026-11-09T06:49:51.4491901Z Updating files:  93% (46181/49656)
+2026-11-09T06:49:51.7115006Z Updating files:  94% (46677/49656)
+2026-11-09T06:49:51.9194160Z Updating files:  95% (47174/49656)
+2026-11-09T06:49:51.9985277Z Updating files:  96% (47670/49656)
+2026-11-09T06:49:52.2221566Z Updating files:  96% (47812/49656)
+2026-11-09T06:49:52.4583164Z Updating files:  97% (48167/49656)
+2026-11-09T06:49:52.5600489Z Updating files:  98% (48663/49656)
+2026-11-09T06:49:52.6640892Z Updating files:  99% (49160/49656)
+2026-11-09T06:49:52.6641272Z Updating files: 100% (49656/49656)
+2026-11-09T06:49:52.6641546Z Updating files: 100% (49656/49656), done.
+2026-11-09T06:49:52.7531820Z Switched to a new branch 'main'
+2026-11-09T06:49:52.7544571Z branch 'main' set up to track 'origin/main'.
+2026-11-09T06:49:52.7930832Z ##[endgroup]
+2026-11-09T06:49:52.8247706Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-09T06:49:52.8518713Z 9c320197ca9380df9dedf7c988cb2555118eed97
+2026-11-09T06:49:52.9406941Z ##[group]Run actions/setup-python@v6
+2026-11-09T06:49:52.9407278Z with:
+2026-11-09T06:49:52.9407484Z   python-version: 3.12
+2026-11-09T06:49:52.9407705Z   check-latest: false
+2026-11-09T06:49:52.9410223Z   token: ***
+2026-11-09T06:49:52.9410421Z   update-environment: true
+2026-11-09T06:49:52.9410656Z   allow-prereleases: false
+2026-11-09T06:49:52.9410889Z   freethreaded: false
+2026-11-09T06:49:52.9411085Z ##[endgroup]
+2026-11-09T06:49:53.0960864Z ##[group]Installed versions
+2026-11-09T06:49:53.1114645Z Successfully set up CPython (3.12.10)
+2026-11-09T06:49:53.1115580Z ##[endgroup]
+2026-11-09T06:49:53.1490031Z ##[group]Run mkdir -p downloaded package checks mesa
+2026-11-09T06:49:53.1490529Z [36;1mmkdir -p downloaded package checks mesa[0m
+2026-11-09T06:49:53.1490945Z [36;1mgh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \[0m
+2026-11-09T06:49:53.1491448Z [36;1m  --pattern '*windows-x64.zip' --pattern SHA256SUMS --dir downloaded[0m
+2026-11-09T06:49:53.1491942Z [36;1m(cd downloaded && sha256sum --check --ignore-missing SHA256SUMS)[0m
+2026-11-09T06:49:53.1492306Z [36;1mpython - <<'PY'[0m
+2026-11-09T06:49:53.1492524Z [36;1mimport glob, zipfile[0m
+2026-11-09T06:49:53.1492778Z [36;1marchive, = glob.glob('downloaded/*.zip')[0m
+2026-11-09T06:49:53.1493114Z [36;1mzipfile.ZipFile(archive).extractall('package')[0m
+2026-11-09T06:49:53.1493422Z [36;1mPY[0m
+2026-11-09T06:49:53.1493649Z [36;1mtest -d "package/${RELEASE_TAG}-windows-x64"[0m
+2026-11-09T06:49:53.1511537Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-11-09T06:49:53.1511977Z env:
+2026-11-09T06:49:53.1512249Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:49:53.1512710Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-09T06:49:53.1513152Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:49:53.1513546Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:49:53.1513942Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:49:53.1516578Z   GH_TOKEN: ***
+2026-11-09T06:49:53.1516788Z   RELEASE_TAG: opentt3d-dev-20261108.46
+2026-11-09T06:49:53.1517034Z ##[endgroup]
+2026-11-09T06:49:59.0202393Z opentt3d-dev-20261108.46-windows-x64.zip: OK
+2026-11-09T06:50:00.7428550Z ##[group]Run curl -L --retry 5 --retry-delay 3 -o mesa/mesa.7z \
+2026-11-09T06:50:00.7429101Z [36;1mcurl -L --retry 5 --retry-delay 3 -o mesa/mesa.7z \[0m
+2026-11-09T06:50:00.7429732Z [36;1m  https://github.com/pal1000/mesa-dist-win/releases/download/26.2.6/mesa3d-26.2.6-release-msvc.7z[0m
+2026-11-09T06:50:00.7430276Z [36;1m7z x -y mesa/mesa.7z -omesa >/dev/null[0m
+2026-11-09T06:50:00.7430560Z [36;1mls mesa/x64 | head[0m
+2026-11-09T06:50:00.7430857Z [36;1mcp mesa/x64/*.dll "package/${RELEASE_TAG}-windows-x64/"[0m
+2026-11-09T06:50:00.7445639Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-11-09T06:50:00.7446051Z env:
+2026-11-09T06:50:00.7446321Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:00.7446812Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-09T06:50:00.7447296Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:00.7448602Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:00.7449037Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:00.7449403Z   RELEASE_TAG: opentt3d-dev-20261108.46
+2026-11-09T06:50:00.7449661Z ##[endgroup]
+2026-11-09T06:50:00.9132200Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+2026-11-09T06:50:00.9132863Z                                  Dload  Upload  Total   Spent   Left   Speed
+2026-11-09T06:50:00.9133227Z 
+2026-11-09T06:50:01.0456518Z   0      0   0      0   0      0      0      0                              0
+2026-11-09T06:50:01.0457475Z   0      0   0      0   0      0      0      0                              0
+2026-11-09T06:50:01.0458161Z   0      0   0      0   0      0      0      0                              0
+2026-11-09T06:50:01.1349665Z 
+2026-11-09T06:50:02.0451638Z   0      0   0      0   0      0      0      0                              0
+2026-11-09T06:50:02.0452466Z 100 53.37M 100 53.37M   0      0 44.20M      0   00:01   00:01              0
+2026-11-09T06:50:02.0453101Z 100 53.37M 100 53.37M   0      0 44.20M      0   00:01   00:01              0
+2026-11-09T06:50:02.0453761Z 100 53.37M 100 53.37M   0      0 44.19M      0   00:01   00:01              0
+2026-11-09T06:50:04.6845665Z VkLayer_MESA_anti_lag.dll
+2026-11-09T06:50:04.6846317Z VkLayer_MESA_anti_lag.json
+2026-11-09T06:50:04.6848683Z clon12compiler.dll
+2026-11-09T06:50:04.6851480Z d3d10warp.dll
+2026-11-09T06:50:04.6852125Z dxil.dll
+2026-11-09T06:50:04.6852651Z dzn_icd.x86_64.json
+2026-11-09T06:50:04.6855436Z lvp_icd.x86_64.json
+2026-11-09T06:50:04.6858135Z openclon12.dll
+2026-11-09T06:50:04.6858639Z spirv2dxil.exe
+2026-11-09T06:50:04.6859072Z spirv_to_dxil.dll
+2026-11-09T06:50:04.8484880Z ##[group]Run python tools/opentt3d/package_smoke.py \
+2026-11-09T06:50:04.8485391Z [36;1mpython tools/opentt3d/package_smoke.py \[0m
+2026-11-09T06:50:04.8485819Z [36;1m  "package/${RELEASE_TAG}-windows-x64" --output checks/window \[0m
+2026-11-09T06:50:04.8486233Z [36;1m  --driver win32-opengl[0m
+2026-11-09T06:50:04.8501156Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-11-09T06:50:04.8501567Z env:
+2026-11-09T06:50:04.8501837Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:04.8502327Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-09T06:50:04.8502816Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:04.8503244Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:04.8503665Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:50:04.8504058Z   RELEASE_TAG: opentt3d-dev-20261108.46
+2026-11-09T06:50:04.8504331Z   GALLIUM_DRIVER: llvmpipe
+2026-11-09T06:50:04.8504559Z   LIBGL_ALWAYS_SOFTWARE: 1
+2026-11-09T06:50:04.8504777Z ##[endgroup]
+2026-11-09T06:55:05.8845307Z Traceback (most recent call last):
+2026-11-09T06:55:05.8869240Z   File "D:\a\opentt3d\opentt3d\tools\opentt3d\package_smoke.py", line 126, in <module>
+2026-11-09T06:55:05.8871896Z     verify(args.package, args.output, args.driver, headless=args.headless)
+2026-11-09T06:55:05.8873463Z   File "D:\a\opentt3d\opentt3d\tools\opentt3d\package_smoke.py", line 93, in verify
+2026-11-09T06:55:05.8876043Z     raise TimeoutError(f"Packaged game did not render and save: {log_path}")
+2026-11-09T06:55:05.8878317Z TimeoutError: Packaged game did not render and save: D:\a\opentt3d\opentt3d\checks\window\run.log
+2026-11-09T06:55:05.9120665Z ##[error]Process completed with exit code 1.
+2026-11-09T06:55:05.9616455Z ##[group]Run actions/upload-artifact@v5
+2026-11-09T06:55:05.9616907Z with:
+2026-11-09T06:55:05.9617173Z   name: independent-windows-window
+2026-11-09T06:55:05.9617486Z   path: checks/
+2026-11-09T06:55:05.9617731Z   if-no-files-found: warn
+2026-11-09T06:55:05.9618021Z   retention-days: 30
+2026-11-09T06:55:05.9618283Z   compression-level: 6
+2026-11-09T06:55:05.9618785Z   overwrite: false
+2026-11-09T06:55:05.9619035Z   include-hidden-files: false
+2026-11-09T06:55:05.9619306Z env:
+2026-11-09T06:55:05.9619613Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:55:05.9620096Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-09T06:55:05.9620613Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:55:05.9621081Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:55:05.9621562Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-09T06:55:05.9622025Z ##[endgroup]
+2026-11-09T06:55:06.1661907Z (node:3184) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-09T06:55:06.1662950Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-09T06:55:06.1893946Z With the provided path, there will be 4 files uploaded
+2026-11-09T06:55:06.1900267Z Artifact name is valid!
+2026-11-09T06:55:06.1902261Z Root directory input is valid!
+2026-11-09T06:55:06.6053613Z Beginning upload of artifact content to blob storage
+2026-11-09T06:55:06.6400586Z (node:3184) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-09T06:55:07.1714522Z Uploaded bytes 157118
+2026-11-09T06:55:07.2494135Z Finished uploading artifact content to blob storage!
+2026-11-09T06:55:07.2495947Z SHA256 digest of uploaded artifact zip is c06c5c651e0b007ef5c4f2f8d235595178416e3320b9727805df2dd42a54b90a
+2026-11-09T06:55:07.2497918Z Finalizing artifact upload
+2026-11-09T06:55:07.6512209Z Artifact independent-windows-window.zip successfully finalized. Artifact ID 13655291590
+2026-11-09T06:55:07.6513877Z Artifact independent-windows-window has been successfully uploaded! Final size is 157118 bytes. Artifact ID is 13655291590
+2026-11-09T06:55:07.6522128Z Artifact download URL: https://github.com/cstanislav/opentt3d/actions/runs/42575134711/artifacts/13655291590
+2026-11-09T06:55:07.7148000Z Post job cleanup.
+2026-11-09T06:55:07.9221906Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-09T06:55:07.9512911Z git version 2.56.0.windows.4
+2026-11-09T06:55:07.9578409Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\823d9e6e-bc9c-4fcb-9875-85ebc87819c4\.gitconfig'
+2026-11-09T06:55:07.9601769Z Temporarily overriding HOME='D:\a\_temp\823d9e6e-bc9c-4fcb-9875-85ebc87819c4' before making global git config changes
+2026-11-09T06:55:07.9602885Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T06:55:07.9614191Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\opentt3d\opentt3d
+2026-11-09T06:55:07.9936262Z Removing SSH command configuration
+2026-11-09T06:55:07.9948262Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T06:55:08.0308683Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T06:55:08.5998302Z Removing HTTP extra header
+2026-11-09T06:55:08.6008843Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T06:55:08.6337743Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T06:55:09.2087926Z Removing includeIf entries pointing to credentials config files
+2026-11-09T06:55:09.2099889Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-09T06:55:09.2384130Z includeif.gitdir:D:/a/opentt3d/opentt3d/.git.path
+2026-11-09T06:55:09.2384938Z includeif.gitdir:D:/a/opentt3d/opentt3d/.git/worktrees/*.path
+2026-11-09T06:55:09.2385637Z includeif.gitdir:/github/workspace/.git.path
+2026-11-09T06:55:09.2386174Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-09T06:55:09.2424969Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/opentt3d/opentt3d/.git.path
+2026-11-09T06:55:09.2711097Z D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.2753244Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/opentt3d/opentt3d/.git.path D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.3084277Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/opentt3d/opentt3d/.git/worktrees/*.path
+2026-11-09T06:55:09.3368385Z D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.3407828Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/opentt3d/opentt3d/.git/worktrees/*.path D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.3725299Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-09T06:55:09.3997660Z /github/runner_temp/git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.4035116Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.4356481Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-09T06:55:09.4646255Z /github/runner_temp/git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.4689907Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config
+2026-11-09T06:55:09.5016249Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-09T06:55:10.0373342Z Removing credentials config 'D:\a\_temp\git-credentials-c15e685c-e53b-4d58-93c7-2cb918165bad.config'
+2026-11-09T06:55:10.0567944Z Cleaning up orphan processes
+2026-11-09T06:55:10.0641538Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
