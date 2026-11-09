@@ -1,11 +1,13 @@
 # `.46` independent native release smoke
 
 Workflow runs
-[`42565973306`](https://github.com/cstanislav/opentt3d/actions/runs/42565973306)
-and
+[`42565973306`](https://github.com/cstanislav/opentt3d/actions/runs/42565973306),
 [`42571096954`](https://github.com/cstanislav/opentt3d/actions/runs/42571096954)
+and
+[`42573903535`](https://github.com/cstanislav/opentt3d/actions/runs/42573903535)
 downloaded and ran the hosted `.46` archives on real Windows and Linux
-runners. All four jobs passed in both runs.
+runners. All four jobs passed in each run; the final run also ran a native
+dedicated-server listener on every Windows architecture.
 
 - Linux x86_64: the downloaded archive's default Vulkan 3D launch and explicit
   OpenGL launch both presented a GPU viewport, verified perspective clipping and
@@ -19,12 +21,14 @@ runners. All four jobs passed in both runs.
   cross-compiling x64 host, so the previously pending native ARM64 execution is
   now verified.
 - The Windows jobs exercise native executable/resource loading and save
-  serialization only. Hosted Windows runners have no interactive GPU desktop
-  or usable console stdin for the GUI-subsystem executable, so their windowed
-  renderer, pointer input, replay and dedicated-server checks remain separate
-  from this evidence. The Linux job exercises the real window, OpenGL
-  presentation, tile picking and a native dedicated loopback listener under
-  Xvfb (`network-linux/`).
+  serialization, plus a native dedicated loopback listener on x64, x86 and
+  ARM64. Windows console output/input is closed by the GUI-subsystem host after
+  accepting the listener, so the result records `loopback_connected: true`,
+  `log_acknowledged: false` and `console_input: false`; the wire listener is
+  still independently accepted. Hosted Windows runners have no interactive GPU
+  desktop, so windowed rendering, pointer input and replay remain separate.
+  The Linux job exercises the real window, OpenGL presentation, tile picking
+  and a listener with both console and loopback evidence (`network-linux/`).
 - The hosted archives were checksum-verified against the release
   `SHA256SUMS`. No source or asset byte was rebuilt or modified for these runs.
 

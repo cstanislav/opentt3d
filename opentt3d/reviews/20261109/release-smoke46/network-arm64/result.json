@@ -1,0 +1,30 @@
+{
+  "native_listener": true,
+  "log_acknowledged": false,
+  "loopback_connected": true,
+  "console_input": false,
+  "port": 62502,
+  "package": "C:\\a\\opentt3d\\opentt3d\\package\\opentt3d-dev-20261108.46-windows-arm64",
+  "executable": "C:\\a\\opentt3d\\opentt3d\\package\\opentt3d-dev-20261108.46-windows-arm64\\opentt3d.exe",
+  "command": [
+    "C:\\a\\opentt3d\\opentt3d\\package\\opentt3d-dev-20261108.46-windows-arm64\\opentt3d.exe",
+    "-D",
+    "127.0.0.1:62502",
+    "-c",
+    "C:\\a\\opentt3d\\opentt3d\\checks\\network\\openttd.cfg",
+    "-x",
+    "-X",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-g",
+    "C:\\a\\opentt3d\\opentt3d\\checks\\network\\input.sav"
+  ]
+}

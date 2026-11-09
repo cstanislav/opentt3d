@@ -80,11 +80,13 @@ controls under Rosetta. Independent native runs42565973306 and42571096954 then r
 archives: Linux-x86_64 passed default Vulkan/OpenGL presentation, an OpenGL
 title-world save with tile picking and a dedicated loopback listener, while
 Windows x64/x86/native-ARM64 each loaded and re-saved the packaged title world
-(`windows-11-arm`, not a cross-compiler). Four independent `.46` title worlds at rotations0–3 retain
+and accepted a dedicated loopback client (`windows-11-arm`, not a
+cross-compiler); Windows console input closes after acceptance, so full client
+play/replay remains open. Four independent `.46` title worlds at rotations0–3 retain
 64 picking samples each, eight to eleven acknowledged commands and synchronous
-saves. The downloaded Linux package also started its native dedicated server,
-listened on loopback and accepted a client connection. Windows windowed
-rendering, pointer input, network transport and replay remain open. It is not published. The final `.46`
+saves. The downloaded Linux and Windows packages started native dedicated servers and
+accepted loopback clients. Windows windowed rendering, pointer input and full
+client/replay remain open. It is not published. The final `.46`
 performance control measured39.37fps at1280×720/zoom5 and retains the60fps
 failure. `.42` remains recommended until those remaining runtime/network checks
 and sustained60fps pass.
