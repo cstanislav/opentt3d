@@ -153,6 +153,10 @@ jobs:
       - uses: OpenTTD/actions/setup-vcpkg@v6
         id: vcpkg_first
         continue-on-error: true
+      - name: Clear the failed vcpkg bootstrap
+        if: steps.vcpkg_first.outcome == 'failure'
+        shell: pwsh
+        run: Remove-Item -Recurse -Force D:\a\_temp\vcpkg -ErrorAction SilentlyContinue
       - uses: OpenTTD/actions/setup-vcpkg@v6
         id: vcpkg_retry
         if: steps.vcpkg_first.outcome == 'failure'
