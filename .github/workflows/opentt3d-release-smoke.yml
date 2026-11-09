@@ -1,0 +1,148 @@
+name: OpenTT3D - Independent release smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published or draft OpenTT3D release tag to exercise
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opentt3d-release-smoke-${{ inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  linux-x86_64:
+    if: github.repository == 'cstanislav/opentt3d'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install native window and software-rendering prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libgl1-mesa-dri mesa-vulkan-drivers \
+            libfontconfig1 libsdl2-2.0-0
+      - name: Download and verify the published Linux archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          mkdir -p downloaded package checks
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern '*linux-x86_64.tar.xz' --pattern SHA256SUMS --dir downloaded
+          (cd downloaded && sha256sum --check --ignore-missing SHA256SUMS)
+          tar -xJf downloaded/*linux-x86_64.tar.xz -C package
+          test -d "package/${RELEASE_TAG}-linux-x86_64"
+          ldd "package/${RELEASE_TAG}-linux-x86_64/opentt3d" | tee checks/ldd.log
+      - name: Exercise the extracted download on both renderers
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          xvfb-run -a python3 tools/opentt3d/package_smoke.py \
+            "package/${RELEASE_TAG}-linux-x86_64" --output checks/default
+          xvfb-run -a python3 tools/opentt3d/package_smoke.py \
+            "package/${RELEASE_TAG}-linux-x86_64" --output checks/opengl --driver sdl-opengl
+      - name: Exercise window, picking, scripts and an actual save
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          mkdir -p checks/title-build
+          xvfb-run -a python3 tools/opentt3d/smoke.py \
+            --build-dir checks/title-build \
+            --executable "package/${RELEASE_TAG}-linux-x86_64/opentt3d.sh" \
+            --output checks/title \
+            --renderer 3d --backend opengl --savegame "package/${RELEASE_TAG}-linux-x86_64/baseset/opntitle.dat" \
+            --center 200 160 --rotation 1 --resolution 800 600 \
+            --verify-tile-picking --synchronous-save --record-console \
+            --timeout 300 --brief
+          if grep -q "unmodelled reference" checks/title/run.log; then
+            echo "The independent Linux title run reported unmodelled reference sprites" >&2
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: independent-release-smoke-linux-x86_64
+          path: checks/
+          if-no-files-found: warn
+          retention-days: 30
+
+  windows:
+    if: github.repository == 'cstanislav/opentt3d'
+    needs: []
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            runner: windows-2022
+          - arch: x86
+            runner: windows-2022
+          - arch: arm64
+            runner: windows-11-arm
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Download and verify the published Windows archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+          TARGET_ARCH: ${{ matrix.arch }}
+        shell: bash
+        run: |
+          mkdir -p downloaded package checks
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern "*windows-${TARGET_ARCH}.zip" --pattern SHA256SUMS --dir downloaded
+          (cd downloaded && sha256sum --check --ignore-missing SHA256SUMS)
+          python - <<'PY'
+          import glob, zipfile
+          archive, = glob.glob('downloaded/*.zip')
+          zipfile.ZipFile(archive).extractall('package')
+          PY
+          test -d "package/${RELEASE_TAG}-windows-${TARGET_ARCH}"
+      - name: Exercise the extracted native package
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+          TARGET_ARCH: ${{ matrix.arch }}
+        shell: bash
+        run: |
+          python tools/opentt3d/package_smoke.py \
+            "package/${RELEASE_TAG}-windows-${TARGET_ARCH}" \
+            --output checks/headless --headless
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path('checks/headless/result.json').read_text())
+          assert result['native_load_save'] is True
+          assert Path('checks/headless/save/package-smoke.sav').stat().st_size > 100
+          print('native title-world load/save verified')
+          PY
+          file "package/${RELEASE_TAG}-windows-${TARGET_ARCH}/opentt3d.exe" | tee checks/file.log
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: independent-release-smoke-windows-${{ matrix.arch }}
+          path: checks/
+          if-no-files-found: warn
+          retention-days: 30
