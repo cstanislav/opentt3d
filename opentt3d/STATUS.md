@@ -60,9 +60,12 @@ now retains 1,156 natural source selectors, all twelve flat bank offsets and
 custom rivermouth/rapids sources (`opentt3d/reviews/20261109/custom-river-source/`);
 this source is static, so animation phases are not claimed, and its 29
 undrawn interior tiles are no-draw absence rather than a zero-feature base.
-Four-rotation title-world picking and saves pass. Full LOD geometry review,
-explicit custom-base absence, full ship clearance, performance and independent
-network/replay checks remain separate. The final `.46` performance control measured39.37fps at1280×720/zoom5
+Four-rotation title-world picking and saves pass. A catalogue-wide geometry
+audit now verifies all2,035 authored volumes at automatic LOD factors2/4/8/16
+(8,140 views; source-owner bounds/occupancy exact, ordinary growth at most one
+coarse cell; `reviews/20261109/catalogue-lods46/`). Explicit custom-base
+absence, full ship bridge/swept clearance, performance and full client/replay
+checks remain separate. The final `.46` performance control measured39.37fps at1280×720/zoom5
 and retains the60fps failure; the expanded ship fixture verified all seven
 original ship engines through two loading docks, four dock orientations, the
 actual buoy, the dry harbour island and the recurring depot order, then captured
