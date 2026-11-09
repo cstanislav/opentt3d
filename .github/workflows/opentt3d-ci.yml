@@ -160,6 +160,7 @@ jobs:
       - uses: OpenTTD/actions/setup-vcpkg@v6
         id: vcpkg_retry
         if: steps.vcpkg_first.outcome == 'failure'
+        continue-on-error: true
       - name: Fall back to the runner's preinstalled vcpkg
         id: vcpkg_fallback
         if: steps.vcpkg_first.outcome == 'failure' && steps.vcpkg_retry.outcome == 'failure'
