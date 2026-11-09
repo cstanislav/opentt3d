@@ -8,6 +8,8 @@ import os
 from pathlib import Path
 import shutil
 import tempfile
+import time
+import urllib.error
 import urllib.request
 
 
@@ -62,12 +64,27 @@ def fetch(destination, *, seed=None, cache=None, pin=None):
     request = urllib.request.Request(pin["url"], headers={"User-Agent": "OpenTT3D/0.2.0 (https://github.com/cstanislav/opentt3d)"})
     temporary = None
     try:
-        digest = hashlib.sha256()
-        with urllib.request.urlopen(request, timeout=120) as response, tempfile.NamedTemporaryFile(dir=cache, delete=False) as output:
-            temporary = Path(output.name)
-            while block := response.read(1024 * 1024):
-                digest.update(block)
-                output.write(block)
+        last_error = None
+        for attempt in range(3):
+            digest = hashlib.sha256()
+            try:
+                with urllib.request.urlopen(request, timeout=120) as response, tempfile.NamedTemporaryFile(dir=cache, delete=False) as output:
+                    temporary = Path(output.name)
+                    while block := response.read(1024 * 1024):
+                        digest.update(block)
+                        output.write(block)
+                break
+            except (urllib.error.URLError, TimeoutError, OSError) as error:
+                last_error = error
+                if temporary is not None:
+                    temporary.unlink(missing_ok=True)
+                    temporary = None
+                if attempt == 2:
+                    raise
+                print(f"Graphics download attempt {attempt + 1} failed ({error}); retrying")
+                time.sleep(2 ** attempt)
+        else:
+            raise RuntimeError("Graphics download failed") from last_error
         if digest.hexdigest() != pin["sha256"]:
             raise ValueError(f"Graphics checksum mismatch: {digest.hexdigest()}")
         temporary.replace(cached)
