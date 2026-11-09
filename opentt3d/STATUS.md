@@ -64,11 +64,13 @@ Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. A `.46` draft is hosted from the accepted
-runtime tag; its macOS-arm64 candidate passed packaged Vulkan/OpenGL and an
+runtime tag; all eight packaging jobs passed, and an independent download of19
+assets plus49,507 source blobs compiled to the exact2,035-model package
+catalogue. Its macOS-arm64 package passed packaged Vulkan/OpenGL and an
 independent title-world save control. It is not published. The final `.46`
-performance control measured39.37fps at1280×720/zoom5 and retains the 60fps
-failure. `.42` remains recommended until the hosted all-platform and independent
-runtime matrix passes.
+performance control measured39.37fps at1280×720/zoom5 and retains the60fps
+failure. `.42` remains recommended until independent Windows/Linux native runtime
+checks pass.
 
 ## October 3 — HQ brick ownership and unbound lock detail improved provisionally
 

@@ -30,10 +30,11 @@ engine's path.
 > source sprites now use authored 3D body and shadow volumes with actual saved-
 > world evidence. No source-layer fallback rows remain. The reviewed title view
 > reports zero unmodelled reference sprites. A `.45` development draft remains
-> unpublished. A `.46` draft is hosted from the accepted runtime tag; its
-> macOS-arm64 candidate passed packaged Vulkan/OpenGL and independent title-world
-> save controls. It is not published: the hosted all-platform package matrix,
-> independent Windows/Linux runtime checks and sustained 60 fps/memory gates
+> unpublished. A `.46` draft is hosted from the accepted runtime tag; eight
+> packaging jobs, 19 hosted assets, 49,507 source blobs and the exact 2,035-model
+> package catalogue passed independent source/artifact audit. Its macOS-arm64
+> package passed Vulkan/OpenGL and title-world save controls. It is not published:
+> independent Windows/Linux native checks and sustained 60 fps/memory gates
 > remain open.
 
 ## Download and play
