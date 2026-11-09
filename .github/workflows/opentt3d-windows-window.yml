@@ -1,0 +1,70 @@
+name: OpenTT3D - Windows windowed package probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published or draft OpenTT3D release tag to exercise
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  windows-x64-window:
+    if: github.repository == 'cstanislav/opentt3d'
+    runs-on: windows-2022
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Enable full evidence paths before checkout
+        shell: pwsh
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Download the released Windows x64 package and checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          mkdir -p downloaded package checks mesa
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern '*windows-x64.zip' --pattern SHA256SUMS --dir downloaded
+          (cd downloaded && sha256sum --check --ignore-missing SHA256SUMS)
+          python - <<'PY'
+          import glob, zipfile
+          archive, = glob.glob('downloaded/*.zip')
+          zipfile.ZipFile(archive).extractall('package')
+          PY
+          test -d "package/${RELEASE_TAG}-windows-x64"
+      - name: Install Mesa software OpenGL for the hosted runner
+        shell: bash
+        run: |
+          curl -L --retry 5 --retry-delay 3 -o mesa/mesa.7z \
+            https://github.com/pal1000/mesa-dist-win/releases/download/26.2.6/mesa3d-26.2.6-release-msvc.7z
+          7z x -y mesa/mesa.7z -omesa >/dev/null
+          ls mesa/x64 | head
+          cp mesa/x64/*.dll "package/${RELEASE_TAG}-windows-x64/"
+      - name: Run the extracted package in a real windowed software-OpenGL session
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+          GALLIUM_DRIVER: llvmpipe
+          LIBGL_ALWAYS_SOFTWARE: '1'
+        shell: bash
+        run: |
+          python tools/opentt3d/package_smoke.py \
+            "package/${RELEASE_TAG}-windows-x64" --output checks/window \
+            --driver win32-opengl
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: independent-windows-window
+          path: checks/
+          if-no-files-found: warn
+          retention-days: 30
