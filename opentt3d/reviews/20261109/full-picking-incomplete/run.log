@@ -1,0 +1,536 @@
+[2026-11-09 01:26:52] dbg: [driver:1] Successfully loaded blitter '32bpp-optimized'
+[2026-11-09 01:26:52] dbg: [driver:1] OpenTT3D: Cocoa process 39043
+[mvk-info] MoltenVK version 1.4.2, supporting Vulkan version 1.4.357.
+	The following 154 Vulkan extensions are supported:
+	VK_KHR_16bit_storage v1
+	VK_KHR_8bit_storage v1
+	VK_KHR_bind_memory2 v1
+	VK_KHR_buffer_device_address v1
+	VK_KHR_calibrated_timestamps v1
+	VK_KHR_copy_commands2 v1
+	VK_KHR_create_renderpass2 v1
+	VK_KHR_dedicated_allocation v3
+	VK_KHR_deferred_host_operations v4
+	VK_KHR_depth_stencil_resolve v1
+	VK_KHR_descriptor_update_template v1
+	VK_KHR_device_group v4
+	VK_KHR_device_group_creation v1
+	VK_KHR_driver_properties v1
+	VK_KHR_dynamic_rendering v1
+	VK_KHR_dynamic_rendering_local_read v1
+	VK_KHR_external_fence v1
+	VK_KHR_external_fence_capabilities v1
+	VK_KHR_external_memory v1
+	VK_KHR_external_memory_capabilities v1
+	VK_KHR_external_semaphore v1
+	VK_KHR_external_semaphore_capabilities v1
+	VK_KHR_format_feature_flags2 v2
+	VK_KHR_fragment_shader_barycentric v1
+	VK_KHR_get_memory_requirements2 v1
+	VK_KHR_get_physical_device_properties2 v2
+	VK_KHR_get_surface_capabilities2 v1
+	VK_KHR_global_priority v1
+	VK_KHR_image_format_list v1
+	VK_KHR_imageless_framebuffer v1
+	VK_KHR_incremental_present v2
+	VK_KHR_index_type_uint8 v1
+	VK_KHR_line_rasterization v1
+	VK_KHR_load_store_op_none v1
+	VK_KHR_maintenance1 v2
+	VK_KHR_maintenance2 v1
+	VK_KHR_maintenance3 v1
+	VK_KHR_maintenance4 v2
+	VK_KHR_maintenance5 v1
+	VK_KHR_maintenance6 v1
+	VK_KHR_maintenance7 v1
+	VK_KHR_maintenance8 v1
+	VK_KHR_maintenance9 v1
+	VK_KHR_map_memory2 v1
+	VK_KHR_multiview v1
+	VK_KHR_portability_subset v1
+	VK_KHR_present_id v1
+	VK_KHR_present_id2 v1
+	VK_KHR_present_wait v1
+	VK_KHR_present_wait2 v1
+	VK_KHR_push_descriptor v2
+	VK_KHR_relaxed_block_layout v1
+	VK_KHR_robustness2 v1
+	VK_KHR_sampler_mirror_clamp_to_edge v3
+	VK_KHR_sampler_ycbcr_conversion v14
+	VK_KHR_separate_depth_stencil_layouts v1
+	VK_KHR_shader_draw_parameters v1
+	VK_KHR_shader_expect_assume v1
+	VK_KHR_shader_float_controls v4
+	VK_KHR_shader_float_controls2 v1
+	VK_KHR_shader_float16_int8 v1
+	VK_KHR_shader_fma v1
+	VK_KHR_shader_integer_dot_product v1
+	VK_KHR_shader_maximal_reconvergence v1
+	VK_KHR_shader_non_semantic_info v1
+	VK_KHR_shader_quad_control v1
+	VK_KHR_shader_relaxed_extended_instruction v1
+	VK_KHR_shader_subgroup_extended_types v1
+	VK_KHR_shader_subgroup_rotate v2
+	VK_KHR_shader_subgroup_uniform_control_flow v1
+	VK_KHR_shader_terminate_invocation v1
+	VK_KHR_spirv_1_4 v1
+	VK_KHR_storage_buffer_storage_class v1
+	VK_KHR_surface v25
+	VK_KHR_surface_maintenance1 v1
+	VK_KHR_surface_protected_capabilities v1
+	VK_KHR_swapchain v70
+	VK_KHR_swapchain_maintenance1 v1
+	VK_KHR_swapchain_mutable_format v1
+	VK_KHR_synchronization2 v1
+	VK_KHR_timeline_semaphore v2
+	VK_KHR_uniform_buffer_standard_layout v1
+	VK_KHR_variable_pointers v1
+	VK_KHR_vertex_attribute_divisor v1
+	VK_KHR_vulkan_memory_model v3
+	VK_KHR_zero_initialize_workgroup_memory v1
+	VK_EXT_4444_formats v1
+	VK_EXT_buffer_device_address v2
+	VK_EXT_calibrated_timestamps v2
+	VK_EXT_debug_marker v4
+	VK_EXT_debug_report v10
+	VK_EXT_debug_utils v2
+	VK_EXT_depth_clip_control v1
+	VK_EXT_descriptor_indexing v2
+	VK_EXT_extended_dynamic_state v1
+	VK_EXT_extended_dynamic_state2 v1
+	VK_EXT_extended_dynamic_state3 v2
+	VK_EXT_external_memory_host v1
+	VK_EXT_external_memory_metal v1
+	VK_EXT_fragment_shader_interlock v1
+	VK_EXT_global_priority v2
+	VK_EXT_global_priority_query v1
+	VK_EXT_hdr_metadata v3
+	VK_EXT_headless_surface v1
+	VK_EXT_host_image_copy v1
+	VK_EXT_host_query_reset v1
+	VK_EXT_image_2d_view_of_3d v1
+	VK_EXT_image_robustness v1
+	VK_EXT_index_type_uint8 v1
+	VK_EXT_inline_uniform_block v1
+	VK_EXT_layer_settings v2
+	VK_EXT_legacy_dithering v2
+	VK_EXT_line_rasterization v1
+	VK_EXT_load_store_op_none v1
+	VK_EXT_memory_budget v1
+	VK_EXT_metal_objects v2
+	VK_EXT_metal_surface v1
+	VK_EXT_non_seamless_cube_map v1
+	VK_EXT_pipeline_creation_cache_control v3
+	VK_EXT_pipeline_creation_feedback v1
+	VK_EXT_pipeline_robustness v1
+	VK_EXT_post_depth_coverage v1
+	VK_EXT_primitive_topology_list_restart v1
+	VK_EXT_private_data v1
+	VK_EXT_provoking_vertex v1
+	VK_EXT_robustness2 v1
+	VK_EXT_sample_locations v1
+	VK_EXT_sampler_filter_minmax v2
+	VK_EXT_scalar_block_layout v1
+	VK_EXT_separate_stencil_usage v1
+	VK_EXT_shader_atomic_float v1
+	VK_EXT_shader_demote_to_helper_invocation v1
+	VK_EXT_shader_stencil_export v1
+	VK_EXT_shader_subgroup_ballot v1
+	VK_EXT_shader_subgroup_vote v1
+	VK_EXT_shader_viewport_index_layer v1
+	VK_EXT_subgroup_size_control v2
+	VK_EXT_surface_maintenance1 v1
+	VK_EXT_swapchain_colorspace v5
+	VK_EXT_swapchain_maintenance1 v1
+	VK_EXT_texel_buffer_alignment v1
+	VK_EXT_texture_compression_astc_hdr v1
+	VK_EXT_tooling_info v1
+	VK_EXT_vertex_attribute_divisor v3
+	VK_AMD_gpu_shader_half_float v2
+	VK_AMD_negative_viewport_height v1
+	VK_AMD_shader_image_load_store_lod v1
+	VK_AMD_shader_trinary_minmax v1
+	VK_GOOGLE_display_timing v1
+	VK_IMG_format_pvrtc v1
+	VK_INTEL_shader_integer_functions2 v1
+	VK_MVK_macos_surface v3
+	VK_MVK_moltenvk v37
+	VK_NV_fragment_shader_barycentric v1
+[mvk-info] GPU device:
+	model: Apple M3 Pro
+	type: Integrated
+	vendorID: 0x106b
+	deviceID: 0x1a060209
+	pipelineCacheUUID: DB660224-1A06-0209-0000-000100000000
+	GPU memory available: 13639 MB
+	GPU memory used: 0 MB
+	Metal Shading Language 4.0
+	supports the following GPU Features:
+		GPU Family Metal 4
+		GPU Family Apple 9
+		GPU Family Mac 1
+		GPU Family Mac 2
+		Read-Write Texture Tier 2
+[mvk-info] Created VkInstance for Vulkan version 1.1.357, as requested by app, with the following 2 Vulkan extensions enabled:
+	VK_KHR_surface v25
+	VK_EXT_metal_surface v1
+[mvk-info] Vulkan semaphores using MTLEvent.
+[mvk-info] Descriptor sets binding resources using Metal3 argument buffers.
+[mvk-info] Created VkDevice to run on GPU Apple M3 Pro with the following 2 Vulkan extensions enabled:
+	VK_KHR_portability_subset v1
+	VK_KHR_swapchain v70
+[mvk-warn] VK_ERROR_FEATURE_NOT_PRESENT: Blending is enabled for attachment with format VK_FORMAT_R32_UINT, which does not support it.
+[mvk-warn] VK_ERROR_FEATURE_NOT_PRESENT: Blending is enabled for attachment with format VK_FORMAT_R32_UINT, which does not support it.
+[mvk-warn] VK_ERROR_FEATURE_NOT_PRESENT: Blending is enabled for attachment with format VK_FORMAT_R32_UINT, which does not support it.
+[mvk-warn] VK_ERROR_FEATURE_NOT_PRESENT: Blending is enabled for attachment with format VK_FORMAT_R32_UINT, which does not support it.
+[2026-11-09 01:26:52] dbg: [driver:1] OpenTT3D: Vulkan instanced renderer initialized on Apple M3 Pro
+[mvk-info] Created 3 swapchain images with size (1600, 1200) and contents scale 2.0 in layer (null) (0xc6c070480) on screen Built-in Retina Display.
+[2026-11-09 01:26:52] dbg: [driver:1] Successfully loaded video driver 'cocoa-vulkan'
+[2026-11-09 01:26:52] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-11-09 01:26:52] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: background Cocoa window active=false, key=false, visible=false, policy=2
+[2026-11-09 01:26:53] dbg: [driver:1] using thread for game-loop
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: 72 perspective clipping views preserve ray-tested coverage, depth, colour and picking (21180 samples, 16104 visible)
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: 60 cached mip/padding variants match direct upstream pixels and framing
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: model materials use OpenGFX2 Classic at native resolution or coarser
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: palette lookup survives atlas-page eviction and source-node reuse
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: 24 ordered child-layer views preserve coincident priority, ordinary depth, opacity and complete picking IDs
+[2026-11-09 01:26:53] dbg: [driver:1] OpenTT3D: 32 allocation-order views preserve coplanar colour, opacity and picking independently of mesh addresses
+[2026-11-09 01:27:06] dbg: [driver:1] OpenTT3D: loaded 2035 authored voxel models, 18796812 occupied cells, 13053784 exposed cell faces merged to 2806587 conforming rectangles / 21959776 triangles
+[2026-11-09 01:27:06] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 39649344 bytes instead of 1842648044 dense cell bytes, with one shared palette
+[2026-11-09 01:27:06] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1071239096 bytes under a scene-pinned soft budget, including 206649656 exact restoration bytes
+[2026-11-09 01:27:16] dbg: [driver:1] OpenTT3D: 2035 authored catalogue volumes retain bounded geometry and palette ownership at automatic LOD factors2/4/8/16 (8140 views; 64 ordinary views expand by at most one coarse cell; source-owner bounds/occupancy exact)
+[2026-11-09 01:27:17] dbg: [driver:1] OpenTT3D: 4 CPU voxel retirement/rebuild views preserve scene pins, stable GPU keys, exact colour, transparency and picking
+[2026-11-09 01:27:17] dbg: [driver:2] OpenTT3D: retired 5615616 completed Vulkan upload bytes; retaining 2 scratch pages / 11542528 bytes
+[2026-11-09 01:27:17] dbg: [driver:2] OpenTT3D: retired 7348224 completed Vulkan upload bytes; retaining 2 scratch pages / 11763712 bytes
+[2026-11-09 01:27:17] dbg: [driver:2] OpenTT3D: retired 7569408 completed Vulkan upload bytes; retaining 2 scratch pages / 12935168 bytes
+[2026-11-09 01:27:17] dbg: [driver:2] OpenTT3D: retired 8740864 completed Vulkan upload bytes; retaining 2 scratch pages / 15147008 bytes
+[2026-11-09 01:27:18] dbg: [driver:2] OpenTT3D: retired 10952704 completed Vulkan upload bytes; retaining 2 scratch pages / 16678912 bytes
+[2026-11-09 01:27:18] dbg: [driver:2] OpenTT3D: retired 12484608 completed Vulkan upload bytes; retaining 2 scratch pages / 17567744 bytes
+[2026-11-09 01:27:19] dbg: [driver:1] OpenTT3D: 640 voxel effect views preserve original sprite/climate selection, altitude, opacity, fixed orientation and unclickable ownership
+[2026-11-09 01:27:19] dbg: [driver:1] OpenTT3D: 0 unauthored effect sources preserve their original fallback in climate 3
+[2026-11-09 01:27:19] dbg: [driver:1] OpenTT3D: 2 incomplete/custom/unavailable original object families retain every source ground/body layer in climate 3
+[2026-11-09 01:27:19] dbg: [driver:1] OpenTT3D: 320 original HQ ground views preserve independent opaque source ownership, all16 company palettes and intentional body absences
+[2026-11-09 01:27:22] dbg: [driver:1] OpenTT3D: 145 independent HQ owner LOD views preserve exact occupied/air boundaries, automatic factors1/2/4/8/16, source transforms, opacity and tile picking
+[2026-11-09 01:27:22] dbg: [driver:1] OpenTT3D: 145 independent HQ owner LOD rebuild views preserve copied-scene pins, stable mesh identities and exact vertex words/RGBA/picking
+[2026-11-09 01:27:22] dbg: [driver:1] OpenTT3D: 20 supported river diagnostic LOD views preserve exact source air boundaries, factors1/2/4/8/16, unscaled columns, original paint and diagnostic picking
+[2026-11-09 01:27:22] dbg: [driver:1] OpenTT3D: 20 supported river LOD rebuild views retain copied-scene pins, stable identities and exact vertex words/RGBA/picking
+[2026-11-09 01:27:22] dbg: [driver:2] OpenTT3D: retired 13373440 completed Vulkan upload bytes; retaining 2 scratch pages / 19111936 bytes
+[2026-11-09 01:27:23] dbg: [driver:2] OpenTT3D: retired 14917632 completed Vulkan upload bytes; retaining 2 scratch pages / 25583616 bytes
+[2026-11-09 01:27:23] dbg: [driver:2] OpenTT3D: retired 21389312 completed Vulkan upload bytes; retaining 2 scratch pages / 31301632 bytes
+[2026-11-09 01:27:23] dbg: [driver:1] OpenTT3D: 60 joined original HQ views preserve four source anchors, ground/body visibility and independent tile picking
+[2026-11-09 01:27:23] dbg: [driver:1] OpenTT3D: 352 original object views preserve source layout/climate, anchors, all16 company palettes and transparent picking
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533131264 resident bytes / 482 meshes
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533131264 resident bytes / 481 meshes
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533131264 resident bytes / 484 meshes
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533131264 resident bytes / 482 meshes
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 4300800 cold Vulkan mesh bytes; 533024768 resident bytes / 483 meshes
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 5451776 cold Vulkan mesh bytes; 531767296 resident bytes / 483 meshes
+[2026-11-09 01:27:26] dbg: [driver:2] OpenTT3D: retired 6164480 cold Vulkan mesh bytes; 533991424 resident bytes / 485 meshes
+[2026-11-09 01:27:27] dbg: [driver:1] OpenTT3D: 1584 house variant/construction bindings select their explicit geometry and original palettes
+[2026-11-09 01:27:27] dbg: [driver:2] OpenTT3D: retired 4403200 cold Vulkan mesh bytes; 533782528 resident bytes / 509 meshes
+[2026-11-09 01:27:27] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533782528 resident bytes / 523 meshes
+[2026-11-09 01:27:28] dbg: [driver:1] OpenTT3D: 1332 voxel house-ground bindings preserve source palettes, empty body stages and opaque floor ownership
+[2026-11-09 01:27:29] dbg: [driver:2] OpenTT3D: retired 4292608 cold Vulkan mesh bytes; 533684224 resident bytes / 536 meshes
+[2026-11-09 01:27:29] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 538 meshes
+[2026-11-09 01:27:30] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 539 meshes
+[2026-11-09 01:27:30] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 539 meshes
+[2026-11-09 01:27:31] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 544 meshes
+[2026-11-09 01:27:31] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 545 meshes
+[2026-11-09 01:27:32] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 549 meshes
+[2026-11-09 01:27:32] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 549 meshes
+[2026-11-09 01:27:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 553 meshes
+[2026-11-09 01:27:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 553 meshes
+[2026-11-09 01:27:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 560 meshes
+[2026-11-09 01:27:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 565 meshes
+[2026-11-09 01:27:35] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 571 meshes
+[2026-11-09 01:27:36] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 579 meshes
+[2026-11-09 01:27:36] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 576 meshes
+[2026-11-09 01:27:37] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 578 meshes
+[2026-11-09 01:27:37] dbg: [driver:2] OpenTT3D: retired 9019392 cold Vulkan mesh bytes; 528859136 resident bytes / 591 meshes
+[2026-11-09 01:27:38] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 604 meshes
+[2026-11-09 01:27:39] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 619 meshes
+[2026-11-09 01:27:40] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 620 meshes
+[2026-11-09 01:27:40] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 616 meshes
+[2026-11-09 01:27:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 615 meshes
+[2026-11-09 01:27:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 618 meshes
+[2026-11-09 01:27:42] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 623 meshes
+[2026-11-09 01:27:42] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 624 meshes
+[2026-11-09 01:27:44] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 629 meshes
+[2026-11-09 01:27:44] dbg: [driver:2] OpenTT3D: retired 20971520 cold Vulkan mesh bytes; 533909504 resident bytes / 606 meshes
+[2026-11-09 01:27:44] dbg: [driver:2] OpenTT3D: retired 27107328 completed Vulkan upload bytes; retaining 2 scratch pages / 68001792 bytes
+[2026-11-09 01:27:46] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535773184 resident bytes / 602 meshes
+[2026-11-09 01:27:46] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535773184 resident bytes / 600 meshes
+[2026-11-09 01:27:47] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535773184 resident bytes / 611 meshes
+[2026-11-09 01:27:48] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 535941120 resident bytes / 600 meshes
+[2026-11-09 01:27:48] dbg: [driver:2] OpenTT3D: retired 12582912 cold Vulkan mesh bytes; 532926464 resident bytes / 585 meshes
+[2026-11-09 01:27:50] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 585 meshes
+[2026-11-09 01:27:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 590 meshes
+[2026-11-09 01:27:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 589 meshes
+[2026-11-09 01:27:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 584 meshes
+[2026-11-09 01:27:52] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 581 meshes
+[2026-11-09 01:27:52] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 581 meshes
+[2026-11-09 01:27:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 580 meshes
+[2026-11-09 01:27:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 579 meshes
+[2026-11-09 01:27:54] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 579 meshes
+[2026-11-09 01:27:54] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 578 meshes
+[2026-11-09 01:27:54] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 577 meshes
+[2026-11-09 01:27:56] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 590 meshes
+[2026-11-09 01:27:56] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 589 meshes
+[2026-11-09 01:27:56] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 586 meshes
+[2026-11-09 01:27:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 581 meshes
+[2026-11-09 01:27:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 576 meshes
+[2026-11-09 01:27:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 574 meshes
+[2026-11-09 01:27:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532926464 resident bytes / 573 meshes
+[2026-11-09 01:27:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 572 meshes
+[2026-11-09 01:27:58] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 562 meshes
+[2026-11-09 01:27:58] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 547 meshes
+[2026-11-09 01:27:59] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 553 meshes
+[2026-11-09 01:27:59] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 552 meshes
+[2026-11-09 01:27:59] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 552 meshes
+[2026-11-09 01:28:00] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 551 meshes
+[2026-11-09 01:28:00] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 548 meshes
+[2026-11-09 01:28:01] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 555 meshes
+[2026-11-09 01:28:01] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 553 meshes
+[2026-11-09 01:28:02] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 557 meshes
+[2026-11-09 01:28:02] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 551 meshes
+[2026-11-09 01:28:03] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 550 meshes
+[2026-11-09 01:28:03] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 547 meshes
+[2026-11-09 01:28:03] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533024768 resident bytes / 544 meshes
+[2026-11-09 01:28:03] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533131264 resident bytes / 537 meshes
+[2026-11-09 01:28:04] dbg: [driver:2] OpenTT3D: retired 4292608 cold Vulkan mesh bytes; 533032960 resident bytes / 541 meshes
+[2026-11-09 01:28:04] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533032960 resident bytes / 535 meshes
+[2026-11-09 01:28:05] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 534290432 resident bytes / 529 meshes
+[2026-11-09 01:28:05] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536260608 resident bytes / 527 meshes
+[2026-11-09 01:28:06] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 524 meshes
+[2026-11-09 01:28:06] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 521 meshes
+[2026-11-09 01:28:06] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 519 meshes
+[2026-11-09 01:28:08] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 536 meshes
+[2026-11-09 01:28:08] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 543 meshes
+[2026-11-09 01:28:09] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 545 meshes
+[2026-11-09 01:28:09] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536469504 resident bytes / 543 meshes
+[2026-11-09 01:28:10] dbg: [driver:2] OpenTT3D: retired 29638656 cold Vulkan mesh bytes; 534085632 resident bytes / 525 meshes
+[2026-11-09 01:28:10] dbg: [driver:2] OpenTT3D: retired 63807488 completed Vulkan upload bytes; retaining 2 scratch pages / 82833408 bytes
+[2026-11-09 01:28:12] dbg: [driver:2] OpenTT3D: retired 33554432 cold Vulkan mesh bytes; 536145920 resident bytes / 500 meshes
+[2026-11-09 01:28:12] dbg: [driver:2] OpenTT3D: retired 78639104 completed Vulkan upload bytes; retaining 2 scratch pages / 104005632 bytes
+[2026-11-09 01:28:14] dbg: [driver:2] OpenTT3D: retired 33554432 cold Vulkan mesh bytes; 533356544 resident bytes / 437 meshes
+[2026-11-09 01:28:16] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533356544 resident bytes / 432 meshes
+[2026-11-09 01:28:17] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533356544 resident bytes / 432 meshes
+[2026-11-09 01:28:17] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533356544 resident bytes / 434 meshes
+[2026-11-09 01:28:17] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 534200320 resident bytes / 431 meshes
+[2026-11-09 01:28:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 424 meshes
+[2026-11-09 01:28:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 424 meshes
+[2026-11-09 01:28:19] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 425 meshes
+[2026-11-09 01:28:19] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 427 meshes
+[2026-11-09 01:28:20] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 419 meshes
+[2026-11-09 01:28:20] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 426 meshes
+[2026-11-09 01:28:21] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 428 meshes
+[2026-11-09 01:28:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 425 meshes
+[2026-11-09 01:28:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 417 meshes
+[2026-11-09 01:28:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 413 meshes
+[2026-11-09 01:28:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 411 meshes
+[2026-11-09 01:28:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 409 meshes
+[2026-11-09 01:28:24] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 401 meshes
+[2026-11-09 01:28:24] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536211456 resident bytes / 397 meshes
+[2026-11-09 01:28:25] dbg: [driver:2] OpenTT3D: retired 21827584 cold Vulkan mesh bytes; 518578176 resident bytes / 400 meshes
+[2026-11-09 01:28:28] dbg: [driver:2] OpenTT3D: retired 6057984 cold Vulkan mesh bytes; 533491712 resident bytes / 428 meshes
+[2026-11-09 01:28:28] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533491712 resident bytes / 430 meshes
+[2026-11-09 01:28:29] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533491712 resident bytes / 427 meshes
+[2026-11-09 01:28:29] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533491712 resident bytes / 419 meshes
+[2026-11-09 01:28:29] dbg: [driver:2] OpenTT3D: retired 8556544 cold Vulkan mesh bytes; 529129472 resident bytes / 419 meshes
+[2026-11-09 01:28:30] dbg: [driver:2] OpenTT3D: retired 9568256 cold Vulkan mesh bytes; 527949824 resident bytes / 422 meshes
+[2026-11-09 01:28:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 437 meshes
+[2026-11-09 01:28:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 436 meshes
+[2026-11-09 01:28:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 434 meshes
+[2026-11-09 01:28:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 432 meshes
+[2026-11-09 01:28:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 426 meshes
+[2026-11-09 01:28:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 421 meshes
+[2026-11-09 01:28:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 419 meshes
+[2026-11-09 01:28:36] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 433 meshes
+[2026-11-09 01:28:37] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 437 meshes
+[2026-11-09 01:28:37] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 435 meshes
+[2026-11-09 01:28:38] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 443 meshes
+[2026-11-09 01:28:39] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 447 meshes
+[2026-11-09 01:28:39] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 451 meshes
+[2026-11-09 01:28:40] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536338432 resident bytes / 447 meshes
+[2026-11-09 01:28:40] dbg: [driver:2] OpenTT3D: retired 4292608 cold Vulkan mesh bytes; 536240128 resident bytes / 447 meshes
+[2026-11-09 01:28:40] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 442 meshes
+[2026-11-09 01:28:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 438 meshes
+[2026-11-09 01:28:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 438 meshes
+[2026-11-09 01:28:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 437 meshes
+[2026-11-09 01:28:42] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 429 meshes
+[2026-11-09 01:28:44] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 431 meshes
+[2026-11-09 01:28:44] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 428 meshes
+[2026-11-09 01:28:45] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 426 meshes
+[2026-11-09 01:28:45] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 419 meshes
+[2026-11-09 01:28:46] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 411 meshes
+[2026-11-09 01:28:46] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536240128 resident bytes / 412 meshes
+[2026-11-09 01:28:47] dbg: [driver:2] OpenTT3D: retired 4300800 cold Vulkan mesh bytes; 536133632 resident bytes / 412 meshes
+[2026-11-09 01:28:47] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 410 meshes
+[2026-11-09 01:28:47] dbg: [driver:2] OpenTT3D: retired 5451776 cold Vulkan mesh bytes; 534876160 resident bytes / 410 meshes
+[2026-11-09 01:28:48] dbg: [driver:2] OpenTT3D: retired 6164480 cold Vulkan mesh bytes; 532905984 resident bytes / 410 meshes
+[2026-11-09 01:28:48] dbg: [driver:2] OpenTT3D: retired 4403200 cold Vulkan mesh bytes; 532697088 resident bytes / 410 meshes
+[2026-11-09 01:28:49] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532697088 resident bytes / 413 meshes
+[2026-11-09 01:28:49] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532697088 resident bytes / 412 meshes
+[2026-11-09 01:28:50] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 532975616 resident bytes / 410 meshes
+[2026-11-09 01:28:50] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533073920 resident bytes / 409 meshes
+[2026-11-09 01:28:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533073920 resident bytes / 409 meshes
+[2026-11-09 01:28:52] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533073920 resident bytes / 408 meshes
+[2026-11-09 01:28:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533073920 resident bytes / 406 meshes
+[2026-11-09 01:28:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533073920 resident bytes / 404 meshes
+[2026-11-09 01:28:53] dbg: [driver:2] OpenTT3D: retired 27254784 cold Vulkan mesh bytes; 510013440 resident bytes / 408 meshes
+[2026-11-09 01:28:57] dbg: [driver:2] OpenTT3D: retired 35614720 cold Vulkan mesh bytes; 503758848 resident bytes / 438 meshes
+[2026-11-09 01:29:02] dbg: [driver:2] OpenTT3D: retired 30765056 cold Vulkan mesh bytes; 506548224 resident bytes / 492 meshes
+[2026-11-09 01:29:06] dbg: [driver:2] OpenTT3D: retired 5038080 cold Vulkan mesh bytes; 535064576 resident bytes / 545 meshes
+[2026-11-09 01:29:07] dbg: [driver:2] OpenTT3D: retired 6205440 cold Vulkan mesh bytes; 533053440 resident bytes / 547 meshes
+[2026-11-09 01:29:07] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 545 meshes
+[2026-11-09 01:29:08] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 537 meshes
+[2026-11-09 01:29:08] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 535 meshes
+[2026-11-09 01:29:08] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 532 meshes
+[2026-11-09 01:29:09] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 529 meshes
+[2026-11-09 01:29:09] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 521 meshes
+[2026-11-09 01:29:09] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 520 meshes
+[2026-11-09 01:29:10] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 520 meshes
+[2026-11-09 01:29:10] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 519 meshes
+[2026-11-09 01:29:10] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 515 meshes
+[2026-11-09 01:29:11] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 514 meshes
+[2026-11-09 01:29:11] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 510 meshes
+[2026-11-09 01:29:11] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 511 meshes
+[2026-11-09 01:29:13] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 526 meshes
+[2026-11-09 01:29:14] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 533 meshes
+[2026-11-09 01:29:14] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 533 meshes
+[2026-11-09 01:29:14] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533053440 resident bytes / 534 meshes
+[2026-11-09 01:29:15] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 533684224 resident bytes / 528 meshes
+[2026-11-09 01:29:15] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 526 meshes
+[2026-11-09 01:29:16] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 530 meshes
+[2026-11-09 01:29:16] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 532 meshes
+[2026-11-09 01:29:17] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 541 meshes
+[2026-11-09 01:29:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 543 meshes
+[2026-11-09 01:29:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 542 meshes
+[2026-11-09 01:29:19] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 544 meshes
+[2026-11-09 01:29:19] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 541 meshes
+[2026-11-09 01:29:20] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 544 meshes
+[2026-11-09 01:29:20] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 549 meshes
+[2026-11-09 01:29:21] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 549 meshes
+[2026-11-09 01:29:21] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 555 meshes
+[2026-11-09 01:29:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 559 meshes
+[2026-11-09 01:29:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 562 meshes
+[2026-11-09 01:29:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 562 meshes
+[2026-11-09 01:29:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 559 meshes
+[2026-11-09 01:29:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 551 meshes
+[2026-11-09 01:29:24] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 546 meshes
+[2026-11-09 01:29:24] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 538 meshes
+[2026-11-09 01:29:24] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 532 meshes
+[2026-11-09 01:29:25] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 531 meshes
+[2026-11-09 01:29:25] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 529 meshes
+[2026-11-09 01:29:25] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 525 meshes
+[2026-11-09 01:29:25] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 523 meshes
+[2026-11-09 01:29:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 517 meshes
+[2026-11-09 01:29:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 515 meshes
+[2026-11-09 01:29:27] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 517 meshes
+[2026-11-09 01:29:27] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 524 meshes
+[2026-11-09 01:29:28] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 515 meshes
+[2026-11-09 01:29:29] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533684224 resident bytes / 526 meshes
+[2026-11-09 01:29:30] dbg: [driver:2] OpenTT3D: retired 4472832 cold Vulkan mesh bytes; 533405696 resident bytes / 538 meshes
+[2026-11-09 01:29:30] dbg: [driver:2] OpenTT3D: retired 4292608 cold Vulkan mesh bytes; 533307392 resident bytes / 546 meshes
+[2026-11-09 01:29:31] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 549 meshes
+[2026-11-09 01:29:31] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 553 meshes
+[2026-11-09 01:29:32] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 557 meshes
+[2026-11-09 01:29:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 564 meshes
+[2026-11-09 01:29:33] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 563 meshes
+[2026-11-09 01:29:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 565 meshes
+[2026-11-09 01:29:34] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 570 meshes
+[2026-11-09 01:29:35] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 562 meshes
+[2026-11-09 01:29:37] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 595 meshes
+[2026-11-09 01:29:38] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 609 meshes
+[2026-11-09 01:29:38] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 611 meshes
+[2026-11-09 01:29:39] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 615 meshes
+[2026-11-09 01:29:39] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 618 meshes
+[2026-11-09 01:29:40] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 622 meshes
+[2026-11-09 01:29:40] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 624 meshes
+[2026-11-09 01:29:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 626 meshes
+[2026-11-09 01:29:41] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 627 meshes
+[2026-11-09 01:29:42] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 624 meshes
+[2026-11-09 01:29:42] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 629 meshes
+[2026-11-09 01:29:47] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 633 meshes
+[2026-11-09 01:29:48] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 636 meshes
+[2026-11-09 01:29:48] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 638 meshes
+[2026-11-09 01:29:49] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 639 meshes
+[2026-11-09 01:29:49] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 642 meshes
+[2026-11-09 01:29:50] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 645 meshes
+[2026-11-09 01:29:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 647 meshes
+[2026-11-09 01:29:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 648 meshes
+[2026-11-09 01:29:51] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 645 meshes
+[2026-11-09 01:29:52] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 644 meshes
+[2026-11-09 01:29:52] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 642 meshes
+[2026-11-09 01:29:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 642 meshes
+[2026-11-09 01:29:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 641 meshes
+[2026-11-09 01:29:53] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 639 meshes
+[2026-11-09 01:29:54] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 533307392 resident bytes / 637 meshes
+[2026-11-09 01:29:54] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 534032384 resident bytes / 634 meshes
+[2026-11-09 01:29:54] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 632 meshes
+[2026-11-09 01:29:56] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 644 meshes
+[2026-11-09 01:29:56] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 643 meshes
+[2026-11-09 01:29:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 644 meshes
+[2026-11-09 01:29:57] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 647 meshes
+[2026-11-09 01:29:58] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 646 meshes
+[2026-11-09 01:29:58] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 645 meshes
+[2026-11-09 01:29:58] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 644 meshes
+[2026-11-09 01:29:59] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 647 meshes
+[2026-11-09 01:30:00] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536072192 resident bytes / 648 meshes
+[2026-11-09 01:30:00] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 534204416 resident bytes / 643 meshes
+[2026-11-09 01:30:00] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535257088 resident bytes / 640 meshes
+[2026-11-09 01:30:01] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535457792 resident bytes / 637 meshes
+[2026-11-09 01:30:01] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535457792 resident bytes / 635 meshes
+[2026-11-09 01:30:01] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535457792 resident bytes / 633 meshes
+[2026-11-09 01:30:02] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535457792 resident bytes / 632 meshes
+[2026-11-09 01:30:02] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535457792 resident bytes / 631 meshes
+[2026-11-09 01:30:02] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535457792 resident bytes / 628 meshes
+[2026-11-09 01:30:03] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 534106112 resident bytes / 623 meshes
+[2026-11-09 01:30:03] dbg: [driver:2] OpenTT3D: retired 9019392 cold Vulkan mesh bytes; 530112512 resident bytes / 623 meshes
+[2026-11-09 01:30:04] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536227840 resident bytes / 620 meshes
+[2026-11-09 01:30:04] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536227840 resident bytes / 619 meshes
+[2026-11-09 01:30:05] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 535228416 resident bytes / 611 meshes
+[2026-11-09 01:30:05] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535228416 resident bytes / 608 meshes
+[2026-11-09 01:30:06] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535228416 resident bytes / 610 meshes
+[2026-11-09 01:30:06] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 535228416 resident bytes / 607 meshes
+[2026-11-09 01:30:07] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536215552 resident bytes / 603 meshes
+[2026-11-09 01:30:08] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 536121344 resident bytes / 592 meshes
+[2026-11-09 01:30:09] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536756224 resident bytes / 587 meshes
+[2026-11-09 01:30:09] dbg: [driver:2] OpenTT3D: retired 8388608 cold Vulkan mesh bytes; 533102592 resident bytes / 574 meshes
+[2026-11-09 01:30:10] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 568 meshes
+[2026-11-09 01:30:11] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 568 meshes
+[2026-11-09 01:30:12] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 565 meshes
+[2026-11-09 01:30:12] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 563 meshes
+[2026-11-09 01:30:13] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 564 meshes
+[2026-11-09 01:30:13] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 559 meshes
+[2026-11-09 01:30:14] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 559 meshes
+[2026-11-09 01:30:14] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 561 meshes
+[2026-11-09 01:30:15] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 567 meshes
+[2026-11-09 01:30:15] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 568 meshes
+[2026-11-09 01:30:15] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 567 meshes
+[2026-11-09 01:30:16] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 568 meshes
+[2026-11-09 01:30:16] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 566 meshes
+[2026-11-09 01:30:17] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 565 meshes
+[2026-11-09 01:30:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 569 meshes
+[2026-11-09 01:30:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 563 meshes
+[2026-11-09 01:30:18] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 563 meshes
+[2026-11-09 01:30:19] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 563 meshes
+[2026-11-09 01:30:19] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 559 meshes
+[2026-11-09 01:30:20] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 558 meshes
+[2026-11-09 01:30:20] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 559 meshes
+[2026-11-09 01:30:21] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 553 meshes
+[2026-11-09 01:30:21] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 552 meshes
+[2026-11-09 01:30:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 552 meshes
+[2026-11-09 01:30:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 552 meshes
+[2026-11-09 01:30:22] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 547 meshes
+[2026-11-09 01:30:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 550 meshes
+[2026-11-09 01:30:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 553 meshes
+[2026-11-09 01:30:23] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 552 meshes
+[2026-11-09 01:30:24] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 556 meshes
+[2026-11-09 01:30:25] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 566 meshes
+[2026-11-09 01:30:25] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 568 meshes
+[2026-11-09 01:30:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 570 meshes
+[2026-11-09 01:30:26] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 573 meshes
+[2026-11-09 01:30:27] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 578 meshes
+[2026-11-09 01:30:28] dbg: [driver:2] OpenTT3D: retired 4194304 cold Vulkan mesh bytes; 536133632 resident bytes / 577 meshes
