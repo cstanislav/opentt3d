@@ -63,10 +63,10 @@ undrawn interior tiles are no-draw absence rather than a zero-feature base.
 Four-rotation title-world picking and saves pass. A catalogue-wide geometry
 audit now verifies all2,035 authored volumes at automatic LOD factors2/4/8/16
 (8,140 views; source-owner bounds/occupancy exact, ordinary growth at most one
-coarse cell; `reviews/20261109/catalogue-lods46/`). A current scene-scope full
-renderer/picking run also passes 24,528 tree, 20,832 distant-tree, 8,688
-industry and 48 power-spark views plus GPU/atlas/unlimited-distance/picking
-checks (`reviews/20261109/scene-picking46/`). All four vehicle pose shards0-63,64-127,128-191 and192-255 now pass their
+coarse cell; `reviews/20261109/catalogue-lods46/`). Current Vulkan and OpenGL scene-scope full
+renderer/picking runs pass 24,528 tree, 20,832 distant-tree, 8,688 industry and
+48 power-spark views plus GPU/atlas/unlimited-distance/picking checks
+(`reviews/20261109/scene-picking46/` and `scene-picking-gl46/`). All four vehicle pose shards0-63,64-127,128-191 and192-255 now pass their
 complete 16-palette/crash/cargo/heading/picking matrices with72 acknowledged
 commands and synchronous saves each (`reviews/20261109/vehicle-poses-shard*/`).
 The no-scope renderer run is retained incomplete; scene scope plus all vehicle
