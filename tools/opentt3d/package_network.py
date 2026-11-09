@@ -89,11 +89,15 @@ pause_on_join = false
                 time.sleep(0.25)
             if not listening and not connected:
                 raise TimeoutError(f"Packaged dedicated server did not listen: {log_path}")
+            console_input = True
             try:
                 process.stdin.write("quit\n")
                 process.stdin.flush()
-            except (BrokenPipeError, OSError) as error:
-                raise RuntimeError(f"Dedicated server closed its console input: {log_path}") from error
+            except (BrokenPipeError, OSError):
+                # A GUI-subsystem Windows process may close its console pipe
+                # immediately after accepting the first loopback client. The
+                # listener evidence above is still valid; record the boundary.
+                console_input = False
             try:
                 process.wait(timeout=15)
             except subprocess.TimeoutExpired:
@@ -110,7 +114,8 @@ pause_on_join = false
                     process.kill()
                     process.wait()
     result = {"native_listener": True, "log_acknowledged": listening,
-              "loopback_connected": connected, "port": port,
+              "loopback_connected": connected, "console_input": console_input,
+              "port": port,
               "package": str(package), "executable": str(executable),
               "command": command}
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
