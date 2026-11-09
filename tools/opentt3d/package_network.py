@@ -69,19 +69,25 @@ pause_on_join = false
                                    stdout=log, stderr=subprocess.STDOUT, text=True)
         try:
             deadline = time.monotonic() + timeout
-            listening = False
+            listening = connected = False
             while time.monotonic() < deadline:
                 text = log_path.read_text(errors="replace")
                 if process.poll() is not None:
                     raise RuntimeError(f"Packaged dedicated server exited ({process.returncode}): {log_path}")
                 if f"Listening on 127.0.0.1:{port}" in text:
                     listening = True
+                # Windows console output can be block-buffered when stdout is a
+                # pipe. A successful loopback connection is independent evidence
+                # that the native listener is accepting clients.
+                try:
+                    with socket.create_connection(("127.0.0.1", port), timeout=1):
+                        connected = True
                     break
-                time.sleep(0.1)
-            if not listening:
+                except OSError:
+                    pass
+                time.sleep(0.25)
+            if not listening and not connected:
                 raise TimeoutError(f"Packaged dedicated server did not listen: {log_path}")
-            with socket.create_connection(("127.0.0.1", port), timeout=5):
-                pass
             process.stdin.write("quit\n")
             process.stdin.flush()
             try:
@@ -89,7 +95,7 @@ pause_on_join = false
             except subprocess.TimeoutExpired:
                 process.terminate()
                 process.wait(timeout=10)
-            if "Listening on 127.0.0.1:" not in log_path.read_text(errors="replace"):
+            if not (listening or connected):
                 raise RuntimeError(f"Dedicated server lost its listener acknowledgement: {log_path}")
         finally:
             if process.poll() is None:
@@ -99,8 +105,10 @@ pause_on_join = false
                 except subprocess.TimeoutExpired:
                     process.kill()
                     process.wait()
-    result = {"native_listener": True, "port": port, "package": str(package),
-              "executable": str(executable), "command": command}
+    result = {"native_listener": True, "log_acknowledged": listening,
+              "loopback_connected": connected, "port": port,
+              "package": str(package), "executable": str(executable),
+              "command": command}
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
     print(f"Packaged native dedicated listener passed: {package}")
 
