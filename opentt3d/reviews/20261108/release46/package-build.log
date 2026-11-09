@@ -1,0 +1,20 @@
+CPack: Create package using Bundle
+CPack: Install projects
+CPack: - Run preinstall target for: opentt3d
+CPack: - Install project: opentt3d []
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/libpng16.16.dylib
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/liblzo2.2.dylib
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/libopus.0.dylib
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/libopusfile.0.dylib
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/libMoltenVK.dylib (for architecture x86_64)
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/libMoltenVK.dylib (for architecture arm64)
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app/Contents/Frameworks/libogg.0.8.6.dylib
+CPack: Create package
+CPack: - Application has been codesigned
+CPack: - package: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/opentt3d-dev-20261108.46-macos-arm64.dmg generated.
+CPack: - checksum file: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/opentt3d-dev-20261108.46-macos-arm64.dmg.sha256 generated.
+Verified shared /Users/stanislav/Projects/opentt3d/build-macos/baseset/OpenGFX2_Classic-0.8.1.tar
+Package resources, graphics checksum and dependency paths passed: /Users/stanislav/Projects/opentt3d/build-macos/release-packages/_CPack_Packages/arm64/Bundle/opentt3d-dev-20261108.46-macos-arm64/OpenTT3D.app
+Package resources, graphics checksum and dependency paths passed: /private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opentt3d-package-fja1amw2/OpenTT3D.app
+Packaged default 3D launch, GPU presentation and save passed: /private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opentt3d-package-fja1amw2/OpenTT3D.app
+Packaged default 3D launch, GPU presentation and save passed: /private/var/folders/2h/jfs4f82d6dv54t_m4v49cd_80000gn/T/opentt3d-package-fja1amw2/OpenTT3D.app

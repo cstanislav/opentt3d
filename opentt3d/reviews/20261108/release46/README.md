@@ -1,17 +1,17 @@
-# Release .46 local macOS-arm64 candidate
+# Release .46 macos-arm64 candidate (c875dfd9e)
 
-This candidate was built from commit `0128cbdc8` (the accepted 2,886-row runtime
-ledger, all at 9/10; 183 retained references separately at 3/10; zero coverage
-gaps). The package contains the pinned OpenGFX2 Classic set and the final
-disaster body/shadow catalogue.
+Built from the accepted runtime commit `c875dfd9e`: **2,887 runtime rows, all
+9/10**; 183 retained references separately at 3/10; zero coverage gaps.
 
-Local package-generation and resource/dependency audits passed. Two extracted
-package runs loaded and saved natively: Vulkan and OpenGL. Their results and logs
-are retained here. The `.dmg` and `.zip` hashes are in `SHA256SUMS` and
-`package-metadata.json`.
+The packaged app passed package resource/dependency audits, Vulkan and OpenGL
+native load/save controls, and an independently extracted title-world Vulkan
+run using only the package resources. That run completed an actual synchronous
+save, recorded eight console acknowledgements, and reported **zero unmodelled
+reference sprites**.
 
-This is **not** a published release and not a full independent matrix. Hosted
-source/resource downloads, Windows/macOS x86_64/Linux packaging jobs, independent
-native GPU/window/input/replay/network checks, sustained 60fps/memory, natural
-HQ-score selection and natural custom river-source selection remain open.
+`package-build.log`, `SHA256SUMS`, `package-metadata.json`, `vulkan/`,
+`opengl/` and `independent-title/` retain the evidence. The package is **not
+published**. Hosted source/resource and all-platform packaging, independent
+Windows/Linux runtime/window/input/replay/network checks, natural HQ/river
+selection, LOD/picking/ship clearance and sustained60fps/memory remain open.
 `.42` remains the recommended checkpoint.
