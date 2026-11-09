@@ -100,6 +100,11 @@ jobs:
       contents: write
       actions: read
     steps:
+      - name: Enable full evidence paths before checkout
+        # Retained native source/provenance paths can exceed MAX_PATH. Preserve
+        # them verbatim; checkout must not fail before the package is exercised.
+        shell: pwsh
+        run: git config --global core.longpaths true
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
