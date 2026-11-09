@@ -1,0 +1,94 @@
+[2026-11-09 05:14:29] dbg: [driver:1] Successfully loaded blitter '32bpp-anim'
+[2026-11-09 05:14:29] dbg: [driver:2] Resolution for display: 640x480
+[2026-11-09 05:14:29] dbg: [driver:1] SDL2: Mouse is at (640, 512), use display 0 (0, 0, 1280, 1024)
+[2026-11-09 05:14:29] dbg: [driver:1] SDL2: using mode 640x480
+[2026-11-09 05:14:29] dbg: [driver:1] SDL2: using driver 'x11'
+[2026-11-09 05:14:29] dbg: [driver:1] OpenGL driver: Mesa - llvmpipe (LLVM 20.1.2, 256 bits) (4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.4)
+[2026-11-09 05:14:29] dbg: [driver:2] OpenGL shading language version: 4.50, texture units = 192
+[2026-11-09 05:14:29] dbg: [driver:1] Successfully loaded video driver 'sdl-opengl'
+[2026-11-09 05:14:29] dbg: [driver:1] Successfully loaded sound driver 'null'
+[2026-11-09 05:14:29] dbg: [driver:1] Successfully loaded music driver 'null'
+[2026-11-09 05:14:29] dbg: [driver:1] using thread for game-loop
+[2026-11-09 05:14:29] dbg: [driver:1] Switching blitter from '32bpp-anim' to '40bpp-anim'... 
+[2026-11-09 05:14:29] dbg: [driver:1] Successfully loaded blitter '40bpp-anim'
+[2026-11-09 05:14:29] dbg: [driver:1] Successfully switched to 40bpp-anim.
+[2026-11-09 05:14:29] dbg: [driver:1] SDL2: using mode 640x480
+[2026-11-09 05:14:30] dbg: [driver:1] OpenTT3D: depth-tested mesh renderer initialized
+[2026-11-09 05:14:30] dbg: [driver:1] OpenTT3D: 72 perspective clipping views preserve ray-tested coverage, depth, colour and picking (21180 samples, 16104 visible)
+[2026-11-09 05:14:30] dbg: [driver:1] OpenTT3D: benchmarking 3 presented frames after 30 warm-up frames
+[2026-11-09 05:14:30] dbg: [driver:1] OpenTT3D: loaded 62 profiles from opentt3d-trees.json
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: loaded 2035 authored voxel models, 18796812 occupied cells, 13053784 exposed cell faces merged to 2806587 conforming rectangles / 21959776 triangles
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: retained lossless voxel sources use 39649344 bytes instead of 1842648044 dense cell bytes, with one shared palette
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: CPU voxel surfaces retain 1071239096 bytes under a scene-pinned soft budget, including 206649656 exact restoration bytes
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4773 mip family request 4 decode 0.285 ms, preparation 1.083 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4662 mip family request 4 decode 0.458 ms, preparation 0.554 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4644 mip family request 4 decode 0.640 ms, preparation 0.713 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4638 mip family request 4 decode 0.791 ms, preparation 0.878 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4632 mip family request 4 decode 0.903 ms, preparation 1.023 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4629 mip family request 4 decode 0.763 ms, preparation 0.851 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4659 mip family request 4 decode 0.854 ms, preparation 0.917 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4697 mip family request 4 decode 0.469 ms, preparation 0.545 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4668 mip family request 4 decode 0.635 ms, preparation 0.721 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4705 mip family request 4 decode 0.502 ms, preparation 0.564 ms
+[2026-11-09 05:14:56] dbg: [driver:2] OpenTT3D: source texture 4707 mip family request 4 decode 0.600 ms, preparation 1.792 ms
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 2003 stage 3 captured at 38,48
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 2003 stage 4 captured at 38,48
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1982 stage 3 captured at 33,49
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1982 stage 6 captured at 33,49
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 3 captured at 34,49
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 4 captured at 37,49
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 1 captured at 41,49
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 2003 stage 2 captured at 59,49
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 2 captured at 33,50
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 5 captured at 37,50
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 3 captured at 33,51
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1982 stage 4 captured at 34,51
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1989 stage 3 captured at 44,51
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 2003 stage 5 captured at 60,51
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 2003 stage 6 captured at 30,52
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1982 stage 1 captured at 37,52
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 3 captured at 38,52
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 0 captured at 39,52
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1982 stage 2 captured at 40,52
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1954 stage 3 captured at 59,52
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 2 captured at 30,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 1 captured at 37,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 5 captured at 39,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1968 stage 6 captured at 43,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1954 stage 1 captured at 60,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 4 captured at 61,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 3 captured at 61,53
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 0 captured at 36,54
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 2 captured at 52,54
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1954 stage 4 captured at 60,54
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1954 stage 2 captured at 61,54
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1989 stage 5 captured at 39,55
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 4 captured at 40,55
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 6 captured at 49,55
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 5 captured at 51,55
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1954 stage 5 captured at 60,55
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1961 stage 3 captured at 62,55
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 2 captured at 46,56
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 4 captured at 49,56
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 0 captured at 56,56
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 5 captured at 59,56
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 1 captured at 60,56
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1982 stage 5 captured at 43,57
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1961 stage 6 captured at 51,57
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 0 captured at 54,57
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1947 stage 1 captured at 60,57
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1961 stage 4 captured at 63,57
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1961 stage 2 captured at 49,59
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1989 stage 6 captured at 50,59
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1996 stage 6 captured at 51,59
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1961 stage 1 captured at 52,60
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1975 stage 6 captured at 55,60
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1989 stage 0 captured at 57,62
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1961 stage 0 captured at 61,62
+[2026-11-09 05:14:56] dbg: [driver:1] OpenTT3D: live projected tree 1954 stage 0 captured at 63,62
+[2026-11-09 05:14:57] dbg: [driver:2] OpenTT3D: source texture 2075 mip family request 3 decode 0.733 ms, preparation 0.850 ms
+[2026-11-09 05:14:57] dbg: [driver:2] OpenTT3D: source texture 2074 mip family request 3 decode 0.621 ms, preparation 0.730 ms
+[2026-11-09 05:14:57] dbg: [driver:2] OpenTT3D: source texture 2073 mip family request 3 decode 0.535 ms, preparation 0.675 ms
+[2026-11-09 05:14:57] dbg: [driver:1] OpenTT3D: 63 ground-detail tiles rendered with raised crops, hay, rocks or turf
+[2026-11-09 05:14:58] dbg: [driver:1] OpenTT3D: benchmark 25.18 fps, p95 work 40.17ms; /home/runner/work/opentt3d/opentt3d/checks/opengl/benchmark.json
+[2026-11-09 05:14:58] dbg: [driver:1] OpenTT3D: captured OpenGL presentation with 2 GPU viewport regions

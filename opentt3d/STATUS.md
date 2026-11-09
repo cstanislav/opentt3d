@@ -67,10 +67,16 @@ newest prerelease and is not merged. A `.46` draft is hosted from the accepted
 runtime tag; all eight packaging jobs passed, and an independent download of19
 assets plus49,507 source blobs compiled to the exact2,035-model package
 catalogue. Its macOS-arm64 package passed packaged Vulkan/OpenGL and an
-independent title-world save control. It is not published. The final `.46`
+independent title-world save control; the macOS-x86_64 package passed the same
+controls under Rosetta. Independent native run42565973306 then ran the downloaded
+archives: Linux-x86_64 passed default Vulkan/OpenGL presentation and an
+OpenGL title-world save with tile picking, while Windows x64/x86/native-ARM64
+each loaded and re-saved the packaged title world (`windows-11-arm`, not a
+cross-compiler). Windows windowed rendering, pointer input, replay and
+multiplayer transport remain open. It is not published. The final `.46`
 performance control measured39.37fps at1280×720/zoom5 and retains the60fps
-failure. `.42` remains recommended until independent Windows/Linux native runtime
-checks pass.
+failure. `.42` remains recommended until those remaining runtime/network checks
+and sustained60fps pass.
 
 ## October 3 — HQ brick ownership and unbound lock detail improved provisionally
 

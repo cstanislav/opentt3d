@@ -1,0 +1,25 @@
+{
+  "native_load_save": true,
+  "package": "C:\\a\\opentt3d\\opentt3d\\package\\opentt3d-dev-20261108.46-windows-arm64",
+  "command": [
+    "C:\\a\\opentt3d\\opentt3d\\package\\opentt3d-dev-20261108.46-windows-arm64\\opentt3d.exe",
+    "-c",
+    "C:\\a\\opentt3d\\opentt3d\\checks\\headless\\openttd.cfg",
+    "-x",
+    "-X",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-d",
+    "driver=2,console=1",
+    "-g",
+    "C:\\a\\opentt3d\\opentt3d\\checks\\headless\\input.sav",
+    "-v",
+    "null"
+  ]
+}
