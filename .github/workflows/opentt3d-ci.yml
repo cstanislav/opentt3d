@@ -135,6 +135,10 @@ jobs:
             host: x86
           - arch: arm64
             host: x64_arm64
+    env:
+      # The hosted runner already has CMake/Ninja; avoid vcpkg's transient
+      # GitHub download of its own CMake tool on network errors.
+      VCPKG_FORCE_SYSTEM_BINARIES: '1'
     steps:
       - name: Enable full evidence paths before checkout
         # Retained native review paths exceed the Windows MAX_PATH limit.
