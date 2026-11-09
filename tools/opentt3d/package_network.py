@@ -88,8 +88,11 @@ pause_on_join = false
                 time.sleep(0.25)
             if not listening and not connected:
                 raise TimeoutError(f"Packaged dedicated server did not listen: {log_path}")
-            process.stdin.write("quit\n")
-            process.stdin.flush()
+            try:
+                process.stdin.write("quit\n")
+                process.stdin.flush()
+            except (BrokenPipeError, OSError) as error:
+                raise RuntimeError(f"Dedicated server closed its console input: {log_path}") from error
             try:
                 process.wait(timeout=15)
             except subprocess.TimeoutExpired:
