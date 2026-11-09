@@ -44,6 +44,8 @@ jobs:
           PY
           test -d "package/${RELEASE_TAG}-windows-x64"
       - name: Install Mesa software OpenGL for the hosted runner
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
         shell: bash
         run: |
           curl -L --retry 5 --retry-delay 3 -o mesa/mesa.7z \
