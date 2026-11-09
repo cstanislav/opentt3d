@@ -1,9 +1,11 @@
 # `.46` independent native release smoke
 
-Workflow run
+Workflow runs
 [`42565973306`](https://github.com/cstanislav/opentt3d/actions/runs/42565973306)
+and
+[`42571096954`](https://github.com/cstanislav/opentt3d/actions/runs/42571096954)
 downloaded and ran the hosted `.46` archives on real Windows and Linux
-runners. All four jobs passed.
+runners. All four jobs passed in both runs.
 
 - Linux x86_64: the downloaded archive's default Vulkan 3D launch and explicit
   OpenGL launch both presented a GPU viewport, verified perspective clipping and
