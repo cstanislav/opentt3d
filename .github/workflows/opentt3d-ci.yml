@@ -160,6 +160,16 @@ jobs:
       - uses: OpenTTD/actions/setup-vcpkg@v6
         id: vcpkg_retry
         if: steps.vcpkg_first.outcome == 'failure'
+      - name: Fall back to the runner's preinstalled vcpkg
+        id: vcpkg_fallback
+        if: steps.vcpkg_first.outcome == 'failure' && steps.vcpkg_retry.outcome == 'failure'
+        shell: pwsh
+        run: |
+          $root = "C:\vcpkg"
+          $toolchain = Join-Path $root "scripts\buildsystems\vcpkg.cmake"
+          if (!(Test-Path $toolchain)) { throw "Preinstalled vcpkg toolchain is missing: $toolchain" }
+          "VCPKG_ROOT=$root" >> $env:GITHUB_ENV
+          "vcpkg-cmake=$toolchain" >> $env:GITHUB_OUTPUT
       - name: Select the available vcpkg toolchain
         id: vcpkg
         shell: bash
@@ -167,6 +177,9 @@ jobs:
           toolchain="${{ steps.vcpkg_first.outputs.vcpkg-cmake }}"
           if [ -z "$toolchain" ]; then
             toolchain="${{ steps.vcpkg_retry.outputs.vcpkg-cmake }}"
+          fi
+          if [ -z "$toolchain" ]; then
+            toolchain="${{ steps.vcpkg_fallback.outputs.vcpkg-cmake }}"
           fi
           if [ -z "$toolchain" ]; then
             echo "No vcpkg toolchain was produced" >&2
