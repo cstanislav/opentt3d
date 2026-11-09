@@ -1,0 +1,74 @@
+{
+  "x": 40,
+  "y": 24,
+  "water_height": 1,
+  "depot": 4028,
+  "depot_axis": 0,
+  "depot_service": true,
+  "depot_hold_ticks": 0,
+  "dock_hold": false,
+  "buoy": 4278,
+  "dike_island": 4152,
+  "docks": [
+    4011,
+    4174
+  ],
+  "extra_docks": [
+    3508,
+    4676
+  ],
+  "vehicles": [
+    {
+      "engine": 212,
+      "vehicle": 0,
+      "peak_speed": 40,
+      "docks_visited": 3,
+      "buoy_visited": true
+    },
+    {
+      "engine": 211,
+      "vehicle": 1,
+      "peak_speed": 24,
+      "docks_visited": 3,
+      "buoy_visited": true
+    },
+    {
+      "engine": 208,
+      "vehicle": 2,
+      "peak_speed": 112,
+      "docks_visited": 3,
+      "buoy_visited": true
+    },
+    {
+      "engine": 207,
+      "vehicle": 3,
+      "peak_speed": 64,
+      "docks_visited": 3,
+      "buoy_visited": true
+    },
+    {
+      "engine": 206,
+      "vehicle": 4,
+      "peak_speed": 32,
+      "docks_visited": 3,
+      "buoy_visited": true
+    },
+    {
+      "engine": 205,
+      "vehicle": 5,
+      "peak_speed": 40,
+      "docks_visited": 3,
+      "buoy_visited": true
+    },
+    {
+      "engine": 204,
+      "vehicle": 6,
+      "peak_speed": 24,
+      "docks_visited": 3,
+      "buoy_visited": true
+    }
+  ],
+  "climate": "temperate",
+  "starting_year": 2050,
+  "save": "save/ship-catalogue.sav"
+}

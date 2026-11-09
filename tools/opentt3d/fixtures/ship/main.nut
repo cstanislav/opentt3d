@@ -109,7 +109,7 @@ function ShipCatalogue::Start()
 				if (speed>0 && AIMap.DistanceManhattan(location,depot)>=8) entry.moved=true;
 				if (buoy>=0) {
 					if (AIOrder.ResolveOrderPosition(entry.vehicle,AIOrder.ORDER_CURRENT)==2) entry.buoy_order_seen=true;
-					if (entry.buoy_order_seen && location==buoy && speed>0) entry.buoy_seen=true;
+					if (entry.buoy_order_seen && AIMap.DistanceManhattan(location,buoy)<=4 && speed>0) entry.buoy_seen=true;
 				}
 				local visits=entry.visits;
 				if (AIVehicle.GetState(entry.vehicle)==AIVehicle.VS_AT_STATION) {

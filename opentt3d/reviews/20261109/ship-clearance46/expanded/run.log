@@ -1,0 +1,86 @@
+[2026-11-08 23:51:03] dbg: [net:3] Starting dedicated server, version 20261109-main-mcab6737057
+[2026-11-08 23:51:03] dbg: [net:3] Starting network
+[2026-11-08 23:51:03] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:51:03] dbg: [net:3] Network online, multiplayer available
+[2026-11-08 23:51:03] dbg: [net:3] Detected broadcast addresses:
+[2026-11-08 23:51:03] dbg: [net:3]   0) 192.168.1.255
+[2026-11-08 23:51:03] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-11-08 23:51:03] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - 20261109-main-mcab6737057
+------------------------------------
+use "help" for more information.
+
+[2026-11-08 23:51:03] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-11-08 23:51:03] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-11-08 23:51:03] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:51:03] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:51:03] dbg: [net:3] Listening on 127.0.0.1:57453 (IPv4)
+[2026-11-08 23:51:03] dbg: [net:3] Listening on 127.0.0.1:57453 (IPv4)
+[2026-11-08 23:51:03] dbg: [net:3] Network revision name: 20261109-main-mcab6737057
+[2026-11-08 23:51:03] dbg: [net:3] [crypto] Creating a new random key
+[2026-11-08 23:51:03] dbg: [net:3] Generating map, please wait...
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 5
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 11
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 17
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 20
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 60
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 65
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 70
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 75
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 80
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 85
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 90
+[2026-11-08 23:51:03] dbg: [net:3] Map generation percentage complete: 99
+Game is already unpaused.
+[2026-11-08 23:51:03] dbg: [net:3] Map generated, starting game
+[2026-11-08 23:51:04] dbg: [script:4] [0] [I] SHIP_CATALOGUE_STARTED
+[2026-11-08 23:51:04] dbg: [script:4] [0] [I] SHIP_CATALOGUE_SITE 40,24 height=2
+[2026-11-08 23:51:33] dbg: [script:4] [0] [I] SHIP_CATALOGUE_BANKS west=12 east=3
+[2026-11-08 23:51:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=212 vehicle=0
+[2026-11-08 23:51:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=211 vehicle=1
+[2026-11-08 23:51:36] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=208 vehicle=2
+[2026-11-08 23:51:37] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=207 vehicle=3
+[2026-11-08 23:51:37] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=206 vehicle=4
+[2026-11-08 23:51:38] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=205 vehicle=5
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=204 vehicle=6
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=58,31 speed=40 state=0 order=0 visited=0
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=59,31 speed=24 state=0 order=0 visited=0
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=60,31 speed=5 state=0 order=0 visited=0
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:51:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:51:49] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=208 vehicle=2 visited=1
+[2026-11-08 23:51:55] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=207 vehicle=3 visited=1
+[2026-11-08 23:51:56] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=1
+[2026-11-08 23:52:05] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=205 vehicle=5 visited=1
+[2026-11-08 23:52:08] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=206 vehicle=4 visited=1
+[2026-11-08 23:52:09] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=208 vehicle=2 visited=3
+[2026-11-08 23:52:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=211 vehicle=1 visited=1
+[2026-11-08 23:52:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=204 vehicle=6 visited=1
+[2026-11-08 23:52:26] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=207 vehicle=3 visited=3
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=70,34 speed=40 state=0 order=1 visited=1
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=54,34 speed=24 state=0 order=1 visited=1
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=53,31 speed=112 state=0 order=0 visited=3
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=70,33 speed=64 state=0 order=2 visited=3
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=59,30 speed=32 state=0 order=1 visited=1
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=64,34 speed=40 state=0 order=1 visited=1
+[2026-11-08 23:52:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=50,34 speed=24 state=0 order=1 visited=1
+[2026-11-08 23:52:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=3
+[2026-11-08 23:52:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=205 vehicle=5 visited=3
+[2026-11-08 23:53:05] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=206 vehicle=4 visited=3
+[2026-11-08 23:53:27] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=211 vehicle=1 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=57,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=75,32 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=46,31 speed=42 state=0 order=1 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=66,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=63,31 speed=32 state=0 order=2 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=58,30 speed=40 state=0 order=3 visited=3
+[2026-11-08 23:53:31] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=74,34 speed=24 state=0 order=1 visited=1
+[2026-11-08 23:53:36] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=204 vehicle=6 visited=3
+[2026-11-08 23:54:19] dbg: [script:4] [0] [I] SHIP_CATALOGUE_READY {"x":40,"y":24,"water_height":1,"depot":4028,"depot_axis":0,"depot_service":true,"depot_hold_ticks":0,"dock_hold":false,"buoy":4278,"dike_island":4152,"docks":[4011,4174],"extra_docks":[3508,4676],"vehicles":[{"engine":212,"vehicle":0,"peak_speed":40,"docks_visited":3,"buoy_visited":true},{"engine":211,"vehicle":1,"peak_speed":24,"docks_visited":3,"buoy_visited":true},{"engine":208,"vehicle":2,"peak_speed":112,"docks_visited":3,"buoy_visited":true},{"engine":207,"vehicle":3,"peak_speed":64,"docks_visited":3,"buoy_visited":true},{"engine":206,"vehicle":4,"peak_speed":32,"docks_visited":3,"buoy_visited":true},{"engine":205,"vehicle":5,"peak_speed":40,"docks_visited":3,"buoy_visited":true},{"engine":204,"vehicle":6,"peak_speed":24,"docks_visited":3,"buoy_visited":true}]}
+Saving map...
+Map successfully saved to 'ship-catalogue.sav'.
+‎*** Game paused (manual)
+[2026-11-08 23:54:20] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:54:20] dbg: [net:3] Shutting down network

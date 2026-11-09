@@ -1,0 +1,176 @@
+[2026-11-08 23:33:16] dbg: [net:3] Starting dedicated server, version 20261109-main-mcab6737057
+[2026-11-08 23:33:16] dbg: [net:3] Starting network
+[2026-11-08 23:33:16] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:33:16] dbg: [net:3] Network online, multiplayer available
+[2026-11-08 23:33:16] dbg: [net:3] Detected broadcast addresses:
+[2026-11-08 23:33:16] dbg: [net:3]   0) 192.168.1.255
+[2026-11-08 23:33:16] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-11-08 23:33:16] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - 20261109-main-mcab6737057
+------------------------------------
+use "help" for more information.
+
+[2026-11-08 23:33:17] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-11-08 23:33:17] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-11-08 23:33:17] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:33:17] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:33:17] dbg: [net:3] Listening on 127.0.0.1:61407 (IPv4)
+[2026-11-08 23:33:17] dbg: [net:3] Listening on 127.0.0.1:61407 (IPv4)
+[2026-11-08 23:33:17] dbg: [net:3] Network revision name: 20261109-main-mcab6737057
+[2026-11-08 23:33:17] dbg: [net:3] [crypto] Creating a new random key
+[2026-11-08 23:33:17] dbg: [net:3] Generating map, please wait...
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 5
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 11
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 17
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 20
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 60
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 65
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 70
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 75
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 80
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 85
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 90
+[2026-11-08 23:33:17] dbg: [net:3] Map generation percentage complete: 99
+Game is already unpaused.
+[2026-11-08 23:33:17] dbg: [net:3] Map generated, starting game
+[2026-11-08 23:33:17] dbg: [script:4] [0] [I] SHIP_CATALOGUE_STARTED
+[2026-11-08 23:33:17] dbg: [script:4] [0] [I] SHIP_CATALOGUE_SITE 40,24 height=2
+[2026-11-08 23:33:46] dbg: [script:4] [0] [I] SHIP_CATALOGUE_BANKS west=12 east=3
+[2026-11-08 23:33:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=212 vehicle=0
+[2026-11-08 23:33:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=211 vehicle=1
+[2026-11-08 23:33:49] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=208 vehicle=2
+[2026-11-08 23:33:50] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=207 vehicle=3
+[2026-11-08 23:33:50] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=206 vehicle=4
+[2026-11-08 23:33:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=205 vehicle=5
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=204 vehicle=6
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=58,31 speed=40 state=0 order=0 visited=0
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=59,31 speed=24 state=0 order=0 visited=0
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=60,31 speed=5 state=0 order=0 visited=0
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:33:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=60,31 speed=0 state=0 order=0 visited=0
+[2026-11-08 23:34:02] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=208 vehicle=2 visited=1
+[2026-11-08 23:34:08] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=207 vehicle=3 visited=1
+[2026-11-08 23:34:09] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=1
+[2026-11-08 23:34:18] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=205 vehicle=5 visited=1
+[2026-11-08 23:34:21] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=206 vehicle=4 visited=1
+[2026-11-08 23:34:22] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=208 vehicle=2 visited=3
+[2026-11-08 23:34:24] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=211 vehicle=1 visited=1
+[2026-11-08 23:34:33] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=204 vehicle=6 visited=1
+[2026-11-08 23:34:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=207 vehicle=3 visited=3
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=70,34 speed=40 state=0 order=1 visited=1
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=54,34 speed=24 state=0 order=1 visited=1
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=53,31 speed=112 state=0 order=0 visited=3
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=70,33 speed=64 state=0 order=2 visited=3
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=59,30 speed=32 state=0 order=1 visited=1
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=64,34 speed=40 state=0 order=1 visited=1
+[2026-11-08 23:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=50,34 speed=24 state=0 order=1 visited=1
+[2026-11-08 23:34:56] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=3
+[2026-11-08 23:35:05] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=205 vehicle=5 visited=3
+[2026-11-08 23:35:18] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=206 vehicle=4 visited=3
+[2026-11-08 23:35:40] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=211 vehicle=1 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=57,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=75,32 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=46,31 speed=42 state=0 order=1 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=66,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=63,31 speed=32 state=0 order=2 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=58,30 speed=40 state=0 order=3 visited=3
+[2026-11-08 23:35:44] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=74,34 speed=24 state=0 order=1 visited=1
+[2026-11-08 23:35:49] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=204 vehicle=6 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=71,30 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=56,30 speed=24 state=0 order=3 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=57,34 speed=112 state=0 order=1 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=46,32 speed=52 state=0 order=1 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=46,31 speed=28 state=0 order=1 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=65,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:36:39] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=55,33 speed=24 state=0 order=3 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=56,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=49,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=70,30 speed=112 state=0 order=1 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=60,31 speed=16 state=0 order=0 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=76,32 speed=0 state=0 order=2 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=58,30 speed=40 state=0 order=3 visited=3
+[2026-11-08 23:37:34] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=46,31 speed=20 state=0 order=1 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=72,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=73,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=75,32 speed=32 state=0 order=2 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=67,33 speed=64 state=0 order=2 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=58,31 speed=32 state=0 order=0 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=65,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:38:30] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=69,30 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=56,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=57,33 speed=24 state=0 order=3 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=66,33 speed=112 state=0 order=2 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=68,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=62,34 speed=32 state=0 order=1 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=59,30 speed=40 state=0 order=3 visited=3
+[2026-11-08 23:39:25] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=61,31 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=72,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=46,31 speed=24 state=0 order=0 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=55,31 speed=112 state=0 order=3 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=48,33 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=59,33 speed=32 state=0 order=2 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=66,30 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:40:20] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=49,31 speed=24 state=0 order=0 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=55,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=67,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=58,31 speed=68 state=0 order=0 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=59,31 speed=38 state=0 order=0 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=48,34 speed=32 state=0 order=1 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=59,31 speed=40 state=0 order=3 visited=3
+[2026-11-08 23:41:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=64,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=73,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=62,33 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=45,31 speed=3 state=0 order=1 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=65,33 speed=64 state=0 order=2 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=74,33 speed=32 state=0 order=2 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=67,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:42:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=65,33 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=55,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=51,31 speed=24 state=0 order=0 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=50,34 speed=104 state=0 order=1 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=70,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=55,31 speed=32 state=0 order=0 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=60,31 speed=40 state=0 order=3 visited=3
+[2026-11-08 23:43:06] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=54,31 speed=24 state=0 order=0 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=74,30 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=63,30 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=62,34 speed=112 state=0 order=1 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=49,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=66,34 speed=32 state=0 order=1 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=67,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:44:01] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=59,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=54,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=67,31 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=75,33 speed=112 state=0 order=1 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=57,31 speed=64 state=0 order=0 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=56,33 speed=32 state=0 order=3 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=60,31 speed=4 state=0 order=0 visited=3
+[2026-11-08 23:44:57] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=70,33 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=74,33 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=55,31 speed=24 state=0 order=0 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=73,33 speed=76 state=0 order=2 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=63,33 speed=64 state=0 order=2 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=51,30 speed=32 state=0 order=1 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=67,34 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:45:52] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=59,31 speed=24 state=0 order=0 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=53,31 speed=40 state=0 order=0 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=58,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=61,33 speed=112 state=0 order=2 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=71,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=71,31 speed=32 state=0 order=2 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=60,31 speed=12 state=0 order=0 visited=3
+[2026-11-08 23:46:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=54,34 speed=24 state=0 order=1 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=74,33 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=72,33 speed=24 state=0 order=2 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=59,30 speed=112 state=0 order=3 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=51,34 speed=64 state=0 order=1 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=52,31 speed=32 state=0 order=0 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=68,30 speed=40 state=0 order=1 visited=3
+[2026-11-08 23:47:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=75,32 speed=24 state=0 order=2 visited=3
+Saving map...
+Map successfully saved to 'failed-fixture.sav'.
+‎*** Game paused (manual)
+[2026-11-08 23:48:17] dbg: [net:3] Initializing UDP listeners
+[2026-11-08 23:48:17] dbg: [net:3] Shutting down network
