@@ -63,7 +63,11 @@ undrawn interior tiles are no-draw absence rather than a zero-feature base.
 Four-rotation title-world picking and saves pass. A catalogue-wide geometry
 audit now verifies all2,035 authored volumes at automatic LOD factors2/4/8/16
 (8,140 views; source-owner bounds/occupancy exact, ordinary growth at most one
-coarse cell; `reviews/20261109/catalogue-lods46/`). Explicit custom-base
+coarse cell; `reviews/20261109/catalogue-lods46/`). A current scene-scope full
+renderer/picking run also passes 24,528 tree, 20,832 distant-tree, 8,688
+industry and 48 power-spark views plus GPU/atlas/unlimited-distance/Picking
+checks (`reviews/20261109/scene-picking46/`); complete vehicle pose shards
+remain separate and a no-scope run is retained incomplete. Explicit custom-base
 absence, full ship bridge/swept clearance, performance and full client/replay
 checks remain separate. A repeatable zoom3 cache collapse was repaired by raising the default CPU voxel
 cache budget to1.5GiB: zoom3 moved from6.9fps/146.96ms capture to46.89fps/10.60ms,
