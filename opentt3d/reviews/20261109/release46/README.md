@@ -15,7 +15,8 @@ independently downloaded and checked:
   synchronous save, eight acknowledgements and zero unmodelled references.
 - Independent native release smoke runs
   [`42565973306`](https://github.com/cstanislav/opentt3d/actions/runs/42565973306)
-  and [`42571096954`](https://github.com/cstanislav/opentt3d/actions/runs/42571096954)
+  [`42571096954`](https://github.com/cstanislav/opentt3d/actions/runs/42571096954)
+  and [`42573903535`](https://github.com/cstanislav/opentt3d/actions/runs/42573903535)
   downloaded the hosted archives and passed all four jobs:
   - Linux x86_64 passed default Vulkan and explicit OpenGL package presentation,
     perspective clipping and saved worlds, then an OpenGL title-world run with
