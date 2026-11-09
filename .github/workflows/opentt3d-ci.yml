@@ -147,7 +147,24 @@ jobs:
         with:
           python-version: '3.12'
       - uses: OpenTTD/actions/setup-vcpkg@v6
+        id: vcpkg_first
+        continue-on-error: true
+      - uses: OpenTTD/actions/setup-vcpkg@v6
+        id: vcpkg_retry
+        if: steps.vcpkg_first.outcome == 'failure'
+      - name: Select the available vcpkg toolchain
         id: vcpkg
+        shell: bash
+        run: |
+          toolchain="${{ steps.vcpkg_first.outputs.vcpkg-cmake }}"
+          if [ -z "$toolchain" ]; then
+            toolchain="${{ steps.vcpkg_retry.outputs.vcpkg-cmake }}"
+          fi
+          if [ -z "$toolchain" ]; then
+            echo "No vcpkg toolchain was produced" >&2
+            exit 1
+          fi
+          echo "vcpkg-cmake=$toolchain" >> "$GITHUB_OUTPUT"
       - uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: x64
