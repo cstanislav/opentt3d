@@ -10,6 +10,9 @@ independently downloaded and checked:
 - The independently downloaded macOS ARM64 app passed Vulkan and OpenGL package
   controls and a title-world Vulkan run with an actual synchronous save, eight
   console acknowledgements and zero unmodelled-reference report.
+- The independently downloaded macOS x86_64 app ran under Rosetta and passed
+  Vulkan/OpenGL package controls plus a title-world Vulkan run with an actual
+  synchronous save, eight acknowledgements and zero unmodelled references.
 
 The draft remains **unpublished**. Independent Linux/Windows/x86_64 native
 runtime/window/input/replay/network checks and sustained60fps/memory acceptance
