@@ -36,8 +36,9 @@ size2/3/4 saved-world screenshots, source owner sheets and complete bound famili
 The8 river-relief models and192 conditional instances were accepted at9/10 from a
 forced actual river world, source sheets and the complete bound family. The HQ
 stages and river relief were forced in isolated fixtures; natural company-score
-selection, natural custom river-source selection, absence and phase gates remain
-open. The audit's remaining coverage gap is the uncatalogued disaster/world-sprite
+selection is now verified at stage4 from an actual score870 on the title company
+with a normal HQ build; lower thresholds remain source-governed. Natural custom
+river-source selection, absence and phase gates remain open. The audit's remaining coverage gap is the uncatalogued disaster/world-sprite
 inventory. That gap is now covered by fifteen authored 3D disaster body/shadow
 volumes and23 source-sprite bindings, with all fifteen subtypes observed in one
 actual saved Vulkan world. The canonical audit now reports an empty coverage-gap

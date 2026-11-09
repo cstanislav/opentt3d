@@ -55,10 +55,10 @@ water, four rotor frames and six shadow states. The audit's coverage-gap list is
 empty and every runtime-required row is at9/10. The actual title-world Vulkan
 capture now reports zero unmodelled reference sprites: road slopes/road waypoint
 signs use world geometry, locks use the complete map-owned wall family, and the
-Toyland factory144 completed state has an authored 3D body. Natural company-score selection,
-natural custom river-source selection, absence, phase/custom-family,
-LOD/picking/ship-clearance, performance and independent release gates remain
-separate.
+Toyland factory144 completed state has an authored 3D body. Natural company-score selection is now verified at stage4 from an actual company score870 and a normal HQ build (`opentt3d/reviews/20261109/natural-hq-selection/`); lower thresholds remain source-governed. Natural custom river-source selection, absence, phase/custom-family,
+LOD/picking/full ship-clearance, performance and independent release gates remain
+separate. The final `.46` performance control measured39.37fps at1280×720/zoom5
+and retains the60fps failure; the ship fixture verified all seven original ship engines through both docks.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness122 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
