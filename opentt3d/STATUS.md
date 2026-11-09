@@ -69,6 +69,9 @@ actual buoy, the dry harbour island and the recurring depot order, then captured
 all seven 3D hulls in the saved world.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness124 and native219 tests pass; the presentation boundary passes.
+The latest main CI attempt is still affected by external GitHub 504s during
+vcpkg/CMake and MoltenVK downloads; retries are in place and the failure is
+retained rather than presented as a code pass.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. A `.46` draft is hosted from the accepted
@@ -82,11 +85,14 @@ title-world save with tile picking and a dedicated loopback listener, while
 Windows x64/x86/native-ARM64 each loaded and re-saved the packaged title world
 and accepted a dedicated loopback client (`windows-11-arm`, not a
 cross-compiler); Windows console input closes after acceptance, so full client
-play/replay remains open. Four independent `.46` title worlds at rotations0–3 retain
+play/replay remains open. A hosted Windows windowed/Mesa probe launched but
+produced an empty log and no frame under the non-interactive runner session; it
+is retained as rejected environment evidence
+(`opentt3d/reviews/20261109/windows-window-probe/`), not a window/input pass. Four independent `.46` title worlds at rotations0–3 retain
 64 picking samples each, eight to eleven acknowledged commands and synchronous
 saves. The downloaded Linux and Windows packages started native dedicated servers and
 accepted loopback clients. Windows windowed rendering, pointer input and full
-client/replay remain open. It is not published. The final `.46`
+client/replay remain open; the hosted window probe is rejected, not hidden. It is not published. The final `.46`
 performance control measured39.37fps at1280×720/zoom5 and retains the60fps
 failure. `.42` remains recommended until those remaining runtime/network checks
 and sustained60fps pass.
