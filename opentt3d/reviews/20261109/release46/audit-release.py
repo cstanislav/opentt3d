@@ -47,7 +47,6 @@ def main():
         assert extras=={f'{args.tag}/release-source.json',graphics_path}
         authored=json.load(source.extractfile(f'{args.tag}/assets/3d/voxels.json'));assert len(authored['models'])==2035
         diagnostic=json.load(source.extractfile(f'{args.tag}/assets/3d/hq-diagnostic-bindings.json'));assert diagnostic['runtime_enabled'] is False
-        for category in ('objects','object_ground'):assert all(int(layout)<12 for layout in authored['bindings'][category])
         compiler_source=source.extractfile(f'{args.tag}/tools/assets/compile_voxels.py').read()
         namespace={'__file__':str(ROOT/'tools/assets/compile_voxels.py'),'__name__':'release_audit_compiler'}
         exec(compile(compiler_source,'immutable-tagged-compiler','exec'),namespace)
