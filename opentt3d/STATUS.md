@@ -63,9 +63,12 @@ undrawn interior tiles are no-draw absence rather than a zero-feature base.
 Four-rotation title-world picking and saves pass. Full LOD geometry review,
 explicit custom-base absence, full ship clearance, performance and independent
 network/replay checks remain separate. The final `.46` performance control measured39.37fps at1280×720/zoom5
-and retains the60fps failure; the ship fixture verified all seven original ship engines through both docks.
+and retains the60fps failure; the expanded ship fixture verified all seven
+original ship engines through two loading docks, four dock orientations, the
+actual buoy, the dry harbour island and the recurring depot order, then captured
+all seven 3D hulls in the saved world.
 The earlier7/10 provisional reviews and their defects are retained in git history.
-Asset280, harness122 and native219 tests pass; the presentation boundary passes.
+Asset280, harness123 and native219 tests pass; the presentation boundary passes.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. A `.46` draft is hosted from the accepted
@@ -78,7 +81,7 @@ archives: Linux-x86_64 passed default Vulkan/OpenGL presentation and an
 OpenGL title-world save with tile picking, while Windows x64/x86/native-ARM64
 each loaded and re-saved the packaged title world (`windows-11-arm`, not a
 cross-compiler). Four independent `.46` title worlds at rotations0–3 retain
-64 picking samples each, nine to eleven acknowledged commands and synchronous
+64 picking samples each, eight to eleven acknowledged commands and synchronous
 saves. Windows windowed rendering, pointer input, network transport and replay
 remain open. It is not published. The final `.46`
 performance control measured39.37fps at1280×720/zoom5 and retains the60fps
