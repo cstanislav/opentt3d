@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 import tarfile
 import tempfile
+import time
+import urllib.error
 import urllib.request
 
 
@@ -20,17 +22,23 @@ def main():
     archive = target / pin["filename"]
     if not archive.is_file():
         request = urllib.request.Request(pin["url"], headers={"User-Agent": "OpenTT3D-build"})
-        with tempfile.NamedTemporaryFile(dir=target, delete=False) as temporary:
-            temporary_path = Path(temporary.name)
-            try:
-                with urllib.request.urlopen(request, timeout=120) as source:
-                    while chunk := source.read(1024 * 1024):
-                        temporary.write(chunk)
-                temporary.flush()
-            except BaseException:
-                temporary_path.unlink(missing_ok=True)
-                raise
-        archive = temporary_path
+        for attempt in range(3):
+            with tempfile.NamedTemporaryFile(dir=target, delete=False) as temporary:
+                temporary_path = Path(temporary.name)
+                try:
+                    with urllib.request.urlopen(request, timeout=120) as source:
+                        while chunk := source.read(1024 * 1024):
+                            temporary.write(chunk)
+                    temporary.flush()
+                except (urllib.error.URLError, TimeoutError, OSError):
+                    temporary_path.unlink(missing_ok=True)
+                    if attempt == 2:
+                        raise
+                    print(f"MoltenVK download attempt {attempt + 1} failed; retrying")
+                    time.sleep(2 ** attempt)
+                    continue
+            archive = temporary_path
+            break
     with archive.open("rb") as source:
         digest = hashlib.file_digest(source, "sha256").hexdigest()
     if digest != pin["sha256"]:

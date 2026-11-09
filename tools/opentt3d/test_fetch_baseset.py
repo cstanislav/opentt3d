@@ -5,6 +5,7 @@ import io
 from pathlib import Path
 import tempfile
 import unittest
+import urllib.error
 from unittest.mock import patch
 
 from fetch_baseset import fetch, link_or_copy
@@ -42,6 +43,12 @@ class GraphicsCacheTests(unittest.TestCase):
             second = self.install("second")
         self.assertTrue(first.samefile(second))
         self.assertEqual(second.read_bytes(), self.content)
+
+    def test_transient_download_is_retried(self):
+        destination = self.root / "retry" / "graphics.tar"
+        with patch("urllib.request.urlopen", side_effect=[urllib.error.URLError("504"), io.BytesIO(self.content)]):
+            result = fetch(destination.parent, cache=self.root / "retry-cache", pin=self.pin)
+        self.assertEqual(result.read_bytes(), self.content)
 
     def test_cross_filesystem_copy_is_complete_and_atomic(self):
         destination = self.root / "other-device" / "graphics.tar"
