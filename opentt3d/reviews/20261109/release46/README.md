@@ -13,8 +13,9 @@ independently downloaded and checked:
 - The independently downloaded macOS x86_64 app ran under Rosetta and passed
   Vulkan/OpenGL package controls plus a title-world Vulkan run with an actual
   synchronous save, eight acknowledgements and zero unmodelled references.
-- Independent native release smoke run
+- Independent native release smoke runs
   [`42565973306`](https://github.com/cstanislav/opentt3d/actions/runs/42565973306)
+  and [`42571096954`](https://github.com/cstanislav/opentt3d/actions/runs/42571096954)
   downloaded the hosted archives and passed all four jobs:
   - Linux x86_64 passed default Vulkan and explicit OpenGL package presentation,
     perspective clipping and saved worlds, then an OpenGL title-world run with

@@ -76,11 +76,11 @@ runtime tag; all eight packaging jobs passed, and an independent download of19
 assets plus49,507 source blobs compiled to the exact2,035-model package
 catalogue. Its macOS-arm64 package passed packaged Vulkan/OpenGL and an
 independent title-world save control; the macOS-x86_64 package passed the same
-controls under Rosetta. Independent native run42565973306 then ran the downloaded
-archives: Linux-x86_64 passed default Vulkan/OpenGL presentation and an
-OpenGL title-world save with tile picking, while Windows x64/x86/native-ARM64
-each loaded and re-saved the packaged title world (`windows-11-arm`, not a
-cross-compiler). Four independent `.46` title worlds at rotations0–3 retain
+controls under Rosetta. Independent native runs42565973306 and42571096954 then ran the downloaded
+archives: Linux-x86_64 passed default Vulkan/OpenGL presentation, an OpenGL
+title-world save with tile picking and a dedicated loopback listener, while
+Windows x64/x86/native-ARM64 each loaded and re-saved the packaged title world
+(`windows-11-arm`, not a cross-compiler). Four independent `.46` title worlds at rotations0–3 retain
 64 picking samples each, eight to eleven acknowledged commands and synchronous
 saves. The downloaded Linux package also started its native dedicated server,
 listened on loopback and accepted a client connection. Windows windowed
