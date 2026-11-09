@@ -151,10 +151,14 @@ jobs:
           print('native title-world load/save verified')
           PY
           file "package/${RELEASE_TAG}-windows-${TARGET_ARCH}/opentt3d.exe" | tee checks/file.log
-      # Hosted Windows runners launch the GUI-subsystem executable without a
-      # console pipe; the dedicated-server listener check is Linux-native here.
-      # The Windows package still has its independent title-world load/save
-      # control above. Windows network transport remains an explicit open gate.
+      - name: Exercise the native dedicated network listener
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+          TARGET_ARCH: ${{ matrix.arch }}
+        shell: bash
+        run: |
+          python3 tools/opentt3d/package_network.py \
+            "package/${RELEASE_TAG}-windows-${TARGET_ARCH}" --output checks/network --timeout 120
       - uses: actions/upload-artifact@v5
         if: always()
         with:

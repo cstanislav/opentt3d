@@ -42,6 +42,7 @@ def verify(package: Path, output: Path, timeout: int = 60) -> None:
     home = output / "home"
     home.mkdir()
     shutil.copyfile(title, output / "input.sav")
+    shutil.copytree(resources / "baseset", output / "baseset", dirs_exist_ok=True)
     with socket.socket() as probe:
         probe.bind(("127.0.0.1", 0))
         port = probe.getsockname()[1]
