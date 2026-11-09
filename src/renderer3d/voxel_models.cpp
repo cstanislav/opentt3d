@@ -210,6 +210,42 @@ std::vector<Vec3> HouseReviewOffsets(unsigned house)
 }
 } // namespace
 
+std::pair<size_t,size_t> VerifyVoxelCatalogueLods()
+{
+	const auto &catalogue = Models();
+	size_t models = 0, lods = 0, expanded = 0;
+	for (const auto &[name,model] : catalogue.models) {
+		if (model.surface.occupied == 0) continue;
+		auto grid = model.source->Expand(catalogue.materials);
+		for (unsigned factor : {2U,4U,8U,16U}) {
+			auto reduced = grid.ReducedMesh(factor,model.lod_preserve_occupancy);
+			if (reduced.vertices.empty()) throw std::runtime_error(fmt::format("Catalogue model {} LOD {} is empty",name,factor));
+			/* Ordinary aggregation may grow a bounding box by at most one coarse
+			 * cell per axis. Source-owner families must stay exact; report normal
+			 * growth instead of pretending it is zero. */
+			const float margin = std::max(1.0f,static_cast<float>(factor));
+			bool grew = reduced.low != model.surface.low || reduced.high != model.surface.high;
+			if (grew) ++expanded;
+			if (reduced.low.x < model.surface.low.x-margin || reduced.low.y < model.surface.low.y-margin || reduced.low.z < model.surface.low.z-margin ||
+				reduced.high.x > model.surface.high.x+margin || reduced.high.y > model.surface.high.y+margin || reduced.high.z > model.surface.high.z+margin) throw std::runtime_error(fmt::format("Catalogue model {} LOD {} inflated bounds beyond one coarse cell",name,factor));
+			if (model.lod_preserve_occupancy && (reduced.low != model.surface.low || reduced.high != model.surface.high || reduced.occupied != model.surface.occupied || reduced.exposed_faces != model.surface.exposed_faces)) throw std::runtime_error(fmt::format("Catalogue model {} LOD {} changed occupancy-preserving bounds",name,factor));
+			for (const auto &vertex : reduced.vertices) {
+				if (!std::isfinite(vertex.position.x+vertex.position.y+vertex.position.z) ||
+					vertex.position.x < model.surface.low.x-margin || vertex.position.x > model.surface.high.x+margin ||
+					vertex.position.y < model.surface.low.y-margin || vertex.position.y > model.surface.high.y+margin ||
+					vertex.position.z < model.surface.low.z-margin || vertex.position.z > model.surface.high.z+margin) throw std::runtime_error(fmt::format("Catalogue model {} LOD {} emitted an out-of-bounds vertex",name,factor));
+				unsigned colour = static_cast<unsigned>(vertex.texture.x*256);
+				if (colour >= catalogue.materials.size()) throw std::runtime_error(fmt::format("Catalogue model {} LOD {} lost its palette owner",name,factor));
+			}
+			++lods;
+		}
+		++models;
+	}
+	if (models < 2000 || lods != models*4) throw std::runtime_error("Catalogue LOD matrix did not cover every authored volume");
+	Debug(driver,1,"OpenTT3D: {} authored catalogue volumes retain bounded geometry and palette ownership at automatic LOD factors2/4/8/16 ({} views; {} ordinary views expand by at most one coarse cell; source-owner bounds/occupancy exact)",models,lods,expanded);
+	return {models,lods};
+}
+
 uint32_t VoxelPaletteMask(std::span<const Vertex> vertices, unsigned first, unsigned count)
 {
 	if (count == 0 || count > 32 || first >= 256 || count > 256-first) throw std::invalid_argument("Invalid voxel palette interval");
@@ -2140,6 +2176,7 @@ void VerifyVoxelIndustryModels()
 
 void VerifyVoxelMeshes(std::string_view prefix)
 {
+	if (prefix.empty()) VerifyVoxelCatalogueLods();
 	std::vector<uint8_t> pixels, expected;
 	std::vector<uint32_t> ids, expected_ids;
 	/* A copied scene pins CPU storage even after its original is destroyed.

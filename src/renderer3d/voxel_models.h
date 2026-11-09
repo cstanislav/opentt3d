@@ -145,6 +145,8 @@ struct VoxelTrainSupport { float rear, front, height, length_scale; std::span<co
 std::optional<VoxelTrainSupport> VoxelTrainSupportBounds(unsigned engine, bool loaded, float heading);
 bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, float heading, PaletteID palette, float opacity = 1, unsigned climate = UINT_MAX, float grade = 0);
 void VerifyVoxelModels(bool vehicle_poses = true);
+/** Verify every authored catalogue volume at the automatic LOD factors2/4/8/16. */
+std::pair<size_t,size_t> VerifyVoxelCatalogueLods();
 void VerifyVoxelMeshes(std::string_view prefix = {});
 void VerifyVoxelVehicleModels(unsigned only_engine = UINT_MAX);
 void VerifyVoxelTreeModels();

@@ -258,6 +258,7 @@ def main():
     parser.add_argument("--verify-clipping", action="store_true", help="Compare clipped perspective triangles with independent ray-tested coverage, depth, colour and picking")
     parser.add_argument("--verify-world-atlas", action="store_true", help="Compare complete current-world RGBA/picking before and after atlas repacking")
     parser.add_argument("--verify-voxel-meshes", metavar="PREFIX", help="Run exact voxel cell/CPU/palette/picking checks for a named model family, including its house bindings and joins")
+    parser.add_argument("--verify-catalogue-lods", action="store_true", help="Verify every authored catalogue volume at automatic LOD factors2/4/8/16")
     parser.add_argument("--verify-voxel-poses", type=int, nargs="+", choices=range(256), help="Run the exact company/crash/cargo/heading matrix for selected voxel vehicle engines")
     parser.add_argument("--verify-voxel-vehicle", type=int, choices=range(256), help="Require an actual captured voxel vehicle of the selected vanilla engine type")
     parser.add_argument("--verify-voxel-cargo", type=int, choices=range(256), help="Observe one actual voxel vehicle at both zero cargo and full capacity with the corresponding original bindings")
@@ -646,6 +647,8 @@ server_advertise = false
         commands.append("renderer3d verify-clipping")
     if args.verify_voxel_meshes is not None:
         commands.append(f"renderer3d verify-voxel-meshes {args.verify_voxel_meshes}")
+    if args.verify_catalogue_lods:
+        commands.append("renderer3d verify-catalogue-lods")
     if args.verify_voxel_poses is not None:
         for engine in dict.fromkeys(args.verify_voxel_poses):
             commands.append(f"renderer3d verify-voxel-poses {engine}")
