@@ -1,0 +1,43 @@
+{
+  "format": 1,
+  "source": "River Addon for OpenGFX2 'TropicalGrass' V1.0.0",
+  "source_nml": "../custom-river-source/source/source.nml",
+  "source_nml_sha256": "c969c0a383378dfd41c6d628e6086a7282c917ee2398043bc4eb1672efa0ab10",
+  "anim_syntax_count": 64,
+  "anim_semantics": "ANIM marks a 32bpp sprite whose source pixels use the global palette-animation range; it is not a discrete source-frame sequence and does not create a per-tile animation callback.",
+  "selected_slope_source": {
+    "feature": "CF_RIVER_SLOPE",
+    "base_sprite": 11336,
+    "requested_offset": 2,
+    "resolved_offset": 2,
+    "selected_sprite": 11338,
+    "tile": 15827,
+    "tile_xy": [83, 123],
+    "source_image": "river-selector-source-11338-0-generation3.pam",
+    "source_file": "river_addon_for_opengfx2_'tropicalgrass'",
+    "size": [64, 39],
+    "source_size": [256, 156],
+    "source_offset": [-124, -32],
+    "opaque_pixels": 1280,
+    "animated_pixels": 1242,
+    "animated_palette_indices": {
+      "245": 205,
+      "246": 339,
+      "247": 238,
+      "248": 244,
+      "249": 216
+    }
+  },
+  "engine_palette": {
+    "animation_start_index": 227,
+    "animation_size": 28,
+    "dark_water_cycle": 5,
+    "glitter_water_cycle": 15,
+    "code_references": [
+      "src/gfx_type.h: PALETTE_ANIM_START=227, PALETTE_ANIM_SIZE=28",
+      "src/palette.cpp: DoPaletteAnimations dark-water and glitter-water cycles",
+      "src/blitter/32bpp_sse2.cpp: has_anim is set for source remap indices >=227"
+    ]
+  },
+  "scope": "Resolves the source phase semantics from the supplied NML and exact selected PAM metadata. The selected river-slope sprite has no separate frame sequence; its animated colors are supplied by the engine's global palette cycles. This audit does not claim a captured runtime palette phase, model approval, a custom-family sweep or ship clearance."
+}

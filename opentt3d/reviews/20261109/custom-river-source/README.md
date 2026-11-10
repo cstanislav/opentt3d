@@ -34,10 +34,13 @@ row was emitted and no 3D bank was invented for them. Zero-source absence with
 this particular GRF is therefore a structural no-draw state, not a claimed
 feature-absence matrix.
 
-This GRF supplies bank artwork and **ANIM river-rapids entries**; the source
-contains animated sprites, but their individual phase frames were not separately
-observed in this natural run. `source-audit.json` records the exact source
-inspection and explicitly leaves phase approval open. The survey's 29 river
+This GRF supplies bank artwork and **64 ANIM river-rapids entries**. A
+follow-up source audit (`../custom-river-phases/`) establishes that `ANIM` is
+the 32bpp palette-animation flag, not a discrete frame sequence: the selected
+`CF_RIVER_SLOPE` source has 1,242 of 1,280 opaque pixels in animated palette
+indices 245–249, whose phases are supplied by the engine's global palette
+cycles. A captured renderer palette phase remains a separate control;
+`source-audit.json` retains the original selector inspection. The survey's 29 river
 tiles without an edge draw are structural no-draw absence; no 3D bank is
 invented for them. Because this source supplies a bank for every drawn edge, a
 zero-feature base absence is not applicable. The custom bank source is retained

@@ -58,9 +58,12 @@ signs use world geometry, locks use the complete map-owned wall family, and the
 Toyland factory144 completed state has an authored 3D body. Natural company-score selection is now verified at stage4 from an actual company score870 and a normal HQ build (`opentt3d/reviews/20261109/natural-hq-selection/`); lower thresholds remain source-governed. A real GPL-2.0 custom river NewGRF
 now retains 1,156 natural source selectors, all twelve flat bank offsets and
 custom rivermouth/rapids sources (`opentt3d/reviews/20261109/custom-river-source/`);
-this source contains ANIM river-rapids entries, whose individual phase frames
-were not separately observed, and its 29 undrawn interior tiles are no-draw
-absence rather than a zero-feature base.
+its 64 `ANIM` river-rapids entries are palette-animation flags, not discrete
+source frames: the selected `CF_RIVER_SLOPE` PAM has 1,242 of 1,280 opaque
+pixels in the animated 245–249 palette range
+(`reviews/20261109/custom-river-phases/`); a captured renderer palette phase
+remains separate. Its 29 undrawn interior tiles are no-draw absence rather than
+a zero-feature base.
 Four-rotation title-world picking and saves pass. A catalogue-wide geometry
 audit now verifies all2,035 authored volumes at automatic LOD factors2/4/8/16
 (8,140 views; source-owner bounds/occupancy exact, ordinary growth at most one
@@ -72,8 +75,8 @@ complete 16-palette/crash/cargo/heading/picking matrices with72 acknowledged
 commands and synchronous saves each (`reviews/20261109/vehicle-poses-shard*/`).
 The no-scope renderer run is retained incomplete; scene scope plus all vehicle
 shards provide the complete picking matrix. Explicit custom-base
-absence, all-heading bridge/swept clearance, performance and full client/replay
-checks remain separate. A repeatable zoom3 cache collapse was repaired by raising the default CPU voxel
+absence, all-heading bridge/swept clearance, captured custom-river palette
+phase, performance and full client/replay checks remain separate. A repeatable zoom3 cache collapse was repaired by raising the default CPU voxel
 cache budget to1.5GiB: zoom3 moved from6.9fps/146.96ms capture to46.89fps/10.60ms,
 peak4.374GiB; the wide zoom5 view remains a failure at38.53fps with peak3.897GiB
 (`reviews/20261109/performance-zoom-matrix/`). The final `.46` performance
