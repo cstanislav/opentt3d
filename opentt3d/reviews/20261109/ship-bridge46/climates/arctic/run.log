@@ -1,0 +1,87 @@
+[2026-11-09 20:34:16] dbg: [net:3] Starting dedicated server, version 20261109-main-g296883d795
+[2026-11-09 20:34:16] dbg: [net:3] Starting network
+[2026-11-09 20:34:16] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:34:16] dbg: [net:3] Network online, multiplayer available
+[2026-11-09 20:34:16] dbg: [net:3] Detected broadcast addresses:
+[2026-11-09 20:34:16] dbg: [net:3]   0) 192.168.1.255
+[2026-11-09 20:34:16] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-11-09 20:34:16] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - 20261109-main-g296883d795
+------------------------------------
+use "help" for more information.
+
+[2026-11-09 20:34:16] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-11-09 20:34:16] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-11-09 20:34:16] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:34:16] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:34:16] dbg: [net:3] Listening on 127.0.0.1:50905 (IPv4)
+[2026-11-09 20:34:16] dbg: [net:3] Listening on 127.0.0.1:50905 (IPv4)
+[2026-11-09 20:34:16] dbg: [net:3] Network revision name: 20261109-main-g296883d795
+[2026-11-09 20:34:16] dbg: [net:3] [crypto] Creating a new random key
+[2026-11-09 20:34:16] dbg: [net:3] Generating map, please wait...
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 5
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 11
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 17
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 20
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 60
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 65
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 70
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 75
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 80
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 85
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 90
+[2026-11-09 20:34:16] dbg: [net:3] Map generation percentage complete: 99
+Game is already unpaused.
+[2026-11-09 20:34:16] dbg: [net:3] Map generated, starting game
+[2026-11-09 20:34:16] dbg: [script:4] [0] [I] SHIP_CATALOGUE_STARTED
+[2026-11-09 20:34:17] dbg: [script:4] [0] [I] SHIP_CATALOGUE_SITE 24,24 height=2
+[2026-11-09 20:34:47] dbg: [script:4] [0] [I] SHIP_BRIDGE_READY bridge=3239 buoy=4007 name=Tubular road bridge
+[2026-11-09 20:34:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_BANKS west=12 east=3
+[2026-11-09 20:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=212 vehicle=0
+[2026-11-09 20:34:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=211 vehicle=1
+[2026-11-09 20:34:49] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=208 vehicle=2
+[2026-11-09 20:34:49] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=207 vehicle=3
+[2026-11-09 20:34:50] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=206 vehicle=4
+[2026-11-09 20:34:50] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=205 vehicle=5
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=204 vehicle=6
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=42,31 speed=40 state=0 order=0 visited=0
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=44,31 speed=24 state=0 order=0 visited=0
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=44,31 speed=0 state=0 order=0 visited=0
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=44,31 speed=0 state=0 order=0 visited=0
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=44,31 speed=0 state=0 order=0 visited=0
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=44,31 speed=0 state=0 order=0 visited=0
+[2026-11-09 20:34:51] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=44,31 speed=0 state=0 order=0 visited=0
+[2026-11-09 20:35:02] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=208 vehicle=2 visited=1
+[2026-11-09 20:35:08] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=207 vehicle=3 visited=1
+[2026-11-09 20:35:09] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=1
+[2026-11-09 20:35:18] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=205 vehicle=5 visited=1
+[2026-11-09 20:35:21] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=206 vehicle=4 visited=1
+[2026-11-09 20:35:21] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=208 vehicle=2 visited=3
+[2026-11-09 20:35:24] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=211 vehicle=1 visited=1
+[2026-11-09 20:35:33] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=204 vehicle=6 visited=1
+[2026-11-09 20:35:38] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=207 vehicle=3 visited=3
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=55,32 speed=40 state=0 order=1 visited=1
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=38,32 speed=24 state=0 order=1 visited=1
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=33,32 speed=92 state=0 order=1 visited=3
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=53,31 speed=64 state=0 order=2 visited=3
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=43,32 speed=32 state=0 order=1 visited=1
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=48,32 speed=40 state=0 order=1 visited=1
+[2026-11-09 20:35:47] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=34,32 speed=24 state=0 order=1 visited=1
+[2026-11-09 20:35:54] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=3
+[2026-11-09 20:36:03] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=205 vehicle=5 visited=3
+[2026-11-09 20:36:17] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=206 vehicle=4 visited=3
+[2026-11-09 20:36:37] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=211 vehicle=1 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=30,32 speed=40 state=0 order=1 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=211 tile=58,31 speed=24 state=0 order=2 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=208 tile=58,31 speed=56 state=0 order=2 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=207 tile=57,31 speed=64 state=0 order=2 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=206 tile=46,31 speed=32 state=0 order=2 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=205 tile=33,31 speed=40 state=0 order=0 visited=3
+[2026-11-09 20:36:43] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=204 tile=58,32 speed=24 state=0 order=1 visited=1
+[2026-11-09 20:36:46] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=204 vehicle=6 visited=3
+[2026-11-09 20:37:35] dbg: [script:4] [0] [I] SHIP_CATALOGUE_READY {"x":24,"y":24,"water_height":1,"depot":4012,"depot_axis":0,"depot_service":false,"depot_hold_ticks":0,"dock_hold":false,"buoy":-1,"bridge":3239,"bridge_buoy":4007,"bridge_name":"Tubular road bridge","bridge_hold":false,"bridge_held":false,"bridge_hold_engine":-1,"bridge_hold_tile":-1,"dike_island":-1,"docks":[3995,4158],"extra_docks":[],"vehicles":[{"engine":212,"vehicle":0,"peak_speed":40,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0},{"engine":211,"vehicle":1,"peak_speed":24,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0},{"engine":208,"vehicle":2,"peak_speed":112,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0},{"engine":207,"vehicle":3,"peak_speed":64,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0},{"engine":206,"vehicle":4,"peak_speed":32,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0},{"engine":205,"vehicle":5,"peak_speed":40,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0},{"engine":204,"vehicle":6,"peak_speed":24,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0}]}
+Saving map...
+Map successfully saved to 'ship-catalogue.sav'.
+‎*** Game paused (manual)
+[2026-11-09 20:37:36] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:37:36] dbg: [net:3] Shutting down network

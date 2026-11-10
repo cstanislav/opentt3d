@@ -65,6 +65,32 @@ function ShipCatalogue::Start()
 			this.Require(AIMarine.BuildCanal(tile),"build canal "+dx+","+dy);
 		}
 		if (dike_island>=0) this.Require(!AITile.IsWaterTile(dike_island),"original dry canal island remains land");
+		/* Keep both bridge heads and both approach-road tiles on the flat
+		 * plateau, outside the lowered canal rectangle. The span therefore
+		 * crosses the sloped banks and the real water without terraforming
+		 * underneath an existing bridge. */
+		local bridge=-1, bridge_buoy=-1, bridge_name="";
+		if (AIController.GetSetting("bridge")!=0) {
+			AIRoad.SetCurrentRoadType(AIRoad.ROADTYPE_ROAD);
+			/* A north-south span crosses the east-west canal, so every ship
+			 * passes under the real bridge rather than merely following it. */
+			local bridge_start=this.Tile(15,1), bridge_end=this.Tile(15,15);
+			if (AITile.GetSlope(bridge_start)!=AITile.SLOPE_FLAT || AITile.GetSlope(bridge_end)!=AITile.SLOPE_FLAT) throw "bridge heads are not on flat plateau";
+			local bridges=AIBridgeList_Length(15);
+			if (bridges.IsEmpty()) throw "no 15-tile ordinary road bridge is available";
+			local built=false;
+			for (local type=bridges.Begin(); !bridges.IsEnd(); type=bridges.Next()) {
+				if (AIBridge.BuildBridge(AIVehicle.VT_ROAD,type,bridge_start,bridge_end)) {
+					bridge=bridge_start; bridge_name=AIBridge.GetName(type,AIVehicle.VT_ROAD); built=true; break;
+				}
+				AILog.Info("SHIP_BRIDGE_REJECTED type="+type+" error="+AIError.GetLastErrorString());
+			}
+			this.Require(built,"build ordinary road bridge across the canal");
+			this.Require(AIBridge.IsBridgeTile(bridge),"bridge head is a real bridge tile");
+			bridge_buoy=this.Tile(15,7);
+			this.Require(AIMarine.BuildBuoy(bridge_buoy),"ordinary buoy below the bridge span");
+			AILog.Info("SHIP_BRIDGE_READY bridge="+bridge+" buoy="+bridge_buoy+" name="+bridge_name);
+		}
 		local west=this.Tile(3,7), east=this.Tile(38,8), depot=this.Tile(20,7);
 		AILog.Info("SHIP_CATALOGUE_BANKS west="+AITile.GetSlope(west)+" east="+AITile.GetSlope(east));
 		this.Require(AIMarine.BuildDock(west,AIStation.STATION_NEW),"west dock");
@@ -82,6 +108,8 @@ function ShipCatalogue::Start()
 			this.Require(AIMarine.BuildBuoy(buoy),"build original navigation buoy");
 		}
 		local first=AIController.GetSetting("review_first"), last=AIController.GetSetting("review_last"), dock_hold=AIController.GetSetting("dock_hold")!=0;
+		local bridge_hold=AIController.GetSetting("bridge_hold")!=0, bridge_hold_engine=AIController.GetSetting("bridge_hold_engine");
+		local bridge_order=2+(buoy>=0 ? 1 : 0);
 		local engines=AIEngineList(AIVehicle.VT_WATER), fleet=[];
 		for (local engine=engines.Begin(); !engines.IsEnd(); engine=engines.Next()) {
 			if (engine<first || engine>last) continue;
@@ -92,9 +120,10 @@ function ShipCatalogue::Start()
 			this.Require(AIOrder.AppendOrder(vehicle,west,AIOrder.OF_FULL_LOAD_ANY),"west dock order");
 			this.Require(AIOrder.AppendOrder(vehicle,east,AIOrder.OF_FULL_LOAD_ANY),"east dock order");
 			if (buoy>=0) this.Require(AIOrder.AppendOrder(vehicle,buoy,AIOrder.OF_NONE),"original buoy waypoint order");
+			if (bridge_buoy>=0) this.Require(AIOrder.AppendOrder(vehicle,bridge_buoy,AIOrder.OF_NONE),"under-bridge buoy waypoint order");
 			if (service) this.Require(AIOrder.AppendOrder(vehicle,depot,hold!=0 ? AIOrder.OF_STOP_IN_DEPOT : AIOrder.OF_NONE),"recurring depot-service order");
 			this.Require(AIVehicle.StartStopVehicle(vehicle),"start ship "+engine);
-			fleet.append({engine=engine,vehicle=vehicle,moved=false,peak=0,visits=0,buoy_order_seen=false,buoy_seen=false});
+			fleet.append({engine=engine,vehicle=vehicle,moved=false,peak=0,visits=0,buoy_order_seen=false,buoy_seen=false,bridge_order_seen=false,bridge_seen=false,bridge_under=false,bridge_min_distance=999});
 			AILog.Info("SHIP_CATALOGUE_VEHICLE engine="+engine+" vehicle="+vehicle);
 		}
 		if (fleet.len()==0) throw "no selected ships available in this climate";
@@ -111,6 +140,13 @@ function ShipCatalogue::Start()
 					if (AIOrder.ResolveOrderPosition(entry.vehicle,AIOrder.ORDER_CURRENT)==2) entry.buoy_order_seen=true;
 					if (entry.buoy_order_seen && AIMap.DistanceManhattan(location,buoy)<=4 && speed>0) entry.buoy_seen=true;
 				}
+				if (bridge_buoy>=0) {
+					if (AIOrder.ResolveOrderPosition(entry.vehicle,AIOrder.ORDER_CURRENT)==bridge_order) entry.bridge_order_seen=true;
+					local bridge_distance=AIMap.DistanceManhattan(location,bridge_buoy);
+					if (bridge_distance<entry.bridge_min_distance) entry.bridge_min_distance=bridge_distance;
+					if (entry.bridge_order_seen && bridge_distance<=2 && speed>0) entry.bridge_seen=true;
+					if (entry.bridge_order_seen && AIMap.GetTileX(location)==this.x+15 && AIMap.GetTileY(location)>=this.y+1 && AIMap.GetTileY(location)<=this.y+15 && speed>0) entry.bridge_under=true;
+				}
 				local visits=entry.visits;
 				if (AIVehicle.GetState(entry.vehicle)==AIVehicle.VS_AT_STATION) {
 					if (AIMap.DistanceManhattan(location,west)<=4) entry.visits=entry.visits|1;
@@ -122,16 +158,34 @@ function ShipCatalogue::Start()
 					AILog.Info("SHIP_CATALOGUE_DOCK engine="+entry.engine+" vehicle="+entry.vehicle+" visited="+entry.visits);
 				}
 				if (tick%512==0) AILog.Info("SHIP_CATALOGUE_PROGRESS engine="+entry.engine+" tile="+AIMap.GetTileX(location)+","+AIMap.GetTileY(location)+" speed="+speed+" state="+AIVehicle.GetState(entry.vehicle)+" order="+AIOrder.ResolveOrderPosition(entry.vehicle,AIOrder.ORDER_CURRENT)+" visited="+entry.visits);
-				ready=ready && entry.moved && entry.visits==3 && (buoy<0 || entry.buoy_seen);
+				ready=ready && entry.moved && entry.visits==3 && (buoy<0 || entry.buoy_seen) && (bridge_buoy<0 || (entry.bridge_seen && entry.bridge_under));
 			}
 			if (!ready) this.Sleep(2);
 		}
 		if (!ready) throw "not every ship moved and entered loading state at both docks";
+		local held_engine=-1, held_tile=-1;
+		if (bridge_hold) {
+			if (bridge_buoy<0) throw "bridge hold requires the real bridge span";
+			local held_vehicle=-1;
+			foreach (entry in fleet) if ((bridge_hold_engine<0 || entry.engine==bridge_hold_engine) && held_vehicle<0) { held_vehicle=entry.vehicle; held_engine=entry.engine; }
+			if (held_vehicle<0) throw "requested bridge-hold ship is not in the selected fleet";
+			for (local tick=0; tick<4000 && held_tile<0; ++tick) {
+				local location=AIVehicle.GetLocation(held_vehicle), speed=AIVehicle.GetCurrentSpeed(held_vehicle);
+				if (speed>0 && AIMap.GetTileX(location)==this.x+15 && AIMap.GetTileY(location)>=this.y+1 && AIMap.GetTileY(location)<=this.y+15) {
+					this.Require(AIVehicle.StartStopVehicle(held_vehicle),"stop selected ship under the bridge span");
+					held_tile=location;
+					AILog.Info("SHIP_BRIDGE_HELD engine="+held_engine+" tile="+AIMap.GetTileX(location)+","+AIMap.GetTileY(location));
+					break;
+				}
+				this.Sleep(1);
+			}
+			if (held_tile<0) throw "selected ship did not reach the real bridge span for a held clearance review";
+		}
 		local extras=extra_docks.len()==0 ? "[]" : "["+extra_docks[0]+","+extra_docks[1]+"]";
-		local result="{\"x\":"+this.x+",\"y\":"+this.y+",\"water_height\":"+(height-1)+",\"depot\":"+depot+",\"depot_axis\":"+axis+",\"depot_service\":"+(service ? "true" : "false")+",\"depot_hold_ticks\":"+hold+",\"dock_hold\":"+(dock_hold ? "true" : "false")+",\"buoy\":"+buoy+",\"dike_island\":"+dike_island+",\"docks\":["+west+","+east+"],\"extra_docks\":"+extras+",\"vehicles\":[";
+		local result="{\"x\":"+this.x+",\"y\":"+this.y+",\"water_height\":"+(height-1)+",\"depot\":"+depot+",\"depot_axis\":"+axis+",\"depot_service\":"+(service ? "true" : "false")+",\"depot_hold_ticks\":"+hold+",\"dock_hold\":"+(dock_hold ? "true" : "false")+",\"buoy\":"+buoy+",\"bridge\":"+bridge+",\"bridge_buoy\":"+bridge_buoy+",\"bridge_name\":\""+bridge_name+"\",\"bridge_hold\":"+(bridge_hold ? "true" : "false")+",\"bridge_held\":"+(held_tile>=0 ? "true" : "false")+",\"bridge_hold_engine\":"+held_engine+",\"bridge_hold_tile\":"+held_tile+",\"dike_island\":"+dike_island+",\"docks\":["+west+","+east+"],\"extra_docks\":"+extras+",\"vehicles\":[";
 		foreach (index,entry in fleet) {
 			if (index!=0) result+=",";
-			result+="{\"engine\":"+entry.engine+",\"vehicle\":"+entry.vehicle+",\"peak_speed\":"+entry.peak+",\"docks_visited\":"+entry.visits+",\"buoy_visited\":"+(entry.buoy_seen ? "true" : "false")+"}";
+			result+="{\"engine\":"+entry.engine+",\"vehicle\":"+entry.vehicle+",\"peak_speed\":"+entry.peak+",\"docks_visited\":"+entry.visits+",\"buoy_visited\":"+(entry.buoy_seen ? "true" : "false")+",\"bridge_visited\":"+(entry.bridge_seen ? "true" : "false")+",\"bridge_under_span\":"+(entry.bridge_under ? "true" : "false")+",\"bridge_min_distance\":"+entry.bridge_min_distance+"}";
 		}
 		AILog.Info("SHIP_CATALOGUE_READY "+result+"]}");
 		this.MaintainDepotStops();

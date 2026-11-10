@@ -25,11 +25,33 @@ class ShipFixtureScriptTests(unittest.TestCase):
                         fixture_ship.main()
                 commands = (output/"scripts/game_start.scr").read_text()
                 self.assertIn(f"dike_island={int(island)}",commands)
+                self.assertIn("bridge=0",commands)
                 source = (output/"ai/ship-catalogue/main.nut").read_text()
                 self.assertIn("if (tile==dike_island) continue;",source)
                 self.assertIn("AIMarine.BuildCanal(tile)",source)
                 self.assertIn("original dry canal island remains land",source)
                 self.assertNotIn("renderer3d",commands)
+
+    def test_bridge_fixture_uses_real_road_bridge_and_under_bridge_buoy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            build = root/"build"
+            build.mkdir()
+            (build/("opentt3d.exe" if os.name == "nt" else "opentt3d")).touch()
+            output = root/"review"
+            argv = ["fixture_ship.py","--build-dir",str(build),"--output",str(output),"--bridge","--bridge-hold","--bridge-hold-engine","208"]
+            with mock.patch.object(sys,"argv",argv),mock.patch("fixture_ship.subprocess.Popen",side_effect=RuntimeError("stop before launch")):
+                with self.assertRaisesRegex(RuntimeError,"stop before launch"):
+                    fixture_ship.main()
+            commands = (output/"scripts/game_start.scr").read_text()
+            self.assertIn("bridge=1",commands)
+            self.assertIn("bridge_hold=1",commands)
+            self.assertIn("bridge_hold_engine=208",commands)
+            source = (output/"ai/ship-catalogue/main.nut").read_text()
+            self.assertIn("AIBridge.BuildBridge(AIVehicle.VT_ROAD",source)
+            self.assertIn("ordinary buoy below the bridge span",source)
+            self.assertIn("under-bridge buoy waypoint order",source)
+            self.assertIn("SHIP_BRIDGE_HELD",source)
 
 
 if __name__ == "__main__":

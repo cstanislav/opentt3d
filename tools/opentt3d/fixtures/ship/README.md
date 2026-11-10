@@ -65,6 +65,30 @@ artwork capture; the service still visits the original west/east pair.
 a real paused mooring state. Use one selected engine for an uncluttered view. It is
 separate from recurring depot service; no cargo is created and no state bytes are set.
 
+## Ordinary bridge clearance fixture
+
+`fixture_ship.py --bridge` builds a real public-command road bridge across the
+canal after the water is dug. Both bridge heads and their two approach-road tiles
+remain on the untouched flat plateau outside the lowered canal rectangle, so the
+bridge spans actual water while retaining valid flat endpoints. The script then
+builds an ordinary buoy directly below the span, appends a normal waypoint order,
+and requires every selected ship to reach that buoy at positive speed. The
+manifest records the bridge head, under-bridge buoy, bridge name and each
+`bridge_visited` observation. This verifies navigation and a real bridge asset
+over the ship route; it does not claim swept hull clearance for every heading or
+that every bridge type was exercised. `--bridge` cannot combine with
+`--dock-hold`, because the held dock prevents reaching the later bridge order.
+
+`--bridge-hold` (with `--bridge`) waits until one selected ship is inside the
+real bridge span and stops it with the ordinary `AIVehicle.StartStopVehicle`
+command; `--bridge-hold-engine 204…214` chooses that ship (default: the first
+selected ship). The manifest records `bridge_held`, the actual engine and the
+held tile. The retained review used this option once for each ship definition
+204…214 and captured the saved world from a low side angle; every hull sits
+below the deck without intersecting it. This is a held visual clearance check
+at one heading per hull, not a claim that every possible heading and every
+bridge type has been swept.
+
 ## Original buoy waypoint review
 
 `fixture_ship.py --buoy-waypoint` adds a public `AIMarine.BuildBuoy` marker and an

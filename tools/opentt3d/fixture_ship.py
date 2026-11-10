@@ -25,6 +25,9 @@ def main():
     parser.add_argument("--dock-hold", action="store_true", help="Keep the observed final full-load dock order for a paused actual mooring review")
     parser.add_argument("--buoy-waypoint", action="store_true", help="Build an original buoy and require the ships to navigate its ordinary waypoint order")
     parser.add_argument("--dike-island", action="store_true", help="Retain one ordinary dry tile inside the harbour to expose all four concave dikes, while requiring the actual ship route to complete")
+    parser.add_argument("--bridge", action="store_true", help="Build an ordinary road bridge across the canal and require every ship to visit a buoy below its span")
+    parser.add_argument("--bridge-hold", action="store_true", help="Stop one selected ship under the real bridge span after all bridge visits")
+    parser.add_argument("--bridge-hold-engine", type=int, choices=range(204,215), help="Ship engine to stop under the bridge; default is the first selected ship")
     parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
     build, output = args.build_dir.resolve(), args.output.resolve()
@@ -37,6 +40,14 @@ def main():
         parser.error("Choose a held dock review or a recurring depot-service route")
     if args.dock_hold and args.buoy_waypoint:
         parser.error("A held dock cannot complete the subsequent buoy waypoint order")
+    if args.dock_hold and args.bridge:
+        parser.error("A held dock cannot complete the subsequent under-bridge buoy waypoint order")
+    if args.bridge_hold and not args.bridge:
+        parser.error("--bridge-hold requires --bridge")
+    if args.bridge_hold_engine is not None and not args.bridge_hold:
+        parser.error("--bridge-hold-engine requires --bridge-hold")
+    if args.dock_hold and args.bridge_hold:
+        parser.error("A held dock cannot complete a subsequent under-bridge hold")
     root = Path(__file__).resolve().parents[2]
     graphics = json.loads((root / "opentt3d/upstream.json").read_text())["graphics"]
     shutil.copytree(Path(__file__).with_name("fixtures") / "ship", output / "ai/ship-catalogue")
@@ -78,7 +89,8 @@ server_advertise = false
 min_active_clients = 0
 pause_on_join = false
 """)
-    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Ship Catalogue" "review_first={args.first_engine},review_last={args.last_engine},depot_axis={args.depot_axis},depot_service={int(args.depot_service)},depot_hold_ticks={args.depot_hold_ticks},all_docks={int(args.all_dock_directions)},dock_hold={int(args.dock_hold)},buoy_waypoint={int(args.buoy_waypoint)},dike_island={int(args.dike_island)}"\n')
+    bridge_hold_engine = args.bridge_hold_engine if args.bridge_hold_engine is not None else -1
+    (scripts / "game_start.scr").write_text(f'unpause\nstart_ai "OpenTT3D Ship Catalogue" "review_first={args.first_engine},review_last={args.last_engine},depot_axis={args.depot_axis},depot_service={int(args.depot_service)},depot_hold_ticks={args.depot_hold_ticks},all_docks={int(args.all_dock_directions)},dock_hold={int(args.dock_hold)},buoy_waypoint={int(args.buoy_waypoint)},dike_island={int(args.dike_island)},bridge={int(args.bridge)},bridge_hold={int(args.bridge_hold)},bridge_hold_engine={bridge_hold_engine}"\n')
     (scripts / "save_fixture.scr").write_text("pause\nsave ship-catalogue\n")
     (scripts / "save_failed.scr").write_text("pause\nsave failed-fixture\n")
     with socket.socket() as probe:
@@ -106,6 +118,10 @@ pause_on_join = false
                         raise RuntimeError("Ship fixture did not observe navigation through the actual buoy tile")
                     if args.dike_island and manifest.get("dike_island",-1) < 0:
                         raise RuntimeError("Ship fixture did not retain the actual dry canal island")
+                    if args.bridge and (manifest.get("bridge",-1) < 0 or manifest.get("bridge_buoy",-1) < 0 or not manifest.get("bridge_name") or any(not vehicle.get("bridge_visited") or not vehicle.get("bridge_under_span") for vehicle in manifest["vehicles"])):
+                        raise RuntimeError("Ship fixture did not observe every ship under the real bridge span")
+                    if args.bridge_hold and (not manifest.get("bridge_held") or manifest.get("bridge_hold_tile",-1) < 0 or manifest.get("bridge_hold_engine",-1) not in [vehicle["engine"] for vehicle in manifest["vehicles"]]):
+                        raise RuntimeError("Ship fixture did not stop the requested ship under the real bridge span")
                     process.stdin.write("exec scripts/save_fixture.scr\n"); process.stdin.flush()
                     break
                 time.sleep(0.2)

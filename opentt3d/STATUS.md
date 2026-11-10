@@ -72,7 +72,7 @@ complete 16-palette/crash/cargo/heading/picking matrices with72 acknowledged
 commands and synchronous saves each (`reviews/20261109/vehicle-poses-shard*/`).
 The no-scope renderer run is retained incomplete; scene scope plus all vehicle
 shards provide the complete picking matrix. Explicit custom-base
-absence, full ship bridge/swept clearance, performance and full client/replay
+absence, all-heading bridge/swept clearance, performance and full client/replay
 checks remain separate. A repeatable zoom3 cache collapse was repaired by raising the default CPU voxel
 cache budget to1.5GiB: zoom3 moved from6.9fps/146.96ms capture to46.89fps/10.60ms,
 peak4.374GiB; the wide zoom5 view remains a failure at38.53fps with peak3.897GiB
@@ -81,9 +81,16 @@ control measured39.37fps at1280×720/zoom5
 and retains the60fps failure; the expanded ship fixture verified all seven
 original ship engines through two loading docks, four dock orientations, the
 actual buoy, the dry harbour island and the recurring depot order, then captured
-all seven 3D hulls in the saved world.
+all seven 3D hulls in the saved world. A separate public-NoAI perpendicular
+bridge fixture now builds a real Tubular road bridge across the canal, requires
+every available ship to cross under its span, and holds each of the eleven ship
+definitions204…214 below the deck for a saved low-angle review
+(`reviews/20261109/ship-bridge46/`). The four climate runs retain direct
+`bridge_under_span` observations for all selected ships, and each held hull is
+visibly below the deck without intersecting it; the sweep is still limited to
+one heading per hull and this bridge family.
 The earlier7/10 provisional reviews and their defects are retained in git history.
-Asset280, harness124 and native219 tests pass; the presentation boundary passes.
+Asset280, harness125 and native219 tests pass; the presentation boundary passes.
 Run42584463110 at b44de9cba recovered Windows through the preinstalled-vcpkg
 fallback; run42591061848 at90b28288c then completed **all ten jobs green**:
 Linux OpenGL full, Vulkan scene, all four vehicle-pose shards, macOS and

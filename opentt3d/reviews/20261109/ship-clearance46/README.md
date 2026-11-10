@@ -19,5 +19,8 @@ moved, but the observer required equality with the buoy tile and timed out.
 That observation method was rejected; the model/world was not changed to make
 the test pass. The corrected control samples normal proximity to the buoy.
 
-This does **not** prove bridge/swept-clearance for every ship hull at every
-heading, nor all 23 ship source sprites in every climate. Those remain separate.
+This control does **not** prove clearance for every ship hull at every heading,
+nor all 23 ship source sprites in every climate. A separate real perpendicular
+road-bridge fixture now verifies all eleven ship definitions 204…214 under a
+bridge and holds each hull below the deck for side-view review; it is retained
+in `../ship-bridge46/`. Other headings and bridge types remain separate.

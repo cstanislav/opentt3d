@@ -1,0 +1,51 @@
+[2026-11-09 20:58:10] dbg: [net:3] Starting dedicated server, version 20261109-main-g296883d795
+[2026-11-09 20:58:10] dbg: [net:3] Starting network
+[2026-11-09 20:58:10] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:58:10] dbg: [net:3] Network online, multiplayer available
+[2026-11-09 20:58:10] dbg: [net:3] Detected broadcast addresses:
+[2026-11-09 20:58:10] dbg: [net:3]   0) 192.168.1.255
+[2026-11-09 20:58:10] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-11-09 20:58:10] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - 20261109-main-g296883d795
+------------------------------------
+use "help" for more information.
+
+[2026-11-09 20:58:10] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-11-09 20:58:10] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-11-09 20:58:10] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:58:10] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 20:58:10] dbg: [net:3] Listening on 127.0.0.1:52611 (IPv4)
+[2026-11-09 20:58:10] dbg: [net:3] Listening on 127.0.0.1:52611 (IPv4)
+[2026-11-09 20:58:10] dbg: [net:3] Network revision name: 20261109-main-g296883d795
+[2026-11-09 20:58:10] dbg: [net:3] [crypto] Creating a new random key
+[2026-11-09 20:58:10] dbg: [net:3] Generating map, please wait...
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 5
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 11
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 17
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 20
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 60
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 65
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 70
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 75
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 80
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 85
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 90
+[2026-11-09 20:58:10] dbg: [net:3] Map generation percentage complete: 99
+Game is already unpaused.
+[2026-11-09 20:58:10] dbg: [net:3] Map generated, starting game
+[2026-11-09 20:58:10] dbg: [script:4] [0] [I] SHIP_CATALOGUE_STARTED
+[2026-11-09 20:58:11] dbg: [script:4] [0] [I] SHIP_CATALOGUE_SITE 40,24 height=2
+[2026-11-09 20:58:41] dbg: [script:4] [0] [I] SHIP_BRIDGE_READY bridge=3255 buoy=4023 name=Tubular road bridge
+[2026-11-09 20:58:41] dbg: [script:4] [0] [I] SHIP_CATALOGUE_BANKS west=12 east=3
+[2026-11-09 20:58:42] dbg: [script:4] [0] [I] SHIP_CATALOGUE_VEHICLE engine=212 vehicle=0
+[2026-11-09 20:58:42] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=60,31 speed=2 state=0 order=0 visited=0
+[2026-11-09 20:59:03] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=1
+[2026-11-09 20:59:37] dbg: [script:4] [0] [I] SHIP_CATALOGUE_PROGRESS engine=212 tile=68,32 speed=40 state=0 order=1 visited=1
+[2026-11-09 20:59:48] dbg: [script:4] [0] [I] SHIP_CATALOGUE_DOCK engine=212 vehicle=0 visited=3
+[2026-11-09 21:00:19] dbg: [script:4] [0] [I] SHIP_BRIDGE_HELD engine=212 tile=55,31
+[2026-11-09 21:00:19] dbg: [script:4] [0] [I] SHIP_CATALOGUE_READY {"x":40,"y":24,"water_height":1,"depot":4028,"depot_axis":0,"depot_service":false,"depot_hold_ticks":0,"dock_hold":false,"buoy":-1,"bridge":3255,"bridge_buoy":4023,"bridge_name":"Tubular road bridge","bridge_hold":true,"bridge_held":true,"bridge_hold_engine":212,"bridge_hold_tile":4023,"dike_island":-1,"docks":[4011,4174],"extra_docks":[],"vehicles":[{"engine":212,"vehicle":0,"peak_speed":40,"docks_visited":3,"buoy_visited":false,"bridge_visited":true,"bridge_under_span":true,"bridge_min_distance":0}]}
+Saving map...
+Map successfully saved to 'ship-catalogue.sav'.
+‎*** Game paused (manual)
+[2026-11-09 21:00:20] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 21:00:20] dbg: [net:3] Shutting down network

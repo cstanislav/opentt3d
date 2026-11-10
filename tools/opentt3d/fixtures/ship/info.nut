@@ -19,6 +19,9 @@ class ShipCatalogueInfo extends AIInfo {
 		AddSetting({name="dock_hold",description="Retain the final ordinary full-load dock call for review",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
 		AddSetting({name="buoy_waypoint",description="Build and visit an original buoy waypoint",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
 		AddSetting({name="dike_island",description="Retain a dry tile for concave canal-bank review",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
+		AddSetting({name="bridge",description="Span the canal with an ordinary road bridge and require every ship to pass its under-bridge buoy",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
+		AddSetting({name="bridge_hold",description="Stop one selected ship under the real bridge span after all bridge visits",min_value=0,max_value=1,default_value=0,flags=CONFIG_NONE});
+		AddSetting({name="bridge_hold_engine",description="Ship engine to hold under the bridge; -1 selects the first selected ship",min_value=-1,max_value=214,default_value=-1,flags=CONFIG_NONE});
 	}
 }
 RegisterAI(ShipCatalogueInfo());
