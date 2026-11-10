@@ -91,13 +91,13 @@ Windows x64/x86/ARM64 (`reviews/20261109/ci-final/`). Later commits are
 documentation/evidence-only.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
-newest prerelease and is not merged. A `.46` draft is hosted from the accepted
-runtime tag; all eight packaging jobs passed, and an independent download of19
+newest prerelease and is not merged. `.46` is published as a development
+prerelease from the accepted runtime tag; all eight packaging jobs passed, and an independent download of19
 assets plus49,507 source blobs compiled to the exact2,035-model package
 catalogue. Its macOS-arm64 package passed packaged Vulkan/OpenGL and an
 independent title-world save control; the macOS-x86_64 package passed the same
-controls under Rosetta. Independent native runs42565973306 and42571096954 then ran the downloaded
-archives: Linux-x86_64 passed default Vulkan/OpenGL presentation, an OpenGL
+controls under Rosetta. Independent native runs42565973306,42571096954 and42573903535 then ran the
+downloaded archives: Linux-x86_64 passed default Vulkan/OpenGL presentation, an OpenGL
 title-world save with tile picking and a dedicated loopback listener, while
 Windows x64/x86/native-ARM64 each loaded and re-saved the packaged title world
 and accepted a dedicated loopback client (`windows-11-arm`, not a
@@ -109,8 +109,9 @@ is retained as rejected environment evidence
 64 picking samples each, eight to eleven acknowledged commands and synchronous
 saves. The downloaded Linux and Windows packages started native dedicated servers and
 accepted loopback clients. Windows windowed rendering, pointer input and full
-client/replay remain open; the hosted window probe is rejected, not hidden. It was published as a development prerelease through the reviewed publication
-workflow with its 19 audited assets unchanged (`releases/20261109/release46/publication-receipt.json`).
+client/replay remain open; the hosted window probe is rejected, not hidden.
+It was published through the reviewed publication workflow with its 19 audited
+assets unchanged (`releases/20261109/release46/publication-receipt.json`).
 The final `.46` performance control measured39.37fps at1280×720/zoom5 and
 retains the60fps failure. `.42` remains the recommended checkpoint.
 
