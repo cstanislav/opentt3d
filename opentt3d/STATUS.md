@@ -83,10 +83,11 @@ actual buoy, the dry harbour island and the recurring depot order, then captured
 all seven 3D hulls in the saved world.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness124 and native219 tests pass; the presentation boundary passes.
-The latest main CI run with the Windows preinstalled-vcpkg fallback now has
-all Windows and macOS jobs green despite external GitHub504s; Linux full and
-shard jobs remain in progress. The fallback uses the runner toolchain instead of
-the unavailable vcpkg bootstrap download.
+Run42584463110 at b44de9cba recovered Windows through the preinstalled-vcpkg
+fallback; run42591061848 at90b28288c then completed **all ten jobs green**:
+Linux OpenGL full, Vulkan scene, all four vehicle-pose shards, macOS and
+Windows x64/x86/ARM64 (`reviews/20261109/ci-final/`). Later commits are
+documentation/evidence-only.
 `CI - Nightly` run42402873295 is green on both platform jobs and the annotation
 check; the earlier failures and their fixes remain in the review evidence. Upstream stable remains15.3; 16.0-RC1 is the
 newest prerelease and is not merged. A `.46` draft is hosted from the accepted
