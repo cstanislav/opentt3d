@@ -69,7 +69,7 @@ function ShipCatalogue::Start()
 		 * plateau, outside the lowered canal rectangle. The span therefore
 		 * crosses the sloped banks and the real water without terraforming
 		 * underneath an existing bridge. */
-		local bridge=-1, bridge_buoy=-1, bridge_name="";
+		local bridge=-1, bridge_buoy=-1, bridge_name="", bridge_type=-1;
 		if (AIController.GetSetting("bridge")!=0) {
 			AIRoad.SetCurrentRoadType(AIRoad.ROADTYPE_ROAD);
 			/* A north-south span crosses the east-west canal, so every ship
@@ -78,18 +78,27 @@ function ShipCatalogue::Start()
 			if (AITile.GetSlope(bridge_start)!=AITile.SLOPE_FLAT || AITile.GetSlope(bridge_end)!=AITile.SLOPE_FLAT) throw "bridge heads are not on flat plateau";
 			local bridges=AIBridgeList_Length(15);
 			if (bridges.IsEmpty()) throw "no 15-tile ordinary road bridge is available";
+			local requested=AIController.GetSetting("bridge_type");
 			local built=false;
-			for (local type=bridges.Begin(); !bridges.IsEnd(); type=bridges.Next()) {
-				if (AIBridge.BuildBridge(AIVehicle.VT_ROAD,type,bridge_start,bridge_end)) {
-					bridge=bridge_start; bridge_name=AIBridge.GetName(type,AIVehicle.VT_ROAD); built=true; break;
+			if (requested>=0) {
+				if (AIBridge.BuildBridge(AIVehicle.VT_ROAD,requested,bridge_start,bridge_end)) {
+					bridge=bridge_start; bridge_type=requested; bridge_name=AIBridge.GetName(requested,AIVehicle.VT_ROAD); built=true;
+				} else {
+					AILog.Info("SHIP_BRIDGE_REJECTED type="+requested+" error="+AIError.GetLastErrorString());
 				}
-				AILog.Info("SHIP_BRIDGE_REJECTED type="+type+" error="+AIError.GetLastErrorString());
+			} else {
+				for (local type=bridges.Begin(); !bridges.IsEnd(); type=bridges.Next()) {
+					if (AIBridge.BuildBridge(AIVehicle.VT_ROAD,type,bridge_start,bridge_end)) {
+						bridge=bridge_start; bridge_type=type; bridge_name=AIBridge.GetName(type,AIVehicle.VT_ROAD); built=true; break;
+					}
+					AILog.Info("SHIP_BRIDGE_REJECTED type="+type+" error="+AIError.GetLastErrorString());
+				}
 			}
-			this.Require(built,"build ordinary road bridge across the canal");
+			this.Require(built,"build the requested ordinary road bridge across the canal");
 			this.Require(AIBridge.IsBridgeTile(bridge),"bridge head is a real bridge tile");
 			bridge_buoy=this.Tile(15,7);
 			this.Require(AIMarine.BuildBuoy(bridge_buoy),"ordinary buoy below the bridge span");
-			AILog.Info("SHIP_BRIDGE_READY bridge="+bridge+" buoy="+bridge_buoy+" name="+bridge_name);
+			AILog.Info("SHIP_BRIDGE_READY bridge="+bridge+" buoy="+bridge_buoy+" type="+bridge_type+" name="+bridge_name);
 		}
 		local west=this.Tile(3,7), east=this.Tile(38,8), depot=this.Tile(20,7);
 		AILog.Info("SHIP_CATALOGUE_BANKS west="+AITile.GetSlope(west)+" east="+AITile.GetSlope(east));
@@ -182,7 +191,7 @@ function ShipCatalogue::Start()
 			if (held_tile<0) throw "selected ship did not reach the real bridge span for a held clearance review";
 		}
 		local extras=extra_docks.len()==0 ? "[]" : "["+extra_docks[0]+","+extra_docks[1]+"]";
-		local result="{\"x\":"+this.x+",\"y\":"+this.y+",\"water_height\":"+(height-1)+",\"depot\":"+depot+",\"depot_axis\":"+axis+",\"depot_service\":"+(service ? "true" : "false")+",\"depot_hold_ticks\":"+hold+",\"dock_hold\":"+(dock_hold ? "true" : "false")+",\"buoy\":"+buoy+",\"bridge\":"+bridge+",\"bridge_buoy\":"+bridge_buoy+",\"bridge_name\":\""+bridge_name+"\",\"bridge_hold\":"+(bridge_hold ? "true" : "false")+",\"bridge_held\":"+(held_tile>=0 ? "true" : "false")+",\"bridge_hold_engine\":"+held_engine+",\"bridge_hold_tile\":"+held_tile+",\"dike_island\":"+dike_island+",\"docks\":["+west+","+east+"],\"extra_docks\":"+extras+",\"vehicles\":[";
+		local result="{\"x\":"+this.x+",\"y\":"+this.y+",\"water_height\":"+(height-1)+",\"depot\":"+depot+",\"depot_axis\":"+axis+",\"depot_service\":"+(service ? "true" : "false")+",\"depot_hold_ticks\":"+hold+",\"dock_hold\":"+(dock_hold ? "true" : "false")+",\"buoy\":"+buoy+",\"bridge\":"+bridge+",\"bridge_buoy\":"+bridge_buoy+",\"bridge_type\":"+bridge_type+",\"bridge_name\":\""+bridge_name+"\",\"bridge_hold\":"+(bridge_hold ? "true" : "false")+",\"bridge_held\":"+(held_tile>=0 ? "true" : "false")+",\"bridge_hold_engine\":"+held_engine+",\"bridge_hold_tile\":"+held_tile+",\"dike_island\":"+dike_island+",\"docks\":["+west+","+east+"],\"extra_docks\":"+extras+",\"vehicles\":[";
 		foreach (index,entry in fleet) {
 			if (index!=0) result+=",";
 			result+="{\"engine\":"+entry.engine+",\"vehicle\":"+entry.vehicle+",\"peak_speed\":"+entry.peak+",\"docks_visited\":"+entry.visits+",\"buoy_visited\":"+(entry.buoy_seen ? "true" : "false")+",\"bridge_visited\":"+(entry.bridge_seen ? "true" : "false")+",\"bridge_under_span\":"+(entry.bridge_under ? "true" : "false")+",\"bridge_min_distance\":"+entry.bridge_min_distance+"}";

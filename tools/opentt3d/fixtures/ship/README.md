@@ -86,8 +86,15 @@ selected ship). The manifest records `bridge_held`, the actual engine and the
 held tile. The retained review used this option once for each ship definition
 204…214 and captured the saved world from a low side angle; every hull sits
 below the deck without intersecting it. This is a held visual clearance check
-at one heading per hull, not a claim that every possible heading and every
-bridge type has been swept.
+at one heading per hull, not a claim that every possible heading has been
+swept.
+
+`--bridge-type 0…12` selects one exact vanilla road-bridge type instead of the
+first available 15-tile type. The retained long-span matrix builds types
+`0` (Wooden), `4`/`5` (Steel suspension), and `10`/`11`/`12` (Tubular); all
+seven temperate engines cross under each and each world holds engine208 under
+the span. Short-span types that cannot reach 15 tiles remain a separate
+fixture boundary.
 
 ## Original buoy waypoint review
 

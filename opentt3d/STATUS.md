@@ -82,13 +82,17 @@ and retains the60fps failure; the expanded ship fixture verified all seven
 original ship engines through two loading docks, four dock orientations, the
 actual buoy, the dry harbour island and the recurring depot order, then captured
 all seven 3D hulls in the saved world. A separate public-NoAI perpendicular
-bridge fixture now builds a real Tubular road bridge across the canal, requires
-every available ship to cross under its span, and holds each of the eleven ship
+bridge fixture now builds a real road bridge across the canal, requires every
+available ship to cross under its span, and holds each of the eleven ship
 definitions204…214 below the deck for a saved low-angle review
 (`reviews/20261109/ship-bridge46/`). The four climate runs retain direct
-`bridge_under_span` observations for all selected ships, and each held hull is
-visibly below the deck without intersecting it; the sweep is still limited to
-one heading per hull and this bridge family.
+`bridge_under_span` observations for all selected ships. The retained
+15-tile bridge matrix covers all six vanilla road types that support the span
+(Wooden, both Steel-suspension types and the three Tubular types), with all
+seven temperate ships under each and engine208 held below the deck; the lowest
+Wooden deck is visibly clear. Each held hull is below the deck without
+intersecting it; the sweep is still limited to one heading per hull, and
+short-span bridge types that cannot reach 15 tiles remain separate.
 The earlier7/10 provisional reviews and their defects are retained in git history.
 Asset280, harness125 and native219 tests pass; the presentation boundary passes.
 Run42584463110 at b44de9cba recovered Windows through the preinstalled-vcpkg

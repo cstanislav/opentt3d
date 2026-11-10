@@ -57,9 +57,29 @@ between the support columns; no ship geometry is above the deck. The four
 rotations for engine208 are retained under `views/held-208-rotations/`.
 
 This closes a real **bridge navigation and held visual-clearance** control for
-all eleven ship definitions in the four climates. It is one heading per hull
-and this one road-bridge type; a complete all-heading/all-bridge-type swept
-matrix is not claimed.
+all eleven ship definitions in the four climates of one road-bridge type. It is
+one heading per hull; a complete all-heading swept matrix is not claimed.
+
+## Additional 15-tile bridge types
+
+The same fixture was rerun in temperate for every vanilla road-bridge type that
+supports the 15-tile span:
+
+| type | bridge name | all seven engines under span | held engine208 |
+| --- | --- | --- | --- |
+| 0 | Wooden road bridge | yes, min distance0 | `types/0-view/smoke.png` |
+| 4 | Steel suspension road bridge | yes, min distance0 | `types/4-view/smoke.png` |
+| 5 | Steel suspension road bridge | yes, min distance0 | `types/5-view/smoke.png` |
+| 10 | Tubular road bridge | yes, min distance0 | `types/10-view/smoke.png` |
+| 11 | Tubular road bridge | yes, min distance0 | `types/11-view/smoke.png` |
+| 12 | Tubular road bridge | yes, min distance0 | `types/12-view/smoke.png` |
+
+Each type directory retains the fixture manifest, save, AI/scripts and log; each
+`-view` directory retains the low-pitch bridge renderer log, result and
+screenshot. The wooden bridge is the lowest-deck type in this group; its saved
+review shows engine208’s hull and cranes below the wooden deck. Short-span
+bridge types that cannot span the 15-tile crossing are still outside this
+fixture.
 
 The saved worlds are deterministic `2050` worlds with `vehicle_breakdowns=0`;
 the fixture does not write cargo, vehicle, construction, map or save-format

@@ -39,12 +39,13 @@ class ShipFixtureScriptTests(unittest.TestCase):
             build.mkdir()
             (build/("opentt3d.exe" if os.name == "nt" else "opentt3d")).touch()
             output = root/"review"
-            argv = ["fixture_ship.py","--build-dir",str(build),"--output",str(output),"--bridge","--bridge-hold","--bridge-hold-engine","208"]
+            argv = ["fixture_ship.py","--build-dir",str(build),"--output",str(output),"--bridge","--bridge-type","0","--bridge-hold","--bridge-hold-engine","208"]
             with mock.patch.object(sys,"argv",argv),mock.patch("fixture_ship.subprocess.Popen",side_effect=RuntimeError("stop before launch")):
                 with self.assertRaisesRegex(RuntimeError,"stop before launch"):
                     fixture_ship.main()
             commands = (output/"scripts/game_start.scr").read_text()
             self.assertIn("bridge=1",commands)
+            self.assertIn("bridge_type=0",commands)
             self.assertIn("bridge_hold=1",commands)
             self.assertIn("bridge_hold_engine=208",commands)
             source = (output/"ai/ship-catalogue/main.nut").read_text()
