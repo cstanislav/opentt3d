@@ -107,10 +107,10 @@ is retained as rejected environment evidence
 64 picking samples each, eight to eleven acknowledged commands and synchronous
 saves. The downloaded Linux and Windows packages started native dedicated servers and
 accepted loopback clients. Windows windowed rendering, pointer input and full
-client/replay remain open; the hosted window probe is rejected, not hidden. It is not published. The final `.46`
-performance control measured39.37fps at1280×720/zoom5 and retains the60fps
-failure. `.42` remains recommended until those remaining runtime/network checks
-and sustained60fps pass.
+client/replay remain open; the hosted window probe is rejected, not hidden. It was published as a development prerelease through the reviewed publication
+workflow with its 19 audited assets unchanged (`releases/20261109/release46/publication-receipt.json`).
+The final `.46` performance control measured39.37fps at1280×720/zoom5 and
+retains the60fps failure. `.42` remains the recommended checkpoint.
 
 ## October 3 — HQ brick ownership and unbound lock detail improved provisionally
 
