@@ -34,13 +34,14 @@ row was emitted and no 3D bank was invented for them. Zero-source absence with
 this particular GRF is therefore a structural no-draw state, not a claimed
 feature-absence matrix.
 
-This GRF supplies static bank artwork; `source-audit.json` records the source
-inspection. It contains no animated phase family, so there is no phase state to
-verify. The survey's 29 river tiles without an edge draw are structural no-draw
-absence; no 3D bank is invented for them. Because this source supplies a bank
-for every drawn edge, a zero-feature base absence is not applicable. The custom
-bank source is retained as the original native surface; it is not promoted to a
-new authored 3D asset.
+This GRF supplies bank artwork and **ANIM river-rapids entries**; the source
+contains animated sprites, but their individual phase frames were not separately
+observed in this natural run. `source-audit.json` records the exact source
+inspection and explicitly leaves phase approval open. The survey's 29 river
+tiles without an edge draw are structural no-draw absence; no 3D bank is
+invented for them. Because this source supplies a bank for every drawn edge, a
+zero-feature base absence is not applicable. The custom bank source is retained
+as the original native surface; it is not promoted to a new authored 3D asset.
 
 The run's title-world save completed synchronously with nine acknowledged
 console commands, and `run.log` contains no unmodelled-reference report.

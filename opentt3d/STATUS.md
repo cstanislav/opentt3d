@@ -58,8 +58,9 @@ signs use world geometry, locks use the complete map-owned wall family, and the
 Toyland factory144 completed state has an authored 3D body. Natural company-score selection is now verified at stage4 from an actual company score870 and a normal HQ build (`opentt3d/reviews/20261109/natural-hq-selection/`); lower thresholds remain source-governed. A real GPL-2.0 custom river NewGRF
 now retains 1,156 natural source selectors, all twelve flat bank offsets and
 custom rivermouth/rapids sources (`opentt3d/reviews/20261109/custom-river-source/`);
-this source is static, so animation phases are not claimed, and its 29
-undrawn interior tiles are no-draw absence rather than a zero-feature base.
+this source contains ANIM river-rapids entries, whose individual phase frames
+were not separately observed, and its 29 undrawn interior tiles are no-draw
+absence rather than a zero-feature base.
 Four-rotation title-world picking and saves pass. A catalogue-wide geometry
 audit now verifies all2,035 authored volumes at automatic LOD factors2/4/8/16
 (8,140 views; source-owner bounds/occupancy exact, ordinary growth at most one
