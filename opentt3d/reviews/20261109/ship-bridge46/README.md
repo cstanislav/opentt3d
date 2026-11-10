@@ -67,15 +67,15 @@ supports the 15-tile span:
 
 | type | bridge name | all seven engines under span | held engine208 |
 | --- | --- | --- | --- |
-| 0 | Wooden road bridge | yes, min distance0 | `types/0-view/smoke.png` |
-| 4 | Steel suspension road bridge | yes, min distance0 | `types/4-view/smoke.png` |
-| 5 | Steel suspension road bridge | yes, min distance0 | `types/5-view/smoke.png` |
-| 10 | Tubular road bridge | yes, min distance0 | `types/10-view/smoke.png` |
-| 11 | Tubular road bridge | yes, min distance0 | `types/11-view/smoke.png` |
-| 12 | Tubular road bridge | yes, min distance0 | `types/12-view/smoke.png` |
+| 0 | Wooden road bridge | yes, min distance0 | `types/0/view/smoke.png` |
+| 4 | Steel suspension road bridge | yes, min distance0 | `types/4/view/smoke.png` |
+| 5 | Steel suspension road bridge | yes, min distance0 | `types/5/view/smoke.png` |
+| 10 | Tubular road bridge | yes, min distance0 | `types/10/view/smoke.png` |
+| 11 | Tubular road bridge | yes, min distance0 | `types/11/view/smoke.png` |
+| 12 | Tubular road bridge | yes, min distance0 | `types/12/view/smoke.png` |
 
 Each type directory retains the fixture manifest, save, AI/scripts and log; each
-`-view` directory retains the low-pitch bridge renderer log, result and
+`view/` subdirectory retains the low-pitch bridge renderer log, result and
 screenshot. The wooden bridge is the lowest-deck type in this group; its saved
 review shows engine208’s hull and cranes below the wooden deck. Short-span
 bridge types that cannot span the 15-tile crossing are still outside this
