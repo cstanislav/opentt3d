@@ -1,0 +1,45 @@
+[2026-11-09 22:29:27] dbg: [net:3] Starting dedicated server, version 20261109-main-g296883d795
+[2026-11-09 22:29:27] dbg: [net:3] Starting network
+[2026-11-09 22:29:27] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 22:29:27] dbg: [net:3] Network online, multiplayer available
+[2026-11-09 22:29:27] dbg: [net:3] Detected broadcast addresses:
+[2026-11-09 22:29:27] dbg: [net:3]   0) 192.168.1.255
+[2026-11-09 22:29:27] dbg: [net:3] Using certificate file: /etc/ssl/cert.pem
+[2026-11-09 22:29:27] dbg: [net:3] Using certificate path: none
+OpenTTD Game Console Revision 7 - 20261109-main-g296883d795
+------------------------------------
+use "help" for more information.
+
+[2026-11-09 22:29:27] dbg: [net:1] No "client_name" has been set, using "Unnamed Client" instead. Please set this now using the "name <new name>" command
+[2026-11-09 22:29:27] dbg: [net:1] No "server_name" has been set, using "Unnamed Server" instead. Please set this now using the "server_name <new name>" command
+[2026-11-09 22:29:27] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 22:29:27] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 22:29:27] dbg: [net:3] Listening on 127.0.0.1:55742 (IPv4)
+[2026-11-09 22:29:27] dbg: [net:3] Listening on 127.0.0.1:55742 (IPv4)
+[2026-11-09 22:29:27] dbg: [net:3] Network revision name: 20261109-main-g296883d795
+[2026-11-09 22:29:27] dbg: [net:3] [crypto] Creating a new random key
+[2026-11-09 22:29:27] dbg: [net:3] Generating map, please wait...
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 5
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 11
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 17
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 20
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 60
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 65
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 70
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 75
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 80
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 85
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 90
+[2026-11-09 22:29:27] dbg: [net:3] Map generation percentage complete: 99
+Game is already unpaused.
+[2026-11-09 22:29:27] dbg: [net:3] Map generated, starting game
+[2026-11-09 22:29:27] dbg: [script:4] [0] [I] SHIP_SHORT_SITE 40,24 height=2
+[2026-11-09 22:29:31] dbg: [script:4] [0] [I] SHIP_SHORT_DOCK_SLOPES west=12 east=3
+[2026-11-09 22:29:32] dbg: [script:4] [0] [I] SHIP_SHORT_PROGRESS tick=0 tile=45,32 speed=2 visits=0 bridge=false
+[2026-11-09 22:30:20] dbg: [script:4] [0] [I] SHIP_SHORT_HELD tile=54,33
+[2026-11-09 22:30:20] dbg: [script:4] [0] [I] SHIP_SHORT_READY {"x":40,"y":24,"height":2,"canal_width":2,"bridge_type":2,"bridge_name":"Steel girder road bridge","engine":204,"vehicle":0,"peak_speed":24,"docks_visited":3,"bridge_under_span":true,"bridge_held":true}
+Saving map...
+Map successfully saved to 'short-bridge.sav'.
+‎*** Game paused (manual)
+[2026-11-09 22:30:20] dbg: [net:3] Initializing UDP listeners
+[2026-11-09 22:30:20] dbg: [net:3] Shutting down network

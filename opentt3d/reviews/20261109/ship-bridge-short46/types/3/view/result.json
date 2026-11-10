@@ -1,0 +1,387 @@
+{
+  "renderer": "3d",
+  "rotation": 0,
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "screenshot": "/Users/stanislav/Projects/opentt3d/build-macos/ship-short-w3-t3-view/screenshot/smoke.png",
+  "image_size": [
+    1280,
+    800
+  ],
+  "command": [
+    "/Users/stanislav/Projects/opentt3d/build-macos/opentt3d",
+    "-c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/ship-short-w3-t3-view/openttd.cfg",
+    "-x",
+    "-X",
+    "-v",
+    "cocoa-opengl",
+    "-b",
+    "32bpp-optimized",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-r",
+    "1280x800",
+    "-d",
+    "driver=2,console=1",
+    "-G",
+    "314159",
+    "-t",
+    "1950",
+    "-g",
+    "/Users/stanislav/Projects/opentt3d/build-macos/ship-short-w3-t3/save/short-bridge.sav"
+  ],
+  "pid": 28889,
+  "background": false,
+  "benchmark": {
+    "atlas_pages": 1,
+    "atlas_repack_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "backend": "OpenGL: Apple M3 Pro, 4.1 Metal - 90.5",
+    "backend_including_readback_ms": {
+      "max": 2.06875,
+      "mean": 1.2728577166666666,
+      "p50": 1.171042,
+      "p95": 2.001542,
+      "p99": 2.06875
+    },
+    "buffer_wait_ms": {
+      "max": 0.045625,
+      "mean": 0.016716,
+      "p50": 0.015667,
+      "p95": 0.033167,
+      "p99": 0.045625
+    },
+    "capture_ms": {
+      "max": 1.475542,
+      "mean": 0.8617722166666664,
+      "p50": 0.881,
+      "p95": 1.195875,
+      "p99": 1.475542
+    },
+    "captured_fence_vertices": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "captured_foundation_vertices": {
+      "max": 19584.0,
+      "mean": 19584.0,
+      "p50": 19584.0,
+      "p95": 19584.0,
+      "p99": 19584.0
+    },
+    "captured_running_rail_vertices": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "captured_vertices_by_owner": {
+      "clear": {
+        "max": 86391.0,
+        "mean": 86232.6,
+        "p50": 86175.0,
+        "p95": 86391.0,
+        "p99": 86391.0
+      },
+      "house": {
+        "max": 272226.0,
+        "mean": 272226.0,
+        "p50": 272226.0,
+        "p95": 272226.0,
+        "p99": 272226.0
+      },
+      "industry": {
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "object": {
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "rail": {
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "road": {
+        "max": 129.0,
+        "mean": 129.0,
+        "p50": 129.0,
+        "p95": 129.0,
+        "p99": 129.0
+      },
+      "station": {
+        "max": 102432.0,
+        "mean": 102432.0,
+        "p50": 102432.0,
+        "p95": 102432.0,
+        "p99": 102432.0
+      },
+      "trees": {
+        "max": 1302120.0,
+        "mean": 1302120.0,
+        "p50": 1302120.0,
+        "p95": 1302120.0,
+        "p99": 1302120.0
+      },
+      "tunnel_bridge": {
+        "max": 1524.0,
+        "mean": 1524.0,
+        "p50": 1524.0,
+        "p95": 1524.0,
+        "p99": 1524.0
+      },
+      "unowned": {
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "vehicle": {
+        "max": 55644.0,
+        "mean": 55644.0,
+        "p50": 55644.0,
+        "p95": 55644.0,
+        "p99": 55644.0
+      },
+      "void": {
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "water": {
+        "max": 183324.0,
+        "mean": 183324.0,
+        "p50": 183324.0,
+        "p95": 183324.0,
+        "p99": 183324.0
+      }
+    },
+    "composite_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "draw_distance": "unlimited",
+    "effective_zoom": -1.0,
+    "first_person": false,
+    "frame_deadline_lateness_ms": {
+      "max": 3.541875,
+      "mean": 2.3801993166666673,
+      "p50": 2.64975,
+      "p95": 3.218458,
+      "p99": 3.541875
+    },
+    "frame_interval_ms": {
+      "max": 20.179875,
+      "mean": 16.66796041666667,
+      "p50": 16.601125,
+      "p95": 19.048,
+      "p99": 20.179875
+    },
+    "frame_work_ms": {
+      "max": 5.766542,
+      "mean": 3.42294095,
+      "p50": 3.199709,
+      "p95": 5.55575,
+      "p99": 5.766542
+    },
+    "frames": 60,
+    "frames_over_16_67_ms": 0,
+    "fullscreen": false,
+    "game_lock_wait_ms": {
+      "max": 0.049,
+      "mean": 0.00110485,
+      "p50": 0.000208,
+      "p95": 0.000667,
+      "p99": 0.049
+    },
+    "height": 800,
+    "intervals_over_20_ms": 1,
+    "legacy_zoom": 0,
+    "measured_fps": 59.995342861510366,
+    "mesh_index_ms": {
+      "max": 0.050167,
+      "mean": 0.001591,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.050167
+    },
+    "mesh_upload_bytes": {
+      "max": 20770.0,
+      "mean": 645.2333333333333,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 20770.0
+    },
+    "mesh_upload_ms": {
+      "max": 0.13208399999999998,
+      "mean": 0.004133333333333333,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.13208399999999998
+    },
+    "mesh_uploads": {
+      "max": 2.0,
+      "mean": 0.06666666666666667,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 2.0
+    },
+    "palette_upload_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "passes": {
+      "max": 1.0,
+      "mean": 1.0,
+      "p50": 1.0,
+      "p95": 1.0,
+      "p99": 1.0
+    },
+    "pitch_degrees": 3.0,
+    "present_ms": {
+      "max": 1.259167,
+      "mean": 0.40778963333333346,
+      "p50": 0.323,
+      "p95": 1.011375,
+      "p99": 1.259167
+    },
+    "presentation_upload_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "queue_present_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "queue_submit_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "readback_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "renderer_enabled": true,
+    "requested_refresh_rate": 60,
+    "rotation": 0.0026041667442768812,
+    "slow_frames": [
+      {
+        "atlas_repack_ms": 0.0,
+        "backend_including_readback_ms": 0.649375,
+        "buffer_wait_ms": 0.018709,
+        "capture_ms": 0.437084,
+        "composite_ms": 0.0,
+        "deadline_lateness_ms": 3.541875,
+        "game_lock_wait_ms": 8.4e-05,
+        "index": 24,
+        "interval_ms": 20.179875,
+        "mesh_index_ms": 0.0,
+        "mesh_upload_bytes": 0,
+        "mesh_upload_ms": 0.0,
+        "mesh_uploads": 0,
+        "palette_upload_ms": 0.0,
+        "passes": 1,
+        "present_ms": 0.369917,
+        "presentation_upload_ms": 0.0,
+        "queue_present_ms": 0.0,
+        "queue_submit_ms": 0.0,
+        "readback_ms": 0.0,
+        "swapchain_acquire_inclusive_ms": 0.0,
+        "texture_decode_ms": 0.0,
+        "ui_palette_upload_ms": 0.0,
+        "vertices": 2003574,
+        "window_draw_inclusive_ms": 1.603917,
+        "work_ms": 2.075625
+      }
+    ],
+    "swapchain_acquire_inclusive_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "texture_decode_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "ui_palette_upload_ms": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "vertices": {
+      "max": 2003790.0,
+      "mean": 2003631.6,
+      "p50": 2003574.0,
+      "p95": 2003790.0,
+      "p99": 2003790.0
+    },
+    "viewport": {
+      "height": 800,
+      "left": -3328,
+      "top": 5168,
+      "width": 1280
+    },
+    "width": 1280,
+    "window_draw_inclusive_ms": {
+      "max": 4.932625,
+      "mean": 2.876919483333333,
+      "p50": 2.629334,
+      "p95": 4.527125,
+      "p99": 4.932625
+    }
+  }
+}

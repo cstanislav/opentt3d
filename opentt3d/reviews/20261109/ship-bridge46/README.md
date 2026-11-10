@@ -78,8 +78,9 @@ Each type directory retains the fixture manifest, save, AI/scripts and log; each
 `view/` subdirectory retains the low-pitch bridge renderer log, result and
 screenshot. The wooden bridge is the lowest-deck type in this group; its saved
 review shows engine208’s hull and cranes below the wooden deck. Short-span
-bridge types that cannot span the 15-tile crossing are still outside this
-fixture.
+bridge types that cannot span the 15-tile crossing are covered by the separate
+narrow-canal fixture in `../ship-bridge-short46/`, which completes the 13-type
+vanilla road-bridge matrix.
 
 The saved worlds are deterministic `2050` worlds with `vehicle_breakdowns=0`;
 the fixture does not write cargo, vehicle, construction, map or save-format
