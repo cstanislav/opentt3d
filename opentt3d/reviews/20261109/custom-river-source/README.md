@@ -34,9 +34,11 @@ row was emitted and no 3D bank was invented for them. Zero-source absence with
 this particular GRF is therefore a structural no-draw state, not a claimed
 feature-absence matrix.
 
-This GRF supplies static bank artwork and has no animated river phases. The
-fixture therefore claims custom source selection and the complete twelve-slot
-bank family, but does **not** claim custom animation/phase coverage. The custom
+This GRF supplies static bank artwork; `source-audit.json` records the source
+inspection. It contains no animated phase family, so there is no phase state to
+verify. The survey's 29 river tiles without an edge draw are structural no-draw
+absence; no 3D bank is invented for them. Because this source supplies a bank
+for every drawn edge, a zero-feature base absence is not applicable. The custom
 bank source is retained as the original native surface; it is not promoted to a
 new authored 3D asset.
 

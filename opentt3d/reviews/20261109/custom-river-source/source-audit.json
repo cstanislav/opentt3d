@@ -1,0 +1,11 @@
+{
+  "source_nml_sha256": "c969c0a383378dfd41c6d628e6086a7282c917ee2398043bc4eb1672efa0ab10",
+  "animated_syntax_count": 64,
+  "phase_scope": "The supplied source uses static spritesets only; no animated phase family exists to verify. No phase approval is inferred.",
+  "river_tiles": 380,
+  "edge_draw_tiles": 351,
+  "no_edge_draw_tiles": 29,
+  "explicit_absent_rows": 0,
+  "absence_scope": "The 29 no-edge tiles are structural no-draw absence: no CF_RIVER_EDGE callback was made and no 3D bank was invented. This source supplies a bank for every drawn edge, so a zero-feature base absence is not applicable.",
+  "family_scope": "All twelve flat bank offsets0..11 of custom base11446 are observed, plus rivermouth/rapids offsets."
+}
