@@ -136,6 +136,7 @@ def main():
     parser.add_argument("--town-count", type=int, help="Use the normal custom town count when generating a review world")
     parser.add_argument("--city-size", type=int, choices=range(1,11), help="New review world: make every town a city with this normal initial size multiplier")
     parser.add_argument("--climate", choices=("temperate", "arctic", "tropic", "toyland"))
+    parser.add_argument("--industry-density", type=int, choices=range(5), help="New review world: normal industry density, including 0 for no industries")
     parser.add_argument("--savegame", type=Path)
     parser.add_argument("--ai-dir", type=Path, help="Stage a fixture's local AI scripts alongside the isolated save")
     parser.add_argument("--newgrf-dir", type=Path, help="Stage the NewGRF files required by a fixture save")
@@ -490,6 +491,9 @@ server_advertise = false
     if args.climate:
         config = output / "openttd.cfg"
         config.write_text(config.read_text().replace("[game_creation]", f"[game_creation]\nlandscape = {args.climate}"))
+    if args.industry_density is not None:
+        config = output / "openttd.cfg"
+        config.write_text(config.read_text() + f"\n[difficulty]\nindustry_density = {args.industry_density}\n")
     if args.infinite_water:
         config = output / "openttd.cfg"
         config.write_text(config.read_text() + "\n[construction]\nfreeform_edges = false\n")

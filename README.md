@@ -57,14 +57,14 @@ optional sound/music.
 
 | | |
 | :---: | :---: |
-| [![A dense temperate city in the rotatable 3D world](docs/screenshots/hero-city.webp)](docs/screenshots/hero-city.webp) | [![A temperate river, farms and a town](docs/screenshots/temperate-river.webp)](docs/screenshots/temperate-river.webp) |
-| *A working city with real building, road and roof relief.* | *River banks, fields and hills in the fixed 40° world camera.* |
-| [![Snow-covered Arctic forest, lake and town](docs/screenshots/arctic-landscape.webp)](docs/screenshots/arctic-landscape.webp) | [![Toyland's colourful 3D scenery](docs/screenshots/toyland-parade.webp)](docs/screenshots/toyland-parade.webp) |
-| *Arctic snow, conifers and a frozen shoreline.* | *Toyland's full colour range, with 3D trees and buildings.* |
-| [![A drive-through bus stop whose asphalt matches the road](docs/screenshots/bus-stop-ground.webp)](docs/screenshots/bus-stop-ground.webp) | [![A stone-lined canal with a launch](docs/screenshots/canal-quay.webp)](docs/screenshots/canal-quay.webp) |
-| *Bus-stop lanes now sample the adjoining road surface.* | *Canal edges are stepped stone quays instead of flat borders.* |
-| [![A train cab view at a station](docs/screenshots/train-cab.webp)](docs/screenshots/train-cab.webp) | [![A close view of a 3D bank with a centred cupola](docs/screenshots/bank-cupola.webp)](docs/screenshots/bank-cupola.webp) |
-| *First-person following with the same fixed lens.* | *Joined bank bodies keep the cupola centred across the tile seam.* |
+| [![A dense temperate city with canal bridges in the rotatable 3D world](docs/screenshots/hero-city.webp)](docs/screenshots/hero-city.webp) | [![A temperate river, fields and towns](docs/screenshots/temperate-river.webp)](docs/screenshots/temperate-river.webp) |
+| *A working city with real building, bridge and roof relief.* | *River banks, fields and towns in the fixed 40° world camera.* |
+| [![Snow-covered Arctic forest and a river](docs/screenshots/arctic-landscape.webp)](docs/screenshots/arctic-landscape.webp) | [![Toyland's colourful 3D scenery](docs/screenshots/toyland-parade.webp)](docs/screenshots/toyland-parade.webp) |
+| *Arctic snow, conifers and a river through the forest.* | *Toyland's full colour range, with 3D trees and buildings.* |
+| [![A drive-through bus stop whose asphalt matches the road](docs/screenshots/bus-stop-ground.webp)](docs/screenshots/bus-stop-ground.webp) | [![A short-span bridge over a stone-lined canal with a ship beneath it](docs/screenshots/canal-quay.webp)](docs/screenshots/canal-quay.webp) |
+| *Bus-stop lanes sample the adjoining road surface.* | *A short-span road bridge over stepped stone canal quays.* |
+| [![A train cab view at a station](docs/screenshots/train-cab.webp)](docs/screenshots/train-cab.webp) | [![A close view of a finished 3D bank facade](docs/screenshots/bank-cupola.webp)](docs/screenshots/bank-cupola.webp) |
+| *First-person following with the same fixed lens.* | *A finished bank facade and roof at street level.* |
 
 ## Camera controls
 
