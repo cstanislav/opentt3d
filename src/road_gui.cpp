@@ -1755,3 +1755,28 @@ DropDownList GetScenRoadTypeDropDownList(RoadTramTypes rtts)
 
 	return list;
 }
+
+/** Exercise the road construction-orientation windows through their ordinary click paths. */
+bool VerifyRoadConstructionOrientationUI()
+{
+	Window *toolbar = ShowBuildRoadToolbar(ROADTYPE_ROAD);
+	if (toolbar == nullptr) return false;
+	toolbar->OnClick({}, WID_ROT_DEPOT, 1);
+	Window *depot = FindWindowById(WC_BUILD_DEPOT, TRANSPORT_ROAD);
+	if (depot == nullptr) return false;
+	const DiagDirection depot_before = _road_depot_orientation;
+	depot->OnClick({}, WID_BROD_DEPOT_NE, 1);
+	const bool depot_ok = _road_depot_orientation != depot_before;
+	CloseWindowById(WC_BUILD_DEPOT, TRANSPORT_ROAD);
+
+	toolbar = ShowBuildRoadToolbar(ROADTYPE_ROAD);
+	if (toolbar == nullptr) return false;
+	toolbar->OnClick({}, WID_ROT_BUS_STATION, 1);
+	Window *stop = FindWindowById(WC_BUS_STATION, TRANSPORT_ROAD);
+	if (stop == nullptr) return false;
+	const DiagDirection stop_before = _roadstop_gui.orientation;
+	stop->OnClick({}, WID_BROS_STATION_NE, 1);
+	const bool stop_ok = _roadstop_gui.orientation != stop_before;
+	CloseWindowById(WC_BUS_STATION, TRANSPORT_ROAD);
+	return depot_ok && stop_ok;
+}

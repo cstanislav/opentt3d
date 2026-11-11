@@ -10,6 +10,8 @@ ship depot, rail station and bus/tram stop pickers use one click-to-rotate
 preview with a rotation tooltip; drive-through-only and tram restrictions still
 limit the selectable orientations.
 
+`--verify-ui-orientation` opens and clicks the rail/road/dock depot and rail/bus station previews through their ordinary handlers; all passed.
+
 Road vehicles now sample the actual road/bridge surface ahead and behind their
 direction of travel and apply the resulting grade to the voxel chassis; train
 behavior and all non-road vehicle paths are unchanged. A temporary live
@@ -21,7 +23,8 @@ The wide title control moved from40.45fps to60.00fps at1280x720/zoom5 (capture
 18.14ms to6.10ms), while a static road fixture reaches59.98fps. The current
 full-capture control also reaches60.03fps; GPU/composition is now the bound, and
 render distance and map extent are unchanged. This is a bounded300-frame control,
-not sustained long-duration acceptance. Evidence:
+not sustained long-duration acceptance. An1,800-frame control averages60.01fps
+(Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 
 ## October 18 — bus-stop, canal, bank and branding consistency pass

@@ -66,6 +66,10 @@
 #include "renderer3d/road_stop_capture.h"
 #include "video/video_driver.hpp"
 
+extern bool VerifyRailConstructionOrientationUI();
+extern bool VerifyRoadConstructionOrientationUI();
+extern bool VerifyDockConstructionOrientationUI();
+
 #if defined(WITH_ZLIB)
 #include "network/network_content.h"
 #endif /* WITH_ZLIB */
@@ -3444,6 +3448,15 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		auto engine = ParseInteger<unsigned>(argv[2]);
 		if (!engine || *engine >= 256 || (argv.size() == 4 && argv[3] != "loaded")) return false;
 		VideoDriver::GetInstance()->QueueOnMainThread([id = *engine, loaded = argv.size() == 4] { Renderer3D::ExportVehicleModelGallery(id, loaded); });
+		return true;
+	}
+	if (argv.size() == 2 && argv[1] == "ui-orientation") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			const bool ok = VerifyRailConstructionOrientationUI() &&
+				VerifyRoadConstructionOrientationUI() &&
+				VerifyDockConstructionOrientationUI();
+			Debug(driver, 1, "OpenTT3D: construction orientation UI {}", ok ? "passed" : "failed");
+		});
 		return true;
 	}
 	if (argv.size() != 2) {

@@ -18,10 +18,12 @@ GPU capture now caches the static terrain/building layer and the per-tick vehicl
 layer. Wide title-world FPS moved from40.45 to60.00 at1280×720/zoom5, with mean
 capture18.14→6.10ms; the static road fixture reaches59.98fps. Render distance is
 unchanged and the remaining wide-view bound is GPU raster/visibility. The static layer refreshes on map, camera, texture or selection changes. This is
-a bounded300-frame control, not sustained long-duration acceptance.
+a bounded300-frame control, not sustained long-duration acceptance. An1,800-frame
+control averages60.01fps (Vulkan) and60.00fps (OpenGL) but retains387/457
+intervals above20ms.
 
 Verification: native219/219, harness126/126, presentation boundary147 files,
-focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
+`--verify-ui-orientation`, focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
 `--verify-renderer --renderer-verification-scope scene` pass. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 

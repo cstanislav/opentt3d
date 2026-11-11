@@ -596,3 +596,18 @@ void InitializeDockGui()
 {
 	_ship_depot_direction = AXIS_X;
 }
+
+/** Exercise the ship-depot orientation window through its ordinary click path. */
+bool VerifyDockConstructionOrientationUI()
+{
+	Window *toolbar = ShowBuildDocksToolbar();
+	if (toolbar == nullptr) return false;
+	toolbar->OnClick({}, WID_DT_DEPOT, 1);
+	Window *depot = FindWindowById(WC_BUILD_DEPOT, TRANSPORT_WATER);
+	if (depot == nullptr) return false;
+	const Axis before = _ship_depot_direction;
+	depot->OnClick({}, WID_BDD_X, 1);
+	const bool ok = _ship_depot_direction != before;
+	CloseWindowById(WC_BUILD_DEPOT, TRANSPORT_WATER);
+	return ok;
+}

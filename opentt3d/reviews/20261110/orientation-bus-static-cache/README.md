@@ -59,12 +59,24 @@ the static road fixture reaches 60 fps. Render distance, map extent and vehicle
 coverage are unchanged. This is a bounded 300-frame control, not a sustained
 long-duration or multi-viewport acceptance.
 
+A longer 1,800-frame control keeps the average near 60 fps on both backends but
+still shows scheduling jitter:
+
+| Backend | FPS | capture mean | p95 interval | intervals over20 ms |
+|---|---:|---:|---:|---:|
+| Vulkan | 60.01 | 5.76 ms | 20.80 ms | 387 |
+| OpenGL | 60.00 | 5.45 ms | 22.36 ms | 457 |
+
+The 300-frame and 1,800-frame averages do not establish smooth long-duration or
+multi-viewport acceptance; the jitter remains visible in the retained JSON.
+
 Raw benchmark JSON is retained beside this file:
 
 - `wide-baseline.json`
 - `wide-full-current.json`
 - `wide-static-cache.json`
 - `road-static-cache.json`
+- `long-run-summary.json`
 
 ## Verification
 
@@ -72,6 +84,8 @@ Raw benchmark JSON is retained beside this file:
 - Harness: 126/126 (run separately).
 - Presentation boundary: 147 files (run separately; the three GUI pickers and
   read-only viewport revision API were added to the reviewed boundary).
+- `--verify-ui-orientation` opens and clicks every rail/road/dock orientation
+  picker through the ordinary window handlers: passed (`ui-orientation-observation.txt`).
 - `--reference-vehicle 116 --verify-voxel-vehicle 116 --verify-road-stops` and
   `--verify-renderer --renderer-verification-scope scene` pass on the road fixture.
 - A broad verifier run combining every live family exceeded its 240-second

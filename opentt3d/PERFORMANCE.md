@@ -13,7 +13,8 @@ from **18.14 ms** to **6.10 ms**. A static road-catalogue fixture reaches **59.9
 fps**. The remaining wide-view limit is GPU raster/visibility time (about 9.36 ms),
 not CPU capture; the current full-capture control also measures60.03fps. Render
 distance and map extent are unchanged. This is a bounded 300-frame control, not
-a sustained long-duration acceptance. Evidence:
+a sustained long-duration acceptance. A 1,800-frame control averages60.01fps
+(Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 
 ## Verified `.37` original-bubble release review

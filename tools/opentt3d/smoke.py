@@ -232,6 +232,7 @@ def main():
     parser.add_argument("--verify-depot-traversal", type=int, metavar="VEHICLE", help="Observe an actual road vehicle or ship before, inside and after a captured voxel depot")
     parser.add_argument("--verify-crossings", action="store_true")
     parser.add_argument("--verify-road-stops", action="store_true")
+    parser.add_argument("--verify-ui-orientation", action="store_true", help="Open the construction orientation pickers and click their previews")
     parser.add_argument("--verify-crossing-transitions", action="store_true", help="Require both actual open/barred states during a running viewport benchmark")
     parser.add_argument("--verify-airport-animation", nargs="+", type=int, choices=range(74), metavar="GFX", help="Observe every actual upstream animation frame of the selected voxel airport tiles")
     parser.add_argument("--verify-industry-animation", nargs="+", type=int, choices=range(175), metavar="GFX", help="Observe every distinct original sprite frame of the selected voxel industry animations")
@@ -506,6 +507,8 @@ server_advertise = false
     if args.renderer == "3d":
         commands.append("renderer3d on")
         commands.extend(["renderer3d right"] * args.rotation)
+    if args.verify_ui_orientation:
+        commands.append("renderer3d ui-orientation")
     if args.reference_model:
         commands.append("renderer3d locate")
     if args.reference_house_stage is not None:
@@ -1082,6 +1085,8 @@ server_advertise = false
                 raise RuntimeError("Road-stop gallery did not complete")
             if args.verify_road_stops and "road-stop layout/tram views, company materials and transparent shelters passed" not in text:
                 raise RuntimeError("Road-stop verification did not complete")
+            if args.verify_ui_orientation and "construction orientation UI passed" not in text:
+                raise RuntimeError("Construction orientation picker interaction did not pass")
             if args.expect_canal_dikes:
                 require_live_canal_dikes(text,args.expect_canal_dikes)
             if args.verify_crossing_transitions and not re.search(r"live crossing \d+,\d+ changed from (open to barred|barred to open)", text):

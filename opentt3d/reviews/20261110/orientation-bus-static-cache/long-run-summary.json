@@ -1,0 +1,24 @@
+{
+  "vulkan": {
+    "frames": 1800,
+    "measured_fps": 60.010730834837055,
+    "capture_ms_mean": 5.7602170994444455,
+    "gpu_frame_ms_mean": 11.301728092222216,
+    "frame_interval_ms_p95": 20.795584,
+    "frame_interval_ms_p99": 22.149583,
+    "frames_over_16_67_ms": 35,
+    "intervals_over_20_ms": 387,
+    "peak_sampled_bytes": 3999256704
+  },
+  "opengl": {
+    "frames": 1800,
+    "measured_fps": 60.002914559570705,
+    "capture_ms_mean": 5.4510678022222265,
+    "gpu_frame_ms_mean": null,
+    "frame_interval_ms_p95": 22.364625,
+    "frame_interval_ms_p99": 22.930708,
+    "frames_over_16_67_ms": 58,
+    "intervals_over_20_ms": 457,
+    "peak_sampled_bytes": 3957772440
+  }
+}

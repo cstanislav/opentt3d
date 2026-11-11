@@ -1,0 +1,43 @@
+{
+  "renderer": "3d",
+  "rotation": 0,
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "screenshot": "/Users/stanislav/Projects/opentt3d/build-macos/ui-orientation-check/screenshot/smoke.png",
+  "image_size": [
+    2560,
+    1440
+  ],
+  "command": [
+    "/Users/stanislav/Projects/opentt3d/build-macos/opentt3d",
+    "-c",
+    "/Users/stanislav/Projects/opentt3d/build-macos/ui-orientation-check/openttd.cfg",
+    "-x",
+    "-X",
+    "-v",
+    "cocoa-vulkan",
+    "-b",
+    "32bpp-optimized",
+    "-s",
+    "null",
+    "-m",
+    "null",
+    "-I",
+    "OpenGFX2 Classic",
+    "-S",
+    "NoSound",
+    "-M",
+    "NoMusic",
+    "-r",
+    "1280x720",
+    "-d",
+    "driver=2,console=1",
+    "-G",
+    "314159",
+    "-t",
+    "1950",
+    "-g",
+    "/Users/stanislav/Projects/opentt3d/build-macos/pass1-buses-temperate-connected/save/road-catalogue.sav"
+  ],
+  "pid": 57984,
+  "background": true
+}

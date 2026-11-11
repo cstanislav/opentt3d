@@ -1996,3 +1996,28 @@ DropDownList GetRailTypeDropDownList(bool for_replacement, bool all_option)
 
 	return list;
 }
+
+/** Exercise the construction-orientation windows through their ordinary click paths. */
+bool VerifyRailConstructionOrientationUI()
+{
+	Window *toolbar = ShowBuildRailToolbar(RAILTYPE_RAIL);
+	if (toolbar == nullptr) return false;
+	toolbar->OnClick({}, WID_RAT_BUILD_DEPOT, 1);
+	Window *depot = FindWindowById(WC_BUILD_DEPOT, TRANSPORT_RAIL);
+	if (depot == nullptr) return false;
+	const DiagDirection depot_before = _build_depot_direction;
+	depot->OnClick({}, WID_BRAD_DEPOT_NE, 1);
+	const bool depot_ok = _build_depot_direction != depot_before;
+	CloseWindowById(WC_BUILD_DEPOT, TRANSPORT_RAIL);
+
+	toolbar = ShowBuildRailToolbar(RAILTYPE_RAIL);
+	if (toolbar == nullptr) return false;
+	toolbar->OnClick({}, WID_RAT_BUILD_STATION, 1);
+	Window *station = FindWindowById(WC_BUILD_STATION, TRANSPORT_RAIL);
+	if (station == nullptr) return false;
+	const Axis station_before = _station_gui.axis;
+	station->OnClick({}, WID_BRAS_PLATFORM_DIR_X, 1);
+	const bool station_ok = _station_gui.axis != station_before;
+	CloseWindowById(WC_BUILD_STATION, TRANSPORT_RAIL);
+	return depot_ok && station_ok;
+}
