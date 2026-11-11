@@ -3621,6 +3621,15 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 				Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what());
 			}
 		});
+	} else if (argv[1] == "verify-navigation") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try {
+				Renderer3D::VerifyViewportNavigation();
+				Debug(driver, 1, "OpenTT3D: viewport navigation verification passed");
+			} catch (const std::exception &error) {
+				Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what());
+			}
+		});
 	} else if (argv[1] == "verify" || argv[1] == "verify-scene") {
 		VideoDriver::GetInstance()->QueueOnMainThread([vehicle_poses=argv[1] == "verify"] {
 			try {

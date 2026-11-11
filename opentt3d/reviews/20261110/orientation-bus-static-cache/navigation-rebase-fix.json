@@ -1,0 +1,30 @@
+{
+  "before": {
+    "scene_verifier": "failed: Navigation verification: raised orbit focus exhausted the street-level zoom range",
+    "after_temporary_rebase": {
+      "error": "rebasing zoom changed the actual camera pose",
+      "eye_error": [
+        -50.13379,
+        58.359924,
+        115.86334
+      ]
+    }
+  },
+  "root_cause": "RebaseOrbitZoom converted eye distance to zoom without the Cocoa backing scale that MakeCamera applies, so a high-DPI rebase moved the eye; CanZoom also rebased ordinary toolbar queries at every zoom.",
+  "fix": [
+    "RebaseOrbitZoom includes VideoDriver::GetDisplayScale in the zoom and pixels-per-unit conversion.",
+    "CanZoom only rebases when zooming in at MIN_CAMERA_ZOOM, preserving explicit zoom levels during toolbar repaints."
+  ],
+  "after": {
+    "verify_navigation": "passed",
+    "rotation3_effective_zoom": 5.0,
+    "rotation3_fps": 44.01,
+    "native_tests": "219/219",
+    "harness": "126/126",
+    "presentation_boundary": "147 files"
+  },
+  "commands": [
+    "python3 tools/opentt3d/smoke.py --build-dir build-macos --output build-macos/bg-verify-navigation-clean --savegame opentt3d/reviews/20261109/rotation-picking46/rotation0/smoke-state.sav --renderer 3d --backend vulkan --verify-navigation --zoom 5 --resolution 1280 720 --background --timeout 240",
+    "python3 tools/opentt3d/smoke.py --build-dir build-macos --output build-macos/bg-rot3-rebase-fix --savegame opentt3d/reviews/20261109/rotation-picking46/rotation0/smoke-state.sav --renderer 3d --backend vulkan --rotation 3 --zoom 5 --running --benchmark-frames 300 --resolution 1280 720 --background --timeout 180"
+  ]
+}

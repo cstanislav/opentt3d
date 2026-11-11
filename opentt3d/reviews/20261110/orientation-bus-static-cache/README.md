@@ -119,6 +119,7 @@ Raw benchmark JSON is retained beside this file:
 - `image-reuse-experiment.json`
 - `rotation-matrix.json`
 - `background-acceptance.json`
+- `navigation-rebase-fix.json`
 - `windowed-hidpi-summary.json`
 - `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`
@@ -132,6 +133,8 @@ Raw benchmark JSON is retained beside this file:
 - Presentation boundary: 147 files (run separately; the three GUI pickers and
   read-only viewport revision API were added to the reviewed boundary).
 - `--reference-road-grade --zoom -3` locates vehicle76 and captures `road-grade.png`.
+- `--verify-navigation` passes the high-DPI orbit/zoom recovery check after
+  `RebaseOrbitZoom` began applying the Cocoa backing scale.
 - `--verify-ui-orientation` opens and clicks every rail/road/dock orientation
   picker through the ordinary window handlers: passed
   (`ui-orientation-observation.txt`); the single-preview ship-depot window is

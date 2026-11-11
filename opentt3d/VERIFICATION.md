@@ -30,6 +30,10 @@ dense rotation2 averages60.005fps on Vulkan and60.009fps on OpenGL over1,800
 frames, with20.6/21.6ms p95 intervals. The zoom5 controls are a full-map
 overview stress case.
 
+`renderer3d verify-navigation` passes the high-DPI orbit/rebasing check; a
+temporary `CanZoom` that rebased every query failed with an eye translation of
+-50.1/58.4/115.9 world units before the backing-scale correction.
+
 Verification: native219/219, harness126/126, presentation boundary147 files,
 `--verify-ui-orientation`, focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
 `--verify-renderer --renderer-verification-scope scene` pass. Evidence:

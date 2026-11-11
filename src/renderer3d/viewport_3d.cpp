@@ -390,10 +390,14 @@ static void RebaseOrbitZoom(const Viewport &vp)
 	if (!ground) { position.grounded_camera = before; return; }
 	float distance = Dot(Camera::Physical(before.Rotate(before.Eye()-*ground)),before.Back());
 	if (distance <= 0.05f) { position.grounded_camera = before; return; }
-	float zoom = std::log2(distance * Camera::ART_SCALE * ZOOM_BASE / before.FocalPixels());
+	/* MakeCamera applies the Cocoa backing scale after the zoom conversion.
+	 * Rebase must use the same scale here or a ground-relative dolly lands at
+	 * half the intended distance and the actual eye moves. */
+	const float display_scale = VideoDriver::GetInstance() != nullptr ? VideoDriver::GetInstance()->GetDisplayScale() : 1.0f;
+	float zoom = std::log2(distance * Camera::ART_SCALE * ZOOM_BASE * display_scale / before.FocalPixels());
 	if (!std::isfinite(zoom)) return;
 	Camera changed = before;
-	changed.pixels_per_unit = ZOOM_BASE * std::exp2(-zoom);
+	changed.pixels_per_unit = ZOOM_BASE * std::exp2(-zoom) * display_scale;
 	changed.TranslateFocus(before.Unrotate(Camera::World(before.Back()*(before.Distance()-changed.Distance()))));
 	position.zoom_current = position.zoom_target = zoom;
 	position.legacy_zoom = vp.zoom;
@@ -598,10 +602,14 @@ static void AnchorViewport(ViewportData &vp, Vec3 anchor, float x, float y)
 bool CanZoom(const Viewport &vp, bool in)
 {
 	if (MakeCamera(vp).first_person) return false;
-	/* A query must not rewrite the camera: SetZoom already rebases an orbit
-	 * before applying an explicit level. Mutating here let toolbar repaints
-	 * replace a requested zoom while the view was being rotated. */
 	auto found = camera_positions.find(&vp);
+	/* An explicit requested zoom must survive ordinary toolbar repaints. Only
+	 * recover a raised orbit while zooming in at the close limit, where the stale
+	 * eye-height dolly would otherwise make the remaining descent unreachable. */
+	if (in && found != camera_positions.end() && found->second.free_orbit &&
+			found->second.zoom_target <= MIN_CAMERA_ZOOM + 0.0001f) {
+		RebaseOrbitZoom(vp);
+	}
 	float target = GetEffectiveZoom(vp);
 	if (found != camera_positions.end() && std::isfinite(found->second.zoom_current)) target = found->second.zoom_target;
 	return in ? target > MIN_CAMERA_ZOOM : target < to_underlying(_settings_client.gui.zoom_max);
