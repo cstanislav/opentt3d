@@ -1,0 +1,16 @@
+{
+  "command": "python3 tools/opentt3d/smoke.py --build-dir build-macos --output build-macos/bg-verify-scene-fixed --savegame opentt3d/reviews/20261109/rotation-picking46/rotation0/smoke-state.sav --renderer 3d --backend vulkan --verify-renderer --renderer-verification-scope scene --zoom 5 --resolution 1280 720 --background --timeout 900",
+  "result": "passed",
+  "highlights": [
+    "48840 authored voxel views",
+    "GPU depth/object picking/transparency",
+    "full 24-bit map indices and vehicle IDs",
+    "unlimited-distance GPU color/depth/picking",
+    "GPU-resident resize and retirement",
+    "48 text anchors",
+    "192 terrain zoom/drag anchors",
+    "orbit/zoom and street-level recovery",
+    "64 vehicle-follow camera checks",
+    "first-person beyond 4096 world units"
+  ]
+}
