@@ -970,7 +970,11 @@ bool DrawViewport(const Viewport &vp, const DrawPixelInfo &dpi)
 				it->second.static_revision = MapRevision();
 				it->second.texture_generation = TextureGeneration();
 			}
-			const bool vehicle_cache_valid = it->second.vehicle_scene &&
+			static const bool vehicle_cache_enabled = [] {
+				const char *value = std::getenv("OPENTT3D_VEHICLE_CACHE");
+				return value == nullptr || std::string_view(value) != "0";
+			}();
+			const bool vehicle_cache_valid = vehicle_cache_enabled && it->second.vehicle_scene &&
 				it->second.vehicle_tick == TimerGameTick::counter &&
 				it->second.texture_generation == TextureGeneration();
 			if (!vehicle_cache_valid) {
