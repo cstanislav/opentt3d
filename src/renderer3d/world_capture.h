@@ -99,6 +99,7 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 void CaptureChild(SpriteID image, PaletteID palette, int x, int y, bool transparent, const SubSprite *sub, bool scale, bool relative);
 std::array<int, 4> CaptureTileBounds();
 bool CaptureVehicleVisible(const Vehicle *vehicle);
+bool FocusPitchedRoadVehicle();
 }
 
 /** Implemented at the upstream viewport boundary, using the original tile/vehicle draw callbacks. */

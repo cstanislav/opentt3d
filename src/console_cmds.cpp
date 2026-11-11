@@ -3450,6 +3450,12 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 		VideoDriver::GetInstance()->QueueOnMainThread([id = *engine, loaded = argv.size() == 4] { Renderer3D::ExportVehicleModelGallery(id, loaded); });
 		return true;
 	}
+	if (argv.size() == 2 && argv[1] == "road-grade-locate") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			if (!Renderer3D::FocusPitchedRoadVehicle()) Debug(driver, 0, "OpenTT3D: renderer verification failed: no pitched primary road vehicle in this map");
+		});
+		return true;
+	}
 	if (argv.size() == 2 && argv[1] == "ui-orientation") {
 		VideoDriver::GetInstance()->QueueOnMainThread([] {
 			const bool ok = VerifyRailConstructionOrientationUI() &&

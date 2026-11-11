@@ -1919,6 +1919,20 @@ static float FitRoadVehicleToGrade(const Vehicle &vehicle)
 	return grade;
 }
 
+bool FocusPitchedRoadVehicle()
+{
+	for (const Vehicle *vehicle : Vehicle::Iterate()) {
+		if (vehicle->type != VEH_ROAD || !vehicle->IsPrimaryVehicle() ||
+			vehicle->vehstatus.Any({VehState::Hidden, VehState::Shadow, VehState::Unclickable})) continue;
+		const float grade = FitRoadVehicleToGrade(*vehicle);
+		if (std::abs(grade) < 0.05f) continue;
+		ScrollMainWindowTo(vehicle->x_pos, vehicle->y_pos, vehicle->z_pos, true);
+		Debug(driver, 1, "OpenTT3D: focused pitched road vehicle {} at grade {} tile {},{}", vehicle->index.base(), grade, TileX(vehicle->tile), TileY(vehicle->tile));
+		return true;
+	}
+	return false;
+}
+
 void BeginVoxelTrainSupportCheck(unsigned engine, bool corners)
 {
 	if (engine >= 116 || !VoxelVehicleState(engine,false)) throw std::invalid_argument("Train support observation requires an original voxel train");

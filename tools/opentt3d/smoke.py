@@ -146,6 +146,7 @@ def main():
     base_graphics.add_argument("--graphics", choices=("OpenGFX2 Classic", "OpenGFX2 High Def", "OpenGFX"), help="Explicit original base-set selection; unlike saved High Def settings this bypasses the intentional Classic migration")
     parser.add_argument("--reference-model", action="store_true")
     parser.add_argument("--reference-vehicle", type=int, choices=range(256), help="Locate an actual visible vehicle with an authored voxel binding")
+    parser.add_argument("--reference-road-grade", action="store_true", help="Locate a primary road vehicle whose actual surface has a nonzero grade")
     parser.add_argument("--reference-vehicle-binding", type=int, choices=range(8), help="Require an exact climate/cargo binding with --reference-vehicle")
     parser.add_argument("--reference-cargo", choices=("empty", "full"), help="Require the located vehicle's real cargo count to be zero/full in a paused review")
     parser.add_argument("--reference-industry", nargs=2, type=int, metavar=("GRAPHICS", "STAGE"), help="Locate an actual voxel industry tile in its original construction state")
@@ -517,6 +518,8 @@ server_advertise = false
         commands.append(f"renderer3d tree-locate {args.reference_tree[0]} {args.reference_tree[1]}")
     if args.reference_vehicle is not None:
         commands.append(f"renderer3d vehicle-locate {args.reference_vehicle}")
+    if args.reference_road_grade:
+        commands.append("renderer3d road-grade-locate")
     if args.reference_industry:
         commands.append(f"renderer3d industry-locate {args.reference_industry[0]} {args.reference_industry[1]}")
     if args.reference_industry_ground:
@@ -962,6 +965,8 @@ server_advertise = false
                     raise RuntimeError("The requested actual tree lifecycle stage was not located and captured")
             if args.reference_vehicle is not None and (f"focused voxel vehicle engine {args.reference_vehicle} vehicle " not in text or f"live voxel vehicle engine {args.reference_vehicle} cargo " not in text):
                 raise RuntimeError("The requested actual voxel vehicle was not located and captured")
+            if args.reference_road_grade and "focused pitched road vehicle" not in text:
+                raise RuntimeError("No primary road vehicle on a nonzero grade was located")
             if args.reference_buoy and ("focused voxel buoy at" not in text or "live voxel buoy captured at" not in text):
                 raise RuntimeError("An actual original voxel buoy was not located and captured")
             if args.reference_object is not None:

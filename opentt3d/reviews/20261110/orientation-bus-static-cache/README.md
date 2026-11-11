@@ -34,7 +34,8 @@ OpenTT3D: road vehicle 407 grade 1 tile 143,125
 OpenTT3D: road vehicle 765 grade 0.75 tile 84,112
 ```
 
-The diagnostic was removed after verification. The implementation remains in
+The diagnostic was removed after verification; `road-grade.png` is the
+close-up saved-world capture at tile202,62. The implementation remains in
 the normal capture path and uses `GetSlopePixelZ(..., true)` so bridge ramps are
 included. No simulation, command, save-format or RNG behavior is changed.
 
@@ -77,6 +78,7 @@ Raw benchmark JSON is retained beside this file:
 - `wide-static-cache.json`
 - `road-static-cache.json`
 - `long-run-summary.json`
+- `road-grade.png` and `road-grade-result.json`
 
 ## Verification
 
@@ -84,6 +86,7 @@ Raw benchmark JSON is retained beside this file:
 - Harness: 126/126 (run separately).
 - Presentation boundary: 147 files (run separately; the three GUI pickers and
   read-only viewport revision API were added to the reviewed boundary).
+- `--reference-road-grade --zoom -3` locates vehicle76 and captures `road-grade.png`.
 - `--verify-ui-orientation` opens and clicks every rail/road/dock orientation
   picker through the ordinary window handlers: passed (`ui-orientation-observation.txt`).
 - `--reference-vehicle 116 --verify-voxel-vehicle 116 --verify-road-stops` and
