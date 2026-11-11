@@ -102,6 +102,6 @@ bool CaptureVehicleVisible(const Vehicle *vehicle);
 }
 
 /** Implemented at the upstream viewport boundary, using the original tile/vehicle draw callbacks. */
-void CollectViewport3D(const Viewport &viewport);
+void CollectViewport3D(const Viewport &viewport, bool include_vehicles = true);
 
 #endif

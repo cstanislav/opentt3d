@@ -1,5 +1,30 @@
 # Implementation verification
 
+## Construction rotation, bus grade and cached capture — November 10
+
+The direction-free rail/road toolbars and single-preview orientation pickers were
+built into the macOS ARM64 Vulkan binary. Rail/road toolbar line construction now
+uses Autorail/Autoroad; fixed direction hotkeys were removed. Rail depot, road
+depot, ship depot, rail station and bus/tram stop previews cycle orientation on
+click, retaining drive-through-only and tram restrictions. `STR_BUILD_ORIENTATION_ROTATE_TOOLTIP`
+documents the interaction.
+
+Road vehicles sample the road or bridge surface ahead and behind their travel
+axis and apply that grade to the authored voxel chassis. A temporary title-world
+observation recorded vehicle76 at grade-1 on tile202,62; no simulation, save,
+command or RNG path was touched.
+
+GPU capture now caches the static terrain/building layer and the per-tick vehicle
+layer. Wide title-world FPS moved from40.45 to60.00 at1280×720/zoom5, with mean
+capture18.14→6.10ms; the static road fixture reaches59.98fps. Render distance is
+unchanged and the remaining wide-view bound is GPU raster/visibility. The static layer refreshes on map, camera, texture or selection changes. This is
+a bounded300-frame control, not sustained long-duration acceptance.
+
+Verification: native219/219, harness126/126, presentation boundary147 files,
+focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
+`--verify-renderer --renderer-verification-scope scene` pass. Evidence:
+`reviews/20261110/orientation-bus-static-cache/`.
+
 ## Exact-source rebuilt `.42` and guarded publication — October 3
 
 Immutable tag `opentt3d-dev-20261003.42` peels to

@@ -2,6 +2,28 @@
 
 This file records implemented and verified work, not promises of completeness.
 
+## November 10 — construction rotation, bus grade pitch and cached capture
+
+Rail/road toolbars now expose Autorail/Autoroad without the four fixed rail or
+two road/tram direction buttons or their number hotkeys. Rail depot, road depot,
+ship depot, rail station and bus/tram stop pickers use one click-to-rotate
+preview with a rotation tooltip; drive-through-only and tram restrictions still
+limit the selectable orientations.
+
+Road vehicles now sample the actual road/bridge surface ahead and behind their
+direction of travel and apply the resulting grade to the voxel chassis; train
+behavior and all non-road vehicle paths are unchanged. A temporary live
+observation found an actual road vehicle pitched at grade -1 on the title world
+at tile202,62; the diagnostic was removed after verification.
+
+GPU presentation now caches static scenery and the per-tick vehicle/effect layer.
+The wide title control moved from40.45fps to60.00fps at1280x720/zoom5 (capture
+18.14ms to6.10ms), while a static road fixture reaches59.98fps. The current
+full-capture control also reaches60.03fps; GPU/composition is now the bound, and
+render distance and map extent are unchanged. This is a bounded300-frame control,
+not sustained long-duration acceptance. Evidence:
+`reviews/20261110/orientation-bus-static-cache/`.
+
 ## October 18 — bus-stop, canal, bank and branding consistency pass
 
 Drive-through bus/truck stop lanes now sample the adjoining paved road ground, so

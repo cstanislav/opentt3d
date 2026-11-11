@@ -43,6 +43,7 @@
 #include "../tile_map.h"
 #include "../tile_cmd.h"
 #include "../vehicle_base.h"
+#include "../map_func.h"
 #include "../engine_base.h"
 #include "../train.h"
 #include "../aircraft.h"
@@ -1892,6 +1893,32 @@ static float FitTrainToCapturedRail(unsigned engine, bool loaded, Vec3 &position
 	return grade;
 }
 
+/**
+ * Follow the road surface along a road vehicle's longitudinal axis.
+ *
+ * Road sprites are drawn with the original flat body model, but on a ramp the
+ * chassis should pitch with the road. Sampling the source-height function a
+ * short distance ahead and behind the vehicle keeps this independent of bridge,
+ * tunnel and foundation drawing; the palette/geometry paths remain untouched.
+ */
+static float FitRoadVehicleToGrade(const Vehicle &vehicle)
+{
+	if (vehicle.type != VEH_ROAD) return 0;
+	const TileIndexDiffC offset = TileIndexDiffCByDir(vehicle.direction);
+	const float dx = static_cast<float>(offset.x), dy = static_cast<float>(offset.y);
+	const float length = std::sqrt(dx*dx + dy*dy);
+	if (length < 0.5f) return 0;
+	constexpr float reach = 4.0f;
+	auto ground = [&](float direction) {
+		const int x = std::clamp(vehicle.x_pos + static_cast<int>(std::lround(direction * dx / length * reach)), 0, static_cast<int>(Map::MaxX()*TILE_SIZE)-1);
+		const int y = std::clamp(vehicle.y_pos + static_cast<int>(std::lround(direction * dy / length * reach)), 0, static_cast<int>(Map::MaxY()*TILE_SIZE)-1);
+		return TerrainZ(GetSlopePixelZ(x, y, true));
+	};
+	const float grade = (ground(1) - ground(-1)) / (2 * reach);
+	if (!std::isfinite(grade) || std::abs(grade) > TerrainZ(0.5f) + 0.001f) return 0;
+	return grade;
+}
+
 void BeginVoxelTrainSupportCheck(unsigned engine, bool corners)
 {
 	if (engine >= 116 || !VoxelVehicleState(engine,false)) throw std::invalid_argument("Train support observation requires an original voxel train");
@@ -2254,7 +2281,13 @@ void CaptureParent(SpriteID image, PaletteID palette, int x, int y, int z, const
 				if (sequence.count != 1 || !IsBaseGraphicsSprite(sequence.seq[0].sprite)) { supported = false; break; }
 				references[direction] = sequence.seq[0].sprite;
 			}
-			float grade = supported && vehicle.type == VEH_TRAIN ? FitTrainToCapturedRail(vehicle.engine_type.base(),loaded,position,heading) : 0;
+			float grade = 0;
+			if (supported && vehicle.type == VEH_TRAIN) {
+				grade = FitTrainToCapturedRail(vehicle.engine_type.base(),loaded,position,heading);
+			} else if (supported && vehicle.type == VEH_ROAD) {
+				/* Buses and lorries pitch over real uphill/downhill road grades. */
+				grade = FitRoadVehicleToGrade(vehicle);
+			}
 			if (supported && DrawAuthoredVehicle(capture->scene, vehicle.engine_type.base(), loaded, position, heading, palette, TextureZoom(position), 1, &references, grade)) {
 				if (vehicle.type == VEH_TRAIN && capture->scene.instances.size() > capture->parent_instance_begin) CheckTrainSupport(vehicle,capture->scene.instances[capture->parent_instance_begin],heading,grade,loaded);
 				if (vehicle.type == VEH_TRAIN && VoxelTrainCollectorMount(vehicle.engine_type.base(),0,heading)) {

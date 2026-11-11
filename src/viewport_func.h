@@ -86,6 +86,9 @@ extern Point _tile_fract_coords;
 
 void MarkTileDirtyByTile(TileIndex tile, int bridge_level_offset, int tile_height_override);
 
+/** Monotonic revision of map/tile presentation state, used to validate cached 3D scenery. */
+uint64_t MapRevision();
+
 /**
  * Mark a tile given by its index dirty for repaint.
  * @param tile The tile to mark dirty.

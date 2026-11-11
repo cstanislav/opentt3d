@@ -3,6 +3,19 @@
 The release target is smooth **60 fps**, including fullscreen and every exposed
 zoom level. This target is **not yet met**.
 
+## Static/vehicle capture split (2026-11-10)
+
+GPU presentation now caches the static terrain/building scene and captures only
+vehicles/effects on an unchanged simulation tick. The static layer refreshes on map, camera, texture or tile-selection changes;
+vehicles are recaptured once per simulation tick. The wide title-world control
+improved from **40.45 fps** to **60.00 fps** at 1280x720/zoom5; mean capture fell
+from **18.14 ms** to **6.10 ms**. A static road-catalogue fixture reaches **59.98
+fps**. The remaining wide-view limit is GPU raster/visibility time (about 9.36 ms),
+not CPU capture; the current full-capture control also measures60.03fps. Render
+distance and map extent are unchanged. This is a bounded 300-frame control, not
+a sustained long-duration acceptance. Evidence:
+`reviews/20261110/orientation-bus-static-cache/`.
+
 ## Verified `.37` original-bubble release review
 
 The exact tagged1,782-model release passes all original support/collector contexts in
@@ -1950,7 +1963,7 @@ This is a geometry reduction, **not a sustained-frame-time pass**. The later run
 uses the same saved commuter-airport map with the expanded model catalogue; it holds
 676 meshes, 74,588,640 used bytes in 18 buffers. Its cold frame includes 16.63 ms capture,
 14.44 ms resource wait and 14.33 MB uploads. Later resource waits still occur without
-new uploads; maximum wait 25.53 ms, GPU 35.79 ms, submission 5.14 ms. The larger content
+new uploads; maximum wait 25.78 ms, GPU 35.79 ms, submission 5.14 ms. The larger content
 and timing differences prevent treating this as a controlled overall speedup.
 
 ## Classic low-bridge Cab checkpoint
@@ -2094,7 +2107,7 @@ there are **zero intervals above 20 ms** across all 3,600 frames.
 | −5 | 5.28 ms | 6.92 ms | 0 |
 | −4 | 4.88 ms | 6.12 ms | 0 |
 | −3 | 4.90 ms | 7.06 ms | 0 |
-| −2 | 5.53 ms | 8.14 ms | 0 |
+| −2 | 5.78 ms | 8.14 ms | 0 |
 | −1 | 5.54 ms | 5.87 ms | 0 |
 | 0 | 6.29 ms | 6.76 ms | 0 |
 | 1 | 7.35 ms | 8.86 ms | 0 |
@@ -2325,7 +2338,7 @@ measured again for 300 frames per integer zoom:
 | 4 | 13.21 ms | 7.96 ms | 0 |
 | 5 | 14.50 ms | 6.93 ms | 0 |
 
-All average **59.98–60.01 fps**. Valid artifacts:
+All average **59.98–60.00 fps**. Valid artifacts:
 `build-macos/vehicle-zoom--{3,2,1}/`, `vehicle-zoom-0/` and
 `vehicle-zoom-dpi-{1..5}/`. The original `vehicle-zoom-1` run is invalid zoom-1
 evidence: the harness caught GUI/DPI scaling changing its zoom to zero. The 3D

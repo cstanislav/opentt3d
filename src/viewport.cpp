@@ -1227,7 +1227,7 @@ static int GetViewportY(Point tile)
 /**
  * Add the landscape to the viewport, i.e. all ground tiles and buildings.
  */
-void CollectViewport3D(const Viewport &viewport)
+void CollectViewport3D(const Viewport &viewport, bool include_vehicles)
 {
 	/* Atlas repacking can interrupt draw_tile_proc inside StartSpriteCombine.
 	 * Restore presentation bookkeeping before retrying the capture. */
@@ -1254,7 +1254,7 @@ void CollectViewport3D(const Viewport &viewport)
 		}
 	}
 	Renderer3D::CaptureTile(nullptr);
-	ViewportAddVehicles(&_vd.dpi);
+	if (include_vehicles) ViewportAddVehicles(&_vd.dpi);
 }
 
 static void ViewportAddLandscape(bool selections_only = false)
@@ -2179,6 +2179,13 @@ void ConstrainAllViewportsZoom()
 	}
 }
 
+static uint64_t _map_presentation_revision = 0;
+
+uint64_t MapRevision()
+{
+	return _map_presentation_revision;
+}
+
 /**
  * Mark a tile given by its index dirty for repaint.
  * @param tile The tile to mark dirty.
@@ -2188,6 +2195,7 @@ void ConstrainAllViewportsZoom()
  */
 void MarkTileDirtyByTile(TileIndex tile, int bridge_level_offset, int tile_height_override)
 {
+	++_map_presentation_revision;
 	Point pt = RemapCoords(TileX(tile) * TILE_SIZE, TileY(tile) * TILE_SIZE, tile_height_override * TILE_HEIGHT);
 	MarkAllViewportsDirty(
 			pt.x - MAX_TILE_EXTENT_LEFT,

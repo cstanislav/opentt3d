@@ -1051,7 +1051,7 @@ bool DrawVoxelVehicle(Scene &scene, unsigned engine, bool loaded, Vec3 origin, f
 	auto data = Material(origin,palette,opacity);
 	data.mirror_layer_heading[3] = heading;
 	if (engine < 116) data.SetLongitudinalScale(OriginalTrainVoxelScale(heading,mesh.high.x-mesh.low.x));
-	if (engine < 116 && grade != 0) data.SetPitch(grade,Camera::WORLD_Z_SCALE,mesh.low.z);
+	if (grade != 0) data.SetPitch(grade,Camera::WORLD_Z_SCALE,mesh.low.z);
 	AddVoxelInstance(scene,models.models.at(binding->second),data);
 	return true;
 }

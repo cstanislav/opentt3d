@@ -529,58 +529,40 @@ public:
 	BuildDocksDepotWindow(WindowDesc &desc, Window *parent) : PickerWindowBase(desc, parent)
 	{
 		this->InitNested(TRANSPORT_WATER);
-		this->LowerWidget(WID_BDD_X + _ship_depot_direction);
+		this->LowerWidget(WID_BDD_X);
 		UpdateDocksDirection();
 	}
 
 	void UpdateWidgetSize(WidgetID widget, Dimension &size, [[maybe_unused]] const Dimension &padding, [[maybe_unused]] Dimension &fill, [[maybe_unused]] Dimension &resize) override
 	{
-		switch (widget) {
-			case WID_BDD_X:
-			case WID_BDD_Y:
-				size.width  = ScaleGUITrad(96) + WidgetDimensions::scaled.fullbevel.Horizontal();
-				size.height = ScaleGUITrad(64) + WidgetDimensions::scaled.fullbevel.Vertical();
-				break;
-		}
+		if (widget != WID_BDD_X) return;
+		size.width  = ScaleGUITrad(96) + WidgetDimensions::scaled.fullbevel.Horizontal();
+		size.height = ScaleGUITrad(64) + WidgetDimensions::scaled.fullbevel.Vertical();
 	}
 
 	void DrawWidget(const Rect &r, WidgetID widget) const override
 	{
+		if (widget != WID_BDD_X) return;
 		DrawPixelInfo tmp_dpi;
-
-		switch (widget) {
-			case WID_BDD_X:
-			case WID_BDD_Y: {
-				Axis axis = widget == WID_BDD_X ? AXIS_X : AXIS_Y;
-
-				Rect ir = r.Shrink(WidgetDimensions::scaled.bevel);
-				if (FillDrawPixelInfo(&tmp_dpi, ir)) {
-					AutoRestoreBackup dpi_backup(_cur_dpi, &tmp_dpi);
-					int x = (ir.Width()  - ScaleSpriteTrad(96)) / 2;
-					int y = (ir.Height() - ScaleSpriteTrad(64)) / 2;
-					int x1 = ScaleSpriteTrad(63);
-					int x2 = ScaleSpriteTrad(31);
-					DrawShipDepotSprite(x + (axis == AXIS_X ? x1 : x2), y + ScaleSpriteTrad(17), axis, DepotPart::North);
-					DrawShipDepotSprite(x + (axis == AXIS_X ? x2 : x1), y + ScaleSpriteTrad(33), axis, DepotPart::South);
-				}
-				break;
-			}
+		Rect ir = r.Shrink(WidgetDimensions::scaled.bevel);
+		if (FillDrawPixelInfo(&tmp_dpi, ir)) {
+			AutoRestoreBackup dpi_backup(_cur_dpi, &tmp_dpi);
+			int x = (ir.Width()  - ScaleSpriteTrad(96)) / 2;
+			int y = (ir.Height() - ScaleSpriteTrad(64)) / 2;
+			int x1 = ScaleSpriteTrad(63);
+			int x2 = ScaleSpriteTrad(31);
+			DrawShipDepotSprite(x + (_ship_depot_direction == AXIS_X ? x1 : x2), y + ScaleSpriteTrad(17), _ship_depot_direction, DepotPart::North);
+			DrawShipDepotSprite(x + (_ship_depot_direction == AXIS_X ? x2 : x1), y + ScaleSpriteTrad(33), _ship_depot_direction, DepotPart::South);
 		}
 	}
 
 	void OnClick([[maybe_unused]] Point pt, WidgetID widget, [[maybe_unused]] int click_count) override
 	{
-		switch (widget) {
-			case WID_BDD_X:
-			case WID_BDD_Y:
-				this->RaiseWidget(WID_BDD_X + _ship_depot_direction);
-				_ship_depot_direction = (widget == WID_BDD_X ? AXIS_X : AXIS_Y);
-				this->LowerWidget(WID_BDD_X + _ship_depot_direction);
-				SndClickBeep();
-				UpdateDocksDirection();
-				this->SetDirty();
-				break;
-		}
+		if (widget != WID_BDD_X) return;
+		_ship_depot_direction = _ship_depot_direction == AXIS_X ? AXIS_Y : AXIS_X;
+		SndClickBeep();
+		UpdateDocksDirection();
+		this->SetDirty();
 	}
 };
 
@@ -591,8 +573,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_build_docks_depot_wi
 	EndContainer(),
 	NWidget(WWT_PANEL, COLOUR_DARK_GREEN, WID_BDD_BACKGROUND),
 		NWidget(NWID_HORIZONTAL_LTR), SetPIP(0, WidgetDimensions::unscaled.hsep_normal, 0), SetPIPRatio(1, 0, 1), SetPadding(WidgetDimensions::unscaled.picker),
-			NWidget(WWT_TEXTBTN, COLOUR_GREY, WID_BDD_X), SetToolTip(STR_DEPOT_BUILD_SHIP_ORIENTATION_TOOLTIP),
-			NWidget(WWT_TEXTBTN, COLOUR_GREY, WID_BDD_Y), SetToolTip(STR_DEPOT_BUILD_SHIP_ORIENTATION_TOOLTIP),
+			NWidget(WWT_TEXTBTN, COLOUR_GREY, WID_BDD_X), SetToolTip(STR_BUILD_ORIENTATION_ROTATE_TOOLTIP),
 		EndContainer(),
 	EndContainer(),
 };

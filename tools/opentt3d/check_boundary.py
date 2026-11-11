@@ -37,6 +37,8 @@ PRESENTATION_FILES = {
     "src/landscape.cpp",  # Foundation drawing adapter only.
     "src/station_cmd.cpp",  # Vanilla station drawing adapter after upstream foundation selection.
     "src/station_func.h",  # Read-only vanilla airport animation layout access.
+    "src/dock_gui.cpp", "src/rail_gui.cpp", "src/road_gui.cpp",  # Construction-orientation presentation controls.
+    "src/viewport_func.h",  # Read-only presentation revision used to validate cached scenery.
     "src/object.h", "src/object_cmd.cpp",  # Read-only original object/HQ drawing layout access; no object or rating mutation.
     "src/elrail.cpp",  # Resolved overhead-wire and pylon drawing metadata only.
     "src/road_cmd.h", "src/road_cmd.cpp",  # Read-only road drawing layouts and presentation adapters.

@@ -18,6 +18,9 @@
 #include "../landscape.h"
 #include "../town_map.h"
 #include "../vehicle_base.h"
+#include "../vehicle_func.h"
+#include "../timer/timer_game_tick.h"
+#include "../tilehighlight_func.h"
 #include "../video/video_driver.hpp"
 #include "../viewport_func.h"
 #include "../window_func.h"
@@ -51,12 +54,35 @@ struct Frame {
 	uint64_t epoch = 0, texture_generation = 0;
 	bool gpu_resident = false;
 	Camera camera;
+	std::optional<Scene> static_scene; ///< Cached terrain/buildings; vehicles and effects are captured on simulation ticks.
+	std::optional<Scene> vehicle_scene; ///< Cached vehicle/effect layer for the current simulation tick.
+	uint64_t static_revision = 0; ///< MapRevision at which static_scene was captured.
+	uint64_t selection_cookie = 0; ///< Tile-selection state included in the static capture.
+	uint64_t vehicle_tick = UINT64_MAX; ///< TimerGameTick at which vehicle_scene was captured.
 	mutable Point pick_point{-1,-1};
 	mutable uint64_t pick_epoch = UINT64_MAX;
 	mutable uint32_t pick_id = 0;
 };
 static std::unordered_map<const Viewport *, Frame> frames;
 static uint64_t frame_epoch = 0;
+
+/** Selection overlays are part of the static capture; include their state in its validity key. */
+static uint64_t SelectionCookie()
+{
+	uint64_t hash = 1469598103934665603ULL;
+	auto mix = [&hash](uint64_t value) {
+		hash ^= value;
+		hash *= 1099511628211ULL;
+	};
+	for (const Point &point : {_thd.pos, _thd.size, _thd.offs, _thd.outersize, _thd.selstart, _thd.selend}) {
+		mix(static_cast<uint64_t>(static_cast<uint32_t>(point.x)));
+		mix(static_cast<uint64_t>(static_cast<uint32_t>(point.y)));
+	}
+	mix(static_cast<uint64_t>(_thd.drawstyle));
+	mix(static_cast<uint64_t>(_thd.make_square_red));
+	mix(static_cast<uint64_t>(_thd.redsq.base()));
+	return hash;
+}
 static unsigned readback_depth = 0;
 static bool middle_pressed = false;
 static const Viewport *orbit_viewport = nullptr;
@@ -749,13 +775,44 @@ bool FocusReferenceModel()
 	return false;
 }
 
-static bool CaptureScene(const Viewport &vp, const Camera &camera, Scene &scene)
+static bool CaptureScene(const Viewport &vp, const Camera &camera, Scene &scene, bool include_vehicles = true)
 {
 	Profile::Scope capture_time(Profile::Section::Capture);
 	for (unsigned attempt = 0; attempt < 2; ++attempt) {
 		try {
 			BeginCapture(camera);
-			CollectViewport3D(vp);
+			CollectViewport3D(vp, include_vehicles);
+		} catch (const AtlasFull &) {
+			if (IsCapturing()) FinishCapture();
+			if (attempt != 0) {
+				Debug(driver, 0, "OpenTT3D: viewport rendering failed: visible textures exceed the compacted atlas");
+				return false;
+			}
+			Debug(driver, 2, "OpenTT3D: repacking fragmented sprite atlas");
+			Textures().Repack();
+			continue;
+		} catch (...) {
+			if (IsCapturing()) FinishCapture();
+			throw;
+		}
+		scene = FinishCapture();
+		return true;
+	}
+	return false;
+}
+
+/* Vehicles and effects change independently of the static map. Capture only that
+ * layer while the cached terrain/buildings layer remains valid. */
+static bool CaptureVehicles([[maybe_unused]] const Viewport &vp, const Camera &camera, Scene &scene)
+{
+	Profile::Scope capture_time(Profile::Section::Capture);
+	for (unsigned attempt = 0; attempt < 2; ++attempt) {
+		try {
+			BeginCapture(camera);
+			/* ViewportAddVehicles uses the capture-only branch and ignores the
+			 * legacy clipping rectangle; pass a valid local value for its type. */
+			DrawPixelInfo vehicle_dpi{};
+			ViewportAddVehicles(&vehicle_dpi);
 		} catch (const AtlasFull &) {
 			if (IsCapturing()) FinishCapture();
 			if (attempt != 0) {
@@ -834,24 +891,107 @@ bool DrawViewport(const Viewport &vp, const DrawPixelInfo &dpi)
 	bool gpu = (Vulkan::Active() || OpenGL::Active()) && readback_depth == 0 && vp.width <= MaximumFramebufferSize() && vp.height <= MaximumFramebufferSize();
 	Camera camera = MakeCamera(vp);
 	auto it = frames.find(&vp);
-	/* Legacy following scrolls can change between dirty-rectangle passes without
-	 * moving the smoothed 3D eye. Reuse the target when its actual camera matches. */
-	if (it == frames.end() || it->second.epoch != frame_epoch || it->second.camera != camera || it->second.gpu_resident != gpu) {
+	bool gpu_full_rendered = false;
+	const uint64_t selection_cookie = SelectionCookie();
+	const bool frame_current = gpu && it != frames.end() && it->second.epoch == frame_epoch &&
+		it->second.camera == camera && it->second.gpu_resident;
+	if (frame_current) {
+		gpu_full_rendered = true;
+	} else if (gpu) {
+		/* OPENTT3D_STATIC_CACHE=0 retains the original one-pass capture for
+		 * controlled performance comparisons; the cache is the normal path. */
+		static const bool static_cache_enabled = [] {
+			const char *value = std::getenv("OPENTT3D_STATIC_CACHE");
+			return value == nullptr || std::string_view(value) != "0";
+		}();
+		if (!static_cache_enabled) {
+			Frame frame{vp.virtual_left, vp.virtual_top, vp.width, vp.height, vp.zoom, {}, {}, 0, 0, false, camera};
+			frame.epoch = frame_epoch;
+			frame.gpu_resident = true;
+			Scene scene;
+			if (!CaptureScene(vp, camera, scene)) return RenderingFailed();
+			if (!(Vulkan::Active() ? Vulkan::RenderViewport(&vp, scene, camera) : OpenGL::RenderViewport(&vp, scene, camera))) return RenderingFailed();
+			RecycleCapture(scene);
+			it = frames.insert_or_assign(&vp, std::move(frame)).first;
+			gpu_full_rendered = true;
+		} else {
+			/* Terrain, buildings and selections only change on a map revision or
+			 * camera/atlas change. Keep that layer between draw ticks and capture
+			 * only vehicles and effects every frame. */
+			const bool static_base_valid = it != frames.end() && it->second.gpu_resident &&
+				it->second.camera == camera && it->second.static_scene &&
+				it->second.texture_generation == TextureGeneration();
+			const bool static_refresh_due = !static_base_valid ||
+				selection_cookie != it->second.selection_cookie ||
+				it->second.static_revision != MapRevision();
+			if (static_refresh_due) {
+				Scene static_scene;
+				if (!CaptureScene(vp, camera, static_scene, false)) return RenderingFailed();
+				if (!static_base_valid) {
+					Frame frame{vp.virtual_left, vp.virtual_top, vp.width, vp.height, vp.zoom, {}, {}, 0, 0, false, camera};
+					frame.epoch = frame_epoch;
+					frame.gpu_resident = true;
+					frame.static_scene = std::move(static_scene);
+					frame.selection_cookie = selection_cookie;
+					frame.static_revision = MapRevision();
+					frame.texture_generation = TextureGeneration();
+					it = frames.insert_or_assign(&vp, std::move(frame)).first;
+				} else {
+					it->second.static_scene = std::move(static_scene);
+					it->second.selection_cookie = selection_cookie;
+					it->second.static_revision = MapRevision();
+					it->second.texture_generation = TextureGeneration();
+				}
+			}
+			it->second.epoch = frame_epoch;
+		}
+	} else if (it == frames.end() || it->second.epoch != frame_epoch || it->second.camera != camera || it->second.gpu_resident != gpu) {
+		/* Legacy following scrolls can change between dirty-rectangle passes without
+		 * moving the smoothed 3D eye. Reuse the target when its actual camera matches. */
 		Frame frame{vp.virtual_left, vp.virtual_top, vp.width, vp.height, vp.zoom, {}, {}, 0, 0, false, camera};
 		frame.epoch = frame_epoch;
 		frame.texture_generation = TextureGeneration();
-		frame.gpu_resident = gpu;
-		if (gpu) {
-			Scene scene;
-			if (!CaptureScene(vp,camera,scene) || !(Vulkan::Active() ? Vulkan::RenderViewport(&vp,scene,camera) : OpenGL::RenderViewport(&vp,scene,camera))) return RenderingFailed();
-			RecycleCapture(scene);
-		} else {
-			frame.pixels.resize(static_cast<size_t>(vp.width) * vp.height);
-			if (!RenderTo(vp, camera, frame.pixels.data(), vp.width, &frame.picking)) return RenderingFailed();
-		}
+		frame.gpu_resident = false;
+		frame.pixels.resize(static_cast<size_t>(vp.width) * vp.height);
+		if (!RenderTo(vp, camera, frame.pixels.data(), vp.width, &frame.picking)) return RenderingFailed();
 		it = frames.insert_or_assign(&vp, std::move(frame)).first;
 	}
 	it->second.left = vp.virtual_left; it->second.top = vp.virtual_top; it->second.zoom = vp.zoom;
+	if (gpu && !gpu_full_rendered) {
+		bool rendered = false;
+		for (unsigned attempt = 0; attempt < 2; ++attempt) {
+			/* An atlas repack invalidates cached texture regions. Refresh the static
+			 * layer, then capture vehicles once more against the new atlas. */
+			if (it->second.texture_generation != TextureGeneration()) {
+				Scene static_scene;
+				if (!CaptureScene(vp, camera, static_scene, false)) return RenderingFailed();
+				it->second.static_scene = std::move(static_scene);
+				it->second.selection_cookie = selection_cookie;
+				it->second.static_revision = MapRevision();
+				it->second.texture_generation = TextureGeneration();
+			}
+			const bool vehicle_cache_valid = it->second.vehicle_scene &&
+				it->second.vehicle_tick == TimerGameTick::counter &&
+				it->second.texture_generation == TextureGeneration();
+			if (!vehicle_cache_valid) {
+				Scene vehicles;
+				if (!CaptureVehicles(vp, camera, vehicles)) return RenderingFailed();
+				if (it->second.texture_generation != TextureGeneration()) continue;
+				it->second.vehicle_scene = std::move(vehicles);
+				it->second.vehicle_tick = TimerGameTick::counter;
+			}
+			Scene &scene = *it->second.static_scene;
+			const Scene &vehicles = *it->second.vehicle_scene;
+			const size_t static_vertices = scene.vertices.size(), static_instances = scene.instances.size();
+			scene.vertices.insert(scene.vertices.end(), vehicles.vertices.begin(), vehicles.vertices.end());
+			scene.instances.insert(scene.instances.end(), vehicles.instances.begin(), vehicles.instances.end());
+			rendered = Vulkan::Active() ? Vulkan::RenderViewport(&vp, scene, camera) : OpenGL::RenderViewport(&vp, scene, camera);
+			scene.vertices.resize(static_vertices);
+			scene.instances.resize(static_instances);
+			break;
+		}
+		if (!rendered) return RenderingFailed();
+	}
 	const auto &pixels = it->second.pixels;
 	const int x_begin = std::max(0, -left), x_end = std::min(width, vp.width - left);
 	if (gpu) {
