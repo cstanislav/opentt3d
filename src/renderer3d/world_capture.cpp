@@ -45,6 +45,7 @@
 #include "../vehicle_base.h"
 #include "../map_func.h"
 #include "../engine_base.h"
+#include "../cargotype.h"
 #include "../train.h"
 #include "../aircraft.h"
 #include "../effectvehicle_base.h"
@@ -1921,13 +1922,27 @@ static float FitRoadVehicleToGrade(const Vehicle &vehicle)
 
 bool FocusPitchedRoadVehicle()
 {
+	const Vehicle *fallback = nullptr;
+	float fallback_grade = 0;
 	for (const Vehicle *vehicle : Vehicle::Iterate()) {
 		if (vehicle->type != VEH_ROAD || !vehicle->IsPrimaryVehicle() ||
 			vehicle->vehstatus.Any({VehState::Hidden, VehState::Shadow, VehState::Unclickable})) continue;
 		const float grade = FitRoadVehicleToGrade(*vehicle);
 		if (std::abs(grade) < 0.05f) continue;
+		if (!IsCargoInClass(vehicle->cargo_type, CargoClass::Passengers)) {
+			if (fallback == nullptr) {
+				fallback = vehicle;
+				fallback_grade = grade;
+			}
+			continue;
+		}
 		ScrollMainWindowTo(vehicle->x_pos, vehicle->y_pos, vehicle->z_pos, true);
-		Debug(driver, 1, "OpenTT3D: focused pitched road vehicle {} at grade {} tile {},{}", vehicle->index.base(), grade, TileX(vehicle->tile), TileY(vehicle->tile));
+		Debug(driver, 1, "OpenTT3D: focused pitched passenger road vehicle {} at grade {} tile {},{}", vehicle->index.base(), grade, TileX(vehicle->tile), TileY(vehicle->tile));
+		return true;
+	}
+	if (fallback != nullptr) {
+		ScrollMainWindowTo(fallback->x_pos, fallback->y_pos, fallback->z_pos, true);
+		Debug(driver, 1, "OpenTT3D: focused pitched road vehicle {} at grade {} tile {},{}", fallback->index.base(), fallback_grade, TileX(fallback->tile), TileY(fallback->tile));
 		return true;
 	}
 	return false;

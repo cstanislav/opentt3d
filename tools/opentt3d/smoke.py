@@ -965,7 +965,7 @@ server_advertise = false
                     raise RuntimeError("The requested actual tree lifecycle stage was not located and captured")
             if args.reference_vehicle is not None and (f"focused voxel vehicle engine {args.reference_vehicle} vehicle " not in text or f"live voxel vehicle engine {args.reference_vehicle} cargo " not in text):
                 raise RuntimeError("The requested actual voxel vehicle was not located and captured")
-            if args.reference_road_grade and "focused pitched road vehicle" not in text:
+            if args.reference_road_grade and "focused pitched" not in text:
                 raise RuntimeError("No primary road vehicle on a nonzero grade was located")
             if args.reference_buoy and ("focused voxel buoy at" not in text or "live voxel buoy captured at" not in text):
                 raise RuntimeError("An actual original voxel buoy was not located and captured")
