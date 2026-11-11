@@ -108,7 +108,10 @@ absence, all-heading bridge/swept clearance, captured custom-river palette
 phase, performance and full client/replay checks remain separate. A repeatable zoom3 cache collapse was repaired by raising the default CPU voxel
 cache budget to1.5GiB: zoom3 moved from6.9fps/146.96ms capture to46.89fps/10.60ms,
 peak4.374GiB; the wide zoom5 view remains a failure at38.53fps with peak3.897GiB
-(`reviews/20261109/performance-zoom-matrix/`). The final `.46` performance
+(`reviews/20261109/performance-zoom-matrix/`). The 20261110 pass subsequently
+accepted normal zoom2 at60.00/60.01fps over1,800 frames on Vulkan/OpenGL at
+dense rotation2; only the full-map zoom5 overview remains the stress boundary
+(`reviews/20261110/orientation-bus-static-cache/background-acceptance.json`). The final `.46` performance
 control measured39.37fps at1280×720/zoom5
 and retains the60fps failure; the expanded ship fixture verified all seven
 original ship engines through two loading docks, four dock orientations, the
