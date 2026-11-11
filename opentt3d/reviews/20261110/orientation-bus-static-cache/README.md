@@ -93,9 +93,9 @@ camera and replace an explicit zoom; it is now side-effect free, so rotation3
 retains the requested zoom5.0. Background-window controls at the same views
 measure60.30fps at rotation0,36.42fps at rotation2 and45.97fps at rotation3;
 the1,800-frame background controls measure59.69fps on Vulkan and53.57fps on
-OpenGL. At normal zoom2, both Vulkan and OpenGL sustain60.04/60.15fps at dense
-rotation2 (46.8M vertices), and1,800-frame controls average60.00/60.01fps with
-20.6/21.6ms p95 intervals. The zoom5 controls are a full-map overview stress
+OpenGL. At normal zoom2 on the2560×1440 Retina window, both Vulkan and OpenGL sustain
+60.04/60.15fps at dense rotation2 (46.8M vertices), and1,800-frame controls
+average60.00/60.01fps with20.6/21.6ms p95 intervals. The zoom5 controls are a full-map overview stress
 case. Coarser hedge LOD2 geometry, dirty-tile visibility filtering and rail LOD3
 were tested but produced no measurable gain and were reverted. See
 `background-acceptance.json`. See `rotation-matrix.json`, `image-reuse-experiment.json`,

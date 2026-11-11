@@ -57,27 +57,33 @@
   },
   "remaining": "dense rotation2/3 views are GPU-vertex-bound; OpenGL Retina and host-induced long-run jitter remain",
   "normal_zoom_controls": {
-    "description": "Zoom2 background controls cover normal gameplay framing rather than the full-map zoom5 overview.",
+    "description": "2560x1440 device-pixel Retina background controls cover normal gameplay framing rather than the full-map zoom5 overview.",
     "rotation0_vulkan": {
       "fps": 60.039,
       "effective_zoom": 2.0,
       "vertices_mean": 12990423,
       "gpu_frame_ms_mean": 8.345,
-      "intervals_over_20_ms": 42
+      "intervals_over_20_ms": 42,
+      "width": 2560,
+      "height": 1440
     },
     "rotation2_vulkan": {
       "fps": 60.037,
       "effective_zoom": 2.0,
       "vertices_mean": 46838103,
       "gpu_frame_ms_mean": 12.575,
-      "intervals_over_20_ms": 46
+      "intervals_over_20_ms": 46,
+      "width": 2560,
+      "height": 1440
     },
     "rotation2_opengl": {
       "fps": 60.152,
       "effective_zoom": 2.0,
       "vertices_mean": 46832351,
       "gpu_frame_ms_mean": 0,
-      "intervals_over_20_ms": 57
+      "intervals_over_20_ms": 57,
+      "width": 2560,
+      "height": 1440
     }
   },
   "finding": "At normal zoom2, both backends sustain60fps over1,800 frames at dense rotation2. The zoom5 controls are a full-map overview stress case.",
@@ -88,7 +94,9 @@
       "frames": 1800,
       "frames_over_16_67_ms": 5,
       "intervals_over_20_ms": 315,
-      "p95_interval_ms": 20.598
+      "p95_interval_ms": 20.598,
+      "width": 2560,
+      "height": 1440
     },
     "rotation2_opengl": {
       "fps": 60.009,
@@ -96,7 +104,9 @@
       "frames": 1800,
       "frames_over_16_67_ms": 34,
       "intervals_over_20_ms": 321,
-      "p95_interval_ms": 21.597
+      "p95_interval_ms": 21.597,
+      "width": 2560,
+      "height": 1440
     }
   }
 }
