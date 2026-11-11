@@ -74,7 +74,8 @@ multi-viewport acceptance; the jitter remains visible in the retained JSON.
 A native2x Retina window (2560×1440 device pixels) measured38.31fps; the same
 scene at1280×720 logical pixels (`--no-hidpi`) measured60.01fps. An uncommitted
 half-resolution render-target experiment reached only38.7–46.7fps because CPU
-capture stayed at18.2–18.7ms; it was not retained. The high-DPI full-resolution
+capture stayed at18.2–18.7ms; a separate LOD-bias test (2/0.5/0.25) also failed
+to improve the work-bound frame and was not retained. The high-DPI full-resolution
 path remains a known performance limitation; render distance is unchanged in both.
 See `windowed-hidpi-summary.json` and `render-scale-experiment.json`.
 

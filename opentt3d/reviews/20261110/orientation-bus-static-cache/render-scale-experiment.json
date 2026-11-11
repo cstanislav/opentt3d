@@ -28,5 +28,26 @@
     "capture_ms_mean": 17.960475974999998,
     "gpu_frame_ms_mean": 13.332756996666657,
     "intervals_over_20_ms": 556
+  },
+  "lod_bias_2": {
+    "measured_fps": 36.132837317801645,
+    "capture_ms_mean": 18.130919146666667,
+    "gpu_frame_ms_mean": 25.73358010666667,
+    "vertices_mean": 144619620.67,
+    "intervals_over_20_ms": 286
+  },
+  "lod_bias_0.5": {
+    "measured_fps": 43.830330642979256,
+    "capture_ms_mean": 15.096780636666663,
+    "gpu_frame_ms_mean": 16.824786390000007,
+    "vertices_mean": 80182264.5,
+    "intervals_over_20_ms": 254
+  },
+  "lod_bias_0.25": {
+    "measured_fps": 38.78298246564519,
+    "capture_ms_mean": 18.65087493,
+    "gpu_frame_ms_mean": 16.77405443666668,
+    "vertices_mean": 80184014.96,
+    "intervals_over_20_ms": 282
   }
 }
