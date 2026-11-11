@@ -27,7 +27,7 @@ not sustained long-duration acceptance. An1,800-frame control averages60.01fps
 (Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. A native2x
 Retina window at2560×1440 now scales the camera pixels-per-unit by the Cocoa
 backing factor, preserving the logical view; it measures59.76fps over300 frames and60.04fps over1,800 frames on Vulkan,
-and54.79fps over1,800 frames on OpenGL versus60.00fps at1280×720. UI/picking remain native and the
+and54.79fps over1,800 frames on OpenGL versus60.00fps at1280×720. A four-heading control keeps the requested zoom but exposes view-dependent load: rotation0/1 measure59.18/54.16fps, while dense rotation2/3 scenes measure36.13/42.02fps. The toolbar `CanZoom` query no longer mutates the orbit camera, fixing a rotation3 zoom drift to4.0008. UI/picking remain native and the
 earlier38.31fps high-DPI mismatch is removed. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 

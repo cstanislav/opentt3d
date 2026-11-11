@@ -23,7 +23,9 @@ control averages60.01fps (Vulkan) and60.00fps (OpenGL) but retains387/457
 intervals above20ms. A native2x Retina window at2560×1440 now scales the camera pixels-per-unit by the
 Cocoa backing factor, preserving the logical view. It measures59.76fps over300 frames and60.04fps over1,800 frames on Vulkan,
 and54.79fps over1,800 frames on OpenGL versus60.00fps at1280×720; UI and picking
-stay native.
+stay native. A four-heading Vulkan control found59.18/54.16fps at rotations0/1
+and36.13/42.02fps at dense rotations2/3; all four retain the requested zoom5.0
+after the side-effect-free `CanZoom` fix.
 
 Verification: native219/219, harness126/126, presentation boundary147 files,
 `--verify-ui-orientation`, focused `--verify-voxel-vehicle 116 --verify-road-stops`, and

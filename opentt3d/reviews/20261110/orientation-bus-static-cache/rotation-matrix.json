@@ -29,14 +29,14 @@
     },
     {
       "rotation": 3,
-      "measured_fps": 57.162,
-      "effective_zoom": 4.000846862792969,
-      "gpu_frame_ms_mean": 16.696,
-      "vertices_mean": 61740282,
-      "intervals_over_20_ms": 120,
-      "valid_requested_zoom": false
+      "measured_fps": 42.023,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms_mean": 22.97,
+      "vertices_mean": 96190000,
+      "intervals_over_20_ms": 245,
+      "valid_requested_zoom": true
     }
   ],
-  "finding": "The rotation0/1/2 views retain requested zoom5.0. Rotation2 submits126.2M vertices against68.9M at rotation0 and falls to36.13fps; rotation3 is invalid because its effective zoom drifted to4.0008.",
-  "status": "remaining limitation: view-dependent geometry load is not performance-accepted across headings"
+  "finding": "The rotation0/1/2/3 views retain requested zoom5.0. Visible geometry grows from68.9M vertices at rotation0 to126.2M at rotation2 and96.2M at rotation3; those dense views measure36.13fps and42.02fps. Rotation3 previously drifted to4.0008 because a toolbar CanZoom query rebased the orbit camera; CanZoom is now side-effect free.",
+  "status": "remaining limitation: rotation0/1 are near60fps, but dense rotation2/3 views are not performance-accepted"
 }

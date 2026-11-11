@@ -598,7 +598,9 @@ static void AnchorViewport(ViewportData &vp, Vec3 anchor, float x, float y)
 bool CanZoom(const Viewport &vp, bool in)
 {
 	if (MakeCamera(vp).first_person) return false;
-	RebaseOrbitZoom(vp);
+	/* A query must not rewrite the camera: SetZoom already rebases an orbit
+	 * before applying an explicit level. Mutating here let toolbar repaints
+	 * replace a requested zoom while the view was being rotated. */
 	auto found = camera_positions.find(&vp);
 	float target = GetEffectiveZoom(vp);
 	if (found != camera_positions.end() && std::isfinite(found->second.zoom_current)) target = found->second.zoom_target;
