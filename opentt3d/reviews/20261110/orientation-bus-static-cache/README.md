@@ -136,7 +136,7 @@ Raw benchmark JSON is retained beside this file:
 - `--reference-road-grade --zoom -3` locates vehicle76 and captures `road-grade.png`.
 - `--verify-navigation` passes on Vulkan and OpenGL after `RebaseOrbitZoom`
   began applying the Cocoa backing scale.
-- `--verify-renderer --renderer-verification-scope scene` passes on Vulkan,
+- `--verify-renderer --renderer-verification-scope scene` passes on Vulkan and OpenGL,
   including GPU depth/picking/transparency, unlimited distance, resize,
   terrain anchors, orbit/zoom recovery, vehicle follow and first person.
 - `--verify-ui-orientation` opens and clicks every rail/road/dock orientation

@@ -34,8 +34,8 @@ overview stress case.
 that rebased every query failed with an eye translation of -50.1/58.4/115.9
 world units before the backing-scale correction. The full
 `--verify-renderer --renderer-verification-scope scene` background run also passes
-on Vulkan, including GPU picking, unlimited distance, resize, terrain anchors,
-orbit/zoom recovery, vehicle follow and first-person checks.
+on Vulkan and OpenGL, including GPU picking, unlimited distance, resize, terrain
+anchors, orbit/zoom recovery, vehicle follow and first-person checks.
 
 Verification: native219/219, harness126/126, presentation boundary147 files,
 `--verify-ui-orientation`, focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
