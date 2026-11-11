@@ -14,7 +14,8 @@ fps**. The remaining wide-view limit is GPU raster/visibility time (about 9.36 m
 not CPU capture; the current full-capture control also measures60.03fps. Render
 distance and map extent are unchanged. This is a bounded 300-frame control, not
 a sustained long-duration acceptance. A 1,800-frame control averages60.01fps
-(Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. Evidence:
+(Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. Delaying static refreshes to2/4 frames
+was worse (42.75/49.19fps over1,800 frames), so scene changes refresh immediately. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 
 ## Verified `.37` original-bubble release review

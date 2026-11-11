@@ -71,6 +71,11 @@ still shows scheduling jitter:
 The 300-frame and 1,800-frame averages do not establish smooth long-duration or
 multi-viewport acceptance; the jitter remains visible in the retained JSON.
 
+A controlled experiment that delayed static refreshes to every2 or4 frames was
+worse, not better: the 1,800-frame controls fell to42.75 and49.19fps and retained
+905/464 intervals above20ms. The implementation therefore refreshes the static
+layer immediately on map or selection changes; see `static-refresh-experiment.json`.
+
 Raw benchmark JSON is retained beside this file:
 
 - `wide-baseline.json`
@@ -78,6 +83,7 @@ Raw benchmark JSON is retained beside this file:
 - `wide-static-cache.json`
 - `road-static-cache.json`
 - `long-run-summary.json`
+- `static-refresh-experiment.json`
 - `road-grade.png` and `road-grade-result.json`
 
 ## Verification
