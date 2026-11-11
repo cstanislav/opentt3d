@@ -1278,9 +1278,9 @@ public:
 
 		this->LowerWidget(WID_BROS_STATION_NE);
 		this->LowerWidget(WID_BROS_LT_OFF + _settings_client.gui.station_show_coverage);
-		this->CheckOrientationValid();
 
 		this->window_class = (rs == RoadStopType::Bus) ? WC_BUS_STATION : WC_TRUCK_STATION;
+		this->CheckOrientationValid();
 	}
 
 	void Close([[maybe_unused]] int data = 0) override
