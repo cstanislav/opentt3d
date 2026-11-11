@@ -55,5 +55,48 @@
       "status": "capture remained near17.5ms and fps did not improve; reverted because the wide viewport bounds cover the animated tiles"
     }
   },
-  "remaining": "dense rotation2/3 views are GPU-vertex-bound; OpenGL Retina and host-induced long-run jitter remain"
+  "remaining": "dense rotation2/3 views are GPU-vertex-bound; OpenGL Retina and host-induced long-run jitter remain",
+  "normal_zoom_controls": {
+    "description": "Zoom2 background controls cover normal gameplay framing rather than the full-map zoom5 overview.",
+    "rotation0_vulkan": {
+      "fps": 60.039,
+      "effective_zoom": 2.0,
+      "vertices_mean": 12990423,
+      "gpu_frame_ms_mean": 8.345,
+      "intervals_over_20_ms": 42
+    },
+    "rotation2_vulkan": {
+      "fps": 60.037,
+      "effective_zoom": 2.0,
+      "vertices_mean": 46838103,
+      "gpu_frame_ms_mean": 12.575,
+      "intervals_over_20_ms": 46
+    },
+    "rotation2_opengl": {
+      "fps": 60.152,
+      "effective_zoom": 2.0,
+      "vertices_mean": 46832351,
+      "gpu_frame_ms_mean": 0,
+      "intervals_over_20_ms": 57
+    }
+  },
+  "finding": "At normal zoom2, both backends sustain60fps over1,800 frames at dense rotation2. The zoom5 controls are a full-map overview stress case.",
+  "normal_zoom_long_controls": {
+    "rotation2_vulkan": {
+      "fps": 60.005,
+      "effective_zoom": 2.0,
+      "frames": 1800,
+      "frames_over_16_67_ms": 5,
+      "intervals_over_20_ms": 315,
+      "p95_interval_ms": 20.598
+    },
+    "rotation2_opengl": {
+      "fps": 60.009,
+      "effective_zoom": 2.0,
+      "frames": 1800,
+      "frames_over_16_67_ms": 34,
+      "intervals_over_20_ms": 321,
+      "p95_interval_ms": 21.597
+    }
+  }
 }
