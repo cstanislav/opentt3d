@@ -85,10 +85,13 @@ experiment skipped rasterization while the simulation tick, camera, map and
 selection were unchanged. It raised the paired300-frame control from59.18 to
 60.54fps and cut GPU work from15.99ms to9.87ms,
 but the1,800-frame controls regressed to55.65 and51.67fps against59.87fps, and
-the repeat drifted from requested zoom5.0 to4.34, so it was rejected. See
-`image-reuse-experiment.json`, `opengl-frame-slot-experiment.json`,
-`windowed-hidpi-fixed-summary.json`, `windowed-hidpi-summary.json` and
-`render-scale-experiment.json`.
+the repeat drifted from requested zoom5.0 to4.34, so it was rejected. A four-heading
+Vulkan control at1280×720 measured59.18fps at rotation0,54.16fps at rotation1
+and36.13fps at rotation2, where the visible scene grows from68.9M to126.2M
+vertices. Rotation3 did not retain the requested zoom and is not accepted as a
+performance result. See `rotation-matrix.json`, `image-reuse-experiment.json`,
+`opengl-frame-slot-experiment.json`, `windowed-hidpi-fixed-summary.json`,
+`windowed-hidpi-summary.json` and `render-scale-experiment.json`.
 
 A controlled experiment that delayed static refreshes to every2 or4 frames was
 worse, not better: the 1,800-frame controls fell to42.75 and49.19fps and retained
@@ -105,6 +108,7 @@ Raw benchmark JSON is retained beside this file:
 - `static-refresh-experiment.json`
 - `opengl-frame-slot-experiment.json`
 - `image-reuse-experiment.json`
+- `rotation-matrix.json`
 - `windowed-hidpi-summary.json`
 - `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`

@@ -1,0 +1,42 @@
+{
+  "runs": [
+    {
+      "rotation": 0,
+      "measured_fps": 59.178,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms_mean": 15.991,
+      "vertices_mean": 68893780,
+      "intervals_over_20_ms": 75,
+      "valid_requested_zoom": true
+    },
+    {
+      "rotation": 1,
+      "measured_fps": 54.159,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms_mean": 17.017,
+      "vertices_mean": 73286412,
+      "intervals_over_20_ms": 114,
+      "valid_requested_zoom": true
+    },
+    {
+      "rotation": 2,
+      "measured_fps": 36.133,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms_mean": 25.578,
+      "vertices_mean": 126192782,
+      "intervals_over_20_ms": 284,
+      "valid_requested_zoom": true
+    },
+    {
+      "rotation": 3,
+      "measured_fps": 57.162,
+      "effective_zoom": 4.000846862792969,
+      "gpu_frame_ms_mean": 16.696,
+      "vertices_mean": 61740282,
+      "intervals_over_20_ms": 120,
+      "valid_requested_zoom": false
+    }
+  ],
+  "finding": "The rotation0/1/2 views retain requested zoom5.0. Rotation2 submits126.2M vertices against68.9M at rotation0 and falls to36.13fps; rotation3 is invalid because its effective zoom drifted to4.0008.",
+  "status": "remaining limitation: view-dependent geometry load is not performance-accepted across headings"
+}
