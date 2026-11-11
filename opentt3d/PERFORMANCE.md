@@ -18,7 +18,7 @@ a sustained long-duration acceptance. A 1,800-frame control averages60.01fps
 was worse (42.75/49.19fps over1,800 frames), so scene changes refresh immediately.
 A native2x Retina window at2560×1440 now uses the Cocoa backing factor in the
 camera pixels-per-unit, preserving the logical view. It measures59.76fps over300 frames and60.04fps over1,800 frames on Vulkan,
-and52.43fps on OpenGL; the1280×720 logical control measures60.00fps. This replaces
+and54.79fps over1,800 frames on OpenGL; the1280×720 logical control measures60.00fps. This replaces
 the prior38.31fps high-DPI mismatch. Half-resolution/LOD experiments were rejected
 as capture-bound. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.

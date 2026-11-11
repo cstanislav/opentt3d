@@ -74,7 +74,7 @@ multi-viewport acceptance; the jitter remains visible in the retained JSON.
 The camera now scales its pixels-per-unit by the actual Cocoa backing factor, so
 the 3D zoom denotes the same logical view on a2x Retina display. The retained
 2560×1440 device-pixel control measures59.76fps over300 frames and60.04fps over
-1,800 frames on Vulkan, and52.43fps over300 frames on OpenGL; the1280×720
+1,800 frames on Vulkan, and54.79fps over1,800 frames on OpenGL; the1280×720
 logical control measures60.00fps. This replaces the old38.31fps logical-view
 mismatch. Half-resolution and LOD-bias experiments were rejected because they
 remained capture-bound. See `windowed-hidpi-fixed-summary.json`,

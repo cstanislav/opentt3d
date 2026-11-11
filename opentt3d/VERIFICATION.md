@@ -22,7 +22,7 @@ a bounded300-frame control, not sustained long-duration acceptance. An1,800-fram
 control averages60.01fps (Vulkan) and60.00fps (OpenGL) but retains387/457
 intervals above20ms. A native2x Retina window at2560×1440 now scales the camera pixels-per-unit by the
 Cocoa backing factor, preserving the logical view. It measures59.76fps over300 frames and60.04fps over1,800 frames on Vulkan,
-and52.43fps over300 frames on OpenGL versus60.00fps at1280×720; UI and picking
+and54.79fps over1,800 frames on OpenGL versus60.00fps at1280×720; UI and picking
 stay native.
 
 Verification: native219/219, harness126/126, presentation boundary147 files,
