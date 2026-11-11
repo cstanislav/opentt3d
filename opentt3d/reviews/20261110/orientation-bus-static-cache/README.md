@@ -78,9 +78,15 @@ the 3D zoom denotes the same logical view on a2x Retina display. The retained
 logical control measures60.00fps. This replaces the old38.31fps logical-view
 mismatch. Half-resolution and LOD-bias experiments remained capture-bound and
 were rejected. A three-slot OpenGL experiment reached60.05fps but changed the
-requested zoom from5.0 to4.5 and was rejected. See
-`opengl-frame-slot-experiment.json`, `windowed-hidpi-fixed-summary.json`,
-`windowed-hidpi-summary.json` and `render-scale-experiment.json`.
+requested zoom from5.0 to4.5; with the correct zoom it measured52.92fps, so it
+was rejected. A retained-target experiment skipped rasterization while the
+simulation tick, camera, map and selection were unchanged. It raised the paired
+300-frame control from59.18 to60.54fps and cut GPU work from15.99ms to9.87ms,
+but the1,800-frame controls regressed to55.65 and51.67fps against59.87fps, and
+the repeat drifted from requested zoom5.0 to4.34, so it was rejected. See
+`image-reuse-experiment.json`, `opengl-frame-slot-experiment.json`,
+`windowed-hidpi-fixed-summary.json`, `windowed-hidpi-summary.json` and
+`render-scale-experiment.json`.
 
 A controlled experiment that delayed static refreshes to every2 or4 frames was
 worse, not better: the 1,800-frame controls fell to42.75 and49.19fps and retained
@@ -96,6 +102,7 @@ Raw benchmark JSON is retained beside this file:
 - `long-run-summary.json`
 - `static-refresh-experiment.json`
 - `opengl-frame-slot-experiment.json`
+- `image-reuse-experiment.json`
 - `windowed-hidpi-summary.json`
 - `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`

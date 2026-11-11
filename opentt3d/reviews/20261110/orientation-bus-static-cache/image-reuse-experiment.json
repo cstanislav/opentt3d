@@ -1,0 +1,162 @@
+{
+  "paired_300_frames": {
+    "cache_off": {
+      "measured_fps": 59.178,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms": {
+        "mean": 15.991,
+        "p50": 15.767,
+        "p95": 17.4
+      },
+      "buffer_wait_ms": {
+        "mean": 3.392,
+        "p50": 2.646,
+        "p95": 10.411
+      },
+      "capture_ms": {
+        "mean": 6.199,
+        "p50": 8.287,
+        "p95": 19.315
+      },
+      "frame_interval_ms": {
+        "mean": 16.898,
+        "p50": 16.628,
+        "p95": 28.089
+      },
+      "vertices": {
+        "mean": 68893780.15,
+        "p50": 68864862.0,
+        "p95": 69158175.0
+      },
+      "frames_over_16_67_ms": 89,
+      "intervals_over_20_ms": 75
+    },
+    "cache_on": {
+      "measured_fps": 60.543,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms": {
+        "mean": 9.869,
+        "p50": 15.416,
+        "p95": 16.879
+      },
+      "buffer_wait_ms": {
+        "mean": 1.582,
+        "p50": 0.045,
+        "p95": 8.757
+      },
+      "capture_ms": {
+        "mean": 6.112,
+        "p50": 8.301,
+        "p95": 19.351
+      },
+      "frame_interval_ms": {
+        "mean": 16.517,
+        "p50": 16.616,
+        "p95": 24.081
+      },
+      "vertices": {
+        "mean": 42022728.38,
+        "p50": 68820120.0,
+        "p95": 69044916.0
+      },
+      "frames_over_16_67_ms": 63,
+      "intervals_over_20_ms": 41
+    }
+  },
+  "sustained_1800_frames": {
+    "cache_off": {
+      "measured_fps": 59.869,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms": {
+        "mean": 15.856,
+        "p50": 15.689,
+        "p95": 17.17
+      },
+      "buffer_wait_ms": {
+        "mean": 1.309,
+        "p50": 0.064,
+        "p95": 9.122
+      },
+      "capture_ms": {
+        "mean": 5.638,
+        "p50": 8.483,
+        "p95": 9.539
+      },
+      "frame_interval_ms": {
+        "mean": 16.703,
+        "p50": 16.713,
+        "p95": 22.654
+      },
+      "vertices": {
+        "mean": 68497672.632,
+        "p50": 68519061.0,
+        "p95": 69060258.0
+      },
+      "frames_over_16_67_ms": 220,
+      "intervals_over_20_ms": 160
+    },
+    "cache_on": {
+      "measured_fps": 55.647,
+      "effective_zoom": 5.0,
+      "gpu_frame_ms": {
+        "mean": 12.38,
+        "p50": 15.519,
+        "p95": 23.545
+      },
+      "buffer_wait_ms": {
+        "mean": 3.719,
+        "p50": 0.067,
+        "p95": 19.075
+      },
+      "capture_ms": {
+        "mean": 6.082,
+        "p50": 8.625,
+        "p95": 9.618
+      },
+      "frame_interval_ms": {
+        "mean": 17.97,
+        "p50": 16.671,
+        "p95": 32.852
+      },
+      "vertices": {
+        "mean": 45506250.135,
+        "p50": 68200236.0,
+        "p95": 68993562.0
+      },
+      "frames_over_16_67_ms": 417,
+      "intervals_over_20_ms": 378
+    },
+    "cache_on_repeat": {
+      "measured_fps": 51.672,
+      "effective_zoom": 4.341,
+      "gpu_frame_ms": {
+        "mean": 9.12,
+        "p50": 8.131,
+        "p95": 23.349
+      },
+      "buffer_wait_ms": {
+        "mean": 0.981,
+        "p50": 0.029,
+        "p95": 7.429
+      },
+      "capture_ms": {
+        "mean": 6.439,
+        "p50": 3.106,
+        "p95": 14.811
+      },
+      "frame_interval_ms": {
+        "mean": 19.353,
+        "p50": 16.669,
+        "p95": 26.063
+      },
+      "vertices": {
+        "mean": 33082762.598,
+        "p50": 20781981.0,
+        "p95": 115138788.0
+      },
+      "frames_over_16_67_ms": 313,
+      "intervals_over_20_ms": 275
+    }
+  },
+  "decision": "rejected: the 300-frame control improved, but the 1800-frame control regressed and the final repeat drifted from requested zoom 5 to 4.34"
+}

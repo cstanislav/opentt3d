@@ -10,5 +10,10 @@
   "two_frame_slots": {
     "fps": 54.793391945850004,
     "source": "perf-gl-dpi-long"
+  },
+  "three_frame_slots_with_instant_zoom_fixed": {
+    "fps": 52.92084746558178,
+    "effective_zoom": 5.0,
+    "status": "rejected: correct zoom5.0 view leaves no 60fps benefit"
   }
 }
