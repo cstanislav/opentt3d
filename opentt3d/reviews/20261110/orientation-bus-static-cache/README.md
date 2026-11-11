@@ -90,7 +90,12 @@ Vulkan control at1280×720 measured59.18fps at rotation0,54.16fps at rotation1,
 36.13fps at rotation2 and42.02fps at rotation3, where the visible scene grows
 from68.9M to126.2M vertices. A toolbar `CanZoom` query used to rebase the orbit
 camera and replace an explicit zoom; it is now side-effect free, so rotation3
-retains the requested zoom5.0. See `rotation-matrix.json`, `image-reuse-experiment.json`,
+retains the requested zoom5.0. Background-window controls at the same views
+measure60.30fps at rotation0,36.42fps at rotation2 and45.97fps at rotation3;
+the1,800-frame background controls measure59.69fps on Vulkan and53.57fps on
+OpenGL. Coarser hedge LOD2 geometry and a dirty-tile visibility filter were
+tested but produced no measurable gain and were reverted. See
+`background-acceptance.json`. See `rotation-matrix.json`, `image-reuse-experiment.json`,
 `opengl-frame-slot-experiment.json`, `windowed-hidpi-fixed-summary.json`,
 `windowed-hidpi-summary.json` and `render-scale-experiment.json`.
 
@@ -110,6 +115,7 @@ Raw benchmark JSON is retained beside this file:
 - `opengl-frame-slot-experiment.json`
 - `image-reuse-experiment.json`
 - `rotation-matrix.json`
+- `background-acceptance.json`
 - `windowed-hidpi-summary.json`
 - `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`

@@ -1,0 +1,59 @@
+{
+  "constraint": "All acceptance runs used the background Cocoa window; no foreground game window was opened.",
+  "rotations": {
+    "0": {
+      "fps": 60.296,
+      "effective_zoom": 5.0,
+      "vertices_mean": 68887662,
+      "gpu_frame_ms_mean": 15.593,
+      "capture_ms_mean": 5.946,
+      "intervals_over_20_ms": 82,
+      "p95_interval_ms": 27.026
+    },
+    "2": {
+      "fps": 36.415,
+      "effective_zoom": 5.0,
+      "vertices_mean": 126190682,
+      "gpu_frame_ms_mean": 25.366,
+      "capture_ms_mean": 18.142,
+      "intervals_over_20_ms": 278,
+      "p95_interval_ms": 41.734
+    },
+    "3": {
+      "fps": 45.969,
+      "effective_zoom": 5.0,
+      "vertices_mean": 96197191,
+      "gpu_frame_ms_mean": 20.938,
+      "capture_ms_mean": 10.571,
+      "intervals_over_20_ms": 184,
+      "p95_interval_ms": 36.03
+    }
+  },
+  "long_1800_vulkan": {
+    "fps": 59.688,
+    "effective_zoom": 5.0,
+    "vertices_mean": 68496382,
+    "gpu_frame_ms_mean": 16.336,
+    "capture_ms_mean": 5.484,
+    "intervals_over_20_ms": 484,
+    "p95_interval_ms": 24.096
+  },
+  "long_1800_opengl": {
+    "fps": 53.568,
+    "effective_zoom": 5.0,
+    "vertices_mean": 68478813,
+    "gpu_frame_ms_mean": 0,
+    "capture_ms_mean": 5.979,
+    "intervals_over_20_ms": 625,
+    "p95_interval_ms": 28.292
+  },
+  "rejected_experiments": {
+    "hedge_lod2": {
+      "status": "no measurable fps or vertex change; reverted"
+    },
+    "dirty_tile_visibility_filter": {
+      "status": "capture remained near17.5ms and fps did not improve; reverted because the wide viewport bounds cover the animated tiles"
+    }
+  },
+  "remaining": "dense rotation2/3 views are GPU-vertex-bound; OpenGL Retina and host-induced long-run jitter remain"
+}
