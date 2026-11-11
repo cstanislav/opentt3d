@@ -24,7 +24,9 @@ The wide title control moved from40.45fps to60.00fps at1280x720/zoom5 (capture
 full-capture control also reaches60.03fps; GPU/composition is now the bound, and
 render distance and map extent are unchanged. This is a bounded300-frame control,
 not sustained long-duration acceptance. An1,800-frame control averages60.01fps
-(Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. Evidence:
+(Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. A native2x
+Retina window at2560×1440 measures38.31fps; high-DPI full-resolution performance
+remains open. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 
 ## October 18 — bus-stop, canal, bank and branding consistency pass

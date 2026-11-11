@@ -71,6 +71,11 @@ still shows scheduling jitter:
 The 300-frame and 1,800-frame averages do not establish smooth long-duration or
 multi-viewport acceptance; the jitter remains visible in the retained JSON.
 
+A native2x Retina window (2560×1440 device pixels) measured38.31fps; the same
+scene at1280×720 logical pixels (`--no-hidpi`) measured60.01fps. The high-DPI
+full-resolution path remains a known performance limitation; render distance is
+unchanged in both. See `windowed-hidpi-summary.json`.
+
 A controlled experiment that delayed static refreshes to every2 or4 frames was
 worse, not better: the 1,800-frame controls fell to42.75 and49.19fps and retained
 905/464 intervals above20ms. The implementation therefore refreshes the static
@@ -84,6 +89,7 @@ Raw benchmark JSON is retained beside this file:
 - `road-static-cache.json`
 - `long-run-summary.json`
 - `static-refresh-experiment.json`
+- `windowed-hidpi-summary.json`
 - `road-grade.png` and `road-grade-result.json`
 - `ui-orientation.png` and `ui-orientation-result.json`
 

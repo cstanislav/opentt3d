@@ -20,7 +20,8 @@ capture18.14→6.10ms; the static road fixture reaches59.98fps. Render distance 
 unchanged and the remaining wide-view bound is GPU raster/visibility. The static layer refreshes on map, camera, texture or selection changes. This is
 a bounded300-frame control, not sustained long-duration acceptance. An1,800-frame
 control averages60.01fps (Vulkan) and60.00fps (OpenGL) but retains387/457
-intervals above20ms.
+intervals above20ms. A native2x Retina window at2560×1440 measures38.31fps;
+high-DPI full-resolution performance remains open.
 
 Verification: native219/219, harness126/126, presentation boundary147 files,
 `--verify-ui-orientation`, focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
