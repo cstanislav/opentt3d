@@ -16,10 +16,11 @@ distance and map extent are unchanged. This is a bounded 300-frame control, not
 a sustained long-duration acceptance. A 1,800-frame control averages60.01fps
 (Vulkan) and60.00fps (OpenGL), but retains387/457 intervals above20ms. Delaying static refreshes to2/4 frames
 was worse (42.75/49.19fps over1,800 frames), so scene changes refresh immediately.
-A native2x Retina window at2560×1440 measured38.31fps; the1280×720 logical
-control measured60.01fps. A half-resolution render-target experiment reached only38.7–46.7fps
-because capture stayed at18.2–18.7ms and was not retained. High-DPI full-resolution
-performance remains open. Evidence:
+A native2x Retina window at2560×1440 now uses the Cocoa backing factor in the
+camera pixels-per-unit, preserving the logical view. It measures59.76fps over300 frames and60.04fps over1,800 frames on Vulkan,
+and52.43fps on OpenGL; the1280×720 logical control measures60.00fps. This replaces
+the prior38.31fps high-DPI mismatch. Half-resolution/LOD experiments were rejected
+as capture-bound. Evidence:
 `reviews/20261110/orientation-bus-static-cache/`.
 
 ## Verified `.37` original-bubble release review

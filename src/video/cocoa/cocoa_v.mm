@@ -104,6 +104,12 @@ VideoDriver_Cocoa::VideoDriver_Cocoa(bool uses_hardware_acceleration)
 	this->dirty_rect = {};
 }
 
+/** Native device pixels per logical screen pixel. */
+float VideoDriver_Cocoa::GetDisplayScale() const
+{
+	return this->cocoaview != nil ? [ this->cocoaview getContentsScale ] : 1.0f;
+}
+
 /** Stop Cocoa video driver. */
 void VideoDriver_Cocoa::Stop()
 {

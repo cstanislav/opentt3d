@@ -46,6 +46,7 @@ public:
 
 	void MakeDirty(int left, int top, int width, int height) override;
 	bool AfterBlitterChange() override;
+	float GetDisplayScale() const override;
 
 	bool ChangeResolution(int w, int h) override;
 	bool ToggleFullscreen(bool fullscreen) override;

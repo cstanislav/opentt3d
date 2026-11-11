@@ -71,13 +71,14 @@ still shows scheduling jitter:
 The 300-frame and 1,800-frame averages do not establish smooth long-duration or
 multi-viewport acceptance; the jitter remains visible in the retained JSON.
 
-A native2x Retina window (2560×1440 device pixels) measured38.31fps; the same
-scene at1280×720 logical pixels (`--no-hidpi`) measured60.01fps. An uncommitted
-half-resolution render-target experiment reached only38.7–46.7fps because CPU
-capture stayed at18.2–18.7ms; a separate LOD-bias test (2/0.5/0.25) also failed
-to improve the work-bound frame and was not retained. The high-DPI full-resolution
-path remains a known performance limitation; render distance is unchanged in both.
-See `windowed-hidpi-summary.json` and `render-scale-experiment.json`.
+The camera now scales its pixels-per-unit by the actual Cocoa backing factor, so
+the 3D zoom denotes the same logical view on a2x Retina display. The retained
+2560×1440 device-pixel control measures59.76fps over300 frames and60.04fps over
+1,800 frames on Vulkan, and52.43fps over300 frames on OpenGL; the1280×720
+logical control measures60.00fps. This replaces the old38.31fps logical-view
+mismatch. Half-resolution and LOD-bias experiments were rejected because they
+remained capture-bound. See `windowed-hidpi-fixed-summary.json`,
+`windowed-hidpi-summary.json` and `render-scale-experiment.json`.
 
 A controlled experiment that delayed static refreshes to every2 or4 frames was
 worse, not better: the 1,800-frame controls fell to42.75 and49.19fps and retained
@@ -93,6 +94,7 @@ Raw benchmark JSON is retained beside this file:
 - `long-run-summary.json`
 - `static-refresh-experiment.json`
 - `windowed-hidpi-summary.json`
+- `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`
 - `road-grade.png` and `road-grade-result.json`
 - `ui-orientation.png` and `ui-orientation-result.json`

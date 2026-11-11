@@ -329,6 +329,7 @@ static Camera MakeCamera(const Viewport &vp)
 	}
 	float zoom = GetEffectiveZoom(vp);
 	camera.pixels_per_unit = ZOOM_BASE * std::exp2(-zoom);
+	if (VideoDriver::GetInstance() != nullptr) camera.pixels_per_unit *= VideoDriver::GetInstance()->GetDisplayScale();
 	camera.vertical_fov = VIEWPORT_VERTICAL_FOV;
 	camera.width = vp.width;
 	camera.height = vp.height;

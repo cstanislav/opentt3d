@@ -1,0 +1,38 @@
+{
+  "vulkan_300": {
+    "resolution": [
+      2560,
+      1440
+    ],
+    "fps": 59.758618994282536,
+    "capture_ms_mean": 6.8806401300000015,
+    "gpu_frame_ms_mean": 15.56217623666668,
+    "p95_interval_ms": 26.804291,
+    "intervals_over_20_ms": 86,
+    "vertices_mean": 68894327.09
+  },
+  "vulkan_1800": {
+    "resolution": [
+      2560,
+      1440
+    ],
+    "fps": 60.04342190163373,
+    "capture_ms_mean": 5.490582347222227,
+    "gpu_frame_ms_mean": 15.64186022333334,
+    "p95_interval_ms": 17.600166,
+    "intervals_over_20_ms": 77,
+    "vertices_mean": 68499655.06833333
+  },
+  "opengl_300": {
+    "resolution": [
+      2560,
+      1440
+    ],
+    "fps": 52.434344172087606,
+    "capture_ms_mean": 7.026608573333331,
+    "gpu_frame_ms_mean": null,
+    "p95_interval_ms": 33.992917,
+    "intervals_over_20_ms": 115,
+    "vertices_mean": 68925322.47
+  }
+}

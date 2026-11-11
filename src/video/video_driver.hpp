@@ -174,6 +174,12 @@ public:
 		return this->GetName();
 	}
 
+	/** Native device pixels per logical screen pixel. */
+	virtual float GetDisplayScale() const
+	{
+		return 1.0f;
+	}
+
 	/**
 	 * Queue a function to be called on the main thread with game state
 	 * lock held and video buffer locked. Queued functions will be
