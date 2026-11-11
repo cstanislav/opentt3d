@@ -76,8 +76,10 @@ the 3D zoom denotes the same logical view on a2x Retina display. The retained
 2560×1440 device-pixel control measures59.76fps over300 frames and60.04fps over
 1,800 frames on Vulkan, and54.79fps over1,800 frames on OpenGL; the1280×720
 logical control measures60.00fps. This replaces the old38.31fps logical-view
-mismatch. Half-resolution and LOD-bias experiments were rejected because they
-remained capture-bound. See `windowed-hidpi-fixed-summary.json`,
+mismatch. Half-resolution and LOD-bias experiments remained capture-bound and
+were rejected. A three-slot OpenGL experiment reached60.05fps but changed the
+requested zoom from5.0 to4.5 and was rejected. See
+`opengl-frame-slot-experiment.json`, `windowed-hidpi-fixed-summary.json`,
 `windowed-hidpi-summary.json` and `render-scale-experiment.json`.
 
 A controlled experiment that delayed static refreshes to every2 or4 frames was
@@ -93,6 +95,7 @@ Raw benchmark JSON is retained beside this file:
 - `road-static-cache.json`
 - `long-run-summary.json`
 - `static-refresh-experiment.json`
+- `opengl-frame-slot-experiment.json`
 - `windowed-hidpi-summary.json`
 - `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`
