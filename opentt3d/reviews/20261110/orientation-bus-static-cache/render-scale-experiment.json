@@ -1,0 +1,32 @@
+{
+  "perf-hidpi-scale": {
+    "fps": 46.704335789228956,
+    "capture_ms_mean": 13.593558616666659,
+    "gpu_frame_ms_mean": 14.666770119999995,
+    "intervals_over_20_ms": 475
+  },
+  "perf-hidpi-final": {
+    "fps": 38.72069762467575,
+    "capture_ms_mean": 18.666802063333332,
+    "gpu_frame_ms_mean": 14.563868443333341,
+    "intervals_over_20_ms": 281
+  },
+  "perf-hidpi-final2": {
+    "fps": 39.25237955284671,
+    "capture_ms_mean": 18.43106679333335,
+    "gpu_frame_ms_mean": 14.518357933333336,
+    "intervals_over_20_ms": 280
+  },
+  "perf-scale-0.35": {
+    "fps": 39.58615979861322,
+    "capture_ms_mean": 18.19443073500002,
+    "gpu_frame_ms_mean": 13.73280569666667,
+    "intervals_over_20_ms": 559
+  },
+  "perf-scale-0.25": {
+    "fps": 39.85804049756754,
+    "capture_ms_mean": 17.960475974999998,
+    "gpu_frame_ms_mean": 13.332756996666657,
+    "intervals_over_20_ms": 556
+  }
+}
