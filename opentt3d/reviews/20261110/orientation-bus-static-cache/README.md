@@ -78,10 +78,12 @@ the 3D zoom denotes the same logical view on a2x Retina display. The retained
 logical control measures60.00fps. This replaces the old38.31fps logical-view
 mismatch. Half-resolution and LOD-bias experiments remained capture-bound and
 were rejected. A three-slot OpenGL experiment reached60.05fps but changed the
-requested zoom from5.0 to4.5; with the correct zoom it measured52.92fps, so it
-was rejected. A retained-target experiment skipped rasterization while the
-simulation tick, camera, map and selection were unchanged. It raised the paired
-300-frame control from59.18 to60.54fps and cut GPU work from15.99ms to9.87ms,
+requested zoom from5.0 to4.5; with the correct zoom it measured52.92fps. A clean
+retest with the palette arrays fixed measured49.69fps against a52.63fps two-slot
+control at the same requested zoom, so it was rejected. A retained-target
+experiment skipped rasterization while the simulation tick, camera, map and
+selection were unchanged. It raised the paired300-frame control from59.18 to
+60.54fps and cut GPU work from15.99ms to9.87ms,
 but the1,800-frame controls regressed to55.65 and51.67fps against59.87fps, and
 the repeat drifted from requested zoom5.0 to4.34, so it was rejected. See
 `image-reuse-experiment.json`, `opengl-frame-slot-experiment.json`,

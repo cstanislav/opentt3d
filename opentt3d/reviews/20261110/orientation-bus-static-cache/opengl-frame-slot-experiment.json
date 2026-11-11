@@ -15,5 +15,12 @@
     "fps": 52.92084746558178,
     "effective_zoom": 5.0,
     "status": "rejected: correct zoom5.0 view leaves no 60fps benefit"
+  },
+  "three_frame_slots_palette_fixed": {
+    "fps": 49.691,
+    "baseline_two_slots_fps": 52.628,
+    "effective_zoom": 5.0,
+    "vertices_mean": 68930000,
+    "status": "rejected: at the requested zoom and with the palette arrays fixed, three slots are slower than two under the same host conditions"
   }
 }
