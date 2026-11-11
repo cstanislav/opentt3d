@@ -608,6 +608,6 @@ bool VerifyDockConstructionOrientationUI()
 	const Axis before = _ship_depot_direction;
 	depot->OnClick({}, WID_BDD_X, 1);
 	const bool ok = _ship_depot_direction != before;
-	CloseWindowById(WC_BUILD_DEPOT, TRANSPORT_WATER);
+	/* Leave the final preview open so the presentation capture includes it. */
 	return ok;
 }

@@ -85,6 +85,7 @@ Raw benchmark JSON is retained beside this file:
 - `long-run-summary.json`
 - `static-refresh-experiment.json`
 - `road-grade.png` and `road-grade-result.json`
+- `ui-orientation.png` and `ui-orientation-result.json`
 
 ## Verification
 
@@ -94,7 +95,9 @@ Raw benchmark JSON is retained beside this file:
   read-only viewport revision API were added to the reviewed boundary).
 - `--reference-road-grade --zoom -3` locates vehicle76 and captures `road-grade.png`.
 - `--verify-ui-orientation` opens and clicks every rail/road/dock orientation
-  picker through the ordinary window handlers: passed (`ui-orientation-observation.txt`).
+  picker through the ordinary window handlers: passed
+  (`ui-orientation-observation.txt`); the single-preview ship-depot window is
+  shown in `ui-orientation.png`.
 - `--reference-vehicle 116 --verify-voxel-vehicle 116 --verify-road-stops` and
   `--verify-renderer --renderer-verification-scope scene` pass on the road fixture.
 - A broad verifier run combining every live family exceeded its 240-second
