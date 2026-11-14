@@ -8,5 +8,10 @@
     "retained live water source tile 83,125 role ground sprite 11368",
     "retained live water source tile 83,125 role ground sprite 11411"
   ],
-  "limitation": "This revalidates the custom source and selector path; it does not claim a captured renderer palette phase."
+  "limitation": "This revalidates the custom source and selector path; it does not claim a captured renderer palette phase.",
+  "palette_phase_probe": {
+    "result": "A diagnostic rendered tile83,123 over repeated DoPaletteAnimations steps and found no pixel change; the diagnostic was removed.",
+    "indices_checked": "245..249",
+    "next_step": "A palette-driven river-water surface or equivalent runtime phase capture is still required."
+  }
 }

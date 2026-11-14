@@ -141,7 +141,9 @@ Raw benchmark JSON is retained beside this file:
   including GPU depth/picking/transparency, unlimited distance, resize,
   terrain anchors, orbit/zoom recovery, vehicle follow and first person.
 - The custom river source fixture revalidates tile83,125 selectors and water
-  sources at60fps; a captured renderer palette phase remains a separate gate.
+  sources at60fps. A diagnostic rendered tile83,123 across repeated palette
+  animation steps and found no pixel change; the diagnostic was removed. A
+  palette-driven river surface or equivalent runtime phase capture remains open.
 - `--verify-ui-orientation` opens and clicks every rail/road/dock orientation
   picker through the ordinary window handlers: passed
   (`ui-orientation-observation.txt`); the single-preview ship-depot window is
