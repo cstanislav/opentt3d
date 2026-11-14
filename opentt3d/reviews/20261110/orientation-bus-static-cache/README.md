@@ -121,6 +121,7 @@ Raw benchmark JSON is retained beside this file:
 - `background-acceptance.json`
 - `navigation-rebase-fix.json`
 - `scene-verification.json`
+- `custom-river-source-check.json`
 - `windowed-hidpi-summary.json`
 - `windowed-hidpi-fixed-summary.json`
 - `render-scale-experiment.json`
@@ -139,6 +140,8 @@ Raw benchmark JSON is retained beside this file:
 - `--verify-renderer --renderer-verification-scope scene` passes on Vulkan and OpenGL,
   including GPU depth/picking/transparency, unlimited distance, resize,
   terrain anchors, orbit/zoom recovery, vehicle follow and first person.
+- The custom river source fixture revalidates tile83,125 selectors and water
+  sources at60fps; a captured renderer palette phase remains a separate gate.
 - `--verify-ui-orientation` opens and clicks every rail/road/dock orientation
   picker through the ordinary window handlers: passed
   (`ui-orientation-observation.txt`); the single-preview ship-depot window is

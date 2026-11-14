@@ -1,0 +1,12 @@
+{
+  "command": "OPENTT3D_EXPORT_WATER_SOURCES=1 python3 tools/opentt3d/smoke.py --build-dir build-macos --output build-macos/bg-river-source-final --savegame opentt3d/reviews/20261109/custom-river-source/render/smoke-state.sav --newgrf-dir opentt3d/reviews/20261109/custom-river-source/source --renderer 3d --backend vulkan --zoom 5 --running --benchmark-frames 300 --resolution 800 600 --background --timeout 300",
+  "result": "passed",
+  "fps": 60.0,
+  "effective_zoom": 5.0,
+  "selector_observations": [
+    "retained river selector tile 83,125 feature 6 base 11386 offset 25->25 sprite 11411",
+    "retained live water source tile 83,125 role ground sprite 11368",
+    "retained live water source tile 83,125 role ground sprite 11411"
+  ],
+  "limitation": "This revalidates the custom source and selector path; it does not claim a captured renderer palette phase."
+}
