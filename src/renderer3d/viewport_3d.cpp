@@ -23,6 +23,8 @@
 #include "../tilehighlight_func.h"
 #include "../video/video_driver.hpp"
 #include "../viewport_func.h"
+#include "../palette_func.h"
+#include "../water.h"
 #include "../window_func.h"
 #include "../window_gui.h"
 #include "../zoom_func.h"
@@ -36,6 +38,8 @@
 #include <filesystem>
 #include <fstream>
 #include <unordered_map>
+
+void DoPaletteAnimations();
 
 namespace Renderer3D {
 
@@ -1320,6 +1324,47 @@ static void VerifyTextEffectAnchors()
 	auto legacy = GetTextEffectSign(id), projected = GetTextEffectSign(id,&viewport);
 	if (legacy.center != projected.center || legacy.top != projected.top) throw std::runtime_error("Reused legacy text effect retained a stale world anchor");
 	Debug(driver,1,"OpenTT3D: {} loading/income text anchors follow orbit, dolly, Cab and secondary viewports; registry reuse passed",checks);
+}
+
+/** Capture the custom river water surface at successive palette phases. */
+void VerifyRiverWaterPalette()
+{
+	Blitter *blitter = BlitterFactory::GetCurrentBlitter();
+	if (blitter == nullptr || blitter->UsePaletteAnimation() == Blitter::PaletteAnimation::None) throw std::runtime_error("River palette verification requires a palette-animated blitter such as 40bpp-anim");
+	Window *window = GetMainWindow();
+	if (!IsEnabled() || window == nullptr || window->viewport == nullptr) throw std::runtime_error("River palette verification requires a 3D world viewport");
+	const TileIndex river_tile = TileXY(83, 123);
+	if (!IsValidTile(river_tile) || !IsTileType(river_tile, MP_WATER) || !IsRiver(river_tile)) throw std::runtime_error("River palette verification needs the custom-river fixture at 83,123");
+	ViewportData &vp = *window->viewport;
+	ScrollMainWindowToTile(river_tile, true);
+	SetZoom(*window, 0.0f, true);
+	Camera camera = MakeCamera(vp);
+	Scene scene;
+	if (!CaptureScene(vp, camera, scene)) throw std::runtime_error("River palette verification could not capture the river scene");
+	std::vector<uint8_t> first, next;
+	std::vector<uint32_t> ids;
+	if (!RenderScene(scene, camera, first, &ids) || first.size() != ids.size() * 4) throw std::runtime_error("River palette verification could not render the initial phase");
+	const uint32_t river_id = TILE_PICK_ID | river_tile.base();
+	size_t river_pixels = 0;
+	for (uint32_t id : ids) river_pixels += id == river_id;
+	if (river_pixels < 8) throw std::runtime_error("River palette verification did not identify the river surface");
+	const Palette saved_palette = SnapshotPalette();
+	bool changed = false;
+	unsigned phases = 0;
+	for (; phases < 16 && !changed; ++phases) {
+		DoPaletteAnimations();
+		if (!RenderScene(scene, camera, next, nullptr) || next.size() != first.size()) {
+			_cur_palette = saved_palette;
+			throw std::runtime_error("River palette verification could not render an animated phase");
+		}
+		for (size_t i = 0; i < ids.size() && !changed; ++i) {
+			if (ids[i] != river_id) continue;
+			changed = first[i * 4] != next[i * 4] || first[i * 4 + 1] != next[i * 4 + 1] || first[i * 4 + 2] != next[i * 4 + 2];
+		}
+	}
+	_cur_palette = saved_palette;
+	if (!changed) throw std::runtime_error("River palette verification found no animated renderer phase on tile83,123");
+	Debug(driver, 1, "OpenTT3D: custom river tile83,123 rendered {} distinct palette phases across {} river pixels", phases, river_pixels);
 }
 
 /** Integration check against the loaded terrain and actual window input paths. */

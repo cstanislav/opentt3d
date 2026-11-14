@@ -46,6 +46,7 @@ ViewportSign ProjectSign(const Viewport &viewport, const ViewportSign &sign, int
 ViewportSign ProjectSign(const Viewport &viewport, const ViewportSign &sign, TileIndex tile);
 bool FocusReferenceModel();
 void VerifyViewportNavigation();
+void VerifyRiverWaterPalette();
 void VerifyTilePicking();
 void VerifyWorldAtlas();
 

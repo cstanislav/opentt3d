@@ -3621,6 +3621,14 @@ static bool ConRenderer3D(std::span<std::string_view> argv)
 				Debug(driver,0,"OpenTT3D: renderer verification failed: {}",error.what());
 			}
 		});
+	} else if (argv[1] == "verify-river-palette") {
+		VideoDriver::GetInstance()->QueueOnMainThread([] {
+			try {
+				Renderer3D::VerifyRiverWaterPalette();
+			} catch (const std::exception &error) {
+				Debug(driver, 0, "OpenTT3D: renderer verification failed: {}", error.what());
+			}
+		});
 	} else if (argv[1] == "verify-navigation") {
 		VideoDriver::GetInstance()->QueueOnMainThread([] {
 			try {

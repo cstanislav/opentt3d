@@ -261,6 +261,7 @@ def main():
     parser.add_argument("--verify-clipping", action="store_true", help="Compare clipped perspective triangles with independent ray-tested coverage, depth, colour and picking")
     parser.add_argument("--verify-world-atlas", action="store_true", help="Compare complete current-world RGBA/picking before and after atlas repacking")
     parser.add_argument("--verify-navigation", action="store_true", help="Verify camera navigation and street-level zoom recovery")
+    parser.add_argument("--verify-river-palette", action="store_true", help="Verify custom river water palette phases")
     parser.add_argument("--verify-voxel-meshes", metavar="PREFIX", help="Run exact voxel cell/CPU/palette/picking checks for a named model family, including its house bindings and joins")
     parser.add_argument("--verify-catalogue-lods", action="store_true", help="Verify every authored catalogue volume at automatic LOD factors2/4/8/16")
     parser.add_argument("--verify-voxel-poses", type=int, nargs="+", choices=range(256), help="Run the exact company/crash/cargo/heading matrix for selected voxel vehicle engines")
@@ -677,6 +678,8 @@ server_advertise = false
         commands.append("renderer3d verify-world-atlas")
     if args.verify_navigation:
         commands.append("renderer3d verify-navigation")
+    if args.verify_river_palette:
+        commands.append("renderer3d verify-river-palette")
     if args.verify_native_input:
         commands.append("renderer3d verify-input")
     if args.verify_airport_animation:
@@ -843,6 +846,8 @@ server_advertise = false
                 raise RuntimeError("Voxel review export did not complete")
             if args.verify_navigation and "fixed FOV, legacy-zoom independence and street-level recovery after orbit passed" not in text:
                 raise RuntimeError("Viewport navigation verification did not complete")
+            if args.verify_river_palette and "distinct palette phases" not in text:
+                raise RuntimeError("Custom river palette verification did not complete")
             if args.verify_tile_picking and "roof/wall pixels select their owning tile across four rotations, with independent vehicle picking" not in text:
                 raise RuntimeError("Geometry-aware tile picking did not complete")
             if args.verify_native_input and "Cocoa input recovery passed 32 focus/capture cycles" not in text:

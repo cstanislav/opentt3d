@@ -8,10 +8,14 @@
     "retained live water source tile 83,125 role ground sprite 11368",
     "retained live water source tile 83,125 role ground sprite 11411"
   ],
-  "limitation": "This revalidates the custom source and selector path; it does not claim a captured renderer palette phase.",
+  "limitation": "The source/selector path and palette phase pass under 40bpp-anim. The default 32bpp-optimized path has no palette animation by upstream blitter design.",
   "palette_phase_probe": {
-    "result": "A diagnostic rendered tile83,123 over repeated DoPaletteAnimations steps and found no pixel change; the diagnostic was removed.",
-    "indices_checked": "245..249",
-    "next_step": "A palette-driven river-water surface or equivalent runtime phase capture is still required."
+    "result": "passed with 40bpp-anim",
+    "phases": 2,
+    "river_pixels": 177228,
+    "tile": "83,123",
+    "command": "python3 tools/opentt3d/smoke.py --build-dir build-macos --output build-macos/bg-verify-river-palette-anim2 --savegame opentt3d/reviews/20261109/custom-river-source/render/smoke-state.sav --newgrf-dir opentt3d/reviews/20261109/custom-river-source/source --renderer 3d --backend vulkan --blitter 40bpp-anim --verify-river-palette --zoom 5 --resolution 800 600 --background --timeout 300",
+    "screenshot": "custom-river-palette.png",
+    "prerequisite": "40bpp-anim; 32bpp-optimized reports Blitter::PaletteAnimation::None and intentionally does not advance palette animation."
   }
 }

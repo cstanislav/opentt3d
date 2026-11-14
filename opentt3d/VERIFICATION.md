@@ -37,9 +37,10 @@ world units before the backing-scale correction. The full
 on Vulkan and OpenGL, including GPU picking, unlimited distance, resize, terrain
 anchors, orbit/zoom recovery, vehicle follow and first-person checks. The custom river
 source fixture revalidates the tile83,125 selectors and water sources at60fps.
-A diagnostic phase probe on tile83,123 found no pixel change across repeated
-palette animation steps and was removed; a palette-driven river surface or
-equivalent runtime phase capture remains open.
+With `40bpp-anim`, `--verify-river-palette` renders tile83,123 through2 distinct
+phases across177,228 river pixels. `32bpp-optimized` reports
+`Blitter::PaletteAnimation::None` and intentionally does not advance palette
+animation upstream.
 
 Verification: native219/219, harness126/126, presentation boundary147 files,
 `--verify-ui-orientation`, focused `--verify-voxel-vehicle 116 --verify-road-stops`, and
